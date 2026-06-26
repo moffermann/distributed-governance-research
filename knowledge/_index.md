@@ -12,15 +12,22 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/03_ROADMAP|Roadmap]]
 - [[../docs/04_AGENT_ROLES|Agent Roles]]
 - [[../docs/05_OBSIDIAN_TOOLING_SETUP|Obsidian and tooling Setup]]
+- [[../docs/06_CURRENT_PROJECT_RECAP|Current Project Recap]]
 
 ## Core glossary
 
 - [[concepts/core-glossary-v0|Core Glossary v0]]
+- [[concepts/project-governance-glossary-addendum|Project Governance Glossary Addendum]]
 
 ## Foundational session distillations
 
 - [[00_SESSION_2026-06-25_DISTILLATION|Initial Distributed Governance Conversation]]
 - [[01_SESSION_RICARDO_REVIEW_ROUND|Ricardo Review Round]]
+- [[02_SESSION_PROJECT_GOVERNANCE_REPUTATION_FISCALIZATION|Project Governance, Reputation, and Fiscalization]]
+
+## External review
+
+- [[external-review/ricardo-review-log|Ricardo Review Log]]
 
 ## Core concepts
 
@@ -28,6 +35,12 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/institutional-taxonomy|Institutional Taxonomy]]
 - [[concepts/distributed-trust|Distributed Trust]]
 - [[concepts/algorithm-as-coordinator|Algorithm as Coordinator]]
+- [[concepts/distributed-planning-architecture|Distributed Planning Architecture]]
+
+## Functional matrix
+
+- [[functional-matrix-v0|Functional Matrix v0]]
+- [[functional-matrix-v0-addendum-missing-functions|Functional Matrix v0 — Missing Functions Addendum]]
 
 ## Hypotheses
 
@@ -39,6 +52,20 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H006-assisted-deliberation|H006 — Assisted Deliberation]]
 - [[hypotheses/H007-continuous-performance-evaluation|H007 — Continuous Performance Evaluation]]
 - [[hypotheses/H008-distributed-accountability|H008 — Distributed Accountability]]
+- [[hypotheses/H009-binding-evolutionary-planning|H009 — Binding Evolutionary Planning]]
+- [[hypotheses/H010-primary-responsibility-principle|H010 — Primary Responsibility Principle]]
+- [[hypotheses/H011-financial-assurance-and-revocability|H011 — Financial Assurance and Project Revocability]]
+- [[hypotheses/H012-distributed-value-antivalue-management|H012 — Distributed Value and Antivalue Management]]
+- [[hypotheses/H013-pause-mitigation-revocation-governance|H013 — Pause, Mitigation, and Revocation Governance]]
+- [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]
+- [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]
+- [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
+
+## Principles
+
+- [[principles/P001-comparative-critique-rule|P001 — Comparative Critique Rule]]
+- [[principles/P002-social-sovereignty-over-value|P002 — Social Sovereignty over Value]]
+- [[principles/P003-project-responsibility-for-undeclared-antivalue|P003 — Project Responsibility for Undeclared Antivalue]]
 
 ## Open questions and objections
 
