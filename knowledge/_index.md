@@ -24,6 +24,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[00_SESSION_2026-06-25_DISTILLATION|Initial Distributed Governance Conversation]]
 - [[01_SESSION_RICARDO_REVIEW_ROUND|Ricardo Review Round]]
 - [[02_SESSION_PROJECT_GOVERNANCE_REPUTATION_FISCALIZATION|Project Governance, Reputation, and Fiscalization]]
+- [[03_SESSION_META_GOVERNANCE_VALUE_PROJECT_LIFECYCLE|Meta-Governance, Value Thesis, and Project Lifecycle]]
 
 ## External review
 
@@ -60,6 +61,11 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]
 - [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]
 - [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
+- [[hypotheses/H017-meta-governance-protocol-evolution|H017 — Meta-Governance and Protocol Evolution]]
+- [[hypotheses/H018-project-value-thesis-and-measurement|H018 — Project Value Thesis and Measurement]]
+- [[hypotheses/H019-distributed-project-modeling-execution-fiscalization|H019 — Distributed Project Modeling, Execution, and Fiscalization]]
+- [[hypotheses/H020-proportional-procedural-burden|H020 — Proportional Procedural Burden]]
+- [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
 
 ## Principles
 
