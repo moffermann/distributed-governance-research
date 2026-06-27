@@ -22,6 +22,7 @@ As a default design rule:
 
 - one delegate per area or action scope;
 - no subdelegation;
+- no temporary pause mechanism;
 - simple delegation available as a quick action;
 - revocation available immediately and easily;
 - detailed configuration available only in advanced settings.
@@ -96,6 +97,18 @@ Advanced users can create detailed delegation rules.
 
 Custom delegation should be available in advanced versions or advanced settings, but not forced into the main interface.
 
+## No temporary pause in the first version
+
+A separate “pause delegation” state is unnecessary in the first version.
+
+If a citizen wants to stop delegated authority, they can revoke immediately. If they later want to delegate again, they can create a new delegation request.
+
+This keeps the delegation lifecycle simple:
+
+```text
+requested → accepted → active → revoked
+```
+
 ## Delegated action scope
 
 Delegation can apply beyond budget allocation. It may include voting, commenting, complaint support, fiscalization support, project evaluation, or protocol-change participation.
@@ -133,6 +146,7 @@ Delegation should be:
 - action-specific when configured;
 - compatible with profiles and default allocation rules;
 - non-subdelegable by default;
+- not pausable in the first version;
 - simple in the first version, with more detailed time-bound and custom controls left for later versions.
 
 ## Principle
