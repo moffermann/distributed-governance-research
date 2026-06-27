@@ -25,7 +25,13 @@ Citizen revokes delegation
 
 From the moment of revocation, the delegate has no authority to act for the citizen.
 
-Actions already completed before revocation remain part of the historical record, but no future action can use the revoked delegation.
+## Immutability of prior delegated actions
+
+Actions already completed before revocation remain valid and immutable in the historical record because the delegate had authority at the time they acted.
+
+Revocation does not retroactively undo actions previously taken within the valid delegation scope.
+
+This preserves traceability and prevents retroactive instability.
 
 ## User experience
 
@@ -50,7 +56,7 @@ After revocation, the system should show:
 
 ## Principle
 
-> Delegation is voluntary and revocable at any time. The citizen must remain the ultimate controller of delegated authority.
+> Delegation is voluntary, revocable at any time, and non-retroactive. The citizen controls future authority, while past authorized actions remain immutable.
 
 ## Status
 
