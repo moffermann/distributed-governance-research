@@ -12,6 +12,21 @@ Delegation makes the system viable by allowing citizens to participate through t
 
 However, excessive delegation options can make the system difficult to use. The interface should therefore provide simple defaults and deeper configuration only when requested.
 
+The goal is to validate a first version of the model, not to build the most granular delegation system imaginable.
+
+## First-version simplicity
+
+The first version should avoid unnecessary complexity.
+
+As a default design rule:
+
+- one delegate per area or action scope;
+- no subdelegation;
+- simple delegation available as a quick action;
+- detailed configuration available only in advanced settings.
+
+The system can become more granular later if real use shows that it is needed.
+
 ## Layered delegation
 
 ### 1. Simple delegation
@@ -52,6 +67,8 @@ Delegate fiscalization decisions.
 Delegate complaint support.
 Delegate profile configuration.
 Delegate evaluation review.
+Delegate protocol-change votes.
+Delegate project comments or reviews.
 ```
 
 ### 4. Time-bounded delegation
@@ -69,6 +86,16 @@ Delegate until revoked.
 ### 5. Custom delegation
 
 Advanced users can create detailed delegation rules.
+
+Custom delegation should be available, but not forced into the main interface.
+
+## Delegated action scope
+
+Delegation can apply beyond budget allocation. It may include voting, commenting, complaint support, fiscalization support, project evaluation, or protocol-change participation.
+
+However, these capabilities should be configurable by layers rather than exposed all at once.
+
+The basic interface should remain simple. Advanced controls can allow the citizen to decide which actions a delegate can perform on their behalf.
 
 ## No subdelegation in the core design
 
@@ -96,12 +123,13 @@ Delegation should be:
 - auditable;
 - visible in monthly reports;
 - role-specific when configured;
+- action-specific when configured;
 - compatible with profiles and default allocation rules;
 - non-subdelegable by default.
 
 ## Principle
 
-> Delegation should be simple at the surface and flexible under the hood, without allowing delegated authority to become opaque through subdelegation.
+> Delegation should be simple at the surface and flexible under the hood, without allowing delegated authority to become opaque through subdelegation or excessive interface complexity.
 
 ## Status
 
