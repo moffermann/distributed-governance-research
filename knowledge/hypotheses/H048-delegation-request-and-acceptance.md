@@ -33,6 +33,31 @@ A delegate may reject a delegation because:
 - they do not serve that area or community;
 - they do not want to accumulate more delegation concentration.
 
+## First version
+
+In the first version, the request-and-acceptance flow should remain simple.
+
+The delegate receives a delegation request and accepts or rejects it manually.
+
+The system should not initially require complex acceptance-condition configuration, because the goal is to validate the model without turning delegation into a control panel.
+
+## Advanced version
+
+In a later, more advanced version, delegates may configure general acceptance conditions.
+
+Examples:
+
+```text
+Accept only education delegations.
+Accept only delegations from my region or commune.
+Accept at most N delegators.
+Accept only delegations with a maximum duration.
+Reject protocol-change voting delegations.
+Accept fiscalization delegation, but not budget allocation delegation.
+```
+
+These conditions should be configurable, transparent, and visible to citizens before they request delegation.
+
 ## Active delegation
 
 A delegation is active only after acceptance.
