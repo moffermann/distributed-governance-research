@@ -48,6 +48,24 @@ If the project is reformulated:
 - if a funder does not respond within the defined response window, continued support is assumed by default;
 - funders can change their evaluation of the project based on the reformulation.
 
+## Reformulation response window
+
+A reformulation should open a response window during which existing funders may withdraw support.
+
+The default window may be three days.
+
+The exact duration should be a configurable protocol parameter, not a discretionary decision by a single system operator.
+
+During the response window:
+
+- the project is marked as reformulated;
+- funders can review the changes;
+- funders can withdraw support;
+- funders can comment or express concerns;
+- if no action is taken, continued support is assumed by default.
+
+After the response window closes, funders cannot withdraw solely because of that reformulation, but they may still comment, update evaluations, or participate in future complaint/fiscalization mechanisms if new issues arise.
+
 ## Reformulation frequency
 
 A project should not have a hard limit on the total number of reformulations.
@@ -82,7 +100,7 @@ The project should not reset reputation by reformulating. Its prior attempt, cha
 
 ## Default continuity rule
 
-When a project is reformulated, existing funder support continues by default unless the funder actively withdraws during the notification window.
+When a project is reformulated, existing funder support continues by default unless the funder actively withdraws during the response window.
 
 This prevents reformulation from automatically destroying partial support while still preserving the funder's right to exit.
 
