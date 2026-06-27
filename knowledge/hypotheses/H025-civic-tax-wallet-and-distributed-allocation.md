@@ -55,7 +55,21 @@ A portion of public resources can be assigned by citizens to:
 
 ## Important distinction
 
-The assignable wallet is not private disposable income. It remains public money, but its destination is selected by the citizen.
+The assignable wallet is personal in the sense that it corresponds to the citizen's own civic allocation capacity. The citizen can decide where that assignable portion goes.
+
+However, it is not private disposable income. The citizen cannot withdraw it, spend it on private consumption, transfer it freely, or convert it into cash.
+
+It is better understood as a **personal, non-withdrawable public allocation right**.
+
+## Why this matters
+
+Calling it purely public money hides the citizen's sense of ownership and responsibility. Calling it purely private money is also wrong, because it is locked to public-value uses.
+
+The correct framing is:
+
+```text
+personal allocation authority over non-withdrawable public-purpose funds
+```
 
 ## Voluntary alternative
 
