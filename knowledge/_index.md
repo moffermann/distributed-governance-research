@@ -90,6 +90,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H041-distributed-participation-capacity|H041 — Distributed Participation Capacity]]
 - [[hypotheses/H042-layered-delegation-architecture|H042 — Layered Delegation Architecture]]
 - [[hypotheses/H043-transparent-delegation-concentration|H043 — Transparent Delegation Concentration]]
+- [[hypotheses/H044-non-compensated-delegation-by-default|H044 — Non-Compensated Delegation by Default]]
 
 ## Principles
 
