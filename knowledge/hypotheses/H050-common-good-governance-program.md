@@ -144,13 +144,29 @@ derogate the active charter for future use
 → propose and vote on a new charter if a new governance framework is needed
 ```
 
+## Derogation quorum
+
+A common good governance charter can only be derogated using the same approval threshold that was required to approve it.
+
+If the charter required simple majority to be approved, derogation requires simple majority.
+
+If the charter required a qualified majority, derogation requires that same qualified majority.
+
+If the derogation vote does not reach the required threshold, the charter remains active.
+
 ## Derogation rule
 
-A derogated common good governance program stops being available as a basis for new projects, but its historical version remains visible and binding for projects that were already approved under it, unless those projects voluntarily migrate to a new charter through their own approved reformulation or compatibility process.
+A derogated common good governance program stops being available as a basis for new projects, but its historical version remains visible and binding for projects that were already approved under it.
+
+Projects already approved under the derogated charter may continue under the regime of the charter version that was active when they were approved.
+
+New projects must use the new active charter if one has been approved.
+
+Old projects may optionally migrate to the new charter only through their own approved reformulation or compatibility process. Migration should not be automatic.
 
 ## Principle
 
-> A project is funded. A common good governance program is approved. A common good charter should not be casually modified after approval; if its framework no longer works, it should be derogated for future use and replaced by a newly approved charter.
+> A project is funded. A common good governance program is approved. A common good charter should not be casually modified after approval; if its framework no longer works, it should be derogated for future use using the same quorum that approved it, while existing projects remain under the charter version that governed their approval.
 
 ## Status
 
