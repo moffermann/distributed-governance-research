@@ -88,6 +88,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H039-configurable-civic-notifications|H039 — Configurable Civic Notifications]]
 - [[hypotheses/H040-funding-deadline-and-reformulation-rule|H040 — Funding Deadline and Reformulation Rule]]
 - [[hypotheses/H041-distributed-participation-capacity|H041 — Distributed Participation Capacity]]
+- [[hypotheses/H042-layered-delegation-architecture|H042 — Layered Delegation Architecture]]
 
 ## Principles
 
