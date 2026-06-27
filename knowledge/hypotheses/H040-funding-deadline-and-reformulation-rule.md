@@ -56,6 +56,22 @@ However, to avoid notification fatigue and constant instability, a project shoul
 
 This allows projects to improve over time without overwhelming funders or making the project's identity unstable.
 
+## Reformulated visibility label
+
+A reformulated project should not appear as a new project.
+
+It should keep its identity and history, but be clearly labeled as reformulated.
+
+Possible label:
+
+```text
+Reformulated recently
+```
+
+This helps funders who missed the reformulation notification understand that the project they originally supported has changed and should be reviewed again.
+
+Funders who did not respond during the notification window cannot withdraw by default after the window closes, but they may comment, update their evaluation, or express concerns about the reformulated version.
+
 ## History and reputation
 
 A reformulated project should preserve its history.
@@ -72,7 +88,7 @@ This prevents reformulation from automatically destroying partial support while 
 
 ## Principle
 
-> A project that fails to reach funding by its deadline must either close and release committed funds, or reformulate transparently while preserving history and allowing funders to withdraw. Reformulation should be possible without a fixed total cap, but limited in frequency to prevent overload.
+> A project that fails to reach funding by its deadline must either close and release committed funds, or reformulate transparently while preserving history and allowing funders to withdraw during the response window. Reformulation should be possible without a fixed total cap, but limited in frequency and clearly labeled to prevent overload and confusion.
 
 ## Status
 
