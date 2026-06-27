@@ -91,6 +91,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H042-layered-delegation-architecture|H042 — Layered Delegation Architecture]]
 - [[hypotheses/H043-transparent-delegation-concentration|H043 — Transparent Delegation Concentration]]
 - [[hypotheses/H044-non-compensated-delegation-by-default|H044 — Non-Compensated Delegation by Default]]
+- [[hypotheses/H045-delegated-action-weight|H045 — Delegated Action Weight]]
 
 ## Principles
 
