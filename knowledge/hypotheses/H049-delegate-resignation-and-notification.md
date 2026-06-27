@@ -30,6 +30,21 @@ Delegate resigns
 → future actions exclude that delegator's weight
 ```
 
+## Fallback after resignation
+
+When a delegate resigns, the system should apply the delegator's currently configured profile or allocation rule.
+
+If the delegator has no configured profile or rule, the system should apply the system default profile until the delegator chooses a new delegate or configures a new rule.
+
+```text
+Delegate resigns
+→ use delegator's configured profile/rule
+→ if none exists, use system default profile
+→ delegator may later choose a new delegate
+```
+
+This prevents the citizen's civic allocation from becoming frozen or unmanaged after delegate resignation.
+
 ## Notification requirement
 
 The delegator must be notified adequately when a delegate resigns.
@@ -66,7 +81,7 @@ Resignation affects only future authority.
 
 ## Principle
 
-> Delegation is voluntary on both sides. The delegator can revoke, and the delegate can resign, but both actions affect only future authority and must be communicated clearly.
+> Delegation is voluntary on both sides. The delegator can revoke, and the delegate can resign, but both actions affect only future authority and must be communicated clearly. If delegation ends, the citizen's configured profile applies; if none exists, the system default applies.
 
 ## Status
 
