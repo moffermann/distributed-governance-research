@@ -33,6 +33,22 @@ Revocation does not retroactively undo actions previously taken within the valid
 
 This preserves traceability and prevents retroactive instability.
 
+## Post-revocation expression
+
+After revocation, the citizen may always act directly going forward.
+
+For example, if a delegate previously supported a project on the citizen's behalf, the citizen may later:
+
+- comment on the project;
+- express disagreement;
+- update their own evaluation;
+- support a complaint or fiscalization if applicable;
+- participate directly in future actions.
+
+However, the citizen cannot withdraw funding already committed through a valid delegated action merely because delegation was revoked.
+
+Funding withdrawal is allowed only through protocol-defined windows or events, such as project reformulation where funders are explicitly allowed to withdraw during the response window.
+
 ## User experience
 
 Revocation should be extremely simple.
@@ -56,7 +72,7 @@ After revocation, the system should show:
 
 ## Principle
 
-> Delegation is voluntary, revocable at any time, and non-retroactive. The citizen controls future authority, while past authorized actions remain immutable.
+> Delegation is voluntary, revocable at any time, and non-retroactive. The citizen controls future authority, while past authorized actions remain immutable. The citizen may always add new direct expression, but cannot retroactively remove valid commitments except through protocol-defined exit windows.
 
 ## Status
 
