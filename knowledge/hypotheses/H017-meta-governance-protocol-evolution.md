@@ -62,6 +62,43 @@ An operator or administrator may implement a change only if:
 - the change is auditable;
 - rollback conditions are defined when applicable.
 
+## Environments for protocol evolution
+
+Protocol changes should use separate environments, similar to critical software systems.
+
+Possible environments:
+
+```text
+Development:
+  design, simulation, and technical implementation of proposed changes.
+
+Sandbox / pilot:
+  limited-scope testing with selected projects, categories, territories, or user groups.
+
+Staging / pre-production:
+  final validation of the approved version before broad deployment.
+
+Production:
+  official protocol version used by the whole system.
+```
+
+Not every change needs every environment. The required testing depth should depend on the risk, scope, and reversibility of the change.
+
+## Pilot principle
+
+A protocol change should not affect the entire system immediately when its impact is uncertain.
+
+It can first be tested in a bounded setting:
+
+- one project category;
+- one region;
+- one type of fiscalization;
+- a subset of users;
+- a simulated historical dataset;
+- a temporary experimental environment.
+
+Pilot results should be documented before production deployment.
+
 ## Change process
 
 A protocol change should follow a structured process:
