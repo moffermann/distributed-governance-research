@@ -83,6 +83,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H034-configurable-allocation-profiles|H034 — Configurable Allocation Profiles]]
 - [[hypotheses/H035-funding-target-closure-rule|H035 — Funding Target Closure Rule]]
 - [[hypotheses/H036-milestone-based-disbursement-and-guarantees|H036 — Milestone-Based Disbursement and Guarantees]]
+- [[hypotheses/H037-public-revenue-custody-and-disbursement|H037 — Public Revenue Custody and Disbursement]]
 
 ## Principles
 
