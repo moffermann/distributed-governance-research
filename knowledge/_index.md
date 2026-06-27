@@ -82,6 +82,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H033-system-defined-default-allocation-rule|H033 — System-Defined Default Allocation Rule]]
 - [[hypotheses/H034-configurable-allocation-profiles|H034 — Configurable Allocation Profiles]]
 - [[hypotheses/H035-funding-target-closure-rule|H035 — Funding Target Closure Rule]]
+- [[hypotheses/H036-milestone-based-disbursement-and-guarantees|H036 — Milestone-Based Disbursement and Guarantees]]
 
 ## Principles
 
