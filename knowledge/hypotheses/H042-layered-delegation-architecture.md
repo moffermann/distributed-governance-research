@@ -70,6 +70,16 @@ Delegate until revoked.
 
 Advanced users can create detailed delegation rules.
 
+## No subdelegation in the core design
+
+Delegates should not be able to subdelegate by default.
+
+Subdelegation adds complexity and may obscure who is actually exercising delegated authority.
+
+If a citizen wants another actor to exercise authority, the citizen should delegate directly to that actor.
+
+This keeps delegation transparent and understandable.
+
 ## Usability principle
 
 The default interface should not expose every delegation option at once.
@@ -86,11 +96,12 @@ Delegation should be:
 - auditable;
 - visible in monthly reports;
 - role-specific when configured;
-- compatible with profiles and default allocation rules.
+- compatible with profiles and default allocation rules;
+- non-subdelegable by default.
 
 ## Principle
 
-> Delegation should be simple at the surface and flexible under the hood.
+> Delegation should be simple at the surface and flexible under the hood, without allowing delegated authority to become opaque through subdelegation.
 
 ## Status
 
