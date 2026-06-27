@@ -71,6 +71,16 @@ The charter should define:
 - revision and reformulation rules;
 - voting and amendment rules.
 
+## Voting participation
+
+Participation should be free and transparent.
+
+Any verified actor who wants to participate should be able to do so during the voting period.
+
+The system should not create a hidden authority that decides who is allowed to care about a common good. Some actors may be affected directly, others may be beneficiaries, others may care for environmental, cultural, regional, scientific, strategic, or ethical reasons.
+
+The important requirement is transparency: the system should show who participated, from what role or relationship if declared, and how concentrated or distributed the support and opposition were.
+
 ## Relationship with projects
 
 Once approved, the program can act as a parent context for projects.
@@ -93,8 +103,8 @@ The program is approved or rejected through voting after analysis and debate.
 
 ## Principle
 
-> A project is funded. A common good governance program is approved.
+> A project is funded. A common good governance program is approved. Participation in approval should be open to verified actors, with transparency over participation patterns.
 
 ## Status
 
-New governance-entity hypothesis. Needs further design around voting community, approval thresholds, and revision mechanisms.
+New governance-entity hypothesis. Needs further design around approval thresholds, amendment rules, and relationship with formal legal authority.
