@@ -97,6 +97,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H047-immediate-delegation-revocation|H047 — Immediate Delegation Revocation]]
 - [[hypotheses/H048-delegation-request-and-acceptance|H048 — Delegation Request and Acceptance]]
 - [[hypotheses/H049-delegate-resignation-and-notification|H049 — Delegate Resignation and Notification]]
+- [[hypotheses/H050-common-good-governance-program|H050 — Common Good Governance Program]]
 
 ## Principles
 
