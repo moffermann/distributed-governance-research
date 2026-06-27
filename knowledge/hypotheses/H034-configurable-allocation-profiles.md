@@ -18,6 +18,55 @@ If the citizen wants more control, they can choose one of several allocation pro
 
 If the citizen wants full control, they can customize their own rule.
 
+## Official profile shortlist
+
+The user interface should show a short, simple list of official profiles first.
+
+The purpose is to avoid overwhelming the user with too many choices.
+
+Example shortlist:
+
+```text
+Balanced
+Local
+Strategic
+Social
+Science / Long-term
+Fiscalization
+Custom
+```
+
+## More profile options
+
+The interface may include a “more profiles” or “see more options” section where users can explore additional official profiles.
+
+These profiles should still be system-defined and governed by the protocol. They should not be editable by external institutions.
+
+## No third-party official profiles in the core design
+
+Third parties should not be able to create official allocation profiles that other users adopt as if they were system profiles.
+
+This avoids creating a new influence layer where organizations compete to control citizens' automatic allocation rules.
+
+Third parties may still publish recommendations, guides, or educational material outside the official profile system, but official profiles belong to the protocol.
+
+## Custom profiles
+
+Citizens may create personal custom profiles.
+
+A custom profile may define:
+
+- allocation percentages;
+- preferred categories;
+- geographic priorities;
+- roadmap branches;
+- risk tolerance;
+- fiscalization allocation;
+- local versus national balance;
+- strategic versus immediate balance.
+
+Custom profiles apply only to the citizen who created them unless a future protocol explicitly allows profile sharing under controlled rules.
+
 ## Possible profiles
 
 Examples:
@@ -51,11 +100,12 @@ Profiles must be:
 
 - simple to understand;
 - transparent;
-- editable;
+- editable by the citizen when custom;
 - auditable;
 - reversible;
 - explainable in plain language;
-- compatible with monthly allocation.
+- compatible with monthly allocation;
+- governed by the protocol when official.
 
 ## Monthly report
 
@@ -72,7 +122,7 @@ This month your profile assigned:
 
 ## Principle
 
-> Participation should not require constant attention or expert configuration. Citizens should be able to choose simple allocation profiles that express broad priorities.
+> Participation should not require constant attention or expert configuration. Citizens should be able to choose simple official allocation profiles, explore more options if desired, or create a custom profile.
 
 ## Status
 
