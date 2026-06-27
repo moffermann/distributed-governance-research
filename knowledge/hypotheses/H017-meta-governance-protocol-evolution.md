@@ -26,6 +26,42 @@ It defines rules such as:
 
 Changing these rules is not normal governance. It is meta-governance.
 
+## Protocol parameters
+
+Some operational values should be treated as protocol parameters rather than discretionary administrator settings.
+
+Examples:
+
+- reformulation response window;
+- maximum reformulation frequency;
+- complaint thresholds;
+- pause thresholds;
+- revocation thresholds;
+- guarantee requirements;
+- default allocation rules;
+- official allocation profiles;
+- identity and privacy rules;
+- reputation formulas;
+- funding closure rules;
+- disbursement rules.
+
+These parameters may be edited inside an administration system, but only after the relevant meta-governance process has authorized the change.
+
+## Administration system
+
+The system may have an administrative interface where approved protocol changes are configured and deployed.
+
+However, the administration system should not be a source of discretionary power. It is an execution surface for approved changes.
+
+An operator or administrator may implement a change only if:
+
+- the change has passed the required process;
+- the approved version is identifiable;
+- the parameter being changed is authorized;
+- the change is logged;
+- the change is auditable;
+- rollback conditions are defined when applicable.
+
 ## Change process
 
 A protocol change should follow a structured process:
@@ -57,6 +93,12 @@ If the content changes, it becomes a new version and should return to the releva
 ## Core principle
 
 > The power to modify a protocol should be separated from the power to approve a protocol version.
+
+## Operator distinction
+
+The technical operator maintains the system. The protocol defines the rules. Meta-governance defines how the rules change.
+
+The operator can deploy approved changes, but should not decide substantive rules.
 
 ## Open-source analogy
 
