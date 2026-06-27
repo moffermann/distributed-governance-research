@@ -87,6 +87,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H038-monthly-use-it-or-allocate-it-cycle|H038 — Monthly Use-It-or-Allocate-It Cycle]]
 - [[hypotheses/H039-configurable-civic-notifications|H039 — Configurable Civic Notifications]]
 - [[hypotheses/H040-funding-deadline-and-reformulation-rule|H040 — Funding Deadline and Reformulation Rule]]
+- [[hypotheses/H041-distributed-participation-capacity|H041 — Distributed Participation Capacity]]
 
 ## Principles
 
