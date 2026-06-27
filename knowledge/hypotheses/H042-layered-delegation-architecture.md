@@ -23,6 +23,7 @@ As a default design rule:
 - one delegate per area or action scope;
 - no subdelegation;
 - simple delegation available as a quick action;
+- revocation available immediately and easily;
 - detailed configuration available only in advanced settings.
 
 The system can become more granular later if real use shows that it is needed.
@@ -73,9 +74,15 @@ Delegate project comments or reviews.
 
 ### 4. Time-bounded delegation
 
-Delegation may be temporary.
+Time-bounded delegation is useful but should not be required in the first version.
 
-Examples:
+Example:
+
+A citizen goes on vacation and delegates to a trusted family member for a temporary period, then later resumes direct control.
+
+In the first version, this can be handled by ordinary delegation plus immediate revocation when the citizen wants to retake control.
+
+In a more advanced version, the system may allow explicit time limits:
 
 ```text
 Delegate for 3 months.
@@ -87,7 +94,7 @@ Delegate until revoked.
 
 Advanced users can create detailed delegation rules.
 
-Custom delegation should be available, but not forced into the main interface.
+Custom delegation should be available in advanced versions or advanced settings, but not forced into the main interface.
 
 ## Delegated action scope
 
@@ -125,7 +132,8 @@ Delegation should be:
 - role-specific when configured;
 - action-specific when configured;
 - compatible with profiles and default allocation rules;
-- non-subdelegable by default.
+- non-subdelegable by default;
+- simple in the first version, with more detailed time-bound and custom controls left for later versions.
 
 ## Principle
 
@@ -133,4 +141,4 @@ Delegation should be:
 
 ## Status
 
-Participation and delegation hypothesis. Extends H025, H034, and H041.
+Participation and delegation hypothesis. Extends H025, H034 and H041.
