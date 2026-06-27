@@ -25,6 +25,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[01_SESSION_RICARDO_REVIEW_ROUND|Ricardo Review Round]]
 - [[02_SESSION_PROJECT_GOVERNANCE_REPUTATION_FISCALIZATION|Project Governance, Reputation, and Fiscalization]]
 - [[03_SESSION_META_GOVERNANCE_VALUE_PROJECT_LIFECYCLE|Meta-Governance, Value Thesis, and Project Lifecycle]]
+- [[04_SESSION_RICARDO_DEEP_QUESTIONS|Ricardo's Deep Questions]]
 
 ## External review
 
@@ -66,6 +67,8 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H019-distributed-project-modeling-execution-fiscalization|H019 — Distributed Project Modeling, Execution, and Fiscalization]]
 - [[hypotheses/H020-proportional-procedural-burden|H020 — Proportional Procedural Burden]]
 - [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
+- [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
+- [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]
 
 ## Principles
 
