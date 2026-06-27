@@ -48,6 +48,14 @@ If the project is reformulated:
 - if a funder does not respond within the defined response window, continued support is assumed by default;
 - funders can change their evaluation of the project based on the reformulation.
 
+## Reformulation frequency
+
+A project should not have a hard limit on the total number of reformulations.
+
+However, to avoid notification fatigue and constant instability, a project should be reformulated at most once per month.
+
+This allows projects to improve over time without overwhelming funders or making the project's identity unstable.
+
 ## History and reputation
 
 A reformulated project should preserve its history.
@@ -64,7 +72,7 @@ This prevents reformulation from automatically destroying partial support while 
 
 ## Principle
 
-> A project that fails to reach funding by its deadline must either close and release committed funds, or reformulate transparently while preserving history and allowing funders to withdraw.
+> A project that fails to reach funding by its deadline must either close and release committed funds, or reformulate transparently while preserving history and allowing funders to withdraw. Reformulation should be possible without a fixed total cap, but limited in frequency to prevent overload.
 
 ## Status
 
