@@ -28,6 +28,41 @@ Unassigned monthly funds should not simply accumulate forever.
 
 If the citizen does not act, the system applies the configured or default allocation rule.
 
+## Configurable fallback behavior
+
+When a profile category has no available projects that satisfy its criteria during a monthly cycle, the fallback behavior should be configurable.
+
+Example:
+
+```text
+Profile rule:
+30% → local projects
+
+Problem:
+No local projects are currently active, eligible, or fundable.
+```
+
+The citizen should be able to choose a fallback rule, such as:
+
+- reassign proportionally to the rest of the profile;
+- apply the system default rule for that portion;
+- redirect to strategic projects;
+- redirect to projects close to funding completion;
+- redirect to fiscalization or mitigation;
+- hold only until the next monthly cycle, not indefinitely.
+
+## Default fallback
+
+If the citizen does not configure fallback behavior, the system should apply a simple default fallback defined by the protocol.
+
+The fallback must be:
+
+- public;
+- simple;
+- auditable;
+- explainable;
+- modifiable by the citizen.
+
 ## Reason
 
 Monthly automatic allocation creates a continuous flow of resources into the project ecosystem and reduces financing bottlenecks.
@@ -38,7 +73,7 @@ Projects still close when they reach their funding target. Monthly allocation he
 
 ## Principle
 
-> Civic funds exist to be assigned to public-value projects, not to remain dormant indefinitely.
+> Civic funds exist to be assigned to public-value projects, not to remain dormant indefinitely. If a chosen category has no eligible projects, the system should apply a transparent fallback rather than freeze resources.
 
 ## Status
 
