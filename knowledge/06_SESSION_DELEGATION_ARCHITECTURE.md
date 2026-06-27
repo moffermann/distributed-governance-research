@@ -1,0 +1,104 @@
+# Session Distillation — Delegation Architecture
+
+Date: 2026-06-27
+
+## Context
+
+This session closed the first version of the delegation architecture. Delegation was introduced as a way to reduce participation fatigue, help citizens who do not want to interact directly with every project, and enable communities with lower technical capacity to participate through trusted actors.
+
+The guiding design constraint was simplicity: the first version should validate the model without turning delegation into a complex control panel.
+
+## New hypotheses
+
+- H042 — Layered Delegation Architecture
+- H043 — Transparent Delegation Concentration
+- H044 — Non-Compensated Delegation by Default
+- H045 — Delegated Action Weight
+- H046 — Delegated Action Reporting
+- H047 — Immediate Delegation Revocation
+- H048 — Delegation Request and Acceptance
+- H049 — Delegate Resignation and Notification
+
+## Core conclusions
+
+### 1. Delegation must be layered
+
+Delegation should be simple at the surface and flexible under the hood.
+
+The first version should provide simple delegation first, then expose advanced configuration only when needed.
+
+### 2. No subdelegation in the first version
+
+Subdelegation adds complexity and may obscure who is actually exercising authority. If a citizen wants another actor to represent them, the citizen should delegate directly to that actor.
+
+### 3. No temporary pause in the first version
+
+A separate pause state is unnecessary. If a citizen wants to stop delegation, they revoke it. If they later want to delegate again, they create a new delegation request.
+
+### 4. Delegation is mutual
+
+Delegation requires:
+
+```text
+citizen request → delegate acceptance → active delegation
+```
+
+A delegate can reject a request. A delegation becomes active only after acceptance.
+
+### 5. Delegation is immediately revocable
+
+A citizen can revoke delegation immediately at any time. Revocation affects only future authority.
+
+Past actions taken while the delegation was valid remain immutable.
+
+### 6. Delegates can resign
+
+Delegation is voluntary on both sides. A delegate may resign, and the delegator must be notified properly.
+
+If a delegate resigns, the citizen's configured profile applies. If none exists, the system default applies.
+
+### 7. Delegated actions carry represented weight
+
+If a delegate acts inside the delegated scope, the action counts for the delegate and the citizens whose authority was delegated.
+
+Example:
+
+```text
+Delegate's own vote: 1
+Delegated citizens: 2
+Total represented weight: 3
+```
+
+### 8. Delegation concentration is allowed but transparent
+
+There should be no hard cap by default. If many citizens trust one actor, the system should allow that.
+
+But concentration must be visible: how many delegators, how much budget, which domains, and what share of influence.
+
+### 9. Delegation is not a paid asset-management business by default
+
+Delegates should not receive automatic compensation for managing delegations.
+
+Assistance to communities can be funded as separate participation-support projects, but delegation itself is not automatically remunerated.
+
+### 10. Delegates must report actions
+
+Delegators must be informed periodically of what delegates did on their behalf.
+
+Report channels and frequency should be configurable.
+
+## Design principle
+
+> Delegation should expand participation without creating opaque representation or unnecessary interface complexity.
+
+## Open questions
+
+1. What delegated action types should exist in the first implementation?
+2. What is the minimal UI for delegation request, acceptance, revocation, and reporting?
+3. How should delegate concentration be displayed visually?
+4. How should delegation interact with sensitive actions such as complaints and protocol changes?
+5. What safeguards are needed if a delegate becomes inactive?
+
+## Research significance
+
+This session made delegation a central participation mechanism. It responds to the problem that direct participation cannot be expected from every citizen, while preserving revocability, transparency, identity, and accountability.
