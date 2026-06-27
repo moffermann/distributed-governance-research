@@ -2,7 +2,7 @@
 
 ## Hypothesis
 
-A delegate should periodically report to delegators the actions performed on their behalf.
+A delegate should periodically report to delegators the actions performed on their behalf, using notification channels and frequency configured by the delegator.
 
 ## Rationale
 
@@ -39,6 +39,21 @@ app-only report;
 minimal critical alerts.
 ```
 
+## Reporting channels
+
+The delegator should be able to configure how delegated-action reports are delivered.
+
+Possible channels:
+
+- in-app notification;
+- email;
+- SMS;
+- WhatsApp or equivalent messaging channel where available;
+- push notification;
+- app-only report with no external interruption.
+
+The system should not force one communication channel for everyone. Accessibility, age, digital literacy, and personal preference differ across users.
+
 ## User experience
 
 Reporting should not overwhelm delegators. The default report should be simple, with detail available on demand.
@@ -61,7 +76,7 @@ Reports should make revocation meaningful. A citizen cannot effectively revoke d
 
 ## Principle
 
-> Delegation requires periodic accountability from delegate to delegator.
+> Delegation requires periodic accountability from delegate to delegator, delivered through configurable channels that match the citizen's preferences and capacity.
 
 ## Status
 
