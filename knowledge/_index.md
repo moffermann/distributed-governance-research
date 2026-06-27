@@ -26,6 +26,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[02_SESSION_PROJECT_GOVERNANCE_REPUTATION_FISCALIZATION|Project Governance, Reputation, and Fiscalization]]
 - [[03_SESSION_META_GOVERNANCE_VALUE_PROJECT_LIFECYCLE|Meta-Governance, Value Thesis, and Project Lifecycle]]
 - [[04_SESSION_RICARDO_DEEP_QUESTIONS|Ricardo's Deep Questions]]
+- [[05_SESSION_FUNDING_AND_PROJECT_CONTROLS|Funding and Project Controls]]
 
 ## External review
 
@@ -69,12 +70,19 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
 - [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
 - [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]
+- [[hypotheses/H024-complaint-as-fiscalization-trigger|H024 — Complaint as Fiscalization Trigger]]
+- [[hypotheses/H025-civic-tax-wallet-and-distributed-allocation|H025 — Civic Tax Wallet and Distributed Allocation]]
+- [[hypotheses/H026-support-vs-financing-signals|H026 — Support Versus Financing Signals]]
+- [[hypotheses/H027-proportional-project-thresholds|H027 — Proportional Project Thresholds]]
+- [[hypotheses/H028-related-party-conflict-of-interest|H028 — Related-Party Conflict of Interest]]
 
 ## Principles
 
 - [[principles/P001-comparative-critique-rule|P001 — Comparative Critique Rule]]
 - [[principles/P002-social-sovereignty-over-value|P002 — Social Sovereignty over Value]]
 - [[principles/P003-project-responsibility-for-undeclared-antivalue|P003 — Project Responsibility for Undeclared Antivalue]]
+- [[principles/P004-verified-identity-no-anonymous-actors|P004 — Verified Identity and No Anonymous Actors]]
+- [[principles/P005-separation-public-support-private-benefit|P005 — Separation of Public Support and Private Benefit]]
 
 ## Open questions and objections
 
