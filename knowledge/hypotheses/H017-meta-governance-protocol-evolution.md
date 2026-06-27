@@ -84,6 +84,30 @@ Production:
 
 Not every change needs every environment. The required testing depth should depend on the risk, scope, and reversibility of the change.
 
+## Software quality standards
+
+Protocol changes should follow high standards from software engineering and critical systems development.
+
+Depending on the risk and scope of the change, this may include:
+
+- unit tests;
+- integration tests;
+- end-to-end tests;
+- regression tests;
+- security tests;
+- performance tests;
+- data migration tests;
+- simulation with historical or synthetic data;
+- user acceptance testing;
+- monitoring plans;
+- rollback plans.
+
+The purpose is not to bureaucratize every change, but to prevent untested protocol changes from affecting money, reputation, rights, project continuity, fiscalization, or governance rules.
+
+## Testing principle
+
+A protocol change should not be promoted to production merely because it was approved conceptually. It must also demonstrate that it can operate safely in the system.
+
 ## Pilot principle
 
 A protocol change should not affect the entire system immediately when its impact is uncertain.
@@ -110,7 +134,7 @@ problem detected
 → impact analysis
 → public deliberation
 → technical review
-→ sandbox or limited-scope test if needed
+→ testing / simulation / sandbox when required
 → approval or rejection
 → versioned implementation
 → monitoring
