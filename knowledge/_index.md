@@ -79,6 +79,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H030-layered-role-based-reputation|H030 — Layered Role-Based Reputation]]
 - [[hypotheses/H031-transparent-project-discovery-layer|H031 — Transparent Project Discovery Layer]]
 - [[hypotheses/H032-hybrid-explicit-inferred-preference-discovery|H032 — Hybrid Explicit and Inferred Preference Discovery]]
+- [[hypotheses/H033-system-defined-default-allocation-rule|H033 — System-Defined Default Allocation Rule]]
 
 ## Principles
 
