@@ -86,6 +86,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H037-public-revenue-custody-and-disbursement|H037 — Public Revenue Custody and Disbursement]]
 - [[hypotheses/H038-monthly-use-it-or-allocate-it-cycle|H038 — Monthly Use-It-or-Allocate-It Cycle]]
 - [[hypotheses/H039-configurable-civic-notifications|H039 — Configurable Civic Notifications]]
+- [[hypotheses/H040-funding-deadline-and-reformulation-rule|H040 — Funding Deadline and Reformulation Rule]]
 
 ## Principles
 
