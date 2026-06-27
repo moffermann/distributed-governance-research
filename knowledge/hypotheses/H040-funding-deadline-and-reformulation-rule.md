@@ -45,11 +45,26 @@ If the project is reformulated:
 - funders are notified;
 - the new version must explain what changed;
 - funders may choose whether to continue supporting the reformulated project or withdraw their support;
-- prior support should not automatically carry over without the funder's consent if the reformulation changes scope, KPIs, risks, antivalue, or timeline.
+- if a funder does not respond within the defined response window, continued support is assumed by default;
+- funders can change their evaluation of the project based on the reformulation.
+
+## History and reputation
+
+A reformulated project should preserve its history.
+
+Reformulation is not necessarily a negative event. It may indicate that the project team is improving design, scope, KPIs, cost structure, communication, or feasibility.
+
+The project should not reset reputation by reformulating. Its prior attempt, changes, support history, and funder reactions remain visible.
+
+## Default continuity rule
+
+When a project is reformulated, existing funder support continues by default unless the funder actively withdraws during the notification window.
+
+This prevents reformulation from automatically destroying partial support while still preserving the funder's right to exit.
 
 ## Principle
 
-> A project that fails to reach funding by its deadline must either close and return committed funds, or reformulate transparently and allow funders to opt in again.
+> A project that fails to reach funding by its deadline must either close and release committed funds, or reformulate transparently while preserving history and allowing funders to withdraw.
 
 ## Status
 
