@@ -84,6 +84,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H035-funding-target-closure-rule|H035 — Funding Target Closure Rule]]
 - [[hypotheses/H036-milestone-based-disbursement-and-guarantees|H036 — Milestone-Based Disbursement and Guarantees]]
 - [[hypotheses/H037-public-revenue-custody-and-disbursement|H037 — Public Revenue Custody and Disbursement]]
+- [[hypotheses/H038-monthly-use-it-or-allocate-it-cycle|H038 — Monthly Use-It-or-Allocate-It Cycle]]
 
 ## Principles
 
