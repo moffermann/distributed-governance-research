@@ -95,6 +95,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H046-delegated-action-reporting|H046 — Delegated Action Reporting]]
 - [[hypotheses/H047-immediate-delegation-revocation|H047 — Immediate Delegation Revocation]]
 - [[hypotheses/H048-delegation-request-and-acceptance|H048 — Delegation Request and Acceptance]]
+- [[hypotheses/H049-delegate-resignation-and-notification|H049 — Delegate Resignation and Notification]]
 
 ## Principles
 
@@ -119,7 +120,6 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Skills
 
-- [[../skills/recursive-hypothesis-refinement/SKILL|Recursive Hypothesis Refinement]]
-- [[../skills/session-distillation/SKILL|Session Distillation]]
+- [[../skills/recursive-hypothesis-refinement/SKILL|Session Distillation]]
 - [[../skills/literature-scout/SKILL|Literature Scout]]
 - [[../skills/paper-drafting/SKILL|Paper Drafting]]
