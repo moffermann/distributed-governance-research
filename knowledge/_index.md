@@ -27,6 +27,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[03_SESSION_META_GOVERNANCE_VALUE_PROJECT_LIFECYCLE|Meta-Governance, Value Thesis, and Project Lifecycle]]
 - [[04_SESSION_RICARDO_DEEP_QUESTIONS|Ricardo's Deep Questions]]
 - [[05_SESSION_FUNDING_AND_PROJECT_CONTROLS|Funding and Project Controls]]
+- [[06_SESSION_DELEGATION_ARCHITECTURE|Delegation Architecture]]
 
 ## External review
 
@@ -120,6 +121,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Skills
 
-- [[../skills/recursive-hypothesis-refinement/SKILL|Session Distillation]]
+- [[../skills/recursive-hypothesis-refinement/SKILL|Recursive Hypothesis Refinement]]
+- [[../skills/session-distillation/SKILL|Session Distillation]]
 - [[../skills/literature-scout/SKILL|Literature Scout]]
 - [[../skills/paper-drafting/SKILL|Paper Drafting]]
