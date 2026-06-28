@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|Distributed Governance System v0 Blueprint]]
+- [[../docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW|Project Reformulation, Pause, and Revocation Flow v0]]
 - [[../docs/31_PROJECT_DISBURSEMENT_FLOW|Project Disbursement Flow v0]]
 - [[../docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW|Project Lifecycle After Publication Flow v0]]
 - [[../docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW|Project Creation and Publication Flow v0]]
@@ -66,6 +68,8 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW|Project Creation and Publication Flow v0]]
 - [[../docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW|Project Lifecycle After Publication Flow v0]]
 - [[../docs/31_PROJECT_DISBURSEMENT_FLOW|Project Disbursement Flow v0]]
+- [[../docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW|Project Reformulation, Pause, and Revocation Flow v0]]
+- [[../docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|Distributed Governance System v0 Blueprint]]
 
 ## Core glossary
 
