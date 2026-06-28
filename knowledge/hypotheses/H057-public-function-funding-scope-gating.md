@@ -1,8 +1,10 @@
-# H057 — Tutored Transition Moderation for Public-Function Categories
+# H057 — Tutored Transition Moderation as an Operating Mode
 
 ## Hypothesis
 
-During a partial transition pilot, projects belonging to the public-function category opened by an implementing institution should pass through a tutored moderation regime before publication.
+During a partial transition pilot, the public function opened by an implementing institution can operate under a tutored operating mode before becoming fully distributed.
+
+In this tutored operating mode, projects associated with that public function pass through institutional moderation before publication.
 
 This moderation is administered by the implementing public institution or its designated administrators.
 
@@ -25,7 +27,7 @@ Traditional institutional allocation:
   remaining 95% of sports budget
 ```
 
-A purely automatic category or scope-gating mechanism is not enough because:
+A purely automatic classification or scope-gating mechanism is not enough because:
 
 - the platform may not have visibility into the institution's traditional 95% portfolio;
 - a project may appear sports-related but not be eligible under the ministry's legal or administrative mandate;
@@ -37,7 +39,7 @@ A purely automatic category or scope-gating mechanism is not enough because:
 
 The core project model does not need a separate "funding source" concept for this issue.
 
-Projects are created with a category, such as:
+Projects are created under a public function or project classification, such as:
 
 ```text
 sports
@@ -47,30 +49,30 @@ health
 infrastructure
 ```
 
-During transition, if a category is under a tutored public-function pilot, projects in that category must be approved by the relevant moderator before publication.
+During transition, if a public function is operating in tutored mode, projects associated with that function must be approved by the relevant moderator before publication.
 
 ## Example
 
 A traditional spinning-top competition may be socially recognized by some citizens as sport or recreation.
 
-However, if the sports institution does not officially recognize it as eligible under the sports category, the project may need to be reclassified as culture, heritage, education, or community recreation.
+However, if the sports institution does not officially recognize it as eligible under the sports public function, the project may need to be reclassified as culture, heritage, education, or community recreation.
 
-The platform should not decide that boundary automatically if the implementing institution is legally or administratively responsible for the category during transition.
+The platform should not decide that boundary automatically if the implementing institution is legally or administratively responsible for that public function during transition.
 
-## Tutored regime
+## Tutored operating mode
 
-During transition, the implementing institution may act as a **system administrator or project moderator** for the category it has chosen to open.
+During transition, the implementing institution may act as a **system administrator or project moderator** for the public function it has chosen to open.
 
-This means it can approve or deny whether a project in that category may be published.
+This means it can approve or deny whether a project associated with that public function may be published.
 
-The moderated decision is not a general judgment about whether the project has value. It is a category-approval decision inside the tutored transition regime.
+The moderated decision is not a general judgment about whether the project has value. It is a publication-approval decision inside the tutored operating mode.
 
 ```text
 Project rejected by sports moderator:
   Not approved for publication as a sports project.
 
 Possible next action:
-  Reformulate, reclassify, or submit to another category such as culture.
+  Reformulate, reclassify, or submit under another public function such as culture.
 ```
 
 ## Rejection is not public punishment
@@ -89,7 +91,7 @@ The creator may revise, reformulate, reclassify, and resubmit.
 
 ## Administration panel
 
-For transition pilots, an administration panel is useful and legitimate if it is limited to the pilot category or public-function scope.
+For transition pilots, an administration panel is useful and legitimate if it is limited to the tutored operating mode and public-function scope.
 
 The administrator may:
 
@@ -119,7 +121,7 @@ The system should record internally:
 
 - who approved or rejected the project;
 - under what role;
-- for which category;
+- for which public function or operating mode;
 - when the decision was made;
 - what reason was given;
 - whether reformulation or reclassification was suggested;
@@ -145,7 +147,7 @@ The implementing institution may configure pilot parameters if the pilot design 
 
 Examples:
 
-- eligible categories;
+- eligible public-function classifications;
 - publication requirements;
 - moderation queues;
 - project templates;
@@ -162,7 +164,7 @@ In a mature fully distributed regime, these powers should be reduced, transferre
 
 This administrative role should be understood as transitional.
 
-It exists because the country is not yet operating under a fully distributed architecture and because the institution remains legally and administratively responsible for the category it is opening.
+It exists because the country is not yet operating under a fully distributed architecture and because the institution remains legally and administratively responsible for the public function it is opening.
 
 The goal is not to recreate permanent ministerial control inside the platform, but to allow a controlled transition before broader autonomy.
 
@@ -180,12 +182,12 @@ The platform should measure how this moderation regime behaves:
 - concentration of moderation decisions;
 - share of projects blocked before publication.
 
-This allows the country and society to observe whether the tutored regime is enabling transition or becoming a bottleneck, without turning each rejected draft into a public reputational event.
+This allows the country and society to observe whether the tutored operating mode is enabling transition or becoming a bottleneck, without turning each rejected draft into a public reputational event.
 
 ## Principle
 
-> In a transition pilot, the institution may moderate publication inside its tutored category, but that moderation must be limited, internally traceable, aggregately observable, and non-punitive for rejected drafts.
+> In a transition pilot, the institution may moderate publication inside a tutored operating mode, but that moderation must be limited, internally traceable, aggregately observable, and non-punitive for rejected drafts.
 
 ## Status
 
-Transition-implementation boundary hypothesis. Replaces the weaker automatic scope-gating idea with a tutored moderation model for public-function categories during transition.
+Transition-implementation boundary hypothesis. Replaces the weaker automatic scope-gating idea with a tutored moderation model for public functions during transition.
