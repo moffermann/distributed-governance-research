@@ -98,6 +98,8 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H048-delegation-request-and-acceptance|H048 — Delegation Request and Acceptance]]
 - [[hypotheses/H049-delegate-resignation-and-notification|H049 — Delegate Resignation and Notification]]
 - [[hypotheses/H050-common-good-governance-program|H050 — Common Good Governance Program]]
+- [[hypotheses/H051-composite-programs-as-project-aggregators|H051 — Composite Programs as Project Aggregators]]
+- [[hypotheses/H052-emergency-as-urgency-attribute|H052 — Emergency as Urgency Attribute]]
 
 ## Principles
 
