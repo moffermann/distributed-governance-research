@@ -20,7 +20,8 @@ Examples of common goods:
 - shared infrastructure corridor;
 - air quality zone;
 - fisheries area;
-- urban heritage district.
+- urban heritage district;
+- statue, monument, heritage house, or other physical cultural asset.
 
 ## Core distinction
 
@@ -61,7 +62,7 @@ proposal
 The charter should define:
 
 - the common good being governed;
-- territorial or functional scope;
+- territorial, physical, or functional scope;
 - affected and beneficiary communities;
 - purpose and value thesis;
 - general KPIs;
@@ -106,6 +107,48 @@ Special threshold above simple majority:
 
 The threshold must be declared before the voting period begins. It cannot be changed during the vote.
 
+## Common good registry
+
+The system should maintain a registry of common goods with active or proposed governance programs.
+
+This registry should not require a complete national inventory before the system can operate. It should grow organically as actors propose, debate, approve, reject, derogate, or replace common good governance programs.
+
+Each registered common good should include:
+
+- unique identifier;
+- name;
+- type of common good;
+- scope or location;
+- active charter, if any;
+- derogated charter history;
+- proposed replacement charters, if any;
+- related projects;
+- compatibility rules;
+- relevant KPIs and monitoring information.
+
+The registry is not an authority that decides the value of a common good by itself. It is an indexing and traceability layer for common goods that have entered the governance process.
+
+## One active charter per scope
+
+The system should avoid multiple active charters for the same common good and scope.
+
+If two governance proposals refer to the same common good and the same scope, they should be treated as competing alternatives inside one deliberative process, not as separate charters that can both become active.
+
+If a common good is too large and different areas require different rules, the preferred solution is to define separate non-overlapping common goods or scopes.
+
+Example:
+
+```text
+Instead of:
+  Lake X with two overlapping active charters.
+
+Use:
+  Lake X North
+  Lake X South
+```
+
+This avoids subordinate charters and reduces complexity.
+
 ## Relationship with projects
 
 Once approved, the program can act as a parent context for projects.
@@ -119,6 +162,16 @@ Projects associated with the common good remain normal projects:
 - they may be fiscalized.
 
 However, they also need to declare how they relate to the common good governance program.
+
+## Project compatibility with active charters
+
+A project that affects a registered common good with an active charter must declare compatibility with that charter.
+
+The system should not depend only on voluntary disclosure by the proponent. When a project declares its location, scope, affected assets, or expected externalities, the platform should check whether it intersects with registered common goods.
+
+If the project intersects with an active charter, the project must address that relationship before publication or funding.
+
+If a proponent hides or omits a relevant relationship with an active common good charter, the omission should be treated as a relevant information failure and may trigger observation, fiscalization, reputational damage, pause, guarantee consequences, or revocation depending on severity.
 
 ## Approval rule
 
@@ -164,10 +217,27 @@ New projects must use the new active charter if one has been approved.
 
 Old projects may optionally migrate to the new charter only through their own approved reformulation or compatibility process. Migration should not be automatic.
 
+## Visibility of derogated charters
+
+Derogated charters should not disappear, but they should not remain in the main active view.
+
+They should be accessible through the active charter or the common good history.
+
+Example:
+
+```text
+Common good: Lake X
+Active charter: Version 2
+History:
+  Version 1 — derogated
+```
+
+This preserves traceability without confusing new project proponents.
+
 ## Principle
 
 > A project is funded. A common good governance program is approved. A common good charter should not be casually modified after approval; if its framework no longer works, it should be derogated for future use using the same quorum that approved it, while existing projects remain under the charter version that governed their approval.
 
 ## Status
 
-New governance-entity hypothesis. Needs further design around derogation rules, relationship with existing projects, and relationship with formal legal authority.
+New governance-entity hypothesis. Needs further design around registry mechanics, detection of project/common-good intersections, relationship with existing projects, and relationship with formal legal authority.
