@@ -51,7 +51,22 @@ Control happens through transparency, fiscalization, reputation, complaints, gua
 
 ### 5. Suspended mode
 
-The public function is temporarily frozen or restricted because of serious issues such as fraud, lack of fiscalization capacity, operational overload, implementation failure, or a decision of the implementing authority.
+The public function is temporarily frozen because of serious issues such as fraud, lack of fiscalization capacity, operational overload, implementation failure, legal problems, or a decision of the implementing authority.
+
+Suspension should be complete for the affected public function, not partial by actor, project type, or lifecycle stage. This keeps the rule simple and prevents ambiguity during a crisis.
+
+In suspended mode:
+
+```text
+new projects cannot be published;
+projects pending publication or moderation do not advance;
+new financing activity is paused;
+new disbursements are paused unless the suspension decision explicitly preserves critical payments;
+existing projects remain historically visible;
+no completed action is retroactively erased.
+```
+
+The implementing authority may later restore the function to another operating mode.
 
 ## Platform role
 
@@ -80,6 +95,8 @@ As a default principle, mode changes should not retroactively alter obligations 
 
 Published and funded projects continue under the rules that applied when they entered their current state, unless the implementing authority defines an exceptional transition rule.
 
+Suspended mode is the exception: it can pause forward activity for the affected public function, including pending publication, new financing, and new disbursement activity, while preserving the historical validity of actions already completed.
+
 ## Effect on pending moderation
 
 Projects pending moderation should be treated according to the new operating mode once the mode change becomes effective.
@@ -107,8 +124,9 @@ Open → Tutored:
   projects already published are not retroactively unpublished.
 
 Any mode → Suspended:
-  new publication and/or funding activity may pause according to the suspension rule;
-  already funded or executing projects require explicit treatment in the suspension decision.
+  pending projects do not advance;
+  new publication, financing, and disbursement activity are paused for the affected public function;
+  prior completed actions remain valid and visible.
 ```
 
 ## No retroactive punishment
@@ -116,6 +134,8 @@ Any mode → Suspended:
 A project should not be penalized merely because the public function changed operating mode after the project was created.
 
 Mode transitions should preserve traceability and avoid retroactive instability.
+
+Suspension pauses future activity but does not erase or punish prior valid activity by itself.
 
 ## Relationship with H057
 
@@ -140,7 +160,7 @@ Potential metrics:
 
 ## Principle
 
-> The country decides the transition pace; the platform represents the operating mode and enforces the corresponding rules. Mode changes apply forward, while pending unpublished projects follow the new mode once it becomes effective.
+> The country decides the transition pace; the platform represents the operating mode and enforces the corresponding rules. Mode changes apply forward, while pending unpublished projects follow the new mode once it becomes effective. Suspension is complete for the affected public function and pauses future activity without erasing prior valid actions.
 
 ## Status
 
