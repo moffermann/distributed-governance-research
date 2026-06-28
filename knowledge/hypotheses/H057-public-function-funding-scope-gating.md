@@ -1,8 +1,10 @@
-# H057 — Tutored Transition Moderation for Public-Function Funding
+# H057 — Tutored Transition Moderation for Public-Function Categories
 
 ## Hypothesis
 
-During a partial transition pilot, project eligibility for a public-function funding source should be controlled through a tutored moderation regime administered by the implementing public institution or its designated administrators.
+During a partial transition pilot, projects belonging to the public-function category opened by an implementing institution should pass through a tutored moderation regime before publication.
+
+This moderation is administered by the implementing public institution or its designated administrators.
 
 This is an exception to the fully distributed philosophy, justified by the fact that transition pilots operate inside an existing state structure, with existing budgets, legal mandates, institutional responsibilities, and parallel traditional programs.
 
@@ -23,7 +25,7 @@ Traditional institutional allocation:
   remaining 95% of sports budget
 ```
 
-A purely automatic scope-gating mechanism is not enough because:
+A purely automatic category or scope-gating mechanism is not enough because:
 
 - the platform may not have visibility into the institution's traditional 95% portfolio;
 - a project may appear sports-related but not be eligible under the ministry's legal or administrative mandate;
@@ -31,66 +33,111 @@ A purely automatic scope-gating mechanism is not enough because:
 - a project may duplicate, conflict with, or compete against a traditional program already funded outside the platform;
 - there may be no clear automatic rule to decide whether the project belongs inside or outside the pilot scope.
 
+## No separate funding-source concept in the core model
+
+The core project model does not need a separate "funding source" concept for this issue.
+
+Projects are created with a category, such as:
+
+```text
+sports
+culture
+education
+health
+infrastructure
+```
+
+During transition, if a category is under a tutored public-function pilot, projects in that category must be approved by the relevant moderator before publication.
+
 ## Example
 
 A traditional spinning-top competition may be socially recognized by some citizens as sport or recreation.
 
-However, if the sports institution does not officially recognize it as eligible for sports funding, it may need to be financed by culture, heritage, education, or another function.
+However, if the sports institution does not officially recognize it as eligible under the sports category, the project may need to be reclassified as culture, heritage, education, or community recreation.
 
-The platform should not decide that boundary automatically if the implementing institution is the one legally responsible for the funding source.
+The platform should not decide that boundary automatically if the implementing institution is legally or administratively responsible for the category during transition.
 
 ## Tutored regime
 
-During transition, the implementing institution may act as a **system administrator or project moderator** for the specific funding source it has chosen to open.
+During transition, the implementing institution may act as a **system administrator or project moderator** for the category it has chosen to open.
 
-This means it can approve or deny whether a project may enter that specific funding source before publication or financing.
+This means it can approve or deny whether a project in that category may be published.
 
-The moderated decision is not a general judgment about whether the project has value. It is a funding-source eligibility decision.
+The moderated decision is not a general judgment about whether the project has value. It is a category-approval decision inside the tutored transition regime.
 
 ```text
-Valid project:
-  May be valuable and publishable somewhere in the platform.
+Project rejected by sports moderator:
+  Not approved for publication as a sports project.
 
-Eligible for this funding source:
-  May receive money from this specific public-function budget.
+Possible next action:
+  Reformulate, reclassify, or submit to another category such as culture.
 ```
 
-A project can be valuable but not eligible for the sports pilot budget.
+## Rejection is not public punishment
+
+A moderation rejection should not:
+
+- invalidate the project forever;
+- destroy the draft;
+- create reputational damage for the proponent;
+- be treated as misconduct;
+- necessarily become publicly visible.
+
+It is a pre-publication moderation decision.
+
+The creator may revise, reformulate, reclassify, and resubmit.
 
 ## Administration panel
 
-For transition pilots, an administration panel is useful and legitimate if it is limited to the pilot scope.
+For transition pilots, an administration panel is useful and legitimate if it is limited to the pilot category or public-function scope.
 
 The administrator may:
 
-- approve project eligibility for the funding source;
-- reject projects outside the funding source scope;
+- approve projects before publication;
+- reject projects before publication;
 - request reformulation;
+- suggest reclassification;
 - classify projects;
 - flag duplication risks;
 - configure pilot parameters authorized by the implementing state;
 - monitor pilot operation;
-- document reasons for approval or rejection.
+- document internal reasons for approval or rejection.
 
 ## Human responsibility
 
-Eligibility decisions that depend on institutional mandate, existing programs, or legal interpretation should remain under human responsibility.
+Eligibility decisions that depend on institutional mandate, existing programs, official recognition, or legal interpretation should remain under human responsibility.
 
 The platform can assist with structured fields, checklists, classification, and traceability, but it should not pretend to solve all ambiguous eligibility boundaries algorithmically.
 
-## Transparency requirements
+## Visibility and traceability of moderation
 
-Because this is an exception to the fully distributed architecture, it must be transparent.
+Because this is an exception to the fully distributed architecture, moderation must be traceable inside the administration system.
 
-The system should record:
+However, pre-publication rejection does not need to be public by default.
+
+The system should record internally:
 
 - who approved or rejected the project;
 - under what role;
-- for which funding source;
+- for which category;
 - when the decision was made;
 - what reason was given;
-- whether reformulation was allowed;
+- whether reformulation or reclassification was suggested;
+- whether the project was later resubmitted;
 - whether the decision was appealed or challenged, if appeals exist.
+
+Public reporting should be aggregate unless the pilot explicitly defines otherwise.
+
+Examples of aggregate transparency:
+
+```text
+number of projects approved;
+number of projects rejected before publication;
+common rejection reasons;
+average moderation time;
+number of reformulations requested;
+number of projects reclassified.
+```
 
 ## Parameter configuration
 
@@ -115,7 +162,7 @@ In a mature fully distributed regime, these powers should be reduced, transferre
 
 This administrative role should be understood as transitional.
 
-It exists because the country is not yet operating under a fully distributed architecture and because the institution remains legally and administratively responsible for the budget it is opening.
+It exists because the country is not yet operating under a fully distributed architecture and because the institution remains legally and administratively responsible for the category it is opening.
 
 The goal is not to recreate permanent ministerial control inside the platform, but to allow a controlled transition before broader autonomy.
 
@@ -124,21 +171,21 @@ The goal is not to recreate permanent ministerial control inside the platform, b
 The platform should measure how this moderation regime behaves:
 
 - number of projects approved;
-- number of projects rejected;
+- number of projects rejected before publication;
 - rejection reasons;
 - time to moderation decision;
 - reformulations requested;
+- reclassifications suggested;
 - appeals or observations if available;
 - concentration of moderation decisions;
-- share of projects blocked before publication;
-- share of projects redirected to another funding source.
+- share of projects blocked before publication.
 
-This allows the country and society to observe whether the tutored regime is enabling transition or becoming a bottleneck.
+This allows the country and society to observe whether the tutored regime is enabling transition or becoming a bottleneck, without turning each rejected draft into a public reputational event.
 
 ## Principle
 
-> In a transition pilot, the institution may moderate access to its own funding source, but that moderation must be explicit, limited, traceable, and observable.
+> In a transition pilot, the institution may moderate publication inside its tutored category, but that moderation must be limited, internally traceable, aggregately observable, and non-punitive for rejected drafts.
 
 ## Status
 
-Transition-implementation boundary hypothesis. Replaces the weaker automatic scope-gating idea with a tutored moderation model for public-function pilots.
+Transition-implementation boundary hypothesis. Replaces the weaker automatic scope-gating idea with a tutored moderation model for public-function categories during transition.
