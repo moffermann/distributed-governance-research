@@ -1,187 +1,144 @@
-# H057 — Public Function Funding Scope Gating
+# H057 — Tutored Transition Moderation for Public-Function Funding
 
 ## Hypothesis
 
-The distributed governance platform should not manage the political or administrative transition process of an implementing state. However, when a public function allocates budget through the platform, the platform must enforce the scope of that funding source so that only eligible projects can receive those resources.
+During a partial transition pilot, project eligibility for a public-function funding source should be controlled through a tutored moderation regime administered by the implementing public institution or its designated administrators.
 
-Eligibility must be based not only on a broad social category such as "sports" or "culture," but on the official mandate, legal scope, exclusions, and existing commitments of the specific funding source.
+This is an exception to the fully distributed philosophy, justified by the fact that transition pilots operate inside an existing state structure, with existing budgets, legal mandates, institutional responsibilities, and parallel traditional programs.
 
 ## Rationale
 
-If a country decides to pilot distributed allocation in a specific public function, such as sports, the detailed implementation work will likely be coordinated by officials, agencies, or institutional teams outside the platform.
-
-The platform should not prescribe that administrative process.
-
-However, the platform must prevent out-of-scope projects from using function-specific funds.
+In a transition pilot, a country may allocate only a fraction of a public function's budget to the distributed platform.
 
 Example:
 
 ```text
-Funding source:
-  Sports pilot budget.
+Public function:
+  Sports
 
-Eligible:
-  sports equipment, athlete support, club infrastructure, local tournaments.
+Distributed pilot:
+  5% of sports budget
 
-Not eligible:
-  unrelated cultural, commercial, health, or infrastructure projects unless they satisfy the sports-scope rules.
+Traditional institutional allocation:
+  remaining 95% of sports budget
 ```
 
-## Core distinction
+A purely automatic scope-gating mechanism is not enough because:
+
+- the platform may not have visibility into the institution's traditional 95% portfolio;
+- a project may appear sports-related but not be eligible under the ministry's legal or administrative mandate;
+- some activities may be socially perceived as sports but officially belong to culture, education, recreation, or another function;
+- a project may duplicate, conflict with, or compete against a traditional program already funded outside the platform;
+- there may be no clear automatic rule to decide whether the project belongs inside or outside the pilot scope.
+
+## Example
+
+A traditional spinning-top competition may be socially recognized by some citizens as sport or recreation.
+
+However, if the sports institution does not officially recognize it as eligible for sports funding, it may need to be financed by culture, heritage, education, or another function.
+
+The platform should not decide that boundary automatically if the implementing institution is the one legally responsible for the funding source.
+
+## Tutored regime
+
+During transition, the implementing institution may act as a **system administrator or project moderator** for the specific funding source it has chosen to open.
+
+This means it can approve or deny whether a project may enter that specific funding source before publication or financing.
+
+The moderated decision is not a general judgment about whether the project has value. It is a funding-source eligibility decision.
 
 ```text
-Transition implementation:
-  managed by the country or institution.
+Valid project:
+  May be valuable and publishable somewhere in the platform.
 
-Funding scope enforcement:
-  handled by the platform.
+Eligible for this funding source:
+  May receive money from this specific public-function budget.
 ```
 
-## Funding source mandate charter
+A project can be valuable but not eligible for the sports pilot budget.
 
-Each public-function funding source should have a mandate charter configured by the implementing country or institution.
+## Administration panel
 
-This mandate charter defines what the funding source can and cannot finance.
+For transition pilots, an administration panel is useful and legitimate if it is limited to the pilot scope.
 
-It may specify:
+The administrator may:
 
-- public function or sector;
-- legal or institutional mandate;
-- official categories;
-- eligible project types;
-- excluded project types;
-- required declarations;
-- required beneficiary types;
-- required evidence or KPIs;
-- territorial limits if applicable;
-- relationship with existing institutional programs;
-- duplication or overlap rules;
-- related legal or institutional constraints.
+- approve project eligibility for the funding source;
+- reject projects outside the funding source scope;
+- request reformulation;
+- classify projects;
+- flag duplication risks;
+- configure pilot parameters authorized by the implementing state;
+- monitor pilot operation;
+- document reasons for approval or rejection.
 
-## Social category versus official eligibility
+## Human responsibility
 
-A project may be socially recognized as belonging to a broad category while still being ineligible for a specific public funding source.
+Eligibility decisions that depend on institutional mandate, existing programs, or legal interpretation should remain under human responsibility.
 
-Example:
+The platform can assist with structured fields, checklists, classification, and traceability, but it should not pretend to solve all ambiguous eligibility boundaries algorithmically.
 
-```text
-Project:
-  Traditional spinning-top competition.
+## Transparency requirements
 
-Social interpretation:
-  Some citizens may see it as sport or recreation.
+Because this is an exception to the fully distributed architecture, it must be transparent.
 
-Official funding eligibility:
-  The sports funding source may not recognize it as an eligible sport.
-  It may instead belong to culture, heritage, education, or community recreation.
-```
+The system should record:
 
-The platform should not decide the official mandate by itself. The implementing country defines the funding-source mandate. The platform enforces it transparently.
+- who approved or rejected the project;
+- under what role;
+- for which funding source;
+- when the decision was made;
+- what reason was given;
+- whether reformulation was allowed;
+- whether the decision was appealed or challenged, if appeals exist.
 
-## Existing institutional portfolio and duplication
+## Parameter configuration
 
-A funding-source scope should also account for the institution's existing portfolio, especially during partial transition.
+The implementing institution may configure pilot parameters if the pilot design grants it that authority.
 
-Example:
+Examples:
 
-```text
-Sports budget:
-  5% distributed pilot
-  95% traditional institutional allocation
-```
+- eligible categories;
+- publication requirements;
+- moderation queues;
+- project templates;
+- emergency marking rules;
+- review windows;
+- additional documentation requirements;
+- fiscalization requirements.
 
-A project in the distributed 5% may be genuinely sports-related but duplicate or compete with a program already funded by the traditional 95%.
+This is similar to the earlier distinction between protocol, meta-governance, and administration system, but applied to a tutored transition pilot.
 
-Therefore, the platform should distinguish:
+In a mature fully distributed regime, these powers should be reduced, transferred, or constrained by the ordinary distributed protocol.
 
-```text
-Eligible by category:
-  This project belongs to sports.
+## Not a permanent central authority
 
-Eligible by mandate:
-  This project fits the official sports funding rules.
+This administrative role should be understood as transitional.
 
-Non-duplicative / complementary:
-  This project does not improperly duplicate an already funded institutional program, unless duplication or competition is explicitly allowed.
-```
+It exists because the country is not yet operating under a fully distributed architecture and because the institution remains legally and administratively responsible for the budget it is opening.
 
-The implementing institution should provide or configure enough information about existing commitments, funded programs, exclusions, and known overlaps for the platform to flag possible duplication.
+The goal is not to recreate permanent ministerial control inside the platform, but to allow a controlled transition before broader autonomy.
 
-## Project access to funds
+## Relationship to observability metrics
 
-A project can exist in the platform only if it satisfies the publication rules of the platform.
+The platform should measure how this moderation regime behaves:
 
-But to receive money from a specific funding source, it must also satisfy that funding source's eligibility rules.
+- number of projects approved;
+- number of projects rejected;
+- rejection reasons;
+- time to moderation decision;
+- reformulations requested;
+- appeals or observations if available;
+- concentration of moderation decisions;
+- share of projects blocked before publication;
+- share of projects redirected to another funding source.
 
-Therefore, the system should distinguish:
-
-```text
-Project validity:
-  can this project exist in the platform?
-
-Funding-source eligibility:
-  can this project receive money from this specific budget source?
-```
-
-A project may be valid but not eligible for a specific funding source.
-
-## Scope validation
-
-When a project requests access to a function-specific funding source, the platform should require structured declarations such as:
-
-- project category;
-- public function addressed;
-- official funding source requested;
-- beneficiaries;
-- location;
-- value thesis;
-- KPIs;
-- relationship to the funding-source mandate;
-- relationship to existing institutional programs;
-- duplication or complementarity declaration.
-
-The system can then determine whether the project is eligible, incomplete, duplicate/overlapping, or out of scope.
-
-## Out-of-scope or duplicate handling
-
-If a project is out of scope for a funding source:
-
-- it should not be funded by that source;
-- it may be redirected to another eligible funding source if available;
-- it may be reformulated;
-- it may remain visible only if it satisfies general publication rules and does not misrepresent eligibility.
-
-If a project appears to duplicate an existing institutional program:
-
-- it should be flagged;
-- it may require a complementarity justification;
-- it may be rejected from that funding source;
-- it may proceed only if the funding-source mandate permits overlapping or competing initiatives.
-
-## Hidden or false scope declarations
-
-If a project falsely claims eligibility, hides relevant information, or omits a known overlap with existing programs to access a funding source, this should be treated as a relevant information failure.
-
-Consequences may include:
-
-- observation;
-- rejection from the funding source;
-- fiscalization;
-- reputational damage;
-- pause;
-- guarantee consequences;
-- revocation depending on severity.
-
-## Human burden minimization
-
-The platform should reduce manual burden on officials by using structured project fields, eligibility checklists, automatic classification, overlap detection, and public observation mechanisms.
-
-Officials should not need to manually reject every obviously out-of-scope project if the platform can prevent ineligible publication into that funding source.
+This allows the country and society to observe whether the tutored regime is enabling transition or becoming a bottleneck.
 
 ## Principle
 
-> The country manages the transition. The platform enforces the mandate, scope, and eligibility of each funding source.
+> In a transition pilot, the institution may moderate access to its own funding source, but that moderation must be explicit, limited, traceable, and observable.
 
 ## Status
 
-Transition-implementation boundary hypothesis. Extends H053, H054, and H055.
+Transition-implementation boundary hypothesis. Replaces the weaker automatic scope-gating idea with a tutored moderation model for public-function pilots.
