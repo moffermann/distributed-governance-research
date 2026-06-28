@@ -28,6 +28,20 @@ A sports-transition pilot can test whether distributed allocation improves on bu
 
 This should be treated as an empirical question, not as an assumption.
 
+## Initial pilot budget
+
+The pilot should begin with a small portion of the sports budget rather than attempting full replacement.
+
+A reasonable starting range could be:
+
+```text
+1%–5% of the sports budget assigned through the distributed project system
+```
+
+This range is large enough to test real behavior but small enough to control risk.
+
+If the pilot demonstrates good results, the assignable percentage can increase gradually through the transition and meta-governance process.
+
 ## Possible project types
 
 Examples:
@@ -55,7 +69,8 @@ Sports can serve as an early test of:
 - evidence contracts;
 - milestone disbursement;
 - transition KPIs;
-- institutional maturity measurement.
+- institutional maturity measurement;
+- gradual budget migration.
 
 ## Principle
 
