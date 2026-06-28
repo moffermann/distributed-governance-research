@@ -45,9 +45,24 @@ The institution should not fiscalize itself or dominate fiscalization of the pil
 
 Fiscalization should remain independent from the actor being evaluated.
 
+## Personnel transition is out of core scope
+
+What happens to existing public employees during a transition is implementation-dependent and should not be defined by the core architecture.
+
+The implementing state decides, according to its laws, labor rules, public administration structure, and political choices, whether officials:
+
+- remain in their current roles;
+- move into support, training, or assistance functions;
+- participate as institutional actors;
+- move into oversight roles where appropriate;
+- transition to other functions;
+- remain outside the pilot.
+
+The model can provide transparency and metrics, but it should not prescribe personnel policy.
+
 ## Principle
 
-> The incumbent institution may participate, but it does not receive institutional privilege inside the distributed pilot.
+> The incumbent institution may participate, but it does not receive institutional privilege inside the distributed pilot. Personnel transition belongs to the implementing state, not the core architecture.
 
 ## Status
 
