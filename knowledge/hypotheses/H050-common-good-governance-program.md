@@ -147,7 +147,31 @@ Use:
   Lake X South
 ```
 
-This avoids subordinate charters and reduces complexity.
+This avoids subordinate charters in the core version and reduces complexity.
+
+## Future concept: subordinate charters
+
+Subordinate charters may be useful in a future version, but should not be part of the first design.
+
+A subordinate charter could apply when an active main charter exists but a community wants to make additional or more specific requirements enforceable for a narrower scope or specific dimension that the main charter did not contemplate.
+
+Example:
+
+```text
+Main charter:
+  Lake X
+
+Subordinate charter:
+  Wetland restoration zone within Lake X
+```
+
+A project that declares association with the subordinate charter would need to comply with both:
+
+```text
+main charter + subordinate charter
+```
+
+This could add useful precision, but also adds complexity. For the core model, the preferred solution remains dividing the common good into clear non-overlapping scopes when different rules are needed.
 
 ## Relationship with projects
 
@@ -240,4 +264,4 @@ This preserves traceability without confusing new project proponents.
 
 ## Status
 
-New governance-entity hypothesis. Needs further design around registry mechanics, detection of project/common-good intersections, relationship with existing projects, and relationship with formal legal authority.
+New governance-entity hypothesis. Needs further design around registry mechanics, detection of project/common-good intersections, relationship with existing projects, possible subordinate charters, and relationship with formal legal authority.
