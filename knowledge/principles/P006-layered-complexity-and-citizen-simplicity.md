@@ -4,20 +4,13 @@
 
 The architecture may be complex, but ordinary citizen participation must remain simple.
 
-The system should distinguish between:
-
-```text
-protocol complexity
-operational complexity
-expert complexity
-citizen experience
-```
+The system should distinguish between protocol complexity, operational complexity, expert complexity, and citizen experience.
 
 The first three can be deep. The last one must be simple.
 
 ## Core formulation
 
-> Simple to participate. Deep to audit. Complex only for those who assume complex roles.
+> Simple to participate. Deep to audit. Complex only when the citizen chooses to go deeper in a specific context.
 
 ## Rationale
 
@@ -33,26 +26,53 @@ Most citizens should be able to interact with the system through simple actions:
 - evaluate;
 - report a problem.
 
-They should not need to understand every detail of:
-
-- project modeling;
-- fiscalization markets;
-- evidence missions;
-- guarantees;
-- retentions;
-- anti-capture detection;
-- reputation formulas;
-- protocol evolution;
-- mode transitions;
-- conflict-of-interest logic.
+They should not need to understand every detail of project modeling, fiscalization, evidence missions, guarantees, reputation, protocol evolution, transition modes, or conflict-of-interest logic before taking basic actions.
 
 These details should exist, but they should be layered beneath the user experience.
 
-## User layers
+## Contextual depth, not hard user modes
 
-### 1. Basic citizen
+The system should not force citizens into permanent labels such as basic user, advanced user, expert mode, or professional panel.
 
-The basic citizen should see a simple project sheet and simple actions.
+A citizen should be able to explore deeper functionality gradually, inside the same interface, as their interest in a specific project, category, territory, or process increases.
+
+The same citizen may:
+
+- fund one project quickly;
+- inspect another project deeply;
+- provide evidence in a nearby project;
+- file a complaint in a project they know;
+- delegate decisions in one area;
+- model or execute a project in another area.
+
+The citizen is not globally basic or advanced. The citizen goes deeper locally.
+
+## Progressive disclosure model
+
+The default interface shows the simplest useful layer.
+
+Deeper layers appear through natural exploration:
+
+```text
+project card
+→ citizen project sheet
+→ budget details
+→ milestones
+→ evidence
+→ fiscalization
+→ complaints
+→ audit trail
+```
+
+The citizen is not moved into a separate permanent panel. The same interface opens deeper layers only where relevant.
+
+## Depth layers, not user types
+
+The following are levels of interaction depth, not fixed user categories.
+
+### 1. Basic interaction depth
+
+The citizen sees a simple project sheet and simple actions.
 
 Typical actions:
 
@@ -63,9 +83,9 @@ Typical actions:
 - provide evidence if willing;
 - report obvious problems.
 
-### 2. Interested citizen
+### 2. Interested interaction depth
 
-The interested citizen can expand details:
+The citizen can expand details:
 
 - budget;
 - milestones;
@@ -78,9 +98,9 @@ The interested citizen can expand details:
 - complaints;
 - project history.
 
-### 3. Active participant
+### 3. Active participation depth
 
-The active participant may:
+The citizen may:
 
 - propose projects;
 - model projects;
@@ -91,9 +111,9 @@ The active participant may:
 - act as delegate;
 - perform community oversight.
 
-### 4. Expert or professional participant
+### 4. Technical or professional depth
 
-The expert participant may:
+The citizen or organization may:
 
 - provide technical modeling;
 - execute complex projects;
@@ -102,6 +122,8 @@ The expert participant may:
 - audit project records;
 - review risk and control structures;
 - participate in protocol improvement.
+
+These depths are navigational and contextual, not permanent user labels.
 
 ## Citizen-facing project sheet
 
@@ -140,7 +162,7 @@ If no, it can exist as a technical, professional, or audit layer.
 
 The system should work like a bank app.
 
-A user does not need to understand clearing, settlement, fraud models, internal accounting, KYC architecture, or interbank protocols to transfer money.
+A user does not need to understand internal settlement, risk controls, accounting, identity checks, or interbank protocols to transfer money.
 
 Likewise, a citizen should not need to understand every control layer to assign civic funding or delegate a decision.
 
@@ -149,7 +171,7 @@ Likewise, a citizen should not need to understand every control layer to assign 
 The architecture must support:
 
 - progressive disclosure;
-- role-based interfaces;
+- contextual interfaces instead of hard user modes;
 - simplified project summaries;
 - automatic profiles;
 - delegation;
@@ -164,6 +186,8 @@ This principle does not mean hiding information.
 It means not forcing all information into the default interaction.
 
 Transparency remains available through deeper layers.
+
+Some actions may still require eligibility rules such as identity, reputation, authorization, absence of conflict, or technical requirements. But exploration and access to information should not depend on a global advanced-user label.
 
 ## Status
 
