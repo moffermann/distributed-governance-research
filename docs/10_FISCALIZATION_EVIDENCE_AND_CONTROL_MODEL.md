@@ -1,0 +1,344 @@
+# Fiscalization, Evidence, and Control Model v0
+
+## Purpose
+
+This document consolidates the Core v0 thinking around fiscalization, evidence production, control funding, anti-capture protections, and proportional project control.
+
+The central problem is that the executor has strong incentives to weaken, underfund, or capture the control layer. The architecture must therefore separate execution, evidence production, and responsible fiscalization.
+
+## Core rule
+
+> The executor executes. The system and protocol define control requirements. Evidence producers collect evidence. The fiscalizer evaluates. The community can observe, contradict, and denounce.
+
+## Key distinction
+
+Fiscalization should not be treated as a single undifferentiated role.
+
+The system should distinguish at least four layers:
+
+```text
+1. Open observation
+2. Evidence production
+3. Responsible fiscalization
+4. Technical or reinforced fiscalization
+```
+
+## 1. Open observation
+
+Any citizen or organization may observe, comment, denounce, or submit evidence related to a project.
+
+This layer is open by default.
+
+Open observation can include:
+
+- comments;
+- complaints;
+- photos;
+- videos;
+- local observations;
+- contradictions to submitted evidence;
+- warnings about conflict of interest;
+- warnings about undeclared risks or antivalues.
+
+Open observation does not necessarily validate project milestones or release funds.
+
+## 2. Evidence production
+
+Evidence producers collect evidence, but do not formally validate project compliance.
+
+Evidence production can be voluntary or paid.
+
+Examples:
+
+- georeferenced photos;
+- videos;
+- beneficiary interviews;
+- attendance records;
+- on-site visit reports;
+- document collection;
+- physical verification of goods or infrastructure;
+- testimony from affected or benefited parties.
+
+Evidence production strengthens fiscalization because the fiscalizer does not depend only on the executor's own reports.
+
+## 3. Responsible fiscalization
+
+The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, evidence obligations, guarantees, mitigation commitments, and fiscalization criteria.
+
+The responsible fiscalizer may use:
+
+- evidence provided by the executor;
+- evidence produced by citizens or organizations;
+- evidence missions;
+- beneficiary confirmations;
+- funder observations;
+- complaints and contradictions;
+- its own inspections or analysis.
+
+The responsible fiscalizer is reputationally accountable for the quality, independence, timeliness, and reliability of its fiscalization.
+
+## 4. Technical or reinforced fiscalization
+
+Projects that are larger, more complex, risky, technical, remote, irreversible, or high-impact may require stronger fiscalization.
+
+This may include:
+
+- professional fiscalizers;
+- technical reviewers;
+- auditors;
+- laboratories;
+- engineering inspections;
+- multiple fiscalization points;
+- mandatory site visits;
+- stronger guarantees and retention rules.
+
+The fact that any citizen or organization may participate in fiscalization does not mean that any citizen or organization can serve as the sole responsible fiscalizer for any project.
+
+## Control funding
+
+Fiscalization and evidence costs should be financed as part of the total control cost of the project, but should not be controlled by the executor.
+
+A project budget may include separated control components:
+
+```text
+execution budget
+responsible fiscalization budget
+evidence mission budget
+contingency / extraordinary review budget
+guarantees or retentions, if applicable
+```
+
+The executor should not directly pay or appoint the actors responsible for validating its own performance.
+
+## Fiscalization offers
+
+For projects that require financed fiscalization, the system may open a fiscalization-offer phase before execution financing.
+
+Fiscalizers can submit offers associated with the project, declaring:
+
+- fiscalizer identity;
+- proposed methodology;
+- required budget;
+- travel and logistics costs;
+- technical requirements;
+- deliverables;
+- timeline;
+- evidence requirements;
+- declared conflicts of interest;
+- relevant reputation or qualifications.
+
+The offer helps discover the real cost of fiscalizing a project.
+
+This is especially important for remote or extreme-zone projects, where the true cost of fiscalization may include travel, lodging, time, specialized review, or multiple visits.
+
+## Fiscalization offer admissibility
+
+Not every fiscalization offer should be allowed to win.
+
+Fiscalization offers must first satisfy the minimum control requirements defined by protocol for the project's risk, size, location, technical complexity, and possible conflicts.
+
+The winning criterion should not simply be:
+
+```text
+the cheapest fiscalizer wins
+```
+
+nor:
+
+```text
+the first fiscalizer funded wins
+```
+
+without protections.
+
+A safer rule is:
+
+> Only admissible fiscalization offers may compete, and projects above a minimum risk level require a competition and observation window before selection.
+
+Possible protections:
+
+- minimum offer window;
+- public observation period;
+- conflict-of-interest declarations;
+- pattern visibility;
+- reputation requirements;
+- eligibility thresholds;
+- independent selection rules;
+- reinforced requirements for medium, large, or risky projects.
+
+## Evidence commitments from funders and beneficiaries
+
+Funders and direct beneficiaries are naturally interested in whether the project is executed well.
+
+When a citizen funds a project, the system may ask:
+
+```text
+Would you like to commit to providing evidence during execution or after completion?
+```
+
+A funder or beneficiary may offer to provide:
+
+- photos;
+- videos;
+- field observations;
+- beneficiary confirmation;
+- surveys;
+- attendance confirmation;
+- local verification;
+- contradiction of false or incomplete evidence.
+
+This creates a distributed network of potential evidence producers around the project.
+
+## Evidence commitment object
+
+An evidence commitment may include:
+
+- project id;
+- actor id;
+- relationship to project: funder, beneficiary, neighbor, organization, affected party, other;
+- type of evidence offered;
+- location relevance;
+- expected timing;
+- delivery status;
+- evidence submitted;
+- whether evidence was accepted, contradicted, rejected, or found false;
+- reputational effect.
+
+Evidence commitments do not replace responsible fiscalization. They complement it.
+
+## Paid evidence missions
+
+A paid evidence mission is not a new project. It is a task associated with a project or fiscalization process.
+
+Example:
+
+```text
+Mission:
+  Visit project site, take georeferenced photos, record short video, interview beneficiaries, and upload evidence.
+Payment:
+  Fixed amount if evidence satisfies the required format and traceability standards.
+```
+
+Paid evidence missions allow citizens or organizations to professionalize evidence collection without creating a new financing project for every evidence task.
+
+## Evidence mission funding
+
+Evidence missions should be funded from the project's control budget, from a fiscalization budget, or from an extraordinary review budget.
+
+However, the executor should not define or assign evidence missions at its own discretion.
+
+The executor can define project commitments, milestones, and locations, but should not control the evidence producers who verify them.
+
+## Evidence mission assignment
+
+Evidence missions should be assigned or selected through system rules, not by the executor.
+
+Possible assignment criteria:
+
+- eligibility;
+- absence of known conflict of interest;
+- reputation;
+- location proximity;
+- availability;
+- specialization;
+- random or semi-random selection;
+- rotation;
+- redundancy for riskier projects.
+
+A simple first-come-first-served rule may be acceptable for low-risk tasks, but it is vulnerable to capture for medium or high-risk projects.
+
+## Anti-capture premise
+
+The system should assume that hidden collusion is possible.
+
+It may be impossible to detect every friendship, informal payment, hidden relationship, or off-platform compensation.
+
+Therefore the architecture should not depend on perfect conflict detection.
+
+Instead, it should make capture harder, riskier, and less sufficient.
+
+## Anti-capture protections
+
+Controls include:
+
+- executor does not choose the responsible fiscalizer;
+- executor does not directly pay fiscalizers or evidence producers;
+- evidence is public and contradictable;
+- fiscalizers and evidence producers carry reputational risk;
+- evidence can be challenged by beneficiaries, funders, citizens, and other organizations;
+- repeated executor-fiscalizer or executor-evidence-producer relationships are visible;
+- suspicious patterns are flagged;
+- false evidence can produce strong reputational penalties;
+- medium and large projects may require redundant evidence sources;
+- fiscalizer validation does not close the possibility of later complaint or fraud review.
+
+## Palos blancos / straw participants
+
+The executor could try to use friends or straw participants as funders, evidence producers, or fiscalizers.
+
+The system cannot perfectly prevent this, but it can reduce usefulness through:
+
+- not weighting evidence by amount financed;
+- not allowing executor-controlled assignment;
+- making evidence contradicible;
+- exposing patterns;
+- requiring multiple evidence sources for riskier projects;
+- attaching reputational consequences to false or misleading evidence;
+- preserving full audit trails;
+- allowing later complaint, review, and sanction.
+
+## Proportionality
+
+Not every project should carry the same control burden.
+
+Suggested proportional model:
+
+```text
+Small project:
+  executor evidence + open observation + voluntary evidence.
+
+Medium project:
+  responsible fiscalization + control budget + evidence commitments + possible evidence missions.
+
+Large or risky project:
+  reinforced fiscalization + technical review + multiple evidence sources + stronger guarantees and observation windows.
+```
+
+## Project lifecycle concern
+
+Adding too many layers can make the process too slow or impossible for ordinary users to understand.
+
+Therefore control mechanisms must be designed with layered complexity:
+
+- simple for ordinary citizens;
+- detailed for interested users;
+- operational for active participants;
+- technical for specialists and auditors.
+
+The existence of fiscalization, evidence, guarantees, control budgets, missions, and reputation should not force every citizen to understand every layer before participating.
+
+## Citizen-facing simplification
+
+For ordinary citizens, the interface should show a simplified project sheet:
+
+- what will be done;
+- where;
+- who executes;
+- who benefits;
+- how much it costs;
+- risk level;
+- whether fiscalization is included;
+- whether evidence is required;
+- whether guarantees or retentions apply;
+- current status;
+- simple action buttons: fund, support, delegate, follow, provide evidence, report problem.
+
+Deep control details remain available for those who want to audit.
+
+## Principle
+
+> Control should be strong enough to reduce capture but layered enough that ordinary participation remains simple.
+
+## Status
+
+Accepted as Fiscalization, Evidence, and Control Model v0.
