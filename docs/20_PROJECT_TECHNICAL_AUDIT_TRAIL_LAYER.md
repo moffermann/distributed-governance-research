@@ -1,0 +1,370 @@
+# Project Technical Audit Trail Layer v0
+
+## Purpose
+
+This document defines and freezes Layer 5: the technical audit trail of a project.
+
+Layer 5 is the deepest transparency layer. It exists so that auditors, journalists, fiscalizers, researchers, institutions, and highly engaged citizens can verify what happened in a project beyond the citizen-readable summary.
+
+Layer 5 is not the default citizen experience.
+
+## Core principle
+
+> Layer 5 should make the project fully auditable without forcing ordinary citizens to consume technical trace data.
+
+## Main question
+
+Layer 5 answers:
+
+```text
+Can everything relevant that happened in this project be technically audited?
+```
+
+## Relationship with previous layers
+
+```text
+Layer 2:
+  Project dashboard.
+
+Layer 3:
+  Detail of one icon, signal, number, alert, or condition.
+
+Layer 4:
+  Full citizen-readable project sheet.
+
+Layer 5:
+  Full technical trace and audit trail.
+```
+
+Layer 5 should be reachable from Layer 4 through an explicit action such as:
+
+```text
+[View full audit trail]
+```
+
+## Audience
+
+Layer 5 is mainly for:
+
+- fiscalizers;
+- auditors;
+- journalists;
+- researchers;
+- public institutions;
+- civil society organizations;
+- expert citizens;
+- project reviewers;
+- appeal or review bodies;
+- system maintainers with appropriate permissions.
+
+## Content areas
+
+Layer 5 should include technical traceability for:
+
+```text
+1. Project versions
+2. Value thesis history
+3. Metric history
+4. Budget history
+5. Funding and custody trace
+6. Milestone and disbursement trace
+7. Evidence archive
+8. Fiscalization reports
+9. Complaint and review trace
+10. Conflict-of-interest declarations
+11. Actor and role events
+12. Moderation and mode decisions
+13. System decisions and protocol references
+14. Data export and verification tools
+```
+
+## 1. Project versions
+
+Show every meaningful project version.
+
+For each version:
+
+- version number;
+- timestamp;
+- actor who submitted or approved the change;
+- changed fields;
+- previous value;
+- new value;
+- reason for change;
+- whether funders or participants were notified;
+- whether the change required approval.
+
+This allows the project history to be reconstructed.
+
+## 2. Value thesis history
+
+Track changes to declared values.
+
+Examples:
+
+- value icons added or removed;
+- value thesis edited;
+- beneficiary scope changed;
+- promised outcome changed;
+- metrics changed;
+- evidence obligations changed.
+
+Layer 5 should make clear whether a project changed what it promised after receiving support.
+
+## 3. Metric history
+
+Track project metrics over time.
+
+For each metric:
+
+- original metric;
+- metric changes;
+- reason for change;
+- validator results;
+- accepted alternative metrics;
+- measurement method;
+- evidence requirements;
+- final status.
+
+This is especially important for preventing vague or moving targets.
+
+## 4. Budget history
+
+Track budget changes and budget structure.
+
+Include:
+
+- original budget;
+- revised budget;
+- budget lines;
+- changes by line;
+- justification;
+- approvals;
+- relation to milestones;
+- control cost;
+- fiscalization cost;
+- evidence production cost;
+- guarantees or retentions.
+
+Layer 5 should allow reviewers to understand how the budget evolved.
+
+## 5. Funding and custody trace
+
+Track money status without exposing unnecessary private information.
+
+Include:
+
+- funding target;
+- commitments;
+- releases;
+- returned or reassigned amounts;
+- custody status;
+- disbursement rules;
+- release dates;
+- milestone relation;
+- public aggregate funding data;
+- direct versus delegated allocation where relevant.
+
+Privacy-protected individual funding details should follow the system's identity and privacy rules.
+
+## 6. Milestone and disbursement trace
+
+For each milestone, show:
+
+- milestone definition;
+- expected date;
+- actual date;
+- required evidence;
+- evidence submitted;
+- fiscalizer review;
+- approval or rejection;
+- disbursement decision;
+- amount released;
+- comments or observations;
+- delays;
+- corrective actions.
+
+Layer 5 should explain why money was or was not released.
+
+## 7. Evidence archive
+
+Layer 5 should contain the full evidence archive, subject to privacy and safety rules.
+
+For each evidence item:
+
+- evidence type;
+- who produced it;
+- role of producer;
+- timestamp;
+- location metadata where applicable;
+- associated milestone;
+- associated metric;
+- review status;
+- objections or contradictions;
+- integrity information;
+- privacy classification;
+- access level.
+
+Evidence may include documents, photos, videos, field reports, attendance records, beneficiary confirmations, fiscalizer reports, or other accepted evidence types.
+
+## 8. Fiscalization reports
+
+Include complete fiscalization records:
+
+- responsible fiscalizer;
+- evidence producers;
+- methodology;
+- scope;
+- reports;
+- observations;
+- objections;
+- conflict declarations;
+- late reports;
+- rejected reports;
+- final evaluation;
+- reputation effects.
+
+Layer 5 should make fiscalization itself auditable.
+
+## 9. Complaint and review trace
+
+Include the complete trace of complaints and reviews:
+
+- complaint submitted;
+- complainant role;
+- issue type;
+- evidence attached;
+- project effect;
+- whether it was blocking;
+- responses;
+- review steps;
+- resolution;
+- sanctions or corrections if applicable;
+- reopening or appeal history.
+
+Layer 5 should show not only the result, but how the result was reached.
+
+## 10. Conflict-of-interest declarations
+
+Track declared and detected relationships among relevant actors.
+
+Examples:
+
+- executor and fiscalizer;
+- fiscalizer and evidence producer;
+- proposer and executor;
+- funder and executor where relevant;
+- moderator and project actor;
+- repeated relationships across projects.
+
+Layer 5 should show declarations, updates, and unresolved conflict alerts.
+
+## 11. Actor and role events
+
+Track role assignments and role changes.
+
+Examples:
+
+- proposer;
+- modeler;
+- executor;
+- fiscalizer;
+- evidence producer;
+- funder;
+- moderator;
+- complainant;
+- evaluator;
+- beneficiary confirmation actor.
+
+For each role event:
+
+- actor;
+- role;
+- date;
+- acceptance status;
+- resignation or replacement if any;
+- scope;
+- conflict declarations;
+- reputation-relevant outcomes.
+
+## 12. Moderation and mode decisions
+
+If the project is in a tutored, semi-open, suspended, or otherwise special operating mode, Layer 5 should show:
+
+- mode at project publication;
+- moderation decisions;
+- reasons;
+- parameters applied;
+- requests for reformulation;
+- classification decisions;
+- approvals or rejections;
+- mode changes over time.
+
+This preserves traceability without making moderation the first citizen experience.
+
+## 13. System decisions and protocol references
+
+Layer 5 should show important system decisions and the rules used.
+
+Examples:
+
+- why project was marked open;
+- why project became execution-ready;
+- why a condition blocked execution;
+- why a funding deadline triggered reformulation;
+- why evidence was accepted or rejected;
+- why an alert appeared;
+- which protocol version applied.
+
+Each important decision should reference the applicable rule or protocol version.
+
+## 14. Data export and verification tools
+
+Layer 5 should support external review.
+
+Possible tools:
+
+- export project data;
+- export evidence index;
+- export financial trace summary;
+- export metric fulfillment data;
+- compare versions;
+- download public reports;
+- cite permanent project snapshots;
+- verify integrity of archived evidence where applicable.
+
+## Privacy and access control
+
+Layer 5 is deep transparency, but not unlimited exposure.
+
+Some data may need redaction or tiered access.
+
+Examples:
+
+- personal data of beneficiaries;
+- sensitive location data;
+- private identity details;
+- documents containing private information;
+- protected complainant information;
+- safety-sensitive evidence.
+
+The system should preserve auditability while respecting privacy and safety rules.
+
+## What Layer 5 should not do
+
+Layer 5 should not:
+
+- replace the citizen project sheet;
+- be the default project view;
+- hide behind inaccessible technical formats only;
+- expose private data without rules;
+- allow project actors to alter history silently;
+- present raw records without timestamps, actors, or context.
+
+## Design rule
+
+> Layer 5 is the complete technical memory of the project: versioned, traceable, exportable, and constrained by privacy rules.
+
+## Status
+
+Accepted as Project Technical Audit Trail Layer v0.
