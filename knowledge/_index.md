@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H059-public-value-return-per-peso|H059 — Public Value Return per Peso]]
 - [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
 - [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
@@ -123,6 +124,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H056-existing-institution-as-equal-actor|H056 — Existing Institution as Equal Actor]]
 - [[hypotheses/H057-public-function-funding-scope-gating|H057 — Tutored Transition Moderation as an Operating Mode]]
 - [[hypotheses/H058-operating-modes-for-transition|H058 — Operating Modes for Transition]]
+- [[hypotheses/H059-public-value-return-per-peso|H059 — Public Value Return per Peso]]
 
 ## Principles
 
