@@ -75,6 +75,34 @@ design published
 
 The executor cannot later avoid responsibility by claiming that the accepted design contained errors, risks, or antivalues that were reasonably detectable during the review and acceptance phase.
 
+## Role attributes versus reputational responsibility
+
+A project should store role attributes such as:
+
+- modeler / designer;
+- executor;
+- fiscalizer;
+- proposer;
+- funders;
+- beneficiaries;
+- affected parties.
+
+These attributes identify who performed which function in relation to the project.
+
+However, role attributes do not mean that every listed actor shares the same reputational responsibility for the project outcome.
+
+The execution project's primary reputational responsibility belongs to the executor after the executor accepts the design.
+
+The modeler is reputationally evaluated for the quality of the design and for how that design is accepted, rejected, corrected, or later shown to be defective.
+
+The fiscalizer is reputationally evaluated for the quality, independence, timeliness, and reliability of its fiscalization work.
+
+```text
+modeler attribute → design traceability and design reputation
+executor attribute → execution responsibility and project-performance reputation
+fiscalizer attribute → fiscalization traceability and fiscalizer reputation
+```
+
 ## Modeler reputation versus executor reputation
 
 The modeler's reputation is associated with the quality of the design and with the reception that design receives from potential executors.
@@ -135,7 +163,9 @@ Possible project roles:
 
 Roles are accumulable unless an incompatibility or conflict of interest applies.
 
-The project should record which actor designed the project and which executor accepted responsibility for the execution project.
+The project should record which actor designed the project, which executor accepted responsibility for the execution project, and which actor is responsible for fiscalization.
+
+These fields are role attributes for traceability. They do not override the responsibility rule: execution responsibility is assumed by the executor once the executor accepts the design.
 
 ### 3. Value thesis
 
@@ -309,7 +339,7 @@ The project creator may reformulate, reclassify, or resubmit.
 
 ## Principle
 
-> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, KPIs, evidence, and execution accountability are sufficiently explicit. Design quality affects the modeler; accepted execution responsibility belongs to the executor.
+> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, KPIs, evidence, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design.
 
 ## Status
 
