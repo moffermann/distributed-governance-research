@@ -100,6 +100,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H050-common-good-governance-program|H050 — Common Good Governance Program]]
 - [[hypotheses/H051-composite-programs-as-project-aggregators|H051 — Composite Programs as Project Aggregators]]
 - [[hypotheses/H052-emergency-as-urgency-attribute|H052 — Emergency as Urgency Attribute]]
+- [[hypotheses/H053-sports-as-transition-pilot|H053 — Sports as Transition Pilot]]
 
 ## Principles
 
