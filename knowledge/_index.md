@@ -15,6 +15,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/06_CURRENT_PROJECT_RECAP|Current Project Recap]]
 - [[../docs/07_CORE_V0_SCOPE|Core v0 Scope]]
 - [[../docs/08_ENTITY_AND_ROLE_MAP|Entity and Role Map v0]]
+- [[../docs/09_PROJECT_OBJECT_MODEL|Project Object Model v0]]
 
 ## Core glossary
 
