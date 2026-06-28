@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/15_CITIZEN_HOME_DISCOVERY_LAYER|Citizen Home / Discovery Layer v0]]
 - [[../docs/14_LAYERED_CITIZEN_INTERFACE_MODEL|Layered Citizen Interface Model v0]]
 - [[hypotheses/H059-public-value-return-per-peso|H059 — Public Value Return per Peso]]
 - [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
@@ -32,6 +33,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
 - [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
 - [[../docs/14_LAYERED_CITIZEN_INTERFACE_MODEL|Layered Citizen Interface Model v0]]
+- [[../docs/15_CITIZEN_HOME_DISCOVERY_LAYER|Citizen Home / Discovery Layer v0]]
 
 ## Core glossary
 
