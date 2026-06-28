@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
 - [[../docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|Idea Entity, Navigation, and C001 Resolution v0]]
 - [[../docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|v0 Contradiction and Failure-Mode Checklist]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
@@ -82,6 +83,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 - [[../docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|v0 Contradiction and Failure-Mode Checklist]]
 - [[../docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|Idea Entity, Navigation, and C001 Resolution v0]]
+- [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
 
 ## Core glossary
 
