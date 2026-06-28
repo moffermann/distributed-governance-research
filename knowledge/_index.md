@@ -13,6 +13,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/04_AGENT_ROLES|Agent Roles]]
 - [[../docs/05_OBSIDIAN_TOOLING_SETUP|Obsidian and tooling Setup]]
 - [[../docs/06_CURRENT_PROJECT_RECAP|Current Project Recap]]
+- [[../docs/07_CORE_V0_SCOPE|Core v0 Scope]]
 
 ## Core glossary
 
