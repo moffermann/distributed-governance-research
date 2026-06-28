@@ -104,6 +104,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H054-functional-transition-maturity-metrics|H054 — Functional Transition Maturity Metrics]]
 - [[hypotheses/H055-universal-institutional-observability-panel|H055 — Universal Institutional Observability Panel]]
 - [[hypotheses/H056-existing-institution-as-equal-actor|H056 — Existing Institution as Equal Actor]]
+- [[hypotheses/H057-public-function-funding-scope-gating|H057 — Public Function Funding Scope Gating]]
 
 ## Principles
 
