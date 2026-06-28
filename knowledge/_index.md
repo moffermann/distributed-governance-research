@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 - [[../docs/34_CORE_V0_SCOPE_FREEZE|Core v0 Scope Freeze]]
@@ -76,6 +77,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/34_CORE_V0_SCOPE_FREEZE|Core v0 Scope Freeze]]
 - [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
+- [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 
 ## Core glossary
 
