@@ -30,7 +30,7 @@ Possible citizen roles include:
 - delegate;
 - commenter;
 - evaluator;
-- complainant;
+- complainant / denunciante;
 - fiscalizer;
 - modeler;
 - executor where allowed;
@@ -69,6 +69,7 @@ Possible organization roles include:
 - delegate;
 - moderator in a tutored transition mode;
 - administrator in a transition context;
+- complainant / denunciante;
 - beneficiary;
 - affected party;
 - project sponsor;
@@ -114,7 +115,7 @@ Example:
 ```text
 Citizen A
   Role in Project X: funder
-  Role in Project Y: complainant
+  Role in Project Y: complainant / denunciante
   Role in Project Z: fiscalizer
   Role in Delegation: delegator
 ```
@@ -133,13 +134,43 @@ The following are roles, not actor types:
 - delegate;
 - moderator;
 - administrator;
-- complainant;
+- complainant / denunciante;
 - evaluator;
 - commenter;
 - beneficiary;
 - affected party;
 - technical assistant;
 - evidence producer.
+
+## Role accumulation rule
+
+Roles are accumulable by default.
+
+A citizen or organization may hold multiple roles across different projects, programs, delegations, or governance processes.
+
+Example:
+
+```text
+Club A
+  Project 1: proposer and executor
+  Project 2: beneficiary
+  Project 3: complainant / denunciante
+```
+
+The system should not force artificial separation of roles when it is unnecessary, especially in small projects.
+
+## Minimum role incompatibilities
+
+Role accumulation is limited when there is a conflict of interest or when one role must control another.
+
+Minimum Core v0 incompatibilities:
+
+1. The executor should not be the fiscalizer of the same project.
+2. A fiscalizer should not fiscalize a project where they have a direct economic interest.
+3. A tutored moderator should not approve their own project or a project from a related organization.
+4. A technical administrator should not alter substantive rules unless authorized by protocol, meta-governance, or the applicable tutored operating mode.
+5. A delegate must act only within the scope of the delegation they accepted.
+6. A proposer, modeler, and executor may be the same actor, but that accumulation must be transparent.
 
 ## Public institutions
 
@@ -195,7 +226,7 @@ It should be modeled separately from actors.
 
 ## Principle
 
-> The system has two base actor types: citizens and organizations. Everything else is a role, attribute, or infrastructure unless a later implementation requires additional actor classes.
+> The system has two base actor types: citizens and organizations. Everything else is a role, attribute, or infrastructure unless a later implementation requires additional actor classes. Roles are accumulable by default, except where conflict of interest or control relationships require explicit incompatibility.
 
 ## Status
 
