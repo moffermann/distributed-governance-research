@@ -1,0 +1,202 @@
+# Entity and Role Map v0
+
+## Purpose
+
+This document separates actors, roles, objects, and infrastructure in the Core v0 architecture.
+
+The key rule is:
+
+> Actor = who exists in the system. Role = what function that actor performs in a specific context.
+
+This avoids confusing organizations or citizens with roles such as executor, fiscalizer, delegate, or moderator.
+
+## Core actor types
+
+Core v0 uses two primary actor types.
+
+### 1. Citizen
+
+A citizen is an individual person authorized to participate in the system.
+
+The term "citizen" is preferred over "natural person" because the system is civic by nature. Not every natural person is necessarily eligible to participate. For example, foreigners without the required national identifier, minors, or other non-eligible persons may be natural persons but not citizens for purposes of this system.
+
+Citizens are not anonymous. Identity verification is a baseline requirement of the system, so "verified" does not need to be part of the actor name.
+
+Possible citizen roles include:
+
+- funder;
+- voter;
+- delegator;
+- delegate;
+- commenter;
+- evaluator;
+- complainant;
+- fiscalizer;
+- modeler;
+- executor where allowed;
+- beneficiary;
+- affected party.
+
+### 2. Organization
+
+An organization is a collective actor authorized to participate in the system.
+
+The term "organization" is preferred because it is neutral and can include different legal or social forms.
+
+Examples:
+
+- private organization / company;
+- nonprofit organization / foundation;
+- public organization / institution;
+- university;
+- club;
+- association;
+- cooperative;
+- union;
+- community organization;
+- NGO;
+- local group;
+- other legally or socially recognized collective actor.
+
+Organization type should be treated as an attribute, not as a separate actor class unless implementation requires it.
+
+Possible organization roles include:
+
+- proposer;
+- modeler;
+- executor;
+- fiscalizer;
+- delegate;
+- moderator in a tutored transition mode;
+- administrator in a transition context;
+- beneficiary;
+- affected party;
+- project sponsor;
+- technical assistant;
+- evidence producer.
+
+## Identity and verification
+
+There are no anonymous actors in the system.
+
+Verification is a system requirement, not a separate actor label.
+
+Therefore, the actor names are simply:
+
+```text
+Citizen
+Organization
+```
+
+not:
+
+```text
+Verified citizen
+Verified organization
+```
+
+## Roles
+
+Roles are contextual. The same actor can play different roles in different projects or governance processes.
+
+Example:
+
+```text
+University X
+  Role in Project A: modeler
+  Role in Project B: fiscalizer
+  Role in Project C: executor
+  Role in Education Delegation: delegate
+```
+
+Example:
+
+```text
+Citizen A
+  Role in Project X: funder
+  Role in Project Y: complainant
+  Role in Project Z: fiscalizer
+  Role in Delegation: delegator
+```
+
+## Core roles
+
+The following are roles, not actor types:
+
+- proposer;
+- modeler / designer;
+- executor;
+- fiscalizer;
+- funder;
+- voter;
+- delegator;
+- delegate;
+- moderator;
+- administrator;
+- complainant;
+- evaluator;
+- commenter;
+- beneficiary;
+- affected party;
+- technical assistant;
+- evidence producer.
+
+## Public institutions
+
+A public institution is an organization with type:
+
+```text
+organization_type = public institution
+```
+
+It is not a separate base actor type in Core v0.
+
+During transition, a public institution may receive special roles, such as:
+
+- tutored mode moderator;
+- administrator of a transition operating mode;
+- project proposer;
+- project executor under equal rules;
+- provider of institutional information.
+
+These are roles or permissions granted by the operating mode, not a separate actor ontology.
+
+## Treasury / revenue authority
+
+Treasury, revenue authority, tax authority, or similar state financial bodies are not core actors in the civic interaction model.
+
+They are external or infrastructural integrations unless the implementing country decides to represent them inside the platform.
+
+Their possible external functions include:
+
+- informing assignable civic balances;
+- receiving tax or budget data;
+- transferring or custodying public resources;
+- enabling disbursement;
+- supporting financial traceability.
+
+However, they do not decide project value, approve ordinary projects, fiscalize results, or participate in governance unless explicitly granted a role by the implementing country.
+
+For Core v0, they are best described as:
+
+```text
+external financial infrastructure / integration
+```
+
+not as a primary actor.
+
+## Platform / system
+
+The platform is not an actor with civic agency.
+
+It is infrastructure that executes protocol rules, records events, applies modes, computes metrics, displays information, and supports workflows.
+
+It should be modeled separately from actors.
+
+## Principle
+
+> The system has two base actor types: citizens and organizations. Everything else is a role, attribute, or infrastructure unless a later implementation requires additional actor classes.
+
+## Status
+
+Accepted as Entity and Role Map v0 foundation.
