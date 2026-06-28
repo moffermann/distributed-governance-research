@@ -4,6 +4,13 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|Citizen Automatic Allocation Profile Flow v0]]
+- [[../docs/27_CITIZEN_DELEGATION_FLOW|Citizen Delegation Flow v0]]
+- [[../docs/26_CITIZEN_COMPLAINT_FLOW|Citizen Complaint Flow v0]]
+- [[../docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW|Citizen Comment and Question Flow v0]]
+- [[../docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|Citizen Evidence Production Flow v0]]
+- [[../docs/23_CITIZEN_FISCALIZER_OFFER_FLOW|Citizen Fiscalizer Offer Flow v0]]
+- [[../docs/22_CITIZEN_PROJECT_FOLLOWING_FLOW|Citizen Project Following Flow v0]]
 - [[../docs/21_CITIZEN_FUNDING_FLOW|Citizen Funding Flow v0]]
 - [[../docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER|Project Technical Audit Trail Layer v0]]
 - [[../docs/19_CITIZEN_FULL_PROJECT_SHEET_LAYER|Citizen Full Project Sheet Layer v0]]
@@ -46,6 +53,13 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/19_CITIZEN_FULL_PROJECT_SHEET_LAYER|Citizen Full Project Sheet Layer v0]]
 - [[../docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER|Project Technical Audit Trail Layer v0]]
 - [[../docs/21_CITIZEN_FUNDING_FLOW|Citizen Funding Flow v0]]
+- [[../docs/22_CITIZEN_PROJECT_FOLLOWING_FLOW|Citizen Project Following Flow v0]]
+- [[../docs/23_CITIZEN_FISCALIZER_OFFER_FLOW|Citizen Fiscalizer Offer Flow v0]]
+- [[../docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|Citizen Evidence Production Flow v0]]
+- [[../docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW|Citizen Comment and Question Flow v0]]
+- [[../docs/26_CITIZEN_COMPLAINT_FLOW|Citizen Complaint Flow v0]]
+- [[../docs/27_CITIZEN_DELEGATION_FLOW|Citizen Delegation Flow v0]]
+- [[../docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|Citizen Automatic Allocation Profile Flow v0]]
 
 ## Core glossary
 
