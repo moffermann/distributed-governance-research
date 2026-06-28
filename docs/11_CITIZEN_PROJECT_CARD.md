@@ -1,0 +1,264 @@
+# Citizen Project Card v0
+
+## Purpose
+
+This document defines the first citizen-facing layer of a project.
+
+The goal is not to expose the full technical project object. The goal is to give ordinary citizens a simple, concrete, and clickable dashboard of the most relevant project signals.
+
+## Core decision
+
+The first layer should not show abstract system labels such as:
+
+```text
+risk: medium
+complexity: normal
+fiscalization: included
+```
+
+These labels require interpretation and may confuse ordinary citizens.
+
+Instead, the first layer should show concrete, countable, and explorable signals:
+
+```text
+beneficiaries
+funders
+fiscalizers
+comments
+complaints
+evidence
+funding progress
+```
+
+Each signal acts as a direct access point into the deeper layer.
+
+## Design principle
+
+> The first project layer should be a dashboard of concrete signals, not a summary of technical judgments.
+
+The citizen should not need to understand technical categories before deciding whether to inspect, fund, follow, delegate, or report a problem.
+
+## Citizen project card
+
+A project card should include:
+
+- project name;
+- one-sentence explanation;
+- location;
+- who will do it;
+- funding progress;
+- remaining amount;
+- closing deadline;
+- signal dashboard;
+- primary action button;
+- secondary detail action.
+
+## Example card
+
+```text
+Escuela deportiva infantil en Maipú
+
+Entrenamientos gratuitos para 80 niños durante 6 meses.
+
+Lo hará:
+Club Deportivo Los Cóndores
+
+Financiamiento:
+$7.560.000 reunidos de $12.000.000
+Faltan $4.440.000
+Cierra en 8 días
+
+Dashboard:
+👥 Beneficiarios: 80
+💰 Financiadores: 1.240
+🛡 Fiscalizadores: 2
+💬 Comentarios: 35
+🚩 Denuncias: 0
+📎 Evidencias: 12
+
+[Financiar]
+[Ver detalle]
+```
+
+## Dashboard signals
+
+### Beneficiaries
+
+Shows how many people or organizations are declared as direct beneficiaries.
+
+Clicking opens:
+
+- beneficiary description;
+- beneficiary count;
+- territory;
+- selection criteria;
+- confirmation status;
+- beneficiary evidence or feedback if available.
+
+### Funders
+
+Shows how many citizens or organizations have funded the project.
+
+Clicking opens:
+
+- number of funders;
+- funding distribution;
+- amount funded;
+- average contribution where useful;
+- delegated versus direct funding where useful;
+- number of funders who offered to provide evidence.
+
+### Fiscalizers
+
+Shows how many responsible fiscalizers are associated with the project.
+
+Clicking opens:
+
+- who fiscalizes;
+- fiscalizer reputation;
+- declared independence;
+- scope of fiscalization;
+- reports;
+- pending reviews;
+- conflict declarations if any.
+
+### Comments
+
+Shows number of comments or observations.
+
+Clicking opens:
+
+- citizen comments;
+- questions;
+- observations;
+- executor responses;
+- highlighted unresolved issues;
+- community discussion.
+
+### Complaints
+
+Shows number of complaints or denunciations.
+
+Clicking opens:
+
+- open complaints;
+- resolved complaints;
+- rejected complaints;
+- current status;
+- severity where applicable;
+- effects on project state if any.
+
+### Evidence
+
+Shows number of evidence items associated with the project.
+
+Clicking opens:
+
+- evidence committed;
+- evidence delivered;
+- evidence reviewed;
+- executor evidence;
+- beneficiary evidence;
+- funder evidence;
+- paid evidence missions;
+- fiscalizer reports;
+- disputed evidence.
+
+## Evidence by project stage
+
+The meaning of the evidence count may vary by stage.
+
+Before execution:
+
+```text
+evidence commitments
+```
+
+During execution:
+
+```text
+evidence delivered
+```
+
+After execution:
+
+```text
+evidence reviewed or final evidence
+```
+
+The first layer may simply show "Evidence" with a count, while the detail layer explains the status.
+
+## Funding display
+
+The first layer should show:
+
+- total required amount;
+- amount already funded;
+- amount remaining;
+- deadline or time remaining;
+- funding progress bar.
+
+Example:
+
+```text
+$7.560.000 reunidos de $12.000.000
+Faltan $4.440.000
+Cierra en 8 días
+```
+
+This is clearer than showing only a percentage.
+
+## First-layer language
+
+Use citizen language rather than technical system language.
+
+Prefer:
+
+```text
+Lo hará
+Cómo va el financiamiento
+Faltan
+Beneficiarios
+Fiscalizadores
+Comentarios
+Denuncias
+Evidencias
+```
+
+Avoid in the first layer:
+
+```text
+executor
+risk level
+project complexity
+fiscalization regime
+evidence architecture
+control package
+protocol status
+```
+
+These may appear in deeper layers.
+
+## Why this works
+
+This design gives direct access to the most important project elements without forcing the citizen to understand technical abstractions.
+
+The citizen can immediately inspect:
+
+- who benefits;
+- who funds;
+- who controls;
+- what people are saying;
+- whether there are complaints;
+- what evidence exists;
+- how much funding is still needed.
+
+The card is simple, but each number opens a deeper layer.
+
+## Principle
+
+> The first layer should not tell the citizen what to think. It should expose concrete signals that the citizen can inspect.
+
+## Status
+
+Accepted as Citizen Project Card v0 foundation.
