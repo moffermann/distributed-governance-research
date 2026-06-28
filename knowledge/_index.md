@@ -102,6 +102,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[hypotheses/H052-emergency-as-urgency-attribute|H052 — Emergency as Urgency Attribute]]
 - [[hypotheses/H053-sports-as-transition-pilot|H053 — Sports as Transition Pilot]]
 - [[hypotheses/H054-functional-transition-maturity-metrics|H054 — Functional Transition Maturity Metrics]]
+- [[hypotheses/H055-universal-institutional-observability-panel|H055 — Universal Institutional Observability Panel]]
 
 ## Principles
 
