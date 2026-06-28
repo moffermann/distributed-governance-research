@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
 - [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
 - [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Evidence, and Control Model v0]]
@@ -27,6 +28,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Evidence, and Control Model v0]]
 - [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
+- [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
 
 ## Core glossary
 
