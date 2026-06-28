@@ -57,6 +57,49 @@ Therefore:
 
 A separate project may exist for design/modeling work. In that case, the executor is the actor responsible for delivering the design, not the future execution of the designed project.
 
+## Design, acceptance, and responsibility
+
+The modeler/designer of a project must be identified, but the operational responsibility for an execution project belongs to the executor once the executor accepts the design and publishes or submits the project for execution financing.
+
+The executor is responsible for reviewing the design before accepting it.
+
+Acceptance means the executor has agreed that the design is sufficiently executable and is willing to be evaluated against it.
+
+```text
+design published
+→ executors review and observe
+→ executor accepts design
+→ executor publishes / seeks execution financing
+→ operational responsibility belongs to executor
+```
+
+The executor cannot later avoid responsibility by claiming that the accepted design contained errors, risks, or antivalues that were reasonably detectable during the review and acceptance phase.
+
+## Modeler reputation versus executor reputation
+
+The modeler's reputation is associated with the quality of the design and with the reception that design receives from potential executors.
+
+Modeler reputation may be affected when designs are:
+
+- frequently rejected by executors;
+- repeatedly unaccepted;
+- poorly specified;
+- unexecutable;
+- associated with recurring design failures;
+- accepted only after substantial corrections.
+
+Executor reputation is associated with the execution project once the executor has accepted the design.
+
+The executor is evaluated against:
+
+- the accepted base design;
+- declared KPIs;
+- milestones;
+- evidence obligations;
+- guarantees;
+- mitigation commitments;
+- fiscalization outcomes.
+
 ## Main project sections
 
 ### 1. Project identity
@@ -91,6 +134,8 @@ Possible project roles:
 - evidence producer.
 
 Roles are accumulable unless an incompatibility or conflict of interest applies.
+
+The project should record which actor designed the project and which executor accepted responsibility for the execution project.
 
 ### 3. Value thesis
 
@@ -234,6 +279,8 @@ Waiting for approval under a tutored or semi-open operating mode.
 
 Visible and eligible to receive funding/support according to its operating mode and project rules.
 
+For execution projects, publication for funding requires an identified executor that has accepted the design.
+
 ### Funded
 
 Reached or exceeded the declared funding target. Funding closes.
@@ -262,7 +309,7 @@ The project creator may reformulate, reclassify, or resubmit.
 
 ## Principle
 
-> A project is a defined commitment for value creation. It can be financed only when responsibility, value thesis, KPIs, evidence, and execution accountability are sufficiently explicit.
+> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, KPIs, evidence, and execution accountability are sufficiently explicit. Design quality affects the modeler; accepted execution responsibility belongs to the executor.
 
 ## Status
 
