@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
+- [[../docs/34_CORE_V0_SCOPE_FREEZE|Core v0 Scope Freeze]]
 - [[../docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|Distributed Governance System v0 Blueprint]]
 - [[../docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW|Project Reformulation, Pause, and Revocation Flow v0]]
 - [[../docs/31_PROJECT_DISBURSEMENT_FLOW|Project Disbursement Flow v0]]
@@ -70,6 +72,8 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/31_PROJECT_DISBURSEMENT_FLOW|Project Disbursement Flow v0]]
 - [[../docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW|Project Reformulation, Pause, and Revocation Flow v0]]
 - [[../docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|Distributed Governance System v0 Blueprint]]
+- [[../docs/34_CORE_V0_SCOPE_FREEZE|Core v0 Scope Freeze]]
+- [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 
 ## Core glossary
 
