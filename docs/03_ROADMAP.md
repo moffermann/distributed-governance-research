@@ -2,42 +2,42 @@
 
 ## Purpose
 
-This roadmap defines the working path for developing the Distributed Governance Research project from exploratory conversation into a bounded architecture, then into a rigorous theoretical framework, and later into publishable or implementable outputs.
+This roadmap defines the working path for the Distributed Governance Research project from exploratory conversation into a bounded architecture, then into a rigorous theoretical framework, and later into publishable or implementable outputs.
 
-The roadmap is intentionally iterative, but the project must now avoid unlimited conceptual expansion. The current priority is to move from discovery into consolidation.
+The project has now moved from broad discovery into v0 consolidation. The immediate priority is to turn the v0 blueprint and supporting flows into a formal system model with entities, states, diagrams, scope classification, and a paper outline.
 
 ## Current diagnosis
 
-The project has produced a large conceptual architecture: project-based governance, distributed allocation, fiscalization, reputation, delegation, meta-governance, common-good programs, transition pilots, operating modes, and observability metrics.
+The project now has a first integrated **Distributed Governance System v0 Blueprint** plus detailed documents for citizen interfaces, citizen action flows, project creation, project lifecycle, disbursement, fiscalization, evidence, complaints, reformulation, pause, revocation, and technical auditability.
 
-The main risk is no longer lack of ideas. The main risk is uncontrolled scope growth.
+The main risk is no longer lack of ideas. The main risk is fragmentation: many good documents must now be connected through maps, diagrams, classifications, and a coherent paper structure.
 
 Approximate current maturity:
 
 ```text
-Exploratory conceptual discovery: 90%
-System architecture: 70%–75%
-Scope consolidation: 40%
+Exploratory conceptual discovery: 95%
+System architecture: 85%–90%
+Scope consolidation: 70%–75%
 Literature and theoretical framing: 20%
 Paper drafting: 10%–15%
-Implementable specification: 25%–35%
+Implementable specification: 55%–65%
 ```
 
-These percentages are heuristic, not formal metrics. They help orient the next phase.
+These percentages are heuristic, not formal metrics.
 
 ## Scope-control rule
 
-From this point forward, every new idea should be classified as one of four types:
+Every new idea should be classified as one of four types:
 
 ```text
 A. Core v0
    Necessary for the first coherent version of the model.
 
 B. Extension v1+
-   Interesting and probably useful, but not required for the first paper or core model.
+   Useful, but not required for the first model.
 
 C. Country implementation
-   Depends on the state, jurisdiction, law, public administration, or political decision of the implementer.
+   Depends on legal, administrative, or political choices of an implementing country.
 
 D. Out of scope
    Not necessary for the model and should not be solved now.
@@ -47,71 +47,67 @@ The project should not keep expanding unless the new idea is clearly Core v0 or 
 
 ## Phase 0 — Preserve the Brain
 
-**Status:** mostly complete, ongoing as maintenance.
-
-Goal: ensure that important ideas do not remain trapped in chat history.
+**Status:** mostly complete; ongoing as maintenance.
 
 Completed or active deliverables:
 
 - repository initialized;
-- research philosophy documented;
-- research method documented;
+- research philosophy and method documented;
 - session distillations created;
 - hypotheses created and indexed;
-- Ricardo review rounds incorporated;
-- delegation architecture distilled;
-- transition and observability hypotheses added.
+- review rounds incorporated;
+- delegation, transition, and observability concepts documented;
+- interface layers and citizen/project flows documented;
+- integrated v0 blueprint created.
 
 Exit criteria:
 
-- every major idea from the conversation has a home in the repository;
-- new sessions are regularly distilled into the repository;
+- every major idea has a home in the repository;
+- new sessions are regularly distilled;
 - the knowledge index remains updated.
 
 ## Phase 1 — Stabilize Core Architecture v0
 
-**Status:** in progress, high priority.
+**Status:** substantially complete; final scope freeze still required.
 
 Goal: define the bounded architecture of the first coherent model.
 
-Core v0 modules likely include:
+Core v0 modules now include:
 
+- project object model;
+- entity and role map;
 - project lifecycle;
-- project value thesis and KPIs;
-- project modeling, execution, and fiscalization;
-- milestone-based disbursement and guarantees;
-- reputation by role;
-- complaint and fiscalization triggers;
-- civic tax wallet and distributed allocation;
-- support versus financing signals;
-- allocation profiles and monthly automatic allocation;
-- identity and contextual privacy;
-- delegation architecture;
-- transparent project discovery;
-- meta-governance and protocol evolution;
-- transition modes and tutored pilots;
-- universal observability panel.
+- value thesis, value icons, metrics, and evidence;
+- project creation and publication;
+- open-project and parallel closure model;
+- fiscalization and evidence production;
+- complaints and review triggers;
+- milestone-based disbursement and retentions;
+- reformulation, pause, revocation, and closure controls;
+- role-based reputation;
+- civic wallet and distributed allocation;
+- funding, following, delegation, and automatic allocation flows;
+- layered citizen interface;
+- technical audit trail;
+- transition modes and tutored pilots.
 
-Modules that may remain as extensions:
+Likely extensions v1+:
 
-- subordinate common-good charters;
+- public value return per peso;
 - advanced delegation rules;
 - time-bound delegation;
-- complex canary releases;
-- highly granular operating modes;
-- country-specific labor transition;
-- full implementation of every sectoral KPI.
+- paid delegation markets;
+- advanced common-good sub-charters;
+- granular operating modes;
+- full country-specific implementation details;
+- advanced cross-project benchmarking.
 
-Deliverables:
+Remaining deliverables before closing Phase 1:
 
-- v0 scope document;
-- entity map;
-- role map;
-- lifecycle map;
-- rule map;
-- list of extension concepts;
-- list of implementation-country decisions;
-- list of out-of-scope issues.
+- explicit Core v0 freeze;
+- formal Core v0 / Extension / Country / Out-of-scope classification;
+- consolidated entity-object-state map;
+- diagram index.
 
 Exit criteria:
 
@@ -121,33 +117,36 @@ Exit criteria:
 
 ## Phase 2 — Formalize the System Model
 
-**Status:** partially started through hypotheses.
+**Status:** active next phase.
 
-Goal: convert the hypotheses into a coherent analytical model.
+Goal: convert the v0 blueprint and detailed flows into a coherent analytical model.
 
 Deliverables:
 
 - system entity inventory;
-- state diagrams for projects, programs, delegations, and operating modes;
-- funding and disbursement flow;
-- fiscalization and complaint flow;
-- delegation flow;
+- object model with attributes and relationships;
+- state diagrams for projects, delegations, complaints, evidence, fiscalization, funding, and operating modes;
+- funding and disbursement flow diagrams;
+- fiscalization and complaint flow diagrams;
+- delegation flow diagram;
+- project creation and publication flow diagram;
+- project lifecycle diagram;
 - meta-governance flow;
 - transition flow;
-- common-good governance flow;
-- observability panel specification.
+- observability panel specification;
+- responsibility matrix by role.
 
 Candidate entity groups:
 
 ```text
 Actors:
-  citizen, delegator, delegate, modeler, executor, fiscalizer, moderator, institution, treasury/custodian.
+  citizen, organization, proposer, modeler, executor, fiscalizer, evidence producer, funder, delegator, delegate, moderator, complainant, beneficiary, affected party, institution, custodian.
 
 Objects:
-  project, composite program, common-good program, governance charter, civic wallet, allocation profile, complaint, evidence, KPI, guarantee, reputation record.
+  project, project version, value thesis, value icon, metric, evidence, milestone, budget, disbursement, retention, fiscalization offer, fiscalization report, complaint, comment, civic wallet, allocation profile, delegation, reputation record, operating mode, audit event.
 
 States:
-  draft, moderated, published, funding, funded, execution, paused, completed, revoked, reformulated, derogated, suspended.
+  draft, in validation, requires adjustment, ready to publish, open, execution-ready, in execution, correction required, paused, requires reformulation, under review, revoked, closed, expired.
 ```
 
 Exit criteria:
@@ -158,9 +157,9 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** partially ongoing through Ricardo's objections.
+**Status:** partially ongoing; should become systematic after the entity and diagram work.
 
-Goal: identify where the architecture breaks, becomes dangerous, or creates new power concentration.
+Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
 Priority objections:
 
@@ -168,19 +167,20 @@ Priority objections:
 - information capture;
 - fiscalization failure;
 - manipulation of metrics;
-- neglected but essential services;
+- neglected essential services;
 - volatile funding;
-- conflict between evaluators or fiscalizers;
-- use-of-force fragmentation;
-- capture by platforms or algorithms;
+- conflicting reviews;
+- platform or algorithmic capture;
 - inequality of participation;
 - delegation concentration;
 - moderation abuse in transition pilots;
 - scope creep and excessive complexity;
-- false evidence or incomplete evidence;
-- conflict of interest and related-party projects;
+- false or incomplete evidence;
+- related-party projects;
 - common-good charter conflicts;
-- transition resistance by incumbent institutions.
+- resistance by incumbent institutions;
+- disbursement gaming;
+- collusion among project roles.
 
 Deliverables:
 
@@ -191,12 +191,12 @@ Deliverables:
 
 Exit criteria:
 
-- every major objection has at least one serious response or is explicitly marked unresolved;
+- every major objection has a serious response or is explicitly marked unresolved;
 - unresolved objections are visible, not hidden.
 
 ## Phase 4 — Literature Review and Theoretical Grounding
 
-**Status:** low maturity, should begin after v0 scope is bounded.
+**Status:** low maturity; begin after v0 scope is frozen and diagrams are in progress.
 
 Goal: locate the project inside existing academic and institutional work.
 
@@ -215,22 +215,20 @@ Research areas:
 - fiscal federalism and decentralized budgeting;
 - digital government;
 - algorithmic accountability;
-- explainable recommender systems;
 - civic tech and platform governance;
-- DAOs and blockchain governance where relevant;
 - audit, assurance, and evidence systems.
 
 Deliverables:
 
 - annotated bibliography;
 - literature matrix;
-- “what already exists” document;
-- “what appears original” document;
+- what already exists document;
+- what appears original document;
 - theory map connecting project modules to literature.
 
 Exit criteria:
 
-- the project can state clearly what it borrows, what it extends, and what may be original;
+- the project can state what it borrows, what it extends, and what may be original;
 - the paper does not present known ideas as if they were invented here.
 
 ## Phase 5 — Build the Paper Architecture
@@ -290,21 +288,9 @@ Exit criteria:
 
 ## Phase 7 — External Review
 
-**Status:** already informally started through Ricardo, but formal review comes later.
+**Status:** informal review started; formal review later.
 
 Goal: expose the framework to serious critique before publication.
-
-Reviewers may include:
-
-- economists;
-- political scientists;
-- public policy experts;
-- lawyers;
-- technologists;
-- institutional design researchers;
-- public administration practitioners;
-- civic tech researchers;
-- AI governance researchers.
 
 Deliverables:
 
@@ -325,7 +311,7 @@ Goal: decide how to publish based on maturity and audience.
 Possible paths:
 
 - working paper;
-- SSRN or arXiv-style preprint;
+- preprint;
 - long-form essay;
 - academic journal submission;
 - conference paper;
@@ -340,7 +326,7 @@ Exit criteria:
 
 ## Phase 9 — Practical Experiments or Prototypes
 
-**Status:** later, not required for first theory paper.
+**Status:** later; not required for the first theory paper.
 
 Goal: identify small systems that test parts of the theory.
 
@@ -352,7 +338,9 @@ Candidate experiments:
 - fiscalization workflow prototype;
 - common-good charter workflow;
 - observability dashboard;
-- sports-transition pilot simulation.
+- sports-transition pilot simulation;
+- project lifecycle simulator;
+- disbursement and evidence review simulator.
 
 Exit criteria:
 
@@ -363,12 +351,13 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Freeze Core v0 scope.
-2. Create entity map.
+1. Freeze Core v0 scope explicitly.
+2. Build the consolidated entity-object-state map.
 3. Create lifecycle and flow diagrams.
-4. Classify all hypotheses as Core v0, Extension v1+, Country implementation, or Out of scope.
-5. Create paper outline v1.
-6. Begin literature map update.
+4. Classify all hypotheses and docs as Core v0, Extension v1+, Country implementation, or Out of scope.
+5. Create the v0 contradiction/failure-mode checklist.
+6. Create paper outline v1.
+7. Begin literature map update.
 ```
 
 ## Operating rule
@@ -376,7 +365,7 @@ The next working sequence should be:
 After every significant conversation or review round:
 
 1. distill new concepts;
-2. create or update hypotheses;
+2. create or update hypotheses/docs;
 3. record objections;
 4. update open questions;
 5. classify new ideas by scope;
