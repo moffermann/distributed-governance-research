@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/14_LAYERED_CITIZEN_INTERFACE_MODEL|Layered Citizen Interface Model v0]]
 - [[hypotheses/H059-public-value-return-per-peso|H059 — Public Value Return per Peso]]
 - [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
@@ -30,6 +31,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
 - [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
+- [[../docs/14_LAYERED_CITIZEN_INTERFACE_MODEL|Layered Citizen Interface Model v0]]
 
 ## Core glossary
 
