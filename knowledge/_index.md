@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER|Citizen Project Dashboard Layer v0]]
 - [[../docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|Citizen Compact Project List Layer v0]]
 - [[../docs/15_CITIZEN_HOME_DISCOVERY_LAYER|Citizen Home / Discovery Layer v0]]
 - [[../docs/14_LAYERED_CITIZEN_INTERFACE_MODEL|Layered Citizen Interface Model v0]]
@@ -36,6 +37,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/14_LAYERED_CITIZEN_INTERFACE_MODEL|Layered Citizen Interface Model v0]]
 - [[../docs/15_CITIZEN_HOME_DISCOVERY_LAYER|Citizen Home / Discovery Layer v0]]
 - [[../docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|Citizen Compact Project List Layer v0]]
+- [[../docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER|Citizen Project Dashboard Layer v0]]
 
 ## Core glossary
 
@@ -157,6 +159,6 @@ Start here when navigating the project in Obsidian or GitHub.
 ## Skills
 
 - [[../skills/recursive-hypothesis-refinement/SKILL|Recursive Hypothesis Refinement]]
-- [[skills/session-distillation/SKILL|Session Distillation]]
-- [[skills/literature-scout/SKILL|Literature Scout]]
-- [[skills/paper-drafting/SKILL|Paper Drafting]]
+- [[../skills/session-distillation/SKILL|Session Distillation]]
+- [[../skills/literature-scout/SKILL|Literature Scout]]
+- [[../skills/paper-drafting/SKILL|Paper Drafting]]
