@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW|Project Lifecycle After Publication Flow v0]]
 - [[../docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW|Project Creation and Publication Flow v0]]
 - [[../docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|Citizen Automatic Allocation Profile Flow v0]]
 - [[../docs/27_CITIZEN_DELEGATION_FLOW|Citizen Delegation Flow v0]]
@@ -62,6 +63,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/27_CITIZEN_DELEGATION_FLOW|Citizen Delegation Flow v0]]
 - [[../docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|Citizen Automatic Allocation Profile Flow v0]]
 - [[../docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW|Project Creation and Publication Flow v0]]
+- [[../docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW|Project Lifecycle After Publication Flow v0]]
 
 ## Core glossary
 
