@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER|Project Technical Audit Trail Layer v0]]
+- [[../docs/19_CITIZEN_FULL_PROJECT_SHEET_LAYER|Citizen Full Project Sheet Layer v0]]
 - [[../docs/18_CITIZEN_SIGNAL_DETAIL_LAYER|Citizen Signal Detail Layer v0]]
 - [[../docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER|Citizen Project Dashboard Layer v0]]
 - [[../docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|Citizen Compact Project List Layer v0]]
@@ -40,6 +42,8 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|Citizen Compact Project List Layer v0]]
 - [[../docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER|Citizen Project Dashboard Layer v0]]
 - [[../docs/18_CITIZEN_SIGNAL_DETAIL_LAYER|Citizen Signal Detail Layer v0]]
+- [[../docs/19_CITIZEN_FULL_PROJECT_SHEET_LAYER|Citizen Full Project Sheet Layer v0]]
+- [[../docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER|Project Technical Audit Trail Layer v0]]
 
 ## Core glossary
 
