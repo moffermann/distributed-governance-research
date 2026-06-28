@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/18_CITIZEN_SIGNAL_DETAIL_LAYER|Citizen Signal Detail Layer v0]]
 - [[../docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER|Citizen Project Dashboard Layer v0]]
 - [[../docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|Citizen Compact Project List Layer v0]]
 - [[../docs/15_CITIZEN_HOME_DISCOVERY_LAYER|Citizen Home / Discovery Layer v0]]
@@ -38,6 +39,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/15_CITIZEN_HOME_DISCOVERY_LAYER|Citizen Home / Discovery Layer v0]]
 - [[../docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|Citizen Compact Project List Layer v0]]
 - [[../docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER|Citizen Project Dashboard Layer v0]]
+- [[../docs/18_CITIZEN_SIGNAL_DETAIL_LAYER|Citizen Signal Detail Layer v0]]
 
 ## Core glossary
 
