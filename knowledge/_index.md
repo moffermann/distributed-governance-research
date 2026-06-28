@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|Idea Entity, Navigation, and C001 Resolution v0]]
 - [[../docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|v0 Contradiction and Failure-Mode Checklist]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
@@ -80,6 +81,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 - [[../docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|v0 Contradiction and Failure-Mode Checklist]]
+- [[../docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|Idea Entity, Navigation, and C001 Resolution v0]]
 
 ## Core glossary
 
