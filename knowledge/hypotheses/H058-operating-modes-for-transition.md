@@ -59,6 +59,64 @@ The platform supports these modes technically. It does not decide when a public 
 
 The implementing country or authorized governance process decides the mode.
 
+## Mode change registration
+
+When a public function changes operating mode, the platform should register:
+
+- public function affected;
+- previous mode;
+- new mode;
+- effective date and time;
+- authorized actor or process that made the change;
+- justification if provided;
+- parameters modified;
+- treatment of pending projects;
+- affected project counts;
+- public history of the mode change.
+
+## Effect on existing projects
+
+As a default principle, mode changes should not retroactively alter obligations of projects already published, funded, or executing under a prior mode.
+
+Published and funded projects continue under the rules that applied when they entered their current state, unless the implementing authority defines an exceptional transition rule.
+
+## Effect on pending moderation
+
+Projects pending moderation should be treated according to the new operating mode once the mode change becomes effective.
+
+Example:
+
+```text
+Sports mode changes:
+Tutored → Open
+
+Projects pending moderation:
+No longer require institutional approval.
+If they satisfy the ordinary publication requirements, they should proceed to publication.
+```
+
+For other mode changes:
+
+```text
+Tutored → Semi-open:
+  pending projects that no longer require review proceed under ordinary rules;
+  pending projects that meet semi-open review criteria remain under review.
+
+Open → Tutored:
+  new drafts and unpublished projects become subject to moderation;
+  projects already published are not retroactively unpublished.
+
+Any mode → Suspended:
+  new publication and/or funding activity may pause according to the suspension rule;
+  already funded or executing projects require explicit treatment in the suspension decision.
+```
+
+## No retroactive punishment
+
+A project should not be penalized merely because the public function changed operating mode after the project was created.
+
+Mode transitions should preserve traceability and avoid retroactive instability.
+
 ## Relationship with H057
 
 H057 defines the tutored moderation regime used when a public function is in tutored mode.
@@ -77,11 +135,12 @@ Potential metrics:
 - moderation time;
 - mode changes over time;
 - projects affected by suspension;
+- projects released from pending moderation after a mode change;
 - transition from tutored to semi-open or open mode.
 
 ## Principle
 
-> The country decides the transition pace; the platform represents the operating mode and enforces the corresponding rules.
+> The country decides the transition pace; the platform represents the operating mode and enforces the corresponding rules. Mode changes apply forward, while pending unpublished projects follow the new mode once it becomes effective.
 
 ## Status
 
