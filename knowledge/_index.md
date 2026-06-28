@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
 - [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Evidence, and Control Model v0]]
 - [[07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY|Core Objects, Fiscalization, Evidence, and Simplicity]]
 - [[principles/P006-layered-complexity-and-citizen-simplicity|P006 — Layered Complexity and Citizen Simplicity]]
@@ -23,6 +24,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/08_ENTITY_AND_ROLE_MAP|Entity and Role Map v0]]
 - [[../docs/09_PROJECT_OBJECT_MODEL|Project Object Model v0]]
 - [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Evidence, and Control Model v0]]
+- [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
 
 ## Core glossary
 
