@@ -41,7 +41,18 @@ Projects involving related parties require:
 - stronger fiscalization;
 - clear public-return definition;
 - separation of control where necessary;
-- potential exclusion from assignable public funds if the private benefit dominates.
+- proportional classification of the conflict;
+- potential exclusion from assignable public funds if the private benefit dominates or if the conflict is severe.
+
+Related-party status does not automatically invalidate a project. A declared low or indirect conflict may proceed with warning and transparency. A relevant conflict may require independent control, access guarantees, pricing or revenue rules, ownership clarity, or other public-return safeguards. A severe or hidden conflict may require reformulation, actor exclusion, disbursement blocking, rejection, or a role-specific responsibility review.
+
+Example:
+
+```text
+A local sports club may propose a public multi-court facility that its members also use if public access, beneficiary rules, control, and operating conditions are declared.
+
+The same project becomes a severe conflict if the executor secretly hires a related construction company or captures the resulting asset for private revenue.
+```
 
 ## Status
 

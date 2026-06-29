@@ -49,6 +49,7 @@ A project card should include:
 - funding progress;
 - remaining amount;
 - closing deadline;
+- visible warnings where relevant;
 - signal dashboard;
 - primary action button;
 - secondary detail action.
@@ -75,6 +76,9 @@ Dashboard:
 💬 Comentarios: 35
 🚩 Denuncias: 0
 📎 Evidencias: 12
+
+Warnings:
+Declared relationship: the executing club will also use the facility under public access rules.
 
 [Financiar]
 [Ver detalle]
@@ -121,6 +125,32 @@ Clicking opens:
 - reports;
 - pending reviews;
 - conflict declarations if any.
+
+### Related-party warnings
+
+Shows whether the project has declared, alleged, or unresolved related-party conflict signals.
+
+Clicking opens:
+
+- relationship summary;
+- severity classification;
+- required safeguards;
+- independent control requirement;
+- objections or complaint links if any;
+- current effect: warning, safeguards required, reformulation, blocked, rejected, or under responsibility review.
+
+Example:
+
+```text
+Related-party warning:
+Declared low or indirect conflict.
+
+Reason:
+The local sports club proposing the project will also use the facility.
+
+Safeguards:
+Public access rules and independent control required.
+```
 
 ### Comments
 

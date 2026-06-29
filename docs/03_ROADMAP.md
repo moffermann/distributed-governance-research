@@ -21,6 +21,7 @@ C001-C025 have been propagated into the main core documents, contradiction check
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public institutions remain excluded from internal project participation, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority.
+H028 is aligned: related-party status does not automatically invalidate a project, but it must be declared, classified, and handled proportionally through warnings, safeguards, independent control, reformulation, blocking, rejection, or responsibility review depending on severity and disclosure.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -101,7 +102,9 @@ The thirty-third residual cleanup aligned H030 with C012 and C018: reputation re
 
 The thirty-fourth residual cleanup aligned H029 with C014 and C024: protected identity is the general verified-actor visibility mechanism for specific sensitive actions, not only for comments. Comments keep visible identity by default and may request protected identity per comment; complaints, testimony, evidence submissions, beneficiary confirmations, worker reports, affected-party observations, and similar sensitive formal actions may also request contextual protected identity when public exposure creates a justified safety, retaliation, privacy, or beneficiary-protection risk. This preserves the no-anonymous-formal-power rule while avoiding unnecessary public exposure.
 
-Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
+The thirty-fifth residual cleanup aligned H028 with the v0 control, auditability, role, and project-object model: related-party conflicts are declared and classified proportionally, ordinary declared proximity does not automatically invalidate a project, relevant conflicts require public-benefit safeguards and independent control, and severe or hidden conflicts may trigger reformulation, actor exclusion, disbursement blocking, rejection, complaint review, or role-specific Responsibility Events.
+
+Next review candidate: H027 proportional project thresholds.
 
 Approximate current maturity:
 

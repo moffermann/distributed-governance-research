@@ -171,6 +171,8 @@ Minimum Core v0 incompatibilities:
 5. A delegate must act only within the scope of the delegation they accepted.
 6. A proposer, modeler, and executor may be the same actor, but that accumulation must be transparent.
 
+Related-party relationships among proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries must be declared and classified. Declaration does not automatically invalidate a project. Low or indirect conflicts may be handled with public warnings; relevant conflicts may require independent control and public-return safeguards; severe or hidden conflicts may require reformulation, actor exclusion, disbursement blocking, rejection, or a role-specific responsibility review.
+
 ## Public institutions
 
 Public institutions are external to the internal Core v0 actor model.

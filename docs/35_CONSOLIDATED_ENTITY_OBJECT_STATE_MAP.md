@@ -203,6 +203,9 @@ Key attributes:
 - disbursement milestone plan;
 - evidence obligations;
 - fiscalization requirements;
+- related-party and conflict declarations;
+- related-party conflict classification where applicable;
+- public-benefit safeguards where applicable;
 - common-good impact declarations where relevant;
 - funding target;
 - funding deadline;
@@ -229,8 +232,54 @@ Project has many FiscalizerOffers
 Project has many FundingCommitments
 Project has many Complaints
 Project has many Comments
+Project has many RelatedPartyConflictReviews
 Project has many AuditEvents
 Project has one current State
+```
+
+## Related-Party Conflict Review
+
+A traceable review object that records declared, detected, or alleged related-party conflicts for a project.
+
+Attributes:
+
+- project;
+- actors and roles involved;
+- relationship type;
+- benefit type: monetary, non-monetary, operational, ownership, revenue, beneficiary, supplier, or other;
+- disclosure status: declared, corrected, alleged, hidden, misrepresented, disproven;
+- severity classification: low or indirect, relevant, severe, hidden or misrepresented;
+- public-benefit safeguards required;
+- independent control requirement;
+- effect: disclose, warn, require safeguards, require non-related control, reformulate, exclude actor or supplier, block disbursement, reject, trigger complaint review, or trigger responsibility review;
+- citizen-facing explanation;
+- audit references;
+- status.
+
+Rule:
+
+> Related-party status does not automatically invalidate a project. The system exposes the relationship, classifies severity, and applies proportional safeguards or blocking consequences.
+
+Example:
+
+```text
+Project:
+Multi-court facility in Macul.
+
+Declared relationship:
+The proposing local sports club will also use the facility.
+
+Classification:
+Low or indirect conflict.
+
+Effect:
+Visible warning plus public access rules and independent control.
+
+Hidden relationship:
+The executor secretly hires a sibling's construction company.
+
+Effect:
+Possible disbursement block, supplier replacement, complaint review, and Responsibility Event if proven.
 ```
 
 ## Project Version

@@ -38,6 +38,7 @@ Examples:
 - disbursement;
 - complaints;
 - lifecycle states;
+- related-party declaration and proportional conflict handling;
 - technical audit trail.
 
 ### Extension v1+
@@ -163,6 +164,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises. |
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |
 | Funding, civic wallet, notification, custody-boundary, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, follow-up, financial-order traceability, and visible citizen control. |
+| Related-party conflict of interest `H028` | Core v0 | Needed to prevent public resources from becoming hidden private self-financing while preserving proportional treatment for declared relationships. |
 | Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-institution participation. |
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
 | Meta-governance protocol change `H017` | Core v0 conceptual / paper layer | Needed to explain protocol evolution, but not fully implemented in MVP. |

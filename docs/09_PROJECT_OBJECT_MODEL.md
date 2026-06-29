@@ -170,6 +170,32 @@ The project should record which actor designed the project, which executor accep
 
 These fields are role attributes for traceability. They do not override the responsibility rule: execution responsibility is assumed by the executor once the executor accepts the design.
 
+The project should also record related-party and conflict declarations among relevant actors, including proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries.
+
+Conflict handling is proportional:
+
+```text
+Declared low or indirect conflict:
+  visible warning and traceability.
+
+Relevant conflict:
+  public-benefit safeguards and independent control.
+
+Severe conflict:
+  reformulation, actor exclusion, disbursement blocking, or rejection.
+
+Hidden or misrepresented conflict:
+  review trigger and possible Responsibility Event.
+```
+
+Example:
+
+```text
+A Macul multi-court project may be legitimate even if the proposing local club will also use the facility, provided public access rules, operating conditions, and independent control are declared.
+
+If the executor secretly uses a related construction supplier, the issue becomes a hidden related-party conflict and may block disbursement or trigger responsibility review.
+```
+
 ### 3. Value thesis
 
 The value thesis declares:

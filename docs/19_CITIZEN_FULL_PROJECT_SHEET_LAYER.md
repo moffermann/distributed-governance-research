@@ -142,6 +142,26 @@ This section may link to:
 - declared relationships;
 - previous projects.
 
+Related-party and conflict signals should be shown in plain language.
+
+Example:
+
+```text
+Related-party warning:
+Declared low or indirect conflict.
+
+Reason:
+The proposing sports club will also use the public facility under published access rules.
+
+Safeguards:
+Independent control required.
+Public access rules published.
+No private revenue destination declared.
+
+Status:
+Allowed with safeguards.
+```
+
 ## 5. Budget
 
 The budget should be understandable, not an accounting dump.

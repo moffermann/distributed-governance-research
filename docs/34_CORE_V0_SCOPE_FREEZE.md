@@ -81,6 +81,8 @@ Examples:
 - delegate acts only inside accepted scope;
 - executor responsibility begins when executor accepts the project design.
 
+Related-party relationships do not automatically invalidate a project, but they must be declared and classified. Low or indirect conflicts may proceed with visible warnings; relevant conflicts may require independent control and public-benefit safeguards; severe or hidden conflicts may require reformulation, actor exclusion, disbursement blocking, rejection, or a role-specific responsibility review.
+
 ### 2a. Idea object
 
 Core v0 includes `Idea` as a separate civic-demand object.
@@ -111,6 +113,7 @@ A project must include:
 - metrics;
 - evidence obligations;
 - fiscalization requirements;
+- related-party and conflict declarations;
 - risks;
 - antivalues;
 - funding target;

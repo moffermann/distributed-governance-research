@@ -259,9 +259,17 @@ Examples:
 - proposer and executor;
 - funder and executor where relevant;
 - moderator and project actor;
+- operator, owner, revenue recipient, or beneficiary and any funded project role;
 - repeated relationships across projects.
 
-Layer 5 should show declarations, updates, and unresolved conflict alerts.
+Layer 5 should show declarations, updates, proportional classification, safeguards, objections, and unresolved conflict alerts.
+
+Classification should distinguish:
+
+- declared low or indirect conflict;
+- relevant conflict requiring public-benefit safeguards or independent control;
+- severe conflict requiring reformulation, actor exclusion, disbursement blocking, or rejection;
+- hidden or misrepresented conflict that may trigger complaint review and a role-specific Responsibility Event.
 
 ## 11. Actor and role events
 

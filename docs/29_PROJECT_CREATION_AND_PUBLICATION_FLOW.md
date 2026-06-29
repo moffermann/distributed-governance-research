@@ -48,7 +48,7 @@ Important distinction:
 2. Define problem and solution
 3. Declare promised value
 4. Define beneficiaries
-5. Define executor
+5. Define executor and related-party declarations
 6. Build budget
 7. Define milestones
 8. Define metrics and evidence
@@ -257,6 +257,30 @@ It may search for an executor, open a call, or remain as an idea until a respons
 Rule:
 
 > No responsible executor means no execution financing.
+
+### Related-party and conflict declarations
+
+Before publication, the project should declare relevant relationships among proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries.
+
+This should be a structured part of project preparation, not a separate bureaucracy for ordinary users.
+
+Example:
+
+```text
+Project:
+Multi-court facility in Macul.
+
+Declared relationship:
+The proposing sports club will also use the facility during scheduled public-access hours.
+
+Classification:
+Declared low or indirect conflict.
+
+Required safeguards:
+Public access rules, beneficiary criteria, operating conditions, and independent control.
+```
+
+If the relationship is severe, the system may require reformulation, actor or supplier replacement, disbursement blocking, or rejection. If the relationship was hidden or misrepresented, it may trigger complaint review and a role-specific Responsibility Event.
 
 ## 6. Build budget
 

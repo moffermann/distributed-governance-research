@@ -104,6 +104,8 @@ Examples:
 - moderator should not approve own or related project;
 - executor responsibility starts when executor accepts the project design.
 
+Related-party relationships do not automatically invalidate a project, but they must be declared and classified. Low or indirect conflicts may proceed with visible warnings; relevant conflicts may require independent control and public-benefit safeguards; severe or hidden conflicts may require reformulation, actor exclusion, disbursement blocking, rejection, or a role-specific responsibility review.
+
 Public institutions may not use operating-mode authority to become internal project competitors. Material tutored decisions should be represented as public governance-resolution objects.
 
 ## Core object: idea
@@ -136,6 +138,7 @@ A project must contain:
 - metrics;
 - evidence obligations;
 - fiscalization requirements;
+- related-party and conflict declarations;
 - risks;
 - antivalues;
 - funding target;

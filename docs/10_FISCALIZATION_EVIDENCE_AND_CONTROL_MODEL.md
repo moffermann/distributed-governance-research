@@ -331,6 +331,7 @@ Controls include:
 
 - executor does not choose the responsible fiscalizer;
 - executor does not directly pay fiscalizers or evidence producers;
+- project and control actors declare related-party relationships;
 - evidence is public and contradictable;
 - fiscalizers and evidence producers carry reputational risk;
 - evidence can be challenged by beneficiaries, funders, citizens, and other organizations;
@@ -340,6 +341,20 @@ Controls include:
 - medium and large projects may require redundant evidence sources;
 - fiscalizer validation does not close the possibility of later complaint or fraud review.
 - supplemental control funding is capped and does not permit unlimited fiscalizers or unlimited evidence producers.
+
+## Related-party conflicts
+
+Related-party conflict is a control input, not an automatic universal rejection rule.
+
+Declared low or indirect conflicts may remain visible as warnings. Relevant conflicts may require stronger independence rules, non-related fiscalization, additional evidence, access guarantees, ownership or revenue clarity, or a longer observation window. Severe conflicts may require reformulation, exclusion of the conflicted actor or supplier, disbursement blocking, or rejection. Hidden or misrepresented conflicts may trigger complaint review and a role-specific Responsibility Event if proven.
+
+Example:
+
+```text
+A local sports club may propose a public multi-court project in Macul and also use the facility under published public-access rules.
+
+If the executor secretly hires a sibling's construction company, the control package should treat the issue as a hidden related-party conflict and may block release until corrected.
+```
 
 ## Palos blancos / straw participants
 

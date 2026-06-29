@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Show how an idea becomes a financeable project only after responsibility, value, budget, evidence, fiscalization, common-good impact, and disbursement plan requirements are coherent.
+Show how an idea becomes a financeable project only after responsibility, value, budget, evidence, fiscalization, common-good impact, related-party conflict, and disbursement plan requirements are coherent.
 
-Related resolutions: C001, C002, C008, C010, C016, C022.
+Related references: C001, C002, C008, C010, C016, C022, H028.
 
 ```mermaid
 flowchart TD
@@ -19,7 +19,8 @@ flowchart TD
     C --> VVP[Value Verification Package]
     VVP --> D[Beneficiaries and affected parties]
     D --> CG[Common-good impact declaration where relevant]
-    CG --> F[Execution budget]
+    CG --> RPC[Related-party and conflict declarations]
+    RPC --> F[Execution budget]
     F --> MP[Disbursement Milestone Plan]
     MP --> EV[Metrics, evidence, and corroboration requirements]
     EV --> CTRL[Control package and fiscalization requirements]
