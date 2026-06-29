@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
 - [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
 - [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
 - [[../docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|Layered Citizen State Translation and C009 Resolution v0]]
@@ -106,6 +107,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|Layered Citizen State Translation and C009 Resolution v0]]
 - [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
 - [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
+- [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
 
 ## Core glossary
 
