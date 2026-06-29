@@ -212,7 +212,7 @@ Reputation updates follow role-specific responsibility events. The system should
 
 ### Accepted v0 rule
 
-Execution funding, fiscalization offers, evidence-producer offers, and control-cost discovery proceed in parallel. Execution readiness requires both execution budget closure and control package closure. Control costs are part of the project, but executor-controlled spending must remain separated from control spending.
+Execution funding, fiscalization offers, evidence-producer offers, and control-cost discovery proceed in parallel. Execution readiness requires both execution budget closure and control package closure. Control costs are part of the project, but executor-controlled spending must remain separated from control spending. After minimum control closure, limited supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative evidence needs; it does not fund execution or block execution automatically.
 
 ---
 

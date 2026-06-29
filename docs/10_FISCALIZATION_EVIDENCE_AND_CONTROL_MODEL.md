@@ -123,6 +123,32 @@ control package closure
 
 Execution funding may close before the final control package is selected and funded, but the project does not become execution-ready until the minimum admissible control package is also closed.
 
+## Supplemental control funding
+
+After the minimum admissible control package is accepted, the project may allow additional control-only contributions under strict limits.
+
+Supplemental control funding:
+
+- never goes to the executor;
+- does not expand the execution budget;
+- does not change the project's promised scope;
+- does not automatically block execution;
+- must be assigned through the same independence, eligibility, conflict, and auditability rules that govern control selection.
+
+Core v0 should allow at most:
+
+```text
+1 primary fiscalizer
+1 secondary fiscalizer or fiscalization auditor
+non-duplicative additional evidence producers or evidence missions within protocol-defined evidence needs
+```
+
+The secondary fiscalizer does not replace the primary fiscalizer. The secondary role reviews, contrasts, or audits the primary fiscalization and may trigger a complaint, extraordinary review, pause, or blocking path only through the ordinary formal rules.
+
+Additional evidence producers should be funded only when they provide evidence that is materially different from or complementary to already accepted evidence. The system should reject duplicate, redundant, or low-value evidence funding once the protocol-defined evidence needs are satisfied.
+
+If new supplemental funding is not enough to fund a secondary fiscalizer but can fund a non-duplicative evidence mission, the evidence mission may be accepted. If the project already has enough evidence and no distinct evidence offer is admissible, the funding may remain reserved for the secondary fiscalizer. If the project already has both primary and secondary fiscalization and no admissible distinct evidence need remains, new supplemental control contributions should be rejected.
+
 ## Control subprojects
 
 Fiscalization, evidence missions, technical review, or other control work may be modeled as a Control Subproject associated with the parent project.
@@ -202,6 +228,8 @@ Possible protections:
 
 Execution readiness requires both execution budget closure and control package closure where control is required. A project may be execution-funded while control remains pending, but it may not begin execution until the minimum admissible control package is selected, funded, and accepted.
 
+Supplemental control funding after minimum closure may improve auditability, but it should not reopen execution readiness by default. Its effects become operational only through accepted control assignments, evidence items, complaints, extraordinary review, pause, blocking, or disbursement rules.
+
 ## Evidence commitments from funders and beneficiaries
 
 Funders and direct beneficiaries are naturally interested in whether the project is executed well.
@@ -263,6 +291,8 @@ Evidence missions should be funded from the project's separated control budget, 
 
 Submitting an evidence-producer offer is not itself payable by default. Payment begins only when the actor is selected or assigned to accepted control work under the protocol.
 
+Supplemental evidence funding after the minimum control package is accepted should fund only distinct or complementary evidence. It should not pay multiple actors to produce the same evidence merely because additional money is available.
+
 However, the executor should not define or assign evidence missions at its own discretion.
 
 The executor can define project commitments, milestones, and locations, but should not control the evidence producers who verify them.
@@ -309,6 +339,7 @@ Controls include:
 - false evidence can produce strong reputational penalties;
 - medium and large projects may require redundant evidence sources;
 - fiscalizer validation does not close the possibility of later complaint or fraud review.
+- supplemental control funding is capped and does not permit unlimited fiscalizers or unlimited evidence producers.
 
 ## Palos blancos / straw participants
 

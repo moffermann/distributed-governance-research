@@ -262,6 +262,8 @@ Fiscalization cost is a control cost and should be separated from executor-contr
 
 Fiscalization may be structured as a Control Subproject associated with the parent project. Control selection must be protocolized, risk-adjusted, conflict-checked, and auditable, not chosen by the executor or ordinary popularity.
 
+After the minimum admissible control package is accepted, supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct additional evidence needs. It does not fund execution, expand project scope, create unlimited fiscalization, or block execution automatically.
+
 ## Citizen interface layers
 
 v0 uses layered citizen complexity.

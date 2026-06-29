@@ -214,6 +214,7 @@ Core funding rules:
 ```text
 If the project reaches or exceeds its declared funding target → funding closes.
 No automatic overfunding by default.
+Limited supplemental control funding may exist only as designated control funding, not execution overfunding.
 If the project does not reach funding by deadline → close or reformulate.
 After funding → no ordinary free withdrawal.
 ```

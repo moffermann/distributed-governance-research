@@ -211,6 +211,42 @@ If yes, the system selects the package according to transparent rules.
 
 If no, the project remains funded for execution but pending control closure.
 
+## Supplemental control funding after minimum closure
+
+Once the minimum admissible control package is funded, selected, and accepted, the project may accept additional control-only contributions under protocol limits.
+
+This is not ordinary project overfunding.
+
+Supplemental control funding:
+
+- does not fund the executor;
+- does not increase the execution budget;
+- does not expand the project scope;
+- does not automatically delay or block execution;
+- must remain separate from execution funding;
+- must follow the same independence, admissibility, conflict-check, and audit-trail rules as other control work.
+
+Core v0 caps supplemental control:
+
+```text
+primary fiscalizer: maximum 1
+secondary fiscalizer / fiscalization auditor: maximum 1
+additional evidence producers: only for distinct or complementary evidence needs
+```
+
+The secondary fiscalizer or fiscalization auditor is a control actor that reviews, contrasts, or audits the primary fiscalization. It does not replace the primary fiscalizer and does not block execution by itself. If it detects a serious issue, the issue must enter the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
+
+Additional evidence producers may be funded only when the proposed evidence is materially different from or complementary to already accepted evidence. The system should not fund repeated evidence production when it adds no meaningful verification value.
+
+Recommended priority rule:
+
+```text
+If available supplemental funding can cover the secondary fiscalizer and an admissible secondary offer exists, it may fund that role.
+If it cannot cover the secondary fiscalizer but can cover a distinct admissible evidence mission, it may fund that evidence mission.
+If there is enough evidence and no distinct evidence offer is admissible, reserve the supplemental control balance toward the secondary fiscalizer.
+If the project already has both primary and secondary fiscalization and no distinct evidence need remains, reject new supplemental control contributions.
+```
+
 ## Admissible control package
 
 The system should not choose the cheapest package automatically.
@@ -368,6 +404,15 @@ Total funded:                 $101,800,000
 Status: execution-ready
 ```
 
+Example after supplemental control funding:
+
+```text
+Execution budget:              closed
+Minimum control package:       closed
+Supplemental control:          funding secondary fiscalization
+Execution status:              execution-ready, not blocked by supplemental funding
+```
+
 The citizen should not see the fiscalization or evidence cost as an unrelated fee.
 
 They should see it as part of the cost of making the project auditable.
@@ -475,6 +520,10 @@ Final rule:
 
 > A project may close execution funding before closing control funding, but it may not execute before the minimum admissible control package is selected, funded, and accepted.
 
+Supplemental rule:
+
+> After minimum control closure, supplemental control funding may finance at most one secondary fiscalizer or fiscalization auditor and distinct additional evidence needs. It never funds execution, never creates unlimited fiscalization, and never blocks execution automatically.
+
 ## Documents that should eventually reflect this resolution
 
 This resolution should inform future updates to:
@@ -498,6 +547,10 @@ This resolution should inform future updates to:
 - Control budget estimates may change after execution funding closure.
 - Paid pre-assessment exceptions may become a new gatekeeping layer.
 - Citizens may misunderstand whether they are funding execution or control.
+- Supplemental control may become harassment if unlimited.
+- Wealthier groups may try to pressure projects through excessive review funding.
+- Secondary fiscalization may produce conflicting conclusions that confuse citizens.
+- Duplicate evidence missions may waste resources without improving verification.
 
 ## Mitigations
 
@@ -510,6 +563,10 @@ This resolution should inform future updates to:
 - prevent executor-controlled fiscalizer and evidence-producer payments;
 - define expiry, extension, reformulation, return, or reassignment rules if control funding does not close;
 - track bad-faith or misleading offers as responsibility events where appropriate.
+- cap ordinary fiscalization at one primary and one secondary fiscalizer or fiscalization auditor;
+- fund additional evidence only when it is distinct or complementary;
+- reject new supplemental control contributions when fiscalization and admissible evidence needs are already saturated;
+- ensure supplemental findings affect execution only through formal complaint, extraordinary review, pause, blocking, or disbursement-control rules.
 
 ## Design rule
 

@@ -32,6 +32,13 @@ Visible button:
 [Ofrecerme como fiscalizador]
 ```
 
+Where the project already has a primary fiscalizer and protocol permits supplemental control:
+
+```text
+[Offer as secondary fiscalizer]
+[Offer fiscalization audit]
+```
+
 For organizations:
 
 ```text
@@ -170,6 +177,8 @@ Rule:
 
 > The executor should not directly control the actor responsible for validating its own performance.
 
+After the primary fiscalizer is accepted, Core v0 may allow at most one secondary fiscalizer or fiscalization auditor if supplemental control funding and an admissible offer exist. This secondary role reviews, contrasts, or audits the primary fiscalization. It does not replace the primary fiscalizer and does not block execution automatically.
+
 ## 6. Confirmation
 
 When accepted:
@@ -201,6 +210,7 @@ Examples:
 - relationship issue;
 - eligibility not met;
 - project already has fiscalizer;
+- project already has both primary and secondary fiscalization;
 - offer window still open;
 - missing information;
 - another eligible fiscalizer was selected;
@@ -233,6 +243,7 @@ This flow should not:
 - hide methodology and deliverables;
 - activate responsibility without explicit acceptance;
 - rely only on first-come-first-served selection for complex projects.
+- create unlimited secondary fiscalizers or fiscalization auditors.
 
 ## Design rule
 

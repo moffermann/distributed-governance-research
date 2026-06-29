@@ -59,6 +59,7 @@ Required conditions may include:
 - funding complete;
 - responsible executor accepted;
 - fiscalizer confirmed;
+- minimum admissible control package accepted where required;
 - evidence plan configured;
 - milestones defined;
 - disbursement milestone plan validated with no unresolved critical failures;
@@ -136,6 +137,7 @@ Evidence may come from:
 - executor;
 - beneficiaries;
 - evidence producers;
+- accepted supplemental evidence producers;
 - fiscalizer;
 - funders;
 - open observers;
@@ -173,6 +175,7 @@ The fiscalizer reviews whether the milestone was fulfilled.
 The review may consider:
 
 - required evidence;
+- distinct supplemental evidence where accepted;
 - metric targets;
 - beneficiary confirmations;
 - budget use;
@@ -182,6 +185,7 @@ The review may consider:
 - complaints;
 - prior warnings;
 - protocol rules.
+- secondary fiscalizer or fiscalization-audit findings where accepted.
 
 Possible review results:
 
@@ -202,6 +206,7 @@ Possible blockers:
 - blocking complaint open;
 - evidence contradicted and unresolved;
 - fiscalizer report missing;
+- formal review triggered by supplemental control finding;
 - milestone late without accepted justification;
 - budget exceeded;
 - required document missing;
@@ -224,6 +229,8 @@ Under extraordinary review
 ### Rule
 
 > Blocking status must be explicit, justified, and reviewable.
+
+Supplemental control findings do not block disbursement automatically. They must be converted into a formal complaint, extraordinary review, pause, blocking condition, or disbursement objection under the applicable rule.
 
 ## 8. Disbursement decision
 
@@ -450,6 +457,18 @@ What happens next:
 Executor must respond and the fiscalizer must review additional evidence.
 ```
 
+Example supplemental control case:
+
+```text
+Disbursement observed
+
+Reason:
+A secondary fiscalization report contradicts part of the primary fiscalizer's conclusion.
+
+What happens next:
+The issue must enter formal review before it can block release.
+```
+
 ## 16. Executor view
 
 The executor should see an operational disbursement panel.
@@ -512,6 +531,7 @@ Required trace:
 - retained amount;
 - evidence considered;
 - fiscalizer decision;
+- supplemental control reports considered where applicable;
 - blockers checked;
 - complaints considered;
 - rule applied;
@@ -554,6 +574,7 @@ The disbursement flow should not:
 - rely on executor self-validation;
 - hide blocking complaints;
 - ignore contradicted evidence;
+- treat supplemental control findings as automatic vetoes;
 - hide retained amounts;
 - treat remaining funds as executor property;
 - make release decisions without audit trace;

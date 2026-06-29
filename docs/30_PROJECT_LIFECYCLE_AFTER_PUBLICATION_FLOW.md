@@ -68,7 +68,7 @@ Possible closure conditions:
 - beneficiary information declared or confirmed;
 - required documents complete;
 - guarantees or retentions configured;
-- control budget complete;
+- minimum admissible control package complete;
 - no blocking complaint;
 - moderation completed if operating mode requires it;
 - required protocol checks passed.
@@ -101,6 +101,7 @@ This check should confirm:
 - no blocking complaint is active;
 - fiscalization is configured;
 - evidence obligations are configured;
+- the minimum admissible control package is accepted where control is required;
 - milestone plan is complete;
 - disbursement milestone plan has no unresolved critical validation failures;
 - disbursement rules are defined;
@@ -126,6 +127,8 @@ Execution-ready means:
 
 > Execution-ready authorizes the start of controlled execution. It does not release the full budget automatically.
 
+Supplemental control funding after execution-ready does not reopen this transition by default. A project may remain execution-ready while additional control-only funding is reserved for one secondary fiscalizer, fiscalization audit, or distinct evidence work. Any blocking effect from supplemental control must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
+
 ## 4. Start of execution
 
 When execution begins, status becomes:
@@ -139,6 +142,7 @@ The system activates:
 - milestone calendar;
 - evidence schedule;
 - fiscalizer responsibilities;
+- any accepted supplemental control responsibilities;
 - executor reporting obligations;
 - citizen notifications;
 - funder tracking;
@@ -247,6 +251,7 @@ The fiscalizer reviews the milestone against the accepted project design.
 The review may consider:
 
 - required evidence;
+- distinct supplemental evidence where accepted;
 - metric targets;
 - beneficiary confirmations;
 - budget use;
@@ -256,6 +261,7 @@ The review may consider:
 - complaints;
 - prior warnings;
 - protocol rules.
+- secondary fiscalization or fiscalization-audit findings where accepted.
 
 Possible review outcomes:
 
@@ -327,6 +333,8 @@ The system may respond by:
 - triggering extraordinary review;
 - escalating to reformulation;
 - escalating to revocation in severe cases.
+
+Supplemental control reports are observations within the control architecture. They may strengthen a complaint, request for extraordinary review, pause, or disbursement objection, but they do not automatically override the primary fiscalizer or block execution by themselves.
 
 ### Rule
 

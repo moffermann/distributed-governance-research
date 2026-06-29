@@ -181,6 +181,15 @@ Rules:
 
 Evidence-producer offers may be submitted in parallel with execution funding. The offer is lightweight and unpaid by default. Payment begins only when the actor is selected or assigned to accepted control work under the protocol.
 
+After the minimum control package is accepted, supplemental evidence funding may support additional producers only when the proposed evidence is distinct or complementary to evidence already accepted or planned.
+
+The system should not fund unlimited evidence producers. It should reject or close supplemental evidence funding when:
+
+- the evidence need is already satisfied;
+- the proposed evidence duplicates existing accepted evidence;
+- the project already has enough evidence for the relevant milestone, territory, beneficiary group, or risk;
+- no admissible distinct evidence offer remains.
+
 ## 5. Review and status
 
 After submission, evidence should have a clear status.
@@ -277,6 +286,7 @@ The evidence production flow should not:
 - accept vague material without context;
 - hide evidence status;
 - hide whether evidence was disputed.
+- fund duplicate evidence merely because supplemental control money is available.
 
 ## Design rule
 

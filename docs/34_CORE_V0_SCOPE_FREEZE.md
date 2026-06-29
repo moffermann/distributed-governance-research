@@ -188,6 +188,8 @@ Fiscalization is proportional to project size, complexity, risk, territory, and 
 
 Fiscalization may be modeled as a Control Subproject with budget, methodology, deliverables, evidence, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
 
+Core v0 also allows limited supplemental control funding after minimum control closure: at most one secondary fiscalizer or fiscalization auditor, plus distinct additional evidence needs. Supplemental control never funds execution, expands project scope, creates unlimited fiscalizers, or blocks execution automatically.
+
 ### 9. Funding model
 
 Core v0 includes:

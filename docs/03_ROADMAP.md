@@ -47,7 +47,9 @@ The sixth residual cleanup aligned C014 with C024 and C007: comments require ver
 
 The seventh residual cleanup aligned the fiscalization and evidence control model with C002 and C013: execution funding, fiscalizer offers, evidence-producer offers, and control-cost discovery move in parallel, while execution-ready requires both execution budget closure and minimum admissible control package closure.
 
-Next review candidate: evaluate whether supplemental post-control-closure funding should allow additional secondary fiscalizers, fiscalization auditors, or evidence producers after the first admissible control package is accepted. No v0 rule has been accepted for this yet.
+The eighth residual cleanup accepted a limited supplemental control rule and aligned the older funding-target rule with it: after minimum control closure, additional control-only funding may support at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative evidence needs; it never funds execution, expands project scope, creates unlimited fiscalizers, or blocks execution automatically.
+
+Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
 

@@ -390,6 +390,7 @@ Attributes:
 - project;
 - amount;
 - source: direct, delegated, automatic profile;
+- funding target: execution, minimum control, supplemental control where applicable;
 - status;
 - timestamp;
 - commitment and failure-handling rule;
@@ -410,6 +411,39 @@ Released totally
 Rule:
 
 > Funding is a commitment until project closure, not a freely reversible preference. Return, reassignment, recovery, guarantee, or retention handling occurs through project failure, closure, complaint, or reformulation rules.
+
+## Supplemental Control Contribution
+
+A designated contribution for control after the minimum admissible control package is accepted.
+
+Attributes:
+
+- citizen or funding actor;
+- project;
+- amount;
+- target: secondary fiscalizer / fiscalization auditor, distinct evidence mission, extraordinary review reserve where permitted;
+- admissibility status;
+- reservation status;
+- linked control offer or evidence mission where assigned;
+- rejection reason if no admissible supplemental need remains;
+- timestamp.
+
+States:
+
+```text
+Offered
+Reserved for secondary fiscalization
+Assigned to distinct evidence mission
+Assigned to secondary fiscalizer
+Rejected as saturated
+Returned
+Reassigned
+Closed
+```
+
+Rule:
+
+> Supplemental control contributions never fund execution. They may fund at most one secondary fiscalizer or fiscalization auditor and distinct additional evidence needs under protocol limits.
 
 ## Milestone
 
@@ -511,6 +545,8 @@ Attributes:
 - project;
 - required fiscalizer count;
 - required evidence producer count;
+- supplemental evidence need count or scope where applicable;
+- secondary fiscalizer slot: none, open, filled, closed;
 - report count;
 - control budget;
 - expertise needed;
@@ -526,7 +562,7 @@ It may define fiscalization, evidence-production, audit, or control work.
 Attributes:
 
 - parent project;
-- control type;
+- control type: primary fiscalization, secondary fiscalization, fiscalization audit, evidence mission, technical review, extraordinary review;
 - methodology;
 - deliverables;
 - control budget;
@@ -541,6 +577,10 @@ Attributes:
 Rule:
 
 > Control subprojects fit the project architecture, but their selection follows independence rules stronger than ordinary project selection.
+
+Supplemental rule:
+
+> The ordinary supplemental control cap is one secondary fiscalization or fiscalization-audit role plus non-duplicative evidence work. Additional control must not become unlimited fiscalizer or evidence-producer overfunding.
 
 ## Fiscalizer Offer
 
@@ -579,6 +619,7 @@ Attributes:
 
 - project;
 - fiscalizer;
+- assignment type: primary fiscalizer, secondary fiscalizer, fiscalization auditor;
 - scope;
 - reports required;
 - relationship declarations;

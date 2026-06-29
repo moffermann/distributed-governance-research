@@ -96,6 +96,7 @@ A main project may have:
 - one control subproject;
 - several control subprojects;
 - specialized control subprojects;
+- a secondary fiscalization or fiscalization-audit subproject where protocol permits;
 - evidence mission subprojects;
 - extraordinary review subprojects.
 
@@ -116,6 +117,24 @@ The control budget may include:
 Rule:
 
 > Control funding is part of the project control architecture, but it should not be controlled by the executor being reviewed.
+
+## Secondary fiscalization and fiscalization audit
+
+Core v0 may allow one secondary fiscalizer or fiscalization auditor after the primary control package has been accepted.
+
+This role exists to strengthen auditability without creating unlimited fiscalization.
+
+Rules:
+
+- maximum one primary fiscalizer and one secondary fiscalizer or fiscalization auditor;
+- the secondary fiscalizer does not replace the primary fiscalizer;
+- the secondary fiscalizer reviews, contrasts, or audits the primary fiscalization;
+- its conclusions are public and auditable;
+- its conclusions do not automatically block execution or disbursement;
+- any blocking effect must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path;
+- selection must follow eligibility, conflict, independence, and auditability rules.
+
+Supplemental evidence-producer subprojects may also be accepted when they produce distinct or complementary evidence. They should not be used to fund duplicate evidence that adds no meaningful verification value.
 
 ## Selection problem
 
@@ -324,6 +343,10 @@ Final rule:
 
 > Fiscalization may be structured as a project-like control subproject with budget, methodology, deliverables, evidence, comments, auditability, and reputation. However, it is not selected by ordinary popularity or by the executor. It is selected through a protocolized, risk-adjusted process based on eligibility, conflict checks, technical/economic criteria, and auditability.
 
+Supplemental rule:
+
+> Control subprojects may include one secondary fiscalization or fiscalization-audit role and distinct additional evidence work, but they must not become unlimited control overfunding.
+
 ## Documents that should eventually reflect this resolution
 
 This resolution should inform future updates to:
@@ -343,6 +366,8 @@ This resolution should inform future updates to:
 - Repeated relationships may still create soft capture.
 - Low-risk projects may not justify expensive selection procedures.
 - High-risk projects may need country-specific professional standards.
+- Secondary fiscalization may be used to pressure or harass projects if not capped.
+- Duplicate evidence work may waste control funding.
 
 ## Mitigations
 
@@ -353,6 +378,9 @@ This resolution should inform future updates to:
 - Require conflict declarations.
 - Record selection as audit event.
 - Allow citizen observations on conflicts.
+- Cap ordinary supplemental fiscalization at one secondary fiscalizer or fiscalization auditor.
+- Require distinct evidence value before accepting supplemental evidence work.
+- Route blocking effects through formal review paths rather than automatic secondary-fiscalizer veto.
 
 ## Design rule
 

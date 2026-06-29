@@ -42,6 +42,14 @@ The system should not allow indefinite overfunding by default.
 
 If a project wants to expand scope, it should create a new project, new version, or separate expansion phase with its own scope, financing target, KPIs, and evidential contract.
 
+This rule is qualified by the later limited supplemental control rule:
+
+```text
+Supplemental control funding is not execution overfunding.
+```
+
+After minimum control closure, additional control-only contributions may fund at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative evidence needs. They do not increase the executor's budget, expand project scope, or create unlimited fiscalization.
+
 ## Withdrawal rule
 
 Once a project is funded, contributors should not be able to withdraw support freely.

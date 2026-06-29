@@ -101,6 +101,22 @@ The system should enforce simple rules:
 - the citizen can cancel before confirming;
 - the system should show the remaining citizen balance after the selected amount.
 
+Controlled overfunding should not increase the executor's execution budget by default.
+
+After the execution budget and minimum admissible control package are closed, the project may accept only designated supplemental control contributions when admissible control needs remain.
+
+Supplemental control contributions may fund:
+
+- one secondary fiscalizer or fiscalization auditor;
+- distinct additional evidence producers or evidence missions.
+
+They should be rejected when:
+
+- the project already has a primary and secondary fiscalizer;
+- no distinct admissible evidence need remains;
+- the contribution would function as ordinary execution overfunding;
+- the contribution would create duplicate evidence or unlimited fiscalization.
+
 ## 3. Summary before confirmation
 
 Before confirming, the citizen should see a clear summary.
@@ -128,6 +144,16 @@ Se liberará sólo si:
 
 [Confirmar aporte]
 [Volver]
+```
+
+If the contribution is for supplemental control, the summary should say so explicitly:
+
+```text
+This contribution funds supplemental control.
+
+It does not increase the executor's budget.
+It may fund a secondary fiscalizer, fiscalization audit, or distinct additional evidence if an admissible offer exists.
+If no admissible control need remains, the contribution will not be accepted.
 ```
 
 ## 4. Funding confirmation
@@ -193,6 +219,19 @@ Qué significa:
 Tu aporte cuenta para financiar el proyecto, pero todavía no se entrega al ejecutor.
 ```
 
+For supplemental control contributions, the status should distinguish control from execution:
+
+```text
+Your contribution:
+$10,000
+
+Status:
+Reserved for supplemental control
+
+Meaning:
+This contribution can fund additional fiscalization or distinct evidence. It cannot be released to the executor.
+```
+
 ## 6. Automatic following
 
 Funding a project automatically adds it to the citizen's following area.
@@ -254,6 +293,8 @@ Possible default rules:
 
 > The citizen must always know whether their money is committed, reserved, released, paused, returned, or reassigned.
 
+The citizen must also know whether the contribution funds execution, the minimum control package, or supplemental control.
+
 ## Summary flow
 
 ```text
@@ -278,6 +319,9 @@ The funding flow should not:
 - require technical understanding before funding;
 - let the citizen lose track of a funded project;
 - hide what happens if a project fails, expires, or is reformulated.
+- accept unlimited post-closure control contributions;
+- present supplemental control funding as money for the executor;
+- fund duplicate evidence or unlimited fiscalizers.
 
 ## Design rule
 
