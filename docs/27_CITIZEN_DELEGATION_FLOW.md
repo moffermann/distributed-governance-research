@@ -242,19 +242,26 @@ Reports may include:
 
 Revocation should be immediate for future actions.
 
+For budget delegation, revocation should also reactivate the citizen's previously selected base allocation profile or fallback rule. This is the same base rule required before delegation becomes active.
+
 Example:
 
 ```text
-Revocar delegación
+Revoke delegation
 
-Desde ahora, este delegado ya no podrá actuar por ti en este ámbito.
+From now on, this delegate will not be able to act for you in this scope.
 
-Las acciones realizadas mientras la delegación estaba activa se mantienen como parte del historial.
+Actions performed while the delegation was active remain part of the history.
 
-[Confirmar revocación]
+Your base profile will become active again:
+Public system default.
+
+[Confirm revocation]
 ```
 
 Revocation affects future delegated decisions only. Funding commitments already made by the delegate remain governed by the ordinary funding commitment and project failure rules.
+
+After revocation, the citizen may choose a new delegate, edit the base profile, or fund manually. The system should not improvise a hidden fallback after revocation.
 
 ## 10. Delegate resignation
 
@@ -293,14 +300,15 @@ The delegation flow should not:
 - hide the fallback that resumes if delegation ends;
 - make revocation difficult;
 - erase past delegated actions after revocation;
+- hide which base allocation profile or fallback rule resumes after revocation;
 - allow delegate to act outside scope;
 - confuse delegation with automatic allocation profile;
-- require every citizen to delegate.
+- require every citizen to delegate;
 - hide that automatic allocation rules are inactive within the delegated scope.
 
 ## Design rule
 
-> Delegation should be easy to create, easy to understand, transparent in concentration, and immediately revocable for future actions.
+> Delegation should be easy to create, easy to understand, transparent in concentration, and immediately revocable for future actions. For budget delegation, revocation resumes the citizen's previously selected base allocation profile or fallback rule.
 
 ## Status
 

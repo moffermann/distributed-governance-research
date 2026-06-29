@@ -191,6 +191,7 @@ Recently aligned residual-audit hypotheses:
 - [[hypotheses/H033-system-defined-default-allocation-rule|H033 — System-Defined Default Allocation Rule]]
 - [[hypotheses/H034-configurable-allocation-profiles|H034 — Configurable Allocation Profiles]]
 - [[hypotheses/H038-monthly-use-it-or-allocate-it-cycle|H038 — Monthly Use-It-or-Allocate-It Cycle]]
+- [[hypotheses/H047-immediate-delegation-revocation|H047 — Immediate Delegation Revocation]]
 - [[hypotheses/H048-delegation-request-and-acceptance|H048 — Delegation Request and Acceptance]]
 - [[hypotheses/H049-delegate-resignation-and-notification|H049 — Delegate Resignation and Notification]]
 - [[hypotheses/H051-composite-programs-as-project-aggregators|H051 — Composite Programs as Project Aggregators]]

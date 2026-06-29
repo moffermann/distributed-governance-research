@@ -51,6 +51,8 @@ A citizen can revoke delegation immediately at any time. Revocation affects only
 
 Past actions taken while the delegation was valid remain immutable.
 
+For budget delegation, revocation reactivates the citizen's previously selected base allocation profile or fallback rule. The system should not invent a new fallback when the citizen revokes delegation.
+
 ### 6. Delegates can resign
 
 Delegation is voluntary on both sides. A delegate may resign, and the delegator must be notified properly.
@@ -62,8 +64,9 @@ Budget delegation should only become active after the citizen has
 a selected base allocation profile or fallback rule.
 
 If a delegate resigns, that previously selected base rule resumes.
+If the citizen revokes delegation, that same previously selected base rule resumes.
 The public system default may be the selected base rule, but it should
-not be improvised silently after resignation.
+not be improvised silently after resignation or revocation.
 ```
 
 ### 7. Delegated actions carry represented weight

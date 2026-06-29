@@ -73,6 +73,8 @@ The nineteenth residual cleanup aligned H059 with C021 and C025: public value re
 
 The twentieth residual cleanup aligned H049 with C011, H033, H034, H038, and the delegation and automatic-allocation flows: budget delegation should not become active until the citizen has selected or acknowledged a base allocation profile or fallback rule. If delegation is revoked, rejected, expired, or resigned, the previously selected base rule resumes; the system does not improvise a hidden fallback after delegate resignation. Citizens who never onboard may still be governed by the public protocol default so civic allocation does not remain dormant indefinitely.
 
+The twenty-first residual cleanup aligned H047 with H049 and the delegation/automatic-allocation diagram: citizen revocation remains immediate, simple, and non-retroactive, but budget delegation revocation must also reactivate the citizen's previously selected base allocation profile or fallback rule. Past delegated funding remains valid, future delegated authority ends, and the system must show which base rule resumed instead of creating a hidden post-revocation default.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
