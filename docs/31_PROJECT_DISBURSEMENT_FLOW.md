@@ -27,9 +27,10 @@ When, why, and under what controls can project funds be released?
 6. Fiscalizer reviews
 7. Blocking conditions are checked
 8. Disbursement decision is made
-9. Funds are released, retained, corrected, rejected, or blocked
-10. Audit trail is updated
-11. Citizens and project actors are notified
+9. System generates a financial order where money movement is required
+10. Custodian executes payment, retention, return, reassignment, or recovery
+11. Audit trail is updated
+12. Citizens and project actors are notified
 ```
 
 ## 1. Funds committed
@@ -246,6 +247,22 @@ Reject milestone
 Send to extraordinary review
 Block because of complaint
 ```
+
+When a decision requires money movement, the system should generate a `Financial Order` for the custodian, treasury integration, escrow service, bank, or other country-specific financial execution mechanism.
+
+The financial order should include:
+
+- project;
+- milestone or closure reference;
+- amount;
+- action: release, retain, return, reassign, recover, or execute guarantee;
+- rule applied;
+- evidence and fiscalization references where relevant;
+- blocking-condition status;
+- destination or ledger account;
+- protocol authorization or signature.
+
+The custodian executes valid financial orders. It may reject or suspend an order only for closed technical or legal causes such as invalid signature, duplicated order, insufficient funds, invalid account, legal freeze, compliance block required by law, malformed order, or ledger mismatch. It should not reject an order because it disagrees with the project's civic value or priority.
 
 Example full release:
 
@@ -529,6 +546,8 @@ Required trace:
 - approved amount;
 - released amount;
 - retained amount;
+- financial order ID where applicable;
+- custodian execution status where applicable;
 - evidence considered;
 - fiscalizer decision;
 - supplemental control reports considered where applicable;

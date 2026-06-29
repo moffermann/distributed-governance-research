@@ -92,7 +92,8 @@ It may act as:
 - law enforcer;
 - public authority issuing governance resolutions in tutored mode;
 - external tutored-scope reviewer for eligibility, duplication, scope, or compatibility where configured;
-- infrastructure provider for identity, treasury, custody, permits, or registries.
+- infrastructure provider for identity, treasury, custody, permits, or registries;
+- custodian that executes protocol-valid financial orders and reports closed technical/legal execution blocks.
 
 It should not act as:
 
@@ -102,6 +103,7 @@ It should not act as:
 - internal evidence producer;
 - ordinary delegate;
 - internal moderator of competing projects;
+- discretionary project payment authority;
 - recipient of distributed project financing.
 
 ## 2. Role entities
@@ -413,6 +415,30 @@ Released totally
 Rule:
 
 > Funding is a commitment until project closure, not a freely reversible preference. Return, reassignment, recovery, guarantee, or retention handling occurs through project failure, closure, complaint, or reformulation rules.
+
+## Financial Order
+
+A protocol-authorized instruction for external financial execution.
+
+Attributes:
+
+- order id;
+- project;
+- funding commitment or ledger reference;
+- amount;
+- action: commit, reserve, retain, release, return, reassign, recover, execute guarantee, or close balance;
+- milestone, closure, complaint, guarantee, or recovery reference where applicable;
+- rule applied;
+- evidence or fiscalization reference where applicable;
+- destination or ledger account;
+- protocol authorization or signature;
+- custodian execution status;
+- closed rejection cause if execution is refused or suspended;
+- timestamp.
+
+Rule:
+
+> The protocol generates valid financial orders. The custodian executes them or reports closed technical/legal execution blocks; it does not decide civic value or project priority.
 
 ## Supplemental Control Contribution
 

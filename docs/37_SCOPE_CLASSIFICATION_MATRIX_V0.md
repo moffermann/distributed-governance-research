@@ -162,7 +162,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
 | Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises. |
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |
-| Funding, civic wallet, notification, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, follow-up, and visible citizen control. |
+| Funding, civic wallet, notification, custody-boundary, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, follow-up, financial-order traceability, and visible citizen control. |
 | Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-institution participation. |
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
 | Meta-governance protocol change `H017` | Core v0 conceptual / paper layer | Needed to explain protocol evolution, but not fully implemented in MVP. |
@@ -197,7 +197,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Sports transition pilot `H053` | Country implementation / pilot strategy | Good candidate pilot, not universal architecture. |
 | Functional transition maturity metrics `H054` | Country implementation + Extension | Thresholds and interpretation depend on implementer. |
-| Treasury / tax authority custody rules | Country implementation | Depends on legal and fiscal system. |
+| Treasury / tax authority custody rules | Country implementation with Core boundary | The specific custodian and legal integration depend on the legal and fiscal system; the Core v0 boundary is that custody executes valid financial orders and does not become civic decision-making. |
 | Official identity and privacy standards | Country implementation | Depends on jurisdiction. |
 | Sanctions, recovery, and appeals | Country implementation | Depends on administrative law. |
 | Budget percentage migrated to the system | Country implementation | Political and fiscal decision. |

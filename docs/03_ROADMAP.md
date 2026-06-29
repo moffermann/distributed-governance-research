@@ -91,6 +91,8 @@ The twenty-eighth residual cleanup aligned H040 with C005, C017, and the operati
 
 The twenty-ninth residual cleanup aligned H039 as the Core v0 civic-notification baseline: citizens may configure channels, intensity, frequency, and app-only or silent external notification modes, but material in-app civic records remain visible for affected funding, following, delegation, automatic allocation, reformulation, complaint, fiscalization, governance-resolution, and timeout-resolution events. The system reduces interruption without hiding traceability.
 
+The thirtieth residual cleanup aligned H037 with C006 and C007: public revenue custody, treasury integration, escrow, or other lawful custodians remain external infrastructure, not internal civic actors. Core v0 requires a financial-order boundary: the protocol generates valid financial orders for commitment, retention, release, return, reassignment, recovery, guarantee execution, or balance closure; the custodian executes them or reports closed technical/legal execution blocks. Custody must not become project selection, civic value judgment, fiscalization, complaint resolution, discretionary disbursement authority, or public-institution competition inside the platform.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

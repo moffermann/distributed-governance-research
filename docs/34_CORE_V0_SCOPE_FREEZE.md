@@ -218,9 +218,12 @@ Every disbursement requires:
 - fiscalizer review;
 - blocking-condition check;
 - rule applied;
+- financial order where money movement is required;
 - audit trace.
 
 Core v0 also requires a coherent Disbursement Milestone plan before execution funding. Specialized validation should check milestone evidence, release amounts, partial-release rules, retentions, and advance-payment protections. Projects with unresolved critical validation failures cannot begin receiving execution funding.
+
+Financial execution/custody is external infrastructure. The platform or protocol may generate financial orders for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. The custodian executes valid orders and reports status; it does not select projects, evaluate civic value, fiscalize milestones, or make discretionary disbursement judgments.
 
 Money states:
 

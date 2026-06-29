@@ -549,6 +549,7 @@ Each release requires:
 - review;
 - blocking check;
 - rule applied;
+- financial order where money movement is required;
 - audit trace.
 
 Before a project can receive execution funding, its disbursement milestone plan should pass specialized validation for milestone coherence, evidence requirements, release amounts, partial-release rules, retentions, and protected advance-payment rules. Unresolved critical validation failures block financing.
@@ -571,6 +572,8 @@ In recovery
 ```
 
 Remaining funds do not automatically belong to the executor.
+
+The platform may generate `Financial Orders` for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. Treasury, a custodian, escrow service, bank, or country-specific financial infrastructure executes valid orders and reports status. It does not decide project value, select projects, fiscalize milestones, or reject payments by civic preference.
 
 ## Reformulation, pause, and revocation
 
@@ -672,7 +675,9 @@ It may support:
 - disbursement integration;
 - compliance with country implementation.
 
-It does not decide project value, select ordinary projects, or fiscalize by default.
+It may execute protocol-valid financial orders and reject or suspend them only for closed technical or legal causes, such as invalid signature, duplicated order, insufficient real funds, invalid destination account, legal freeze, required compliance block, malformed order, or ledger mismatch.
+
+It does not decide project value, select ordinary projects, approve milestones by discretion, fiscalize by default, resolve complaints, or use custody power to override citizen allocation choices.
 
 ## Out of scope for v0
 
