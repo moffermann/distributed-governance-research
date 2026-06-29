@@ -61,6 +61,8 @@ The thirteenth residual cleanup aligned H058 with C020 and C007: operating modes
 
 The fourteenth residual cleanup aligned H054 with C020, C021, H055, and H058: functional transition maturity metrics remain useful for evaluation, comparison, and public audit, but they do not define mandatory political thresholds, automatic budget migration, automatic exit from tutored mode, or automatic institutional replacement. The platform measures, the country decides, and society audits both.
 
+The fifteenth residual cleanup aligned H053 with C007, C020, H054, and H058: sports remains a plausible early pilot sector, but pilot-sector choice, budget share, operating mode, and expansion pace are country implementation decisions. Sports pilots may use tutored review, but material rejection, reformulation, timeout, or scope decisions must remain public and auditable through Governance Resolutions or Review Timeout Resolutions.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

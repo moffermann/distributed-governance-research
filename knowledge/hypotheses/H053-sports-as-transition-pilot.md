@@ -1,14 +1,22 @@
 # H053 — Sports as Transition Pilot
 
+## Status
+
+Country-implementation / pilot-strategy hypothesis aligned with [[../../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[../../docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]], [[H054-functional-transition-maturity-metrics|H054]], and [[H058-operating-modes-for-transition|H058]].
+
+Sports is a plausible first pilot sector, not a universal requirement. The model should not decide which public function a country opens first, how much budget is assigned, whether the function remains tutored, or whether the pilot expands. Those are country implementation decisions.
+
 ## Hypothesis
 
-Sports is a strong candidate function for the first institutional-transition pilot toward distributed governance.
+Sports may be a strong candidate function for an early institutional-transition pilot toward distributed governance.
 
 ## Rationale
 
-A realistic implementation should not begin by attempting to replace the entire state. It should start with a function that is visible, socially attractive, relatively low-risk, and politically less central than defense, justice, taxation, security, or macroeconomic management.
+A realistic implementation does not need to begin by attempting to replace the entire state. A country may choose to start with a function that is visible, socially attractive, relatively low-risk, and politically less central than defense, justice, taxation, security, or macroeconomic management.
 
 Sports may satisfy these conditions better than many other state functions.
+
+This does not mean that sports must be the first pilot everywhere. Culture, local infrastructure, education support, community development, or another function may be a better first pilot in a specific jurisdiction.
 
 ## Reasons
 
@@ -30,7 +38,7 @@ This should be treated as an empirical question, not as an assumption.
 
 ## Initial pilot budget
 
-The pilot should begin with a small portion of the sports budget rather than attempting full replacement.
+If a country chooses sports as a pilot, it may begin with a small portion of the sports budget rather than attempting full replacement.
 
 A reasonable starting range could be:
 
@@ -40,7 +48,41 @@ A reasonable starting range could be:
 
 This range is large enough to test real behavior but small enough to control risk.
 
-If the pilot demonstrates good results, the assignable percentage can increase gradually through the transition and meta-governance process.
+The percentage is a country implementation choice. It should be public, traceable, and tied to the selected operating mode.
+
+If the pilot demonstrates good results, the competent authority may keep the same percentage, increase it, reduce it, pause the pilot, or close the pilot. H054 maturity metrics can inform the decision, but they do not force budget migration.
+
+## Tutored pilot example
+
+```text
+Public function:
+  Sports.
+
+Country implementation:
+  The sports ministry opens 5% of its budget to distributed governance.
+
+Operating mode:
+  Tutored mode with a 30-day review window.
+
+Project:
+  Multi-court complex in Macul on Street X.
+
+Authority finding:
+  The ministry already has an approved traditional project
+  for the same facility in the same location.
+
+Allowed tutored action:
+  Reject publication, request reformulation, or suggest another scope.
+
+Required platform record:
+  Public Governance Resolution with the responsible authority,
+  reason, affected project, applied scope rule, review date,
+  and suggested next path.
+```
+
+This is compatible with C007 because the ministry is not acting as an internal project actor, executor, fiscalizer, ordinary moderator, or competitor. It is exercising external tutored-scope review under a configured operating mode.
+
+If the authority does not issue a decision within the configured review window, C020 requires a public Review Timeout Resolution under the mode's predeclared timeout policy.
 
 ## Possible project types
 
@@ -70,12 +112,27 @@ Sports can serve as an early test of:
 - milestone disbursement;
 - transition KPIs;
 - institutional maturity measurement;
-- gradual budget migration.
+- budget migration evidence;
+- tutored review traceability;
+- Governance Resolution and Review Timeout Resolution behavior.
+
+## What H053 does not decide
+
+H053 should not be used to claim that:
+
+- every country should start with sports;
+- sports must move from tutored mode to open mode;
+- good pilot metrics automatically increase the assigned budget;
+- the sports institution must disappear or cede authority;
+- public institutions may compete internally for project funding;
+- the platform decides the pace of institutional transition.
+
+Those decisions remain with the country, jurisdiction, or authorized governance process. The platform represents the chosen operating mode, records decisions, exposes evidence, and supports public audit.
 
 ## Principle
 
-> The first transition pilot should be socially visible, low enough risk to experiment, and concrete enough to measure. Sports is a strong candidate.
+> A first transition pilot should be socially visible, low enough risk to experiment, and concrete enough to measure. Sports is a strong candidate in many contexts, but pilot-sector choice, budget share, operating mode, and expansion pace are country implementation decisions.
 
-## Status
+## Research note
 
-Transition-pilot hypothesis. Needs later empirical validation and country-specific design.
+Transition-pilot hypothesis. Needs later empirical validation and country-specific design. It should be read as a pilot example and evaluation strategy, not as a universal architecture requirement.

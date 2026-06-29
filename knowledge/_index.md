@@ -188,6 +188,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned transition hypotheses:
 
+- [[hypotheses/H053-sports-as-transition-pilot|H053 — Sports as Transition Pilot]]
 - [[hypotheses/H054-functional-transition-maturity-metrics|H054 — Functional Transition Maturity Metrics]]
 - [[hypotheses/H055-universal-institutional-observability-panel|H055 — Universal Institutional Observability Panel]]
 - [[hypotheses/H057-public-function-funding-scope-gating|H057 — Public Function Funding Scope Gating]]
