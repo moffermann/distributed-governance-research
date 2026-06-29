@@ -69,6 +69,8 @@ The seventeenth residual cleanup aligned H052 with C025 and H031: emergency rema
 
 The eighteenth residual cleanup aligned H051 with C022 and H050: composite programs remain Extension v1+ coordination containers for genuinely interdependent projects. They do not replace project-level accountability, create common-good charters, import full common-good governance, hide child-project funding conditions, or pool responsibility away from executors, fiscalizers, evidence, complaints, reputation, and common-good impact declarations at the child-project level.
 
+The nineteenth residual cleanup aligned H059 with C021 and C025: public value return per peso remains an Extension v2/v3 analytical signal, not Core v0, not a universal moral score, not an automatic funding rule, and not an opaque ranking engine. Any future use must compare within transparent domain limits, expose measured commitments, assumptions, evidence quality, comparison sets, and audit traces, and preserve explicit citizen funding decisions.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

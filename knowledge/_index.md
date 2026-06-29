@@ -196,6 +196,7 @@ Recently aligned residual-audit hypotheses:
 - [[hypotheses/H056-existing-institution-as-equal-actor|H056 — Existing Institution as Equal Actor]]
 - [[hypotheses/H057-public-function-funding-scope-gating|H057 — Public Function Funding Scope Gating]]
 - [[hypotheses/H058-operating-modes-for-transition|H058 — Operating Modes for Transition]]
+- [[hypotheses/H059-public-value-return-per-peso|H059 — Public Value Return per Peso]]
 
 ## Principles
 
