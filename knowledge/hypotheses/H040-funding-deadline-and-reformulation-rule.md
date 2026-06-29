@@ -4,6 +4,21 @@
 
 Every project should define a funding deadline. If the project does not reach its funding target by that deadline, it should either close or enter a reformulation process.
 
+## Resolution alignment
+
+This hypothesis is qualified by:
+
+- `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`;
+- `docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md`.
+
+Where older wording suggested an individualized funder withdrawal window during reformulation, C005 and C017 are the controlling rules.
+
+```text
+Reformulation does not create a default unilateral withdrawal window.
+Funding remains a commitment until project closure or protocol-defined project outcome.
+Material reformulation is handled through a Reformulation Proposal, not silent editing and not ordinary funder withdrawal.
+```
+
 ## Rationale
 
 Projects should not remain open indefinitely. An indefinite funding period creates stale projects, clutters the platform, and keeps committed civic funds locked without execution.
@@ -44,27 +59,28 @@ If the project is reformulated:
 
 - funders are notified;
 - the new version must explain what changed;
-- funders may choose whether to continue supporting the reformulated project or withdraw their support;
-- if a funder does not respond within the defined response window, continued support is assumed by default;
-- funders can change their evaluation of the project based on the reformulation.
+- the project must distinguish operational reformulation from material value reformulation;
+- funding effects follow C005 and C017;
+- funders can comment, object, support complaints, follow the reformulation, and change their evaluation of the project.
 
-## Reformulation response window
+## Reformulation decision path
 
-A reformulation should open a response window during which existing funders may withdraw support.
+Reformulation should not open a default individualized withdrawal window.
 
-The default window may be three days.
+Instead:
 
-The exact duration should be a configurable protocol parameter, not a discretionary decision by a single system operator.
+```text
+Operational reformulation:
+  visible change, notification where appropriate, validation, audit trail, no default funder withdrawal.
 
-During the response window:
+Material value reformulation:
+  Reformulation Proposal, preserved original version, community or protocol-defined approval, funding effects by approval outcome.
 
-- the project is marked as reformulated;
-- funders can review the changes;
-- funders can withdraw support;
-- funders can comment or express concerns;
-- if no action is taken, continued support is assumed by default.
+Rejected or expired material reformulation:
+  project fails, closes, or is revoked under the original terms; unreleased, unused, retained, guaranteed, or recovered funds return or reassign according to protocol and citizen configuration.
+```
 
-After the response window closes, funders cannot withdraw solely because of that reformulation, but they may still comment, update evaluations, or participate in future complaint/fiscalization mechanisms if new issues arise.
+The relevant response period is for review, comment, objection, complaint, approval, or protocol-defined decision, not for ordinary voluntary withdrawal.
 
 ## Reformulation frequency
 
@@ -88,7 +104,7 @@ Reformulated recently
 
 This helps funders who missed the reformulation notification understand that the project they originally supported has changed and should be reviewed again.
 
-Funders who did not respond during the notification window cannot withdraw by default after the window closes, but they may comment, update their evaluation, or express concerns about the reformulated version.
+Funders who do not respond remain governed by the project outcome and their configured return/reassignment rules where those rules apply.
 
 ## History and reputation
 
@@ -100,14 +116,20 @@ The project should not reset reputation by reformulating. Its prior attempt, cha
 
 ## Default continuity rule
 
-When a project is reformulated, existing funder support continues by default unless the funder actively withdraws during the response window.
+When a project is reformulated, existing funding remains committed unless the project reaches a protocol-defined outcome that returns or reassigns unreleased, unused, retained, guaranteed, or recovered funds.
 
-This prevents reformulation from automatically destroying partial support while still preserving the funder's right to exit.
+This prevents reformulation from automatically destroying partial support while still preserving citizen protection through traceability, complaints, fiscalization, retentions, guarantees, recovery where possible, and return/reassignment of eligible balances.
+
+## Recovery caveat
+
+Core v0 should not promise full recovery after failure or reformulation.
+
+If funds were legitimately or illegitimately released and spent, they may not be fully recoverable, just as current public projects do not always recover spent funds when a contractor fails. The system improves the situation by making losses visible, slowing release through milestones, preserving evidence, activating guarantees or recovery where possible, and assigning responsibility.
 
 ## Principle
 
-> A project that fails to reach funding by its deadline must either close and release committed funds, or reformulate transparently while preserving history and allowing funders to withdraw during the response window. Reformulation should be possible without a fixed total cap, but limited in frequency and clearly labeled to prevent overload and confusion.
+> A project that fails to reach funding by its deadline must either close and release eligible committed funds according to protocol, or reformulate transparently while preserving history. Reformulation does not create default individual withdrawal; funding effects follow project outcome, C005, and C017.
 
 ## Status
 
-Project funding lifecycle rule. Extends H035.
+Project funding lifecycle rule. Extends H035. Superseded where necessary by C005 and C017.

@@ -47,7 +47,7 @@ For example, if a delegate previously supported a project on the citizen's behal
 
 However, the citizen cannot withdraw funding already committed through a valid delegated action merely because delegation was revoked.
 
-Funding withdrawal is allowed only through protocol-defined windows or events, such as project reformulation where funders are explicitly allowed to withdraw during the response window.
+Funding effects follow C005 and C017. A delegated funding action remains a funding commitment until project closure or protocol-defined project outcome. Reformulation does not create default individual withdrawal; eligible unreleased, unused, retained, guaranteed, or recovered funds may return or reassign only through the project outcome and citizen configuration.
 
 ## User experience
 
@@ -72,8 +72,8 @@ After revocation, the system should show:
 
 ## Principle
 
-> Delegation is voluntary, revocable at any time, and non-retroactive. The citizen controls future authority, while past authorized actions remain immutable. The citizen may always add new direct expression, but cannot retroactively remove valid commitments except through protocol-defined exit windows.
+> Delegation is voluntary, revocable at any time, and non-retroactive. The citizen controls future authority, while past authorized actions remain immutable. The citizen may always add new direct expression, but cannot retroactively remove valid funding commitments except through project closure, failure, revocation, recovery, return, or reassignment rules.
 
 ## Status
 
-Extension of H042, H045, and H046.
+Extension of H042, H045, and H046. Funding effects are superseded where necessary by C005 and C017.

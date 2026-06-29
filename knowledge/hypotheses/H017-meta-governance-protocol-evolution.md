@@ -32,7 +32,7 @@ Some operational values should be treated as protocol parameters rather than dis
 
 Examples:
 
-- reformulation response window;
+- reformulation review, approval, and funding-effect rules;
 - maximum reformulation frequency;
 - complaint thresholds;
 - pause thresholds;

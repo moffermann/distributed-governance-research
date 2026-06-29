@@ -65,7 +65,7 @@ These show how money flows inside the platform.
 | Committed budget | Resources supporting projects not yet fully funded | Measures latent demand |
 | Milestone-released budget | Resources actually disbursed after milestone compliance | Measures real execution, not just intention |
 | Retained budget | Funded resources still held pending milestones | Measures pending exposure and discipline |
-| Returned or reassigned budget | Resources released by closure, reformulation, or valid withdrawal | Measures recycling of unexecuted commitments |
+| Returned or reassigned budget | Eligible resources returned or reassigned through closure, expiration, rejected or expired reformulation, revocation, unused balances, retentions, guarantees, or recovery | Measures recycling of eligible unexecuted or recovered commitments without implying voluntary withdrawal |
 
 ## 3. Project lifecycle metrics
 
@@ -80,7 +80,7 @@ These show whether projects move through the system.
 | Time to funding | Days from publication to funding closure | Measures coordination speed |
 | Projects expired without funding | Projects that missed their funding deadline | Detects low demand or poor formulation |
 | Projects reformulated | Projects changed after not reaching funding or after feedback | Measures learning and adaptation |
-| Projects closed | Projects withdrawn, expired, or discarded | Measures ecosystem cleanup |
+| Projects closed | Projects closed, expired, revoked, or discarded | Measures ecosystem cleanup |
 | Projects in execution | Funded projects that started execution | Measures conversion from funding to action |
 
 ## 4. Execution metrics

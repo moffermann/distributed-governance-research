@@ -19,6 +19,7 @@ C024 is resolved: verified identity remains mandatory, public visibility depends
 C025 is resolved: discovery may organize attention, but Home categories are user-customizable, project-list ordering must be visible and switchable, urgent/recommended visibility must show reasons, and Core v0 excludes paid promotion and opaque manual boosting.
 C001-C025 have been propagated into the main core documents, contradiction checklist, citizen flows, and superseded hypotheses.
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
+Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -32,6 +33,8 @@ The main risk is no longer lack of ideas. The main risk is fragmentation: many g
 Contradictions C001-C025 have accepted resolution documents and have been propagated into the main core documents. A residual audit of diagrams, secondary notes, and remaining stale references should follow.
 
 The first residual cleanup updated the diagram format, split the v0 diagram set into canonical Mermaid source files under `docs/diagrams/`, installed Mermaid CLI locally, and generated SVG outputs under `docs/diagrams/generated/`.
+
+The second residual cleanup began reconciling older hypotheses with C005 and C017: funding remains a commitment until project outcome, reformulation does not create a default individual withdrawal window, and the system does not promise full recovery of already released funds.
 
 Approximate current maturity:
 
