@@ -1,5 +1,11 @@
 # H031 — Transparent Project Discovery Layer
 
+## Status
+
+Core v0 discovery hypothesis aligned with [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|C025]].
+
+H031 remains Core v0 only under C025 constraints: discovery must be explainable, user-configurable, non-commercial, auditable, and subordinate to explicit citizen action. It may organize attention, but it must not secretly allocate resources, sell visibility, or create hidden legitimacy through opaque ranking.
+
 ## Hypothesis
 
 A distributed project platform requires a discovery layer to help citizens find relevant projects without turning the algorithm into a hidden decision-maker.
@@ -20,6 +26,46 @@ Discovery layer: helps people find projects they may value.
 ```
 
 The system should not allocate funds automatically based on algorithmic preference. It should only organize attention and information.
+
+## C025 alignment
+
+C025 makes this hypothesis operational for Core v0.
+
+Core v0 discovery must include:
+
+- user-customizable Home categories;
+- project-list ordering modes that are visible to citizens;
+- simple controls for switching ordering modes;
+- visible reasons for urgent highlights and recommendations;
+- no paid promotion;
+- no opaque manual boosting;
+- observability metrics for discovery influence;
+- audit traces for material discovery decisions.
+
+Advanced personalized ranking may exist later, but the Core v0 baseline should rely first on simple, visible, explainable modes.
+
+Example:
+
+```text
+Project:
+  School sports equipment delivery.
+
+Valid urgent visibility:
+  The project needs 1 fiscalizer and closes in 3 days.
+  The urgent slot shows that reason.
+  The citizen can ignore it, search manually, or change list ordering.
+
+Invalid visibility:
+  The project appears first because it paid for priority,
+  or because an administrator manually boosted it without a visible protocol reason.
+```
+
+Home customization is personal navigation, not public project governance:
+
+```text
+The citizen hides "Culture" from Home.
+Culture projects remain reachable through Explore, filters, and search.
+```
 
 ## Possible discovery signals
 
@@ -111,6 +157,6 @@ Projects should compete through value, evidence, relevance, reputation, support,
 
 > The algorithm may coordinate attention and reveal strategic relevance, but it should not sell attention, decide value, or create obligations the project did not accept.
 
-## Status
+## Remaining design questions
 
-Discovery and user-experience hypothesis. Needs further design only after the core project architecture is stable.
+Core v0 discovery and user-experience hypothesis aligned with C025. Needs further design around default ordering, urgent-slot rotation, recommendation explanations, discovery influence metrics, and audit traces, while keeping advanced inferred ranking in Extension v1+ unless it satisfies explainability, configurability, user ability to reduce or turn off personalization, and auditability constraints.

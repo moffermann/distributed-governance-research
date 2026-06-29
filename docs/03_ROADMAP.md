@@ -53,6 +53,8 @@ The ninth residual cleanup aligned H050 with C022: common-good governance progra
 
 The tenth residual cleanup aligned H055 with C021: the universal institutional observability panel remains an advanced administrative and institutional Extension v1+, while Core v0 keeps only simple user-facing signals plus the minimum platform-generated administrative baseline needed to operate, audit, and evaluate the first coherent system.
 
+The eleventh residual cleanup aligned H031 and H032 with C025: Core v0 discovery remains explainable, user-configurable, non-commercial, auditable, and based on visible ordering and urgency/recommendation reasons, while advanced inferred recommender systems remain Extension v1+ unless they are explainable, configurable, correctable, controllable by the user, and auditable.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
