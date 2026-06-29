@@ -12,6 +12,7 @@ Integrated C007/C020 correction:
 
 ```text
 The public institution remains an external authority, not an internal project actor.
+The authority may perform external tutored-scope moderation when the operating mode grants it review authority.
 Material tutored decisions must become public Governance Resolution objects.
 Review silence must become a public Review Timeout Resolution under the configured timeout policy.
 ```
@@ -57,7 +58,7 @@ health
 infrastructure
 ```
 
-During transition, if a public function is operating in tutored mode, projects associated with that function must be approved by the relevant moderator before publication.
+During transition, if a public function is operating in tutored mode, projects associated with that function must pass the relevant external tutored-scope review before publication.
 
 ## Example
 
@@ -69,19 +70,60 @@ The platform should not decide that boundary automatically if the implementing i
 
 ## Tutored operating mode
 
-During transition, the implementing institution may act as a **system administrator or project moderator** for the public function it has chosen to open.
+During transition, the implementing institution may act as an **external tutored-scope review authority** for the public function it has chosen to open.
 
-This means it can approve or deny whether a project associated with that public function may be published.
+This means it can approve, reject, request reformulation, or suggest reclassification when a project associated with that public function is submitted under the tutored operating mode.
 
-The moderated decision is not a general judgment about whether the project has value. It is a publication-approval decision inside the tutored operating mode.
+The decision is not a general judgment about whether the project has value. It is a scope, eligibility, duplication, or compatibility decision inside the tutored operating mode.
 
 ```text
-Project rejected by sports moderator:
+Project rejected by external sports authority:
   Not approved for publication as a sports project.
 
 Possible next action:
   Reformulate, reclassify, or submit under another public function such as culture.
 ```
+
+This is moderation in practical terms, but it is not an internal platform actor role. The public authority remains external to the project actor set and must publish material decisions as Governance Resolutions.
+
+## Example: duplicate public project
+
+```text
+Public function:
+  Sports
+
+Distributed pilot:
+  5% of the Ministry of Sports budget
+
+Traditional institutional portfolio:
+  remaining 95% of the ministry budget
+
+Submitted project:
+  Multi-court sports complex in Macul on Street X
+
+Existing traditional project:
+  The ministry already approved the same multi-court complex in Macul on Street X
+```
+
+If the authority does not reject or request reformulation, the platform may duplicate public spending and distort the evaluation of the distributed pilot.
+
+Accepted treatment:
+
+```text
+Governance Resolution:
+  rejected for duplicate existing public project.
+
+Responsible authority:
+  Ministry of Sports / authorized tutored-review office.
+
+Reason:
+  same facility, same location, already approved under the traditional portfolio.
+
+Suggested next path:
+  change location, complement the existing project, reclassify, or reformulate.
+```
+
+Citizens may comment, support, object, and follow the resolution. Aggregate metrics should show whether duplication rejections become a genuine boundary control or a bottleneck against distributed proposals.
 
 ## Rejection is not public punishment, but it is publicly reviewable
 
@@ -103,7 +145,7 @@ If an authority rejects publication, the system should create a public Governanc
 
 For transition pilots, an administration panel is useful and legitimate if it is limited to the tutored operating mode and public-function scope.
 
-The administrator may:
+The external tutored-scope reviewer may:
 
 - approve projects before publication;
 - reject projects before publication;
@@ -111,9 +153,11 @@ The administrator may:
 - suggest reclassification;
 - classify projects;
 - flag duplication risks;
-- configure pilot parameters authorized by the implementing state;
+- apply pilot parameters authorized by the implementing state;
 - monitor pilot operation;
 - document internal reasons for approval or rejection.
+
+Configuration of pilot parameters remains a country implementation or authorized administration function. Material configuration changes should remain public, versioned, and traceable under C019 and C020.
 
 ## Human responsibility
 
@@ -130,7 +174,7 @@ Material moderation outcomes should be public civic objects by default, subject 
 The system should record:
 
 - who approved or rejected the project;
-- under what role;
+- under what external authority or authorized tutored-review role;
 - for which public function or operating mode;
 - when the decision was made;
 - what reason was given;
@@ -172,7 +216,7 @@ In a mature fully distributed regime, these powers should be reduced, transferre
 
 ## Not a permanent central authority
 
-This administrative role should be understood as transitional.
+This external tutored-scope review authority should be understood as transitional or implementation-specific.
 
 It exists because the country is not yet operating under a fully distributed architecture and because the institution remains legally and administratively responsible for the public function it is opening.
 
@@ -198,7 +242,7 @@ Every tutored review window should have a configured timeout policy. If the auth
 
 ## Principle
 
-> In a transition pilot, the external public authority may moderate publication inside a tutored operating mode, but that moderation must be limited, publicly resolvable, aggregately observable, time-bounded, and non-punitive for rejected drafts.
+> In a transition pilot, the external public authority may perform tutored-scope moderation for publication inside a tutored operating mode, but that moderation must be limited, publicly resolvable, aggregately observable, time-bounded, and non-punitive for rejected drafts.
 
 ## Status
 

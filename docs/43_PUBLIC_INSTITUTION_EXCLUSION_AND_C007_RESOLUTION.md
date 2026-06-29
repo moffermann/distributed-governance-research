@@ -106,6 +106,38 @@ In v0, tutored or semi-open implementation may exist as a country-level rollout 
 
 If an implementing country requires external public review, it should be treated as an external legal or implementation constraint, not as an internal actor role.
 
+## External tutored-scope moderation
+
+C007 does not prohibit external tutored-scope moderation.
+
+When a country voluntarily opens a bounded share of a public function budget to the distributed platform, the responsible public authority may need to review whether a submitted project fits the scope of that tutored allocation.
+
+This is allowed when the authority is acting externally to protect the boundary of the pilot, not internally as a competing project actor.
+
+Examples of valid external tutored-scope review:
+
+- project is outside the public function opened to the platform;
+- project duplicates an already approved traditional public project;
+- project requests funding from the distributed pilot for a location, facility, or service already covered by the ministry's ordinary portfolio;
+- project lacks eligibility required by the legal or administrative mandate of the tutored pilot;
+- project should be reclassified under another public function.
+
+Example:
+
+```text
+The Ministry of Sports opens 5% of its budget to distributed governance.
+A citizen proposes a multi-court sports complex in Macul on Street X.
+The ministry already has an approved traditional project for the same multi-court complex in the same location.
+```
+
+In this case, the authority may reject, request reformulation, or suggest reclassification to avoid duplicate allocation of public resources.
+
+The decision must not be opaque or discretionary without reasons. It should create a public Governance Resolution under C020, including the responsible authority, reason, affected project or idea, scope rule applied, and suggested next path.
+
+Rule:
+
+> Public institutions may perform external tutored-scope moderation when an operating mode grants them review authority, but they do not become internal project moderators or ordinary platform actors.
+
 ## What public institutions may do externally
 
 Public institutions may still act outside the system in country implementation roles.
@@ -197,7 +229,7 @@ Public institutions are external to the system, not internal participants.
 
 Final rule:
 
-> Public institutions cannot propose, execute, fiscalize, moderate, or compete for distributed project financing inside the system v0. They may define the legal framework, allocate or remove budget, audit externally, enforce general law, and provide country-specific infrastructure such as custody or treasury integration where required.
+> Public institutions cannot propose, execute, fiscalize, act as ordinary internal moderators, or compete for distributed project financing inside the system v0. They may define the legal framework, allocate or remove budget, perform external tutored-scope moderation where configured, audit externally, enforce general law, and provide country-specific infrastructure such as custody or treasury integration where required.
 
 ## Documents that should eventually reflect this resolution
 
@@ -218,6 +250,7 @@ This resolution should inform future updates to:
 - A state-funded organization may blur the boundary.
 - External legal review may become de facto internal control.
 - Country implementation may pressure the model to include public actors.
+- Tutored-scope moderation may be abused to protect traditional institutional portfolios from distributed competition.
 
 ## Mitigations
 
@@ -227,7 +260,9 @@ This resolution should inform future updates to:
 - keep external audit separate from internal fiscalization;
 - prohibit state-controlled entities by default;
 - record exceptions explicitly if a future implementation creates them.
+- require material tutored-scope decisions to become public Governance Resolutions;
+- measure duplicate-project rejections, outside-scope rejections, review delays, and timeout resolutions.
 
 ## Design rule
 
-> The system distributes execution and internal control among non-state civic/private actors. The state remains outside as funder, legal framework, external auditor, custodian, or regulator, not as internal competitor or fiscalizer.
+> The system distributes execution and internal control among non-state civic/private actors. The state remains outside as funder, legal framework, external tutored-scope reviewer, external auditor, custodian, or regulator, not as internal competitor, executor, fiscalizer, or ordinary project moderator.

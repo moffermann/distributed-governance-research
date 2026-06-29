@@ -20,6 +20,7 @@ C025 is resolved: discovery may organize attention, but Home categories are user
 C001-C025 have been propagated into the main core documents, contradiction checklist, citizen flows, and superseded hypotheses.
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
+C007/C020 clarification: public institutions remain excluded from internal project participation, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -35,6 +36,8 @@ Contradictions C001-C025 have accepted resolution documents and have been propag
 The first residual cleanup updated the diagram format, split the v0 diagram set into canonical Mermaid source files under `docs/diagrams/`, installed Mermaid CLI locally, and generated SVG outputs under `docs/diagrams/generated/`.
 
 The second residual cleanup began reconciling older hypotheses with C005 and C017: funding remains a commitment until project outcome, reformulation does not create a default individual withdrawal window, and the system does not promise full recovery of already released funds.
+
+The third residual cleanup clarified C007/C020 and H057: the state may moderate externally in tutored mode to prevent duplicate public spending or out-of-scope projects, but cannot participate as an internal competitor, executor, fiscalizer, or ordinary project moderator.
 
 Approximate current maturity:
 

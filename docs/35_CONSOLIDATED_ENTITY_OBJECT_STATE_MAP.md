@@ -91,6 +91,7 @@ It may act as:
 - external auditor;
 - law enforcer;
 - public authority issuing governance resolutions in tutored mode;
+- external tutored-scope reviewer for eligibility, duplication, scope, or compatibility where configured;
 - infrastructure provider for identity, treasury, custody, permits, or registries.
 
 It should not act as:

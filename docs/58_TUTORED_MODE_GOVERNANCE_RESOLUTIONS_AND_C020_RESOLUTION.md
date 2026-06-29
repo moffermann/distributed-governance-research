@@ -67,6 +67,36 @@ and without a public space where citizens can observe or object.
 
 The accepted v0 rule is that the rejection must create a public governance-resolution object.
 
+## Example: duplicate public project
+
+A country opens 5% of the Ministry of Sports budget to the distributed platform while the ministry continues executing the remaining 95% through its traditional portfolio.
+
+A citizen submits:
+
+```text
+Project:
+Multi-court sports complex in Macul on Street X.
+```
+
+The ministry already has an approved traditional project for the same multi-court complex in the same location.
+
+The authority may reject or request reformulation because the proposal would duplicate public spending and distort the pilot scope.
+
+This is allowed as external tutored-scope moderation. It is not allowed as ordinary internal project moderation by a competing public institution.
+
+The decision should create a Governance Resolution:
+
+```text
+Decision:
+Rejected for duplicate existing public project.
+
+Reason:
+Same facility and location already approved under the traditional ministry portfolio.
+
+Suggested next action:
+Change location, complement the existing project, reclassify, or reformulate.
+```
+
 ## Governance Resolution
 
 Every material tutored governance decision should create a public object:
@@ -305,7 +335,9 @@ C007 excludes public institutions from acting as ordinary internal actors in v0.
 
 Therefore, tutored governance is not an ordinary internal project role. It is an external implementation condition represented by the platform.
 
-The authority may define, reject, approve, or delay according to the tutored operating mode. But the system must expose the resolution, the responsible authority or process, the reason, and the timeout record.
+The authority may perform external tutored-scope moderation according to the tutored operating mode, including eligibility, duplication, scope, and compatibility review. But the system must expose the resolution, the responsible authority or process, the reason, and the timeout record.
+
+This preserves the C007 exclusion: the public authority does not become a project proposer, executor, fiscalizer, internal ordinary moderator, delegate, or competitor for distributed project financing.
 
 ## Relationship with C019
 

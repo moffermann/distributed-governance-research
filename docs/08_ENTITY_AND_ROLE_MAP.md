@@ -195,6 +195,7 @@ Public institutions may still act externally as:
 - external auditor;
 - general-law enforcer;
 - public authority issuing governance resolutions in a tutored operating mode;
+- external tutored-scope reviewer for eligibility, duplication, scope, or compatibility where the operating mode grants that authority;
 - provider of country-specific infrastructure such as identity, treasury, custody, or legal registries.
 
 If a country chooses a tutored mode, institutional decisions that affect project publication, rejection, timeout, review, operating mode, or rule configuration should be represented as public governance-resolution objects, not hidden internal moderation.
