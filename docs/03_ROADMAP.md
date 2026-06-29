@@ -55,6 +55,8 @@ The tenth residual cleanup aligned H055 with C021: the universal institutional o
 
 The eleventh residual cleanup aligned H031 and H032 with C025: Core v0 discovery remains explainable, user-configurable, non-commercial, auditable, and based on visible ordering and urgency/recommendation reasons, while advanced inferred recommender systems remain Extension v1+ unless they are explainable, configurable, correctable, controllable by the user, and auditable.
 
+The twelfth residual cleanup aligned H033, H041, and H042 with C007, C008, and C023: delegation may go to eligible citizens, non-state organizations, or configured allocation profiles, while public institutions remain outside internal delegation and AI remains assistance infrastructure rather than a civic delegate or actor.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

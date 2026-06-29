@@ -1,5 +1,11 @@
 # H033 — System-Defined Default Allocation Rule
 
+## Status
+
+Core financing and participation hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]] and [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]].
+
+Delegation and automatic allocation must preserve the v0 actor boundary: public institutions are not internal delegates, and AI assistance is infrastructure rather than a delegate or civic actor.
+
 ## Hypothesis
 
 If citizens do not actively allocate their civic budget or configure their own allocation rule, the system should apply a transparent, system-defined default allocation rule.
@@ -19,9 +25,29 @@ The default rule functions as a civic autopilot.
 A citizen can:
 
 - allocate resources manually;
-- delegate allocation to a person, institution, portfolio, or AI guide;
+- delegate allocation to an eligible citizen or non-state organization;
+- choose a published allocation profile or portfolio rule;
+- use AI assistance to understand options or configure preferences;
 - configure a personal automatic rule;
 - do nothing, in which case the system default applies.
+
+## Delegation boundary after C007 and C008
+
+The civic autopilot must distinguish delegation, profiles, and AI assistance.
+
+```text
+Allowed in Core v0:
+  Delegate allocation to a trusted citizen.
+  Delegate allocation to an eligible non-state civic/private organization.
+  Use a published allocation profile or portfolio rule.
+  Ask AI assistance to explain tradeoffs or help configure preferences.
+
+Not allowed in Core v0:
+  Delegate allocation to a public institution as an internal actor.
+  Delegate allocation to an AI guide as if it were a representative.
+```
+
+Public institutions may still act externally according to C007, and AI may still assist according to C008. Neither becomes the internal delegate that exercises civic allocation authority.
 
 ## Monthly allocation
 
@@ -63,6 +89,6 @@ The citizen can change the default rule at any time by configuring their own all
 
 > Inactivity should not freeze public resources indefinitely, and participation should not require constant attention.
 
-## Status
+## Remaining design questions
 
-Core financing and participation hypothesis. Extends H025.
+Core financing and participation hypothesis aligned with C007 and C008. Extends H025. Needs further design around default-rule governance, profile publication, monthly reporting, citizen override, and how AI assistance explains allocation options without becoming a delegate.

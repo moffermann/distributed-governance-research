@@ -1,5 +1,11 @@
 # H042 — Layered Delegation Architecture
 
+## Status
+
+Core delegation hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]], and [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]].
+
+Core v0 delegation may be assigned to eligible citizens or non-state organizations, with visible concentration and immediate revocation. Public institutions are not internal delegates, and AI assistance is not a delegate or civic actor.
+
 ## Hypothesis
 
 Delegation of civic participation should be flexible but layered, so citizens can delegate easily without turning the interface into a complex control panel.
@@ -8,7 +14,7 @@ Delegation of civic participation should be flexible but layered, so citizens ca
 
 Not every citizen will want to review projects, configure allocation rules, evaluate evidence, or participate directly in every governance decision.
 
-Delegation makes the system viable by allowing citizens to participate through trusted people, organizations, institutions, or rules.
+Delegation makes the system viable by allowing citizens to participate through trusted eligible citizens, non-state organizations, allocation profiles, or configured rules.
 
 However, excessive delegation options can make the system difficult to use. The interface should therefore provide simple defaults and deeper configuration only when requested.
 
@@ -29,16 +35,38 @@ As a default design rule:
 
 The system can become more granular later if real use shows that it is needed.
 
+## Delegate eligibility boundary
+
+Core v0 delegation must preserve the actor boundaries defined by C007 and C008.
+
+Allowed:
+
+```text
+Delegate my sports allocation to a trusted citizen.
+Delegate my education allocation to a non-state civic organization.
+Use an allocation profile for local youth sports.
+Ask AI assistance to explain the options before deciding.
+```
+
+Not allowed in Core v0:
+
+```text
+Delegate my allocation to the Ministry of Sports as an internal delegate.
+Delegate my funding decisions to an AI guide as if it were a representative.
+```
+
+Public institutions may have external implementation roles under C007, and AI may assist under C008. Neither becomes the internal actor exercising delegated civic authority.
+
 ## Layered delegation
 
 ### 1. Simple delegation
 
-The citizen can delegate the whole allocation profile to a trusted person or organization.
+The citizen can delegate the whole allocation profile to a trusted eligible citizen or non-state organization.
 
 Example:
 
 ```text
-Delegate my civic allocation to Organization X.
+Delegate my civic allocation to Non-State Organization X.
 ```
 
 This should be available as a quick action.
@@ -50,10 +78,10 @@ The citizen can delegate by domain.
 Examples:
 
 ```text
-Education → University A
+Education → Education nonprofit A
 Health → Foundation B
 Fiscalization → Local watchdog group
-Science → Research council profile
+Science → Research network profile
 Local projects → Community organization
 ```
 
@@ -153,6 +181,6 @@ Delegation should be:
 
 > Delegation should be simple at the surface and flexible under the hood, without allowing delegated authority to become opaque through subdelegation or excessive interface complexity.
 
-## Status
+## Remaining design questions
 
-Participation and delegation hypothesis. Extends H025, H034 and H041.
+Participation and delegation hypothesis aligned with C007, C008, and C023. Extends H025, H034 and H041. Needs further design around delegate eligibility checks, organization verification, public-institution boundary enforcement, allocation-profile governance, AI assistance boundaries, and concentration visibility in the delegation interface.

@@ -1,5 +1,11 @@
 # H041 — Distributed Participation Capacity
 
+## Status
+
+Core inclusion and capacity hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]] and [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]].
+
+Participation capacity can be distributed and fundable without turning public institutions or AI systems into internal delegates. Public institutions remain external under C007; AI may assist under C008 but does not become a civic actor.
+
 ## Hypothesis
 
 A distributed governance system should not assume that openness alone creates equal participation. It must allow the capacity to participate, produce evidence, audit, translate, delegate, and assist communities to become itself distributed and fundable.
@@ -24,9 +30,31 @@ Examples:
 - project-modeling support;
 - delegation to trusted actors;
 - community intermediaries;
-- local participation offices;
+- community participation support offices;
 - AI-guided assistance;
 - educational material in accessible language.
+
+## C007 and C008 alignment
+
+Capacity support must preserve the actor model.
+
+Allowed support examples:
+
+```text
+A neighborhood organization helps residents understand project options.
+A non-state civic organization receives delegated authority after explicit acceptance.
+An evidence-support project helps a community document facts.
+An AI assistant explains a project, translates content, or helps configure a profile.
+```
+
+Rejected Core v0 patterns:
+
+```text
+A public ministry becomes an internal delegate for citizens.
+An AI guide receives delegated allocation authority as if it were a person.
+```
+
+This keeps assistance broad while preserving accountability: delegable authority belongs to verified eligible actors or configured profiles, not to public institutions acting internally or to AI infrastructure.
 
 ## Evidence capacity
 
@@ -49,12 +77,14 @@ The system should include interfaces, explanations, simplified views, delegation
 
 ## Delegation
 
-Delegation is part of the participation architecture. A citizen or community can delegate participation to trusted people, organizations, institutions, or allocation profiles without losing the ability to revoke or change that delegation.
+Delegation is part of the participation architecture. A citizen or community can delegate participation to trusted citizens, eligible non-state organizations, or allocation profiles without losing the ability to revoke or change that delegation.
+
+AI-guided assistance may help citizens understand delegation options, compare delegates, or configure allocation profiles, but it is not itself a delegate.
 
 ## Principle
 
 > Formal openness is not enough. Participation capacity must also be distributed, assisted, and fundable.
 
-## Status
+## Remaining design questions
 
-Core inclusion and capacity hypothesis. Responds to Ricardo's concern that evidence and technical participation may remain concentrated even in an open system.
+Core inclusion and capacity hypothesis aligned with C007 and C008. Responds to Ricardo's concern that evidence and technical participation may remain concentrated even in an open system. Needs further design around eligibility for support organizations, anti-capture rules, accessibility standards, funding for participation support, and AI assistance boundaries.
