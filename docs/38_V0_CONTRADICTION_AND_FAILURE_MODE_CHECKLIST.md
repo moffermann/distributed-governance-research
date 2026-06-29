@@ -54,847 +54,309 @@ For every issue, ask:
 
 ---
 
-# A. Initial contradictions and tensions found
+# A. Resolved contradictions and accepted v0 rules
+
+This section preserves the original contradiction checklist as a traceable integration surface. C001-C025 are now resolved through dedicated resolution documents. Remaining work is propagation, stress testing, and identification of residual risks, not reopening the decisions unless explicitly requested.
 
 ## C001 — Open project with no executor vs no execution financing without executor
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The architecture says a project may exist as a draft or design without an executor. It also says a project cannot be published for execution financing without an identified and accepted responsible executor.
+Do not model executorless public proposals as project states. Model them as a separate `Idea` entity.
 
-This creates ambiguity around whether an executorless project can be public, searchable, followed, commented on, or receive any kind of support.
-
-### Risk
-
-If executorless projects are publicly visible and receive funding, the system may accidentally allow financing without responsibility.
-
-If executorless projects cannot be visible at all, the system loses the ability to call for executors around good ideas.
-
-### Proposed resolution
-
-Create a strict distinction:
-
-```text
-Public design / call for executor
-Open financeable project
-```
-
-A `public design` may be visible, followed, discussed, improved, and used to attract an executor.
-
-An `open financeable project` may receive execution funding only after executor acceptance.
-
-### Decision needed
-
-Should v0 include `Public design` as an explicit pre-project state, or should executorless drafts remain private until executor acceptance?
+> Ideas capture demand. Projects execute responsibility. Financing applies to projects, not ideas.
 
 ---
 
 ## C002 — Fiscalizer offer flow vs executor cannot choose fiscalizer
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The system allows actors to offer to fiscalize. It also says the executor should not directly choose or control the fiscalizer.
-
-The architecture does not yet fully specify who or what selects among fiscalizer offers.
-
-### Risk
-
-If the executor selects the fiscalizer, control is captured.
-
-If the platform selects without transparent rule, hidden authority is created.
-
-If selection is purely first-come-first-served, low-quality or captured fiscalizers may dominate.
-
-### Proposed resolution
-
-Fiscalizer selection should be rule-based and risk-adjusted:
-
-```text
-Eligibility filter
-Conflict declaration
-Offer window
-Reputation / qualification filter
-Random or semi-random selection among qualified offers where appropriate
-Public selection reason
-Audit event
-```
-
-For low-risk projects, simple rotation may be enough.
-
-For medium/high-risk projects, independent selection logic must be explicit.
-
-### Decision needed
-
-Define a v0 fiscalizer selection rule simple enough to implement but strong enough to prevent executor capture.
+Fiscalization may be structured as a project-like `Control Subproject` with budget, methodology, deliverables, evidence, comments, auditability, and reputation. It is not selected by ordinary popularity or by the executor. Selection follows a protocolized, risk-adjusted process based on eligibility, conflict checks, technical/economic criteria, and auditability.
 
 ---
 
 ## C003 — Evidence can be produced by interested actors
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-Evidence may come from executor, beneficiaries, funders, evidence producers, fiscalizers, and observers. Some of these actors may have direct interest in project success.
-
-### Risk
-
-Evidence may be biased, staged, incomplete, or collusive.
-
-### Proposed resolution
-
-Do not ban interested evidence. Classify it.
-
-Evidence should include:
-
-```text
-producer role
-relationship declaration
-interest level
-verification strength
-independent corroboration status
-```
-
-Fiscalizer reports should distinguish:
-
-```text
-self-reported evidence
-beneficiary evidence
-independent evidence
-contradictory evidence
-```
-
-### Decision needed
-
-Should v0 require at least one independent evidence source for every disbursement, or only for projects above a risk/amount threshold?
+Create and use the `Evidence Producer` role. Executor self-report is useful context, but critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
 ---
 
 ## C004 — Blocking complaints must block enough, but not too much
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model says not every complaint blocks. It also says blocking complaints must pause related disbursement or project progress.
-
-The exact threshold for blocking is not yet defined.
-
-### Risk
-
-If blocking is too easy, hostile actors can freeze projects.
-
-If blocking is too hard, serious fraud or false evidence can proceed to disbursement.
-
-### Proposed resolution
-
-A complaint should become blocking only when it meets at least one criterion:
-
-```text
-credible evidence attached
-directly affects current or next disbursement
-concerns beneficiary existence or eligibility
-concerns fiscalizer conflict
-concerns material false information
-concerns misuse of already released funds
-concerns safety or legal impossibility
-```
-
-Blocking should be scoped:
-
-```text
-block project
-block milestone
-block budget line
-block evidence item
-block actor assignment
-block disbursement only
-```
-
-### Decision needed
-
-Define v0 blocking criteria and whether an initial reviewer, fiscalizer, or protocol rule assigns blocking status.
+`Complaint` is a formal review entity with evidence, scope, support, objections, duplicate grouping, review, admission, and resolution. Citizen-submitted complaints must provide evidence, identify affected scope, and pass admission by the competent reviewer before creating blocking effects. Blocking must be scoped to the affected object.
 
 ---
 
 ## C005 — Funding withdrawal, lock, reformulation, and no-response defaults
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model allows withdrawal or reassignment before execution-ready. It also says once execution-ready, funds are locked. Reformulation may give funders options to keep, return, or reassign. If a funder does not respond, a default may apply.
-
-### Risk
-
-The model may contradict itself if a project is already execution-ready or in execution and then reformulates.
-
-### Proposed resolution
-
-Separate funder rights by project state:
-
-```text
-Open project:
-  withdrawal/reassignment allowed unless protocol window says otherwise.
-
-Execution-ready but not started:
-  withdrawal not allowed except material reformulation, fraud, or blocking review.
-
-In execution:
-  no ordinary withdrawal; reformulation may affect unreleased balance only.
-
-After disbursement:
-  no withdrawal of released funds; only review, recovery, complaint, or reputation effects.
-```
-
-### Decision needed
-
-Define whether material reformulation reopens exit rights for all funders or only for unreleased balances.
+No ordinary withdrawal after financing. Funding is a commitment until project closure. Project failure is handled through traceability, fiscalization, complaints, guarantees, recovery, returned balances, and reputation consequences, not through free withdrawal.
 
 ---
 
 ## C006 — Treasury is not a civic actor, but custody and disbursement require authority
 
-**Severity:** Medium  
-**Status:** Partially resolved
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model says treasury or revenue authority is infrastructure, not a civic decision-maker. But custody, settlement, and disbursement still require an actor or integration with authority.
-
-### Risk
-
-The architecture may hide a major decision-maker inside infrastructure.
-
-### Proposed resolution
-
-Clarify:
-
-```text
-Protocol decides eligibility and disbursement logic.
-Fiscalization provides review.
-Custodian executes settlement according to rule.
-Custodian does not choose projects, values, fiscalizers, or beneficiaries.
-```
-
-### Decision needed
-
-Country implementation must define legal custodian, but v0 should define the custodian as a non-discretionary settlement actor.
+Separate citizen funding capacity from project payment execution. Treasury informs how much each citizen may finance and executes protocol-valid financial orders. It does not choose projects, decide public value, select fiscalizers, validate evidence, or govern civic allocation.
 
 ---
 
 ## C007 — Public institution as equal actor vs tutored moderation by institution
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model allows public institutions to participate as ordinary actors. It also allows tutored transition modes where an institution may moderate publication.
-
-### Risk
-
-An institution could compete as proposer/executor while also moderating competitors.
-
-### Proposed resolution
-
-In tutored mode, role separation must be explicit:
-
-```text
-Institution-as-executor
-Institution-as-moderator
-Institution-as-fiscalizer
-```
-
-The same institutional unit should not moderate its own projects or block competitors without visible reason.
-
-Moderation decisions must be auditable and appealable or reviewable according to transition rules.
-
-### Decision needed
-
-Define whether institutional moderation requires a separate moderation unit or whether public audit of decisions is enough for v0.
+Public institutions are external to the system, not internal participants. They cannot propose, execute, fiscalize, moderate, or compete for distributed project financing inside Core v0. They may define the legal framework, allocate or remove budget, audit externally, enforce general law, and provide country-specific infrastructure such as custody or treasury integration where required.
 
 ---
 
 ## C008 — AI assistance vs protocol authority
 
-**Severity:** Medium  
-**Status:** Partially resolved
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-AI helps with value search, value generation, metric validation, project creation, and possibly risk detection. But protocol rules should remain authoritative.
-
-### Risk
-
-AI could become an invisible decision-maker.
-
-### Proposed resolution
-
-Core v0 rule:
-
-```text
-AI may suggest, warn, classify, and draft.
-Protocol rules decide mandatory validity.
-Human/role-based review handles accountability where required.
-Audit trail records AI-assisted outputs when they affect decisions.
-```
-
-### Decision needed
-
-Define which AI outputs must be recorded in Layer 5.
+AI may assist with drafting, validation, warnings, classification, comparison, and explanation. It may not silently replace protocol authority, human responsibility, or review roles. Material AI assistance should be recorded when it affects validation, publication, funding, disbursement, evidence, complaints, or rule changes.
 
 ---
 
 ## C009 — Citizen simplicity vs too many technical states
 
-**Severity:** Medium  
-**Status:** Partially resolved
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The architecture has many technical states: draft, validation, open, execution-ready, in execution, paused, blocking, correction required, reformulation, review, revocation, etc.
-
-The citizen interface must remain simple.
-
-### Risk
-
-The system may become as confusing as the bureaucracy it aims to improve.
-
-### Proposed resolution
-
-Use two state layers:
-
-```text
-Citizen-facing state
-Technical state
-```
-
-Example:
-
-```text
-Citizen sees: Paused
-Technical state: Paused by blocking complaint on milestone 2 disbursement
-```
-
-### Decision needed
-
-Define official v0 citizen-facing states and map technical states to them.
+Use a layered translation model: citizens see simple state labels and relevant actions, while the technical layer preserves detailed states, causes, scopes, rules, and audit events.
 
 ---
 
 ## C010 — Metrics may distort value
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The system requires measurable value. But public value can be distorted when only measurable outputs matter.
-
-### Risk
-
-Projects may optimize for easy metrics instead of true value.
-
-Examples:
-
-```text
-more sessions but poor quality
-more beneficiaries but shallow impact
-more evidence but staged evidence
-```
-
-### Proposed resolution
-
-Metrics should be paired with:
-
-- declared risks;
-- antivalues;
-- beneficiary feedback;
-- qualitative evidence where appropriate;
-- fiscalizer judgment;
-- complaint and contradiction channels;
-- value-specific metric standards.
-
-### Decision needed
-
-Define whether v0 allows qualitative evidence as supporting evidence, and how it is reviewed without becoming arbitrary.
+Replace isolated value metrics with a `Value Verification Package`. Activity metrics alone are insufficient. Each promised value must be verified through metrics plus evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels.
 
 ---
 
 ## C011 — Automatic allocation and delegation can conflict
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-A citizen may have a delegate and an automatic allocation profile. Both can direct allocation.
-
-### Risk
-
-Conflicting instructions may cause unintended allocation.
-
-### Proposed resolution
-
-Define priority order:
-
-```text
-1. Direct citizen action
-2. Explicit delegation within scope
-3. Automatic allocation profile
-4. System default fallback
-```
-
-Or require the citizen to assign percentage shares:
-
-```text
-40% delegate
-40% automatic profile
-20% manual balance
-```
-
-### Decision needed
-
-Choose priority model or percentage model for v0.
+Delegation has priority over automatic allocation. In v0, if a citizen has an active delegate, the delegate governs financing decisions and automatic allocation rules do not execute. In future scoped delegation, the delegate has priority within the delegated scope.
 
 ---
 
 ## C012 — Reputation by role vs shared responsibility
 
-**Severity:** Medium  
-**Status:** Partially resolved
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model says reputation follows role responsibility. But projects often involve modelers, executors, fiscalizers, evidence producers, and delegates whose responsibilities overlap.
-
-### Risk
-
-Actors may blame each other, or the system may punish the wrong actor.
-
-### Proposed resolution
-
-Core v0 should define responsibility triggers:
-
-```text
-Modeler: design quality before executor acceptance.
-Executor: execution after accepting design.
-Fiscalizer: review quality and independence.
-Evidence producer: accuracy and usefulness of evidence.
-Delegate: decisions within delegated scope.
-```
-
-If the executor accepted a design with reasonably detectable issues, execution responsibility remains with executor.
-
-### Decision needed
-
-Define what counts as a reasonably detectable design problem.
+Reputation updates follow role-specific responsibility events. The system should assign responsibility by the obligation breached, the actor's accepted role, evidence of control or knowledge, and whether the defect was reasonably detectable by that role.
 
 ---
 
 ## C013 — Fiscalization cost is control cost, but who funds it before project is funded?
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-Fiscalization cost is part of project control cost, but fiscalizer offers may be needed before project closure. It is unclear whether fiscalizers spend effort making offers before funding is guaranteed.
-
-### Risk
-
-Good fiscalizers may not participate if offer preparation is unpaid.
-
-Bad fiscalizers may flood offers cheaply.
-
-### Proposed resolution
-
-Possible v0 options:
-
-```text
-Unpaid lightweight offer for low-risk projects.
-Paid pre-assessment budget for higher-risk projects.
-Standardized offer templates.
-Qualification pools by category.
-```
-
-### Decision needed
-
-Should v0 include paid pre-assessment, or defer it to v1+?
+Execution funding, fiscalization offers, evidence-producer offers, and control-cost discovery proceed in parallel. Execution readiness requires both execution budget closure and control package closure. Control costs are part of the project, but executor-controlled spending must remain separated from control spending.
 
 ---
 
 ## C014 — Open comments vs social media dynamics
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The system allows comments and questions, but should not become a popularity contest or hostile social network.
-
-### Risk
-
-Comment volume, brigading, harassment, or low-quality debate may bury useful signals.
-
-### Proposed resolution
-
-Comments should be structured by type and relevance:
-
-```text
-Question
-Observation
-Suggestion
-Response
-Clarification
-```
-
-High-risk claims should be routed to complaints rather than endless debate.
-
-### Decision needed
-
-Define whether comment ranking exists in v0, and if so whether it is chronological, relevance-based, or role-weighted.
+Do not build a social-media ranking system in Core v0. Require verified visible authorship by default, keep ordering simple, route serious claims to the complaint flow, and apply only narrow rule-based moderation for illegal, unsafe, private, spam, or platform-integrity violations.
 
 ---
 
 ## C015 — Transparency vs privacy
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The system requires public auditability. But evidence may include minors, vulnerable beneficiaries, location data, identity documents, medical or social information.
-
-### Risk
-
-Full transparency could violate privacy or expose vulnerable people.
-
-Over-redaction could weaken auditability.
-
-### Proposed resolution
-
-Create privacy classes:
-
-```text
-Public
-Public summary with private attachment
-Restricted to fiscalizer/reviewer
-Aggregated only
-Redacted public copy
-Sealed unless formal review
-```
-
-Layer 5 should show that evidence exists and how it was reviewed, even when raw content is restricted.
-
-### Decision needed
-
-Define v0 privacy classes and who can access each class.
+Evidence publication should not be trapped behind human pre-approval. The system should use AI-assisted privacy detection, redaction, warnings, and safer versions while leaving publication responsibility with the user and evidentiary evaluation with the fiscalizer.
 
 ---
 
 ## C016 — Partial disbursement criteria are not yet precise
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model allows partial release and retention. But criteria for partial release are not fully defined.
-
-### Risk
-
-Partial release could become arbitrary.
-
-### Proposed resolution
-
-Partial release should require:
-
-```text
-separable milestone components
-accepted evidence for completed components
-explicit retained amount
-clear condition for releasing retained amount
-fiscalizer explanation
-citizen-facing summary
-```
-
-### Decision needed
-
-Define whether partial release is allowed by default or only when milestone rules define it in advance.
+Create a structured `Disbursement Milestone` entity and require specialized AI validation before a project is published as financeable. Projects with unresolved critical validation failures cannot begin receiving execution funding.
 
 ---
 
 ## C017 — Project reformulation may become a way to escape failure
 
-**Severity:** High  
-**Status:** Partially resolved
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-Reformulation preserves project value when circumstances change. But it may also let an executor reframe failure as a new version.
-
-### Risk
-
-Executors may avoid reputation damage by repeatedly reformulating.
-
-### Proposed resolution
-
-V0 should define reformulation limits:
-
-- no silent history deletion;
-- visible change summary;
-- reason required;
-- reputation impact when reformulation follows avoidable failure;
-- limit frequency or require stronger review after repeated reformulations.
-
-### Decision needed
-
-Should v0 set a default reformulation frequency limit, or leave it protocol-configurable?
+Reformulation may change implementation, but it must not unilaterally rewrite the value promise that funders and beneficiaries relied on. Material value reformulations require visible cause analysis, preserved history, effect on funds, and potential reputation events when caused by avoidable failure or misleading design.
 
 ---
 
 ## C018 — Project closure categories need stronger link to reputation
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-Closure can be fulfilled, partially fulfilled, unfulfilled, revoked, expired, or reformulated. Reputation effects are role-based but not yet formulaic.
-
-### Risk
-
-Closure may become descriptive but not consequential.
-
-### Proposed resolution
-
-Each closure outcome should generate candidate reputation events by role.
-
-Example:
-
-```text
-Closed fulfilled → positive executor event, fiscalizer completion event.
-Closed partially fulfilled → mixed executor event, modeler/fiscalizer review depending cause.
-Revoked for false evidence → negative executor/evidence producer event.
-Expired before funding → no executor penalty unless misleading design.
-```
-
-### Decision needed
-
-Define whether v0 uses qualitative reputation events first, rather than numeric scores.
+Do not calculate reputation directly from closure labels. Use closure category as procedural context, but calculate numeric reputation updates primarily from verified fulfillment of the value thesis and predeclared metrics, adjusted by founded complaints, evidence corrections, and role-specific responsibility events.
 
 ---
 
 ## C019 — Core v0 includes meta-governance conceptually, but not operationally
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The classification matrix keeps meta-governance as Core v0 conceptual/paper layer but not necessarily MVP implementation.
-
-### Risk
-
-The model may rely on protocol evolution without explaining who can change protocol rules.
-
-### Proposed resolution
-
-For v0 paper:
-
-```text
-Meta-governance must be described as protocol-change path.
-Full administrative implementation can remain future work.
-```
-
-### Decision needed
-
-Define minimum v0 meta-governance diagram: proposal, review, sandbox, approval, implementation, rollback.
+Separate administrative configuration changes from system implementation changes. In tutored mode, material configuration changes must be public, versioned, justified, have an effective date, include an adaptation period, and define transition rules. In non-tutored mode, protocol changes require visible proposal, review, sandbox or simulation, approval, implementation, and rollback.
 
 ---
 
 ## C020 — Operating modes may become permanent discretionary control
 
-**Severity:** High  
-**Status:** Open
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-Tutored and semi-open modes help transition. But they can also preserve old gatekeeping.
-
-### Risk
-
-The distributed system becomes a front-end for centralized institutional approval.
-
-### Proposed resolution
-
-Operating modes must have:
-
-- public reason;
-- scope;
-- start date;
-- review date;
-- mode-change history;
-- aggregate reporting;
-- criteria for moving toward more openness.
-
-### Decision needed
-
-Should v0 require every tutored mode to have an explicit review date or maturity condition?
+The system does not force a country to leave tutored mode. The contradiction is opaque tutored governance. Material tutored decisions must create public `Governance Resolution` objects, and tutored silence must create public `Review Timeout Resolution` objects under a preconfigured timeout policy.
 
 ---
 
 ## C021 — Universal observability panel classified as extension, but basic observability is core
 
-**Severity:** Low  
-**Status:** Partially resolved
+**Severity:** Low
+**Status:** Resolved
+**Resolution document:** `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The classification matrix places the full universal observability panel as extension with a core baseline.
-
-### Risk
-
-Readers may be confused about which metrics are core.
-
-### Proposed resolution
-
-Separate:
-
-```text
-Core audit metrics: required in v0.
-Universal institutional observability panel: extension v1+.
-```
-
-### Decision needed
-
-Create a minimal v0 observability list.
+The full H055 universal institutional observability panel remains Extension v1+. Core v0 requires simple user-facing signals plus a minimal administrative observability baseline covering lifecycle, funding, disbursement, milestones, evidence, fiscalization, complaints, operating modes, governance resolutions, timeouts, rule changes, and basic concentration indicators.
 
 ---
 
 ## C022 — Common-good governance is extension, but projects may affect common goods
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-Common-good governance charters are classified as extension. But v0 projects may affect rivers, parks, plazas, schools, cultural assets, or shared infrastructure.
-
-### Risk
-
-v0 may ignore conflicts with common goods.
-
-### Proposed resolution
-
-Core v0 should not include full common-good charter governance, but should require projects to declare common-good impact where relevant.
-
-This can be handled through risks, antivalues, affected parties, and required evidence.
-
-### Decision needed
-
-Add `common-good impact declaration` to Core v0 project fields, or defer entirely?
+Core v0 does not include full common-good charter governance. However, projects must declare relevant common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. Active charter relationships must be declared where a charter exists, but lack of a charter does not automatically block the project.
 
 ---
 
 ## C023 — Delegation concentration is visible, but no default cap exists
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model makes delegation concentration transparent but avoids hard caps by default.
-
-### Risk
-
-A few delegates may accumulate large influence.
-
-### Proposed resolution
-
-v0 should at least show concentration warnings:
-
-```text
-This delegate controls X allocation / Y citizens / Z projects in this scope.
-```
-
-No hard cap is required unless the pilot protocol defines one.
-
-### Decision needed
-
-Should v0 include soft warnings only, or configurable concentration caps?
+Core v0 does not impose a universal hard cap on delegation concentration. Citizen-chosen concentration is allowed, but it must be visible before delegation, during delegated action, in delegate reports, and in administrative observability. Configurable caps may exist only when public, explicit, and predefined.
 
 ---
 
 ## C024 — No anonymous actors vs beneficiary privacy
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/62_BENEFICIARY_PRIVACY_AND_PROTECTED_COMMENT_IDENTITY_AND_C024_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-The model requires verified identity and no anonymous actors. But beneficiaries, especially minors or vulnerable groups, may require privacy.
-
-### Risk
-
-The system may expose beneficiaries or exclude sensitive projects.
-
-### Proposed resolution
-
-Separate:
-
-```text
-Verified to system
-Visible to public
-Visible to fiscalizer
-Visible only as aggregate
-```
-
-Actors with responsibility should be verified. Beneficiaries can be privacy-protected while still confirmable.
-
-### Decision needed
-
-Define identity visibility classes for beneficiaries vs responsible actors.
+Core v0 keeps the no-anonymous-formal-actor rule, but separates verified identity from public visibility. Responsible actors are generally public. Beneficiaries and vulnerable participants may be verified privately, reviewer-visible, or represented publicly in aggregate. Protected comment identity is a justified per-comment exception, not a general anonymous layer.
 
 ---
 
 ## C025 — Project discovery may bias allocation
 
-**Severity:** Medium  
-**Status:** Open
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md`
 
-### Tension
+### Accepted v0 rule
 
-Layer 0 includes urgent projects and discovery categories. Visibility can influence funding.
-
-### Risk
-
-The interface itself becomes a hidden allocator.
-
-### Proposed resolution
-
-Layer 0 visibility must be rule-based and explainable:
-
-- urgent slots limited;
-- reason displayed;
-- rotation visible;
-- no paid promotion;
-- no opaque manual boosting.
-
-### Decision needed
-
-Define the v0 ranking/visibility rule for discovery lists.
+Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Citizens may reorder, pin, collapse, or hide Home categories for personal navigation. Project lists must show and allow switching ordering modes. Urgent/recommended visibility must show reasons. Paid promotion and opaque manual boosting are excluded from Core v0.
 
 ---
 
@@ -906,14 +368,14 @@ Define the v0 ranking/visibility rule for discovery lists.
 - [ ] Does every responsibility-heavy role require acceptance?
 - [ ] Are role conflicts declared?
 - [ ] Can an actor hold conflicting roles in the same project?
-- [ ] Are institutional actors treated equally or privileged?
-- [ ] Can a public institution moderate competitors?
+- [x] Are public institutions kept external to internal project participation under Core v0?
+- [x] Are material tutored decisions represented as public governance-resolution objects?
 - [ ] Does role-based reputation match actual responsibility?
 
 ## 2. Project object checklist
 
 - [ ] Does every project have a responsible executor before execution funding?
-- [ ] Are draft, public design, and open financeable project clearly separated?
+- [x] Are Idea, draft project, and open financeable project clearly separated?
 - [ ] Does every project have value thesis, beneficiaries, metrics, evidence, fiscalization, risks, and antivalues?
 - [ ] Are project versions immutable?
 - [ ] Are reformulations visible?
@@ -933,7 +395,7 @@ Define the v0 ranking/visibility rule for discovery lists.
 
 - [ ] Is funding clearly a conditional commitment?
 - [ ] Is money prevented from going directly to executor before conditions?
-- [ ] Are withdrawal and lock rules state-specific?
+- [x] Is funding described as commitment until closure rather than free withdrawal?
 - [ ] Are delegated and automatic allocations distinguishable?
 - [ ] Are unused funds handled clearly?
 - [ ] Are funders notified of material changes?
@@ -959,8 +421,8 @@ Define the v0 ranking/visibility rule for discovery lists.
 
 ## 7. Fiscalization checklist
 
-- [ ] Who selects fiscalizers?
-- [ ] Can the executor influence fiscalizer selection?
+- [x] Who selects fiscalizers?
+- [x] Is executor control over fiscalizer selection excluded?
 - [ ] Are conflicts of interest declared?
 - [ ] Is fiscalization cost separated from execution budget?
 - [ ] Can fiscalizers resign or be replaced?
@@ -981,8 +443,9 @@ Define the v0 ranking/visibility rule for discovery lists.
 - [ ] Is delegation scoped?
 - [ ] Does delegate acceptance occur before activation?
 - [ ] Can delegation be revoked for future actions?
-- [ ] Are automatic allocation and delegation separate?
-- [ ] Is concentration visible?
+- [x] Are automatic allocation and delegation separate?
+- [x] Is delegation priority over automatic allocation explicit?
+- [x] Is concentration visible?
 - [ ] Are delegate actions reported?
 - [ ] Does delegate reputation reflect delegated decisions?
 
@@ -991,8 +454,9 @@ Define the v0 ranking/visibility rule for discovery lists.
 - [ ] Is the ordinary citizen view simple?
 - [ ] Are signals clickable?
 - [ ] Can technical detail be reached when needed?
-- [ ] Is project discovery explainable?
-- [ ] Are urgent/promoted-looking slots rule-based?
+- [x] Is project discovery explainable?
+- [x] Are urgent/promoted-looking slots rule-based?
+- [x] Can users customize Home categories without changing project eligibility?
 - [ ] Are citizen-facing states mapped from technical states?
 
 ## 11. Transition checklist
@@ -1001,49 +465,54 @@ Define the v0 ranking/visibility rule for discovery lists.
 - [ ] Is tutored mode justified?
 - [ ] Is there a review date or maturity condition?
 - [ ] Can institutional moderation be audited?
-- [ ] Can institutions participate without privilege?
+- [x] Are public institutions external to internal project competition under Core v0?
 - [ ] Is transition scope bounded?
 
 ## 12. Audit checklist
 
 - [ ] Is every major state change an audit event?
 - [ ] Does the audit event name actor, role, object, previous state, new state, and rule?
-- [ ] Are private details protected without hiding existence of evidence?
-- [ ] Can project history be reconstructed?
-- [ ] Are AI-assisted decisions recorded when material?
+- [x] Are private details protected without hiding existence of evidence?
+- [x] Can project history be reconstructed?
+- [x] Are AI-assisted decisions recorded when material?
+- [x] Are governance resolutions, review timeouts, and material discovery reasons auditable?
 
-# C. Current highest-priority unresolved issues
+# C. Current integration priorities
 
-The following should be resolved first because they affect Core v0 coherence:
+C001-C025 are resolved through dedicated resolution documents.
+
+The current priority is no longer to decide these contradictions. The priority is to propagate the accepted rules into the core corpus and then run another contradiction pass against the integrated model.
+
+Highest-priority integration checks:
 
 ```text
-1. C001 — Public design vs open financeable project.
-2. C002 — Fiscalizer selection rule.
-3. C004 — Blocking complaint criteria.
-4. C005 — Funding withdrawal/lock/reformulation rules.
-5. C007 — Public institution as actor vs tutored moderator.
-6. C010 — Metric distortion and qualitative evidence.
-7. C015 — Transparency vs privacy.
-8. C016 — Partial disbursement criteria.
-9. C020 — Operating modes becoming permanent gatekeeping.
-10. C025 — Discovery layer as hidden allocator.
+1. Ensure Idea and Project are distinct in all core documents.
+2. Ensure public institutions are external actors, not ordinary internal participants.
+3. Ensure funding is described as commitment until project closure, not free withdrawal.
+4. Ensure fiscalization and evidence production are distinct control roles.
+5. Ensure complaints are formal entities with admission, scope, and blocking status.
+6. Ensure value verification uses packages, not isolated metrics.
+7. Ensure disbursement milestones require coherent pre-funding validation.
+8. Ensure tutored mode decisions and timeouts become public civic objects.
+9. Ensure beneficiary privacy does not create anonymous formal power.
+10. Ensure discovery visibility is explainable and user-customizable.
 ```
 
 ## Proposed next working method
 
-Resolve one issue at a time using this template:
+Integrate one coherent document group at a time using this template:
 
 ```text
-Issue:
-Decision:
-Rule added to v0:
-Documents to update:
-Remaining risk:
+Document group:
+Resolutions propagated:
+Conflicts removed:
+Residual risks:
+Files updated:
 ```
 
-## Suggested first issue to resolve
+## Suggested first integration area
 
-Start with **C001 — Public design vs open financeable project**, because it affects project creation, publication, funding, discovery, and lifecycle states.
+Start with actor/entity and object documents, because C001, C002, C003, C006, C007, C020, C024, and C025 all depend on clean actor, role, object, and visibility definitions.
 
 ## Design rule
 

@@ -10,6 +10,8 @@ Comments are part of open civic observation. They help clarify, improve, and cha
 
 > Commenting is civic observation, not project approval, funding, fiscalization, or complaint by default.
 
+Comments are linked to verified actors. Visible identity is the default. Protected identity is a justified per-comment exception, not a general anonymous comment layer.
+
 ## Main question
 
 ```text
@@ -115,10 +117,13 @@ Comentario:
 Relacionado con:
 [Valor] [Beneficiarios] [Presupuesto] [Evidencia] [Fiscalización] [Otro]
 
-[Publicar]
+[Publicar con identidad visible]
+[Solicitar identidad protegida]
 ```
 
 The relationship field helps organize comments by project area.
+
+If the user requests protected identity for this specific comment, the system should ask for a short justification and use AI assistance to either mark protected publication as acceptable or propose a safer protected version with explanation. The AI should not suppress publication; if the user does not accept the protected version, the user may publish under visible identity subject to the same legal and safety gate.
 
 ## 3. Escalation suggestion
 
@@ -137,17 +142,23 @@ Puedes publicarlo como comentario, pero si quieres que active revisión formal, 
 
 The system should not force all critical comments into complaints, but it should make the difference clear.
 
-## 4. Visibility and moderation
+## 4. Visibility, identity, and narrow publication gate
 
-Comments should generally be visible, but may be subject to rules against:
+Comments should generally be visible with the author's verified identity.
+
+The system should not moderate tone merely because criticism is harsh, uncomfortable, embarrassing, or politically inconvenient.
+
+All comments, including visible-identity comments and protected-identity comments, remain subject to a narrow legal, safety, privacy, and platform-integrity gate against:
 
 - spam;
-- harassment;
-- irrelevant content;
 - private personal data;
-- repeated duplicate posts;
 - illegal content;
 - unsafe disclosure.
+- direct threats;
+- incitement to violence;
+- doxxing;
+- impersonation;
+- automated abuse.
 
 Moderation should be recorded in Layer 5 if it affects the project discussion.
 
@@ -192,9 +203,9 @@ Possible negative signals:
 
 - spam;
 - bad-faith repetition;
-- abusive behavior;
 - knowingly false claims;
 - posting private information.
+- illegal or unsafe content.
 
 ## What this flow should not do
 
@@ -205,6 +216,7 @@ The comment flow should not:
 - count as approval;
 - bury important unanswered questions;
 - become a social-media popularity contest;
+- create anonymous public comments;
 - hide critical comments merely because they are uncomfortable;
 - expose private information without rules.
 

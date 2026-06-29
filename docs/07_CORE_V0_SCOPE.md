@@ -41,21 +41,20 @@ These modules are necessary for the first coherent version of the model.
 - basic delegation;
 - allocation profiles and automatic monthly allocation;
 - transparent project discovery;
+- explainable discovery ordering and user-customizable Home categories;
 - meta-governance and protocol evolution;
 - progressive institutional transition;
 - operating modes: closed, tutored, semi-open, open, suspended;
-- universal institutional observability panel.
+- simple user-facing signals and a minimal administrative observability baseline.
 
 ## Complementary v0 modules
 
 These modules belong in the first version as complementary capabilities, but they should not be the center of the first explanation.
 
 - composite programs as project aggregators;
-- common-good governance programs;
-- common-good charters;
+- common-good impact declarations through project fields;
 - urgency/emergency as a project attribute;
-- existing institution as equal actor;
-- tutored moderation during transition.
+- tutored governance transparency during transition.
 
 They help the architecture handle more complex cases, but the core model should be explainable without starting from them.
 
@@ -64,12 +63,15 @@ They help the architecture handle more complex cases, but the core model should 
 These concepts are documented but should not be treated as necessary for Core v0.
 
 - subordinate common-good charters;
+- full common-good governance programs;
+- common-good charters and charter voting;
 - subdelegation;
 - explicit time-bound delegation;
 - temporary delegation pause;
 - third-party shareable allocation profiles;
 - complex canary release mechanisms;
 - advanced recommendation algorithms;
+- full universal institutional observability panel;
 - multiple incompatible institutional architectures;
 - fully automated scope moderation;
 - highly granular operating modes.
@@ -84,6 +86,7 @@ These questions belong to the implementing country or jurisdiction, not the core
 - when to increase or reduce distributed budget share;
 - what laws must be changed;
 - which institution operates or hosts the platform;
+- whether a country deliberately departs from Core v0 by allowing public institutions to act inside the platform;
 - what external datasets are used for comparison;
 - what political adoption pace is chosen;
 - what sector-specific KPIs are used;
@@ -119,7 +122,7 @@ Meta-governance, protocol change, testing environments, approval rules, and vers
 
 ### Block 7 — Transition
 
-Operating modes, tutored pilots, incumbent institutions, transition metrics, and the universal observability panel.
+Operating modes, tutored pilots, governance resolutions, review timeout resolutions, transition metrics, and the administrative observability baseline.
 
 ## First thesis statement
 

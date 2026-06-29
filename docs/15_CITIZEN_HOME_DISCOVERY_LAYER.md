@@ -49,6 +49,19 @@ E. Search / filters
 F. Delegate or configure automatic profile
 ```
 
+The citizen may personalize the Home categories without changing project eligibility or public visibility rules.
+
+Allowed personal controls:
+
+- reorder categories;
+- pin categories;
+- collapse categories;
+- hide categories from Home;
+- restore the default layout;
+- edit declared discovery preferences.
+
+Hidden categories must remain reachable through Explore, filters, and search.
+
 ## A. Citizen allocation / available amount
 
 The first block may show the citizen's available civic allocation for the period.
@@ -104,11 +117,13 @@ Urgent now
 
 1. Repair community center before heavy rain
 Missing $800,000 · closes in 2 days
+Shown because: funding closes soon + weather risk
 👥 Community · 🧓 Older adults
 [View] [Fund]
 
 2. School sports equipment delivery
 Needs 1 fiscalizer · closes in 3 days
+Shown because: missing fiscalizer + deadline near
 ⚽ Sports · 👧 Childhood
 [View] [Offer help]
 ```
@@ -218,6 +233,8 @@ Examples:
 - clicking a search result opens a compact list;
 - clicking an urgent project opens that project's card or compact detail.
 
+Layer 0 category order is a personal navigation preference. Layer 1 project order is a visible discovery rule and must show which ordering mode is being used.
+
 ## Final Layer 0 structure
 
 ```text
@@ -231,9 +248,24 @@ E. Search
 F. Delegate / automatic profile
 ```
 
+User-customized example:
+
+```text
+Layer 0 — Home / Discovery
+
+A. Available civic allocation
+B. Sports
+C. Need fiscalizer
+D. Near me
+E. Almost ready
+F. Search
+```
+
+This customization affects only the citizen's Home surface. It does not remove hidden categories from Explore or search.
+
 ## Principle
 
-> The home layer should help citizens choose a path, not force them to evaluate projects immediately.
+> The home layer should help citizens choose a path, not force them to evaluate projects immediately or accept a hidden platform ordering as neutral.
 
 ## Status
 

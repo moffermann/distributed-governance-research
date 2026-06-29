@@ -58,7 +58,6 @@ Possible organization types:
 
 - company;
 - nonprofit;
-- public institution;
 - university;
 - club;
 - association;
@@ -67,6 +66,8 @@ Possible organization types:
 - NGO;
 - local group;
 - other recognized organization.
+
+Core v0 organizations are internal non-state actors. Public institutions are external legal, budgetary, auditing, regulatory, or infrastructure actors unless a country implementation explicitly departs from the Core v0 baseline.
 
 An organization may act as:
 
@@ -77,8 +78,30 @@ An organization may act as:
 - evidence producer;
 - delegate;
 - funder where rules allow;
-- moderator where operating mode allows;
 - technical assistant.
+
+### Public Institution / External Authority
+
+A public institution is external to the internal actor set in Core v0.
+
+It may act as:
+
+- legal framework setter;
+- budget allocator or remover;
+- external auditor;
+- law enforcer;
+- public authority issuing governance resolutions in tutored mode;
+- infrastructure provider for identity, treasury, custody, permits, or registries.
+
+It should not act as:
+
+- internal project proposer;
+- internal executor;
+- internal fiscalizer;
+- internal evidence producer;
+- ordinary delegate;
+- internal moderator of competing projects;
+- recipient of distributed project financing.
 
 ## 2. Role entities
 
@@ -122,6 +145,39 @@ Automatic Profile Owner
 
 ## 3. Primary objects
 
+## Idea
+
+A public expression of civic demand or project possibility.
+
+An idea is not financeable for execution.
+
+Key attributes:
+
+- id;
+- title;
+- summary;
+- problem or demand;
+- territory;
+- value interests;
+- supporters;
+- followers;
+- comments;
+- structured objections;
+- associated projects;
+- current status;
+- audit trail.
+
+Key relationships:
+
+```text
+Idea may generate many Projects
+Idea has many SupportSignals
+Idea has many Comments
+Idea has many Followers
+Idea has many StructuredObjections
+Idea has many AuditEvents
+```
+
 ## Project
 
 The main financeable and executable unit.
@@ -141,8 +197,10 @@ Key attributes:
 - beneficiaries;
 - budget;
 - milestones;
+- disbursement milestone plan;
 - evidence obligations;
 - fiscalization requirements;
+- common-good impact declarations where relevant;
 - funding target;
 - closure conditions;
 - risks;
@@ -159,6 +217,7 @@ Project has many ValueTheses
 Project has many BeneficiaryGroups
 Project has one or more Budgets
 Project has many Milestones
+Project has DisbursementMilestonePlan
 Project has many EvidenceItems
 Project has FiscalizationRequirement
 Project has many FiscalizerOffers
@@ -332,7 +391,7 @@ Attributes:
 - source: direct, delegated, automatic profile;
 - status;
 - timestamp;
-- withdrawal/reassignment rule;
+- commitment and failure-handling rule;
 - related project version.
 
 States:
@@ -346,6 +405,10 @@ Reassigned
 Released partially
 Released totally
 ```
+
+Rule:
+
+> Funding is a commitment until project closure, not a freely reversible preference. Return, reassignment, recovery, guarantee, or retention handling occurs through project failure, closure, complaint, or reformulation rules.
 
 ## Milestone
 
@@ -379,6 +442,28 @@ Late
 Paused
 ```
 
+## Disbursement Milestone Plan
+
+A structured plan defining how project funds may be released.
+
+Attributes:
+
+- project;
+- milestone list;
+- release amounts;
+- maximum release per milestone;
+- partial-release rules;
+- retention rules;
+- evidence required;
+- protected advance-payment rules where applicable;
+- validation status;
+- critical failures;
+- citizen-facing summary.
+
+Rule:
+
+> A project cannot receive execution funding while its disbursement milestone plan has unresolved critical validation failures.
+
 ## Evidence Item
 
 A piece of material used to verify, contradict, or evaluate a project.
@@ -398,6 +483,10 @@ Attributes:
 - privacy classification;
 - review status;
 - contradiction status.
+
+Rule:
+
+> Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
 States:
 
@@ -426,6 +515,31 @@ Attributes:
 - expertise needed;
 - risk basis;
 - status.
+
+## Control Subproject
+
+A project-like control object associated with a parent project.
+
+It may define fiscalization, evidence-production, audit, or control work.
+
+Attributes:
+
+- parent project;
+- control type;
+- methodology;
+- deliverables;
+- control budget;
+- evidence requirements;
+- eligibility rule;
+- conflict checks;
+- selection rule;
+- assigned actor or actors;
+- status;
+- audit trail.
+
+Rule:
+
+> Control subprojects fit the project architecture, but their selection follows independence rules stronger than ordinary project selection.
 
 ## Fiscalizer Offer
 
@@ -587,6 +701,9 @@ Attributes:
 - type: question, observation, suggestion, response, clarification;
 - related area;
 - text;
+- visible identity mode;
+- protected identity request reference where applicable;
+- legal/safety/privacy gate status;
 - status;
 - timestamp.
 
@@ -602,6 +719,14 @@ Hidden by moderation
 Resolved
 ```
 
+Rules:
+
+- comments are linked to verified actors;
+- visible identity is the default;
+- protected identity is a justified per-comment exception, not an anonymous layer;
+- serious claims may be converted to complaints;
+- all comments remain subject to narrow legal, safety, privacy, and platform-integrity gates.
+
 ## Delegation
 
 A scoped authorization from one actor to another.
@@ -615,7 +740,9 @@ Attributes:
 - request date;
 - acceptance date;
 - revocation date;
-- reporting preference.
+- reporting preference;
+- concentration signal at activation;
+- concentration signal during reporting.
 
 States:
 
@@ -627,6 +754,10 @@ Rejected
 Revoked
 Resigned
 ```
+
+Rule:
+
+> Delegation concentration is allowed when citizens choose it, but it must be visible before delegation, during delegated action, in delegate reports, and in administrative observability.
 
 ## Automatic Allocation Profile
 
@@ -640,6 +771,7 @@ Attributes:
 - project-state preferences;
 - control preferences;
 - fallback rule;
+- active delegation interaction;
 - status;
 - history.
 
@@ -652,6 +784,10 @@ Paused
 Edited
 Disabled
 ```
+
+Rule:
+
+> Automatic allocation rules do not execute where active delegation governs the same balance or scope.
 
 ## Reputation Record
 
@@ -691,7 +827,42 @@ Attributes:
 - reason;
 - approving authority or process;
 - affected project rules;
+- governance resolutions;
+- review timeout policy;
+- timeout resolutions;
 - history.
+
+## Governance Resolution
+
+A public civic object recording a material tutored-mode decision.
+
+Attributes:
+
+- authority;
+- affected project or rule;
+- decision;
+- reason;
+- evidence or criteria considered;
+- review window;
+- comments/support/objections;
+- status;
+- timestamp;
+- audit trail.
+
+## Review Timeout Resolution
+
+A public civic object created when a tutored review window expires without authority decision.
+
+Attributes:
+
+- affected project or request;
+- responsible authority;
+- configured timeout policy;
+- expiration date;
+- automatic effect;
+- public comments/support/objections;
+- status;
+- audit trail.
 
 ## Audit Event
 
@@ -707,6 +878,9 @@ Attributes:
 - new state;
 - data changed;
 - rule applied;
+- protocol version;
+- material AI assistance reference where applicable;
+- discovery visibility reason where applicable;
 - timestamp;
 - visibility;
 - privacy classification.

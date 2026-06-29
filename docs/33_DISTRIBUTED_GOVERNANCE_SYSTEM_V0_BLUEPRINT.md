@@ -32,7 +32,7 @@ Sports, especially local sports projects, remains a strong transition pilot cand
 
 v0 should prove that the system can:
 
-1. let citizens discover projects without complexity overload;
+1. let citizens discover ideas and projects without complexity overload;
 2. let actors create projects as measurable public promises;
 3. let citizens fund projects conditionally;
 4. prevent immediate uncontrolled transfer of money;
@@ -58,7 +58,6 @@ An organization may be:
 
 - company;
 - nonprofit;
-- public institution;
 - university;
 - club;
 - association;
@@ -69,6 +68,8 @@ An organization may be:
 - other legal or civic organization.
 
 Organization type is an attribute, not a separate actor class.
+
+Core v0 excludes public institutions from the internal actor set. Public institutions remain external legal, budgetary, auditing, regulatory, or infrastructure actors. They may define the country framework, provide treasury or identity integration, and issue public governance resolutions in tutored modes, but they do not propose, execute, fiscalize, moderate, or compete for distributed project financing inside Core v0.
 
 ## Core roles
 
@@ -85,7 +86,7 @@ Important roles:
 - voter where voting applies;
 - delegator;
 - delegate;
-- moderator;
+- moderator where protocol-defined and not a public institution acting as an internal participant;
 - complainant;
 - evaluator;
 - commenter;
@@ -102,6 +103,20 @@ Examples:
 - delegate acts only inside accepted scope;
 - moderator should not approve own or related project;
 - executor responsibility starts when executor accepts the project design.
+
+Public institutions may not use operating-mode authority to become internal project competitors. Material tutored decisions should be represented as public governance-resolution objects.
+
+## Core object: idea
+
+An idea is a public expression of civic demand or project possibility.
+
+An idea may be visible, followed, commented on, refined, and associated with future projects.
+
+An idea is not financeable for execution.
+
+Key rule:
+
+> Ideas capture demand. Projects execute responsibility. Financing applies to projects, not ideas.
 
 ## Core object: project
 
@@ -132,7 +147,7 @@ Key rule:
 
 > A project is funded. A common-good charter is approved.
 
-A project may exist as a draft without executor, but it cannot be published for execution financing without an identified and accepted responsible executor.
+A project draft may exist internally while being prepared. Public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
 
 ## Value thesis and value icons
 
@@ -159,6 +174,8 @@ Rule:
 > No value icon without metrics. No metrics without evidence.
 
 The system should first search the value catalog before generating new values. AI may propose a new value only when there is no adequate existing catalog value.
+
+Promised value should be verified through a Value Verification Package, not isolated metrics. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
 
 ## Metrics and evidence
 
@@ -209,6 +226,8 @@ Evidence must be linked to:
 - review status;
 - privacy classification.
 
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
 Evidence states:
 
 ```text
@@ -241,6 +260,8 @@ Fiscalization may be simple for low-risk projects and reinforced for larger, tec
 
 Fiscalization cost is a control cost and should be separated from executor-controlled execution spending.
 
+Fiscalization may be structured as a Control Subproject associated with the parent project. Control selection must be protocolized, risk-adjusted, conflict-checked, and auditable, not chosen by the executor or ordinary popularity.
+
 ## Citizen interface layers
 
 v0 uses layered citizen complexity.
@@ -270,6 +291,8 @@ It includes:
 - projects that need something;
 - search;
 - delegation or automatic profile.
+
+Home categories may be reordered, pinned, collapsed, or hidden by the citizen for personal navigation. Hidden categories remain reachable through Explore, filters, and search. Urgent and recommended visibility must show reasons, and Core v0 excludes paid promotion and opaque manual boosting.
 
 ### Layer 1 — Compact project list
 
@@ -378,6 +401,8 @@ It does not immediately transfer money to the executor.
 
 Funds are released only after closure conditions, milestones, evidence, and fiscalization rules are satisfied.
 
+Funding is not a freely reversible expression of preference. After financing, ordinary withdrawal is not allowed; failure is handled through traceability, complaints, retentions, guarantees, recovery, returned balances, and reputation consequences.
+
 ### Following
 
 Following is observation and notification only.
@@ -401,6 +426,8 @@ It does not by itself validate compliance.
 Comments support civic observation and clarification.
 
 Serious issues can be escalated into formal complaints.
+
+Public comments are identifiable by default. Protected identity is a justified per-comment exception for exposed actors, not an anonymous comment layer. All comments remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
 
 ### Complaints
 
@@ -442,7 +469,11 @@ Idea
 → publication as open project
 ```
 
+`Idea` in this flow is the demand or proposal source. It is not a project state and is not financeable until it becomes a project with an accepted executor and validated disbursement milestone plan.
+
 The creator should not start with a giant technical form. The system should assist the creator in making the project financeable, measurable, fiscalizable, and auditable.
+
+Project creation should include lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. Full common-good charter governance remains a later extension.
 
 ## Open project model
 
@@ -495,6 +526,8 @@ Each release requires:
 - rule applied;
 - audit trace.
 
+Before a project can receive execution funding, its disbursement milestone plan should pass specialized validation for milestone coherence, evidence requirements, release amounts, partial-release rules, retentions, and protected advance-payment rules. Unresolved critical validation failures block financing.
+
 Money states:
 
 ```text
@@ -536,6 +569,8 @@ Rules:
 - no revocation without traceable reason;
 - no treating every complaint as automatic project destruction.
 
+Operational reformulations may preserve the value thesis. Material value reformulations cannot unilaterally rewrite what funders financed and beneficiaries expected; they require visible cause analysis, preserved history, funding effects, and role-specific responsibility review.
+
 ## Project closure
 
 A project can close as:
@@ -561,6 +596,8 @@ Closure must show:
 - complaints status;
 - fiscalizer final report;
 - reputation effects.
+
+Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, evidence corrections, and responsibility events.
 
 ## Reputation
 
@@ -594,6 +631,8 @@ Tutored or semi-open modes may require institutional moderation before publicati
 
 Operating mode decisions should be visible and traceable.
 
+Core v0 does not force a country to leave tutored mode. It requires tutored governance to be visible. Material tutored decisions should create public Governance Resolution objects, and review silence should create Review Timeout Resolution objects under a publicly configured timeout policy.
+
 ## Treasury / public revenue authority
 
 In v0, treasury or revenue authority is treated as infrastructure integration, not a civic decision-maker.
@@ -618,9 +657,11 @@ Out of scope or future extension:
 - full national transition of all public functions;
 - complex subdelegation and paid delegation markets;
 - universal replacement of public institutions;
+- public institutions as internal project competitors;
 - full legal implementation by country;
 - advanced macro-budget balancing;
-- every possible common-good governance case;
+- full common-good charter governance;
+- advanced inferred recommender systems;
 - deep predictive scoring as a decision authority.
 
 ## Future extensions

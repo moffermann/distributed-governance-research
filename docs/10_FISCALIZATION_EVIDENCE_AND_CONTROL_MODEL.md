@@ -61,6 +61,8 @@ Examples:
 
 Evidence production strengthens fiscalization because the fiscalizer does not depend only on the executor's own reports.
 
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
 ## 3. Responsible fiscalization
 
 The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, evidence obligations, guarantees, mitigation commitments, and fiscalization criteria.
@@ -109,6 +111,25 @@ guarantees or retentions, if applicable
 ```
 
 The executor should not directly pay or appoint the actors responsible for validating its own performance.
+
+## Control subprojects
+
+Fiscalization, evidence missions, technical review, or other control work may be modeled as a Control Subproject associated with the parent project.
+
+A Control Subproject may contain:
+
+- methodology;
+- deliverables;
+- control budget;
+- eligibility criteria;
+- conflict checks;
+- assigned actor or actor pool;
+- evidence requirements;
+- comments and objections;
+- audit trail;
+- reputation effects.
+
+Control subprojects fit the project architecture, but their selection rules must be stronger than ordinary project selection. They are selected through protocolized, risk-adjusted, conflict-checked, and auditable rules, not by the executor or by ordinary popularity.
 
 ## Fiscalization offers
 
@@ -165,6 +186,8 @@ Possible protections:
 - eligibility thresholds;
 - independent selection rules;
 - reinforced requirements for medium, large, or risky projects.
+
+Execution readiness requires both execution budget closure and control package closure where control is required.
 
 ## Evidence commitments from funders and beneficiaries
 

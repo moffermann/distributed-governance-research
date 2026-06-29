@@ -6,6 +6,8 @@ This document freezes the first version of the project creation and publication 
 
 The flow explains how a citizen or organization turns an idea into a public project that can be funded, reviewed, fiscalized, evidenced, and eventually executed.
 
+An idea and a project are different objects. An idea can express civic demand and attract discussion or potential executors. A project is financeable only after it has accepted executor responsibility and the required validation package.
+
 This is a v0 design and should be refined later.
 
 ## Core principle
@@ -37,7 +39,7 @@ These roles may overlap only where the protocol allows it.
 
 Important distinction:
 
-> A project can exist as a draft or design without an executor, but it cannot be published for execution financing without an identified and accepted responsible executor.
+> An executorless public proposal is an Idea, not an open financeable project. A project draft may exist privately or internally during preparation, but it cannot be published for execution financing without an identified and accepted responsible executor.
 
 ## Flow overview
 
@@ -91,6 +93,8 @@ The system can offer AI assistance:
 ```text
 Puedo ayudarte a convertir esta idea en un proyecto financiable, medible y fiscalizable.
 ```
+
+If no executor is ready to accept responsibility, the idea may remain public as an Idea. It can collect followers, comments, structured objections, and associated project proposals, but it cannot receive execution funding.
 
 ## 2. Define problem and solution
 
@@ -244,10 +248,10 @@ If no executor exists:
 
 ```text
 Status:
-Project in design, without executor.
+Idea / call for executor.
 
 This project cannot yet receive execution funding.
-It may search for an executor, open a call, or remain as a draft/design.
+It may search for an executor, open a call, or remain as an idea until a responsible executor accepts a project design.
 ```
 
 Rule:
@@ -305,6 +309,8 @@ Rule:
 
 > If a project requires financed control, the cost of control must be included and separated from executor-controlled spending.
 
+Control work may be structured as a Control Subproject. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable; the executor cannot directly select the actor that validates its own performance.
+
 ## 7. Define milestones
 
 The system turns the project into verifiable milestones.
@@ -318,6 +324,8 @@ Each milestone should define:
 - reviewer or fiscalizer;
 - whether the milestone triggers disbursement;
 - what happens if milestone is delayed or rejected.
+
+Milestones that affect payment should belong to a structured Disbursement Milestone plan with release amounts, partial-release rules, retentions, advance-payment protections where applicable, and evidence requirements.
 
 Example:
 
@@ -383,6 +391,8 @@ Rule:
 
 > There is no promised value without a reasonable way to measure and verify it.
 
+Value verification should use a package of metrics and evidence. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
+
 ## 9. Define required fiscalization
 
 The system proposes or requires fiscalization according to project characteristics.
@@ -412,6 +422,8 @@ The creator may see why this is required, but cannot arbitrarily remove required
 Rule:
 
 > The executor does not freely define who fiscalizes it and does not directly control payment to the fiscalizer.
+
+Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
 ## 10. Declare risks and antivalues
 
@@ -448,6 +460,8 @@ Rule:
 
 > A serious project declares not only value, but also risks, limits, and possible negative effects.
 
+Where relevant, the project must declare common-good impact through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+.
+
 ## 11. Assisted validation by rules and AI
 
 Before publication, the system validates the project.
@@ -464,6 +478,8 @@ Validation dimensions:
 - fiscalization adequacy;
 - risk and antivalue declaration;
 - role responsibility;
+- disbursement milestone plan;
+- common-good impact declaration where relevant;
 - duplicate or overlapping project detection;
 - operating mode rules.
 
@@ -488,6 +504,8 @@ Requires adjustments:
 ```
 
 AI helps identify issues, but protocol rules define mandatory requirements.
+
+Projects with unresolved critical failures in their disbursement milestone plan cannot be published for execution funding.
 
 ## 12. Citizen preview
 
@@ -527,6 +545,8 @@ Open project
 ```
 
 Publication does not mean execution.
+
+Publication as an open project requires accepted executor responsibility. Executorless ideas remain Ideas or calls for executor.
 
 Publication means the project can receive:
 
@@ -578,6 +598,7 @@ Limits:
 - cannot freely choose the responsible fiscalizer;
 - cannot change core promises without visible reformulation;
 - cannot receive execution disbursement before conditions are met.
+- cannot receive execution funding if the disbursement milestone plan has unresolved critical validation failures.
 
 ## Creator-side project states
 
@@ -622,6 +643,7 @@ Idea
 This flow should not:
 
 - publish vague promises as financeable projects;
+- treat an idea as a financeable project;
 - allow execution funding without responsible executor;
 - allow value icons without metrics;
 - allow metrics without evidence;

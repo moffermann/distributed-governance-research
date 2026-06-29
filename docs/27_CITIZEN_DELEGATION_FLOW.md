@@ -10,6 +10,8 @@ Delegation allows a citizen to authorize another actor to act within a defined s
 
 > Delegation is scoped authorization, not transfer of citizenship, identity, money ownership, or unlimited power.
 
+Delegation has priority over automatic allocation within the delegated scope.
+
 ## Main question
 
 ```text
@@ -131,6 +133,8 @@ Alta dentro de proyectos deportivos de esta comuna.
 
 The system should not hide concentration. It should make it visible.
 
+Core v0 does not impose a universal hard cap on delegation concentration. If citizens voluntarily concentrate delegated authority in a trusted actor, that is a legitimate civic choice. The system must show concentration before delegation, during delegated action, in delegate reports, and in administrative observability.
+
 ## 5. Confirmation request
 
 Example:
@@ -230,6 +234,8 @@ Las acciones realizadas mientras la delegación estaba activa se mantienen como 
 [Confirmar revocación]
 ```
 
+Revocation affects future delegated decisions only. Funding commitments already made by the delegate remain governed by the ordinary funding commitment and project failure rules.
+
 ## 10. Delegate resignation
 
 The delegate may resign.
@@ -253,6 +259,7 @@ The delegation flow should not:
 - allow delegate to act outside scope;
 - confuse delegation with automatic allocation profile;
 - require every citizen to delegate.
+- hide that automatic allocation rules are inactive within the delegated scope.
 
 ## Design rule
 

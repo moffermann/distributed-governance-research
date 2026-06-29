@@ -8,7 +8,7 @@ Evidence production is different from fiscalization. Evidence producers collect 
 
 ## Core principle
 
-> Evidence producers help create verifiable information. Fiscalizers evaluate that information against the project commitments.
+> Evidence producers help create verifiable information. Fiscalizers evaluate that information against the project commitments. Executor self-report is useful context, not final proof for critical decisions.
 
 ## Main question
 
@@ -128,6 +128,8 @@ The system should record:
 - whether it is voluntary or paid;
 - whether the actor accepts evidence standards.
 
+For critical milestones, disbursements, and closures, the system should require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
 ## 3. Evidence submission form
 
 For actual evidence submission:
@@ -209,7 +211,7 @@ Será visible según las reglas de privacidad del proyecto.
 
 Evidence may contain personal or sensitive information.
 
-The system should show a privacy notice before submission.
+The system should show a privacy notice before submission and use AI-assisted privacy review where possible.
 
 Examples:
 
@@ -219,7 +221,20 @@ Examples:
 - medical or vulnerable-person information;
 - documents with private identifiers.
 
-The system should support redaction, restricted visibility, or rejection if evidence is unsafe to publish.
+The system should support redaction, restricted visibility, metadata removal, safer public versions, or publication as a summary if evidence is unsafe to publish directly.
+
+Recommended assisted flow:
+
+```text
+1. User uploads evidence.
+2. AI detects possible privacy risks.
+3. System generates or suggests a safer public version.
+4. User reviews the safer version and warning.
+5. User decides whether to publish, edit, cancel, or keep the evidence restricted where supported.
+6. Fiscalizer later evaluates evidentiary value.
+```
+
+Publishing evidence is separate from validating its evidentiary value.
 
 ## 7. Evidence contradiction
 
@@ -256,6 +271,7 @@ The evidence production flow should not:
 - let executor fully control evidence assignment;
 - pay only for favorable evidence;
 - expose private information carelessly;
+- trap ordinary evidence publication behind human pre-approval;
 - accept vague material without context;
 - hide evidence status;
 - hide whether evidence was disputed.

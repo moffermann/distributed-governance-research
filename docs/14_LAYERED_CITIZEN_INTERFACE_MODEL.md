@@ -67,6 +67,8 @@ Explore:
 - Need evidence producer
 ```
 
+The citizen may reorder, pin, collapse, or hide Home categories for personal navigation. Hidden categories remain available through Explore and search.
+
 ## Layer 0 exception — urgent highlighted projects
 
 Layer 0 may show one or two ultra-highlighted urgent projects.
@@ -105,6 +107,7 @@ Missing $800,000 · closes in 2 days
 
 2. School sports equipment delivery
 Needs 1 fiscalizer · closes in 3 days
+Shown because: missing fiscalizer + deadline near
 [View] [Offer help]
 ```
 
@@ -113,6 +116,8 @@ Needs 1 fiscalizer · closes in 3 days
 After entering a category, grouping, search result, or recommendation path, the citizen sees a compact list of projects.
 
 This is the first place where multiple projects are compared.
+
+Layer 1 should show the current ordering mode and allow the citizen to switch modes such as Near me, Closing soon, Almost ready, Need fiscalizer, New, Random rotation, or Search relevance.
 
 Each compact project item should include:
 
@@ -264,7 +269,10 @@ Clicking beneficiaries shows:
 - selection criteria;
 - territory;
 - confirmation status;
-- beneficiary feedback if available.
+- beneficiary feedback if available;
+- privacy classification where personal identity is restricted.
+
+For minors or vulnerable beneficiaries, the citizen-facing view should normally show aggregate counts, selection criteria, confirmation status, and fiscalizer verification rather than exposing names, identity numbers, addresses, or unredacted faces.
 
 ### Funding detail
 
@@ -286,7 +294,10 @@ Clicking comments shows:
 - observations;
 - executor responses;
 - highlighted unresolved issues;
-- community discussion.
+- community discussion;
+- visible or protected identity status where applicable.
+
+Comments are identifiable by default. Protected identity is a justified per-comment exception and does not create an anonymous comment layer.
 
 ### Complaint detail
 
@@ -355,10 +366,10 @@ Each layer answers a different question:
 
 ```text
 Layer 0:
-  What paths can I use to find projects?
+  What paths can I use to find projects, and how have I configured my Home navigation?
 
 Layer 1:
-  Which projects are available in this path?
+  Which projects are available in this path, and why are they ordered this way?
 
 Layer 2:
   What does this project promise and what does it need?

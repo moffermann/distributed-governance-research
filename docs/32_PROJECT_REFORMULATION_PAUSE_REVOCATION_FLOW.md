@@ -10,6 +10,8 @@ Not every problem should revoke a project. The system needs proportional respons
 
 > A project may be corrected, reformulated, paused, or revoked, but every critical change must preserve history, explain effects on funds, notify affected actors, and remain fully traceable.
 
+Reformulation may change implementation, but it must not unilaterally rewrite the value promise that funders and beneficiaries relied on.
+
 ## Main question
 
 ```text
@@ -435,6 +437,7 @@ Rules:
 - budget changes need justification;
 - fiscalization cannot be weakened silently;
 - execution failure cannot be disguised as a clean new design without history.
+- avoidable executor failure, misleading design, insufficient planning, or non-compliance should generate candidate role-specific reputation events even if a reformulated version is accepted.
 
 The flow must also prevent weak complaints from destroying projects.
 
@@ -460,6 +463,8 @@ Problem detected
 → record in audit trail
 → update role-based reputation where applicable
 ```
+
+Closure category is procedural context. Reputation should be updated primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, evidence corrections, and role-specific responsibility events.
 
 ## What this flow should not do
 

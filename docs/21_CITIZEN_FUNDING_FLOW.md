@@ -4,11 +4,11 @@
 
 This document freezes the citizen funding flow: what happens when a citizen chooses to fund a project.
 
-Funding is one of the central actions of the distributed governance system. The flow must be simple for the citizen but clear about the state of money, release conditions, reversibility, reformulation, and follow-up.
+Funding is one of the central actions of the distributed governance system. The flow must be simple for the citizen but clear about the state of money, release conditions, commitment, failure handling, reformulation, and follow-up.
 
 ## Core principle
 
-> Funding is a conditional, traceable, and reversible commitment before closure. It is not an immediate transfer of money to the executor.
+> Funding is a conditional, traceable commitment until project closure. It is not an immediate transfer of money to the executor and not a freely reversible expression of preference.
 
 ## Main question
 
@@ -56,6 +56,8 @@ The funding flow has six steps:
 5. Post-confirmation money status
 6. Automatic project following
 ```
+
+If active delegation governs the citizen's allocation, the delegate has priority over automatic allocation rules for that delegated balance or scope. A manual citizen funding action may still be allowed only where the delegated scope or country implementation rules permit it.
 
 ## 1. Entry from the Fund button
 
@@ -209,22 +211,25 @@ Funds can be released only after the applicable project conditions are met and a
 
 ## Withdrawal and reassignment rule
 
-Withdrawal depends on project state.
+Ordinary withdrawal is not available after the citizen finances a project.
 
 Recommended rule:
 
 ```text
-While the project is open and has not completed closure conditions:
-  the citizen may withdraw or reassign the contribution, unless a protocol rule limits withdrawal near closure.
+After funding:
+  the contribution remains committed until project closure or a protocol-defined failure/reformulation outcome.
 
-Once the project becomes execution-ready:
-  the contribution is locked for execution.
+If the project fails before release:
+  unused committed funds may return, reassign, or follow the citizen's default rule.
+
+If the project enters material reformulation:
+  unreleased balances may return, reassign, or stay with the reformulated version according to the reformulation rule.
 
 Once funds are released by milestones:
-  they cannot be withdrawn; the citizen can only audit, complain, or trigger review mechanisms.
+  they cannot be withdrawn; the citizen can audit, complain, trigger review, or benefit from recovery/guarantee mechanisms where applicable.
 ```
 
-This prevents arbitrary late withdrawals from destabilizing projects that are ready to execute.
+This prevents arbitrary withdrawals from destabilizing projects while preserving citizen protection through traceability, fiscalization, complaints, retentions, guarantees, recovery, returned balances, and reputation consequences.
 
 ## Reformulation rule
 
@@ -269,7 +274,7 @@ The funding flow should not:
 
 - imply that money is immediately transferred to the executor;
 - hide release conditions;
-- make withdrawal rules ambiguous;
+- present funding as freely withdrawable after confirmation;
 - require technical understanding before funding;
 - let the citizen lose track of a funded project;
 - hide what happens if a project fails, expires, or is reformulated.

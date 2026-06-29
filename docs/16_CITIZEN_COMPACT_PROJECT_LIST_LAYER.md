@@ -110,6 +110,48 @@ Examples:
 
 Filters should be simple and citizen-readable.
 
+## Ordering mode
+
+Layer 1 must show how the current list is ordered.
+
+Examples:
+
+```text
+Childhood projects
+Sorted by: Near me
+
+Sports projects
+Sorted by: Almost ready
+
+Projects that need fiscalizers
+Sorted by: Closing soon
+```
+
+The citizen should be able to switch the ordering mode.
+
+Possible v0 ordering modes:
+
+- Near me;
+- Closing soon;
+- Almost ready;
+- Need funding;
+- Need fiscalizer;
+- Need evidence;
+- New;
+- Most supported;
+- Random rotation;
+- Search relevance.
+
+If a project appears because of a recommendation or urgent slot, the list or card should expose the reason.
+
+Example:
+
+```text
+Shown because: Sports + near your commune + needs fiscalizer.
+```
+
+Core v0 excludes paid promotion and opaque manual boosting.
+
 ## Compact project item
 
 Each project in the list should be displayed as a compact card.
@@ -219,6 +261,9 @@ Layer 1 should not:
 - show raw audit trails;
 - force the citizen into advanced mode;
 - overwhelm the citizen with too many actions per project.
+- hide why projects are ordered or recommended;
+- sell ranking, urgency, or visual prominence;
+- manually boost projects without a visible protocol reason.
 
 Layer 1 should be compact, comparable, and actionable.
 
@@ -234,7 +279,7 @@ Layer 3 opens details for a specific icon or signal.
 
 ## Principle
 
-> Layer 1 should let citizens compare projects quickly, search within or beyond a context, and act directly without losing access to deeper details.
+> Layer 1 should let citizens compare projects quickly, search within or beyond a context, understand why the list is ordered as it is, and act directly without losing access to deeper details.
 
 ## Status
 

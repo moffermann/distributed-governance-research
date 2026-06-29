@@ -102,6 +102,7 @@ This check should confirm:
 - fiscalization is configured;
 - evidence obligations are configured;
 - milestone plan is complete;
+- disbursement milestone plan has no unresolved critical validation failures;
 - disbursement rules are defined;
 - executor has accepted responsibility;
 - required documents and guarantees are complete;
@@ -237,6 +238,8 @@ Evidence must be linked to:
 
 > Evidence is not mere decoration. It must be connected to a milestone, metric, value promise, or complaint/review issue.
 
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
 ## 7. Fiscalizer review
 
 The fiscalizer reviews the milestone against the accepted project design.
@@ -357,6 +360,8 @@ Reformulation should:
 ### Rule
 
 > Reformulation changes the project transparently; it does not delete the past.
+
+Operational reformulation may preserve the value thesis. Material value reformulation cannot unilaterally rewrite what funders financed and beneficiaries expected; it requires visible cause analysis, preserved history, funding effects, and role-specific responsibility review.
 
 ## 11. Pause
 

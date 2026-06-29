@@ -166,9 +166,13 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
 | Meta-governance protocol change `H017` | Core v0 conceptual / paper layer | Needed to explain protocol evolution, but not fully implemented in MVP. |
 | Emergency as urgency attribute `H052` | Core v0 | Treats emergencies without separate architecture. |
-| Existing institution as equal actor `H056` | Core v0 / transition | Allows incumbent institutions to participate without privilege. |
+| Existing institution as equal actor `H056` | Superseded / Country implementation departure | C007 excludes public institutions from internal Core v0 participation. A country may deliberately depart from this, but it is not the Core v0 baseline. |
 | Tutored transition moderation `H057` | Core v0 / transition | Needed for pilots and bounded rollout. |
 | Operating modes `H058` | Core v0 / transition | Needed to move from closed to open functions safely. |
+| Transparent project discovery `H031` | Core v0 | Discovery must be explainable, non-commercial, and auditable. |
+| Simple Home customization and visible list ordering `C025` | Core v0 | Needed to prevent discovery from becoming a hidden allocator. |
+| Common-good impact declaration `C022` | Core v0 | Projects must declare relevant common-good impacts without importing full charter governance. |
+| Administrative observability baseline `C021` | Core v0 | Required to operate and audit the first coherent system. |
 
 ## Extension v1+ hypothesis clusters
 
@@ -176,6 +180,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Common Good Governance Program `H050` | Extension v1+ | Important but not required for first project-based model. |
 | Composite Programs `H051` | Extension v1+ | Useful grouping layer, not required for first v0. |
+| Full common-good charter governance | Extension v1+ | Core v0 only requires impact declaration and charter relationship where an active charter exists. |
 | Advanced delegation beyond simple scoped delegation | Extension v1+ | Adds complexity not required for v0. |
 | Paid delegation markets | Extension v1+ | Raises incentive and capture questions. |
 | Subdelegation | Extension v1+ | Not required for v0. |
@@ -183,6 +188,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Public Value Return per Peso `H059` | Extension v1+ | Valuable comparison tool but risky to over-centralize early. |
 | Advanced capture detection / pattern scoring | Extension v1+ | Useful later; v0 uses transparency and auditability first. |
 | Universal observability panel `H055` | Extension v1+ with Core baseline | Basic audit metrics are core; full universal panel can follow. |
+| Advanced inferred recommender systems `H032` | Extension v1+ with Core constraints | Simple explainable ordering is core; advanced inference needs literature review, configurability, and auditability. |
 
 ## Country implementation hypothesis clusters
 
@@ -194,6 +200,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Official identity and privacy standards | Country implementation | Depends on jurisdiction. |
 | Sanctions, recovery, and appeals | Country implementation | Depends on administrative law. |
 | Budget percentage migrated to the system | Country implementation | Political and fiscal decision. |
+| Public institution participation inside the platform | Country implementation departure | Core v0 excludes it; any country-specific exception must be explicit, justified, and traceable. |
 
 ## Out-of-scope clusters for Core v0
 

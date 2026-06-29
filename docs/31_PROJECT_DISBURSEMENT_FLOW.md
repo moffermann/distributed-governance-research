@@ -61,6 +61,7 @@ Required conditions may include:
 - fiscalizer confirmed;
 - evidence plan configured;
 - milestones defined;
+- disbursement milestone plan validated with no unresolved critical failures;
 - no blocking complaints;
 - required documents complete;
 - guarantees or retentions configured where applicable;
@@ -71,6 +72,8 @@ Execution-ready does not mean automatic release of the full budget.
 ### Rule
 
 > Execution-ready authorizes controlled execution. It does not authorize uncontrolled payment.
+
+No project may receive execution funding until its disbursement milestone plan is coherent enough for funding and later fiscalization.
 
 ## 3. Start of execution
 
@@ -160,6 +163,8 @@ Evidence should be linked to:
 - timestamp;
 - privacy classification;
 - review status.
+
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
 ## 6. Fiscalizer review
 
@@ -285,6 +290,8 @@ Possible mechanisms:
 ### Rule
 
 > The system should be able to recognize real progress without releasing resources over insufficient evidence.
+
+Partial release is allowed only when the disbursement milestone plan defines separable components, accepted evidence for completed components, explicit retained amount, clear condition for releasing retained funds, fiscalizer explanation, and citizen-facing summary.
 
 ## 10. Guarantees and retentions
 

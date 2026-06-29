@@ -8,6 +8,14 @@ In this tutored operating mode, projects associated with that public function pa
 
 This moderation is administered by the implementing public institution or its designated administrators.
 
+Integrated C007/C020 correction:
+
+```text
+The public institution remains an external authority, not an internal project actor.
+Material tutored decisions must become public Governance Resolution objects.
+Review silence must become a public Review Timeout Resolution under the configured timeout policy.
+```
+
 This is an exception to the fully distributed philosophy, justified by the fact that transition pilots operate inside an existing state structure, with existing budgets, legal mandates, institutional responsibilities, and parallel traditional programs.
 
 ## Rationale
@@ -75,7 +83,7 @@ Possible next action:
   Reformulate, reclassify, or submit under another public function such as culture.
 ```
 
-## Rejection is not public punishment
+## Rejection is not public punishment, but it is publicly reviewable
 
 A moderation rejection should not:
 
@@ -83,11 +91,13 @@ A moderation rejection should not:
 - destroy the draft;
 - create reputational damage for the proponent;
 - be treated as misconduct;
-- necessarily become publicly visible.
+- hide the fact that a governance decision occurred.
 
-It is a pre-publication moderation decision.
+It is a tutored governance decision.
 
 The creator may revise, reformulate, reclassify, and resubmit.
+
+If an authority rejects publication, the system should create a public Governance Resolution that citizens can comment on, support, object to, and follow. The resolution should explain the reason, the responsible authority, the affected project or idea, the review window, and the next available options.
 
 ## Administration panel
 
@@ -115,9 +125,9 @@ The platform can assist with structured fields, checklists, classification, and 
 
 Because this is an exception to the fully distributed architecture, moderation must be traceable inside the administration system.
 
-However, pre-publication rejection does not need to be public by default.
+Material moderation outcomes should be public civic objects by default, subject to privacy and safety redaction where necessary.
 
-The system should record internally:
+The system should record:
 
 - who approved or rejected the project;
 - under what role;
@@ -128,7 +138,7 @@ The system should record internally:
 - whether the project was later resubmitted;
 - whether the decision was appealed or challenged, if appeals exist.
 
-Public reporting should be aggregate unless the pilot explicitly defines otherwise.
+Public reporting should include both individual Governance Resolutions for material decisions and aggregate observability metrics.
 
 Examples of aggregate transparency:
 
@@ -184,9 +194,11 @@ The platform should measure how this moderation regime behaves:
 
 This allows the country and society to observe whether the tutored operating mode is enabling transition or becoming a bottleneck, without turning each rejected draft into a public reputational event.
 
+Every tutored review window should have a configured timeout policy. If the authority does not decide within that period, the system should automatically create a Review Timeout Resolution.
+
 ## Principle
 
-> In a transition pilot, the institution may moderate publication inside a tutored operating mode, but that moderation must be limited, internally traceable, aggregately observable, and non-punitive for rejected drafts.
+> In a transition pilot, the external public authority may moderate publication inside a tutored operating mode, but that moderation must be limited, publicly resolvable, aggregately observable, time-bounded, and non-punitive for rejected drafts.
 
 ## Status
 

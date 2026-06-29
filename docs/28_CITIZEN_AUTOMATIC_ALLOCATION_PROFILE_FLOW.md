@@ -52,6 +52,19 @@ Automatic profile:
 The system allocates according to my configured preferences.
 ```
 
+Priority rule:
+
+```text
+Active delegation has priority within the delegated scope.
+Automatic allocation rules execute only where no active delegation governs the same balance or scope.
+```
+
+If delegation is active, the system should show:
+
+```text
+Automatic rules are inactive while delegation is active in this scope.
+```
+
 ## Flow steps
 
 ```text
@@ -245,6 +258,8 @@ Proyectos:
 
 Reports should explain why allocations happened.
 
+Reports should also state whether any automatic rule was skipped because active delegation had priority.
+
 ## 10. Edit, pause, or deactivate
 
 The citizen should be able to:
@@ -263,6 +278,7 @@ The automatic profile flow should not:
 
 - make hidden decisions without citizen-configured rules;
 - pretend to be delegation;
+- compete silently with active delegation;
 - ignore project control conditions;
 - allocate to projects with blocking issues if rules forbid it;
 - hide why a project was selected;

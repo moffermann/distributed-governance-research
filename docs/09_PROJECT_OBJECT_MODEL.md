@@ -8,6 +8,8 @@ This document defines the project as the central operational object of the Core 
 
 A project is the basic operational and financeable unit of the system.
 
+An `Idea` is a separate object. It may express civic demand, gather followers, comments, structured objections, and associated projects, but it is not financeable for execution.
+
 It is a concrete proposal for public or social action that declares:
 
 - what value it promises to generate;
@@ -41,9 +43,9 @@ Project:
 
 ## Required executor rule
 
-A project may exist as a draft or design without an executor.
+A project draft may exist privately or internally while being prepared.
 
-However, a project should not enter execution-financing unless it has an identified and accepted responsible executor.
+However, public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project should not enter execution-financing unless it has an identified and accepted responsible executor.
 
 Reason:
 
@@ -193,6 +195,8 @@ Each KPI should include:
 - reporting actor;
 - fiscalization actor or method where applicable.
 
+KPIs are not sufficient by themselves. Each promised value should be verified through a Value Verification Package that combines metrics, evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, and complaint/contradiction channels.
+
 ### 5. Budget and financing
 
 A project declares:
@@ -211,7 +215,10 @@ Core funding rules:
 If the project reaches or exceeds its declared funding target → funding closes.
 No automatic overfunding by default.
 If the project does not reach funding by deadline → close or reformulate.
+After funding → no ordinary free withdrawal.
 ```
+
+Funding is a commitment until project closure. If a project fails, citizen protection comes through traceability, fiscalization, complaints, guarantees, recovery, returned balances, reassignment rules, and reputation consequences.
 
 ### 6. Milestones, disbursement, and guarantees
 
@@ -225,7 +232,11 @@ A project may include:
 - guarantees or bonds;
 - conditions for executing guarantees.
 
+The project should also include a structured Disbursement Milestone plan with release amounts, partial-release rules, retention rules, evidence requirements, and advance-payment protections where applicable.
+
 Funding completion does not imply full immediate transfer to the executor. Funds may be released by milestone according to the project design.
+
+Projects with unresolved critical failures in their disbursement milestone plan should not receive execution funding.
 
 ### 7. Evidence and fiscalization
 
@@ -241,6 +252,8 @@ The project declares:
 
 The executor should not be the only source of evidence about its own performance.
 
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
 ### 8. Risks and antivalues
 
 A project declares:
@@ -250,6 +263,8 @@ A project declares:
 - declared antivalues;
 - mitigation plans;
 - detected undeclared antivalues if discovered later.
+
+Where relevant, a project must declare common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+.
 
 Undeclared antivalues may affect fiscalization, reputation, mitigation, pause, or revocation.
 
@@ -267,6 +282,8 @@ A project may be linked to:
 - delegation-generated actions;
 - evidence records;
 - guarantee records.
+
+Public institutions are not ordinary internal project actors in Core v0. They may appear as external legal, budgetary, auditing, regulatory, permitting, or infrastructure references, but they do not propose, execute, fiscalize, moderate, or compete for distributed project financing inside the Core v0 baseline.
 
 ## Project states
 
@@ -311,6 +328,8 @@ Visible and eligible to receive funding/support according to its operating mode 
 
 For execution projects, publication for funding requires an identified executor that has accepted the design.
 
+Executorless public proposals remain Ideas or calls for executor, not financeable projects.
+
 ### Funded
 
 Reached or exceeded the declared funding target. Funding closes.
@@ -339,7 +358,7 @@ The project creator may reformulate, reclassify, or resubmit.
 
 ## Principle
 
-> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, KPIs, evidence, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design.
+> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, verification package, disbursement milestone plan, evidence, fiscalization, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design and is updated by verified value fulfillment, founded complaints, evidence corrections, and role-specific responsibility events.
 
 ## Status
 

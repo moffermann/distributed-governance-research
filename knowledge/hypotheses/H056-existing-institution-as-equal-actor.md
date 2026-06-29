@@ -1,49 +1,36 @@
 # H056 — Existing Institution as Equal Actor
 
-## Hypothesis
+## Status
 
-During an institutional-transition pilot, the existing public institution may participate as an actor inside the distributed system, but only under the same rules as any other participant.
+Superseded for Core v0 by `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`.
 
-## Rationale
+This hypothesis is retained as historical reasoning and as a possible country-specific departure from the Core v0 baseline. It should not guide Core v0 unless the user explicitly reopens C007.
 
-A transition pilot does not require excluding the incumbent institution from all participation. If the institution proposes, models, executes, or supports projects, it should be treated as one actor among others.
+## Superseding rule
 
-The more important design rule is that institutional participation should not create special privileges, hidden authority, or asymmetric evaluation.
+Core v0 excludes public institutions from internal project participation.
 
-## Rule
+Public institutions cannot propose, execute, fiscalize, moderate, or compete for distributed project financing inside the system v0. They may define the legal framework, allocate or remove budget, audit externally, enforce general law, and provide country-specific infrastructure such as custody or treasury integration where required.
 
-If the existing institution participates as executor, modeler, proposer, or supporter, it must comply with the same requirements as everyone else:
+## Historical rejected hypothesis
 
-- identity and role transparency;
-- project thesis of value;
-- KPIs;
-- funding rules;
-- evidence requirements;
-- fiscalization;
-- milestone disbursement;
-- reputation;
-- conflict-of-interest disclosure;
-- complaint and revocation mechanisms.
+Earlier version allowed the incumbent public institution to participate internally under equal rules.
 
-## Measurement caveat
+This is no longer the Core v0 position.
 
-Although institutional participation is allowed, it may alter the clean evaluation of the pilot.
+## Historical rationale
 
-If the incumbent institution executes many projects inside the pilot, it may become harder to compare distributed execution against the prior centralized model.
+The earlier version tried to solve institutional privilege by equal treatment: if an incumbent institution entered the system, it would have to follow the same transparency, funding, evidence, fiscalization, reputation, conflict-disclosure, complaint, and revocation rules as everyone else.
 
-Therefore, institutional participation should be visible in observability metrics, so evaluators can distinguish:
+C007 rejects that approach for Core v0 because equal formal rules do not remove the deeper conflict: a public institution may still hold external authority, legal mandate, budgetary power, administrative influence, or tutored-mode control while competing inside the same platform.
 
-```text
-projects executed by incumbent institution
-projects executed by non-institutional actors
-projects executed by mixed arrangements
-```
+The current Core v0 solution is exclusion from internal project participation, not equalized internal participation.
 
-## Fiscalization caveat
+## Measurement caveat retained for country departures
 
-The institution should not fiscalize itself or dominate fiscalization of the pilot if the pilot is partly evaluating that institution's prior performance.
+If a country deliberately departs from Core v0 and allows institutional internal participation, that participation should be highly visible in observability metrics so evaluators can distinguish public-institution execution from non-institutional execution.
 
-Fiscalization should remain independent from the actor being evaluated.
+Such a departure should also preserve independent fiscalization and should not allow the institution to fiscalize itself.
 
 ## Personnel transition is out of core scope
 
@@ -53,17 +40,17 @@ The implementing state decides, according to its laws, labor rules, public admin
 
 - remain in their current roles;
 - move into support, training, or assistance functions;
-- participate as institutional actors;
+- move into country-defined institutional roles outside the Core v0 internal actor baseline;
 - move into oversight roles where appropriate;
 - transition to other functions;
 - remain outside the pilot.
 
 The model can provide transparency and metrics, but it should not prescribe personnel policy.
 
-## Principle
+## Current principle
 
-> The incumbent institution may participate, but it does not receive institutional privilege inside the distributed pilot. Personnel transition belongs to the implementing state, not the core architecture.
+> Core v0 keeps public institutions outside internal project participation. Personnel transition belongs to the implementing state, not the core architecture.
 
-## Status
+## Historical status
 
-Transition-design hypothesis. Extends H054 and H055.
+Transition-design hypothesis. Superseded as a Core v0 rule by C007.

@@ -75,7 +75,9 @@ Layer 5 should include technical traceability for:
 11. Actor and role events
 12. Moderation and mode decisions
 13. System decisions and protocol references
-14. Data export and verification tools
+14. Governance resolutions and review timeouts
+15. Discovery visibility reasons
+16. Data export and verification tools
 ```
 
 ## 1. Project versions
@@ -207,6 +209,8 @@ For each evidence item:
 
 Evidence may include documents, photos, videos, field reports, attendance records, beneficiary confirmations, fiscalizer reports, or other accepted evidence types.
 
+Executor-submitted material should be distinguishable from corroborated non-executor evidence. Evidence records should show whether AI-assisted privacy review, redaction, metadata removal, or safer-publication tools were applied.
+
 ## 8. Fiscalization reports
 
 Include complete fiscalization records:
@@ -302,6 +306,8 @@ If the project is in a tutored, semi-open, suspended, or otherwise special opera
 
 This preserves traceability without making moderation the first citizen experience.
 
+If a comment is published under protected identity, Layer 5 should record the existence of the protected identity request, the AI-assisted process result, the contextual protected display identity, and any legal/safety/privacy gate action, without exposing protected personal identity to unauthorized viewers.
+
 ## 13. System decisions and protocol references
 
 Layer 5 should show important system decisions and the rules used.
@@ -318,7 +324,40 @@ Examples:
 
 Each important decision should reference the applicable rule or protocol version.
 
-## 14. Data export and verification tools
+## 14. Governance resolutions and review timeouts
+
+For tutored or semi-open operating modes, Layer 5 should include public governance objects:
+
+- Governance Resolution;
+- Review Timeout Resolution;
+- authority or responsible office;
+- declared review window;
+- configured timeout policy;
+- decision, non-decision, or automatic effect;
+- public reason;
+- comments, support, objections, and follow status;
+- affected project, rule, or operating mode;
+- audit trail.
+
+Tutored decisions and tutored silence should be auditable civic objects, not hidden administrative events.
+
+## 15. Discovery visibility reasons
+
+Layer 5 should preserve material discovery and visibility traces where they may affect funding or legitimacy.
+
+Examples:
+
+- urgent-slot reason;
+- recommendation reason;
+- list ordering mode;
+- filters applied;
+- protocol rule for rotation;
+- whether the user customized Home categories;
+- aggregate funding from search, category navigation, urgent highlights, recommendations, delegation, and automatic profiles.
+
+The ordinary citizen does not need to see every technical ranking detail, but reviewers should be able to reconstruct whether discovery acted as a hidden allocator.
+
+## 16. Data export and verification tools
 
 Layer 5 should support external review.
 

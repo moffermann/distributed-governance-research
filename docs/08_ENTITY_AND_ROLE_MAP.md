@@ -47,7 +47,6 @@ Examples:
 
 - private organization / company;
 - nonprofit organization / foundation;
-- public organization / institution;
 - university;
 - club;
 - association;
@@ -67,14 +66,14 @@ Possible organization roles include:
 - executor;
 - fiscalizer;
 - delegate;
-- moderator in a tutored transition mode;
-- administrator in a transition context;
 - complainant / denunciante;
 - beneficiary;
 - affected party;
 - project sponsor;
 - technical assistant;
 - evidence producer.
+
+Core v0 excludes public institutions from this internal organization set. Public institutions remain external legal, budgetary, regulatory, auditing, or infrastructure actors unless a later country implementation deliberately changes the model.
 
 ## Identity and verification
 
@@ -167,30 +166,38 @@ Minimum Core v0 incompatibilities:
 
 1. The executor should not be the fiscalizer of the same project.
 2. A fiscalizer should not fiscalize a project where they have a direct economic interest.
-3. A tutored moderator should not approve their own project or a project from a related organization.
+3. A public institution should not participate as an internal project actor while also exercising tutored or external authority over the same system.
 4. A technical administrator should not alter substantive rules unless authorized by protocol, meta-governance, or the applicable tutored operating mode.
 5. A delegate must act only within the scope of the delegation they accepted.
 6. A proposer, modeler, and executor may be the same actor, but that accumulation must be transparent.
 
 ## Public institutions
 
-A public institution is an organization with type:
+Public institutions are external to the internal Core v0 actor model.
 
-```text
-organization_type = public institution
-```
+They are not ordinary organizations competing inside the distributed project system.
 
-It is not a separate base actor type in Core v0.
+In Core v0, public institutions should not act inside the system as:
 
-During transition, a public institution may receive special roles, such as:
-
-- tutored mode moderator;
-- administrator of a transition operating mode;
 - project proposer;
-- project executor under equal rules;
-- provider of institutional information.
+- project modeler;
+- project executor;
+- fiscalizer;
+- evidence producer;
+- ordinary delegate;
+- internal moderator of competing projects;
+- recipient of distributed project financing.
 
-These are roles or permissions granted by the operating mode, not a separate actor ontology.
+Public institutions may still act externally as:
+
+- legal framework setter;
+- budget allocator or budget remover;
+- external auditor;
+- general-law enforcer;
+- public authority issuing governance resolutions in a tutored operating mode;
+- provider of country-specific infrastructure such as identity, treasury, custody, or legal registries.
+
+If a country chooses a tutored mode, institutional decisions that affect project publication, rejection, timeout, review, operating mode, or rule configuration should be represented as public governance-resolution objects, not hidden internal moderation.
 
 ## Treasury / revenue authority
 
@@ -206,7 +213,7 @@ Their possible external functions include:
 - enabling disbursement;
 - supporting financial traceability.
 
-However, they do not decide project value, approve ordinary projects, fiscalize results, or participate in governance unless explicitly granted a role by the implementing country.
+However, they do not decide project value, approve ordinary projects, fiscalize results, or participate in internal governance under Core v0. If an implementing country grants a public institution broader internal powers, that is a country-specific departure from the Core v0 baseline and should be documented as such.
 
 For Core v0, they are best described as:
 
@@ -226,7 +233,7 @@ It should be modeled separately from actors.
 
 ## Principle
 
-> The system has two base actor types: citizens and organizations. Everything else is a role, attribute, or infrastructure unless a later implementation requires additional actor classes. Roles are accumulable by default, except where conflict of interest or control relationships require explicit incompatibility.
+> The system has two internal base actor types: citizens and non-state organizations. Public institutions remain external legal, budgetary, auditing, or infrastructure actors in Core v0. Everything else is a role, attribute, or infrastructure unless a later implementation requires additional actor classes. Roles are accumulable by default, except where conflict of interest or control relationships require explicit incompatibility.
 
 ## Status
 
