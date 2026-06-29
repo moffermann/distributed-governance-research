@@ -93,6 +93,8 @@ The twenty-ninth residual cleanup aligned H039 as the Core v0 civic-notification
 
 The thirtieth residual cleanup aligned H037 with C006 and C007: public revenue custody, treasury integration, escrow, or other lawful custodians remain external infrastructure, not internal civic actors. Core v0 requires a financial-order boundary: the protocol generates valid financial orders for commitment, retention, release, return, reassignment, recovery, guarantee execution, or balance closure; the custodian executes them or reports closed technical/legal execution blocks. Custody must not become project selection, civic value judgment, fiscalization, complaint resolution, discretionary disbursement authority, or public-institution competition inside the platform.
 
+The thirty-first residual cleanup aligned H036 with C005, C016, C017, H037, and the accepted project disbursement flow: funding completion does not mean full transfer, but controlled execution through validated disbursement milestones, evidence, fiscalization where required, blocking-condition checks, guarantees, retentions, and protocol-valid financial orders. The citizen sees simple funding and disbursement states, while the technical layer preserves milestone rules, partial-release conditions, guarantee treatment, custodian execution status, recovery limits, and the distinction between unreleased, retained, justified released, disputed, and non-compliant funds.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
