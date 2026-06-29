@@ -39,6 +39,8 @@ The second residual cleanup began reconciling older hypotheses with C005 and C01
 
 The third residual cleanup clarified C007/C020 and H057: the state may moderate externally in tutored mode to prevent duplicate public spending or out-of-scope projects, but cannot participate as an internal competitor, executor, fiscalizer, or ordinary project moderator.
 
+The fourth residual cleanup aligned session 07 with C001, C002, C007, C013, and C020 while preserving it as a historical distillation.
+
 Approximate current maturity:
 
 ```text
