@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
 - [[../docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|Layered Citizen State Translation and C009 Resolution v0]]
 - [[../docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION|AI Assistance and C008 Resolution v0]]
 - [[../docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|Treasury, Citizen Balance, and C006 Resolution v0]]
@@ -102,6 +103,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|Treasury, Citizen Balance, and C006 Resolution v0]]
 - [[../docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION|AI Assistance and C008 Resolution v0]]
 - [[../docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|Layered Citizen State Translation and C009 Resolution v0]]
+- [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
 
 ## Core glossary
 
