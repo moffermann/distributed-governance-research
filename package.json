@@ -1,0 +1,9 @@
+{
+  "name": "distributed-governance-research",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Local tooling for generated diagram artifacts in the Distributed Governance Research project.",
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "11.16.0"
+  }
+}

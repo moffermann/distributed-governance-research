@@ -135,6 +135,7 @@ Start here when navigating the project in Obsidian or GitHub.
 ## Diagram sources
 
 - [[../docs/diagrams/README|Diagram Sources]]
+- [[../docs/diagrams/generated/README|Generated Diagram Outputs]]
 - [[../docs/diagrams/v0-citizen-navigation-layers|Diagram - Citizen Navigation Layers v0]]
 - [[../docs/diagrams/v0-project-creation-publication|Diagram - Project Creation and Publication v0]]
 - [[../docs/diagrams/v0-project-lifecycle-state|Diagram - Project Lifecycle State v0]]

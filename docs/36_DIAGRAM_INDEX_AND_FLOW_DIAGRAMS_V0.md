@@ -14,7 +14,7 @@ Accepted as Diagram Index and Flow Diagrams v0. Updated after propagation of C00
 
 ```text
 Canonical source: Markdown file with Mermaid diagram
-Generated outputs: SVG, PNG, PDF, or slide images when needed
+Generated outputs: SVG under docs/diagrams/generated/, plus PNG, PDF, or slide images when needed
 ```
 
 Reasons:
@@ -23,6 +23,26 @@ Reasons:
 - diagrams are editable in Obsidian, GitHub, and ordinary editors;
 - each diagram can link to the resolutions it implements;
 - images can be regenerated without losing traceability.
+
+## Generated output rule
+
+Generated SVG files are committed for visual inspection, but they are not the source of truth. When a Mermaid source changes, regenerate the SVG outputs with the project-local Mermaid CLI dependency:
+
+```powershell
+npm install
+npx mmdc --version
+if (Test-Path docs\diagrams\generated) { Remove-Item -LiteralPath docs\diagrams\generated -Recurse -Force }
+New-Item -ItemType Directory -Force docs\diagrams\generated | Out-Null
+Get-ChildItem docs\diagrams\*.md |
+  Where-Object { $_.Name -ne 'README.md' } |
+  Sort-Object Name |
+  ForEach-Object {
+    $base = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
+    npx mmdc -i $_.FullName -o "docs\diagrams\generated\$base.svg"
+  }
+```
+
+Mermaid CLI renders Markdown inputs with a numeric suffix such as `-1.svg`, because a Markdown file may contain more than one Mermaid chart.
 
 ## Diagram principle
 
@@ -49,6 +69,10 @@ Primary Mermaid sources:
 Conceptual planning diagram:
 
 - `docs/diagrams/distributed-planning-architecture-v1.md`
+
+Generated SVG outputs:
+
+- `docs/diagrams/generated/`
 
 ## Resolution coverage
 
