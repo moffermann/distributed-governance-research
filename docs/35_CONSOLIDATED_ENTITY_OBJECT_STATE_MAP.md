@@ -783,6 +783,11 @@ Attributes:
 - acceptance date;
 - revocation date;
 - reporting preference;
+- report frequency;
+- report channels;
+- system-generated delegated-action report stream;
+- last report generated date;
+- last report delivery status;
 - base allocation profile or fallback rule at activation, for budget delegation;
 - concentration signal at activation;
 - concentration signal during reporting.
@@ -805,6 +810,10 @@ Rule:
 Budget delegation rule:
 
 > Budget delegation should not become active unless the citizen has a selected base allocation profile or fallback rule. If delegation ends, that previously selected rule resumes for future allocation.
+
+Delegated-action reporting rule:
+
+> Delegated-action reports should be generated primarily from the audit trail. Delegates may add explanations, but Core v0 should not depend on heavy manual report writing for delegators to understand delegated actions or revoke future authority.
 
 ## Automatic Allocation Profile
 

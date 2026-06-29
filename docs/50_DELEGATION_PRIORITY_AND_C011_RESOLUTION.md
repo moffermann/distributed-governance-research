@@ -56,7 +56,7 @@ When delegation is active:
 
 - the delegate chooses projects according to the delegation mandate;
 - the citizen's previous automatic rules are suspended or bypassed for the delegated balance;
-- the citizen may still see what the delegate does;
+- the citizen may still see what the delegate does through delegated-action history and system-generated reports;
 - the citizen may revoke delegation for future decisions according to the delegation rules;
 - past commitments already made by the delegate remain governed by the funding commitment rules.
 
@@ -150,7 +150,7 @@ This resolution should inform future updates to:
 ## Mitigations
 
 - clear active delegation banner;
-- delegation activity history;
+- delegation activity history and system-generated delegated-action reports;
 - simple revocation path for future decisions;
 - explicit UI message that automatic rules are inactive under delegation;
 - avoid scoped delegation in v0.

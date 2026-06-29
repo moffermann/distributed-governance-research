@@ -75,6 +75,8 @@ The twentieth residual cleanup aligned H049 with C011, H033, H034, H038, and the
 
 The twenty-first residual cleanup aligned H047 with H049 and the delegation/automatic-allocation diagram: citizen revocation remains immediate, simple, and non-retroactive, but budget delegation revocation must also reactivate the citizen's previously selected base allocation profile or fallback rule. Past delegated funding remains valid, future delegated authority ends, and the system must show which base rule resumed instead of creating a hidden post-revocation default.
 
+The twenty-second residual cleanup aligned H046 with C011, C023, H047, H048, and H049: delegated-action reporting should not become a manual bureaucracy for delegates or a complex audit burden for citizens. Core v0 uses system-generated reports from the delegated-action audit trail, with optional delegate explanations, configurable channels and frequency, represented weight, concentration signals, conflict/abstention visibility, and a clear path to revoke future authority while preserving past valid commitments.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

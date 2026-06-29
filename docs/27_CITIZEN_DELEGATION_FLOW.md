@@ -78,11 +78,11 @@ More complex delegation, subdelegation, time-bound delegation, paid delegation, 
 Example:
 
 ```text
-Delegar permite que otra persona u organización actúe por ti dentro de un ámbito definido.
+Delegation allows another person or organization to act for you within a defined scope.
 
-Puedes revocar la delegación para acciones futuras.
+You can revoke delegation for future actions.
 
-Las acciones ya realizadas mientras la delegación estaba activa no se borran.
+Actions already performed while delegation was active are not erased.
 ```
 
 ## 2. Scope selection
@@ -107,13 +107,13 @@ The citizen chooses what they are delegating.
 Example:
 
 ```text
-¿Qué quieres delegar?
+What do you want to delegate?
 
-[Asignación mensual completa]
-[Sólo proyectos de infancia]
-[Sólo proyectos de mi comuna]
-[Sólo proyectos de deporte]
-[Participación en cambios de protocolo]
+[Full monthly allocation]
+[Only child-related projects]
+[Only projects in my commune]
+[Only sports projects]
+[Participation in protocol changes]
 ```
 
 Each scope should be understandable and visible later.
@@ -141,14 +141,14 @@ Before confirming, the system should show if the delegate already concentrates s
 Example:
 
 ```text
-Este delegado representa actualmente:
-2.430 ciudadanos
+This delegate currently represents:
+2,430 citizens
 
-Áreas principales:
-Infancia, deporte, educación
+Main areas:
+Children, sports, education
 
-Concentración:
-Alta dentro de proyectos deportivos de esta comuna.
+Concentration:
+High within sports projects in this commune.
 ```
 
 The system should not hide concentration. It should make it visible.
@@ -160,23 +160,23 @@ Core v0 does not impose a universal hard cap on delegation concentration. If cit
 Example:
 
 ```text
-Solicitud de delegación
+Delegation request
 
-Delegas:
-Proyectos de infancia
+You delegate:
+Child-related projects
 
-A:
-Fundación Vecinos por la Infancia
+To:
+Neighbors for Children Foundation
 
-Qué podrá hacer:
-Asignar tu monto disponible dentro de este ámbito.
+What this delegate may do:
+Allocate your available amount within this scope.
 
-Qué no podrá hacer:
-Actuar fuera del ámbito delegado.
-Retirar dinero ya liberado.
-Usar tu identidad como propia.
+What this delegate may not do:
+Act outside the delegated scope.
+Withdraw money already released.
+Use your identity as their own.
 
-[Enviar solicitud]
+[Send request]
 ```
 
 ## 6. Delegate acceptance
@@ -208,35 +208,68 @@ Expired, if future extension supports time limits
 Once active, the citizen should see:
 
 ```text
-Delegación activa
+Active delegation
 
-Delegado:
-Fundación Vecinos por la Infancia
+Delegate:
+Neighbors for Children Foundation
 
-Ámbito:
-Proyectos de infancia
+Scope:
+Child-related projects
 
-Acciones recientes:
-- asignó $8.000 a proyecto X
-- asignó $12.000 a proyecto Y
+Recent actions:
+- allocated $8,000 to Project X
+- allocated $12,000 to Project Y
 
-[Ver reporte]
-[Revocar delegación]
+[View report]
+[Revoke delegation]
 ```
 
 ## 8. Reporting
 
-The delegate should periodically report or have actions automatically summarized.
+The citizen should receive delegated-action reports.
+
+The Core v0 baseline should be generated primarily by the system from the delegated-action audit trail. The delegate may add short explanations, but the citizen should not depend on manually written delegate reports to know what happened.
 
 Reports may include:
 
 - projects funded;
 - reasons for allocation;
 - amounts assigned;
+- represented weight used;
+- concentration signal at the time of action;
 - projects followed;
 - alerts;
 - conflicts or abstentions;
 - results of funded projects.
+
+Example:
+
+```text
+Monthly delegated-action summary
+
+Delegate:
+Macul Sports Association
+
+Scope:
+Sports allocation in Macul
+
+Actions:
+- funded 3 projects
+- allocated $42,000 total
+- supported 1 fiscalization action
+- declared 0 conflicts
+
+Represented weight:
+1 own action + 2,430 delegated citizens
+
+Your base profile is inactive while this delegation remains active.
+
+[View detail]
+[Revoke delegation]
+[Edit report preferences]
+```
+
+The detailed view should link each action to its audit record and show any delegate explanation when one exists.
 
 ## 9. Revocation
 
@@ -298,6 +331,7 @@ The delegation flow should not:
 - hide scope;
 - hide concentration;
 - hide the fallback that resumes if delegation ends;
+- make delegated-action reporting depend only on voluntary manual reports;
 - make revocation difficult;
 - erase past delegated actions after revocation;
 - hide which base allocation profile or fallback rule resumes after revocation;
@@ -308,7 +342,7 @@ The delegation flow should not:
 
 ## Design rule
 
-> Delegation should be easy to create, easy to understand, transparent in concentration, and immediately revocable for future actions. For budget delegation, revocation resumes the citizen's previously selected base allocation profile or fallback rule.
+> Delegation should be easy to create, easy to understand, transparent in concentration, reportable through system-generated summaries, and immediately revocable for future actions. For budget delegation, revocation resumes the citizen's previously selected base allocation profile or fallback rule.
 
 ## Status
 

@@ -445,6 +445,8 @@ It requires explicit scope, delegate acceptance, transparency of concentration, 
 
 Budget delegation also requires a selected base allocation profile or fallback rule before activation. Delegation has priority while active, but the selected base rule resumes if delegation is revoked, rejected, expired, or resigned.
 
+Delegated-action reports should be generated primarily from the audit trail, with simple citizen summaries, detail on demand, represented weight, concentration signals, and optional delegate explanations.
+
 ### Automatic allocation profile
 
 Automatic allocation is citizen-configured rule-based distribution.

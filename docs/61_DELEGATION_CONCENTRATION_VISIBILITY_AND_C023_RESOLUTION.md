@@ -303,8 +303,8 @@ A good executor is not automatically a good delegate.
 
 Delegation concentration should therefore be shown alongside delegate-specific history:
 
-- reports delivered;
-- alignment with declared criteria;
+- system-generated reports delivered;
+- alignment with declared criteria and optional explanations;
 - complaints or objections;
 - revocation rates;
 - outcomes of delegated decisions;
@@ -345,14 +345,14 @@ This resolution should inform future updates to:
 - Related delegates may split influence across multiple entities to evade caps.
 - Caps may be configured in ways that are themselves political or exclusionary.
 - Too many warnings may create fatigue.
-- Delegates may report formally but not meaningfully.
+- Delegates may add optional explanations that are formally correct but not very meaningful.
 
 ## Mitigations
 
 - show warnings before delegation, not only after;
 - make represented weight visible when delegates act;
 - keep immediate revocation available;
-- require periodic delegated-action reports;
+- require periodic system-generated delegated-action reports;
 - show delegate-specific reputation and history;
 - include delegation concentration in administrative observability;
 - make any configured cap public before it affects delegation;
