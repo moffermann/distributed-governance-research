@@ -385,4 +385,7 @@ After every significant conversation or review round:
 3. record objections;
 4. update open questions;
 5. classify new ideas by scope;
-6. revise the roadmap only when the strategy changes.
+6. communicate with the user in Spanish;
+7. write durable repository documents in English;
+8. include concrete examples from the case under review when explaining issues or proposing resolutions;
+9. revise the roadmap before every commit and whenever the strategy changes.
