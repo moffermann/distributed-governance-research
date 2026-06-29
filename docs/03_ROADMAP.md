@@ -51,6 +51,8 @@ The eighth residual cleanup accepted a limited supplemental control rule and ali
 
 The ninth residual cleanup aligned H050 with C022: common-good governance programs, registry mechanics, charter voting, derogation, subordinate charters, full compatibility rule engines, and formal legal authority relationships remain Extension v1+, while Core v0 only requires lightweight project-level common-good impact declaration, active-charter relationship disclosure where applicable, and public auditability.
 
+The tenth residual cleanup aligned H055 with C021: the universal institutional observability panel remains an advanced administrative and institutional Extension v1+, while Core v0 keeps only simple user-facing signals plus the minimum platform-generated administrative baseline needed to operate, audit, and evaluate the first coherent system.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
