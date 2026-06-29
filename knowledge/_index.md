@@ -186,8 +186,9 @@ Start here when navigating the project in Obsidian or GitHub.
 
 See the complete hypothesis list in the repository under `knowledge/hypotheses/`.
 
-Recently aligned transition and actor-boundary hypotheses:
+Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H051-composite-programs-as-project-aggregators|H051 — Composite Programs as Project Aggregators]]
 - [[hypotheses/H052-emergency-as-urgency-attribute|H052 — Emergency as Urgency Attribute]]
 - [[hypotheses/H053-sports-as-transition-pilot|H053 — Sports as Transition Pilot]]
 - [[hypotheses/H054-functional-transition-maturity-metrics|H054 — Functional Transition Maturity Metrics]]

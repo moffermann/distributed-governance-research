@@ -67,6 +67,8 @@ The sixteenth residual cleanup aligned H056 with C007 and C020: public instituti
 
 The seventeenth residual cleanup aligned H052 with C025 and H031: emergency remains an urgency attribute on ordinary projects, not a separate coordination architecture. Emergency visibility must show its reason, remain limited, follow visible ordering or rotation rules where multiple projects qualify, avoid paid promotion or opaque manual boosting, preserve explicit citizen action, and be measurable through observability.
 
+The eighteenth residual cleanup aligned H051 with C022 and H050: composite programs remain Extension v1+ coordination containers for genuinely interdependent projects. They do not replace project-level accountability, create common-good charters, import full common-good governance, hide child-project funding conditions, or pool responsibility away from executors, fiscalizers, evidence, complaints, reputation, and common-good impact declarations at the child-project level.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

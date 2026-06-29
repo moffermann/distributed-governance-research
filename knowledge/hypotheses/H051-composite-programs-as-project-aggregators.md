@@ -1,8 +1,14 @@
 # H051 — Composite Programs as Project Aggregators
 
+## Status
+
+Extension v1+ coordination-pattern hypothesis aligned with [[../../docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|C022]] and [[H050-common-good-governance-program|H050]].
+
+Composite programs are useful grouping and dependency containers, not a Core v0 requirement, not a full common-good governance program, and not a replacement for project-level accountability.
+
 ## Hypothesis
 
-Some public goals require a composite program that aggregates multiple interdependent projects. A composite program is not a separate governance architecture; it is a coordination container that groups projects whose value depends on being executed together.
+In an advanced implementation, some public goals may require a composite program that aggregates multiple interdependent projects. A composite program is not a separate governance architecture; it is a coordination container that groups projects whose value depends on being executed together.
 
 ## Rationale
 
@@ -38,6 +44,57 @@ Composite program:
   parent container that coordinates multiple projects required for a larger result.
 ```
 
+## Boundary with common-good governance
+
+A composite program is different from a common-good governance program.
+
+```text
+Composite program:
+  coordinates dependencies among execution projects.
+
+Common-good governance program:
+  defines a long-term governance charter for a shared asset,
+  public space, ecosystem, infrastructure system, or other common good.
+```
+
+A composite program should not introduce:
+
+- full common-good registry mechanics;
+- governance charter voting;
+- charter derogation;
+- subordinate charters;
+- complete compatibility rule engines;
+- formal legal authority relationships;
+- hidden authority over which projects are legitimate.
+
+Those remain Extension v1+ under H050 or country implementation work. Core v0 only requires the C022 lightweight common-good impact declaration when a project materially affects a common good.
+
+Example:
+
+```text
+Composite program:
+  Recover an urban park.
+
+Child projects:
+  lighting;
+  walking paths;
+  playground repair;
+  irrigation;
+  maintenance equipment;
+  accessibility upgrades.
+
+Program role:
+  show dependencies, phases, aggregate progress, and shared risks.
+
+Child-project responsibility:
+  each child project keeps its own executor, budget, evidence,
+  fiscalizer, KPI set, complaints, and reputation effects.
+
+C022 rule:
+  because the park is a public space, each relevant child project
+  declares common-good impact through ordinary project fields.
+```
+
 ## Program structure
 
 A composite program may include:
@@ -70,6 +127,10 @@ or:
 Program phase 1 becomes executable when projects A, B, and C are funded.
 ```
 
+The program should not hide funding conditions from citizens. If a project is valuable only when other projects are funded, that dependency should be visible before citizens fund it.
+
+The program should also avoid pooling responsibility into an abstract parent. Failure of a child project should remain attributable to the responsible project actors, while the program view records how that failure affects the larger goal.
+
 ## Relationship with child projects
 
 Child projects remain normal projects:
@@ -79,18 +140,44 @@ Child projects remain normal projects:
 - they define their own KPIs;
 - they have their own executor;
 - they have their own fiscalization;
+- they declare relevant common-good impacts under C022 where applicable;
+- they preserve their own evidence, complaint, pause, reformulation, and revocation paths;
 - they affect reputation individually.
 
 The program adds coordination, dependency tracking, and aggregate visibility.
+
+It may show aggregate evidence and aggregate fiscalization views, but those views should drill down to project-level records.
+
+Example:
+
+```text
+Program:
+  Regional logistics corridor.
+
+Child project failure:
+  Access-road project misses milestones.
+
+Program consequence:
+  The corridor view shows blocked value and dependency risk.
+
+Project consequence:
+  The access-road executor still receives the responsibility event,
+  and its project evidence, fiscalization, complaints, and reputation
+  remain traceable at the child-project level.
+```
 
 ## Avoiding complexity
 
 Composite programs should be introduced only where project interdependence is real. They should not become a default wrapper for every project.
 
+Core v0 can operate without composite programs. Ordinary projects should not be forced into program containers merely to look more strategic, receive more visibility, or bundle unrelated funding demands.
+
+Composite programs should remain optional Extension v1+ until the system has enough project-level maturity to handle dependency logic without confusing ordinary citizen participation.
+
 ## Principle
 
-> A composite program coordinates interdependent projects; it does not replace project-level accountability.
+> A composite program coordinates interdependent projects; it does not replace project-level accountability, create a common-good charter, or hide child-project responsibility.
 
-## Status
+## Research note
 
-Coordination-pattern hypothesis. Complements H050 but is different from a common good governance program.
+Coordination-pattern hypothesis. Complements H050 but is different from a common-good governance program. It should be treated as Extension v1+ unless a future implementation proves that dependency aggregation is required for a specific domain.
