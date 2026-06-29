@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
 - [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
 - [[../docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|Layered Citizen State Translation and C009 Resolution v0]]
 - [[../docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION|AI Assistance and C008 Resolution v0]]
@@ -104,6 +105,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION|AI Assistance and C008 Resolution v0]]
 - [[../docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|Layered Citizen State Translation and C009 Resolution v0]]
 - [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
+- [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
 
 ## Core glossary
 
