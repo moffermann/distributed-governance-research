@@ -77,6 +77,8 @@ The twenty-first residual cleanup aligned H047 with H049 and the delegation/auto
 
 The twenty-second residual cleanup aligned H046 with C011, C023, H047, H048, and H049: delegated-action reporting should not become a manual bureaucracy for delegates or a complex audit burden for citizens. Core v0 uses system-generated reports from the delegated-action audit trail, with optional delegate explanations, configurable channels and frequency, represented weight, concentration signals, conflict/abstention visibility, and a clear path to revoke future authority while preserving past valid commitments.
 
+The twenty-third residual cleanup clarified H045 without changing its underlying rule: when a delegate acts inside an active delegated scope, the action represents the delegate and all delegators covered by that scope by default. The represented weight, scope, and any configured cap effect must be visible in the action record, delegated-action reports, concentration signals, and observability metrics. Core v0 does not require per-delegator selection for ordinary in-scope delegated actions.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

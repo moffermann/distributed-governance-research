@@ -443,6 +443,8 @@ Delegation is scoped authorization to another actor.
 
 It requires explicit scope, delegate acceptance, transparency of concentration, and immediate revocation for future actions.
 
+When a delegate acts inside an active delegated scope, the action represents the delegate and all delegators covered by that scope by default. The represented weight, scope, and any configured cap effect must be visible in the action record, delegated-action reports, and observability metrics.
+
 Budget delegation also requires a selected base allocation profile or fallback rule before activation. Delegation has priority while active, but the selected base rule resumes if delegation is revoked, rejected, expired, or resigned.
 
 Delegated-action reports should be generated primarily from the audit trail, with simple citizen summaries, detail on demand, represented weight, concentration signals, and optional delegate explanations.

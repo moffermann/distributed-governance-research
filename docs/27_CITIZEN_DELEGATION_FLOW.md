@@ -224,7 +224,28 @@ Recent actions:
 [Revoke delegation]
 ```
 
-## 8. Reporting
+## 8. Delegated action weight
+
+When a delegate acts inside the active delegation scope, the action represents the delegate and all delegators covered by that scope by default.
+
+Example:
+
+```text
+Delegate action:
+Macul Sports Association funded Project A.
+
+Represented weight:
+1 own action + 2,430 delegated citizens
+
+Scope:
+Sports allocation in Macul
+```
+
+This must be visible in the action detail, delegated-action report, concentration signals, and audit trail. Core v0 should not require per-delegator selection for ordinary in-scope actions.
+
+If a configured cap limits represented weight for a specific action type, the cap and its effect must be visible.
+
+## 9. Reporting
 
 The citizen should receive delegated-action reports.
 
@@ -271,7 +292,7 @@ Your base profile is inactive while this delegation remains active.
 
 The detailed view should link each action to its audit record and show any delegate explanation when one exists.
 
-## 9. Revocation
+## 10. Revocation
 
 Revocation should be immediate for future actions.
 
@@ -296,7 +317,7 @@ Revocation affects future delegated decisions only. Funding commitments already 
 
 After revocation, the citizen may choose a new delegate, edit the base profile, or fund manually. The system should not improvise a hidden fallback after revocation.
 
-## 10. Delegate resignation
+## 11. Delegate resignation
 
 The delegate may resign.
 
@@ -330,6 +351,7 @@ The delegation flow should not:
 - activate budget delegation without a selected base allocation profile or fallback rule;
 - hide scope;
 - hide concentration;
+- hide represented weight when a delegate acts;
 - hide the fallback that resumes if delegation ends;
 - make delegated-action reporting depend only on voluntary manual reports;
 - make revocation difficult;

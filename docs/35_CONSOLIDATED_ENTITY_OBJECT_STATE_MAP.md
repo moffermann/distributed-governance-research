@@ -788,6 +788,9 @@ Attributes:
 - system-generated delegated-action report stream;
 - last report generated date;
 - last report delivery status;
+- represented weight rule;
+- represented weight history;
+- represented weight cap status, if applicable;
 - base allocation profile or fallback rule at activation, for budget delegation;
 - concentration signal at activation;
 - concentration signal during reporting.
@@ -806,6 +809,10 @@ Resigned
 Rule:
 
 > Delegation concentration is allowed when citizens choose it, but it must be visible before delegation, during delegated action, in delegate reports, and in administrative observability.
+
+Delegated-action weight rule:
+
+> If a delegate acts inside an active delegation scope, the action represents the delegate and all delegators covered by that scope by default. The represented weight, scope, and any configured cap effect must be visible in the action record, delegated-action reports, and observability metrics.
 
 Budget delegation rule:
 

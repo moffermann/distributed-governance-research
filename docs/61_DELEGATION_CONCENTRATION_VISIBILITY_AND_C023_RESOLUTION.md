@@ -156,7 +156,7 @@ Concentration should be visible at least in these moments:
 
 ## Delegated action weight
 
-When a delegate acts within an accepted delegation scope, the represented weight should be visible.
+When a delegate acts within an accepted delegation scope, the represented weight must be visible.
 
 Example:
 
@@ -172,6 +172,10 @@ Sports allocation in Commune X.
 ```
 
 This makes clear whether an action is one actor's personal opinion or a delegated action representing many citizens.
+
+Core v0 should use a simple default: if the action is inside the delegated scope, the action represents the delegate and all delegators covered by that scope. Per-action selection of individual delegators is an advanced feature, not the default citizen or delegate experience.
+
+If a configured cap limits represented weight for a specific action type, the action record should show both the delegated weight held and the represented weight actually counted under the cap.
 
 ## Configurable caps
 

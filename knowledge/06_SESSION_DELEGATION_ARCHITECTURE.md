@@ -81,6 +81,20 @@ Delegated citizens: 2
 Total represented weight: 3
 ```
 
+Current alignment after the H045 residual cleanup:
+
+```text
+If the action is inside an active delegated scope, represented weight
+applies by default and is recorded in the action audit trail.
+
+Example:
+  Macul Sports Association funds a sports project.
+  Represented weight: 1 own action + 2,430 delegated citizens.
+
+The represented weight appears in action detail, delegated-action reports,
+concentration signals, and administrative observability.
+```
+
 ### 8. Delegation concentration is allowed but transparent
 
 There should be no hard cap by default. If many citizens trust one actor, the system should allow that.
