@@ -13,7 +13,7 @@ The objective of this repository is not to defend a conclusion, but to build a t
 ```text
 docs/                 Research philosophy, method, and project scope
 knowledge/            Consolidated concepts, hypotheses, objections, and open questions
-skills/               Reusable workflows for tooling and AI-assisted research
+tools/skills/        Reusable project-local tooling workflows
 drafts/               Essays, papers, outlines, and publication drafts
 research/             Literature notes and external references
 ```

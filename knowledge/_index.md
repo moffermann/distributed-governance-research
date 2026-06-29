@@ -180,8 +180,8 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 ## Skills
 
-- [[../skills/recursive-hypothesis-refinement/SKILL|Recursive Hypothesis Refinement]]
-- [[../skills/session-distillation/SKILL|Session Distillation]]
-- [[../skills/literature-scout/SKILL|Literature Scout]]
-- [[../skills/paper-drafting/SKILL|Paper Drafting]]
+- [[../tools/skills/recursive-hypothesis-refinement/SKILL|Recursive Hypothesis Refinement]]
+- [[../tools/skills/session-distillation/SKILL|Session Distillation]]
+- [[../tools/skills/literature-scout/SKILL|Literature Scout]]
+- [[../tools/skills/paper-drafting/SKILL|Paper Drafting]]
 - [[../tools/skills/collaborative-resolution-workflow/SKILL|Collaborative Resolution Workflow]]

@@ -11,6 +11,8 @@ Current working decision, 2026-06-29:
 ```text
 Resolve C020-C025 first.
 Then integrate C001-C025 into the core documents, checklist, and index.
+Project-local skills are consolidated under tools/skills/.
+The legacy skills/ path is retired as an active skill location.
 ```
 
 ## Current diagnosis
@@ -388,4 +390,5 @@ After every significant conversation or review round:
 6. communicate with the user in Spanish;
 7. write durable repository documents in English;
 8. include concrete examples from the case under review when explaining issues or proposing resolutions;
-9. revise the roadmap before every commit and whenever the strategy changes.
+9. use project-local skills from `tools/skills/`;
+10. revise the roadmap before every commit and whenever the strategy changes.
