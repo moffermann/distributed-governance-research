@@ -19,6 +19,19 @@ Verified identity = the system can identify and hold the actor accountable.
 Public identity = the broader public can see who the actor is.
 ```
 
+## C024 alignment
+
+C024 confirms this hypothesis and narrows the rule:
+
+```text
+Protected identity is not anonymity.
+Protected identity is a role- and context-specific visibility rule for verified actors.
+```
+
+For comments, protected identity is requested per comment.
+
+For complaints, whistleblower-sensitive reports, beneficiary confirmations, or exposed affected-party participation, protected identity may apply to a specific process or evidence item. The public display should use contextual protected identity, while authorized reviewers may verify restricted identity under logged access.
+
 ## Identity layers
 
 ### 1. Real verified identity
@@ -75,6 +88,19 @@ Beneficiary review B: Verified beneficiary #K27B
 
 The same person should not necessarily have a single public alias across all sensitive actions, because a stable alias can be correlated over time.
 
+Example:
+
+```text
+Sports project complaint:
+  Verified protected complainant #C-184
+
+Public meaning:
+  A verified actor submitted the complaint under protected identity.
+
+Restricted review:
+  Authorized reviewer can verify identity under access-log rules.
+```
+
 ## Visibility by role
 
 The system should expose different levels of identity depending on role:
@@ -86,8 +112,8 @@ The system should expose different levels of identity depending on role:
 - beneficiaries vulnerable to retaliation: protected;
 - small funders: verified but not necessarily public;
 - large funders: higher visibility due to influence;
-- complainants: verified, protected at least in early stages;
-- whistleblowers: protected with escalation rules.
+- complainants: verified, protected when justified by retaliation, safety, privacy, or beneficiary-protection risk;
+- whistleblowers: verified, protected with escalation and restricted-review rules.
 
 ## Principle
 

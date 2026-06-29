@@ -10,6 +10,8 @@ A complaint is different from a comment. It is a structured claim that something
 
 > A complaint is a formal review trigger. It must be easy to submit, structured enough to evaluate, and traceable enough to prevent arbitrary decisions.
 
+Complaints are submitted by verified actors. Visible identity is the default where no special risk exists, but a complainant may request protected identity when public exposure creates a retaliation, safety, privacy, or beneficiary-protection risk. Protected identity is not an anonymous complaint: the system retains restricted accountability and authorized reviewers may verify identity under access-log rules.
+
 ## Main question
 
 ```text
@@ -65,11 +67,12 @@ The category helps routing, but the citizen should not need legal or technical e
 3. Citizen selects category
 4. Citizen writes claim and attaches evidence if available
 5. System asks project area affected
-6. Citizen reviews possible consequences
-7. Complaint is submitted
-8. System assigns status and review path
-9. Project actors may respond
-10. Resolution is published and traceable
+6. Citizen chooses visible identity or requests protected identity if justified
+7. Citizen reviews possible consequences
+8. Complaint is submitted
+9. System assigns status and review path
+10. Project actors may respond
+11. Resolution is published and traceable
 ```
 
 ## 1. Explanation
@@ -103,7 +106,23 @@ Categoría:
 ¿Tienes evidencia?
 [Subir archivo] [Agregar enlace] [Describir observación]
 
+Identidad:
+[Presentar con identidad visible]
+[Solicitar identidad protegida]
+
 [Continuar]
+```
+
+If the citizen requests protected identity, the form should ask for a short justification. The request should be stored as part of the complaint trace, but the public complaint page should show only the protected display identity unless disclosure is authorized by the applicable review rules.
+
+Example:
+
+```text
+Justification:
+My child is still enrolled in the project and I fear retaliation if my name is public.
+
+Public display:
+Verified protected complainant #C-184
 ```
 
 ## 3. Consequence notice
@@ -231,7 +250,8 @@ Possible safeguards:
 - review stages;
 - visibility of status;
 - reputation effects for repeated abuse;
-- protection for good-faith complainants.
+- protection for good-faith complainants;
+- protected identity requests for verified complainants exposed to retaliation or safety risks.
 
 ## What this flow should not do
 
@@ -240,6 +260,7 @@ The complaint flow should not:
 - confuse complaints with comments;
 - require legal expertise;
 - hide complaint effects;
+- allow anonymous formal complaints;
 - block projects automatically without rule-based justification;
 - expose sensitive complainant information without rules;
 - allow unresolved blocking complaints to disappear silently;

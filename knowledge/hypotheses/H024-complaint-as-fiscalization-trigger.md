@@ -10,12 +10,25 @@ Any open system can be abused by false accusations, personal conflicts, maliciou
 
 The solution is not to prevent complaints, but to require identity, evidence, thresholds, and process before a complaint produces formal consequences.
 
+## C024 alignment
+
+Earlier versions left open whether whistleblower information could enter the system without verified identity if later validated by verified actors.
+
+C024 resolves this direction for Core v0:
+
+```text
+No anonymous formal complaints.
+Sensitive complaints may use protected identity when submitted by verified actors.
+```
+
+Protected identity means the public display can hide the complainant's legal identity when exposure creates a retaliation, safety, privacy, or beneficiary-protection risk. It does not mean the system loses accountability. Authorized reviewers, fiscalizers, or auditors may verify restricted identity under role, purpose, and access-log rules.
+
 ## Basic structure
 
 A complaint process may follow this sequence:
 
 ```text
-verified actor files complaint
+verified actor files complaint, with protected identity if justified
 → evidence or claim is stated
 → other actors can support or add evidence
 → resources are gathered for review/fiscalization
@@ -42,14 +55,20 @@ False or malicious complaints should create reputational and possibly financial 
 
 ## Principle
 
-> Anyone with verified identity can raise an alert, but formal consequences require evidence, support, resources, and fiscalization.
+> Anyone with verified identity can raise an alert, but formal consequences require evidence, support, resources, and fiscalization. Protected identity may limit public exposure; it does not create anonymous formal power.
+
+## Example
+
+A parent in a sports project for children reports that the executor threatened to remove children from the program if their families complain.
+
+The parent should file as a verified actor and request protected identity. The public complaint page may show a contextual protected complainant, the evidence, the affected scope, the review status, and the resolution. The authorized reviewer may verify the complainant's identity under restricted access.
 
 ## Open questions
 
 - What threshold activates review?
 - What threshold activates pause?
 - How are frivolous or malicious complaints sanctioned?
-- Can anonymous whistleblower information be submitted if later validated by verified actors?
+- What restricted-access and audit-log rules should protect verified whistleblowers while preserving accountability?
 - Who selects the fiscalizer for complaint review?
 - How are complaint supporters protected from retaliation?
 

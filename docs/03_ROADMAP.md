@@ -41,6 +41,8 @@ The third residual cleanup clarified C007/C020 and H057: the state may moderate 
 
 The fourth residual cleanup aligned session 07 with C001, C002, C007, C013, and C020 while preserving it as a historical distillation.
 
+The fifth residual cleanup propagated C024/C014 into older identity and complaint documents: anonymous formal alerts remain excluded from Core v0, while sensitive alerts and complaints use protected identity for verified actors.
+
 Approximate current maturity:
 
 ```text
