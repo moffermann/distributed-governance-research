@@ -112,6 +112,17 @@ guarantees or retentions, if applicable
 
 The executor should not directly pay or appoint the actors responsible for validating its own performance.
 
+Control-cost discovery may proceed in parallel with execution funding. This means that fiscalizers, evidence producers, and technical reviewers may submit lightweight offers while citizens are still funding the execution budget.
+
+However, execution funding and control funding remain distinct closures:
+
+```text
+execution budget closure
+control package closure
+```
+
+Execution funding may close before the final control package is selected and funded, but the project does not become execution-ready until the minimum admissible control package is also closed.
+
 ## Control subprojects
 
 Fiscalization, evidence missions, technical review, or other control work may be modeled as a Control Subproject associated with the parent project.
@@ -133,7 +144,9 @@ Control subprojects fit the project architecture, but their selection rules must
 
 ## Fiscalization offers
 
-For projects that require financed fiscalization, the system may open a fiscalization-offer phase before execution financing.
+For projects that require financed control, the system may open fiscalizer offers, evidence-producer offers, and control-cost discovery in parallel with execution funding.
+
+This is not a prior gate that blocks citizens from funding execution. It is a parallel discovery process that helps the system identify an admissible control package before execution begins.
 
 Fiscalizers can submit offers associated with the project, declaring:
 
@@ -148,13 +161,13 @@ Fiscalizers can submit offers associated with the project, declaring:
 - declared conflicts of interest;
 - relevant reputation or qualifications.
 
-The offer helps discover the real cost of fiscalizing a project.
+The offer helps discover the real cost of fiscalizing a project. Offers are lightweight and unpaid by default. Payment belongs to accepted control work after a fiscalizer, evidence producer, or reviewer becomes part of the selected control package or Control Subproject.
 
 This is especially important for remote or extreme-zone projects, where the true cost of fiscalization may include travel, lodging, time, specialized review, or multiple visits.
 
 ## Fiscalization offer admissibility
 
-Not every fiscalization offer should be allowed to win.
+Not every fiscalization offer should be allowed to become part of the accepted control package.
 
 Fiscalization offers must first satisfy the minimum control requirements defined by protocol for the project's risk, size, location, technical complexity, and possible conflicts.
 
@@ -187,7 +200,7 @@ Possible protections:
 - independent selection rules;
 - reinforced requirements for medium, large, or risky projects.
 
-Execution readiness requires both execution budget closure and control package closure where control is required.
+Execution readiness requires both execution budget closure and control package closure where control is required. A project may be execution-funded while control remains pending, but it may not begin execution until the minimum admissible control package is selected, funded, and accepted.
 
 ## Evidence commitments from funders and beneficiaries
 
@@ -231,7 +244,7 @@ Evidence commitments do not replace responsible fiscalization. They complement i
 
 ## Paid evidence missions
 
-A paid evidence mission is not a new project. It is a task associated with a project or fiscalization process.
+A paid evidence mission is not an ordinary public-value project. It is control work associated with a project, control package, fiscalization process, or Control Subproject.
 
 Example:
 
@@ -242,11 +255,13 @@ Payment:
   Fixed amount if evidence satisfies the required format and traceability standards.
 ```
 
-Paid evidence missions allow citizens or organizations to professionalize evidence collection without creating a new financing project for every evidence task.
+Paid evidence missions allow citizens or organizations to professionalize evidence collection without creating a new public-value project for every evidence task. When the mission requires budget, methodology, assignment, deliverables, evidence standards, reputation effects, and auditability, it may be represented inside a Control Subproject.
 
 ## Evidence mission funding
 
-Evidence missions should be funded from the project's control budget, from a fiscalization budget, or from an extraordinary review budget.
+Evidence missions should be funded from the project's separated control budget, from the accepted control package, from a Control Subproject budget, or from an extraordinary review budget.
+
+Submitting an evidence-producer offer is not itself payable by default. Payment begins only when the actor is selected or assigned to accepted control work under the protocol.
 
 However, the executor should not define or assign evidence missions at its own discretion.
 

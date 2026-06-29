@@ -170,7 +170,7 @@ The form should collect:
 
 Some evidence production may be paid from a project control budget.
 
-Paid evidence missions are not new projects. They are control tasks attached to a project.
+Paid evidence missions are not ordinary public-value projects. They are control tasks attached to a project, control package, fiscalization process, or Control Subproject.
 
 Rules:
 
@@ -178,6 +178,8 @@ Rules:
 - payment must not depend on evidence being favorable to the executor;
 - executor should not directly appoint or pay evidence producers;
 - assignment should follow eligibility, availability, proximity, reputation, rotation, redundancy, or protocol rules.
+
+Evidence-producer offers may be submitted in parallel with execution funding. The offer is lightweight and unpaid by default. Payment begins only when the actor is selected or assigned to accepted control work under the protocol.
 
 ## 5. Review and status
 

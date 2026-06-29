@@ -45,6 +45,10 @@ The fifth residual cleanup propagated C024/C014 into older identity and complain
 
 The sixth residual cleanup aligned C014 with C024 and C007: comments require verified authorship, visible identity remains the default, protected identity is a justified per-comment exception, and public institutions appear only as external authority responses or governance-resolution actors where applicable.
 
+The seventh residual cleanup aligned the fiscalization and evidence control model with C002 and C013: execution funding, fiscalizer offers, evidence-producer offers, and control-cost discovery move in parallel, while execution-ready requires both execution budget closure and minimum admissible control package closure.
+
+Next review candidate: evaluate whether supplemental post-control-closure funding should allow additional secondary fiscalizers, fiscalization auditors, or evidence producers after the first admissible control package is accepted. No v0 rule has been accepted for this yet.
+
 Approximate current maturity:
 
 ```text
