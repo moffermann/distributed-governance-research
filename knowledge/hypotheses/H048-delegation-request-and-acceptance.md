@@ -15,6 +15,19 @@ The delegate must have the right to accept or reject the delegation.
 Delegation follows a request-and-acceptance flow:
 
 ```text
+Citizen has selected a base allocation profile or fallback rule
+→ citizen requests delegation
+→ proposed delegate receives request
+→ delegate accepts or rejects
+→ if accepted, delegation becomes active
+→ if rejected, no delegation is created and the base rule remains active
+```
+
+For non-budget delegation scopes, the exact fallback may differ. For budget allocation delegation, the base allocation profile or fallback rule is required before activation.
+
+For non-budget scopes, the same request/acceptance core applies without a budget-allocation fallback:
+
+```text
 Citizen requests delegation
 → proposed delegate receives request
 → delegate accepts or rejects
@@ -64,6 +77,8 @@ A delegation is active only after acceptance.
 
 Before acceptance, the proposed delegate has no authority to act on behalf of the citizen.
 
+If the request is rejected or expires, the citizen's base allocation profile or fallback rule continues to govern future allocation.
+
 ## Transparency
 
 The system should show the status of a delegation request:
@@ -82,7 +97,7 @@ The request and acceptance flow should remain simple. Delegation should not beco
 
 ## Principle
 
-> Delegation is a mutual trust relationship: the citizen chooses whom to trust, and the delegate chooses whether to accept responsibility.
+> Delegation is a mutual trust relationship: the citizen chooses whom to trust, the delegate chooses whether to accept responsibility, and budget delegation only activates when the citizen has a base allocation rule ready to resume if delegation fails or ends.
 
 ## Status
 

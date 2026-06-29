@@ -12,11 +12,17 @@ Predefined profiles reduce cognitive burden while preserving citizen choice.
 
 ## Relationship with default allocation
 
-If a citizen does nothing, the system applies the system-defined default allocation rule.
+If a citizen never enters the platform, the system applies the system-defined default allocation rule under H033.
+
+When a citizen enters the platform for the first time, the citizen should select or acknowledge a base allocation profile.
+
+The system-defined default profile may be selected as that base profile.
 
 If the citizen wants more control, they can choose one of several allocation profiles.
 
 If the citizen wants full control, they can customize their own rule.
+
+Before a citizen can activate budget delegation, the citizen should already have a base allocation profile or fallback rule. While delegation is active, the delegate has priority. If delegation ends, the selected base profile resumes.
 
 ## Official profile shortlist
 
@@ -122,7 +128,7 @@ This month your profile assigned:
 
 ## Principle
 
-> Participation should not require constant attention or expert configuration. Citizens should be able to choose simple official allocation profiles, explore more options if desired, or create a custom profile.
+> Participation should not require constant attention or expert configuration. Citizens should be able to accept the public system default, choose simple official allocation profiles, explore more options if desired, or create a custom profile. That selected base profile provides continuity when delegation is revoked, rejected, expired, or resigned.
 
 ## Status
 

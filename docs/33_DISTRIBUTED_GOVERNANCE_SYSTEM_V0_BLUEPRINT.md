@@ -443,11 +443,15 @@ Delegation is scoped authorization to another actor.
 
 It requires explicit scope, delegate acceptance, transparency of concentration, and immediate revocation for future actions.
 
+Budget delegation also requires a selected base allocation profile or fallback rule before activation. Delegation has priority while active, but the selected base rule resumes if delegation is revoked, rejected, expired, or resigned.
+
 ### Automatic allocation profile
 
 Automatic allocation is citizen-configured rule-based distribution.
 
 It is not delegation and not hidden system choice.
+
+On first active use, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that base profile.
 
 ## Project creation flow
 

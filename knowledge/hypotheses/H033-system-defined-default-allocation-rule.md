@@ -2,13 +2,15 @@
 
 ## Status
 
-Core financing and participation hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]] and [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]].
+Core financing and participation hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]], and [[H049-delegate-resignation-and-notification|H049]].
 
 Delegation and automatic allocation must preserve the v0 actor boundary: public institutions are not internal delegates, and AI assistance is infrastructure rather than a delegate or civic actor.
 
 ## Hypothesis
 
 If citizens do not actively allocate their civic budget or configure their own allocation rule, the system should apply a transparent, system-defined default allocation rule.
+
+Once a citizen enters the platform for the first time, the system should require the citizen to select or acknowledge a base allocation profile. The public system default may be one of the selectable options.
 
 ## Rationale
 
@@ -17,6 +19,8 @@ A distributed governance system cannot assume that every citizen will enter the 
 Many people will remain inactive. If their assignable civic funds remain indefinitely unallocated, large amounts of public resources may become dormant. If citizens are forced to enter the platform, the system becomes coercive in a way that contradicts its usability goals.
 
 Therefore, the system needs a default rule.
+
+The default rule should solve inactivity without becoming a hidden decision. A citizen who never onboards may be governed by the public protocol default. A citizen who onboards should explicitly accept that default or choose another base profile.
 
 ## Civic autopilot
 
@@ -29,7 +33,11 @@ A citizen can:
 - choose a published allocation profile or portfolio rule;
 - use AI assistance to understand options or configure preferences;
 - configure a personal automatic rule;
-- do nothing, in which case the system default applies.
+- accept the public system default profile as their base rule.
+
+If the citizen never enters the platform, the protocol-defined default still applies so public-purpose funds do not remain dormant indefinitely.
+
+If the citizen wants to delegate budget allocation, the citizen must already have a base allocation profile or fallback rule. Delegation has priority while active, but the base rule resumes if the delegate resigns, the delegation is revoked, or the delegation otherwise becomes inactive for future actions.
 
 ## Delegation boundary after C007 and C008
 
@@ -85,9 +93,11 @@ The default rule must be:
 
 The citizen can change the default rule at any time by configuring their own allocation preferences or delegations.
 
+When changing to delegation, the previously selected base rule remains stored as the fallback for future loss of delegation authority.
+
 ## Principle
 
-> Inactivity should not freeze public resources indefinitely, and participation should not require constant attention.
+> Inactivity should not freeze public resources indefinitely, and participation should not require constant attention. First-use onboarding and pre-delegation flows should ensure each active citizen has a selected base allocation rule before another actor can exercise delegated allocation authority.
 
 ## Remaining design questions
 

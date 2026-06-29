@@ -333,11 +333,15 @@ Core v0 includes simple scoped delegation with explicit scope, delegate acceptan
 
 Delegation has priority over automatic allocation within the delegated scope. Core v0 does not impose a universal hard cap on delegation concentration; it requires concentration visibility and soft warnings, while configurable caps remain protocol, pilot, territory, or country implementation choices.
 
+Budget delegation requires a selected base allocation profile or fallback rule before activation. If delegation later ends, that previously selected rule resumes for future allocation.
+
 ### 19. Automatic allocation profile
 
 Core v0 includes citizen-configured automatic allocation. It is not delegation and not hidden system choice.
 
 Automatic allocation rules do not execute where an active delegation governs the same balance or scope.
+
+On first active use, the citizen should select or acknowledge a base allocation profile. The public system default may be one selectable profile, but the platform should not leave an onboarded citizen without a fallback rule before delegation.
 
 ### 20. Technical audit trail
 

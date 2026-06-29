@@ -6,9 +6,15 @@ This document freezes the flow for configuring an automatic allocation profile.
 
 An automatic allocation profile lets a citizen participate without manually choosing projects every period.
 
+It also provides the base allocation rule that resumes when budget delegation is revoked, rejected, expired, or resigned.
+
 ## Core principle
 
 > Automatic allocation is a citizen-configured rule for distributing their civic allocation. It is not delegation to another actor and it is not a hidden system decision.
+
+On first active use of the platform, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that profile.
+
+Budget delegation should not become active until the citizen has a selected base allocation profile or fallback rule.
 
 ## Main question
 
@@ -25,6 +31,8 @@ The flow can start from:
 - profile;
 - funding confirmation;
 - inactivity prompt;
+- first-session onboarding;
+- pre-delegation requirement;
 - delegation screen;
 - monthly allocation reminder.
 
@@ -70,14 +78,15 @@ Automatic rules are inactive while delegation is active in this scope.
 ```text
 1. Citizen starts automatic profile configuration
 2. System explains what it does
-3. Citizen chooses value preferences
-4. Citizen chooses territory preferences
-5. Citizen chooses project-state preferences
-6. Citizen chooses risk/control preferences
-7. Citizen chooses fallback rules
-8. Citizen reviews simulation
-9. Citizen confirms profile
-10. Profile runs each period and reports allocations
+3. Citizen chooses or acknowledges a base profile
+4. Citizen chooses value preferences, if customizing
+5. Citizen chooses territory preferences, if customizing
+6. Citizen chooses project-state preferences, if customizing
+7. Citizen chooses risk/control preferences, if customizing
+8. Citizen chooses fallback rules
+9. Citizen reviews simulation
+10. Citizen confirms profile
+11. Profile runs each period and reports allocations
 ```
 
 ## 1. Explanation
@@ -91,6 +100,23 @@ Puedes cambiarlo cuando quieras.
 
 No entrega dinero inmediatamente al ejecutor: los aportes siguen sujetos a condiciones, hitos, evidencia y fiscalización.
 ```
+
+## Base profile selection
+
+The first active session should not leave the citizen without a fallback rule.
+
+Simple options:
+
+```text
+Use public system default
+Choose official profile
+Create custom profile
+Hold available balance until manual decision, if the protocol allows it
+```
+
+If the citizen later delegates budget allocation, the selected base profile remains stored but inactive within the delegated scope while delegation is active.
+
+If delegation ends, the selected base profile resumes from the next applicable allocation cycle.
 
 ## 2. Value preferences
 
@@ -198,6 +224,8 @@ Delegate fallback to selected delegate
 
 Core v0 should avoid indefinite accumulation unless the broader protocol allows it.
 
+The selected fallback rule is also relevant when delegation ends. The system should not choose a new fallback silently after delegate resignation; it should resume the citizen's previously selected base profile or fallback rule.
+
 ## 7. Simulation before confirmation
 
 Before activation, the system should show a simple simulation using current projects.
@@ -279,6 +307,7 @@ The automatic profile flow should not:
 - make hidden decisions without citizen-configured rules;
 - pretend to be delegation;
 - compete silently with active delegation;
+- allow budget delegation to activate with no base profile or fallback rule;
 - ignore project control conditions;
 - allocate to projects with blocking issues if rules forbid it;
 - hide why a project was selected;

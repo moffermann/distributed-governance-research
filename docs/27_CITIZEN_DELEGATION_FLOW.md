@@ -12,6 +12,10 @@ Delegation allows a citizen to authorize another actor to act within a defined s
 
 Delegation has priority over automatic allocation within the delegated scope.
 
+For budget allocation delegation, the citizen must have a selected base allocation profile or fallback rule before delegation becomes active. The public system default profile may be selected or accepted as that base rule.
+
+If delegation later ends, the system resumes that previously selected base rule for future allocation.
+
 ## Main question
 
 ```text
@@ -59,13 +63,14 @@ More complex delegation, subdelegation, time-bound delegation, paid delegation, 
 ```text
 1. Citizen starts delegation
 2. System explains what delegation means
-3. Citizen chooses scope
-4. Citizen chooses delegate
-5. System shows delegate profile and concentration signal
-6. Citizen confirms request
-7. Delegate accepts or rejects
-8. Delegation becomes active after acceptance
-9. Citizen can monitor and revoke
+3. System verifies or requests a base allocation profile/fallback rule
+4. Citizen chooses scope
+5. Citizen chooses delegate
+6. System shows delegate profile and concentration signal
+7. Citizen confirms request
+8. Delegate accepts or rejects
+9. Delegation becomes active after acceptance
+10. Citizen can monitor and revoke
 ```
 
 ## 1. Explanation
@@ -81,6 +86,21 @@ Las acciones ya realizadas mientras la delegación estaba activa no se borran.
 ```
 
 ## 2. Scope selection
+
+For budget allocation delegation, the system should first verify that the citizen has a base allocation profile or fallback rule.
+
+If not, the flow should ask the citizen to choose one:
+
+```text
+Before delegating, choose what should happen if delegation ends.
+
+[Use public system default]
+[Choose an official profile]
+[Create my own profile]
+[Use manual available-balance fallback, if allowed]
+```
+
+This avoids a hidden allocation decision if the delegate later resigns, rejects a renewal, loses eligibility, or is revoked.
 
 The citizen chooses what they are delegating.
 
@@ -245,15 +265,32 @@ If a delegate resigns:
 - citizen is notified;
 - no future actions are authorized;
 - previous actions remain valid;
-- fallback rule applies: citizen decides directly, automatic profile applies, or system default applies.
+- the citizen's previously selected base allocation profile or fallback rule resumes.
+
+The system should not improvise a new fallback after resignation.
+
+Example:
+
+```text
+Delegation inactive: delegate resigned.
+
+Your base profile is active again:
+Public system default.
+
+[Choose new delegate]
+[Edit base profile]
+[Fund manually]
+```
 
 ## What this flow should not do
 
 The delegation flow should not:
 
 - activate without delegate acceptance;
+- activate budget delegation without a selected base allocation profile or fallback rule;
 - hide scope;
 - hide concentration;
+- hide the fallback that resumes if delegation ends;
 - make revocation difficult;
 - erase past delegated actions after revocation;
 - allow delegate to act outside scope;

@@ -55,7 +55,16 @@ Past actions taken while the delegation was valid remain immutable.
 
 Delegation is voluntary on both sides. A delegate may resign, and the delegator must be notified properly.
 
-If a delegate resigns, the citizen's configured profile applies. If none exists, the system default applies.
+Current alignment after the H049 residual cleanup:
+
+```text
+Budget delegation should only become active after the citizen has
+a selected base allocation profile or fallback rule.
+
+If a delegate resigns, that previously selected base rule resumes.
+The public system default may be the selected base rule, but it should
+not be improvised silently after resignation.
+```
 
 ### 7. Delegated actions carry represented weight
 

@@ -71,6 +71,8 @@ The eighteenth residual cleanup aligned H051 with C022 and H050: composite progr
 
 The nineteenth residual cleanup aligned H059 with C021 and C025: public value return per peso remains an Extension v2/v3 analytical signal, not Core v0, not a universal moral score, not an automatic funding rule, and not an opaque ranking engine. Any future use must compare within transparent domain limits, expose measured commitments, assumptions, evidence quality, comparison sets, and audit traces, and preserve explicit citizen funding decisions.
 
+The twentieth residual cleanup aligned H049 with C011, H033, H034, H038, and the delegation and automatic-allocation flows: budget delegation should not become active until the citizen has selected or acknowledged a base allocation profile or fallback rule. If delegation is revoked, rejected, expired, or resigned, the previously selected base rule resumes; the system does not improvise a hidden fallback after delegate resignation. Citizens who never onboard may still be governed by the public protocol default so civic allocation does not remain dormant indefinitely.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

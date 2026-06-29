@@ -1,5 +1,11 @@
 # H049 — Delegate Resignation and Notification
 
+## Status
+
+Core v0 delegation-continuity hypothesis aligned with [[../../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|C011]], [[H033-system-defined-default-allocation-rule|H033]], [[H038-monthly-use-it-or-allocate-it-cycle|H038]], and [[../../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]].
+
+Delegation can end without freezing civic allocation because a citizen should have a base allocation profile or fallback rule before budget delegation becomes active. The system default profile may be that selected base rule, but it must be public and either accepted by the citizen during onboarding/pre-delegation or applied by protocol only for citizens who never onboard.
+
 ## Hypothesis
 
 A delegate should be able to resign from an accepted delegation unilaterally. No person or organization should be forced to continue representing another citizen if they no longer want or are no longer able to do so.
@@ -32,18 +38,49 @@ Delegate resigns
 
 ## Fallback after resignation
 
-When a delegate resigns, the system should apply the delegator's currently configured profile or allocation rule.
+When a delegate resigns, the system should reactivate the delegator's previously selected base allocation profile or fallback rule.
 
-If the delegator has no configured profile or rule, the system should apply the system default profile until the delegator chooses a new delegate or configures a new rule.
+Budget delegation should not become active unless the citizen has a base allocation profile or fallback rule selected first.
+
+The base rule may be:
+
+- the public system default profile accepted by the citizen;
+- an official allocation profile selected by the citizen;
+- a custom automatic allocation profile;
+- a protocol-allowed manual-hold or available-balance rule;
+- another explicit fallback rule allowed by the protocol.
+
+If the citizen has never onboarded and therefore never selected a base rule, the protocol-defined system default may apply under H033/H038. That is different from delegate resignation, because delegation cannot exist without prior citizen action and delegate acceptance.
 
 ```text
 Delegate resigns
-→ use delegator's configured profile/rule
-→ if none exists, use system default profile
-→ delegator may later choose a new delegate
+→ delegation becomes inactive for future actions
+→ delegator is notified
+→ previously selected base profile/fallback rule resumes
+→ delegator may later choose a new delegate or edit the base rule
 ```
 
-This prevents the citizen's civic allocation from becoming frozen or unmanaged after delegate resignation.
+This prevents the citizen's civic allocation from becoming frozen or unmanaged after delegate resignation without allowing the system to improvise a hidden allocation rule.
+
+Example:
+
+```text
+First session:
+  Ana accepts the public system default profile as her base rule.
+
+Later:
+  Ana delegates sports allocation to a local sports association.
+
+Delegate resignation:
+  The association resigns because it reached capacity.
+
+Result:
+  The sports delegation becomes inactive for future actions.
+  Past delegated funding remains valid.
+  Ana is notified.
+  Ana's accepted base profile resumes from the next applicable cycle.
+  Ana can choose a new delegate, edit her profile, or fund manually.
+```
 
 ## Notification requirement
 
@@ -69,7 +106,8 @@ Delegation inactive: delegate resigned.
 The system should provide simple next actions:
 
 - choose a new delegate;
-- switch to a default allocation rule;
+- view or edit the active base allocation profile;
+- switch to the public system default profile;
 - switch to an official allocation profile;
 - resume direct control.
 
@@ -81,8 +119,8 @@ Resignation affects only future authority.
 
 ## Principle
 
-> Delegation is voluntary on both sides. The delegator can revoke, and the delegate can resign, but both actions affect only future authority and must be communicated clearly. If delegation ends, the citizen's configured profile applies; if none exists, the system default applies.
+> Delegation is voluntary on both sides. The delegator can revoke, and the delegate can resign, but both actions affect only future authority and must be communicated clearly. Delegation should only become active after the citizen has a selected base allocation profile or fallback rule; if delegation ends, that previously selected rule resumes.
 
-## Status
+## Research note
 
-Extension of H042, H046, H047, and H048.
+Extension of H042, H046, H047, and H048. Needs future implementation detail around onboarding, notification reliability, offline citizens, and whether any country implementation allows a manual-hold fallback without undermining monthly allocation flow.

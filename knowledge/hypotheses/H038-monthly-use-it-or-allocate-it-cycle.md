@@ -22,11 +22,15 @@ At the end of each cycle, funds are assigned according to one of the following:
 - delegation rule;
 - system-defined default rule.
 
+For onboarded citizens, the system-defined default should be either the selected base profile or the fallback rule the citizen accepted. For citizens who never onboard, the public protocol default may apply directly.
+
 ## No indefinite accumulation
 
 Unassigned monthly funds should not simply accumulate forever.
 
-If the citizen does not act, the system applies the configured or default allocation rule.
+If the citizen does not act, the system applies the configured, selected, or protocol-defined default allocation rule.
+
+If delegation ends because of revocation, rejection, expiration, or delegate resignation, the next applicable monthly cycle should use the citizen's previously selected base allocation profile or fallback rule.
 
 ## Configurable fallback behavior
 
@@ -73,7 +77,7 @@ Projects still close when they reach their funding target. Monthly allocation he
 
 ## Principle
 
-> Civic funds exist to be assigned to public-value projects, not to remain dormant indefinitely. If a chosen category has no eligible projects, the system should apply a transparent fallback rather than freeze resources.
+> Civic funds exist to be assigned to public-value projects, not to remain dormant indefinitely. If a chosen category has no eligible projects, or if delegation authority ends, the system should apply a transparent selected fallback rather than freeze resources.
 
 ## Status
 

@@ -783,6 +783,7 @@ Attributes:
 - acceptance date;
 - revocation date;
 - reporting preference;
+- base allocation profile or fallback rule at activation, for budget delegation;
 - concentration signal at activation;
 - concentration signal during reporting.
 
@@ -801,6 +802,10 @@ Rule:
 
 > Delegation concentration is allowed when citizens choose it, but it must be visible before delegation, during delegated action, in delegate reports, and in administrative observability.
 
+Budget delegation rule:
+
+> Budget delegation should not become active unless the citizen has a selected base allocation profile or fallback rule. If delegation ends, that previously selected rule resumes for future allocation.
+
 ## Automatic Allocation Profile
 
 Citizen-configured allocation rule.
@@ -808,11 +813,13 @@ Citizen-configured allocation rule.
 Attributes:
 
 - owner;
+- base profile selection status;
 - value preferences;
 - territory preferences;
 - project-state preferences;
 - control preferences;
 - fallback rule;
+- delegation-end fallback behavior;
 - active delegation interaction;
 - status;
 - history.
@@ -830,6 +837,10 @@ Disabled
 Rule:
 
 > Automatic allocation rules do not execute where active delegation governs the same balance or scope.
+
+Continuity rule:
+
+> On first active use, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that profile. The selected base profile resumes when budget delegation is revoked, rejected, expired, or resigned.
 
 ## Reputation Record
 
