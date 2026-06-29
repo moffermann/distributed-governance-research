@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|Treasury, Citizen Balance, and C006 Resolution v0]]
 - [[../docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|Evidence Producers and C003 Resolution v0]]
 - [[../docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|Assisted Evidence Publication and C015 Resolution v0]]
 - [[../docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION|Value Verification and C010 Resolution v0]]
@@ -96,6 +97,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION|Value Verification and C010 Resolution v0]]
 - [[../docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|Assisted Evidence Publication and C015 Resolution v0]]
 - [[../docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|Evidence Producers and C003 Resolution v0]]
+- [[../docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|Treasury, Citizen Balance, and C006 Resolution v0]]
 
 ## Core glossary
 
