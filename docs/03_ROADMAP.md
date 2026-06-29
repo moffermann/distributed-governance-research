@@ -43,6 +43,8 @@ The fourth residual cleanup aligned session 07 with C001, C002, C007, C013, and 
 
 The fifth residual cleanup propagated C024/C014 into older identity and complaint documents: anonymous formal alerts remain excluded from Core v0, while sensitive alerts and complaints use protected identity for verified actors.
 
+The sixth residual cleanup aligned C014 with C024 and C007: comments require verified authorship, visible identity remains the default, protected identity is a justified per-comment exception, and public institutions appear only as external authority responses or governance-resolution actors where applicable.
+
 Approximate current maturity:
 
 ```text

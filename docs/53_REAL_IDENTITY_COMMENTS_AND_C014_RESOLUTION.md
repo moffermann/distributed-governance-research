@@ -6,7 +6,7 @@ This document resolves contradiction C014 from the v0 contradiction checklist.
 
 C014 was originally framed as the tension between allowing open comments and questions while avoiding social-media dynamics such as popularity contests, hostility, brigading, harassment, and low-quality debate.
 
-The final v0 resolution is that comments do not require a complex ranking or moderation architecture. The main v0 protection is verified real identity, visible authorship, traceability, and minimal rule-based moderation.
+The final v0 resolution is that comments do not require a complex ranking or moderation architecture. The main v0 protection is verified real identity, visible authorship by default, traceability, and minimal rule-based moderation.
 
 ## Status
 
@@ -19,6 +19,19 @@ Accepted as the v0 resolution for C014.
 In v0, every comment, question, suggestion, observation, response, or clarification must be linked to a verified actor.
 
 There are no anonymous comments.
+
+## Post-C024 and C007 alignment
+
+C024 later refined the identity rule without reopening anonymous comments:
+
+```text
+Verified identity is mandatory.
+Visible identity is the default.
+Protected identity is a justified per-comment exception.
+Protected identity does not create an anonymous comment layer.
+```
+
+C007 also refined actor participation. Public institutions should not appear as ordinary internal commenters competing in the same civic layer as citizens and non-state organizations. If a public institution needs to respond, review, explain, or reject something, it should do so as an external authority response, tutored-scope review action, or Governance Resolution where material.
 
 ## The contradiction
 
@@ -76,14 +89,14 @@ It should first rely on the structural difference that every comment is attribut
 
 ## Resolution
 
-C014 is resolved by requiring verified visible authorship for all comments and keeping the comment layer structurally simple.
+C014 is resolved by requiring verified authorship for all comments, visible authorship by default, and keeping the comment layer structurally simple.
 
 Accepted v0 rules:
 
 ```text
 1. No anonymous comments.
-2. Every comment is linked to a verified citizen, organization, or institution.
-3. The author's visible identity is shown with the comment, subject to actor-type display rules.
+2. Every comment is linked to a verified actor.
+3. The author's visible identity is shown by default, subject to actor-type display rules and the C024 protected-identity exception.
 4. Comments are not ranked by popularity.
 5. Comments do not create approval, fiscalization, or blocking effects by themselves.
 6. Serious claims are routed toward the complaint flow when appropriate.
@@ -99,14 +112,17 @@ Examples:
 ```text
 María González — verified citizen
 Fundación Control Ciudadano — verified organization
-Municipality Unit X — verified institution
 Executor response — Club Deportivo Los Cóndores
 Fiscalizer clarification — Fundación Control Ciudadano
+External authority response — Ministry of Sports, tutored-scope review office
+Verified protected participant #P-184
 ```
 
-The system may use privacy-protecting display rules where legally necessary, but the actor must still be verified to the system.
+The system may use privacy-protecting display rules where justified under C024, but the actor must still be verified to the system.
 
 Responsible project roles should not be anonymous.
+
+Public institutions should not use the ordinary comment layer as internal project participants. If they act under external authority, the response should be labeled as external, and material decisions should be represented through the governance-resolution or audit-trail mechanisms defined elsewhere.
 
 ## Comment types
 
@@ -298,12 +314,12 @@ The citizen may convert it into a complaint if they want review or blocking effe
 C014 is resolved as follows:
 
 ```text
-Do not build a social-media ranking system in Core v0. Require verified visible authorship for all comments, keep comment ordering simple, route serious claims to the complaint flow, and apply only minimal rule-based moderation for abusive, illegal, private, or spam content.
+Do not build a social-media ranking system in Core v0. Require verified authorship for all comments, keep visible identity as the default, allow protected identity only as a justified per-comment exception under C024, keep comment ordering simple, route serious claims to the complaint flow, and apply only minimal rule-based moderation for abusive, illegal, private, or spam content.
 ```
 
 Final rule:
 
-> The primary v0 protection against hostile social-media dynamics is not algorithmic ranking. It is real identity, visible authorship, traceability, and reputation-relevant accountability.
+> The primary v0 protection against hostile social-media dynamics is not algorithmic ranking. It is verified identity, visible authorship by default, traceability, and reputation-relevant accountability.
 
 ## Documents that should eventually reflect this resolution
 
