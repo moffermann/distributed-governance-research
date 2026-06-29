@@ -1,5 +1,11 @@
 # H050 — Common Good Governance Program
 
+## Status
+
+Extension v1+ hypothesis aligned with [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|C022]].
+
+Full common-good governance is not part of Core v0. Core v0 only requires lightweight project-level common-good impact declaration where relevant, including affected assets, affected parties, risks, antivalues, evidence, fiscalization, and active-charter relationship disclosure when an active charter already exists.
+
 ## Hypothesis
 
 A common good governance program is not a project and should not be approved through funding. It is a governance entity that defines a shared framework for managing a common good, and therefore should be approved or rejected through a deliberative voting process.
@@ -9,6 +15,49 @@ A common good governance program is not a project and should not be approved thr
 A project asks for resources to execute a defined commitment.
 
 A common good governance program defines a framework that can affect many future projects and many actors over time. It is therefore closer to a governance charter than to an execution project.
+
+## C022 alignment
+
+C022 separates the future common-good governance system from the Core v0 project model.
+
+In Core v0:
+
+- a project may affect a common good even if no common-good governance program exists;
+- the project is not automatically blocked merely because no active charter exists;
+- the project must declare relevant common-good impacts through the ordinary project fields;
+- if an active charter exists for the affected common good and scope, the project must declare its relationship to that charter;
+- omission of a known or reasonably foreseeable charter relationship is an information failure;
+- AI or platform assistance may suggest possible common-good impacts, but it does not decide the value, compatibility, or legitimacy of the project by itself.
+
+The full system described in this hypothesis remains Extension v1+:
+
+- common-good registry mechanics;
+- governance charter creation and approval;
+- charter voting thresholds;
+- charter derogation;
+- subordinate charters;
+- full compatibility rule engines;
+- formal legal authority relationships.
+
+Example:
+
+```text
+Project:
+  Repair and illuminate a neighborhood plaza.
+
+Core v0 requirement:
+  Declare that the project affects a public plaza,
+  list expected benefits, risks, antivalues, affected parties,
+  evidence needs, and fiscalization needs.
+
+If no active plaza charter exists:
+  The project is not blocked.
+  The impact remains visible, commentable, fiscalizable, and auditable.
+
+If an active plaza charter exists:
+  The project declares whether it is compatible, uncertain,
+  or potentially incompatible with that charter.
+```
 
 Examples of common goods:
 
@@ -262,6 +311,6 @@ This preserves traceability without confusing new project proponents.
 
 > A project is funded. A common good governance program is approved. A common good charter should not be casually modified after approval; if its framework no longer works, it should be derogated for future use using the same quorum that approved it, while existing projects remain under the charter version that governed their approval.
 
-## Status
+## Remaining design questions
 
-New governance-entity hypothesis. Needs further design around registry mechanics, detection of project/common-good intersections, relationship with existing projects, possible subordinate charters, and relationship with formal legal authority.
+Extension v1+ governance-entity hypothesis aligned with C022. Needs further design around registry mechanics, detection of project/common-good intersections, relationship with existing projects, possible subordinate charters, charter derogation, and relationship with formal legal authority.

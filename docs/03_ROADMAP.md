@@ -49,6 +49,8 @@ The seventh residual cleanup aligned the fiscalization and evidence control mode
 
 The eighth residual cleanup accepted a limited supplemental control rule and aligned the older funding-target rule with it: after minimum control closure, additional control-only funding may support at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative evidence needs; it never funds execution, expands project scope, creates unlimited fiscalizers, or blocks execution automatically.
 
+The ninth residual cleanup aligned H050 with C022: common-good governance programs, registry mechanics, charter voting, derogation, subordinate charters, full compatibility rule engines, and formal legal authority relationships remain Extension v1+, while Core v0 only requires lightweight project-level common-good impact declaration, active-charter relationship disclosure where applicable, and public auditability.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
