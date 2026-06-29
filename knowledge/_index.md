@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|Real Identity Comments and C014 Resolution v0]]
 - [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
 - [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
 - [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
@@ -108,6 +109,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
 - [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
 - [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
+- [[../docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|Real Identity Comments and C014 Resolution v0]]
 
 ## Core glossary
 
