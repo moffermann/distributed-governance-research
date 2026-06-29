@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION|Value Thesis Reformulation and C017 Resolution v0]]
 - [[../docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|Disbursement Milestone AI Validation and C016 Resolution v0]]
 - [[../docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|Real Identity Comments and C014 Resolution v0]]
 - [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
@@ -112,6 +113,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
 - [[../docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|Real Identity Comments and C014 Resolution v0]]
 - [[../docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|Disbursement Milestone AI Validation and C016 Resolution v0]]
+- [[../docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION|Value Thesis Reformulation and C017 Resolution v0]]
 
 ## Core glossary
 
