@@ -65,6 +65,8 @@ The fifteenth residual cleanup aligned H053 with C007, C020, H054, and H058: spo
 
 The sixteenth residual cleanup aligned H056 with C007 and C020: public institutions remain excluded from internal project participation, but in a configured tutored operating mode they may moderate eligibility, scope, duplication, or compatibility as institutional tutored authorities. This is moderation in practical terms, but not ordinary internal platform moderation; every material decision or timeout must remain public, reasoned, traceable, and auditable.
 
+The seventeenth residual cleanup aligned H052 with C025 and H031: emergency remains an urgency attribute on ordinary projects, not a separate coordination architecture. Emergency visibility must show its reason, remain limited, follow visible ordering or rotation rules where multiple projects qualify, avoid paid promotion or opaque manual boosting, preserve explicit citizen action, and be measurable through observability.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
