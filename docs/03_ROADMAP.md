@@ -57,6 +57,8 @@ The eleventh residual cleanup aligned H031 and H032 with C025: Core v0 discovery
 
 The twelfth residual cleanup aligned H033, H041, and H042 with C007, C008, and C023: delegation may go to eligible citizens, non-state organizations, or configured allocation profiles, while public institutions remain outside internal delegation and AI remains assistance infrastructure rather than a civic delegate or actor.
 
+The thirteenth residual cleanup aligned H058 with C020 and C007: operating modes remain country-configured technical states, tutored mode may be temporary, indefinite, or permanent, and tutored decisions, review windows, timeout policies, Review Timeout Resolutions, and configured timeout consequences must be public, traceable, and auditable.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

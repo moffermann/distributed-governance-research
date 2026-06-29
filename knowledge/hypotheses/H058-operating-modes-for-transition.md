@@ -1,5 +1,11 @@
 # H058 — Operating Modes for Transition
 
+## Status
+
+Transition-operation hypothesis aligned with [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]] and [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]].
+
+Operating modes are technical states that represent country implementation choices. The platform does not force a country to move toward open mode, but it must make tutored decisions, review windows, timeout policies, and tutored silence public, traceable, and auditable.
+
 ## Hypothesis
 
 The platform should support distinct operating modes for public functions during transition. These modes are not policy decisions made by the platform; they are technical states that allow the implementing country to configure how open or tutored a public function is at a given moment.
@@ -11,6 +17,59 @@ A country may begin with a controlled transition and later move toward broader d
 The correct concept is **operating mode**, not category.
 
 A public function such as sports, culture, education, health, infrastructure, or local development may operate under different modes depending on the country's implementation decision.
+
+## C020 alignment
+
+C020 clarifies that permanent tutored mode is not itself a contradiction. A country may keep a public function in tutored mode indefinitely, use the platform only under tutored conditions, never adopt the platform for that function, or abandon the system later.
+
+The contradiction is opaque tutored governance.
+
+When a public function operates in tutored mode:
+
+- every material tutored decision should create a public Governance Resolution;
+- every tutored submission should have a declared review window;
+- every tutored operating mode should have a public timeout policy before projects are submitted;
+- if the authority does not decide within the configured review window, the platform should create a Review Timeout Resolution automatically;
+- timeout consequences may include visibility only, escalation, community override, or automatic approval, but they must be configured publicly before submission;
+- external tutored-scope moderation remains compatible with C007 because the public authority does not become an internal project actor.
+
+Example:
+
+```text
+Public function:
+  Sports.
+
+Operating mode:
+  Tutored, with no declared transition path to open mode.
+
+Project:
+  Multi-court complex in Macul.
+
+Authority decision:
+  Rejected because the same facility and location already exist
+  in the traditional ministry portfolio.
+
+System record:
+  Public Governance Resolution with responsible authority,
+  applied scope rule, reason, suggested next path, and audit trail.
+```
+
+Timeout example:
+
+```text
+Review window:
+  30 days.
+
+Authority action:
+  No decision issued within the configured window.
+
+System action:
+  Review Timeout Resolution created automatically.
+
+Configured consequence:
+  Community override trigger opens, if that policy was configured
+  before submission.
+```
 
 ## Possible operating modes
 
@@ -33,6 +92,10 @@ Sports is open, but projects must be approved by the sports institution before p
 ```
 
 This is useful during early transition when the institution remains legally or administratively responsible for the function.
+
+Tutored mode may also be indefinite or permanent if the implementing country chooses that configuration. The platform should not imply a mandatory path toward open mode.
+
+However, tutored mode must not become hidden discretionary governance. Each material decision should produce a public Governance Resolution, and each tutored mode should declare its review window and timeout policy before projects are submitted.
 
 ### 3. Semi-open mode
 
@@ -74,6 +137,8 @@ The platform supports these modes technically. It does not decide when a public 
 
 The implementing country or authorized governance process decides the mode.
 
+If no transition path exists, the platform should state that the mode is indefinite or permanent rather than implying distributed openness.
+
 ## Mode change registration
 
 When a public function changes operating mode, the platform should register:
@@ -87,6 +152,8 @@ When a public function changes operating mode, the platform should register:
 - parameters modified;
 - treatment of pending projects;
 - affected project counts;
+- declared transition path, if any;
+- review window and timeout policy, if the new mode requires tutored review;
 - public history of the mode change.
 
 ## Effect on existing projects
@@ -143,6 +210,8 @@ H057 defines the tutored moderation regime used when a public function is in tut
 
 H058 defines the broader set of possible operating modes.
 
+C020 supersedes any older interpretation that treated tutored-mode permanence as the contradiction. The required correction is public traceability: Governance Resolutions, Review Timeout Resolutions, configured timeout policies, and aggregate review metrics.
+
 ## Observability
 
 The platform should report which mode each public function is operating under and should track mode changes over time.
@@ -153,15 +222,21 @@ Potential metrics:
 - projects blocked by closed mode;
 - projects moderated under tutored mode;
 - moderation time;
+- governance resolutions issued;
+- review timeout resolutions created;
+- timeout policy distribution;
+- timeout consequences activated;
+- projects opened through community override or automatic approval, where configured;
 - mode changes over time;
 - projects affected by suspension;
 - projects released from pending moderation after a mode change;
 - transition from tutored to semi-open or open mode.
+- public functions configured as indefinite or permanent tutored mode.
 
 ## Principle
 
-> The country decides the transition pace; the platform represents the operating mode and enforces the corresponding rules. Mode changes apply forward, while pending unpublished projects follow the new mode once it becomes effective. Suspension is complete for the affected public function and pauses future activity without erasing prior valid actions.
+> The country decides the transition pace; the platform represents the operating mode and enforces the corresponding rules. Tutored mode may be temporary, indefinite, or permanent, but tutored decisions and tutored silence must become public civic objects. Mode changes apply forward, while pending unpublished projects follow the new mode once it becomes effective. Suspension is complete for the affected public function and pauses future activity without erasing prior valid actions.
 
-## Status
+## Remaining design questions
 
-Transition-operation hypothesis. Extends H054, H055, and H057.
+Transition-operation hypothesis aligned with C020 and C007. Extends H054, H055, and H057. Needs further design around mode-change authority, timeout-policy configuration, citizen audit actions on governance resolutions, community override thresholds, automatic-approval safeguards, suspension criteria, and observability for permanent or indefinite tutored modes.
