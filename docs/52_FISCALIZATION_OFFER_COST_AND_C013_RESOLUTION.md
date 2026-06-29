@@ -4,7 +4,9 @@
 
 This document resolves contradiction C013 from the v0 contradiction checklist.
 
-C013 was originally framed as the tension between fiscalization cost being part of project control cost, while fiscalizer offers may need to exist before the project is fully funded. The final v0 resolution is that fiscalizer offer preparation must be lightweight and mostly unpaid before funding closure, while the accepted fiscalization work is paid only through the project's separated control budget after the project reaches execution-ready conditions.
+C013 was originally framed as the tension between fiscalization cost being part of project control cost, while fiscalizer and evidence-producer offers may need to exist before the project is fully ready for execution.
+
+The final v0 resolution is not to serialize the process. Execution funding, fiscalization offers, evidence-producer offers, and control-cost discovery should proceed in parallel. However, execution readiness requires two distinct closures: execution budget closure and control package closure.
 
 ## Status
 
@@ -12,7 +14,7 @@ Accepted as the v0 resolution for C013.
 
 ## Core principle
 
-> The system may ask fiscalizers for a lightweight accountable offer before funding closure, but it must not create a paid pre-project bureaucracy before there is a funded project to control.
+> Project funding, fiscalizer offers, and evidence-producer offers should move in parallel, but the project cannot execute until both the execution budget and the minimum control package are closed.
 
 Fiscalization is a control cost, but not every offer to fiscalize is itself a payable control activity.
 
@@ -30,83 +32,82 @@ contingency / extraordinary review budget
 guarantees or retentions
 ```
 
-The executor should not directly control the fiscalization budget or appoint the reviewer responsible for validating its own performance.
+The executor should not directly control the fiscalization budget, evidence mission budget, or appointment of actors responsible for validating its own performance.
 
-At the same time, a fiscalizer may need to submit an offer before the project becomes fully financeable or execution-ready.
-
-That offer may include:
-
-- methodology;
-- required budget;
-- travel and logistics needs;
-- deliverables;
-- timeline;
-- qualifications;
-- relationship declarations;
-- conflict-of-interest declarations.
+At the same time, the project should not wait for every fiscalizer and evidence-producer selection before receiving citizen funding. That would make the process too slow and would recreate serial procurement logic.
 
 This creates the C013 question:
 
 ```text
-Who pays for fiscalizer effort before the project is funded?
+How can a project receive funding while the final control package is still being discovered?
 ```
 
 ## Explanation
 
-There are two different activities that must not be confused:
+There are four different processes that should not be collapsed into one serial step:
 
 ```text
-1. Fiscalization offer preparation
-2. Accepted fiscalization work
+1. Execution funding
+2. Fiscalizer offer preparation
+3. Evidence-producer offer preparation
+4. Accepted control work
 ```
 
-Offer preparation is the act of declaring availability, methodology, estimated cost, qualifications, and conflicts.
+Execution funding covers the executor's fixed execution budget.
 
-Accepted fiscalization work is the actual responsibility-bearing review work performed after the fiscalizer is selected and the project enters execution conditions.
+Fiscalizer and evidence-producer offers declare availability, methodology, estimated cost, qualifications, scope, and conflicts.
 
-The first should be lightweight in v0.
+Accepted control work is the actual responsibility-bearing fiscalization and evidence production performed after selection and before/during execution.
 
-The second should be paid from the project's separated control budget when the project is funded and execution-ready.
+The first three can proceed in parallel.
+
+The fourth is paid from the project's separated control budget once selected and funded.
 
 ## Why this is a contradiction
 
-If fiscalization is mandatory control work, it must be funded.
+If fiscalization and paid evidence production are mandatory control work, they must be funded.
 
-But if every fiscalization offer is paid before the project is funded, the system creates a new funding problem before the project itself exists as a funded execution object.
+But if the project cannot receive execution funding until the complete control package is selected, the system delays financing and may prevent projects from reaching closure quickly.
 
 That would create several contradictions:
 
 ```text
-Fiscalization is supposed to control funded execution,
-but paid pre-assessment would require money before funded execution exists.
+The model wants fast citizen-driven project financing,
+but serial control selection would delay project funding.
+```
+
+```text
+The model separates execution from control,
+but a single undifferentiated project total could hide whether citizens are funding execution or control.
 ```
 
 ```text
 The model prevents uncontrolled money movement,
-but paid offer preparation could create payments for projects that never execute.
+but execution cannot start merely because the execution budget was funded if the control package is still missing.
 ```
 
 ```text
 The model protects citizen simplicity,
-but paid pre-assessment would create another mini-procurement layer before the citizen can even fund the project.
+but citizens must still know whether their contribution goes to execution or control.
 ```
 
-```text
-The model resists gatekeeping,
-but paid expert pre-assessment could become a hidden barrier to publication or funding.
-```
+The contradiction is therefore not only when fiscalization becomes payable.
 
-The contradiction is therefore not that fiscalization costs money.
-
-The contradiction is when that cost becomes payable.
+The contradiction is how to discover and fund control costs without slowing down execution funding or hiding what citizens are funding.
 
 ## Example
 
 A project proposes to repair a rural bridge.
 
-The project needs technical fiscalization because the work is physical, remote, and safety-relevant.
+The executor requests:
 
-Several fiscalizers may offer:
+```text
+Execution budget: $100,000,000
+```
+
+The project also requires technical fiscalization because the work is physical, remote, and safety-relevant.
+
+While citizens fund the execution budget, several fiscalizers and evidence producers may offer:
 
 ```text
 Fiscalizer A:
@@ -126,34 +127,122 @@ Fiscalizer C:
   Required budget: $850,000
   Travel: required
   Conflict: none declared
+
+Evidence Producer 1:
+  Scope: georeferenced photos and short video
+  Required budget: $300,000
+
+Evidence Producer 2:
+  Scope: beneficiary confirmation and site visit
+  Required budget: $350,000
 ```
 
-In v0, these offers can exist before the project is fully funded.
+The system should not pay all actors just for submitting offers.
 
-But the system should not pay all three fiscalizers just for submitting those offers.
+The system also should not wait for the final control package before allowing execution funding to begin.
 
 Instead:
 
 ```text
-1. The offers are lightweight and standardized.
-2. The system filters admissible offers.
-3. The selected fiscalizer's accepted cost becomes part of the project control budget.
-4. Payment occurs only when the project reaches the required funded/execution-ready state and the fiscalizer accepts the responsibility role.
+1. The execution budget receives funding.
+2. Fiscalizer and evidence-producer offers arrive in parallel.
+3. The system filters admissible offers.
+4. When execution funding closes, new contributions fund the control budget.
+5. After each control contribution, the system checks whether an admissible control package can be selected and funded.
+6. When execution and control are both closed, the project becomes execution-ready.
 ```
 
 ## Proposed resolution
 
-C013 is resolved by separating fiscalizer participation into three tiers.
+C013 is resolved by separating the funding process into parallel flows and two closures.
 
-## Tier 1 — Lightweight offer
+## Parallel flows
 
-This is the default v0 mechanism.
+A published financeable project may simultaneously have:
 
-A lightweight offer is unpaid and standardized.
+```text
+execution funding flow
+fiscalizer offer flow
+evidence-producer offer flow
+control funding flow, once execution funding is complete or once protocol allows designated control contributions
+```
 
-It should require enough information to evaluate admissibility, but not enough work to become a professional unpaid study.
+The project remains transparent about which flows are open and which one a citizen contribution affects.
 
-Minimum fields:
+## Closure 1 — Execution budget closure
+
+The execution budget is fixed by the executor before publication as a financeable project.
+
+Example:
+
+```text
+Execution budget: $100,000,000
+```
+
+Citizen contributions first fund this execution budget unless the protocol or citizen explicitly supports a control-designated contribution.
+
+When the execution budget reaches its target, the project enters:
+
+```text
+Execution-funded / control pending
+```
+
+This does not authorize execution.
+
+It only means the executor's budget has been funded.
+
+## Closure 2 — Control package closure
+
+After the execution budget is funded, new ordinary contributions go to the separated control budget.
+
+The control package may include:
+
+```text
+responsible fiscalizer
+evidence producers
+evidence missions
+extraordinary review reserve
+technical review, if required
+```
+
+After each new control contribution, the system checks whether the available control budget can fund an admissible package.
+
+If yes, the system selects the package according to transparent rules.
+
+If no, the project remains funded for execution but pending control closure.
+
+## Admissible control package
+
+The system should not choose the cheapest package automatically.
+
+A control package is admissible only if it satisfies the minimum control requirements defined by protocol for the project.
+
+Relevant criteria:
+
+```text
+project amount
+risk
+technical complexity
+territory
+vulnerable beneficiaries
+irreversibility
+need for independent evidence
+required reports
+conflict-of-interest rules
+minimum evidence coverage
+```
+
+A cheap offer that does not meet the minimum control requirement is not admissible.
+
+An expensive offer that exceeds what is reasonable may be rejected, require reformulation, or wait for additional control funding.
+
+## Lightweight offers
+
+Fiscalizer and evidence-producer offers are unpaid and standardized by default.
+
+They should require enough information to evaluate admissibility, but not enough work to become a professional unpaid study.
+
+Minimum fiscalizer offer fields:
 
 ```text
 actor identity
@@ -168,15 +257,24 @@ relationship/conflict declaration
 acceptance of role responsibility if selected
 ```
 
-The goal is to keep participation cheap enough for good fiscalizers while structured enough to prevent low-quality spam.
+Minimum evidence-producer offer fields:
 
-## Tier 2 — Accepted fiscalization plan
+```text
+actor identity
+evidence type
+milestone or metric covered
+location or scope
+required budget, if paid
+availability
+relationship/conflict declaration
+evidence standards accepted
+```
 
-Once a fiscalizer is selected or conditionally selected, the offer becomes an accepted fiscalization plan.
+## Accepted control work
 
-This accepted plan is part of the project's separated control budget.
+Once selected, a fiscalizer or evidence producer becomes part of an accepted control package.
 
-It may include:
+The accepted control package may include:
 
 ```text
 final deliverables
@@ -190,7 +288,7 @@ reputation consequences
 
 Payment belongs here, not at the first offer stage.
 
-## Tier 3 — Exceptional paid pre-assessment
+## Exceptional paid pre-assessment
 
 Paid pre-assessment should not be required in Core v0.
 
@@ -203,7 +301,7 @@ It may be allowed only as an explicit exception for projects that are:
 - above a protocol-defined amount threshold;
 - dependent on feasibility questions that cannot be answered by a lightweight offer.
 
-Even then, it must be governed as a separate protocol-visible object, not hidden inside fiscalizer selection.
+Even then, it must be governed as a separate protocol-visible object, not hidden inside fiscalizer or evidence selection.
 
 Possible object:
 
@@ -230,53 +328,78 @@ audit event
 Recommended v0 rule:
 
 ```text
-Fiscalizer offers are unpaid lightweight role offers by default.
-The selected fiscalizer's accepted fiscalization cost becomes part of the project's separated control budget.
-Paid pre-assessment is not a default Core v0 requirement and may only exist as an exceptional protocol-defined mission for high-risk or technically complex projects.
+Execution funding, fiscalizer offers, and evidence-producer offers proceed in parallel.
+The executor's execution budget is funded first and remains separate from the control budget.
+Once execution funding closes, new ordinary contributions fund the control budget.
+After each control contribution, the system checks whether an admissible control package can be selected and funded.
+The project becomes execution-ready only after both execution funding and minimum control package closure.
 ```
 
 ## Funding treatment
 
-The project funding target should include the accepted control budget.
+The citizen must know which budget their contribution is funding.
 
-Example:
+Example before execution budget closure:
 
 ```text
-Execution budget:              $20,000,000
-Responsible fiscalization:      $1,200,000
-Evidence missions:                $400,000
-Extraordinary review reserve:      $300,000
-Total funding target:          $21,900,000
+Your contribution funds execution.
+Execution budget: $100,000,000
+Funded so far:    $74,000,000
+Control:          offers open, not yet closed
 ```
 
-The citizen should not see the fiscalization cost as an unrelated fee.
+Example after execution budget closure:
+
+```text
+Execution budget: closed
+New contributions fund control.
+Control budget available: $1,200,000
+Minimum admissible package not yet funded.
+```
+
+Example after control closure:
+
+```text
+Execution budget:              $100,000,000
+Responsible fiscalization:        $900,000
+Evidence missions:                $650,000
+Extraordinary review reserve:     $250,000
+Total funded:                 $101,800,000
+Status: execution-ready
+```
+
+The citizen should not see the fiscalization or evidence cost as an unrelated fee.
 
 They should see it as part of the cost of making the project auditable.
 
 ## Relationship with execution-ready state
 
-A project should not become execution-ready unless required fiscalization is confirmed.
+A project should not become execution-ready merely because execution funding closed.
 
-Therefore, the sequence should be:
+The sequence should be:
 
 ```text
-1. Project published for funding with estimated or accepted control cost.
-2. Fiscalization offer window runs where required.
-3. Eligible fiscalizer is selected according to rule.
-4. Fiscalization cost is included in the total funding target.
-5. Funding target is reached.
-6. Fiscalizer accepts responsibility role.
-7. Project becomes execution-ready.
+1. Project published with fixed execution budget.
+2. Execution funding opens.
+3. Fiscalizer and evidence-producer offers open in parallel.
+4. Execution funding reaches target.
+5. New ordinary contributions fund control.
+6. After each control contribution, the system recalculates admissible packages.
+7. An admissible control package is selected and funded.
+8. Fiscalizer and evidence producers accept responsibility.
+9. Project becomes execution-ready.
 ```
 
-If the fiscalization cost changes materially after funding, the project may require:
+If execution funding closes but control funding does not close within a protocol-defined period, possible outcomes include:
 
 ```text
-reformulation
-additional funding window
-scope reduction
-replacement fiscalizer
-return/reassignment of committed funds according to funding rules
+extend control funding window
+seek additional control contributions
+select a lower-cost admissible package
+reduce scope and reformulate
+replace fiscalizer/evidence offers
+return or reassign committed funds according to funding rules
+cancel or expire project
 ```
 
 ## Anti-spam protections
@@ -296,34 +419,40 @@ Minimum safeguards:
 
 ## Anti-capture protections
 
-The executor must not solve C013 by privately paying or selecting its preferred fiscalizer.
+The executor must not solve C013 by privately paying or selecting its preferred fiscalizer or evidence producer.
 
 Rejected rule:
 
 ```text
-Executor pays a fiscalizer before funding and then the system accepts that fiscalizer.
+Executor pays a fiscalizer or evidence producer before funding and then the system accepts that actor.
 ```
 
 Accepted rule:
 
 ```text
-The protocol defines fiscalizer admissibility and selection.
+The protocol defines fiscalizer and evidence-producer admissibility and selection.
 The control budget is separated from the execution budget.
-The executor does not privately appoint the actor that validates its own performance.
+The executor does not privately appoint the actors that validate its own performance.
 ```
 
 ## Citizen-facing explanation
 
 The interface should keep this simple.
 
-Example:
+Before execution funding closes:
 
 ```text
-This project includes a control budget.
+This project is raising money for execution.
+Fiscalizers and evidence producers may also offer to verify the project.
+Execution cannot begin until the required control package is also funded and selected.
+```
 
-That budget pays the accepted fiscalizer and evidence work needed to verify execution.
+After execution funding closes:
 
-Fiscalizers may offer to review the project before funding is complete, but payment only applies to the accepted fiscalization work if the project reaches execution conditions.
+```text
+The execution budget is funded.
+New contributions now fund the control package needed to verify execution.
+The project will become ready to execute when an admissible fiscalization and evidence package is funded and accepted.
 ```
 
 For complex projects:
@@ -339,12 +468,12 @@ The pre-assessment has its own scope, cost limit, selection rule, and public rep
 C013 is resolved as follows:
 
 ```text
-Do not create a mandatory paid pre-assessment layer in Core v0. Use unpaid standardized lightweight fiscalizer offers by default, include the selected fiscalizer's cost in the project's separated control budget, and allow paid pre-assessment only as an exceptional protocol-defined mission for high-risk or technically complex projects.
+Do not serialize execution funding behind fiscalizer and evidence-producer selection. Allow execution funding, fiscalizer offers, and evidence-producer offers to proceed in parallel. Keep the executor's budget separate and fixed. Once execution funding closes, fund and select the minimum admissible control package. The project becomes execution-ready only when both execution and control are closed.
 ```
 
 Final rule:
 
-> Fiscalization is paid as accepted control work, not as ordinary offer preparation. Pre-funding offers must be lightweight, standardized, auditable, and non-binding until selected under protocol rules.
+> A project may close execution funding before closing control funding, but it may not execute before the minimum admissible control package is selected, funded, and accepted.
 
 ## Documents that should eventually reflect this resolution
 
@@ -352,6 +481,8 @@ This resolution should inform future updates to:
 
 - fiscalization, evidence, and control model;
 - citizen fiscalizer offer flow;
+- citizen evidence production flow;
+- citizen funding flow;
 - project creation and publication flow;
 - project lifecycle after publication flow;
 - project disbursement flow;
@@ -360,22 +491,26 @@ This resolution should inform future updates to:
 
 ## Remaining risks
 
+- Execution funding may close while control funding remains incomplete.
 - Good fiscalizers may still consider unpaid lightweight offers unattractive.
 - Cheap low-quality offers may still appear.
 - Complex projects may need real pre-assessment earlier than v0 expects.
-- Control budget estimates may change after funding.
+- Control budget estimates may change after execution funding closure.
 - Paid pre-assessment exceptions may become a new gatekeeping layer.
+- Citizens may misunderstand whether they are funding execution or control.
 
 ## Mitigations
 
+- show separate execution and control funding states;
 - keep lightweight offers standardized and short;
 - use eligibility and reputation filters;
 - expose offer cost, methodology, and conflict declarations;
-- include control budget in the project funding target;
+- recalculate admissible control packages after each control contribution;
 - allow paid pre-assessment only with explicit protocol trigger, cap, scope, deliverable, and audit trail;
-- prevent executor-controlled fiscalizer payments;
+- prevent executor-controlled fiscalizer and evidence-producer payments;
+- define expiry, extension, reformulation, return, or reassignment rules if control funding does not close;
 - track bad-faith or misleading offers as responsibility events where appropriate.
 
 ## Design rule
 
-> Control has a cost, but the cost of control must not create a new hidden authority before the project exists.
+> Funding should move fast, but execution should not move faster than control.
