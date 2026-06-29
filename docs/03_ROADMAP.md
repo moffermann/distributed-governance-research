@@ -9,7 +9,8 @@ The project has now moved from broad discovery into v0 consolidation. The immedi
 Current working decision, 2026-06-29:
 
 ```text
-Resolve C020-C025 first.
+Resolve C021-C025 next.
+C020 is resolved: tutored mode may be permanent as an external implementation choice, but tutored decisions and timeouts must be public civic objects.
 Then integrate C001-C025 into the core documents, checklist, and index.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
@@ -21,7 +22,7 @@ The project now has a first integrated **Distributed Governance System v0 Bluepr
 
 The main risk is no longer lack of ideas. The main risk is fragmentation: many good documents must now be connected through maps, diagrams, classifications, contradiction resolutions, and a coherent paper structure.
 
-Contradictions C001-C019 have accepted resolution documents, but those resolutions have not yet been fully propagated into the older core documents. Contradictions C020-C025 remain unresolved and should be completed before the integration pass begins.
+Contradictions C001-C020 have accepted resolution documents, but those resolutions have not yet been fully propagated into the older core documents. Contradictions C021-C025 remain unresolved and should be completed before the integration pass begins.
 
 Approximate current maturity:
 
@@ -115,8 +116,8 @@ Likely extensions v1+:
 
 Remaining deliverables before closing Phase 1:
 
-- resolve C020-C025 through the collaborative contradiction-resolution routine;
-- create resolution documents for C020-C025;
+- resolve C021-C025 through the collaborative contradiction-resolution routine;
+- create resolution documents for C021-C025;
 - update the knowledge index with each accepted resolution;
 - propagate C001-C025 resolutions into the core documents;
 - reconcile older public-institution participation language with C007;
@@ -171,7 +172,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** active through the C020-C025 contradiction-resolution sequence; broader stress testing follows integration.
+**Status:** active through the C021-C025 contradiction-resolution sequence; broader stress testing follows integration.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -367,15 +368,14 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Resolve C020 — Operating modes may become permanent discretionary control.
-2. Resolve C021 — Universal observability panel vs core observability baseline.
-3. Resolve C022 — Common-good governance extension vs common-good impact in v0 projects.
-4. Resolve C023 — Delegation concentration visibility without default caps.
-5. Resolve C024 — No anonymous actors vs beneficiary privacy.
-6. Resolve C025 — Project discovery as hidden allocator.
-7. For each accepted resolution, update the roadmap, create the resolution document, update the index, commit, and push.
-8. After C020-C025 are complete, integrate C001-C025 into the core corpus and contradiction checklist.
-9. Then resume formal system modeling, literature mapping, and paper architecture.
+1. Resolve C021 — Universal observability panel vs core observability baseline.
+2. Resolve C022 — Common-good governance extension vs common-good impact in v0 projects.
+3. Resolve C023 — Delegation concentration visibility without default caps.
+4. Resolve C024 — No anonymous actors vs beneficiary privacy.
+5. Resolve C025 — Project discovery as hidden allocator.
+6. For each accepted resolution, update the roadmap, create the resolution document, update the index, commit, and push.
+7. After C021-C025 are complete, integrate C001-C025 into the core corpus and contradiction checklist.
+8. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
 ## Operating rule
