@@ -145,11 +145,21 @@ Example:
 This delegate currently represents:
 2,430 citizens
 
+Delegated influence:
+28% of delegated sports allocation in this commune
+
 Main areas:
 Children, sports, education
 
 Concentration:
 High within sports projects in this commune.
+
+Recent delegated actions:
+funded 14 sports projects
+supported 3 fiscalization actions
+
+Separate participation-support funding:
+Community Sports Help Desk, if funded as an ordinary project
 ```
 
 The system should not hide concentration. It should make it visible.

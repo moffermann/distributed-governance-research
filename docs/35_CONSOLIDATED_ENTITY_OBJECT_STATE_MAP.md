@@ -795,7 +795,9 @@ Attributes:
 - linked participation-support projects, if any;
 - base allocation profile or fallback rule at activation, for budget delegation;
 - concentration signal at activation;
-- concentration signal during reporting.
+- concentration signal during reporting;
+- concentration trend;
+- revocation and resignation trend signals.
 
 States:
 
@@ -811,6 +813,10 @@ Resigned
 Rule:
 
 > Delegation concentration is allowed when citizens choose it, but it must be visible before delegation, during delegated action, in delegate reports, and in administrative observability.
+
+Concentration visibility rule:
+
+> Concentration visibility should include active delegators, delegated allocation, scopes, territory, represented weight, trend, conflicts, related-party warnings, separate participation-support funding where relevant, and configured cap effects if any.
 
 Delegated-action weight rule:
 

@@ -99,7 +99,18 @@ concentration signals, and administrative observability.
 
 There should be no hard cap by default. If many citizens trust one actor, the system should allow that.
 
-But concentration must be visible: how many delegators, how much budget, which domains, and what share of influence.
+But concentration must be visible: how many delegators, how much budget, which domains, what territory, what represented weight, what trend, what conflicts, what separate participation-support funding, and what share of influence.
+
+Current alignment after the H043 residual cleanup:
+
+```text
+Macul Sports Association has 2,430 active sports delegators.
+It represents 28% of delegated sports allocation in Macul.
+
+The citizen sees a short concentration signal before delegating.
+Audit views can inspect represented weight, actions, reports, funding,
+revocations, resignations, conflicts, and cap effects if any.
+```
 
 ### 9. Delegation is not a paid asset-management business by default
 

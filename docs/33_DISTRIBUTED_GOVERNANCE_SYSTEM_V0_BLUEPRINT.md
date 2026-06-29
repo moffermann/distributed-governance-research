@@ -443,6 +443,8 @@ Delegation is scoped authorization to another actor.
 
 It requires explicit scope, delegate acceptance, transparency of concentration, and immediate revocation for future actions.
 
+Delegation concentration is allowed by default when citizens choose it, but it must be visible before delegation, during delegated action, in delegated-action reports, and in administrative observability. Concentration visibility should include active delegators, delegated allocation, scopes, territory, represented weight, trend, conflicts, separate participation-support funding where relevant, and configured cap effects if any.
+
 When a delegate acts inside an active delegated scope, the action represents the delegate and all delegators covered by that scope by default. The represented weight, scope, and any configured cap effect must be visible in the action record, delegated-action reports, and observability metrics.
 
 Budget delegation also requires a selected base allocation profile or fallback rule before activation. Delegation has priority while active, but the selected base rule resumes if delegation is revoked, rejected, expired, or resigned.

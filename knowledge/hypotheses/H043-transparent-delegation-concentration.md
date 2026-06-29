@@ -1,35 +1,79 @@
 # H043 — Transparent Delegation Concentration
 
+## Status
+
+Core v0 delegation-concentration hypothesis aligned with [[H042-layered-delegation-architecture|H042]], [[../../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], [[H044-non-compensated-delegation-by-default|H044]], [[H045-delegated-action-weight|H045]], and [[H046-delegated-action-reporting|H046]].
+
+The original rule is preserved: voluntary delegation concentration is allowed by default, but it must never be hidden. The clarification is that concentration visibility now includes represented weight, action scopes, delegated budget, territory, trends, conflicts, separate participation-support funding, delegated-action reports, revocation/resignation signals, and any configured cap effects.
+
 ## Hypothesis
 
 Delegation concentration should be allowed, but made fully transparent. The system should not prevent citizens from freely delegating to trusted actors, but society should be able to see how much delegated power each actor accumulates.
 
 ## Rationale
 
-If many citizens trust a university, foundation, expert, community organization, or person, the system should not prohibit that delegation merely because it becomes large.
+If many citizens trust an eligible person, non-state organization, eligible university or expert group, foundation, or local group, the system should not prohibit that delegation merely because it becomes large.
 
 However, delegation creates influence. If a delegate accumulates significant authority over civic allocation, complaints, fiscalization, evaluation, or other delegated actions, that concentration must be visible.
 
+The problem is not concentration itself. The problem is hidden concentration: citizens delegating without knowing how much influence the delegate already holds, observers being unable to audit delegated power, or the platform treating a high-weight delegated action as if it were only one actor's personal action.
+
 ## Rule
 
-Delegation is free, but concentration is transparent.
+Delegation remains a voluntary citizen choice by default, but concentration is transparent, reportable, and auditable.
 
 The system should show:
 
-- number of citizens delegating to an actor;
-- total civic budget influenced by that delegate;
-- areas or domains where the delegation applies;
-- geographic distribution of delegators;
-- percentage of total assignable resources influenced;
-- historical decisions made by the delegate;
-- project outcomes resulting from delegated decisions;
-- delegate reputation by role.
+- number of active delegators;
+- total delegated civic allocation;
+- delegated action scopes;
+- public functions or domains affected;
+- territorial concentration;
+- share of total delegated influence in a scope;
+- share of total civic allocation influenced, where relevant;
+- represented weight used in delegated actions;
+- recent delegated actions;
+- system-generated delegated-action reports;
+- delegate reputation by role;
+- conflicts of interest;
+- related-party warnings;
+- separate participation-support funding, if any;
+- revocation and resignation trends;
+- concentration trend over time;
+- configured caps and cap effects, if any.
+
+Example:
+
+```text
+Delegate:
+Macul Sports Association
+
+Current delegation:
+2,430 active delegators
+28% of delegated sports allocation in Macul
+
+Recent delegated action:
+Funded Project A
+
+Represented weight:
+1 own action + 2,430 delegated citizens
+
+Separate participation-support funding:
+Community Sports Help Desk, if funded as an ordinary project
+
+Citizen choices:
+[Delegate anyway]
+[View detail]
+[Choose another delegate]
+```
 
 ## No hard cap by default
 
 The system should not impose a hard cap on delegation concentration by default.
 
 A hard cap would override citizen trust and create an artificial limit on voluntary coordination.
+
+Configurable caps may exist by pilot, public function, territory, action type, operating mode, protocol-change process, or country implementation rule. If a cap exists, it must be public before delegation and visible when the delegate acts.
 
 ## Transparency indicators
 
@@ -41,7 +85,10 @@ Examples:
 This delegate currently influences 4.2% of the national assignable civic budget.
 This delegate has 850,000 active delegators.
 This delegate is especially influential in health and education allocation.
+This delegate represents 28% of delegated sports allocation in this commune.
 ```
+
+Warnings should inform. They should not shame the citizen, block voluntary delegation by default, or imply that concentration is automatically illegitimate.
 
 ## Citizen visibility
 
@@ -49,10 +96,68 @@ When a citizen chooses a delegate, the interface should show the delegate's exis
 
 This allows the citizen to decide whether they are comfortable increasing that concentration.
 
+Concentration should be visible at least:
+
+1. In the delegate profile.
+2. Before delegation confirmation.
+3. When the delegate acts with represented weight.
+4. In delegated-action reports.
+5. In administrative observability.
+6. In public audit views where appropriate.
+
+## Relationship with non-compensated delegation
+
+Delegation concentration should not become automatically profitable in Core v0.
+
+A delegate may accumulate influence and responsibility when citizens trust them, but they should not receive automatic commissions, fees, or percentages of delegated civic allocation merely because they hold delegations.
+
+Participation-support projects may exist separately, but they must be ordinary transparent projects with their own budget, evidence, fiscalization, and audit trail.
+
+## Relationship with represented weight and reporting
+
+Concentration visibility should connect directly to represented weight and reports.
+
+When a delegate acts inside an accepted delegation scope, the action should show whether it is:
+
+```text
+personal-only action
+delegated action with represented weight
+delegated action with capped represented weight
+```
+
+The same represented weight should appear in:
+
+- the action record;
+- delegated-action reports;
+- concentration signals;
+- administrative observability metrics;
+- cap-compliance checks where caps exist.
+
+## Remaining risks
+
+- Citizens may ignore concentration warnings.
+- Popular delegates may become de facto political machines even without automatic compensation.
+- Related delegates may split influence across multiple entities to reduce visible concentration.
+- Participation-support projects may become indirect delegation-acquisition tools if not transparent.
+- Too many warnings may create fatigue.
+- Configurable caps may be used politically or inconsistently.
+
+## Mitigations
+
+- keep warnings short at the citizen-facing layer;
+- keep detail available on demand;
+- show represented weight when delegates act;
+- generate delegated-action reports from the audit trail;
+- keep revocation simple and immediate for future actions;
+- show separate participation-support funding where relevant;
+- exclude automatic delegation commissions from Core v0;
+- include concentration metrics in administrative observability;
+- make any configured cap public before it affects delegation.
+
 ## Principle
 
-> Delegation concentration is not forbidden, but it must never be hidden.
+> Delegation concentration is not forbidden, but it must never be hidden, automatically monetized, or reported as if high-weight delegated actions were personal-only actions.
 
-## Status
+## Research note
 
-Extension of H042 — Layered Delegation Architecture.
+Extension of H042. Superseded where necessary by C023, H044, H045, and H046.

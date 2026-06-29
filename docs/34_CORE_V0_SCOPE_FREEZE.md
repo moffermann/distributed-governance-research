@@ -333,6 +333,8 @@ Core v0 includes simple scoped delegation with explicit scope, delegate acceptan
 
 Delegation has priority over automatic allocation within the delegated scope. Core v0 does not impose a universal hard cap on delegation concentration; it requires concentration visibility and soft warnings, while configurable caps remain protocol, pilot, territory, or country implementation choices.
 
+Concentration visibility includes active delegators, delegated allocation, scopes, territory, represented weight, trend, conflicts, separate participation-support funding where relevant, and configured cap effects if any.
+
 Delegation is non-compensated by default. Delegates do not receive automatic commissions, fees, or percentages of delegated civic allocation. Participation-support services may be funded only as separate transparent projects under ordinary project rules.
 
 Budget delegation requires a selected base allocation profile or fallback rule before activation. If delegation later ends, that previously selected rule resumes for future allocation.
