@@ -4,7 +4,7 @@
 
 Show the relationship between delegation and automatic allocation, including base-profile continuity, delegation priority, concentration visibility, and revocation.
 
-Related resolutions: C011, C023. Related hypotheses: H045, H046, H047, H048, H049.
+Related resolutions: C011, C023. Related hypotheses: H042, H043, H044, H045, H046, H047, H048, H049.
 
 ```mermaid
 flowchart TD

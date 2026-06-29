@@ -83,6 +83,8 @@ The twenty-fourth residual cleanup aligned H044 with C023, H045, and H046: deleg
 
 The twenty-fifth residual cleanup aligned H043 with C023, H044, H045, and H046: voluntary delegation concentration remains allowed by default, but it must be visible, reportable, revocable, and auditable. Concentration visibility now includes active delegators, delegated allocation, scopes, territory, represented weight, trends, conflicts, separate participation-support funding where relevant, delegated-action reports, revocation/resignation signals, and configured cap effects if any, while ordinary citizens continue to see a simple warning and detail on demand.
 
+The twenty-sixth residual cleanup aligned H042 as the umbrella Core v0 delegation architecture: delegation remains simple scoped authorization to eligible citizens or non-state organizations, not identity transfer, money ownership transfer, AI authority, internal public-institution authority, automatic allocation, or paid asset management. Budget delegation requires a selected base allocation profile or fallback rule before activation; delegation has priority while active; represented weight, concentration, reports, revocation, delegate resignation, no automatic compensation, and fallback continuity are all part of the stable baseline.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
