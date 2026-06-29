@@ -188,6 +188,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H030-layered-role-based-reputation|H030 — Layered Role-Based Reputation]]
 - [[hypotheses/H033-system-defined-default-allocation-rule|H033 — System-Defined Default Allocation Rule]]
 - [[hypotheses/H034-configurable-allocation-profiles|H034 — Configurable Allocation Profiles]]
 - [[hypotheses/H035-funding-target-closure-rule|H035 — Funding Target Closure Rule]]

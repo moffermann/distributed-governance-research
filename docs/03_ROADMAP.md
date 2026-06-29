@@ -97,6 +97,8 @@ The thirty-first residual cleanup aligned H036 with C005, C016, C017, H037, and 
 
 The thirty-second residual cleanup aligned H035 with C002, C005, C013, H036, and the parallel closure model: funding target closure is budget-lane-specific, not a single undifferentiated overfunding rule. Execution funding closes the executor's fixed budget, but the project is not execution-ready until the minimum admissible control package is funded, selected, and accepted where required. Supplemental control funding remains separate, limited, and non-expansive: it may support at most the allowed secondary fiscalization or distinct non-duplicative evidence needs, never increases the execution budget, never expands scope, and should reject new contributions once control coverage and evidence needs are saturated unless a visible protocol rule defines another lawful destination.
 
+The thirty-third residual cleanup aligned H030 with C012 and C018: reputation remains layered, role-based, transparent, and aggregated upward, but formal reputation updates must be traceable to verified value fulfillment, metric breakdowns, accepted evidence, fiscalizer evaluation, founded complaint corrections, and role-specific Responsibility Events. Closure labels are procedural context rather than automatic scores, negative effects require demonstrated role responsibility, and ordinary citizens should see a simple reputation summary with inspectable detail underneath.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
