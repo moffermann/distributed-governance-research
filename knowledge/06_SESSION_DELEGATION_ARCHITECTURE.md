@@ -107,6 +107,22 @@ Delegates should not receive automatic compensation for managing delegations.
 
 Assistance to communities can be funded as separate participation-support projects, but delegation itself is not automatically remunerated.
 
+Current alignment after the H044 residual cleanup:
+
+```text
+Macul Sports Association may receive many sports-allocation delegations.
+
+Core v0 allows:
+  visible represented weight;
+  system-generated delegated-action reports;
+  separate transparent participation-support projects, if funded.
+
+Core v0 excludes:
+  automatic commissions per delegator;
+  automatic percentages of delegated civic allocation;
+  hidden payment for accumulated delegation influence.
+```
+
 ### 10. Delegates must report actions
 
 Delegators must be informed periodically of what delegates did on their behalf.

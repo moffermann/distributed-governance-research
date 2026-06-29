@@ -791,6 +791,8 @@ Attributes:
 - represented weight rule;
 - represented weight history;
 - represented weight cap status, if applicable;
+- automatic compensation status: none by default;
+- linked participation-support projects, if any;
 - base allocation profile or fallback rule at activation, for budget delegation;
 - concentration signal at activation;
 - concentration signal during reporting.
@@ -821,6 +823,10 @@ Budget delegation rule:
 Delegated-action reporting rule:
 
 > Delegated-action reports should be generated primarily from the audit trail. Delegates may add explanations, but Core v0 should not depend on heavy manual report writing for delegators to understand delegated actions or revoke future authority.
+
+Delegation compensation rule:
+
+> Delegation does not create automatic payment, commission, or a percentage of delegated civic allocation in Core v0. Participation-support work may be funded only as separate transparent projects under ordinary project rules.
 
 ## Automatic Allocation Profile
 

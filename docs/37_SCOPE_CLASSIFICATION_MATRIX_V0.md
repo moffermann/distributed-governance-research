@@ -182,7 +182,8 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Composite Programs `H051` | Extension v1+ | Useful grouping layer, not required for first v0. |
 | Full common-good charter governance | Extension v1+ | Core v0 only requires impact declaration and charter relationship where an active charter exists. |
 | Advanced delegation beyond simple scoped delegation | Extension v1+ | Adds complexity not required for v0. |
-| Paid delegation markets | Extension v1+ | Raises incentive and capture questions. |
+| Paid delegation markets | Extension v1+ | Raises incentive and capture questions; Core v0 excludes automatic commissions for delegation. |
+| Participation-support projects | Core v0 / ordinary project path | Can help citizens participate, but must be ordinary transparent projects, not hidden delegation payments. |
 | Subdelegation | Extension v1+ | Not required for v0. |
 | Time-bound delegation | Extension v1+ | Useful later, not necessary for first model. |
 | Public Value Return per Peso `H059` | Extension v1+ | Valuable comparison tool but risky to over-centralize early. |

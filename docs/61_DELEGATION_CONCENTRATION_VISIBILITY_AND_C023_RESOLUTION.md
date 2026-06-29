@@ -104,6 +104,8 @@ Blocking these delegations by default would reduce participation capacity and we
 
 The model should not assume that concentration is always capture.
 
+However, Core v0 should not make delegation concentration automatically profitable. Delegates may accumulate influence when citizens voluntarily trust them, but they should not receive automatic commissions, fees, or percentages of delegated civic allocation merely because they hold delegations.
+
 ## Why concentration must be visible
 
 Delegation concentration still creates power.
@@ -120,6 +122,7 @@ Therefore, citizens and observers should be able to see:
 - recent delegated actions;
 - delegate reputation;
 - conflicts of interest;
+- separate participation-support funding, if any;
 - related-party warnings;
 - concentration trend over time.
 
@@ -350,6 +353,7 @@ This resolution should inform future updates to:
 - Caps may be configured in ways that are themselves political or exclusionary.
 - Too many warnings may create fatigue.
 - Delegates may add optional explanations that are formally correct but not very meaningful.
+- Separate participation-support projects may become indirect delegation-acquisition tools if not transparent.
 
 ## Mitigations
 
@@ -358,6 +362,8 @@ This resolution should inform future updates to:
 - keep immediate revocation available;
 - require periodic system-generated delegated-action reports;
 - show delegate-specific reputation and history;
+- show separate participation-support funding where relevant;
+- exclude automatic delegation commissions from Core v0;
 - include delegation concentration in administrative observability;
 - make any configured cap public before it affects delegation;
 - allow related-party and conflict-of-interest declarations to reveal artificial fragmentation;

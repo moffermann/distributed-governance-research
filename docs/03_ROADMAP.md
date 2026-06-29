@@ -79,6 +79,8 @@ The twenty-second residual cleanup aligned H046 with C011, C023, H047, H048, and
 
 The twenty-third residual cleanup clarified H045 without changing its underlying rule: when a delegate acts inside an active delegated scope, the action represents the delegate and all delegators covered by that scope by default. The represented weight, scope, and any configured cap effect must be visible in the action record, delegated-action reports, concentration signals, and observability metrics. Core v0 does not require per-delegator selection for ordinary in-scope delegated actions.
 
+The twenty-fourth residual cleanup aligned H044 with C023, H045, and H046: delegation remains non-compensated by default in Core v0. Delegates may accumulate visible influence and responsibility when citizens voluntarily trust them, but they do not receive automatic commissions, fees, or percentages of delegated civic allocation. Participation-support work may be funded only as separate transparent projects with ordinary project budget, evidence, fiscalization, and audit rules.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

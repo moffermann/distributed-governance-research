@@ -132,7 +132,8 @@ Delegate profile should show:
 - declared interests;
 - concentration signal;
 - whether the delegate accepts new delegations;
-- communication/reporting frequency.
+- communication/reporting frequency;
+- separate participation-support funding, if any.
 
 ## 4. Concentration signal
 
@@ -155,6 +156,8 @@ The system should not hide concentration. It should make it visible.
 
 Core v0 does not impose a universal hard cap on delegation concentration. If citizens voluntarily concentrate delegated authority in a trusted actor, that is a legitimate civic choice. The system must show concentration before delegation, during delegated action, in delegate reports, and in administrative observability.
 
+Core v0 also does not pay delegates automatically for accumulated delegations. Participation-support projects may exist separately, but they must be ordinary transparent projects rather than hidden delegation commissions.
+
 ## 5. Confirmation request
 
 Example:
@@ -175,6 +178,7 @@ What this delegate may not do:
 Act outside the delegated scope.
 Withdraw money already released.
 Use your identity as their own.
+Receive an automatic commission because you delegated.
 
 [Send request]
 ```
@@ -352,6 +356,8 @@ The delegation flow should not:
 - hide scope;
 - hide concentration;
 - hide represented weight when a delegate acts;
+- hide separate participation-support funding received by a delegate;
+- create automatic delegation commissions;
 - hide the fallback that resumes if delegation ends;
 - make delegated-action reporting depend only on voluntary manual reports;
 - make revocation difficult;

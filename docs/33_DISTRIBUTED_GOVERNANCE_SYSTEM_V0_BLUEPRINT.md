@@ -449,6 +449,8 @@ Budget delegation also requires a selected base allocation profile or fallback r
 
 Delegated-action reports should be generated primarily from the audit trail, with simple citizen summaries, detail on demand, represented weight, concentration signals, and optional delegate explanations.
 
+Delegation is non-compensated by default in Core v0. A delegate does not receive automatic payment, commission, or a percentage of delegated civic allocation merely because citizens delegate to them. Participation-support services may be funded only as separate transparent projects with ordinary budget, evidence, fiscalization, and audit rules.
+
 ### Automatic allocation profile
 
 Automatic allocation is citizen-configured rule-based distribution.
