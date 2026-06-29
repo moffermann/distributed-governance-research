@@ -190,6 +190,7 @@ Recently aligned residual-audit hypotheses:
 
 - [[hypotheses/H033-system-defined-default-allocation-rule|H033 — System-Defined Default Allocation Rule]]
 - [[hypotheses/H034-configurable-allocation-profiles|H034 — Configurable Allocation Profiles]]
+- [[hypotheses/H035-funding-target-closure-rule|H035 — Funding Target Closure Rule]]
 - [[hypotheses/H036-milestone-based-disbursement-and-guarantees|H036 — Milestone-Based Disbursement and Guarantees]]
 - [[hypotheses/H037-public-revenue-custody-and-disbursement|H037 — Public Revenue Custody and Disbursement]]
 - [[hypotheses/H038-monthly-use-it-or-allocate-it-cycle|H038 — Monthly Use-It-or-Allocate-It Cycle]]

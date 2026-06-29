@@ -95,6 +95,8 @@ The thirtieth residual cleanup aligned H037 with C006 and C007: public revenue c
 
 The thirty-first residual cleanup aligned H036 with C005, C016, C017, H037, and the accepted project disbursement flow: funding completion does not mean full transfer, but controlled execution through validated disbursement milestones, evidence, fiscalization where required, blocking-condition checks, guarantees, retentions, and protocol-valid financial orders. The citizen sees simple funding and disbursement states, while the technical layer preserves milestone rules, partial-release conditions, guarantee treatment, custodian execution status, recovery limits, and the distinction between unreleased, retained, justified released, disputed, and non-compliant funds.
 
+The thirty-second residual cleanup aligned H035 with C002, C005, C013, H036, and the parallel closure model: funding target closure is budget-lane-specific, not a single undifferentiated overfunding rule. Execution funding closes the executor's fixed budget, but the project is not execution-ready until the minimum admissible control package is funded, selected, and accepted where required. Supplemental control funding remains separate, limited, and non-expansive: it may support at most the allowed secondary fiscalization or distinct non-duplicative evidence needs, never increases the execution budget, never expands scope, and should reject new contributions once control coverage and evidence needs are saturated unless a visible protocol rule defines another lawful destination.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
