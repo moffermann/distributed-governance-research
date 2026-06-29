@@ -59,6 +59,8 @@ The twelfth residual cleanup aligned H033, H041, and H042 with C007, C008, and C
 
 The thirteenth residual cleanup aligned H058 with C020 and C007: operating modes remain country-configured technical states, tutored mode may be temporary, indefinite, or permanent, and tutored decisions, review windows, timeout policies, Review Timeout Resolutions, and configured timeout consequences must be public, traceable, and auditable.
 
+The fourteenth residual cleanup aligned H054 with C020, C021, H055, and H058: functional transition maturity metrics remain useful for evaluation, comparison, and public audit, but they do not define mandatory political thresholds, automatic budget migration, automatic exit from tutored mode, or automatic institutional replacement. The platform measures, the country decides, and society audits both.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
