@@ -203,6 +203,8 @@ Key attributes:
 - fiscalization requirements;
 - common-good impact declarations where relevant;
 - funding target;
+- funding deadline;
+- reformulation policy or policy reference;
 - closure conditions;
 - risks;
 - antivalues;

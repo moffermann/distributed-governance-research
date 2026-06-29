@@ -274,14 +274,16 @@ This prevents arbitrary withdrawals from destabilizing projects while preserving
 
 If a project fails to complete conditions, expires, or requires reformulation, the citizen must be notified.
 
-Possible citizen options:
+Depending on the active reformulation policy and C005/C017 rules, eligible unreleased, unused, retained, guaranteed, or recovered funds may:
 
-- keep the contribution in the reformulated version;
-- return the contribution to available balance;
-- reassign the contribution to another project;
-- allow the automatic profile to decide.
+- remain committed to the reformulated version;
+- return to available balance;
+- reassign to another project;
+- follow the citizen's automatic profile or default rule.
 
-If the citizen does not respond within the protocol-defined response window, the system applies the citizen's default rule.
+Released funds cannot be freely withdrawn because of reformulation. They remain subject to evidence, fiscalization, guarantee, recovery, sanction, and reputation rules.
+
+If the citizen has a response right and does not respond within the protocol-defined response window, the system applies the citizen's default rule.
 
 Possible default rules:
 

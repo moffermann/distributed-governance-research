@@ -139,6 +139,8 @@ A project must contain:
 - risks;
 - antivalues;
 - funding target;
+- funding deadline;
+- reformulation policy or policy reference;
 - closure conditions;
 - lifecycle state;
 - audit trail.
@@ -586,6 +588,8 @@ Rules:
 - no treating every complaint as automatic project destruction.
 
 Operational reformulations may preserve the value thesis. Material value reformulations cannot unilaterally rewrite what funders financed and beneficiaries expected; they require visible cause analysis, preserved history, funding effects, and role-specific responsibility review.
+
+Reformulation frequency, minimum spacing, deadline-extension effects, and exhaustion consequences are not universal application constants. They should be defined in a visible reformulation policy for the project, public function, operating mode, or protocol. In tutored mode, the administrator or tutored authority may configure concrete parameters. In non-tutored or open modes, the competent authority, community mechanism, or active protocol defines the strategy.
 
 ## Project closure
 

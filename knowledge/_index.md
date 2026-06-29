@@ -191,6 +191,7 @@ Recently aligned residual-audit hypotheses:
 - [[hypotheses/H033-system-defined-default-allocation-rule|H033 — System-Defined Default Allocation Rule]]
 - [[hypotheses/H034-configurable-allocation-profiles|H034 — Configurable Allocation Profiles]]
 - [[hypotheses/H038-monthly-use-it-or-allocate-it-cycle|H038 — Monthly Use-It-or-Allocate-It Cycle]]
+- [[hypotheses/H040-funding-deadline-and-reformulation-rule|H040 — Funding Deadline and Reformulation Rule]]
 - [[hypotheses/H041-distributed-participation-capacity|H041 — Distributed Participation Capacity]]
 - [[hypotheses/H042-layered-delegation-architecture|H042 — Layered Delegation Architecture]]
 - [[hypotheses/H043-transparent-delegation-concentration|H043 — Transparent Delegation Concentration]]

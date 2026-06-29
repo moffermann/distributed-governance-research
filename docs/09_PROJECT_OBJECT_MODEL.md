@@ -143,7 +143,8 @@ The executor is evaluated against:
 - current state;
 - creation date;
 - publication date;
-- funding deadline.
+- funding deadline;
+- reformulation policy or policy reference.
 
 ### 2. Actors and roles
 
@@ -204,6 +205,7 @@ A project declares:
 - required amount;
 - currency;
 - funding deadline;
+- reformulation policy or policy reference;
 - amount currently financed;
 - number of funders;
 - funding status;
@@ -215,7 +217,7 @@ Core funding rules:
 If the project reaches or exceeds its declared funding target → funding closes.
 No automatic overfunding by default.
 Limited supplemental control funding may exist only as designated control funding, not execution overfunding.
-If the project does not reach funding by deadline → close or reformulate.
+If the project does not reach funding by deadline → close or enter policy-governed reformulation.
 After funding → no ordinary free withdrawal.
 ```
 

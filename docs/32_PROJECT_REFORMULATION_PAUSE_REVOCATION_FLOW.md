@@ -12,6 +12,8 @@ Not every problem should revoke a project. The system needs proportional respons
 
 Reformulation may change implementation, but it must not unilaterally rewrite the value promise that funders and beneficiaries relied on.
 
+Reformulation limits and timing should be policy-configurable. Core v0 requires the active reformulation policy to be visible, traceable, and enforceable; it does not impose one universal maximum number of reformulations or one universal minimum period between reformulations.
+
 ## Main question
 
 ```text
@@ -113,12 +115,13 @@ Effects:
 - new project version is created;
 - previous version remains visible;
 - changes are explained;
+- active reformulation policy is shown and applied;
 - rules and AI validation run again;
 - citizen-facing views update;
 - relevant actors are notified;
 - executor may need to accept again;
 - fiscalization may need to update;
-- funders may receive response options when rules require it.
+- funders may receive response or funding-treatment options only when the configured policy and C005/C017 rules allow it.
 
 Example:
 
@@ -134,13 +137,27 @@ available venue has lower capacity.
 Impact:
 lower promised reach, higher cost per beneficiary, updated metrics required.
 
-Funder options:
-keep contribution, return to available balance, or reassign according to profile.
+Funding treatment:
+eligible unreleased balances follow the configured reformulation policy and C005/C017 rules.
 ```
 
 ### Rule
 
 > Reformulation is not silent editing. It is a visible new project version.
+
+### Reformulation policy
+
+The active policy may define:
+
+- maximum reformulations;
+- minimum period between reformulations;
+- whether reformulation extends the funding deadline;
+- who may approve operational reformulation;
+- who may approve material value reformulation;
+- what happens if limits are exhausted;
+- what happens if a reformulation expires without decision.
+
+In tutored mode, the administrator or tutored authority may configure concrete values, such as `maximum reformulations: 2` and `minimum period between reformulations: 30 days`. In a non-tutored or open mode, the competent authority, community mechanism, or active protocol defines the strategy. The application records and enforces the configured policy; it does not impose a universal value.
 
 ## 3. Pause
 
@@ -265,9 +282,10 @@ remaining funds are blocked, released funds are reviewed, executor reputation is
 ### Reformulation
 
 - funds remain committed or paused;
-- funders may need to accept the new version;
+- funders may need to accept the new version only where the configured policy and C005/C017 rules require it;
 - funds are not released until updated conditions are validated;
-- default citizen rules apply if no response is received within protocol window.
+- eligible unreleased, unused, retained, guaranteed, or recovered funds follow the configured reformulation policy and citizen rules;
+- released funds cannot be freely withdrawn and remain subject to evidence, fiscalization, guarantee, recovery, sanction, and reputation rules.
 
 ### Pause
 
@@ -301,7 +319,8 @@ Your contribution remains committed.
 
 ```text
 This project changed in a relevant way.
-You may keep your contribution, return it to your balance, or reassign it.
+The active reformulation policy defines what happens to eligible unreleased funds.
+Released funds cannot be freely withdrawn.
 ```
 
 ### Pause

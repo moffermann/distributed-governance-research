@@ -10,6 +10,7 @@ This hypothesis is qualified by:
 
 - `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`;
 - `docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md`.
+- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`.
 
 Where older wording suggested an individualized funder withdrawal window during reformulation, C005 and C017 are the controlling rules.
 
@@ -18,6 +19,8 @@ Reformulation does not create a default unilateral withdrawal window.
 Funding remains a commitment until project closure or protocol-defined project outcome.
 Material reformulation is handled through a Reformulation Proposal, not silent editing and not ordinary funder withdrawal.
 ```
+
+H040 is also qualified by the operating-mode principle: the application should not impose a universal number of allowed reformulations or a universal minimum reformulation period. It should require a visible reformulation policy and execute the policy configured by the competent administrator, authority, community mechanism, or protocol for the active mode.
 
 ## Rationale
 
@@ -31,6 +34,7 @@ Each project should declare:
 
 - funding target;
 - funding deadline;
+- reformulation policy or policy reference;
 - closure conditions;
 - whether reformulation is allowed;
 - notification rules for funders.
@@ -43,6 +47,8 @@ When the deadline arrives and the project has not reached its funding target, th
 1. Closure
 2. Reformulation
 ```
+
+The choice between closure and reformulation must follow the visible reformulation policy for the relevant project, public function, operating mode, or protocol. The application records and enforces that policy; it does not create an implicit universal strategy.
 
 ## Closure
 
@@ -61,6 +67,7 @@ If the project is reformulated:
 - the new version must explain what changed;
 - the project must distinguish operational reformulation from material value reformulation;
 - funding effects follow C005 and C017;
+- policy parameters such as maximum reformulations, minimum period between reformulations, and deadline-extension rules are applied if configured;
 - funders can comment, object, support complaints, follow the reformulation, and change their evaluation of the project.
 
 ## Reformulation decision path
@@ -82,13 +89,47 @@ Rejected or expired material reformulation:
 
 The relevant response period is for review, comment, objection, complaint, approval, or protocol-defined decision, not for ordinary voluntary withdrawal.
 
-## Reformulation frequency
+## Reformulation policy
 
-A project should not have a hard limit on the total number of reformulations.
+Core v0 should not hard-code a universal reformulation frequency.
 
-However, to avoid notification fatigue and constant instability, a project should be reformulated at most once per month.
+Instead, each relevant project, public function, operating mode, or protocol should expose a `Reformulation Policy` that may define:
 
-This allows projects to improve over time without overwhelming funders or making the project's identity unstable.
+- maximum number of reformulations;
+- minimum period between reformulations;
+- whether reformulation can extend the funding deadline;
+- who may approve operational reformulation;
+- who may approve material value reformulation;
+- what happens when reformulation limits are exhausted;
+- what happens if a reformulation expires without decision.
+
+In tutored mode, the administrator or tutored authority may configure concrete parameters.
+
+Example:
+
+```text
+Public function:
+Sports pilot in Macul
+
+Operating mode:
+Tutored
+
+Maximum reformulations:
+2
+
+Minimum period between reformulations:
+30 days
+
+Material reformulation approval:
+Tutored authority plus public Governance Resolution
+
+If limits are exhausted:
+Close, revoke, or require exceptional public resolution.
+```
+
+In a non-tutored or open mode, the competent authority, community mechanism, or protocol active at that time defines the correct strategy. The application should not impose a universal reformulation count or period on that mode.
+
+This preserves flexibility without allowing silent instability: citizens can see the active policy, the project history, the deadline effects, and the authority or rule responsible for each reformulation.
 
 ## Reformulated visibility label
 
@@ -130,6 +171,8 @@ If funds were legitimately or illegitimately released and spent, they may not be
 
 > A project that fails to reach funding by its deadline must either close and release eligible committed funds according to protocol, or reformulate transparently while preserving history. Reformulation does not create default individual withdrawal; funding effects follow project outcome, C005, and C017.
 
+> Reformulation frequency and deadline-extension parameters are policy-configurable by operating mode, administrator, competent authority, community mechanism, or protocol. Core v0 requires visibility, traceability, and enforcement of the configured policy, not a universal application-imposed number.
+
 ## Status
 
-Project funding lifecycle rule. Extends H035. Superseded where necessary by C005 and C017.
+Project funding lifecycle rule. Extends H035. Superseded where necessary by C005 and C017, and aligned with the C020 operating-mode configuration principle.
