@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|Core Administrative Observability Baseline and C021 Resolution v0]]
 - [[../docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|Tutored Mode Governance Resolutions and C020 Resolution v0]]
 - [[../docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|Protocol Change Governance and C019 Resolution v0]]
 - [[../docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|Value Fulfillment Reputation and C018 Resolution v0]]
@@ -120,6 +121,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|Value Fulfillment Reputation and C018 Resolution v0]]
 - [[../docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|Protocol Change Governance and C019 Resolution v0]]
 - [[../docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|Tutored Mode Governance Resolutions and C020 Resolution v0]]
+- [[../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|Core Administrative Observability Baseline and C021 Resolution v0]]
 
 ## Core glossary
 
