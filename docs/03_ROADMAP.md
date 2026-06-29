@@ -4,18 +4,19 @@
 
 This roadmap defines the working path for the Distributed Governance Research project from exploratory conversation into a bounded architecture, then into a rigorous theoretical framework, and later into publishable or implementable outputs.
 
-The project has now moved from broad discovery into v0 consolidation. The immediate priority is to finish resolving the remaining contradiction checklist items before integrating the full checklist back into the core corpus.
+The project has now moved from broad discovery into v0 consolidation. The immediate priority is to integrate the resolved contradiction checklist items back into the core corpus.
 
 Current working decision, 2026-06-29:
 
 ```text
-Resolve C025 next.
+Begin the C001-C025 integration pass next.
 C020 is resolved: tutored mode may be permanent as an external implementation choice, but tutored decisions and timeouts must be public civic objects.
 C021 is resolved: simple user-facing signals and a minimal administrative observability baseline are Core v0, while the full universal institutional observability panel remains Extension v1+.
 C022 is resolved: full common-good governance remains Extension v1+, but Core v0 projects must declare relevant common-good impacts through risks, antivalues, affected parties, evidence, and fiscalization.
 C023 is resolved: citizen-chosen delegation concentration is allowed by default, but must be visible through soft warnings, represented-weight disclosure, reporting, and observability; hard caps are configurable, not universal.
 C024 is resolved: verified identity remains mandatory, public visibility depends on role and context, beneficiary privacy uses aggregate or restricted visibility where needed, and protected comment identity is a justified per-comment exception rather than an anonymous comment layer.
-Then integrate C001-C025 into the core documents, checklist, and index.
+C025 is resolved: discovery may organize attention, but Home categories are user-customizable, project-list ordering must be visible and switchable, urgent/recommended visibility must show reasons, and Core v0 excludes paid promotion and opaque manual boosting.
+Integrate C001-C025 into the core documents, checklist, and index.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -26,7 +27,7 @@ The project now has a first integrated **Distributed Governance System v0 Bluepr
 
 The main risk is no longer lack of ideas. The main risk is fragmentation: many good documents must now be connected through maps, diagrams, classifications, contradiction resolutions, and a coherent paper structure.
 
-Contradictions C001-C024 have accepted resolution documents, but those resolutions have not yet been fully propagated into the older core documents. Contradiction C025 remains unresolved and should be completed before the integration pass begins.
+Contradictions C001-C025 have accepted resolution documents, but those resolutions have not yet been fully propagated into the older core documents.
 
 Approximate current maturity:
 
@@ -120,13 +121,11 @@ Likely extensions v1+:
 
 Remaining deliverables before closing Phase 1:
 
-- resolve C025 through the collaborative contradiction-resolution routine;
-- create the resolution document for C025;
-- update the knowledge index with each accepted resolution;
 - propagate C001-C025 resolutions into the core documents;
 - reconcile older public-institution participation language with C007;
 - update the contradiction checklist so resolved items no longer appear open;
 - identify any residual contradictions that remain after integration.
+- update the knowledge index and roadmap during the integration pass;
 
 Exit criteria:
 
@@ -176,7 +175,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** active through the C025 contradiction-resolution sequence; broader stress testing follows integration.
+**Status:** active through the C001-C025 integration pass; broader stress testing follows integration.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -372,10 +371,12 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Resolve C025 — Project discovery as hidden allocator.
-2. For the accepted resolution, update the roadmap, create the resolution document, update the index, commit, and push.
-3. After C025 is complete, integrate C001-C025 into the core corpus and contradiction checklist.
-4. Then resume formal system modeling, literature mapping, and paper architecture.
+1. Start the C001-C025 integration pass.
+2. Propagate accepted resolutions into the older core documents where they supersede earlier assumptions.
+3. Update the contradiction checklist so resolved items no longer appear open.
+4. Reconcile older public-institution participation language with C007.
+5. Update the roadmap and knowledge index during the integration pass, then commit and push each accepted integration unit.
+6. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
 ## Operating rule
