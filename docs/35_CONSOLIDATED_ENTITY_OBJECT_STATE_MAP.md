@@ -738,6 +738,8 @@ Attributes:
 - description;
 - affected area;
 - evidence attached;
+- visible identity mode;
+- protected identity request reference where applicable;
 - status;
 - blocking status;
 - resolution;
@@ -793,9 +795,33 @@ Rules:
 
 - comments are linked to verified actors;
 - visible identity is the default;
-- protected identity is a justified per-comment exception, not an anonymous layer;
+- protected identity is a justified per-comment exception for the comment layer, not an anonymous layer;
 - serious claims may be converted to complaints;
 - all comments remain subject to narrow legal, safety, privacy, and platform-integrity gates.
+
+## Protected Identity Request
+
+A request to restrict public identity visibility for a specific verified action.
+
+Attributes:
+
+- request id;
+- verified actor, restricted from unauthorized viewers;
+- protected action or object: comment, complaint, evidence item, testimony, beneficiary confirmation, affected-party report, or other sensitive formal action;
+- project or process context;
+- justification;
+- risk type: retaliation, safety, privacy, beneficiary protection, worker dependency, whistleblower exposure, or other configured risk;
+- public contextual display identity;
+- AI-assisted recommendation where applicable;
+- user acceptance of safer version where applicable;
+- authorized-review access rule;
+- legal/safety/privacy gate status where applicable;
+- audit trail reference;
+- timestamp.
+
+Rule:
+
+> Protected identity restricts public visibility for a specific verified action. It does not create anonymous formal power or a permanent anonymous user mode.
 
 ## Delegation
 

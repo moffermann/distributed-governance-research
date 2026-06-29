@@ -12,6 +12,8 @@ Comments are part of open civic observation. They help clarify, improve, and cha
 
 Comments are linked to verified actors. Visible identity is the default. Protected identity is a justified per-comment exception, not a general anonymous comment layer.
 
+This per-comment rule governs only the comment layer. The broader H029/C024 protected-identity mechanism may also apply to complaints, evidence, testimony, beneficiary confirmations, or other sensitive formal actions when justified.
+
 ## Main question
 
 ```text

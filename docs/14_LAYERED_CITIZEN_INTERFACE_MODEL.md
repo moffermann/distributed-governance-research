@@ -299,6 +299,8 @@ Clicking comments shows:
 
 Comments are identifiable by default. Protected identity is a justified per-comment exception and does not create an anonymous comment layer.
 
+The same verified protected-identity mechanism may appear in complaint, evidence, beneficiary, testimony, or affected-party layers when a specific action requires protection. The public interface should show that the actor is verified and protected without exposing restricted identity.
+
 ### Complaint detail
 
 Clicking complaints shows:

@@ -5,7 +5,7 @@ Start here when navigating the project in Obsidian or GitHub.
 ## Recent additions
 
 - [[../docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|Project Discovery Visibility, User Customization, and C025 Resolution v0]]
-- [[../docs/62_BENEFICIARY_PRIVACY_AND_PROTECTED_COMMENT_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Comment Identity, and C024 Resolution v0]]
+- [[../docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Identity, and C024 Resolution v0]]
 - [[../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|Delegation Concentration Visibility and C023 Resolution v0]]
 - [[../docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|Common-Good Impact Declaration and C022 Resolution v0]]
 - [[../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|Core Administrative Observability Baseline and C021 Resolution v0]]
@@ -129,7 +129,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|Core Administrative Observability Baseline and C021 Resolution v0]]
 - [[../docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|Common-Good Impact Declaration and C022 Resolution v0]]
 - [[../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|Delegation Concentration Visibility and C023 Resolution v0]]
-- [[../docs/62_BENEFICIARY_PRIVACY_AND_PROTECTED_COMMENT_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Comment Identity, and C024 Resolution v0]]
+- [[../docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Identity, and C024 Resolution v0]]
 - [[../docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|Project Discovery Visibility, User Customization, and C025 Resolution v0]]
 
 ## Diagram sources
@@ -188,6 +188,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H029-verified-identity-contextual-privacy|H029 — Verified Identity and Contextual Privacy]]
 - [[hypotheses/H030-layered-role-based-reputation|H030 — Layered Role-Based Reputation]]
 - [[hypotheses/H033-system-defined-default-allocation-rule|H033 — System-Defined Default Allocation Rule]]
 - [[hypotheses/H034-configurable-allocation-profiles|H034 — Configurable Allocation Profiles]]

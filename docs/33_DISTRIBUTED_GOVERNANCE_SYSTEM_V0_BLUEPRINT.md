@@ -436,7 +436,7 @@ Comments support civic observation and clarification.
 
 Serious issues can be escalated into formal complaints.
 
-Public comments are identifiable by default. Protected identity is a justified per-comment exception for exposed actors, not an anonymous comment layer. All comments remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
+Public comments are identifiable by default. Protected identity is a justified per-comment exception for the comment layer, not an anonymous comment layer. The broader protected-identity mechanism may also apply to complaints, testimony, evidence, beneficiary confirmations, and other sensitive formal actions when public exposure creates a justified risk. All public-facing submissions remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
 
 ### Complaints
 

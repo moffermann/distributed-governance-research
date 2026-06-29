@@ -1,4 +1,4 @@
-# Beneficiary Privacy, Protected Comment Identity, and C024 Resolution v0
+# Beneficiary Privacy, Protected Identity, and C024 Resolution v0
 
 ## Purpose
 
@@ -6,7 +6,7 @@ This document resolves contradiction C024 from the v0 contradiction checklist.
 
 C024 was originally framed as the tension between the project's no-anonymous-actors rule and the need to protect beneficiaries, minors, vulnerable groups, or exposed participants from unnecessary public exposure.
 
-The final v0 resolution keeps verified identity as a constitutional rule, but separates identity verification from public visibility. It also clarifies that protected identity is an exception for specific sensitive comments or participation contexts, not a general anonymous comment layer.
+The final v0 resolution keeps verified identity as a constitutional rule, but separates identity verification from public visibility. It also clarifies that protected identity is an exception for specific sensitive actions or participation contexts, not a general anonymous layer.
 
 ## Status
 
@@ -53,9 +53,9 @@ Accepted v0 rules:
 2. Responsible project actors are generally public.
 3. Beneficiaries may be verified privately, visible only to authorized reviewers, or represented publicly in aggregate.
 4. Public comments are identifiable by default.
-5. Protected identity for comments is an exception requested per comment.
-6. Protected identity does not create an anonymous comment layer.
-7. All comments, including visible-identity comments, remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
+5. Protected identity may be requested for a specific sensitive action, including comments, complaints, testimony, evidence, beneficiary confirmations, or affected-party reports.
+6. Protected identity does not create an anonymous layer or permanent anonymous user mode.
+7. All public-facing submissions, including visible-identity and protected-identity submissions, remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
 8. The gate is not tone moderation and must not suppress political criticism or uncomfortable project criticism.
 ```
 
@@ -149,7 +149,7 @@ The public should not need to see:
 
 Authorized fiscalizers or auditors may verify restricted records when necessary, subject to access logs and privacy rules.
 
-## Comment identity rule
+## Protected action identity rule
 
 Core v0 does not allow anonymous public comments.
 
@@ -157,13 +157,26 @@ Public comments are visible by default with the verified actor's identity.
 
 Protected identity is an exception requested per comment, not a permanent user mode and not a general pseudonymous discussion layer.
 
+The same protected-identity mechanism may apply to other sensitive formal actions when justified:
+
+- complaints;
+- whistleblower-sensitive reports;
+- worker reports;
+- affected-party observations;
+- beneficiary confirmations;
+- family-member reports;
+- sensitive evidence submissions;
+- testimony or clarification in a review process.
+
+The action remains verified to the system. Only public visibility is restricted.
+
 ## Identity protection request
 
-When a user wants to publish a specific comment with protected identity, the user must submit an identity protection request.
+When a user wants to publish or submit a specific action with protected identity, the user must submit an identity protection request.
 
 The request should include:
 
-- the comment;
+- the comment, complaint, evidence item, testimony, confirmation, or other protected action;
 - the user's justification for protected identity;
 - the project or process context;
 - whether the user is a beneficiary, affected party, worker, complainant, or other exposed actor.
@@ -175,15 +188,15 @@ The system uses AI assistance to process the request without creating a human mo
 The AI-assisted flow should be narrow and practical:
 
 ```text
-1. User writes a comment.
-2. Default option is publication with visible identity.
-3. User requests protected identity for this specific comment.
+1. User prepares a comment, complaint, evidence item, testimony, confirmation, or other formal action.
+2. Default option is visible identity when no special risk exists.
+3. User requests protected identity for this specific action.
 4. User explains why identity protection is needed.
-5. AI reviews the comment and justification.
+5. AI reviews the action content and justification where AI assistance is appropriate.
 6. AI does not suppress publication.
 7. AI either marks protected publication as acceptable or proposes a safer protected version with an explanation.
 8. User decides whether to accept the safer protected version.
-9. If accepted, the comment is published with contextual protected identity.
+9. If accepted, the action is published or submitted with contextual protected identity.
 10. If not accepted, the user may still publish under visible identity, subject to the same legal and safety gate.
 ```
 
@@ -199,13 +212,13 @@ Example:
 Verified protected participant #P-184
 ```
 
-The pseudonym should be specific to the project, complaint, or comment context where possible. This reduces cross-project correlation and protects people who repeatedly participate in sensitive processes.
+The pseudonym should be specific to the project, complaint, evidence item, comment, or review context where possible. This reduces cross-project correlation and protects people who repeatedly participate in sensitive processes.
 
 ## Legal, safety, privacy, and platform-integrity gate
 
 Visible identity does not make illegal content acceptable.
 
-All comments, including visible-identity comments, should pass through a narrow publication gate for:
+All public-facing submissions, including visible-identity and protected-identity submissions, should pass through a narrow publication gate for:
 
 - child sexual abuse material or sexual exploitation content;
 - direct threats;
@@ -248,22 +261,22 @@ The first is accountable criticism. The second exposes protected personal data.
 
 C014 established that comments should not become anonymous social-media posts and that real identity, visible authorship, traceability, and accountability are the primary v0 protections against hostile comment dynamics.
 
-C024 refines that rule:
+C024 refines that rule for comments while also establishing the broader protected-action identity mechanism:
 
 ```text
 Visible identity remains the default.
-Protected identity may exist only as a justified per-comment exception.
+For comments, protected identity may exist only as a justified per-comment exception.
 Verified identity remains mandatory behind the protection.
 Both visible and protected comments remain subject to the narrow legal, safety, privacy, and platform-integrity gate.
 ```
 
-This does not reopen anonymous comments as a general design option.
+This does not reopen anonymous comments as a general design option. It also does not limit protected identity only to comments. Complaints, evidence, beneficiary confirmations, testimony, and other sensitive formal actions may use the same verified protected-identity mechanism when justified.
 
 ## Relationship with C015
 
 C015 established AI-assisted privacy review for evidence publication.
 
-C024 applies the same logic to protected comment identity:
+C024 applies the same logic to protected identity:
 
 - the system assists before publication;
 - the user remains responsible for choosing what to publish;
@@ -319,12 +332,38 @@ I report that a participant was allegedly warned that raising complaints could a
 
 The user may accept the safer protected version, or publish under visible identity if they prefer.
 
+Protected complaint request:
+
+```text
+Complaint:
+The coordinator is allegedly pressuring parents not to file complaints.
+
+Justification:
+My child is still enrolled and I fear retaliation.
+
+Public display:
+Verified protected complainant #C-184
+```
+
+Protected evidence request:
+
+```text
+Evidence:
+A worker submits a document showing unsafe construction practice.
+
+Justification:
+The worker depends economically on the executor.
+
+Public display:
+Verified protected evidence contributor #E-77C
+```
+
 ## C024 final resolution
 
 C024 is resolved as follows:
 
 ```text
-Core v0 keeps the no-anonymous-formal-actor rule, but separates verified identity from public visibility. Responsible actors must be verified and generally public. Beneficiaries and vulnerable participants may be verified privately, reviewer-visible, or represented publicly in aggregate. Public comments are identifiable by default. Protected identity for comments is a justified per-comment exception processed through AI assistance, not a general anonymous comment layer. All comments remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
+Core v0 keeps the no-anonymous-formal-actor rule, but separates verified identity from public visibility. Responsible actors must be verified and generally public. Beneficiaries and vulnerable participants may be verified privately, reviewer-visible, or represented publicly in aggregate. Public comments are identifiable by default. Protected identity is a justified exception for specific sensitive actions, including comments, complaints, testimony, evidence, beneficiary confirmations, and affected-party reports. It is processed through AI assistance or restricted-review rules where appropriate, and it does not create a general anonymous layer. Public-facing submissions remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
 ```
 
 Final rule:
@@ -358,7 +397,7 @@ This resolution should inform future updates to:
 
 ## Mitigations
 
-- keep visible identity as the default for comments;
+- keep visible identity as the default for comments and other public-facing actions where no special risk exists;
 - require justification for protected identity;
 - use contextual pseudonyms instead of stable universal aliases;
 - record that protected identity was granted through an AI-assisted process;

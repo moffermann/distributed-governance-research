@@ -306,7 +306,7 @@ If the project is in a tutored, semi-open, suspended, or otherwise special opera
 
 This preserves traceability without making moderation the first citizen experience.
 
-If a comment is published under protected identity, Layer 5 should record the existence of the protected identity request, the AI-assisted process result, the contextual protected display identity, and any legal/safety/privacy gate action, without exposing protected personal identity to unauthorized viewers.
+If a comment, complaint, evidence item, testimony, beneficiary confirmation, affected-party report, or other formal action is published or submitted under protected identity, Layer 5 should record the existence of the protected identity request, the AI-assisted or restricted-review process result where applicable, the contextual protected display identity, and any legal/safety/privacy gate action, without exposing protected personal identity to unauthorized viewers.
 
 ## 13. System decisions and protocol references
 

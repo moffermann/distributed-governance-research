@@ -31,6 +31,8 @@ Protected identity is a justified per-comment exception.
 Protected identity does not create an anonymous comment layer.
 ```
 
+The per-comment rule is specific to the comment layer. It does not limit the broader protected-identity mechanism. Under H029/C024, complaints, testimony, evidence submissions, beneficiary confirmations, and other sensitive formal actions may also request protected identity when public exposure creates a justified risk.
+
 C007 also refined actor participation. Public institutions should not appear as ordinary internal commenters competing in the same civic layer as citizens and non-state organizations. If a public institution needs to respond, review, explain, or reject something, it should do so as an external authority response, tutored-scope review action, or Governance Resolution where material.
 
 ## The contradiction
@@ -314,7 +316,7 @@ The citizen may convert it into a complaint if they want review or blocking effe
 C014 is resolved as follows:
 
 ```text
-Do not build a social-media ranking system in Core v0. Require verified authorship for all comments, keep visible identity as the default, allow protected identity only as a justified per-comment exception under C024, keep comment ordering simple, route serious claims to the complaint flow, and apply only minimal rule-based moderation for abusive, illegal, private, or spam content.
+Do not build a social-media ranking system in Core v0. Require verified authorship for all comments, keep visible identity as the default, allow protected identity only as a justified per-comment exception under C024 for the comment layer, keep comment ordering simple, route serious claims to the complaint flow, and apply only minimal rule-based moderation for abusive, illegal, private, or spam content.
 ```
 
 Final rule:

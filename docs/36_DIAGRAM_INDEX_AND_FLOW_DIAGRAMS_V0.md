@@ -88,7 +88,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C009: citizen layers translate complexity progressively.
 - C010/C017/C018: value verification, reformulation, and reputation depend on verified value fulfillment, not labels alone.
 - C011/C023: delegation has priority over automatic allocation and concentration must be visible.
-- C014/C024: comments use verified identity by default, with justified protected identity as a per-comment exception.
+- C014/C024/H029: comments use verified identity by default, with justified protected identity as a per-comment exception; the broader protected-identity mechanism may also apply to complaints, evidence, testimony, beneficiary confirmations, or other sensitive formal actions.
 - C019: protocol changes and material system decisions remain auditable.
 - C021: administrative observability baseline is core; full universal panel remains extension.
 - C022: projects declare common-good impacts where relevant.

@@ -340,11 +340,11 @@ Core v0 does not impose a universal hard cap on delegation concentration. Citize
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/62_BENEFICIARY_PRIVACY_AND_PROTECTED_COMMENT_IDENTITY_AND_C024_RESOLUTION.md`
+**Resolution document:** `docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md`
 
 ### Accepted v0 rule
 
-Core v0 keeps the no-anonymous-formal-actor rule, but separates verified identity from public visibility. Responsible actors are generally public. Beneficiaries and vulnerable participants may be verified privately, reviewer-visible, or represented publicly in aggregate. Protected comment identity is a justified per-comment exception, not a general anonymous layer.
+Core v0 keeps the no-anonymous-formal-actor rule, but separates verified identity from public visibility. Responsible actors are generally public. Beneficiaries and vulnerable participants may be verified privately, reviewer-visible, or represented publicly in aggregate. Protected identity is a justified exception for specific sensitive actions, including comments, complaints, testimony, evidence, beneficiary confirmations, and affected-party reports. It is not a general anonymous layer.
 
 ---
 
