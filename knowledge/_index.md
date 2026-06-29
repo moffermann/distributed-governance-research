@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/62_BENEFICIARY_PRIVACY_AND_PROTECTED_COMMENT_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Comment Identity, and C024 Resolution v0]]
 - [[../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|Delegation Concentration Visibility and C023 Resolution v0]]
 - [[../docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|Common-Good Impact Declaration and C022 Resolution v0]]
 - [[../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|Core Administrative Observability Baseline and C021 Resolution v0]]
@@ -126,6 +127,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|Core Administrative Observability Baseline and C021 Resolution v0]]
 - [[../docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|Common-Good Impact Declaration and C022 Resolution v0]]
 - [[../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|Delegation Concentration Visibility and C023 Resolution v0]]
+- [[../docs/62_BENEFICIARY_PRIVACY_AND_PROTECTED_COMMENT_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Comment Identity, and C024 Resolution v0]]
 
 ## Core glossary
 
