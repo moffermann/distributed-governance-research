@@ -32,6 +32,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|v0 Contradiction and Failure-Mode Checklist]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
+- [[../docs/diagrams/README|Diagram Sources]]
 - [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 - [[../docs/34_CORE_V0_SCOPE_FREEZE|Core v0 Scope Freeze]]
 - [[../docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|Distributed Governance System v0 Blueprint]]
@@ -130,6 +131,22 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|Delegation Concentration Visibility and C023 Resolution v0]]
 - [[../docs/62_BENEFICIARY_PRIVACY_AND_PROTECTED_COMMENT_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Comment Identity, and C024 Resolution v0]]
 - [[../docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|Project Discovery Visibility, User Customization, and C025 Resolution v0]]
+
+## Diagram sources
+
+- [[../docs/diagrams/README|Diagram Sources]]
+- [[../docs/diagrams/v0-citizen-navigation-layers|Diagram - Citizen Navigation Layers v0]]
+- [[../docs/diagrams/v0-project-creation-publication|Diagram - Project Creation and Publication v0]]
+- [[../docs/diagrams/v0-project-lifecycle-state|Diagram - Project Lifecycle State v0]]
+- [[../docs/diagrams/v0-open-project-parallel-closure|Diagram - Open Project Parallel Closure v0]]
+- [[../docs/diagrams/v0-funding-disbursement|Diagram - Funding and Disbursement v0]]
+- [[../docs/diagrams/v0-evidence-fiscalization|Diagram - Evidence and Fiscalization v0]]
+- [[../docs/diagrams/v0-complaint-review|Diagram - Complaint and Review v0]]
+- [[../docs/diagrams/v0-delegation-automatic-allocation|Diagram - Delegation and Automatic Allocation v0]]
+- [[../docs/diagrams/v0-reformulation-pause-revocation|Diagram - Reformulation, Pause, and Revocation v0]]
+- [[../docs/diagrams/v0-tutored-mode-governance-resolution|Diagram - Tutored Mode Governance Resolution v0]]
+- [[../docs/diagrams/v0-audit-trail-pattern|Diagram - Audit Trail Pattern v0]]
+- [[../docs/diagrams/distributed-planning-architecture-v1|Diagram - Distributed Planning Architecture v1]]
 
 ## Core glossary
 

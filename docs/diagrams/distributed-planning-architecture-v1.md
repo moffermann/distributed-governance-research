@@ -1,4 +1,4 @@
-# Diagram — Distributed Planning Architecture v1
+# Diagram - Distributed Planning Architecture v1
 
 This diagram captures the current conceptual model of binding and evolutionary distributed planning.
 

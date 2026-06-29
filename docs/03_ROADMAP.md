@@ -10,6 +10,7 @@ Current working decision, 2026-06-29:
 
 ```text
 Run a residual audit of diagrams, indexes, and stale references next.
+The v0 diagram source format is now Markdown plus Mermaid, with generated images treated only as secondary outputs.
 C020 is resolved: tutored mode may be permanent as an external implementation choice, but tutored decisions and timeouts must be public civic objects.
 C021 is resolved: simple user-facing signals and a minimal administrative observability baseline are Core v0, while the full universal institutional observability panel remains Extension v1+.
 C022 is resolved: full common-good governance remains Extension v1+, but Core v0 projects must declare relevant common-good impacts through risks, antivalues, affected parties, evidence, and fiscalization.
@@ -17,6 +18,7 @@ C023 is resolved: citizen-chosen delegation concentration is allowed by default,
 C024 is resolved: verified identity remains mandatory, public visibility depends on role and context, beneficiary privacy uses aggregate or restricted visibility where needed, and protected comment identity is a justified per-comment exception rather than an anonymous comment layer.
 C025 is resolved: discovery may organize attention, but Home categories are user-customizable, project-list ordering must be visible and switchable, urgent/recommended visibility must show reasons, and Core v0 excludes paid promotion and opaque manual boosting.
 C001-C025 have been propagated into the main core documents, contradiction checklist, citizen flows, and superseded hypotheses.
+The v0 diagram index has been converted into a master index, and the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -28,6 +30,8 @@ The project now has a first integrated **Distributed Governance System v0 Bluepr
 The main risk is no longer lack of ideas. The main risk is fragmentation: many good documents must now be connected through maps, diagrams, classifications, contradiction resolutions, and a coherent paper structure.
 
 Contradictions C001-C025 have accepted resolution documents and have been propagated into the main core documents. A residual audit of diagrams, secondary notes, and remaining stale references should follow.
+
+The first residual cleanup updated the diagram format and split the v0 diagram set into canonical Mermaid source files under `docs/diagrams/`.
 
 Approximate current maturity:
 
@@ -121,7 +125,7 @@ Likely extensions v1+:
 
 Remaining deliverables before closing Phase 1:
 
-- audit diagrams and secondary documents for stale C001-C025 assumptions;
+- continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions;
 - update remaining maps or indexes affected by the integration pass;
 - identify any residual contradictions that remain after integration;
 - then prepare Phase 2 formal system modeling.
@@ -370,7 +374,7 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Audit diagrams and remaining secondary documents for stale C001-C025 assumptions.
+1. Continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 2. Update remaining maps or indexes affected by the integration pass.
 3. Identify any residual contradictions introduced by the integrated corpus.
 4. Commit and push each accepted cleanup unit.
