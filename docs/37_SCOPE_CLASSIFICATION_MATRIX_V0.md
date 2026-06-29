@@ -163,6 +163,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises. |
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |
 | Funding, civic wallet, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation and conditional funding. |
+| Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-institution participation. |
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
 | Meta-governance protocol change `H017` | Core v0 conceptual / paper layer | Needed to explain protocol evolution, but not fully implemented in MVP. |
 | Emergency as urgency attribute `H052` | Core v0 | Treats emergencies without separate architecture. |
@@ -183,7 +184,6 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Full common-good charter governance | Extension v1+ | Core v0 only requires impact declaration and charter relationship where an active charter exists. |
 | Advanced delegation beyond simple scoped delegation | Extension v1+ | Adds complexity not required for v0. |
 | Paid delegation markets | Extension v1+ | Raises incentive and capture questions; Core v0 excludes automatic commissions for delegation. |
-| Participation-support projects | Core v0 / ordinary project path | Can help citizens participate, but must be ordinary transparent projects, not hidden delegation payments. |
 | Subdelegation | Extension v1+ | Not required for v0. |
 | Time-bound delegation | Extension v1+ | Useful later, not necessary for first model. |
 | Public Value Return per Peso `H059` | Extension v1+ | Valuable comparison tool but risky to over-centralize early. |

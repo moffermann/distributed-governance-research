@@ -85,6 +85,8 @@ The twenty-fifth residual cleanup aligned H043 with C023, H044, H045, and H046: 
 
 The twenty-sixth residual cleanup aligned H042 as the umbrella Core v0 delegation architecture: delegation remains simple scoped authorization to eligible citizens or non-state organizations, not identity transfer, money ownership transfer, AI authority, internal public-institution authority, automatic allocation, or paid asset management. Budget delegation requires a selected base allocation profile or fallback rule before activation; delegation has priority while active; represented weight, concentration, reports, revocation, delegate resignation, no automatic compensation, and fallback continuity are all part of the stable baseline.
 
+The twenty-seventh residual cleanup aligned H041 as the Core v0 participation-capacity boundary: support for citizens can be distributed and fundable through ordinary transparent projects and assistance layers, but it must not become hidden delegation payment, hidden authority, AI civic agency, automatic allocation authority, or internal public-institution participation. Direct participation, automatic allocation profiles, scoped delegation, participation-support projects, and AI assistance remain distinct mechanisms.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

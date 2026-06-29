@@ -395,6 +395,8 @@ Delegating
 Configuring automatic allocation profile
 ```
 
+Participation capacity support is also part of Core v0, but only through ordinary transparent project paths and assistance layers. A participation-support project may help citizens understand projects, translate material, produce evidence, file comments or complaints, model proposals, or configure profiles and delegation. It does not receive hidden delegation commissions, does not allocate citizen balances without explicit accepted delegation, does not turn AI into a civic actor, and does not make public institutions internal project participants.
+
 ### Funding
 
 Funding is a conditional commitment.

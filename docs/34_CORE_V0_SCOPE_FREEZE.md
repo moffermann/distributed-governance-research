@@ -266,6 +266,8 @@ Rule:
 
 Core v0 includes flows for funding, following, fiscalizer offers, evidence production, comments/questions, complaints, delegation, and automatic allocation profiles.
 
+Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public institutions acting as internal project participants.
+
 ### 14. Project creation and publication
 
 Core v0 includes project creation from idea to open project:
