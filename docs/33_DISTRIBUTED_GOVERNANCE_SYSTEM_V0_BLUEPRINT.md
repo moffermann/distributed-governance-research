@@ -379,6 +379,7 @@ Layer 5 contains complete traceability:
 - relationship declarations;
 - role events;
 - moderation decisions;
+- notification and civic-inbox records for material events;
 - protocol references;
 - export and verification tools.
 
@@ -414,6 +415,8 @@ Funding is not a freely reversible expression of preference. After financing, or
 Following is observation and notification only.
 
 It does not fund, approve, validate, or block a project.
+
+Notification interruptions are configurable, but critical in-app civic records should remain visible for material events such as reformulation, pause, revocation, closure, complaint, fiscalization, delegation fallback activation, automatic-profile runs, Governance Resolutions, and Review Timeout Resolutions affecting the citizen's projects or roles.
 
 ### Fiscalizer offer
 
@@ -455,6 +458,8 @@ Budget delegation also requires a selected base allocation profile or fallback r
 
 Delegated-action reports should be generated primarily from the audit trail, with simple citizen summaries, detail on demand, represented weight, concentration signals, and optional delegate explanations.
 
+Report channels and frequency may be configured by the citizen, but delegated-action records and fallback activation should remain available in-app.
+
 Delegation is non-compensated by default in Core v0. A delegate does not receive automatic payment, commission, or a percentage of delegated civic allocation merely because citizens delegate to them. Participation-support services may be funded only as separate transparent projects with ordinary budget, evidence, fiscalization, and audit rules.
 
 ### Automatic allocation profile
@@ -464,6 +469,8 @@ Automatic allocation is citizen-configured rule-based distribution.
 It is not delegation and not hidden system choice.
 
 On first active use, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that base profile.
+
+Automatic allocation reports should explain allocations, skipped rules, and fallback activation. Their interruption channel may be configured, but the report history remains available in-app.
 
 ## Project creation flow
 

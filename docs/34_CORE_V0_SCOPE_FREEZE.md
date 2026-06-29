@@ -270,6 +270,8 @@ Core v0 includes flows for funding, following, fiscalizer offers, evidence produ
 
 Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public institutions acting as internal project participants.
 
+Core v0 includes configurable civic notifications as a simple user-experience baseline: citizens may configure channels, intensity, and frequency for external interruptions, but material in-app civic records should remain visible for affected projects, allocation profiles, delegations, complaints, reformulations, governance resolutions, and timeout resolutions.
+
 ### 14. Project creation and publication
 
 Core v0 includes project creation from idea to open project:
@@ -358,6 +360,8 @@ On first active use, the citizen should select or acknowledge a base allocation 
 Core v0 requires Layer 5 auditability for project versions, value history, metrics, budget, custody trace, milestones, disbursements, evidence, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve material AI-assisted outputs, governance resolutions, review timeout resolutions, protocol-change records, discovery visibility reasons where material, and privacy-aware access/redaction traces.
+
+Layer 5 should also preserve notification or civic-inbox records for material events so muted push notifications do not erase traceability.
 
 ### 21. Operating modes
 

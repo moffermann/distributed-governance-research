@@ -306,6 +306,8 @@ Your base profile is inactive while this delegation remains active.
 
 The detailed view should link each action to its audit record and show any delegate explanation when one exists.
 
+The citizen may configure report channel and frequency, including app-only or silent external notifications. However, delegated-action reports, delegate resignation, delegation revocation, rejected delegation, and fallback activation should remain visible in-app so delegation does not become hidden allocation.
+
 ## 10. Revocation
 
 Revocation should be immediate for future actions.

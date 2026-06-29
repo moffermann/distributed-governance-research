@@ -240,7 +240,7 @@ Funding a project automatically adds it to the citizen's following area.
 Financiar implica seguir automáticamente el proyecto.
 ```
 
-The citizen may later adjust notification preferences, but the project should not disappear after funding.
+The citizen may later adjust notification preferences, but the project should not disappear after funding. External interruptions may be muted, but critical in-app records for reformulation, pause, revocation, closure, complaint, fiscalization, or fund-treatment events should remain visible.
 
 ## Release rule
 
@@ -308,7 +308,7 @@ Citizen clicks Fund
 → contribution becomes committed
 → project is added to following
 → funds are released only by conditions, milestones, evidence, and fiscalization
-→ if project fails, expires, or is reformulated, the citizen receives options
+→ if project fails, expires, or is reformulated, the citizen receives policy-defined notice and fund-treatment information
 ```
 
 ## What this flow should not do

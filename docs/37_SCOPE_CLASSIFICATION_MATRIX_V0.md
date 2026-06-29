@@ -162,7 +162,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
 | Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises. |
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |
-| Funding, civic wallet, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation and conditional funding. |
+| Funding, civic wallet, notification, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, follow-up, and visible citizen control. |
 | Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-institution participation. |
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
 | Meta-governance protocol change `H017` | Core v0 conceptual / paper layer | Needed to explain protocol evolution, but not fully implemented in MVP. |

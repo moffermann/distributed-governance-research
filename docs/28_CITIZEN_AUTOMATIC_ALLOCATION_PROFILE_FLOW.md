@@ -288,6 +288,8 @@ Reports should explain why allocations happened.
 
 Reports should also state whether any automatic rule was skipped because active delegation had priority.
 
+The citizen may configure report channel and frequency, but each profile run should remain available in-app. App-only or silent notification mode must not hide allocation history, skipped-rule explanations, fallback activation, or the profile that resumed after delegation ended.
+
 ## 10. Edit, pause, or deactivate
 
 The citizen should be able to:

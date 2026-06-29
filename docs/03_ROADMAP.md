@@ -89,6 +89,8 @@ The twenty-seventh residual cleanup aligned H041 as the Core v0 participation-ca
 
 The twenty-eighth residual cleanup aligned H040 with C005, C017, and the operating-mode configuration principle: projects still need funding deadlines and transparent closure-or-reformulation outcomes, but Core v0 no longer imposes a universal number of reformulations or a universal minimum period between reformulations. Instead, each relevant project, public function, operating mode, or protocol must expose a visible Reformulation Policy. In tutored mode, the administrator or tutored authority may configure concrete parameters such as maximum reformulations, minimum days between reformulations, deadline-extension effects, approval authority, and exhaustion consequences; in non-tutored or open modes, the competent authority, community mechanism, or active protocol defines the strategy.
 
+The twenty-ninth residual cleanup aligned H039 as the Core v0 civic-notification baseline: citizens may configure channels, intensity, frequency, and app-only or silent external notification modes, but material in-app civic records remain visible for affected funding, following, delegation, automatic allocation, reformulation, complaint, fiscalization, governance-resolution, and timeout-resolution events. The system reduces interruption without hiding traceability.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:

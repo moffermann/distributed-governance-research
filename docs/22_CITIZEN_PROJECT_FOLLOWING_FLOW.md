@@ -68,9 +68,10 @@ The citizen should choose a simple notification level.
 Recommended levels:
 
 ```text
-Básico
-Normal
-Detallado
+Basic
+Standard
+Detailed
+App-only / silent
 ```
 
 ### Basic
@@ -86,7 +87,7 @@ Examples:
 - project is reformulated;
 - blocking complaint appears.
 
-### Normal
+### Standard
 
 Includes Basic plus operational updates.
 
@@ -101,7 +102,7 @@ Examples:
 
 ### Detailed
 
-Includes Normal plus deeper civic activity.
+Includes Standard plus deeper civic activity.
 
 Examples:
 
@@ -112,38 +113,55 @@ Examples:
 - non-blocking complaints;
 - project history updates.
 
+### App-only / silent
+
+No external push or email interruption by default. Critical civic records remain visible inside the app, the Following area, reports, or activity history.
+
+Examples:
+
+- material reformulation;
+- pause, revocation, or closure;
+- complaint or fiscalization issue requiring attention;
+- funding-treatment event;
+- Governance Resolution or Review Timeout Resolution affecting the followed project.
+
 ## Example UI
 
 ```text
-¿Qué quieres recibir?
+What do you want to receive?
 
-[Básico]
-Sólo cambios importantes.
+[Basic]
+Only major changes.
 
-[Normal]
-Cambios importantes, avances y alertas.
+[Standard]
+Major changes, progress, and alerts.
 
-[Detallado]
-Hitos, evidencias, comentarios relevantes y denuncias.
+[Detailed]
+Milestones, evidence, relevant comments, and complaints.
+
+[App-only]
+No external interruption; critical records remain in the app.
 ```
 
-Default recommendation: `Normal`.
+Default recommendation: `Standard`.
+
+Critical in-app records should not be disabled. The citizen can silence interruptions, but the project remains visible where the citizen can inspect what changed.
 
 ## 3. Confirmation
 
 After selection:
 
 ```text
-Ahora sigues este proyecto.
+You are now following this project.
 
-Nivel:
-Normal
+Level:
+Standard
 
-Podrás verlo en:
-Seguimiento
+You can see it in:
+Following
 
-[Ver seguimiento]
-[Volver al proyecto]
+[View following]
+[Back to project]
 ```
 
 ## 4. Automatic following after material actions
@@ -165,7 +183,7 @@ Rule:
 
 > Every material action on a project adds it to the citizen's Following area.
 
-The citizen may later silence notifications, but the project should not disappear from their participation history.
+The citizen may later silence external notifications, but the project should not disappear from their participation history or from critical in-app civic records.
 
 ## 5. Following area
 
@@ -206,6 +224,8 @@ Si tienes una responsabilidad aceptada, dejar de seguir no renuncia a esa respon
 ```
 
 The system must avoid confusion between notification status and substantive action.
+
+Stopping voluntary following should not erase material-action history. If the citizen funded, complained, submitted evidence, fiscalized, or holds another material relationship to the project, critical in-app records should remain available through that relationship even if ordinary following notifications are muted.
 
 ## What following should not do
 
