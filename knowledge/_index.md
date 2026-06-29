@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|Disbursement Milestone AI Validation and C016 Resolution v0]]
 - [[../docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|Real Identity Comments and C014 Resolution v0]]
 - [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
 - [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
@@ -110,6 +111,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|Role Reputation, Responsibility Events, and C012 Resolution v0]]
 - [[../docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|Fiscalization Offer Cost and C013 Resolution v0]]
 - [[../docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|Real Identity Comments and C014 Resolution v0]]
+- [[../docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|Disbursement Milestone AI Validation and C016 Resolution v0]]
 
 ## Core glossary
 
