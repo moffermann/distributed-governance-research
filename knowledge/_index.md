@@ -184,3 +184,4 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 - [[../skills/session-distillation/SKILL|Session Distillation]]
 - [[../skills/literature-scout/SKILL|Literature Scout]]
 - [[../skills/paper-drafting/SKILL|Paper Drafting]]
+- [[../tools/skills/collaborative-resolution-workflow/SKILL|Collaborative Resolution Workflow]]

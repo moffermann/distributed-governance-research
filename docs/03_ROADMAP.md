@@ -4,13 +4,22 @@
 
 This roadmap defines the working path for the Distributed Governance Research project from exploratory conversation into a bounded architecture, then into a rigorous theoretical framework, and later into publishable or implementable outputs.
 
-The project has now moved from broad discovery into v0 consolidation. The immediate priority is to turn the v0 blueprint and supporting flows into a formal system model with entities, states, diagrams, scope classification, and a paper outline.
+The project has now moved from broad discovery into v0 consolidation. The immediate priority is to finish resolving the remaining contradiction checklist items before integrating the full checklist back into the core corpus.
+
+Current working decision, 2026-06-29:
+
+```text
+Resolve C020-C025 first.
+Then integrate C001-C025 into the core documents, checklist, and index.
+```
 
 ## Current diagnosis
 
 The project now has a first integrated **Distributed Governance System v0 Blueprint** plus detailed documents for citizen interfaces, citizen action flows, project creation, project lifecycle, disbursement, fiscalization, evidence, complaints, reformulation, pause, revocation, and technical auditability.
 
-The main risk is no longer lack of ideas. The main risk is fragmentation: many good documents must now be connected through maps, diagrams, classifications, and a coherent paper structure.
+The main risk is no longer lack of ideas. The main risk is fragmentation: many good documents must now be connected through maps, diagrams, classifications, contradiction resolutions, and a coherent paper structure.
+
+Contradictions C001-C019 have accepted resolution documents, but those resolutions have not yet been fully propagated into the older core documents. Contradictions C020-C025 remain unresolved and should be completed before the integration pass begins.
 
 Approximate current maturity:
 
@@ -68,7 +77,7 @@ Exit criteria:
 
 ## Phase 1 — Stabilize Core Architecture v0
 
-**Status:** substantially complete; final scope freeze still required.
+**Status:** scope frozen; final contradiction resolution and integration pass active.
 
 Goal: define the bounded architecture of the first coherent model.
 
@@ -104,10 +113,13 @@ Likely extensions v1+:
 
 Remaining deliverables before closing Phase 1:
 
-- explicit Core v0 freeze;
-- formal Core v0 / Extension / Country / Out-of-scope classification;
-- consolidated entity-object-state map;
-- diagram index.
+- resolve C020-C025 through the collaborative contradiction-resolution routine;
+- create resolution documents for C020-C025;
+- update the knowledge index with each accepted resolution;
+- propagate C001-C025 resolutions into the core documents;
+- reconcile older public-institution participation language with C007;
+- update the contradiction checklist so resolved items no longer appear open;
+- identify any residual contradictions that remain after integration.
 
 Exit criteria:
 
@@ -117,7 +129,7 @@ Exit criteria:
 
 ## Phase 2 — Formalize the System Model
 
-**Status:** active next phase.
+**Status:** ready after remaining contradiction resolution and integration pass.
 
 Goal: convert the v0 blueprint and detailed flows into a coherent analytical model.
 
@@ -157,7 +169,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** partially ongoing; should become systematic after the entity and diagram work.
+**Status:** active through the C020-C025 contradiction-resolution sequence; broader stress testing follows integration.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -186,6 +198,8 @@ Deliverables:
 
 - objection files for each major risk;
 - failure-mode catalog;
+- contradiction resolution documents;
+- updated contradiction checklist;
 - stress-test scenarios;
 - unresolved-objections document.
 
@@ -351,13 +365,15 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Freeze Core v0 scope explicitly.
-2. Build the consolidated entity-object-state map.
-3. Create lifecycle and flow diagrams.
-4. Classify all hypotheses and docs as Core v0, Extension v1+, Country implementation, or Out of scope.
-5. Create the v0 contradiction/failure-mode checklist.
-6. Create paper outline v1.
-7. Begin literature map update.
+1. Resolve C020 — Operating modes may become permanent discretionary control.
+2. Resolve C021 — Universal observability panel vs core observability baseline.
+3. Resolve C022 — Common-good governance extension vs common-good impact in v0 projects.
+4. Resolve C023 — Delegation concentration visibility without default caps.
+5. Resolve C024 — No anonymous actors vs beneficiary privacy.
+6. Resolve C025 — Project discovery as hidden allocator.
+7. For each accepted resolution, update the roadmap, create the resolution document, update the index, commit, and push.
+8. After C020-C025 are complete, integrate C001-C025 into the core corpus and contradiction checklist.
+9. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
 ## Operating rule
