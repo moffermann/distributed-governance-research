@@ -63,6 +63,8 @@ The fourteenth residual cleanup aligned H054 with C020, C021, H055, and H058: fu
 
 The fifteenth residual cleanup aligned H053 with C007, C020, H054, and H058: sports remains a plausible early pilot sector, but pilot-sector choice, budget share, operating mode, and expansion pace are country implementation decisions. Sports pilots may use tutored review, but material rejection, reformulation, timeout, or scope decisions must remain public and auditable through Governance Resolutions or Review Timeout Resolutions.
 
+The sixteenth residual cleanup aligned H056 with C007 and C020: public institutions remain excluded from internal project participation, but in a configured tutored operating mode they may moderate eligibility, scope, duplication, or compatibility as institutional tutored authorities. This is moderation in practical terms, but not ordinary internal platform moderation; every material decision or timeout must remain public, reasoned, traceable, and auditable.
+
 Next review candidate: continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
 
 Approximate current maturity:
