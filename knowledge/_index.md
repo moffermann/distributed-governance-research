@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|Protocol Change Governance and C019 Resolution v0]]
 - [[../docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|Value Fulfillment Reputation and C018 Resolution v0]]
 - [[../docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION|Value Thesis Reformulation and C017 Resolution v0]]
 - [[../docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|Disbursement Milestone AI Validation and C016 Resolution v0]]
@@ -116,6 +117,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|Disbursement Milestone AI Validation and C016 Resolution v0]]
 - [[../docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION|Value Thesis Reformulation and C017 Resolution v0]]
 - [[../docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|Value Fulfillment Reputation and C018 Resolution v0]]
+- [[../docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|Protocol Change Governance and C019 Resolution v0]]
 
 ## Core glossary
 
