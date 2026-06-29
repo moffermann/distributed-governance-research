@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|Public Institution Exclusion and C007 Resolution v0]]
 - [[../docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|Funding Commitment and C005 Resolution v0]]
 - [[../docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|Complaint Entity and C004 Resolution v0]]
 - [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
@@ -88,6 +89,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
 - [[../docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|Complaint Entity and C004 Resolution v0]]
 - [[../docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|Funding Commitment and C005 Resolution v0]]
+- [[../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|Public Institution Exclusion and C007 Resolution v0]]
 
 ## Core glossary
 
