@@ -144,7 +144,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 - [[principles/P006-layered-complexity-and-citizen-simplicity|P006 — Layered Complexity and Citizen Simplicity]]
 
 ## Open questions and objections
-n
+
 - [[open-questions/README|Open Questions]]
 - [[objections/README|Objections]]
 
