@@ -238,6 +238,33 @@ A project declares:
 - funding status;
 - funding closure rules.
 
+The project should also expose social support and justified objection signals separately from funding.
+
+Recommended signal fields:
+
+- active support count;
+- active justified objection count;
+- withdrawn support count as historical context;
+- withdrawn objection count as historical context;
+- main objection reasons;
+- whether any objection has been converted into a formal complaint.
+
+Rules:
+
+```text
+Support:
+  reversible civic signal.
+
+Justified objection:
+  reversible structured civic signal.
+
+Funding:
+  financial commitment governed by funding rules.
+
+Complaint:
+  formal review object governed by complaint rules.
+```
+
 Core funding rules:
 
 ```text

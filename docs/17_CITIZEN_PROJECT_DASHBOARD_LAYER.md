@@ -168,6 +168,8 @@ Example:
 ```text
 👥 Beneficiarios: 80
 💰 Financiadores: 1.240
+👍 Supporters: 1,180
+⚠ Justified objections: 18
 🛡 Fiscalizadores: 0
 📎 Evidencias: 12
 💬 Comentarios: 35
@@ -175,6 +177,17 @@ Example:
 ```
 
 Do not show abstract judgments as the main signal. Show concrete counts and entry points.
+
+Support and justified objections should be shown separately from funding.
+
+Rules:
+
+- funding shows financial feasibility;
+- support shows active positive civic signal;
+- justified objections show active reasoned negative civic signal;
+- complaints show formal review objects.
+
+Support and justified objection are reversible by the citizen who created them. Withdrawn signals may remain visible in detail or audit layers, but they should not count as active support or active objection.
 
 ## 8. Short summary
 

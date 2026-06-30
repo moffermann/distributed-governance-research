@@ -178,6 +178,7 @@ Idea has many SupportSignals
 Idea has many Comments
 Idea has many Followers
 Idea has many StructuredObjections
+Idea has many JustifiedObjectionSignals
 Idea has many AuditEvents
 ```
 
@@ -207,6 +208,8 @@ Key attributes:
 - related-party conflict classification where applicable;
 - public-benefit safeguards where applicable;
 - common-good impact declarations where relevant;
+- active support count;
+- active justified objection count;
 - funding target;
 - funding deadline;
 - reformulation policy or policy reference;
@@ -233,11 +236,58 @@ Project has many FiscalizerOffers
 Project has many FundingCommitments
 Project has many Complaints
 Project has many Comments
+Project has many SupportSignals
+Project has many JustifiedObjectionSignals
 Project has many RelatedPartyConflictReviews
 Project has ThresholdPolicy or threshold policy reference
 Project has many AuditEvents
 Project has one current State
 ```
+
+## Support Signal
+
+A reversible positive civic signal attached to an idea or project.
+
+Attributes:
+
+- actor;
+- target object: idea or project;
+- target version where relevant;
+- reason or optional note where allowed;
+- status: active, withdrawn, superseded;
+- created timestamp;
+- withdrawn timestamp where applicable;
+- audit references.
+
+Rule:
+
+> Support is a civic signal, not funding. A citizen may withdraw support at any time, and withdrawn support should not count as active support.
+
+## Justified Objection Signal
+
+A reversible structured negative civic signal attached to an idea or project.
+
+Attributes:
+
+- actor;
+- target object: idea or project;
+- target version where relevant;
+- objection reason;
+- explanation;
+- affected area: value, beneficiaries, budget, evidence, fiscalization, duplication, access, common-good impact, related-party concern, scope, other;
+- status: active, withdrawn, superseded, converted to complaint where applicable;
+- created timestamp;
+- withdrawn timestamp where applicable;
+- linked complaint where applicable;
+- audit references.
+
+Rule:
+
+> A justified objection is not a simple dislike and is not a formal complaint by default. It is a reversible civic signal that identifies a reasoned concern.
+
+Withdrawal rule:
+
+> Withdrawing a justified objection removes it from active objection counts but does not erase the historical trace and does not erase a formal complaint or review already opened.
 
 ## Threshold Policy
 

@@ -145,6 +145,7 @@ A project must contain:
 - funding deadline;
 - reformulation policy or policy reference;
 - threshold policy or policy reference;
+- social support and justified objection signals;
 - closure conditions;
 - lifecycle state;
 - audit trail.
@@ -156,6 +157,8 @@ Key rule:
 A project draft may exist internally while being prepared. Public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
 
 Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
+
+Projects should expose funding, social support, justified objections, and formal complaints as separate signals. Support and justified objection are reversible civic signals. Funding is a financial commitment governed by funding rules. A complaint is a formal review object.
 
 ## Value thesis and value icons
 

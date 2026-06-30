@@ -23,6 +23,8 @@ Instead, the first layer should show concrete, countable, and explorable signals
 ```text
 beneficiaries
 funders
+supporters
+justified objections
 fiscalizers
 comments
 complaints
@@ -72,6 +74,8 @@ Cierra en 8 días
 Dashboard:
 👥 Beneficiarios: 80
 💰 Financiadores: 1.240
+👍 Supporters: 1.180
+⚠ Justified objections: 18
 🛡 Fiscalizadores: 2
 💬 Comentarios: 35
 🚩 Denuncias: 0
@@ -111,6 +115,37 @@ Clicking opens:
 - average contribution where useful;
 - delegated versus direct funding where useful;
 - number of funders who offered to provide evidence.
+
+Funding is a financial signal. It should not be treated as a larger social-support vote merely because the amount is larger.
+
+### Supporters
+
+Shows active civic support for the project.
+
+Clicking opens:
+
+- active support count;
+- withdrawn support count as historical context where useful;
+- supporter diversity summary where appropriate;
+- whether support is a threshold condition for this project;
+- action to support or withdraw support.
+
+Support is reversible. Withdrawing support does not withdraw committed funding.
+
+### Justified objections
+
+Shows active structured objections to the project.
+
+Clicking opens:
+
+- active objection count;
+- withdrawn objection count as historical context where useful;
+- objection categories;
+- whether any objection has been converted into a formal complaint;
+- current response or resolution status;
+- action to object with reason or withdraw an objection.
+
+A justified objection is not a simple dislike and is not a formal complaint by default. It is a reversible civic signal that identifies a reasoned concern.
 
 ### Fiscalizers
 

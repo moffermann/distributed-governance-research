@@ -52,6 +52,7 @@ Observación
 Sugerencia
 Respuesta
 Aclaración
+Justified objection
 ```
 
 A formal issue should be redirected to the complaint flow.
@@ -143,6 +144,40 @@ Puedes publicarlo como comentario, pero si quieres que active revisión formal, 
 ```
 
 The system should not force all critical comments into complaints, but it should make the difference clear.
+
+## Justified objection signal
+
+A justified objection is a structured civic signal attached to a project.
+
+It should capture:
+
+- objection reason;
+- affected project area;
+- short explanation;
+- whether the citizen wants only civic visibility or wants to start a formal complaint;
+- current status: active or withdrawn.
+
+Example:
+
+```text
+Reason:
+Possible duplication.
+
+Explanation:
+The ministry already announced a multi-court project in the same location.
+
+Current effect:
+Counts as active justified objection.
+Does not block the project by itself.
+```
+
+The citizen may withdraw a justified objection at any time. Withdrawal removes it from active objection counts but preserves the historical audit trail.
+
+If the citizen wants review, blocking, correction, fiscalization, or formal response, the system should offer the complaint flow.
+
+Rule:
+
+> Justified objection is reversible civic signal. Complaint is formal review.
 
 ## 4. Visibility, identity, and narrow publication gate
 

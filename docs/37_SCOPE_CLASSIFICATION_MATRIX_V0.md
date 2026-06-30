@@ -162,6 +162,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Support versus financing signals `H026` | Core v0 | Needed to separate financial feasibility, social support, justified objection, and formal complaint signals. |
 | Proportional project thresholds `H027` | Core v0 | Needed to define visible, proportional execution-readiness conditions without imposing one universal approval formula. |
 | Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises. |
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |

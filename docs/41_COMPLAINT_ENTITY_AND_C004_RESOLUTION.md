@@ -132,6 +132,8 @@ Rule:
 
 > Support for a complaint means citizens think it deserves attention. It does not prove the complaint.
 
+Project-level justified objections may point citizens toward a complaint, but they do not become complaints automatically. If a citizen wants formal review, the objection must be converted into or accompanied by a complaint with affected scope, allegation, evidence, and requested outcome.
+
 ## Supporting a complaint
 
 A citizen may support a complaint when they believe it deserves review.

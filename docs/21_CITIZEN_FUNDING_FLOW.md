@@ -242,6 +242,23 @@ Financiar implica seguir automáticamente el proyecto.
 
 The citizen may later adjust notification preferences, but the project should not disappear after funding. External interruptions may be muted, but critical in-app records for reformulation, pause, revocation, closure, complaint, fiscalization, or fund-treatment events should remain visible.
 
+Funding should remain separate from civic support.
+
+The system may ask whether the citizen also wants to support the project publicly as a civic signal, but financial amount should not count as extra social legitimacy.
+
+Example:
+
+```text
+You funded this project.
+
+Do you also want to show civic support?
+
+[Support project]
+[Not now]
+```
+
+If the citizen later withdraws support, the funding commitment remains governed by the funding, reformulation, failure, and closure rules.
+
 ## Release rule
 
 Funds are not released to the executor just because a citizen funds the project.
@@ -316,6 +333,7 @@ Citizen clicks Fund
 The funding flow should not:
 
 - imply that money is immediately transferred to the executor;
+- imply that a larger amount creates more social support;
 - hide release conditions;
 - present funding as freely withdrawable after confirmation;
 - require technical understanding before funding;

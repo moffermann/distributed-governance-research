@@ -286,6 +286,19 @@ Clicking funding shows:
 - direct versus delegated funding where useful;
 - whether funding is reserved, committed, or released.
 
+### Support and justified objection detail
+
+Clicking support or justified objections shows:
+
+- active support count;
+- active justified objection count;
+- withdrawn support or objection as historical context where useful;
+- main objection reasons;
+- whether any objection was converted into a complaint;
+- the citizen's current support or objection state.
+
+Support and justified objection are reversible civic signals. Funding remains a separate financial commitment, and complaints remain formal review objects.
+
 ### Comments detail
 
 Clicking comments shows:

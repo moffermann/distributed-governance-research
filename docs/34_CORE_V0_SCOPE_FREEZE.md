@@ -120,6 +120,7 @@ A project must include:
 - funding deadline;
 - reformulation policy or policy reference;
 - threshold policy or policy reference;
+- social support and justified objection signals;
 - closure conditions;
 - lifecycle state;
 - audit trail.
@@ -131,6 +132,10 @@ Rule:
 Rule:
 
 > Each project should expose the applicable threshold policy that explains which proportional conditions must be satisfied for publication, execution-ready status, disbursement, or closure.
+
+Rule:
+
+> Funding, support, justified objection, and formal complaint are separate project signals. Support and justified objection are reversible; funding and formal complaints follow their own rules.
 
 ### 4. Value thesis, value icons, and metrics
 

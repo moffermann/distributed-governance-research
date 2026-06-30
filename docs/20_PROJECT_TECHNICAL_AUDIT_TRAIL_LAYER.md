@@ -71,13 +71,14 @@ Layer 5 should include technical traceability for:
 7. Evidence archive
 8. Fiscalization reports
 9. Complaint and review trace
-10. Conflict-of-interest declarations
-11. Actor and role events
-12. Moderation and mode decisions
-13. System decisions and protocol references
-14. Governance resolutions and review timeouts
-15. Discovery visibility reasons
-16. Data export and verification tools
+10. Civic support and justified objection trace
+11. Conflict-of-interest declarations
+12. Actor and role events
+13. Moderation and mode decisions
+14. System decisions and protocol references
+15. Governance resolutions and review timeouts
+16. Discovery visibility reasons
+17. Data export and verification tools
 ```
 
 ## 1. Project versions
@@ -248,7 +249,30 @@ Include the complete trace of complaints and reviews:
 
 Layer 5 should show not only the result, but how the result was reached.
 
-## 10. Conflict-of-interest declarations
+## 10. Civic support and justified objection trace
+
+Track support and justified objection signals separately from funding and complaints.
+
+Layer 5 should preserve:
+
+- actor;
+- signal type: support or justified objection;
+- project or project version;
+- objection reason where applicable;
+- active, withdrawn, superseded, or converted status;
+- creation timestamp;
+- withdrawal timestamp where applicable;
+- whether the signal affected threshold policy, visibility, review priority, or governance-resolution discussion;
+- audit references.
+
+Rules:
+
+- active counts should exclude withdrawn signals;
+- historical withdrawals remain auditable;
+- support withdrawal does not withdraw committed funding;
+- objection withdrawal does not erase a formal complaint or review already opened.
+
+## 11. Conflict-of-interest declarations
 
 Track declared and detected relationships among relevant actors.
 
@@ -271,7 +295,7 @@ Classification should distinguish:
 - severe conflict requiring reformulation, actor exclusion, disbursement blocking, or rejection;
 - hidden or misrepresented conflict that may trigger complaint review and a role-specific Responsibility Event.
 
-## 11. Actor and role events
+## 12. Actor and role events
 
 Track role assignments and role changes.
 
@@ -299,7 +323,7 @@ For each role event:
 - conflict declarations;
 - reputation-relevant outcomes.
 
-## 12. Moderation and mode decisions
+## 13. Moderation and mode decisions
 
 If the project is in a tutored, semi-open, suspended, or otherwise special operating mode, Layer 5 should show:
 
@@ -316,7 +340,7 @@ This preserves traceability without making moderation the first citizen experien
 
 If a comment, complaint, evidence item, testimony, beneficiary confirmation, affected-party report, or other formal action is published or submitted under protected identity, Layer 5 should record the existence of the protected identity request, the AI-assisted or restricted-review process result where applicable, the contextual protected display identity, and any legal/safety/privacy gate action, without exposing protected personal identity to unauthorized viewers.
 
-## 13. System decisions and protocol references
+## 14. System decisions and protocol references
 
 Layer 5 should show important system decisions and the rules used.
 
@@ -345,7 +369,7 @@ For threshold policy decisions, Layer 5 should preserve:
 - citizen-facing explanation;
 - changes to the threshold policy after publication, if any.
 
-## 14. Governance resolutions and review timeouts
+## 15. Governance resolutions and review timeouts
 
 For tutored or semi-open operating modes, Layer 5 should include public governance objects:
 
@@ -362,7 +386,7 @@ For tutored or semi-open operating modes, Layer 5 should include public governan
 
 Tutored decisions and tutored silence should be auditable civic objects, not hidden administrative events.
 
-## 15. Discovery visibility reasons
+## 16. Discovery visibility reasons
 
 Layer 5 should preserve material discovery and visibility traces where they may affect funding or legitimacy.
 
@@ -378,7 +402,7 @@ Examples:
 
 The ordinary citizen does not need to see every technical ranking detail, but reviewers should be able to reconstruct whether discovery acted as a hidden allocator.
 
-## 16. Data export and verification tools
+## 17. Data export and verification tools
 
 Layer 5 should support external review.
 

@@ -45,14 +45,15 @@ Layer 4 should include:
 4. Who will do it
 5. Budget
 6. Conditions to become execution-ready
-7. Execution plan and milestones
-8. Evidence committed
-9. Fiscalization
-10. Declared risks and antivalues
-11. Relevant comments
-12. Complaints
-13. Change history
-14. Access to full audit trail
+7. Civic support and justified objections
+8. Execution plan and milestones
+9. Evidence committed
+10. Fiscalization
+11. Declared risks and antivalues
+12. Relevant comments
+13. Complaints
+14. Change history
+15. Access to full audit trail
 ```
 
 ## 1. Citizen summary
@@ -232,7 +233,35 @@ Applies because:
 The project builds a public facility, may need permits, and requires independent fiscalization before execution.
 ```
 
-## 7. Execution plan and milestones
+## 7. Civic support and justified objections
+
+Show social support and justified objections separately from funding.
+
+Example:
+
+```text
+Active support:
+1,180 citizens
+
+Active justified objections:
+18
+
+Main objection reasons:
+- possible duplication with existing public project
+- unclear beneficiary access
+
+Withdrawn support:
+87 historical withdrawals
+
+Withdrawn objections:
+7 historical withdrawals
+```
+
+Rule:
+
+> Support and justified objections are reversible civic signals. They do not withdraw funding and do not replace formal complaints.
+
+## 8. Execution plan and milestones
 
 Show the plan in citizen language.
 
@@ -260,7 +289,7 @@ Deadline: month 6
 Evidence: final report, total attendance, beneficiary confirmation
 ```
 
-## 8. Evidence committed
+## 9. Evidence committed
 
 Show what evidence the project has committed to produce.
 
@@ -284,7 +313,7 @@ Pending: 6
 Observed: 0
 ```
 
-## 9. Fiscalization
+## 10. Fiscalization
 
 Show who reviews the project and what is reviewed.
 
@@ -321,7 +350,7 @@ Delivered reports:
 0
 ```
 
-## 10. Declared risks and antivalues
+## 11. Declared risks and antivalues
 
 The project sheet should show not only promised value, but also possible negative effects or risks declared by the project.
 
@@ -348,7 +377,7 @@ Possible antivalues:
 
 > The citizen project sheet should show both promised value and declared risks or possible negative effects.
 
-## 11. Relevant comments
+## 12. Relevant comments
 
 Do not show every comment by default. Show a useful synthesis.
 
@@ -369,7 +398,7 @@ Main topics:
 [See full conversation]
 ```
 
-## 12. Complaints
+## 13. Complaints
 
 Show complaint status clearly.
 
@@ -396,7 +425,7 @@ Status:
 Project observed until blocking complaint is resolved.
 ```
 
-## 13. Change history
+## 14. Change history
 
 Show a citizen-readable version history.
 
@@ -415,7 +444,7 @@ Beneficiary number corrected from 100 to 80.
 
 Layer 4 should show meaningful changes, not raw technical records.
 
-## 14. Access to full audit trail
+## 15. Access to full audit trail
 
 Layer 4 should end with access to Layer 5.
 

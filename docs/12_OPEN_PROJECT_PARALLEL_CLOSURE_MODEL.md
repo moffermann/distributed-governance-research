@@ -15,6 +15,8 @@ This model simplifies citizen participation and better reflects distributed gove
 A project can be open for multiple forms of participation at the same time:
 
 - funding;
+- support;
+- justified objection;
 - fiscalization offers or fiscalizer participation;
 - evidence producer commitments;
 - beneficiary confirmation;
@@ -53,6 +55,12 @@ Funding:
   $7.560.000 of $12.000.000
   Missing $4.440.000
 
+Support:
+  1,180 active supporters
+
+Justified objections:
+  18 active objections
+
 Fiscalizers:
   0 of 1 required
 
@@ -73,6 +81,10 @@ The citizen can immediately see what is missing and where they can participate.
 A citizen or organization may:
 
 - fund the project;
+- support the project without funding;
+- withdraw support;
+- submit a justified objection;
+- withdraw a justified objection;
 - offer to become a fiscalizer, if eligible;
 - offer to become an evidence producer;
 - commit to provide evidence later;
@@ -80,11 +92,13 @@ A citizen or organization may:
 - file a complaint;
 - follow the project;
 - support without funding;
-- inspect beneficiaries, funders, fiscalizers, evidence, comments, and complaints.
+- inspect beneficiaries, funders, supporters, justified objections, fiscalizers, evidence, comments, and complaints.
 
 The system does not need to block funding simply because other conditions are incomplete.
 
 Instead, the funding is conditional until the project closes its open formation stage.
+
+Support and justified objection are civic signals, not financial commitments. They may inform the project's legitimacy profile, threshold policy, attention, or review priority, but they remain reversible by the citizen who created them. Withdrawing support does not withdraw committed funding. Withdrawing an objection does not erase a formal complaint if one was filed.
 
 ## Conditional funding
 

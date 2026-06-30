@@ -56,6 +56,8 @@ Layer 3 includes reusable panels for:
 - value promised;
 - beneficiaries;
 - funding;
+- support;
+- justified objections;
 - fiscalizers;
 - evidence;
 - comments;
@@ -195,7 +197,101 @@ Sólo si el proyecto completa sus condiciones de cierre y luego según hitos apr
 
 Layer 3 should make this clear.
 
-## 4. Fiscalizer detail
+## 4. Support detail
+
+Opened when the citizen clicks support.
+
+The panel should show:
+
+- active supporters;
+- withdrawn support where useful as historical context;
+- supporter diversity where appropriate;
+- whether support is part of the applicable threshold policy;
+- the citizen's current support state.
+
+Example:
+
+```text
+Support
+
+Active support:
+1,180 citizens
+
+Withdrawn support:
+87 historical withdrawals
+
+Your current signal:
+Supporting
+
+Meaning:
+You think this project deserves attention or execution.
+
+Important:
+Support is not funding. You can withdraw support at any time.
+
+[Withdraw support]
+```
+
+If the citizen has not supported the project:
+
+```text
+[Support project]
+```
+
+### Rule
+
+> Support is a reversible civic signal. It does not commit money and does not replace funding, evidence, fiscalization, or formal approval where required.
+
+## 5. Justified objection detail
+
+Opened when the citizen clicks justified objections.
+
+The panel should show:
+
+- active objections;
+- withdrawn objections where useful as historical context;
+- objection categories;
+- project responses;
+- whether any objection has been converted into a formal complaint;
+- the citizen's current objection state.
+
+Example:
+
+```text
+Justified objections
+
+Active objections:
+18
+
+Main reasons:
+- possible duplication with an existing public project
+- beneficiary access unclear
+- missing permit document
+
+Withdrawn objections:
+7 historical withdrawals
+
+Your current signal:
+You objected: possible duplication.
+
+Important:
+This is not a formal complaint by default. If you want review, file a complaint.
+
+[Withdraw objection]
+[File complaint]
+```
+
+If the citizen has not objected:
+
+```text
+[Object with reason]
+```
+
+### Rule
+
+> A justified objection is a reversible structured civic signal, not a simple dislike and not a formal complaint by default.
+
+## 6. Fiscalizer detail
 
 Opened when the citizen clicks fiscalizers or a missing fiscalizer condition.
 
@@ -243,7 +339,7 @@ Informes:
 0 entregados / 3 esperados
 ```
 
-## 5. Evidence detail
+## 7. Evidence detail
 
 Opened when the citizen clicks evidence.
 
@@ -295,7 +391,7 @@ Estado:
 
 > Evidence is not blind trust. It is material that can be reviewed, contradicted, and traced.
 
-## 6. Comments detail
+## 8. Comments detail
 
 Opened when the citizen clicks comments.
 
@@ -323,7 +419,7 @@ Observaciones destacadas:
 [Comentar]
 ```
 
-## 7. Complaint detail
+## 9. Complaint detail
 
 Opened when the citizen clicks complaints.
 
@@ -364,7 +460,7 @@ Observado hasta resolver denuncia bloqueante.
 [Presentar denuncia]
 ```
 
-## 8. Missing condition detail
+## 10. Missing condition detail
 
 Opened when the citizen clicks a condition required for the project to become execution-ready.
 
@@ -385,7 +481,7 @@ Qué puede pasar ahora:
 - el proyecto puede reformularse
 ```
 
-## 9. Alert detail
+## 11. Alert detail
 
 Opened when the citizen clicks an alert.
 
