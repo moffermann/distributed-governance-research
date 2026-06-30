@@ -10,6 +10,15 @@ The central problem is that the executor has strong incentives to weaken, underf
 
 > The executor executes. The system and protocol define control requirements. Evidence producers collect fulfillment or control evidence. The fiscalizer evaluates. The community can observe, submit complaint evidence, contradict, and denounce.
 
+H015 adds an evaluation-context boundary to this rule:
+
+```text
+Evidence capture and formal evaluation are separate functions.
+Formal evaluation is valid only for the project dimension and formal effect that the actor is allowed, qualified, or situated to evaluate.
+```
+
+This means a neighbor may submit a photo showing that the Macul sports court is closed, incomplete, or different from the accepted design. That submission may become useful fulfillment/control evidence. It does not by itself release funds, close the project, prove breach, assign responsibility, or update reputation until the relevant fiscalizer, reviewer, authority, or protocol path records a formal evaluation for the specific dimension and effect.
+
 H016 frames this as a distributed but protocol-selected fiscalization ecosystem:
 
 ```text
@@ -203,6 +212,8 @@ replace fiscalizer, regulator, court, or competent authority
 ## 3. Responsible fiscalization
 
 The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, fulfillment evidence obligations, guarantees, mitigation commitments, and fiscalization criteria.
+
+Each formal fiscalization conclusion should identify the evaluated dimension, actor role, observability basis, authority or qualification basis, contextualized evidence used, method or limitation, evaluation type, formal effect, and review status. A fiscalizer may rely on many evidence sources, but the formal conclusion should not collapse beneficiary experience, citizen observation, technical review, complaint findings, and value fulfillment into one undifferentiated score.
 
 The responsible fiscalizer may use:
 

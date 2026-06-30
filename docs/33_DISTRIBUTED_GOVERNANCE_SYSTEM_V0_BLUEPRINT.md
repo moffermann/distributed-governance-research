@@ -310,6 +310,39 @@ Contradicted
 Used in fiscalization report
 ```
 
+## Evaluation context model
+
+H015 requires evaluation to be scoped by dimension and by effect.
+
+Core v0 distinguishes:
+
+```text
+Soft Public Signal
+Experiential Evaluation
+Fulfillment Evaluation
+Technical or Professional Review
+Fiscalization Conclusion
+Complaint Review Finding
+Reputation Input
+```
+
+Ordinary citizens should not face this as a technical form. They can comment, confirm, object, submit complaint evidence, or file a complaint. The technical layer records what kind of evaluation the input can become, what dimension it concerns, what the actor could observe or experience, and what formal effect it may have.
+
+Example:
+
+```text
+Macul multi-court project:
+  a resident may complain that bathrooms are missing;
+  a beneficiary may confirm whether public access was real;
+  a technical reviewer may measure court dimensions;
+  a fiscalizer may approve, observe, reject, or require correction;
+  reputation changes only after reviewed role-specific responsibility or verified fulfillment.
+```
+
+Rule:
+
+> Formal evaluation is not an open popularity vote. It requires observability, experience, assignment, or qualification for the evaluated dimension, and it must state whether it is a soft signal, fulfillment input, disbursement input, closure input, complaint finding, responsibility review, or reputation input.
+
 ## Fiscalization model
 
 Fiscalization is the accountable review of project compliance.
@@ -749,6 +782,8 @@ Closure must show:
 - reputation effects.
 
 Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, fulfillment evidence corrections, and responsibility events.
+
+Citizen, beneficiary, funder, and affected-party evaluations may remain visible as soft or experiential signals. They become formal reputation inputs only when the relevant review path connects them to verified fulfillment, founded complaint correction, or role-specific responsibility.
 
 Verified discovery may create positive role-specific reputation when a reviewed contribution materially improves information reliability, prevents loss, corrects false or manipulated contextualized evidence, or reveals a hidden issue. Raw accusations, AI anomaly flags, and popularity signals do not create reputation effects by themselves.
 

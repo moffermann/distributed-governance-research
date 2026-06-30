@@ -79,6 +79,8 @@ The fiscalizer reviews evidence and evaluates whether the project complied.
 
 Both may be performed by the same actor in v0, but the system should record which function is being performed.
 
+H015 further requires that evaluator mode be recorded as a dimension-scoped and effect-scoped EvaluationRecord. The same evidence item may support different later reviews, but an evidence producer does not create a formal fulfillment, disbursement, closure, complaint, or reputation conclusion merely by submitting material.
+
 Example:
 
 ```text
@@ -275,7 +277,7 @@ Create and use the Evidence Producer role. Do not treat executor-submitted mater
 
 Final rule:
 
-> Fulfillment evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation. Evidence items should connect to material claims, carry an explicit evidence context, and may create responsibility or verified-discovery effects only after review.
+> Fulfillment evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation. Evidence items should connect to material claims, carry an explicit evidence context, and may create responsibility or verified-discovery effects only after review. When evidence is used for formal fulfillment, disbursement, closure, complaint, or reputation consequences, the system should also record the applicable evaluation context, evaluated dimension, authority or qualification basis, and formal effect.
 
 ## Documents that should eventually reflect this resolution
 
@@ -303,7 +305,7 @@ This resolution should inform future updates to:
 
 - scale fulfillment/control evidence requirements by risk;
 - require relationship and conflict declarations;
-- distinguish evidence production from evaluation;
+- distinguish evidence production from dimension-scoped and effect-scoped evaluation;
 - record source and role metadata;
 - require corroboration for critical milestones;
 - allow lightweight evidence for low-risk projects;

@@ -205,6 +205,8 @@ The system should not fund unlimited evidence producers. It should reject or clo
 
 After submission, fulfillment evidence should have a clear status.
 
+The submission status is not the same as formal project evaluation. If the material is later used for disbursement, milestone closure, value fulfillment, complaint review, or reputation effects, the fiscalizer or reviewer should create a separate EvaluationRecord that identifies the evaluated dimension, actor role, observability basis, evidence used, evaluation type, formal effect, and review status.
+
 Possible states:
 
 ```text
@@ -282,7 +284,7 @@ Possible status:
 Supports claim / contradicts claim / insufficient to evaluate.
 ```
 
-The system should avoid asking ordinary citizens to classify technical validity. The citizen may describe what the fulfillment evidence shows; the fiscalizer or reviewer evaluates evidentiary value.
+The system should avoid asking ordinary citizens to classify technical validity. The citizen may describe what the fulfillment evidence shows; the fiscalizer or reviewer evaluates evidentiary value within the relevant evaluation context.
 
 Where possible, the interface may show the relevant evidential contract need in simple language.
 

@@ -65,6 +65,24 @@ Observability means that an actor has direct or verifiable access to a project d
 
 If an actor cannot observe or verify a dimension, they may express an opinion or alert, but should not formally score that dimension.
 
+## Evaluation Context
+
+Evaluation context distinguishes what procedural job an evaluation is doing and what effect it may have.
+
+Core v0 should distinguish soft public signals from formal evaluation inputs.
+
+Minimum distinction:
+
+- `Soft Public Signal`: opinion, concern, satisfaction, support, objection, or perceived quality without direct formal effect.
+- `Experiential Evaluation`: evaluation of a dimension directly experienced by a beneficiary, affected party, worker, local resident, funder, or similar actor.
+- `Fulfillment Evaluation`: formal evaluation of value thesis, metrics, milestones, phase gates, deliverables, disbursement, closure, or reputation-relevant obligations.
+- `Technical or Professional Review`: formal evaluation requiring specialized competence or assigned authority.
+- `Fiscalization Conclusion`: fiscalizer output connecting contextualized evidence to review outcome.
+- `Complaint Review Finding`: review of complaint admissibility, relevance, evidence, scope, foundedness, and procedural effect.
+- `Reputation Input`: reviewed input to role-specific reputation.
+
+Formal evaluation is dimension-scoped and effect-scoped. See `evaluation-context-taxonomy-v0.md`.
+
 ## Evidence Context
 
 Evidence context distinguishes what procedural job an evidence item is doing.

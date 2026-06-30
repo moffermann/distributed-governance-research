@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
+- [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]
 - [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
 - [[hypotheses/H017-meta-governance-protocol-evolution|H017 — Meta-Governance and Protocol Evolution]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
@@ -163,6 +165,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 - [[concepts/core-glossary-v0|Core Glossary v0]]
 - [[concepts/project-governance-glossary-addendum|Project Governance Glossary Addendum]]
+- [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 
 ## Foundational session distillations
@@ -187,6 +190,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/distributed-trust|Distributed Trust]]
 - [[concepts/algorithm-as-coordinator|Algorithm as Coordinator]]
 - [[concepts/distributed-planning-architecture|Distributed Planning Architecture]]
+- [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 
 ## Functional matrix
@@ -200,6 +204,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]
 - [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
 - [[hypotheses/H017-meta-governance-protocol-evolution|H017 — Meta-Governance and Protocol Evolution]]
 - [[hypotheses/H018-project-value-thesis-and-measurement|H018 — Project Value Thesis and Measurement]]

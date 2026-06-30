@@ -219,6 +219,16 @@ Core v0 includes material information claims as the accountable statements that 
 
 Verified discovery may be rewarded or recognized only after review confirms materiality and usefulness. AI may assist with anomaly, duplicate, privacy, or contradiction detection, but it does not decide truth, fraud, responsibility, fund release, or legal consequences.
 
+### 7a. Evaluation context model
+
+Core v0 includes `EvaluationRecord` as a technical audit object for formal evaluations.
+
+Formal evaluation is dimension-scoped and effect-scoped. A citizen observation, beneficiary experience, technical review, fiscalization conclusion, complaint finding, fulfillment evaluation, and reputation input may all concern the same project, but they do not have the same authority or effect.
+
+An EvaluationRecord should preserve the evaluation context, evaluated dimension, actor role, observability basis, authority or qualification basis where relevant, contextualized evidence used, evaluation type, formal effect, review status, and audit trace.
+
+Ordinary citizen interfaces should remain simple: users report what they saw, experienced, confirmed, contradicted, or complained about. The technical layer records whether that input remains a soft public signal or becomes part of a formal fulfillment, disbursement, closure, complaint, responsibility, or reputation review.
+
 ### 8. Fiscalization model
 
 Core v0 includes accountable fiscalization.
@@ -455,7 +465,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 

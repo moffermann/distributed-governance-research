@@ -241,6 +241,7 @@ Project has DisbursementMilestonePlan
 Project has one ProjectEvidentialContract
 Project has many FulfillmentEvidenceNeeds
 Project has many EvidenceItems
+Project has many EvaluationRecords
 Project has FiscalizationRequirement
 Project has many FiscalizerOffers
 Project has many FundingCommitments
@@ -1230,6 +1231,49 @@ Linked to report
 Used in verified discovery
 ```
 
+## Evaluation Record
+
+A technical audit record that classifies an evaluation by context, dimension, source role, observability basis, and formal effect.
+
+It is not a new citizen-facing bureaucracy. Ordinary users may comment, confirm, object, or complain through simple interfaces. The system records whether the input is a soft public signal, experiential evaluation, fulfillment evaluation, technical review, fiscalization conclusion, complaint review finding, or reputation input.
+
+Attributes:
+
+- project;
+- project phase where applicable;
+- related value thesis, metric, milestone, budget line, complaint, evidence item, fiscalization report, or reputation record where applicable;
+- evaluation context: soft public signal, experiential evaluation, fulfillment evaluation, technical or professional review, fiscalization conclusion, complaint review finding, or reputation input;
+- evaluated dimension;
+- actor;
+- actor role at evaluation time;
+- observability basis: direct observation, direct experience, technical measurement, document review, assigned fiscalization, qualified professional review, financial audit, complaint review, or protocol rule;
+- authority or qualification basis where formal effect is claimed;
+- contextualized evidence used;
+- evaluation type: signal, confirmation, contradiction, compliance review, technical finding, financial finding, fiscalization conclusion, complaint finding, or reputation input;
+- formal effect: none, soft public context, value verification input, disbursement input, correction requirement, closure input, complaint outcome, responsibility review, reputation input, or referral support;
+- confidence or limitation statement where relevant;
+- privacy or protected-identity classification;
+- review status;
+- timestamp;
+- audit trail.
+
+Relationships:
+
+```text
+EvaluationRecord belongs to Project
+EvaluationRecord may reference ValueVerificationPackage
+EvaluationRecord may reference Metric
+EvaluationRecord may reference Milestone
+EvaluationRecord may reference EvidenceItem
+EvaluationRecord may reference Complaint
+EvaluationRecord may reference FiscalizationReport
+EvaluationRecord may contribute to ReputationRecord after review
+```
+
+Rule:
+
+> Formal evaluation is dimension-scoped and effect-scoped. A person may be a valid evaluator for one dimension and not for another. Soft public signals may be visible and useful, but they should not directly release funds, close projects, sanction actors, or update role-specific reputation without the relevant review path.
+
 ## Verified Discovery
 
 A review-confirmed discovery of material hidden information, false or manipulated contextualized evidence, KPI manipulation, undeclared conflict, material omission, or relevant contradiction.
@@ -1401,6 +1445,7 @@ Attributes:
 - project;
 - milestone;
 - fiscalizer;
+- related evaluation records;
 - fulfillment evidence considered;
 - fulfillment evidence limitations or unresolved contradictions;
 - metric evaluation;

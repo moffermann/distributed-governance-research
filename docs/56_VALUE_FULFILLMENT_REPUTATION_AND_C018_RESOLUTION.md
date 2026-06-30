@@ -319,6 +319,18 @@ They should not automatically create formal sanctions.
 
 Formal reputation updates require verified project metrics, accepted fulfillment evidence, fiscalizer evaluation, or founded complaints connected to role obligations.
 
+H015 adds the evaluation-context boundary:
+
+```text
+soft public signal -> visible context, no direct reputation effect
+experiential evaluation -> may inform value verification if relevant and reviewed
+complaint review finding -> may correct metrics or trigger responsibility review
+fulfillment evaluation -> may update value fulfillment score
+responsibility event -> may update role-specific reputation
+```
+
+The reputation record should preserve the evaluation context and formal effect instead of treating all evaluations as equivalent.
+
 ## Closure category as context
 
 Closure categories remain visible because citizens need procedural context.
@@ -467,6 +479,7 @@ This resolution should inform future updates to:
 - Metric weights can be gamed if poorly defined.
 - Fiscalizer evaluations may be inconsistent.
 - Citizen expectations may differ from formal value metrics.
+- Soft public signals may be confused with formal reputation inputs.
 - Founded complaints may arrive after reputation has already been updated.
 - A moving-average score can hide severe recent misconduct if not separately displayed.
 
@@ -474,6 +487,7 @@ This resolution should inform future updates to:
 
 - show metric breakdown behind the numeric score;
 - show recent project evaluations separately from aggregate reputation;
+- label soft public signals, experiential evaluations, fulfillment evaluations, complaint findings, and reputation inputs separately;
 - keep severe responsibility events visible even if aggregate score later improves;
 - require metric weights before funding;
 - correct historical project scores when founded complaints change contextualized evidence;

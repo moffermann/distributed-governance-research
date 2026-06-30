@@ -132,6 +132,36 @@ sessions delivered, regular attendance, continuity, beneficiary feedback, fulfil
 
 If the project changes the evidential contract after support or funding, the value-verification package should preserve the old version, explain the change, and trigger reformulation or review where the change materially weakens what citizens funded.
 
+## Relationship with observability-based evaluation
+
+H015 adds that value verification must distinguish evaluation context.
+
+Beneficiary feedback, affected-party experience, citizen observations, expert opinions, fiscalizer conclusions, complaint findings, and reputation inputs should not collapse into one undifferentiated score.
+
+For every formal value-verification input, the technical layer should record:
+
+```text
+evaluated dimension
+actor role
+observability basis
+authority or qualification basis where applicable
+contextualized evidence used
+evaluation type
+formal effect
+```
+
+Example:
+
+```text
+Macul multi-court project:
+  beneficiary confirms whether public access was real;
+  resident complains that bathrooms are missing;
+  technical reviewer checks dimensions and safety;
+  fiscalizer decides whether the design gate or construction milestone is accepted.
+```
+
+Each signal matters, but each has a different procedural effect.
+
 ## Example: sports value
 
 Promised value:
@@ -216,6 +246,8 @@ Examples:
 - expert review;
 - structured testimonial;
 - satisfaction or usefulness score.
+
+Quality signals should be classified as soft public signals or experiential evaluations unless a review path incorporates them into the formal value-verification package.
 
 ### Fulfillment evidence strength
 
@@ -332,6 +364,10 @@ Final rule:
 
 > Every promised value must be verified through a package of metrics and fulfillment evidence. Activity metrics alone are insufficient. The fiscalizer may mark a project as formally compliant but weak in value if the broader fulfillment evidence does not reasonably demonstrate the promised value.
 
+H015 complement:
+
+> Value-verification inputs must be dimension-scoped and effect-scoped. A citizen, beneficiary, affected party, expert, evidence producer, fiscalizer, or auditor may contribute only the evaluation type their observability, experience, assignment, or qualification supports.
+
 ## Documents that should eventually reflect this resolution
 
 This resolution should inform future updates to:
@@ -350,6 +386,7 @@ This resolution should inform future updates to:
 - Value verification packages may become too complex.
 - Fiscalizers may apply qualitative judgment inconsistently.
 - Beneficiary feedback may be manipulated.
+- Soft public signals may be mistaken for formal value fulfillment.
 - Some values may remain difficult to measure.
 - Excessive verification could increase project cost.
 

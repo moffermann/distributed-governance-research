@@ -35,6 +35,7 @@ H018 is aligned: every financeable project must declare a value thesis, core val
 H017 is aligned: meta-governance and protocol evolution are Core v0 as a minimum visible rule-change discipline, not as a full constitutional implementation. Core v0 distinguishes Reformulation Proposals, Administrative Rule Changes, System Implementation Changes, and non-tutored Protocol Change Proposals, with public reason, effective date, transition rule, citizen-facing summary, and audit trace where material.
 H016 is aligned: fiscalization is distributed in available actors and fulfillment/control evidence sources, but protocol-selected in responsible assignment. Open observation, fulfillment/control evidence production, responsible fiscalization, technical or reinforced fiscalization, and capped secondary fiscalization remain distinct layers; executor-controlled selection, direct payment, unlimited secondary control, and popularity-only fiscalizer selection are excluded.
 Evidence-context taxonomy is aligned: Core v0 now distinguishes Complaint Evidence, Fulfillment Evidence, Control Evidence, Contradiction Evidence, Administrative Observability Data, and Research Evidence. Bare Evidence Item remains only as a technical object with required evidence_context.
+H015 is aligned: formal evaluation is dimension-scoped and effect-scoped. Citizen observations, beneficiary experience, technical review, fiscalizer conclusions, complaint findings, fulfillment evaluations, and reputation inputs remain distinct evaluation contexts; formal effects such as disbursement, closure, responsibility, or reputation require an EvaluationRecord with observability basis, authority or qualification basis, contextualized evidence used, evaluation type, effect, and review status.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -145,7 +146,9 @@ The forty-seventh residual cleanup aligned H016 with the v0 control, contextuali
 
 The forty-eighth residual cleanup resolved the evidence terminology ambiguity surfaced during H015/H024 discussion: Core v0 now distinguishes Complaint Evidence, Fulfillment Evidence, Control Evidence, Contradiction Evidence, Administrative Observability Data, and Research Evidence. Bare Evidence Item remains only as a technical object with required evidence_context. Complaint filing is not conditioned on observability, while formal fulfillment evaluation requires qualified observability and review. The pass updated core documents, citizen flows, hypotheses, diagrams, generated SVGs, glossary/index entries, and the AGENTS concept-boundary challenge rule.
 
-Next review candidate: H015 observability-based evaluation, now continuing from the accepted evidence-context taxonomy.
+The forty-ninth residual cleanup aligned H015 with the v0 value-verification, fiscalization, evidence-production, reputation, audit, scope-freeze, classification matrix, object-map, glossary, and checklist model: formal evaluation is now scoped by evaluated dimension and formal effect. Core v0 distinguishes soft public signals, experiential evaluations, fulfillment evaluations, technical or professional reviews, fiscalization conclusions, complaint review findings, and reputation inputs. Ordinary citizens can still report what they saw or experienced, while formal effects require a traceable EvaluationRecord.
+
+Next review candidate: H014 reputation input boundaries and role-specific scoring, now after the H015 evaluation-context boundary.
 
 Approximate current maturity:
 

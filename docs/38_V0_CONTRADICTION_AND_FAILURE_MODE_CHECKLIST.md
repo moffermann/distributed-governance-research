@@ -387,6 +387,9 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Is every value icon linked to metrics?
 - [ ] Is every core value commitment linked to a fulfillment evidence need?
 - [ ] Is every metric linked to fulfillment evidence needs and review consequences?
+- [ ] Is every formal evaluation scoped to a dimension and formal effect?
+- [ ] Are soft public signals distinguished from fulfillment evaluation, technical review, fiscalization conclusions, complaint findings, and reputation inputs?
+- [ ] Does every formal evaluation record its actor role, observability basis, authority or qualification basis, and contextualized evidence used where applicable?
 - [ ] Are qualitative value claims handled?
 - [ ] Are input-only metrics rejected when insufficient?
 - [ ] Does the Project Evidential Contract define fulfillment evidence needs rather than preselected evidence producers?
@@ -437,6 +440,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [x] Is responsible fiscalization distinguished from open observation and evidence production?
 - [x] Are fiscalizer assignments protocol-selected rather than popularity-selected, first-funded, executor-selected, or lowest-price-only?
 - [x] Are supplemental fiscalization and evidence missions capped against unlimited control overfunding?
+- [ ] Are fiscalizer evidence-capture functions distinguished from fiscalizer evaluation functions?
+- [ ] Do fiscalization conclusions identify the evaluated dimension, evidence considered, limitations, and formal effect?
 - [ ] Can fiscalizers resign or be replaced?
 - [ ] Are fiscalizer reports public or privacy-filtered?
 - [ ] Does fiscalizer reputation update after closure?
@@ -445,6 +450,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 
 - [ ] Can a complaint be filed easily?
 - [ ] Is the difference between comment and complaint clear?
+- [ ] Is complaint evidence distinguished from formal fulfillment evaluation?
+- [ ] Are complaint review findings separated from the complainant's own evaluation?
 - [ ] Are blocking criteria explicit?
 - [ ] Can complaints be scoped to a milestone, budget line, contextualized evidence item, or actor?
 - [ ] Are weak or abusive complaints handled without discouraging good-faith complaints?
