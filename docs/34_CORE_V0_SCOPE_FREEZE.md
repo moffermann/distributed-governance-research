@@ -469,7 +469,28 @@ Suspended
 
 Core v0 does not force countries to exit tutored mode. It requires material tutored decisions and tutored silence to become public civic objects through Governance Resolution and Review Timeout Resolution mechanisms.
 
-### 22. Role-based reputation
+### 22. Protocol change governance
+
+Core v0 includes a minimum protocol-change discipline.
+
+It does not require a full constitutional meta-governance implementation, but it does require that material rule changes are not silent, surprising, or retroactive by default.
+
+Core v0 distinguishes:
+
+```text
+Reformulation Proposal
+Administrative Rule Change
+System Implementation Change
+Protocol Change Proposal
+```
+
+Tutored mode may allow an administrator or implementing ministry to configure rules within its mandate. Material changes still require public reason, versioning, scope, effective date, adaptation period where relevant, transition rule, and audit trail.
+
+Non-tutored mode requires visible Protocol Change Proposals for major protocol changes, with review, sandbox or simulation where required, approval, versioned implementation, and rollback path where applicable.
+
+Citizen-facing layers summarize what changed, why, when it takes effect, and which projects or actions are affected. Layer 5 preserves the full rule-change object and implementation trace.
+
+### 23. Role-based reputation
 
 Core v0 includes reputation by role: executor, modeler, fiscalizer, evidence producer, complainant, delegate, and other relevant roles.
 
@@ -479,7 +500,7 @@ Rule:
 
 Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, evidence corrections, verified discoveries, and responsibility events by role.
 
-### 23. Discovery visibility and customization
+### 24. Discovery visibility and customization
 
 Core v0 includes transparent discovery controls:
 
@@ -490,7 +511,7 @@ Core v0 includes transparent discovery controls:
 - urgent and recommended projects must show why they appear;
 - paid promotion and opaque manual boosting are excluded.
 
-### 24. Basic observability baseline
+### 25. Basic observability baseline
 
 Core v0 includes simple user-facing signals plus a minimal administrative observability baseline. The full universal institutional observability panel remains Extension v1+.
 
@@ -507,6 +528,8 @@ These should not be part of Core v0 unless later shown necessary:
 - advanced cross-project benchmarking;
 - full common-good subordinate charter system;
 - complex canary releases;
+- full constitutional meta-governance implementation;
+- detailed non-tutored protocol voting mechanics;
 - advanced capture-prediction scoring;
 - advanced inferred recommender systems;
 - detailed sector-specific KPI libraries beyond pilot needs;

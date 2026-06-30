@@ -32,6 +32,7 @@ H021 is aligned: project variation control is a classification layer under C017 
 H020 is aligned: proportional procedural burden is the procedural-depth layer of Threshold Policies; AI may help discover required documents and missing conditions, but document acceptability is validated only by competent authorities, independent reviewers, certifiers, fiscalizers, or protocol-defined review bodies where the active policy requires it.
 H019 is aligned: project modeling, execution, and fiscalization remain distinct responsibilities, while integrated design-and-execution projects are represented through Project Phases. Execution-phase funding may be collected while design is pending, but remains reserved and cannot be released until the required design phase gate and control conditions are accepted.
 H018 is aligned: every financeable project must declare a value thesis, core value commitments, proportional value verification package, and evidence needs before receiving resources. The evidential contract defines needs rather than preselected producers; independent evidence producers later offer evidence tied to metrics, material claims, milestones, phases, risks, or antivalues.
+H017 is aligned: meta-governance and protocol evolution are Core v0 as a minimum visible rule-change discipline, not as a full constitutional implementation. Core v0 distinguishes Reformulation Proposals, Administrative Rule Changes, System Implementation Changes, and non-tutored Protocol Change Proposals, with public reason, effective date, transition rule, citizen-facing summary, and audit trace where material.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -136,7 +137,9 @@ The evidence-quality open question has been captured for later resolution: indep
 
 The forty-fifth residual cleanup aligned H018 with the v0 value-thesis, metric, evidential-contract, evidence-production, fiscalization, audit, object-map, scope, and creation-flow model: a financeable project must connect its value thesis to core value commitments, proportional value verification packages, evidence needs, independent evidence-producer offers, and review consequences. The Project Evidential Contract defines what must be evidenced and through which source roles, but it does not preselect the evidence producers. Contract-matched evidence has higher eligibility priority; unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
-Next review candidate: H017 meta-governance protocol evolution.
+The forty-sixth residual cleanup aligned H017 with the accepted C019 protocol-change governance resolution: Core v0 now treats meta-governance as a minimum rule-change discipline rather than a full constitutional module. It distinguishes Reformulation Proposal from Administrative Rule Change, System Implementation Change, and non-tutored Protocol Change Proposal; material changes require public reason, scope, effective date, adaptation or transition rule where relevant, citizen-facing summary, implementation trace, and Layer 5 auditability. Tutored administrators may configure rules within mandate, but not silently, overnight, or retroactively by default.
+
+Next review candidate: H016 disbursement milestone AI validation.
 
 Approximate current maturity:
 

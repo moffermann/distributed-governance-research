@@ -43,7 +43,7 @@ These modules are necessary for the first coherent version of the model.
 - allocation profiles and automatic monthly allocation;
 - transparent project discovery;
 - explainable discovery ordering and user-customizable Home categories;
-- meta-governance and protocol evolution;
+- minimum meta-governance and protocol evolution discipline for visible rule changes;
 - progressive institutional transition;
 - operating modes: closed, tutored, semi-open, open, suspended;
 - simple user-facing signals and a minimal administrative observability baseline.

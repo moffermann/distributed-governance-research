@@ -167,7 +167,7 @@ Minimum Core v0 incompatibilities:
 1. The executor should not be the fiscalizer of the same project.
 2. A fiscalizer should not fiscalize a project where they have a direct economic interest.
 3. A public institution should not participate as an internal project actor while also exercising tutored or external authority over the same system.
-4. A technical administrator should not alter substantive rules unless authorized by protocol, meta-governance, or the applicable tutored operating mode.
+4. A technical administrator should not alter substantive rules unless authorized by the applicable Administrative Rule Change, System Implementation Change, Protocol Change Proposal, or tutored operating-mode authority, with public versioning and audit trace where material.
 5. A delegate must act only within the scope of the delegation they accepted.
 6. A proposer, modeler, and executor may be the same actor, but that accumulation must be transparent.
 

@@ -533,6 +533,27 @@ Examples:
 
 Each important decision should reference the applicable rule or protocol version.
 
+For material rule or implementation changes, Layer 5 should preserve:
+
+- change type: Administrative Rule Change, System Implementation Change, or Protocol Change Proposal;
+- operating mode;
+- proposing actor or authority;
+- rule or component affected;
+- old value or behavior;
+- new value or behavior;
+- public reason;
+- scope;
+- affected project states, roles, future projects, and existing projects where applicable;
+- publication date;
+- effective date;
+- adaptation period;
+- transition rule;
+- emergency justification where applicable;
+- test, sandbox, simulation, migration, monitoring, or release reference where applicable;
+- rollback rule or rollback version where applicable;
+- citizen-facing summary;
+- implementation version where applicable.
+
 For threshold policy decisions, Layer 5 should preserve:
 
 - project type or classification used;
@@ -556,6 +577,7 @@ For tutored or semi-open operating modes, Layer 5 should include public governan
 
 - Governance Resolution;
 - Review Timeout Resolution;
+- Administrative Rule Change where the tutored authority changes configured rules within its mandate;
 - authority or responsible office;
 - declared review window;
 - configured timeout policy;

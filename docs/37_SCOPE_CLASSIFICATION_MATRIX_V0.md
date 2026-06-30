@@ -179,7 +179,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Related-party conflict of interest `H028` | Core v0 | Needed to prevent public resources from becoming hidden private self-financing while preserving proportional treatment for declared relationships. |
 | Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-institution participation. |
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
-| Meta-governance protocol change `H017` | Core v0 conceptual / paper layer | Needed to explain protocol evolution, but not fully implemented in MVP. |
+| Meta-governance protocol change `H017` | Core v0 conceptual / minimum rule-change path | Needed to explain protocol evolution without hidden authority: v0 distinguishes project reformulation, administrative rule changes, system implementation changes, and non-tutored protocol change proposals, while full constitutional meta-governance remains v1+. |
 | Emergency as urgency attribute `H052` | Core v0 | Treats emergencies without separate architecture. |
 | Existing institution as equal actor `H056` | Superseded / Country implementation departure | C007 excludes public institutions from internal Core v0 participation. A country may deliberately depart from this, but it is not the Core v0 baseline. |
 | Tutored transition moderation `H057` | Core v0 / transition | Needed for pilots and bounded rollout. |

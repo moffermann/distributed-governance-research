@@ -1757,6 +1757,8 @@ Attributes:
 - reason;
 - approving authority or process;
 - affected project rules;
+- administrative rule changes;
+- protocol change proposals where applicable;
 - governance resolutions;
 - review timeout policy;
 - timeout resolutions;
@@ -1794,6 +1796,154 @@ Attributes:
 - status;
 - audit trail.
 
+## Protocol Version
+
+A versioned record of the active rule set that governed a decision, project state, operating mode, or system behavior at a given time.
+
+Attributes:
+
+- version id;
+- operating mode or public function scope;
+- effective date;
+- superseded date where applicable;
+- source rule-change object;
+- active rules or references;
+- transition rules;
+- rollback reference where applicable;
+- citizen-facing summary for material changes;
+- audit trail.
+
+Relationships:
+
+```text
+ProtocolVersion may be created or superseded by AdministrativeRuleChange
+ProtocolVersion may be created or superseded by ProtocolChangeProposal
+ProtocolVersion may be implemented by SystemImplementationChange
+ProtocolVersion is referenced by AuditEvents
+ProtocolVersion may govern ThresholdPolicy, ReformulationPolicy, ComplaintReviewPolicy, AllocationAmountRule, or OperatingMode
+```
+
+Rule:
+
+> Important decisions should record the protocol version or rule version that governed them so later changes do not rewrite the basis of past decisions.
+
+## Administrative Rule Change
+
+A public object recording a material change to a configured parameter, threshold, eligibility rule, review period, guarantee requirement, complaint threshold, funding deadline, or similar operational rule.
+
+Attributes:
+
+- change id;
+- operating mode;
+- proposing actor or authority;
+- rule affected;
+- old value or behavior;
+- new value or behavior;
+- reason;
+- scope;
+- affected project states;
+- affected roles;
+- affected future projects;
+- affected existing projects if any;
+- publication date;
+- effective date;
+- adaptation period;
+- transition rule;
+- emergency justification where applicable;
+- rollback rule where applicable;
+- citizen-facing summary;
+- audit trail.
+
+Relationships:
+
+```text
+AdministrativeRuleChange belongs to OperatingMode or ProtocolVersion
+AdministrativeRuleChange may affect ThresholdPolicy
+AdministrativeRuleChange may affect ReformulationPolicy
+AdministrativeRuleChange may affect ComplaintReviewPolicy
+AdministrativeRuleChange may affect AllocationAmountRule
+AdministrativeRuleChange may affect Project states or ProjectVersions through transition rules
+AdministrativeRuleChange is referenced by AuditEvents
+```
+
+Rule:
+
+> A material administrative rule change must be public, versioned, justified, scoped, and governed by an effective date and transition rule. Tutored authority does not permit silent, overnight, or retroactive rule changes by default.
+
+## System Implementation Change
+
+A public object recording a material software, algorithmic, AI-model, validator, interface, schema, migration, or technical release change.
+
+Attributes:
+
+- change id;
+- implementation version;
+- affected system component;
+- related rule or protocol if applicable;
+- old behavior;
+- new behavior;
+- reason;
+- migration plan;
+- test, sandbox, or simulation result where required;
+- known risks;
+- affected project states, roles, or objects;
+- monitoring rule;
+- rollback version or rollback rule;
+- release notes;
+- citizen-facing summary where material;
+- audit trail.
+
+Relationships:
+
+```text
+SystemImplementationChange may implement AdministrativeRuleChange
+SystemImplementationChange may implement ProtocolChangeProposal
+SystemImplementationChange may affect validators, AI assistance, ranking, fiscalization selection, reputation formulas, or project workflows
+SystemImplementationChange is referenced by AuditEvents
+```
+
+Rule:
+
+> Software changes must not hide substantive rule changes. When a technical release materially changes governance behavior, the release must reference the governing rule-change object or protocol version.
+
+## Protocol Change Proposal
+
+A visible proposal for changing governing protocol in non-tutored mode.
+
+Attributes:
+
+- proposal id;
+- proposing actor or process;
+- rule or protocol section affected;
+- public reason;
+- scope;
+- impact analysis;
+- review period;
+- sandbox or simulation result where required;
+- approval method;
+- approval result;
+- participation record;
+- minority objections or dissent summary where relevant;
+- implementation date;
+- versioned protocol update;
+- transition rule;
+- rollback path where applicable;
+- citizen-facing summary;
+- audit trail.
+
+Relationships:
+
+```text
+ProtocolChangeProposal may create AdministrativeRuleChange
+ProtocolChangeProposal may require SystemImplementationChange
+ProtocolChangeProposal updates ProtocolVersion
+ProtocolChangeProposal is referenced by AuditEvents
+```
+
+Rule:
+
+> Non-tutored protocol change must not be an invisible administrator edit. Core v0 requires a visible proposal, public reason, review, approval path, versioned implementation, and transition rule, while detailed voting mechanics can remain future work.
+
 ## Audit Event
 
 Immutable record of relevant system activity.
@@ -1809,6 +1959,8 @@ Attributes:
 - data changed;
 - rule applied;
 - protocol version;
+- rule-change object reference where applicable;
+- implementation version where applicable;
 - material AI assistance reference where applicable;
 - discovery visibility reason where applicable;
 - timestamp;
@@ -1895,6 +2047,9 @@ Disbursement:
 Complaints:
   complainant triggers, executor/fiscalizer/responders answer, review process resolves
 
+Rule changes:
+  tutored authority configures within mandate, non-tutored protocol process approves, technical operator implements approved changes
+
 Audit trail:
   system records, actors cannot erase history
 ```
@@ -1911,6 +2066,7 @@ Audit trail:
 - Fiscalization report connects evidence to review outcome.
 - Disbursement connects phase, milestone, evidence, fiscalization, and money state.
 - Complaint can affect project state, milestone state, evidence state, or disbursement state.
+- Administrative Rule Changes, System Implementation Changes, and Protocol Change Proposals must reference affected rules, project states, effective dates, transition rules, and audit events where material.
 - Delegation affects funding action authority, not citizen identity.
 - Automatic profile affects allocation rule, not delegation.
 - Reputation connects actor, role, and outcome.

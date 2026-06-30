@@ -92,7 +92,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - H021/C010/C017/C018: project variation classification, value verification, reformulation, and reputation depend on verified value fulfillment, not labels alone.
 - C011/C023: delegation has priority over automatic allocation and concentration must be visible.
 - C014/C024/H029: comments use verified identity by default, with justified protected identity as a per-comment exception; the broader protected-identity mechanism may also apply to complaints, evidence, testimony, beneficiary confirmations, or other sensitive formal actions.
-- C019: protocol changes and material system decisions remain auditable.
+- H017/C019: protocol evolution uses visible rule-change objects for administrative rule changes, system implementation changes, and non-tutored protocol change proposals.
 - C021: administrative observability baseline is core; full universal panel remains extension.
 - C022: projects declare common-good impacts where relevant.
 - C025: discovery is explainable, user-configurable, non-commercial, and auditable.

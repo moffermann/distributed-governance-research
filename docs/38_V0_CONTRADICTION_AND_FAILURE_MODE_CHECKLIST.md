@@ -284,7 +284,7 @@ Do not calculate reputation directly from closure labels. Use closure category a
 
 ### Accepted v0 rule
 
-Separate administrative configuration changes from system implementation changes. In tutored mode, material configuration changes must be public, versioned, justified, have an effective date, include an adaptation period, and define transition rules. In non-tutored mode, protocol changes require visible proposal, review, sandbox or simulation, approval, implementation, and rollback.
+Separate project reformulations, administrative configuration changes, system implementation changes, and non-tutored protocol changes. In tutored mode, material configuration changes must be public, versioned, justified, have an effective date, include an adaptation period, and define transition rules. In non-tutored mode, protocol changes require visible proposal, review, sandbox or simulation, approval, implementation, and rollback.
 
 ---
 
@@ -507,6 +507,7 @@ Highest-priority integration checks:
 10. Ensure beneficiary privacy does not create anonymous formal power.
 11. Ensure discovery visibility is explainable and user-customizable.
 12. Ensure Project Evidential Contracts define evidence needs rather than preselected evidence producers.
+13. Ensure material rule changes are classified as Administrative Rule Change, System Implementation Change, or Protocol Change Proposal, with public reason, effective date, transition rule, and audit trace.
 ```
 
 ## Proposed next working method

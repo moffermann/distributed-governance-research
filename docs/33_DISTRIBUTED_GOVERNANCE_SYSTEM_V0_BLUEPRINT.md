@@ -767,6 +767,45 @@ Operating mode decisions should be visible and traceable.
 
 Core v0 does not force a country to leave tutored mode. It requires tutored governance to be visible. Material tutored decisions should create public Governance Resolution objects, and review silence should create Review Timeout Resolution objects under a publicly configured timeout policy.
 
+## Protocol change governance
+
+Core v0 includes a minimum meta-governance discipline for changing system rules.
+
+It does not implement a full constitutional meta-governance system, but it must prevent hidden rule changes.
+
+The model distinguishes:
+
+```text
+Reformulation Proposal:
+  changes one project or project version.
+
+Administrative Rule Change:
+  changes a configured parameter, threshold, eligibility rule, review period,
+  guarantee requirement, complaint threshold, or similar operational rule.
+
+System Implementation Change:
+  changes software, algorithmic behavior, validator logic, AI model,
+  interface behavior, schema, migration, or technical release.
+
+Protocol Change Proposal:
+  changes governing protocol in non-tutored mode.
+```
+
+In tutored mode, an administrator or implementing ministry may configure rules within its mandate, but every material change must be public, versioned, justified, scoped, non-surprising by default, attached to an effective date, and governed by a transition rule.
+
+In non-tutored mode, major protocol changes require a visible Protocol Change Proposal with public reason, scope, impact analysis, review, sandbox or simulation where required, approval, implementation date, versioned update, and rollback path where applicable.
+
+Citizen-facing layers should summarize what changed, why, when it takes effect, what it affects, and whether existing projects are protected, transitioned, or reviewed. Layer 5 preserves the full rule-change object and implementation trace.
+
+Example:
+
+```text
+If the guarantee requirement increases from 5% to 20%, the rule change must
+state whether it applies only to future projects, unpublished drafts,
+materially reformulated projects, or already active projects under an
+exceptional emergency rule.
+```
+
 ## Treasury / public revenue authority
 
 In v0, treasury or revenue authority is treated as infrastructure integration, not a civic decision-maker.
