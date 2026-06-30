@@ -210,6 +210,9 @@ Core v0 also allows limited supplemental control funding after minimum control c
 Core v0 includes:
 
 - civic wallet or civic allocation right;
+- public, versioned allocation amount rules;
+- equal allocation for all eligible citizens as a simple explicit formula option;
+- externally provided authorized allocation amounts where sensitive data is required;
 - conditional project funding;
 - funding target;
 - committed funds;
@@ -221,6 +224,10 @@ Core v0 includes:
 Rule:
 
 > Funding is a conditional commitment, not immediate payment and not a freely reversible expression of preference.
+
+Allocation amount rule:
+
+> The amount available to each citizen is a configurable institutional, protocol, or country-implementation rule. The platform should support equal allocation for all eligible citizens, contribution-weighted formulas, inverse or redistributive formulas, hybrid formulas, and externally calculated formulas. If sensitive tax or registry data is required, the platform should receive only the authorized allocation amount and audit reference, not the raw sensitive data.
 
 ### 10. Disbursement model
 

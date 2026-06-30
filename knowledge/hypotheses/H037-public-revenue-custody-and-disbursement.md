@@ -31,6 +31,7 @@ Its role is administrative and fiduciary:
 
 - collect taxes or public contributions;
 - maintain assignable balances;
+- report signed authorized allocation amounts where configured;
 - record allocations;
 - retain funds until conditions are met;
 - execute protocol-valid financial orders;
@@ -39,6 +40,8 @@ Its role is administrative and fiduciary:
 - maintain public accounting and traceability.
 
 The platform, protocol rules, project lifecycle, fiscalization, evidence, complaints, and disbursement validation determine whether a financial order is valid. The custodian executes or reports closed technical/legal rejection causes.
+
+Where H025 requires a citizen-level amount formula, the custodian, treasury, tax authority, social registry, ministry system, or other lawful provider may act as an `Allocation Amount Provider`. This role reports the authorized allocation amount, eligibility status, formula version, explanation code, and audit reference. It should not expose raw tax declarations, income files, vulnerability records, or other sensitive source datasets to the platform.
 
 ## Conceptual flow
 

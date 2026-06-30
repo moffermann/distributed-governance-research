@@ -91,6 +91,32 @@ $4.440.000 más para completar financiamiento.
 [Continuar]
 ```
 
+The available amount shown to the citizen comes from the citizen's civic allocation account for the relevant period and program.
+
+That amount may be calculated by different institutional formulas, including:
+
+```text
+equal for all eligible citizens;
+proportional to declared taxes or validated contribution;
+inversely proportional to declared taxes, vulnerability, or priority status;
+hybrid formula;
+external authorized amount provider.
+```
+
+The citizen-facing explanation should remain simple.
+
+Example:
+
+```text
+Available this month:
+$42,000
+
+Why:
+This sports program assigns the same amount to every eligible citizen.
+```
+
+If the formula uses sensitive external data, the platform should show only the authorized amount, formula version, provider/audit reference where appropriate, and plain-language explanation. It should not show or store the citizen's full tax declaration or sensitive source record.
+
 ## Amount rules
 
 The system should enforce simple rules:

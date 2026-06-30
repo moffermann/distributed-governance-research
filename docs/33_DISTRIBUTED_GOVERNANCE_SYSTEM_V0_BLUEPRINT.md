@@ -680,9 +680,14 @@ It may support:
 
 - collection;
 - custody;
+- signed citizen allocation amount reporting;
 - settlement;
 - disbursement integration;
 - compliance with country implementation.
+
+Citizen-level allocation amounts may be calculated through a public, versioned formula configured by the competent authority, institutional administrator, protocol, or country implementation. The simplest supported formula should be equal allocation for all eligible citizens. Other formulas may be contribution-weighted, inverse or redistributive, hybrid, or externally calculated.
+
+If the formula depends on sensitive tax, vulnerability, territorial-priority, or registry data, the platform should not receive the raw dataset. It should consume only an authorized allocation amount from an `Allocation Amount Provider`, such as treasury, tax authority, social registry, ministry system, lawful custodian, or signed batch file.
 
 It may execute protocol-valid financial orders and reject or suspend them only for closed technical or legal causes, such as invalid signature, duplicated order, insufficient real funds, invalid destination account, legal freeze, required compliance block, malformed order, or ledger mismatch.
 

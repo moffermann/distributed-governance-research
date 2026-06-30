@@ -48,12 +48,17 @@ Recommended fields:
 
 - citizen identifier;
 - period;
+- program or budget scope;
 - authorized funding amount;
 - amount already committed;
 - available balance;
 - returned or recovered balance, if applicable;
+- eligibility status;
+- allocation formula version;
+- explanation code where applicable;
 - date of calculation;
 - source of validation;
+- issuer or provider identifier;
 - digital signature or verifiable authorization.
 
 Example:
@@ -61,11 +66,54 @@ Example:
 ```text
 Citizen: C-001
 Period: 2026
+Program: Sports distributed allocation
 Authorized funding amount: 350000
 Already committed: 120000
 Available balance: 230000
+Eligibility status: eligible
+Formula version: sports-2026-equal-v1
 Date of calculation: 2026-04-01
 Source: Treasury signed balance file/API
+```
+
+## Allocation formula and amount provider
+
+The amount assigned to each citizen may be calculated by a configurable institutional formula.
+
+Core v0 should allow at least these formula types:
+
+```text
+Equal for all eligible citizens
+Proportional to declared taxes or validated contribution
+Inversely proportional to declared taxes, vulnerability, or priority status
+Hybrid formula
+Externally calculated formula
+```
+
+`Equal for all eligible citizens` is the simplest option and should be available as an explicit first-class configuration. It is especially useful for pilots because it requires little sensitive data and is easy to explain.
+
+If the formula depends on tax declarations, vulnerability records, territorial priority, or another external dataset, the platform should not calculate the amount from raw sensitive data. The competent authority should configure an `Allocation Amount Provider` from the administration interface.
+
+The provider may expose an API or signed batch file. The platform may query it with only the minimum required data, such as citizen identifier, period, program scope, and formula version. The provider returns the authorized allocation amount, eligibility status, formula version, explanation code, issuer, timestamp, and signature or audit id.
+
+Example:
+
+```text
+Provider:
+Treasury allocation service
+
+Query:
+citizen_id = C-001
+period = 2026-04
+program = sports-distributed-budget
+formula_version = sports-2026-equal-v1
+
+Response:
+authorized_allocation_amount = 42000
+available_balance = 42000
+eligibility_status = eligible
+explanation_code = equal_for_all_eligible_citizens
+signature = treasury-signature-001
 ```
 
 ## What Treasury should not report
@@ -91,6 +139,8 @@ Rule:
 Recommended v0 flow:
 
 ```text
+Institution configures distributed budget, eligibility, formula, and provider
+↓
 Treasury calculates or validates authorized funding capacity
 ↓
 Treasury sends signed balance to the system
@@ -316,6 +366,8 @@ This resolution should inform future updates to:
 - Treasury or custodian may demand more data than needed.
 - Financial infrastructure may become a political control point.
 - Citizen balance calculation may be opaque.
+- Allocation formulas may hide political choices if not published.
+- External amount providers may be unavailable or delayed.
 - Balance update delays may cause stale funding capacity.
 - Custodian legal blocks may interrupt project execution.
 
@@ -323,6 +375,9 @@ This resolution should inform future updates to:
 
 - minimize data shared with platform;
 - require signed balance messages;
+- publish the active allocation formula and version;
+- keep equal-for-all allocation available as a simple explicit option;
+- use external amount providers only for the final authorized amount, not raw tax or social data;
 - expose balance calculation period and update date;
 - separate financial execution from civic decision-making;
 - use closed rejection causes;

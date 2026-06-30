@@ -211,12 +211,15 @@ They are external or infrastructural integrations unless the implementing countr
 Their possible external functions include:
 
 - informing assignable civic balances;
+- reporting signed authorized allocation amounts for a citizen, period, and program;
 - receiving tax or budget data;
 - transferring or custodying public resources;
 - enabling disbursement;
 - supporting financial traceability.
 
 However, they do not decide project value, approve ordinary projects, fiscalize results, or participate in internal governance under Core v0. If an implementing country grants a public institution broader internal powers, that is a country-specific departure from the Core v0 baseline and should be documented as such.
+
+If a citizen-level amount formula depends on tax, vulnerability, territorial-priority, or other sensitive external data, the platform should receive only the authorized amount, eligibility status, formula version, explanation code, and audit reference from the competent provider. It should not receive the citizen's raw tax declaration or sensitive registry file.
 
 For Core v0, they are best described as:
 

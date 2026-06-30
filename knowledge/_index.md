@@ -188,6 +188,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H025-civic-tax-wallet-and-distributed-allocation|H025 — Civic Tax Wallet and Distributed Allocation]]
 - [[hypotheses/H026-support-vs-financing-signals|H026 — Support Versus Financing Signals]]
 - [[hypotheses/H027-proportional-project-thresholds|H027 — Proportional Project Thresholds]]
 - [[hypotheses/H028-related-party-conflict-of-interest|H028 — Related-Party Conflict of Interest]]

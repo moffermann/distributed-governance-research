@@ -31,6 +31,7 @@ These modules are necessary for the first coherent version of the model.
 - separated roles: modeler/designer, executor, fiscalizer;
 - distributed financing;
 - civic wallet / assignable public-purpose budget;
+- public allocation amount rules and external provider boundary;
 - support versus financing signals;
 - funding closure once target is reached;
 - milestones, guarantees, and disbursement rules;
@@ -106,7 +107,7 @@ Project, value thesis, KPIs, evidence, roles, and responsibilities.
 
 ### Block 3 — Financing
 
-Civic wallet, monthly allocation, profiles, funding closure, milestones, guarantees, and disbursement.
+Civic wallet, citizen amount formulas, external authorized amount providers where needed, monthly allocation, profiles, funding closure, milestones, guarantees, and disbursement.
 
 ### Block 4 — Control
 

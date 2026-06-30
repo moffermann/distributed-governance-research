@@ -71,6 +71,162 @@ The correct framing is:
 personal allocation authority over non-withdrawable public-purpose funds
 ```
 
+## Individual allocation amount
+
+If a public institution, authority, or protocol assigns a percentage of a public budget to distributed allocation, the system must still define how much of that assignable pool corresponds to each eligible citizen.
+
+Core v0 should not impose one universal formula. The formula should be configured by the competent authority, institutional administrator, protocol, or country implementation, and should be public, versioned, auditable, and explainable to citizens.
+
+Recommended formula options:
+
+```text
+Equal for all eligible citizens
+Proportional to declared taxes or validated contribution
+Inversely proportional to declared taxes, vulnerability, or priority status
+Hybrid formula
+Externally calculated formula
+```
+
+### Equal for all eligible citizens
+
+This is the simplest option.
+
+Each eligible citizen receives the same civic allocation amount for the relevant period, program, territory, or public function.
+
+Example:
+
+```text
+Sports Ministry distributed budget:
+$1,200,000,000
+
+Eligible citizens:
+100,000
+
+Formula:
+Equal for all eligible citizens
+
+Monthly allocation amount:
+$1,000 per eligible citizen per month
+```
+
+This option is easy to explain, minimizes sensitive data needs, and works well for pilots where the institution wants a clear one-person-equal-allocation rule.
+
+### Contribution-weighted formula
+
+A formula may assign larger amounts to citizens who declared or paid more taxes, if the competent authority chooses that rule.
+
+This can be defended as contribution-weighted allocation, but it increases the relative allocation power of higher-income citizens and should be visible as such.
+
+### Redistributive or inverse formula
+
+A formula may assign larger amounts to citizens with lower declared tax contribution, higher vulnerability, lower access, or higher territorial priority.
+
+This can be defended as a redistributive or priority-sensitive rule, but it must not require the platform to receive the citizen's full tax, income, or social file.
+
+### Hybrid formula
+
+A formula may combine a simple equal base with a weighted component.
+
+Example:
+
+```text
+70% equal for all eligible citizens
+30% weighted by territorial priority or social vulnerability
+```
+
+This preserves a simple universal base while allowing a public institution to express a legitimate policy priority.
+
+## Allocation Amount Provider
+
+When the allocation formula depends on sensitive external data, the platform should not calculate the amount from raw tax declarations, income records, vulnerability files, or other private datasets.
+
+Instead, the administration interface should allow the institution to configure an `Allocation Amount Provider`.
+
+The provider may be:
+
+- treasury;
+- tax authority;
+- social registry;
+- lawful custodian;
+- ministry system;
+- signed batch file emitted by the competent authority;
+- another country-specific authorized service.
+
+The platform may send only the minimum required query data, such as:
+
+```text
+citizen identifier, such as RUT where legally applicable
+period
+program or budget scope
+formula version
+```
+
+The provider should return only the minimum operational result:
+
+```text
+citizen identifier
+period
+program or budget scope
+authorized allocation amount
+available balance where applicable
+eligibility status
+formula version
+explanation code
+issuer
+signature or audit id
+calculation timestamp
+```
+
+The platform should not receive the full tax declaration, income details, deductions, employer data, debt profile, family tax details, or the raw sensitive dataset used to calculate the amount.
+
+## Administration configuration
+
+For each distributed budget program, the institutional administration surface should expose:
+
+```text
+Distributed budget amount or percentage
+Eligible population rule
+Allocation formula
+Allocation Amount Provider, if external calculation is used
+Update cycle
+Fallback rule if the provider is unavailable
+Formula version
+Citizen-facing explanation
+Audit reference
+```
+
+The fallback should be explicit. For example, the institution may decide that provider failure leaves amounts pending, uses the last signed amount, or applies an equal-allocation fallback only if that fallback was publicly configured.
+
+## Citizen-facing simplicity
+
+The citizen should not need to understand tax formulas to use the system.
+
+The ordinary interface should show:
+
+```text
+Available to allocate this month:
+$8,400
+
+Why:
+Calculated by the Sports Ministry allocation rule.
+
+Formula:
+Equal base plus territorial priority adjustment.
+
+Formula version:
+2026-07-sports-v3
+```
+
+If the formula is equal for all eligible citizens, the explanation can be even simpler:
+
+```text
+Available to allocate this month:
+$1,000
+
+Why:
+This program assigns the same amount to every eligible citizen.
+```
+
 ## Voluntary alternative
 
 A fully voluntary system is conceptually possible, but may reduce participation incentives and create free-rider problems at national scale. The civic tax wallet model is a bridge between the current tax system and distributed allocation.
@@ -81,4 +237,4 @@ If a person abuses formal mechanisms, such as filing malicious complaints, the s
 
 ## Status
 
-Core financing hypothesis. Needs design of assignable/non-assignable percentages and constitutional constraints.
+Core financing hypothesis. Aligned with the v0 funding, custody, allocation-profile, and citizen-balance model. The assignable/non-assignable percentage, citizen eligibility, amount formula, and legal provider integration remain country implementation or institutional configuration decisions.

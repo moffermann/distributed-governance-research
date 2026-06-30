@@ -93,6 +93,7 @@ It may act as:
 - public authority issuing governance resolutions in tutored mode;
 - external tutored-scope reviewer for eligibility, duplication, scope, or compatibility where configured;
 - infrastructure provider for identity, treasury, custody, permits, or registries;
+- allocation amount provider where legally authorized;
 - custodian that executes protocol-valid financial orders and reports closed technical/legal execution blocks.
 
 It should not act as:
@@ -519,6 +520,32 @@ Attributes:
 - executor controlled or control controlled;
 - status.
 
+## Allocation Amount Rule
+
+A program-level rule that defines how a distributed budget is converted into citizen-level allocation amounts.
+
+Attributes:
+
+- public function, program, or budget scope;
+- distributed budget amount or percentage;
+- eligible population rule;
+- formula type: equal for all eligible citizens, contribution-weighted, inverse or redistributive, hybrid, or externally calculated;
+- formula version;
+- allocation amount provider where applicable;
+- update cycle;
+- fallback rule if the provider is unavailable;
+- citizen-facing explanation;
+- audit references;
+- status.
+
+Rule:
+
+> The amount formula must be public, versioned, auditable, and explainable. Equal allocation for all eligible citizens should be available as an explicit simple option.
+
+External-provider rule:
+
+> If the formula depends on tax, vulnerability, territorial-priority, or other sensitive external data, the platform should consume only the authorized allocation amount from the competent provider, not the raw sensitive dataset.
+
 ## Civic Wallet / Civic Allocation
 
 Represents the citizen's available public allocation right.
@@ -527,15 +554,25 @@ Attributes:
 
 - owner;
 - period;
+- public function, program, or budget scope;
+- authorized allocation amount;
 - available amount;
 - committed amount;
 - delegated amount;
 - automatic profile amount;
+- allocation formula version;
+- eligibility status;
+- provider audit id or signed balance reference where applicable;
+- explanation code where applicable;
 - history.
 
 Rule:
 
 > Civic allocation is a public allocation right, not private withdrawable cash.
+
+Citizen-facing rule:
+
+> The citizen should see the available amount and a simple explanation, such as equal allocation for all eligible citizens, hybrid formula, or external authorized amount. The citizen should not need to inspect tax calculations to fund a project.
 
 ## Funding Commitment
 

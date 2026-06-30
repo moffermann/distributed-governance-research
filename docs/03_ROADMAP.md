@@ -21,6 +21,7 @@ C001-C025 have been propagated into the main core documents, contradiction check
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public institutions remain excluded from internal project participation, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority.
+H025 is aligned: the civic tax wallet is a non-withdrawable public allocation right, citizen-level amounts are defined by public configurable formulas, equal allocation for all eligible citizens is an explicit simple option, and sensitive tax or registry data remains outside the platform through authorized allocation amount providers.
 H026 is aligned: project funding, social support, justified objection, and formal complaint are separate signals; support and justified objection are reversible civic signals, while funding remains governed by C005-style commitment rules and complaints remain formal review objects.
 H027 is aligned: proportional project thresholds are represented through visible Threshold Policies connected to project type, public function, operating mode, protocol rules, and country implementation where applicable; citizens see simple missing conditions, while the audit layer preserves the policy source and rationale.
 H028 is aligned: related-party status does not automatically invalidate a project, but it must be declared, classified, and handled proportionally through warnings, safeguards, independent control, reformulation, blocking, rejection, or responsibility review depending on severity and disclosure.
@@ -110,7 +111,9 @@ The thirty-sixth residual cleanup aligned H027 with the v0 parallel closure, pro
 
 The thirty-seventh residual cleanup aligned H026 with the v0 project signal model: financial contribution, social support, justified objection, and formal complaint are separate planes. Support and justified objection are reversible civic signals with active and withdrawn states; funding is a financial commitment governed by funding, reformulation, failure, and closure rules; complaints are formal review objects with evidence, affected scope, and procedural effects. Active counts exclude withdrawn signals, while the audit trail preserves history.
 
-Next review candidate: H025 civic tax wallet and distributed allocation.
+The thirty-eighth residual cleanup aligned H025 with the v0 funding, custody, citizen-balance, and administration model: the civic tax wallet is a personal, non-withdrawable public allocation right rather than private cash; the amount available to each citizen is calculated through a public, versioned, configurable institutional or country-implementation formula; equal allocation for all eligible citizens is an explicit simple option; contribution-weighted, inverse or redistributive, hybrid, and externally calculated formulas remain possible; sensitive tax, vulnerability, registry, or territorial-priority data should stay with an authorized Allocation Amount Provider, while the platform receives only the authorized amount, eligibility status, formula version, explanation code, and audit reference.
+
+Next review candidate: H024 complaint as fiscalization trigger.
 
 Approximate current maturity:
 

@@ -162,6 +162,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Civic tax wallet and distributed allocation `H025` | Core v0 with country/institution configuration | Needed to separate tax collection from allocation, define non-withdrawable public allocation rights, and expose configurable citizen amount formulas without importing raw sensitive tax data into the platform. |
 | Support versus financing signals `H026` | Core v0 | Needed to separate financial feasibility, social support, justified objection, and formal complaint signals. |
 | Proportional project thresholds `H027` | Core v0 | Needed to define visible, proportional execution-readiness conditions without imposing one universal approval formula. |
 | Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises. |
@@ -203,6 +204,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Sports transition pilot `H053` | Country implementation / pilot strategy | Good candidate pilot, not universal architecture. |
 | Functional transition maturity metrics `H054` | Country implementation + Extension | Thresholds and interpretation depend on implementer. |
 | Treasury / tax authority custody rules | Country implementation with Core boundary | The specific custodian and legal integration depend on the legal and fiscal system; the Core v0 boundary is that custody executes valid financial orders and does not become civic decision-making. |
+| Allocation amount provider integration | Country implementation with Core boundary | The specific API, signed batch, identifier such as RUT, provider, and legal authorization depend on the jurisdiction; the Core v0 boundary is that the platform receives the authorized allocation amount and audit reference, not the raw sensitive dataset. |
 | Official identity and privacy standards | Country implementation | Depends on jurisdiction. |
 | Sanctions, recovery, and appeals | Country implementation | Depends on administrative law. |
 | Budget percentage migrated to the system | Country implementation | Political and fiscal decision. |
