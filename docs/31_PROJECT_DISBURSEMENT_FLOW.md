@@ -79,6 +79,8 @@ No project may receive execution funding until its disbursement milestone plan i
 
 The disbursement milestone plan should reference the accepted Project Evidential Contract. This avoids releasing funds against evidence criteria invented after execution has already started.
 
+If the executor proposes to change milestones, evidence requirements, disbursement criteria, fiscalization conditions, or beneficiary targets during execution, the change must be classified under H021 before any affected funds are released. Operational variations follow the active Reformulation Policy; material value changes require the C017 Reformulation Proposal path.
+
 ## 3. Start of execution
 
 Once execution begins, the milestone calendar becomes active.

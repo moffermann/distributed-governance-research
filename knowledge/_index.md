@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
 - [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
 - [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]
 - [[../docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|Project Discovery Visibility, User Customization, and C025 Resolution v0]]
@@ -190,6 +191,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
 - [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
 - [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]
 - [[hypotheses/H024-complaint-as-fiscalization-trigger|H024 — Complaint as Fiscalization Trigger]]

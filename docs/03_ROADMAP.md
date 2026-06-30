@@ -28,6 +28,7 @@ H025 is aligned: the civic tax wallet is a non-withdrawable public allocation ri
 H026 is aligned: project funding, social support, justified objection, and formal complaint are separate signals; support and justified objection are reversible civic signals, while funding remains governed by C005-style commitment rules and complaints remain formal review objects.
 H027 is aligned: proportional project thresholds are represented through visible Threshold Policies connected to project type, public function, operating mode, protocol rules, and country implementation where applicable; citizens see simple missing conditions, while the audit layer preserves the policy source and rationale.
 H028 is aligned: related-party status does not automatically invalidate a project, but it must be declared, classified, and handled proportionally through warnings, safeguards, independent control, reformulation, blocking, rejection, or responsibility review depending on severity and disclosure.
+H021 is aligned: project variation control is a classification layer under C017 and H040, distinguishing minor corrections, operational variations, material value reformulations, and substitutive reformulations while keeping ordinary citizen labels simple and Layer 5 fully auditable.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -122,7 +123,9 @@ The fortieth residual cleanup aligned H023 with the v0 evidence, complaint, valu
 
 The forty-first residual cleanup aligned H022 with the v0 project-object, project-creation, value-catalog, fiscalization, evidence-production, disbursement, lifecycle, audit, entity-map, scope, and project-creation diagram model: every financeable execution project should define a Project Evidential Contract before execution funding. The contract is project-specific and proportional, records how fulfillment will be evidenced, and stays constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries. Ordinary citizens see a simple verification summary, while Layer 5 preserves the full versioned contract and any material weakening or change.
 
-Next review candidate: H021 project variation control.
+The forty-second residual cleanup aligned H021 with C017, H040, and the v0 reformulation, lifecycle, disbursement, audit, entity-map, blueprint, scope, and diagram model: project variation control now classifies changes as minor corrections, operational variations, material value reformulations, or substitutive reformulations. Operational changes preserve the value thesis and follow the active Reformulation Policy; material value changes require a C017 Reformulation Proposal; substitutive changes become new projects or close, fail, or revoke the original under original terms. Citizen-facing labels remain simple, while Layer 5 preserves the full comparison against the accepted base design.
+
+Next review candidate: H020 proportional procedural burden.
 
 Approximate current maturity:
 

@@ -123,12 +123,45 @@ Executor reputation is associated with the execution project once the executor h
 The executor is evaluated against:
 
 - the accepted base design;
+- formally approved variation records;
 - declared KPIs;
 - milestones;
 - evidential contract and evidence obligations;
 - guarantees;
 - mitigation commitments;
 - fiscalization outcomes.
+
+Unapproved variations do not erase the accepted base design or the executor's responsibility under that design.
+
+## Project variation control
+
+A project may change during validation, funding, or execution, but changes must be classified before they are treated as ordinary updates.
+
+Core v0 uses H021 as the project variation control layer:
+
+```text
+Minor variation or correction:
+  record or correct without changing the project promise.
+
+Operational variation / operational reformulation:
+  implementation changes while preserving the value thesis and core metrics.
+
+Material value reformulation:
+  C017 Reformulation Proposal because the value thesis, core metrics, beneficiary scope, promised result, or public utility changes.
+
+Substitutive reformulation:
+  new project or failure/closure of the original project.
+```
+
+The active Reformulation Policy defines any maximum reformulations, minimum period between reformulations, deadline effects, approval authority, and exhaustion consequences. The application records and enforces the policy; it does not impose a universal value.
+
+Example:
+
+```text
+Changing a sports-school schedule while preserving 80 children, workshop count, and evidence obligations may be operational.
+
+Changing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
+```
 
 ## Main project sections
 
@@ -144,7 +177,8 @@ The executor is evaluated against:
 - creation date;
 - publication date;
 - funding deadline;
-- reformulation policy or policy reference.
+- reformulation policy or policy reference;
+- variation control history.
 
 ### 2. Actors and roles
 

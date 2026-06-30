@@ -367,6 +367,17 @@ Rule:
 
 > No critical project change should erase history or hide effects on funds, evidence, reputation, or responsibility.
 
+Core v0 includes H021 project variation control as a classification layer:
+
+```text
+Minor variation or correction -> record/correct
+Operational variation -> active Reformulation Policy
+Material value reformulation -> C017 Reformulation Proposal
+Substitutive reformulation -> new project or original-project failure/closure
+```
+
+Citizen-facing views should keep this simple with labels such as `Minor correction`, `Operational change`, `Value change proposal`, or `New project required`, while Layer 5 preserves the full comparison against the accepted base design.
+
 Reformulation limits and timing are configurable by the active project, public-function, operating-mode, or protocol policy. Core v0 requires the policy to be visible, traceable, and enforceable; it does not impose one universal maximum number of reformulations or one universal minimum period between reformulations. In tutored mode, the administrator or tutored authority may configure concrete values.
 
 ### 17. Complaint model

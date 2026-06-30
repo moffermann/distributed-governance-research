@@ -348,6 +348,22 @@ Supplemental control reports are observations within the control architecture. T
 
 A project may require reformulation if the original design can no longer be executed as approved but the project may still preserve public value.
 
+Before choosing the reformulation path, the project change should be classified under H021:
+
+```text
+Minor variation or correction:
+  record or correct without creating a substantive new promise.
+
+Operational variation / operational reformulation:
+  preserve the value thesis and core metrics while changing implementation.
+
+Material value reformulation:
+  use a C017 Reformulation Proposal because the promised value, core metrics, beneficiary scope, or public utility changes.
+
+Substitutive reformulation:
+  treat as a new project or as failure/closure of the original project.
+```
+
 Examples:
 
 - cost changed materially;
@@ -373,7 +389,17 @@ Reformulation should:
 
 > Reformulation changes the project transparently; it does not delete the past.
 
-Operational reformulation may preserve the value thesis. Material value reformulation cannot unilaterally rewrite what funders financed and beneficiaries expected; it requires visible cause analysis, preserved history, funding effects, and role-specific responsibility review.
+Operational reformulation may preserve the value thesis. Material value reformulation cannot unilaterally rewrite what funders financed and beneficiaries expected; it requires visible cause analysis, preserved history, funding effects, C017 approval handling, and role-specific responsibility review.
+
+Example:
+
+```text
+Changing the weekly schedule of a sports school while preserving 80 children and the same evidence obligations may be operational.
+
+Reducing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
+
+Replacing the sports school with an unrelated community event is not the same project.
+```
 
 ## 11. Pause
 
@@ -521,6 +547,7 @@ This lifecycle should not:
 - hide blocking complaints;
 - hide failed milestones;
 - erase previous versions during reformulation;
+- treat a material value change as an ordinary operational variation;
 - close without final evidence and money status;
 - assign reputation effects without role context.
 

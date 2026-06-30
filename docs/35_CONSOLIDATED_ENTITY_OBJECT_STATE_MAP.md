@@ -215,6 +215,7 @@ Key attributes:
 - funding target;
 - funding deadline;
 - reformulation policy or policy reference;
+- variation control history;
 - threshold policy or policy reference;
 - closure conditions;
 - risks;
@@ -242,6 +243,9 @@ Project has many Comments
 Project has many SupportSignals
 Project has many JustifiedObjectionSignals
 Project has many RelatedPartyConflictReviews
+Project has many ProjectVariationRecords
+Project has many ReformulationProposals
+Project has ReformulationPolicy or reformulation policy reference
 Project has ThresholdPolicy or threshold policy reference
 Project has many AuditEvents
 Project has one current State
@@ -470,6 +474,141 @@ Used for:
 - evidence requirement changes;
 - fiscalization changes;
 - auditability.
+
+## Project Variation Record
+
+A traceable classification and decision record for a project change under H021.
+
+Attributes:
+
+- record id;
+- project id;
+- base project version;
+- proposed or resulting project version where applicable;
+- variation class: minor correction, operational variation, material value reformulation, or substitutive reformulation;
+- proposed by;
+- reviewed or approved by where applicable;
+- active Reformulation Policy or policy reference;
+- change reason;
+- affected fields;
+- original and proposed value thesis comparison;
+- original and proposed core metric comparison;
+- beneficiary impact;
+- budget impact;
+- milestone impact;
+- disbursement impact;
+- Project Evidential Contract impact;
+- fiscalization impact;
+- risk, antivalue, and related-party-safeguard impact;
+- approval requirement;
+- approval result or current review status;
+- citizen-facing summary;
+- notification history;
+- linked complaint, pause, revocation, Responsibility Event, or financial order where applicable;
+- audit references.
+
+Relationships:
+
+```text
+ProjectVariationRecord belongs to Project
+ProjectVariationRecord compares ProjectVersions
+ProjectVariationRecord may create or reference ReformulationProposal
+ProjectVariationRecord may update ProjectEvidentialContract
+ProjectVariationRecord may reference ThresholdPolicy or ReformulationPolicy
+ProjectVariationRecord may generate AuditEvents
+```
+
+Rule:
+
+> Unapproved variation records do not erase the accepted base design or the executor's responsibility under that design.
+
+Example:
+
+```text
+Changing a sports-school schedule while preserving 80 beneficiaries is operational.
+Changing 80 beneficiaries to 60 beneficiaries is a material value reformulation.
+Replacing the sports school with an unrelated event is a different project.
+```
+
+## Reformulation Proposal
+
+A separate proposal required when a project change reduces, alters, or replaces the value thesis, core metrics, beneficiary scope, promised result, or public utility under C017.
+
+Attributes:
+
+- proposal id;
+- project id;
+- original project version;
+- proposed project version;
+- reason for reformulation;
+- triggering event;
+- original value thesis;
+- proposed value thesis;
+- original core metrics;
+- proposed core metrics;
+- beneficiary impact;
+- budget impact;
+- milestone impact;
+- evidence impact;
+- fiscalization impact;
+- funding impact;
+- executor explanation;
+- validation result;
+- fiscalizer observation where applicable;
+- approval rule or authority;
+- approval status;
+- consequence if rejected or expired;
+- citizen-facing summary;
+- audit references.
+
+Relationships:
+
+```text
+ReformulationProposal belongs to Project
+ReformulationProposal references ProjectVariationRecord
+ReformulationProposal compares ProjectVersions
+ReformulationProposal follows ReformulationPolicy
+ReformulationProposal may create new ProjectVersion if approved
+ReformulationProposal may lead to closure, failure, or revocation if rejected or expired
+```
+
+Rule:
+
+> A Reformulation Proposal may preserve partial value, but it cannot convert original non-fulfillment into retrospective success.
+
+## Reformulation Policy
+
+A visible policy object or policy reference defining how reformulation is handled for a project, public function, operating mode, competent authority, community mechanism, or protocol.
+
+Attributes:
+
+- policy id or reference;
+- source: project, public function, operating mode, competent authority, community mechanism, protocol, or country implementation;
+- scope;
+- maximum reformulations where configured;
+- minimum period between reformulations where configured;
+- deadline-extension effects;
+- operational-reformulation approval authority;
+- material-value-reformulation approval authority;
+- exhaustion consequences;
+- expiry-without-decision consequence;
+- notification rules;
+- effective date or version;
+- audit references.
+
+Relationships:
+
+```text
+ReformulationPolicy may apply to Project
+ReformulationPolicy may apply to OperatingMode
+ReformulationPolicy governs ProjectVariationRecords
+ReformulationPolicy governs ReformulationProposals
+ReformulationPolicy is referenced by AuditEvents
+```
+
+Rule:
+
+> Core v0 requires the active Reformulation Policy to be visible, traceable, and enforced; it does not impose one universal maximum count or one universal minimum period.
 
 ## Value Thesis
 

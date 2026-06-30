@@ -162,6 +162,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Project variation control `H021` | Core v0 | Needed to distinguish minor corrections, operational variations, material value reformulations, and substitutive reformulations without imposing unnecessary citizen bureaucracy or allowing silent value rewrites. |
 | Project evidential contract `H022` | Core v0 | Needed to define ex ante how each project will prove fulfillment without relying on a single centralized evidence code or ex post evidence improvisation. |
 | Incentive architecture for reliable information `H023` | Core v0 | Needed to connect material claims, evidence, contradictions, verified discovery, role-specific responsibility, and AI anomaly assistance without turning AI or accusations into truth. |
 | Complaint as fiscalization trigger `H024` | Core v0 with country/authority boundary | Needed to make complaints reviewable through support windows, fiscalizer quotes, reserved review funding, and admissibility review, while preventing platform review from replacing courts, regulators, or competent authorities in legally regulated projects. |

@@ -656,6 +656,23 @@ Rules:
 
 Operational reformulations may preserve the value thesis. Material value reformulations cannot unilaterally rewrite what funders financed and beneficiaries expected; they require visible cause analysis, preserved history, funding effects, and role-specific responsibility review.
 
+H021 adds the project variation classification test before the response path is chosen:
+
+```text
+Minor variation or correction -> record/correct
+Operational variation -> active Reformulation Policy
+Material value reformulation -> C017 Reformulation Proposal
+Substitutive reformulation -> new project or original-project failure/closure
+```
+
+Example:
+
+```text
+A sports-school schedule change may be operational if the same 80 children, workshop count, and evidence obligations remain.
+
+Reducing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
+```
+
 Reformulation frequency, minimum spacing, deadline-extension effects, and exhaustion consequences are not universal application constants. They should be defined in a visible reformulation policy for the project, public function, operating mode, or protocol. In tutored mode, the administrator or tutored authority may configure concrete parameters. In non-tutored or open modes, the competent authority, community mechanism, or active protocol defines the strategy.
 
 ## Project closure

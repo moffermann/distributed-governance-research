@@ -14,6 +14,45 @@ Reformulation may change implementation, but it must not unilaterally rewrite th
 
 Reformulation limits and timing should be policy-configurable. Core v0 requires the active reformulation policy to be visible, traceable, and enforceable; it does not impose one universal maximum number of reformulations or one universal minimum period between reformulations.
 
+## Relationship with project variation control
+
+H021 defines the classification test used before choosing the response level.
+
+Project changes should be classified as:
+
+```text
+Minor variation or correction:
+  fixes or clarifies without changing the project promise.
+
+Operational variation / operational reformulation:
+  changes implementation while preserving the value thesis and core metrics.
+
+Material value reformulation:
+  reduces, alters, or replaces the value thesis, core metrics, beneficiary scope, promised result, or public utility.
+
+Substitutive reformulation:
+  turns the proposal into a substantially different project.
+```
+
+The classification determines the path:
+
+```text
+Minor variation -> correction or audit-only record
+Operational variation -> active Reformulation Policy
+Material value reformulation -> C017 Reformulation Proposal
+Substitutive reformulation -> new project or original-project failure/closure
+```
+
+Example:
+
+```text
+A Macul multi-court project may move an accessible bathroom within the same facility if equivalent access and metrics are preserved. That is operational.
+
+Removing the bathroom commitment or reducing public access hours changes the value promise. That requires a material value reformulation path.
+
+Replacing the multi-court with temporary sports workshops is a different project.
+```
+
 ## Main question
 
 ```text
@@ -90,7 +129,7 @@ disbursement for this milestone remains retained until corrected.
 
 ## 2. Reformulation
 
-Reformulation applies when the project changes in a relevant way but may still preserve its public purpose.
+Reformulation applies when the project changes in a relevant way but may still preserve public value. H021 supplies the variation classification, while C017 controls the value-thesis boundary.
 
 Examples:
 
@@ -144,6 +183,22 @@ eligible unreleased balances follow the configured reformulation policy and C005
 ### Rule
 
 > Reformulation is not silent editing. It is a visible new project version.
+
+### Variation classification before reformulation
+
+Before approving a reformulation path, the system or reviewer should compare:
+
+- original and proposed value thesis;
+- original and proposed core metrics;
+- beneficiary scope;
+- budget, milestones, disbursement, evidential contract, fiscalization, risk, antivalue, and related-party safeguards;
+- active Reformulation Policy limits, timing, approval authority, and deadline effects.
+
+If the value thesis and core metrics remain intact, the change may be operational.
+
+If they are reduced, altered, or replaced, the change must become a C017 Reformulation Proposal.
+
+If the project is no longer substantially the same project, it should become a new project or trigger failure, closure, or revocation of the original under the original terms.
 
 ### Reformulation policy
 
@@ -409,6 +464,9 @@ Required trace:
 - related complaints;
 - funds affected;
 - project version;
+- H021 variation classification where a project change is involved;
+- original and proposed value thesis and core-metric comparison where applicable;
+- active Reformulation Policy or policy reference where applicable;
 - executor responses;
 - fiscalizer decision;
 - notifications sent;

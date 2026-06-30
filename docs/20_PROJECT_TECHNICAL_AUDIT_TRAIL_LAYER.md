@@ -63,6 +63,7 @@ Layer 5 should include technical traceability for:
 
 ```text
 1. Project versions
+1a. Project variation and reformulation records
 2. Value thesis history
 3. Metric history
 4. Project evidential contract history
@@ -99,6 +100,44 @@ For each version:
 - whether the change required approval.
 
 This allows the project history to be reconstructed.
+
+## 1a. Project variation and reformulation records
+
+Show every recorded project-change classification under H021.
+
+For each variation record:
+
+- project id;
+- base project version;
+- proposed or resulting project version where applicable;
+- variation class: minor correction, operational variation, material value reformulation, or substitutive reformulation;
+- actor who proposed the change;
+- actor, authority, community mechanism, or protocol rule that approved or rejected it where applicable;
+- reason for the change;
+- original and proposed value thesis comparison;
+- original and proposed core metric comparison;
+- beneficiary, budget, milestone, disbursement, evidential contract, fiscalization, risk, antivalue, and related-party-safeguard effects;
+- active Reformulation Policy or policy reference;
+- whether a C017 Reformulation Proposal was required;
+- approval result or current review status;
+- citizen-facing summary;
+- notifications sent;
+- linked complaint, pause, revocation, Responsibility Event, or financial order where applicable.
+
+Examples:
+
+```text
+Operational variation:
+same sports school, same 80 children, different weekly schedule.
+
+Material value reformulation:
+80 children -> 60 children because the new venue is smaller.
+
+Evidence weakening:
+attendance records and beneficiary confirmations -> executor photos only.
+```
+
+Layer 5 should make clear whether a project merely changed implementation or attempted to change the value promise that citizens funded.
 
 ## 2. Value thesis history
 
