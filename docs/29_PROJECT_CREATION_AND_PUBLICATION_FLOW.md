@@ -51,7 +51,7 @@ Important distinction:
 5. Define executor and related-party declarations
 6. Build budget
 7. Define milestones
-8. Define metrics and evidence
+8. Build the Project Evidential Contract
 9. Define fiscalization required
 10. Define threshold policy
 11. Declare risks and antivalues
@@ -376,9 +376,25 @@ Deadline: month 6
 Evidence: final report, total attendance, beneficiary confirmation
 ```
 
-## 8. Define metrics and evidence
+## 8. Build the Project Evidential Contract
 
-For every promised value, the system requires metrics and evidence.
+For every promised value, the system requires a Project Evidential Contract.
+
+The contract defines how society will know whether the project fulfilled its promises.
+
+It should connect:
+
+- promised value;
+- metric or qualitative commitment;
+- material information claim;
+- milestone or budget line where relevant;
+- evidence type;
+- expected evidence source role;
+- whether executor self-report is enough or corroboration is required;
+- timing of evidence;
+- fiscalizer or reviewer role;
+- contradiction, complaint, correction, disbursement, closure, or responsibility effect where applicable;
+- privacy or protected-identity rule where relevant.
 
 Example for sports:
 
@@ -417,6 +433,17 @@ Rule:
 > There is no promised value without a reasonable way to measure and verify it.
 
 Value verification should use a package of metrics and evidence. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
+
+Citizen-facing summary:
+
+```text
+How this will be verified:
+attendance records + beneficiary confirmations + fiscalizer review.
+```
+
+The technical layer should preserve the full contract.
+
+The contract should be proportional. A small sports workshop may need attendance, photos, and beneficiary confirmation. A water-intensive industrial project may need permits, baseline measurements, technical records, independent review, affected-party evidence channels, and competent-authority boundaries.
 
 ## 9. Define required fiscalization
 
@@ -541,6 +568,7 @@ Validation dimensions:
 - beneficiary clarity;
 - value metrics;
 - evidence adequacy;
+- Project Evidential Contract completeness;
 - budget consistency;
 - milestone consistency;
 - fiscalization adequacy;
@@ -567,7 +595,7 @@ Example result:
 Requires adjustments:
 
 1. Beneficiaries are too vague.
-2. There is no evidence for attendance.
+2. The Project Evidential Contract lacks evidence for attendance.
 3. Budget does not include fiscalization.
 4. The Health value needs a metric or should be removed.
 ```
@@ -669,7 +697,7 @@ Limits:
 - cannot hide complaints;
 - cannot freely choose the responsible fiscalizer;
 - cannot change core promises without visible reformulation;
-- cannot receive execution disbursement before conditions are met.
+- cannot receive execution disbursement before conditions are met;
 - cannot receive execution funding if the disbursement milestone plan has unresolved critical validation failures.
 
 ## Creator-side project states
@@ -700,7 +728,7 @@ Idea
 → executor
 → budget
 → milestones
-→ metrics and evidence
+→ Project Evidential Contract
 → fiscalization
 → risks and antivalues
 → validation
@@ -719,6 +747,7 @@ This flow should not:
 - allow execution funding without responsible executor;
 - allow value icons without metrics;
 - allow metrics without evidence;
+- publish a project with a weak or missing evidential contract;
 - hide control costs;
 - let the executor control its own fiscalization;
 - hide risks and antivalues;

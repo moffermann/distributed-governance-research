@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
 - [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]
 - [[../docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|Project Discovery Visibility, User Customization, and C025 Resolution v0]]
 - [[../docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Identity, and C024 Resolution v0]]
@@ -189,6 +190,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
 - [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]
 - [[hypotheses/H024-complaint-as-fiscalization-trigger|H024 — Complaint as Fiscalization Trigger]]
 - [[hypotheses/H025-civic-tax-wallet-and-distributed-allocation|H025 — Civic Tax Wallet and Distributed Allocation]]

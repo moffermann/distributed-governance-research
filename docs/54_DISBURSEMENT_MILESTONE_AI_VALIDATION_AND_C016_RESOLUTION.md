@@ -8,6 +8,8 @@ C016 was originally framed as the problem that the model allows partial release 
 
 The final v0 resolution is to make disbursement milestones a structured entity and require a specialized AI validation before a project is published as financeable. The AI does not approve the social value of the project. It validates whether the milestone, metric, evidence, release amount, retention, and risk protections are coherent enough for funding and later fiscalization.
 
+This validation should be consistent with the Project Evidential Contract. The milestone plan defines how money may be released; the evidential contract defines how project fulfillment will be proven.
+
 ## Status
 
 Accepted as the v0 resolution for C016.
@@ -107,6 +109,7 @@ milestone-specific metric
 verifiable result
 measurement method
 required evidence
+Project Evidential Contract reference
 evidence acceptance rule
 responsible executor
 responsible fiscalizer or fiscalization method
@@ -143,6 +146,7 @@ The validator checks questions such as:
 ```text
 Does every milestone describe a verifiable result?
 Does the evidence actually support the claimed result?
+Does the milestone evidence match the Project Evidential Contract?
 Is the payment tied to the evidence?
 Is partial release supported by a formula?
 Is a supposedly divisible milestone actually measurable by parts?
@@ -431,7 +435,7 @@ For Red cases, the project should not be financeable yet.
 C016 is resolved as follows:
 
 ```text
-Create a structured Disbursement Milestone entity and require specialized AI validation before a project is published as financeable. The AI does not approve the project's social value and does not estimate the exact economic value of every milestone. It checks whether milestones, evidence, release amounts, partial-release rules, retentions, and advance-payment protections are coherent enough for funding and later fiscalization. Projects with unresolved critical validation failures cannot begin receiving funding.
+Create a structured Disbursement Milestone entity and require specialized AI validation before a project is published as financeable. The AI does not approve the project's social value and does not estimate the exact economic value of every milestone. It checks whether milestones, evidence, Project Evidential Contract references, release amounts, partial-release rules, retentions, and advance-payment protections are coherent enough for funding and later fiscalization. Projects with unresolved critical validation failures cannot begin receiving funding.
 ```
 
 Final rule:

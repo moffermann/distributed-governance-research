@@ -425,6 +425,28 @@ The validator asks:
 - Can the evidence be contradicted or audited?
 - Is the evidence proportional to the value claim?
 
+These answers should become part of the Project Evidential Contract.
+
+The validator should not merely ask whether an evidence item exists. It should check whether the proposed evidence is coherent with the value, metric, beneficiary group, risk, and milestone being claimed.
+
+Example:
+
+```text
+Value:
+Sports participation for children.
+
+Metric:
+80 children with 70% average monthly attendance.
+
+Weak evidence:
+photos of one training day.
+
+Stronger contract:
+attendance records, monthly beneficiary confirmation, activity photos, evidence-producer observation, and fiscalizer review.
+```
+
+For technical or regulated projects, value-catalog evidence requirements may point to external standards, permits, technical measurements, or competent-authority review. The platform should record the requirement and boundary, not pretend that a generic app rule can replace domain-specific review.
+
 ## Validator result
 
 The validator should return simple results for the proponent:

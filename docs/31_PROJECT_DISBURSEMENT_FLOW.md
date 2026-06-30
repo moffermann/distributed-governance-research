@@ -61,7 +61,7 @@ Required conditions may include:
 - responsible executor accepted;
 - fiscalizer confirmed;
 - minimum admissible control package accepted where required;
-- evidence plan configured;
+- Project Evidential Contract configured;
 - milestones defined;
 - disbursement milestone plan validated with no unresolved critical failures;
 - no blocking complaints;
@@ -76,6 +76,8 @@ Execution-ready does not mean automatic release of the full budget.
 > Execution-ready authorizes controlled execution. It does not authorize uncontrolled payment.
 
 No project may receive execution funding until its disbursement milestone plan is coherent enough for funding and later fiscalization.
+
+The disbursement milestone plan should reference the accepted Project Evidential Contract. This avoids releasing funds against evidence criteria invented after execution has already started.
 
 ## 3. Start of execution
 
@@ -162,12 +164,15 @@ Evidence should be linked to:
 - project;
 - milestone;
 - metric;
+- evidential contract requirement;
 - evidence producer;
 - timestamp;
 - privacy classification;
 - review status.
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+If submitted evidence does not satisfy the evidential contract, the fiscalizer may accept it only as contextual material, request correction or additional evidence, approve partially where the disbursement plan allows it, or reject the milestone.
 
 ## 6. Fiscalizer review
 
@@ -176,6 +181,7 @@ The fiscalizer reviews whether the milestone was fulfilled.
 The review may consider:
 
 - required evidence;
+- evidential contract references;
 - distinct supplemental evidence where accepted;
 - metric targets;
 - beneficiary confirmations;

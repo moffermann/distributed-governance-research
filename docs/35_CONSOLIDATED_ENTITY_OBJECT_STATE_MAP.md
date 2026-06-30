@@ -203,6 +203,7 @@ Key attributes:
 - budget;
 - milestones;
 - disbursement milestone plan;
+- Project Evidential Contract;
 - evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
@@ -231,6 +232,7 @@ Project has many BeneficiaryGroups
 Project has one or more Budgets
 Project has many Milestones
 Project has DisbursementMilestonePlan
+Project has one ProjectEvidentialContract
 Project has many EvidenceItems
 Project has FiscalizationRequirement
 Project has many FiscalizerOffers
@@ -342,6 +344,61 @@ Strategic defense asset:
 Funding, strategic compatibility, competent institutional control, and limited distributed operational governance.
 ```
 
+## Project Evidential Contract
+
+A versioned project object defining how fulfillment will be evidenced.
+
+Attributes:
+
+- project;
+- project version;
+- value promises covered;
+- metrics and qualitative commitments covered;
+- material information claims covered;
+- milestone evidence requirements;
+- budget-line evidence requirements where relevant;
+- risk and antivalue evidence requirements where relevant;
+- evidence types;
+- evidence source roles: executor, beneficiary, affected party, evidence producer, fiscalizer, technical record, external register, or other;
+- corroboration requirement;
+- executor self-report treatment;
+- fiscalizer or reviewer responsibility;
+- disbursement, closure, complaint, correction, and responsibility effects;
+- privacy classification and protected-identity rules where relevant;
+- proportionality basis: project type, risk, territory, operating mode, value catalog, threshold policy, or competent-authority requirement;
+- citizen-facing verification summary;
+- validation status;
+- audit trail.
+
+States:
+
+```text
+Draft
+In validation
+Accepted
+Requires adjustment
+Weak or not verifiable
+Superseded by reformulation
+Closed
+```
+
+Rules:
+
+- every execution-financeable project should have an accepted evidential contract;
+- the contract is project-specific and proportional, not one universal centralized evidence code;
+- material weakening after support or funding should be versioned and may require reformulation, notification, renewed review, or responsibility analysis;
+- citizens should see a simple verification summary, while Layer 5 preserves the full contract.
+
+Example:
+
+```text
+Sports school:
+attendance records, beneficiary confirmation, activity photos, evidence-producer observations, fiscalizer review.
+
+Water-intensive project:
+baseline documents, technical measurements, permit documents, expert review, affected-party channels, competent-authority boundaries.
+```
+
 ## Related-Party Conflict Review
 
 A traceable review object that records declared, detected, or alleged related-party conflicts for a project.
@@ -436,6 +493,7 @@ ValueThesis belongs to ProjectVersion
 ValueThesis uses ValueIcon
 ValueThesis has many Metrics
 ValueThesis requires EvidenceItems
+ValueThesis is covered by ProjectEvidentialContract
 ```
 
 ## Value Icon
@@ -466,6 +524,7 @@ Attributes:
 - timeframe;
 - beneficiary group;
 - evidence requirement;
+- evidential contract requirement reference;
 - validation status;
 - fulfillment status.
 
@@ -708,6 +767,7 @@ Attributes:
 - partial-release rules;
 - retention rules;
 - evidence required;
+- evidential contract references;
 - protected advance-payment rules where applicable;
 - validation status;
 - critical failures;
@@ -764,6 +824,7 @@ Attributes:
 - milestone;
 - metric;
 - material claim supported or contradicted where known;
+- evidential contract requirement;
 - producer;
 - producer role;
 - type;

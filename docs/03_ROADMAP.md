@@ -21,6 +21,7 @@ C001-C025 have been propagated into the main core documents, contradiction check
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public institutions remain excluded from internal project participation, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority.
+H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
 H023 is aligned: reliable information is handled through accountable material information claims, evidence and corroboration status, verified discovery incentives, role-specific responsibility events, and AI anomaly assistance that does not decide truth, responsibility, fund release, or legal consequences.
 H024 is aligned: complaints use a simplified support-window and fiscalizer-quoted review model; administrators configure required support count, support window days, quote deadline, and fallback rules; citizens may reserve conditional review funding while the fiscalizer quotes without seeing reserved totals; objections are counter-signals rather than vetoes; regulated project suspension requires competent authority or judicial action where applicable.
 H025 is aligned: the civic tax wallet is a non-withdrawable public allocation right, citizen-level amounts are defined by public configurable formulas, equal allocation for all eligible citizens is an explicit simple option, and sensitive tax or registry data remains outside the platform through authorized allocation amount providers.
@@ -119,7 +120,9 @@ The thirty-ninth residual cleanup aligned H024 with the v0 complaint, fiscalizat
 
 The fortieth residual cleanup aligned H023 with the v0 evidence, complaint, value-verification, reputation, audit, entity-map, and evidence/fiscalization diagram model: material project statements are now accountable claims connected to evidence, contradiction, review, correction, and role-specific responsibility. Verified discovery may create reward or reputation effects only after review confirms materiality and usefulness. AI may assist with anomaly, privacy, duplicate, missing-evidence, or contradiction detection, but does not decide truth, fraud, responsibility, fund release, or legal consequences.
 
-Next review candidate: H022 project evidential contract.
+The forty-first residual cleanup aligned H022 with the v0 project-object, project-creation, value-catalog, fiscalization, evidence-production, disbursement, lifecycle, audit, entity-map, scope, and project-creation diagram model: every financeable execution project should define a Project Evidential Contract before execution funding. The contract is project-specific and proportional, records how fulfillment will be evidenced, and stays constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries. Ordinary citizens see a simple verification summary, while Layer 5 preserves the full versioned contract and any material weakening or change.
+
+Next review candidate: H021 project variation control.
 
 Approximate current maturity:
 

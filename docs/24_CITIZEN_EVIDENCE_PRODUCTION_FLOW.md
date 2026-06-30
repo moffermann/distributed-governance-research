@@ -122,6 +122,7 @@ The system should record:
 - actor;
 - project;
 - evidence type;
+- related evidential contract requirement where known;
 - expected timing;
 - location or scope;
 - relationship declarations;
@@ -158,6 +159,7 @@ The form should collect:
 - associated milestone;
 - associated metric;
 - material claim supported or contradicted, where known;
+- related evidential contract requirement where known;
 - description;
 - date/time;
 - location where applicable;
@@ -273,6 +275,18 @@ Supports claim / contradicts claim / insufficient to evaluate.
 ```
 
 The system should avoid asking ordinary citizens to classify technical validity. The citizen may describe what the evidence shows; the fiscalizer or reviewer evaluates evidentiary value.
+
+Where possible, the interface may show the relevant evidential contract need in simple language.
+
+Example:
+
+```text
+This project needs:
+attendance confirmation for month 2.
+
+Your evidence:
+parent confirmation that the child attended sessions in month 2.
+```
 
 ## 8. Reputation effects
 

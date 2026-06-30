@@ -18,7 +18,7 @@ It is a concrete proposal for public or social action that declares:
 - who is responsible for execution;
 - how it will be executed;
 - how progress will be measured;
-- what evidence will be required;
+- what evidential contract will verify fulfillment;
 - how it can be fiscalized;
 - what risks, externalities, or antivalues may exist.
 
@@ -38,7 +38,7 @@ Project:
   financeable operational unit;
   created by a citizen or organization;
   associated with a public function or project classification;
-  declares value thesis, budget, KPIs, milestones, evidence, responsible actors, risks, and fiscalization conditions.
+  declares value thesis, budget, KPIs, milestones, evidential contract, responsible actors, risks, and fiscalization conditions.
 ```
 
 ## Required executor rule
@@ -125,7 +125,7 @@ The executor is evaluated against:
 - the accepted base design;
 - declared KPIs;
 - milestones;
-- evidence obligations;
+- evidential contract and evidence obligations;
 - guarantees;
 - mitigation commitments;
 - fiscalization outcomes.
@@ -223,6 +223,38 @@ Each KPI should include:
 - fiscalization actor or method where applicable.
 
 KPIs are not sufficient by themselves. Each promised value should be verified through a Value Verification Package that combines metrics, evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, and complaint/contradiction channels.
+
+### 4a. Project Evidential Contract
+
+A project should define a `Project Evidential Contract`.
+
+The evidential contract connects:
+
+- promised value;
+- metrics and qualitative commitments;
+- material information claims;
+- milestones;
+- budget lines where relevant;
+- risk and antivalue declarations;
+- evidence types;
+- evidence source roles;
+- corroboration requirements;
+- fiscalizer or reviewer responsibility;
+- disbursement, closure, complaint, and responsibility effects.
+
+The contract is not a universal centralized evidence code. It is project-specific, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
+
+Example:
+
+```text
+Sports school:
+attendance records, beneficiary confirmations, activity photos, evidence-producer observations, and fiscalizer review.
+
+Water-intensive infrastructure:
+baseline documents, technical measurements, permit documents, expert review, affected-party channels, and competent authority boundaries.
+```
+
+Citizen-facing views should summarize the contract as "how this project will be verified." Layer 5 should preserve the full versioned contract and its changes.
 
 ### 5. Budget and financing
 
@@ -334,6 +366,7 @@ Projects with unresolved critical failures in their disbursement milestone plan 
 The project declares:
 
 - evidence required;
+- evidential contract or contract reference;
 - evidence submitted;
 - observations;
 - fiscalization events;
@@ -344,6 +377,8 @@ The project declares:
 The executor should not be the only source of evidence about its own performance.
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+Evidence should be evaluated against the accepted evidential contract. If the contract is weak, incomplete, or materially changed after support or funding, the issue should be visible and may require correction, reformulation, complaint review, or responsibility review depending on severity.
 
 ### 8. Risks and antivalues
 
@@ -449,7 +484,7 @@ The project creator may reformulate, reclassify, or resubmit.
 
 ## Principle
 
-> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, verification package, disbursement milestone plan, evidence, fiscalization, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design and is updated by verified value fulfillment, founded complaints, evidence corrections, and role-specific responsibility events.
+> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, Project Evidential Contract, verification package, disbursement milestone plan, evidence, fiscalization, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design and is updated by verified value fulfillment, founded complaints, evidence corrections, and role-specific responsibility events.
 
 ## Status
 

@@ -232,6 +232,34 @@ If evidence reveals a verified material omission, falsehood, hidden conflict, or
 
 Reward should attach only to verified, material, review-confirmed discovery, not to accusations or raw submissions.
 
+## Relationship with the Project Evidential Contract
+
+Evidence producers should work against the accepted Project Evidential Contract where one exists.
+
+The contract tells evidence producers:
+
+- which project promise, metric, milestone, claim, risk, or antivalue needs evidence;
+- what evidence type is expected;
+- when it should be produced;
+- what privacy or protected-identity rules apply;
+- whether independent or corroborating evidence is required;
+- how the fiscalizer or reviewer will use the evidence.
+
+Example:
+
+```text
+Contract requirement:
+Monthly attendance must be corroborated by beneficiary or parent confirmation.
+
+Evidence producer task:
+Collect structured parent confirmations for month 2.
+
+Review:
+Fiscalizer compares the confirmations with attendance records and executor reports.
+```
+
+Evidence producers may still submit useful unexpected evidence, but paid or assigned evidence work should be tied to defined evidence needs so control funding does not become open-ended or duplicative.
+
 ## C003 final resolution
 
 C003 is resolved as follows:

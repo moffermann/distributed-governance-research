@@ -111,7 +111,7 @@ A project must include:
 - budget;
 - milestones;
 - metrics;
-- evidence obligations;
+- Project Evidential Contract and evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - risks;
@@ -147,6 +147,7 @@ Core rules:
 - value icons are not marketing decorations;
 - selecting a value creates metric obligations;
 - metrics require evidence;
+- each project must define a proportional Project Evidential Contract;
 - value verification uses a package of metrics, evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels;
 - vague value claims must be reformulated before publication.
 
@@ -177,6 +178,16 @@ Core v0 distinguishes:
 - affected parties.
 
 Projects must clarify who benefits and how beneficiaries are counted or confirmed.
+
+### 6a. Project Evidential Contract
+
+Core v0 includes a Project Evidential Contract.
+
+The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, evidence types, evidence source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
+
+The contract is project-specific and proportional, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
+
+Citizen-facing views should summarize it as "how this project will be verified"; Layer 5 preserves the full versioned contract and changes.
 
 ### 7. Evidence model
 
@@ -400,7 +411,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, budget, custody trace, milestones, disbursements, evidence, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, evidence, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve material AI-assisted outputs, governance resolutions, review timeout resolutions, protocol-change records, discovery visibility reasons where material, and privacy-aware access/redaction traces.
 

@@ -136,7 +136,7 @@ A project must contain:
 - budget;
 - milestones;
 - metrics;
-- evidence obligations;
+- Project Evidential Contract and evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - risks;
@@ -212,6 +212,22 @@ Buying 100 balls
 ```
 
 is not enough to measure sports value. The project must measure actual participation, sessions, use, attendance, or equivalent value-relevant output.
+
+Each project should also define a Project Evidential Contract.
+
+The contract states how fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
+
+The contract is proportional:
+
+```text
+Small sports workshop:
+attendance records, photos, beneficiary confirmation, fiscalizer review.
+
+Technical or regulated project:
+permits, baseline measurements, technical records, expert review, affected-party channels, and competent-authority boundaries.
+```
+
+Citizens should see a simple "How this will be verified" summary, while Layer 5 preserves the full versioned contract.
 
 ## Evidence model
 
@@ -398,6 +414,7 @@ Layer 5 contains complete traceability:
 - budget history;
 - funding and custody trace;
 - milestone and disbursement trace;
+- project evidential contract history;
 - evidence archive;
 - material information claim and verified-discovery trace;
 - fiscalization reports;

@@ -107,6 +107,27 @@ Formal sessions occurred, but the beneficiary count was materially overstated.
 
 This keeps the citizen-facing signal simple while making the technical value-verification package auditable.
 
+## Relationship with the Project Evidential Contract
+
+H022 defines the ex ante Project Evidential Contract.
+
+The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, evidence, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
+
+Example:
+
+```text
+Project:
+Sports school for 80 children.
+
+Evidential contract:
+attendance records, beneficiary confirmation, activity evidence, fiscalizer review, and contradiction path.
+
+Value Verification Package:
+sessions delivered, regular attendance, continuity, beneficiary feedback, evidence strength, and antivalue check.
+```
+
+If the project changes the evidential contract after support or funding, the value-verification package should preserve the old version, explain the change, and trigger reformulation or review where the change materially weakens what citizens funded.
+
 ## Example: sports value
 
 Promised value:

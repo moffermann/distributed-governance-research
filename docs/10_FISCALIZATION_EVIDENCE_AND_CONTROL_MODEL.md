@@ -105,6 +105,37 @@ Accepted
 
 The technical audit layer preserves the full claim and evidence trail.
 
+## Project Evidential Contract
+
+Every project should define a Project Evidential Contract before execution funding.
+
+The contract states how project promises will be evidenced and reviewed. It connects:
+
+- value promises;
+- metrics and qualitative commitments;
+- material information claims;
+- milestones and budget lines where relevant;
+- risks and antivalues;
+- evidence types;
+- evidence source roles;
+- corroboration requirements;
+- responsible fiscalization or review;
+- complaint, correction, disbursement, closure, and responsibility effects.
+
+The contract is project-specific and proportional. It may use value-catalog defaults, project-type templates, threshold policies, operating-mode rules, or country-specific requirements, but it should not become a single centralized evidence code for every domain.
+
+Examples:
+
+```text
+Sports training project:
+attendance records, activity photos, beneficiary confirmation, evidence-producer observations, and fiscalizer review.
+
+Technical infrastructure project:
+permits, budget-line evidence, georeferenced milestones, independent control, technical reception, and public-use evidence.
+```
+
+Fiscalizers evaluate evidence against the accepted evidential contract. If the contract is materially weakened after support or funding, the change should be versioned and may require reformulation, notification, renewed review, or responsibility analysis depending on severity.
+
 ## Discovery incentives
 
 Actors who discover verified hidden information, false evidence, KPI manipulation, undeclared conflict, or material omission may receive reputational credit or compensation only after review confirms materiality and usefulness.

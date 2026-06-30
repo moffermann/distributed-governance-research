@@ -100,7 +100,7 @@ This check should confirm:
 - funding commitments are enough;
 - no blocking complaint is active;
 - fiscalization is configured;
-- evidence obligations are configured;
+- Project Evidential Contract and evidence obligations are configured;
 - the minimum admissible control package is accepted where control is required;
 - milestone plan is complete;
 - disbursement milestone plan has no unresolved critical validation failures;
@@ -233,6 +233,7 @@ Evidence must be linked to:
 - project;
 - milestone;
 - metric;
+- evidential contract requirement;
 - producer;
 - timestamp;
 - privacy classification;
@@ -244,6 +245,8 @@ Evidence must be linked to:
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
+Evidence is evaluated against the accepted Project Evidential Contract. If the project changes that contract during execution, the change must preserve history and may require reformulation, notification, or renewed review where it weakens the original promise.
+
 ## 7. Fiscalizer review
 
 The fiscalizer reviews the milestone against the accepted project design.
@@ -251,6 +254,7 @@ The fiscalizer reviews the milestone against the accepted project design.
 The review may consider:
 
 - required evidence;
+- evidential contract requirements;
 - distinct supplemental evidence where accepted;
 - metric targets;
 - beneficiary confirmations;
@@ -453,6 +457,7 @@ Closure should include:
 - budget used;
 - unused funds;
 - evidence final status;
+- evidential contract fulfillment status;
 - fiscalizer final report;
 - unresolved observations;
 - complaints status;

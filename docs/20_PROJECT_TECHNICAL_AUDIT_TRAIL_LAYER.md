@@ -65,20 +65,21 @@ Layer 5 should include technical traceability for:
 1. Project versions
 2. Value thesis history
 3. Metric history
-4. Budget history
-5. Funding and custody trace
-6. Milestone and disbursement trace
-7. Evidence archive and material information claim trace
-8. Fiscalization reports
-9. Complaint and review trace
-10. Civic support and justified objection trace
-11. Conflict-of-interest declarations
-12. Actor and role events
-13. Moderation and mode decisions
-14. System decisions and protocol references
-15. Governance resolutions and review timeouts
-16. Discovery visibility reasons
-17. Data export and verification tools
+4. Project evidential contract history
+5. Budget history
+6. Funding and custody trace
+7. Milestone and disbursement trace
+8. Evidence archive and material information claim trace
+9. Fiscalization reports
+10. Complaint and review trace
+11. Civic support and justified objection trace
+12. Conflict-of-interest declarations
+13. Actor and role events
+14. Moderation and mode decisions
+15. System decisions and protocol references
+16. Governance resolutions and review timeouts
+17. Discovery visibility reasons
+18. Data export and verification tools
 ```
 
 ## 1. Project versions
@@ -131,7 +132,43 @@ For each metric:
 
 This is especially important for preventing vague or moving targets.
 
-## 4. Budget history
+## 4. Project evidential contract history
+
+Track the accepted Project Evidential Contract and every material change.
+
+Include:
+
+- contract version;
+- value promises covered;
+- metrics or qualitative commitments covered;
+- material information claims covered;
+- evidence required;
+- evidence source roles;
+- corroboration requirements;
+- fiscalizer or reviewer role;
+- privacy or protected-identity rules where relevant;
+- disbursement, closure, complaint, correction, or responsibility effects;
+- reason for change;
+- whether the change weakens, strengthens, or clarifies the previous contract;
+- who proposed and approved the change;
+- whether funders, beneficiaries, affected parties, or fiscalizers were notified.
+
+Example:
+
+```text
+Original contract:
+80 children verified by monthly attendance records and beneficiary confirmations.
+
+Proposed change:
+attendance photos only.
+
+Audit concern:
+material weakening of beneficiary verification; reformulation or review required.
+```
+
+Layer 5 should make it impossible to silently change how project fulfillment will be proven after citizens have funded or supported the project.
+
+## 5. Budget history
 
 Track budget changes and budget structure.
 
@@ -151,7 +188,7 @@ Include:
 
 Layer 5 should allow reviewers to understand how the budget evolved.
 
-## 5. Funding and custody trace
+## 6. Funding and custody trace
 
 Track money status without exposing unnecessary private information.
 
@@ -170,7 +207,7 @@ Include:
 
 Privacy-protected individual funding details should follow the system's identity and privacy rules.
 
-## 6. Milestone and disbursement trace
+## 7. Milestone and disbursement trace
 
 For each milestone, show:
 
@@ -178,6 +215,7 @@ For each milestone, show:
 - expected date;
 - actual date;
 - required evidence;
+- evidential contract reference;
 - evidence submitted;
 - fiscalizer review;
 - approval or rejection;
@@ -189,7 +227,7 @@ For each milestone, show:
 
 Layer 5 should explain why money was or was not released.
 
-## 7. Evidence archive
+## 8. Evidence archive
 
 Layer 5 should contain the full evidence archive, subject to privacy and safety rules.
 
@@ -202,6 +240,7 @@ For each evidence item:
 - location metadata where applicable;
 - associated milestone;
 - associated metric;
+- evidential contract requirement;
 - review status;
 - objections or contradictions;
 - integrity information;
@@ -242,7 +281,7 @@ executor claim, parent confirmations, evidence-producer record, fiscalizer revie
 
 Verified discoveries should also be traceable. The audit trail should show the discovery, the actor and protected-identity status where relevant, the claim or omission discovered, evidence used, review result, materiality finding, reward or reputation effect, and any complaint, disbursement, correction, or responsibility event that followed.
 
-## 8. Fiscalization reports
+## 9. Fiscalization reports
 
 Include complete fiscalization records:
 
@@ -250,6 +289,7 @@ Include complete fiscalization records:
 - evidence producers;
 - methodology;
 - scope;
+- evidential contract reviewed;
 - reports;
 - observations;
 - objections;
@@ -261,7 +301,7 @@ Include complete fiscalization records:
 
 Layer 5 should make fiscalization itself auditable.
 
-## 9. Complaint and review trace
+## 10. Complaint and review trace
 
 Include the complete trace of complaints and reviews:
 
@@ -289,7 +329,7 @@ Include the complete trace of complaints and reviews:
 
 Layer 5 should show not only the result, but how the result was reached.
 
-## 10. Civic support and justified objection trace
+## 11. Civic support and justified objection trace
 
 Track support and justified objection signals separately from funding and complaints.
 
@@ -312,7 +352,7 @@ Rules:
 - support withdrawal does not withdraw committed funding;
 - objection withdrawal does not erase a formal complaint or review already opened.
 
-## 11. Conflict-of-interest declarations
+## 12. Conflict-of-interest declarations
 
 Track declared and detected relationships among relevant actors.
 
@@ -335,7 +375,7 @@ Classification should distinguish:
 - severe conflict requiring reformulation, actor exclusion, disbursement blocking, or rejection;
 - hidden or misrepresented conflict that may trigger complaint review and a role-specific Responsibility Event.
 
-## 12. Actor and role events
+## 13. Actor and role events
 
 Track role assignments and role changes.
 
@@ -363,7 +403,7 @@ For each role event:
 - conflict declarations;
 - reputation-relevant outcomes.
 
-## 13. Moderation and mode decisions
+## 14. Moderation and mode decisions
 
 If the project is in a tutored, semi-open, suspended, or otherwise special operating mode, Layer 5 should show:
 
@@ -380,7 +420,7 @@ This preserves traceability without making moderation the first citizen experien
 
 If a comment, complaint, evidence item, testimony, beneficiary confirmation, affected-party report, or other formal action is published or submitted under protected identity, Layer 5 should record the existence of the protected identity request, the AI-assisted or restricted-review process result where applicable, the contextual protected display identity, and any legal/safety/privacy gate action, without exposing protected personal identity to unauthorized viewers.
 
-## 14. System decisions and protocol references
+## 15. System decisions and protocol references
 
 Layer 5 should show important system decisions and the rules used.
 
@@ -409,7 +449,7 @@ For threshold policy decisions, Layer 5 should preserve:
 - citizen-facing explanation;
 - changes to the threshold policy after publication, if any.
 
-## 15. Governance resolutions and review timeouts
+## 16. Governance resolutions and review timeouts
 
 For tutored or semi-open operating modes, Layer 5 should include public governance objects:
 
@@ -426,7 +466,7 @@ For tutored or semi-open operating modes, Layer 5 should include public governan
 
 Tutored decisions and tutored silence should be auditable civic objects, not hidden administrative events.
 
-## 16. Discovery visibility reasons
+## 17. Discovery visibility reasons
 
 Layer 5 should preserve material discovery and visibility traces where they may affect funding or legitimacy.
 
@@ -442,7 +482,7 @@ Examples:
 
 The ordinary citizen does not need to see every technical ranking detail, but reviewers should be able to reconstruct whether discovery acted as a hidden allocator.
 
-## 17. Data export and verification tools
+## 18. Data export and verification tools
 
 Layer 5 should support external review.
 
