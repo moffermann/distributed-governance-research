@@ -4,7 +4,7 @@
 
 This document freezes the first version of the project lifecycle after publication.
 
-It covers what happens after a project becomes public as an open project: how it completes closure conditions, becomes execution-ready, enters execution, advances through milestones, submits evidence, receives fiscalization, releases funds, handles problems, and closes.
+It covers what happens after a project becomes public as an open project: how it completes closure conditions, becomes execution-ready, enters execution, advances through phases and milestones, submits evidence, receives fiscalization, releases funds, handles problems, and closes.
 
 ## Core principle
 
@@ -23,7 +23,7 @@ What happens to a project after it is published as open until it closes?
 ```text
 Open project
 → parallel closure of conditions
-→ execution-ready
+→ phase gates and execution-ready
 → in execution
 → milestones
 → evidence submission
@@ -62,6 +62,7 @@ Open projects complete their applicable conditions in parallel.
 Possible closure conditions:
 
 - funding target reached;
+- required prior phase gate accepted where applicable;
 - responsible executor accepted;
 - fiscalizer confirmed;
 - evidence producers committed;
@@ -86,17 +87,28 @@ Blocking complaints: 0
 Documents: complete
 ```
 
+For phased projects, the dashboard should also show phase-specific conditions.
+
+Example:
+
+```text
+Design phase: submitted for review
+Construction funding: reserved
+Construction release: blocked until design accepted
+```
+
 ### Rule
 
 > A project does not become ready because it passed a rigid sequence. It becomes ready because all applicable closure conditions are complete.
 
 ## 3. Execution-ready transition
 
-When all applicable closure conditions are complete, the system evaluates whether the project can become `Execution-ready`.
+When all applicable closure conditions are complete, the system evaluates whether the project or the relevant project phase can become `Execution-ready`.
 
 This check should confirm:
 
 - the project version is stable;
+- required prior phase gates are accepted where applicable;
 - funding commitments are enough;
 - no blocking complaint is active;
 - fiscalization is configured;
@@ -119,13 +131,15 @@ Execution-ready
 
 Execution-ready means:
 
-- the project may begin execution under the approved plan;
+- the project or phase may begin execution under the approved plan;
 - funds remain controlled and are released by rule;
 - milestones, evidence, fiscalization, and reporting obligations become active.
 
 ### Rule
 
 > Execution-ready authorizes the start of controlled execution. It does not release the full budget automatically.
+
+For phased projects, execution-ready is phase-sensitive. A parent project may collect construction funding while the design phase is pending, but the construction phase does not become execution-ready and construction funds cannot be released until the design phase gate is accepted.
 
 Supplemental control funding after execution-ready does not reopen this transition by default. A project may remain execution-ready while additional control-only funding is reserved for one secondary fiscalizer, fiscalization audit, or distinct evidence work. Any blocking effect from supplemental control must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
 
@@ -136,6 +150,8 @@ When execution begins, status becomes:
 ```text
 In execution
 ```
+
+For phased projects, execution begins for the relevant accepted phase. Design work may be in execution while construction remains reserved and not ready. Construction begins only after prerequisite design deliverables and required control conditions are accepted.
 
 The system activates:
 
@@ -171,6 +187,8 @@ Each milestone should include:
 - disbursement consequence;
 - correction rule;
 - late rule.
+
+Where phases are used, each milestone should identify its phase.
 
 Example:
 
@@ -231,6 +249,7 @@ Linked to fiscalizer report
 Evidence must be linked to:
 
 - project;
+- project phase where applicable;
 - milestone;
 - metric;
 - evidential contract requirement;
@@ -247,9 +266,13 @@ Executor-submitted material is self-reported support unless corroborated. Critic
 
 Evidence is evaluated against the accepted Project Evidential Contract. If the project changes that contract during execution, the change must preserve history and may require reformulation, notification, or renewed review where it weakens the original promise.
 
+In an integrated design-and-execution project, design-phase evidence is evaluated before construction release. A design package for the Macul multi-court project should evidence dimensions, access rules, bathrooms or accessibility commitments where required, budget refinement, permit or compatibility requirements, and construction evidence requirements.
+
 ## 7. Fiscalizer review
 
 The fiscalizer reviews the milestone against the accepted project design.
+
+When a phase gate is being evaluated, the fiscalizer, reviewer, certifier, or competent authority reviews the phase deliverables against the phase baseline and threshold policy.
 
 The review may consider:
 
@@ -285,6 +308,8 @@ Extraordinary review required
 
 Funds are released according to milestone rules.
 
+For phased projects, funds are also released according to phase gates.
+
 Possible disbursement states:
 
 ```text
@@ -301,6 +326,7 @@ Returned or reassigned if project fails
 
 The disbursement decision should show:
 
+- phase, where applicable;
 - milestone;
 - amount requested;
 - amount approved;
@@ -314,6 +340,8 @@ The disbursement decision should show:
 ### Rule
 
 > Money is released for verified milestone fulfillment, not for promises or self-declared progress.
+
+> Construction money is not released for an integrated design-and-execution project until the design phase has been accepted.
 
 ## 9. Observations, corrections, and complaints
 
@@ -374,6 +402,8 @@ Examples:
 - milestone plan is no longer realistic;
 - risk or antivalue becomes material.
 
+For an integrated Macul design-and-construction project, the design phase failing to include required bathrooms, producing wrong court dimensions, or reducing promised public access is not an ordinary implementation adjustment. It is a design failure or material value reformulation if it changes what funders and beneficiaries relied on.
+
 Reformulation should:
 
 - preserve history;
@@ -409,6 +439,7 @@ Possible reasons:
 
 - blocking complaint;
 - missing evidence;
+- failed or pending prerequisite phase gate;
 - fiscalizer delay;
 - executor delay;
 - serious unresolved contradiction;
@@ -477,6 +508,7 @@ Closed reformulated into new version
 Closure should include:
 
 - final value fulfillment;
+- phase completion status where applicable;
 - metrics achieved;
 - metrics not achieved;
 - beneficiaries confirmed;
@@ -529,6 +561,8 @@ Citizen-facing statuses should remain simple:
 Open project
 Execution-ready
 In execution
+Design under review
+Construction reserved
 Paused
 Requires reformulation
 Revoked
@@ -543,6 +577,7 @@ This lifecycle should not:
 
 - treat publication as execution approval;
 - release all funds at once by default;
+- release later-phase execution funds before prerequisite phase gates are accepted;
 - allow executor self-validation;
 - hide blocking complaints;
 - hide failed milestones;

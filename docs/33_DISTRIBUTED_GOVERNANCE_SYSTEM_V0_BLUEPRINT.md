@@ -134,6 +134,7 @@ A project must contain:
 - beneficiaries;
 - responsible executor;
 - budget;
+- project phases where applicable;
 - milestones;
 - metrics;
 - Project Evidential Contract and evidence obligations;
@@ -161,6 +162,8 @@ Each project should also declare or reference a visible `Threshold Policy` defin
 AI and rules may help discover required documents and suggest a burden profile, but they should not certify document acceptability by themselves. Where the Threshold Policy requires project acceptability review, tutored mode routes review to the competent authority under C020, while non-tutored or open modes may use an independent `Control Subproject: Project Admissibility Review` under C002/C013 rules.
 
 Projects should expose funding, social support, justified objections, and formal complaints as separate signals. Support and justified objection are reversible civic signals. Funding is a financial commitment governed by funding rules. A complaint is a formal review object.
+
+Projects may also expose phase-specific funding lanes where needed. A design-and-execution project may receive execution-phase funding commitments while the design phase is pending, but those commitments remain reserved and cannot be released until the design phase gate is accepted.
 
 ## Value thesis and value icons
 
@@ -411,6 +414,7 @@ It includes:
 Layer 5 contains complete traceability:
 
 - project versions;
+- project phases and phase gates;
 - value thesis history;
 - metric history;
 - budget history;
@@ -544,6 +548,7 @@ Idea
 → beneficiaries
 → executor
 → budget
+→ phases where relevant
 → milestones
 → metrics and evidence
 → fiscalization
@@ -558,6 +563,16 @@ Idea
 The creator should not start with a giant technical form. The system should assist the creator in making the project financeable, measurable, fiscalizable, and auditable.
 
 Project creation should include lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. Full common-good charter governance remains a later extension.
+
+When a project combines design and execution, creation should define explicit `Project Phases`. The design phase should produce an auditable design package and a minimum public-value baseline before any later execution phase can release funds.
+
+Example:
+
+```text
+Design and Construction of Multi-court Facility in Macul:
+  design phase -> dimensions, public access, bathrooms or accessibility commitments where required, budget refinement, evidence plan;
+  construction phase -> construction milestones, evidence, fiscalization, disbursement.
+```
 
 ## Open project model
 
@@ -576,6 +591,8 @@ Open means it can receive:
 Open does not mean execution may start.
 
 A project becomes execution-ready only when all applicable closure conditions are complete.
+
+For phased projects, execution-ready may apply to a specific phase. A parent project can be open and receive reserved construction funding while the design phase is pending, but construction is not execution-ready until the design phase is accepted and the construction phase satisfies its threshold and control requirements.
 
 ## Lifecycle after publication
 
@@ -603,6 +620,7 @@ Disbursement is conditional release.
 
 Each release requires:
 
+- phase gate acceptance where applicable;
 - milestone;
 - evidence;
 - review;
@@ -611,7 +629,9 @@ Each release requires:
 - financial order where money movement is required;
 - audit trace.
 
-Before a project can receive execution funding, its disbursement milestone plan should pass specialized validation for milestone coherence, evidence requirements, release amounts, partial-release rules, retentions, and protected advance-payment rules. Unresolved critical validation failures block financing.
+Before a project can receive execution funding commitments, its disbursement milestone plan should pass specialized validation for milestone coherence, evidence requirements, release amounts, partial-release rules, retentions, protected advance-payment rules, and phase-gate treatment where applicable. Unresolved critical validation failures block financing.
+
+A pending design gate is not by itself a critical validation failure if the phase plan, public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It is a release blocker: later-phase execution funds remain reserved until the prerequisite design phase is accepted.
 
 Money states:
 
@@ -674,6 +694,8 @@ A sports-school schedule change may be operational if the same 80 children, work
 
 Reducing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
 ```
+
+In a design-and-execution project, a failed design gate may trigger the same hierarchy. If the Macul design removes promised public access, omits required bathrooms, changes court dimensions materially, or weakens evidence requirements, construction cannot proceed as if nothing changed. The issue must be corrected or classified as material reformulation, substitutive reformulation, rejection, or closure under the active policy.
 
 Reformulation frequency, minimum spacing, deadline-extension effects, and exhaustion consequences are not universal application constants. They should be defined in a visible reformulation policy for the project, public function, operating mode, or protocol. In tutored mode, the administrator or tutored authority may configure concrete parameters. In non-tutored or open modes, the competent authority, community mechanism, or active protocol defines the strategy.
 

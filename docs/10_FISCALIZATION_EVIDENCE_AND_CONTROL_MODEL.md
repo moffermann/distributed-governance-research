@@ -281,6 +281,21 @@ If new supplemental funding is not enough to fund a secondary fiscalizer but can
 
 Fiscalization, evidence missions, technical review, admissibility review, or other control work may be modeled as a Control Subproject associated with the parent project.
 
+For phased projects, control work may also verify phase gates. This is especially important when a single parent project combines design and execution.
+
+Example:
+
+```text
+Parent project:
+Design and Construction of Multi-court Facility in Macul.
+
+Design phase gate:
+review whether the design package satisfies dimensions, public access, bathrooms or accessibility commitments where required, budget refinement, evidence requirements, and related-party safeguards.
+
+Construction phase:
+cannot release construction funds until the design phase gate is accepted.
+```
+
 A Control Subproject may contain:
 
 - methodology;
@@ -293,6 +308,8 @@ A Control Subproject may contain:
 - comments and objections;
 - audit trail;
 - reputation effects.
+
+When the control subproject verifies a phase gate, its deliverables should identify whether the phase is accepted, requires correction, rejected, or requires reformulation.
 
 Control subprojects fit the project architecture, but their selection rules must be stronger than ordinary project selection. They are selected through protocolized, risk-adjusted, conflict-checked, and auditable rules, not by the executor or by ordinary popularity.
 
@@ -327,6 +344,8 @@ In tutored mode, the competent authority may perform the review under C020 and i
 In non-tutored or open mode, the admissibility reviewer should be selected through the same independence, eligibility, conflict, budget, deliverable, and auditability rules used for other control subprojects.
 
 The executor cannot privately select, directly pay, or remove the reviewer who determines project admissibility.
+
+The same rule applies to phase-gate review. If the executor also designed the project, it cannot privately approve the design package that unlocks its own construction funds where the Threshold Policy requires independent review.
 
 ## Fiscalization offers
 

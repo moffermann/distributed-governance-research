@@ -109,6 +109,7 @@ A project must include:
 - beneficiaries;
 - responsible executor;
 - budget;
+- project phases where applicable;
 - milestones;
 - metrics;
 - Project Evidential Contract and evidence obligations;
@@ -140,6 +141,10 @@ Rule:
 Rule:
 
 > Funding, support, justified objection, and formal complaint are separate project signals. Support and justified objection are reversible; funding and formal complaints follow their own rules.
+
+Rule:
+
+> Project phases are part of Core v0 where they are needed to keep funding, deliverables, verification, and disbursement coherent. A design-and-execution project may receive execution-phase commitments while design is pending, but execution funds cannot be released until the design phase gate is accepted.
 
 ### 4. Value thesis, value icons, and metrics
 
@@ -233,6 +238,7 @@ Core v0 includes:
 - equal allocation for all eligible citizens as a simple explicit formula option;
 - externally provided authorized allocation amounts where sensitive data is required;
 - conditional project funding;
+- phase-specific funding lanes where applicable;
 - funding target;
 - committed funds;
 - no immediate release to executor;
@@ -244,6 +250,10 @@ Rule:
 
 > Funding is a conditional commitment, not immediate payment and not a freely reversible expression of preference.
 
+Phase funding rule:
+
+> A citizen must know whether a contribution funds design, reserved execution, minimum control, or supplemental control. Reserved execution funding may count toward a later phase but cannot be released while a prerequisite phase gate is pending, rejected, or materially reformulated.
+
 Allocation amount rule:
 
 > The amount available to each citizen is a configurable institutional, protocol, or country-implementation rule. The platform should support equal allocation for all eligible citizens, contribution-weighted formulas, inverse or redistributive formulas, hybrid formulas, and externally calculated formulas. If sensitive tax or registry data is required, the platform should receive only the authorized allocation amount and audit reference, not the raw sensitive data.
@@ -252,6 +262,7 @@ Allocation amount rule:
 
 Every disbursement requires:
 
+- phase gate acceptance where applicable;
 - milestone;
 - evidence;
 - fiscalizer review;
@@ -260,7 +271,9 @@ Every disbursement requires:
 - financial order where money movement is required;
 - audit trace.
 
-Core v0 also requires a coherent Disbursement Milestone plan before execution funding. Specialized validation should check milestone evidence, release amounts, partial-release rules, retentions, and advance-payment protections. Projects with unresolved critical validation failures cannot begin receiving execution funding.
+Core v0 also requires a coherent Disbursement Milestone plan before execution funding commitments. Specialized validation should check milestone evidence, release amounts, partial-release rules, retentions, advance-payment protections, and phase-gate treatment where applicable. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
+
+A pending design gate is not itself a critical validation failure if the phase plan, minimum public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It blocks release, not necessarily funding commitments.
 
 Financial execution/custody is external infrastructure. The platform or protocol may generate financial orders for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. The custodian executes valid orders and reports status; it does not select projects, evaluate civic value, fiscalize milestones, or make discretionary disbursement judgments.
 
@@ -284,6 +297,8 @@ In recovery
 ### 11. Open project and parallel closure
 
 A published project enters `Open project` state and may gather funding, fiscalizer offers, evidence commitments, beneficiary confirmations, comments, complaints, required documents, and control configuration in parallel.
+
+Where project phases exist, `Open project` may also gather phase-specific funding and phase-gate deliverables in parallel.
 
 Rule:
 
@@ -325,6 +340,7 @@ Idea
 → beneficiaries
 → executor
 → budget
+→ phases where relevant
 → milestones
 → metrics and evidence
 → fiscalization
@@ -338,6 +354,8 @@ Idea
 
 Project creation also includes lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. Full common-good charter governance remains Extension v1+.
 
+For integrated design-and-execution projects, creation must define the phase baseline and gate before accepting execution-phase commitments. Example: `Design and Construction of Multi-court Facility in Macul` may reserve construction funding while the design is reviewed, but construction cannot become execution-ready if the design omits required bathrooms, changes court dimensions materially, weakens public access, or fails the accepted baseline.
+
 ### 15. Project lifecycle after publication
 
 Core v0 includes:
@@ -345,7 +363,7 @@ Core v0 includes:
 ```text
 Open project
 → parallel closure of conditions
-→ execution-ready
+→ phase gates and execution-ready
 → in execution
 → milestones
 → evidence submission
@@ -427,6 +445,8 @@ On first active use, the citizen should select or acknowledge a base allocation 
 ### 20. Technical audit trail
 
 Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, evidence, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
+
+Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 
 Layer 5 should also preserve material AI-assisted outputs, governance resolutions, review timeout resolutions, protocol-change records, discovery visibility reasons where material, and privacy-aware access/redaction traces.
 

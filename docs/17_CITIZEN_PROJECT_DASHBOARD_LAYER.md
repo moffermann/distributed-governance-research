@@ -87,6 +87,8 @@ Show a simple state.
 Examples:
 
 - Proyecto abierto;
+- Diseño en revisión;
+- Construcción reservada;
 - Listo para ejecutar;
 - En ejecución;
 - Cerrado;
@@ -118,6 +120,7 @@ Only show conditions that apply to the specific project.
 Possible conditions:
 
 - funding;
+- phase gate accepted, where applicable;
 - executor confirmed;
 - fiscalizer required;
 - evidence producers required;
@@ -125,6 +128,19 @@ Possible conditions:
 - guarantees or retentions;
 - moderation completed, if applicable;
 - required documents complete.
+
+For phased projects, show the relevant phase condition in simple language.
+
+Example:
+
+```text
+Design phase
+Under review.
+
+Construction phase
+Funding reserved.
+Funds are not released until design is accepted.
+```
 
 Each condition is clickable.
 

@@ -201,6 +201,7 @@ Key attributes:
 - value theses;
 - beneficiaries;
 - budget;
+- phase plan or project phases where applicable;
 - milestones;
 - disbursement milestone plan;
 - Project Evidential Contract;
@@ -231,6 +232,7 @@ Project has many ProjectVersions
 Project has many ValueTheses
 Project has many BeneficiaryGroups
 Project has one or more Budgets
+Project may have many ProjectPhases
 Project has many Milestones
 Project has DisbursementMilestonePlan
 Project has one ProjectEvidentialContract
@@ -481,11 +483,104 @@ Used for:
 
 - reformulation;
 - budget changes;
+- phase plan changes;
 - beneficiary changes;
 - value thesis changes;
 - evidence requirement changes;
 - fiscalization changes;
 - auditability.
+
+## Project Phase
+
+A project phase is an internal segment of a parent project with its own deliverables, funding lane, verification gate, and disbursement boundary where needed.
+
+It is not automatically a separate public-value project and it is not the same as a milestone. A phase groups one or more milestones or deliverables.
+
+Attributes:
+
+- phase id;
+- project;
+- project version;
+- phase type: design, feasibility, construction, delivery, operation, pilot, scale-up, monitoring, or configured equivalent;
+- phase order;
+- phase title;
+- phase purpose;
+- responsible actor or role;
+- related modeler, executor, fiscalizer, reviewer, or evidence producer where applicable;
+- phase budget or funding lane;
+- phase funding target;
+- phase funding status;
+- phase deliverables;
+- minimum public-value baseline where the phase gates later execution;
+- phase evidential requirements or Project Evidential Contract section;
+- phase threshold conditions;
+- prerequisite phases;
+- successor phases;
+- readiness gate;
+- verification or fiscalization rule;
+- disbursement rules;
+- related milestones;
+- related evidence items;
+- related material information claims;
+- related related-party declarations or safeguards where applicable;
+- current state;
+- audit trail.
+
+States:
+
+```text
+Draft
+Open for funding
+Funded
+Deliverables in progress
+Submitted for review
+Accepted
+Requires correction
+Rejected
+Superseded by reformulation
+Closed
+```
+
+Relationships:
+
+```text
+ProjectPhase belongs to Project
+ProjectPhase belongs to ProjectVersion
+ProjectPhase may have many Milestones
+ProjectPhase may have one or more Budgets or BudgetLines
+ProjectPhase may have many FundingCommitments
+ProjectPhase may have many EvidenceItems
+ProjectPhase may reference ProjectEvidentialContract
+ProjectPhase may reference FiscalizationRequirement or ControlSubproject
+ProjectPhase may be affected by ProjectVariationRecord
+ProjectPhase may generate AuditEvents
+```
+
+Rule:
+
+> Project phases are used when a project needs phase-specific funding, deliverables, verification, or disbursement gates. Small low-risk projects may have one implicit phase.
+
+Design-and-execution rule:
+
+> If a parent project combines design and execution, execution funding may be collected in parallel but remains reserved or conditionally committed until the required design phase is accepted. Construction or execution disbursement cannot occur against an unaudited design.
+
+Example:
+
+```text
+Project:
+  Design and Construction of Multi-court Facility in Macul
+
+Phase 1:
+  Design
+  Deliverables: design package, dimensions, public-access rules, budget, risks, evidence plan
+  Gate: accepted / requires correction / rejected
+
+Phase 2:
+  Construction
+  Funding: may be committed while design is pending
+  Start condition: design phase accepted
+  Disbursement: construction milestones, evidence, fiscalization
+```
 
 ## Project Variation Record
 
@@ -507,6 +602,7 @@ Attributes:
 - original and proposed core metric comparison;
 - beneficiary impact;
 - budget impact;
+- phase impact;
 - milestone impact;
 - disbursement impact;
 - Project Evidential Contract impact;
@@ -524,6 +620,7 @@ Relationships:
 ```text
 ProjectVariationRecord belongs to Project
 ProjectVariationRecord compares ProjectVersions
+ProjectVariationRecord may affect ProjectPhases
 ProjectVariationRecord may create or reference ReformulationProposal
 ProjectVariationRecord may update ProjectEvidentialContract
 ProjectVariationRecord may reference ThresholdPolicy or ReformulationPolicy
@@ -711,6 +808,7 @@ Attributes:
 
 - total amount;
 - budget lines;
+- phase allocation where applicable;
 - control cost;
 - fiscalization cost;
 - evidence cost;
@@ -726,6 +824,7 @@ Attributes:
 - category;
 - amount;
 - justification;
+- phase where applicable;
 - linked milestone;
 - executor controlled or control controlled;
 - status.
@@ -792,9 +891,10 @@ Attributes:
 
 - citizen;
 - project;
+- project phase where applicable;
 - amount;
 - source: direct, delegated, automatic profile;
-- funding target: execution, minimum control, supplemental control where applicable;
+- funding target: design phase, execution phase, minimum control, supplemental control where applicable;
 - status;
 - timestamp;
 - commitment and failure-handling rule;
@@ -816,6 +916,10 @@ Rule:
 
 > Funding is a commitment until project closure, not a freely reversible preference. Return, reassignment, recovery, guarantee, or retention handling occurs through project failure, closure, complaint, or reformulation rules.
 
+Phase rule:
+
+> Funding commitments may target a phase-specific lane. Execution-phase commitments may be accepted while a required design phase is pending, but they remain reserved or conditional and cannot be released to execution until the design phase gate is accepted.
+
 ## Financial Order
 
 A protocol-authorized instruction for external financial execution.
@@ -824,6 +928,7 @@ Attributes:
 
 - order id;
 - project;
+- project phase where applicable;
 - funding commitment or ledger reference;
 - amount;
 - action: commit, reserve, retain, release, return, reassign, recover, execute guarantee, or close balance;
@@ -880,6 +985,7 @@ A verifiable execution step.
 Attributes:
 
 - project;
+- project phase where applicable;
 - name;
 - description;
 - expected date;
@@ -912,6 +1018,7 @@ A structured plan defining how project funds may be released.
 Attributes:
 
 - project;
+- project phase sequence or phase reference where applicable;
 - milestone list;
 - release amounts;
 - maximum release per milestone;
@@ -926,7 +1033,11 @@ Attributes:
 
 Rule:
 
-> A project cannot receive execution funding while its disbursement milestone plan has unresolved critical validation failures.
+> A project cannot receive execution funding commitments if its disbursement milestone plan has unresolved critical validation failures in the rules that define commitment, release, retention, failure handling, or auditability.
+
+Phase rule:
+
+> Where phases are used, the disbursement milestone plan must distinguish which milestones and release amounts belong to each phase. A pending design gate is not by itself a critical validation failure if the phase plan, minimum public-value baseline, release block, and fund-treatment rule are explicit. A later execution phase cannot release funds until required prior phase gates are accepted.
 
 ## Material Information Claim
 
@@ -972,6 +1083,7 @@ A piece of material used to verify, contradict, or evaluate a project.
 Attributes:
 
 - project;
+- project phase where applicable;
 - milestone;
 - metric;
 - material claim supported or contradicted where known;
@@ -1242,6 +1354,10 @@ Attributes:
 - blocking status;
 - resolution;
 - timestamp.
+
+Rule:
+
+> Disbursement may be phase-bound. Design funds may be released against accepted design deliverables, while construction or execution funds remain blocked until the prerequisite design phase gate is accepted.
 
 States:
 
@@ -1612,6 +1728,8 @@ Closed
 Expired
 ```
 
+Project-level states remain simple for citizens. Phase-level states may show more precise internal progress, such as `Design submitted for review`, `Design accepted`, or `Construction funding reserved`.
+
 ## Project state transitions
 
 ```text
@@ -1643,7 +1761,10 @@ Requires reformulation → Closed
 
 ```text
 Project design:
-  proposer, modeler, executor if accepted
+  proposer, modeler, executor if accepted, design-phase reviewer where required
+
+Project phases:
+  proposer/modeler defines, executor accepts where executing, fiscalizer or reviewer verifies phase gates
 
 Execution:
   executor
@@ -1658,10 +1779,10 @@ Fiscalization:
   fiscalizer
 
 Funding:
-  funders, delegates, automatic profiles
+  funders, delegates, automatic profiles, phase-specific funding lanes where applicable
 
 Disbursement:
-  protocol rules, fiscalizer review, custody integration
+  protocol rules, phase gates, fiscalizer review, custody integration
 
 Complaints:
   complainant triggers, executor/fiscalizer/responders answer, review process resolves
@@ -1674,11 +1795,12 @@ Audit trail:
 
 - Project is the central object.
 - Project version preserves history.
+- Project phase groups phase-specific funding, deliverables, verification, and disbursement gates.
 - Value thesis connects project to metrics and evidence.
 - Metrics must connect to evidence.
-- Evidence must connect to milestone, metric, or complaint/review issue.
+- Evidence must connect to phase, milestone, metric, or complaint/review issue where applicable.
 - Fiscalization report connects evidence to review outcome.
-- Disbursement connects milestone, evidence, fiscalization, and money state.
+- Disbursement connects phase, milestone, evidence, fiscalization, and money state.
 - Complaint can affect project state, milestone state, evidence state, or disbursement state.
 - Delegation affects funding action authority, not citizen identity.
 - Automatic profile affects allocation rule, not delegation.

@@ -30,6 +30,7 @@ Necessary for the first coherent version of the model.
 Examples:
 
 - project object;
+- project phases where needed for staged funding, deliverables, verification, and disbursement;
 - actor and role model;
 - proportional threshold policies;
 - value thesis;
@@ -162,6 +163,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Distributed project modeling, execution, and fiscalization `H019` | Core v0 | Needed to separate modeler, executor, and fiscalizer responsibility, allow transparent design-and-execution integration, and use Project Phases where design deliverables must be verified before execution funds are released. |
 | Proportional procedural burden `H020` | Core v0 | Needed to keep one conceptual project structure while scaling documents, evidence, guarantees, fiscalization, and admissibility review by risk, complexity, irreversibility, and public-function sensitivity. |
 | Project variation control `H021` | Core v0 | Needed to distinguish minor corrections, operational variations, material value reformulations, and substitutive reformulations without imposing unnecessary citizen bureaucracy or allowing silent value rewrites. |
 | Project evidential contract `H022` | Core v0 | Needed to define ex ante how each project will prove fulfillment without relying on a single centralized evidence code or ex post evidence improvisation. |

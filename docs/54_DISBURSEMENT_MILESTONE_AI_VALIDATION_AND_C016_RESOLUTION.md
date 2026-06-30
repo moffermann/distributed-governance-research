@@ -6,7 +6,7 @@ This document resolves contradiction C016 from the v0 contradiction checklist.
 
 C016 was originally framed as the problem that the model allows partial release and retention, but the criteria for partial release were not precise enough. That creates a risk that partial disbursement becomes arbitrary, manipulable, or dependent on subjective judgment after funding.
 
-The final v0 resolution is to make disbursement milestones a structured entity and require a specialized AI validation before a project is published as financeable. The AI does not approve the social value of the project. It validates whether the milestone, metric, evidence, release amount, retention, and risk protections are coherent enough for funding and later fiscalization.
+The final v0 resolution is to make disbursement milestones a structured entity and require a specialized AI validation before a project is published as financeable. The AI does not approve the social value of the project. It validates whether the milestone, metric, evidence, release amount, retention, phase-gate treatment where applicable, and risk protections are coherent enough for funding and later fiscalization.
 
 This validation should be consistent with the Project Evidential Contract. The milestone plan defines how money may be released; the evidential contract defines how project fulfillment will be proven.
 
@@ -16,7 +16,7 @@ Accepted as the v0 resolution for C016.
 
 ## Core principle
 
-> A project must not begin receiving funding until its disbursement milestones have been structurally validated as coherent, evidence-linked, and fiscalizable.
+> A project must not begin receiving funding until its disbursement milestones and any applicable phase-gate release rules have been structurally validated as coherent, evidence-linked, and fiscalizable.
 
 Partial disbursement is not an improvised decision during execution. It is a preconfigured rule attached to a validated milestone.
 
@@ -90,6 +90,7 @@ Accepted v0 rules:
 5. The AI validator checks whether the payment structure is coherent, evidence-linked, fiscalizable, and risk-protected.
 6. Critical validation failures block financeable publication until corrected.
 7. Partial release is allowed only when the milestone contains a validated partial-release rule.
+8. Where a project uses phases, the plan must identify which milestones and release amounts belong to each phase and which prerequisite phase gates block later-phase release.
 ```
 
 ## Disbursement Milestone entity
@@ -113,6 +114,8 @@ Project Evidential Contract reference
 evidence acceptance rule
 responsible executor
 responsible fiscalizer or fiscalization method
+project phase where applicable
+prerequisite phase gate where applicable
 maximum releasable amount
 percentage of execution budget
 partial release allowed
@@ -156,6 +159,7 @@ If there is advance payment, are protections defined?
 Is there adequate retention?
 Can a fiscalizer reasonably evaluate this milestone?
 Can a citizen understand what is being paid and why?
+If a later phase is funded before a prior phase is accepted, are the reserved-fund rule, release block, and fund-treatment rule explicit?
 ```
 
 The AI should not pretend to know the exact economic value of every milestone.
@@ -172,14 +176,14 @@ However:
 
 ```text
 No validated milestone plan → no financeable publication.
-No financeable publication → no execution funding.
+No financeable publication → no execution funding commitments.
 ```
 
 This prevents citizens from funding a project whose payment structure is still unresolved.
 
 The system may still let the proposer iterate privately or in draft mode with AI assistance.
 
-But the project should not begin receiving execution funding until the milestone plan has passed validation.
+But the project should not begin receiving execution funding commitments until the milestone plan has passed validation.
 
 ## Validation outcome
 
@@ -435,12 +439,14 @@ For Red cases, the project should not be financeable yet.
 C016 is resolved as follows:
 
 ```text
-Create a structured Disbursement Milestone entity and require specialized AI validation before a project is published as financeable. The AI does not approve the project's social value and does not estimate the exact economic value of every milestone. It checks whether milestones, evidence, Project Evidential Contract references, release amounts, partial-release rules, retentions, and advance-payment protections are coherent enough for funding and later fiscalization. Projects with unresolved critical validation failures cannot begin receiving funding.
+Create a structured Disbursement Milestone entity and require specialized AI validation before a project is published as financeable. The AI does not approve the project's social value and does not estimate the exact economic value of every milestone. It checks whether milestones, phase-gate release rules where applicable, evidence, Project Evidential Contract references, release amounts, partial-release rules, retentions, and advance-payment protections are coherent enough for funding and later fiscalization. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
 ```
 
 Final rule:
 
-> No project may receive execution funding until its disbursement milestone plan has passed specialized AI validation with no unresolved critical failures.
+> No project may receive execution funding commitments until its disbursement milestone plan and applicable phase-gate funding treatment have passed specialized AI validation with no unresolved critical failures.
+
+A pending design phase gate is not itself a critical validation failure when the project explicitly defines the design baseline, reserved execution-funding rule, release block, and failure or reformulation treatment. It is a disbursement blocker until accepted.
 
 ## Documents that should eventually reflect this resolution
 

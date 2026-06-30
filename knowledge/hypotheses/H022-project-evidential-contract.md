@@ -37,6 +37,7 @@ A project should declare:
 - what evidence will demonstrate fulfillment;
 - which material information claims must be evidenced;
 - which evidence is required for each milestone, metric, budget line, risk, or antivalue where relevant;
+- which evidence is required for each project phase where relevant;
 - who can observe or verify that evidence;
 - what fiscalization profile or control package is required;
 - what antivalue or externalities may appear;
@@ -56,6 +57,7 @@ A Project Evidential Contract should include at least:
 - expected evidence producer or source role;
 - whether executor self-report is sufficient or corroboration is required;
 - timing: before publication, before execution-ready status, per milestone, at closure, or during follow-up;
+- phase timing or phase gate where applicable;
 - review actor or method;
 - contradiction or complaint path;
 - disbursement, closure, reputation, or responsibility effect where applicable;
@@ -93,6 +95,18 @@ permit documents, construction milestones, georeferenced evidence, budget-line e
 
 Regulated mining or water-intensive project:
 baseline documents, permits, technical measurements, expert review, affected-party evidence channels, and competent authority or court boundaries may be required.
+```
+
+For an integrated design-and-execution project, the contract should distinguish design-phase evidence from construction-phase evidence.
+
+Example:
+
+```text
+Design phase:
+dimensions, public access rules, bathrooms or accessibility commitments where required, budget refinement, permit or compatibility requirements, and reviewer acceptance.
+
+Construction phase:
+site evidence, construction milestones, budget-line evidence, fiscalizer visits, final completion proof, and public-use evidence.
 ```
 
 ## Evidence quality competition

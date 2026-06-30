@@ -83,6 +83,7 @@ Additional v0 threshold dimensions may include:
 - control-package threshold;
 - evidence threshold;
 - admissibility-review threshold;
+- phase-gate threshold where applicable;
 - disbursement milestone validation;
 - common-good impact declaration;
 - related-party safeguard threshold;
@@ -124,6 +125,7 @@ The system checks completeness and basic coherence. No independent admissibility
 May require:
 
 - execution funding;
+- accepted design phase if design and construction are integrated;
 - accepted executor responsibility;
 - permits or venue documentation;
 - independent control package;
@@ -136,6 +138,7 @@ Citizen-facing version:
 ```text
 To become execution-ready:
 Funding: complete.
+Design phase: accepted, if applicable.
 Fiscalization: one primary fiscalizer required.
 Documents: municipal permit pending.
 Tutored review: no duplicate public project detected / pending authority resolution.
@@ -147,6 +150,8 @@ Procedural burden profile:
 Reinforced.
 The system or AI may require land-use documents, public-access commitments, construction milestones, and control-package definition. If the sports function is in tutored mode, the competent authority reviews duplication or scope. If not tutored, an independent admissibility reviewer or certifier may be required by policy.
 ```
+
+If the project is `Design and Construction of Multi-court Facility in Macul`, the threshold policy should also define the design gate that blocks construction release until the design package satisfies the minimum public-value baseline.
 
 ### Strategic defense asset
 

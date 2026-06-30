@@ -15,6 +15,7 @@ This model simplifies citizen participation and better reflects distributed gove
 A project can be open for multiple forms of participation at the same time:
 
 - funding;
+- phase-specific funding where applicable;
 - support;
 - justified objection;
 - fiscalization offers or fiscalizer participation;
@@ -39,6 +40,7 @@ It may also be looking for:
 - fiscalizers;
 - evidence producers;
 - funders;
+- phase deliverables or phase-gate review;
 - beneficiary confirmations;
 - observations;
 - missing control components;
@@ -63,6 +65,10 @@ Justified objections:
 
 Fiscalizers:
   0 of 1 required
+
+Phases:
+  Design under review
+  Construction funding reserved
 
 Evidence producers:
   2 of 4 required
@@ -125,6 +131,7 @@ Possible closure conditions include:
 
 - responsible executor accepted;
 - required funding reached;
+- required prior phase gate accepted where applicable;
 - required fiscalizer or fiscalizers confirmed;
 - required evidence producer commitments met;
 - beneficiary information declared or confirmed where applicable;
@@ -166,6 +173,8 @@ Concrete threshold values may be configured by protocol, operating mode, public-
 
 The system and AI may help discover which documents appear necessary, but document acceptability is governed by the active policy. If a project requires independent admissibility review outside tutored authority review, that review may be modeled as a Control Subproject associated with the parent project.
 
+For phased projects, closure conditions may be phase-specific. A parent project may receive construction funding commitments while the design phase is pending, but the construction phase cannot become execution-ready until the design package is accepted and any required control package, documents, evidence plan, and blocking-condition checks are complete.
+
 ## State transition
 
 Suggested simplified citizen-facing states:
@@ -206,10 +215,13 @@ At this point:
 
 - funding is complete;
 - executor responsibility is confirmed;
+- required prior phase gates are accepted where applicable;
 - fiscalization requirements are satisfied;
 - evidence requirements are satisfied or committed;
 - no blocking issue prevents execution;
 - funds can begin to be released according to milestones and disbursement rules.
+
+For phased projects, execution-ready may apply to the relevant phase. Construction funding can be reserved before design acceptance, but construction funds cannot be released until the design phase gate is accepted.
 
 ## In execution
 

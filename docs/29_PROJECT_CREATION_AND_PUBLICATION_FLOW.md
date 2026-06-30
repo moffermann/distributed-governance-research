@@ -16,6 +16,8 @@ This is a v0 design and should be refined later.
 
 A project is not just a text proposal. It is a structured commitment with value, beneficiaries, responsible execution, budget, milestones, metrics, evidence, fiscalization, risks, and closure conditions.
 
+Where a project includes meaningfully different segments of work, such as design and construction, it should also define `Project Phases`. Phases create visible funding lanes, deliverables, verification gates, and disbursement boundaries inside one parent project.
+
 ## Main question
 
 ```text
@@ -50,15 +52,16 @@ Important distinction:
 4. Define beneficiaries
 5. Define executor and related-party declarations
 6. Build budget
-7. Define milestones
-8. Build the Project Evidential Contract
-9. Define fiscalization required
-10. Define threshold policy
-11. Declare risks and antivalues
-12. Assisted validation by rules and AI
-13. Citizen preview
-14. Publication as open project
-15. Management of open project
+7. Define phases where relevant
+8. Define milestones
+9. Build the Project Evidential Contract
+10. Define fiscalization required
+11. Define threshold policy
+12. Declare risks and antivalues
+13. Assisted validation by rules and AI
+14. Citizen preview
+15. Publication as open project
+16. Management of open project
 ```
 
 ## 1. Create idea
@@ -336,7 +339,71 @@ Rule:
 
 Control work may be structured as a Control Subproject. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable; the executor cannot directly select the actor that validates its own performance.
 
-## 7. Define milestones
+## 7. Define phases where relevant
+
+Most small projects can proceed with one implicit phase.
+
+Explicit `Project Phases` should be used when the project has distinct segments with different deliverables, funding, verification, or disbursement gates.
+
+Examples:
+
+- design then construction;
+- feasibility then execution;
+- pilot then scale-up;
+- delivery then post-completion monitoring.
+
+Each explicit phase should define:
+
+- purpose;
+- budget or funding lane;
+- deliverables;
+- responsible actor or role;
+- evidence and review requirements;
+- readiness gate;
+- dependency on prior phases;
+- failure or reformulation treatment.
+
+### Integrated design-and-execution project
+
+A single parent project may combine design and execution.
+
+Example:
+
+```text
+Project:
+Design and Construction of Multi-court Facility in Macul.
+
+Phase 1:
+Design.
+
+Phase 2:
+Construction.
+```
+
+The construction phase may receive funding commitments while the design phase is still pending, but those funds remain reserved. They cannot be released for construction until the design package is accepted.
+
+The project should declare a minimum public-value baseline before construction funding is collected.
+
+Example baseline:
+
+```text
+Macul multi-court facility:
+- two usable multi-courts;
+- declared or regulation-compatible dimensions;
+- public access hours;
+- accessibility and bathroom commitments where promised or required;
+- budget-change rule;
+- construction milestones;
+- evidence and fiscalization requirements.
+```
+
+If the design phase later produces incomplete courts, wrong dimensions, no bathrooms where required, weaker public access, or a weaker evidence plan, the construction phase cannot become execution-ready. The project must enter correction, material reformulation, rejection, expiration, return, reassignment, or reconfirmation according to the active policy.
+
+Rule:
+
+> A design-and-execution project may be one parent project, but execution money cannot be released against an unaudited design.
+
+## 8. Define milestones
 
 The system turns the project into verifiable milestones.
 
@@ -376,7 +443,7 @@ Deadline: month 6
 Evidence: final report, total attendance, beneficiary confirmation
 ```
 
-## 8. Build the Project Evidential Contract
+## 9. Build the Project Evidential Contract
 
 For every promised value, the system requires a Project Evidential Contract.
 
@@ -445,7 +512,19 @@ The technical layer should preserve the full contract.
 
 The contract should be proportional. A small sports workshop may need attendance, photos, and beneficiary confirmation. A water-intensive industrial project may need permits, baseline measurements, technical records, independent review, affected-party evidence channels, and competent-authority boundaries.
 
-## 9. Define required fiscalization
+For phased projects, the contract should identify which evidence applies to each phase.
+
+Example:
+
+```text
+Design phase:
+design package, dimensions, public-access conditions, budget refinement, permit or compatibility requirements, and reviewer acceptance.
+
+Construction phase:
+georeferenced construction evidence, fiscalizer visits, budget-line evidence, completion proof, public-use evidence, and beneficiary or community observations.
+```
+
+## 10. Define required fiscalization
 
 The system proposes or requires fiscalization according to project characteristics.
 
@@ -477,7 +556,7 @@ Rule:
 
 Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-## 10. Define threshold policy
+## 11. Define threshold policy
 
 The system should determine and expose the project's applicable `Threshold Policy`.
 
@@ -488,6 +567,7 @@ The policy should also expose the project's `Procedural Burden Profile` under H0
 Possible threshold dimensions:
 
 - execution funding;
+- phase gate acceptance where applicable;
 - beneficiary or attendance commitments;
 - fiscalization and control package;
 - evidence producer commitments;
@@ -524,6 +604,19 @@ The creator may see why thresholds apply, but cannot silently remove mandatory t
 Rule:
 
 > Thresholds must be proportional, visible, and auditable before citizens are asked to fund or follow the project.
+
+For phased projects, the threshold policy should show phase dependencies.
+
+Example:
+
+```text
+Construction phase cannot become execution-ready until:
+- design package accepted;
+- execution funding reserved or complete;
+- control package accepted;
+- construction disbursement milestone plan valid;
+- no blocking complaint affects the design or construction baseline.
+```
 
 ### Requirement discovery and admissibility review
 
@@ -565,7 +658,7 @@ Control Subproject: Project Admissibility Review
 
 This review is linked to the parent project, scoped, budgeted, conflict-checked, and selected under C002/C013 control rules. The executor should not privately choose or pay the reviewer that determines admissibility.
 
-## 11. Declare risks and antivalues
+## 12. Declare risks and antivalues
 
 The system should explicitly ask:
 
@@ -602,7 +695,7 @@ Rule:
 
 Where relevant, the project must declare common-good impact through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+.
 
-## 12. Assisted validation by rules and AI
+## 13. Assisted validation by rules and AI
 
 Before publication, the system validates the project.
 
@@ -619,6 +712,7 @@ Validation dimensions:
 - fiscalization adequacy;
 - risk and antivalue declaration;
 - role responsibility;
+- phase plan and phase gate completeness where applicable;
 - disbursement milestone plan;
 - common-good impact declaration where relevant;
 - threshold policy completeness;
@@ -646,15 +740,16 @@ Requires adjustments:
 2. The Project Evidential Contract lacks evidence for attendance.
 3. Budget does not include fiscalization.
 4. The Health value needs a metric or should be removed.
+5. The construction phase has funding enabled, but the design baseline and failure-treatment rule are missing.
 ```
 
 AI helps identify issues, but protocol rules define mandatory requirements.
 
 AI may suggest documents, burden profile, review needs, and missing conditions. It should not certify that a permit, technical study, consultation process, environmental document, or legal authorization is substantively valid.
 
-Projects with unresolved critical failures in their disbursement milestone plan or threshold policy cannot be published for execution funding.
+Projects with unresolved critical failures in their disbursement milestone plan, phase plan, or threshold policy cannot be published for execution funding commitments. A pending design gate is not a critical failure if the phase plan, minimum public-value baseline, reserved-fund rule, and failure-treatment rule are explicit.
 
-## 13. Citizen preview
+## 14. Citizen preview
 
 Before publication, the creator sees how the project will appear to citizens.
 
@@ -684,9 +779,24 @@ Threshold policy:
 Medium public sports project
 ```
 
+For phased projects, the preview should show phase status without exposing unnecessary technical detail.
+
+Example:
+
+```text
+Design and Construction of Multi-court Facility in Macul
+
+Phases:
+Design: funding open / deliverables pending.
+Construction: funding can be reserved; release blocked until design accepted.
+
+How this protects your contribution:
+construction funds are not released if the design fails the public baseline.
+```
+
 This forces the creator to see the project from the citizen perspective.
 
-## 14. Publication as open project
+## 15. Publication as open project
 
 Once minimum requirements are complete, the project can be published as:
 
@@ -701,6 +811,7 @@ Publication as an open project requires accepted executor responsibility. Execut
 Publication means the project can receive:
 
 - funding commitments;
+- phase-specific funding commitments where applicable;
 - fiscalizer offers;
 - evidence producer commitments;
 - comments;
@@ -712,7 +823,7 @@ Rule:
 
 > Publishing opens the project for closure conditions. It does not authorize execution by itself.
 
-## 15. Management of open project
+## 16. Management of open project
 
 After publication, the executor or responsible project actor sees an open project management panel.
 
@@ -724,6 +835,7 @@ Open project
 
 Missing:
 - $4.440.000 funding
+- design phase review, if applicable
 - 1 fiscalizer
 - 2 evidence producers
 - 4 comments pending response
@@ -747,8 +859,8 @@ Limits:
 - cannot hide complaints;
 - cannot freely choose the responsible fiscalizer;
 - cannot change core promises without visible reformulation;
-- cannot receive execution disbursement before conditions are met;
-- cannot receive execution funding if the disbursement milestone plan has unresolved critical validation failures.
+- cannot receive execution disbursement before phase gates and conditions are met;
+- cannot receive execution funding commitments if the disbursement milestone plan, phase plan, or fund-treatment rule has unresolved critical validation failures.
 
 ## Creator-side project states
 
@@ -777,6 +889,7 @@ Idea
 → beneficiaries
 → executor
 → budget
+→ phases where relevant
 → milestones
 → Project Evidential Contract
 → fiscalization
@@ -798,6 +911,8 @@ This flow should not:
 - allow value icons without metrics;
 - allow metrics without evidence;
 - publish a project with a weak or missing evidential contract;
+- hide phase gates in design-and-execution projects;
+- release construction funds against an unaudited design;
 - hide control costs;
 - let the executor control its own fiscalization;
 - hide risks and antivalues;

@@ -10,6 +10,8 @@ Disbursement is one of the most trust-sensitive parts of the system. It defines 
 
 > Disbursement is not payment by trust. It is conditional release of retained resources, based on milestones, evidence, fiscalization, and absence of relevant blocking issues.
 
+For phased projects, disbursement is also phase-gated. Funds committed to a later execution phase may be collected in advance, but they cannot be released until prerequisite phase deliverables are accepted.
+
 ## Main question
 
 ```text
@@ -22,11 +24,12 @@ When, why, and under what controls can project funds be released?
 1. Funds committed
 2. Project becomes execution-ready
 3. Execution begins
-4. Milestone is activated or submitted for review
-5. Evidence is submitted
-6. Fiscalizer reviews
-7. Blocking conditions are checked
-8. Disbursement decision is made
+4. Phase gate is checked where applicable
+5. Milestone is activated or submitted for review
+6. Evidence is submitted
+7. Fiscalizer reviews
+8. Blocking conditions are checked
+9. Disbursement decision is made
 9. System generates a financial order where money movement is required
 10. Custodian executes payment, retention, return, reassignment, or recovery
 11. Audit trail is updated
@@ -58,6 +61,7 @@ A project can move toward disbursement only after it becomes execution-ready.
 Required conditions may include:
 
 - funding complete;
+- prerequisite phase gate accepted where applicable;
 - responsible executor accepted;
 - fiscalizer confirmed;
 - minimum admissible control package accepted where required;
@@ -71,22 +75,45 @@ Required conditions may include:
 
 Execution-ready does not mean automatic release of the full budget.
 
+For phased projects, execution-ready may apply to the relevant phase. Construction-phase disbursement requires construction readiness, not merely parent-project publication or funding.
+
 ### Rule
 
 > Execution-ready authorizes controlled execution. It does not authorize uncontrolled payment.
 
-No project may receive execution funding until its disbursement milestone plan is coherent enough for funding and later fiscalization.
+No project may receive execution funding commitments until its disbursement milestone plan and any applicable phase-gate funding treatment are coherent enough for funding and later fiscalization.
 
 The disbursement milestone plan should reference the accepted Project Evidential Contract. This avoids releasing funds against evidence criteria invented after execution has already started.
 
 If the executor proposes to change milestones, evidence requirements, disbursement criteria, fiscalization conditions, or beneficiary targets during execution, the change must be classified under H021 before any affected funds are released. Operational variations follow the active Reformulation Policy; material value changes require the C017 Reformulation Proposal path.
 
+If the project combines design and construction, construction funds may be committed while the design phase is pending only when the phase baseline, phase gate, release block, and fund-treatment rule are explicit. Those funds cannot be released while the design phase is pending, rejected, or materially reformulated.
+
+Example:
+
+```text
+Project:
+Design and Construction of Multi-court Facility in Macul.
+
+Design phase:
+Pending review.
+
+Construction funding:
+Reserved.
+
+Disbursement:
+Blocked until design accepted.
+```
+
 ## 3. Start of execution
 
 Once execution begins, the milestone calendar becomes active.
 
+For phased projects, the milestone calendar activates for the relevant accepted phase. Design milestones may be active while construction milestones remain blocked by the design gate.
+
 Each milestone should have:
 
+- phase reference where applicable;
 - maximum releasable amount;
 - required evidence;
 - responsible fiscalizer;
@@ -111,7 +138,36 @@ Reviewer:
 responsible fiscalizer
 ```
 
-## 4. Milestone activation or review request
+## 4. Phase gate check
+
+Before a milestone in a later phase can activate for disbursement, the system checks whether required prior phase gates are accepted.
+
+Possible phase gate results:
+
+```text
+Accepted
+Requires correction
+Rejected
+Material reformulation required
+Pending review
+```
+
+If the gate is not accepted, later-phase disbursement remains blocked.
+
+Example:
+
+```text
+Construction milestone:
+site preparation.
+
+Prerequisite:
+design package accepted.
+
+Result:
+blocked because design review requires correction.
+```
+
+## 5. Milestone activation or review request
 
 There are two possible models:
 
@@ -133,7 +189,7 @@ This does not validate the milestone.
 
 > The executor can declare progress, but cannot approve its own milestone.
 
-## 5. Evidence submission
+## 6. Evidence submission
 
 Evidence must be submitted for the milestone.
 
@@ -164,6 +220,7 @@ Linked to fiscalizer report
 Evidence should be linked to:
 
 - project;
+- project phase where applicable;
 - milestone;
 - metric;
 - evidential contract requirement;
@@ -176,9 +233,11 @@ Executor-submitted material is self-reported support unless corroborated. Critic
 
 If submitted evidence does not satisfy the evidential contract, the fiscalizer may accept it only as contextual material, request correction or additional evidence, approve partially where the disbursement plan allows it, or reject the milestone.
 
-## 6. Fiscalizer review
+## 7. Fiscalizer review
 
 The fiscalizer reviews whether the milestone was fulfilled.
+
+Where the disbursement depends on a phase gate, the fiscalizer, reviewer, certifier, or competent authority also verifies whether the phase deliverables satisfy the accepted baseline and threshold policy.
 
 The review may consider:
 
@@ -206,13 +265,14 @@ Rejected
 Extraordinary review required
 ```
 
-## 7. Blocking condition check
+## 8. Blocking condition check
 
 Before any release, the system checks whether a blocking issue exists.
 
 Possible blockers:
 
 - blocking complaint open;
+- prerequisite phase gate pending, rejected, or requiring correction;
 - evidence contradicted and unresolved;
 - fiscalizer report missing;
 - formal review triggered by supplemental control finding;
@@ -241,7 +301,7 @@ Under extraordinary review
 
 Supplemental control findings do not block disbursement automatically. They must be converted into a formal complaint, extraordinary review, pause, blocking condition, or disbursement objection under the applicable rule.
 
-## 8. Disbursement decision
+## 9. Disbursement decision
 
 Possible decisions:
 
@@ -261,6 +321,7 @@ When a decision requires money movement, the system should generate a `Financial
 The financial order should include:
 
 - project;
+- phase where applicable;
 - milestone or closure reference;
 - amount;
 - action: release, retain, return, reassign, recover, or execute guarantee;
@@ -271,6 +332,8 @@ The financial order should include:
 - protocol authorization or signature.
 
 The custodian executes valid financial orders. It may reject or suspend an order only for closed technical or legal causes such as invalid signature, duplicated order, insufficient funds, invalid account, legal freeze, compliance block required by law, malformed order, or ledger mismatch. It should not reject an order because it disagrees with the project's civic value or priority.
+
+The platform should not generate a release order for a later phase while a required prior phase gate is not accepted.
 
 Example full release:
 
@@ -305,7 +368,7 @@ Reason:
 activities started, but attendance confirmation remains incomplete.
 ```
 
-## 9. Partial release and retention
+## 10. Partial release and retention
 
 The system should not be only binary.
 
@@ -325,7 +388,7 @@ Possible mechanisms:
 
 Partial release is allowed only when the disbursement milestone plan defines separable components, accepted evidence for completed components, explicit retained amount, clear condition for releasing retained funds, fiscalizer explanation, and citizen-facing summary.
 
-## 10. Guarantees and retentions
+## 11. Guarantees and retentions
 
 Medium, large, high-risk, remote, or hard-to-reverse projects may require retentions or guarantees.
 
@@ -347,7 +410,7 @@ Retentions may help:
 
 > The harder a project is to reverse or verify, the more important retention becomes.
 
-## 11. Failed milestone
+## 12. Failed milestone
 
 If a milestone fails:
 
@@ -369,7 +432,7 @@ Revoked
 
 Unused funds may be returned or reassigned according to protocol and citizen rules.
 
-## 12. Complaint impact
+## 13. Complaint impact
 
 Complaints can affect disbursement differently.
 
@@ -402,7 +465,7 @@ H024 boundary:
 
 > A submitted complaint, support threshold, reserved review funding, or fiscalizer quote does not by itself block disbursement. For legally regulated projects, platform review does not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights. Those effects require a court order, regulator order, or competent authority resolution where applicable.
 
-## 13. Remaining or unused funds
+## 14. Remaining or unused funds
 
 Funds may remain unused because of:
 
@@ -425,7 +488,7 @@ Possible treatment:
 
 > Remaining funds do not automatically belong to the executor.
 
-## 14. Revoked project
+## 15. Revoked project
 
 If a project is revoked before release:
 
@@ -445,7 +508,7 @@ If revoked after partial release:
 
 > Revocation must distinguish unreleased funds, justified released funds, and funds released under non-compliance.
 
-## 15. Citizen view
+## 16. Citizen view
 
 The citizen should see a simple status.
 
@@ -486,6 +549,19 @@ What happens next:
 Executor must respond and the fiscalizer must review additional evidence.
 ```
 
+Example phase-gate case:
+
+```text
+Construction funds reserved
+
+Reason:
+Design review is not accepted yet.
+
+What happens next:
+The designer/executor must correct the design package or request reformulation.
+No construction money is released while this gate remains unresolved.
+```
+
 Example supplemental control case:
 
 ```text
@@ -498,7 +574,7 @@ What happens next:
 The issue must enter formal review before it can block release.
 ```
 
-## 16. Executor view
+## 17. Executor view
 
 The executor should see an operational disbursement panel.
 
@@ -523,7 +599,7 @@ Action:
 Submit missing evidence
 ```
 
-## 17. Fiscalizer view
+## 18. Fiscalizer view
 
 The fiscalizer should see:
 
@@ -546,13 +622,14 @@ Reject
 Request extraordinary review
 ```
 
-## 18. Audit trail
+## 19. Audit trail
 
 Every disbursement event must be recorded in Layer 5.
 
 Required trace:
 
 - project;
+- phase where applicable;
 - milestone;
 - requested amount;
 - approved amount;

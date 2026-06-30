@@ -40,6 +40,7 @@ substitutive reformulation
 The executor is evaluated against:
 
 - the accepted base design;
+- accepted phase deliverables where applicable;
 - formally approved variations;
 - the active Project Evidential Contract;
 - declared value thesis and core metrics;
@@ -144,14 +145,15 @@ Before accepting a change, the system or reviewer should ask:
 1. Does the change preserve the value thesis?
 2. Does it preserve core metrics and beneficiary scope?
 3. Does it affect budget, milestones, disbursement, fiscalization, evidence, risk, antivalues, or related-party safeguards?
-4. Does it weaken how fulfillment will be proven?
-5. Does the active Reformulation Policy require approval, spacing, maximum count, notification, or deadline effects?
-6. Is this still the same project?
+4. Does it affect any phase gate or prerequisite phase baseline?
+5. Does it weaken how fulfillment will be proven?
+6. Does the active Reformulation Policy require approval, spacing, maximum count, notification, or deadline effects?
+7. Is this still the same project?
 ```
 
 If the answer to 1 or 2 is no, the change is not an ordinary operational variation.
 
-If the answer to 6 is no, the proposal should become a new project or trigger failure/closure of the original.
+If the answer to 7 is no, the proposal should become a new project or trigger failure/closure of the original.
 
 ## Examples from current v0 use cases
 
@@ -178,6 +180,12 @@ Material value reformulation:
 
 ```text
 Reducing the promised public access hours or removing the accessible bathroom commitment.
+```
+
+Design-phase failure:
+
+```text
+The design package submitted for a design-and-construction project omits required bathrooms, changes court dimensions materially, or weakens public-access rules. Construction cannot become execution-ready until the issue is corrected or processed as material reformulation.
 ```
 
 Substitutive reformulation:

@@ -248,7 +248,7 @@ Evidence publication should not be trapped behind human pre-approval. The system
 
 ### Accepted v0 rule
 
-Create a structured `Disbursement Milestone` entity and require specialized AI validation before a project is published as financeable. Projects with unresolved critical validation failures cannot begin receiving execution funding.
+Create a structured `Disbursement Milestone` entity and require specialized AI validation before a project is published as financeable. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments. For phased projects, a pending design gate is not itself a critical validation failure if the design baseline, reserved-fund rule, release block, and failure-treatment rule are explicit; it blocks later-phase release until accepted.
 
 ---
 
@@ -377,6 +377,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Does every project have a responsible executor before execution funding?
 - [x] Are Idea, draft project, and open financeable project clearly separated?
 - [ ] Does every project have value thesis, beneficiaries, metrics, evidence, fiscalization, risks, and antivalues?
+- [ ] If the project uses phases, are phase deliverables, gates, dependencies, and failure treatment explicit?
 - [ ] Are project versions immutable?
 - [ ] Are reformulations visible?
 - [ ] Can project history be reconstructed from audit events?
@@ -399,16 +400,19 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are delegated and automatic allocations distinguishable?
 - [ ] Are unused funds handled clearly?
 - [ ] Are funders notified of material changes?
+- [ ] If execution funding is phase-specific, does the citizen see whether funds are reserved pending a phase gate?
 
 ## 5. Disbursement checklist
 
 - [ ] Does every disbursement have a milestone?
+- [ ] If the project is phased, does every relevant disbursement reference the applicable phase?
 - [ ] Does every disbursement have evidence?
 - [ ] Does every disbursement have fiscalizer review?
 - [ ] Are blocking issues checked before release?
 - [ ] Are partial releases governed by pre-defined rules?
 - [ ] Are retained funds visible?
 - [ ] Is every release auditable?
+- [ ] Are later-phase funds blocked when prerequisite phase gates are pending, rejected, or materially reformulated?
 
 ## 6. Evidence checklist
 
@@ -493,9 +497,10 @@ Highest-priority integration checks:
 5. Ensure complaints are formal entities with admission, scope, and blocking status.
 6. Ensure value verification uses packages, not isolated metrics.
 7. Ensure disbursement milestones require coherent pre-funding validation.
-8. Ensure tutored mode decisions and timeouts become public civic objects.
-9. Ensure beneficiary privacy does not create anonymous formal power.
-10. Ensure discovery visibility is explainable and user-customizable.
+8. Ensure project phases prevent release of later-phase execution funds before prerequisite phase gates are accepted.
+9. Ensure tutored mode decisions and timeouts become public civic objects.
+10. Ensure beneficiary privacy does not create anonymous formal power.
+11. Ensure discovery visibility is explainable and user-customizable.
 ```
 
 ## Proposed next working method

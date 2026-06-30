@@ -38,7 +38,7 @@ Project:
   financeable operational unit;
   created by a citizen or organization;
   associated with a public function or project classification;
-  declares value thesis, budget, KPIs, milestones, evidential contract, responsible actors, risks, and fiscalization conditions.
+  declares value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, responsible actors, risks, and fiscalization conditions.
 ```
 
 ## Required executor rule
@@ -59,6 +59,8 @@ Therefore:
 
 A separate project may exist for design/modeling work. In that case, the executor is the actor responsible for delivering the design, not the future execution of the designed project.
 
+A single parent project may also combine design and execution when the design work is represented as a project phase. In that case, execution-phase funding may be collected while the design phase is pending, but it remains reserved or conditional and cannot be released for execution until the design phase deliverables pass the applicable verification gate.
+
 ## Design, acceptance, and responsibility
 
 The modeler/designer of a project must be identified, but the operational responsibility for an execution project belongs to the executor once the executor accepts the design and publishes or submits the project for execution financing.
@@ -76,6 +78,8 @@ design published
 ```
 
 The executor cannot later avoid responsibility by claiming that the accepted design contained errors, risks, or antivalues that were reasonably detectable during the review and acceptance phase.
+
+If the same actor designs and executes the project, the actor holds both roles for traceability. That accumulation is allowed when declared, but self-acceptance of the design does not replace independent design-phase verification where the Threshold Policy, related-party safeguards, risk level, or project type requires it.
 
 ## Role attributes versus reputational responsibility
 
@@ -105,6 +109,8 @@ executor attribute → execution responsibility and project-performance reputati
 fiscalizer attribute → fiscalization traceability and fiscalizer reputation
 ```
 
+For phased projects, reputation remains role-specific by phase. A defective design package can affect the modeler/designer role. Failure to execute accepted construction commitments can affect the executor role. Weak verification of the design gate can affect the fiscalizer or reviewer role.
+
 ## Modeler reputation versus executor reputation
 
 The modeler's reputation is associated with the quality of the design and with the reception that design receives from potential executors.
@@ -123,6 +129,7 @@ Executor reputation is associated with the execution project once the executor h
 The executor is evaluated against:
 
 - the accepted base design;
+- accepted phase deliverables where applicable;
 - formally approved variation records;
 - declared KPIs;
 - milestones;
@@ -163,6 +170,69 @@ Changing a sports-school schedule while preserving 80 children, workshop count, 
 Changing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
 ```
 
+## Project phases
+
+A project may include `Project Phases` when different parts of the project need separate funding, deliverables, verification, or disbursement gates.
+
+A phase is not a separate public-value project by default. It is an internal segment of the parent project.
+
+```text
+Project
+→ Project Phase
+→ Milestones
+```
+
+Common phase types include:
+
+- design;
+- feasibility or pre-assessment;
+- construction;
+- delivery or service operation;
+- pilot;
+- scale-up;
+- post-completion monitoring.
+
+Small, low-risk projects may use one implicit phase. The phase object should be used only when it clarifies funding, responsibility, evidence, or control.
+
+Each explicit phase should define:
+
+- phase purpose;
+- phase budget or funding lane;
+- phase deliverables;
+- responsible actor or role;
+- evidence and review requirements;
+- readiness gate;
+- dependency on prior phases;
+- disbursement rules;
+- failure or reformulation treatment.
+
+### Integrated design-and-execution projects
+
+If a project is published as `Design and Construction of Multi-court Facility in Macul`, the parent project should define at least:
+
+```text
+Phase 1:
+  Design
+  Deliverables:
+    design package, dimensions, public-access rules, budget refinement,
+    permit or compatibility requirements, risks, evidence plan.
+  Gate:
+    accepted / requires correction / rejected.
+
+Phase 2:
+  Construction
+  Funding:
+    may receive execution commitments while design is pending.
+  Start condition:
+    design phase accepted.
+  Disbursement:
+    construction milestones, evidence, fiscalization, and blocking checks.
+```
+
+Before execution funding is collected for a later phase, the parent project should declare a minimum public-value baseline. For the Macul example, this may include two usable multi-courts, declared or regulation-compatible dimensions, public access hours, accessibility and bathroom commitments where promised or required, budget-change rules, and evidence/fiscalization requirements.
+
+If the design phase later produces incomplete courts, wrong dimensions, no bathrooms where required, weaker public-access rules, or a materially weaker evidence plan, the construction phase cannot become execution-ready. The project enters correction, material reformulation, rejection, expiration, return, reassignment, or reconfirmation according to the active policy.
+
 ## Main project sections
 
 ### 1. Project identity
@@ -177,6 +247,7 @@ Changing the target from 80 children to 60 children changes the value promise an
 - creation date;
 - publication date;
 - funding deadline;
+- phase plan where applicable;
 - reformulation policy or policy reference;
 - variation control history.
 
@@ -295,6 +366,7 @@ Citizen-facing views should summarize the contract as "how this project will be 
 A project declares:
 
 - required amount;
+- phase budget or funding lane where applicable;
 - currency;
 - funding deadline;
 - reformulation policy or policy reference;
@@ -343,6 +415,22 @@ After funding → no ordinary free withdrawal.
 
 Funding is a commitment until project closure. If a project fails, citizen protection comes through traceability, fiscalization, complaints, guarantees, recovery, returned balances, reassignment rules, and reputation consequences.
 
+For phased projects, funding may be phase-specific:
+
+```text
+Design funding:
+  funds design deliverables only.
+
+Execution-phase funding:
+  may be committed while design is pending,
+  but remains reserved until the design gate is accepted.
+
+Control funding:
+  remains separated from executor-controlled spending.
+```
+
+If a design gate fails, reserved execution funds are not released. Their treatment follows the active failure, reformulation, return, reassignment, or reconfirmation policy. This is not ordinary free withdrawal; it is a protocol-defined outcome because the condition for execution funding was not satisfied.
+
 ### 5a. Threshold policy and execution readiness
 
 A project should declare or reference the `Threshold Policy` that defines what it must complete to become execution-ready.
@@ -350,6 +438,7 @@ A project should declare or reference the `Threshold Policy` that defines what i
 Thresholds may include:
 
 - execution funding;
+- phase gate acceptance where applicable;
 - beneficiary or attendance commitments;
 - fiscalization and control package closure;
 - evidence producer commitments;
@@ -377,6 +466,8 @@ Strategic defense asset:
 
 Citizen-facing displays should show only the applicable conditions and what is missing. The technical layer should show the policy source and audit trail.
 
+For phased projects, execution-ready may apply to the relevant phase. A parent project may be open and collecting execution-phase commitments while a design phase is still under review, but the construction or execution phase is not execution-ready until prerequisite phase gates, control package, evidence requirements, and blocking checks are complete.
+
 ### 6. Milestones, disbursement, and guarantees
 
 A project may include:
@@ -393,7 +484,9 @@ The project should also include a structured Disbursement Milestone plan with re
 
 Funding completion does not imply full immediate transfer to the executor. Funds may be released by milestone according to the project design.
 
-Projects with unresolved critical failures in their disbursement milestone plan should not receive execution funding.
+Projects with unresolved critical failures in their disbursement milestone plan should not receive execution funding commitments. A pending design gate is not a critical failure if the phase plan, minimum public-value baseline, reserved-fund rule, and failure-treatment rule are explicit.
+
+Where phases are used, the disbursement milestone plan should identify which milestones and releases belong to each phase. Design funds may be released against accepted design deliverables. Construction or execution funds cannot be released until the prerequisite design phase gate is accepted.
 
 ### 7. Evidence and fiscalization
 
@@ -488,15 +581,21 @@ Visible and eligible to receive funding/support according to its operating mode 
 
 For execution projects, publication for funding requires an identified executor that has accepted the design.
 
+For integrated design-and-execution projects, publication may allow phase-specific funding. Execution-phase commitments may be visible and accepted before design approval only when the phase gate, minimum baseline, and fund-treatment rule are public.
+
 Executorless public proposals remain Ideas or calls for executor, not financeable projects.
 
 ### Funded
 
 Reached or exceeded the declared funding target. Funding closes.
 
+In phased projects, a phase may be funded while another phase remains pending. Parent-project funding labels should distinguish `design funded`, `execution funding reserved`, `control pending`, and `execution-ready` where applicable.
+
 ### Preparation
 
 Post-funding setup before execution begins.
+
+For design-and-execution projects, preparation for construction includes accepted design-phase deliverables. Preparation does not authorize construction disbursement when the design gate is pending or rejected.
 
 ### Execution
 
@@ -518,7 +617,9 @@ The project creator may reformulate, reclassify, or resubmit.
 
 ## Principle
 
-> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, Project Evidential Contract, verification package, disbursement milestone plan, evidence, fiscalization, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design and is updated by verified value fulfillment, founded complaints, evidence corrections, and role-specific responsibility events.
+> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, Project Evidential Contract, verification package, phase plan where applicable, disbursement milestone plan, evidence, fiscalization, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design and is updated by verified value fulfillment, founded complaints, evidence corrections, and role-specific responsibility events.
+
+> A design-and-execution project may be one parent project, but execution funds cannot be released against an unaudited design.
 
 ## Status
 

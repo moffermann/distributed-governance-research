@@ -103,6 +103,8 @@ In recovery
 
 But these are project/protocol states, not free withdrawal by the funder.
 
+For phased projects, a failed prerequisite phase gate is also a project/protocol state. If a citizen reserved funds for construction while the design phase was pending, those funds do not become freely withdrawable by personal regret. They follow the active phase failure, reformulation, return, reassignment, or reconfirmation rule.
+
 ## Ordinary project modification
 
 Ordinary project modifications do not reopen withdrawal rights.
@@ -139,6 +141,8 @@ If a project fails, is abandoned, is revoked, or triggers guarantees, the system
 - return or reassign unused or recovered funds according to protocol and citizen configuration;
 - affect executor reputation;
 - record the loss and responsibility.
+
+For a design-and-execution project, a design phase that fails the declared public-value baseline can trigger this material-failure or reformulation path before construction money is released. Example: a Macul multi-court design that removes required bathrooms, changes court dimensions materially, or reduces promised public access blocks construction release and requires correction, reformulation, rejection, expiration, return, reassignment, or reconfirmation under the active policy.
 
 ## Released funds
 

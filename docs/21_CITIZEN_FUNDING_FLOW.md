@@ -10,6 +10,10 @@ Funding is one of the central actions of the distributed governance system. The 
 
 > Funding is a conditional, traceable commitment until project closure. It is not an immediate transfer of money to the executor and not a freely reversible expression of preference.
 
+For phased projects, funding may be attached to a phase-specific lane. A citizen may fund a design phase, an execution phase, a minimum control package, or supplemental control where allowed.
+
+Execution-phase funding may be accepted while a required design phase is still pending, but it remains reserved or conditional. It cannot be released for construction or execution until the design phase gate is accepted.
+
 ## Main question
 
 The flow answers:
@@ -91,6 +95,27 @@ $4.440.000 más para completar financiamiento.
 [Continuar]
 ```
 
+For phased projects, the amount screen should show the funding lane.
+
+Example:
+
+```text
+Action:
+Financiar proyecto
+
+Project:
+Design and Construction of Multi-court Facility in Macul
+
+Phase:
+Construction
+
+Status:
+Design under review.
+
+Your contribution remains reserved for construction.
+It is not released to the executor until the design is accepted.
+```
+
 The available amount shown to the citizen comes from the citizen's civic allocation account for the relevant period and program.
 
 That amount may be calculated by different institutional formulas, including:
@@ -126,6 +151,7 @@ The system should enforce simple rules:
 - the citizen can assign their full available balance;
 - the citizen can cancel before confirming;
 - the system should show the remaining citizen balance after the selected amount.
+- where phases exist, the system should show which phase or funding lane the contribution affects.
 
 Controlled overfunding should not increase the executor's execution budget by default.
 
@@ -142,6 +168,8 @@ They should be rejected when:
 - no distinct admissible evidence need remains;
 - the contribution would function as ordinary execution overfunding;
 - the contribution would create duplicate evidence or unlimited fiscalization.
+
+Phase-specific funding should not silently move between phases. A design contribution should not become construction money, and a construction contribution should not pay design work, unless the active reformulation or failure-treatment rule explicitly allows reassignment and records the change.
 
 ## 3. Summary before confirmation
 
@@ -164,6 +192,7 @@ Comprometido, no liberado al ejecutor.
 Se liberará sólo si:
 - el proyecto completa su financiamiento;
 - cumple sus condiciones de cierre;
+- si tiene fases, la fase previa requerida fue aprobada;
 - tiene fiscalización requerida;
 - no tiene denuncias bloqueantes;
 - avanza por hitos con evidencia.
@@ -180,6 +209,19 @@ This contribution funds supplemental control.
 It does not increase the executor's budget.
 It may fund a secondary fiscalizer, fiscalization audit, or distinct additional evidence if an admissible offer exists.
 If no admissible control need remains, the contribution will not be accepted.
+```
+
+If the contribution is for a later execution phase while design is pending, the summary should say so explicitly:
+
+```text
+This contribution funds the construction phase.
+
+Current gate:
+Design phase pending review.
+
+Your contribution is reserved.
+It cannot be released for construction unless the design package is accepted.
+If the design is rejected or materially changes the promise, the active policy defines whether funds return, reassign, remain reserved after reconfirmation, or follow a reformulation rule.
 ```
 
 ## 4. Funding confirmation
@@ -213,6 +255,16 @@ Te avisaremos cuando:
 [Seguir explorando]
 ```
 
+For phase-specific funding, confirmation should preserve the phase status:
+
+```text
+Status:
+Reserved for construction phase.
+
+Gate:
+Design review pending.
+```
+
 ## 5. Post-confirmation money status
 
 The citizen should always be able to see the status of their contribution.
@@ -222,6 +274,7 @@ Possible states:
 ```text
 Comprometido
 Reservado
+Reservado para fase
 Liberado parcialmente
 Liberado totalmente
 Devuelto
@@ -258,6 +311,19 @@ Meaning:
 This contribution can fund additional fiscalization or distinct evidence. It cannot be released to the executor.
 ```
 
+For phase-specific execution commitments, the status should distinguish reservation from release:
+
+```text
+Your contribution:
+$10,000
+
+Status:
+Reserved for construction phase
+
+Meaning:
+This contribution counts toward construction funding, but construction funds cannot be released until the design phase is accepted.
+```
+
 ## 6. Automatic following
 
 Funding a project automatically adds it to the citizen's following area.
@@ -291,6 +357,17 @@ Funds are not released to the executor just because a citizen funds the project.
 
 Funds can be released only after the applicable project conditions are met and according to the milestone, evidence, and fiscalization rules.
 
+For phased projects:
+
+```text
+Design funds:
+  release only against accepted design deliverables.
+
+Execution funds:
+  release only after required prior phase gates are accepted
+  and the execution phase satisfies its threshold, control, evidence, and milestone rules.
+```
+
 ## Withdrawal and reassignment rule
 
 Ordinary withdrawal is not available after the citizen finances a project.
@@ -304,6 +381,9 @@ After funding:
 If the project fails before release:
   unused committed funds may return, reassign, or follow the citizen's default rule.
 
+If the phase gate fails before release:
+  phase-specific unused funds may return, reassign, remain reserved after reconfirmation, or follow the citizen's default rule according to the active policy.
+
 If the project enters material reformulation:
   unreleased balances may return, reassign, or stay with the reformulated version according to the reformulation rule.
 
@@ -312,6 +392,8 @@ Once funds are released by milestones:
 ```
 
 This prevents arbitrary withdrawals from destabilizing projects while preserving citizen protection through traceability, fiscalization, complaints, retentions, guarantees, recovery, returned balances, and reputation consequences.
+
+The same rule applies to integrated design-and-execution projects. A citizen does not receive a free withdrawal right merely because the design is pending. But if the design phase fails the public baseline or requires material reformulation, unreleased execution-phase balances follow the policy-defined failure or reformulation treatment.
 
 ## Reformulation rule
 
@@ -340,6 +422,8 @@ Possible default rules:
 
 The citizen must also know whether the contribution funds execution, the minimum control package, or supplemental control.
 
+For phased projects, the citizen must also know whether the contribution funds design, execution reserved pending design, construction ready for release, or another phase-specific lane.
+
 ## Summary flow
 
 ```text
@@ -349,8 +433,9 @@ Citizen clicks Fund
 → sees clear summary
 → confirms
 → contribution becomes committed
+→ if phase-specific, contribution is attached to the selected phase or funding lane
 → project is added to following
-→ funds are released only by conditions, milestones, evidence, and fiscalization
+→ funds are released only by phase gates, conditions, milestones, evidence, and fiscalization
 → if project fails, expires, or is reformulated, the citizen receives policy-defined notice and fund-treatment information
 ```
 
@@ -368,6 +453,8 @@ The funding flow should not:
 - accept unlimited post-closure control contributions;
 - present supplemental control funding as money for the executor;
 - fund duplicate evidence or unlimited fiscalizers.
+- hide that construction funding is reserved while the design phase is pending;
+- move funds between phases without a visible rule and audit trail.
 
 ## Design rule
 

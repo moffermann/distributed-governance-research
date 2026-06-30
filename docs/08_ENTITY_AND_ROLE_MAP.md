@@ -173,6 +173,8 @@ Minimum Core v0 incompatibilities:
 
 Related-party relationships among proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries must be declared and classified. Declaration does not automatically invalidate a project. Low or indirect conflicts may be handled with public warnings; relevant conflicts may require independent control and public-return safeguards; severe or hidden conflicts may require reformulation, actor exclusion, disbursement blocking, rejection, or a role-specific responsibility review.
 
+When a project combines design and execution, the same actor or related actors may occupy both roles if declared. This does not allow self-validation of the design phase where the Threshold Policy requires independent review. Execution-phase funds may remain reserved while the design phase is pending, but they cannot be released until the relevant phase gate is accepted.
+
 ## Public institutions
 
 Public institutions are external to the internal Core v0 actor model.

@@ -6,6 +6,8 @@ All projects should share the same conceptual structure, but not the same proced
 
 The level of design, documents, guarantees, fiscalization, admissibility review, evidence, and evaluation should be proportional to the project's size, risk, complexity, irreversibility, vulnerable beneficiaries, territory, public-function sensitivity, common-good impact, technical requirements, and potential antivalue.
 
+Where project phases are used, the phase plan and phase-gate deliverables should also be proportional. A small workshop should not need a heavy phase structure. A design-and-construction project may need explicit design and construction phases because later execution funding depends on accepted design deliverables.
+
 ## Resolution alignment
 
 This hypothesis is now aligned with:
@@ -51,6 +53,7 @@ Every financeable project should expose:
 Threshold Policy
 Procedural Burden Profile
 Project Evidential Contract
+Project Phase plan where applicable
 Control requirements where applicable
 Admissibility review requirements where applicable
 ```
@@ -118,6 +121,7 @@ Examples:
 Likely requirements:
 
 - stronger project modeling;
+- explicit design and construction phases where design deliverables gate later execution;
 - permits or land-use documents where applicable;
 - guarantees or retentions;
 - execution milestones;
@@ -301,6 +305,7 @@ AI may detect:
 physical infrastructure
 land or venue use
 public access commitment
+design deliverables gating construction
 possible duplication with ministry projects
 construction milestones
 related-party use risk if a local club benefits
@@ -309,6 +314,8 @@ related-party use risk if a local club benefits
 Candidate requirements:
 
 ```text
+design phase package
+construction phase release block until design accepted
 land-use document
 municipal compatibility or permit where applicable
 public-access conditions

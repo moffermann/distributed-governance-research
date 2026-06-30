@@ -44,16 +44,17 @@ Layer 4 should include:
 3. Beneficiaries
 4. Who will do it
 5. Budget
-6. Conditions to become execution-ready
-7. Civic support and justified objections
-8. Execution plan and milestones
-9. Evidence committed
-10. Fiscalization
-11. Declared risks and antivalues
-12. Relevant comments
-13. Complaints
-14. Change history
-15. Access to full audit trail
+6. Project phases where applicable
+7. Conditions to become execution-ready
+8. Civic support and justified objections
+9. Execution plan and milestones
+10. Evidence committed
+11. Fiscalization
+12. Declared risks and antivalues
+13. Relevant comments
+14. Complaints
+15. Change history
+16. Access to full audit trail
 ```
 
 ## 1. Citizen summary
@@ -192,7 +193,42 @@ Release:
 By milestones, evidence, and validation.
 ```
 
-## 6. Conditions to become execution-ready
+For phased projects, the budget section should show phase funding lanes.
+
+Example:
+
+```text
+Design phase:
+Funding open.
+
+Construction phase:
+Funding may be reserved.
+Release blocked until design accepted.
+```
+
+## 6. Project phases where applicable
+
+If the project has phases, show them in plain language.
+
+Example:
+
+```text
+Project phases:
+
+1. Design
+Status: under review.
+Deliverables: court design, dimensions, public-access rules, bathroom or accessibility commitments where applicable, refined budget, and evidence plan.
+
+2. Construction
+Status: funding reserved.
+Missing condition: design approval before construction funds can be released.
+```
+
+Rule:
+
+> The citizen should understand which phase is active, which phase is blocked, and why later-phase funds are not released yet.
+
+## 7. Conditions to become execution-ready
 
 Show the parallel closure conditions that apply to the project.
 
@@ -203,6 +239,9 @@ To become execution-ready:
 
 💰 Funding
 $7,560,000 of $12,000,000
+
+🧩 Phase gate
+Design review pending, if applicable
 
 🛡 Fiscalizer
 0 of 1 confirmed
@@ -217,6 +256,8 @@ $7,560,000 of $12,000,000
 ### Rule
 
 > A project does not advance by rigid stages. It becomes execution-ready when its applicable closure conditions are complete.
+
+For phased projects, the condition should identify the relevant phase. A construction phase may have funding reserved but still not be execution-ready because the design phase has not been accepted.
 
 The sheet should show the threshold policy that explains why those conditions apply.
 
@@ -233,7 +274,7 @@ Applies because:
 The project builds a public facility, may need permits, and requires independent fiscalization before execution.
 ```
 
-## 7. Civic support and justified objections
+## 8. Civic support and justified objections
 
 Show social support and justified objections separately from funding.
 
@@ -261,9 +302,11 @@ Rule:
 
 > Support and justified objections are reversible civic signals. They do not withdraw funding and do not replace formal complaints.
 
-## 8. Execution plan and milestones
+## 9. Execution plan and milestones
 
 Show the plan in citizen language.
+
+Where phases exist, group milestones by phase.
 
 Example:
 
@@ -289,7 +332,7 @@ Deadline: month 6
 Evidence: final report, total attendance, beneficiary confirmation
 ```
 
-## 9. Evidence committed
+## 10. Evidence committed
 
 Show what evidence the project has committed to produce.
 
@@ -313,7 +356,7 @@ Pending: 6
 Observed: 0
 ```
 
-## 10. Fiscalization
+## 11. Fiscalization
 
 Show who reviews the project and what is reviewed.
 
@@ -350,7 +393,7 @@ Delivered reports:
 0
 ```
 
-## 11. Declared risks and antivalues
+## 12. Declared risks and antivalues
 
 The project sheet should show not only promised value, but also possible negative effects or risks declared by the project.
 
@@ -377,7 +420,7 @@ Possible antivalues:
 
 > The citizen project sheet should show both promised value and declared risks or possible negative effects.
 
-## 12. Relevant comments
+## 13. Relevant comments
 
 Do not show every comment by default. Show a useful synthesis.
 
@@ -398,7 +441,7 @@ Main topics:
 [See full conversation]
 ```
 
-## 13. Complaints
+## 14. Complaints
 
 Show complaint status clearly.
 
@@ -445,7 +488,7 @@ The full sheet should distinguish:
 
 Support and objections to complaints should be shown separately. Objections do not reduce the support count required by the active complaint policy.
 
-## 14. Change history
+## 15. Change history
 
 Show a citizen-readable version history.
 
@@ -464,7 +507,7 @@ Beneficiary number corrected from 100 to 80.
 
 Layer 4 should show meaningful changes, not raw technical records.
 
-## 15. Access to full audit trail
+## 16. Access to full audit trail
 
 Layer 4 should end with access to Layer 5.
 

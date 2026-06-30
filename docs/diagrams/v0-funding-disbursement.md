@@ -4,7 +4,7 @@
 
 Show that citizen funding is a commitment and that disbursement is conditional release through milestone, evidence, fiscalization, and custody rules.
 
-Related resolutions: C005, C006, C016.
+Related resolutions: C005, C006, C016, H019.
 
 ```mermaid
 flowchart TD
@@ -12,8 +12,10 @@ flowchart TD
     B --> C[Committed: not released]
     C --> D{Execution-ready conditions met?}
     D -->|No| C
-    D -->|Yes| MP{Disbursement Milestone Plan valid?}
-    MP -->|No: critical failure| BL[Block execution funding]
+    D -->|Yes| PG{Required phase gate accepted?}
+    PG -->|No: pending design or correction| PR[Keep later-phase funds reserved]
+    PG -->|Yes or not applicable| MP{Disbursement Milestone Plan valid?}
+    MP -->|No: critical failure| BL[Block release or financeable setup]
     MP -->|Yes| E[Milestone Active]
 
     E --> F[Evidence Submitted]
@@ -33,8 +35,9 @@ flowchart TD
     I --> N
     M --> N
     BL --> N
+    PR --> N
 ```
 
 ## Rule
 
-> Funding is commitment. Treasury or custody executes protocol-valid orders, but does not decide civic value, project priority, evidence validity, or discretionary disbursement.
+> Funding is commitment. Later-phase funds may be reserved before a phase gate is accepted, but they are not released until the gate passes. Treasury or custody executes protocol-valid orders, but does not decide civic value, project priority, evidence validity, or discretionary disbursement.

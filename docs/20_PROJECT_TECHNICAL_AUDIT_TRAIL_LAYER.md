@@ -64,6 +64,7 @@ Layer 5 should include technical traceability for:
 ```text
 1. Project versions
 1a. Project variation and reformulation records
+1b. Project phases and phase gates
 2. Value thesis history
 3. Metric history
 4. Project evidential contract history
@@ -117,6 +118,7 @@ For each variation record:
 - original and proposed value thesis comparison;
 - original and proposed core metric comparison;
 - beneficiary, budget, milestone, disbursement, evidential contract, fiscalization, risk, antivalue, and related-party-safeguard effects;
+- phase effects where applicable;
 - active Reformulation Policy or policy reference;
 - whether a C017 Reformulation Proposal was required;
 - approval result or current review status;
@@ -138,6 +140,42 @@ attendance records and beneficiary confirmations -> executor photos only.
 ```
 
 Layer 5 should make clear whether a project merely changed implementation or attempted to change the value promise that citizens funded.
+
+## 1b. Project phases and phase gates
+
+Track every explicit project phase.
+
+For each phase:
+
+- phase type and order;
+- phase purpose;
+- responsible actor or role;
+- phase budget or funding lane;
+- phase deliverables;
+- minimum public-value baseline where relevant;
+- prerequisite and successor phases;
+- evidence and review requirements;
+- phase gate decision;
+- accepted, rejected, correction-required, or reformulation status;
+- related milestones and disbursements;
+- related funding commitments;
+- citizen-facing phase summary;
+- audit events and reviewer references.
+
+Example:
+
+```text
+Project:
+Design and Construction of Multi-court Facility in Macul.
+
+Design phase:
+submitted for review.
+
+Construction phase:
+funding reserved; release blocked until design accepted.
+```
+
+Layer 5 should make it impossible to hide that construction funding was reserved before the design was approved, or to release later-phase funds without the prerequisite phase gate.
 
 ## 2. Value thesis history
 
@@ -220,6 +258,7 @@ Include:
 - justification;
 - approvals;
 - relation to milestones;
+- relation to phases where applicable;
 - control cost;
 - fiscalization cost;
 - evidence production cost;
@@ -235,21 +274,33 @@ Include:
 
 - funding target;
 - commitments;
+- phase-specific funding lane where applicable;
 - releases;
 - returned or reassigned amounts;
 - custody status;
 - disbursement rules;
 - release dates;
 - milestone relation;
+- phase-gate relation where applicable;
 - public aggregate funding data;
 - direct versus delegated allocation where relevant.
 
 Privacy-protected individual funding details should follow the system's identity and privacy rules.
 
+For design-and-execution projects, Layer 5 should distinguish:
+
+```text
+design funding released against design deliverables
+construction funding reserved pending design gate
+construction funding released after design acceptance
+funds returned, reassigned, or reconfirmed after failed design gate
+```
+
 ## 7. Milestone and disbursement trace
 
 For each milestone, show:
 
+- phase reference where applicable;
 - milestone definition;
 - expected date;
 - actual date;
@@ -259,6 +310,7 @@ For each milestone, show:
 - fiscalizer review;
 - approval or rejection;
 - disbursement decision;
+- prerequisite phase-gate check where applicable;
 - amount released;
 - comments or observations;
 - delays;

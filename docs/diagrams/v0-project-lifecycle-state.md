@@ -4,7 +4,7 @@
 
 Show the project lifecycle after publication, including validation, execution readiness, reformulation, review, revocation, and closure.
 
-Related resolutions: C005, C016, C017, C018.
+Related resolutions: C005, C016, C017, C018, H019.
 
 ```mermaid
 stateDiagram-v2
@@ -18,6 +18,10 @@ stateDiagram-v2
     OpenProject --> FundingOpen
     FundingOpen --> ClosureReview: target and control conditions met
     ClosureReview --> OpenProject: missing closure condition
+    ClosureReview --> PhaseGateReview: phase gate required
+    PhaseGateReview --> OpenProject: gate pending or correction required
+    PhaseGateReview --> RequiresReformulation: gate fails material baseline
+    PhaseGateReview --> ExecutionReady: gate accepted
     ClosureReview --> ExecutionReady: execution budget and control package closed
 
     ExecutionReady --> InExecution

@@ -18,6 +18,8 @@ Accepted as the v0 resolution for C013.
 
 Fiscalization is a control cost, but not every offer to fiscalize is itself a payable control activity.
 
+For phased projects, later-phase funding may also move in parallel with earlier-phase work. A construction phase may receive funding commitments while a design phase is pending, but those commitments remain reserved and cannot be released until the design phase gate and the relevant control package are accepted.
+
 ## Description
 
 The architecture already separates execution from control.
@@ -433,6 +435,16 @@ The sequence should be:
 7. An admissible control package is selected and funded.
 8. Fiscalizer and evidence producers accept responsibility.
 9. Project becomes execution-ready.
+```
+
+For a design-and-execution project, the same sequence is phase-sensitive:
+
+```text
+1. Design phase is funded and executed.
+2. Construction funding commitments may accumulate in parallel as reserved commitments.
+3. Design phase deliverables are reviewed.
+4. If the design phase is accepted, construction can continue toward execution-ready status.
+5. If the design phase is rejected or materially changes the promise, construction funds are not released and the active policy governs correction, reformulation, return, reassignment, or reconfirmation.
 ```
 
 If execution funding closes but control funding does not close within a protocol-defined period, possible outcomes include:

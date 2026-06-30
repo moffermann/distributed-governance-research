@@ -101,6 +101,12 @@ The executor of the same Macul project hires a sibling's construction company wi
 
 This is not just a visible overlap. It is a hidden related-party conflict. It may justify blocking disbursements, requiring supplier replacement, opening review, and creating a Responsibility Event if the concealment is proven.
 
+### Design-and-build holding
+
+A company proposes a parent project called `Design and Construction of Multi-court Facility in Macul`. One holding company designs the facility and a related company builds it.
+
+This is not automatically illegitimate if the relationship is declared. However, the project should expose the relationship, use a phase plan, and require independent design-gate verification where the Threshold Policy requires it. Construction funds may be reserved while design is pending, but they should not be released until the design package satisfies the minimum public-value baseline.
+
 ### Private business asset
 
 If a project mainly benefits the funder's own company, it should not be financed through assignable public tax resources unless the private benefit is subordinated to a clear public-return structure with enforceable safeguards.

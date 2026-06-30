@@ -6,7 +6,7 @@ This roadmap defines the working path for the Distributed Governance Research pr
 
 The project has now moved from broad discovery into v0 consolidation. The primary C001-C025 integration pass has propagated the accepted contradiction resolutions into the main core corpus.
 
-Current working decision, 2026-06-29:
+Current working decision, 2026-06-30:
 
 ```text
 Run a residual audit of diagrams, indexes, and stale references next.
@@ -30,6 +30,7 @@ H027 is aligned: proportional project thresholds are represented through visible
 H028 is aligned: related-party status does not automatically invalidate a project, but it must be declared, classified, and handled proportionally through warnings, safeguards, independent control, reformulation, blocking, rejection, or responsibility review depending on severity and disclosure.
 H021 is aligned: project variation control is a classification layer under C017 and H040, distinguishing minor corrections, operational variations, material value reformulations, and substitutive reformulations while keeping ordinary citizen labels simple and Layer 5 fully auditable.
 H020 is aligned: proportional procedural burden is the procedural-depth layer of Threshold Policies; AI may help discover required documents and missing conditions, but document acceptability is validated only by competent authorities, independent reviewers, certifiers, fiscalizers, or protocol-defined review bodies where the active policy requires it.
+H019 is aligned: project modeling, execution, and fiscalization remain distinct responsibilities, while integrated design-and-execution projects are represented through Project Phases. Execution-phase funding may be collected while design is pending, but remains reserved and cannot be released until the required design phase gate and control conditions are accepted.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -128,7 +129,9 @@ The forty-second residual cleanup aligned H021 with C017, H040, and the v0 refor
 
 The forty-third residual cleanup aligned H020 with H027, C002, C013, C020, and C008: every project keeps the same conceptual structure, but its required documents, evidence, guarantees, fiscalization, admissibility review, and technical checks scale through a visible Procedural Burden Profile inside the Threshold Policy. AI may assist requirement discovery and completeness checks, but it does not certify document acceptability. Tutored review belongs to the competent authority and should produce public review traces under C020; non-tutored paid admissibility review may be modeled as a Control Subproject under C002/C013.
 
-Next review candidate: H019 distributed project modeling, execution, and fiscalization.
+The forty-fourth residual cleanup aligned H019 with the v0 project-object, phase, funding, lifecycle, disbursement, control, audit, threshold, related-party, and diagram model: modeler/designer, executor, and fiscalizer remain separate role responsibilities, but a single parent project may combine design and execution through explicit Project Phases. Phase-specific funding lanes allow construction or execution commitments to accumulate while a design phase is pending, but later-phase funds remain reserved and cannot be released until the prerequisite design gate, public-value baseline, control package, and disbursement rules are accepted. Related design-and-build actors or holding-linked companies are allowed only with declaration, proportional safeguards, and independent gate/control where required.
+
+Next review candidate: H018 project value thesis and measurement.
 
 Approximate current maturity:
 

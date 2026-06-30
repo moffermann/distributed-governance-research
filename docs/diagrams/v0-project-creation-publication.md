@@ -4,7 +4,7 @@
 
 Show how an idea becomes a financeable project only after responsibility, value, budget, Project Evidential Contract, fiscalization, common-good impact, related-party conflict, and disbursement plan requirements are coherent.
 
-Related references: C001, C002, C008, C010, C013, C016, C020, C022, H020, H022, H027, H028.
+Related references: C001, C002, C008, C010, C013, C016, C020, C022, H019, H020, H022, H027, H028.
 
 ```mermaid
 flowchart TD
@@ -21,11 +21,14 @@ flowchart TD
     D --> CG[Common-good impact declaration where relevant]
     CG --> RPC[Related-party and conflict declarations]
     RPC --> F[Execution budget]
-    F --> EC[Project Evidential Contract]
+    F --> PH{Phases needed?}
+    PH -->|No| EC[Project Evidential Contract]
+    PH -->|Yes| PG[Project Phase plan: design gate, execution lane, fund treatment]
+    PG --> EC
     EC --> MP[Disbursement Milestone Plan]
     MP --> EV[Evidence and corroboration requirements]
     EV --> TP[Threshold Policy and Procedural Burden Profile]
-    TP --> DOC[Required documents and project admissibility review needs]
+    TP --> DOC[Required documents, phase gates, and admissibility review needs]
     DOC --> CTRL[Control package and fiscalization requirements]
     CTRL --> RA[Risks, antivalues, and mitigation]
     RA --> AS[Assisted validation by rules and AI]
