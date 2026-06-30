@@ -13,7 +13,7 @@ This session is retained as a historical architecture distillation. Several term
 Current controlling rules:
 
 - C001 separates `Idea` from `Project`: public executorless demand is an Idea, not an open financeable project.
-- C002/C013 model fiscalization and evidence work through control packages and Control Subprojects, with execution funding and control-cost discovery moving in parallel.
+- C002/C013 model fiscalization and fulfillment/control evidence work through control packages and Control Subprojects, with execution funding and control-cost discovery moving in parallel.
 - C007 excludes public institutions from internal Core v0 participation.
 - C020 allows external tutored-scope moderation by public authorities where configured, but material decisions must become Governance Resolutions or Review Timeout Resolutions.
 
@@ -242,7 +242,7 @@ Accepted distinction:
 Open observation:
   anyone can observe, comment, denounce, or submit evidence.
 
-Evidence production:
+Fulfillment/control evidence production:
   actors can collect evidence but do not validate fulfillment.
 
 Responsible fiscalization:
@@ -267,8 +267,8 @@ Controls include:
 - evidence is public and contradictable;
 - repeated relationships are visible;
 - suspicious patterns are flagged;
-- false evidence has reputational cost;
-- multiple evidence sources may be required;
+- false contextualized evidence has reputational cost;
+- multiple fulfillment/control evidence sources may be required;
 - later complaints and fraud review remain possible.
 
 ## 13. Evidence commitments by funders and beneficiaries
@@ -339,7 +339,7 @@ Accepted correction:
 
 > Evidence missions may be associated with the project, but should not be designed or assigned at the executor's discretion.
 
-The executor declares commitments, milestones, and locations. The system, protocol, fiscalizer, and control rules define or activate evidence needs and assignment rules.
+The executor declares commitments, milestones, and locations. The system, protocol, fiscalizer, and control rules define or activate fulfillment evidence needs and assignment rules.
 
 Possible assignment rules:
 

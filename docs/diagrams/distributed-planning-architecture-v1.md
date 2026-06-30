@@ -40,7 +40,7 @@ flowchart TD
     M3 --> M4[Approval / rejection]
     M4 --> M5[Incorporation into roadmap]
 
-    P1 --> E[Execution and evidence]
+    P1 --> E[Execution and contextualized evidence]
     E --> F[Evaluation dashboard]
     F --> G[Reputation and future funding]
 ```
@@ -55,7 +55,7 @@ flowchart TD
 6. Goals are binding but not irreversible.
 7. Goals can be added, modified, reformulated, suspended, or eliminated.
 8. Planning conflicts should be visible rather than hidden.
-9. Evaluation and future funding depend on evidence and performance.
+9. Evaluation and future funding depend on contextualized evidence and performance.
 
 ## Current status
 

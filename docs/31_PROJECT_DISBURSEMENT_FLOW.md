@@ -1,4 +1,4 @@
-# Project Disbursement Flow v0
+﻿# Project Disbursement Flow v0
 
 ## Purpose
 
@@ -8,7 +8,7 @@ Disbursement is one of the most trust-sensitive parts of the system. It defines 
 
 ## Core principle
 
-> Disbursement is not payment by trust. It is conditional release of retained resources, based on milestones, evidence, fiscalization, and absence of relevant blocking issues.
+> Disbursement is not payment by trust. It is conditional release of retained resources, based on milestones, fulfillment evidence, fiscalization, and absence of relevant blocking issues.
 
 For phased projects, disbursement is also phase-gated. Funds committed to a later execution phase may be collected in advance, but they cannot be released until prerequisite phase deliverables are accepted.
 
@@ -26,7 +26,7 @@ When, why, and under what controls can project funds be released?
 3. Execution begins
 4. Phase gate is checked where applicable
 5. Milestone is activated or submitted for review
-6. Evidence is submitted
+6. Fulfillment evidence is submitted
 7. Fiscalizer reviews
 8. Blocking conditions are checked
 9. Disbursement decision is made
@@ -83,9 +83,9 @@ For phased projects, execution-ready may apply to the relevant phase. Constructi
 
 No project may receive execution funding commitments until its disbursement milestone plan and any applicable phase-gate funding treatment are coherent enough for funding and later fiscalization.
 
-The disbursement milestone plan should reference the accepted Project Evidential Contract. This avoids releasing funds against evidence criteria invented after execution has already started.
+The disbursement milestone plan should reference the accepted Project Evidential Contract. This avoids releasing funds against fulfillment evidence criteria invented after execution has already started.
 
-If the executor proposes to change milestones, evidence requirements, disbursement criteria, fiscalization conditions, or beneficiary targets during execution, the change must be classified under H021 before any affected funds are released. Operational variations follow the active Reformulation Policy; material value changes require the C017 Reformulation Proposal path.
+If the executor proposes to change milestones, fulfillment evidence requirements, disbursement criteria, fiscalization conditions, or beneficiary targets during execution, the change must be classified under H021 before any affected funds are released. Operational variations follow the active Reformulation Policy; material value changes require the C017 Reformulation Proposal path.
 
 If the project combines design and construction, construction funds may be committed while the design phase is pending only when the phase baseline, phase gate, release block, and fund-treatment rule are explicit. Those funds cannot be released while the design phase is pending, rejected, or materially reformulated.
 
@@ -115,7 +115,7 @@ Each milestone should have:
 
 - phase reference where applicable;
 - maximum releasable amount;
-- required evidence;
+- required fulfillment evidence;
 - responsible fiscalizer;
 - deadline;
 - approval criteria;
@@ -131,7 +131,7 @@ Beneficiary registration
 Maximum releasable amount:
 20% of project budget
 
-Required evidence:
+Required fulfillment evidence:
 registration list, selection criteria, initial confirmations
 
 Reviewer:
@@ -189,11 +189,11 @@ This does not validate the milestone.
 
 > The executor can declare progress, but cannot approve its own milestone.
 
-## 6. Evidence submission
+## 6. Fulfillment evidence submission
 
-Evidence must be submitted for the milestone.
+Fulfillment evidence must be submitted for the milestone.
 
-Evidence may come from:
+Fulfillment evidence may come from:
 
 - executor;
 - beneficiaries;
@@ -204,7 +204,7 @@ Evidence may come from:
 - open observers;
 - system integrations where applicable.
 
-Evidence states:
+Fulfillment evidence states:
 
 ```text
 Expected
@@ -217,7 +217,7 @@ Contradicted
 Linked to fiscalizer report
 ```
 
-Evidence should be linked to:
+Fulfillment evidence should be linked to:
 
 - project;
 - project phase where applicable;
@@ -229,9 +229,9 @@ Evidence should be linked to:
 - privacy classification;
 - review status.
 
-Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-If submitted evidence does not satisfy the evidential contract, the fiscalizer may accept it only as contextual material, request correction or additional evidence, approve partially where the disbursement plan allows it, or reject the milestone.
+If submitted fulfillment evidence does not satisfy the evidential contract, the fiscalizer may accept it only as contextual material, request correction or additional fulfillment evidence, approve partially where the disbursement plan allows it, or reject the milestone.
 
 ## 7. Fiscalizer review
 
@@ -241,9 +241,9 @@ Where the disbursement depends on a phase gate, the fiscalizer, reviewer, certif
 
 The review may consider:
 
-- required evidence;
+- required fulfillment evidence;
 - evidential contract references;
-- distinct supplemental evidence where accepted;
+- distinct supplemental fulfillment evidence where accepted;
 - metric targets;
 - beneficiary confirmations;
 - budget use;
@@ -273,7 +273,7 @@ Possible blockers:
 
 - blocking complaint open;
 - prerequisite phase gate pending, rejected, or requiring correction;
-- evidence contradicted and unresolved;
+- fulfillment evidence contradicted and unresolved;
 - fiscalizer report missing;
 - formal review triggered by supplemental control finding;
 - milestone late without accepted justification;
@@ -308,7 +308,7 @@ Possible decisions:
 ```text
 Release full milestone amount
 Release partial milestone amount
-Retain pending evidence
+Retain pending fulfillment evidence
 Retain by guarantee
 Require correction
 Reject milestone
@@ -326,7 +326,7 @@ The financial order should include:
 - amount;
 - action: release, retain, return, reassign, recover, or execute guarantee;
 - rule applied;
-- evidence and fiscalization references where relevant;
+- fulfillment evidence and fiscalization references where relevant;
 - blocking-condition status;
 - destination or ledger account;
 - protocol authorization or signature.
@@ -347,7 +347,7 @@ Released:
 $2.400.000
 
 Reason:
-complete evidence, fiscalizer approval, no blocking complaints.
+complete fulfillment evidence, fiscalizer approval, no blocking complaints.
 ```
 
 Example partial release:
@@ -378,15 +378,15 @@ Possible mechanisms:
 - partial disbursement;
 - temporary retention;
 - guarantee retention;
-- evidence-based retention;
+- fulfillment-evidence-based retention;
 - complaint-based retention;
 - correction-based retention.
 
 ### Rule
 
-> The system should be able to recognize real progress without releasing resources over insufficient evidence.
+> The system should be able to recognize real progress without releasing resources over insufficient fulfillment evidence.
 
-Partial release is allowed only when the disbursement milestone plan defines separable components, accepted evidence for completed components, explicit retained amount, clear condition for releasing retained funds, fiscalizer explanation, and citizen-facing summary.
+Partial release is allowed only when the disbursement milestone plan defines separable components, accepted fulfillment evidence for completed components, explicit retained amount, clear condition for releasing retained funds, fiscalizer explanation, and citizen-facing summary.
 
 ## 11. Guarantees and retentions
 
@@ -403,7 +403,7 @@ Retentions may help:
 - correct non-compliance;
 - respond to observations;
 - cover minor failures;
-- prevent full payment before final evidence;
+- prevent full payment before final fulfillment evidence;
 - preserve leverage until closure.
 
 ### Rule
@@ -453,7 +453,7 @@ A blocking complaint should identify what it blocks:
 - whole project;
 - specific milestone;
 - specific budget line;
-- specific evidence item;
+- specific contextualized evidence item;
 - specific actor relationship;
 - specific fiscalization decision.
 
@@ -530,7 +530,7 @@ Milestone 1 approved
 Project funds released:
 20%
 
-Evidence:
+Fulfillment evidence:
 Reviewed by fiscalizer
 
 Alerts:
@@ -587,7 +587,7 @@ Start of training
 Maximum releasable amount:
 $3.000.000
 
-Pending evidence:
+Pending fulfillment evidence:
 - initial attendance
 - activity photos
 - beneficiary confirmation
@@ -596,7 +596,7 @@ Status:
 Correction required
 
 Action:
-Submit missing evidence
+Submit missing fulfillment evidence
 ```
 
 ## 18. Fiscalizer view
@@ -604,7 +604,7 @@ Submit missing evidence
 The fiscalizer should see:
 
 - milestone pending review;
-- evidence received;
+- fulfillment evidence received;
 - committed metrics;
 - relevant comments;
 - associated complaints;
@@ -637,7 +637,7 @@ Required trace:
 - retained amount;
 - financial order ID where applicable;
 - custodian execution status where applicable;
-- evidence considered;
+- fulfillment evidence considered;
 - fiscalizer decision;
 - supplemental control reports considered where applicable;
 - blockers checked;
@@ -681,7 +681,7 @@ The disbursement flow should not:
 - release full budget by default;
 - rely on executor self-validation;
 - hide blocking complaints;
-- ignore contradicted evidence;
+- ignore contradicted fulfillment evidence;
 - treat supplemental control findings as automatic vetoes;
 - hide retained amounts;
 - treat remaining funds as executor property;
@@ -690,7 +690,7 @@ The disbursement flow should not:
 
 ## Design rule
 
-> Public money assigned to a project remains conditional until fulfillment is verifiable. Each release requires milestone, evidence, review, rule, and traceability.
+> Public money assigned to a project remains conditional until fulfillment is verifiable. Each release requires milestone, fulfillment evidence, review, rule, and traceability.
 
 ## Status
 

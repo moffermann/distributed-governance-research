@@ -132,7 +132,7 @@ Formal reputation updates should be explicit objects or records derived from:
 
 - project value fulfillment score;
 - predefined metric weights;
-- accepted evidence;
+- accepted fulfillment evidence;
 - fiscalizer evaluation;
 - founded complaint corrections;
 - role-specific Responsibility Events;
@@ -145,7 +145,7 @@ Citizen evaluations, comments, and informal satisfaction signals may be visible 
 
 ## Responsibility Events
 
-Negative reputation effects require a `Responsibility Event` when the effect is based on blame, breach, negligence, false evidence, repeated pattern, or founded complaint.
+Negative reputation effects require a `Responsibility Event` when the effect is based on blame, breach, negligence, false contextualized evidence, repeated pattern, or founded complaint.
 
 A Responsibility Event should connect:
 
@@ -180,7 +180,7 @@ Responsibility Event:
 Actor: executor organization
 Role affected: executor
 Obligation: truthful execution and beneficiary reporting
-Evidence: founded complaint + fiscalizer review + corrected evidence record
+Review basis: founded complaint + fiscalizer review + corrected evidence record
 Severity: high
 Effect: negative executor reputation adjustment
 ```
@@ -253,7 +253,7 @@ Executor:
 positive update if value fulfillment is high and no responsibility event exists.
 
 Fiscalizer:
-negative update if it negligently approved false evidence later corrected by a founded complaint.
+negative update if it negligently approved false contextualized evidence later corrected by a founded complaint.
 
 Evidence producer:
 negative update if it submitted manipulated evidence.

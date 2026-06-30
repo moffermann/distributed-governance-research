@@ -148,14 +148,14 @@ These measure traceability between promise, evidence, and result.
 
 | Metric | Measures | Use |
 |---|---|---|
-| Projects with complete value thesis | Projects declaring value, beneficiaries, KPIs, and evidence requirements | Measures design quality |
+| Projects with complete value thesis | Projects declaring value, beneficiaries, KPIs, and fulfillment evidence requirements | Measures design quality |
 | KPIs declared | Number and type of indicators committed | Measures evaluation structure |
 | KPIs fulfilled | Indicators reaching declared target | Measures actual performance |
 | KPI fulfillment rate | Fulfilled KPIs divided by committed KPIs | Measures effectiveness |
-| Evidence submitted | Documents, photos, videos, measurements, reports, or data uploaded | Measures evidential activity |
-| Evidence accepted by fiscalization | Evidence considered sufficient by fiscalizers | Measures evidence quality |
-| Evidence observed or rejected | Evidence questioned or insufficient | Detects weak proof |
-| Projects with incomplete evidence | Projects missing required evidence | Measures compliance risk |
+| Fulfillment/control evidence submitted | Documents, photos, videos, measurements, reports, or data uploaded | Measures evidential activity |
+| Fulfillment/control evidence accepted by fiscalization | Fulfillment/control evidence considered sufficient by fiscalizers | Measures evidence quality |
+| Fulfillment/control evidence observed or rejected | Fulfillment/control evidence questioned or insufficient | Detects weak proof |
+| Projects with incomplete fulfillment evidence | Projects missing required fulfillment evidence | Measures compliance risk |
 | Antivalue declared | Externalities or risks declared in project design | Measures preventive transparency |
 | Undeclared antivalue detected | Externalities discovered during execution that were not declared | Measures omission, error, or bad faith |
 

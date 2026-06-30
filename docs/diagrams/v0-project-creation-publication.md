@@ -26,7 +26,7 @@ flowchart TD
     PH -->|Yes| PG[Project Phase plan: design gate, execution lane, fund treatment]
     PG --> EC
     EC --> MP[Disbursement Milestone Plan]
-    MP --> EV[Evidence needs and corroboration requirements]
+    MP --> EV[Fulfillment evidence needs and corroboration requirements]
     EV --> TP[Threshold Policy and Procedural Burden Profile]
     TP --> DOC[Required documents, phase gates, and admissibility review needs]
     DOC --> CTRL[Control package and fiscalization requirements]

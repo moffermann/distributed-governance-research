@@ -122,7 +122,7 @@ Examples:
 | `docs/21_CITIZEN_FUNDING_FLOW.md` | Core v0 | Funding is central to allocation. |
 | `docs/22_CITIZEN_PROJECT_FOLLOWING_FLOW.md` | Core v0 | Observation and notification are required for transparency. |
 | `docs/23_CITIZEN_FISCALIZER_OFFER_FLOW.md` | Core v0 | Fiscalizer selection/offer is part of accountable control. |
-| `docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md` | Core v0 | Evidence production is central to verification. |
+| `docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md` | Core v0 | Fulfillment/control evidence production is central to verification. |
 | `docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW.md` | Core v0 | Basic observation and clarification are required. |
 | `docs/26_CITIZEN_COMPLAINT_FLOW.md` | Core v0 | Complaints are formal review triggers. |
 | `docs/27_CITIZEN_DELEGATION_FLOW.md` | Core v0, simple version only | Basic delegation is core; advanced delegation is extension. |
@@ -163,8 +163,8 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
-| Distributed fiscalization ecosystem `H016` | Core v0 | Needed to make fiscalization distributed in available actors and evidence sources, but protocol-selected in responsible assignment through eligibility, conflict, independence, risk, budget, methodology, auditability, and capped supplemental control. |
-| Project value thesis and measurement `H018` | Core v0 | Needed to make each financeable project declare a value thesis, core commitments, proportional verification package, evidence needs, and review consequences before resources are committed. |
+| Distributed fiscalization ecosystem `H016` | Core v0 | Needed to make fiscalization distributed in available actors and fulfillment/control evidence sources, but protocol-selected in responsible assignment through eligibility, conflict, independence, risk, budget, methodology, auditability, and capped supplemental control. |
+| Project value thesis and measurement `H018` | Core v0 | Needed to make each financeable project declare a value thesis, core commitments, proportional verification package, fulfillment evidence needs, and review consequences before resources are committed. |
 | Distributed project modeling, execution, and fiscalization `H019` | Core v0 | Needed to separate modeler, executor, and fiscalizer responsibility, allow transparent design-and-execution integration, and use Project Phases where design deliverables must be verified before execution funds are released. |
 | Proportional procedural burden `H020` | Core v0 | Needed to keep one conceptual project structure while scaling documents, evidence, guarantees, fiscalization, and admissibility review by risk, complexity, irreversibility, and public-function sensitivity. |
 | Project variation control `H021` | Core v0 | Needed to distinguish minor corrections, operational variations, material value reformulations, and substitutive reformulations without imposing unnecessary citizen bureaucracy or allowing silent value rewrites. |
@@ -174,7 +174,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Civic tax wallet and distributed allocation `H025` | Core v0 with country/institution configuration | Needed to separate tax collection from allocation, define non-withdrawable public allocation rights, and expose configurable citizen amount formulas without importing raw sensitive tax data into the platform. |
 | Support versus financing signals `H026` | Core v0 | Needed to separate financial feasibility, social support, justified objection, and formal complaint signals. |
 | Proportional project thresholds `H027` | Core v0 | Needed to define visible, proportional execution-readiness conditions without imposing one universal approval formula. |
-| Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises and connect value commitments to evidence needs, independent evidence offers, fiscalization, closure, and reputation. |
+| Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises and connect value commitments to fulfillment evidence needs, independent fulfillment/control evidence offers, fiscalization, closure, and reputation. |
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |
 | Funding, civic wallet, notification, custody-boundary, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, follow-up, financial-order traceability, and visible citizen control. |
 | Related-party conflict of interest `H028` | Core v0 | Needed to prevent public resources from becoming hidden private self-financing while preserving proportional treatment for declared relationships. |

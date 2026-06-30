@@ -217,7 +217,7 @@ At this point:
 - executor responsibility is confirmed;
 - required prior phase gates are accepted where applicable;
 - fiscalization requirements are satisfied;
-- evidence requirements are satisfied or committed;
+- fulfillment/control evidence requirements are satisfied or committed;
 - no blocking issue prevents execution;
 - funds can begin to be released according to milestones and disbursement rules.
 

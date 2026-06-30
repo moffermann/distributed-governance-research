@@ -14,7 +14,7 @@ This does not mean the system is finished. It means the baseline architecture is
 
 ## Core v0 thesis
 
-> Core v0 is a project-based distributed governance system where citizens allocate public resources to verifiable projects, projects declare measurable value, execution is accountable, evidence is produced, fiscalizers review fulfillment, funds are released by milestones, and the full process remains auditable.
+> Core v0 is a project-based distributed governance system where citizens allocate public resources to verifiable projects, projects declare measurable value, execution is accountable, contextualized evidence is produced, fiscalizers review fulfillment, funds are released by milestones, and the full process remains auditable.
 
 ## Scope rule after freeze
 
@@ -112,7 +112,7 @@ A project must include:
 - project phases where applicable;
 - milestones;
 - metrics;
-- Project Evidential Contract and evidence obligations;
+- Project Evidential Contract and fulfillment evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - risks;
@@ -155,10 +155,10 @@ Core rules:
 - every published project must have at least one value thesis;
 - value icons are not marketing decorations;
 - selecting a value creates metric obligations;
-- metrics require evidence;
-- core value commitments should map to evidence needs;
+- metrics require fulfillment evidence;
+- core value commitments should map to fulfillment evidence needs;
 - each project must define a proportional Project Evidential Contract;
-- value verification uses a package of metrics, evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels;
+- value verification uses a package of metrics, fulfillment evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels;
 - vague value claims must be reformulated before publication.
 
 ### 5. Value catalog and metric validator
@@ -171,7 +171,7 @@ Core v0 includes:
 - metric validator;
 - hard validation rules;
 - semantic validation for weak or mismatched metrics;
-- evidence requirement checks.
+- fulfillment evidence requirement checks.
 
 Rule:
 
@@ -193,23 +193,29 @@ Projects must clarify who benefits and how beneficiaries are counted or confirme
 
 Core v0 includes a Project Evidential Contract.
 
-The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, evidence types, evidence source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
+The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment evidence types, fulfillment evidence source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
 
 The contract is project-specific and proportional, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
 
-The contract defines evidence needs, not preselected evidence producers. Independent evidence producers may later offer evidence tied to a metric, material claim, milestone, phase, risk, or antivalue. Contract-matched evidence has higher eligibility priority; unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment evidence needs, not preselected evidence producers. Independent evidence producers may later offer fulfillment evidence tied to a metric, material claim, milestone, phase, risk, or antivalue. Contract-matched fulfillment evidence has higher eligibility priority; unexpected fulfillment evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Citizen-facing views should summarize it as "how this project will be verified"; Layer 5 preserves the full versioned contract and changes.
 
-### 7. Evidence model
+### 7. Contextualized evidence model
 
-Evidence can be produced by executor, fiscalizer, evidence producer, beneficiary, funder, open observer, documents, or integrations.
+Core v0 distinguishes `Complaint Evidence`, `Fulfillment Evidence`, `Control Evidence`, `Contradiction Evidence`, `Administrative Observability Data`, and `Research Evidence`.
 
-Evidence must be linked to project, milestone, metric, material information claim where applicable, producer, timestamp, status, and privacy classification.
+`Evidence Item` may remain as the generic object only when it records an explicit evidence context.
 
-Executor-produced evidence is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Fulfillment Evidence can be produced by executor, fiscalizer, evidence producer, beneficiary, funder, open observer, documents, or integrations.
 
-Core v0 includes material information claims as the accountable statements that connect project promises, evidence, contradictions, review, correction, responsibility, and verified discovery. Ordinary citizens may see simple reliability labels, while Layer 5 preserves the full trace.
+Fulfillment Evidence must be linked to project, milestone, metric, material information claim where applicable, producer, timestamp, status, and privacy classification.
+
+Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+Complaint Evidence belongs to the complaint file. It supports, refutes, clarifies, or contextualizes an allegation and does not become fulfillment evidence unless accepted for that purpose by a fiscalizer, reviewer, competent authority, or protocol rule.
+
+Core v0 includes material information claims as the accountable statements that connect project promises, contextualized evidence, contradictions, review, correction, responsibility, and verified discovery. Ordinary citizens may see simple reliability labels, while Layer 5 preserves the full trace.
 
 Verified discovery may be rewarded or recognized only after review confirms materiality and usefulness. AI may assist with anomaly, duplicate, privacy, or contradiction detection, but it does not decide truth, fraud, responsibility, fund release, or legal consequences.
 
@@ -217,11 +223,11 @@ Verified discovery may be rewarded or recognized only after review confirms mate
 
 Core v0 includes accountable fiscalization.
 
-Fiscalization is distributed in available actors and evidence sources, but protocol-selected in responsible assignment. Open observation, evidence production, responsible fiscalization, and technical or reinforced fiscalization remain distinct layers.
+Fiscalization is distributed in available actors and evidence sources, but protocol-selected in responsible assignment. Open observation, fulfillment evidence production, complaint evidence submission, responsible fiscalization, and technical or reinforced fiscalization remain distinct layers.
 
 ```text
 Executor executes.
-Evidence producers produce evidence.
+Evidence producers produce fulfillment or control evidence.
 Fiscalizers evaluate compliance.
 Citizens observe, comment, contradict, and denounce.
 ```
@@ -230,9 +236,9 @@ The executor should not freely appoint or directly control the fiscalizer that v
 
 Fiscalization is proportional to project size, complexity, risk, territory, and beneficiary vulnerability.
 
-Fiscalization, evidence missions, technical review, and admissibility review may be modeled as Control Subprojects with budget, methodology, deliverables, evidence, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
+Fiscalization, fulfillment evidence missions, technical review, and admissibility review may be modeled as Control Subprojects with budget, methodology, deliverables, fulfillment evidence, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
 
-Core v0 also allows limited supplemental control funding after minimum control closure: at most one secondary fiscalizer or fiscalization auditor, plus distinct additional evidence needs. Supplemental control never funds execution, expands project scope, creates unlimited fiscalizers, or blocks execution automatically.
+Core v0 also allows limited supplemental control funding after minimum control closure: at most one secondary fiscalizer or fiscalization auditor, plus distinct additional fulfillment evidence needs. Supplemental control never funds execution, expands project scope, creates unlimited fiscalizers, or blocks execution automatically.
 
 ### 9. Funding model
 
@@ -269,14 +275,14 @@ Every disbursement requires:
 
 - phase gate acceptance where applicable;
 - milestone;
-- evidence;
+- fulfillment evidence;
 - fiscalizer review;
 - blocking-condition check;
 - rule applied;
 - financial order where money movement is required;
 - audit trace.
 
-Core v0 also requires a coherent Disbursement Milestone plan before execution funding commitments. Specialized validation should check milestone evidence, release amounts, partial-release rules, retentions, advance-payment protections, and phase-gate treatment where applicable. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
+Core v0 also requires a coherent Disbursement Milestone plan before execution funding commitments. Specialized validation should check milestone fulfillment evidence, release amounts, partial-release rules, retentions, advance-payment protections, and phase-gate treatment where applicable. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
 
 A pending design gate is not itself a critical validation failure if the phase plan, minimum public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It blocks release, not necessarily funding commitments.
 
@@ -301,7 +307,7 @@ In recovery
 
 ### 11. Open project and parallel closure
 
-A published project enters `Open project` state and may gather funding, fiscalizer offers, evidence commitments, beneficiary confirmations, comments, complaints, required documents, and control configuration in parallel.
+A published project enters `Open project` state and may gather funding, fiscalizer offers, fulfillment evidence commitments, beneficiary confirmations, comments, complaints, required documents, and control configuration in parallel.
 
 Where project phases exist, `Open project` may also gather phase-specific funding and phase-gate deliverables in parallel.
 
@@ -328,9 +334,9 @@ Rule:
 
 ### 13. Citizen action flows
 
-Core v0 includes flows for funding, following, fiscalizer offers, evidence production, comments/questions, complaints, delegation, and automatic allocation profiles.
+Core v0 includes flows for funding, following, fiscalizer offers, fulfillment evidence production, comments/questions, complaints, delegation, and automatic allocation profiles.
 
-Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public institutions acting as internal project participants.
+Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public institutions acting as internal project participants.
 
 Core v0 includes configurable civic notifications as a simple user-experience baseline: citizens may configure channels, intensity, and frequency for external interruptions, but material in-app civic records should remain visible for affected projects, allocation profiles, delegations, complaints, reformulations, governance resolutions, and timeout resolutions.
 
@@ -347,7 +353,7 @@ Idea
 → budget
 → phases where relevant
 → milestones
-→ metrics and evidence
+→ metrics and fulfillment evidence
 → fiscalization
 → risks and antivalues
 → validation
@@ -357,7 +363,7 @@ Idea
 
 `Idea` is the source object for civic demand. It is not a project state and is not financeable until converted into a project with accepted executor responsibility.
 
-Project creation also includes lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. Full common-good charter governance remains Extension v1+.
+Project creation also includes lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, fulfillment evidence needs, and fiscalization. Full common-good charter governance remains Extension v1+.
 
 For integrated design-and-execution projects, creation must define the phase baseline and gate before accepting execution-phase commitments. Example: `Design and Construction of Multi-court Facility in Macul` may reserve construction funding while the design is reviewed, but construction cannot become execution-ready if the design omits required bathrooms, changes court dimensions materially, weakens public access, or fails the accepted baseline.
 
@@ -371,7 +377,7 @@ Open project
 → phase gates and execution-ready
 → in execution
 → milestones
-→ evidence submission
+→ fulfillment evidence submission
 → fiscalizer review
 → disbursement decision
 → correction / pause / reformulation / revocation if needed
@@ -392,7 +398,7 @@ Severe non-compliance or impossibility → revocation
 
 Rule:
 
-> No critical project change should erase history or hide effects on funds, evidence, reputation, or responsibility.
+> No critical project change should erase history or hide effects on funds, contextualized evidence, reputation, or responsibility.
 
 Core v0 includes H021 project variation control as a classification layer:
 
@@ -425,7 +431,7 @@ After minimum structural validation, a complaint is immediately sent to the prim
 
 Review starts only after the complaint reaches the configured support threshold within the support window, the fiscalizer quote is published, and reserved or available review funding reaches the quoted review cost.
 
-For legally regulated projects, such as environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform does not replace courts, regulators, or competent authorities. Platform review may create reports, evidence indexes, referral packages, and public traceability, but operational suspension, permit revocation, legal sanction, or construction halt requires a competent authority or judicial decision where applicable.
+For legally regulated projects, such as environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform does not replace courts, regulators, or competent authorities. Platform review may create reports, complaint evidence indexes, referral packages, and public traceability, but operational suspension, permit revocation, legal sanction, or construction halt requires a competent authority or judicial decision where applicable.
 
 ### 18. Delegation model
 
@@ -449,7 +455,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, evidence, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 
@@ -500,7 +506,7 @@ Rule:
 
 > Reputation follows role responsibility. It is not one generic social score.
 
-Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, evidence corrections, verified discoveries, and responsibility events by role.
+Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, fulfillment evidence corrections, verified discoveries, and responsibility events by role.
 
 ### 24. Discovery visibility and customization
 

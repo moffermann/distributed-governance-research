@@ -11,7 +11,7 @@ flowchart TD
     A[Verified actor files complaint] --> B[Complaint Submitted]
     B --> ID[Identity visibility and privacy classification]
     ID --> MS{Minimum structure complete?}
-    MS -->|No| RF[Request missing scope or evidence]
+    MS -->|No| RF[Request missing scope or complaint evidence]
     RF --> MS
     MS -->|Yes| Q[Send to fiscalizer for quote]
     MS -->|Yes| SW[Open support window]
@@ -36,7 +36,7 @@ flowchart TD
     AR --> AD{Admissible and scoped?}
     AD -->|No| N[Rejected or redirected to comment or objection]
     AD -->|Yes| ER[Executor, fiscalizer, or actor response]
-    ER --> RV[Review evidence and responses]
+    ER --> RV[Review complaint evidence and responses]
     RV --> REG{Regulated legal effect needed?}
     REG -->|Yes| REF[Referral package to competent authority or court]
     REG -->|No| IMP[Protocol effect if allowed]

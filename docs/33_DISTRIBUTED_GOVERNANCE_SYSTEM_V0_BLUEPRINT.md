@@ -4,11 +4,11 @@
 
 This document consolidates a first integrated version of the distributed governance system.
 
-It does not replace the detailed design documents. It provides a coherent v0 blueprint that lets the project move faster: a single operational view of actors, objects, citizen interfaces, project flows, funding, fiscalization, evidence, lifecycle, and boundaries.
+It does not replace the detailed design documents. It provides a coherent v0 blueprint that lets the project move faster: a single operational view of actors, objects, citizen interfaces, project flows, funding, fiscalization, contextualized evidence, lifecycle, and boundaries.
 
 ## Core thesis
 
-> Public resources can be allocated and controlled through distributed citizen participation, structured projects, verifiable value commitments, transparent evidence, accountable fiscalization, and auditable lifecycle rules.
+> Public resources can be allocated and controlled through distributed citizen participation, structured projects, verifiable value commitments, contextualized evidence, accountable fiscalization, and auditable lifecycle rules.
 
 The system does not begin by abolishing every institution. It begins by creating a functional layer where public/social value can be proposed, funded, executed, verified, contested, and improved with less concentration of discretionary power.
 
@@ -22,7 +22,7 @@ A strong first pilot should have:
 - visible outcomes;
 - manageable risk;
 - distributed local actors;
-- clear evidence possibilities;
+- clear fulfillment evidence possibilities;
 - moderate legal complexity;
 - strong citizen understanding.
 
@@ -37,10 +37,10 @@ v0 should prove that the system can:
 3. let citizens fund projects conditionally;
 4. prevent immediate uncontrolled transfer of money;
 5. require execution responsibility;
-6. require value metrics and evidence;
+6. require value metrics and fulfillment evidence;
 7. require fiscalization proportional to risk;
-8. handle comments, complaints, evidence, and corrections;
-9. release funds by milestone, evidence, and review;
+8. handle comments, complaints, complaint evidence, fulfillment evidence, and corrections;
+9. release funds by milestone, fulfillment evidence, and review;
 10. preserve full auditability;
 11. update role-based reputation;
 12. support transition without pretending the entire system is mature from day one.
@@ -137,7 +137,7 @@ A project must contain:
 - project phases where applicable;
 - milestones;
 - metrics;
-- Project Evidential Contract and evidence obligations;
+- Project Evidential Contract and fulfillment evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - risks;
@@ -187,15 +187,15 @@ A value icon is not decoration.
 
 Rule:
 
-> No value icon without metrics. No metrics without evidence.
+> No value icon without metrics. No metrics without fulfillment evidence.
 
 The system should first search the value catalog before generating new values. AI may propose a new value only when there is no adequate existing catalog value.
 
 Promised value should be verified through a Value Verification Package, not isolated metrics. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
 
-Each core value commitment should map to evidence needs. The project defines what must be evidenced, when, by which source role or corroboration path, and with what review consequence. It should not preselect the independent evidence producers who later verify the project.
+Each core value commitment should map to fulfillment evidence needs. The project defines what must be evidenced, when, by which source role or corroboration path, and with what review consequence. It should not preselect the independent evidence producers who later verify the project.
 
-## Metrics and evidence
+## Metrics and fulfillment evidence
 
 For each promised value, the project must define measurable commitments.
 
@@ -206,7 +206,7 @@ Example for a sports training project:
 - sessions per week;
 - duration;
 - attendance target;
-- activity evidence;
+- activity fulfillment evidence;
 - beneficiary confirmation;
 - fiscalizer review.
 
@@ -222,9 +222,9 @@ is not enough to measure sports value. The project must measure actual participa
 
 Each project should also define a Project Evidential Contract.
 
-The contract states how fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
+The contract states how fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
 
-The contract defines evidence needs rather than named evidence producers. Evidence producers may later offer evidence tied to a specific metric, material claim, milestone, phase, risk, or antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment evidence needs rather than named evidence producers. Evidence producers may later offer fulfillment evidence tied to a specific metric, material claim, milestone, phase, risk, or antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected fulfillment evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
 
 The contract is proportional:
 
@@ -238,9 +238,24 @@ permits, baseline measurements, technical records, expert review, affected-party
 
 Citizens should see a simple "How this will be verified" summary, while Layer 5 preserves the full versioned contract.
 
-## Evidence model
+## Contextualized evidence model
 
-Evidence can come from:
+Core v0 distinguishes evidence by procedural context. It should not use bare `evidence` for system objects when the evidence has procedural consequences.
+
+Minimum evidence contexts:
+
+```text
+Complaint Evidence
+Fulfillment Evidence
+Control Evidence
+Contradiction Evidence
+Administrative Observability Data
+Research Evidence
+```
+
+`Evidence Item` may remain as a generic technical object only when it records an evidence context.
+
+Fulfillment Evidence can come from:
 
 - executor;
 - fiscalizer;
@@ -251,7 +266,7 @@ Evidence can come from:
 - documents;
 - system integrations where applicable.
 
-Evidence must be linked to:
+Fulfillment Evidence must be linked to:
 
 - project;
 - milestone;
@@ -263,9 +278,11 @@ Evidence must be linked to:
 - review status;
 - privacy classification.
 
-Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-Core v0 also treats material project statements as accountable claims. Claims that affect funding, execution readiness, disbursement, closure, risk, beneficiary trust, or reputation should be traceable to actor, role, evidence, contradiction, review status, correction history, and responsibility or verified-discovery effects where applicable.
+Complaint Evidence belongs to the complaint file. It supports, refutes, clarifies, or contextualizes an allegation. It may become relevant to fulfillment review only if the responsible fiscalizer, reviewer, competent authority, or protocol rule accepts it for that purpose.
+
+Core v0 also treats material project statements as accountable claims. Claims that affect funding, execution readiness, disbursement, closure, risk, beneficiary trust, or reputation should be traceable to actor, role, contextualized evidence, contradiction, review status, correction history, and responsibility or verified-discovery effects where applicable.
 
 Citizen-facing reliability labels may remain simple:
 
@@ -278,9 +295,9 @@ Corrected
 Accepted
 ```
 
-Verified discovery may create reputation credit or compensation only after review confirms that the discovered information was material and useful. AI may flag anomalies, duplicates, missing evidence, privacy risks, or contradictions, but it does not decide truth, fraud, responsibility, fund release, or legal consequences by itself.
+Verified discovery may create reputation credit or compensation only after review confirms that the discovered information was material and useful. AI may flag anomalies, duplicates, missing fulfillment evidence, privacy risks, or contradictions, but it does not decide truth, fraud, responsibility, fund release, or legal consequences by itself.
 
-Evidence states:
+Evidence item states:
 
 ```text
 Expected
@@ -297,13 +314,13 @@ Used in fiscalization report
 
 Fiscalization is the accountable review of project compliance.
 
-H016 treats fiscalization as a distributed but protocol-selected ecosystem. Many actors may observe, produce evidence, or submit fiscalization offers, but responsible fiscalization must be assigned through eligibility, conflict, independence, risk, budget, methodology, and auditability rules.
+H016 treats fiscalization as a distributed but protocol-selected ecosystem. Many actors may observe, produce fulfillment or control evidence, submit complaint evidence, or submit fiscalization offers, but responsible fiscalization must be assigned through eligibility, conflict, independence, risk, budget, methodology, and auditability rules.
 
 Core distinction:
 
 ```text
 Executor executes.
-Evidence producers produce evidence.
+Evidence producers produce fulfillment or control evidence.
 Fiscalizers evaluate compliance.
 Citizens observe, comment, contradict, and denounce.
 ```
@@ -314,9 +331,9 @@ Fiscalization may be simple for low-risk projects and reinforced for larger, tec
 
 Fiscalization cost is a control cost and should be separated from executor-controlled execution spending.
 
-Fiscalization, evidence missions, technical review, and admissibility review may be structured as Control Subprojects associated with the parent project. Control selection must be protocolized, risk-adjusted, conflict-checked, and auditable, not chosen by the executor or ordinary popularity.
+Fiscalization, fulfillment evidence missions, technical review, and admissibility review may be structured as Control Subprojects associated with the parent project. Control selection must be protocolized, risk-adjusted, conflict-checked, and auditable, not chosen by the executor or ordinary popularity.
 
-After the minimum admissible control package is accepted, supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct additional evidence needs. It does not fund execution, expand project scope, create unlimited fiscalization, or block execution automatically.
+After the minimum admissible control package is accepted, supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct additional fulfillment evidence needs. It does not fund execution, expand project scope, create unlimited fiscalization, or block execution automatically.
 
 ## Citizen interface layers
 
@@ -407,7 +424,7 @@ It includes:
 - budget;
 - closure conditions;
 - milestones;
-- evidence;
+- fulfillment evidence;
 - fiscalization;
 - risks and antivalues;
 - comments;
@@ -427,7 +444,7 @@ Layer 5 contains complete traceability:
 - funding and custody trace;
 - milestone and disbursement trace;
 - project evidential contract history;
-- evidence archive;
+- contextualized evidence archive;
 - material information claim and verified-discovery trace;
 - fiscalization reports;
 - complaint trace;
@@ -446,14 +463,14 @@ v0 includes these citizen flows:
 Funding
 Following
 Offering as fiscalizer
-Producing evidence
+Producing fulfillment evidence
 Commenting / asking
 Filing complaint
 Delegating
 Configuring automatic allocation profile
 ```
 
-Participation capacity support is also part of Core v0, but only through ordinary transparent project paths and assistance layers. A participation-support project may help citizens understand projects, translate material, produce evidence, file comments or complaints, model proposals, or configure profiles and delegation. It does not receive hidden delegation commissions, does not allocate citizen balances without explicit accepted delegation, does not turn AI into a civic actor, and does not make public institutions internal project participants.
+Participation capacity support is also part of Core v0, but only through ordinary transparent project paths and assistance layers. A participation-support project may help citizens understand projects, translate material, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. It does not receive hidden delegation commissions, does not allocate citizen balances without explicit accepted delegation, does not turn AI into a civic actor, and does not make public institutions internal project participants.
 
 ### Funding
 
@@ -461,7 +478,7 @@ Funding is a conditional commitment.
 
 It does not immediately transfer money to the executor.
 
-Funds are released only after closure conditions, milestones, evidence, and fiscalization rules are satisfied.
+Funds are released only after closure conditions, milestones, fulfillment evidence, and fiscalization rules are satisfied.
 
 Funding is not a freely reversible expression of preference. After financing, ordinary withdrawal is not allowed; failure is handled through traceability, complaints, retentions, guarantees, recovery, returned balances, and reputation consequences.
 
@@ -479,9 +496,9 @@ Offering to fiscalize is a role request with responsibility.
 
 It requires eligibility, relationship declaration, methodology, scope, and acceptance.
 
-### Evidence production
+### Fulfillment evidence production
 
-Evidence production creates verifiable material.
+Fulfillment evidence production creates verifiable material.
 
 It does not by itself validate compliance.
 
@@ -491,7 +508,7 @@ Comments support civic observation and clarification.
 
 Serious issues can be escalated into formal complaints.
 
-Public comments are identifiable by default. Protected identity is a justified per-comment exception for the comment layer, not an anonymous comment layer. The broader protected-identity mechanism may also apply to complaints, testimony, evidence, beneficiary confirmations, and other sensitive formal actions when public exposure creates a justified risk. All public-facing submissions remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
+Public comments are identifiable by default. Protected identity is a justified per-comment exception for the comment layer, not an anonymous comment layer. The broader protected-identity mechanism may also apply to complaints, testimony, complaint evidence, fulfillment evidence, beneficiary confirmations, and other sensitive formal actions when public exposure creates a justified risk. All public-facing submissions remain subject to a narrow legal, safety, privacy, and platform-integrity gate.
 
 ### Complaints
 
@@ -511,7 +528,7 @@ After minimum structural validation, the complaint is immediately sent to the pr
 
 Complaint objections are counter-signals and counterevidence, not numeric vetoes. They do not reduce support count or automatically close a complaint.
 
-For legally regulated projects, platform review can create public traceability, a fiscalizer report, an evidence index, or a referral package. It does not replace a court, regulator, or competent authority for operational suspension, permit revocation, legal sanction, or construction halt.
+For legally regulated projects, platform review can create public traceability, a fiscalizer report, a complaint evidence index, or a referral package. It does not replace a court, regulator, or competent authority for operational suspension, permit revocation, legal sanction, or construction halt.
 
 ### Delegation
 
@@ -529,7 +546,7 @@ Delegated-action reports should be generated primarily from the audit trail, wit
 
 Report channels and frequency may be configured by the citizen, but delegated-action records and fallback activation should remain available in-app.
 
-Delegation is non-compensated by default in Core v0. A delegate does not receive automatic payment, commission, or a percentage of delegated civic allocation merely because citizens delegate to them. Participation-support services may be funded only as separate transparent projects with ordinary budget, evidence, fiscalization, and audit rules.
+Delegation is non-compensated by default in Core v0. A delegate does not receive automatic payment, commission, or a percentage of delegated civic allocation merely because citizens delegate to them. Participation-support services may be funded only as separate transparent projects with ordinary budget, fulfillment evidence, fiscalization, and audit rules.
 
 ### Automatic allocation profile
 
@@ -556,7 +573,7 @@ Idea
 → budget
 → phases where relevant
 → milestones
-→ metrics and evidence
+→ metrics and fulfillment evidence
 → fiscalization
 → risks and antivalues
 → validation
@@ -568,7 +585,7 @@ Idea
 
 The creator should not start with a giant technical form. The system should assist the creator in making the project financeable, measurable, fiscalizable, and auditable.
 
-Project creation should include lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. Full common-good charter governance remains a later extension.
+Project creation should include lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, fulfillment evidence needs, and fiscalization. Full common-good charter governance remains a later extension.
 
 When a project combines design and execution, creation should define explicit `Project Phases`. The design phase should produce an auditable design package and a minimum public-value baseline before any later execution phase can release funds.
 
@@ -576,8 +593,8 @@ Example:
 
 ```text
 Design and Construction of Multi-court Facility in Macul:
-  design phase -> dimensions, public access, bathrooms or accessibility commitments where required, budget refinement, evidence plan;
-  construction phase -> construction milestones, evidence, fiscalization, disbursement.
+  design phase -> dimensions, public access, bathrooms or accessibility commitments where required, budget refinement, fulfillment evidence plan;
+  construction phase -> construction milestones, fulfillment evidence, fiscalization, disbursement.
 ```
 
 ## Open project model
@@ -610,7 +627,7 @@ Open project
 → execution-ready
 → in execution
 → milestones
-→ evidence submission
+→ fulfillment evidence submission
 → fiscalizer review
 → disbursement decision
 → correction / pause / reformulation / revocation if needed
@@ -618,7 +635,7 @@ Open project
 → final evaluation and reputation effects
 ```
 
-The project does not advance through a rigid sequential bureaucracy. It advances through condition completion and evidence-based checks.
+The project does not advance through a rigid sequential bureaucracy. It advances through condition completion and fulfillment-evidence-based checks.
 
 ## Disbursement model
 
@@ -628,14 +645,14 @@ Each release requires:
 
 - phase gate acceptance where applicable;
 - milestone;
-- evidence;
+- fulfillment evidence;
 - review;
 - blocking check;
 - rule applied;
 - financial order where money movement is required;
 - audit trace.
 
-Before a project can receive execution funding commitments, its disbursement milestone plan should pass specialized validation for milestone coherence, evidence requirements, release amounts, partial-release rules, retentions, protected advance-payment rules, and phase-gate treatment where applicable. Unresolved critical validation failures block financing.
+Before a project can receive execution funding commitments, its disbursement milestone plan should pass specialized validation for milestone coherence, fulfillment evidence requirements, release amounts, partial-release rules, retentions, protected advance-payment rules, and phase-gate treatment where applicable. Unresolved critical validation failures block financing.
 
 A pending design gate is not by itself a critical validation failure if the phase plan, public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It is a release blocker: later-phase execution funds remain reserved until the prerequisite design phase is accepted.
 
@@ -696,12 +713,12 @@ Substitutive reformulation -> new project or original-project failure/closure
 Example:
 
 ```text
-A sports-school schedule change may be operational if the same 80 children, workshop count, and evidence obligations remain.
+A sports-school schedule change may be operational if the same 80 children, workshop count, and fulfillment evidence obligations remain.
 
 Reducing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
 ```
 
-In a design-and-execution project, a failed design gate may trigger the same hierarchy. If the Macul design removes promised public access, omits required bathrooms, changes court dimensions materially, or weakens evidence requirements, construction cannot proceed as if nothing changed. The issue must be corrected or classified as material reformulation, substitutive reformulation, rejection, or closure under the active policy.
+In a design-and-execution project, a failed design gate may trigger the same hierarchy. If the Macul design removes promised public access, omits required bathrooms, changes court dimensions materially, or weakens fulfillment evidence requirements, construction cannot proceed as if nothing changed. The issue must be corrected or classified as material reformulation, substitutive reformulation, rejection, or closure under the active policy.
 
 Reformulation frequency, minimum spacing, deadline-extension effects, and exhaustion consequences are not universal application constants. They should be defined in a visible reformulation policy for the project, public function, operating mode, or protocol. In tutored mode, the administrator or tutored authority may configure concrete parameters. In non-tutored or open modes, the competent authority, community mechanism, or active protocol defines the strategy.
 
@@ -724,16 +741,16 @@ Closure must show:
 - actual delivered value;
 - metrics achieved;
 - beneficiaries confirmed;
-- evidence status;
+- fulfillment evidence status;
 - budget used;
 - unused funds;
 - complaints status;
 - fiscalizer final report;
 - reputation effects.
 
-Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, evidence corrections, and responsibility events.
+Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, fulfillment evidence corrections, and responsibility events.
 
-Verified discovery may create positive role-specific reputation when a reviewed contribution materially improves information reliability, prevents loss, corrects false evidence, or reveals a hidden issue. Raw accusations, AI anomaly flags, and popularity signals do not create reputation effects by themselves.
+Verified discovery may create positive role-specific reputation when a reviewed contribution materially improves information reliability, prevents loss, corrects false or manipulated contextualized evidence, or reveals a hidden issue. Raw accusations, AI anomaly flags, and popularity signals do not create reputation effects by themselves.
 
 ## Reputation
 
@@ -868,7 +885,7 @@ A v0 pilot is successful if it can demonstrate:
 - citizens can understand projects quickly;
 - projects can be created as verifiable public promises;
 - funds remain conditional and traceable;
-- evidence and fiscalization actually affect disbursement;
+- fulfillment evidence and fiscalization actually affect disbursement;
 - complaints can pause or correct serious problems;
 - project history cannot be erased;
 - executors cannot self-validate;

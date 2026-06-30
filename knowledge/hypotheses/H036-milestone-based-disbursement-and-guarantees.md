@@ -121,7 +121,7 @@ Each milestone-related money movement should preserve:
 
 - project and milestone reference;
 - validated milestone rule;
-- evidence considered;
+- fulfillment evidence considered;
 - fiscalization decision where required;
 - blocking-condition status;
 - released amount;

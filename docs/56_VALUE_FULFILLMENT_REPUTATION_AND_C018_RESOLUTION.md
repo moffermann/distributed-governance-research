@@ -6,7 +6,7 @@ This document resolves contradiction C018 from the v0 contradiction checklist.
 
 C018 was originally framed as the problem that project closure categories need a stronger link to reputation. Closure can be fulfilled, partially fulfilled, unfulfilled, revoked, expired, or reformulated, but reputation effects were not yet precise enough.
 
-The final v0 resolution is that closure category is descriptive, not the primary reputation input. Reputation should be communicated numerically and updated from the verified fulfillment of the project's value thesis and core metrics, adjusted by founded complaints, evidence corrections, and role-specific responsibility events.
+The final v0 resolution is that closure category is descriptive, not the primary reputation input. Reputation should be communicated numerically and updated from the verified fulfillment of the project's value thesis and core metrics, adjusted by founded complaints, contextualized evidence corrections, and role-specific responsibility events.
 
 ## Status
 
@@ -18,7 +18,7 @@ Accepted as the v0 resolution for C018.
 
 A project may be administratively closed as partially executed while still fulfilling nearly all of its value thesis.
 
-A project may also be administratively closed as completed while later evidence or founded complaints show that the promised value was not actually delivered.
+A project may also be administratively closed as completed while later contextualized evidence or founded complaints show that the promised value was not actually delivered.
 
 Therefore, the closure label is context.
 
@@ -132,7 +132,7 @@ It should be calculated from:
 original value thesis
 core metrics
 predefined metric weights
-accepted evidence
+accepted fulfillment evidence
 fiscalizer evaluation
 validated milestone results
 founded complaints and corrections
@@ -265,7 +265,7 @@ Responsibility Event:
 Actor: executor
 Role: executor
 Obligation: truthful beneficiary declaration
-Evidence: founded complaint + fiscalizer review
+Review basis: founded complaint + fiscalizer review
 Severity: high
 Effect: negative executor reputation adjustment
 ```
@@ -276,7 +276,7 @@ A project can have both:
 
 ```text
 lower value fulfillment score
-+ additional penalty for misconduct, false evidence, or avoidable breach
++ additional penalty for misconduct, false contextualized evidence, or avoidable breach
 ```
 
 ## Relationship with fiscalizer evaluation
@@ -288,7 +288,7 @@ The fiscalizer verifies evidence, reviews milestone completion, and reports fulf
 The reputation input comes from:
 
 ```text
-metrics + evidence + fiscalizer evaluation + founded complaint corrections + responsibility events
+metrics + fulfillment evidence + fiscalizer evaluation + founded complaint corrections + responsibility events
 ```
 
 The fiscalizer's work is therefore a key verification source, but not the only possible source of reputational information.
@@ -317,7 +317,7 @@ These signals may be shown publicly, aggregated, or used as soft context.
 
 They should not automatically create formal sanctions.
 
-Formal reputation updates require verified project metrics, accepted evidence, fiscalizer evaluation, or founded complaints connected to role obligations.
+Formal reputation updates require verified project metrics, accepted fulfillment evidence, fiscalizer evaluation, or founded complaints connected to role obligations.
 
 ## Closure category as context
 
@@ -401,7 +401,7 @@ project closure category
 value fulfillment score
 metric breakdown
 fiscalizer evaluation reference
-accepted evidence references
+accepted fulfillment evidence references
 founded complaint references
 responsibility event references
 base score adjustment
@@ -439,7 +439,7 @@ Numeric reputation updates communicate performance over time.
 C018 is resolved as follows:
 
 ```text
-Do not calculate reputation directly from project closure labels. Use closure category as procedural context, but calculate the executor's numeric reputation update primarily from verified fulfillment of the project's value thesis and predeclared metrics, adjusted by founded complaints, evidence corrections, and role-specific responsibility events. Reputation should be visible to future funders, use a weighted moving average or decay mechanism, and remain role-specific.
+Do not calculate reputation directly from project closure labels. Use closure category as procedural context, but calculate the executor's numeric reputation update primarily from verified fulfillment of the project's value thesis and predeclared metrics, adjusted by founded complaints, contextualized evidence corrections, and role-specific responsibility events. Reputation should be visible to future funders, use a weighted moving average or decay mechanism, and remain role-specific.
 ```
 
 Final rule:
@@ -476,7 +476,7 @@ This resolution should inform future updates to:
 - show recent project evaluations separately from aggregate reputation;
 - keep severe responsibility events visible even if aggregate score later improves;
 - require metric weights before funding;
-- correct historical project scores when founded complaints change evidence;
+- correct historical project scores when founded complaints change contextualized evidence;
 - keep role-specific reputation tracks;
 - show closure category as context, not as the score itself;
 - include appeal or review status where reputation updates are disputed.

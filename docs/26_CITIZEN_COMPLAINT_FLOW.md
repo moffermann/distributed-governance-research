@@ -4,11 +4,13 @@
 
 This document freezes the flow for filing a formal complaint about a project.
 
-A complaint is different from a comment. It is a structured claim that something may be false, incomplete, conflicted, non-compliant, harmful, or otherwise relevant to project validity, execution, fiscalization, evidence, or funding release.
+A complaint is different from a comment. It is a structured claim that something may be false, incomplete, conflicted, non-compliant, harmful, or otherwise relevant to project validity, execution, fiscalization, fulfillment evidence, or funding release.
 
 ## Core principle
 
 > A complaint is a formal review trigger. It must be easy to submit, structured enough to evaluate, and traceable enough to prevent arbitrary decisions.
+
+This flow concerns `Complaint Evidence`. Complaint evidence supports, refutes, clarifies, or contextualizes an allegation. It is not automatically `Fulfillment Evidence`, which verifies value thesis metrics, milestones, disbursement, closure, or reputation. Complaint evidence may become relevant to fulfillment review only after a fiscalizer, reviewer, competent authority, or protocol rule accepts it for that purpose.
 
 Complaints are submitted by verified actors. Visible identity is the default where no special risk exists, but a complainant may request protected identity when public exposure creates a retaliation, safety, privacy, or beneficiary-protection risk. Protected identity is not an anonymous complaint: the system retains restricted accountability and authorized reviewers may verify identity under access-log rules.
 
@@ -59,7 +61,7 @@ Otro
 
 The category helps routing, but the citizen should not need legal or technical expertise.
 
-A complaint may point to a material information claim, but the citizen should not need to model that claim technically. The interface can ask what statement, evidence, budget line, beneficiary count, risk, milestone, or relationship seems false, incomplete, or misleading.
+A complaint may point to a material information claim, but the citizen should not need to model that claim technically. The interface can ask what statement, contextualized evidence item, budget line, beneficiary count, risk, milestone, or relationship seems false, incomplete, or misleading.
 
 ## Flow steps
 
@@ -67,7 +69,7 @@ A complaint may point to a material information claim, but the citizen should no
 1. Citizen starts complaint
 2. System explains difference from comment
 3. Citizen selects category
-4. Citizen writes claim and attaches evidence if available
+4. Citizen writes claim and attaches complaint evidence if available
 5. System asks project area affected
 6. Citizen chooses visible identity or requests protected identity if justified
 7. Citizen reviews possible consequences
@@ -109,7 +111,7 @@ Categoría:
 ¿A qué parte del proyecto afecta?
 [Beneficiarios] [Presupuesto] [Evidencia] [Fiscalización] [Ejecución] [Valor prometido]
 
-¿Tienes evidencia?
+¿Tienes evidencia de la denuncia?
 [Subir archivo] [Agregar enlace] [Describir observación]
 
 Identidad:
@@ -143,7 +145,7 @@ Tu denuncia puede:
 - pedir respuesta al ejecutor;
 - pedir revisión al fiscalizador;
 - bloquear temporalmente avance o desembolso si es grave;
-- ser rechazada si no tiene fundamento suficiente;
+- ser rechazada si no tiene antecedentes o evidencia suficiente;
 - afectar reputación si se demuestra mala fe reiterada.
 ```
 
@@ -184,7 +186,7 @@ quote_deadline_days = Y
 During the support window, citizens may:
 
 - support the complaint;
-- add evidence;
+- add complaint evidence;
 - follow the complaint;
 - reserve a conditional review contribution;
 - object to the complaint or add counterevidence.
@@ -271,7 +273,7 @@ Blocking should be rule-based and visible.
 Examples of potentially blocking issues:
 
 - alleged false beneficiaries;
-- serious evidence dispute;
+- serious fulfillment-evidence dispute;
 - undeclared relation affecting fiscalization;
 - suspected non-compliance with a milestone;
 - budget change not declared;
@@ -283,7 +285,7 @@ Rule:
 
 For legally regulated projects, including environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform should not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights by itself.
 
-For those cases, the platform may fund review, create a fiscalizer report, prepare an evidence index, and generate a referral package. Operational suspension requires a court order, regulator order, or competent authority resolution.
+For those cases, the platform may fund review, create a fiscalizer report, prepare a complaint evidence index, and generate a referral package. Operational suspension requires a court order, regulator order, or competent authority resolution.
 
 ## 7. Actor response
 
@@ -308,7 +310,7 @@ A resolution should include:
 - complaint summary;
 - category;
 - material information claim or project object affected where applicable;
-- evidence considered;
+- complaint evidence considered;
 - actor responses;
 - conclusion;
 - effect on project;

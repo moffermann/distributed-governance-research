@@ -6,8 +6,9 @@ Start here when navigating the project in Obsidian or GitHub.
 
 - [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
 - [[hypotheses/H017-meta-governance-protocol-evolution|H017 — Meta-Governance and Protocol Evolution]]
+- [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 - [[hypotheses/H018-project-value-thesis-and-measurement|H018 — Project Value Thesis and Measurement]]
-- [[open-questions/evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]]
+- [[open-questions/evidence-producer-evidence-quality-validation|Fulfillment/Control Evidence Quality Validation]]
 - [[hypotheses/H019-distributed-project-modeling-execution-fiscalization|H019 — Distributed Project Modeling, Execution, and Fiscalization]]
 - [[hypotheses/H020-proportional-procedural-burden|H020 — Proportional Procedural Burden]]
 - [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
@@ -53,7 +54,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/27_CITIZEN_DELEGATION_FLOW|Citizen Delegation Flow v0]]
 - [[../docs/26_CITIZEN_COMPLAINT_FLOW|Citizen Complaint Flow v0]]
 - [[../docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW|Citizen Comment and Question Flow v0]]
-- [[../docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|Citizen Evidence Production Flow v0]]
+- [[../docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|Citizen Fulfillment Evidence Production Flow v0]]
 - [[../docs/23_CITIZEN_FISCALIZER_OFFER_FLOW|Citizen Fiscalizer Offer Flow v0]]
 - [[../docs/22_CITIZEN_PROJECT_FOLLOWING_FLOW|Citizen Project Following Flow v0]]
 - [[../docs/21_CITIZEN_FUNDING_FLOW|Citizen Funding Flow v0]]
@@ -68,8 +69,8 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
 - [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
-- [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Evidence, and Control Model v0]]
-- [[07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY|Core Objects, Fiscalization, Evidence, and Simplicity]]
+- [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Fulfillment Evidence, and Control Model v0]]
+- [[07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY|Core Objects, Fiscalization, Fulfillment Evidence, and Simplicity]]
 - [[principles/P006-layered-complexity-and-citizen-simplicity|P006 — Layered Complexity and Citizen Simplicity]]
 
 ## Core orientation
@@ -86,7 +87,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/07_CORE_V0_SCOPE|Core v0 Scope]]
 - [[../docs/08_ENTITY_AND_ROLE_MAP|Entity and Role Map v0]]
 - [[../docs/09_PROJECT_OBJECT_MODEL|Project Object Model v0]]
-- [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Evidence, and Control Model v0]]
+- [[../docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|Fiscalization, Fulfillment Evidence, and Control Model v0]]
 - [[../docs/11_CITIZEN_PROJECT_CARD|Citizen Project Card v0]]
 - [[../docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|Open Project and Parallel Closure Model v0]]
 - [[../docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|Value Icon Catalog and Metric Validator Model v0]]
@@ -100,7 +101,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/21_CITIZEN_FUNDING_FLOW|Citizen Funding Flow v0]]
 - [[../docs/22_CITIZEN_PROJECT_FOLLOWING_FLOW|Citizen Project Following Flow v0]]
 - [[../docs/23_CITIZEN_FISCALIZER_OFFER_FLOW|Citizen Fiscalizer Offer Flow v0]]
-- [[../docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|Citizen Evidence Production Flow v0]]
+- [[../docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|Citizen Fulfillment Evidence Production Flow v0]]
 - [[../docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW|Citizen Comment and Question Flow v0]]
 - [[../docs/26_CITIZEN_COMPLAINT_FLOW|Citizen Complaint Flow v0]]
 - [[../docs/27_CITIZEN_DELEGATION_FLOW|Citizen Delegation Flow v0]]
@@ -150,7 +151,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/diagrams/v0-project-lifecycle-state|Diagram - Project Lifecycle State v0]]
 - [[../docs/diagrams/v0-open-project-parallel-closure|Diagram - Open Project Parallel Closure v0]]
 - [[../docs/diagrams/v0-funding-disbursement|Diagram - Funding and Disbursement v0]]
-- [[../docs/diagrams/v0-evidence-fiscalization|Diagram - Evidence and Fiscalization v0]]
+- [[../docs/diagrams/v0-evidence-fiscalization|Diagram - Contextualized Evidence and Fiscalization v0]]
 - [[../docs/diagrams/v0-complaint-review|Diagram - Complaint and Review v0]]
 - [[../docs/diagrams/v0-delegation-automatic-allocation|Diagram - Delegation and Automatic Allocation v0]]
 - [[../docs/diagrams/v0-reformulation-pause-revocation|Diagram - Reformulation, Pause, and Revocation v0]]
@@ -162,6 +163,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 - [[concepts/core-glossary-v0|Core Glossary v0]]
 - [[concepts/project-governance-glossary-addendum|Project Governance Glossary Addendum]]
+- [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 
 ## Foundational session distillations
 
@@ -172,7 +174,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[04_SESSION_RICARDO_DEEP_QUESTIONS|Ricardo's Deep Questions]]
 - [[05_SESSION_FUNDING_AND_PROJECT_CONTROLS|Funding and Project Controls]]
 - [[06_SESSION_DELEGATION_ARCHITECTURE|Delegation Architecture]]
-- [[07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY|Core Objects, Fiscalization, Evidence, and Simplicity]]
+- [[07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY|Core Objects, Fiscalization, Fulfillment Evidence, and Simplicity]]
 
 ## External review
 
@@ -185,6 +187,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/distributed-trust|Distributed Trust]]
 - [[concepts/algorithm-as-coordinator|Algorithm as Coordinator]]
 - [[concepts/distributed-planning-architecture|Distributed Planning Architecture]]
+- [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 
 ## Functional matrix
 
@@ -251,7 +254,7 @@ Recently aligned residual-audit hypotheses:
 ## Open questions and objections
 
 - [[open-questions/README|Open Questions]]
-- [[open-questions/evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]]
+- [[open-questions/evidence-producer-evidence-quality-validation|Fulfillment/Control Evidence Quality Validation]]
 - [[objections/README|Objections]]
 
 ## Literature

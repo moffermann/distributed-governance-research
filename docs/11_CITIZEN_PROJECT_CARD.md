@@ -213,9 +213,9 @@ Clicking opens:
 - severity where applicable;
 - effects on project state if any.
 
-### Evidence
+### Fulfillment evidence
 
-Shows number of evidence items associated with the project.
+Shows number of fulfillment evidence items associated with the project.
 
 Clicking opens:
 

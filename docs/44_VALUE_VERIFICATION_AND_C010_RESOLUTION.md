@@ -14,7 +14,7 @@ Accepted as the v0 resolution for C010.
 
 > Metrics are instruments of verification, not substitutes for public value.
 
-A project should not be considered successful merely because it satisfied one isolated metric if the broader evidence shows that the promised value was weak, distorted, or not reasonably produced.
+A project should not be considered successful merely because it satisfied one isolated metric if the broader fulfillment evidence shows that the promised value was weak, distorted, or not reasonably produced.
 
 ## The contradiction
 
@@ -53,7 +53,7 @@ A value verification package may include:
 - quality signals;
 - beneficiary confirmation;
 - fiscalizer observation;
-- evidence items;
+- fulfillment evidence items;
 - material information claims and corrections;
 - risk and antivalue review;
 - contradiction or complaint signals;
@@ -61,7 +61,7 @@ A value verification package may include:
 
 The exact package depends on the value type and project risk.
 
-The package defines evidence needs and source-role expectations. It should not preselect the independent evidence producers who later verify the project.
+The package defines fulfillment evidence needs and source-role expectations. It should not preselect the independent evidence producers who later verify the project.
 
 ## Minimum v0 rule
 
@@ -70,7 +70,7 @@ For every promised value:
 ```text
 1. At least two verification dimensions should be defined.
 2. A pure activity metric should not be sufficient by itself.
-3. Every metric must connect to evidence.
+3. Every metric must connect to fulfillment evidence.
 4. Beneficiary feedback or confirmation should be included when relevant.
 5. Antivalues and risks must be reviewed at closure.
 6. The fiscalizer may mark formal compliance as weak if the value is not reasonably demonstrated.
@@ -85,8 +85,8 @@ Value verification should therefore preserve the relationship between:
 - promised value;
 - metric or qualitative commitment;
 - material claim;
-- supporting evidence;
-- contradictory evidence;
+- supporting fulfillment evidence;
+- contradictory contextualized evidence;
 - review status;
 - correction history;
 - responsibility or verified-discovery effect where applicable.
@@ -100,7 +100,7 @@ Sports participation for children.
 Material claim:
 80 children regularly attended.
 
-Evidence:
+Fulfillment evidence:
 Attendance lists, parent confirmations, evidence-producer observations, photos, and fiscalizer review.
 
 Possible conclusion:
@@ -113,9 +113,9 @@ This keeps the citizen-facing signal simple while making the technical value-ver
 
 H022 defines the ex ante Project Evidential Contract.
 
-The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, evidence needs, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
+The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, fulfillment evidence needs, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
 
-Independent evidence producers may later offer evidence tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Evidence that satisfies accepted package needs has higher eligibility priority, while unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+Independent evidence producers may later offer fulfillment evidence tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Fulfillment evidence that satisfies accepted package needs has higher eligibility priority, while unexpected fulfillment evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Example:
 
@@ -124,10 +124,10 @@ Project:
 Sports school for 80 children.
 
 Evidential contract:
-attendance records, beneficiary confirmation, activity evidence, fiscalizer review, and contradiction path.
+attendance records, beneficiary confirmation, activity fulfillment evidence, fiscalizer review, and contradiction path.
 
 Value Verification Package:
-sessions delivered, regular attendance, continuity, beneficiary feedback, evidence strength, and antivalue check.
+sessions delivered, regular attendance, continuity, beneficiary feedback, fulfillment evidence strength, and antivalue check.
 ```
 
 If the project changes the evidential contract after support or funding, the value-verification package should preserve the old version, explain the change, and trigger reformulation or review where the change materially weakens what citizens funded.
@@ -161,7 +161,7 @@ average attendance across the program.
 Quality:
 beneficiary or parent feedback.
 
-Evidence:
+Fulfillment evidence:
 attendance lists, photos, calendar, evidence producer observations.
 
 Antivalue check:
@@ -217,16 +217,16 @@ Examples:
 - structured testimonial;
 - satisfaction or usefulness score.
 
-### Evidence strength
+### Fulfillment evidence strength
 
-Measures whether the claim is supported by enough evidence.
+Measures whether the claim is supported by enough fulfillment evidence.
 
 Examples:
 
 - self-reported evidence only;
 - beneficiary confirmation;
-- independent evidence;
-- contradicted evidence;
+- independent fulfillment evidence;
+- contradicted fulfillment evidence;
 - fiscalizer observation.
 
 ### Antivalue and risk check
@@ -241,11 +241,11 @@ Examples:
 - cost concentration;
 - misleading beneficiary claim.
 
-## Qualitative evidence
+## Qualitative fulfillment evidence
 
-Core v0 allows qualitative evidence, but it should be structured.
+Core v0 allows qualitative fulfillment evidence, but it should be structured.
 
-Acceptable qualitative evidence may include:
+Acceptable qualitative fulfillment evidence may include:
 
 - beneficiary surveys;
 - structured testimonials;
@@ -255,7 +255,7 @@ Acceptable qualitative evidence may include:
 - verified comments from beneficiaries;
 - parent or caregiver feedback where relevant.
 
-Qualitative evidence should not be treated as arbitrary narrative. It should identify:
+Qualitative fulfillment evidence should not be treated as arbitrary narrative. It should identify:
 
 - source;
 - relationship to project;
@@ -275,7 +275,7 @@ Value reasonably demonstrated
 Value partially demonstrated
 Formal compliance, weak value
 Value not demonstrated
-Evidence insufficient
+Fulfillment evidence insufficient
 ```
 
 Example:
@@ -284,7 +284,7 @@ Example:
 Sessions delivered: yes.
 Attendance: low.
 Beneficiary feedback: weak.
-Independent evidence: limited.
+Independent fulfillment evidence: limited.
 
 Conclusion:
 formal compliance, weak value.
@@ -302,7 +302,7 @@ Verification status: Partially demonstrated
 Why: sessions were delivered, but attendance and beneficiary feedback were weaker than expected.
 ```
 
-A citizen may click deeper to see the evidence and metric package.
+A citizen may click deeper to see the fulfillment evidence and metric package.
 
 ## Anti-gaming rule
 
@@ -314,7 +314,7 @@ Rule:
 
 ## Relationship with disbursement
 
-Milestone disbursement can still rely on specific milestone evidence.
+Milestone disbursement can still rely on specific milestone fulfillment evidence.
 
 But final closure and reputation should consider the broader value verification package.
 
@@ -330,7 +330,7 @@ Replace isolated value metrics with a Value Verification Package.
 
 Final rule:
 
-> Every promised value must be verified through a package of metrics and evidence. Activity metrics alone are insufficient. The fiscalizer may mark a project as formally compliant but weak in value if the broader evidence does not reasonably demonstrate the promised value.
+> Every promised value must be verified through a package of metrics and fulfillment evidence. Activity metrics alone are insufficient. The fiscalizer may mark a project as formally compliant but weak in value if the broader fulfillment evidence does not reasonably demonstrate the promised value.
 
 ## Documents that should eventually reflect this resolution
 
@@ -356,7 +356,7 @@ This resolution should inform future updates to:
 ## Mitigations
 
 - start with simple minimum packages by value type;
-- use structured qualitative evidence;
+- use structured qualitative fulfillment evidence;
 - separate milestone disbursement from final value judgment where needed;
 - make fiscalizer reasoning visible;
 - allow beneficiary contradiction;

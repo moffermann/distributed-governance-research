@@ -65,6 +65,22 @@ Observability means that an actor has direct or verifiable access to a project d
 
 If an actor cannot observe or verify a dimension, they may express an opinion or alert, but should not formally score that dimension.
 
+## Evidence Context
+
+Evidence context distinguishes what procedural job an evidence item is doing.
+
+Core v0 should not use bare `evidence` for system objects when the evidence has procedural consequences.
+
+Minimum distinction:
+
+- `Complaint Evidence`: material used to support, refute, clarify, or contextualize a complaint.
+- `Fulfillment Evidence`: material used to verify a value thesis, metric, milestone, phase gate, deliverable, disbursement condition, closure condition, or reputation-relevant obligation.
+- `Control Evidence`: material produced or captured by fiscalization, evidence missions, technical review, admissibility review, or another control process.
+- `Administrative Observability Data`: platform or system data used to audit the system itself.
+- `Research Evidence`: literature, empirical information, or case material used by this research project.
+
+See `evidence-context-taxonomy-v0.md`.
+
 ## Role-Based Reputation
 
 Role-based reputation tracks the performance of people and institutions according to their actual responsibility in projects.

@@ -128,7 +128,7 @@ AI does not decide the legal truth of the evidence or the final complaint outcom
 
 AI may flag a project as high risk because beneficiaries are hard to verify.
 
-That can trigger stronger evidence requirements, review attention, or a warning.
+That can trigger stronger fulfillment/control evidence requirements, review attention, or a warning.
 
 It should not automatically reject the project or sanction the executor.
 
@@ -182,7 +182,7 @@ That use is compatible with C008 because AI does not become a publication author
 
 ## Relationship with value verification
 
-AI may help suggest metrics or detect weak value verification, but the final value assessment belongs to the evidence/fiscalization/closure process.
+AI may help suggest metrics or detect weak value verification, but the final value assessment belongs to the contextualized evidence/fiscalization/closure process.
 
 ## C008 final resolution
 

@@ -49,7 +49,7 @@ Examples:
 project status
 funding progress
 fiscalization status
-evidence status
+contextualized evidence status
 active complaints
 tutored review status
 review timeout status

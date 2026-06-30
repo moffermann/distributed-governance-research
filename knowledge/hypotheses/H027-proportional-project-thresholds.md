@@ -90,7 +90,7 @@ Additional v0 threshold dimensions may include:
 - tutored-scope review where an operating mode requires it;
 - reformulation or deadline policy.
 
-Not every threshold is an approval vote. Some are completion conditions, visibility requirements, review windows, evidence requirements, or compatibility checks.
+Not every threshold is an approval vote. Some are completion conditions, visibility requirements, review windows, fulfillment/control evidence requirements, or compatibility checks.
 
 ## Examples
 

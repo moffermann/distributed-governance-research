@@ -314,22 +314,22 @@ Example:
 Milestone 1:
 Beneficiary registration
 Deadline: week 1
-Evidence: registration list
+Fulfillment evidence: registration list
 
 Milestone 2:
 Training starts
 Deadline: week 2
-Evidence: schedule, photos, attendance
+Fulfillment evidence: schedule, photos, attendance
 
 Milestone 3:
 Monthly execution
 Deadline: months 1 to 6
-Evidence: monthly attendance and activity records
+Fulfillment evidence: monthly attendance and activity records
 
 Milestone 4:
 Program closure
 Deadline: month 6
-Evidence: final report, total attendance, beneficiary confirmation
+Fulfillment evidence: final report, total attendance, beneficiary confirmation
 ```
 
 ## 10. Evidence committed

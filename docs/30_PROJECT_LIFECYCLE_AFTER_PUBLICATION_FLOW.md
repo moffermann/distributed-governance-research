@@ -112,7 +112,7 @@ This check should confirm:
 - funding commitments are enough;
 - no blocking complaint is active;
 - fiscalization is configured;
-- Project Evidential Contract and evidence obligations are configured;
+- Project Evidential Contract and fulfillment evidence obligations are configured;
 - the minimum admissible control package is accepted where control is required;
 - milestone plan is complete;
 - disbursement milestone plan has no unresolved critical validation failures;
@@ -141,7 +141,7 @@ Execution-ready means:
 
 For phased projects, execution-ready is phase-sensitive. A parent project may collect construction funding while the design phase is pending, but the construction phase does not become execution-ready and construction funds cannot be released until the design phase gate is accepted.
 
-Supplemental control funding after execution-ready does not reopen this transition by default. A project may remain execution-ready while additional control-only funding is reserved for one secondary fiscalizer, fiscalization audit, or distinct evidence work. Any blocking effect from supplemental control must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
+Supplemental control funding after execution-ready does not reopen this transition by default. A project may remain execution-ready while additional control-only funding is reserved for one secondary fiscalizer, fiscalization audit, or distinct fulfillment/control evidence work. Any blocking effect from supplemental control must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
 
 ## 4. Start of execution
 
@@ -233,7 +233,7 @@ For each milestone, evidence may come from:
 - open observers;
 - documents or system integrations where applicable.
 
-Possible evidence states:
+Possible fulfillment evidence states:
 
 ```text
 Expected
@@ -264,9 +264,9 @@ Evidence must be linked to:
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-Evidence is evaluated against the accepted Project Evidential Contract. If the project changes that contract during execution, the change must preserve history and may require reformulation, notification, or renewed review where it weakens the original promise.
+Fulfillment evidence is evaluated against the accepted Project Evidential Contract. If the project changes that contract during execution, the change must preserve history and may require reformulation, notification, or renewed review where it weakens the original promise.
 
-In an integrated design-and-execution project, design-phase evidence is evaluated before construction release. A design package for the Macul multi-court project should evidence dimensions, access rules, bathrooms or accessibility commitments where required, budget refinement, permit or compatibility requirements, and construction evidence requirements.
+In an integrated design-and-execution project, design-phase fulfillment evidence is evaluated before construction release. A design package for the Macul multi-court project should evidence dimensions, access rules, bathrooms or accessibility commitments where required, budget refinement, permit or compatibility requirements, and construction fulfillment evidence requirements.
 
 ## 7. Fiscalizer review
 
@@ -330,7 +330,7 @@ The disbursement decision should show:
 - milestone;
 - amount requested;
 - amount approved;
-- evidence considered;
+- fulfillment evidence considered;
 - fiscalizer decision;
 - any complaint or alert;
 - rule applied;
@@ -424,7 +424,7 @@ Operational reformulation may preserve the value thesis. Material value reformul
 Example:
 
 ```text
-Changing the weekly schedule of a sports school while preserving 80 children and the same evidence obligations may be operational.
+Changing the weekly schedule of a sports school while preserving 80 children and the same fulfillment evidence obligations may be operational.
 
 Reducing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
 

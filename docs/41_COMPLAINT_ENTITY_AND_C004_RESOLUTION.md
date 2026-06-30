@@ -4,7 +4,7 @@
 
 This document resolves contradiction C004 from the v0 contradiction checklist.
 
-C004 was originally framed as the problem of deciding when a complaint should become blocking. The discussion refined the issue: the complaint model must distinguish misunderstanding from real project failure, avoid reputational sabotage, allow citizen evidence, group repeated complaints, and let the competent reviewer admit, reject, or escalate the complaint.
+C004 was originally framed as the problem of deciding when a complaint should become blocking. The discussion refined the issue: the complaint model must distinguish misunderstanding from real project failure, avoid reputational sabotage, allow citizen complaint evidence, group repeated complaints, and let the competent reviewer admit, reject, or escalate the complaint.
 
 ## Status
 
@@ -18,7 +18,7 @@ Presented complaint ≠ Admitted complaint ≠ Founded complaint ≠ Blocking co
 
 A complaint being presented does not mean the project has a real violation.
 
-A complaint becomes relevant to the project only after it passes a review of minimum evidence, pertinence, scope, and competence.
+A complaint becomes relevant to the project only after it passes a review of minimum complaint evidence or initial supporting material, pertinence, scope, and competence.
 
 ## Why this matters
 
@@ -40,7 +40,7 @@ Rejected complaints should remain historically traceable, but they should not da
 
 ## Definition of Complaint
 
-A `Complaint` is a formal citizen or actor submission that alleges a possible problem in a project, control subproject, evidence item, material information claim, fiscalization process, disbursement, actor relationship, or declared value commitment.
+A `Complaint` is a formal citizen or actor submission that alleges a possible problem in a project, control subproject, contextualized evidence item, material information claim, fiscalization process, disbursement, actor relationship, or declared value commitment.
 
 A complaint must include:
 
@@ -50,7 +50,7 @@ A complaint must include:
 - description;
 - affected scope;
 - explanation of why it matters;
-- evidence or initial supporting material;
+- complaint evidence or initial supporting material;
 - requested review outcome, if any;
 - privacy classification where relevant.
 
@@ -66,9 +66,9 @@ A complaint is not:
 - automatic reputational damage;
 - automatic blocker.
 
-## Required evidence
+## Required complaint evidence
 
-A complaint should require evidence or at least initial supporting material.
+A complaint should require complaint evidence or at least initial supporting material.
 
 The system should not accept a complaint as formal if it only says:
 
@@ -84,7 +84,7 @@ The complaint form should ask:
 What are you alleging?
 Which part of the project does it affect?
 Why do you believe there is a problem?
-What evidence do you provide?
+What complaint evidence or initial supporting material do you provide?
 What outcome do you request?
 ```
 
@@ -99,7 +99,7 @@ Possible affected scopes:
 - milestone;
 - disbursement;
 - budget line;
-- evidence item;
+- contextualized evidence item;
 - material information claim;
 - beneficiary declaration;
 - fiscalizer;
@@ -123,7 +123,7 @@ Possible signals:
 - objection;
 - comments;
 - followers;
-- evidence contributions;
+- complaint evidence contributions;
 - duplicate or similar reports;
 - privacy flags.
 
@@ -133,7 +133,7 @@ Rule:
 
 > Support for a complaint means citizens think it deserves attention. It does not prove the complaint.
 
-Project-level justified objections may point citizens toward a complaint, but they do not become complaints automatically. If a citizen wants formal review, the objection must be converted into or accompanied by a complaint with affected scope, allegation, evidence, and requested outcome.
+Project-level justified objections may point citizens toward a complaint, but they do not become complaints automatically. If a citizen wants formal review, the objection must be converted into or accompanied by a complaint with affected scope, allegation, complaint evidence or initial supporting material, and requested outcome.
 
 ## Supporting a complaint
 
@@ -168,7 +168,7 @@ A citizen may object to a complaint when they believe it is mistaken, exaggerate
 Objection reasons may include:
 
 - misunderstanding of project scope;
-- no evidence;
+- no complaint evidence;
 - duplicate of existing complaint;
 - wrong object affected;
 - already resolved;
@@ -178,7 +178,7 @@ Objection reasons may include:
 
 Objections are not a numeric veto.
 
-They should be visible as civic counter-signals and may include counterevidence, but they should not:
+They should be visible as civic counter-signals and may include counterevidence or complaint-response evidence, but they should not:
 
 - reduce support count;
 - cancel reserved review funding;
@@ -241,25 +241,27 @@ If the complaint closes for lack of support, quote expiration, or policy failure
 
 A complaint should operate as a living review file.
 
-It should have its own evidence list:
+It should have its own complaint evidence list:
 
 ```text
 Complaint Evidence
 ```
 
-This is distinct from normal project evidence.
+This is distinct from fulfillment evidence.
 
-### Project evidence
+### Fulfillment Evidence
 
-Project evidence demonstrates execution or fulfillment.
+Fulfillment Evidence demonstrates execution, value fulfillment, metric completion, milestones, disbursement conditions, closure, or reputation-relevant obligations.
 
-### Complaint evidence
+### Complaint Evidence
 
 Complaint evidence supports, refutes, clarifies, or contextualizes an alleged problem.
 
-## Evidence contributions to complaints
+Complaint evidence may later become relevant to fulfillment review if a fiscalizer, reviewer, competent authority, or protocol rule accepts it for that purpose.
 
-Citizens and relevant actors may add evidence to an active complaint.
+## Complaint evidence contributions
+
+Citizens and relevant actors may add complaint evidence to an active complaint.
 
 Evidence may include:
 
@@ -276,7 +278,7 @@ Evidence may include:
 - executor response;
 - fiscalizer response.
 
-Each evidence item should include:
+Each complaint evidence item should include:
 
 - contributor;
 - evidence type;
@@ -303,7 +305,7 @@ Used in resolution
 Restricted for privacy
 ```
 
-An evidence item can be accepted as relevant without proving the complaint.
+A complaint evidence item can be accepted as relevant without proving the complaint.
 
 Example:
 
@@ -324,13 +326,13 @@ The executor says 80 children attended.
 Complaint:
 Parents allege that the list includes children who never participated.
 
-Evidence:
+Complaint evidence:
 Beneficiary confirmations, attendance records, photos, and fiscalizer review.
 ```
 
-The complaint does not prove the claim false by itself. It creates a structured review path where evidence, counterevidence, actor responses, fiscalizer review, and authority referral where applicable can be evaluated.
+The complaint does not prove the claim false by itself. It creates a structured review path where complaint evidence, counterevidence, actor responses, fiscalizer review, and authority referral where applicable can be evaluated.
 
-If the review confirms that the complaint revealed a material hidden issue, false evidence, duplicate invoice, undeclared conflict, or manipulated metric, the result may create:
+If the review confirms that the complaint revealed a material hidden issue, false fulfillment evidence, duplicate invoice, undeclared conflict, or manipulated metric, the result may create:
 
 - a correction requirement;
 - a disbursement or milestone effect where rules allow;
@@ -357,7 +359,7 @@ when all refer to the same issue, the system should show:
 ```text
 1 active complaint about beneficiary inconsistency
 18 similar reports grouped
-12 evidence items contributed
+12 complaint evidence items contributed
 24 supports
 ```
 
@@ -373,7 +375,7 @@ Merged complaint
 Separated as distinct issue
 ```
 
-Grouping should not silence new evidence. A citizen should be able to attach new evidence to the existing complaint.
+Grouping should not silence new complaint evidence. A citizen should be able to attach new complaint evidence to the existing complaint.
 
 ## Complaint lifecycle
 
@@ -389,7 +391,7 @@ Funding pending
 Ready for admissibility review
 Pending initial review
 Needs more information
-Rejected for lack of evidence
+Rejected for lack of complaint evidence
 Rejected for misunderstanding
 Rejected as not applicable to project
 Rejected as duplicate
@@ -476,13 +478,13 @@ Blocking criteria may include:
 
 - affects current or upcoming disbursement;
 - affects beneficiary existence or eligibility;
-- affects evidence used to approve a milestone;
+- affects fulfillment evidence used to approve a milestone;
 - affects independence of fiscalizer;
 - alleges material conflict of interest;
 - alleges misuse of released funds;
 - alleges falsified or manipulated documents;
 - indicates serious safety, legality, or feasibility issue;
-- provides initial evidence sufficient for urgent review.
+- provides initial complaint evidence sufficient for urgent review.
 
 Blocking should be scoped.
 
@@ -492,7 +494,7 @@ Possible blocking scope:
 - milestone;
 - disbursement;
 - budget line;
-- evidence item;
+- contextualized evidence item;
 - fiscalizer assignment;
 - control subproject;
 - actor role;
@@ -514,7 +516,7 @@ A citizen may:
 - object to complaint;
 - follow complaint;
 - comment;
-- add evidence;
+- add complaint evidence;
 - mark as duplicate;
 - suggest related complaint;
 - report privacy issue;
@@ -529,8 +531,8 @@ The complaint detail page should include:
 3. status;
 4. affected scope;
 5. support and objection counts;
-6. evidence list;
-7. evidence states;
+6. complaint evidence list;
+7. complaint evidence states;
 8. grouped similar complaints;
 9. executor response;
 10. fiscalizer or reviewer response;
@@ -543,12 +545,12 @@ The complaint detail page should include:
 C004 is resolved as follows:
 
 ```text
-Complaint is a formal review entity with evidence, scope, support, objections, duplicate grouping, support-window policy, fiscalizer quote, reserved review funding, review, admission, and resolution.
+Complaint is a formal review entity with complaint evidence, scope, support, objections, duplicate grouping, support-window policy, fiscalizer quote, reserved review funding, review, admission, and resolution.
 ```
 
 Final rule:
 
-> A complaint presented by a citizen does not automatically count as a real project complaint. It must provide evidence, identify affected scope, and pass admission by the competent reviewer. Rejected complaints remain traceable but do not damage the project. Admitted complaints may be non-blocking or blocking, and blocking must be scoped to the affected object.
+> A complaint presented by a citizen does not automatically count as a real project complaint. It must provide complaint evidence or initial supporting material, identify affected scope, and pass admission by the competent reviewer. Rejected complaints remain traceable but do not damage the project. Admitted complaints may be non-blocking or blocking, and blocking must be scoped to the affected object.
 
 H024 alignment:
 
@@ -570,7 +572,7 @@ This resolution should inform future updates to:
 
 - Reviewers may reject valid complaints too easily.
 - Complaint grouping may incorrectly merge distinct issues.
-- Evidence volume may overwhelm fiscalizers.
+- Complaint evidence volume may overwhelm fiscalizers.
 - Complaint support may become brigading.
 - Privacy-sensitive complaint evidence may be mishandled.
 
@@ -579,7 +581,7 @@ This resolution should inform future updates to:
 - appeal or reopen path;
 - transparent rejection reason;
 - ability to separate merged complaints;
-- evidence status classification;
+- complaint evidence status classification;
 - privacy classes;
 - independent review for complaints against fiscalizers;
 - quick view counts only active/admitted/founded/blocking complaints.

@@ -237,7 +237,7 @@ Required fields:
 partial release allowed = true
 unit or component basis
 partial release formula
-accepted evidence per unit or component
+accepted fulfillment evidence per unit or component
 maximum releasable amount
 retention rule
 condition for remaining release
@@ -342,7 +342,7 @@ Start project.
 Release:
 60% of budget.
 
-Evidence:
+Fulfillment evidence:
 executor declaration.
 
 Protection:
@@ -412,17 +412,17 @@ Example milestone summary:
 ```text
 Milestone 1 — Beneficiary registration
 Releases: 20% maximum
-Evidence: registration list and beneficiary confirmation
+Fulfillment evidence: registration list and beneficiary confirmation
 Partial release: no
 
 Milestone 2 — Monthly service delivery
 Releases: 10% per month
-Evidence: attendance records and evidence producer confirmation
+Fulfillment evidence: attendance records and evidence producer confirmation
 Partial release: yes, by month
 
 Milestone 3 — Final report and closure
 Releases: remaining retention
-Evidence: fiscalizer report and closure evidence
+Fulfillment evidence: fiscalizer report and closure evidence
 ```
 
 For Yellow cases:

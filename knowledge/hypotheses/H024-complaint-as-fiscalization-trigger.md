@@ -2,13 +2,13 @@
 
 ## Hypothesis
 
-Complaints should be treated as formal, identity-linked, evidence-seeking processes that can trigger fiscalization when the complaint reaches a configured support threshold, receives a fiscalizer quote, gathers enough reserved review funding, and then passes fiscalizer or competent-reviewer admission.
+Complaints should be treated as formal, identity-linked, complaint-evidence-seeking processes that can trigger fiscalization when the complaint reaches a configured support threshold, receives a fiscalizer quote, gathers enough reserved review funding, and then passes fiscalizer or competent-reviewer admission.
 
 ## Rationale
 
 Any open system can be abused by false accusations, personal conflicts, malicious complaints, ideological attacks, or sabotage. This already happens in existing legal systems.
 
-The solution is not to prevent complaints, but to require identity, evidence, thresholds, and process before a complaint produces formal consequences.
+The solution is not to prevent complaints, but to require identity, complaint evidence or initial supporting material, thresholds, and process before a complaint produces formal consequences.
 
 ## C024 alignment
 
@@ -29,7 +29,7 @@ A complaint process should follow this ordinary sequence:
 
 ```text
 verified actor files complaint, with protected identity if justified
-→ evidence or claim is stated
+→ complaint evidence or claim is stated
 → system validates minimum structure
 → complaint is immediately sent to the primary fiscalizer for quote
 → support window opens
@@ -69,7 +69,7 @@ Complaint objections must not be part of the numeric admissibility trigger. They
 
 ## Complaint funding
 
-A complaint may require resources because someone must evaluate evidence, inspect facts, or conduct fiscalization.
+A complaint may require resources because someone must evaluate complaint evidence, inspect facts, or conduct fiscalization.
 
 Supporters may fund the complaint process. Funding does not buy truth, voting power, or blocking effect; it funds the cost of verification.
 
@@ -113,13 +113,13 @@ If the fiscalizer does not quote within `Y` days, the policy should apply a conf
 
 ## Fiscalizer role
 
-A fiscalizer or specialized reviewer may determine whether the complaint has enough evidence to proceed.
+A fiscalizer or specialized reviewer may determine whether the complaint has enough complaint evidence to proceed.
 
 The fiscalizer does not necessarily decide final revocation. It evaluates whether the claim is credible, relevant, and supported enough to trigger the next stage.
 
 For legally regulated projects, such as mining, energy, infrastructure, water, environmental permits, health, safety, or territorial/legal disputes, the platform does not replace courts, regulators, or competent authorities.
 
-In those cases, a fiscalizer report may create a review report, evidence index, or referral package, but it must not stop construction, revoke a permit, impose legal sanction, or suspend a regulated operation by itself. Operational suspension requires a court order, regulator order, or competent authority resolution.
+In those cases, a fiscalizer report may create a review report, complaint evidence index, or referral package, but it must not stop construction, revoke a permit, impose legal sanction, or suspend a regulated operation by itself. Operational suspension requires a court order, regulator order, or competent authority resolution.
 
 ## False complaints
 
@@ -127,13 +127,13 @@ False or malicious complaints should create reputational and possibly financial 
 
 ## Principle
 
-> Anyone with verified identity can raise an alert, but formal consequences require evidence, support, resources, and fiscalization. Protected identity may limit public exposure; it does not create anonymous formal power.
+> Anyone with verified identity can raise an alert, but formal consequences require complaint evidence or initial supporting material, support, resources, and fiscalization. Protected identity may limit public exposure; it does not create anonymous formal power.
 
 ## Example
 
 A parent in a sports project for children reports that the executor threatened to remove children from the program if their families complain.
 
-The parent should file as a verified actor and request protected identity. The public complaint page may show a contextual protected complainant, the evidence, the affected scope, the support window, the fiscalizer quote status, reserved funding after quote publication, review status, and the resolution. The authorized reviewer may verify the complainant's identity under restricted access.
+The parent should file as a verified actor and request protected identity. The public complaint page may show a contextual protected complainant, the complaint evidence, the affected scope, the support window, the fiscalizer quote status, reserved funding after quote publication, review status, and the resolution. The authorized reviewer may verify the complainant's identity under restricted access.
 
 Example policy:
 

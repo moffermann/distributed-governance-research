@@ -4,7 +4,7 @@
 
 This document resolves contradiction C015 from the v0 contradiction checklist.
 
-C015 was originally framed as a tension between transparency and privacy. The final v0 resolution keeps the flow simple: the system assists the user with privacy protection, but the user who publishes evidence remains responsible for the public content they choose to publish.
+C015 was originally framed as a tension between transparency and privacy. The final v0 resolution keeps the flow simple: the system assists the user with privacy protection, but the user who publishes a contextualized evidence item remains responsible for the public content they choose to publish.
 
 ## Status
 
@@ -12,9 +12,9 @@ Accepted as the v0 resolution for C015.
 
 ## Core principle
 
-> Evidence publication should be fast, user-controlled, and privacy-assisted by default.
+> Contextualized evidence publication should be fast, user-controlled, and privacy-assisted by default.
 
-The system should not require a human fiscalizer to approve every evidence item before publication. That would create delay, bottlenecks, and risk of arbitrary suppression.
+The system should not require a human fiscalizer to approve every contextualized evidence item before publication. That would create delay, bottlenecks, and risk of arbitrary suppression.
 
 Instead, the system should use an AI-assisted privacy check before publication and show the user a safer version when risks are detected.
 
@@ -112,7 +112,7 @@ The wording can be adapted by country implementation and applicable law.
 
 ## No human pre-approval for ordinary publication
 
-For v0, ordinary evidence publication should not require prior human approval by the fiscalizer.
+For v0, ordinary contextualized evidence publication should not require prior human approval by the fiscalizer.
 
 Reasons:
 
@@ -211,7 +211,7 @@ This avoids confusing publication with validation.
 
 C015 supports H023 by separating easy publication from later information reliability effects.
 
-When a user publishes evidence, the evidence item may later support, contradict, weaken, or correct a material project claim. The publication flow should record this possible relationship without asking the ordinary user to make a technical legal or evidentiary judgment.
+When a user publishes contextualized evidence, the evidence item may later support, contradict, weaken, or correct a material project claim. The publication flow should record this possible relationship and its evidence context without asking the ordinary user to make a technical legal or evidentiary judgment.
 
 Example:
 

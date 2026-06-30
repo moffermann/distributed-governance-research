@@ -79,19 +79,19 @@ Generated SVG outputs:
 The diagram set now reflects these accepted C001-C025 corrections:
 
 - C001: `Idea` is separate from `Project`; ideas are not financeable.
-- H016/C002/C013: fiscalization is distributed in available actors and evidence sources, but responsible control is protocol-selected, conflict-checked, risk-adjusted, capped, and closed in parallel with execution funding.
-- C003/C015: executor material is self-report unless corroborated; evidence publication is privacy-assisted.
+- H016/C002/C013: fiscalization is distributed in available actors and fulfillment/control evidence sources, but responsible control is protocol-selected, conflict-checked, risk-adjusted, capped, and closed in parallel with execution funding.
+- C003/C015: executor material is self-report unless corroborated; contextualized evidence publication is privacy-assisted.
 - C004: complaints are formal scoped review objects, not unstructured comments.
 - C005/C006: funding is commitment; treasury/custody executes valid orders without governing project value.
 - C007/C020: public institutions are external authorities; material tutored decisions become Governance Resolutions or Review Timeout Resolutions.
 - C008/C016: AI assists validation; protocol rules and responsible actors remain accountable.
 - C009: citizen layers translate complexity progressively.
-- H018: project value theses connect to value verification packages, evidence needs, and evidential contracts before publication as financeable projects.
+- H018: project value theses connect to value verification packages, fulfillment evidence needs, and evidential contracts before publication as financeable projects.
 - H019: design, execution, and fiscalization remain distinct responsibilities; Project Phases may gate later-phase funding release in integrated design-and-execution projects.
 - H020/H027: proportional burden and threshold policies define required documents, admissibility review, and visible missing conditions without turning AI into the binding authority.
 - H021/C010/C017/C018: project variation classification, value verification, reformulation, and reputation depend on verified value fulfillment, not labels alone.
 - C011/C023: delegation has priority over automatic allocation and concentration must be visible.
-- C014/C024/H029: comments use verified identity by default, with justified protected identity as a per-comment exception; the broader protected-identity mechanism may also apply to complaints, evidence, testimony, beneficiary confirmations, or other sensitive formal actions.
+- C014/C024/H029: comments use verified identity by default, with justified protected identity as a per-comment exception; the broader protected-identity mechanism may also apply to complaints, contextualized evidence, testimony, beneficiary confirmations, or other sensitive formal actions.
 - H017/C019: protocol evolution uses visible rule-change objects for administrative rule changes, system implementation changes, and non-tutored protocol change proposals.
 - C021: administrative observability baseline is core; full universal panel remains extension.
 - C022: projects declare common-good impacts where relevant.
@@ -106,7 +106,7 @@ Entity relationship diagram
 Project object state diagram with all substates
 Funding commitment state diagram
 Complaint state diagram
-Evidence item state diagram
+Contextualized evidence item state diagram
 Control subproject state diagram
 Delegation state diagram
 Operating mode transition diagram

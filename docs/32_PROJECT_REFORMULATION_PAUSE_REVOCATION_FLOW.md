@@ -91,7 +91,7 @@ Examples:
 - minor budget detail missing;
 - relevant comment requires answer;
 - mistaken field or typo;
-- evidence needs better context.
+- fulfillment evidence needs require better context.
 
 Possible state:
 
@@ -138,7 +138,7 @@ Examples:
 - budget changes materially;
 - executor changes;
 - core milestones change;
-- evidence obligations change;
+- fulfillment evidence obligations change;
 - fiscalization requirement changes;
 - promised value is reduced or modified;
 - new risk or antivalue becomes material.
@@ -460,7 +460,7 @@ Required trace:
 - new state;
 - reason;
 - actor or rule that triggered it;
-- evidence considered;
+- contextualized evidence considered;
 - related complaints;
 - funds affected;
 - project version;

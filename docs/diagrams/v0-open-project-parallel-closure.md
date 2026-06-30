@@ -14,7 +14,7 @@ flowchart TD
     OP --> PH[Project Phase Gates if applicable]
     OP --> F[Execution Funding Commitments]
     OP --> FS[Fiscalizer Offers]
-    OP --> EP[Evidence Producer Commitments]
+    OP --> EP[Evidence Producer Commitments for fulfillment/control evidence]
     OP --> CP[Control Subproject or Control Package]
     OP --> B[Beneficiary or Affected-Party Confirmation]
     OP --> D[Required Documents and Permits]
@@ -39,4 +39,4 @@ flowchart TD
 
 ## Rule
 
-> A project becomes execution-ready only when its applicable threshold policy is visible and the required execution funding, phase gates, control capacity, evidence capacity, documents, complaints, and disbursement-plan validation are coherent.
+> A project becomes execution-ready only when its applicable threshold policy is visible and the required execution funding, phase gates, control capacity, fulfillment/control evidence capacity, documents, complaints, and disbursement-plan validation are coherent.

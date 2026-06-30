@@ -188,7 +188,7 @@ Examples:
 - beneficiary scope changed;
 - promised outcome changed;
 - metrics changed;
-- evidence obligations changed.
+- fulfillment evidence obligations changed.
 
 Layer 5 should make clear whether a project changed what it promised after receiving support.
 
@@ -204,7 +204,7 @@ For each metric:
 - validator results;
 - accepted alternative metrics;
 - measurement method;
-- evidence needs;
+- fulfillment evidence needs;
 - expected source roles or corroboration paths;
 - final status.
 
@@ -220,8 +220,8 @@ Include:
 - value promises covered;
 - metrics or qualitative commitments covered;
 - material information claims covered;
-- evidence needs;
-- evidence source roles;
+- fulfillment evidence needs;
+- fulfillment/control evidence source roles;
 - corroboration requirements;
 - evidence-producer offers or commitments linked to each need where applicable;
 - priority treatment for contract-matched, equivalent, unexpected, or supplemental evidence;
@@ -325,7 +325,7 @@ Layer 5 should explain why money was or was not released.
 
 Layer 5 should contain the full evidence archive, subject to privacy and safety rules.
 
-For each evidence item:
+For each contextualized evidence item:
 
 - evidence type;
 - who produced it;
@@ -334,7 +334,7 @@ For each evidence item:
 - location metadata where applicable;
 - associated milestone;
 - associated metric;
-- associated evidence need;
+- associated fulfillment evidence need where applicable;
 - evidential contract requirement;
 - review status;
 - objections or contradictions;
@@ -342,9 +342,9 @@ For each evidence item:
 - privacy classification;
 - access level.
 
-Evidence may include documents, photos, videos, field reports, attendance records, beneficiary confirmations, fiscalizer reports, or other accepted evidence types.
+Contextualized evidence may include documents, photos, videos, field reports, attendance records, beneficiary confirmations, fiscalizer reports, or other accepted evidence types.
 
-Executor-submitted material should be distinguishable from corroborated non-executor evidence. Evidence records should show whether AI-assisted privacy review, redaction, metadata removal, or safer-publication tools were applied.
+Executor-submitted material should be distinguishable from corroborated non-executor evidence. Contextualized evidence records should show whether AI-assisted privacy review, redaction, metadata removal, or safer-publication tools were applied.
 
 Layer 5 should also preserve material information claim traceability.
 
@@ -353,9 +353,9 @@ For each material claim, include where applicable:
 - claim text or structured value;
 - actor responsible for the claim;
 - actor role at the time;
-- affected project object: value thesis, metric, evidence need, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
-- supporting evidence;
-- contradictory evidence, complaint, objection, or verified-discovery reference;
+- affected project object: value thesis, metric, fulfillment evidence need, beneficiary group, budget line, milestone, contextualized evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- supporting contextualized evidence;
+- contradiction evidence, complaint evidence, objection, or verified-discovery reference;
 - review status;
 - correction history;
 - AI anomaly or assistance reference, clearly labeled as assistance;
@@ -410,7 +410,7 @@ Include the complete trace of complaints and reviews:
 - complaint submitted;
 - complainant role;
 - issue type;
-- evidence attached;
+- complaint evidence attached;
 - complaint review policy and version;
 - required support count;
 - support window start and end;
@@ -520,7 +520,7 @@ If the project is in a tutored, semi-open, suspended, or otherwise special opera
 
 This preserves traceability without making moderation the first citizen experience.
 
-If a comment, complaint, evidence item, testimony, beneficiary confirmation, affected-party report, or other formal action is published or submitted under protected identity, Layer 5 should record the existence of the protected identity request, the AI-assisted or restricted-review process result where applicable, the contextual protected display identity, and any legal/safety/privacy gate action, without exposing protected personal identity to unauthorized viewers.
+If a comment, complaint, contextualized evidence item, testimony, beneficiary confirmation, affected-party report, or other formal action is published or submitted under protected identity, Layer 5 should record the existence of the protected identity request, the AI-assisted or restricted-review process result where applicable, the contextual protected display identity, and any legal/safety/privacy gate action, without exposing protected personal identity to unauthorized viewers.
 
 ## 15. System decisions and protocol references
 

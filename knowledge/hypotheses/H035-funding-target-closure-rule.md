@@ -96,7 +96,7 @@ This rule is qualified by the later limited supplemental control rule:
 Supplemental control funding is not execution overfunding.
 ```
 
-After minimum control closure, additional control-only contributions may fund at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative evidence needs. They do not increase the executor's budget, expand project scope, or create unlimited fiscalization.
+After minimum control closure, additional control-only contributions may fund at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative fulfillment/control evidence needs. They do not increase the executor's budget, expand project scope, or create unlimited fiscalization.
 
 New contributions should be rejected once:
 

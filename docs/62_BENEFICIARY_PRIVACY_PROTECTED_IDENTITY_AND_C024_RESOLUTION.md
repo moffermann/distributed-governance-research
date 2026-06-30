@@ -176,7 +176,7 @@ When a user wants to publish or submit a specific action with protected identity
 
 The request should include:
 
-- the comment, complaint, evidence item, testimony, confirmation, or other protected action;
+- the comment, complaint, contextualized evidence item, testimony, confirmation, or other protected action;
 - the user's justification for protected identity;
 - the project or process context;
 - whether the user is a beneficiary, affected party, worker, complainant, or other exposed actor.
@@ -188,7 +188,7 @@ The system uses AI assistance to process the request without creating a human mo
 The AI-assisted flow should be narrow and practical:
 
 ```text
-1. User prepares a comment, complaint, evidence item, testimony, confirmation, or other formal action.
+1. User prepares a comment, complaint, contextualized evidence item, testimony, confirmation, or other formal action.
 2. Default option is visible identity when no special risk exists.
 3. User requests protected identity for this specific action.
 4. User explains why identity protection is needed.
@@ -212,7 +212,7 @@ Example:
 Verified protected participant #P-184
 ```
 
-The pseudonym should be specific to the project, complaint, evidence item, comment, or review context where possible. This reduces cross-project correlation and protects people who repeatedly participate in sensitive processes.
+The pseudonym should be specific to the project, complaint, contextualized evidence item, comment, or review context where possible. This reduces cross-project correlation and protects people who repeatedly participate in sensitive processes.
 
 ## Legal, safety, privacy, and platform-integrity gate
 
@@ -348,7 +348,7 @@ Verified protected complainant #C-184
 Protected evidence request:
 
 ```text
-Evidence:
+Protected contextualized evidence:
 A worker submits a document showing unsafe construction practice.
 
 Justification:

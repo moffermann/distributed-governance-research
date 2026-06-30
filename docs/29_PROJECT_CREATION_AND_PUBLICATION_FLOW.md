@@ -149,9 +149,9 @@ The creator may accept, remove, or propose additional values.
 
 Rule:
 
-> A value icon is not marketing. Every accepted value creates metric and evidence obligations.
+> A value icon is not marketing. Every accepted value creates metric and fulfillment evidence obligations.
 
-The creator should not only select a value icon. The creator should also accept the value commitments, metrics, and evidence needs attached to that value. The evidence needs later guide independent evidence-producer offers and fiscalizer review.
+The creator should not only select a value icon. The creator should also accept the value commitments, metrics, and fulfillment evidence needs attached to that value. The fulfillment evidence needs later guide independent evidence-producer offers and fiscalizer review.
 
 Example:
 
@@ -163,7 +163,7 @@ Requires sessions, participants, duration, and evidence of activity.
 Requires age range, number of children, selection criteria, and beneficiary confirmation.
 ```
 
-If no existing value fits, the AI value generator may propose a project-specific value with metrics and evidence requirements.
+If no existing value fits, the AI value generator may propose a project-specific value with metrics and fulfillment evidence requirements.
 
 ## 4. Define beneficiaries
 
@@ -419,7 +419,7 @@ Each milestone should define:
 - whether the milestone triggers disbursement;
 - what happens if milestone is delayed or rejected.
 
-Milestones that affect payment should belong to a structured Disbursement Milestone plan with release amounts, partial-release rules, retentions, advance-payment protections where applicable, and evidence requirements.
+Milestones that affect payment should belong to a structured Disbursement Milestone plan with release amounts, partial-release rules, retentions, advance-payment protections where applicable, and fulfillment evidence requirements.
 
 Example:
 
@@ -427,22 +427,22 @@ Example:
 Milestone 1:
 Beneficiary registration
 Deadline: week 1
-Evidence: registration list
+Fulfillment evidence: registration list
 
 Milestone 2:
 Training starts
 Deadline: week 2
-Evidence: calendar, photos, attendance
+Fulfillment evidence: calendar, photos, attendance
 
 Milestone 3:
 Monthly execution
 Deadline: months 1 to 6
-Evidence: monthly attendance and activity records
+Fulfillment evidence: monthly attendance and activity records
 
 Milestone 4:
 Program closure
 Deadline: month 6
-Evidence: final report, total attendance, beneficiary confirmation
+Fulfillment evidence: final report, total attendance, beneficiary confirmation
 ```
 
 ## 9. Build the Project Evidential Contract
@@ -457,15 +457,15 @@ It should connect:
 - metric or qualitative commitment;
 - material information claim;
 - milestone or budget line where relevant;
-- evidence need;
-- expected evidence source role or corroboration path;
+- fulfillment evidence need;
+- expected fulfillment/control evidence source role or corroboration path;
 - whether executor self-report is enough or corroboration is required;
 - timing of evidence;
 - fiscalizer or reviewer role;
 - contradiction, complaint, correction, disbursement, closure, or responsibility effect where applicable;
 - privacy or protected-identity rule where relevant.
 
-The contract defines evidence needs, not preselected evidence producers. The creator, modeler, or executor should not control who later produces independent evidence for its own claims.
+The contract defines fulfillment evidence needs, not preselected evidence producers. The creator, modeler, or executor should not control who later produces independent fulfillment evidence for its own claims.
 
 Example for sports:
 
@@ -504,7 +504,7 @@ Evidence producers may later submit offers or commitments that identify which me
 Eligibility priority:
 
 ```text
-Contract-matched evidence need:
+Contract-matched fulfillment evidence need:
   high priority.
 
 Equivalent or materially useful unexpected evidence:

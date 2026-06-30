@@ -48,7 +48,7 @@ Project:
 Core v0 requirement:
   Declare that the project affects a public plaza,
   list expected benefits, risks, antivalues, affected parties,
-  evidence needs, and fiscalization needs.
+  fulfillment evidence needs, and fiscalization needs.
 
 If no active plaza charter exists:
   The project is not blocked.

@@ -52,7 +52,7 @@ Who loses reputation, and in which role?
 
 Use a `Responsibility Event`.
 
-A responsibility event records a specific failure, breach, negligence, founded complaint, misuse, false evidence, or closure problem and links it to the role that had the obligation to prevent, detect, disclose, correct, or avoid that failure.
+A responsibility event records a specific failure, breach, negligence, founded complaint, misuse, false contextualized evidence, or closure problem and links it to the role that had the obligation to prevent, detect, disclose, correct, or avoid that failure.
 
 ## Responsibility Event contents
 
@@ -82,7 +82,7 @@ Problem: inflated beneficiary list
 Actor: Foundation A
 Role affected: executor
 Obligation: truthful beneficiary declaration
-Evidence: complaint C-22 founded + evidence producer record + fiscalizer review
+Review basis: complaint C-22 founded + evidence producer record + fiscalizer review
 Severity: high
 Effect: negative executor reputation
 ```
@@ -182,8 +182,8 @@ Examples:
 
 ```text
 Executor failed to execute → executor reputation affected.
-Fiscalizer approved false evidence → fiscalizer reputation affected.
-Evidence producer submitted manipulated evidence → evidence producer reputation affected.
+Fiscalizer approved false contextualized evidence -> fiscalizer reputation affected.
+Evidence producer submitted manipulated contextualized evidence -> evidence producer reputation affected.
 Delegate repeatedly ignored warning signals → delegate reputation affected.
 Complainant filed repeated malicious complaints → complainant reputation affected.
 ```
@@ -200,7 +200,7 @@ A malicious or knowingly false complaint may trigger a responsibility event for 
 
 A responsibility event must be based on evidence.
 
-Possible evidence sources:
+Possible responsibility-event sources:
 
 - evidence producer record;
 - material information claim history;

@@ -318,7 +318,7 @@ It should be implemented through existing v0 fields:
 - risks;
 - antivalues;
 - externalities;
-- evidence obligations;
+- fulfillment evidence obligations;
 - fiscalization requirements;
 - comments;
 - complaints;

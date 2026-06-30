@@ -35,7 +35,7 @@ A project executor may have incentives to hide information that harms its intere
 - low-quality execution;
 - misuse of funds;
 - harmful side effects;
-- false evidence.
+- false, manipulated, or low-quality contextualized evidence.
 
 The system should not assume that the executor will produce damaging information voluntarily.
 
@@ -60,7 +60,7 @@ Each material claim should record:
 - claim text or structured value;
 - actor responsible for the claim;
 - actor role at the time of claim;
-- affected project object: value thesis, metric, evidence need, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- affected project object: value thesis, metric, fulfillment evidence need, beneficiary group, budget line, milestone, contextualized evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
 - evidence supporting the claim;
 - contradiction or complaint references where applicable;
 - current review status;
@@ -133,7 +133,7 @@ Minor incomplete information:
 Misleading claim with project effect:
   correction, visible history, possible disbursement delay, possible Responsibility Event.
 
-Hidden conflict, false evidence, or beneficiary manipulation:
+Hidden conflict, false contextualized evidence, or beneficiary manipulation:
   complaint review, role-specific reputation loss, guarantee or retention effect, funding release block where rules allow.
 
 Severe fraud or concealment:
@@ -153,7 +153,7 @@ The funders do not lose reputation merely because they funded the project.
 
 ## Reward for discovery
 
-The system may include reward mechanisms similar to bug bounties. Actors who discover verified fraud, hidden antivalue, false evidence, or KPI manipulation may be compensated or reputationally rewarded.
+The system may include reward mechanisms similar to bug bounties. Actors who discover verified fraud, hidden antivalue, false contextualized evidence, or KPI manipulation may be compensated or reputationally rewarded.
 
 The reward should be tied to verified, relevant, review-resistant information, not to accusations alone.
 
@@ -161,10 +161,10 @@ Core v0 may support a lightweight `Verified Discovery` record.
 
 A discovery may qualify only if:
 
-- it identifies a material claim, omission, contradiction, hidden relationship, false evidence, or relevant risk;
+- it identifies a material claim, omission, contradiction, hidden relationship, false contextualized evidence, or relevant risk;
 - it is submitted by a verified actor, with protected identity where justified;
 - it is reviewed and found relevant;
-- it materially improves the project's information quality, prevents loss, corrects false evidence, reveals a hidden issue, or improves value verification;
+- it materially improves the project's information quality, prevents loss, corrects false contextualized evidence, reveals a hidden issue, or improves value verification;
 - it is not merely an accusation, political disagreement, duplicate low-value report, or unsupported suspicion.
 
 Possible rewards:
@@ -299,4 +299,4 @@ It makes the information conflict traceable and funds the proper review path.
 
 ## Status
 
-Core hypothesis for information integrity, Ricardo's third question, and the distributed trust architecture. Aligned with C003, C004, C010, C012, C015, H024, and the Core v0 evidence/fiscalization model.
+Core hypothesis for information integrity, Ricardo's third question, and the distributed trust architecture. Aligned with C003, C004, C010, C012, C015, H024, and the Core v0 contextualized evidence/fiscalization model.

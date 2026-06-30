@@ -104,7 +104,7 @@ Create and use the `Evidence Producer` role. Executor self-report is useful cont
 
 ### Accepted v0 rule
 
-`Complaint` is a formal review entity with evidence, scope, support, objections, duplicate grouping, review, admission, and resolution. Citizen-submitted complaints must provide evidence, identify affected scope, and pass admission by the competent reviewer before creating blocking effects. Blocking must be scoped to the affected object.
+`Complaint` is a formal review entity with complaint evidence, scope, support, objections, duplicate grouping, review, admission, and resolution. Citizen-submitted complaints must provide complaint evidence or initial supporting material, identify affected scope, and pass admission by the competent reviewer before creating blocking effects. Blocking must be scoped to the affected object.
 
 ---
 
@@ -176,7 +176,7 @@ Use a layered translation model: citizens see simple state labels and relevant a
 
 ### Accepted v0 rule
 
-Replace isolated value metrics with a `Value Verification Package`. Activity metrics alone are insufficient. Each promised value must be verified through metrics, evidence needs, accepted evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels.
+Replace isolated value metrics with a `Value Verification Package`. Activity metrics alone are insufficient. Each promised value must be verified through metrics, fulfillment evidence needs, accepted fulfillment evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels.
 
 ---
 
@@ -212,7 +212,7 @@ Reputation updates follow role-specific responsibility events. The system should
 
 ### Accepted v0 rule
 
-Execution funding, fiscalization offers, evidence-producer offers, and control-cost discovery proceed in parallel. Execution readiness requires both execution budget closure and control package closure. Control costs are part of the project, but executor-controlled spending must remain separated from control spending. After minimum control closure, limited supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative evidence needs; it does not fund execution or block execution automatically.
+Execution funding, fiscalization offers, evidence-producer offers, and control-cost discovery proceed in parallel. Execution readiness requires both execution budget closure and control package closure. Control costs are part of the project, but executor-controlled spending must remain separated from control spending. After minimum control closure, limited supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct non-duplicative fulfillment/control evidence needs; it does not fund execution or block execution automatically.
 
 ---
 
@@ -385,11 +385,11 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 ## 3. Value and metrics checklist
 
 - [ ] Is every value icon linked to metrics?
-- [ ] Is every core value commitment linked to an evidence need?
-- [ ] Is every metric linked to evidence needs and review consequences?
+- [ ] Is every core value commitment linked to a fulfillment evidence need?
+- [ ] Is every metric linked to fulfillment evidence needs and review consequences?
 - [ ] Are qualitative value claims handled?
 - [ ] Are input-only metrics rejected when insufficient?
-- [ ] Does the Project Evidential Contract define evidence needs rather than preselected evidence producers?
+- [ ] Does the Project Evidential Contract define fulfillment evidence needs rather than preselected evidence producers?
 - [ ] Can independent evidence producers tie offers to specific metrics, material claims, milestones, phases, risks, or antivalues?
 - [ ] Are unexpected or supplemental evidence offers prioritized lower unless accepted as equivalent, necessary, materially useful, or complementary?
 - [ ] Are antivalues declared?
@@ -420,13 +420,13 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 
 ## 6. Evidence checklist
 
-- [ ] Is evidence classified by source and interest?
-- [ ] Is every evidence item linked to an evidence need, metric, material claim, milestone, phase, or complaint issue where applicable?
-- [ ] Is evidence privacy classified?
-- [ ] Is contradictory evidence allowed?
-- [ ] Are independent evidence requirements defined for risky projects?
-- [ ] Is false evidence penalized by role?
-- [ ] Can citizens understand evidence status without reading raw files?
+- [ ] Is contextualized evidence classified by source and interest?
+- [ ] Is every contextualized evidence item linked to an evidence context and to a fulfillment evidence need, metric, material claim, milestone, phase, or complaint issue where applicable?
+- [ ] Is contextualized evidence privacy classified?
+- [ ] Is contradiction evidence allowed?
+- [ ] Are independent fulfillment/control evidence requirements defined for risky projects?
+- [ ] Is false, manipulated, or low-quality contextualized evidence penalized by role and evidence context?
+- [ ] Can citizens understand contextualized evidence status without reading raw files?
 
 ## 7. Fiscalization checklist
 
@@ -446,7 +446,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Can a complaint be filed easily?
 - [ ] Is the difference between comment and complaint clear?
 - [ ] Are blocking criteria explicit?
-- [ ] Can complaints be scoped to a milestone, budget line, evidence item, or actor?
+- [ ] Can complaints be scoped to a milestone, budget line, contextualized evidence item, or actor?
 - [ ] Are weak or abusive complaints handled without discouraging good-faith complaints?
 - [ ] Does every complaint have a visible status?
 
@@ -503,13 +503,13 @@ Highest-priority integration checks:
 3. Ensure funding is described as commitment until project closure, not free withdrawal.
 4. Ensure fiscalization and evidence production are distinct control roles.
 5. Ensure complaints are formal entities with admission, scope, and blocking status.
-6. Ensure value verification uses packages, not isolated metrics, and maps core value commitments to evidence needs.
+6. Ensure value verification uses packages, not isolated metrics, and maps core value commitments to fulfillment evidence needs.
 7. Ensure disbursement milestones require coherent pre-funding validation.
 8. Ensure project phases prevent release of later-phase execution funds before prerequisite phase gates are accepted.
 9. Ensure tutored mode decisions and timeouts become public civic objects.
 10. Ensure beneficiary privacy does not create anonymous formal power.
 11. Ensure discovery visibility is explainable and user-customizable.
-12. Ensure Project Evidential Contracts define evidence needs rather than preselected evidence producers.
+12. Ensure Project Evidential Contracts define fulfillment evidence needs rather than preselected evidence producers.
 13. Ensure material rule changes are classified as Administrative Rule Change, System Implementation Change, or Protocol Change Proposal, with public reason, effective date, transition rule, and audit trace.
 14. Ensure distributed fiscalization remains protocol-selected, conflict-checked, risk-adjusted, auditable, and capped against unlimited secondary fiscalization or duplicate evidence funding.
 ```

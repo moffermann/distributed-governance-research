@@ -48,7 +48,7 @@ An idea does not include:
 - responsible executor;
 - execution budget;
 - enforceable milestones;
-- evidence obligations;
+- fulfillment evidence obligations;
 - fiscalization of execution;
 - disbursement;
 - project-level complaint process;

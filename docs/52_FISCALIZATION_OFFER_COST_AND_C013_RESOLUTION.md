@@ -233,12 +233,12 @@ Core v0 caps supplemental control:
 ```text
 primary fiscalizer: maximum 1
 secondary fiscalizer / fiscalization auditor: maximum 1
-additional evidence producers: only for distinct or complementary evidence needs
+additional evidence producers: only for distinct or complementary fulfillment/control evidence needs
 ```
 
 The secondary fiscalizer or fiscalization auditor is a control actor that reviews, contrasts, or audits the primary fiscalization. It does not replace the primary fiscalizer and does not block execution by itself. If it detects a serious issue, the issue must enter the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
 
-Additional evidence producers may be funded only when the proposed evidence is materially different from or complementary to already accepted evidence. The system should not fund repeated evidence production when it adds no meaningful verification value.
+Additional evidence producers may be funded only when the proposed fulfillment/control evidence is materially different from or complementary to already accepted fulfillment/control evidence. The system should not fund repeated evidence production when it adds no meaningful verification value.
 
 Recommended priority rule:
 
@@ -317,7 +317,7 @@ The accepted control package may include:
 ```text
 final deliverables
 review calendar
-evidence requirements
+fulfillment/control evidence requirements
 reporting obligations
 payment schedule
 replacement condition
@@ -534,7 +534,7 @@ Final rule:
 
 Supplemental rule:
 
-> After minimum control closure, supplemental control funding may finance at most one secondary fiscalizer or fiscalization auditor and distinct additional evidence needs. It never funds execution, never creates unlimited fiscalization, and never blocks execution automatically.
+> After minimum control closure, supplemental control funding may finance at most one secondary fiscalizer or fiscalization auditor and distinct additional fulfillment/control evidence needs. It never funds execution, never creates unlimited fiscalization, and never blocks execution automatically.
 
 ## Documents that should eventually reflect this resolution
 
@@ -577,7 +577,7 @@ This resolution should inform future updates to:
 - track bad-faith or misleading offers as responsibility events where appropriate.
 - cap ordinary fiscalization at one primary and one secondary fiscalizer or fiscalization auditor;
 - fund additional evidence only when it is distinct or complementary;
-- reject new supplemental control contributions when fiscalization and admissible evidence needs are already saturated;
+- reject new supplemental control contributions when fiscalization and admissible fulfillment/control evidence needs are already saturated;
 - ensure supplemental findings affect execution only through formal complaint, extraordinary review, pause, blocking, or disbursement-control rules.
 
 ## Design rule

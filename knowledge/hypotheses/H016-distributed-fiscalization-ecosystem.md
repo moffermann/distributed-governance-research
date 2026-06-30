@@ -44,11 +44,11 @@ Open observation is broad and low-bureaucracy.
 
 It does not by itself validate milestones, release funds, close complaints, or determine fulfillment.
 
-## 2. Evidence production
+## 2. Fulfillment/control evidence production
 
-Evidence producers collect or submit evidence linked to a value commitment, metric, material claim, milestone, phase, risk, or antivalue.
+Evidence producers collect or submit fulfillment/control evidence linked to a value commitment, metric, material claim, milestone, phase, risk, or antivalue.
 
-Evidence production may be voluntary or funded, but paid evidence missions should be tied to accepted evidence needs and should not become unlimited evidence overfunding.
+Fulfillment/control evidence production may be voluntary or funded, but paid evidence missions should be tied to accepted fulfillment evidence needs and should not become unlimited evidence overfunding.
 
 Executor self-report may be useful context, but it is not enough by itself for critical milestones, disbursements, or closure.
 
@@ -69,7 +69,7 @@ Larger, riskier, more technical, remote, irreversible, or high-impact projects m
 - laboratories;
 - certifiers;
 - engineering inspections;
-- multiple evidence sources;
+- multiple fulfillment/control evidence sources;
 - stronger guarantees or retentions;
 - reinforced observation windows.
 
@@ -85,7 +85,7 @@ The control subproject may include:
 - methodology;
 - deliverables;
 - budget;
-- evidence requirements;
+- fulfillment/control evidence requirements;
 - review calendar;
 - fiscalization reports;
 - questions and comments;
@@ -101,7 +101,7 @@ Example:
 Project: fiscalize emissions from a plant.
 Primary goal: verify compliance with mitigation commitments.
 Funding: affected community, society, protocol-defined control budget, insurers, public funds, or other permitted sources.
-KPIs: measurements, visits, evidence quality, report delivery, traceability.
+KPIs: measurements, visits, fulfillment/control evidence quality, report delivery, traceability.
 Evaluator: affected community, experts, peer fiscalizers, evidence review.
 ```
 
@@ -244,22 +244,22 @@ Citizen-facing layers should show:
 This project requires fiscalization.
 The responsible fiscalizer has been selected.
 The selection reason is visible.
-Required evidence is defined.
-Reports and evidence status are visible.
-Concerns can be submitted as evidence, comments, or complaints.
+Required fulfillment/control evidence is defined.
+Reports and fulfillment/control evidence status are visible.
+Concerns can be submitted as contextualized evidence, comments, or complaints.
 Secondary fiscalization exists only under protocol limits.
 ```
 
-Layer 5 preserves the full selection criteria, offers, conflicts, methodology, evidence considered, fiscalizer reports, reputation effects, and audit trail.
+Layer 5 preserves the full selection criteria, offers, conflicts, methodology, contextualized evidence considered, fiscalizer reports, reputation effects, and audit trail.
 
 ## Relationship to accepted v0 resolutions
 
 H016 is aligned with:
 
 - C002, because fiscalization can be structured as a Control Subproject selected by protocol rather than by executor choice or ordinary popularity;
-- C003, because fiscalization uses evidence production but should distinguish evidence capture from evaluation;
+- C003, because fiscalization uses fulfillment/control evidence production but should distinguish evidence capture from evaluation;
 - C013, because execution funding, fiscalizer offers, evidence-producer offers, and control funding may proceed in parallel, but execution readiness requires the minimum admissible control package;
-- H018 and H022, because fiscalizers evaluate against the value thesis, value verification package, evidence needs, and Project Evidential Contract;
+- H018 and H022, because fiscalizers evaluate against the value thesis, value verification package, fulfillment evidence needs, and Project Evidential Contract;
 - H019, because modeler/designer, executor, and fiscalizer responsibilities remain distinct even when design and execution are integrated in one parent project.
 
 ## Remaining risks
@@ -269,7 +269,7 @@ H016 is aligned with:
 - good fiscalizers may avoid low-paid projects;
 - secondary fiscalization may be used to pressure projects if uncapped;
 - citizens may misunderstand conflicting fiscalizer conclusions;
-- evidence quality, authenticity, AI-generation risk, and usefulness remain a separate open question;
+- fulfillment/control evidence quality, authenticity, AI-generation risk, and usefulness remain a separate open question;
 - small projects may become overburdened if fiscalization rules are not proportional.
 
 These risks do not defeat distributed fiscalization. They require proportional selection, transparent conflict records, capped supplemental control, reviewability, and role-specific reputation.

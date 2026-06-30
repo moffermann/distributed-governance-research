@@ -133,7 +133,7 @@ The executor is evaluated against:
 - formally approved variation records;
 - declared KPIs;
 - milestones;
-- evidential contract and evidence obligations;
+- evidential contract and fulfillment evidence obligations;
 - guarantees;
 - mitigation commitments;
 - fiscalization outcomes.
@@ -165,7 +165,7 @@ The active Reformulation Policy defines any maximum reformulations, minimum peri
 Example:
 
 ```text
-Changing a sports-school schedule while preserving 80 children, workshop count, and evidence obligations may be operational.
+Changing a sports-school schedule while preserving 80 children, workshop count, and fulfillment evidence obligations may be operational.
 
 Changing the target from 80 children to 60 children changes the value promise and must use the material value reformulation path.
 ```
@@ -229,7 +229,7 @@ Phase 2:
     construction milestones, evidence, fiscalization, and blocking checks.
 ```
 
-Before execution funding is collected for a later phase, the parent project should declare a minimum public-value baseline. For the Macul example, this may include two usable multi-courts, declared or regulation-compatible dimensions, public access hours, accessibility and bathroom commitments where promised or required, budget-change rules, and evidence/fiscalization requirements.
+Before execution funding is collected for a later phase, the parent project should declare a minimum public-value baseline. For the Macul example, this may include two usable multi-courts, declared or regulation-compatible dimensions, public access hours, accessibility and bathroom commitments where promised or required, budget-change rules, and fulfillment evidence/fiscalization requirements.
 
 If the design phase later produces incomplete courts, wrong dimensions, no bathrooms where required, weaker public-access rules, or a materially weaker evidence plan, the construction phase cannot become execution-ready. The project enters correction, material reformulation, rejection, expiration, return, reassignment, or reconfirmation according to the active policy.
 
@@ -312,8 +312,8 @@ It should define:
 - intended beneficiaries;
 - why the project matters;
 - core value commitments or metrics;
-- evidence needs for each core commitment;
-- relevant source roles for evidence production or corroboration;
+- fulfillment evidence needs for each core commitment;
+- relevant source roles for fulfillment/control evidence production or corroboration;
 - review method or actor where applicable;
 - disbursement, closure, reformulation, complaint, or reputation consequence where applicable;
 - what happens if the project is not performed;
@@ -352,18 +352,18 @@ The evidential contract connects:
 - milestones;
 - budget lines where relevant;
 - risk and antivalue declarations;
-- evidence types;
-- evidence needs per value commitment;
-- evidence source roles;
+- fulfillment/control evidence types;
+- fulfillment evidence needs per value commitment;
+- fulfillment/control evidence source roles;
 - corroboration requirements;
 - fiscalizer or reviewer responsibility;
 - disbursement, closure, complaint, and responsibility effects.
 
 The contract is not a universal centralized evidence code. It is project-specific, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
 
-The contract defines evidence needs, not preselected evidence producers. Evidence producers may later offer or commit to produce specific evidence tied to a metric, material claim, milestone, phase, risk, or antivalue.
+The contract defines fulfillment evidence needs, not preselected evidence producers. Evidence producers may later offer or commit to produce specific fulfillment/control evidence tied to a metric, material claim, milestone, phase, risk, or antivalue.
 
-Evidence that satisfies a contract need has higher eligibility priority. Evidence outside the accepted contract may still be considered when a fiscalizer, reviewer, or protocol rule treats it as equivalent, necessary, materially useful, or complementary within the available control budget.
+Fulfillment evidence that satisfies a contract need has higher eligibility priority. Fulfillment/control evidence outside the accepted contract may still be considered when a fiscalizer, reviewer, or protocol rule treats it as equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Example:
 
@@ -482,7 +482,7 @@ Strategic defense asset:
 
 Citizen-facing displays should show only the applicable conditions and what is missing. The technical layer should show the policy source and audit trail.
 
-For phased projects, execution-ready may apply to the relevant phase. A parent project may be open and collecting execution-phase commitments while a design phase is still under review, but the construction or execution phase is not execution-ready until prerequisite phase gates, control package, evidence requirements, and blocking checks are complete.
+For phased projects, execution-ready may apply to the relevant phase. A parent project may be open and collecting execution-phase commitments while a design phase is still under review, but the construction or execution phase is not execution-ready until prerequisite phase gates, control package, fulfillment evidence requirements, and blocking checks are complete.
 
 ### 6. Milestones, disbursement, and guarantees
 
@@ -496,7 +496,7 @@ A project may include:
 - guarantees or bonds;
 - conditions for executing guarantees.
 
-The project should also include a structured Disbursement Milestone plan with release amounts, partial-release rules, retention rules, evidence requirements, and advance-payment protections where applicable.
+The project should also include a structured Disbursement Milestone plan with release amounts, partial-release rules, retention rules, fulfillment evidence requirements, and advance-payment protections where applicable.
 
 Funding completion does not imply full immediate transfer to the executor. Funds may be released by milestone according to the project design.
 

@@ -1,19 +1,19 @@
-# Fiscalization, Evidence, and Control Model v0
+# Fiscalization, Fulfillment Evidence, and Control Model v0
 
 ## Purpose
 
-This document consolidates the Core v0 thinking around fiscalization, evidence production, control funding, anti-capture protections, and proportional project control.
+This document consolidates the Core v0 thinking around fiscalization, fulfillment evidence production, control funding, anti-capture protections, and proportional project control.
 
-The central problem is that the executor has strong incentives to weaken, underfund, or capture the control layer. The architecture must therefore separate execution, evidence production, and responsible fiscalization.
+The central problem is that the executor has strong incentives to weaken, underfund, or capture the control layer. The architecture must therefore separate execution, fulfillment evidence production, complaint evidence submission, and responsible fiscalization.
 
 ## Core rule
 
-> The executor executes. The system and protocol define control requirements. Evidence producers collect evidence. The fiscalizer evaluates. The community can observe, contradict, and denounce.
+> The executor executes. The system and protocol define control requirements. Evidence producers collect fulfillment or control evidence. The fiscalizer evaluates. The community can observe, submit complaint evidence, contradict, and denounce.
 
 H016 frames this as a distributed but protocol-selected fiscalization ecosystem:
 
 ```text
-many actors may observe, offer evidence, or compete to fiscalize;
+many actors may observe, offer fulfillment or control evidence, submit complaint evidence, or compete to fiscalize;
 only protocol-selected, conflict-checked, eligible, auditable actors become responsible fiscalizers.
 ```
 
@@ -25,14 +25,14 @@ The system should distinguish at least four layers:
 
 ```text
 1. Open observation
-2. Evidence production
+2. Fulfillment evidence production
 3. Responsible fiscalization
 4. Technical or reinforced fiscalization
 ```
 
 ## 1. Open observation
 
-Any citizen or organization may observe, comment, denounce, or submit evidence related to a project.
+Any citizen or organization may observe, comment, denounce, submit complaint evidence, or submit fulfillment evidence related to a project.
 
 This layer is open by default.
 
@@ -49,11 +49,11 @@ Open observation can include:
 
 Open observation does not necessarily validate project milestones or release funds.
 
-## 2. Evidence production
+## 2. Fulfillment evidence production
 
-Evidence producers collect evidence, but do not formally validate project compliance.
+Evidence producers collect fulfillment or control evidence, but do not formally validate project compliance.
 
-Evidence production can be voluntary or paid.
+Fulfillment evidence production can be voluntary or paid.
 
 Examples:
 
@@ -66,13 +66,13 @@ Examples:
 - physical verification of goods or infrastructure;
 - testimony from affected or benefited parties.
 
-Evidence production strengthens fiscalization because the fiscalizer does not depend only on the executor's own reports.
+Fulfillment evidence production strengthens fiscalization because the fiscalizer does not depend only on the executor's own reports.
 
-Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
 ## Information reliability incentives
 
-Evidence and fiscalization are also an incentive architecture for reliable information.
+Contextualized evidence and fiscalization are also an incentive architecture for reliable information.
 
 Core v0 should not assume that interested actors will voluntarily publish damaging information. It should make material claims traceable, make concealment costly when proven, and make verified discovery valuable.
 
@@ -86,7 +86,7 @@ This beneficiary count is accurate.
 This supplier has no related-party conflict.
 This budget line was spent as declared.
 This risk was mitigated.
-This evidence proves attendance.
+This fulfillment evidence proves attendance.
 ```
 
 Each material claim should connect to:
@@ -94,7 +94,7 @@ Each material claim should connect to:
 - actor responsible;
 - actor role;
 - affected project object;
-- supporting evidence;
+- supporting evidence with context;
 - contradiction or complaint where applicable;
 - review status;
 - responsibility event if a role obligation is breached.
@@ -110,7 +110,7 @@ Corrected
 Accepted
 ```
 
-The technical audit layer preserves the full claim and evidence trail.
+The technical audit layer preserves the full claim and contextualized evidence trail.
 
 ## Project Evidential Contract
 
@@ -123,15 +123,15 @@ The contract states how project promises will be evidenced and reviewed. It conn
 - material information claims;
 - milestones and budget lines where relevant;
 - risks and antivalues;
-- evidence needs and evidence types;
-- evidence source roles;
+- fulfillment evidence needs and fulfillment/control evidence types;
+- fulfillment evidence source roles;
 - corroboration requirements;
 - responsible fiscalization or review;
 - complaint, correction, disbursement, closure, and responsibility effects.
 
 The contract is project-specific and proportional. It may use value-catalog defaults, project-type templates, threshold policies, operating-mode rules, or country-specific requirements, but it should not become a single centralized evidence code for every domain.
 
-The contract defines evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Contract-matched evidence needs have higher eligibility priority, while unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Contract-matched fulfillment evidence needs have higher eligibility priority, while unexpected fulfillment evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Examples:
 
@@ -140,14 +140,14 @@ Sports training project:
 attendance records, activity photos, beneficiary confirmation, evidence-producer observations, and fiscalizer review.
 
 Technical infrastructure project:
-permits, budget-line evidence, georeferenced milestones, independent control, technical reception, and public-use evidence.
+permits, budget-line fulfillment evidence, georeferenced milestones, independent control, technical reception, and public-use evidence.
 ```
 
-Fiscalizers evaluate evidence against the accepted evidential contract. If the contract is materially weakened after support or funding, the change should be versioned and may require reformulation, notification, renewed review, or responsibility analysis depending on severity.
+Fiscalizers evaluate fulfillment evidence against the accepted evidential contract. If the contract is materially weakened after support or funding, the change should be versioned and may require reformulation, notification, renewed review, or responsibility analysis depending on severity.
 
 ## Discovery incentives
 
-Actors who discover verified hidden information, false evidence, KPI manipulation, undeclared conflict, or material omission may receive reputational credit or compensation only after review confirms materiality and usefulness.
+Actors who discover verified hidden information, false or manipulated contextualized evidence, KPI manipulation, undeclared conflict, or material omission may receive reputational credit or compensation only after review confirms materiality and usefulness.
 
 Discovery rewards must not pay for accusations alone.
 
@@ -162,7 +162,7 @@ Verified discovery:
 Citizen identifies duplicate invoice used in two milestones.
 
 Not rewardable by itself:
-Citizen says the executor is corrupt without evidence.
+Citizen says the executor is corrupt without complaint evidence or supporting material.
 ```
 
 Verified discovery may trigger:
@@ -177,7 +177,7 @@ Verified discovery may trigger:
 
 ## AI anomaly assistance
 
-AI may help detect missing evidence, duplicate records, inconsistent dates, suspicious budget changes, privacy risks, or contradictions between claims and evidence.
+AI may help detect missing fulfillment evidence, duplicate records, inconsistent dates, suspicious budget changes, privacy risks, or contradictions between claims and contextualized evidence.
 
 AI should not decide truth or responsibility by itself.
 
@@ -185,7 +185,7 @@ Allowed:
 
 ```text
 flag anomaly
-suggest related evidence
+suggest related contextualized evidence
 summarize contradiction
 warn about weak claim
 detect possible duplicate file
@@ -202,13 +202,13 @@ replace fiscalizer, regulator, court, or competent authority
 
 ## 3. Responsible fiscalization
 
-The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, evidence obligations, guarantees, mitigation commitments, and fiscalization criteria.
+The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, fulfillment evidence obligations, guarantees, mitigation commitments, and fiscalization criteria.
 
 The responsible fiscalizer may use:
 
-- evidence provided by the executor;
-- evidence produced by citizens or organizations;
-- evidence missions;
+- fulfillment evidence or self-report provided by the executor;
+- fulfillment evidence produced by citizens or organizations;
+- fulfillment evidence missions;
 - beneficiary confirmations;
 - funder observations;
 - complaints and contradictions;
@@ -218,7 +218,7 @@ The responsible fiscalizer is reputationally accountable for the quality, indepe
 
 Responsible fiscalization is distributed in supply but not arbitrary in assignment. It should be selected through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules rather than by executor preference, ordinary popularity, first funding, or lowest price alone.
 
-Citizen observation, beneficiary confirmation, evidence production, and complaints can strengthen or challenge the fiscalizer's work, but they do not automatically replace the responsible fiscalizer.
+Citizen observation, beneficiary confirmation, fulfillment evidence production, complaint evidence, and complaints can strengthen or challenge the fiscalizer's work, but they do not automatically replace the responsible fiscalizer.
 
 ## 4. Technical or reinforced fiscalization
 
@@ -239,14 +239,14 @@ The fact that any citizen or organization may participate in fiscalization does 
 
 ## Control funding
 
-Fiscalization and evidence costs should be financed as part of the total control cost of the project, but should not be controlled by the executor.
+Fiscalization and fulfillment evidence costs should be financed as part of the total control cost of the project, but should not be controlled by the executor.
 
 A project budget may include separated control components:
 
 ```text
 execution budget
 responsible fiscalization budget
-evidence mission budget
+fulfillment evidence mission budget
 contingency / extraordinary review budget
 guarantees or retentions, if applicable
 ```
@@ -255,7 +255,7 @@ The executor should not directly pay or appoint the actors responsible for valid
 
 Control-cost discovery may proceed in parallel with execution funding. This means that fiscalizers, evidence producers, and technical reviewers may submit lightweight offers while citizens are still funding the execution budget.
 
-Evidence-producer offers should identify which accepted evidence need, metric, material claim, milestone, phase, risk, or antivalue they address. Offers outside the accepted evidential contract should normally be treated as lower priority unless the fiscalizer, reviewer, or protocol accepts them as useful to the control package.
+Evidence-producer offers should identify which accepted fulfillment evidence need, metric, material claim, milestone, phase, risk, or antivalue they address. Offers outside the accepted evidential contract should normally be treated as lower priority unless the fiscalizer, reviewer, or protocol accepts them as useful to the control package.
 
 However, execution funding and control funding remain distinct closures:
 
@@ -283,18 +283,18 @@ Core v0 should allow at most:
 ```text
 1 primary fiscalizer
 1 secondary fiscalizer or fiscalization auditor
-non-duplicative additional evidence producers or evidence missions within protocol-defined evidence needs
+non-duplicative additional evidence producers or fulfillment evidence missions within protocol-defined fulfillment evidence needs
 ```
 
 The secondary fiscalizer does not replace the primary fiscalizer. The secondary role reviews, contrasts, or audits the primary fiscalization and may trigger a complaint, extraordinary review, pause, or blocking path only through the ordinary formal rules.
 
-Additional evidence producers should be funded only when they provide evidence that is materially different from or complementary to already accepted evidence. The system should reject duplicate, redundant, or low-value evidence funding once the protocol-defined evidence needs are satisfied.
+Additional evidence producers should be funded only when they provide fulfillment evidence that is materially different from or complementary to already accepted fulfillment evidence. The system should reject duplicate, redundant, or low-value fulfillment evidence funding once the protocol-defined fulfillment evidence needs are satisfied.
 
-If new supplemental funding is not enough to fund a secondary fiscalizer but can fund a non-duplicative evidence mission, the evidence mission may be accepted. If the project already has enough evidence and no distinct evidence offer is admissible, the funding may remain reserved for the secondary fiscalizer. If the project already has both primary and secondary fiscalization and no admissible distinct evidence need remains, new supplemental control contributions should be rejected.
+If new supplemental funding is not enough to fund a secondary fiscalizer but can fund a non-duplicative fulfillment evidence mission, the mission may be accepted. If the project already has enough fulfillment evidence and no distinct evidence offer is admissible, the funding may remain reserved for the secondary fiscalizer. If the project already has both primary and secondary fiscalization and no admissible distinct fulfillment evidence need remains, new supplemental control contributions should be rejected.
 
 ## Control subprojects
 
-Fiscalization, evidence missions, technical review, admissibility review, or other control work may be modeled as a Control Subproject associated with the parent project.
+Fiscalization, fulfillment evidence missions, technical review, admissibility review, or other control work may be modeled as a Control Subproject associated with the parent project.
 
 For phased projects, control work may also verify phase gates. This is especially important when a single parent project combines design and execution.
 
@@ -305,7 +305,7 @@ Parent project:
 Design and Construction of Multi-court Facility in Macul.
 
 Design phase gate:
-review whether the design package satisfies dimensions, public access, bathrooms or accessibility commitments where required, budget refinement, evidence requirements, and related-party safeguards.
+review whether the design package satisfies dimensions, public access, bathrooms or accessibility commitments where required, budget refinement, fulfillment evidence requirements, and related-party safeguards.
 
 Construction phase:
 cannot release construction funds until the design phase gate is accepted.
@@ -319,7 +319,7 @@ A Control Subproject may contain:
 - eligibility criteria;
 - conflict checks;
 - assigned actor or actor pool;
-- evidence requirements;
+- fulfillment evidence requirements;
 - comments and objections;
 - audit trail;
 - reputation effects.
@@ -377,7 +377,7 @@ Fiscalizers can submit offers associated with the project, declaring:
 - technical requirements;
 - deliverables;
 - timeline;
-- evidence requirements;
+- fulfillment evidence requirements;
 - declared conflicts of interest;
 - relevant reputation or qualifications.
 
@@ -422,16 +422,16 @@ Possible protections:
 
 Execution readiness requires both execution budget closure and control package closure where control is required. A project may be execution-funded while control remains pending, but it may not begin execution until the minimum admissible control package is selected, funded, and accepted.
 
-Supplemental control funding after minimum closure may improve auditability, but it should not reopen execution readiness by default. Its effects become operational only through accepted control assignments, evidence items, complaints, extraordinary review, pause, blocking, or disbursement rules.
+Supplemental control funding after minimum closure may improve auditability, but it should not reopen execution readiness by default. Its effects become operational only through accepted control assignments, contextualized evidence items, complaints, extraordinary review, pause, blocking, or disbursement rules.
 
-## Evidence commitments from funders and beneficiaries
+## Fulfillment evidence commitments from funders and beneficiaries
 
 Funders and direct beneficiaries are naturally interested in whether the project is executed well.
 
 When a citizen funds a project, the system may ask:
 
 ```text
-Would you like to commit to providing evidence during execution or after completion?
+Would you like to commit to providing fulfillment evidence during execution or after completion?
 ```
 
 A funder or beneficiary may offer to provide:
@@ -443,57 +443,57 @@ A funder or beneficiary may offer to provide:
 - surveys;
 - attendance confirmation;
 - local verification;
-- contradiction of false or incomplete evidence.
+- contradiction of false or incomplete fulfillment evidence.
 
-This creates a distributed network of potential evidence producers around the project.
+This creates a distributed network of potential fulfillment evidence producers around the project.
 
-## Evidence commitment object
+## Fulfillment evidence commitment object
 
-An evidence commitment may include:
+A fulfillment evidence commitment may include:
 
 - project id;
 - actor id;
 - relationship to project: funder, beneficiary, neighbor, organization, affected party, other;
-- type of evidence offered;
+- type of fulfillment evidence offered;
 - location relevance;
 - expected timing;
 - delivery status;
-- evidence submitted;
-- whether evidence was accepted, contradicted, rejected, or found false;
+- fulfillment evidence submitted;
+- whether fulfillment evidence was accepted, contradicted, rejected, or found false;
 - reputational effect.
 
-Evidence commitments do not replace responsible fiscalization. They complement it.
+Fulfillment evidence commitments do not replace responsible fiscalization. They complement it.
 
-## Paid evidence missions
+## Paid fulfillment evidence missions
 
-A paid evidence mission is not an ordinary public-value project. It is control work associated with a project, control package, fiscalization process, or Control Subproject.
+A paid fulfillment evidence mission is not an ordinary public-value project. It is control work associated with a project, control package, fiscalization process, or Control Subproject.
 
 Example:
 
 ```text
 Mission:
-  Visit project site, take georeferenced photos, record short video, interview beneficiaries, and upload evidence.
+  Visit project site, take georeferenced photos, record short video, interview beneficiaries, and upload fulfillment evidence.
 Payment:
-  Fixed amount if evidence satisfies the required format and traceability standards.
+  Fixed amount if fulfillment evidence satisfies the required format and traceability standards.
 ```
 
-Paid evidence missions allow citizens or organizations to professionalize evidence collection without creating a new public-value project for every evidence task. When the mission requires budget, methodology, assignment, deliverables, evidence standards, reputation effects, and auditability, it may be represented inside a Control Subproject.
+Paid fulfillment evidence missions allow citizens or organizations to professionalize fulfillment evidence collection without creating a new public-value project for every evidence task. When the mission requires budget, methodology, assignment, deliverables, fulfillment evidence standards, reputation effects, and auditability, it may be represented inside a Control Subproject.
 
-## Evidence mission funding
+## Fulfillment evidence mission funding
 
-Evidence missions should be funded from the project's separated control budget, from the accepted control package, from a Control Subproject budget, or from an extraordinary review budget.
+Fulfillment evidence missions should be funded from the project's separated control budget, from the accepted control package, from a Control Subproject budget, or from an extraordinary review budget.
 
 Submitting an evidence-producer offer is not itself payable by default. Payment begins only when the actor is selected or assigned to accepted control work under the protocol.
 
-Supplemental evidence funding after the minimum control package is accepted should fund only distinct or complementary evidence. It should not pay multiple actors to produce the same evidence merely because additional money is available.
+Supplemental fulfillment evidence funding after the minimum control package is accepted should fund only distinct or complementary fulfillment evidence. It should not pay multiple actors to produce the same fulfillment evidence merely because additional money is available.
 
-However, the executor should not define or assign evidence missions at its own discretion.
+However, the executor should not define or assign fulfillment evidence missions at its own discretion.
 
 The executor can define project commitments, milestones, and locations, but should not control the evidence producers who verify them.
 
-## Evidence mission assignment
+## Fulfillment evidence mission assignment
 
-Evidence missions should be assigned or selected through system rules, not by the executor.
+Fulfillment evidence missions should be assigned or selected through system rules, not by the executor.
 
 Possible assignment criteria:
 
@@ -526,13 +526,13 @@ Controls include:
 - executor does not choose the responsible fiscalizer;
 - executor does not directly pay fiscalizers or evidence producers;
 - project and control actors declare related-party relationships;
-- evidence is public and contradictable;
+- contextualized evidence is public and contradictable;
 - fiscalizers and evidence producers carry reputational risk;
-- evidence can be challenged by beneficiaries, funders, citizens, and other organizations;
+- contextualized evidence can be challenged by beneficiaries, funders, citizens, and other organizations;
 - repeated executor-fiscalizer or executor-evidence-producer relationships are visible;
 - suspicious patterns are flagged;
-- false evidence can produce strong reputational penalties;
-- medium and large projects may require redundant evidence sources;
+- false or manipulated contextualized evidence can produce strong reputational penalties;
+- medium and large projects may require redundant fulfillment evidence sources;
 - fiscalizer validation does not close the possibility of later complaint or fraud review.
 - supplemental control funding is capped and does not permit unlimited fiscalizers or unlimited evidence producers.
 
@@ -540,7 +540,7 @@ Controls include:
 
 Related-party conflict is a control input, not an automatic universal rejection rule.
 
-Declared low or indirect conflicts may remain visible as warnings. Relevant conflicts may require stronger independence rules, non-related fiscalization, additional evidence, access guarantees, ownership or revenue clarity, or a longer observation window. Severe conflicts may require reformulation, exclusion of the conflicted actor or supplier, disbursement blocking, or rejection. Hidden or misrepresented conflicts may trigger complaint review and a role-specific Responsibility Event if proven.
+Declared low or indirect conflicts may remain visible as warnings. Relevant conflicts may require stronger independence rules, non-related fiscalization, additional fulfillment evidence, access guarantees, ownership or revenue clarity, or a longer observation window. Severe conflicts may require reformulation, exclusion of the conflicted actor or supplier, disbursement blocking, or rejection. Hidden or misrepresented conflicts may trigger complaint review and a role-specific Responsibility Event if proven.
 
 Example:
 
@@ -558,10 +558,10 @@ The system cannot perfectly prevent this, but it can reduce usefulness through:
 
 - not weighting evidence by amount financed;
 - not allowing executor-controlled assignment;
-- making evidence contradicible;
+- making contextualized evidence contradictable;
 - exposing patterns;
-- requiring multiple evidence sources for riskier projects;
-- attaching reputational consequences to false or misleading evidence;
+- requiring multiple fulfillment evidence sources for riskier projects;
+- attaching reputational consequences to false or misleading contextualized evidence;
 - preserving full audit trails;
 - allowing later complaint, review, and sanction.
 
@@ -573,13 +573,13 @@ Suggested proportional model:
 
 ```text
 Small project:
-  executor evidence + open observation + voluntary evidence.
+  executor self-report + open observation + voluntary fulfillment evidence.
 
 Medium project:
-  responsible fiscalization + control budget + evidence commitments + possible evidence missions.
+  responsible fiscalization + control budget + fulfillment evidence commitments + possible fulfillment evidence missions.
 
 Large or risky project:
-  reinforced fiscalization + technical review + multiple evidence sources + stronger guarantees and observation windows.
+  reinforced fiscalization + technical review + multiple fulfillment evidence sources + stronger guarantees and observation windows.
 ```
 
 ## Project lifecycle concern
@@ -593,7 +593,7 @@ Therefore control mechanisms must be designed with layered complexity:
 - operational for active participants;
 - technical for specialists and auditors.
 
-The existence of fiscalization, evidence, guarantees, control budgets, missions, and reputation should not force every citizen to understand every layer before participating.
+The existence of fiscalization, contextualized evidence, guarantees, control budgets, missions, and reputation should not force every citizen to understand every layer before participating.
 
 ## Citizen-facing simplification
 
@@ -606,10 +606,10 @@ For ordinary citizens, the interface should show a simplified project sheet:
 - how much it costs;
 - risk level;
 - whether fiscalization is included;
-- whether evidence is required;
+- whether fulfillment evidence is required;
 - whether guarantees or retentions apply;
 - current status;
-- simple action buttons: fund, support, delegate, follow, provide evidence, report problem.
+- simple action buttons: fund, support, delegate, follow, provide fulfillment evidence, report problem.
 
 Deep control details remain available for those who want to audit.
 
@@ -619,4 +619,4 @@ Deep control details remain available for those who want to audit.
 
 ## Status
 
-Accepted as Fiscalization, Evidence, and Control Model v0.
+Accepted as Fiscalization, Fulfillment Evidence, and Control Model v0.

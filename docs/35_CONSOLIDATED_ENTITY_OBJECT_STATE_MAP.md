@@ -206,8 +206,8 @@ Key attributes:
 - milestones;
 - disbursement milestone plan;
 - Project Evidential Contract;
-- evidence needs;
-- evidence obligations;
+- fulfillment evidence needs;
+- fulfillment evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - related-party conflict classification where applicable;
@@ -239,7 +239,7 @@ Project may have many ProjectPhases
 Project has many Milestones
 Project has DisbursementMilestonePlan
 Project has one ProjectEvidentialContract
-Project has many EvidenceNeeds
+Project has many FulfillmentEvidenceNeeds
 Project has many EvidenceItems
 Project has FiscalizationRequirement
 Project has many FiscalizerOffers
@@ -287,7 +287,7 @@ Attributes:
 - target version where relevant;
 - objection reason;
 - explanation;
-- affected area: value, beneficiaries, budget, evidence, fiscalization, duplication, access, common-good impact, related-party concern, scope, other;
+- affected area: value, beneficiaries, budget, fulfillment evidence, fiscalization, duplication, access, common-good impact, related-party concern, scope, other;
 - status: active, withdrawn, superseded, converted to complaint where applicable;
 - created timestamp;
 - withdrawn timestamp where applicable;
@@ -377,12 +377,12 @@ Attributes:
 - value promises covered;
 - metrics and qualitative commitments covered;
 - material information claims covered;
-- evidence needs;
-- milestone evidence requirements;
-- budget-line evidence requirements where relevant;
-- risk and antivalue evidence requirements where relevant;
-- evidence types;
-- evidence source roles: executor, beneficiary, affected party, evidence producer, fiscalizer, technical record, external register, or other;
+- fulfillment evidence needs;
+- milestone fulfillment evidence requirements;
+- budget-line fulfillment evidence requirements where relevant;
+- risk and antivalue fulfillment evidence requirements where relevant;
+- fulfillment/control evidence types;
+- fulfillment/control evidence source roles: executor, beneficiary, affected party, evidence producer, fiscalizer, technical record, external register, or other;
 - corroboration requirement;
 - executor self-report treatment;
 - fiscalizer or reviewer responsibility;
@@ -398,7 +398,7 @@ Relationships:
 ```text
 ProjectEvidentialContract belongs to Project
 ProjectEvidentialContract covers ValueVerificationPackages
-ProjectEvidentialContract defines EvidenceNeeds
+ProjectEvidentialContract defines FulfillmentEvidenceNeeds
 ProjectEvidentialContract constrains EvidenceProducer offers and EvidenceItems
 ProjectEvidentialContract may be changed by ProjectVariationRecord or ReformulationProposal
 ```
@@ -419,7 +419,7 @@ Rules:
 
 - every execution-financeable project should have an accepted evidential contract;
 - the contract is project-specific and proportional, not one universal centralized evidence code;
-- the contract defines evidence needs, not preselected evidence producers;
+- the contract defines fulfillment evidence needs, not preselected evidence producers;
 - material weakening after support or funding should be versioned and may require reformulation, notification, renewed review, or responsibility analysis;
 - citizens should see a simple verification summary, while Layer 5 preserves the full contract.
 
@@ -536,7 +536,7 @@ Attributes:
 - verification or fiscalization rule;
 - disbursement rules;
 - related milestones;
-- related evidence items;
+- related contextualized evidence items;
 - related material information claims;
 - related related-party declarations or safeguards where applicable;
 - current state;
@@ -595,7 +595,7 @@ Phase 2:
   Construction
   Funding: may be committed while design is pending
   Start condition: design phase accepted
-  Disbursement: construction milestones, evidence, fiscalization
+  Disbursement: construction milestones, fulfillment evidence, fiscalization
 ```
 
 ## Project Variation Record
@@ -746,7 +746,7 @@ Attributes:
 - statement;
 - beneficiary link;
 - metrics;
-- evidence needs;
+- fulfillment evidence needs;
 - value verification package;
 - status;
 - validation result.
@@ -758,13 +758,13 @@ ValueThesis belongs to ProjectVersion
 ValueThesis uses ValueIcon
 ValueThesis has many Metrics
 ValueThesis has ValueVerificationPackage
-ValueThesis defines EvidenceNeeds
+ValueThesis defines FulfillmentEvidenceNeeds
 ValueThesis is covered by ProjectEvidentialContract
 ```
 
 Rule:
 
-> A value thesis is not merely descriptive. It anchors the project's promised public value, core commitments, evidence needs, reformulation boundary, closure evaluation, and reputation effects.
+> A value thesis is not merely descriptive. It anchors the project's promised public value, core commitments, fulfillment evidence needs, reformulation boundary, closure evaluation, and reputation effects.
 
 ## Value Verification Package
 
@@ -781,8 +781,8 @@ Attributes:
 - value icon or value type;
 - core value commitments;
 - metrics and qualitative commitments;
-- evidence needs per commitment;
-- expected source roles or corroboration paths;
+- fulfillment evidence needs per commitment;
+- expected fulfillment evidence source roles or corroboration paths;
 - beneficiary signal requirements where relevant;
 - fiscalizer or reviewer method;
 - risk and antivalue checks;
@@ -799,8 +799,8 @@ ValueVerificationPackage belongs to ValueThesis
 ValueVerificationPackage belongs to ProjectVersion
 ValueVerificationPackage is covered by ProjectEvidentialContract
 ValueVerificationPackage references Metrics
-ValueVerificationPackage defines EvidenceNeeds
-ValueVerificationPackage may be supported or contradicted by EvidenceItems
+ValueVerificationPackage defines FulfillmentEvidenceNeeds
+ValueVerificationPackage may be supported or contradicted by EvidenceItems with fulfillment context
 ValueVerificationPackage may be reviewed by FiscalizationReport
 ValueVerificationPackage may be affected by Complaint or VerifiedDiscovery
 ```
@@ -821,7 +821,7 @@ Attributes:
 - definition;
 - mandatory metrics;
 - optional metrics;
-- evidence requirements;
+- fulfillment evidence requirements;
 - origin: catalog, AI-generated, project-specific, standardized later;
 - related values.
 
@@ -836,20 +836,20 @@ Attributes:
 - target;
 - timeframe;
 - beneficiary group;
-- evidence need;
+- fulfillment evidence need;
 - evidential contract requirement reference;
 - validation status;
 - fulfillment status.
 
 Rule:
 
-> Each core metric should identify what evidence need can verify it. The project defines the evidence need and source role, but should not preselect the independent evidence producer.
+> Each core metric should identify what fulfillment evidence need can verify it. The project defines the fulfillment evidence need and source role, but should not preselect the independent evidence producer.
 
-## Evidence Need
+## Fulfillment Evidence Need
 
-A predefined need for evidence linked to a value commitment, metric, material claim, milestone, phase, risk, or antivalue.
+A predefined need for fulfillment evidence linked to a value commitment, metric, material claim, milestone, phase, risk, or antivalue.
 
-An evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced and under what review conditions.
+A fulfillment evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced and under what review conditions.
 
 Attributes:
 
@@ -858,7 +858,7 @@ Attributes:
 - project version;
 - related value thesis or value verification package;
 - related metric, material claim, milestone, phase, risk, or antivalue;
-- evidence type expected;
+- fulfillment evidence type expected;
 - expected source role or corroboration path;
 - timing;
 - priority: required, recommended, supplemental, or configured equivalent;
@@ -871,17 +871,17 @@ Attributes:
 Relationships:
 
 ```text
-EvidenceNeed belongs to ProjectEvidentialContract
-EvidenceNeed may belong to ValueVerificationPackage
-EvidenceNeed may reference Metric
-EvidenceNeed may reference ProjectPhase
-EvidenceNeed may be addressed by EvidenceProducer offers or commitments
-EvidenceNeed may be satisfied, weakened, contradicted, or left unresolved by EvidenceItems
+FulfillmentEvidenceNeed belongs to ProjectEvidentialContract
+FulfillmentEvidenceNeed may belong to ValueVerificationPackage
+FulfillmentEvidenceNeed may reference Metric
+FulfillmentEvidenceNeed may reference ProjectPhase
+FulfillmentEvidenceNeed may be addressed by EvidenceProducer offers or commitments
+FulfillmentEvidenceNeed may be satisfied, weakened, contradicted, or left unresolved by EvidenceItems with fulfillment context
 ```
 
 Rule:
 
-> Contract-matched evidence needs have higher eligibility priority for control funding. Unexpected evidence may still be admitted when equivalent, necessary, materially useful, or complementary within the available control budget.
+> Contract-matched fulfillment evidence needs have higher eligibility priority for control funding. Unexpected fulfillment evidence may still be admitted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 ## Beneficiary Group
 
@@ -918,7 +918,7 @@ Attributes:
 - phase allocation where applicable;
 - control cost;
 - fiscalization cost;
-- evidence cost;
+- fulfillment evidence cost;
 - contingency;
 - guarantees;
 - retentions;
@@ -1041,7 +1041,7 @@ Attributes:
 - action: commit, reserve, retain, release, return, reassign, recover, execute guarantee, or close balance;
 - milestone, closure, complaint, guarantee, or recovery reference where applicable;
 - rule applied;
-- evidence or fiscalization reference where applicable;
+- fulfillment evidence or fiscalization reference where applicable;
 - destination or ledger account;
 - protocol authorization or signature;
 - custodian execution status;
@@ -1061,10 +1061,10 @@ Attributes:
 - citizen or funding actor;
 - project;
 - amount;
-- target: secondary fiscalizer / fiscalization auditor, distinct evidence mission, extraordinary review reserve where permitted;
+- target: secondary fiscalizer / fiscalization auditor, distinct fulfillment evidence mission, extraordinary review reserve where permitted;
 - admissibility status;
 - reservation status;
-- linked control offer or evidence mission where assigned;
+- linked control offer or fulfillment evidence mission where assigned;
 - rejection reason if no admissible supplemental need remains;
 - timestamp.
 
@@ -1073,7 +1073,7 @@ States:
 ```text
 Offered
 Reserved for secondary fiscalization
-Assigned to distinct evidence mission
+Assigned to distinct fulfillment evidence mission
 Assigned to secondary fiscalizer
 Rejected as saturated
 Returned
@@ -1083,7 +1083,7 @@ Closed
 
 Rule:
 
-> Supplemental control contributions never fund execution. They may fund at most one secondary fiscalizer or fiscalization auditor and distinct additional evidence needs under protocol limits.
+> Supplemental control contributions never fund execution. They may fund at most one secondary fiscalizer or fiscalization auditor and distinct additional fulfillment evidence needs under protocol limits.
 
 ## Milestone
 
@@ -1097,7 +1097,7 @@ Attributes:
 - description;
 - expected date;
 - responsible actor;
-- evidence required;
+- fulfillment evidence required;
 - metric links;
 - maximum disbursement amount;
 - review rule;
@@ -1108,7 +1108,7 @@ States:
 ```text
 Pending
 In progress
-Evidence submitted
+Fulfillment evidence submitted
 Under review
 Approved
 Approved with observations
@@ -1131,7 +1131,7 @@ Attributes:
 - maximum release per milestone;
 - partial-release rules;
 - retention rules;
-- evidence required;
+- fulfillment evidence required;
 - evidential contract references;
 - protected advance-payment rules where applicable;
 - validation status;
@@ -1156,8 +1156,8 @@ Attributes:
 - claim text or structured value;
 - responsible actor;
 - responsible actor role;
-- affected object: value thesis, metric, evidence need, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
-- supporting evidence references;
+- affected object: value thesis, metric, fulfillment evidence need, beneficiary group, budget line, milestone, contextualized evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- supporting evidence references with context;
 - contradiction, justified objection, complaint, or review references;
 - AI anomaly reference where applicable;
 - current review status;
@@ -1181,19 +1181,20 @@ Withdrawn
 
 Rule:
 
-> Material claims are not hidden technical trivia. They are the accountable statements that connect project promises, evidence, contradictions, review, responsibility, and verified discovery.
+> Material claims are not hidden technical trivia. They are the accountable statements that connect project promises, contextualized evidence, contradictions, review, responsibility, and verified discovery.
 
 ## Evidence Item
 
-A piece of material used to verify, contradict, or evaluate a project.
+A piece of material used to verify, contradict, or evaluate a project, complaint, control task, material claim, or administrative observability issue.
 
 Attributes:
 
 - project;
 - project phase where applicable;
+- evidence context: complaint, fulfillment, control, contradiction, administrative observability, or research;
 - milestone;
 - metric;
-- evidence need where applicable;
+- fulfillment evidence need or complaint evidence relation where applicable;
 - material claim supported or contradicted where known;
 - evidential contract requirement;
 - producer;
@@ -1213,7 +1214,7 @@ Attributes:
 
 Rule:
 
-> Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+> Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. Complaint evidence may trigger or support review, but it does not become fulfillment evidence unless accepted for that purpose by the responsible reviewer, fiscalizer, competent authority, or protocol rule.
 
 States:
 
@@ -1231,7 +1232,7 @@ Used in verified discovery
 
 ## Verified Discovery
 
-A review-confirmed discovery of material hidden information, false evidence, KPI manipulation, undeclared conflict, material omission, or relevant contradiction.
+A review-confirmed discovery of material hidden information, false or manipulated contextualized evidence, KPI manipulation, undeclared conflict, material omission, or relevant contradiction.
 
 Attributes:
 
@@ -1241,7 +1242,7 @@ Attributes:
 - protected identity request reference where applicable;
 - target material claim or project object;
 - discovery description;
-- evidence references;
+- evidence references with context;
 - review process reference;
 - materiality finding;
 - usefulness finding;
@@ -1279,7 +1280,7 @@ Attributes:
 - required fiscalization layer: open observation, responsible fiscalization, technical review, reinforced fiscalization;
 - required fiscalizer count;
 - required evidence producer count;
-- supplemental evidence need count or scope where applicable;
+- supplemental fulfillment evidence need count or scope where applicable;
 - secondary fiscalizer slot: none, open, filled, closed;
 - selection model: rotation, random, semi-random among admissible offers, technical/economic scoring, reinforced review, or configured rule;
 - observation or offer window where applicable;
@@ -1298,12 +1299,12 @@ It may define fiscalization, evidence-production, audit, admissibility review, o
 Attributes:
 
 - parent project;
-- control type: primary fiscalization, secondary fiscalization, fiscalization audit, evidence mission, technical review, project admissibility review, extraordinary review;
+- control type: primary fiscalization, secondary fiscalization, fiscalization audit, fulfillment evidence mission, technical review, project admissibility review, extraordinary review;
 - fiscalization layer;
 - methodology;
 - deliverables;
 - control budget;
-- evidence requirements;
+- fulfillment evidence requirements;
 - eligibility rule;
 - conflict checks;
 - selection rule;
@@ -1317,11 +1318,11 @@ Rule:
 
 Fiscalization ecosystem rule:
 
-> Distributed fiscalization means many actors may observe, offer evidence, or compete to fiscalize; it does not mean the responsible fiscalizer is chosen by executor preference, ordinary popularity, first funding, or lowest price alone.
+> Distributed fiscalization means many actors may observe, offer fulfillment evidence, submit complaint evidence, or compete to fiscalize; it does not mean the responsible fiscalizer is chosen by executor preference, ordinary popularity, first funding, or lowest price alone.
 
 Supplemental rule:
 
-> The ordinary supplemental control cap is one secondary fiscalization or fiscalization-audit role plus non-duplicative evidence work. Additional control must not become unlimited fiscalizer or evidence-producer overfunding.
+> The ordinary supplemental control cap is one secondary fiscalization or fiscalization-audit role plus non-duplicative fulfillment/control evidence work. Additional control must not become unlimited fiscalizer or evidence-producer overfunding.
 
 Project admissibility review rule:
 
@@ -1400,8 +1401,8 @@ Attributes:
 - project;
 - milestone;
 - fiscalizer;
-- evidence considered;
-- evidence limitations or unresolved contradictions;
+- fulfillment evidence considered;
+- fulfillment evidence limitations or unresolved contradictions;
 - metric evaluation;
 - conclusion;
 - observations;
@@ -1431,7 +1432,7 @@ Attributes:
 - approved amount;
 - released amount;
 - retained amount;
-- evidence considered;
+- fulfillment evidence considered;
 - fiscalizer report;
 - blocking check;
 - rule applied;
@@ -1464,7 +1465,7 @@ Attributes:
 - category;
 - description;
 - affected area;
-- evidence attached;
+- complaint evidence attached;
 - visible identity mode;
 - protected identity request reference where applicable;
 - review policy reference;
@@ -1619,7 +1620,7 @@ Attributes:
 
 - request id;
 - verified actor, restricted from unauthorized viewers;
-- protected action or object: comment, complaint, evidence item, testimony, beneficiary confirmation, affected-party report, or other sensitive formal action;
+- protected action or object: comment, complaint, contextualized evidence item, testimony, beneficiary confirmation, affected-party report, or other sensitive formal action;
 - project or process context;
 - justification;
 - risk type: retaliation, safety, privacy, beneficiary protection, worker dependency, whistleblower exposure, or other configured risk;
@@ -2049,10 +2050,10 @@ Execution:
   executor
 
 Value metrics:
-  project modeler proposes commitments and evidence needs, validator checks, executor accepts where executing
+  project modeler proposes commitments and fulfillment evidence needs, validator checks, executor accepts where executing
 
-Evidence production:
-  evidence producers, beneficiaries, observers, executor self-report where allowed and classified
+Fulfillment/control evidence production:
+  evidence producers, beneficiaries, observers, executor self-report where allowed and classified by evidence context
 
 Fiscalization:
   fiscalizer
@@ -2078,14 +2079,14 @@ Audit trail:
 - Project is the central object.
 - Project version preserves history.
 - Project phase groups phase-specific funding, deliverables, verification, and disbursement gates.
-- Value thesis connects project to value verification packages, metrics, evidence needs, and evidence.
-- Metrics must connect to evidence needs and review consequences.
-- Evidence needs define what should be evidenced without preselecting evidence producers.
-- Evidence must connect to phase, milestone, metric, evidence need, material claim, or complaint/review issue where applicable.
-- Fiscalization report connects evidence to review outcome.
-- Responsible fiscalization is assigned through protocol-selected Control Subprojects or fiscalization assignments, while open observation and evidence production remain broader participation layers.
-- Disbursement connects phase, milestone, evidence, fiscalization, and money state.
-- Complaint can affect project state, milestone state, evidence state, or disbursement state.
+- Value thesis connects project to value verification packages, metrics, fulfillment evidence needs, and contextualized evidence.
+- Metrics must connect to fulfillment evidence needs and review consequences.
+- Fulfillment evidence needs define what should be evidenced without preselecting evidence producers.
+- Contextualized evidence items must connect to evidence context and to phase, milestone, metric, fulfillment evidence need, material claim, complaint, or review issue where applicable.
+- Fiscalization report connects contextualized evidence to review outcome.
+- Responsible fiscalization is assigned through protocol-selected Control Subprojects or fiscalization assignments, while open observation and contextualized evidence production remain broader participation layers.
+- Disbursement connects phase, milestone, fulfillment evidence, fiscalization, and money state.
+- Complaint can affect project state, milestone state, contextualized evidence state, or disbursement state.
 - Administrative Rule Changes, System Implementation Changes, and Protocol Change Proposals must reference affected rules, project states, effective dates, transition rules, and audit events where material.
 - Delegation affects funding action authority, not citizen identity.
 - Automatic profile affects allocation rule, not delegation.
@@ -2099,7 +2100,7 @@ This map should be used to create:
 - entity relationship diagram;
 - project lifecycle state diagram;
 - funding/disbursement state diagram;
-- evidence/fiscalization diagram;
+- contextualized evidence/fiscalization diagram;
 - complaint resolution diagram;
 - delegation diagram;
 - role responsibility matrix;

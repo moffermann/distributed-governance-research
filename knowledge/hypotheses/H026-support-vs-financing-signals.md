@@ -163,7 +163,7 @@ I believe this project is duplicative.
 A formal complaint must say:
 
 ```text
-What rule, promise, evidence item, budget line, conflict, or compliance condition is allegedly false, incomplete, conflicted, harmful, or non-compliant?
+What rule, promise, contextualized evidence item, budget line, conflict, or compliance condition is allegedly false, incomplete, conflicted, harmful, or non-compliant?
 What evidence supports that claim?
 What review effect is requested?
 ```

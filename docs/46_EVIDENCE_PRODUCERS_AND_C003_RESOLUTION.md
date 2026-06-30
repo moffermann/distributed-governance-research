@@ -4,7 +4,7 @@
 
 This document resolves contradiction C003 from the v0 contradiction checklist.
 
-C003 was originally framed as the problem of evidence being produced by interested actors. The final resolution is stronger: the system should not depend on the executor as the main source of evidence. It should recognize a distinct role called `Evidence Producer`, and it should treat executor-submitted material as self-reported support unless corroborated.
+C003 was originally framed as the problem of fulfillment evidence being produced by interested actors. The final resolution is stronger: the system should not depend on the executor as the main source of fulfillment evidence. It should recognize a distinct role called `Evidence Producer`, and it should treat executor-submitted material as self-reported support unless corroborated.
 
 ## Status
 
@@ -12,15 +12,15 @@ Accepted as the v0 resolution for C003.
 
 ## Core principle
 
-> The system should not depend on the executor as the primary source of evidence.
+> The system should not depend on the executor as the primary source of fulfillment evidence.
 
-The executor may submit material, but project verification, critical milestones, disbursements, and closure should rely on evidence produced or corroborated by evidence producers, fiscalizers, technical records, verified beneficiaries, or other non-executor sources.
+The executor may submit material, but project verification, critical milestones, disbursements, and closure should rely on fulfillment evidence produced or corroborated by evidence producers, fiscalizers, technical records, verified beneficiaries, or other non-executor sources.
 
 ## The contradiction
 
-A project needs evidence to verify execution.
+A project needs fulfillment evidence to verify execution.
 
-But if the executor produces the evidence, the evidence is structurally weak because the executor has a direct interest in the outcome.
+But if the executor produces the fulfillment evidence, the evidence is structurally weak because the executor has a direct interest in the outcome.
 
 The executor wants:
 
@@ -37,7 +37,7 @@ This does not mean the executor is dishonest. It means executor-produced evidenc
 
 The risk is even stronger in an environment where artificial intelligence and digital editing can generate or modify photos, videos, documents, lists, and reports.
 
-Therefore, executor-submitted evidence should not be treated as enough by itself for high-risk verification.
+Therefore, executor-submitted material should not be treated as enough by itself for high-risk verification.
 
 Rule:
 
@@ -47,7 +47,7 @@ Rule:
 
 The system should include a role called `Evidence Producer`.
 
-An evidence producer is an actor whose function is to document, record, observe, capture, or produce evidence about project execution.
+An evidence producer is an actor whose function is to document, record, observe, capture, or produce fulfillment evidence or control evidence about project execution.
 
 The evidence producer is not necessarily the executor.
 
@@ -114,14 +114,15 @@ Executor self-report
 
 It may be useful, but it is not strong independent evidence by itself.
 
-## Rule for executor evidence
+## Rule for executor-submitted material
 
-> Executor evidence is admissible as support, explanation, or self-report, but it is not sufficient by itself for critical milestones, relevant disbursements, or final closure.
+> Executor-submitted material is admissible as support, explanation, or self-report, but it is not sufficient by itself for critical milestones, relevant disbursements, or final closure.
 
 ## Evidence source metadata
 
-Every evidence item should record:
+Every contextualized evidence item should record:
 
+- evidence context: complaint, fulfillment, control, contradiction, administrative observability, or research;
 - source actor;
 - source role;
 - source relationship to project;
@@ -144,7 +145,7 @@ Recommended v0 labels:
 Executor self-report
 Beneficiary confirmation
 Citizen observation
-Evidence producer evidence
+Evidence-producer fulfillment/control evidence
 Fiscalizer-produced evidence
 Independent third-party evidence
 Technical/system-generated record
@@ -165,11 +166,11 @@ Possible corroboration paths:
 - citizen observations align;
 - technical log supports timing/location;
 - independent document matches claim;
-- multiple evidence items converge.
+- multiple contextualized evidence items converge.
 
-## Project risk and evidence requirements
+## Project risk and fulfillment/control evidence requirements
 
-Evidence requirements should scale with risk.
+Fulfillment/control evidence requirements should scale with risk.
 
 Low-risk or low-value milestones may accept lighter evidence.
 
@@ -198,7 +199,7 @@ A user may publish evidence, but the system later classifies its source, indepen
 
 ## Relationship with complaints
 
-Complaint evidence can come from citizens, complainants, beneficiaries, evidence producers, fiscalizers, or third parties.
+Complaint Evidence can come from citizens, complainants, beneficiaries, evidence producers, fiscalizers, or third parties.
 
 The key rule still applies:
 
@@ -213,7 +214,7 @@ Is it corroborated?
 
 Evidence is part of the system's incentive architecture for reliable information.
 
-Each evidence item should be able to support, contradict, weaken, or correct a material project claim.
+Each contextualized evidence item should be able to support, contradict, weaken, or correct a material project claim.
 
 Examples:
 
@@ -221,14 +222,14 @@ Examples:
 Claim:
 The project served 80 children.
 
-Evidence:
+Possible fulfillment/control evidence:
 Attendance record, beneficiary confirmation, fiscalizer observation, or parent testimony.
 
 Review status:
 supports / contradicts / insufficient / used in report.
 ```
 
-If evidence reveals a verified material omission, falsehood, hidden conflict, or manipulation, the result may trigger correction, complaint review, disbursement control, responsibility event, reputation effect, or verified-discovery reward where the protocol allows.
+If fulfillment evidence reveals a verified material omission, falsehood, hidden conflict, or manipulation, the result may trigger correction, complaint review, disbursement control, responsibility event, reputation effect, or verified-discovery reward where the protocol allows.
 
 Reward should attach only to verified, material, review-confirmed discovery, not to accusations or raw submissions.
 
@@ -238,14 +239,14 @@ Evidence producers should work against the accepted Project Evidential Contract 
 
 The contract tells evidence producers:
 
-- which project promise, metric, milestone, claim, risk, or antivalue needs evidence;
-- what evidence type is expected;
+- which project promise, metric, milestone, claim, risk, or antivalue needs fulfillment evidence;
+- what fulfillment evidence type is expected;
 - when it should be produced;
 - what privacy or protected-identity rules apply;
 - whether independent or corroborating evidence is required;
 - how the fiscalizer or reviewer will use the evidence.
 
-The contract defines evidence needs, not preselected producers. Evidence producers should submit offers or commitments identifying the specific metric, material claim, milestone, phase, risk, or antivalue their evidence will address.
+The contract defines fulfillment evidence needs, not preselected producers. Evidence producers should submit offers or commitments identifying the specific metric, material claim, milestone, phase, risk, or antivalue their fulfillment/control evidence will address.
 
 Example:
 
@@ -260,21 +261,21 @@ Review:
 Fiscalizer compares the confirmations with attendance records and executor reports.
 ```
 
-Evidence producers may still submit useful unexpected evidence, but paid or assigned evidence work should be tied to defined evidence needs so control funding does not become open-ended or duplicative.
+Evidence producers may still submit useful unexpected fulfillment evidence, but paid or assigned fulfillment/control evidence work should be tied to defined fulfillment evidence needs so control funding does not become open-ended or duplicative.
 
-Evidence that satisfies an accepted contract need should have higher eligibility priority. Unexpected evidence may be considered when it is equivalent, necessary, materially useful, or complementary within the available control budget, but it should not automatically replace the minimum evidence needs defined before funding.
+Fulfillment evidence that satisfies an accepted contract need should have higher eligibility priority. Unexpected fulfillment/control evidence may be considered when it is equivalent, necessary, materially useful, or complementary within the available control budget, but it should not automatically replace the minimum fulfillment evidence needs defined before funding.
 
 ## C003 final resolution
 
 C003 is resolved as follows:
 
 ```text
-Create and use the Evidence Producer role. Do not treat executor-produced evidence as primary proof for critical decisions.
+Create and use the Evidence Producer role. Do not treat executor-submitted material as primary proof for critical decisions.
 ```
 
 Final rule:
 
-> Evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation. Evidence should connect to material claims and may create responsibility or verified-discovery effects only after review.
+> Fulfillment evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation. Evidence items should connect to material claims, carry an explicit evidence context, and may create responsibility or verified-discovery effects only after review.
 
 ## Documents that should eventually reflect this resolution
 
@@ -300,7 +301,7 @@ This resolution should inform future updates to:
 
 ## Mitigations
 
-- scale evidence requirements by risk;
+- scale fulfillment/control evidence requirements by risk;
 - require relationship and conflict declarations;
 - distinguish evidence production from evaluation;
 - record source and role metadata;

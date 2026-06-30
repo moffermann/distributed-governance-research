@@ -21,7 +21,7 @@ A distributed funding architecture should include some combination of:
 - retained funds;
 - milestone-based disbursement;
 - escrow-like custody;
-- public evidence requirements;
+- public fulfillment/control evidence requirements;
 - continuous community supervision;
 - blocking or revocation mechanisms;
 - financial penalties;

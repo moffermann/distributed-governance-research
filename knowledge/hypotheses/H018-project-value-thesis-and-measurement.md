@@ -9,7 +9,7 @@ The core chain is:
 ```text
 Value Thesis
 → value commitments or core metrics
-→ evidence needs
+→ fulfillment evidence needs
 → independent evidence-producer offers
 → fiscalization or review
 → disbursement, closure, reformulation, or reputation effect
@@ -21,7 +21,7 @@ A distributed architecture does not discover social value as one objective truth
 
 Instead, it lets projects propose value theses that citizens, funders, beneficiaries, fiscalizers, evidence producers, and affected parties can support, evaluate, compare, challenge, and revise.
 
-The risk is not only that projects may lack metrics. The deeper risk is that a project may declare attractive value, define weak or input-only metrics, fail to connect those metrics to evidence needs, or let the proposer indirectly control the evidence architecture.
+The risk is not only that projects may lack metrics. The deeper risk is that a project may declare attractive value, define weak or input-only metrics, fail to connect those metrics to fulfillment evidence needs, or let the proposer indirectly control the fulfillment-evidence architecture.
 
 ## Value thesis
 
@@ -32,7 +32,7 @@ A project should declare:
 - why that value matters;
 - in what time horizon;
 - what commitments or core metrics express the promise;
-- what evidence needs would show fulfillment or progress;
+- what fulfillment evidence needs would show fulfillment or progress;
 - who or what role can legitimately evaluate it;
 - what antivalue it may produce;
 - what happens if it fails.
@@ -52,18 +52,18 @@ Weak metric:
 Buy 100 balls.
 
 Stronger value-linked commitment:
-Provide 48 free training sessions for 80 children over 6 months, with attendance, continuity, activity evidence, and beneficiary confirmation.
+Provide 48 free training sessions for 80 children over 6 months, with attendance, continuity, activity fulfillment evidence, and beneficiary confirmation.
 ```
 
-## Evidence needs, not preselected evidence producers
+## Fulfillment evidence needs, not preselected evidence producers
 
-The `Project Evidential Contract` should define evidence needs, not preselected evidence producers.
+The `Project Evidential Contract` should define fulfillment evidence needs, not preselected evidence producers.
 
 The proposer, modeler, or executor may declare:
 
 - which value commitments must be verified;
-- what type of evidence would be useful;
-- when evidence is needed;
+- what type of fulfillment evidence would be useful;
+- when fulfillment evidence is needed;
 - which source role may produce or corroborate it;
 - which consequence follows missing or failed verification.
 
@@ -72,25 +72,25 @@ But the proposer should not preselect the evidence producers who will later veri
 Evidence producers should submit independent offers or commitments. Each offer should identify:
 
 - which value commitment, metric, material claim, milestone, phase, risk, or antivalue it addresses;
-- what evidence it will produce;
+- what fulfillment evidence it will produce;
 - how it will produce it;
 - when it will produce it;
 - whether it is voluntary or requires control funding;
 - what relationship or conflict exists, if any;
-- what limitations the evidence has.
+- what limitations the fulfillment evidence has.
 
 ## Evidence priority
 
-Evidence that directly satisfies the accepted Project Evidential Contract should have the highest eligibility priority.
+Fulfillment evidence that directly satisfies the accepted Project Evidential Contract should have the highest eligibility priority.
 
-Evidence not explicitly mentioned in the contract may still be useful, but should normally have lower priority unless a fiscalizer, reviewer, threshold policy, or protocol rule accepts it as:
+Fulfillment evidence not explicitly mentioned in the contract may still be useful, but should normally have lower priority unless a fiscalizer, reviewer, threshold policy, or protocol rule accepts it as:
 
-- equivalent to the expected evidence;
+- equivalent to the expected fulfillment evidence;
 - necessary to verify a core value commitment;
 - materially useful to a disputed claim;
 - complementary and non-duplicative within the available control budget.
 
-This prevents the control budget from being consumed by unrelated evidence while still allowing unexpected useful information to enter the review process.
+This prevents the control budget from being consumed by unrelated fulfillment evidence while still allowing unexpected useful information to enter the review process.
 
 ## Relationship with Value Verification Package
 
@@ -103,8 +103,8 @@ The package may include:
 - continuity metrics;
 - quality signals;
 - beneficiary confirmation;
-- evidence needs;
-- expected evidence source roles;
+- fulfillment evidence needs;
+- expected fulfillment evidence source roles;
 - fiscalizer or reviewer method;
 - contradiction or complaint paths;
 - risk and antivalue checks;
@@ -120,7 +120,7 @@ If the thesis is recreation and cultural access for children, the verification p
 
 - functions performed;
 - approximate attendance;
-- evidence of execution;
+- fulfillment evidence of execution;
 - comments from parents or teachers;
 - satisfaction signals;
 - absence of serious incidents;
@@ -161,17 +161,17 @@ Core value commitments may include:
 - public access rules;
 - bathroom or accessibility commitments where promised or required;
 - safety and technical reception;
-- construction evidence;
-- post-completion public-use evidence.
+- construction fulfillment evidence;
+- post-completion public-use fulfillment evidence.
 
-Corresponding evidence needs may include:
+Corresponding fulfillment evidence needs may include:
 
 - design package and accepted dimensions;
 - reviewer or fiscalizer acceptance of the design phase;
-- construction milestone evidence;
+- construction milestone fulfillment evidence;
 - georeferenced photos or field records;
 - technical reception or equivalent review;
-- evidence of public access and later use.
+- fulfillment evidence of public access and later use.
 
 If the design phase produces incomplete courts, wrong dimensions, missing required bathrooms or accessibility commitments, or weaker public access, the issue is not a minor metric gap. It may be a failed value commitment, a design-phase failure, or a material value reformulation under C017/H021.
 
@@ -179,7 +179,7 @@ If the design phase produces incomplete courts, wrong dimensions, missing requir
 
 The model distinguishes:
 
-1. **Formal evaluation of fulfillment:** whether the project did what it promised, according to the value thesis, verification package, accepted evidence, and fiscalization.
+1. **Formal evaluation of fulfillment:** whether the project did what it promised, according to the value thesis, verification package, accepted fulfillment evidence, and fiscalization.
 2. **Distributed signals of perceived value:** comments, recommendations, repeated support, word of mouth, community response, and willingness to finance similar projects.
 
 Not all value should be converted into rigid KPIs.
@@ -193,22 +193,22 @@ H018 is aligned with:
 - C010, because value should be verified through packages, not isolated metrics;
 - C017, because the value thesis and core metrics anchor project identity;
 - C018, because reputation follows verified value fulfillment rather than closure labels alone;
-- H022, because the Project Evidential Contract defines the evidence needs that make verification possible;
+- H022, because the Project Evidential Contract defines the fulfillment evidence needs that make verification possible;
 - H023, because value claims become accountable material information claims when they affect funding, disbursement, trust, or reputation;
-- C003 and C015, because independent evidence production and publication remain distinct from evidentiary validation.
+- C003 and C015, because independent fulfillment evidence production and publication remain distinct from evidentiary validation.
 
 ## Open risk
 
-The quality, authenticity, relevance, AI-generation risk, and usefulness of evidence produced by funded or approved evidence producers remains a separate open question:
+The quality, authenticity, relevance, AI-generation risk, and usefulness of fulfillment evidence produced by funded or approved evidence producers remains a separate open question:
 
 - `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`
 
-That risk should not be hidden inside H018. H018 defines the value-to-evidence chain; the later evidence-quality resolution should define how submitted evidence is evaluated before it supports disbursement, closure, value fulfillment, or reputation.
+That risk should not be hidden inside H018. H018 defines the value-to-fulfillment-evidence chain; the later evidence-quality resolution should define how submitted fulfillment evidence is evaluated before it supports disbursement, closure, value fulfillment, or reputation.
 
 ## Principle
 
-> The system should not force every human experience into hard metrics. It should connect each core value promise to a proportional verification package and evidence needs, while preserving independent evidence production and distributed social signals of perceived value.
+> The system should not force every human experience into hard metrics. It should connect each core value promise to a proportional verification package and fulfillment evidence needs, while preserving independent fulfillment evidence production and distributed social signals of perceived value.
 
 ## Status
 
-Aligned Core v0 hypothesis for project value theses, measurable commitments, evidence needs, independent evidence offers, and proportional value verification.
+Aligned Core v0 hypothesis for project value theses, measurable commitments, fulfillment evidence needs, independent evidence-producer offers, and proportional value verification. Read with `knowledge/concepts/evidence-context-taxonomy-v0.md`.

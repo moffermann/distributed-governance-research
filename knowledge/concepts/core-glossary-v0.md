@@ -249,7 +249,7 @@ Before voting or assigning resources, the system should help users understand:
 - risks;
 - alternatives;
 - affected groups;
-- evidence quality;
+- contextualized evidence quality;
 - expert disagreement;
 - historical performance.
 

@@ -208,7 +208,7 @@ Dashboard:
 💰 Funders: 1,240
 💬 Comments: 35
 🚩 Complaints: 0
-📎 Evidence: 12
+📎 Fulfillment evidence: 12
 
 [Fund]
 [Offer as fiscalizer]

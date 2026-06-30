@@ -159,7 +159,7 @@ Macul multi-court facility baseline:
 
 The design phase is evaluated against this baseline.
 
-If the final design removes bathrooms that were required, changes court dimensions materially, reduces public access, or weakens evidence requirements, this is not a minor correction. It is a design failure or material reformulation under H021/C017.
+If the final design removes bathrooms that were required, changes court dimensions materially, reduces public access, or weakens fulfillment evidence requirements, this is not a minor correction. It is a design failure or material reformulation under H021/C017.
 
 ## Open executor review phase
 

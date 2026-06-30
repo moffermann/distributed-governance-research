@@ -161,7 +161,7 @@ The dashboard may show more explanation:
 
 - current phase;
 - milestone status;
-- evidence status;
+- contextualized evidence status;
 - fiscalization status;
 - active complaints;
 - financial status in citizen language.

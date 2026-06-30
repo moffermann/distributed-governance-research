@@ -4,9 +4,9 @@
 
 Extension v2/v3 analytical hypothesis aligned with [[../../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|C021]] and [[../../docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|C025]]. Not Core v0.
 
-This idea should be considered for a second or third version of the system, after the project card, value icon catalog, metric validator, and basic evidence/fiscalization model are stable.
+This idea should be considered for a second or third version of the system, after the project card, value icon catalog, metric validator, and basic contextualized evidence/fiscalization model are stable.
 
-H059 must not become a single moral score, a universal ranking of all projects, an automatic funding rule, or an opaque recommendation engine. It may become a future explainable comparison signal only when the measured commitments, assumptions, evidence quality, comparison set, and limits are visible and auditable.
+H059 must not become a single moral score, a universal ranking of all projects, an automatic funding rule, or an opaque recommendation engine. It may become a future explainable comparison signal only when the measured commitments, assumptions, fulfillment evidence quality, comparison set, and limits are visible and auditable.
 
 ## Hypothesis
 
@@ -104,7 +104,7 @@ Signal:
   High verifiable value per peso within comparable sports projects.
 
 Explanation:
-  Based on declared direct beneficiaries, duration, evidence quality,
+  Based on declared direct beneficiaries, duration, fulfillment evidence quality,
   comparable project costs, control costs, and execution probability.
 ```
 
@@ -114,7 +114,7 @@ AI may help by:
 
 - reading the value thesis;
 - identifying measurable commitments;
-- extracting reach, intensity, duration, and evidence quality;
+- extracting reach, intensity, duration, and fulfillment evidence quality;
 - detecting inflated or vague claims;
 - normalizing comparable projects;
 - suggesting missing metrics;
@@ -163,7 +163,7 @@ Project B:
 
 Comparison:
   Same value domain, similar deliverable type,
-  comparable cost and evidence requirements.
+  comparable cost and fulfillment evidence requirements.
 ```
 
 Example of risky comparison:
@@ -280,7 +280,7 @@ Run 24 community workshops for at least 120 residents, with an average attendanc
 The model should also discount or flag:
 
 - unusually inflated reach claims;
-- weak evidence requirements;
+- weak fulfillment evidence requirements;
 - missing control costs;
 - low execution probability;
 - unclear beneficiary definitions;
@@ -316,7 +316,7 @@ This future extension depends on:
 - value icon catalog;
 - mandatory metrics per value;
 - metric validator;
-- evidence requirements;
+- fulfillment evidence requirements;
 - fiscalization outcomes;
 - project cost model;
 - project completion history;

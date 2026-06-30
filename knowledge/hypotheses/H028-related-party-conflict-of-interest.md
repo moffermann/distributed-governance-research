@@ -55,7 +55,7 @@ Declared low or indirect conflict
   Public disclosure, citizen-facing warning, and ordinary or targeted review.
 
 Relevant conflict
-  Public disclosure, explicit public-benefit safeguards, independent fiscalization or evidence requirements, and visible access, pricing, ownership, or revenue rules where relevant.
+  Public disclosure, explicit public-benefit safeguards, independent fiscalization or fulfillment/control evidence requirements, and visible access, pricing, ownership, or revenue rules where relevant.
 
 Severe conflict
   Block, reject, reformulate, exclude the conflicted actor or supplier, require non-related execution/control, or prevent financing through assignable public resources.

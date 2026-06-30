@@ -62,7 +62,7 @@ Examples:
 correcting a typo in an address;
 uploading a missing attendance sheet;
 clarifying a milestone date that was already implied;
-adding context to an evidence item without weakening the evidence requirement.
+adding context to a contextualized evidence item without weakening the fulfillment evidence requirement.
 ```
 
 Treatment:
@@ -204,7 +204,7 @@ Serve 80 children through weekly sports workshops with monthly attendance record
 Operational variation:
 
 ```text
-Changing the weekly schedule while preserving 80 children, workshop count, and evidence obligations.
+Changing the weekly schedule while preserving 80 children, workshop count, and fulfillment evidence obligations.
 ```
 
 Material value reformulation:

@@ -33,7 +33,7 @@ Examples:
 - AI-guided assistance;
 - educational material in accessible language.
 
-These services are not a separate hidden layer of power. If they receive civic funding inside Core v0, they must be ordinary projects with budget, executor responsibility, evidence obligations, fiscalization, comments, complaints, and audit trail.
+These services are not a separate hidden layer of power. If they receive civic funding inside Core v0, they must be ordinary projects with budget, executor responsibility, fulfillment evidence obligations, fiscalization, comments, complaints, and audit trail.
 
 ## Distinctions to preserve
 

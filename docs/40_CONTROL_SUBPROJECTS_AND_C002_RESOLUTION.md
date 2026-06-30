@@ -35,7 +35,7 @@ It may include:
 - methodology;
 - budget;
 - milestones;
-- evidence requirements;
+- fulfillment/control evidence requirements;
 - reports;
 - deliverables;
 - timeline;
@@ -211,7 +211,7 @@ Among admissible offers, the protocol may evaluate:
 - reputation;
 - quality of evidence plan;
 - clarity of deliverables;
-- ability to detect fraud, non-compliance, or weak evidence.
+- ability to detect fraud, non-compliance, or weak fulfillment/control evidence.
 
 ## Risk-adjusted selection model
 
@@ -345,7 +345,7 @@ Final rule:
 
 Supplemental rule:
 
-> Control subprojects may include one secondary fiscalization or fiscalization-audit role and distinct additional evidence work, but they must not become unlimited control overfunding.
+> Control subprojects may include one secondary fiscalization or fiscalization-audit role and distinct additional fulfillment/control evidence work, but they must not become unlimited control overfunding.
 
 ## Documents that should eventually reflect this resolution
 
@@ -367,7 +367,7 @@ This resolution should inform future updates to:
 - Low-risk projects may not justify expensive selection procedures.
 - High-risk projects may need country-specific professional standards.
 - Secondary fiscalization may be used to pressure or harass projects if not capped.
-- Duplicate evidence work may waste control funding.
+- Duplicate fulfillment/control evidence work may waste control funding.
 
 ## Mitigations
 
@@ -379,7 +379,7 @@ This resolution should inform future updates to:
 - Record selection as audit event.
 - Allow citizen observations on conflicts.
 - Cap ordinary supplemental fiscalization at one secondary fiscalizer or fiscalization auditor.
-- Require distinct evidence value before accepting supplemental evidence work.
+- Require distinct fulfillment/control evidence value before accepting supplemental fulfillment/control evidence work.
 - Route blocking effects through formal review paths rather than automatic secondary-fiscalizer veto.
 
 ## Design rule

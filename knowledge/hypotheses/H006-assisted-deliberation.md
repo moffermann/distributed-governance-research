@@ -18,7 +18,7 @@ Before a person votes, assigns resources, or supports a project, the system shou
 - risks;
 - affected groups;
 - alternative proposals;
-- evidence quality;
+- contextualized evidence quality;
 - historical context;
 - expert analysis;
 - dissenting views.
