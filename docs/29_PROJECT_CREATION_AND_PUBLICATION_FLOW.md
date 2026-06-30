@@ -53,11 +53,12 @@ Important distinction:
 7. Define milestones
 8. Define metrics and evidence
 9. Define fiscalization required
-10. Declare risks and antivalues
-11. Assisted validation by rules and AI
-12. Citizen preview
-13. Publication as open project
-14. Management of open project
+10. Define threshold policy
+11. Declare risks and antivalues
+12. Assisted validation by rules and AI
+13. Citizen preview
+14. Publication as open project
+15. Management of open project
 ```
 
 ## 1. Create idea
@@ -449,7 +450,50 @@ Rule:
 
 Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-## 10. Declare risks and antivalues
+## 10. Define threshold policy
+
+The system should determine and expose the project's applicable `Threshold Policy`.
+
+The policy explains which conditions must be completed before publication, execution-ready status, disbursement, or closure.
+
+Possible threshold dimensions:
+
+- execution funding;
+- beneficiary or attendance commitments;
+- fiscalization and control package;
+- evidence producer commitments;
+- technical validation;
+- permits or documents;
+- common-good impact declaration;
+- related-party safeguards;
+- tutored-scope review where the operating mode requires it;
+- absence or resolution of blocking complaints.
+
+Example:
+
+```text
+Threshold policy:
+Medium public sports infrastructure.
+
+Source:
+Current protocol + tutored sports operating mode.
+
+Conditions:
+Funding target.
+Accepted executor.
+Permit documentation.
+Independent control package.
+No unresolved blocking complaint.
+Tutored duplication review if configured.
+```
+
+The creator may see why thresholds apply, but cannot silently remove mandatory thresholds. If a threshold is country-specific or operating-mode-specific, the policy should identify that source.
+
+Rule:
+
+> Thresholds must be proportional, visible, and auditable before citizens are asked to fund or follow the project.
+
+## 11. Declare risks and antivalues
 
 The system should explicitly ask:
 
@@ -486,7 +530,7 @@ Rule:
 
 Where relevant, the project must declare common-good impact through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+.
 
-## 11. Assisted validation by rules and AI
+## 12. Assisted validation by rules and AI
 
 Before publication, the system validates the project.
 
@@ -504,6 +548,7 @@ Validation dimensions:
 - role responsibility;
 - disbursement milestone plan;
 - common-good impact declaration where relevant;
+- threshold policy completeness;
 - duplicate or overlapping project detection;
 - operating mode rules.
 
@@ -529,9 +574,9 @@ Requires adjustments:
 
 AI helps identify issues, but protocol rules define mandatory requirements.
 
-Projects with unresolved critical failures in their disbursement milestone plan cannot be published for execution funding.
+Projects with unresolved critical failures in their disbursement milestone plan or threshold policy cannot be published for execution funding.
 
-## 12. Citizen preview
+## 13. Citizen preview
 
 Before publication, the creator sees how the project will appear to citizens.
 
@@ -556,11 +601,14 @@ $0 of $12.000.000
 Needs:
 🛡 1 fiscalizer
 📎 4 evidence producers
+
+Threshold policy:
+Medium public sports project
 ```
 
 This forces the creator to see the project from the citizen perspective.
 
-## 13. Publication as open project
+## 14. Publication as open project
 
 Once minimum requirements are complete, the project can be published as:
 
@@ -586,7 +634,7 @@ Rule:
 
 > Publishing opens the project for closure conditions. It does not authorize execution by itself.
 
-## 14. Management of open project
+## 15. Management of open project
 
 After publication, the executor or responsible project actor sees an open project management panel.
 

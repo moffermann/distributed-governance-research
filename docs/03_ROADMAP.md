@@ -21,6 +21,7 @@ C001-C025 have been propagated into the main core documents, contradiction check
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public institutions remain excluded from internal project participation, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority.
+H027 is aligned: proportional project thresholds are represented through visible Threshold Policies connected to project type, public function, operating mode, protocol rules, and country implementation where applicable; citizens see simple missing conditions, while the audit layer preserves the policy source and rationale.
 H028 is aligned: related-party status does not automatically invalidate a project, but it must be declared, classified, and handled proportionally through warnings, safeguards, independent control, reformulation, blocking, rejection, or responsibility review depending on severity and disclosure.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
@@ -104,7 +105,9 @@ The thirty-fourth residual cleanup aligned H029 with C014 and C024: protected id
 
 The thirty-fifth residual cleanup aligned H028 with the v0 control, auditability, role, and project-object model: related-party conflicts are declared and classified proportionally, ordinary declared proximity does not automatically invalidate a project, relevant conflicts require public-benefit safeguards and independent control, and severe or hidden conflicts may trigger reformulation, actor exclusion, disbursement blocking, rejection, complaint review, or role-specific Responsibility Events.
 
-Next review candidate: H027 proportional project thresholds.
+The thirty-sixth residual cleanup aligned H027 with the v0 parallel closure, project-object, citizen-interface, audit, and diagram model: proportional project thresholds are now represented as visible Threshold Policies that define which conditions apply before publication, execution-ready status, disbursement, closure, review, or reformulation. The policy may depend on project type, public function, operating mode, risk, territory, technical complexity, common-good impact, related-party safeguards, tutored-scope review, and protocol or country implementation rules. The citizen surface shows what is missing; the audit layer shows why the condition applies and who or what rule defined it.
+
+Next review candidate: H026 support versus financing signals.
 
 Approximate current maturity:
 

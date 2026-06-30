@@ -232,6 +232,7 @@ A project declares:
 - currency;
 - funding deadline;
 - reformulation policy or policy reference;
+- threshold policy or policy reference;
 - amount currently financed;
 - number of funders;
 - funding status;
@@ -248,6 +249,40 @@ After funding → no ordinary free withdrawal.
 ```
 
 Funding is a commitment until project closure. If a project fails, citizen protection comes through traceability, fiscalization, complaints, guarantees, recovery, returned balances, reassignment rules, and reputation consequences.
+
+### 5a. Threshold policy and execution readiness
+
+A project should declare or reference the `Threshold Policy` that defines what it must complete to become execution-ready.
+
+Thresholds may include:
+
+- execution funding;
+- beneficiary or attendance commitments;
+- fiscalization and control package closure;
+- evidence producer commitments;
+- technical validation;
+- permits or required documents;
+- common-good impact declaration;
+- related-party safeguards;
+- tutored-scope review where the operating mode requires it;
+- absence or resolution of blocking complaints.
+
+The concrete thresholds depend on project type, public function, risk, complexity, territory, operating mode, and protocol rules. They should not be one universal formula for every project.
+
+Example:
+
+```text
+Small cultural workshop:
+  funding + expected attendees + basic evidence plan.
+
+Macul multi-court facility:
+  funding + executor responsibility + permit documents + control package + related-party safeguards if applicable + tutored duplication review if configured.
+
+Strategic defense asset:
+  funding + competent defense compatibility + external institutional control.
+```
+
+Citizen-facing displays should show only the applicable conditions and what is missing. The technical layer should show the policy source and audit trail.
 
 ### 6. Milestones, disbursement, and guarantees
 

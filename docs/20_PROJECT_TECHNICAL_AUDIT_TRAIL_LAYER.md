@@ -324,6 +324,8 @@ Examples:
 
 - why project was marked open;
 - why project became execution-ready;
+- which threshold policy applied;
+- why a threshold condition applied or did not apply;
 - why a condition blocked execution;
 - why a funding deadline triggered reformulation;
 - why evidence was accepted or rejected;
@@ -331,6 +333,17 @@ Examples:
 - which protocol version applied.
 
 Each important decision should reference the applicable rule or protocol version.
+
+For threshold policy decisions, Layer 5 should preserve:
+
+- project type or classification used;
+- public function;
+- operating mode;
+- risk or complexity basis;
+- protocol, authority, or country-implementation source;
+- threshold values applied;
+- citizen-facing explanation;
+- changes to the threshold policy after publication, if any.
 
 ## 14. Governance resolutions and review timeouts
 

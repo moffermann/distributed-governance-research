@@ -119,6 +119,7 @@ A project must include:
 - funding target;
 - funding deadline;
 - reformulation policy or policy reference;
+- threshold policy or policy reference;
 - closure conditions;
 - lifecycle state;
 - audit trail.
@@ -126,6 +127,10 @@ A project must include:
 Rule:
 
 > Public executorless demand is an Idea, not an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
+
+Rule:
+
+> Each project should expose the applicable threshold policy that explains which proportional conditions must be satisfied for publication, execution-ready status, disbursement, or closure.
 
 ### 4. Value thesis, value icons, and metrics
 

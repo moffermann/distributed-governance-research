@@ -188,6 +188,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H027-proportional-project-thresholds|H027 — Proportional Project Thresholds]]
 - [[hypotheses/H028-related-party-conflict-of-interest|H028 — Related-Party Conflict of Interest]]
 - [[hypotheses/H029-verified-identity-contextual-privacy|H029 — Verified Identity and Contextual Privacy]]
 - [[hypotheses/H030-layered-role-based-reputation|H030 — Layered Role-Based Reputation]]

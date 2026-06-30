@@ -128,6 +128,22 @@ Possible conditions:
 
 Each condition is clickable.
 
+The dashboard should also expose the applicable threshold policy in simple language.
+
+Example:
+
+```text
+Threshold policy:
+Medium public sports project.
+
+Why these conditions apply:
+This project builds a physical facility, uses public funding, needs public access rules, and requires independent control.
+
+Full policy and audit trail available.
+```
+
+The citizen should see what is missing first. The deeper view can explain the policy source, operating mode, protocol version, and tutored review rule if applicable.
+
 ## 6. Main actions
 
 Actions should be direct and contextual.

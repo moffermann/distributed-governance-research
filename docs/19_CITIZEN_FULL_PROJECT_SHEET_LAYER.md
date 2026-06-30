@@ -217,6 +217,21 @@ $7,560,000 of $12,000,000
 
 > A project does not advance by rigid stages. It becomes execution-ready when its applicable closure conditions are complete.
 
+The sheet should show the threshold policy that explains why those conditions apply.
+
+Example:
+
+```text
+Threshold policy:
+Medium public sports infrastructure.
+
+Source:
+Current protocol + tutored sports operating mode.
+
+Applies because:
+The project builds a public facility, may need permits, and requires independent fiscalization before execution.
+```
+
 ## 7. Execution plan and milestones
 
 Show the plan in citizen language.

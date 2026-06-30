@@ -105,6 +105,8 @@ If the project never completes its closure conditions within the allowed time, t
 
 Closure conditions are the minimum requirements that must be complete before the project can move from Open to Execution-ready.
 
+They should come from the project's applicable `Threshold Policy`, not from one universal checklist applied to every project.
+
 Possible closure conditions include:
 
 - responsible executor accepted;
@@ -130,6 +132,21 @@ Conditions depend on:
 - territory;
 - technical complexity;
 - protocol rules.
+
+The policy source should be visible:
+
+```text
+Threshold policy:
+Medium public sports infrastructure.
+
+Source:
+Current protocol + tutored sports operating mode.
+
+Applies because:
+The project builds physical infrastructure, uses public funding, affects public access, and may overlap with existing sports projects.
+```
+
+Concrete threshold values may be configured by protocol, operating mode, public-function rule, or country implementation. In tutored mode, the administrator or tutored authority may configure review thresholds such as required documents, duplication checks, review windows, or compatibility checks. In non-tutored or open modes, the competent protocol or governance mechanism defines the applicable strategy. The application records and enforces the visible policy; it does not invent hidden thresholds.
 
 ## State transition
 
@@ -221,6 +238,9 @@ Faltan $4.440.000
 🚩 Denuncias
 0 bloqueantes
 
+Threshold policy:
+Medium public sports project
+
 Actions:
 [Financiar]
 [Ofrecerme como fiscalizador]
@@ -265,7 +285,7 @@ Each signal is both information and an entry point:
 
 ## Principle
 
-> Project openness means that a project is gathering the conditions required for execution. The project becomes execution-ready only when all applicable closure conditions are complete.
+> Project openness means that a project is gathering the conditions required for execution. The project becomes execution-ready only when all applicable closure conditions from its visible threshold policy are complete.
 
 ## Status
 

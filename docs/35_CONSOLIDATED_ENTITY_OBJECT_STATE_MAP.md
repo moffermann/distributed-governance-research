@@ -210,6 +210,7 @@ Key attributes:
 - funding target;
 - funding deadline;
 - reformulation policy or policy reference;
+- threshold policy or policy reference;
 - closure conditions;
 - risks;
 - antivalues;
@@ -233,8 +234,61 @@ Project has many FundingCommitments
 Project has many Complaints
 Project has many Comments
 Project has many RelatedPartyConflictReviews
+Project has ThresholdPolicy or threshold policy reference
 Project has many AuditEvents
 Project has one current State
+```
+
+## Threshold Policy
+
+A visible policy object or policy reference that defines which proportional thresholds apply to a project.
+
+Attributes:
+
+- project or project category;
+- public function;
+- operating mode;
+- source: protocol, project type rule, public-function rule, tutored authority configuration, country implementation, or other authorized source;
+- threshold dimensions applied;
+- threshold values where concrete values exist;
+- conditions affected: publication, funding, execution-ready status, disbursement, closure, reformulation, pause, or review;
+- rationale;
+- citizen-facing explanation;
+- technical audit reference;
+- effective date or version;
+- change history;
+- status.
+
+Possible threshold dimensions:
+
+- execution funding;
+- beneficiary or attendance commitments;
+- social support where applicable;
+- technical validation;
+- fiscalization and control package;
+- evidence producer commitments;
+- permits or required documents;
+- common-good impact declaration;
+- related-party safeguards;
+- affected-party visibility;
+- tutored-scope review;
+- complaint or blocking-condition clearance.
+
+Rule:
+
+> Thresholds are proportional project conditions, not a universal approval formula. The citizen surface shows what is missing; the audit layer shows why the condition applies and who or what rule defined it.
+
+Example:
+
+```text
+Small cultural workshop:
+Funding, expected attendees, basic evidence plan, no blocking complaint.
+
+Macul multi-court facility:
+Funding, accepted executor, permit documents, control package, public access rules, related-party safeguards if applicable, and tutored duplication review if configured.
+
+Strategic defense asset:
+Funding, strategic compatibility, competent institutional control, and limited distributed operational governance.
 ```
 
 ## Related-Party Conflict Review
