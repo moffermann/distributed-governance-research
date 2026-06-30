@@ -453,6 +453,20 @@ A complaint is a formal review trigger.
 
 It may affect status, milestones, disbursement, or reputation depending on severity and review.
 
+The ordinary complaint-review trigger is governed by a simple visible policy:
+
+```text
+required_support_count = N
+support_window_days = X
+quote_deadline_days = Y
+```
+
+After minimum structural validation, the complaint is immediately sent to the primary fiscalizer or competent reviewer for a quote. During the support window, citizens may support the complaint and reserve conditional review funding. Reserved funding totals should not be visible to the fiscalizer before the quote is submitted. If the complaint reaches the required support count within the support window and reserved funding reaches the quoted review cost, it proceeds to admissibility review.
+
+Complaint objections are counter-signals and counterevidence, not numeric vetoes. They do not reduce support count or automatically close a complaint.
+
+For legally regulated projects, platform review can create public traceability, a fiscalizer report, an evidence index, or a referral package. It does not replace a court, regulator, or competent authority for operational suspension, permit revocation, legal sanction, or construction halt.
+
 ### Delegation
 
 Delegation is scoped authorization to another actor.

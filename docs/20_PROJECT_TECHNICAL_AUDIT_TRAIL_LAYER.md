@@ -239,10 +239,20 @@ Include the complete trace of complaints and reviews:
 - complainant role;
 - issue type;
 - evidence attached;
+- complaint review policy and version;
+- required support count;
+- support window start and end;
+- support threshold result;
+- quote requested timestamp;
+- quote deadline;
+- fiscalizer or reviewer quote, scope, deliverables, cost, and conflict declaration;
+- reserved review funding visibility rule;
+- reserved funding activation or release;
 - project effect;
 - whether it was blocking;
 - responses;
 - review steps;
+- external authority or court referral where applicable;
 - resolution;
 - sanctions or corrections if applicable;
 - reopening or appeal history.

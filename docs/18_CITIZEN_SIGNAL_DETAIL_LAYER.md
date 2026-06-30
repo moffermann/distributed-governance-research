@@ -442,23 +442,34 @@ Puedes denunciar:
 If there are complaints:
 
 ```text
-Denuncias
+Complaints
 
-Abiertas:
+Open:
 2
 
-Resueltas:
+Resolved:
 1
 
-Bloqueantes:
+Blocking:
 1
 
-Estado del proyecto:
-Observado hasta resolver denuncia bloqueante.
+Pending quote:
+1
 
-[Ver denuncias]
-[Presentar denuncia]
+Support window:
+100 supports required within 30 days
+
+Reserved review funding:
+Activates after fiscalizer quote and support threshold
+
+Project status:
+Observed until the blocking complaint is resolved.
+
+[View complaints]
+[File complaint]
 ```
+
+Complaint detail should show the applicable complaint policy, support window, quote status, reserved review funding status, and whether any legal or regulated effect requires referral to a court, regulator, or competent authority.
 
 ## 10. Missing condition detail
 

@@ -358,6 +358,22 @@ Reformulation limits and timing are configurable by the active project, public-f
 
 Complaints are formal review triggers. Not every complaint blocks a project. Blocking status must be explicit, justified, and reviewable.
 
+Core v0 uses a simplified complaint-review policy:
+
+```text
+required_support_count = N
+support_window_days = X
+quote_deadline_days = Y
+```
+
+The administrator configures the required support count, support window, quote deadline, and fallback rule. Complaint objections are counter-signals and counterevidence; they do not reduce support count and do not veto review.
+
+After minimum structural validation, a complaint is immediately sent to the primary fiscalizer or competent reviewer for a review quote. Citizens may support the complaint and reserve conditional review funding while the quote is pending. The fiscalizer should not see reserved funding totals before submitting the quote.
+
+Review starts only after the complaint reaches the configured support threshold within the support window, the fiscalizer quote is published, and reserved or available review funding reaches the quoted review cost.
+
+For legally regulated projects, such as environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform does not replace courts, regulators, or competent authorities. Platform review may create reports, evidence indexes, referral packages, and public traceability, but operational suspension, permit revocation, legal sanction, or construction halt requires a competent authority or judicial decision where applicable.
+
 ### 18. Delegation model
 
 Core v0 includes simple scoped delegation with explicit scope, delegate acceptance, concentration visibility, reporting, and immediate revocation for future actions.

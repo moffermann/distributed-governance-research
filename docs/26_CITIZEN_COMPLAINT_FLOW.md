@@ -70,9 +70,13 @@ The category helps routing, but the citizen should not need legal or technical e
 6. Citizen chooses visible identity or requests protected identity if justified
 7. Citizen reviews possible consequences
 8. Complaint is submitted
-9. System assigns status and review path
-10. Project actors may respond
-11. Resolution is published and traceable
+9. System immediately sends complaint to fiscalizer for quote
+10. Complaint opens support window
+11. Citizens may support and reserve conditional review funding
+12. Fiscalizer publishes quote without seeing reserved funding totals
+13. If support threshold and quoted review funding are reached, fiscalizer reviews admissibility
+14. Project actors may respond where review proceeds
+15. Resolution or referral is published and traceable
 ```
 
 ## 1. Explanation
@@ -141,16 +145,96 @@ Tu denuncia puede:
 - afectar reputación si se demuestra mala fe reiterada.
 ```
 
-## 4. Statuses
+The submission screen should also show the active complaint policy.
+
+Example:
+
+```text
+Complaint policy:
+100 supports required within 30 days.
+
+Fiscalizer quote:
+Requested immediately after submission.
+Quote deadline: 7 days.
+
+Funding:
+You may reserve a conditional contribution now.
+The fiscalizer will not see reserved funding before quoting.
+
+Project effect:
+No automatic blocking effect.
+```
+
+## 4. Support window, quote, and reserved funding
+
+After minimum structural validation, the system should immediately send the complaint to the primary fiscalizer or competent reviewer for quote.
+
+At the same time, the complaint enters a support window.
+
+The administrator-configured values are:
+
+```text
+required_support_count = N
+support_window_days = X
+quote_deadline_days = Y
+```
+
+During the support window, citizens may:
+
+- support the complaint;
+- add evidence;
+- follow the complaint;
+- reserve a conditional review contribution;
+- object to the complaint or add counterevidence.
+
+Complaint objections are not a numeric veto. They do not reduce the support count and do not prevent review if the support, quote, funding, and admission requirements are met. They are counter-signals and counterevidence for the fiscalizer or reviewer.
+
+Before the fiscalizer quote is published, reserved contribution totals should not be visible to the fiscalizer.
+
+Citizen-facing message:
+
+```text
+Your support and reserved contribution have been recorded.
+
+They will activate only if:
+- the fiscalizer publishes a review quote;
+- this complaint reaches 100 supports within 30 days;
+- enough reserved funding is gathered for the quoted review cost.
+
+Until then, no review is started and no project effect is triggered.
+```
+
+If the complaint does not reach the required support count within the support window, it closes as:
+
+```text
+Closed - support threshold not reached
+```
+
+This is not a finding that the complaint was false. The complaint remains traceable in history, and reserved contributions return or follow the applicable funding-return/default-allocation rule.
+
+If the fiscalizer does not quote within the configured deadline, the policy may:
+
+- notify a secondary fiscalizer;
+- request a quote from an eligible reviewer pool;
+- keep the complaint pending quote;
+- close the complaint as quote not received after the support window expires.
+
+## 5. Statuses
 
 Possible complaint statuses:
 
 ```text
 Submitted
-Pending initial review
+Pending quote
+Support window open
+Support threshold not reached
+Funding pending
+Ready for admissibility review
+In admissibility review
 Needs more information
 Sent to executor response
 Sent to fiscalizer review
+In external authority review
 Open
 Blocking
 Resolved
@@ -164,6 +248,9 @@ Citizen-facing language can be simpler:
 
 ```text
 Recibida
+Esperando cotización
+Juntando apoyos
+Juntando financiamiento
 En revisión
 Necesita más información
 Abierta
@@ -173,7 +260,7 @@ Rechazada
 Reabierta
 ```
 
-## 5. Blocking complaints
+## 6. Blocking complaints
 
 Some complaints may block execution, funding release, milestone approval, or project closure.
 
@@ -192,7 +279,11 @@ Rule:
 
 > Not every complaint blocks a project. Blocking status must be explicit, justified, and reviewable.
 
-## 6. Actor response
+For legally regulated projects, including environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform should not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights by itself.
+
+For those cases, the platform may fund review, create a fiscalizer report, prepare an evidence index, and generate a referral package. Operational suspension requires a court order, regulator order, or competent authority resolution.
+
+## 7. Actor response
 
 Relevant actors may be asked to respond.
 
@@ -208,7 +299,7 @@ Possible responders:
 
 Responses should be visible according to privacy rules.
 
-## 7. Resolution
+## 8. Resolution
 
 A resolution should include:
 
@@ -222,13 +313,13 @@ A resolution should include:
 - sanctions or reputation effects if any;
 - whether appeal or reopening is possible.
 
-## 8. Automatic following
+## 9. Automatic following
 
 Filing a complaint automatically adds the project to Following.
 
 The complainant should receive updates about status changes.
 
-## 9. Complaint traceability
+## 10. Complaint traceability
 
 Layer 3 should show complaint status in citizen language.
 
@@ -236,7 +327,20 @@ Layer 4 should summarize relevant complaints.
 
 Layer 5 should contain the full complaint and review trace, subject to privacy and safety rules.
 
-## 10. Protection against misuse
+The trace should include:
+
+- applicable complaint policy;
+- support threshold;
+- support window dates;
+- quote deadline;
+- fiscalizer quote and deliverables;
+- reserved funding status after quote publication;
+- support and objection counts as separate signals;
+- reviewer/fiscalizer admission result;
+- referral package where applicable;
+- authority or court order where legal effect occurs.
+
+## 11. Protection against misuse
 
 The system must allow complaints, including critical ones, without making them impossible for ordinary citizens.
 
@@ -262,6 +366,9 @@ The complaint flow should not:
 - hide complaint effects;
 - allow anonymous formal complaints;
 - block projects automatically without rule-based justification;
+- treat objections as a numeric veto against complaint review;
+- show reserved review funding totals to the fiscalizer before quote publication;
+- let the platform replace courts, regulators, or competent authorities for regulated project suspension;
 - expose sensitive complainant information without rules;
 - allow unresolved blocking complaints to disappear silently;
 - punish good-faith complaints just because they are rejected.

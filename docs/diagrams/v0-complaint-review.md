@@ -4,30 +4,46 @@
 
 Show complaints as scoped formal review objects, distinct from ordinary comments.
 
-Related resolutions: C004, C014, C024.
+Related resolutions: C004, C014, C024, H024.
 
 ```mermaid
 flowchart TD
     A[Verified actor files complaint] --> B[Complaint Submitted]
     B --> ID[Identity visibility and privacy classification]
-    ID --> C[Initial Admission Review]
-    C --> D{Needs more information?}
-    D -->|Yes| E[Request clarification]
-    E --> C
-    D -->|No| F{Admissible and scoped?}
+    ID --> MS{Minimum structure complete?}
+    MS -->|No| RF[Request missing scope or evidence]
+    RF --> MS
+    MS -->|Yes| Q[Send to fiscalizer for quote]
+    MS -->|Yes| SW[Open support window]
 
-    F -->|No| N[Rejected or redirected to comment]
-    F -->|Yes| PB{Potentially blocking?}
-    PB -->|No| G[Open non-blocking complaint]
-    PB -->|Yes| H[Blocking complaint]
+    Q --> QD{Quote within deadline?}
+    QD -->|No| QB[Apply quote fallback]
+    QB --> Q
+    QD -->|Yes| QC[Quote published]
 
-    G --> I[Executor, fiscalizer, or actor response]
-    H --> I
-    H --> J[Pause affected scope only]
+    SW --> SP[Citizens support complaint]
+    SW --> RC[Citizens reserve conditional review funding]
+    RC -. hidden before quote .-> Q
 
-    I --> K[Review evidence and responses]
-    K --> L{Resolution}
-    L -->|Founded| M[Correction, reformulation, pause, revocation, recovery, or responsibility event]
+    SP --> ST{Required supports reached in window?}
+    ST -->|No| CS[Closed - support threshold not reached]
+    ST -->|Yes| FC{Quoted cost funded?}
+    QC --> FC
+    FC -->|No| FP[Funding pending]
+    FP --> FC
+    FC -->|Yes| AR[Admissibility review]
+
+    AR --> AD{Admissible and scoped?}
+    AD -->|No| N[Rejected or redirected to comment or objection]
+    AD -->|Yes| ER[Executor, fiscalizer, or actor response]
+    ER --> RV[Review evidence and responses]
+    RV --> REG{Regulated legal effect needed?}
+    REG -->|Yes| REF[Referral package to competent authority or court]
+    REG -->|No| IMP[Protocol effect if allowed]
+
+    REF --> L{Resolution or authority order}
+    IMP --> L
+    L -->|Founded| M[Correction, mitigation, recovery, responsibility event, or authority action]
     L -->|Not supported| NS[Rejected as unsupported]
     L -->|Resolved| O[Resolved]
 
@@ -35,8 +51,9 @@ flowchart TD
     NS --> P
     O --> P
     N --> P
+    CS --> P
 ```
 
 ## Rule
 
-> Complaints must be easy to file, hard to ignore, and structured enough to review fairly. Blocking effects must be scoped to the affected object.
+> Complaints must be easy to file, hard to ignore, and structured enough to review fairly. Review requires the configured support threshold, fiscalizer quote, and funded review path. Regulated operational effects require the competent authority or court where applicable.

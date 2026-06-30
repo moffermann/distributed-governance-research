@@ -930,6 +930,16 @@ Attributes:
 - evidence attached;
 - visible identity mode;
 - protected identity request reference where applicable;
+- review policy reference;
+- required support count;
+- support window start and end;
+- active support count;
+- active objection count;
+- reserved review funding amount, hidden from fiscalizer before quote publication;
+- fiscalizer quote reference;
+- quoted review cost;
+- review funding status;
+- competent authority referral reference where applicable;
 - status;
 - blocking status;
 - resolution;
@@ -939,10 +949,16 @@ States:
 
 ```text
 Submitted
+Pending quote
+Support window open
+Support threshold not reached
+Funding pending
+Ready for admissibility review
 Pending initial review
 Needs more information
 Sent to executor response
 Sent to fiscalizer review
+In external authority review
 Open
 Blocking
 Resolved
@@ -951,6 +967,71 @@ Withdrawn
 Reopened
 Appealed
 ```
+
+Rules:
+
+- complaint objections are counter-signals and counterevidence, not numeric vetoes;
+- reaching the support threshold creates eligibility for funded review, not proof that the complaint is true;
+- review funding remains conditional until the fiscalizer quote is published and the support threshold is reached;
+- the fiscalizer should not see reserved review funding totals before submitting the quote;
+- regulated project suspension, permit revocation, legal sanction, or operational halt requires a court order, regulator order, or competent authority resolution where applicable.
+
+## Complaint Review Policy
+
+A public, versioned policy defining the ordinary complaint-review trigger.
+
+Attributes:
+
+- policy id;
+- scope: project type, public function, operating mode, territory, or risk category;
+- required support count;
+- support window days;
+- quote deadline days;
+- quote fallback rule;
+- reserved funding visibility rule;
+- citizen-facing explanation;
+- effective date or version;
+- audit references;
+- status.
+
+Rule:
+
+> The administrator configures the support count, support window, quote deadline, and fallback rule. Complaint objections do not reduce support count or veto review.
+
+## Complaint Review Quote
+
+A scoped quote for reviewing a complaint.
+
+Attributes:
+
+- complaint;
+- fiscalizer or competent reviewer;
+- scope of work;
+- method;
+- deliverables;
+- quoted cost;
+- timeline;
+- conflict declaration;
+- quote expiration;
+- expert support needed;
+- referral preparation needed;
+- status;
+- timestamp;
+
+States:
+
+```text
+Requested
+Submitted
+Accepted for funding
+Expired
+Rejected for conflict
+Replaced
+```
+
+Rule:
+
+> Fiscalizer-quoted review cost is the default cost policy. The quote must be public after submission, scoped, time-limited, conflict-declared, and tied to deliverables.
 
 ## Comment
 

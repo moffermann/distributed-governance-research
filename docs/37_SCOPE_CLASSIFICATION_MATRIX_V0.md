@@ -162,6 +162,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Complaint as fiscalization trigger `H024` | Core v0 with country/authority boundary | Needed to make complaints reviewable through support windows, fiscalizer quotes, reserved review funding, and admissibility review, while preventing platform review from replacing courts, regulators, or competent authorities in legally regulated projects. |
 | Civic tax wallet and distributed allocation `H025` | Core v0 with country/institution configuration | Needed to separate tax collection from allocation, define non-withdrawable public allocation rights, and expose configurable citizen amount formulas without importing raw sensitive tax data into the platform. |
 | Support versus financing signals `H026` | Core v0 | Needed to separate financial feasibility, social support, justified objection, and formal complaint signals. |
 | Proportional project thresholds `H027` | Core v0 | Needed to define visible, proportional execution-readiness conditions without imposing one universal approval formula. |

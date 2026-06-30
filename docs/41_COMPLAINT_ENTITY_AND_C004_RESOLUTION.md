@@ -140,6 +140,26 @@ A citizen may support a complaint when they believe it deserves review.
 
 Support should not automatically make the complaint valid, blocking, or founded.
 
+Support may activate the ordinary review path only when the active `Complaint Review Policy` says so.
+
+Core v0 uses a simple configurable policy:
+
+```text
+required_support_count = N
+support_window_days = X
+quote_deadline_days = Y
+```
+
+The complaint must reach `N` active supports within `X` days to become eligible for funded review.
+
+If the support threshold is not reached within the support window, the complaint closes as:
+
+```text
+Closed - support threshold not reached
+```
+
+This does not mean the complaint was false. It means it did not reach the configured civic threshold for funded review.
+
 ## Objecting to a complaint
 
 A citizen may object to a complaint when they believe it is mistaken, exaggerated, duplicated, unsupported, or based on misunderstanding.
@@ -154,6 +174,67 @@ Objection reasons may include:
 - malicious or abusive framing;
 - not a project compliance issue;
 - other.
+
+Objections are not a numeric veto.
+
+They should be visible as civic counter-signals and may include counterevidence, but they should not:
+
+- reduce support count;
+- cancel reserved review funding;
+- prevent review after the support, quote, funding, and admission requirements are met;
+- close a complaint automatically.
+
+High objection volume may mark the complaint as contested and should be considered by the reviewer, but it does not replace review.
+
+## Complaint review policy
+
+The complaint review policy should be visible before a citizen submits a complaint.
+
+Minimum fields:
+
+```text
+policy id
+version
+required support count
+support window days
+quote deadline days
+quote fallback rule
+citizen-facing explanation
+audit reference
+```
+
+The administrator configures the support threshold, support window, and quote deadline. The administrator should not define open-ended complaint formulas.
+
+## Fiscalizer-quoted review cost
+
+The default complaint cost policy is `Fiscalizer-Quoted Review Cost`.
+
+After minimum structural validation, the system should immediately send the complaint to the primary fiscalizer or competent reviewer for quote.
+
+The quote should include:
+
+- scope of work;
+- method;
+- deliverables;
+- cost;
+- timeline;
+- conflict declaration;
+- quote expiration;
+- whether expert support or referral preparation is needed.
+
+The fiscalizer should not see reserved review funding totals before submitting the quote.
+
+Citizens may reserve conditional review contributions while the complaint gathers support and while the quote is pending.
+
+Reserved contributions activate only if:
+
+```text
+fiscalizer quote is published
+required support count is reached within the support window
+reserved funding reaches the quoted review cost
+```
+
+If the complaint closes for lack of support, quote expiration, or policy failure, reserved contributions return or follow the applicable funding-return/default-allocation rule.
 
 ## Complaint evidence module
 
@@ -271,6 +352,11 @@ Recommended states:
 ```text
 Draft
 Presented
+Pending quote
+Support window open
+Support threshold not reached
+Funding pending
+Ready for admissibility review
 Pending initial review
 Needs more information
 Rejected for lack of evidence
@@ -283,6 +369,7 @@ Confirmed blocking
 In executor response
 In fiscalizer review
 In external review
+Referred to competent authority
 Resolved founded
 Resolved unfounded
 Closed
@@ -385,6 +472,10 @@ Rule:
 
 > Blocking should be targeted to the affected object, not automatically total.
 
+Legal and regulated project boundary:
+
+> For legally regulated projects, including environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform should not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights by itself. It may fund review, create a fiscalizer report, prepare an evidence index, and generate a referral package. Operational suspension requires a court order, regulator order, or competent authority resolution.
+
 ## Citizen actions on a complaint
 
 A citizen may:
@@ -422,12 +513,16 @@ The complaint detail page should include:
 C004 is resolved as follows:
 
 ```text
-Complaint is a formal review entity with evidence, scope, support, objections, duplicate grouping, review, admission, and resolution.
+Complaint is a formal review entity with evidence, scope, support, objections, duplicate grouping, support-window policy, fiscalizer quote, reserved review funding, review, admission, and resolution.
 ```
 
 Final rule:
 
 > A complaint presented by a citizen does not automatically count as a real project complaint. It must provide evidence, identify affected scope, and pass admission by the competent reviewer. Rejected complaints remain traceable but do not damage the project. Admitted complaints may be non-blocking or blocking, and blocking must be scoped to the affected object.
+
+H024 alignment:
+
+> The ordinary review trigger is simplified to a visible support threshold, support window, fiscalizer quote deadline, and reserved review funding path. Complaint objections are counter-signals, not vetoes. Fiscalizer-quoted review cost is the default cost policy. For legally regulated projects, platform review cannot replace a court, regulator, or competent authority.
 
 ## Documents that should eventually reflect this resolution
 

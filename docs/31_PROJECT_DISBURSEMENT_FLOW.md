@@ -374,7 +374,7 @@ Milestone may continue, but remains observed.
 If complaint is blocking:
 
 ```text
-Disbursement pauses until the complaint is reviewed and resolved.
+Disbursement connected to the affected scope pauses only if the complaint has a valid blocking status under the applicable policy, protocol, contract, competent authority resolution, or court/regulator order where required.
 ```
 
 A blocking complaint should identify what it blocks:
@@ -389,6 +389,10 @@ A blocking complaint should identify what it blocks:
 ### Rule
 
 > Not every complaint blocks disbursement, but a blocking complaint must stop release of funds connected to the risk under review.
+
+H024 boundary:
+
+> A submitted complaint, support threshold, reserved review funding, or fiscalizer quote does not by itself block disbursement. For legally regulated projects, platform review does not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights. Those effects require a court order, regulator order, or competent authority resolution where applicable.
 
 ## 13. Remaining or unused funds
 

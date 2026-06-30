@@ -421,9 +421,29 @@ Open:
 Blocking:
 1
 
+Pending quote:
+1
+
+Funding review:
+1
+
 Status:
-Project observed until blocking complaint is resolved.
+One complaint is waiting for fiscalizer quote.
+One complaint is gathering reserved review funding.
+One complaint has blocking effect under the applicable rule.
 ```
+
+The full sheet should distinguish:
+
+- complaints gathering support within the support window;
+- complaints pending fiscalizer quote;
+- complaints gathering reserved review funding;
+- complaints under admissibility review;
+- admitted non-blocking complaints;
+- blocking complaints;
+- referred complaints where a competent authority or court is required.
+
+Support and objections to complaints should be shown separately. Objections do not reduce the support count required by the active complaint policy.
 
 ## 14. Change history
 
