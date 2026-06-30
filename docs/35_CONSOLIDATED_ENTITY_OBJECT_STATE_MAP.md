@@ -307,8 +307,14 @@ Attributes:
 - operating mode;
 - source: protocol, project type rule, public-function rule, tutored authority configuration, country implementation, or other authorized source;
 - threshold dimensions applied;
+- procedural burden profile: light, standard, reinforced, critical, or configured equivalent;
 - threshold values where concrete values exist;
 - conditions affected: publication, funding, execution-ready status, disbursement, closure, reformulation, pause, or review;
+- required-document checklist where applicable;
+- requirement discovery source: rule, AI assistance, authority, protocol, or reviewer;
+- document-completeness requirements where applicable;
+- document-acceptability reviewer or authority where applicable;
+- admissibility-review requirement where applicable;
 - rationale;
 - citizen-facing explanation;
 - technical audit reference;
@@ -325,6 +331,8 @@ Possible threshold dimensions:
 - fiscalization and control package;
 - evidence producer commitments;
 - permits or required documents;
+- procedural burden profile;
+- admissibility review;
 - common-good impact declaration;
 - related-party safeguards;
 - affected-party visibility;
@@ -334,6 +342,10 @@ Possible threshold dimensions:
 Rule:
 
 > Thresholds are proportional project conditions, not a universal approval formula. The citizen surface shows what is missing; the audit layer shows why the condition applies and who or what rule defined it.
+
+Document rule:
+
+> AI and rules may help discover required documents, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
 
 Example:
 
@@ -1057,12 +1069,12 @@ Attributes:
 
 A project-like control object associated with a parent project.
 
-It may define fiscalization, evidence-production, audit, or control work.
+It may define fiscalization, evidence-production, audit, admissibility review, or other control work.
 
 Attributes:
 
 - parent project;
-- control type: primary fiscalization, secondary fiscalization, fiscalization audit, evidence mission, technical review, extraordinary review;
+- control type: primary fiscalization, secondary fiscalization, fiscalization audit, evidence mission, technical review, project admissibility review, extraordinary review;
 - methodology;
 - deliverables;
 - control budget;
@@ -1081,6 +1093,10 @@ Rule:
 Supplemental rule:
 
 > The ordinary supplemental control cap is one secondary fiscalization or fiscalization-audit role plus non-duplicative evidence work. Additional control must not become unlimited fiscalizer or evidence-producer overfunding.
+
+Project admissibility review rule:
+
+> A project admissibility review checks whether required documents or technical assumptions are sufficient for a project to advance to the relevant state. In tutored mode this may be performed by the competent authority under C020; outside tutored authority review it may be modeled as an independent Control Subproject selected under C002/C013 rules.
 
 ## Fiscalizer Offer
 

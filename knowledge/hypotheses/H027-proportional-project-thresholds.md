@@ -23,6 +23,8 @@ This hypothesis is aligned with:
 
 H027 defines how applicable thresholds are selected and exposed. H035 defines budget-lane closure. C002 and C013 define control-package closure. H040 defines visible reformulation policy. H057 and H058 define operating-mode and tutored-scope effects where a public authority has configured review power.
 
+H020 defines the procedural depth of those thresholds through a `Procedural Burden Profile`. The same Threshold Policy may therefore say both what conditions apply and how demanding those conditions are.
+
 ## Rationale
 
 Different projects fail in different ways.
@@ -54,6 +56,7 @@ It may be attached to:
 The policy should record:
 
 - threshold types that apply;
+- procedural burden profile;
 - source of authority or protocol reference;
 - citizen-facing explanation;
 - technical audit reference;
@@ -79,6 +82,7 @@ Additional v0 threshold dimensions may include:
 
 - control-package threshold;
 - evidence threshold;
+- admissibility-review threshold;
 - disbursement milestone validation;
 - common-good impact declaration;
 - related-party safeguard threshold;
@@ -108,6 +112,13 @@ Basic evidence plan accepted.
 No blocking complaint.
 ```
 
+Procedural burden profile:
+
+```text
+Light.
+The system checks completeness and basic coherence. No independent admissibility review unless a special risk appears.
+```
+
 ### Macul sports facility
 
 May require:
@@ -128,6 +139,13 @@ Funding: complete.
 Fiscalization: one primary fiscalizer required.
 Documents: municipal permit pending.
 Tutored review: no duplicate public project detected / pending authority resolution.
+```
+
+Procedural burden profile:
+
+```text
+Reinforced.
+The system or AI may require land-use documents, public-access commitments, construction milestones, and control-package definition. If the sports function is in tutored mode, the competent authority reviews duplication or scope. If not tutored, an independent admissibility reviewer or certifier may be required by policy.
 ```
 
 ### Strategic defense asset
@@ -152,6 +170,33 @@ May require:
 - mitigation and guarantees.
 
 The affected-community threshold may require visibility, comment windows, evidence, mitigation, or complaint channels. It does not necessarily mean a universal veto unless the applicable legal or protocol rule says so.
+
+Procedural burden profile:
+
+```text
+Reinforced or critical depending on impact.
+The platform may require environmental or technical documents, but document acceptability belongs to the competent authority, independent reviewer, certifier, or protocol-defined review body where the active policy requires it.
+```
+
+## Requirement discovery and admissibility review
+
+Threshold Policies may include required-document discovery and admissibility review.
+
+The system and AI may help identify required documents, missing fields, possible project class, risk signals, and under-classification or over-classification concerns.
+
+Binding validation should follow the active policy:
+
+```text
+Completeness:
+  automatic or rule-based check that required fields and documents were submitted.
+
+Acceptability:
+  authority, independent reviewer, fiscalizer, certifier, or protocol-defined review body checks whether submitted documents are sufficient where the policy requires it.
+```
+
+In tutored mode, admissibility review may be performed by the competent authority and should produce a public governance decision or review trace under C020.
+
+In non-tutored or open mode, paid project admissibility review may be modeled as a `Control Subproject: Project Admissibility Review` under C002/C013 rules.
 
 ## Core distinction
 
@@ -204,6 +249,7 @@ H027 rejects:
 - treating popularity as a substitute for technical feasibility or lawful authority;
 - forcing heavy technical review on every small project;
 - hiding tutored-mode review thresholds from citizens;
+- allowing document requirements or admissibility review to become hidden discretionary gates;
 - allowing AI to silently decide binding thresholds without protocol or accountable authority.
 
 ## Principle

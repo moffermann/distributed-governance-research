@@ -29,6 +29,7 @@ H026 is aligned: project funding, social support, justified objection, and forma
 H027 is aligned: proportional project thresholds are represented through visible Threshold Policies connected to project type, public function, operating mode, protocol rules, and country implementation where applicable; citizens see simple missing conditions, while the audit layer preserves the policy source and rationale.
 H028 is aligned: related-party status does not automatically invalidate a project, but it must be declared, classified, and handled proportionally through warnings, safeguards, independent control, reformulation, blocking, rejection, or responsibility review depending on severity and disclosure.
 H021 is aligned: project variation control is a classification layer under C017 and H040, distinguishing minor corrections, operational variations, material value reformulations, and substitutive reformulations while keeping ordinary citizen labels simple and Layer 5 fully auditable.
+H020 is aligned: proportional procedural burden is the procedural-depth layer of Threshold Policies; AI may help discover required documents and missing conditions, but document acceptability is validated only by competent authorities, independent reviewers, certifiers, fiscalizers, or protocol-defined review bodies where the active policy requires it.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -125,7 +126,9 @@ The forty-first residual cleanup aligned H022 with the v0 project-object, projec
 
 The forty-second residual cleanup aligned H021 with C017, H040, and the v0 reformulation, lifecycle, disbursement, audit, entity-map, blueprint, scope, and diagram model: project variation control now classifies changes as minor corrections, operational variations, material value reformulations, or substitutive reformulations. Operational changes preserve the value thesis and follow the active Reformulation Policy; material value changes require a C017 Reformulation Proposal; substitutive changes become new projects or close, fail, or revoke the original under original terms. Citizen-facing labels remain simple, while Layer 5 preserves the full comparison against the accepted base design.
 
-Next review candidate: H020 proportional procedural burden.
+The forty-third residual cleanup aligned H020 with H027, C002, C013, C020, and C008: every project keeps the same conceptual structure, but its required documents, evidence, guarantees, fiscalization, admissibility review, and technical checks scale through a visible Procedural Burden Profile inside the Threshold Policy. AI may assist requirement discovery and completeness checks, but it does not certify document acceptability. Tutored review belongs to the competent authority and should produce public review traces under C020; non-tutored paid admissibility review may be modeled as a Control Subproject under C002/C013.
+
+Next review candidate: H019 distributed project modeling, execution, and fiscalization.
 
 Approximate current maturity:
 

@@ -132,7 +132,8 @@ Possible closure conditions include:
 - required moderation completed if operating mode requires it;
 - no unresolved blocking complaint;
 - required control budget completed;
-- required project documents complete.
+- required project documents complete;
+- admissibility review completed where the Threshold Policy requires document or technical acceptability review.
 
 Not every project requires every condition.
 
@@ -145,6 +146,7 @@ Conditions depend on:
 - risk or control requirements;
 - territory;
 - technical complexity;
+- procedural burden profile;
 - protocol rules.
 
 The policy source should be visible:
@@ -161,6 +163,8 @@ The project builds physical infrastructure, uses public funding, affects public 
 ```
 
 Concrete threshold values may be configured by protocol, operating mode, public-function rule, or country implementation. In tutored mode, the administrator or tutored authority may configure review thresholds such as required documents, duplication checks, review windows, or compatibility checks. In non-tutored or open modes, the competent protocol or governance mechanism defines the applicable strategy. The application records and enforces the visible policy; it does not invent hidden thresholds.
+
+The system and AI may help discover which documents appear necessary, but document acceptability is governed by the active policy. If a project requires independent admissibility review outside tutored authority review, that review may be modeled as a Control Subproject associated with the parent project.
 
 ## State transition
 

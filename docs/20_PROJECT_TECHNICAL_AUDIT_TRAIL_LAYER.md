@@ -483,8 +483,14 @@ For threshold policy decisions, Layer 5 should preserve:
 - public function;
 - operating mode;
 - risk or complexity basis;
+- procedural burden profile;
 - protocol, authority, or country-implementation source;
 - threshold values applied;
+- required-document checklist where applicable;
+- requirement discovery source, including AI assistance where material;
+- document completeness status;
+- document acceptability reviewer or authority where applicable;
+- admissibility review status where applicable;
 - citizen-facing explanation;
 - changes to the threshold policy after publication, if any.
 

@@ -156,7 +156,9 @@ Key rule:
 
 A project draft may exist internally while being prepared. Public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
 
-Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
+Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The policy should include or reference a `Procedural Burden Profile` so small low-risk projects do not receive the same procedural burden as infrastructure, regulated, irreversible, or high-antivalue projects. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
+
+AI and rules may help discover required documents and suggest a burden profile, but they should not certify document acceptability by themselves. Where the Threshold Policy requires project acceptability review, tutored mode routes review to the competent authority under C020, while non-tutored or open modes may use an independent `Control Subproject: Project Admissibility Review` under C002/C013 rules.
 
 Projects should expose funding, social support, justified objections, and formal complaints as separate signals. Support and justified objection are reversible civic signals. Funding is a financial commitment governed by funding rules. A complaint is a formal review object.
 
@@ -303,7 +305,7 @@ Fiscalization may be simple for low-risk projects and reinforced for larger, tec
 
 Fiscalization cost is a control cost and should be separated from executor-controlled execution spending.
 
-Fiscalization may be structured as a Control Subproject associated with the parent project. Control selection must be protocolized, risk-adjusted, conflict-checked, and auditable, not chosen by the executor or ordinary popularity.
+Fiscalization, evidence missions, technical review, and admissibility review may be structured as Control Subprojects associated with the parent project. Control selection must be protocolized, risk-adjusted, conflict-checked, and auditable, not chosen by the executor or ordinary popularity.
 
 After the minimum admissible control package is accepted, supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct additional evidence needs. It does not fund execution, expand project scope, create unlimited fiscalization, or block execution automatically.
 

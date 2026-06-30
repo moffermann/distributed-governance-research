@@ -483,6 +483,8 @@ The system should determine and expose the project's applicable `Threshold Polic
 
 The policy explains which conditions must be completed before publication, execution-ready status, disbursement, or closure.
 
+The policy should also expose the project's `Procedural Burden Profile` under H020. This defines how deep the required documents, evidence, guarantees, fiscalization, admissibility review, and technical checks must be.
+
 Possible threshold dimensions:
 
 - execution funding;
@@ -491,6 +493,8 @@ Possible threshold dimensions:
 - evidence producer commitments;
 - technical validation;
 - permits or documents;
+- procedural burden profile;
+- admissibility review where required;
 - common-good impact declaration;
 - related-party safeguards;
 - tutored-scope review where the operating mode requires it;
@@ -510,6 +514,7 @@ Funding target.
 Accepted executor.
 Permit documentation.
 Independent control package.
+Procedural burden profile: Reinforced.
 No unresolved blocking complaint.
 Tutored duplication review if configured.
 ```
@@ -519,6 +524,46 @@ The creator may see why thresholds apply, but cannot silently remove mandatory t
 Rule:
 
 > Thresholds must be proportional, visible, and auditable before citizens are asked to fund or follow the project.
+
+### Requirement discovery and admissibility review
+
+Before publication, the system may use rules and AI to discover required documents or review needs.
+
+Examples:
+
+```text
+Small workshop:
+expected attendance, simple budget, basic evidence plan.
+
+Macul multi-court facility:
+land-use document, permit or municipal compatibility where applicable, public-access commitment, control package, tutored duplication review if configured.
+
+Water-intensive data center:
+technical documents, water-use information, environmental documents where applicable, affected-party channels, competent-authority boundary.
+```
+
+The system may validate completeness:
+
+```text
+required document uploaded
+required field completed
+format accepted
+issuer declared
+date or expiration present
+project reference declared
+```
+
+But document acceptability follows the active Threshold Policy.
+
+In tutored mode, the competent authority may review eligibility, duplication, scope, compatibility, or required documents and should publish a Governance Resolution or review trace under C020 where the decision is material.
+
+In non-tutored or open mode, required expert or certifying review may be handled as:
+
+```text
+Control Subproject: Project Admissibility Review
+```
+
+This review is linked to the parent project, scoped, budgeted, conflict-checked, and selected under C002/C013 control rules. The executor should not privately choose or pay the reviewer that determines admissibility.
 
 ## 11. Declare risks and antivalues
 
@@ -577,6 +622,9 @@ Validation dimensions:
 - disbursement milestone plan;
 - common-good impact declaration where relevant;
 - threshold policy completeness;
+- procedural burden profile;
+- required-document completeness;
+- admissibility-review requirement where applicable;
 - duplicate or overlapping project detection;
 - operating mode rules.
 
@@ -601,6 +649,8 @@ Requires adjustments:
 ```
 
 AI helps identify issues, but protocol rules define mandatory requirements.
+
+AI may suggest documents, burden profile, review needs, and missing conditions. It should not certify that a permit, technical study, consultation process, environmental document, or legal authorization is substantively valid.
 
 Projects with unresolved critical failures in their disbursement milestone plan or threshold policy cannot be published for execution funding.
 

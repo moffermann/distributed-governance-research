@@ -86,6 +86,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C007/C020: public institutions are external authorities; material tutored decisions become Governance Resolutions or Review Timeout Resolutions.
 - C008/C016: AI assists validation; protocol rules and responsible actors remain accountable.
 - C009: citizen layers translate complexity progressively.
+- H020/H027: proportional burden and threshold policies define required documents, admissibility review, and visible missing conditions without turning AI into the binding authority.
 - H021/C010/C017/C018: project variation classification, value verification, reformulation, and reputation depend on verified value fulfillment, not labels alone.
 - C011/C023: delegation has priority over automatic allocation and concentration must be visible.
 - C014/C024/H029: comments use verified identity by default, with justified protected identity as a per-comment exception; the broader protected-identity mechanism may also apply to complaints, evidence, testimony, beneficiary confirmations, or other sensitive formal actions.

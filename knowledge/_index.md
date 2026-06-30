@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H020-proportional-procedural-burden|H020 — Proportional Procedural Burden]]
 - [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
 - [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
 - [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]
@@ -191,6 +192,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H020-proportional-procedural-burden|H020 — Proportional Procedural Burden]]
 - [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
 - [[hypotheses/H022-project-evidential-contract|H022 — Project Evidential Contract]]
 - [[hypotheses/H023-incentive-architecture-for-reliable-information|H023 — Incentive Architecture for Reliable Information]]

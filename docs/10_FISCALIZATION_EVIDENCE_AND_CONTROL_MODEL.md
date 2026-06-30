@@ -279,7 +279,7 @@ If new supplemental funding is not enough to fund a secondary fiscalizer but can
 
 ## Control subprojects
 
-Fiscalization, evidence missions, technical review, or other control work may be modeled as a Control Subproject associated with the parent project.
+Fiscalization, evidence missions, technical review, admissibility review, or other control work may be modeled as a Control Subproject associated with the parent project.
 
 A Control Subproject may contain:
 
@@ -295,6 +295,38 @@ A Control Subproject may contain:
 - reputation effects.
 
 Control subprojects fit the project architecture, but their selection rules must be stronger than ordinary project selection. They are selected through protocolized, risk-adjusted, conflict-checked, and auditable rules, not by the executor or by ordinary popularity.
+
+### Project admissibility review as control work
+
+Some projects require review of submitted documents or technical assumptions before publication, financing, execution-ready status, disbursement, or closure.
+
+This review should be handled as:
+
+```text
+Control Subproject: Project Admissibility Review
+```
+
+when it requires independent or paid work outside a tutored authority decision.
+
+An admissibility review may check whether required documents are sufficient for the next project state.
+
+Examples:
+
+```text
+Macul multi-court facility:
+review land-use document, municipal compatibility, public-access condition, duplication risk, and basic construction-feasibility assumptions.
+
+Water-intensive data center:
+review whether technical, water-use, environmental, or affected-party documents required by the policy have been submitted and are sufficient for the relevant platform state.
+```
+
+The system or AI may identify that these documents are needed, but it does not certify their substantive acceptability by itself.
+
+In tutored mode, the competent authority may perform the review under C020 and issue a public governance decision or review trace.
+
+In non-tutored or open mode, the admissibility reviewer should be selected through the same independence, eligibility, conflict, budget, deliverable, and auditability rules used for other control subprojects.
+
+The executor cannot privately select, directly pay, or remove the reviewer who determines project admissibility.
 
 ## Fiscalization offers
 

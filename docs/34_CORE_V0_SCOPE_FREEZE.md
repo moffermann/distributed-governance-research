@@ -135,6 +135,10 @@ Rule:
 
 Rule:
 
+> The applicable threshold policy should include or reference a procedural burden profile. AI may help discover required documents and missing conditions, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
+
+Rule:
+
 > Funding, support, justified objection, and formal complaint are separate project signals. Support and justified objection are reversible; funding and formal complaints follow their own rules.
 
 ### 4. Value thesis, value icons, and metrics
@@ -216,7 +220,7 @@ The executor should not freely appoint or directly control the fiscalizer that v
 
 Fiscalization is proportional to project size, complexity, risk, territory, and beneficiary vulnerability.
 
-Fiscalization may be modeled as a Control Subproject with budget, methodology, deliverables, evidence, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
+Fiscalization, evidence missions, technical review, and admissibility review may be modeled as Control Subprojects with budget, methodology, deliverables, evidence, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
 
 Core v0 also allows limited supplemental control funding after minimum control closure: at most one secondary fiscalizer or fiscalization auditor, plus distinct additional evidence needs. Supplemental control never funds execution, expands project scope, creates unlimited fiscalizers, or blocks execution automatically.
 
