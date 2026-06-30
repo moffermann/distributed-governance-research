@@ -207,6 +207,29 @@ Evidentiary status: not yet evaluated by fiscalizer.
 
 This avoids confusing publication with validation.
 
+## Relationship with information incentives
+
+C015 supports H023 by separating easy publication from later information reliability effects.
+
+When a user publishes evidence, the evidence item may later support, contradict, weaken, or correct a material project claim. The publication flow should record this possible relationship without asking the ordinary user to make a technical legal or evidentiary judgment.
+
+Example:
+
+```text
+User action:
+Publishes a blurred photo from a sports activity.
+
+Possible later review:
+The photo supports that the activity occurred, but does not prove that 80 children attended.
+
+Information effect:
+The related attendance claim may remain self-reported, become partially corroborated, or become disputed if other evidence contradicts it.
+```
+
+AI assistance in this document is privacy and publication assistance. It may also flag possible metadata issues, duplicates, or missing context, but it does not decide whether a claim is true, whether a discovery is rewardable, or whether an actor is responsible.
+
+Verified-discovery rewards or responsibility effects require later review under the evidence, fiscalization, complaint, reputation, and audit-trail rules.
+
 ## C015 final resolution
 
 C015 is resolved as follows:

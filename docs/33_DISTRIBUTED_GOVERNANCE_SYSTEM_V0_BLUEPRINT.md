@@ -232,12 +232,28 @@ Evidence must be linked to:
 - milestone;
 - metric;
 - value promise;
+- material information claim where applicable;
 - producer;
 - timestamp;
 - review status;
 - privacy classification.
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+Core v0 also treats material project statements as accountable claims. Claims that affect funding, execution readiness, disbursement, closure, risk, beneficiary trust, or reputation should be traceable to actor, role, evidence, contradiction, review status, correction history, and responsibility or verified-discovery effects where applicable.
+
+Citizen-facing reliability labels may remain simple:
+
+```text
+Self-reported
+Corroborated
+Disputed
+Contradicted
+Corrected
+Accepted
+```
+
+Verified discovery may create reputation credit or compensation only after review confirms that the discovered information was material and useful. AI may flag anomalies, duplicates, missing evidence, privacy risks, or contradictions, but it does not decide truth, fraud, responsibility, fund release, or legal consequences by itself.
 
 Evidence states:
 
@@ -383,6 +399,7 @@ Layer 5 contains complete traceability:
 - funding and custody trace;
 - milestone and disbursement trace;
 - evidence archive;
+- material information claim and verified-discovery trace;
 - fiscalization reports;
 - complaint trace;
 - relationship declarations;
@@ -651,6 +668,8 @@ Closure must show:
 - reputation effects.
 
 Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, evidence corrections, and responsibility events.
+
+Verified discovery may create positive role-specific reputation when a reviewed contribution materially improves information reliability, prevents loss, corrects false evidence, or reveals a hidden issue. Raw accusations, AI anomaly flags, and popularity signals do not create reputation effects by themselves.
 
 ## Reputation
 

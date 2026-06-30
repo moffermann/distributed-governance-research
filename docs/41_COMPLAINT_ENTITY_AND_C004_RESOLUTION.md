@@ -40,7 +40,7 @@ Rejected complaints should remain historically traceable, but they should not da
 
 ## Definition of Complaint
 
-A `Complaint` is a formal citizen or actor submission that alleges a possible problem in a project, control subproject, evidence item, fiscalization process, disbursement, actor relationship, or declared value commitment.
+A `Complaint` is a formal citizen or actor submission that alleges a possible problem in a project, control subproject, evidence item, material information claim, fiscalization process, disbursement, actor relationship, or declared value commitment.
 
 A complaint must include:
 
@@ -100,6 +100,7 @@ Possible affected scopes:
 - disbursement;
 - budget line;
 - evidence item;
+- material information claim;
 - beneficiary declaration;
 - fiscalizer;
 - executor;
@@ -309,6 +310,35 @@ Example:
 ```text
 A photo is real and relevant, but it may not prove non-compliance if it was taken before execution started.
 ```
+
+## Relationship with material information claims and verified discovery
+
+A complaint may challenge a material project claim.
+
+Examples:
+
+```text
+Claim challenged:
+The executor says 80 children attended.
+
+Complaint:
+Parents allege that the list includes children who never participated.
+
+Evidence:
+Beneficiary confirmations, attendance records, photos, and fiscalizer review.
+```
+
+The complaint does not prove the claim false by itself. It creates a structured review path where evidence, counterevidence, actor responses, fiscalizer review, and authority referral where applicable can be evaluated.
+
+If the review confirms that the complaint revealed a material hidden issue, false evidence, duplicate invoice, undeclared conflict, or manipulated metric, the result may create:
+
+- a correction requirement;
+- a disbursement or milestone effect where rules allow;
+- a role-specific Responsibility Event;
+- a verified discovery record;
+- a reputation or reward effect where the protocol allows.
+
+The system should reward verified discovery only after review confirms materiality and usefulness, not for raw accusations or unsupported suspicion.
 
 ## Duplicate and similar complaint module
 

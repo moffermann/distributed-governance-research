@@ -68,7 +68,7 @@ Layer 5 should include technical traceability for:
 4. Budget history
 5. Funding and custody trace
 6. Milestone and disbursement trace
-7. Evidence archive
+7. Evidence archive and material information claim trace
 8. Fiscalization reports
 9. Complaint and review trace
 10. Civic support and justified objection trace
@@ -211,6 +211,36 @@ For each evidence item:
 Evidence may include documents, photos, videos, field reports, attendance records, beneficiary confirmations, fiscalizer reports, or other accepted evidence types.
 
 Executor-submitted material should be distinguishable from corroborated non-executor evidence. Evidence records should show whether AI-assisted privacy review, redaction, metadata removal, or safer-publication tools were applied.
+
+Layer 5 should also preserve material information claim traceability.
+
+For each material claim, include where applicable:
+
+- claim text or structured value;
+- actor responsible for the claim;
+- actor role at the time;
+- affected project object: value thesis, metric, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- supporting evidence;
+- contradictory evidence, complaint, objection, or verified-discovery reference;
+- review status;
+- correction history;
+- AI anomaly or assistance reference, clearly labeled as assistance;
+- Responsibility Event or role-specific reputation effect where review creates one.
+
+Examples:
+
+```text
+Claim:
+80 children attended.
+
+Status:
+self-reported -> disputed -> corrected.
+
+Trace:
+executor claim, parent confirmations, evidence-producer record, fiscalizer review, correction event.
+```
+
+Verified discoveries should also be traceable. The audit trail should show the discovery, the actor and protected-identity status where relevant, the claim or omission discovered, evidence used, review result, materiality finding, reward or reputation effect, and any complaint, disbursement, correction, or responsibility event that followed.
 
 ## 8. Fiscalization reports
 

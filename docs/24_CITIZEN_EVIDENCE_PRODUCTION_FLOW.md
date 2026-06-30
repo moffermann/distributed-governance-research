@@ -157,6 +157,7 @@ The form should collect:
 - evidence type;
 - associated milestone;
 - associated metric;
+- material claim supported or contradicted, where known;
 - description;
 - date/time;
 - location where applicable;
@@ -205,6 +206,7 @@ Rejected
 Contradicted
 Linked to milestone
 Used in fiscalization report
+Used in verified discovery
 ```
 
 Example:
@@ -255,6 +257,23 @@ Layer 3 and Layer 5 should show whether evidence was disputed or contradicted.
 
 The citizen who submitted evidence may be notified and allowed to clarify.
 
+Evidence may support, contradict, correct, or weaken a material project claim.
+
+Examples:
+
+```text
+Claim:
+80 children attended the sports program.
+
+Evidence:
+Attendance photo, beneficiary confirmation, or parent testimony.
+
+Possible status:
+Supports claim / contradicts claim / insufficient to evaluate.
+```
+
+The system should avoid asking ordinary citizens to classify technical validity. The citizen may describe what the evidence shows; the fiscalizer or reviewer evaluates evidentiary value.
+
 ## 8. Reputation effects
 
 Evidence production can affect reputation.
@@ -274,6 +293,39 @@ Negative effects:
 - undisclosed relevant relationship;
 - refusal to clarify important issues.
 
+## 9. Verified discovery
+
+Some evidence may reveal a material information problem.
+
+Examples:
+
+- hidden conflict of interest;
+- duplicate invoice;
+- false beneficiary count;
+- manipulated attendance record;
+- undeclared externality;
+- project evidence contradicted by independent source.
+
+A verified discovery may generate:
+
+- reputation credit as evidence producer, complainant, observer, or fiscalizer;
+- compensation from a configured discovery reward, control budget, recovery rule, or other lawful reward source;
+- a complaint, correction, disbursement control, or responsibility review where applicable.
+
+Reward is not paid for accusation alone.
+
+Recommended rule:
+
+> A discovery becomes rewardable only after review confirms that it was relevant, material, and useful for correcting, preventing, or exposing a real information problem.
+
+Citizen-facing example:
+
+```text
+Your evidence was accepted as relevant.
+It helped correct a material project claim.
+Verified discovery status: under review.
+```
+
 ## What this flow should not do
 
 The evidence production flow should not:
@@ -285,12 +337,14 @@ The evidence production flow should not:
 - trap ordinary evidence publication behind human pre-approval;
 - accept vague material without context;
 - hide evidence status;
-- hide whether evidence was disputed.
-- fund duplicate evidence merely because supplemental control money is available.
+- hide whether evidence was disputed;
+- fund duplicate evidence merely because supplemental control money is available;
+- reward accusations before review confirms material discovery;
+- let AI labels replace fiscalizer or reviewer evaluation.
 
 ## Design rule
 
-> Evidence production creates traceable material for review; it does not by itself certify that the project complied.
+> Evidence production creates traceable material for review; it does not by itself certify that the project complied. Verified discovery can be rewarded only after review confirms materiality and usefulness.
 
 ## Status
 

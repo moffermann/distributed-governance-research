@@ -59,6 +59,8 @@ Otro
 
 The category helps routing, but the citizen should not need legal or technical expertise.
 
+A complaint may point to a material information claim, but the citizen should not need to model that claim technically. The interface can ask what statement, evidence, budget line, beneficiary count, risk, milestone, or relationship seems false, incomplete, or misleading.
+
 ## Flow steps
 
 ```text
@@ -305,6 +307,7 @@ A resolution should include:
 
 - complaint summary;
 - category;
+- material information claim or project object affected where applicable;
 - evidence considered;
 - actor responses;
 - conclusion;
@@ -340,6 +343,8 @@ The trace should include:
 - referral package where applicable;
 - authority or court order where legal effect occurs.
 
+If the complaint reveals a verified material information problem, Layer 5 should also link the complaint to the affected claim, correction, verified discovery, responsibility event, and any reward or reputation effect where the protocol allows.
+
 ## 11. Protection against misuse
 
 The system must allow complaints, including critical ones, without making them impossible for ordinary citizens.
@@ -372,10 +377,11 @@ The complaint flow should not:
 - expose sensitive complainant information without rules;
 - allow unresolved blocking complaints to disappear silently;
 - punish good-faith complaints just because they are rejected.
+- reward unsupported accusations as verified discoveries.
 
 ## Design rule
 
-> Complaints must be easy to file, hard to ignore, and structured enough to review fairly.
+> Complaints must be easy to file, hard to ignore, and structured enough to review fairly. They may reveal material information problems, but only review-confirmed discoveries create responsibility, reward, or reputation effects.
 
 ## Status
 

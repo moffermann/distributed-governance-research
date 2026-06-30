@@ -182,9 +182,13 @@ Projects must clarify who benefits and how beneficiaries are counted or confirme
 
 Evidence can be produced by executor, fiscalizer, evidence producer, beneficiary, funder, open observer, documents, or integrations.
 
-Evidence must be linked to project, milestone, metric, producer, timestamp, status, and privacy classification.
+Evidence must be linked to project, milestone, metric, material information claim where applicable, producer, timestamp, status, and privacy classification.
 
 Executor-produced evidence is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+Core v0 includes material information claims as the accountable statements that connect project promises, evidence, contradictions, review, correction, responsibility, and verified discovery. Ordinary citizens may see simple reliability labels, while Layer 5 preserves the full trace.
+
+Verified discovery may be rewarded or recognized only after review confirms materiality and usefulness. AI may assist with anomaly, duplicate, privacy, or contradiction detection, but it does not decide truth, fraud, responsibility, fund release, or legal consequences.
 
 ### 8. Fiscalization model
 
@@ -396,7 +400,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, budget, custody trace, milestones, disbursements, evidence, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, budget, custody trace, milestones, disbursements, evidence, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve material AI-assisted outputs, governance resolutions, review timeout resolutions, protocol-change records, discovery visibility reasons where material, and privacy-aware access/redaction traces.
 
@@ -424,7 +428,7 @@ Rule:
 
 > Reputation follows role responsibility. It is not one generic social score.
 
-Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, evidence corrections, and responsibility events by role.
+Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, evidence corrections, verified discoveries, and responsibility events by role.
 
 ### 23. Discovery visibility and customization
 

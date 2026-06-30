@@ -209,6 +209,29 @@ What interest do they have?
 Is it corroborated?
 ```
 
+## Relationship with information incentives
+
+Evidence is part of the system's incentive architecture for reliable information.
+
+Each evidence item should be able to support, contradict, weaken, or correct a material project claim.
+
+Examples:
+
+```text
+Claim:
+The project served 80 children.
+
+Evidence:
+Attendance record, beneficiary confirmation, fiscalizer observation, or parent testimony.
+
+Review status:
+supports / contradicts / insufficient / used in report.
+```
+
+If evidence reveals a verified material omission, falsehood, hidden conflict, or manipulation, the result may trigger correction, complaint review, disbursement control, responsibility event, reputation effect, or verified-discovery reward where the protocol allows.
+
+Reward should attach only to verified, material, review-confirmed discovery, not to accusations or raw submissions.
+
 ## C003 final resolution
 
 C003 is resolved as follows:
@@ -219,7 +242,7 @@ Create and use the Evidence Producer role. Do not treat executor-produced eviden
 
 Final rule:
 
-> Evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation.
+> Evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation. Evidence should connect to material claims and may create responsibility or verified-discovery effects only after review.
 
 ## Documents that should eventually reflect this resolution
 

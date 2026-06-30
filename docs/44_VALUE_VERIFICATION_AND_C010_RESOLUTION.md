@@ -54,6 +54,7 @@ A value verification package may include:
 - beneficiary confirmation;
 - fiscalizer observation;
 - evidence items;
+- material information claims and corrections;
 - risk and antivalue review;
 - contradiction or complaint signals;
 - final value assessment.
@@ -72,6 +73,39 @@ For every promised value:
 5. Antivalues and risks must be reviewed at closure.
 6. The fiscalizer may mark formal compliance as weak if the value is not reasonably demonstrated.
 ```
+
+## Relationship with material information claims
+
+H023 treats value statements, metric statements, beneficiary counts, milestone declarations, and risk-mitigation declarations as material information claims when they affect funding, disbursement, closure, trust, or reputation.
+
+Value verification should therefore preserve the relationship between:
+
+- promised value;
+- metric or qualitative commitment;
+- material claim;
+- supporting evidence;
+- contradictory evidence;
+- review status;
+- correction history;
+- responsibility or verified-discovery effect where applicable.
+
+Example:
+
+```text
+Promised value:
+Sports participation for children.
+
+Material claim:
+80 children regularly attended.
+
+Evidence:
+Attendance lists, parent confirmations, evidence-producer observations, photos, and fiscalizer review.
+
+Possible conclusion:
+Formal sessions occurred, but the beneficiary count was materially overstated.
+```
+
+This keeps the citizen-facing signal simple while making the technical value-verification package auditable.
 
 ## Example: sports value
 

@@ -717,6 +717,43 @@ Rule:
 
 > A project cannot receive execution funding while its disbursement milestone plan has unresolved critical validation failures.
 
+## Material Information Claim
+
+A statement that can affect funding, execution readiness, disbursement, closure, risk evaluation, beneficiary trust, or reputation.
+
+Attributes:
+
+- project;
+- claim text or structured value;
+- responsible actor;
+- responsible actor role;
+- affected object: value thesis, metric, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- supporting evidence references;
+- contradiction, justified objection, complaint, or review references;
+- AI anomaly reference where applicable;
+- current review status;
+- correction history;
+- responsibility event references;
+- verified discovery references;
+- audit trail.
+
+States:
+
+```text
+Self-reported
+Needs corroboration
+Corroborated
+Disputed
+Contradicted
+Corrected
+Accepted
+Withdrawn
+```
+
+Rule:
+
+> Material claims are not hidden technical trivia. They are the accountable statements that connect project promises, evidence, contradictions, review, responsibility, and verified discovery.
+
 ## Evidence Item
 
 A piece of material used to verify, contradict, or evaluate a project.
@@ -726,6 +763,7 @@ Attributes:
 - project;
 - milestone;
 - metric;
+- material claim supported or contradicted where known;
 - producer;
 - producer role;
 - type;
@@ -735,7 +773,11 @@ Attributes:
 - location metadata where allowed;
 - privacy classification;
 - review status;
-- contradiction status.
+- contradiction status;
+- independence or source-interest classification;
+- corroboration status;
+- verified discovery reference where applicable;
+- AI anomaly reference where applicable.
 
 Rule:
 
@@ -752,7 +794,47 @@ Observed
 Rejected
 Contradicted
 Linked to report
+Used in verified discovery
 ```
+
+## Verified Discovery
+
+A review-confirmed discovery of material hidden information, false evidence, KPI manipulation, undeclared conflict, material omission, or relevant contradiction.
+
+Attributes:
+
+- project;
+- discovering actor;
+- discovering actor role;
+- protected identity request reference where applicable;
+- target material claim or project object;
+- discovery description;
+- evidence references;
+- review process reference;
+- materiality finding;
+- usefulness finding;
+- reward source where applicable;
+- reputation effect where applicable;
+- related complaint, correction, disbursement, or responsibility event references;
+- timestamp;
+- audit trail.
+
+States:
+
+```text
+Submitted
+Under review
+Confirmed
+Rejected
+Duplicate
+Reward pending
+Rewarded
+Closed
+```
+
+Rule:
+
+> Discovery is rewardable only after review confirms materiality and usefulness. The system should not reward accusations, unsupported suspicion, or duplicate low-value reports.
 
 ## Fiscalization Requirement
 
@@ -1207,6 +1289,8 @@ Attributes:
 - event type;
 - outcome;
 - evidence;
+- responsibility event reference where applicable;
+- verified discovery reference where applicable;
 - timestamp;
 - weight or severity;
 - appeal/review status.

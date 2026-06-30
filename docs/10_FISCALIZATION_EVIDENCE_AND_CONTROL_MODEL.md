@@ -63,6 +63,103 @@ Evidence production strengthens fiscalization because the fiscalizer does not de
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
+## Information reliability incentives
+
+Evidence and fiscalization are also an incentive architecture for reliable information.
+
+Core v0 should not assume that interested actors will voluntarily publish damaging information. It should make material claims traceable, make concealment costly when proven, and make verified discovery valuable.
+
+Material project claims include statements that can affect funding, execution readiness, disbursement, closure, reputation, risk, or beneficiary trust.
+
+Examples:
+
+```text
+This milestone is complete.
+This beneficiary count is accurate.
+This supplier has no related-party conflict.
+This budget line was spent as declared.
+This risk was mitigated.
+This evidence proves attendance.
+```
+
+Each material claim should connect to:
+
+- actor responsible;
+- actor role;
+- affected project object;
+- supporting evidence;
+- contradiction or complaint where applicable;
+- review status;
+- responsibility event if a role obligation is breached.
+
+Citizen-facing labels may remain simple:
+
+```text
+Self-reported
+Corroborated
+Disputed
+Contradicted
+Corrected
+Accepted
+```
+
+The technical audit layer preserves the full claim and evidence trail.
+
+## Discovery incentives
+
+Actors who discover verified hidden information, false evidence, KPI manipulation, undeclared conflict, or material omission may receive reputational credit or compensation only after review confirms materiality and usefulness.
+
+Discovery rewards must not pay for accusations alone.
+
+Recommended rule:
+
+> Reward verified discovery, not suspicion. Penalize proven concealment, not mere error.
+
+Examples:
+
+```text
+Verified discovery:
+Citizen identifies duplicate invoice used in two milestones.
+
+Not rewardable by itself:
+Citizen says the executor is corrupt without evidence.
+```
+
+Verified discovery may trigger:
+
+- correction;
+- complaint review;
+- disbursement control;
+- guarantee or retention effect where rules allow;
+- role-specific Responsibility Event;
+- verified-discovery reputation credit;
+- reward from a configured fund where allowed.
+
+## AI anomaly assistance
+
+AI may help detect missing evidence, duplicate records, inconsistent dates, suspicious budget changes, privacy risks, or contradictions between claims and evidence.
+
+AI should not decide truth or responsibility by itself.
+
+Allowed:
+
+```text
+flag anomaly
+suggest related evidence
+summarize contradiction
+warn about weak claim
+detect possible duplicate file
+```
+
+Not allowed:
+
+```text
+declare fraud proven
+assign responsibility event by itself
+release or block funds by itself
+replace fiscalizer, regulator, court, or competent authority
+```
+
 ## 3. Responsible fiscalization
 
 The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, evidence obligations, guarantees, mitigation commitments, and fiscalization criteria.

@@ -65,6 +65,7 @@ A responsibility event should include:
 - actor role affected;
 - obligation or duty involved;
 - evidence supporting responsibility;
+- material information claim or verified discovery reference where applicable;
 - severity;
 - responsibility type;
 - reputational effect;
@@ -202,6 +203,8 @@ A responsibility event must be based on evidence.
 Possible evidence sources:
 
 - evidence producer record;
+- material information claim history;
+- verified discovery record;
 - fiscalizer review;
 - founded complaint;
 - technical register;
@@ -209,6 +212,30 @@ Possible evidence sources:
 - financial audit trail;
 - project closure report;
 - repeated pattern analysis.
+
+## Relationship with information claims
+
+H023 extends this responsibility model to material information reliability.
+
+False, hidden, incomplete, or misleading information should not automatically damage reputation when it is merely alleged. It may affect reputation only when a review connects a material claim, actor, role obligation, evidence, severity, and responsibility type.
+
+Examples:
+
+```text
+Executor responsibility:
+The executor declared that 80 children attended, but review confirms material beneficiary inflation.
+
+Evidence producer responsibility:
+An evidence producer submitted manipulated attendance records.
+
+Fiscalizer responsibility:
+The fiscalizer approved a milestone despite obvious contradictory evidence that should have been reviewed.
+
+Complainant or observer positive event:
+A verified actor found a duplicate invoice that materially improved project control.
+```
+
+Negative effects should use `Responsibility Event`. Positive effects may use a role-specific reputation record for verified discovery, where the discovery was material, useful, and confirmed by review.
 
 ## Relationship with project closure
 
@@ -267,4 +294,4 @@ This resolution should inform future updates to:
 
 ## Design rule
 
-> Reputation must follow responsibility, not blame by association.
+> Reputation must follow responsibility, not blame by association. Information reliability effects require traceable claims, evidence, review, severity, and role-specific responsibility or verified discovery.
