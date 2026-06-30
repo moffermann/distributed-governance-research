@@ -61,6 +61,8 @@ A value verification package may include:
 
 The exact package depends on the value type and project risk.
 
+The package defines evidence needs and source-role expectations. It should not preselect the independent evidence producers who later verify the project.
+
 ## Minimum v0 rule
 
 For every promised value:
@@ -111,7 +113,9 @@ This keeps the citizen-facing signal simple while making the technical value-ver
 
 H022 defines the ex ante Project Evidential Contract.
 
-The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, evidence, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
+The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, evidence needs, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
+
+Independent evidence producers may later offer evidence tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Evidence that satisfies accepted package needs has higher eligibility priority, while unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Example:
 

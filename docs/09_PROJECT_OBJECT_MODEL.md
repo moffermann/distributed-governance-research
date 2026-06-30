@@ -303,14 +303,23 @@ If the executor secretly uses a related construction supplier, the issue becomes
 
 ### 3. Value thesis
 
-The value thesis declares:
+The value thesis declares the public-value promise that citizens, beneficiaries, funders, and reviewers rely on.
+
+It should define:
 
 - value promised;
 - problem addressed;
 - intended beneficiaries;
 - why the project matters;
+- core value commitments or metrics;
+- evidence needs for each core commitment;
+- relevant source roles for evidence production or corroboration;
+- review method or actor where applicable;
+- disbursement, closure, reformulation, complaint, or reputation consequence where applicable;
 - what happens if the project is not performed;
 - relevant risks or tradeoffs.
+
+The value thesis is not merely descriptive. It is the project identity anchor for C017 reformulation, C018 value fulfillment, H022 evidence design, and C010 value verification.
 
 ### 4. KPIs
 
@@ -329,6 +338,8 @@ Each KPI should include:
 
 KPIs are not sufficient by themselves. Each promised value should be verified through a Value Verification Package that combines metrics, evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, and complaint/contradiction channels.
 
+Each core metric should map to an evidence need. The project may define the type, timing, source role, corroboration need, and consequence of missing evidence, but it should not preselect the independent evidence producers who will later verify the project.
+
 ### 4a. Project Evidential Contract
 
 A project should define a `Project Evidential Contract`.
@@ -342,12 +353,17 @@ The evidential contract connects:
 - budget lines where relevant;
 - risk and antivalue declarations;
 - evidence types;
+- evidence needs per value commitment;
 - evidence source roles;
 - corroboration requirements;
 - fiscalizer or reviewer responsibility;
 - disbursement, closure, complaint, and responsibility effects.
 
 The contract is not a universal centralized evidence code. It is project-specific, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
+
+The contract defines evidence needs, not preselected evidence producers. Evidence producers may later offer or commit to produce specific evidence tied to a metric, material claim, milestone, phase, risk, or antivalue.
+
+Evidence that satisfies a contract need has higher eligibility priority. Evidence outside the accepted contract may still be considered when a fiscalizer, reviewer, or protocol rule treats it as equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Example:
 

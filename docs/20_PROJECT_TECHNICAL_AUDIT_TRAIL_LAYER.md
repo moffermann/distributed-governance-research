@@ -204,7 +204,8 @@ For each metric:
 - validator results;
 - accepted alternative metrics;
 - measurement method;
-- evidence requirements;
+- evidence needs;
+- expected source roles or corroboration paths;
 - final status.
 
 This is especially important for preventing vague or moving targets.
@@ -219,9 +220,11 @@ Include:
 - value promises covered;
 - metrics or qualitative commitments covered;
 - material information claims covered;
-- evidence required;
+- evidence needs;
 - evidence source roles;
 - corroboration requirements;
+- evidence-producer offers or commitments linked to each need where applicable;
+- priority treatment for contract-matched, equivalent, unexpected, or supplemental evidence;
 - fiscalizer or reviewer role;
 - privacy or protected-identity rules where relevant;
 - disbursement, closure, complaint, correction, or responsibility effects;
@@ -331,6 +334,7 @@ For each evidence item:
 - location metadata where applicable;
 - associated milestone;
 - associated metric;
+- associated evidence need;
 - evidential contract requirement;
 - review status;
 - objections or contradictions;
@@ -349,7 +353,7 @@ For each material claim, include where applicable:
 - claim text or structured value;
 - actor responsible for the claim;
 - actor role at the time;
-- affected project object: value thesis, metric, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- affected project object: value thesis, metric, evidence need, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
 - supporting evidence;
 - contradictory evidence, complaint, objection, or verified-discovery reference;
 - review status;

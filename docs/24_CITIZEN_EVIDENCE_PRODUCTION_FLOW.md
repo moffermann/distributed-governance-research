@@ -122,7 +122,9 @@ The system should record:
 - actor;
 - project;
 - evidence type;
+- value commitment, metric, material claim, milestone, phase, risk, or antivalue addressed;
 - related evidential contract requirement where known;
+- related evidence need where known;
 - expected timing;
 - location or scope;
 - relationship declarations;
@@ -156,10 +158,12 @@ Confirmo que esta evidencia es verdadera según mi conocimiento.
 The form should collect:
 
 - evidence type;
+- value commitment, metric, material claim, milestone, phase, risk, or antivalue addressed;
 - associated milestone;
 - associated metric;
 - material claim supported or contradicted, where known;
 - related evidential contract requirement where known;
+- related evidence need where known;
 - description;
 - date/time;
 - location where applicable;
@@ -185,6 +189,8 @@ Rules:
 Evidence-producer offers may be submitted in parallel with execution funding. The offer is lightweight and unpaid by default. Payment begins only when the actor is selected or assigned to accepted control work under the protocol.
 
 After the minimum control package is accepted, supplemental evidence funding may support additional producers only when the proposed evidence is distinct or complementary to evidence already accepted or planned.
+
+Evidence offers that satisfy accepted Project Evidential Contract needs should receive higher eligibility priority. Evidence outside the accepted contract may still be useful, but it should normally depend on fiscalizer, reviewer, or protocol acceptance as equivalent, necessary, materially useful, or complementary within the available control budget.
 
 The system should not fund unlimited evidence producers. It should reject or close supplemental evidence funding when:
 

@@ -4,7 +4,7 @@
 
 Every project should define ex ante how its fulfillment will be evidenced. This evidential definition should emerge from the project design itself rather than from a single centralized authority defining evidence standards for every domain.
 
-Core v0 should therefore treat the `Project Evidential Contract` as the project-level bridge between value promises, metrics, milestones, material information claims, evidence requirements, fiscalization, disbursement, complaints, and closure.
+Core v0 should therefore treat the `Project Evidential Contract` as the project-level bridge between value promises, metrics, milestones, material information claims, evidence needs or requirements, fiscalization, disbursement, complaints, and closure.
 
 ## Rationale
 
@@ -38,13 +38,17 @@ A project should declare:
 - which material information claims must be evidenced;
 - which evidence is required for each milestone, metric, budget line, risk, or antivalue where relevant;
 - which evidence is required for each project phase where relevant;
-- who can observe or verify that evidence;
+- which source roles can observe, produce, corroborate, or verify that evidence;
 - what fiscalization profile or control package is required;
 - what antivalue or externalities may appear;
 - what evidence would trigger correction, complaint review, pause, mitigation, disbursement retention, reformulation, or revocation;
 - what evidence privacy, access, redaction, or protected-identity rules apply where relevant.
 
 The contract should be versioned. If the project later weakens or materially changes its evidential contract, the change should be visible, auditable, and handled through the ordinary reformulation or review rules where applicable.
+
+The contract defines evidence needs, not preselected evidence producers. A proposer, modeler, or executor should not control the later evidence producers who verify its own claims. Independent evidence producers may submit offers or commitments tied to specific value commitments, metrics, material claims, milestones, phases, risks, or antivalues.
+
+Evidence that matches the accepted contract should receive higher eligibility priority. Evidence that was not explicitly listed may still be accepted when it is equivalent, necessary, materially useful, or complementary within the available control budget, but it should not automatically displace the minimum evidence needs defined before funding.
 
 ## Minimum v0 contents
 
@@ -157,6 +161,37 @@ the claim can become self-reported, corroborated, disputed, corrected, or contra
 ```
 
 This creates a bridge between ex ante promises and ex post accountability.
+
+## Relationship with evidence-producer offers
+
+Evidence producers should be able to read the accepted evidence needs and propose specific evidence work.
+
+An evidence-producer offer should identify:
+
+- the metric, value commitment, material claim, milestone, phase, risk, or antivalue addressed;
+- the evidence to be produced;
+- the method;
+- timing;
+- whether the offer is voluntary or requires control funding;
+- relationship or conflict declarations;
+- limitations of the proposed evidence.
+
+Example:
+
+```text
+Project:
+Design and Construction of Multi-court Facility in Macul.
+
+Contract need:
+Verify that the construction phase delivers courts with accepted dimensions and public-access commitments.
+
+Evidence-producer offer:
+Field measurement visit, georeferenced photos, public-access observation, and short report linked to the construction milestone.
+```
+
+Evidence not anticipated by the contract may still be useful. For example, a resident may submit evidence that public-access gates remain locked during declared open hours. That evidence may become relevant to the public-access commitment even if the original contract expected only scheduled inspections.
+
+The open question is how to evaluate the quality, authenticity, relevance, AI-generation risk, and usefulness of submitted producer evidence. That issue is tracked separately in `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`.
 
 ## Citizen-facing simplicity
 

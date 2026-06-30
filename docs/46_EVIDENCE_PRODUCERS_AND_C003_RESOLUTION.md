@@ -245,6 +245,8 @@ The contract tells evidence producers:
 - whether independent or corroborating evidence is required;
 - how the fiscalizer or reviewer will use the evidence.
 
+The contract defines evidence needs, not preselected producers. Evidence producers should submit offers or commitments identifying the specific metric, material claim, milestone, phase, risk, or antivalue their evidence will address.
+
 Example:
 
 ```text
@@ -259,6 +261,8 @@ Fiscalizer compares the confirmations with attendance records and executor repor
 ```
 
 Evidence producers may still submit useful unexpected evidence, but paid or assigned evidence work should be tied to defined evidence needs so control funding does not become open-ended or duplicative.
+
+Evidence that satisfies an accepted contract need should have higher eligibility priority. Unexpected evidence may be considered when it is equivalent, necessary, materially useful, or complementary within the available control budget, but it should not automatically replace the minimum evidence needs defined before funding.
 
 ## C003 final resolution
 

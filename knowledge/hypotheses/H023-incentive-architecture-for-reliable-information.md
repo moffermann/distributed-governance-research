@@ -60,7 +60,7 @@ Each material claim should record:
 - claim text or structured value;
 - actor responsible for the claim;
 - actor role at the time of claim;
-- affected project object: value thesis, metric, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- affected project object: value thesis, metric, evidence need, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
 - evidence supporting the claim;
 - contradiction or complaint references where applicable;
 - current review status;

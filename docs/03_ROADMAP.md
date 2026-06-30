@@ -31,6 +31,7 @@ H028 is aligned: related-party status does not automatically invalidate a projec
 H021 is aligned: project variation control is a classification layer under C017 and H040, distinguishing minor corrections, operational variations, material value reformulations, and substitutive reformulations while keeping ordinary citizen labels simple and Layer 5 fully auditable.
 H020 is aligned: proportional procedural burden is the procedural-depth layer of Threshold Policies; AI may help discover required documents and missing conditions, but document acceptability is validated only by competent authorities, independent reviewers, certifiers, fiscalizers, or protocol-defined review bodies where the active policy requires it.
 H019 is aligned: project modeling, execution, and fiscalization remain distinct responsibilities, while integrated design-and-execution projects are represented through Project Phases. Execution-phase funding may be collected while design is pending, but remains reserved and cannot be released until the required design phase gate and control conditions are accepted.
+H018 is aligned: every financeable project must declare a value thesis, core value commitments, proportional value verification package, and evidence needs before receiving resources. The evidential contract defines needs rather than preselected producers; independent evidence producers later offer evidence tied to metrics, material claims, milestones, phases, risks, or antivalues.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -133,7 +134,9 @@ The forty-fourth residual cleanup aligned H019 with the v0 project-object, phase
 
 The evidence-quality open question has been captured for later resolution: independent evidence producers reduce executor self-report risk, but the system still needs a clear way to validate evidence quality, authenticity, relevance, AI-generation risk, usefulness, and fiscalizer reliance before evidence can support disbursement, closure, value fulfillment, or reputation.
 
-Next review candidate: H018 project value thesis and measurement.
+The forty-fifth residual cleanup aligned H018 with the v0 value-thesis, metric, evidential-contract, evidence-production, fiscalization, audit, object-map, scope, and creation-flow model: a financeable project must connect its value thesis to core value commitments, proportional value verification packages, evidence needs, independent evidence-producer offers, and review consequences. The Project Evidential Contract defines what must be evidenced and through which source roles, but it does not preselect the evidence producers. Contract-matched evidence has higher eligibility priority; unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+
+Next review candidate: H017 meta-governance protocol evolution.
 
 Approximate current maturity:
 

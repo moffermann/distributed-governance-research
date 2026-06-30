@@ -20,7 +20,8 @@ Each value icon must connect to:
 - scope;
 - mandatory metrics;
 - optional metrics if applicable;
-- evidence requirements;
+- evidence needs;
+- expected source roles or corroboration requirements;
 - verification method;
 - status of fulfillment.
 
@@ -419,8 +420,8 @@ A metric is not enough if there is no way to verify it.
 
 The validator asks:
 
-- What evidence will prove this?
-- Who produces the evidence?
+- What evidence need would verify this?
+- Which source role could produce or corroborate it?
 - When is evidence expected?
 - Can the evidence be contradicted or audited?
 - Is the evidence proportional to the value claim?
@@ -428,6 +429,10 @@ The validator asks:
 These answers should become part of the Project Evidential Contract.
 
 The validator should not merely ask whether an evidence item exists. It should check whether the proposed evidence is coherent with the value, metric, beneficiary group, risk, and milestone being claimed.
+
+The validator should not require the proposer to name or control the future evidence producer. The proposer defines the evidence need; independent evidence producers later submit offers or commitments tied to specific metrics, claims, milestones, phases, risks, or antivalues.
+
+Evidence-producer offers that satisfy an accepted contract need should receive higher eligibility priority. Unexpected evidence may still be admissible if a fiscalizer, reviewer, or protocol rule accepts it as equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Example:
 

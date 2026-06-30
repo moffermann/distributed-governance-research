@@ -193,6 +193,8 @@ The system should first search the value catalog before generating new values. A
 
 Promised value should be verified through a Value Verification Package, not isolated metrics. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
 
+Each core value commitment should map to evidence needs. The project defines what must be evidenced, when, by which source role or corroboration path, and with what review consequence. It should not preselect the independent evidence producers who later verify the project.
+
 ## Metrics and evidence
 
 For each promised value, the project must define measurable commitments.
@@ -221,6 +223,8 @@ is not enough to measure sports value. The project must measure actual participa
 Each project should also define a Project Evidential Contract.
 
 The contract states how fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
+
+The contract defines evidence needs rather than named evidence producers. Evidence producers may later offer evidence tied to a specific metric, material claim, milestone, phase, risk, or antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
 
 The contract is proportional:
 

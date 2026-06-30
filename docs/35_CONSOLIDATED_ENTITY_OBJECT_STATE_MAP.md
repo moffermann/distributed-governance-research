@@ -199,12 +199,14 @@ Key attributes:
 - modeler;
 - executor;
 - value theses;
+- value verification packages;
 - beneficiaries;
 - budget;
 - phase plan or project phases where applicable;
 - milestones;
 - disbursement milestone plan;
 - Project Evidential Contract;
+- evidence needs;
 - evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
@@ -230,12 +232,14 @@ Key relationships:
 ```text
 Project has many ProjectVersions
 Project has many ValueTheses
+Project has many ValueVerificationPackages
 Project has many BeneficiaryGroups
 Project has one or more Budgets
 Project may have many ProjectPhases
 Project has many Milestones
 Project has DisbursementMilestonePlan
 Project has one ProjectEvidentialContract
+Project has many EvidenceNeeds
 Project has many EvidenceItems
 Project has FiscalizationRequirement
 Project has many FiscalizerOffers
@@ -373,6 +377,7 @@ Attributes:
 - value promises covered;
 - metrics and qualitative commitments covered;
 - material information claims covered;
+- evidence needs;
 - milestone evidence requirements;
 - budget-line evidence requirements where relevant;
 - risk and antivalue evidence requirements where relevant;
@@ -387,6 +392,16 @@ Attributes:
 - citizen-facing verification summary;
 - validation status;
 - audit trail.
+
+Relationships:
+
+```text
+ProjectEvidentialContract belongs to Project
+ProjectEvidentialContract covers ValueVerificationPackages
+ProjectEvidentialContract defines EvidenceNeeds
+ProjectEvidentialContract constrains EvidenceProducer offers and EvidenceItems
+ProjectEvidentialContract may be changed by ProjectVariationRecord or ReformulationProposal
+```
 
 States:
 
@@ -404,6 +419,7 @@ Rules:
 
 - every execution-financeable project should have an accepted evidential contract;
 - the contract is project-specific and proportional, not one universal centralized evidence code;
+- the contract defines evidence needs, not preselected evidence producers;
 - material weakening after support or funding should be versioned and may require reformulation, notification, renewed review, or responsibility analysis;
 - citizens should see a simple verification summary, while Layer 5 preserves the full contract.
 
@@ -730,7 +746,8 @@ Attributes:
 - statement;
 - beneficiary link;
 - metrics;
-- evidence requirements;
+- evidence needs;
+- value verification package;
 - status;
 - validation result.
 
@@ -740,9 +757,57 @@ Relationships:
 ValueThesis belongs to ProjectVersion
 ValueThesis uses ValueIcon
 ValueThesis has many Metrics
-ValueThesis requires EvidenceItems
+ValueThesis has ValueVerificationPackage
+ValueThesis defines EvidenceNeeds
 ValueThesis is covered by ProjectEvidentialContract
 ```
+
+Rule:
+
+> A value thesis is not merely descriptive. It anchors the project's promised public value, core commitments, evidence needs, reformulation boundary, closure evaluation, and reputation effects.
+
+## Value Verification Package
+
+A structured package defining how one promised value will be verified.
+
+It is the value-specific bridge between the Value Thesis and the Project Evidential Contract.
+
+Attributes:
+
+- package id;
+- project;
+- project version;
+- value thesis;
+- value icon or value type;
+- core value commitments;
+- metrics and qualitative commitments;
+- evidence needs per commitment;
+- expected source roles or corroboration paths;
+- beneficiary signal requirements where relevant;
+- fiscalizer or reviewer method;
+- risk and antivalue checks;
+- complaint or contradiction path;
+- disbursement, closure, reformulation, responsibility, or reputation effects;
+- citizen-facing verification summary;
+- validation status;
+- audit trail.
+
+Relationships:
+
+```text
+ValueVerificationPackage belongs to ValueThesis
+ValueVerificationPackage belongs to ProjectVersion
+ValueVerificationPackage is covered by ProjectEvidentialContract
+ValueVerificationPackage references Metrics
+ValueVerificationPackage defines EvidenceNeeds
+ValueVerificationPackage may be supported or contradicted by EvidenceItems
+ValueVerificationPackage may be reviewed by FiscalizationReport
+ValueVerificationPackage may be affected by Complaint or VerifiedDiscovery
+```
+
+Rule:
+
+> Value verification uses packages, not isolated metrics. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
 
 ## Value Icon
 
@@ -771,10 +836,52 @@ Attributes:
 - target;
 - timeframe;
 - beneficiary group;
-- evidence requirement;
+- evidence need;
 - evidential contract requirement reference;
 - validation status;
 - fulfillment status.
+
+Rule:
+
+> Each core metric should identify what evidence need can verify it. The project defines the evidence need and source role, but should not preselect the independent evidence producer.
+
+## Evidence Need
+
+A predefined need for evidence linked to a value commitment, metric, material claim, milestone, phase, risk, or antivalue.
+
+An evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced and under what review conditions.
+
+Attributes:
+
+- need id;
+- project;
+- project version;
+- related value thesis or value verification package;
+- related metric, material claim, milestone, phase, risk, or antivalue;
+- evidence type expected;
+- expected source role or corroboration path;
+- timing;
+- priority: required, recommended, supplemental, or configured equivalent;
+- whether executor self-report is sufficient or corroboration is required;
+- fiscalizer or reviewer role;
+- disbursement, closure, complaint, reformulation, responsibility, or reputation effect;
+- privacy or protected-identity constraints;
+- audit trail.
+
+Relationships:
+
+```text
+EvidenceNeed belongs to ProjectEvidentialContract
+EvidenceNeed may belong to ValueVerificationPackage
+EvidenceNeed may reference Metric
+EvidenceNeed may reference ProjectPhase
+EvidenceNeed may be addressed by EvidenceProducer offers or commitments
+EvidenceNeed may be satisfied, weakened, contradicted, or left unresolved by EvidenceItems
+```
+
+Rule:
+
+> Contract-matched evidence needs have higher eligibility priority for control funding. Unexpected evidence may still be admitted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 ## Beneficiary Group
 
@@ -1049,7 +1156,7 @@ Attributes:
 - claim text or structured value;
 - responsible actor;
 - responsible actor role;
-- affected object: value thesis, metric, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- affected object: value thesis, metric, evidence need, beneficiary group, budget line, milestone, evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
 - supporting evidence references;
 - contradiction, justified objection, complaint, or review references;
 - AI anomaly reference where applicable;
@@ -1086,6 +1193,7 @@ Attributes:
 - project phase where applicable;
 - milestone;
 - metric;
+- evidence need where applicable;
 - material claim supported or contradicted where known;
 - evidential contract requirement;
 - producer;
@@ -1770,10 +1878,10 @@ Execution:
   executor
 
 Value metrics:
-  project modeler proposes, validator checks, executor accepts where executing
+  project modeler proposes commitments and evidence needs, validator checks, executor accepts where executing
 
 Evidence production:
-  executor, evidence producers, beneficiaries, observers
+  evidence producers, beneficiaries, observers, executor self-report where allowed and classified
 
 Fiscalization:
   fiscalizer
@@ -1796,9 +1904,10 @@ Audit trail:
 - Project is the central object.
 - Project version preserves history.
 - Project phase groups phase-specific funding, deliverables, verification, and disbursement gates.
-- Value thesis connects project to metrics and evidence.
-- Metrics must connect to evidence.
-- Evidence must connect to phase, milestone, metric, or complaint/review issue where applicable.
+- Value thesis connects project to value verification packages, metrics, evidence needs, and evidence.
+- Metrics must connect to evidence needs and review consequences.
+- Evidence needs define what should be evidenced without preselecting evidence producers.
+- Evidence must connect to phase, milestone, metric, evidence need, material claim, or complaint/review issue where applicable.
 - Fiscalization report connects evidence to review outcome.
 - Disbursement connects phase, milestone, evidence, fiscalization, and money state.
 - Complaint can affect project state, milestone state, evidence state, or disbursement state.

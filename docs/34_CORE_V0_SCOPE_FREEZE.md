@@ -156,6 +156,7 @@ Core rules:
 - value icons are not marketing decorations;
 - selecting a value creates metric obligations;
 - metrics require evidence;
+- core value commitments should map to evidence needs;
 - each project must define a proportional Project Evidential Contract;
 - value verification uses a package of metrics, evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels;
 - vague value claims must be reformulated before publication.
@@ -195,6 +196,8 @@ Core v0 includes a Project Evidential Contract.
 The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, evidence types, evidence source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
 
 The contract is project-specific and proportional, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
+
+The contract defines evidence needs, not preselected evidence producers. Independent evidence producers may later offer evidence tied to a metric, material claim, milestone, phase, risk, or antivalue. Contract-matched evidence has higher eligibility priority; unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Citizen-facing views should summarize it as "how this project will be verified"; Layer 5 preserves the full versioned contract and changes.
 

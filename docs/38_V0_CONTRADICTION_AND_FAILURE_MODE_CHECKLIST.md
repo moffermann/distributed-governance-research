@@ -176,7 +176,7 @@ Use a layered translation model: citizens see simple state labels and relevant a
 
 ### Accepted v0 rule
 
-Replace isolated value metrics with a `Value Verification Package`. Activity metrics alone are insufficient. Each promised value must be verified through metrics plus evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels.
+Replace isolated value metrics with a `Value Verification Package`. Activity metrics alone are insufficient. Each promised value must be verified through metrics, evidence needs, accepted evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels.
 
 ---
 
@@ -385,9 +385,13 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 ## 3. Value and metrics checklist
 
 - [ ] Is every value icon linked to metrics?
-- [ ] Is every metric linked to evidence?
+- [ ] Is every core value commitment linked to an evidence need?
+- [ ] Is every metric linked to evidence needs and review consequences?
 - [ ] Are qualitative value claims handled?
 - [ ] Are input-only metrics rejected when insufficient?
+- [ ] Does the Project Evidential Contract define evidence needs rather than preselected evidence producers?
+- [ ] Can independent evidence producers tie offers to specific metrics, material claims, milestones, phases, risks, or antivalues?
+- [ ] Are unexpected or supplemental evidence offers prioritized lower unless accepted as equivalent, necessary, materially useful, or complementary?
 - [ ] Are antivalues declared?
 - [ ] Can projects game easy metrics?
 - [ ] Is there a mechanism to challenge weak metrics?
@@ -417,6 +421,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 ## 6. Evidence checklist
 
 - [ ] Is evidence classified by source and interest?
+- [ ] Is every evidence item linked to an evidence need, metric, material claim, milestone, phase, or complaint issue where applicable?
 - [ ] Is evidence privacy classified?
 - [ ] Is contradictory evidence allowed?
 - [ ] Are independent evidence requirements defined for risky projects?
@@ -495,12 +500,13 @@ Highest-priority integration checks:
 3. Ensure funding is described as commitment until project closure, not free withdrawal.
 4. Ensure fiscalization and evidence production are distinct control roles.
 5. Ensure complaints are formal entities with admission, scope, and blocking status.
-6. Ensure value verification uses packages, not isolated metrics.
+6. Ensure value verification uses packages, not isolated metrics, and maps core value commitments to evidence needs.
 7. Ensure disbursement milestones require coherent pre-funding validation.
 8. Ensure project phases prevent release of later-phase execution funds before prerequisite phase gates are accepted.
 9. Ensure tutored mode decisions and timeouts become public civic objects.
 10. Ensure beneficiary privacy does not create anonymous formal power.
 11. Ensure discovery visibility is explainable and user-customizable.
+12. Ensure Project Evidential Contracts define evidence needs rather than preselected evidence producers.
 ```
 
 ## Proposed next working method

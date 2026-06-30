@@ -151,6 +151,8 @@ Rule:
 
 > A value icon is not marketing. Every accepted value creates metric and evidence obligations.
 
+The creator should not only select a value icon. The creator should also accept the value commitments, metrics, and evidence needs attached to that value. The evidence needs later guide independent evidence-producer offers and fiscalizer review.
+
 Example:
 
 ```text
@@ -455,13 +457,15 @@ It should connect:
 - metric or qualitative commitment;
 - material information claim;
 - milestone or budget line where relevant;
-- evidence type;
-- expected evidence source role;
+- evidence need;
+- expected evidence source role or corroboration path;
 - whether executor self-report is enough or corroboration is required;
 - timing of evidence;
 - fiscalizer or reviewer role;
 - contradiction, complaint, correction, disbursement, closure, or responsibility effect where applicable;
 - privacy or protected-identity rule where relevant.
+
+The contract defines evidence needs, not preselected evidence producers. The creator, modeler, or executor should not control who later produces independent evidence for its own claims.
 
 Example for sports:
 
@@ -494,6 +498,21 @@ Evidence examples:
 - fiscalizer report;
 - field observations;
 - documents.
+
+Evidence producers may later submit offers or commitments that identify which metric, value commitment, material claim, milestone, phase, risk, or antivalue their evidence will address.
+
+Eligibility priority:
+
+```text
+Contract-matched evidence need:
+  high priority.
+
+Equivalent or materially useful unexpected evidence:
+  medium priority, if accepted by fiscalizer, reviewer, or protocol rule.
+
+Supplemental evidence outside the contract:
+  lower priority and dependent on available control budget.
+```
 
 Rule:
 

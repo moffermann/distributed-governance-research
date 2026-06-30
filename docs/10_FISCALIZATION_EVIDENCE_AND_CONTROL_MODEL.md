@@ -116,13 +116,15 @@ The contract states how project promises will be evidenced and reviewed. It conn
 - material information claims;
 - milestones and budget lines where relevant;
 - risks and antivalues;
-- evidence types;
+- evidence needs and evidence types;
 - evidence source roles;
 - corroboration requirements;
 - responsible fiscalization or review;
 - complaint, correction, disbursement, closure, and responsibility effects.
 
 The contract is project-specific and proportional. It may use value-catalog defaults, project-type templates, threshold policies, operating-mode rules, or country-specific requirements, but it should not become a single centralized evidence code for every domain.
+
+The contract defines evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Contract-matched evidence needs have higher eligibility priority, while unexpected evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Examples:
 
@@ -241,6 +243,8 @@ guarantees or retentions, if applicable
 The executor should not directly pay or appoint the actors responsible for validating its own performance.
 
 Control-cost discovery may proceed in parallel with execution funding. This means that fiscalizers, evidence producers, and technical reviewers may submit lightweight offers while citizens are still funding the execution budget.
+
+Evidence-producer offers should identify which accepted evidence need, metric, material claim, milestone, phase, risk, or antivalue they address. Offers outside the accepted evidential contract should normally be treated as lower priority unless the fiscalizer, reviewer, or protocol accepts them as useful to the control package.
 
 However, execution funding and control funding remain distinct closures:
 
