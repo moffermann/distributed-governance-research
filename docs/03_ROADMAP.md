@@ -139,7 +139,7 @@ The forty-fifth residual cleanup aligned H018 with the v0 value-thesis, metric, 
 
 The forty-sixth residual cleanup aligned H017 with the accepted C019 protocol-change governance resolution: Core v0 now treats meta-governance as a minimum rule-change discipline rather than a full constitutional module. It distinguishes Reformulation Proposal from Administrative Rule Change, System Implementation Change, and non-tutored Protocol Change Proposal; material changes require public reason, scope, effective date, adaptation or transition rule where relevant, citizen-facing summary, implementation trace, and Layer 5 auditability. Tutored administrators may configure rules within mandate, but not silently, overnight, or retroactively by default.
 
-Next review candidate: H016 disbursement milestone AI validation.
+Next review candidate: H016 distributed fiscalization ecosystem.
 
 Approximate current maturity:
 
