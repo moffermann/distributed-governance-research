@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[open-questions/evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]]
 - [[hypotheses/H019-distributed-project-modeling-execution-fiscalization|H019 — Distributed Project Modeling, Execution, and Fiscalization]]
 - [[hypotheses/H020-proportional-procedural-burden|H020 — Proportional Procedural Burden]]
 - [[hypotheses/H021-project-variation-control|H021 — Project Variation Control]]
@@ -244,6 +245,7 @@ Recently aligned residual-audit hypotheses:
 ## Open questions and objections
 
 - [[open-questions/README|Open Questions]]
+- [[open-questions/evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]]
 - [[objections/README|Objections]]
 
 ## Literature

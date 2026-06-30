@@ -131,6 +131,8 @@ The forty-third residual cleanup aligned H020 with H027, C002, C013, C020, and C
 
 The forty-fourth residual cleanup aligned H019 with the v0 project-object, phase, funding, lifecycle, disbursement, control, audit, threshold, related-party, and diagram model: modeler/designer, executor, and fiscalizer remain separate role responsibilities, but a single parent project may combine design and execution through explicit Project Phases. Phase-specific funding lanes allow construction or execution commitments to accumulate while a design phase is pending, but later-phase funds remain reserved and cannot be released until the prerequisite design gate, public-value baseline, control package, and disbursement rules are accepted. Related design-and-build actors or holding-linked companies are allowed only with declaration, proportional safeguards, and independent gate/control where required.
 
+The evidence-quality open question has been captured for later resolution: independent evidence producers reduce executor self-report risk, but the system still needs a clear way to validate evidence quality, authenticity, relevance, AI-generation risk, usefulness, and fiscalizer reliance before evidence can support disbursement, closure, value fulfillment, or reputation.
+
 Next review candidate: H018 project value thesis and measurement.
 
 Approximate current maturity:
