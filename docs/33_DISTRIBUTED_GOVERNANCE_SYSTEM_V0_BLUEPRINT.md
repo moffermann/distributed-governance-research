@@ -297,6 +297,8 @@ Used in fiscalization report
 
 Fiscalization is the accountable review of project compliance.
 
+H016 treats fiscalization as a distributed but protocol-selected ecosystem. Many actors may observe, produce evidence, or submit fiscalization offers, but responsible fiscalization must be assigned through eligibility, conflict, independence, risk, budget, methodology, and auditability rules.
+
 Core distinction:
 
 ```text

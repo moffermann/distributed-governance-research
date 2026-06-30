@@ -33,6 +33,7 @@ H020 is aligned: proportional procedural burden is the procedural-depth layer of
 H019 is aligned: project modeling, execution, and fiscalization remain distinct responsibilities, while integrated design-and-execution projects are represented through Project Phases. Execution-phase funding may be collected while design is pending, but remains reserved and cannot be released until the required design phase gate and control conditions are accepted.
 H018 is aligned: every financeable project must declare a value thesis, core value commitments, proportional value verification package, and evidence needs before receiving resources. The evidential contract defines needs rather than preselected producers; independent evidence producers later offer evidence tied to metrics, material claims, milestones, phases, risks, or antivalues.
 H017 is aligned: meta-governance and protocol evolution are Core v0 as a minimum visible rule-change discipline, not as a full constitutional implementation. Core v0 distinguishes Reformulation Proposals, Administrative Rule Changes, System Implementation Changes, and non-tutored Protocol Change Proposals, with public reason, effective date, transition rule, citizen-facing summary, and audit trace where material.
+H016 is aligned: fiscalization is distributed in available actors and evidence sources, but protocol-selected in responsible assignment. Open observation, evidence production, responsible fiscalization, technical or reinforced fiscalization, and capped secondary fiscalization remain distinct layers; executor-controlled selection, direct payment, unlimited secondary control, and popularity-only fiscalizer selection are excluded.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -139,7 +140,9 @@ The forty-fifth residual cleanup aligned H018 with the v0 value-thesis, metric, 
 
 The forty-sixth residual cleanup aligned H017 with the accepted C019 protocol-change governance resolution: Core v0 now treats meta-governance as a minimum rule-change discipline rather than a full constitutional module. It distinguishes Reformulation Proposal from Administrative Rule Change, System Implementation Change, and non-tutored Protocol Change Proposal; material changes require public reason, scope, effective date, adaptation or transition rule where relevant, citizen-facing summary, implementation trace, and Layer 5 auditability. Tutored administrators may configure rules within mandate, but not silently, overnight, or retroactively by default.
 
-Next review candidate: H016 distributed fiscalization ecosystem.
+The forty-seventh residual cleanup aligned H016 with the v0 control, evidence, offer, object-map, audit, scope, and checklist model: fiscalization is distributed in available actors and evidence sources, but responsible fiscalization is assigned through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules. Core v0 distinguishes open observation, evidence production, responsible fiscalization, technical or reinforced fiscalization, and optional capped secondary fiscalization or fiscalization audit. Fiscalizer offers remain open to eligible actors, but executor choice, direct executor payment, popularity-only selection, first-funded capture, lowest-price-only selection, unlimited secondary fiscalization, and duplicate evidence overfunding are excluded.
+
+Next review candidate: H015 observability-based evaluation.
 
 Approximate current maturity:
 

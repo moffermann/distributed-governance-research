@@ -432,8 +432,11 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 
 - [x] Who selects fiscalizers?
 - [x] Is executor control over fiscalizer selection excluded?
-- [ ] Are conflicts of interest declared?
-- [ ] Is fiscalization cost separated from execution budget?
+- [x] Are conflicts of interest declared?
+- [x] Is fiscalization cost separated from execution budget?
+- [x] Is responsible fiscalization distinguished from open observation and evidence production?
+- [x] Are fiscalizer assignments protocol-selected rather than popularity-selected, first-funded, executor-selected, or lowest-price-only?
+- [x] Are supplemental fiscalization and evidence missions capped against unlimited control overfunding?
 - [ ] Can fiscalizers resign or be replaced?
 - [ ] Are fiscalizer reports public or privacy-filtered?
 - [ ] Does fiscalizer reputation update after closure?
@@ -508,6 +511,7 @@ Highest-priority integration checks:
 11. Ensure discovery visibility is explainable and user-customizable.
 12. Ensure Project Evidential Contracts define evidence needs rather than preselected evidence producers.
 13. Ensure material rule changes are classified as Administrative Rule Change, System Implementation Change, or Protocol Change Proposal, with public reason, effective date, transition rule, and audit trace.
+14. Ensure distributed fiscalization remains protocol-selected, conflict-checked, risk-adjusted, auditable, and capped against unlimited secondary fiscalization or duplicate evidence funding.
 ```
 
 ## Proposed next working method

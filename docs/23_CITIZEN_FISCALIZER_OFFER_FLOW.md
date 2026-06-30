@@ -6,6 +6,8 @@ This document freezes the flow for a citizen or organization offering to become 
 
 Fiscalization is a responsibility role. It is not the same as commenting, observing, supporting, or funding.
 
+H016 treats the fiscalizer ecosystem as open in offers and observation, but protocol-selected in responsible assignment. Submitting an offer does not by itself make the actor the responsible fiscalizer.
+
 ## Core principle
 
 > Offering to fiscalize is an accountable role request. The executor must not privately appoint the actor that reviews its own performance.
@@ -242,7 +244,7 @@ This flow should not:
 - hide fiscalization cost;
 - hide methodology and deliverables;
 - activate responsibility without explicit acceptance;
-- rely only on first-come-first-served selection for complex projects.
+- rely only on first-come-first-served selection for complex projects;
 - create unlimited secondary fiscalizers or fiscalization auditors.
 
 ## Design rule

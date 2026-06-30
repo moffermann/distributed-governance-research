@@ -217,6 +217,8 @@ Verified discovery may be rewarded or recognized only after review confirms mate
 
 Core v0 includes accountable fiscalization.
 
+Fiscalization is distributed in available actors and evidence sources, but protocol-selected in responsible assignment. Open observation, evidence production, responsible fiscalization, and technical or reinforced fiscalization remain distinct layers.
+
 ```text
 Executor executes.
 Evidence producers produce evidence.

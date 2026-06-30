@@ -1275,10 +1275,14 @@ Defines required control for a project.
 Attributes:
 
 - project;
+- risk tier;
+- required fiscalization layer: open observation, responsible fiscalization, technical review, reinforced fiscalization;
 - required fiscalizer count;
 - required evidence producer count;
 - supplemental evidence need count or scope where applicable;
 - secondary fiscalizer slot: none, open, filled, closed;
+- selection model: rotation, random, semi-random among admissible offers, technical/economic scoring, reinforced review, or configured rule;
+- observation or offer window where applicable;
 - report count;
 - control budget;
 - expertise needed;
@@ -1295,6 +1299,7 @@ Attributes:
 
 - parent project;
 - control type: primary fiscalization, secondary fiscalization, fiscalization audit, evidence mission, technical review, project admissibility review, extraordinary review;
+- fiscalization layer;
 - methodology;
 - deliverables;
 - control budget;
@@ -1309,6 +1314,10 @@ Attributes:
 Rule:
 
 > Control subprojects fit the project architecture, but their selection follows independence rules stronger than ordinary project selection.
+
+Fiscalization ecosystem rule:
+
+> Distributed fiscalization means many actors may observe, offer evidence, or compete to fiscalize; it does not mean the responsible fiscalizer is chosen by executor preference, ordinary popularity, first funding, or lowest price alone.
 
 Supplemental rule:
 
@@ -1333,6 +1342,10 @@ Attributes:
 - availability;
 - relationships declared;
 - qualifications;
+- admissibility result;
+- selection reason or non-selection reason;
+- conflict review result;
+- risk-tier suitability;
 - status.
 
 States:
@@ -1354,11 +1367,16 @@ The accepted fiscalization role.
 Attributes:
 
 - project;
+- control subproject;
 - fiscalizer;
 - assignment type: primary fiscalizer, secondary fiscalizer, fiscalization auditor;
+- selection rule reference;
+- selection reason;
 - scope;
 - reports required;
 - relationship declarations;
+- conflict review result;
+- replacement or resignation condition;
 - start date;
 - status.
 
@@ -1383,6 +1401,7 @@ Attributes:
 - milestone;
 - fiscalizer;
 - evidence considered;
+- evidence limitations or unresolved contradictions;
 - metric evaluation;
 - conclusion;
 - observations;
@@ -2064,6 +2083,7 @@ Audit trail:
 - Evidence needs define what should be evidenced without preselecting evidence producers.
 - Evidence must connect to phase, milestone, metric, evidence need, material claim, or complaint/review issue where applicable.
 - Fiscalization report connects evidence to review outcome.
+- Responsible fiscalization is assigned through protocol-selected Control Subprojects or fiscalization assignments, while open observation and evidence production remain broader participation layers.
 - Disbursement connects phase, milestone, evidence, fiscalization, and money state.
 - Complaint can affect project state, milestone state, evidence state, or disbursement state.
 - Administrative Rule Changes, System Implementation Changes, and Protocol Change Proposals must reference affected rules, project states, effective dates, transition rules, and audit events where material.

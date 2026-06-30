@@ -380,7 +380,13 @@ Verified discoveries should also be traceable. The audit trail should show the d
 
 Include complete fiscalization records:
 
+- fiscalization requirement and risk tier;
+- fiscalizer offers submitted;
+- eligibility, conflict, and admissibility results;
+- selection rule used;
+- selection reason and non-selection reasons where material;
 - responsible fiscalizer;
+- secondary fiscalizer or fiscalization auditor where permitted;
 - evidence producers;
 - methodology;
 - scope;
@@ -391,6 +397,7 @@ Include complete fiscalization records:
 - conflict declarations;
 - late reports;
 - rejected reports;
+- resignation, replacement, suspension, or removal events;
 - final evaluation;
 - reputation effects.
 

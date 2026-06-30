@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
 - [[hypotheses/H017-meta-governance-protocol-evolution|H017 — Meta-Governance and Protocol Evolution]]
 - [[hypotheses/H018-project-value-thesis-and-measurement|H018 — Project Value Thesis and Measurement]]
 - [[open-questions/evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]]
@@ -196,6 +197,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
 - [[hypotheses/H017-meta-governance-protocol-evolution|H017 — Meta-Governance and Protocol Evolution]]
 - [[hypotheses/H018-project-value-thesis-and-measurement|H018 — Project Value Thesis and Measurement]]
 - [[hypotheses/H019-distributed-project-modeling-execution-fiscalization|H019 — Distributed Project Modeling, Execution, and Fiscalization]]

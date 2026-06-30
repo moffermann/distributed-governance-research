@@ -163,6 +163,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Distributed fiscalization ecosystem `H016` | Core v0 | Needed to make fiscalization distributed in available actors and evidence sources, but protocol-selected in responsible assignment through eligibility, conflict, independence, risk, budget, methodology, auditability, and capped supplemental control. |
 | Project value thesis and measurement `H018` | Core v0 | Needed to make each financeable project declare a value thesis, core commitments, proportional verification package, evidence needs, and review consequences before resources are committed. |
 | Distributed project modeling, execution, and fiscalization `H019` | Core v0 | Needed to separate modeler, executor, and fiscalizer responsibility, allow transparent design-and-execution integration, and use Project Phases where design deliverables must be verified before execution funds are released. |
 | Proportional procedural burden `H020` | Core v0 | Needed to keep one conceptual project structure while scaling documents, evidence, guarantees, fiscalization, and admissibility review by risk, complexity, irreversibility, and public-function sensitivity. |

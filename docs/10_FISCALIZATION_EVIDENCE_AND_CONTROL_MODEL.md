@@ -10,6 +10,13 @@ The central problem is that the executor has strong incentives to weaken, underf
 
 > The executor executes. The system and protocol define control requirements. Evidence producers collect evidence. The fiscalizer evaluates. The community can observe, contradict, and denounce.
 
+H016 frames this as a distributed but protocol-selected fiscalization ecosystem:
+
+```text
+many actors may observe, offer evidence, or compete to fiscalize;
+only protocol-selected, conflict-checked, eligible, auditable actors become responsible fiscalizers.
+```
+
 ## Key distinction
 
 Fiscalization should not be treated as a single undifferentiated role.
@@ -208,6 +215,10 @@ The responsible fiscalizer may use:
 - its own inspections or analysis.
 
 The responsible fiscalizer is reputationally accountable for the quality, independence, timeliness, and reliability of its fiscalization.
+
+Responsible fiscalization is distributed in supply but not arbitrary in assignment. It should be selected through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules rather than by executor preference, ordinary popularity, first funding, or lowest price alone.
+
+Citizen observation, beneficiary confirmation, evidence production, and complaints can strengthen or challenge the fiscalizer's work, but they do not automatically replace the responsible fiscalizer.
 
 ## 4. Technical or reinforced fiscalization
 

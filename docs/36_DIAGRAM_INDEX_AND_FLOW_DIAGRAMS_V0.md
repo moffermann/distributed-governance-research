@@ -79,7 +79,7 @@ Generated SVG outputs:
 The diagram set now reflects these accepted C001-C025 corrections:
 
 - C001: `Idea` is separate from `Project`; ideas are not financeable.
-- C002/C013: control and fiscalization packages close in parallel with execution funding.
+- H016/C002/C013: fiscalization is distributed in available actors and evidence sources, but responsible control is protocol-selected, conflict-checked, risk-adjusted, capped, and closed in parallel with execution funding.
 - C003/C015: executor material is self-report unless corroborated; evidence publication is privacy-assisted.
 - C004: complaints are formal scoped review objects, not unstructured comments.
 - C005/C006: funding is commitment; treasury/custody executes valid orders without governing project value.
