@@ -190,6 +190,10 @@ Under H006, AI may help summarize an Assisted Deliberation Context before materi
 
 That summary remains assistance. It should be labeled, source-linked, traceable, and correctable. It must not decide the citizen's action, rank projects silently, certify truth, suppress dissent, allocate funds, or replace the underlying protocol, fiscalization, complaint, evaluation, or legal process.
 
+## Relationship with personal AI guides
+
+Under H005, full personal AI guides are Extension v1+. If a personal guide connects to the platform, it remains assistance infrastructure. It may summarize, compare, translate, draft, warn, and help configure citizen choices, but it cannot become a civic actor, delegate, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
+
 ## C008 final resolution
 
 C008 is resolved as follows:

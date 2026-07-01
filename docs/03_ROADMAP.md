@@ -45,6 +45,7 @@ H009 is aligned: every financeable project must align with an active Planning Sc
 H008 is aligned: distributed accountability is the full project accountability loop from accepted promise to fulfillment/control evidence, formal evaluation, Project Closure Accountability Record, financial closure, role-specific responsibility, reputation, and future financing context. Critical milestones, disbursements, closure, value fulfillment, antivalue compliance, and reputation cannot depend only on self-report by the actor being evaluated.
 H007 is aligned: continuous performance evaluation is represented as role-comparable performance visibility. Core v0 includes a lightweight Performance History Surface derived from reviewed closure, evaluation, fiscalization, responsibility, reputation, complaint-status, financial-closure, and evidence-sufficiency records. It does not create a separate public history for every value label declared by past projects, and it is not a universal score, public-value-per-currency ranking, social-credit mechanism, or automatic allocation rule.
 H006 is aligned: assisted deliberation is represented as an Assisted Deliberation Context for material citizen actions. It gives citizens concise, source-visible, correctable context before funding, supporting, objecting, delegating, offering control work, funding complaint review, or reviewing material reformulation where applicable. It structures "why consider this", "what to review carefully", and "dissent / alerts / unresolved issues" without deciding, ranking, certifying truth, allocating funds, suppressing dissent, or replacing citizen judgment.
+H005 is aligned: full personal AI guides remain Extension v1+, while Core v0 defines compatibility boundaries for any connected guide. A personal guide may summarize, compare, translate, draft, warn, and help configure citizen choices, but it cannot become a civic actor, delegate, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -175,7 +176,9 @@ The fifty-seventh residual cleanup aligned H007 with the v0 blueprint, scope fre
 
 The fifty-eighth residual cleanup aligned H006 with the v0 blueprint, scope freeze, entity map, citizen dashboard, signal detail, full project sheet, funding flow, audit trail, classification matrix, glossary, index, and contradiction checklist. H006 now defines Assisted Deliberation Context as a concise citizen-facing read model for material actions. It separates common deliberative context from H005 personal AI guides, keeps C008's AI-assistance boundary, preserves source labels and dissent, and excludes algorithmic steering, hidden ranking, truth certification, automatic allocation, and suppression of unresolved issues.
 
-Next review candidate: H005 personal AI guides for participation.
+The fifty-ninth residual cleanup aligned H005 with C008, H006, H041, the delegation baseline, automatic allocation profiles, the v0 blueprint, scope freeze, entity map, classification matrix, glossary, index, and contradiction checklist. H005 now treats full personal AI guides as Extension v1+, not a Core v0 dependency. Core v0 only preserves compatibility boundaries: connected guides may assist, summarize, compare, translate, draft, warn, and help configure choices, but they do not become civic actors, delegates, automatic allocation profiles, hidden recommenders, fiscalizers, authorities, or sources of material civic action without explicit confirmation or an auditable platform rule.
+
+Next review candidate: H004 institutional monopolies.
 
 Approximate current maturity:
 
@@ -269,6 +272,7 @@ Likely extensions v1+:
 - advanced common-good sub-charters;
 - granular operating modes;
 - distributed roadmap construction through votable planning areas;
+- full personal AI guides;
 - full country-specific implementation details;
 - advanced cross-project benchmarking.
 

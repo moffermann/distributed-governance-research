@@ -552,6 +552,8 @@ Configuring automatic allocation profile
 
 Participation capacity support is also part of Core v0, but only through ordinary transparent project paths and assistance layers. A participation-support project may help citizens understand projects, translate material, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. It does not receive hidden delegation commissions, does not allocate citizen balances without explicit accepted delegation, does not turn AI into a civic actor, and does not make public institutions internal project participants.
 
+Personal AI guides remain Extension v1+. If a personal guide connects to Core v0, it must stay within the C008 assistance boundary: it may summarize, compare, translate, draft, warn, and help configure citizen choices, but it cannot become a delegate, civic actor, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
+
 ### Funding
 
 Funding is a conditional commitment.
@@ -1012,6 +1014,7 @@ Out of scope or future extension:
 - full legal implementation by country;
 - advanced macro-budget balancing;
 - full common-good charter governance;
+- full personal AI guides;
 - advanced inferred recommender systems;
 - deep predictive scoring as a decision authority.
 

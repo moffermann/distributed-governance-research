@@ -165,6 +165,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Personal AI guides `H005` | Extension v1+ with Core v0 compatibility boundary | Useful for reducing participation cost, but not required for the first coherent model. Core v0 only requires that any connected guide remain assistance infrastructure, not a civic actor, delegate, automatic allocation profile, hidden recommender, or source of material action without explicit citizen confirmation or a separately auditable platform rule. |
 | Assisted deliberation context `H006` | Core v0 | Needed to improve decision quality before material citizen actions while preserving citizen judgment, source visibility, correction, dissent, and the C008 rule that AI assists but does not decide. |
 | Continuous performance visibility `H007` | Core v0 | Needed to make reviewed historical role performance visible before future funding, support, delegation, selection, or review decisions, while avoiding a universal score or an unbounded history for every value declared by past projects. |
 | Distributed accountability loop `H008` | Core v0 | Needed to close the full project cycle from accepted promise to evidence, formal review, Project Closure Accountability Record, financial closure, role-specific responsibility, reputation, and future financing context. |

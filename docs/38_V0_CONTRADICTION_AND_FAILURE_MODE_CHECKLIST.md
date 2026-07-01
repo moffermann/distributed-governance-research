@@ -176,6 +176,28 @@ Checklist:
 
 ---
 
+## C008b — Personal AI guides vs civic authority
+
+**Severity:** Medium
+**Status:** Resolved
+**Related hypothesis:** `knowledge/hypotheses/H005-ai-personal-guides.md`
+
+### Accepted v0 rule
+
+Full personal AI guides are Extension v1+. If connected to the platform, they remain assistance infrastructure under C008. They may summarize, compare, translate, draft, warn, and help configure citizen choices, but they are not civic actors, delegates, automatic allocation profiles, fiscalizers, authorities, hidden recommenders, or sources of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
+
+Checklist:
+
+- [ ] Is the personal AI guide prevented from becoming a delegate, civic actor, fiscalizer, authority, or automatic allocation profile?
+- [ ] Are material actions separated into AI suggestion, citizen confirmation, protocol action, and audit record?
+- [ ] Does the guide avoid hidden funding, support, objection, complaint, vote, following, fiscalization offer, or evidence submission?
+- [ ] Does any connected guide expose source records and label AI-generated content where material?
+- [ ] Can the citizen revoke guide access and correct or override recommendations?
+- [ ] Are guide recommendations separated from platform discovery, paid promotion, and ordering rules?
+- [ ] Are sensitive preferences, identity, complaint, evidence, beneficiary, delegation, and allocation data protected by explicit consent and access scope?
+
+---
+
 ## C009 — Citizen simplicity vs too many technical states
 
 **Severity:** Medium

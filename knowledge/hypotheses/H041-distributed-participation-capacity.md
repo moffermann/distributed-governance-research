@@ -132,6 +132,8 @@ An automatic allocation profile is also not a delegate. It is a configured rule 
 
 AI-guided assistance may help citizens understand delegation options, compare delegates, or configure allocation profiles, but it is not itself a delegate.
 
+Full personal AI guides remain Extension v1+. If connected to the platform, they are compatibility-limited assistance tools: they may summarize, compare, translate, draft, warn, and help configure choices, but they do not become civic actors, delegates, automatic allocation profiles, or sources of material civic action without explicit citizen confirmation or a separately auditable platform rule.
+
 ## Example
 
 In a sports pilot, residents of Macul may face several local sports projects: a multi-court complex, a school sports program, and a fiscalization offer for an existing project. Some residents can decide directly. Others may use the public system default allocation profile. Others may delegate sports allocation to the Macul Sports Association after seeing its concentration signal, represented weight, reporting frequency, and any separate support funding.

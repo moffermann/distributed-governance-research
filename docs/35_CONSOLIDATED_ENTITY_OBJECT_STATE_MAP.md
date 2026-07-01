@@ -2126,6 +2126,10 @@ Delegation compensation rule:
 
 > Delegation does not create automatic payment, commission, or a percentage of delegated civic allocation in Core v0. Participation-support work may be funded only as separate transparent projects under ordinary project rules.
 
+Personal AI guide boundary:
+
+> A personal AI guide is not a delegate, cannot accept delegation, cannot hold represented weight, and cannot act as a civic actor. It may help a citizen understand or prepare delegation choices only as assistance.
+
 ## Automatic Allocation Profile
 
 Citizen-configured allocation rule.
@@ -2161,6 +2165,10 @@ Rule:
 Continuity rule:
 
 > On first active use, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that profile. The selected base profile resumes when budget delegation is revoked, rejected, expired, or resigned.
+
+Personal AI guide boundary:
+
+> A personal AI guide may help the citizen configure, understand, or revise an automatic allocation profile, but the executed allocation rule is the profile. The AI guide is not itself an automatic allocation profile or hidden allocation authority.
 
 ## Reputation Record
 

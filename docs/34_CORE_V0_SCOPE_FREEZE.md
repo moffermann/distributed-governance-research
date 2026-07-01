@@ -402,6 +402,8 @@ Core v0 includes flows for funding, following, fiscalizer offers, fulfillment ev
 
 Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public institutions acting as internal project participants.
 
+Full personal AI guides are Extension v1+. Core v0 only defines the compatibility boundary: a connected personal guide may summarize, compare, translate, draft, warn, and help configure choices, but it cannot become a delegate, civic actor, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
+
 Core v0 includes configurable civic notifications as a simple user-experience baseline: citizens may configure channels, intensity, and frequency for external interruptions, but material in-app civic records should remain visible for affected projects, allocation profiles, delegations, complaints, reformulations, governance resolutions, and timeout resolutions.
 
 ### 14. Project creation and publication
@@ -668,6 +670,7 @@ These should not be part of Core v0 unless later shown necessary:
 - subdelegation;
 - time-bound delegation;
 - complex delegation portfolios;
+- full personal AI guides;
 - advanced cross-project benchmarking;
 - full common-good subordinate charter system;
 - complex canary releases;

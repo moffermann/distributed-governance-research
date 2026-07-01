@@ -277,7 +277,11 @@ A personal AI guide is an AI system aligned with an individual’s preferences, 
 
 Its role is to reduce the cognitive cost of participation by summarizing proposals, identifying contradictions, comparing options, and helping the person understand how a decision relates to their own principles.
 
-It should not be confused with a central AI that decides for everyone.
+Full personal AI guides are Extension v1+, not a Core v0 requirement.
+
+If connected to the platform, a personal AI guide should remain assistance infrastructure under C008. It may read, summarize, translate, compare, draft, warn, and help configure citizen choices. It should not become a civic actor, delegate, automatic allocation profile, fiscalizer, authority, or hidden recommendation engine.
+
+Material civic actions still require explicit citizen confirmation, an accepted delegation to an eligible non-AI actor, a citizen-configured automatic allocation profile, or another public, auditable platform rule.
 
 ---
 

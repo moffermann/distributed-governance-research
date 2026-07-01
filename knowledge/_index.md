@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H005-ai-personal-guides|H005 - Personal AI Guides for Participation]]
 - [[hypotheses/H006-assisted-deliberation|H006 - Assisted Deliberation Context]]
 - [[hypotheses/H007-continuous-performance-evaluation|H007 - Continuous Performance Visibility]]
 - [[open-questions/distributed-roadmap-construction-governance|Distributed Roadmap Construction Governance]]
@@ -225,6 +226,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H005-ai-personal-guides|H005 - Personal AI Guides for Participation]]
 - [[hypotheses/H006-assisted-deliberation|H006 - Assisted Deliberation Context]]
 - [[hypotheses/H007-continuous-performance-evaluation|H007 - Continuous Performance Visibility]]
 - [[hypotheses/H008-distributed-accountability|H008 — Distributed Accountability Loop]]
