@@ -15,7 +15,7 @@ We do not protect ideas because we like them. We expose them to criticism becaus
 1. **Critique is an asset.** Objections are not interruptions; they are the raw material of theory building.
 2. **No premature persuasion.** The first audience is not the public. The first audience is the theory itself.
 3. **No argument from labels.** Terms such as state, anarchy, market, public, private, or institution must be defined functionally, not ideologically.
-4. **Architecture before ideology.** The central question is not “more state or less state,” but which functions benefit from centralization and which benefit from distribution.
+4. **Architecture before ideology.** The central question is not “more state or less state,” but which functions and functional layers benefit from centralization, which benefit from distribution, and which require hybrid architectures.
 5. **Functions before institutions.** We analyze what must be done before deciding which institution should do it.
 6. **Distributed knowledge matters.** Complex societies contain information that no central authority can fully possess.
 7. **Trust must be designed.** Trust should not depend exclusively on a single authority when technology allows verification, auditability, and distributed accountability.

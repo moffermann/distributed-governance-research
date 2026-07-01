@@ -1,6 +1,6 @@
 # Functional Matrix v0
 
-This matrix is a first baseline for classifying state functions according to their functional nature and likely degree of centralization or distribution.
+This matrix is a first baseline for classifying state functions according to their functional nature, internal layers, and likely degree of centralization, hybridity, or distribution.
 
 It is not a final model. It is a working tool for discussion.
 
@@ -10,11 +10,31 @@ For each function, ask:
 
 > If we remove the inherited institutional form, what minimum function remains, and what architecture solves it best?
 
+Then ask which layer is being analyzed:
+
+```text
+coercion
+rule creation
+planning
+funding
+execution
+evidence
+fiscalization
+evaluation
+enforcement
+rights protection
+emergency command
+data custody
+accountability
+```
+
+The labels below summarize the likely architecture of the function as a whole. They should not be read as saying that every layer of a sector is centralized or every layer is distributed.
+
 ## Scale
 
-- **Centralized:** strong central authority is functionally justified.
-- **Hybrid:** central rules or coordination remain, but execution, evaluation, or support functions can be distributed.
-- **Distributed:** the function can largely be performed through distributed institutions, projects, platforms, and accountability mechanisms.
+- **Centralized:** strong central authority is functionally justified for the decisive layer, usually coercion, unified command, legal recognition, macro fiscal stability, or emergency control.
+- **Hybrid:** central rules, standards, rights protection, interoperability, or coordination remain, but execution, evidence, evaluation, fiscalization, support, or bounded allocation can be distributed.
+- **Distributed:** the function can largely be performed through distributed institutions, projects, platforms, evidence, fiscalization, and accountability mechanisms, while still respecting common legal and safety boundaries.
 
 ---
 

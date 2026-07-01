@@ -101,7 +101,7 @@ The Core v0 architecture should be explained in seven blocks.
 
 ### Block 1 — Foundation
 
-Problem, motivation, functional distribution, and why the model is not simply “more state” or “less state.”
+Problem, motivation, functional layer distribution, and why the model is not simply “more state” or “less state.”
 
 ### Block 2 — Operational unit
 

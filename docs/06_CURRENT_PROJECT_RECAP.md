@@ -8,13 +8,13 @@ The project is currently best understood as a theory of **functional distributed
 
 The original question was whether modern technology could reduce the state to a minimal expression. The project has evolved into a more precise framework:
 
-> Decompose the state into functions and determine which functions benefit from centralization, which benefit from distribution, and which require hybrid architectures.
+> Decompose the state into functions and functional layers, then determine which layers benefit from centralization, which benefit from distribution, and which require hybrid architectures.
 
 ## Central thesis
 
-The state should not be evaluated as a single block. Its functions have different natures.
+The state should not be evaluated as a single block. Its functions and functional layers have different natures.
 
-Functions close to the legitimate use of force tend to require stronger central coordination. Functions centered on information, deliberation, planning, resource allocation, service provision, evaluation, accountability, and trust may benefit from distribution.
+Layers close to the legitimate use of force, rights deprivation, emergency command, enforceable legal authority, or macro fiscal stability tend to require stronger central coordination, common rules, or legally recognized authority. Layers centered on information, deliberation, planning, bounded resource allocation, service provision, evidence, fiscalization, evaluation, accountability, and trust may benefit from distribution.
 
 ## Methodological rule
 
@@ -43,9 +43,9 @@ A problem is not a refutation if the current system also handles it poorly, opaq
 
 ## Current strongest principles
 
-### 1. Functional distribution principle
+### 1. Functional layer distribution principle
 
-The degree of distribution should depend on the nature of the function.
+The degree of distribution should depend on the nature of the functional layer, not just the name of the institution or policy sector.
 
 ### 2. Social sovereignty over value
 

@@ -16,7 +16,7 @@ How should state functions be redesigned when modern technology reduces the cost
 
 ## Initial thesis
 
-The state should not be analyzed as a single block. Its functions have different natures. Some functions may still require centralization, especially those close to the legitimate use of force. Other functions, especially those related to information processing, deliberation, resource allocation, and institutional accountability, may benefit from distribution.
+The state should not be analyzed as a single block. Its functions and functional layers have different natures. Some layers may still require centralization or legally recognized authority, especially those close to the legitimate use of force, rights deprivation, emergency command, macro fiscal stability, or enforceable legal decisions. Other layers, especially those related to information processing, deliberation, bounded resource allocation, evidence, fiscalization, service delivery, and institutional accountability, may benefit from distribution.
 
 ## Non-goals
 
@@ -30,4 +30,4 @@ This project is not currently trying to:
 
 ## Current aim
 
-Build a rigorous conceptual framework that separates state functions by their functional nature and identifies where distribution is technically, institutionally, and socially plausible.
+Build a rigorous conceptual framework that separates state functions by functional layer and identifies where centralization, hybridity, or distribution is technically, institutionally, legally, and socially plausible.

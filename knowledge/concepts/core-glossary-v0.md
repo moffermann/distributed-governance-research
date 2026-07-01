@@ -36,19 +36,20 @@ Distributed governance does not mean that everyone decides everything directly. 
 
 ## Functional State Architecture
 
-Functional state architecture is the method of analyzing state functions according to their nature rather than according to inherited institutional categories.
+Functional state architecture is the method of analyzing state functions and functional layers according to their nature rather than according to inherited institutional categories.
 
 Instead of asking whether the state should be larger or smaller, the framework asks:
 
 - What function must be performed?
 - What is the nature of that function?
-- Does it depend mainly on force, information, deliberation, trust, coordination, or resource allocation?
+- Which layer is being analyzed: coercion, rules, planning, funding, execution, evidence, fiscalization, evaluation, enforcement, rights protection, emergency response, data custody, or accountability?
+- Does it depend mainly on force, information, deliberation, trust, coordination, legal recognition, standards, or resource allocation?
 - Does centralization reduce risk, or does it create information loss and weak accountability?
 - Could distribution improve outcomes?
 
 Core principle:
 
-> The question is not more state or less state. The question is which functions benefit from centralization and which benefit from distribution.
+> The question is not more state or less state. The question is which functions and functional layers benefit from centralization, which benefit from distribution, and which require hybrid architectures.
 
 ---
 
@@ -98,11 +99,11 @@ The target is not public ownership by itself. The target is opaque monopoly powe
 
 ## Functional Distribution
 
-Functional distribution is the idea that distribution should depend on what the function does.
+Functional distribution is the idea that distribution should depend on what the function and the specific functional layer do.
 
-Functions close to the use of force tend to require stronger central coordination. Functions centered on information, deliberation, evaluation, resource allocation, or service provision have greater potential for distribution.
+Layers close to the use of force, legal coercion, irreversible emergency command, rights deprivation, or macro fiscal stability tend to require stronger central coordination, common rules, or legally recognized authority. Layers centered on information, deliberation, evaluation, bounded resource allocation, evidence, fiscalization, service provision, accountability, or reputation have greater potential for distribution.
 
-This avoids the simplistic frame of distributing everything or centralizing everything.
+This avoids the simplistic frame of distributing or centralizing whole sectors. Security, health, justice, education, infrastructure, or environmental governance may each contain centralized, hybrid, and distributed layers.
 
 ---
 
