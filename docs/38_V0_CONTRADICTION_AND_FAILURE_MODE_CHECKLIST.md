@@ -481,6 +481,9 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 ## 4. Funding checklist
 
 - [ ] Is funding clearly a conditional commitment?
+- [ ] Is distributed allocation bounded to the configured assignable public-purpose share rather than the whole public budget?
+- [ ] Are non-assignable common-pool functions protected from popularity, discovery visibility, delegation concentration, and monthly attention effects?
+- [ ] Are citizen allocation, project eligibility, execution readiness, disbursement approval, and fulfillment evaluation kept separate?
 - [ ] Is money prevented from going directly to executor before conditions?
 - [x] Is funding described as commitment until closure rather than free withdrawal?
 - [ ] Are delegated and automatic allocations distinguishable?

@@ -48,6 +48,7 @@ H006 is aligned: assisted deliberation is represented as an Assisted Deliberatio
 H005 is aligned: full personal AI guides remain Extension v1+, while Core v0 defines compatibility boundaries for any connected guide. A personal guide may summarize, compare, translate, draft, warn, and help configure citizen choices, but it cannot become a civic actor, delegate, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
 H004 is aligned: institutional monopoly reduction now targets opaque, non-contestable monopoly power rather than public ownership by label. Core v0 distinguishes public authorities from state-owned operators: authorities cannot be judge and party in scopes they control, while state-owned operators may compete as ordinary eligible organizations in non-conflicted modes under disclosure, equal evidence, fiscalization, assurance, complaint, revocation, and reputation rules.
 H003 is aligned: distributed trust is now incentive-compatible distributed trust. Trust does not mean faith in many actors; it emerges when role-specific incentives, material claims, contextualized evidence, corroboration, contradiction, responsible review, payment/disbursement conditions, reputation, responsibility, consequences, and auditability are connected.
+H002 is aligned: distributed resource allocation is bounded to the configured assignable public-purpose share, active planning scopes, eligibility rules, threshold policies, phase gates, evidence, fiscalization, audit controls, and non-assignable common-pool protections; funding does not substitute for legitimacy, execution readiness, disbursement approval, or fulfillment proof.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -184,7 +185,9 @@ The sixtieth residual cleanup aligned H004 with the refined C007 public-authorit
 
 The sixty-first residual cleanup aligned H003 with H008, H014, H015, H016, H022, and H023: distributed trust is not blind faith in multiple actors or blockchain-style registry integrity by itself. Core v0 trust is produced by role-specific incentive alignment, verifiable material claims, contextualized evidence, contradiction paths, responsible review, payment/disbursement conditions, reputation and responsibility consequences, simple citizen-facing trust labels, and Layer 5 auditability.
 
-Next review candidate: H002 distributed resource allocation.
+The sixty-second residual cleanup aligned H002 with H009, H025, H026, H027, H033, H034, H038, H008, H016, H022, and H023: distributed resource allocation is bounded rather than unconstrained. Citizens, delegates, allocation profiles, and public default rules may allocate only the configured assignable public-purpose share, only toward eligible projects or protocol-authorized control, complaint-review, mitigation, fiscalization, or planning vehicles inside active scopes. The cleanup preserves a non-assignable common pool for functions that should not depend on popularity, discovery visibility, delegation concentration, or monthly citizen attention, and clarifies that funding does not equal social legitimacy, execution readiness, disbursement approval, or fulfillment proof.
+
+Next review candidate: H001 functional distribution principle.
 
 Approximate current maturity:
 

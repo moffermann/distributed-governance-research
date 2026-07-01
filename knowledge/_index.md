@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H002-distributed-resource-allocation|H002 - Bounded Distributed Resource Allocation]]
 - [[hypotheses/H003-distributed-trust|H003 - Incentive-Compatible Distributed Trust]]
 - [[concepts/public-authority-operator-boundary-v0|Public Authority / State-Owned Operator Boundary v0]]
 - [[hypotheses/H004-institutional-monopolies|H004 - Institutional Monopoly Reduction]]
@@ -231,6 +232,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H002-distributed-resource-allocation|H002 - Bounded Distributed Resource Allocation]]
 - [[hypotheses/H003-distributed-trust|H003 - Incentive-Compatible Distributed Trust]]
 - [[hypotheses/H005-ai-personal-guides|H005 - Personal AI Guides for Participation]]
 - [[hypotheses/H006-assisted-deliberation|H006 - Assisted Deliberation Context]]

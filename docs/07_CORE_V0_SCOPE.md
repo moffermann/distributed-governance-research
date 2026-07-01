@@ -29,8 +29,9 @@ These modules are necessary for the first coherent version of the model.
 - project as the base unit;
 - project value thesis and KPIs;
 - separated roles: modeler/designer, executor, fiscalizer;
-- distributed financing;
+- bounded distributed financing;
 - civic wallet / assignable public-purpose budget;
+- non-assignable common-pool boundary for functions that should not depend on citizen-by-citizen allocation;
 - public allocation amount rules and external provider boundary;
 - support versus financing signals;
 - funding closure once target is reached;

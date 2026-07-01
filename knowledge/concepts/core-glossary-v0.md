@@ -173,11 +173,13 @@ Schools, hospitals, foundations, research centers, and cultural organizations wo
 
 ## Distributed Resource Allocation
 
-Distributed resource allocation is a mechanism in which many people assign resources directly to projects, institutions, or causes they consider valuable.
+Distributed resource allocation is a bounded mechanism in which many people assign a configured, non-withdrawable public allocation right to eligible projects, control packages, complaint-review costs, mitigation work, or other protocol-authorized public-purpose vehicles inside active planning scopes.
 
-The algorithm does not decide what has value. It coordinates and records many human decisions.
+The algorithm does not decide what has value. It coordinates and records many human decisions while enforcing visible eligibility, threshold, funding, delegation, phase, evidence, fiscalization, and audit rules.
 
-In this model, funding follows demonstrated value, reputation, evidence, and citizen support rather than only centralized budget decisions.
+In this model, funding may follow demonstrated value, role reputation, fulfillment/control evidence, citizen allocation, delegation, and allocation profiles rather than only centralized budget decisions. Funding remains separate from social support, justified objection, formal complaint, execution readiness, disbursement approval, and final fulfillment evaluation.
+
+Distributed allocation does not mean all budgets become individually assignable. A non-assignable common pool may remain for defense, core security, justice guarantees, macro fiscal obligations, emergency reserves, and other functions that cannot depend on popularity or monthly citizen attention.
 
 ---
 

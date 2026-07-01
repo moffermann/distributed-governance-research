@@ -12,6 +12,8 @@ It also provides the base allocation rule that resumes when budget delegation is
 
 > Automatic allocation is a citizen-configured rule for distributing their civic allocation. It is not delegation to another actor and it is not a hidden system decision.
 
+Automatic allocation can execute only inside the configured assignable public-purpose share and only toward eligible projects or protocol-authorized control, complaint-review, mitigation, planning, or fiscalization vehicles. It cannot allocate the non-assignable common pool, bypass project eligibility, override phase gates, release funds, or treat profile output as proof of social legitimacy.
+
 On first active use of the platform, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that profile.
 
 Budget delegation should not become active until the citizen has a selected base allocation profile or fallback rule.

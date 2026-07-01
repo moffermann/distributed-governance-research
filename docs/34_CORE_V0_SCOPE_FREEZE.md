@@ -301,6 +301,8 @@ Core v0 also allows limited supplemental control funding after minimum control c
 
 Core v0 includes:
 
+- bounded distributed resource allocation;
+- assignable civic wallet separated from a non-assignable common pool;
 - civic wallet or civic allocation right;
 - public, versioned allocation amount rules;
 - equal allocation for all eligible citizens as a simple explicit formula option;
@@ -319,6 +321,10 @@ Core v0 includes:
 Rule:
 
 > Funding is a conditional commitment, not immediate payment and not a freely reversible expression of preference.
+
+Distributed allocation boundary:
+
+> Citizens, delegates, allocation profiles, and public default rules allocate only the configured assignable share of public-purpose resources, and only to eligible projects or protocol-authorized control, complaint-review, mitigation, planning, or fiscalization vehicles inside active scopes. Distributed allocation does not replace the non-assignable common pool, project eligibility review, execution readiness, disbursement review, or fulfillment evaluation.
 
 Phase funding rule:
 

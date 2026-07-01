@@ -13,7 +13,7 @@ The current state combines two functions:
 
 These functions can be separated.
 
-A person may still pay taxes as today, but a portion of those taxes can become assignable by the person to projects, institutions, fiscalization processes, mitigation efforts, planning initiatives, or public-value goals.
+A person may still pay taxes as today, but a configured portion of public-purpose resources can become assignable by the person to eligible projects, control packages, complaint-review costs, fiscalization processes, mitigation efforts, planning initiatives, or other protocol-authorized public-value vehicles inside active scopes.
 
 ## Core model
 
@@ -40,7 +40,7 @@ Some functions may require common funding that is not individually assigned:
 
 ## Assignable pool
 
-A portion of public resources can be assigned by citizens to:
+A portion of public resources can be assigned by citizens through eligible project, control, complaint-review, mitigation, fiscalization, planning, or public-value vehicles for areas such as:
 
 - education projects;
 - health projects;

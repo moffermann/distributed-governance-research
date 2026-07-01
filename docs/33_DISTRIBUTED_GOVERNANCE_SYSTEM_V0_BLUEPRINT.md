@@ -187,6 +187,8 @@ Key rule:
 
 A project draft may exist internally while being prepared. Public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
 
+Under H002, distributed resource allocation is bounded rather than unconstrained. Citizens, delegates, allocation profiles, and public default rules may assign only the configured assignable share of public-purpose resources, and only to projects or control vehicles that satisfy the active planning, eligibility, threshold, funding, phase, evidence, fiscalization, and audit conditions. The model does not turn every public budget into an individually assignable balance and does not let popularity substitute for execution readiness, disbursement review, or fulfillment evaluation.
+
 Under H009, every financeable project should align with an active `Planning Scope`: a public-function, pilot, operating-mode, protocol, approved roadmap, or authorized planning line that is currently open to distributed financing. Core v0 does not define how a national roadmap is created or voted. It only requires the active scope used for project eligibility to be visible, versioned, and auditable.
 
 In tutored mode, the planning scope may be authority-defined. This is acceptable only as an external implementation condition under C020: material scope decisions, rejections, or reclassifications should be public Governance Resolution objects or equivalent review traces. An out-of-scope idea should not disappear; it can remain an Idea, be reclassified, be reformulated, or become input for future planning-scope governance.
@@ -1017,6 +1019,8 @@ It may support:
 - compliance with country implementation.
 
 Citizen-level allocation amounts may be calculated through a public, versioned formula configured by the competent authority, institutional administrator, protocol, or country implementation. The simplest supported formula should be equal allocation for all eligible citizens. Other formulas may be contribution-weighted, inverse or redistributive, hybrid, or externally calculated.
+
+Core v0 distinguishes the assignable civic wallet from a non-assignable common pool. The assignable side can fund eligible projects, phase-specific funding lanes, minimum control packages, supplemental control where allowed, complaint-review costs, mitigation, and other protocol-authorized public-purpose vehicles. The non-assignable side may remain for defense, core security, justice guarantees, macro fiscal obligations, emergency reserves, debt service, or other functions that should not depend on popularity, discovery visibility, delegation concentration, or monthly citizen attention.
 
 If the formula depends on sensitive tax, vulnerability, territorial-priority, or registry data, the platform should not receive the raw dataset. It should consume only an authorized allocation amount from an `Allocation Amount Provider`, such as treasury, tax authority, social registry, ministry system, lawful custodian, or signed batch file.
 

@@ -10,6 +10,8 @@ Funding is one of the central actions of the distributed governance system. The 
 
 > Funding is a conditional, traceable commitment until project closure. It is not an immediate transfer of money to the executor and not a freely reversible expression of preference.
 
+Funding is also a bounded allocation action. A citizen can allocate only from the configured assignable civic balance and only to a project, phase lane, control package, complaint-review cost, mitigation activity, or other public-purpose vehicle that is eligible under the active Planning Scope, Threshold Policy, and operating-mode rules.
+
 For phased projects, funding may be attached to a phase-specific lane. A citizen may fund a design phase, an execution phase, a minimum control package, or supplemental control where allowed.
 
 Execution-phase funding may be accepted while a required design phase is still pending, but it remains reserved or conditional. It cannot be released for construction or execution until the design phase gate is accepted.

@@ -29,7 +29,7 @@ A problem is not a refutation if the current system also handles it poorly, opaq
 - Distributed trust
 - Institutional monopoly reduction
 - Algorithm as coordinator, not decider
-- Distributed resource allocation
+- Bounded distributed resource allocation
 - Assisted deliberation context
 - Continuous performance visibility
 - Distributed accountability loop
