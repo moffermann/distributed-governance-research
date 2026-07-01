@@ -192,7 +192,9 @@ The sixty-third residual cleanup aligned H001 with the v0 functional matrix, fun
 
 The sixty-fourth residual cleanup refined H001 after the health/urgent-care objection and added checklist controls: centralizing or legally standardizing public guarantees, rights, coverage duties, accreditation, funding rules, sanctions, and fiscalization does not imply centralized state service provision. Eligible public, private, nonprofit, cooperative, university, concession-like, or state-owned operators may provide publicly financed services under common legal and platform accountability rules. The cleanup also distinguishes platform consequences such as payment blocks, reputation effects, correction, revocation, or replacement from legal consequences such as administrative sanctions, civil liability, license effects, fines, judicial action, or regulatory intervention.
 
-Next review candidate: residual audit of foundational session notes and older scope documents for stale H001-H003 language.
+The sixty-fifth residual cleanup audited foundational session notes and the missing-functions addendum for stale H001-H003 language. The cleanup preserves historical discovery notes while adding v0 alignment notes for functional-layer distribution, bounded assignable allocation, incentive-compatible distributed trust, and the complaint-evidence versus fulfillment/control-evidence distinction where old generic evidence language could confuse the reader. It also narrows older funding language from direct citizen allocation of taxes or resources to configured assignable public-purpose shares inside eligibility, planning, fiscalization, phase, and common-pool boundaries.
+
+Next review candidate: residual audit of remaining maps and indexes affected by H001-H003 and C001-C025, then prepare the Phase 2 formal entity inventory.
 
 Approximate current maturity:
 

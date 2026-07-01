@@ -2,6 +2,14 @@
 
 Date: 2026-06-25 / 2026-06-26
 
+## Current v0 alignment note
+
+This historical review note should now be read through H002, H003, and H008:
+
+- the resource-allocation cycle is bounded to the configured assignable public-purpose share and does not make all public budgets citizen-assignable;
+- trust and accountability depend on role-specific incentives, fulfillment/control evidence, fiscalizer review, responsibility events, and reputation effects, not on self-reporting or crowd confidence alone;
+- generic references to evidence in this note refer primarily to fulfillment/control evidence unless complaint processing is explicitly discussed.
+
 ## Context
 
 Ricardo acted as an external reviewer of the emerging distributed governance theory. His questions forced clarification around value, representation, information integrity, deliberation, and accountability.
@@ -25,7 +33,7 @@ Accountability must not depend only on the institution receiving resources. Self
 The platform should combine:
 
 - commitments declared by the institution;
-- evidence of execution;
+- fulfillment/control evidence of execution;
 - financial traceability;
 - beneficiaries;
 - families or users;
@@ -38,7 +46,7 @@ The platform should combine:
 
 The emerging cycle is:
 
-> proposal → financing → execution → evidence → evaluation → reputation → new financing
+> proposal -> financing -> execution -> fulfillment/control evidence -> evaluation -> reputation -> new financing
 
 This cycle is stronger than a simple voting or donation model because it links future support to verifiable past performance.
 

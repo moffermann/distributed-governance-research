@@ -2,6 +2,14 @@
 
 Date: 2026-06-26
 
+## Current v0 alignment note
+
+This session now maps primarily to H003, H022, and H023:
+
+- social value is expressed through a Project Value Thesis and Project Evidential Contract;
+- generic references to evidence in the value-thesis context should be read as fulfillment/control evidence, not complaint evidence, unless a complaint process is explicitly being discussed;
+- information reliability is not solved by record integrity alone. It requires role incentives, accountable material claims, contextualized evidence, contradiction paths, responsible review, and consequences.
+
 ## Context
 
 Ricardo raised three deeper questions that directly stress-tested the architecture:
@@ -46,7 +54,7 @@ Ricardo asked whether distributed governance discovers social value or necessari
 
 The system does not discover value as an objective physical fact, nor does it impose a single universal theory of value.
 
-Instead, each project must declare a value thesis: what value it claims to produce, for whom, in what time horizon, and with what evidence.
+Instead, each project must declare a value thesis: what value it claims to produce, for whom, in what time horizon, and with what fulfillment/control evidence.
 
 The system allows different theses of value to be proposed, funded, evaluated, compared, corrected, and abandoned.
 
@@ -96,9 +104,9 @@ Therefore, the problem is institutional, not purely technological.
 Ricardo's questions clarified that the system needs:
 
 - meta-governance without discretionary central authority;
-- project-level evidence definitions;
+- project-level fulfillment/control evidence definitions;
 - incentives for third-party information production;
-- contestable evidence industries;
+- contestable fulfillment/control evidence production and contradiction paths;
 - visible and auditable production of knowledge.
 
 ## Open questions

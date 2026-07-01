@@ -2,6 +2,14 @@
 
 Date: 2026-06-25
 
+## Current v0 alignment note
+
+This document is a historical distillation. It should now be read through the accepted H001-H003 refinements:
+
+- H001: distribution is assessed by functional layer, not by whole state function, ministry, policy sector, or public/private label. A centralized public guarantee can coexist with distributed service provision.
+- H002: distributed allocation means a configured assignable public-purpose share inside planning scopes, eligibility rules, phase gates, evidence, fiscalization, and common-pool protections. It does not make all public budgets citizen-assignable.
+- H003: distributed trust means incentive-compatible trust. It is not blockchain by default, crowd faith, or registry integrity alone; it requires role incentives, verifiable claims, contextualized evidence, contradiction paths, responsible review, consequences, and auditability.
+
 ## Origin of the conversation
 
 The initial question was whether, considering only technical feasibility and projecting into the future, artificial intelligence and modern tools could reduce the state to a minimal expression or even make it disappear.
@@ -78,11 +86,13 @@ Blockchain appeared not as the solution, but as a useful analogy. The deeper pri
 - trust in governance should come from distributed participation and transparent processes;
 - trust in agreements should be reduced to structured incentives, evidence, and arbitration.
 
+Current H003 later refines this: trust is not created by believing many actors. It is created when role-specific incentives, material claims, contextualized evidence, contradiction paths, review responsibility, consequences, and auditability are connected.
+
 ## Functional classification discovered
 
-A key architectural principle emerged:
+A key architectural principle emerged and was later refined by H001:
 
-> The degree of distribution should depend on the functional nature of the state function.
+> The degree of distribution should depend on the functional layer being analyzed, not only on the broad state function, ministry, or policy sector.
 
 ### Defense
 
@@ -111,7 +121,7 @@ The legislative function has strong distribution potential because it does not d
 
 ### Executive resource allocation
 
-Many ministries in the executive branch exist primarily as centralized resource allocators: education, health, culture, sports, science, development. The theory suggests that this allocation function could be drastically reduced or replaced by distributed allocation mechanisms where citizens direct resources toward organizations that demonstrate value.
+Many ministries in the executive branch exist primarily as centralized resource allocators: education, health, culture, sports, science, development. The theory suggests that this allocation function could be drastically reduced or replaced by distributed allocation mechanisms where citizens direct a configured assignable share toward eligible public-purpose projects or organizations that demonstrate value under planning, evidence, fiscalization, and common-pool constraints.
 
 ## Strongest principle so far
 

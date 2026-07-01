@@ -2,6 +2,14 @@
 
 Date: 2026-06-26
 
+## Current v0 alignment note
+
+This session should now be read through H002, H024, and H025:
+
+- distributed allocation is bounded to the configured assignable public-purpose share and active eligibility rules;
+- complaint evidence belongs to the complaint process, while fulfillment/control evidence belongs to project accountability, disbursement, closure, and reputation;
+- complaint funding pays for review work and does not buy truth, admissibility, court action, or automatic project suspension.
+
 ## Context
 
 This session clarified several design points around formal participation, complaints, funding, support signals, project thresholds, and conflicts of interest.
@@ -27,11 +35,11 @@ Formal participation requires verified identity. A system that allocates public 
 
 ### 2. Complaints and fiscalization
 
-A complaint can trigger review only after some combination of identity, evidence, support, resources, and fiscalization. Complaint funding pays for verification; it does not buy truth.
+A complaint can trigger review only after some combination of identity, complaint evidence or support material, citizen support, review funding, and fiscalizer admissibility work. Complaint funding pays for verification; it does not buy truth.
 
 ### 3. Civic tax wallet
 
-Mandatory taxation can remain while allocation becomes more distributed. A portion of taxes could become assignable by citizens to approved projects, fiscalization, mitigation, planning, or institutions.
+Mandatory taxation can remain while allocation becomes more distributed. A configured portion of public-purpose resources could become assignable by eligible citizens to eligible projects, control packages, complaint-review costs, fiscalization, mitigation, planning initiatives, or other protocol-authorized public-purpose vehicles.
 
 ### 4. Support is not the same as financing
 
@@ -47,7 +55,7 @@ Projects must disclose relationships among funders, proposers, modelers, executo
 
 ## Open questions
 
-1. What portion of taxes should be assignable?
+1. What configured share of public-purpose resources should be assignable?
 2. What functions remain in the common non-assignable pool?
 3. What support thresholds are appropriate by project type?
 4. How should funding concentration be displayed?

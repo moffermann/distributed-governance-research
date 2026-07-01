@@ -4,6 +4,14 @@ This addendum records additional state functions identified after reviewing `fun
 
 These functions should be incorporated into the next version of the matrix.
 
+## Current v0 alignment note
+
+Read this addendum through H001-H003:
+
+- H001: each missing function should be decomposed into layers before assigning a central, hybrid, or distributed architecture.
+- H002: distributed allocation means a bounded assignable public-purpose share inside planning scopes, eligibility rules, phase gates, evidence, fiscalization, and common-pool protections.
+- H003: trust in distributed service provision, monitoring, planning, or fiscalization depends on incentives, accountable claims, contextualized evidence, contradiction, review responsibility, consequences, and auditability.
+
 ## Why this addendum exists
 
 The first matrix focused on functions already discussed: defense, security, justice, legislation, executive resource allocation, social services, registries, and oversight.
@@ -20,7 +28,7 @@ Further review identified missing high-level functions that are essential for a 
 - labor and social security;
 - emergency and disaster management.
 
-These functions are important because they test the theory in areas that are neither pure use of force nor simple distributed resource allocation.
+These functions are important because they test the theory in areas that are neither pure use of force nor bounded distributed resource allocation.
 
 ---
 
@@ -74,14 +82,14 @@ Even if allocation of resources becomes distributed, the aggregate fiscal envelo
 Public finance has at least two different functions:
 
 1. **Macro fiscal constraint:** how much is collected, borrowed, spent, or saved.
-2. **Micro allocation:** which projects or institutions receive resources.
+2. **Micro allocation:** which eligible projects, institutions, control vehicles, or other protocol-authorized public-purpose vehicles receive the configured assignable share.
 
 The theory is more favorable to distributing micro allocation than to fully distributing macro fiscal stability.
 
 ## Open questions
 
-- Can taxpayers directly allocate part of taxes while a central fiscal rule sets aggregate constraints?
-- What portion of resources should be earmarked, discretionary, or directly assignable?
+- Can eligible citizens allocate a configured public-purpose share while a central fiscal rule sets aggregate constraints?
+- What portion of public-purpose resources should be assignable, discretionary, or reserved in common pools?
 - How are long-term obligations financed?
 
 ---
