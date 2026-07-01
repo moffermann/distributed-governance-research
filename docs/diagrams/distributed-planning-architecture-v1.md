@@ -1,62 +1,44 @@
-# Diagram - Distributed Planning Architecture v1
+# Diagram - Planning Scope Alignment and Future Roadmap Construction
 
-This diagram captures the current conceptual model of binding and evolutionary distributed planning.
+This diagram captures the current H009 alignment: Core v0 requires planning-scope alignment for financeable projects, while full distributed roadmap construction remains an open question.
 
 ```mermaid
 flowchart TD
-    A[Meta-planning national framework<br/>Common constitutional-like planning layer] --> B1[National branch / goal]
-    A --> B2[National branch / goal]
-    A --> B3[National branch / goal]
+    A[Public function / pilot / operating mode] --> B[Planning Scope]
+    B --> B1[Authority-defined scope<br/>Tutored mode]
+    B --> B2[Protocol-defined scope<br/>Semi-open or open mode]
+    B --> B3[Approved roadmap line<br/>Where roadmap exists]
 
-    B1 --> C1[Regional planning branch]
-    B1 --> C2[Regional planning branch]
-    B2 --> C3[Regional planning branch]
+    B --> P[Project]
+    P --> R1[Primary Responsibility Anchor]
+    P --> R2[Optional secondary contributions]
+    P --> V[Value thesis and evidential contract]
+    V --> E[Execution and contextualized evidence]
+    E --> F[Evaluation, closure, and reputation]
 
-    C1 --> D1[Communal / local planning branch]
-    C1 --> D2[Communal / local planning branch]
-    C2 --> D3[Communal / local planning branch]
+    B --> S[Scope decision]
+    S --> S1[Inside scope<br/>continue validation]
+    S --> S2[Outside scope<br/>Idea / reclassify / reformulate]
+    S --> S3[Tutored decision<br/>Governance Resolution]
 
-    D1 --> P1[Project]
-    D1 --> P2[Project]
-    D2 --> P3[Project]
-    C2 --> P4[Regional project]
-    B3 --> P5[National project]
-
-    P1 --> R1[Primary responsibility anchor]
-    P1 --> R2[Optional secondary contributions]
-
-    A --> L[Goal lifecycle]
-    L --> L1[Active]
-    L1 --> L2[Underfunded]
-    L2 --> L3[Under Review]
-    L3 --> L4[At Risk]
-    L4 --> L5[Reformulated / Suspended / Eliminated]
-    L1 --> L6[Completed]
-
-    A --> M[Modification process]
-    M --> M1[Proposal by anyone]
-    M1 --> M2[Justification / plan elaboration]
-    M2 --> M3[Deliberation and review]
-    M3 --> M4[Approval / rejection]
-    M4 --> M5[Incorporation into roadmap]
-
-    P1 --> E[Execution and contextualized evidence]
-    E --> F[Evaluation dashboard]
-    F --> G[Reputation and future funding]
+    OQ[Future open question<br/>Distributed roadmap construction] --> PA[Planning Area]
+    PA --> GP[Roadmap Goal Proposal]
+    GP --> D[Deliberation / support / voting]
+    D --> CA[Conflict analysis and review]
+    CA --> AL[Approved planning line]
+    AL -. future source .-> B
 ```
 
 ## Key rules represented
 
-1. There is a single national meta-planning framework for coherence.
-2. National, regional, communal, and local branches can coexist.
-3. A project must attach to the level that corresponds to its scope.
-4. A project must declare exactly one Primary Responsibility Anchor.
-5. A project may declare secondary contributions, but accountability remains tied to the anchor unless a contribution is also defined as a formal measured commitment.
-6. Goals are binding but not irreversible.
-7. Goals can be added, modified, reformulated, suspended, or eliminated.
-8. Planning conflicts should be visible rather than hidden.
-9. Evaluation and future funding depend on contextualized evidence and performance.
+1. Core v0 requires active Planning Scope alignment before execution financing.
+2. A Planning Scope may be authority-defined in tutored mode, protocol-defined in open or semi-open mode, or linked to an approved roadmap where one exists.
+3. A project must declare exactly one Primary Responsibility Anchor inside the active scope.
+4. A project may declare secondary contributions, but accountability remains tied to the anchor unless a contribution is also defined as a formal measured commitment.
+5. Outside-scope ideas should not disappear; they may remain Ideas, be reclassified, be reformulated, or inform future scope proposals.
+6. Material tutored scope decisions should create Governance Resolutions under C020.
+7. Distributed roadmap construction through votable planning areas is preserved as a future open question, not Core v0.
 
 ## Current status
 
-This is a conceptual diagram, not an implementation design.
+This is a conceptual diagram. Core v0 covers Planning Scope Alignment. Full roadmap-construction governance remains unresolved.

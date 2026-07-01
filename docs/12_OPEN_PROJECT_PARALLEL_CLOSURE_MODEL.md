@@ -41,6 +41,7 @@ It may also be looking for:
 - evidence producers;
 - funders;
 - phase deliverables or phase-gate review;
+- planning scope alignment review where applicable;
 - beneficiary confirmations;
 - observations;
 - missing control components;
@@ -130,6 +131,7 @@ They should come from the project's applicable `Threshold Policy`, not from one 
 Possible closure conditions include:
 
 - responsible executor accepted;
+- active Planning Scope alignment confirmed;
 - required funding reached;
 - required prior phase gate accepted where applicable;
 - required fiscalizer or fiscalizers confirmed;
@@ -214,6 +216,7 @@ The project completed all applicable closure conditions.
 
 At this point:
 
+- Planning Scope alignment is confirmed;
 - funding is complete;
 - executor responsibility is confirmed;
 - required prior phase gates are accepted where applicable;

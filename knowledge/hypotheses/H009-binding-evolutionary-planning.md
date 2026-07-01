@@ -1,77 +1,251 @@
-# H009 — Binding Evolutionary Planning
+# H009 — Planning Scope Alignment
 
 ## Hypothesis
 
-A distributed governance architecture can use a national roadmap that is binding, but evolutionary: it provides a stable long-term direction while remaining capable of organic revision as society, technology, evidence, and priorities change.
+Core v0 should require every financeable project to align with an active `Planning Scope`, but it should not pretend to solve the full governance problem of how a national, regional, communal, or thematic roadmap is created, voted, modified, or legitimized.
 
-## Core idea
+The earlier framing of this hypothesis as "binding evolutionary planning" remains important as a long-term direction. However, it is too broad for Core v0 unless it is split into two distinct concepts:
 
-Planning should not be a static document, nor should it reset with every political cycle. It should behave like a living roadmap.
+1. `Planning Scope Alignment`: whether a project belongs to an active public-function, pilot, operating-mode, roadmap, or authorized planning line.
+2. `Roadmap Construction Governance`: how those scopes, goals, areas, or planning lines are created, voted, revised, suspended, or eliminated.
 
-The roadmap is binding because projects that seek funding must declare how they contribute to an approved goal. It is evolutionary because goals can be added, modified, suspended, reformulated, or eliminated through defined mechanisms.
+Core v0 includes the first concept. The second remains an open question and likely Extension v1+ / country implementation work.
 
-## Meta-planning
+## Rationale
 
-The system requires a shared national meta-planning layer, similar in role to how a constitution provides a common framework for legislation.
+A project-based distributed governance system should not let projects float without any public-function or planning boundary. Citizens need to know which public function, pilot, territorial scope, or authorized line a project is trying to serve.
 
-The meta-planning layer does not define every project. It defines the structure within which national, regional, communal, and local goals are organized.
+At the same time, requiring alignment with a "national roadmap" creates a serious unresolved problem: who builds that roadmap, by what authority, with what voting or deliberation mechanism, and under what relationship to tutored mode?
 
-## Planning hierarchy
+If Core v0 assumes a fully built distributed national planning system, it overclaims.
 
-The planning hierarchy is:
+If Core v0 ignores planning scope entirely, it risks funding projects with no relationship to the public function, pilot budget, or operating mode that made distributed financing available.
 
-```text
-meta-planning national framework
-  → national goals / branches
-    → regional goals / branches
-      → communal or local goals
-        → projects
-```
-
-## Organic growth
-
-Any person, university, foundation, company, community, or institution may propose:
-
-- a new goal;
-- a modification to an existing goal;
-- a replacement of an existing goal;
-- suspension or elimination of an obsolete goal.
-
-## Adding new goals
-
-Adding a new goal generally requires two stages:
-
-1. enough financing or support to elaborate the plan seriously;
-2. enough approval to incorporate it into the binding roadmap.
-
-A plan should normally include diagnosis, goals, costs, timelines, risks, KPIs, externalities, and expected social value.
-
-## Modifying or eliminating goals
-
-Not all changes require the same process. A corrective or derogatory proposal may require justification, impact analysis, and approval, but not necessarily a full planning project.
-
-## Goal states
-
-A goal may move through states:
+The correct v0 move is narrower:
 
 ```text
-Active → Underfunded → Under Review → At Risk → Reformulated / Suspended / Eliminated
+Projects need active planning-scope alignment.
+The roadmap-construction mechanism remains unresolved.
 ```
 
-## Principle
+## Planning Scope
 
-A goal should not be eliminated simply because it failed once. It should be reformulated, suspended, or eliminated only when it persistently loses support, viability, or relevance.
+A `Planning Scope` is a public, versioned scope that defines what kinds of projects are eligible for distributed financing under a public function, operating mode, pilot, protocol, territorial rule, or authorized planning line.
 
-## Planning conflicts
+It may be created by different sources depending on the operating mode and country implementation:
 
-Conflicts between goals are not necessarily failures. They should be made visible. Once visible, society can deliberate, compare tradeoffs, and propose projects that reduce or resolve those conflicts.
+- authority-defined scope in tutored mode;
+- protocol-defined scope in non-tutored mode;
+- approved roadmap goal where a roadmap mechanism exists;
+- pilot program definition;
+- territorial or public-function rule;
+- future distributed roadmap-construction mechanism.
 
-## Methodological rule discovered
+Minimum attributes:
 
-Any critique of the distributed model should be compared with how the current institutional model solves the same problem.
+- public function or pilot;
+- operating mode;
+- source: authority, protocol, approved roadmap, country implementation, or future distributed mechanism;
+- eligible project types;
+- excluded or out-of-scope project types where relevant;
+- territorial level;
+- effective date;
+- review or expiration date where applicable;
+- responsible authority or process;
+- citizen-facing explanation;
+- audit trail.
 
-A problem is not a refutation if the existing system also fails or solves it only through opaque political discretion.
+## Tutored mode
+
+In tutored mode, the planning scope may be defined by the central authority or authorized implementation administrator.
+
+This does not contradict the project model if the scope is public, versioned, reasoned, and auditable.
+
+Example:
+
+```text
+Public function:
+Sports.
+
+Operating mode:
+Tutored.
+
+Authority-defined planning scope:
+- local sports infrastructure;
+- child sports programs;
+- club equipment renewal.
+
+Allowed distributed projects:
+Only projects inside that declared scope.
+```
+
+If a citizen proposes a cultural music lab under the sports scope, the platform should not declare the idea worthless. It should say:
+
+```text
+This idea is outside the active sports planning scope.
+It may remain as an Idea, be reclassified, or become a future scope proposal.
+```
+
+The authority decision should be represented through the C020 Governance Resolution path when it materially affects publication, eligibility, or scope.
+
+## Semi-open and open modes
+
+In semi-open or open modes, planning scope may be defined by protocol rules, approved roadmap goals, public-function rules, or future distributed planning governance.
+
+Core v0 does not need to choose the final political mechanism.
+
+It requires:
+
+- visible scope source;
+- versioned rules;
+- public reason where scope changes materially;
+- audit trail;
+- no hidden eligibility boundaries;
+- no silent removal of project categories from financing.
+
+## Boundary with H010
+
+H010 defines the `Primary Responsibility Anchor` of a project.
+
+H009 defines whether that anchor belongs to an active planning scope.
+
+Example:
+
+```text
+Project:
+Design and Construction of Multi-court Facility in Macul.
+
+Primary Responsibility Anchor:
+Usable public-access sports infrastructure.
+
+Planning Scope:
+Tutored sports pilot allows local sports infrastructure.
+
+Result:
+Eligible for project validation, subject to ordinary requirements.
+```
+
+The anchor answers:
+
+```text
+What is this project primarily responsible for delivering?
+```
+
+The planning scope answers:
+
+```text
+Is that kind of project currently open to distributed financing under this public function or operating mode?
+```
+
+## Out-of-scope or misaligned ideas
+
+An idea or draft outside the active planning scope should not disappear.
+
+Possible treatments:
+
+- remain as an `Idea`;
+- be reclassified under a different active public function;
+- request reformulation;
+- wait for the relevant public function to open;
+- become an input to a future roadmap or planning-scope proposal process.
+
+Core v0 should not create execution financing for out-of-scope projects by default.
+
+Rule:
+
+> Outside-scope does not mean socially worthless. It means not currently eligible for execution financing under the active scope.
+
+## Future distributed roadmap construction
+
+The user-proposed idea of a national roadmap divided by votable areas is important and should be preserved.
+
+A future architecture might look like:
+
+```text
+Planning Area
+-> Roadmap Goal Proposal
+-> deliberation
+-> support / voting / delegated participation
+-> review and conflict analysis
+-> approved planning line
+-> financeable project scope
+```
+
+This could allow distributed creation of national, regional, communal, or thematic roadmaps.
+
+However, this is not ready for Core v0 because it still needs answers to:
+
+- who may create planning areas;
+- how areas are divided;
+- who can vote in each area;
+- whether voting is territorial, thematic, citizen-wide, delegated, or hybrid;
+- how conflicts among planning areas are handled;
+- how tutored authorities interact with citizen-created planning lines;
+- what quorum or support thresholds apply;
+- how low-visibility but essential services are protected;
+- how capture, popularity bias, and short-termism are mitigated;
+- whether planning lines bind budgets, project eligibility, discovery visibility, or only recommendation.
+
+This is recorded as a future open question, not discarded.
+
+## Examples
+
+### Sports project inside scope
+
+```text
+Planning Scope:
+Sports tutored pilot allows local sports workshops.
+
+Project:
+Free sports school for children in Maipu.
+
+Result:
+Eligible for publication if executor, evidence, fiscalization, budget,
+thresholds, and other project requirements are satisfied.
+```
+
+### Sports infrastructure inside scope
+
+```text
+Planning Scope:
+Sports tutored pilot allows local sports infrastructure.
+
+Project:
+Design and Construction of Multi-court Facility in Macul.
+
+Result:
+Eligible for validation, but still subject to design gates,
+control package, assurance, related-party safeguards, and no duplication.
+```
+
+### Valuable idea outside active scope
+
+```text
+Planning Scope:
+Sports only.
+
+Idea:
+Youth music laboratory in Macul.
+
+Result:
+Not execution-financeable under sports scope.
+It remains an Idea, can be reclassified if a cultural scope exists,
+or can inform a future planning-scope proposal.
+```
+
+## Failure modes prevented
+
+This narrower H009 prevents:
+
+- projects with no public-function or pilot boundary;
+- hidden scope decisions by tutored authorities;
+- pretending that Core v0 has solved national planning democracy;
+- rejecting valuable ideas as worthless simply because they are outside scope;
+- using "roadmap alignment" as a silent centralized veto;
+- mixing project governance with unresolved constitutional-scale planning governance.
 
 ## Status
 
-Core planning hypothesis. Needs formalization and examples.
+Aligned Core v0 planning hypothesis.
+
+Core v0 includes Planning Scope Alignment for financeable projects. Full distributed roadmap construction, including national roadmaps divided by votable areas, remains a preserved open question and likely Extension v1+ / country implementation work.

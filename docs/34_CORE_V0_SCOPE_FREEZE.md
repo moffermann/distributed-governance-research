@@ -104,6 +104,7 @@ A project must include:
 - problem;
 - solution;
 - territory;
+- Planning Scope reference;
 - Primary Responsibility Anchor;
 - promised value;
 - value icons;
@@ -151,6 +152,10 @@ Rule:
 Rule:
 
 > Every financeable project must have one Primary Responsibility Anchor. Secondary contributions are allowed, but they cannot hide what the project is primarily funded to deliver. Formal secondary commitments require proportional metrics, fulfillment/control evidence, and consequences.
+
+Rule:
+
+> Every financeable project must align with an active Planning Scope. Core v0 requires the scope used for eligibility to be visible, versioned, and auditable, but it does not define the full mechanism for constructing a national, regional, communal, or thematic roadmap.
 
 Rule:
 
@@ -511,6 +516,8 @@ Suspended
 
 Core v0 does not force countries to exit tutored mode. It requires material tutored decisions and tutored silence to become public civic objects through Governance Resolution and Review Timeout Resolution mechanisms.
 
+In tutored mode, a competent authority or authorized implementation administrator may define the active Planning Scope for the public function opened to distributed financing. This is a country implementation or tutored operating-mode condition, not a solved distributed roadmap-construction mechanism. The scope and material scope decisions must be public, versioned, and auditable.
+
 ### 22. Protocol change governance
 
 Core v0 includes a minimum protocol-change discipline.
@@ -580,6 +587,7 @@ These should not be part of Core v0 unless later shown necessary:
 - complex canary releases;
 - full constitutional meta-governance implementation;
 - detailed non-tutored protocol voting mechanics;
+- distributed national roadmap construction or votable planning-area governance;
 - advanced capture-prediction scoring;
 - advanced inferred recommender systems;
 - detailed sector-specific KPI libraries beyond pilot needs;

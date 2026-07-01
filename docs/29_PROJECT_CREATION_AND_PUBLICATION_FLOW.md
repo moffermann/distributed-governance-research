@@ -49,19 +49,20 @@ Important distinction:
 1. Create idea
 2. Define problem and solution
 3. Declare primary responsibility anchor and promised value
-4. Define beneficiaries
-5. Define executor and related-party declarations
-6. Build budget
-7. Define phases where relevant
-8. Define milestones
-9. Build the Project Evidential Contract
-10. Define fiscalization required
-11. Define threshold policy
-12. Declare risks and antivalues
-13. Assisted validation by rules and AI
-14. Citizen preview
-15. Publication as open project
-16. Management of open project
+4. Check planning scope alignment
+5. Define beneficiaries
+6. Define executor and related-party declarations
+7. Build budget
+8. Define phases where relevant
+9. Define milestones
+10. Build the Project Evidential Contract
+11. Define fiscalization required
+12. Define threshold policy
+13. Declare risks and antivalues
+14. Assisted validation by rules and AI
+15. Citizen preview
+16. Publication as open project
+17. Management of open project
 ```
 
 ## 1. Create idea
@@ -187,7 +188,42 @@ Requires age range, number of children, selection criteria, and beneficiary conf
 
 If no existing value fits, the AI value generator may propose a project-specific value with metrics and fulfillment evidence requirements.
 
-## 4. Define beneficiaries
+## 4. Check planning scope alignment
+
+Before a project can become financeable, it should reference an active Planning Scope.
+
+The Planning Scope defines what kinds of projects are currently open to distributed financing under the relevant public function, operating mode, pilot, protocol, approved roadmap line, or country implementation rule.
+
+Example:
+
+```text
+Public function:
+Sports.
+
+Operating mode:
+Tutored.
+
+Active Planning Scope:
+Local sports infrastructure, child sports programs, club equipment renewal.
+```
+
+If the proposed project fits the active scope, it may continue through ordinary validation.
+
+If it does not fit, the system should not treat the idea as worthless. It should show the next available path:
+
+```text
+This idea is outside the active sports planning scope.
+
+Possible next steps:
+- keep it as an Idea;
+- reclassify under another active public function;
+- reformulate the project;
+- use it as input for a future planning-scope proposal.
+```
+
+In tutored mode, the competent authority may define or review planning scope. Material scope decisions should create a Governance Resolution or review trace under C020.
+
+## 5. Define beneficiaries
 
 The system forces a clear distinction among beneficiary types.
 
@@ -229,7 +265,7 @@ How will that be verified?
 Who is only indirectly benefited?
 ```
 
-## 5. Define executor
+## 6. Define executor
 
 The creator chooses one of two paths.
 
@@ -310,7 +346,7 @@ Public access rules, beneficiary criteria, operating conditions, and independent
 
 If the relationship is severe, the system may require reformulation, actor or supplier replacement, disbursement blocking, or rejection. If the relationship was hidden or misrepresented, it may trigger complaint review and a role-specific Responsibility Event.
 
-## 6. Build budget
+## 7. Build budget
 
 The budget should be guided and structured.
 
@@ -368,7 +404,7 @@ Rule:
 
 Control work may be structured as a Control Subproject. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable; the executor cannot directly select the actor that validates its own performance.
 
-## 7. Define phases where relevant
+## 8. Define phases where relevant
 
 Most small projects can proceed with one implicit phase.
 
@@ -432,7 +468,7 @@ Rule:
 
 > A design-and-execution project may be one parent project, but execution money cannot be released against an unaudited design.
 
-## 8. Define milestones
+## 9. Define milestones
 
 The system turns the project into verifiable milestones.
 
@@ -472,7 +508,7 @@ Deadline: month 6
 Fulfillment evidence: final report, total attendance, beneficiary confirmation
 ```
 
-## 9. Build the Project Evidential Contract
+## 10. Build the Project Evidential Contract
 
 For every promised value, the system requires a Project Evidential Contract.
 
@@ -574,7 +610,7 @@ Construction phase:
 georeferenced construction evidence, fiscalizer visits, budget-line evidence, completion proof, public-use evidence, and beneficiary or community observations.
 ```
 
-## 10. Define required fiscalization
+## 11. Define required fiscalization
 
 The system proposes or requires fiscalization according to project characteristics.
 
@@ -606,7 +642,7 @@ Rule:
 
 Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-## 11. Define threshold policy
+## 12. Define threshold policy
 
 The system should determine and expose the project's applicable `Threshold Policy`.
 
@@ -619,6 +655,7 @@ Under H011, the Threshold Policy should also expose the project's Financial Assu
 Possible threshold dimensions:
 
 - execution funding;
+- planning scope alignment;
 - phase gate acceptance where applicable;
 - beneficiary or attendance commitments;
 - fiscalization and control package;
@@ -711,7 +748,7 @@ Control Subproject: Project Admissibility Review
 
 This review is linked to the parent project, scoped, budgeted, conflict-checked, and selected under C002/C013 control rules. The executor should not privately choose or pay the reviewer that determines admissibility.
 
-## 12. Declare risks and antivalues
+## 13. Declare risks and antivalues
 
 The system should explicitly ask:
 
@@ -759,7 +796,7 @@ Where relevant, the project must declare common-good impact through affected ass
 
 Antivalue ceilings are normally evaluated through fulfillment/control evidence and fiscalization. If a value floor is not reached or an antivalue ceiling is exceeded, the result may affect disbursement, correction, mitigation, closure, or role-specific reputation after review. It becomes a formal complaint only if an actor explicitly files a complaint under the complaint process.
 
-## 13. Assisted validation by rules and AI
+## 14. Assisted validation by rules and AI
 
 Before publication, the system validates the project.
 
@@ -768,6 +805,7 @@ Validation dimensions:
 - completeness;
 - coherence;
 - Primary Responsibility Anchor clarity;
+- Planning Scope alignment;
 - beneficiary clarity;
 - value metrics;
 - value floors and antivalue ceilings;
@@ -815,7 +853,7 @@ AI may suggest documents, burden profile, review needs, and missing conditions. 
 
 Projects with unresolved critical failures in their disbursement milestone plan, phase plan, or threshold policy cannot be published for execution funding commitments. A pending design gate is not a critical failure if the phase plan, minimum public-value baseline, reserved-fund rule, and failure-treatment rule are explicit.
 
-## 14. Citizen preview
+## 15. Citizen preview
 
 Before publication, the creator sees how the project will appear to citizens.
 
@@ -862,7 +900,7 @@ construction funds are not released if the design fails the public baseline.
 
 This forces the creator to see the project from the citizen perspective.
 
-## 15. Publication as open project
+## 16. Publication as open project
 
 Once minimum requirements are complete, the project can be published as:
 
@@ -889,7 +927,7 @@ Rule:
 
 > Publishing opens the project for closure conditions. It does not authorize execution by itself.
 
-## 16. Management of open project
+## 17. Management of open project
 
 After publication, the executor or responsible project actor sees an open project management panel.
 
@@ -952,6 +990,7 @@ Revoked
 Idea
 → problem and solution
 → Primary Responsibility Anchor
+→ Planning Scope alignment
 → promised values
 → beneficiaries
 → executor
@@ -974,6 +1013,7 @@ This flow should not:
 
 - publish vague promises as financeable projects;
 - publish a project without one clear Primary Responsibility Anchor;
+- publish a financeable project outside the active Planning Scope by default;
 - let secondary contributions hide what the project is primarily funded to deliver;
 - treat an idea as a financeable project;
 - allow execution funding without responsible executor;

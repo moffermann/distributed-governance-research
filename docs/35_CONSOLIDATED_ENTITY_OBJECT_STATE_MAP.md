@@ -198,6 +198,7 @@ Key attributes:
 - proposer;
 - modeler;
 - executor;
+- Planning Scope reference;
 - Primary Responsibility Anchor;
 - secondary contributions and commitment status;
 - value theses;
@@ -236,6 +237,7 @@ Key relationships:
 
 ```text
 Project has many ProjectVersions
+Project references PlanningScope
 Project has many ValueTheses
 Project has one ValueAntivalueProfile
 Project has many ValueVerificationPackages
@@ -269,16 +271,55 @@ Project has many AuditEvents
 Project has one current State
 ```
 
+## Planning Scope
+
+A public, versioned scope defining what kinds of projects are currently eligible for distributed financing under a public function, operating mode, pilot, protocol, approved roadmap line, or country implementation rule.
+
+Attributes:
+
+- scope id;
+- public function or pilot;
+- operating mode;
+- source: authority, protocol, approved roadmap, country implementation, or future distributed mechanism;
+- eligible project types;
+- excluded or out-of-scope project types where relevant;
+- territorial level;
+- related budget or allocation boundary where relevant;
+- responsible authority or process;
+- effective date;
+- review or expiration date where applicable;
+- citizen-facing explanation;
+- associated Governance Resolutions or Administrative Rule Changes where relevant;
+- audit trail.
+
+Relationships:
+
+```text
+PlanningScope may govern many Projects
+PlanningScope belongs to OperatingMode or ProtocolVersion where applicable
+PlanningScope may be configured by AdministrativeRuleChange
+PlanningScope may be interpreted by GovernanceResolution in tutored mode
+PlanningScope may be referenced by PrimaryResponsibilityAnchor
+```
+
+Rule:
+
+> Core v0 requires active planning-scope alignment for financeable projects. It does not define the full distributed construction of national, regional, communal, or thematic roadmaps.
+
+Tutored-mode rule:
+
+> In tutored mode, the authority may define or interpret the active Planning Scope, but material scope decisions must be public, versioned, and auditable under C020.
+
 ## Primary Responsibility Anchor
 
-A project attribute defining the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
+A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
 
 Attributes:
 
 - project;
 - project version;
 - anchor statement;
-- roadmap goal or public-function reference where applicable;
+- Planning Scope, roadmap goal, or public-function reference where applicable;
 - territorial or scope level;
 - relationship to value thesis;
 - primary value floor or commitment family;
@@ -2165,6 +2206,7 @@ Attributes:
 
 - public function;
 - mode;
+- active planning scopes;
 - effective date;
 - reason;
 - approving authority or process;
@@ -2220,6 +2262,7 @@ Attributes:
 - superseded date where applicable;
 - source rule-change object;
 - active rules or references;
+- active planning scopes where applicable;
 - transition rules;
 - rollback reference where applicable;
 - citizen-facing summary for material changes;
@@ -2233,6 +2276,7 @@ ProtocolVersion may be created or superseded by ProtocolChangeProposal
 ProtocolVersion may be implemented by SystemImplementationChange
 ProtocolVersion is referenced by AuditEvents
 ProtocolVersion may govern ThresholdPolicy, ReformulationPolicy, ComplaintReviewPolicy, AllocationAmountRule, or OperatingMode
+ProtocolVersion may govern PlanningScope
 ```
 
 Rule:
@@ -2271,6 +2315,7 @@ Relationships:
 ```text
 AdministrativeRuleChange belongs to OperatingMode or ProtocolVersion
 AdministrativeRuleChange may affect ThresholdPolicy
+AdministrativeRuleChange may affect PlanningScope
 AdministrativeRuleChange may affect ReformulationPolicy
 AdministrativeRuleChange may affect ComplaintReviewPolicy
 AdministrativeRuleChange may affect AllocationAmountRule

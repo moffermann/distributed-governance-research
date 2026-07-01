@@ -38,7 +38,7 @@ A project does not require a vote to exist or to be financed. It requires financ
 Project:
   financeable operational unit;
   created by a citizen or organization;
-  associated with a public function or project classification;
+  associated with an active Planning Scope, public function, or project classification;
   declares a Primary Responsibility Anchor, value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, financial assurance profile, responsible actors, risks, and fiscalization conditions.
 ```
 
@@ -244,6 +244,7 @@ If the design phase later produces incomplete courts, wrong dimensions, no bathr
 - full description;
 - Primary Responsibility Anchor;
 - secondary contributions and whether they are formal commitments or expected incidental benefits;
+- Planning Scope or public-function scope reference;
 - public function / classification;
 - territory or location;
 - current state;
@@ -308,7 +309,7 @@ If the executor secretly uses a related construction supplier, the issue becomes
 
 Each financeable project should declare exactly one `Primary Responsibility Anchor`.
 
-The anchor is the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
+The anchor is the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
 
 It is not the same as the full value thesis. A project may have several values, value icons, value floors, antivalue ceilings, metrics, and evidence needs. The anchor identifies the project's primary accountability center.
 
@@ -327,6 +328,35 @@ Macul multi-court facility:
 Secondary contributions may be declared, but they must be classified as either formal commitments or expected incidental benefits. Formal secondary contributions require proportional metrics, fulfillment/control evidence, and consequence rules. Incidental benefits should not be shown as verified project promises.
 
 If two outcomes are both independently primary, the proposal should be challenged as separate projects, project phases under one parent anchor, or a composite structure. Phases do not replace the anchor; they segment work that serves the same parent responsibility.
+
+### 2b. Planning Scope Alignment
+
+Each financeable project should reference an active `Planning Scope`.
+
+A Planning Scope defines what is currently open to distributed financing under a public function, pilot, operating mode, protocol, approved roadmap line, or country implementation rule.
+
+Core v0 does not define the full mechanism for creating a national roadmap. It only requires that the active scope used for project eligibility is public, versioned, and auditable.
+
+Example:
+
+```text
+Public function:
+Sports.
+
+Operating mode:
+Tutored.
+
+Planning Scope:
+Local sports infrastructure and child sports programs.
+
+Project:
+Design and Construction of Multi-court Facility in Macul.
+
+Result:
+Potentially eligible, subject to ordinary project validation.
+```
+
+If a project is outside the active scope, it should not receive execution financing by default. It may remain an Idea, be reclassified, be reformulated, or become input for a future roadmap or scope proposal.
 
 ### 3. Value thesis
 
@@ -502,6 +532,7 @@ Thresholds may include:
 - technical validation;
 - permits or required documents;
 - common-good impact declaration;
+- planning scope alignment;
 - related-party safeguards;
 - tutored-scope review where the operating mode requires it;
 - absence or resolution of admitted blocking complaints or scoped systemic pauses.

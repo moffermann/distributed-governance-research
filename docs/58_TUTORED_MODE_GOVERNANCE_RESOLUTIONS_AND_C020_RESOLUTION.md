@@ -67,6 +67,8 @@ and without a public space where citizens can observe or object.
 
 The accepted v0 rule is that the rejection must create a public governance-resolution object.
 
+Under H009, these eligibility and scope boundaries are represented as Planning Scope decisions. The authority may define or interpret the active scope in tutored mode, but it must not hide that scope or its material application.
+
 ## Example: duplicate public project
 
 A country opens 5% of the Ministry of Sports budget to the distributed platform while the ministry continues executing the remaining 95% through its traditional portfolio.
@@ -114,6 +116,7 @@ Governance resolutions may include:
 - request for reformulation;
 - request for reclassification;
 - eligibility decision;
+- planning-scope interpretation or change;
 - confirmation that the project is outside the tutored public-function scope;
 - special condition imposed before publication;
 - reversal or correction of a prior tutored decision.

@@ -129,6 +129,7 @@ A project must contain:
 - problem;
 - solution;
 - territory;
+- Planning Scope reference;
 - Primary Responsibility Anchor;
 - promised value;
 - value icons;
@@ -157,6 +158,10 @@ Key rule:
 > A project is funded. A common-good charter is approved.
 
 A project draft may exist internally while being prepared. Public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
+
+Under H009, every financeable project should align with an active `Planning Scope`: a public-function, pilot, operating-mode, protocol, approved roadmap, or authorized planning line that is currently open to distributed financing. Core v0 does not define how a national roadmap is created or voted. It only requires the active scope used for project eligibility to be visible, versioned, and auditable.
+
+In tutored mode, the planning scope may be authority-defined. This is acceptable only as an external implementation condition under C020: material scope decisions, rejections, or reclassifications should be public Governance Resolution objects or equivalent review traces. An out-of-scope idea should not disappear; it can remain an Idea, be reclassified, be reformulated, or become input for future planning-scope governance.
 
 Under H010, every financeable project should declare one `Primary Responsibility Anchor`: the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable. Secondary contributions are allowed, but they must not dilute the anchor. If a secondary contribution is presented as a formal promise, it needs proportional metrics, fulfillment/control evidence, and review consequences.
 
@@ -628,6 +633,7 @@ Flow:
 Idea
 → problem and solution
 → Primary Responsibility Anchor
+→ Planning Scope alignment
 → promised values
 → beneficiaries
 → executor
@@ -933,6 +939,7 @@ Out of scope or future extension:
 
 - universal cross-domain public value ROI ranking;
 - full national transition of all public functions;
+- full distributed construction of a national roadmap;
 - complex subdelegation and paid delegation markets;
 - universal replacement of public institutions;
 - public institutions as internal project competitors;
@@ -946,6 +953,7 @@ Out of scope or future extension:
 
 Potential later versions:
 
+- distributed roadmap construction through votable planning areas;
 - public value return per peso;
 - richer reputation models;
 - more advanced delegation;

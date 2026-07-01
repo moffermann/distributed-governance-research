@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[open-questions/distributed-roadmap-construction-governance|Distributed Roadmap Construction Governance]]
+- [[hypotheses/H009-binding-evolutionary-planning|H009 — Planning Scope Alignment]]
 - [[hypotheses/H010-primary-responsibility-principle|H010 — Primary Responsibility Anchor]]
 - [[concepts/financial-assurance-profile-v0|Financial Assurance Profile v0]]
 - [[hypotheses/H011-financial-assurance-and-revocability|H011 — Financial Assurance and Project Revocability]]
@@ -220,6 +222,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H009-binding-evolutionary-planning|H009 — Planning Scope Alignment]]
 - [[hypotheses/H010-primary-responsibility-principle|H010 — Primary Responsibility Anchor]]
 - [[hypotheses/H011-financial-assurance-and-revocability|H011 — Financial Assurance and Project Revocability]]
 - [[hypotheses/H012-distributed-value-antivalue-management|H012 — Distributed Value and Antivalue Management]]
@@ -281,6 +284,7 @@ Recently aligned residual-audit hypotheses:
 
 - [[open-questions/README|Open Questions]]
 - [[open-questions/evidence-producer-evidence-quality-validation|Fulfillment/Control Evidence Quality Validation]]
+- [[open-questions/distributed-roadmap-construction-governance|Distributed Roadmap Construction Governance]]
 - [[objections/README|Objections]]
 
 ## Literature

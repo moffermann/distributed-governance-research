@@ -86,6 +86,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C007/C020: public institutions are external authorities; material tutored decisions become Governance Resolutions or Review Timeout Resolutions.
 - C008/C016: AI assists validation; protocol rules and responsible actors remain accountable.
 - C009: citizen layers translate complexity progressively.
+- H009: financeable projects must align with an active Planning Scope, while full distributed roadmap construction through votable planning areas remains an open extension question.
 - H018: project value theses connect to value verification packages, fulfillment evidence needs, and evidential contracts before publication as financeable projects.
 - H019: design, execution, and fiscalization remain distinct responsibilities; Project Phases may gate later-phase funding release in integrated design-and-execution projects.
 - H020/H027: proportional burden and threshold policies define required documents, admissibility review, and visible missing conditions without turning AI into the binding authority.

@@ -41,6 +41,7 @@ H013 is aligned: project conflict handling now distinguishes complaint admissibi
 H012 is aligned: projects now use a Value-Antivalue Profile with value floors and antivalue ceilings. Values are minimum positive commitments to reach; antivalues are maximum negative effects not to exceed. Both connect to metrics, fulfillment/control evidence, fiscalization, disbursement, closure, complaint paths only when explicitly triggered, and reviewed role-specific reputation or responsibility effects.
 H011 is aligned: every execution-financeable project now uses a Financial Assurance Profile. Financial assurance is universal across social projects, not construction-specific; Core v0 uses a global guarantee percentage configured by administrator, protocol, operating mode, or lawful country implementation rule; proposers, designers, and executors cannot self-select lower assurance categories; guarantee materialization requires custodian, guarantor, insurer, treasury, bank, escrow, or lawful equivalent confirmation.
 H010 is aligned: every financeable project now has one Primary Responsibility Anchor, distinct from its broader value thesis. Secondary contributions are allowed, but formal secondary commitments require proportional metrics, fulfillment/control evidence, and consequences; projects with multiple independently primary outcomes should be split, phased, or represented as composite structures rather than hiding multiple accountability centers in one project.
+H009 is aligned: every financeable project must align with an active Planning Scope before execution readiness. Core v0 requires visible, versioned, auditable planning-scope alignment, but does not define the full mechanism for constructing a national, regional, communal, or thematic roadmap. The idea of distributed roadmap construction through votable planning areas is preserved as an Extension v1+ / open question, not lost inside Core v0.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -163,7 +164,9 @@ The fifty-third residual cleanup aligned H011 with the v0 threshold, procedural 
 
 The fifty-fourth residual cleanup aligned H010 with the project object model, project creation flow, citizen layers, funding flow, lifecycle, reformulation path, audit trail, v0 blueprint, scope freeze, classification matrix, entity map, planning concept, glossary, and planning diagram. H010 now defines the Primary Responsibility Anchor: the single main roadmap goal, public function, or public-value outcome against which a project is classified, funded, evaluated, fiscalized, closed, and assigned role-specific reputation effects. The cleanup preserves legitimate multi-value projects by allowing secondary contributions while preventing value inflation, hidden accountability dilution, or bundled unrelated outcomes.
 
-Next review candidate: H009 binding evolutionary planning.
+The fifty-fifth residual cleanup aligned H009 with the project object model, project creation flow, open-project closure model, audit trail, v0 blueprint, scope freeze, classification matrix, entity map, tutored-mode governance, planning concept, planning diagram, and open-question index. H009 now defines Planning Scope Alignment as the Core v0 requirement: a financeable project must reference an active public-function, pilot, protocol, operating-mode, approved-roadmap, or country-implementation scope before execution readiness. The cleanup preserves the future idea of a distributed roadmap built through votable planning areas as a separate open question rather than treating it as solved.
+
+Next review candidate: H008 distributed accountability.
 
 Approximate current maturity:
 
@@ -230,6 +233,7 @@ Core v0 modules now include:
 - project object model;
 - entity and role map;
 - project lifecycle;
+- planning scope alignment;
 - value thesis, value icons, metrics, and evidence;
 - project creation and publication;
 - open-project and parallel closure model;
@@ -252,6 +256,7 @@ Likely extensions v1+:
 - paid delegation markets;
 - advanced common-good sub-charters;
 - granular operating modes;
+- distributed roadmap construction through votable planning areas;
 - full country-specific implementation details;
 - advanced cross-project benchmarking.
 
@@ -296,7 +301,7 @@ Actors:
   citizen, organization, proposer, modeler, executor, fiscalizer, evidence producer, funder, delegator, delegate, moderator, complainant, beneficiary, affected party, institution, custodian.
 
 Objects:
-  project, project version, value thesis, value-antivalue profile, financial assurance profile, guarantee materialization record, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, operating mode, audit event.
+  project, project version, planning scope, value thesis, value-antivalue profile, financial assurance profile, guarantee materialization record, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, operating mode, audit event.
 
 States:
   draft, in validation, requires adjustment, ready to publish, open, execution-ready, in execution, correction required, paused, requires reformulation, under review, revoked, closed, expired.

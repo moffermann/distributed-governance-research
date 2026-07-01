@@ -55,9 +55,9 @@ The system should not create a central authority that defines social value. Soci
 
 Algorithms should coordinate, record, structure, and aggregate decisions. They should not become sovereign deciders.
 
-### 4. Planning should be binding but evolutionary
+### 4. Projects require visible planning scope alignment
 
-A national roadmap can be binding for project alignment while remaining open to additions, modifications, reformulations, suspensions, and eliminations.
+Financeable projects must align with an active Planning Scope, such as a public-function scope, pilot, operating mode, protocol line, or approved roadmap line. The full mechanism for constructing a national distributed roadmap remains an open question.
 
 ### 5. Projects require one primary responsibility anchor
 
@@ -92,11 +92,10 @@ The planning architecture is stored in:
 The planning model includes:
 
 ```text
-meta-planning national framework
-  → national planning branches
-    → regional planning branches
-      → communal / local planning branches
-        → projects
+public function / operating mode / pilot / authorized planning line
+  → Planning Scope
+    → Primary Responsibility Anchor
+      → Project
 ```
 
 ## Project governance status

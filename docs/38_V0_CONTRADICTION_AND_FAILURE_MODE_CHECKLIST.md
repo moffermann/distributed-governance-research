@@ -376,6 +376,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 
 - [ ] Does every project have a responsible executor before execution funding?
 - [x] Are Idea, draft project, and open financeable project clearly separated?
+- [ ] Does every financeable project reference an active Planning Scope?
 - [ ] Does every project have value thesis, beneficiaries, metrics, evidence, fiscalization, risks, and antivalues?
 - [ ] Does every execution-financeable project have a Financial Assurance Profile?
 - [ ] Is financial assurance treated as universal across social projects, not only construction or infrastructure?
@@ -383,6 +384,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are project versions immutable?
 - [ ] Are reformulations visible?
 - [ ] Can project history be reconstructed from audit events?
+- [ ] If a project is outside the active Planning Scope, is it kept as an Idea, reclassified, reformulated, or routed into future planning-scope governance rather than made execution-financeable by default?
 
 ## 3. Value and metrics checklist
 
@@ -508,9 +510,11 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 ## 11. Transition checklist
 
 - [ ] Is operating mode visible?
+- [ ] Are active Planning Scopes visible, versioned, and auditable?
 - [ ] Is tutored mode justified?
 - [ ] Is there a review date or maturity condition?
 - [ ] Can institutional moderation be audited?
+- [ ] Do tutored planning-scope decisions create Governance Resolution or equivalent public review traces where material?
 - [x] Are public institutions external to internal project competition under Core v0?
 - [ ] Is transition scope bounded?
 
@@ -546,6 +550,7 @@ Highest-priority integration checks:
 12. Ensure Project Evidential Contracts define fulfillment/control evidence needs rather than preselected evidence producers.
 13. Ensure material rule changes are classified as Administrative Rule Change, System Implementation Change, or Protocol Change Proposal, with public reason, effective date, transition rule, and audit trace.
 14. Ensure distributed fiscalization remains protocol-selected, conflict-checked, risk-adjusted, auditable, and capped against unlimited secondary fiscalization or duplicate evidence funding.
+15. Ensure every financeable project aligns with an active Planning Scope while keeping full distributed roadmap construction as an explicit open question.
 ```
 
 ## Proposed next working method

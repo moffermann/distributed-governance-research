@@ -33,6 +33,7 @@ Examples:
 - project phases where needed for staged funding, deliverables, verification, and disbursement;
 - actor and role model;
 - proportional threshold policies;
+- Planning Scope Alignment;
 - Primary Responsibility Anchor;
 - value thesis;
 - evidence;
@@ -164,6 +165,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Planning scope alignment `H009` | Core v0 with Extension/Country boundary | Needed so financeable projects align with an active public-function, pilot, operating-mode, protocol, roadmap, or authorized planning line. Core v0 does not define full distributed roadmap construction. |
 | Primary responsibility anchor `H010` | Core v0 | Needed to keep projects accountable to one main roadmap goal, public function, or public-value outcome while still allowing measured secondary contributions and legitimate multi-value projects. |
 | Financial assurance and project revocability `H011` | Core v0 | Needed to require every execution-financeable project to have a Financial Assurance Profile, externally defined guarantee requirements, custodian-confirmed materialization, and explicit failure treatment across all social project types, not only construction. |
 | Distributed value and antivalue management `H012` | Core v0 | Needed to require projects to declare value floors, antivalue ceilings, metrics, fulfillment/control evidence, affected scope, and role-specific consequences without turning antivalue review into automatic complaints or a centralized net-value score. |
@@ -212,6 +214,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Advanced capture detection / pattern scoring | Extension v1+ | Useful later; v0 uses transparency and auditability first. |
 | Universal observability panel `H055` | Extension v1+ with Core baseline | Basic audit metrics are core; full universal panel can follow. |
 | Advanced inferred recommender systems `H032` | Extension v1+ with Core constraints | Simple explainable ordering is core; advanced inference needs literature review, configurability, and auditability. |
+| Distributed roadmap construction through votable planning areas | Extension v1+ / open question | Potential future planning architecture, but Core v0 only needs active planning-scope alignment. |
 
 ## Country implementation hypothesis clusters
 
@@ -224,6 +227,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Official identity and privacy standards | Country implementation | Depends on jurisdiction. |
 | Sanctions, recovery, and appeals | Country implementation | Depends on administrative law. |
 | Budget percentage migrated to the system | Country implementation | Political and fiscal decision. |
+| Authority-defined planning scopes in tutored mode | Country implementation with Core transparency boundary | The authority may define what is open to distributed financing in a tutored public function, but the scope and material scope decisions must be public, versioned, and auditable. |
 | Public institution participation inside the platform | Country implementation departure | Core v0 excludes it; any country-specific exception must be explicit, justified, and traceable. |
 
 ## Out-of-scope clusters for Core v0
