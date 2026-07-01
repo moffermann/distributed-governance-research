@@ -85,6 +85,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C005/C006: funding is commitment; treasury/custody executes valid orders without governing project value.
 - C007/C020: public institutions are external authorities; material tutored decisions become Governance Resolutions or Review Timeout Resolutions.
 - C008/C016: AI assists validation; protocol rules and responsible actors remain accountable.
+- H008: the full accountability loop runs from accepted promise through fulfillment/control evidence, formal evaluation, Project Closure Accountability Record, financial closure, and role-specific reputation.
 - C009: citizen layers translate complexity progressively.
 - H009: financeable projects must align with an active Planning Scope, while full distributed roadmap construction through votable planning areas remains an open extension question.
 - H018: project value theses connect to value verification packages, fulfillment evidence needs, and evidential contracts before publication as financeable projects.

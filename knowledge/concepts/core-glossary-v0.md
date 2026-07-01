@@ -287,25 +287,30 @@ The purpose is to help citizens allocate resources based on verifiable history, 
 
 ---
 
-## Distributed Accountability
+## Distributed Accountability Loop
 
-Distributed accountability means that performance evaluation does not depend only on the institution receiving resources.
+Distributed accountability means that project performance does not depend only on the actor receiving resources reporting its own success.
 
 Accountability should combine:
 
 - self-declared commitments;
-- evidence of execution;
+- fulfillment/control evidence;
 - financial traceability;
 - beneficiary feedback;
 - family or user evaluations;
 - independent auditors;
 - experts;
 - complaints;
+- formal evaluation records;
+- fiscalization reports;
+- project closure accountability records;
 - AI-assisted inconsistency detection.
 
 Core cycle:
 
-> proposal → financing → execution → evidence → evaluation → reputation → new financing
+> proposal → financing → execution → fulfillment/control evidence → formal evaluation → closure accountability → reputation → new financing
+
+A project cannot close as fulfilled if its main commitments are not supported by sufficient, reviewed, traceable fulfillment/control evidence. Weak or inconclusive material may remain contextual, but it does not prove fulfillment.
 
 ---
 

@@ -226,6 +226,7 @@ Key attributes:
 - threshold policy or policy reference;
 - Financial Assurance Profile;
 - closure conditions;
+- Project Closure Accountability Record where applicable;
 - risks;
 - antivalues;
 - value floors and antivalue ceilings where applicable;
@@ -267,6 +268,7 @@ Project has ReformulationPolicy or reformulation policy reference
 Project has ThresholdPolicy or threshold policy reference
 Project has one FinancialAssuranceProfile where execution funding is allowed
 Project has one or more GuaranteeMaterializationRecords where assurance is required
+Project may have one ProjectClosureAccountabilityRecord
 Project has many AuditEvents
 Project has one current State
 ```
@@ -1441,6 +1443,9 @@ Attributes:
 - contradiction status;
 - independence or source-interest classification;
 - corroboration status;
+- traceability metadata status where relevant;
+- sufficiency status for the claimed formal effect;
+- limitation statement where relevant;
 - verified discovery reference where applicable;
 - AI anomaly reference where applicable.
 
@@ -1455,6 +1460,9 @@ Expected
 Submitted
 Pending review
 Accepted as evidence
+Accepted only as contextual material
+Insufficient for fulfillment effect
+Needs corroboration
 Observed
 Rejected
 Contradicted
@@ -1473,6 +1481,7 @@ Attributes:
 - project;
 - project phase where applicable;
 - related value thesis, metric, milestone, budget line, complaint, evidence item, fiscalization report, reputation input, or reputation update where applicable;
+- related Project Closure Accountability Record where applicable;
 - evaluation context: soft public signal, experiential evaluation, fulfillment evaluation, technical or professional review, fiscalization conclusion, complaint review finding, or reputation input;
 - evaluated dimension;
 - actor;
@@ -1498,6 +1507,7 @@ EvaluationRecord may reference Milestone
 EvaluationRecord may reference EvidenceItem
 EvaluationRecord may reference Complaint
 EvaluationRecord may reference FiscalizationReport
+EvaluationRecord may reference ProjectClosureAccountabilityRecord
 EvaluationRecord may contribute to ReputationInput after review
 ```
 
@@ -1683,6 +1693,7 @@ Attributes:
 - conclusion;
 - observations;
 - disbursement recommendation;
+- closure accountability reference where the report supports final closure;
 - timestamp;
 - status.
 
@@ -1729,6 +1740,57 @@ Returned
 Reassigned
 In recovery
 ```
+
+## Project Closure Accountability Record
+
+The final traceable record that aggregates what the project promised, what was evidenced, what was reviewed, what remained unproven, what happened to the money, and which role-specific consequences followed.
+
+Attributes:
+
+- project;
+- project version;
+- project phase where applicable;
+- Planning Scope reference;
+- Primary Responsibility Anchor;
+- Value-Antivalue Profile reference;
+- Project Evidential Contract version;
+- promised value floors;
+- declared antivalue ceilings;
+- metrics and qualitative commitments;
+- expected fulfillment/control evidence;
+- submitted fulfillment/control evidence;
+- evidence accepted, rejected, contradicted, insufficient, or accepted only as contextual material;
+- EvaluationRecords by dimension;
+- FiscalizationReport final reference;
+- technical, financial, beneficiary, affected-party, or authority reviews where applicable;
+- unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
+- financial closure: released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- closure outcome: fulfilled, partially fulfilled, unfulfilled, revoked, expired, or reformulated into new version;
+- Responsibility Events where reviewed responsibility is established;
+- Reputation Inputs or no-reputation-effect findings;
+- citizen-facing explanation;
+- audit trail.
+
+Relationships:
+
+```text
+ProjectClosureAccountabilityRecord belongs to Project
+ProjectClosureAccountabilityRecord references ProjectVersion
+ProjectClosureAccountabilityRecord references ValueAntivalueProfile
+ProjectClosureAccountabilityRecord references ProjectEvidentialContract
+ProjectClosureAccountabilityRecord references EvidenceItems
+ProjectClosureAccountabilityRecord references EvaluationRecords
+ProjectClosureAccountabilityRecord references FiscalizationReports
+ProjectClosureAccountabilityRecord may reference Disbursements and FinancialOrders
+ProjectClosureAccountabilityRecord may create or reference ResponsibilityEvents
+ProjectClosureAccountabilityRecord may create or reference ReputationInputs
+```
+
+Rule:
+
+> A project cannot close as fulfilled if its main commitments are not supported by sufficient, reviewed, traceable fulfillment/control evidence.
+
+Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment. It may be accepted only as contextual material, trigger a correction window, require corroboration, retain funds, block closure for the affected scope, or support a later responsibility review when a role obligation was breached.
 
 ## Complaint
 

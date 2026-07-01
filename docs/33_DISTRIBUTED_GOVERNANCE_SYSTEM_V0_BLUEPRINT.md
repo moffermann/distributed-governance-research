@@ -42,8 +42,9 @@ v0 should prove that the system can:
 8. handle comments, complaints, complaint evidence, fulfillment evidence, and corrections;
 9. release funds by milestone, fulfillment evidence, and review;
 10. preserve full auditability;
-11. update role-based reputation;
-12. support transition without pretending the entire system is mature from day one.
+11. close projects through a traceable Project Closure Accountability Record;
+12. update role-based reputation;
+13. support transition without pretending the entire system is mature from day one.
 
 ## Core actors
 
@@ -299,7 +300,9 @@ Fulfillment Evidence must be linked to:
 - material information claim where applicable;
 - producer;
 - timestamp;
+- traceability metadata where required;
 - review status;
+- sufficiency status for the claimed formal effect;
 - privacy classification.
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
@@ -330,11 +333,16 @@ Expected
 Submitted
 Pending review
 Accepted as evidence
+Accepted only as contextual material
+Insufficient for fulfillment effect
+Needs corroboration
 Observed
 Rejected
 Contradicted
 Used in fiscalization report
 ```
+
+Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment. A dark photo without reliable timestamp, location metadata, or relation to the relevant milestone may remain contextual material, require corroboration, trigger correction, retain funds, or block closure for the affected scope.
 
 ## Evaluation context model
 
@@ -818,6 +826,21 @@ Closure must show:
 - complaints status;
 - fiscalizer final report;
 - reputation effects.
+
+Under H008, closure should create a `Project Closure Accountability Record`. This record aggregates the accepted project promises, expected fulfillment/control evidence, submitted evidence, evidence sufficiency status, EvaluationRecords, FiscalizationReports, financial closure, unresolved issues, Responsibility Events, Reputation Inputs, and citizen-facing closure explanation.
+
+The record is the technical place where the system says:
+
+```text
+what was promised
+what was evidenced
+what was reviewed
+what remained unproven
+what happened to money
+which roles became responsible for which outcomes
+```
+
+A project cannot close as fulfilled when its main commitments remain unsupported by sufficient, reviewed, traceable fulfillment/control evidence.
 
 Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, fulfillment evidence corrections, and responsibility events.
 

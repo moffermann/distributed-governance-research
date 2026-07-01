@@ -385,6 +385,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are reformulations visible?
 - [ ] Can project history be reconstructed from audit events?
 - [ ] If a project is outside the active Planning Scope, is it kept as an Idea, reclassified, reformulated, or routed into future planning-scope governance rather than made execution-financeable by default?
+- [ ] Does closure create a Project Closure Accountability Record?
+- [ ] Is a project prevented from closing as fulfilled when main commitments lack sufficient, reviewed, traceable fulfillment/control evidence?
 
 ## 3. Value and metrics checklist
 
@@ -399,6 +401,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Is every formal evaluation scoped to a dimension and formal effect?
 - [ ] Are soft public signals distinguished from fulfillment evaluation, technical review, fiscalization conclusions, complaint findings, and reputation inputs?
 - [ ] Does every formal evaluation record its actor role, observability basis, authority or qualification basis, and contextualized evidence used where applicable?
+- [ ] Are evidence submission, review, correction, and closure deadlines configured before they apply rather than improvised at closure?
 - [ ] Are qualitative value claims handled?
 - [ ] Are input-only metrics rejected when insufficient?
 - [ ] Does the Project Evidential Contract define fulfillment/control evidence needs rather than preselected evidence producers?
@@ -455,6 +458,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Is contradiction evidence allowed?
 - [ ] Are independent fulfillment/control evidence requirements defined for risky projects?
 - [ ] Is false, manipulated, or low-quality contextualized evidence penalized by role and evidence context?
+- [ ] Can insufficient evidence be accepted only as contextual material without proving fulfillment?
+- [ ] Are missing timestamp, location, linkage, method, or metadata limitations visible where they matter for the formal effect claimed?
 - [ ] Can citizens understand contextualized evidence status without reading raw files?
 
 ## 7. Fiscalization checklist
@@ -468,6 +473,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [x] Are supplemental fiscalization and evidence missions capped against unlimited control overfunding?
 - [ ] Are fiscalizer evidence-capture functions distinguished from fiscalizer evaluation functions?
 - [ ] Do fiscalization conclusions identify the evaluated dimension, evidence considered, limitations, and formal effect?
+- [ ] Does final fiscalization feed the Project Closure Accountability Record rather than remain an isolated report?
 - [ ] Can fiscalizers resign or be replaced?
 - [ ] Are fiscalizer reports public or privacy-filtered?
 - [ ] Does fiscalizer reputation update after closure?
@@ -551,6 +557,7 @@ Highest-priority integration checks:
 13. Ensure material rule changes are classified as Administrative Rule Change, System Implementation Change, or Protocol Change Proposal, with public reason, effective date, transition rule, and audit trace.
 14. Ensure distributed fiscalization remains protocol-selected, conflict-checked, risk-adjusted, auditable, and capped against unlimited secondary fiscalization or duplicate evidence funding.
 15. Ensure every financeable project aligns with an active Planning Scope while keeping full distributed roadmap construction as an explicit open question.
+16. Ensure project closure creates an accountability record connecting promise, fulfillment/control evidence, evaluation, financial closure, responsibility, reputation, and unresolved issues.
 ```
 
 ## Proposed next working method

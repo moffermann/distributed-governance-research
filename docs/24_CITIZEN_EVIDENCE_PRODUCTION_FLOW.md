@@ -213,6 +213,9 @@ Possible states:
 Submitted
 Pending review
 Accepted as evidence
+Accepted only as contextual material
+Insufficient for fulfillment effect
+Needs corroboration
 Observed
 Rejected
 Contradicted
@@ -220,6 +223,8 @@ Linked to milestone
 Used in fiscalization report
 Used in verified discovery
 ```
+
+Submitted material may be visible and still be insufficient for the formal effect claimed. For example, a dark photo without reliable time, location, milestone link, or useful description may remain contextual material, require corroboration, or be rejected for fulfillment effect.
 
 Example:
 

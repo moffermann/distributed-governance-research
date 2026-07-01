@@ -31,6 +31,7 @@ Open project
 → disbursement decision
 → corrections / complaints / pause / reformulation / revocation if needed
 → closure
+→ Project Closure Accountability Record
 → final evaluation and reputation effects
 ```
 
@@ -244,6 +245,9 @@ Expected
 Submitted
 Pending review
 Accepted as evidence
+Accepted only as contextual material
+Insufficient for fulfillment effect
+Needs corroboration
 Observed
 Rejected
 Contradicted
@@ -259,7 +263,10 @@ Evidence must be linked to:
 - evidential contract requirement;
 - producer;
 - timestamp;
+- traceability metadata where required;
 - privacy classification;
+- sufficiency status for the claimed formal effect;
+- limitation statement where relevant;
 - review status.
 
 ### Rule
@@ -267,6 +274,8 @@ Evidence must be linked to:
 > Evidence is not mere decoration. It must be connected to a milestone, metric, value promise, or complaint/review issue.
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+Submitted material that is unclear, unlinked, missing required traceability metadata, or inadequate for the claimed metric may be accepted only as contextual material, marked as insufficient for fulfillment effect, rejected, or sent back for correction. Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
 
 Fulfillment evidence is evaluated against the accepted Project Evidential Contract. If the project changes that contract during execution, the change must preserve history and may require reformulation, notification, or renewed review where it weakens the original promise.
 
@@ -538,9 +547,25 @@ Closure should include:
 - lessons or notes;
 - reputation effects.
 
+Closure should create a `Project Closure Accountability Record`.
+
+This record connects:
+
+- what the project promised;
+- which value floors and antivalue ceilings applied;
+- which fulfillment/control evidence was expected;
+- which evidence was submitted;
+- which evidence was accepted, rejected, contradicted, insufficient, or accepted only as contextual material;
+- which EvaluationRecords and FiscalizationReports support the closure;
+- what happened to released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- which issues remain unresolved;
+- which Responsibility Events, Reputation Inputs, or no-reputation-effect findings resulted.
+
 ### Rule
 
 > Closure must explain what was promised, what was actually delivered, what evidence supports that conclusion, and what happened to the money.
+
+> A project cannot close as fulfilled when its main commitments remain unsupported by sufficient, reviewed, traceable fulfillment/control evidence.
 
 ## 14. Final evaluation and reputation
 

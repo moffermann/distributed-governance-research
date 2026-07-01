@@ -165,6 +165,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Distributed accountability loop `H008` | Core v0 | Needed to close the full project cycle from accepted promise to evidence, formal review, Project Closure Accountability Record, financial closure, role-specific responsibility, reputation, and future financing context. |
 | Planning scope alignment `H009` | Core v0 with Extension/Country boundary | Needed so financeable projects align with an active public-function, pilot, operating-mode, protocol, roadmap, or authorized planning line. Core v0 does not define full distributed roadmap construction. |
 | Primary responsibility anchor `H010` | Core v0 | Needed to keep projects accountable to one main roadmap goal, public function, or public-value outcome while still allowing measured secondary contributions and legitimate multi-value projects. |
 | Financial assurance and project revocability `H011` | Core v0 | Needed to require every execution-financeable project to have a Financial Assurance Profile, externally defined guarantee requirements, custodian-confirmed materialization, and explicit failure treatment across all social project types, not only construction. |

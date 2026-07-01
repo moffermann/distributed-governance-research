@@ -32,9 +32,9 @@ A problem is not a refutation if the current system also handles it poorly, opaq
 - Distributed resource allocation
 - Assisted deliberation
 - Continuous performance evaluation
-- Distributed accountability
-- Binding evolutionary planning
-- Primary responsibility principle
+- Distributed accountability loop
+- Planning scope alignment
+- Primary responsibility anchor
 - Distributed value and antivalue management
 - Pause / mitigation / revocation governance
 - Reputation architecture
@@ -112,6 +112,7 @@ proposal
 → supervision
 → evidence
 → evaluation
+→ closure accountability record
 → reputation
 → future funding
 ```

@@ -74,6 +74,7 @@ Layer 5 should include technical traceability for:
 7. Milestone and disbursement trace
 7a. Systemic pause records
 8. Evidence archive and material information claim trace
+8a. Project closure accountability trace
 9. Fiscalization reports
 10. Complaint and review trace
 10a. Complaint admissibility / referral records
@@ -432,6 +433,35 @@ executor claim, parent confirmations, evidence-producer record, fiscalizer revie
 ```
 
 Verified discoveries should also be traceable. The audit trail should show the discovery, the actor and protected-identity status where relevant, the claim or omission discovered, evidence used, review result, materiality finding, reward or reputation effect, and any complaint, disbursement, correction, or responsibility event that followed.
+
+## 8a. Project closure accountability trace
+
+Layer 5 should show the `Project Closure Accountability Record`.
+
+For each closure record, include:
+
+- project and project version;
+- project phase where applicable;
+- Planning Scope and Primary Responsibility Anchor;
+- accepted Value-Antivalue Profile;
+- Project Evidential Contract version;
+- value floors and antivalue ceilings evaluated;
+- expected fulfillment/control evidence;
+- submitted fulfillment/control evidence;
+- evidence accepted, rejected, contradicted, insufficient, or accepted only as contextual material;
+- EvaluationRecords by dimension;
+- FiscalizationReport final reference;
+- technical, financial, beneficiary, affected-party, or authority reviews where applicable;
+- unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
+- released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- closure outcome;
+- Responsibility Events;
+- Reputation Inputs or no-reputation-effect findings;
+- citizen-facing closure summary.
+
+Layer 5 should make clear why a project was closed as fulfilled, partially fulfilled, unfulfilled, revoked, expired, or reformulated into a new version.
+
+An evidence item that is dark, unlinked, missing required metadata, or otherwise insufficient may remain in the archive, but the closure trace should show that it was not used as proof of fulfillment unless adequate corroboration or review accepted it for that formal effect.
 
 ## 9. Fiscalization reports
 

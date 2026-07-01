@@ -703,11 +703,11 @@ Oversight is information integrity, auditability, evidence, incentives, and acco
 
 **Distributed/hybrid.**
 
-Oversight should not depend only on the institution receiving resources or on a single central auditor. It should combine self-reporting, evidence, beneficiaries, families, users, experts, independent auditors, public complaints, and AI-assisted inconsistency detection.
+Oversight should not depend only on the institution receiving resources or on a single central auditor. It should combine self-reporting, fulfillment/control evidence, beneficiaries, families, users, experts, independent auditors, public complaints, formal evaluation records, Project Closure Accountability Records, and AI-assisted inconsistency detection.
 
 ## Core cycle
 
-> proposal → financing → execution → evidence → evaluation → reputation → new financing
+> proposal → financing → execution → fulfillment/control evidence → formal evaluation → closure accountability → reputation → new financing
 
 ## Open questions
 

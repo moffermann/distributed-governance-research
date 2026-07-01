@@ -4,7 +4,7 @@
 
 Show how contextualized evidence enters review, how executor self-report is separated from corroborated non-executor evidence, and how material information claims can lead to correction, verified discovery, or responsibility review.
 
-Related resolutions: C002, C003, C015, H023.
+Related resolutions: C002, C003, C015, H008, H023.
 
 ```mermaid
 flowchart TD
@@ -25,7 +25,10 @@ flowchart TD
     PR --> AI[AI anomaly assistance]
     AI --> ER[Contextualized Evidence Review Set]
     MC --> ER
-    ER --> CV{Corroboration sufficient for critical decision?}
+    ER --> ES{Evidence sufficient for claimed formal effect?}
+    ES -->|No| IC[Contextual only / insufficient / needs corroboration]
+    IC --> RQ[Request more contextualized evidence or control action]
+    ES -->|Yes| CV{Corroboration sufficient for critical decision?}
     CV -->|No| RQ[Request more contextualized evidence or control action]
     CV -->|Yes| F[Fiscalizer reviews]
 
@@ -48,4 +51,4 @@ flowchart TD
 
 ## Rule
 
-> Evidence producers create verifiable fulfillment/control material. Executor material is self-report unless corroborated. Fiscalizers evaluate compliance after contextualized evidence exists. AI may flag anomalies, but verified discovery, responsibility, and fund effects require review.
+> Evidence producers create verifiable fulfillment/control material. Executor material is self-report unless corroborated. Insufficient evidence may remain contextual, require corroboration, or be rejected for fulfillment effect. Fiscalizers evaluate compliance after contextualized evidence exists. AI may flag anomalies, but verified discovery, responsibility, and fund effects require review.

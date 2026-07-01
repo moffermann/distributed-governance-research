@@ -39,7 +39,7 @@ Project:
   financeable operational unit;
   created by a citizen or organization;
   associated with an active Planning Scope, public function, or project classification;
-  declares a Primary Responsibility Anchor, value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, financial assurance profile, responsible actors, risks, and fiscalization conditions.
+  declares a Primary Responsibility Anchor, value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, financial assurance profile, responsible actors, risks, fiscalization conditions, and closure accountability.
 ```
 
 ## Required executor rule
@@ -615,7 +615,32 @@ The executor should not be the only source of evidence about its own performance
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
+Evidence that is unclear, unlinked, missing required traceability metadata, or inadequate for the relevant metric may be accepted only as contextual material, marked insufficient for fulfillment effect, rejected, or sent back for correction. It cannot by itself prove fulfillment.
+
 Evidence should be evaluated against the accepted evidential contract. If the contract is weak, incomplete, or materially changed after support or funding, the issue should be visible and may require correction, reformulation, complaint review, or responsibility review depending on severity.
+
+### 7a. Project Closure Accountability Record
+
+At closure, the project should create a `Project Closure Accountability Record`.
+
+This record connects:
+
+- accepted project promise;
+- Planning Scope and Primary Responsibility Anchor;
+- Value-Antivalue Profile;
+- Project Evidential Contract version;
+- expected fulfillment/control evidence;
+- submitted fulfillment/control evidence;
+- evidence accepted, rejected, contradicted, insufficient, or accepted only as contextual material;
+- EvaluationRecords and FiscalizationReports;
+- financial closure;
+- unresolved complaints or contradictions;
+- Responsibility Events;
+- Reputation Inputs or no-reputation-effect findings.
+
+Rule:
+
+> A project cannot close as fulfilled if its main commitments are not supported by sufficient, reviewed, traceable fulfillment/control evidence.
 
 ### 8. Risks and antivalues
 

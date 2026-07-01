@@ -126,6 +126,7 @@ A project must include:
 - threshold policy or policy reference;
 - social support and justified objection signals;
 - closure conditions;
+- Project Closure Accountability Record;
 - lifecycle state;
 - audit trail.
 
@@ -231,6 +232,12 @@ Fulfillment Evidence can be produced by executor, fiscalizer, evidence producer,
 Fulfillment Evidence must be linked to project, milestone, metric, material information claim where applicable, producer, timestamp, status, and privacy classification.
 
 Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+Fulfillment/control evidence should also record sufficiency status for the claimed formal effect. Material that is unclear, unlinked, missing required traceability metadata, or inadequate for the relevant metric may be accepted only as contextual material, marked insufficient for fulfillment effect, rejected, or sent back for correction.
+
+Rule:
+
+> Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
 
 Complaint Evidence belongs to the complaint file. It supports, refutes, clarifies, or contextualizes an allegation and does not become fulfillment evidence unless accepted for that purpose by a fiscalizer, reviewer, competent authority, or protocol rule.
 
@@ -415,6 +422,7 @@ Open project
 → disbursement decision
 → correction / pause / reformulation / revocation if needed
 → closure
+→ Project Closure Accountability Record
 → final evaluation and reputation effects
 ```
 
@@ -494,7 +502,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, material information claims, verified discoveries, fiscalization, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, Project Closure Accountability Records, material information claims, verified discoveries, fiscalization, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 
@@ -538,6 +546,33 @@ Tutored mode may allow an administrator or implementing ministry to configure ru
 Non-tutored mode requires visible Protocol Change Proposals for major protocol changes, with review, sandbox or simulation where required, approval, versioned implementation, and rollback path where applicable.
 
 Citizen-facing layers summarize what changed, why, when it takes effect, and which projects or actions are affected. Layer 5 preserves the full rule-change object and implementation trace.
+
+### 22a. Project closure accountability
+
+Core v0 includes a `Project Closure Accountability Record`.
+
+This record aggregates:
+
+- accepted project promise;
+- Planning Scope and Primary Responsibility Anchor;
+- Value-Antivalue Profile;
+- Project Evidential Contract version;
+- expected fulfillment/control evidence;
+- submitted fulfillment/control evidence;
+- evidence accepted, rejected, contradicted, insufficient, or accepted only as contextual material;
+- EvaluationRecords and FiscalizationReports;
+- unresolved complaints, contradictions, observations, or systemic pauses;
+- financial closure;
+- closure outcome;
+- Responsibility Events;
+- Reputation Inputs or no-reputation-effect findings;
+- citizen-facing explanation.
+
+Rule:
+
+> A project cannot close as fulfilled if its main commitments are not supported by sufficient, reviewed, traceable fulfillment/control evidence.
+
+Evidence submission, review, correction, and closure deadlines should be configured through Threshold Policy, Project Evidential Contract, Disbursement Milestone Plan, Operating Mode, protocol rule, or public administrative rule. They should not be improvised after project actors already relied on different rules.
 
 ### 23. Role-based reputation
 

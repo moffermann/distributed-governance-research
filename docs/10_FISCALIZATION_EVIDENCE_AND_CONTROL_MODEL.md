@@ -79,6 +79,8 @@ Fulfillment evidence production strengthens fiscalization because the fiscalizer
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
+Submitted material that is unclear, unlinked, missing required traceability metadata, or inadequate for the claimed metric may be accepted only as contextual material, marked insufficient for fulfillment effect, rejected, or sent back for correction. Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
+
 ## Information reliability incentives
 
 Contextualized evidence and fiscalization are also an incentive architecture for reliable information.
@@ -230,9 +232,13 @@ The responsible fiscalizer may use:
 
 The responsible fiscalizer is reputationally accountable for the quality, independence, timeliness, and reliability of its fiscalization.
 
+The fiscalizer may integrate evidence and review conclusions into a milestone, phase, or closure report, but the fiscalizer does not replace specialized competence where the active policy requires a technical reviewer, auditor, certifier, laboratory, professional reviewer, regulator, court, or competent authority.
+
 Responsible fiscalization is distributed in supply but not arbitrary in assignment. It should be selected through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules rather than by executor preference, ordinary popularity, first funding, or lowest price alone.
 
 Citizen observation, beneficiary confirmation, fulfillment evidence production, complaint evidence, and complaints can strengthen or challenge the fiscalizer's work, but they do not automatically replace the responsible fiscalizer.
+
+For final closure, fiscalization outputs should feed the Project Closure Accountability Record together with evidence sufficiency status, EvaluationRecords, financial closure, unresolved contradictions, Responsibility Events, and Reputation Inputs or no-reputation-effect findings.
 
 ## 4. Technical or reinforced fiscalization
 

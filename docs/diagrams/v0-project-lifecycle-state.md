@@ -4,7 +4,7 @@
 
 Show the project lifecycle after publication, including validation, execution readiness, reformulation, review, revocation, and closure.
 
-Related resolutions: C005, C016, C017, C018, H011, H019.
+Related resolutions: C005, C016, C017, C018, H008, H011, H019.
 
 ```mermaid
 stateDiagram-v2
@@ -34,7 +34,7 @@ stateDiagram-v2
     OpenProject --> RequiresReformulation
     InExecution --> RequiresReformulation
     RequiresReformulation --> InValidation: compatible reformulation
-    RequiresReformulation --> Closed: value thesis cannot be preserved
+    RequiresReformulation --> ClosureAccountability: value thesis cannot be preserved
 
     InExecution --> UnderExtraordinaryReview
     UnderExtraordinaryReview --> InExecution: review clears issue
@@ -43,12 +43,13 @@ stateDiagram-v2
     FundingOpen --> Expired
     OpenProject --> Revoked
     Paused --> Revoked
-    InExecution --> Closed
-    Revoked --> Closed
-    Expired --> Closed
+    InExecution --> ClosureAccountability
+    Revoked --> ClosureAccountability
+    Expired --> ClosureAccountability
+    ClosureAccountability --> Closed: promise, evidence, money, and responsibility recorded
     Closed --> [*]
 ```
 
 ## Rule
 
-> A project advances through validated conditions and review, not self-declared progress. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.
+> A project advances through validated conditions and review, not self-declared progress. Closure requires a Project Closure Accountability Record. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.

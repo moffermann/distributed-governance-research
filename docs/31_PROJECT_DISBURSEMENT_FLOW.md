@@ -212,6 +212,9 @@ Expected
 Submitted
 Pending review
 Accepted as evidence
+Accepted only as contextual material
+Insufficient for fulfillment effect
+Needs corroboration
 Observed
 Rejected
 Contradicted
@@ -227,12 +230,28 @@ Fulfillment evidence should be linked to:
 - evidential contract requirement;
 - evidence producer;
 - timestamp;
+- traceability metadata where required;
 - privacy classification;
+- sufficiency status for the claimed formal effect;
+- limitation statement where relevant;
 - review status.
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-If submitted fulfillment evidence does not satisfy the evidential contract, the fiscalizer may accept it only as contextual material, request correction or additional fulfillment evidence, approve partially where the disbursement plan allows it, or reject the milestone.
+If submitted fulfillment evidence does not satisfy the evidential contract, the fiscalizer may accept it only as contextual material, mark it insufficient for fulfillment effect, request correction or additional fulfillment evidence, approve partially where the disbursement plan allows it, or reject the milestone.
+
+Example:
+
+```text
+Submitted evidence:
+Dark photo with no reliable timestamp, location metadata, or link to the milestone.
+
+Review status:
+Accepted only as contextual material / insufficient for fulfillment effect.
+
+Disbursement effect:
+No full release until adequate evidence or corroboration is submitted.
+```
 
 ## 7. Fiscalizer review
 
@@ -316,6 +335,8 @@ Reject milestone
 Send to extraordinary review
 Block because of complaint
 ```
+
+The platform should not generate a full release order when the required fulfillment/control evidence is inconclusive, insufficient, contradicted, or accepted only as contextual material for the relevant milestone.
 
 When a decision requires money movement, the system should generate a `Financial Order` for the custodian, treasury integration, escrow service, bank, or other country-specific financial execution mechanism.
 
