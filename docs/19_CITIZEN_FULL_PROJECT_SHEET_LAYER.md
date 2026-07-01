@@ -40,7 +40,7 @@ Layer 4 should include:
 
 ```text
 1. Citizen summary
-2. Value promised
+2. Main responsibility and value promised
 3. Beneficiaries
 4. Who will do it
 5. Budget
@@ -67,7 +67,16 @@ Example:
 This project seeks to fund free sports training for 80 children in Maipú for 6 months. It will be carried out by Club Deportivo Los Cóndores and still needs to complete funding and confirm fiscalization before it can be executed.
 ```
 
-## 2. Value promised
+## 2. Main responsibility and value promised
+
+Start with the project's main responsibility in citizen language.
+
+Example:
+
+```text
+Main responsibility:
+Provide sustained free sports activity for 80 children in Maipu for 6 months.
+```
 
 Show each declared value and its associated promise.
 

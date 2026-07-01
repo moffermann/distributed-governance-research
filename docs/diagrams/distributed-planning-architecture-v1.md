@@ -22,8 +22,8 @@ flowchart TD
     C2 --> P4[Regional project]
     B3 --> P5[National project]
 
-    P1 --> R1[One primary goal]
-    P1 --> R2[Optional secondary goals]
+    P1 --> R1[Primary responsibility anchor]
+    P1 --> R2[Optional secondary contributions]
 
     A --> L[Goal lifecycle]
     L --> L1[Active]
@@ -50,8 +50,8 @@ flowchart TD
 1. There is a single national meta-planning framework for coherence.
 2. National, regional, communal, and local branches can coexist.
 3. A project must attach to the level that corresponds to its scope.
-4. A project must declare exactly one primary goal.
-5. A project may declare secondary goals, but accountability is tied to the primary goal.
+4. A project must declare exactly one Primary Responsibility Anchor.
+5. A project may declare secondary contributions, but accountability remains tied to the anchor unless a contribution is also defined as a formal measured commitment.
 6. Goals are binding but not irreversible.
 7. Goals can be added, modified, reformulated, suspended, or eliminated.
 8. Planning conflicts should be visible rather than hidden.

@@ -104,6 +104,7 @@ A project must include:
 - problem;
 - solution;
 - territory;
+- Primary Responsibility Anchor;
 - promised value;
 - value icons;
 - beneficiaries;
@@ -149,6 +150,10 @@ Rule:
 
 Rule:
 
+> Every financeable project must have one Primary Responsibility Anchor. Secondary contributions are allowed, but they cannot hide what the project is primarily funded to deliver. Formal secondary commitments require proportional metrics, fulfillment/control evidence, and consequences.
+
+Rule:
+
 > Project phases are part of Core v0 where they are needed to keep funding, deliverables, verification, and disbursement coherent. A design-and-execution project may receive execution-phase commitments while design is pending, but execution funds cannot be released until the design phase gate is accepted.
 
 ### 4. Value thesis, value icons, and metrics
@@ -158,6 +163,7 @@ Each project must declare what public value it promises.
 Core rules:
 
 - every published project must have at least one value thesis;
+- every financeable project must organize its value thesis around one Primary Responsibility Anchor;
 - value icons are not marketing decorations;
 - selecting a value creates metric obligations;
 - metrics require fulfillment evidence;

@@ -59,9 +59,9 @@ Algorithms should coordinate, record, structure, and aggregate decisions. They s
 
 A national roadmap can be binding for project alignment while remaining open to additions, modifications, reformulations, suspensions, and eliminations.
 
-### 5. Projects require one primary responsibility
+### 5. Projects require one primary responsibility anchor
 
-Every project must declare exactly one primary goal. It may declare secondary goals, but accountability is tied to the primary goal.
+Every financeable project must declare one Primary Responsibility Anchor. It may declare secondary contributions, but accountability, comparison, fiscalization, closure, and reputation are tied to the anchor unless a secondary contribution is also defined as a formal value commitment with metrics and fulfillment/control evidence.
 
 ### 6. Trust requires guarantees
 

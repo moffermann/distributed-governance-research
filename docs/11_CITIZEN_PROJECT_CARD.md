@@ -46,6 +46,7 @@ A project card should include:
 
 - project name;
 - one-sentence explanation;
+- main responsibility;
 - location;
 - who will do it;
 - funding progress;
@@ -62,6 +63,9 @@ A project card should include:
 Escuela deportiva infantil en Maipú
 
 Entrenamientos gratuitos para 80 niños durante 6 meses.
+
+Responsabilidad principal:
+Actividad deportiva gratuita y sostenida para 80 niños.
 
 Lo hará:
 Club Deportivo Los Cóndores

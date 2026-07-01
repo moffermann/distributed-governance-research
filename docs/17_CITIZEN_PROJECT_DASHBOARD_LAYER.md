@@ -56,6 +56,15 @@ Maipú, Región Metropolitana
 
 ## 2. Value promised
 
+Show the project's main responsibility before showing value icons.
+
+Example:
+
+```text
+Responsabilidad principal:
+Actividad deportiva gratuita y sostenida para 80 niños.
+```
+
 Show value icons near the top.
 
 Example:

@@ -33,6 +33,7 @@ Examples:
 - project phases where needed for staged funding, deliverables, verification, and disbursement;
 - actor and role model;
 - proportional threshold policies;
+- Primary Responsibility Anchor;
 - value thesis;
 - evidence;
 - fiscalization;
@@ -163,6 +164,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Primary responsibility anchor `H010` | Core v0 | Needed to keep projects accountable to one main roadmap goal, public function, or public-value outcome while still allowing measured secondary contributions and legitimate multi-value projects. |
 | Financial assurance and project revocability `H011` | Core v0 | Needed to require every execution-financeable project to have a Financial Assurance Profile, externally defined guarantee requirements, custodian-confirmed materialization, and explicit failure treatment across all social project types, not only construction. |
 | Distributed value and antivalue management `H012` | Core v0 | Needed to require projects to declare value floors, antivalue ceilings, metrics, fulfillment/control evidence, affected scope, and role-specific consequences without turning antivalue review into automatic complaints or a centralized net-value score. |
 | Pause, mitigation, and revocation governance `H013` | Core v0 with country/authority boundary | Needed to distinguish scoped systemic pause, mitigation/correction, material/legal suspension, final resolution, and revocation. Core v0 defines the platform effects and audit boundary; courts, regulators, competent authorities, sanctions, permit effects, and legal remedies remain country implementation where applicable. |

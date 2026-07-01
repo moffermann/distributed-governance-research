@@ -387,10 +387,10 @@ Minor variation or correction:
   record or correct without creating a substantive new promise.
 
 Operational variation / operational reformulation:
-  preserve the value thesis and core metrics while changing implementation.
+  preserve the Primary Responsibility Anchor, value thesis, and core metrics while changing implementation.
 
 Material value reformulation:
-  use a C017 Reformulation Proposal because the promised value, core metrics, beneficiary scope, or public utility changes.
+  use a C017 Reformulation Proposal because the Primary Responsibility Anchor, promised value, core metrics, beneficiary scope, or public utility changes.
 
 Substitutive reformulation:
   treat as a new project or as failure/closure of the original project.
@@ -423,7 +423,9 @@ Reformulation should:
 
 > Reformulation changes the project transparently; it does not delete the past.
 
-Operational reformulation may preserve the value thesis. Material value reformulation cannot unilaterally rewrite what funders financed and beneficiaries expected; it requires visible cause analysis, preserved history, funding effects, C017 approval handling, and role-specific responsibility review.
+Operational reformulation may preserve the Primary Responsibility Anchor, value thesis, and core metrics. Material value reformulation cannot unilaterally rewrite what funders financed and beneficiaries expected; it requires visible cause analysis, preserved history, funding effects, C017 approval handling, and role-specific responsibility review.
+
+Changing the Primary Responsibility Anchor is normally material because it changes the main accountability center of the project.
 
 Example:
 

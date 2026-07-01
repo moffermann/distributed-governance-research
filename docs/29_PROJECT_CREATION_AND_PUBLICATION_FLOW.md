@@ -48,7 +48,7 @@ Important distinction:
 ```text
 1. Create idea
 2. Define problem and solution
-3. Declare promised value
+3. Declare primary responsibility anchor and promised value
 4. Define beneficiaries
 5. Define executor and related-party declarations
 6. Build budget
@@ -126,7 +126,27 @@ Entrenamientos gratuitos dos veces por semana durante seis meses.
 
 This separates a vague idea from a project that can later be evaluated.
 
-## 3. Declare promised value
+## 3. Declare primary responsibility anchor and promised value
+
+The project first needs one main accountability center:
+
+```text
+What is this project primarily responsible for delivering?
+```
+
+This is the project's Primary Responsibility Anchor. It may be a roadmap goal, public function, or public-value outcome.
+
+Examples:
+
+```text
+Free sports school:
+Primary responsibility: sustained sports activity for a defined child group.
+
+Multi-court facility:
+Primary responsibility: usable public-access sports infrastructure.
+```
+
+The system should then ask which other values the project contributes to, without letting them dilute the anchor.
 
 The system asks:
 
@@ -146,6 +166,8 @@ Example suggestions:
 ```
 
 The creator may accept, remove, or propose additional values.
+
+Secondary contributions should be marked as formal commitments only when the project accepts proportional metrics, fulfillment/control evidence, and review consequences for them. Otherwise they should remain expected benefits, not verified promises.
 
 Rule:
 
@@ -745,6 +767,7 @@ Validation dimensions:
 
 - completeness;
 - coherence;
+- Primary Responsibility Anchor clarity;
 - beneficiary clarity;
 - value metrics;
 - value floors and antivalue ceilings;
@@ -928,6 +951,7 @@ Revoked
 ```text
 Idea
 → problem and solution
+→ Primary Responsibility Anchor
 → promised values
 → beneficiaries
 → executor
@@ -949,6 +973,8 @@ Idea
 This flow should not:
 
 - publish vague promises as financeable projects;
+- publish a project without one clear Primary Responsibility Anchor;
+- let secondary contributions hide what the project is primarily funded to deliver;
 - treat an idea as a financeable project;
 - allow execution funding without responsible executor;
 - allow value icons without metrics;

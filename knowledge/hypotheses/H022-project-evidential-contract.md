@@ -33,8 +33,8 @@ C010 requires value verification packages instead of isolated metrics. C003 sepa
 A project should declare:
 
 - what value it promises to generate;
-- its primary goal;
-- relevant secondary goals;
+- its Primary Responsibility Anchor;
+- relevant secondary contributions;
 - KPIs or success indicators;
 - what fulfillment evidence will demonstrate fulfillment;
 - which material information claims must be evidenced;
@@ -47,6 +47,8 @@ A project should declare:
 - what fulfillment evidence privacy, access, redaction, or protected-identity rules apply where relevant.
 
 The contract should be versioned. If the project later weakens or materially changes its evidential contract, the change should be visible, auditable, and handled through the ordinary reformulation or review rules where applicable.
+
+The evidential contract should preserve the H010 boundary between the primary responsibility anchor and secondary contributions. Secondary contributions that remain aspirational should not create false verification claims. Secondary contributions presented as formal commitments should define proportional evidence, review, and consequence rules.
 
 Under H012, the contract should include the project's `Value-Antivalue Profile`:
 

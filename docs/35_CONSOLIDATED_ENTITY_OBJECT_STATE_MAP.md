@@ -198,6 +198,8 @@ Key attributes:
 - proposer;
 - modeler;
 - executor;
+- Primary Responsibility Anchor;
+- secondary contributions and commitment status;
 - value theses;
 - value-antivalue profile;
 - value verification packages;
@@ -265,6 +267,38 @@ Project has one FinancialAssuranceProfile where execution funding is allowed
 Project has one or more GuaranteeMaterializationRecords where assurance is required
 Project has many AuditEvents
 Project has one current State
+```
+
+## Primary Responsibility Anchor
+
+A project attribute defining the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
+
+Attributes:
+
+- project;
+- project version;
+- anchor statement;
+- roadmap goal or public-function reference where applicable;
+- territorial or scope level;
+- relationship to value thesis;
+- primary value floor or commitment family;
+- secondary contributions;
+- secondary contribution status: formal commitment or expected incidental benefit;
+- split, phase, or composite-structure rationale where multiple outcomes appear primary;
+- citizen-facing summary;
+- audit trail.
+
+Rule:
+
+> A project may have several values, but only one Primary Responsibility Anchor. Formal secondary commitments require proportional metrics, fulfillment/control evidence, and consequence rules. Incidental benefits should not be presented as verified promises.
+
+Splitting test:
+
+```text
+If two outcomes each have separable budget, executor responsibility,
+beneficiary scope, fulfillment/control evidence, disbursement, closure,
+and reputation consequences, they may require separate projects or a
+parent/child structure.
 ```
 
 ## Value-Antivalue Profile

@@ -53,6 +53,8 @@ Removing the bathroom commitment or reducing public access hours changes the val
 Replacing the multi-court with temporary sports workshops is a different project.
 ```
 
+Changing the project's Primary Responsibility Anchor is normally material. It changes the main accountability center that funders, beneficiaries, fiscalizers, and reputation updates rely on.
+
 ## Main question
 
 ```text
@@ -138,6 +140,7 @@ Examples:
 - budget changes materially;
 - executor changes;
 - core milestones change;
+- Primary Responsibility Anchor changes;
 - fulfillment evidence obligations change;
 - fiscalization requirement changes;
 - promised value is reduced or modified;
@@ -188,6 +191,7 @@ eligible unreleased balances follow the configured reformulation policy and C005
 
 Before approving a reformulation path, the system or reviewer should compare:
 
+- original and proposed Primary Responsibility Anchor where affected;
 - original and proposed value thesis;
 - original and proposed core metrics;
 - beneficiary scope;

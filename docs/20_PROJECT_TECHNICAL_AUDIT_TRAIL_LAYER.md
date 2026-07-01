@@ -65,7 +65,7 @@ Layer 5 should include technical traceability for:
 1. Project versions
 1a. Project variation and reformulation records
 1b. Project phases and phase gates
-2. Value thesis history
+2. Primary Responsibility Anchor and value thesis history
 2a. Value-Antivalue Profile history
 3. Metric history
 4. Project evidential contract history
@@ -119,6 +119,7 @@ For each variation record:
 - actor, authority, community mechanism, or protocol rule that approved or rejected it where applicable;
 - reason for the change;
 - original and proposed value thesis comparison;
+- original and proposed Primary Responsibility Anchor comparison where affected;
 - original and proposed core metric comparison;
 - beneficiary, budget, milestone, disbursement, evidential contract, fiscalization, risk, antivalue, and related-party-safeguard effects;
 - phase effects where applicable;
@@ -180,12 +181,13 @@ funding reserved; release blocked until design accepted.
 
 Layer 5 should make it impossible to hide that construction funding was reserved before the design was approved, or to release later-phase funds without the prerequisite phase gate.
 
-## 2. Value thesis history
+## 2. Primary Responsibility Anchor and value thesis history
 
-Track changes to declared values.
+Track changes to the project's primary accountability center and declared values.
 
 Examples:
 
+- Primary Responsibility Anchor edited;
 - value icons added or removed;
 - value thesis edited;
 - beneficiary scope changed;
@@ -402,7 +404,7 @@ For each material claim, include where applicable:
 - claim text or structured value;
 - actor responsible for the claim;
 - actor role at the time;
-- affected project object: value thesis, metric, fulfillment evidence need, beneficiary group, budget line, milestone, contextualized evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
+- affected project object: Primary Responsibility Anchor, value thesis, metric, fulfillment evidence need, beneficiary group, budget line, milestone, contextualized evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
 - supporting contextualized evidence;
 - contradiction evidence, complaint evidence, objection, or verified-discovery reference;
 - review status;

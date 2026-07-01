@@ -39,7 +39,7 @@ Project:
   financeable operational unit;
   created by a citizen or organization;
   associated with a public function or project classification;
-  declares value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, financial assurance profile, responsible actors, risks, and fiscalization conditions.
+  declares a Primary Responsibility Anchor, value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, financial assurance profile, responsible actors, risks, and fiscalization conditions.
 ```
 
 ## Required executor rule
@@ -242,6 +242,8 @@ If the design phase later produces incomplete courts, wrong dimensions, no bathr
 - name;
 - short description;
 - full description;
+- Primary Responsibility Anchor;
+- secondary contributions and whether they are formal commitments or expected incidental benefits;
 - public function / classification;
 - territory or location;
 - current state;
@@ -302,6 +304,30 @@ A Macul multi-court project may be legitimate even if the proposing local club w
 If the executor secretly uses a related construction supplier, the issue becomes a hidden related-party conflict and may block disbursement or trigger responsibility review.
 ```
 
+### 2a. Primary Responsibility Anchor
+
+Each financeable project should declare exactly one `Primary Responsibility Anchor`.
+
+The anchor is the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
+
+It is not the same as the full value thesis. A project may have several values, value icons, value floors, antivalue ceilings, metrics, and evidence needs. The anchor identifies the project's primary accountability center.
+
+Examples:
+
+```text
+Sports school:
+  anchor = sustained free sports activity for a defined child beneficiary group.
+  secondary contributions = health, community, prevention, child development where measured.
+
+Macul multi-court facility:
+  anchor = usable public-access sports infrastructure.
+  secondary contributions = sports, health, public space, community use.
+```
+
+Secondary contributions may be declared, but they must be classified as either formal commitments or expected incidental benefits. Formal secondary contributions require proportional metrics, fulfillment/control evidence, and consequence rules. Incidental benefits should not be shown as verified project promises.
+
+If two outcomes are both independently primary, the proposal should be challenged as separate projects, project phases under one parent anchor, or a composite structure. Phases do not replace the anchor; they segment work that serves the same parent responsibility.
+
 ### 3. Value thesis
 
 The value thesis declares the public-value promise that citizens, beneficiaries, funders, and reviewers rely on.
@@ -323,6 +349,8 @@ It should define:
 - relevant risks or tradeoffs.
 
 The value thesis is not merely descriptive. It is the project identity anchor for C017 reformulation, C018 value fulfillment, H022 evidence design, C010 value verification, and H012 value-antivalue governance.
+
+The Primary Responsibility Anchor identifies the main accountability center inside the value thesis. A material change to the anchor is stronger than an ordinary metric adjustment and should normally require reformulation, renewed review, or new project classification.
 
 ### 4. KPIs
 
@@ -674,7 +702,7 @@ The project creator may reformulate, reclassify, or resubmit.
 
 ## Principle
 
-> A project is a defined commitment for value creation. It can be financed for execution only when responsibility, value thesis, Project Evidential Contract, verification package, phase plan where applicable, disbursement milestone plan, evidence, fiscalization, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design and is updated by verified value fulfillment, founded complaints, evidence corrections, and role-specific responsibility events.
+> A project is a defined commitment for value creation. It can be financed for execution only when its Primary Responsibility Anchor, responsibility, value thesis, Project Evidential Contract, verification package, phase plan where applicable, disbursement milestone plan, evidence, fiscalization, and execution accountability are sufficiently explicit. Modeler, executor, and fiscalizer are project role attributes for traceability; primary reputational responsibility for execution belongs to the executor after accepting the design and is updated by verified value fulfillment, founded complaints, evidence corrections, and role-specific responsibility events.
 
 > A design-and-execution project may be one parent project, but execution funds cannot be released against an unaudited design.
 

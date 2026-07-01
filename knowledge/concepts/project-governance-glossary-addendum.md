@@ -18,6 +18,27 @@ value generated - antivalue generated = perceived net social value
 
 The system does not require a central authority to compute this perfectly. It requires transparency so society can evaluate the tradeoff.
 
+## Primary Responsibility Anchor
+
+The Primary Responsibility Anchor is the main roadmap goal, public function, or public-value outcome against which a project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
+
+It is not the same as the full value thesis. A project may contribute to several values, but it should have one primary accountability center.
+
+Example:
+
+```text
+Project:
+Free sports school for children.
+
+Primary Responsibility Anchor:
+Deliver sustained free sports activity for a defined child beneficiary group.
+
+Secondary contributions:
+Health, community, prevention, or child development where measured or reasonably evidenced.
+```
+
+Secondary contributions may enrich the value thesis, but they cannot hide what the project was primarily funded to deliver.
+
 ## Value-Antivalue Profile
 
 The Value-Antivalue Profile records the project's value floors and antivalue ceilings.
@@ -30,7 +51,7 @@ An antivalue ceiling is not a complaint. A complaint may later be filed if an ac
 
 ## Mitigation Project
 
-A mitigation project is a project whose primary goal is to reduce the antivalue created by another project.
+A mitigation project is a project whose Primary Responsibility Anchor is to reduce the antivalue created by another project.
 
 Example: a plant generates jobs but also bad odors. A mitigation project may install treatment technology, improve waste systems, or measure emissions.
 

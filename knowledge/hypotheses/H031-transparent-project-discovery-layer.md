@@ -115,9 +115,9 @@ Inferred impacts can improve visibility and help citizens understand broader rel
 
 ## No automatic invitation to expand goals
 
-The system should not push proponents to convert inferred impacts into formal secondary goals.
+The system should not push proponents to convert inferred impacts into formal secondary contributions.
 
-A proponent may discover that the platform detected additional strategic relevance, but adding those impacts as formal goals increases obligations, KPIs, and reputational risk. The decision to assume additional goals should remain voluntary.
+A proponent may discover that the platform detected additional strategic relevance, but adding those impacts as formal commitments increases obligations, KPIs, evidence needs, and reputational risk. The decision to assume additional commitments should remain voluntary.
 
 ## User control
 

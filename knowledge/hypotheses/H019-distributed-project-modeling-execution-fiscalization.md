@@ -37,8 +37,8 @@ Turns a need, roadmap goal, or social value thesis into an executable project de
 The modeler should produce a minimum design package proportional to the project. Deliverables may include:
 
 - value thesis;
-- primary goal;
-- secondary goals;
+- Primary Responsibility Anchor;
+- secondary contributions;
 - KPIs or value metrics;
 - budget;
 - timeline;
@@ -51,6 +51,8 @@ The modeler should produce a minimum design package proportional to the project.
 - fiscalization criteria;
 - Project Evidential Contract inputs;
 - phase gate requirements where the project is staged.
+
+The modeler should distinguish formal secondary contributions from incidental benefits. If several outcomes are each independently primary, the modeler should propose separate projects, a phase structure, or a composite structure instead of hiding multiple accountability centers inside one project.
 
 ### 2. Project executor
 

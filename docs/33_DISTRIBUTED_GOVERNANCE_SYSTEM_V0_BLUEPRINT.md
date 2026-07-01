@@ -129,6 +129,7 @@ A project must contain:
 - problem;
 - solution;
 - territory;
+- Primary Responsibility Anchor;
 - promised value;
 - value icons;
 - beneficiaries;
@@ -157,6 +158,8 @@ Key rule:
 
 A project draft may exist internally while being prepared. Public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
 
+Under H010, every financeable project should declare one `Primary Responsibility Anchor`: the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable. Secondary contributions are allowed, but they must not dilute the anchor. If a secondary contribution is presented as a formal promise, it needs proportional metrics, fulfillment/control evidence, and review consequences.
+
 Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The policy should include or reference a `Procedural Burden Profile` so small low-risk projects do not receive the same procedural burden as infrastructure, regulated, irreversible, or high-antivalue projects. Thresholds, burden profiles, and assurance requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces obligations. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
 
 H011 adds a universal Financial Assurance Profile for execution-financeable projects. In Core v0, the guarantee requirement should use a global percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. This assurance applies across social projects, including care, supplies, workshops, infrastructure, and services.
@@ -170,6 +173,8 @@ Projects may also expose phase-specific funding lanes where needed. A design-and
 ## Value thesis and value icons
 
 Every public project must declare what value it promises.
+
+The value thesis may contain several values, but it should be organized around the project's Primary Responsibility Anchor. This prevents value inflation while allowing legitimate multi-value projects.
 
 Value icons are the citizen-visible representation of the value thesis.
 
@@ -622,6 +627,7 @@ Flow:
 ```text
 Idea
 → problem and solution
+→ Primary Responsibility Anchor
 → promised values
 → beneficiaries
 → executor

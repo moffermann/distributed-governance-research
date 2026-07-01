@@ -81,6 +81,9 @@ Financiar proyecto
 Proyecto:
 Escuela deportiva infantil en Maipú
 
+Responsabilidad principal:
+Actividad deportiva gratuita y sostenida para 80 niños.
+
 Tienes disponible este mes:
 $42.000
 

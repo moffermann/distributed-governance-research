@@ -160,6 +160,7 @@ It should include:
 
 - project name;
 - one-sentence description;
+- main responsibility when different from the description;
 - value icons;
 - funding progress;
 - missing amount;
@@ -174,6 +175,9 @@ It should include:
 Escuela deportiva infantil en Maipú
 
 Entrenamientos gratuitos para 80 niños durante 6 meses.
+
+Responsabilidad principal:
+Actividad deportiva gratuita y sostenida para 80 niños.
 
 👧 Infancia · ⚽ Deporte · ❤️ Salud
 

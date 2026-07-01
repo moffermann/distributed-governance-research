@@ -51,13 +51,23 @@ Projects should not float independently. They must attach to an approved roadmap
 
 Each project declares:
 
-- one primary goal;
-- optional secondary goals;
+- one Primary Responsibility Anchor;
+- optional secondary contributions;
 - scope level;
 - expected contribution;
 - KPIs;
 - budget;
 - timeline.
+
+The Primary Responsibility Anchor is the project's main accountability center. It identifies the roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.
+
+Secondary contributions are allowed, but they do not replace the anchor. If a secondary contribution is presented as a formal promise, it should have proportional metrics, fulfillment/control evidence, and review consequences.
+
+If several outcomes are each independently primary, the proposal should be challenged as either:
+
+- separate projects;
+- project phases under one parent anchor where the work is sequential and serves the same result;
+- a composite program where several child projects are genuinely interdependent.
 
 ## Living roadmap
 
