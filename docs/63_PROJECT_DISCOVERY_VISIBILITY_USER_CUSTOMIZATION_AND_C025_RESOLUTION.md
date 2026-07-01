@@ -157,6 +157,8 @@ It should not become:
 
 The citizen's first experience should be choosing a path, not being silently pushed toward a project.
 
+An Assisted Deliberation Context under H006 may explain why a project deserves consideration or what should be reviewed carefully. It should not become a hidden discovery boost, paid promotion, automatic ranking, or substitute for visible ordering and recommendation reasons.
+
 ## Home customization rule
 
 Core v0 should allow citizens to configure the Home categories they see first.

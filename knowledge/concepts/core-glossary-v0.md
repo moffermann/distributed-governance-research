@@ -239,9 +239,19 @@ Information integrity requires:
 
 ## Assisted Deliberation
 
-Assisted deliberation is the use of technology, including AI, to improve the quality of human decision-making without replacing human judgment.
+Assisted deliberation is the use of structured information, source labels, interface design, and where appropriate AI assistance to improve the quality of human decision-making without replacing human judgment.
 
-Before voting or assigning resources, the system should help users understand:
+In Core v0, assisted deliberation appears as an `Assisted Deliberation Context`: a concise citizen-facing context surface shown around material decisions such as funding, supporting, objecting, delegating, configuring allocation profiles, funding complaint review, or reviewing material reformulations.
+
+For ordinary citizens, the surface should stay simple:
+
+```text
+Why consider this
+What to review carefully
+Dissent / alerts / unresolved issues
+```
+
+Before acting, the system should help users understand:
 
 - pros and cons;
 - costs;
@@ -253,7 +263,11 @@ Before voting or assigning resources, the system should help users understand:
 - expert disagreement;
 - historical performance.
 
+Every material item should identify its source category, such as proposer statement, executor statement, fiscalizer finding, evidence producer record, beneficiary experience, affected-party observation, expert review, complaint status, Project Closure Accountability Record, Performance History Surface, protocol rule, or AI-generated summary.
+
 The goal is not to make people obey an algorithm. The goal is to make decisions better informed.
+
+Assisted deliberation must not decide the citizen's action, allocate funds, certify truth, rank projects silently, suppress dissent, replace fiscalization or complaint review, or convert AI output into formal truth.
 
 ---
 

@@ -30,7 +30,7 @@ A problem is not a refutation if the current system also handles it poorly, opaq
 - Institutional monopoly reduction
 - Algorithm as coordinator, not decider
 - Distributed resource allocation
-- Assisted deliberation
+- Assisted deliberation context
 - Continuous performance visibility
 - Distributed accountability loop
 - Planning scope alignment

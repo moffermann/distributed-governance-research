@@ -184,6 +184,12 @@ That use is compatible with C008 because AI does not become a publication author
 
 AI may help suggest metrics or detect weak value verification, but the final value assessment belongs to the contextualized evidence/fiscalization/closure process.
 
+## Relationship with assisted deliberation
+
+Under H006, AI may help summarize an Assisted Deliberation Context before material citizen actions such as funding, supporting, objecting, delegating, configuring allocation profiles, funding complaint review, or reviewing material reformulation.
+
+That summary remains assistance. It should be labeled, source-linked, traceable, and correctable. It must not decide the citizen's action, rank projects silently, certify truth, suppress dissent, allocate funds, or replace the underlying protocol, fiscalization, complaint, evaluation, or legal process.
+
 ## C008 final resolution
 
 C008 is resolved as follows:

@@ -45,7 +45,8 @@ v0 should prove that the system can:
 11. close projects through a traceable Project Closure Accountability Record;
 12. update role-based reputation;
 13. make historical performance visible through role-comparable summaries;
-14. support transition without pretending the entire system is mature from day one.
+14. support assisted deliberation without algorithmic authority;
+15. support transition without pretending the entire system is mature from day one.
 
 ## Core actors
 
@@ -460,10 +461,21 @@ It shows:
 - who will do it;
 - project state;
 - conditions needed to become execution-ready;
+- assisted deliberation context;
 - main actions;
 - signal dashboard;
 - short summary;
 - access to full project sheet.
+
+The assisted deliberation context should remain concise:
+
+```text
+Why consider this
+What to review carefully
+Dissent / alerts / unresolved issues
+```
+
+It should expose source labels and link to deeper records, but it should not decide, rank, certify truth, allocate funds, or suppress disagreement.
 
 ### Layer 3 — Detail by signal
 

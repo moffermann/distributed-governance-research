@@ -372,6 +372,30 @@ Rule:
 
 > Simple by default, clickable by signal, deeply auditable by choice.
 
+### 12a. Assisted deliberation context
+
+Core v0 includes an `Assisted Deliberation Context` for material citizen actions.
+
+It should help citizens understand a decision before funding, supporting, objecting, delegating, configuring allocation profiles, offering control work, funding complaint review, or reviewing material reformulation where applicable.
+
+Citizen-facing structure should remain simple:
+
+```text
+Why consider this
+What to review carefully
+Dissent / alerts / unresolved issues
+```
+
+The context may summarize value, cost, risks, antivalues, affected groups, evidence status, fiscalization status, role-performance history, comments, justified objections, complaints, alternatives, related projects, and unresolved limitations.
+
+Rule:
+
+> Assisted deliberation structures decision context; it does not decide, rank, certify truth, allocate funds, suppress dissent, or replace citizen judgment.
+
+Every material deliberative item should expose its source category, such as proposer statement, executor statement, fiscalizer finding, evidence producer record, beneficiary experience, affected-party observation, expert review, complaint status, Project Closure Accountability Record, Performance History Surface, protocol rule, or AI-generated summary.
+
+AI-generated summaries or warnings must be visibly labeled, traceable, and correctable under C008.
+
 ### 13. Citizen action flows
 
 Core v0 includes flows for funding, following, fiscalizer offers, fulfillment evidence production, comments/questions, complaints, delegation, and automatic allocation profiles.
@@ -502,7 +526,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, Project Closure Accountability Records, material information claims, verified discoveries, fiscalization, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, Project Closure Accountability Records, Assisted Deliberation Context source traces, material information claims, verified discoveries, fiscalization, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 

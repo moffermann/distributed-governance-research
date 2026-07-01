@@ -44,6 +44,7 @@ H010 is aligned: every financeable project now has one Primary Responsibility An
 H009 is aligned: every financeable project must align with an active Planning Scope before execution readiness. Core v0 requires visible, versioned, auditable planning-scope alignment, but does not define the full mechanism for constructing a national, regional, communal, or thematic roadmap. The idea of distributed roadmap construction through votable planning areas is preserved as an Extension v1+ / open question, not lost inside Core v0.
 H008 is aligned: distributed accountability is the full project accountability loop from accepted promise to fulfillment/control evidence, formal evaluation, Project Closure Accountability Record, financial closure, role-specific responsibility, reputation, and future financing context. Critical milestones, disbursements, closure, value fulfillment, antivalue compliance, and reputation cannot depend only on self-report by the actor being evaluated.
 H007 is aligned: continuous performance evaluation is represented as role-comparable performance visibility. Core v0 includes a lightweight Performance History Surface derived from reviewed closure, evaluation, fiscalization, responsibility, reputation, complaint-status, financial-closure, and evidence-sufficiency records. It does not create a separate public history for every value label declared by past projects, and it is not a universal score, public-value-per-currency ranking, social-credit mechanism, or automatic allocation rule.
+H006 is aligned: assisted deliberation is represented as an Assisted Deliberation Context for material citizen actions. It gives citizens concise, source-visible, correctable context before funding, supporting, objecting, delegating, offering control work, funding complaint review, or reviewing material reformulation where applicable. It structures "why consider this", "what to review carefully", and "dissent / alerts / unresolved issues" without deciding, ranking, certifying truth, allocating funds, suppressing dissent, or replacing citizen judgment.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -172,7 +173,9 @@ The fifty-sixth residual cleanup aligned H008 with the project object model, fis
 
 The fifty-seventh residual cleanup aligned H007 with the v0 blueprint, scope freeze, entity map, citizen layers, audit trail, classification matrix, glossary, index, and contradiction checklist. H007 now defines Continuous Performance Visibility through a lightweight Performance History Surface: a citizen-facing read model over reviewed historical role performance. The cleanup clarifies that performance history should be generic and comparable by role, while source value floors, antivalue ceilings, metrics, evidence items, closure records, complaint outcomes, and financial records remain auditable through detail links. H007 excludes universal rankings, social-credit effects, automatic allocation, and unbounded value-by-value actor histories.
 
-Next review candidate: H006 assisted deliberation.
+The fifty-eighth residual cleanup aligned H006 with the v0 blueprint, scope freeze, entity map, citizen dashboard, signal detail, full project sheet, funding flow, audit trail, classification matrix, glossary, index, and contradiction checklist. H006 now defines Assisted Deliberation Context as a concise citizen-facing read model for material actions. It separates common deliberative context from H005 personal AI guides, keeps C008's AI-assistance boundary, preserves source labels and dissent, and excludes algorithmic steering, hidden ranking, truth certification, automatic allocation, and suppression of unresolved issues.
+
+Next review candidate: H005 personal AI guides for participation.
 
 Approximate current maturity:
 
@@ -250,6 +253,7 @@ Core v0 modules now include:
 - project closure accountability records;
 - role-based reputation;
 - role-comparable performance history;
+- assisted deliberation context;
 - civic wallet and distributed allocation;
 - funding, following, delegation, and automatic allocation flows;
 - layered citizen interface;
@@ -309,7 +313,7 @@ Actors:
   citizen, organization, proposer, modeler, executor, fiscalizer, evidence producer, funder, delegator, delegate, moderator, complainant, beneficiary, affected party, institution, custodian.
 
 Objects:
-  project, project version, planning scope, value thesis, value-antivalue profile, financial assurance profile, guarantee materialization record, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, project closure accountability record, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, performance history surface, operating mode, audit event.
+  project, project version, planning scope, value thesis, value-antivalue profile, financial assurance profile, guarantee materialization record, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, project closure accountability record, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, performance history surface, assisted deliberation context, operating mode, audit event.
 
 States:
   draft, in validation, requires adjustment, ready to publish, open, execution-ready, in execution, correction required, paused, requires reformulation, under review, revoked, closed, expired.

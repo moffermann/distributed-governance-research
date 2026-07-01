@@ -178,6 +178,18 @@ Phase-specific funding should not silently move between phases. A design contrib
 
 Before confirming, the citizen should see a clear summary.
 
+The summary should include or link to the Assisted Deliberation Context:
+
+```text
+Before funding:
+
+Why consider this
+What to review carefully
+Dissent / alerts / unresolved issues
+```
+
+This context should expose source labels and unresolved limitations, but it should not tell the citizen whether to fund.
+
 Example:
 
 ```text

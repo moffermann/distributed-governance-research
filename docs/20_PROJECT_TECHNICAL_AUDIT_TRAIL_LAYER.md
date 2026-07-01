@@ -494,6 +494,39 @@ Layer 5 should also show comparison limits, such as small sample size, incompara
 
 The Performance History Surface should not create formal effects by itself. Formal effects must still come from the underlying EvaluationRecords, Responsibility Events, Reputation Inputs, financial orders, complaint outcomes, or other reviewed source objects.
 
+## 8c. Assisted deliberation context trace
+
+Layer 5 should show which sources fed an Assisted Deliberation Context.
+
+For each material deliberative item, include:
+
+- context type: funding, support, justified objection, delegation, complaint review funding, reformulation review, control offer, or other material action;
+- citizen-facing item text;
+- source category;
+- source record references;
+- status: claimed, self-reported, corroborated, reviewed, disputed, contradicted, insufficient, corrected, unresolved, or AI-generated where applicable;
+- AI assistance trace where material;
+- correction, contradiction, or supersession history;
+- final citizen-facing version.
+
+Example:
+
+```text
+Deliberative item:
+Design gate pending.
+
+Source:
+Project phase rule + Project Evidential Contract.
+
+Status:
+Reviewed project condition.
+
+AI assistance:
+AI summarized the condition from the contract. User-facing text accepted with minor wording correction.
+```
+
+The assisted context should not create formal effects by itself. Formal effects must still come from the underlying protocol rule, citizen action, EvaluationRecord, FiscalizationReport, complaint process, financial order, governance resolution, or lawful authority path.
+
 ## 9. Fiscalization reports
 
 Include complete fiscalization records:

@@ -2302,6 +2302,61 @@ Rule:
 
 Specific value floors, antivalue ceilings, metrics, fulfillment/control evidence items, and closure records remain auditable through source links. The ordinary citizen-facing surface should expose compact comparable categories and visible data limits. It should not become a universal public-value-per-currency score, a popularity ranking, a social-credit mechanism, or an automatic allocation rule.
 
+## Assisted Deliberation Context
+
+Citizen-facing read model that structures context before a material civic action.
+
+This is not a decision object, ranking object, truth-certification object, moderation object, or allocation object. It does not create formal effects by itself. It summarizes relevant project information, source categories, dissent, risk, and unresolved limitations so citizens can decide with better context.
+
+Typical trigger actions:
+
+- funding a project;
+- supporting a project;
+- creating a justified objection;
+- delegating allocation power;
+- selecting or configuring an allocation profile;
+- offering fiscalization or fulfillment/control evidence;
+- funding complaint review;
+- reviewing material reformulation where citizen review is applicable.
+
+Attributes:
+
+- project or civic object;
+- decision context: funding, support, objection, delegation, complaint review funding, reformulation review, control offer, or other material action;
+- why consider this items;
+- what to review carefully items;
+- dissent, alerts, or unresolved issue items;
+- source category for each material item;
+- source record references;
+- AI-generated summary or warning flag where applicable;
+- correction, contradiction, or supersession status;
+- data limitations;
+- citizen-facing explanation;
+- audit trail.
+
+Relationships:
+
+```text
+AssistedDeliberationContext belongs to Project or other civic object
+AssistedDeliberationContext may reference ValueAntivalueProfile
+AssistedDeliberationContext may reference ProjectEvidentialContract
+AssistedDeliberationContext may reference EvidenceItems
+AssistedDeliberationContext may reference EvaluationRecords
+AssistedDeliberationContext may reference FiscalizationReports
+AssistedDeliberationContext may reference Complaints
+AssistedDeliberationContext may reference ProjectClosureAccountabilityRecords
+AssistedDeliberationContext may reference PerformanceHistorySurface
+AssistedDeliberationContext may reference Comments or JustifiedObjectionSignals
+AssistedDeliberationContext may reference RelatedPartyDeclarations
+AssistedDeliberationContext may reference AI assistance traces
+```
+
+Rule:
+
+> Assisted deliberation structures decision context. It should not decide, rank, certify truth, allocate funds, suppress dissent, or replace citizen judgment.
+
+Every material item should expose whether it is claimed, self-reported, corroborated, reviewed, disputed, contradicted, insufficient, corrected, unresolved, or AI-generated where applicable.
+
 ## Operating Mode
 
 Defines how open or moderated a public function is.

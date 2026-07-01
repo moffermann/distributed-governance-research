@@ -156,6 +156,26 @@ AI may assist with drafting, validation, warnings, classification, comparison, a
 
 ---
 
+## C008a — Assisted deliberation vs algorithmic steering
+
+**Severity:** Medium
+**Status:** Resolved
+**Related hypothesis:** `knowledge/hypotheses/H006-assisted-deliberation.md`
+
+### Accepted v0 rule
+
+Assisted deliberation structures decision context before material citizen action. It does not decide, rank, certify truth, allocate funds, suppress dissent, or replace citizen judgment. Material deliberative items should expose source category, status, unresolved limitations, and AI assistance labels where applicable.
+
+Checklist:
+
+- [ ] Does the citizen-facing context distinguish "Why consider this", "What to review carefully", and "Dissent / alerts / unresolved issues"?
+- [ ] Does each material item expose its source category and status?
+- [ ] Are AI-generated summaries or warnings labeled as assistance and traceable to underlying sources?
+- [ ] Is the context prevented from becoming a hidden ranking, automatic allocation rule, or final truth certification?
+- [ ] Are dissenting views, justified objections, complaints, and unresolved issues shown with proper procedural status rather than suppressed or treated as proven?
+
+---
+
 ## C009 — Citizen simplicity vs too many technical states
 
 **Severity:** Medium

@@ -53,6 +53,7 @@ The citizen should be able to return easily to the project dashboard.
 
 Layer 3 includes reusable panels for:
 
+- assisted deliberation context;
 - value promised;
 - beneficiaries;
 - funding;
@@ -64,6 +65,40 @@ Layer 3 includes reusable panels for:
 - complaints;
 - missing conditions;
 - alerts.
+
+## 0. Assisted deliberation context detail
+
+Opened when the citizen clicks a deliberative item such as `Why consider this`, `What to review carefully`, or `Dissent / alerts`.
+
+The panel should show:
+
+- item title;
+- plain-language explanation;
+- source category;
+- current status: claimed, self-reported, corroborated, reviewed, disputed, contradicted, insufficient, corrected, unresolved, or AI-generated where applicable;
+- why it matters for the citizen's action;
+- what the citizen can do next;
+- source links.
+
+Example:
+
+```text
+Design gate pending
+
+What it means:
+Execution funds may be reserved, but cannot be released until design deliverables are accepted.
+
+Source:
+Project phase rule + Project Evidential Contract.
+
+Why it matters:
+The citizen can fund now, but should know that construction cannot start until design review is approved.
+
+What I can do:
+Fund, follow, inspect design deliverables, or submit a justified objection if something material is missing.
+```
+
+AI-generated summaries should be labeled as assistance and linked to the underlying sources. The panel should not tell the citizen which action to take.
 
 ## 1. Value promised detail
 

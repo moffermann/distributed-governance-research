@@ -170,6 +170,7 @@ It should answer:
 - what is promised;
 - who will do it;
 - what compact role-performance history is available for responsible actors;
+- what deliberative context should be considered before acting;
 - what value it creates;
 - how much funding is missing;
 - what conditions are still missing;

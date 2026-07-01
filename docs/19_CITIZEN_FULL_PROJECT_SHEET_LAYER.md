@@ -40,21 +40,22 @@ Layer 4 should include:
 
 ```text
 1. Citizen summary
-2. Main responsibility and value promised
-3. Beneficiaries
-4. Who will do it
-5. Budget
-6. Project phases where applicable
-7. Conditions to become execution-ready
-8. Civic support and justified objections
-9. Execution plan and milestones
-10. Evidence committed
-11. Fiscalization
-12. Declared risks and antivalues
-13. Relevant comments
-14. Complaints
-15. Change history
-16. Access to full audit trail
+2. Assisted deliberation context
+3. Main responsibility and value promised
+4. Beneficiaries
+5. Who will do it
+6. Budget
+7. Project phases where applicable
+8. Conditions to become execution-ready
+9. Civic support and justified objections
+10. Execution plan and milestones
+11. Evidence committed
+12. Fiscalization
+13. Declared risks and antivalues
+14. Relevant comments
+15. Complaints
+16. Change history
+17. Access to full audit trail
 ```
 
 ## 1. Citizen summary
@@ -67,7 +68,23 @@ Example:
 This project seeks to fund free sports training for 80 children in Maipú for 6 months. It will be carried out by Club Deportivo Los Cóndores and still needs to complete funding and confirm fiscalization before it can be executed.
 ```
 
-## 2. Main responsibility and value promised
+## 2. Assisted deliberation context
+
+Layer 4 should include a citizen-readable decision context.
+
+Default structure:
+
+```text
+Why consider this
+What to review carefully
+Dissent / alerts / unresolved issues
+```
+
+Each item should show or link to its source category and status. AI-generated summaries must be labeled as AI assistance and linked to the underlying source materials where available.
+
+This section should not recommend a final action, certify truth, rank the project, or hide relevant disagreement.
+
+## 3. Main responsibility and value promised
 
 Start with the project's main responsibility in citizen language.
 
@@ -101,7 +118,7 @@ Each value should show:
 - how it is verified;
 - current status.
 
-## 3. Beneficiaries
+## 4. Beneficiaries
 
 Show who receives the benefit and distinguish beneficiary types.
 
@@ -125,7 +142,7 @@ Pending until execution begins.
 
 > Do not mix direct, indirect, estimated, and confirmed beneficiaries.
 
-## 4. Who will do it
+## 5. Who will do it
 
 Present the executor in citizen language.
 
@@ -176,7 +193,7 @@ Status:
 Allowed with safeguards.
 ```
 
-## 5. Budget
+## 6. Budget
 
 The budget should be understandable, not an accounting dump.
 
@@ -218,7 +235,7 @@ Funding may be reserved.
 Release blocked until design accepted.
 ```
 
-## 6. Project phases where applicable
+## 7. Project phases where applicable
 
 If the project has phases, show them in plain language.
 
@@ -240,7 +257,7 @@ Rule:
 
 > The citizen should understand which phase is active, which phase is blocked, and why later-phase funds are not released yet.
 
-## 7. Conditions to become execution-ready
+## 8. Conditions to become execution-ready
 
 Show the parallel closure conditions that apply to the project.
 
@@ -286,7 +303,7 @@ Applies because:
 The project builds a public facility, may need permits, and requires independent fiscalization before execution.
 ```
 
-## 8. Civic support and justified objections
+## 9. Civic support and justified objections
 
 Show social support and justified objections separately from funding.
 
@@ -314,7 +331,7 @@ Rule:
 
 > Support and justified objections are reversible civic signals. They do not withdraw funding and do not replace formal complaints.
 
-## 9. Execution plan and milestones
+## 10. Execution plan and milestones
 
 Show the plan in citizen language.
 
@@ -344,7 +361,7 @@ Deadline: month 6
 Fulfillment evidence: final report, total attendance, beneficiary confirmation
 ```
 
-## 10. Evidence committed
+## 11. Evidence committed
 
 Show what evidence the project has committed to produce.
 
@@ -368,7 +385,7 @@ Pending: 6
 Observed: 0
 ```
 
-## 11. Fiscalization
+## 12. Fiscalization
 
 Show who reviews the project and what is reviewed.
 
@@ -405,7 +422,7 @@ Delivered reports:
 0
 ```
 
-## 12. Declared risks and antivalues
+## 13. Declared risks and antivalues
 
 The project sheet should show not only promised value, but also possible negative effects or risks declared by the project.
 
@@ -432,7 +449,7 @@ Possible antivalues:
 
 > The citizen project sheet should show both promised value and declared risks or possible negative effects.
 
-## 13. Relevant comments
+## 14. Relevant comments
 
 Do not show every comment by default. Show a useful synthesis.
 
@@ -453,7 +470,7 @@ Main topics:
 [See full conversation]
 ```
 
-## 14. Complaints
+## 15. Complaints
 
 Show complaint status clearly.
 
@@ -500,7 +517,7 @@ The full sheet should distinguish:
 
 Support and objections to complaints should be shown separately. Objections do not reduce the support count required by the active complaint policy.
 
-## 15. Change history
+## 16. Change history
 
 Show a citizen-readable version history.
 
@@ -519,7 +536,7 @@ Beneficiary number corrected from 100 to 80.
 
 Layer 4 should show meaningful changes, not raw technical records.
 
-## 16. Access to full audit trail
+## 17. Access to full audit trail
 
 Layer 4 should end with access to Layer 5.
 
