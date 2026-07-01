@@ -150,10 +150,13 @@ This section may link to:
 - actor profile;
 - role history;
 - role-based reputation;
+- compact role-performance history;
 - declared relationships;
 - previous projects.
 
 Related-party and conflict signals should be shown in plain language.
+
+Role-performance history should remain generic and comparable by role. It may summarize completion outcomes, evidence sufficiency, budget closure, correction responsiveness, serious responsibility events, or equivalent role categories, but it should not become a separate lifetime history for every value label declared by the actor's past projects.
 
 Example:
 

@@ -424,6 +424,15 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Can failed value floors, exceeded antivalue ceilings, or undeclared antivalues become reviewed role-specific Reputation Inputs or Responsibility Events?
 - [ ] Are severe events kept visibly inspectable even when aggregate scores recover over time?
 
+## 3b. Performance history checklist
+
+- [ ] Is historical performance shown through generic, role-comparable categories rather than a separate public history for every value label declared by every project?
+- [ ] Is the Performance History Surface derived from reviewed records such as Project Closure Accountability Records, EvaluationRecords, FiscalizationReports, Responsibility Events, Reputation Summaries, financial closure outcomes, and final or procedurally classified complaint outcomes?
+- [ ] Is the surface prevented from creating formal responsibility, reputation, disbursement, closure, suspension, or allocation effects by itself?
+- [ ] Are actors compared only by role and meaningful context, such as public function, project size, risk, regulated status, territory, or operating mode where relevant?
+- [ ] Are data sufficiency, small sample size, and comparability limits visible?
+- [ ] Are universal public-value-per-currency scores, popularity rankings, social-credit effects, and automatic allocation rules excluded from Core v0 performance history?
+
 ## 4. Funding checklist
 
 - [ ] Is funding clearly a conditional commitment?

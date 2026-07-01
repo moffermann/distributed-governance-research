@@ -592,6 +592,33 @@ Reputation Signal -> Reputation Input -> Reputation Update -> Reputation Summary
 
 Raw opinion, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, and closure labels do not directly update formal reputation. Related organizations or holding-linked companies may be visible, but formal effects require a reviewed role, control, conflict, negligence, direct participation, repeated pattern, or responsibility basis.
 
+### 23a. Performance history visibility
+
+Core v0 includes a lightweight Performance History Surface.
+
+This is a citizen-facing read model derived from reviewed records, not a new formal decision object.
+
+It may summarize:
+
+- Project Closure Accountability Records;
+- EvaluationRecords;
+- FiscalizationReports;
+- Responsibility Events;
+- Reputation Summaries;
+- financial closure outcomes;
+- final or procedurally classified complaint outcomes;
+- reviewed fulfillment/control evidence sufficiency patterns.
+
+Rule:
+
+> Historical performance should be visible through generic, role-comparable categories, not through an unbounded history for every value a project declared.
+
+The surface should compare executors with executors, modelers or designers with modelers or designers, fiscalizers with fiscalizers, evidence producers with evidence producers, and other actors only in the role actually reviewed.
+
+Specific value floors, antivalue ceilings, metrics, evidence items, and closure findings remain auditable in the detail and technical layers. The citizen-facing layer should show compact categories such as completed projects, partial or unfulfilled outcomes, evidence sufficiency pattern, budget closure, correction responsiveness, serious responsibility events, review quality, or evidence usefulness according to role.
+
+The surface must disclose data sufficiency and comparison limits. It must not become a universal public-value-per-currency score, a popularity ranking, a social-credit mechanism, or an automatic allocation rule.
+
 ### 24. Discovery visibility and customization
 
 Core v0 includes transparent discovery controls:

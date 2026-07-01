@@ -49,6 +49,7 @@ A project card should include:
 - main responsibility;
 - location;
 - who will do it;
+- compact role-performance history for the responsible actor where available;
 - funding progress;
 - remaining amount;
 - closing deadline;
@@ -69,6 +70,9 @@ Actividad deportiva gratuita y sostenida para 80 niños.
 
 Lo hará:
 Club Deportivo Los Cóndores
+
+Historial como ejecutor:
+12 proyectos cerrados, 2 parciales o incumplidos, evidencia usualmente suficiente.
 
 Financiamiento:
 $7.560.000 reunidos de $12.000.000

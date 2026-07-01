@@ -433,7 +433,7 @@ Science should combine distributed support, expert review, open peer evaluation,
 - Citizen-supported research funds.
 - Expert panels with transparent scoring.
 - Open peer review.
-- Research performance dashboards.
+- Research performance visibility surfaces with expert context.
 - Protected funds for long-horizon research.
 
 ## Open questions
@@ -474,7 +474,7 @@ Social development is service delivery, case management, resource allocation, hu
 
 **Distributed with strong accountability.**
 
-Foundations, local organizations, companies, and social projects can compete for support by demonstrating impact. This requires strong dashboards, beneficiary validation, audits, and anti-fraud mechanisms.
+Foundations, local organizations, companies, and social projects can compete for support by demonstrating impact. This requires role-comparable performance visibility, beneficiary validation, audits, and anti-fraud mechanisms.
 
 ## Open questions
 

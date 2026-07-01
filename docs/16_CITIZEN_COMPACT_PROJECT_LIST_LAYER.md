@@ -142,6 +142,16 @@ Possible v0 ordering modes:
 - Random rotation;
 - Search relevance.
 
+Role-performance history may appear as a visible signal or filter only when the reason is explicit and role-scoped.
+
+Example:
+
+```text
+Shown signal: executor has mostly sufficient evidence history.
+```
+
+It should not become a hidden default ranking, a universal score, or an automatic allocation rule.
+
 If a project appears because of a recommendation or urgent slot, the list or card should expose the reason.
 
 Example:

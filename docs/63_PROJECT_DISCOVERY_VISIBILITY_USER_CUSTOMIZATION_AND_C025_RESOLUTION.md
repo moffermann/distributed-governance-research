@@ -138,6 +138,10 @@ Search relevance
 
 Advanced personalized ranking may exist later, but Core v0 should rely first on simple, visible, explainable modes.
 
+Role-performance history may be shown as a visible signal or used as an explicit filter only when it remains role-scoped, explainable, and auditable.
+
+It should not become a hidden default ranking, a universal performance score, a public-value-per-currency ranking, or an automatic allocation rule.
+
 ## Layer 0 rule
 
 Layer 0 should remain a navigation surface.

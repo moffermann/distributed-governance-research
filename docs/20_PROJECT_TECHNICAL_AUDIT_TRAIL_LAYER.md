@@ -463,6 +463,37 @@ Layer 5 should make clear why a project was closed as fulfilled, partially fulfi
 
 An evidence item that is dark, unlinked, missing required metadata, or otherwise insufficient may remain in the archive, but the closure trace should show that it was not used as proof of fulfillment unless adequate corroboration or review accepted it for that formal effect.
 
+## 8b. Performance history source trace
+
+Layer 5 should show which reviewed records feed any Performance History Surface shown to citizens.
+
+For each actor-role summary, include source references to:
+
+- Project Closure Accountability Records;
+- EvaluationRecords;
+- FiscalizationReports;
+- Responsibility Events;
+- Reputation Summaries;
+- financial closure outcomes;
+- final or procedurally classified complaint outcomes;
+- reviewed fulfillment/control evidence sufficiency findings.
+
+The trace should preserve the generic category used on the citizen-facing surface and the source records behind it.
+
+Example:
+
+```text
+Executor evidence sufficiency pattern: usually sufficient
+Sources:
+- Project A closure record: sufficient
+- Project B closure record: insufficient, later corrected
+- Project C closure record: accepted only as contextual material
+```
+
+Layer 5 should also show comparison limits, such as small sample size, incomparable project domains, different operating modes, or materially different risk levels.
+
+The Performance History Surface should not create formal effects by itself. Formal effects must still come from the underlying EvaluationRecords, Responsibility Events, Reputation Inputs, financial orders, complaint outcomes, or other reviewed source objects.
+
 ## 9. Fiscalization reports
 
 Include complete fiscalization records:

@@ -26,12 +26,13 @@ What does this project promise, what does it need, and what can I do now?
 1. Project header
 2. Value promised
 3. Who will do it
-4. Project state
-5. Conditions required to become execution-ready
-6. Main actions
-7. Signal dashboard
-8. Short summary
-9. Access to full project sheet
+4. Compact role-performance history
+5. Project state
+6. Conditions required to become execution-ready
+7. Main actions
+8. Signal dashboard
+9. Short summary
+10. Access to full project sheet
 ```
 
 This order starts with public value and then shows the operational state.
@@ -89,7 +90,27 @@ Club Deportivo Los Cóndores
 
 instead of technical labels.
 
-## 4. Project state
+## 4. Compact role-performance history
+
+Show a short, role-scoped performance signal for the responsible actor where reviewed data exists.
+
+Example:
+
+```text
+Historial como ejecutor:
+12 proyectos cerrados, 2 parciales o incumplidos.
+Evidencia: usualmente suficiente.
+[Ver historial]
+```
+
+Rules:
+
+- compare actors by role, not through one generic score;
+- do not show a separate history for every value the actor has ever declared;
+- label insufficient data clearly;
+- link to the detail or audit layer for source records.
+
+## 5. Project state
 
 Show a simple state.
 
@@ -104,7 +125,7 @@ Examples:
 - Pausado;
 - Requiere reformulación.
 
-## 5. Conditions required to become execution-ready
+## 6. Conditions required to become execution-ready
 
 For open projects, show what is complete and what is missing.
 
@@ -169,7 +190,7 @@ Full policy and audit trail available.
 
 The citizen should see what is missing first. The deeper view can explain the policy source, operating mode, protocol version, and tutored review rule if applicable.
 
-## 6. Main actions
+## 7. Main actions
 
 Actions should be direct and contextual.
 
@@ -184,7 +205,7 @@ Examples:
 
 The primary action may change based on project need or entry path.
 
-## 7. Signal dashboard
+## 8. Signal dashboard
 
 Show concrete signals as clickable numbers.
 
@@ -214,7 +235,7 @@ Rules:
 
 Support and justified objection are reversible by the citizen who created them. Withdrawn signals may remain visible in detail or audit layers, but they should not count as active support or active objection.
 
-## 8. Short summary
+## 9. Short summary
 
 Layer 2 may include a very brief citizen summary.
 
@@ -224,7 +245,7 @@ Example:
 Este proyecto busca financiar una escuela deportiva gratuita para niños de Maipú. Todavía necesita completar financiamiento y confirmar fiscalización antes de estar listo para ejecutarse.
 ```
 
-## 9. Full project sheet
+## 10. Full project sheet
 
 Layer 2 should include a deliberate entry to the full citizen project sheet.
 

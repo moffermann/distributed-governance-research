@@ -31,7 +31,7 @@ A problem is not a refutation if the current system also handles it poorly, opaq
 - Algorithm as coordinator, not decider
 - Distributed resource allocation
 - Assisted deliberation
-- Continuous performance evaluation
+- Continuous performance visibility
 - Distributed accountability loop
 - Planning scope alignment
 - Primary responsibility anchor

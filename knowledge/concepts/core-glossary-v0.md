@@ -269,21 +269,24 @@ It should not be confused with a central AI that decides for everyone.
 
 ## Performance Dashboard
 
-A performance dashboard is a visible summary of an institution’s historical commitments and results.
+A performance dashboard is a visible summary of reviewed historical role performance.
 
-It may include:
+In Core v0, this should be understood as a lightweight Performance History Surface: a citizen-facing read model derived from reviewed project closure, evaluation, fiscalization, reputation, responsibility, complaint-status, and financial-closure records.
 
-- goals promised;
-- budget requested;
-- budget executed;
-- KPIs;
-- independent audits;
-- beneficiary evaluations;
-- complaints;
-- evidence of execution;
-- comparison with similar institutions.
+It should compare actors through generic role-comparable categories, not through an unbounded history for every value declared by every project.
+
+Examples:
+
+- executor completion outcomes, milestone reliability, evidence sufficiency pattern, budget closure, correction responsiveness, and serious responsibility events;
+- modeler or designer design-deliverable acceptance, rework, phase-gate approval, and reviewed material design omissions;
+- fiscalizer review timeliness, review completeness, weak-evidence correction record, and later-confirmed or corrected findings;
+- evidence producer accepted evidence rate, insufficient evidence rate, metadata completeness, corroboration usefulness, and material corrections after review.
 
 The purpose is to help citizens allocate resources based on verifiable history, not only promises or rhetoric.
+
+Specific value floors, antivalue ceilings, metrics, evidence items, and Project Closure Accountability Records remain auditable through detail links. The first citizen-facing history should stay compact and comparable by role.
+
+The dashboard should disclose data sufficiency and comparison limits. It should not become a universal public-value-per-currency score, a popularity ranking, a social-credit mechanism, or an automatic allocation rule.
 
 ---
 

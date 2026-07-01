@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[hypotheses/H007-continuous-performance-evaluation|H007 - Continuous Performance Visibility]]
 - [[open-questions/distributed-roadmap-construction-governance|Distributed Roadmap Construction Governance]]
 - [[hypotheses/H008-distributed-accountability|H008 — Distributed Accountability Loop]]
 - [[hypotheses/H009-binding-evolutionary-planning|H009 — Planning Scope Alignment]]
@@ -223,6 +224,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H007-continuous-performance-evaluation|H007 - Continuous Performance Visibility]]
 - [[hypotheses/H008-distributed-accountability|H008 — Distributed Accountability Loop]]
 - [[hypotheses/H009-binding-evolutionary-planning|H009 — Planning Scope Alignment]]
 - [[hypotheses/H010-primary-responsibility-principle|H010 — Primary Responsibility Anchor]]

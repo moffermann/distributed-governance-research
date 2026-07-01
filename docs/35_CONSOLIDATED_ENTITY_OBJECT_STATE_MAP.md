@@ -1784,6 +1784,7 @@ ProjectClosureAccountabilityRecord references FiscalizationReports
 ProjectClosureAccountabilityRecord may reference Disbursements and FinancialOrders
 ProjectClosureAccountabilityRecord may create or reference ResponsibilityEvents
 ProjectClosureAccountabilityRecord may create or reference ReputationInputs
+ProjectClosureAccountabilityRecord may feed PerformanceHistorySurface
 ```
 
 Rule:
@@ -2249,6 +2250,57 @@ Attributes:
 Rule:
 
 > Reputation follows reviewed role responsibility and verified role performance. Raw opinion, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, corporate-group proximity, or closure labels should not directly update formal reputation.
+
+## Performance History Surface
+
+Citizen-facing read model over reviewed historical performance.
+
+This is not a new formal decision object. It does not create responsibility, reputation, disbursement, closure, suspension, or allocation effects by itself. It summarizes reviewed records so citizens can inspect an actor's past role performance before funding, supporting, delegating, selecting, or reviewing a project.
+
+Attributes:
+
+- actor;
+- visible role;
+- comparison context: role, public function or domain where available, project size or procedural burden where available, risk or regulated status where relevant, territory or operating mode where relevant;
+- completed projects count;
+- partially fulfilled, unfulfilled, revoked, expired, or reformulated project counts;
+- milestone reliability category;
+- value-floor fulfillment category;
+- antivalue-ceiling compliance category;
+- evidence sufficiency pattern;
+- financial closure pattern: released, retained, returned, recovered, reassigned, or guarantee-executed funds where applicable;
+- correction or mitigation responsiveness;
+- severe responsibility events visible separately;
+- Reputation Summary reference;
+- data sufficiency or confidence status;
+- source links.
+
+Role-specific category examples:
+
+- executor: completion outcomes, milestone reliability, budget closure, correction responsiveness, severe responsibility events;
+- modeler or designer: accepted design deliverables, rework, phase-gate approval record, material design omissions found after review;
+- fiscalizer: timeliness, review completeness, weak-evidence correction record, findings later confirmed, corrected, contradicted, or overturned;
+- evidence producer: accepted evidence rate, insufficient evidence rate, metadata completeness, corroboration usefulness, material corrections after review.
+
+Relationships:
+
+```text
+PerformanceHistorySurface belongs to Actor
+PerformanceHistorySurface is scoped by Role
+PerformanceHistorySurface reads ProjectClosureAccountabilityRecords
+PerformanceHistorySurface reads EvaluationRecords
+PerformanceHistorySurface reads FiscalizationReports
+PerformanceHistorySurface reads ResponsibilityEvents
+PerformanceHistorySurface reads ReputationSummaries
+PerformanceHistorySurface reads final or procedurally classified Complaint outcomes
+PerformanceHistorySurface may link to Layer 5 source records
+```
+
+Rule:
+
+> Performance history is generic and comparable by role. It should not create an unbounded public history for every value label declared by every project.
+
+Specific value floors, antivalue ceilings, metrics, fulfillment/control evidence items, and closure records remain auditable through source links. The ordinary citizen-facing surface should expose compact comparable categories and visible data limits. It should not become a universal public-value-per-currency score, a popularity ranking, a social-credit mechanism, or an automatic allocation rule.
 
 ## Operating Mode
 

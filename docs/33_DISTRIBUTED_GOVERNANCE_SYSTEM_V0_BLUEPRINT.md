@@ -44,7 +44,8 @@ v0 should prove that the system can:
 10. preserve full auditability;
 11. close projects through a traceable Project Closure Accountability Record;
 12. update role-based reputation;
-13. support transition without pretending the entire system is mature from day one.
+13. make historical performance visible through role-comparable summaries;
+14. support transition without pretending the entire system is mature from day one.
 
 ## Core actors
 
@@ -875,6 +876,36 @@ Rule:
 > Reputation follows role responsibility. It should not collapse all participation into one generic score.
 
 Related organizations, holding-linked companies, owners, directors, controllers, project leads, technical leads, and financial leads may be visible in the relationship graph, but reputation effects require a reviewed role-specific basis. Mere proximity to a failed project, raw public criticism, or shared corporate group membership should not automatically alter reputation.
+
+## Performance history visibility
+
+Core v0 should include a lightweight Performance History Surface.
+
+This surface is a citizen-facing navigation layer derived from reviewed records. It should not become a new formal judge, a universal score, a social-credit mechanism, or an automatic allocation rule.
+
+The surface should aggregate:
+
+- Project Closure Accountability Records;
+- EvaluationRecords;
+- FiscalizationReports;
+- Responsibility Events;
+- Reputation Summaries;
+- financial closure outcomes;
+- final or procedurally classified complaint outcomes;
+- reviewed fulfillment/control evidence sufficiency patterns.
+
+The first comparison unit is role performance, not every specific value ever declared by a project.
+
+Examples:
+
+- executors: completed projects, partial or unfulfilled projects, milestone reliability, evidence sufficiency pattern, budget closure, correction responsiveness, severe responsibility events;
+- modelers/designers: accepted design deliverables, rework, phase-gate approval record, material design omissions found after review;
+- fiscalizers: timeliness, review completeness, weak-evidence correction record, findings later confirmed, corrected, contradicted, or overturned;
+- evidence producers: accepted evidence rate, insufficient evidence rate, metadata completeness, corroboration usefulness, material corrections after review.
+
+The detailed values, metrics, antivalue ceilings, evidence items, and closure records remain available in Layer 5. The ordinary citizen-facing history should be generic and comparable by role, with drill-down when the user needs to inspect the source.
+
+Performance comparisons should disclose data sufficiency and should be constrained by meaningful context such as role, public function, project size, risk, complexity, regulated status, territory, or operating mode where relevant. Core v0 should not rank all social value through one universal performance number or public-value-per-currency score.
 
 ## Operating modes
 
