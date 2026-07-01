@@ -50,6 +50,8 @@ For every issue, ask:
 6. Does this create incentives for capture or collusion?
 7. Does this depend on country law rather than system architecture?
 8. Does this belong in v0 or should it be deferred?
+9. Does this confuse a centralized legal/public guarantee with centralized state service provision?
+10. Does this confuse platform consequences with legal consequences?
 ```
 
 ---
@@ -432,6 +434,15 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] If a project is outside the active Planning Scope, is it kept as an Idea, reclassified, reformulated, or routed into future planning-scope governance rather than made execution-financeable by default?
 - [ ] Does closure create a Project Closure Accountability Record?
 - [ ] Is a project prevented from closing as fulfilled when main commitments lack sufficient, reviewed, traceable fulfillment/control evidence?
+
+## 2a. Public guarantee and service provision checklist
+
+- [ ] Are public/legal guarantees, civil rights, standards, accreditation, coverage duties, and funding rules distinguished from direct state service provision?
+- [ ] Can eligible public, private, nonprofit, cooperative, university, concession-like, or state-owned operators provide publicly financed services where the active rules allow it?
+- [ ] Are all service providers subject to the same applicable evidence, fiscalization, complaint, payment, reputation, correction, revocation, replacement, and guarantee rules?
+- [ ] Are platform consequences such as payment block, retention, reputation effect, correction, revocation, replacement, or guarantee use separated from legal consequences such as administrative sanction, civil liability, license effect, fine, court order, or regulatory intervention?
+- [ ] Does the project or operating mode identify which failures require referral to a competent authority, regulator, court, contract path, or enforceable legal obligation?
+- [ ] Do payment and eligibility rules prevent cream-skimming, such as serving only easy, profitable, low-risk, or high-visibility beneficiaries?
 
 ## 3. Value and metrics checklist
 

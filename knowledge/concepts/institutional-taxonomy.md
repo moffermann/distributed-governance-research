@@ -21,3 +21,9 @@ Highly distributable in proposal, deliberation, review, expert input, contradict
 Strongly distributable at the bounded allocation, project execution, evidence, fiscalization, and accountability layers where ministries act mainly as centralized budget allocators. The aggregate fiscal envelope, non-assignable common pool, legal custody, and macro fiscal stability remain central or country-implemented coordination layers.
 
 Schools, hospitals, foundations, research centers, cultural organizations, care providers, utilities, concessionaires, and other eligible operators can receive support through bounded distributed resource assignment only where active scopes, eligibility rules, thresholds, evidence, fiscalization, and accountability conditions are satisfied.
+
+## Health and urgent care
+
+Hybrid by layer. The legal guarantee of access, patient rights, accreditation, minimum standards, triage rules, coverage obligations, public financing rules, health data interoperability, and sanctions require common legal or regulatory frameworks.
+
+Service provision is not necessarily centralized. Public hospitals, private clinics, university hospitals, nonprofits, cooperatives, concession-like operators, or other accredited providers may provide state-financed urgent care or health services if they accept the same coverage duties, evidence requirements, fiscalization, payment conditions, complaint handling, replacement or revocation paths, and legal consequences.

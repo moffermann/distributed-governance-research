@@ -16,7 +16,9 @@ How should state functions be redesigned when modern technology reduces the cost
 
 ## Initial thesis
 
-The state should not be analyzed as a single block. Its functions and functional layers have different natures. Some layers may still require centralization or legally recognized authority, especially those close to the legitimate use of force, rights deprivation, emergency command, macro fiscal stability, or enforceable legal decisions. Other layers, especially those related to information processing, deliberation, bounded resource allocation, evidence, fiscalization, service delivery, and institutional accountability, may benefit from distribution.
+The state should not be analyzed as a single block. Its functions and functional layers have different natures. Some layers may still require centralization or legally recognized authority, especially those that define public guarantees, civil rights, mandatory coverage, accreditation, the legitimate use of force, rights deprivation, macro fiscal stability, or enforceable legal decisions. Other layers, especially those related to information processing, deliberation, bounded resource allocation, evidence, fiscalization, service delivery, and institutional accountability, may benefit from distribution.
+
+Centralized public guarantees do not imply centralized state service provision. A legal framework may define rights, standards, funding rules, accreditation, sanctions, and coverage duties while eligible public, private, nonprofit, cooperative, university, concession-like, or state-owned operators provide the service under transparent accountability rules.
 
 ## Non-goals
 

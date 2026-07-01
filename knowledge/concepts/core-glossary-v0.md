@@ -42,8 +42,9 @@ Instead of asking whether the state should be larger or smaller, the framework a
 
 - What function must be performed?
 - What is the nature of that function?
-- Which layer is being analyzed: coercion, rules, planning, funding, execution, evidence, fiscalization, evaluation, enforcement, rights protection, emergency response, data custody, or accountability?
+- Which layer is being analyzed: public guarantee, civil rights, standards, accreditation, coercion, rules, planning, funding, service provision, execution, evidence, fiscalization, evaluation, enforcement, rights protection, emergency response, data custody, or accountability?
 - Does it depend mainly on force, information, deliberation, trust, coordination, legal recognition, standards, or resource allocation?
+- Is the question about defining rights and obligations, or about who provides the service?
 - Does centralization reduce risk, or does it create information loss and weak accountability?
 - Could distribution improve outcomes?
 
@@ -101,9 +102,13 @@ The target is not public ownership by itself. The target is opaque monopoly powe
 
 Functional distribution is the idea that distribution should depend on what the function and the specific functional layer do.
 
-Layers close to the use of force, legal coercion, irreversible emergency command, rights deprivation, or macro fiscal stability tend to require stronger central coordination, common rules, or legally recognized authority. Layers centered on information, deliberation, evaluation, bounded resource allocation, evidence, fiscalization, service provision, accountability, or reputation have greater potential for distribution.
+Layers that define public guarantees, civil rights, mandatory coverage, enforceable standards, accreditation, legitimate force, legal coercion, rights deprivation, or macro fiscal stability tend to require stronger central coordination, common rules, or legally recognized authority. Layers centered on information, deliberation, evaluation, bounded resource allocation, evidence, fiscalization, service provision, accountability, or reputation have greater potential for distribution.
 
 This avoids the simplistic frame of distributing or centralizing whole sectors. Security, health, justice, education, infrastructure, or environmental governance may each contain centralized, hybrid, and distributed layers.
+
+Centralized public guarantees do not require centralized state service provision. For example, urgent-care access, triage standards, patient rights, accreditation, public financing, and legal consequences may be defined through a common legal framework, while urgent-care services are provided by eligible public hospitals, private clinics, university hospitals, nonprofits, cooperatives, concession-like operators, or other accredited providers.
+
+Platform consequences and legal consequences are also distinct. The platform may block payments, require correction, record non-compliance, affect reputation, trigger complaint handling, or route a matter to competent review. Legal sanctions, liability, permit effects, fines, license revocation, court orders, or administrative intervention require the applicable law, contract, regulator, court, or competent authority.
 
 ---
 

@@ -14,9 +14,14 @@ Then ask which layer is being analyzed:
 
 ```text
 coercion
+public guarantee
+civil rights
+standards
+accreditation
 rule creation
 planning
 funding
+service provision
 execution
 evidence
 fiscalization
@@ -32,8 +37,8 @@ The labels below summarize the likely architecture of the function as a whole. T
 
 ## Scale
 
-- **Centralized:** strong central authority is functionally justified for the decisive layer, usually coercion, unified command, legal recognition, macro fiscal stability, or emergency control.
-- **Hybrid:** central rules, standards, rights protection, interoperability, or coordination remain, but execution, evidence, evaluation, fiscalization, support, or bounded allocation can be distributed.
+- **Centralized:** strong central authority is functionally justified for the decisive layer, usually coercion, unified command, legal recognition, macro fiscal stability, rights guarantees, or enforceable public obligations.
+- **Hybrid:** central legal frameworks, guarantees, standards, accreditation, rights protection, interoperability, financing rules, or coordination remain, but service provision, execution, evidence, evaluation, fiscalization, support, or bounded allocation can be distributed.
 - **Distributed:** the function can largely be performed through distributed institutions, projects, platforms, evidence, fiscalization, and accountability mechanisms, while still respecting common legal and safety boundaries.
 
 ---
@@ -315,6 +320,8 @@ Improve health outcomes through prevention, diagnosis, treatment, care, and emer
 
 Health combines technical expertise, service provision, risk pooling, urgency, standards, and equity concerns.
 
+The key distinction is between the public/legal guarantee layer and the service provision layer. A society may centralize or legally standardize the right to urgent care, triage rules, coverage obligations, accreditation, patient rights, public payment rules, health data interoperability, and sanctions without requiring the state to operate every emergency service directly.
+
 ## Risk of centralization
 
 - Waiting lists.
@@ -335,7 +342,12 @@ Health combines technical expertise, service provision, risk pooling, urgency, s
 
 **Hybrid/distributed.**
 
-Service provision, innovation projects, clinics, prevention programs, and specialized care may be distributed. However, standards, emergency access, patient rights, health data interoperability, and some risk-pooling mechanisms likely require central or shared coordination.
+Service provision, urgent care operation, innovation projects, clinics, prevention programs, and specialized care may be distributed among eligible public hospitals, private clinics, university hospitals, nonprofits, cooperatives, concession-like operators, state-owned operators where eligible, or other accredited providers. However, legal access guarantees, standards, accreditation, triage obligations, patient rights, health data interoperability, public payment rules, anti-discrimination duties, sanctions, and some risk-pooling mechanisms likely require central, shared, or legally recognized coordination.
+
+Failure to deliver publicly financed health services can have two kinds of consequences:
+
+- platform consequences, such as payment blocks, retentions, non-compliance records, reputation effects, correction requirements, replacement, revocation from a program, guarantee use, or complaint handling;
+- legal consequences, such as administrative sanctions, civil liability, fines, license effects, judicial action, regulatory intervention, or other country-specific remedies.
 
 ## Open questions
 
@@ -343,6 +355,8 @@ Service provision, innovation projects, clinics, prevention programs, and specia
 - What must be universally guaranteed?
 - How do distributed providers interoperate?
 - What health outcomes are legitimate performance signals?
+- How should payment formulas prevent providers from accepting only easy, profitable, or low-risk patients?
+- Which health failures should create platform consequences, legal consequences, or both?
 
 ---
 

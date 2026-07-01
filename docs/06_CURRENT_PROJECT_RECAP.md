@@ -14,7 +14,9 @@ The original question was whether modern technology could reduce the state to a 
 
 The state should not be evaluated as a single block. Its functions and functional layers have different natures.
 
-Layers close to the legitimate use of force, rights deprivation, emergency command, enforceable legal authority, or macro fiscal stability tend to require stronger central coordination, common rules, or legally recognized authority. Layers centered on information, deliberation, planning, bounded resource allocation, service provision, evidence, fiscalization, evaluation, accountability, and trust may benefit from distribution.
+Layers that define public guarantees, civil rights, mandatory coverage, accreditation, legitimate force, rights deprivation, enforceable legal authority, or macro fiscal stability tend to require stronger central coordination, common rules, or legally recognized authority. Layers centered on information, deliberation, planning, bounded resource allocation, service provision, evidence, fiscalization, evaluation, accountability, and trust may benefit from distribution.
+
+A centralized legal framework is not the same as centralized state provision. A private clinic may provide state-financed urgent care under public rules, evidence, fiscalization, payment conditions, reputation effects, and legal consequences. The model rejects absence of rules; it questions unnecessary monopoly over service delivery.
 
 ## Methodological rule
 
