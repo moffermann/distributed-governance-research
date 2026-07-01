@@ -385,6 +385,11 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 ## 3. Value and metrics checklist
 
 - [ ] Is every value icon linked to metrics?
+- [ ] Does the project define a Value-Antivalue Profile where relevant?
+- [ ] Are value commitments represented as floors the project must reach?
+- [ ] Are relevant antivalues represented as ceilings the project must not exceed?
+- [ ] Does every antivalue ceiling identify affected parties, zones, assets, or common goods where applicable?
+- [ ] Does every antivalue ceiling define measurement or review method, timing/frequency, required fulfillment/control evidence, and review consequence?
 - [ ] Is every core value commitment linked to a fulfillment evidence need?
 - [ ] Is every metric linked to fulfillment evidence needs and review consequences?
 - [ ] Is every formal evaluation scoped to a dimension and formal effect?
@@ -392,10 +397,11 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Does every formal evaluation record its actor role, observability basis, authority or qualification basis, and contextualized evidence used where applicable?
 - [ ] Are qualitative value claims handled?
 - [ ] Are input-only metrics rejected when insufficient?
-- [ ] Does the Project Evidential Contract define fulfillment evidence needs rather than preselected evidence producers?
-- [ ] Can independent evidence producers tie offers to specific metrics, material claims, milestones, phases, risks, or antivalues?
+- [ ] Does the Project Evidential Contract define fulfillment/control evidence needs rather than preselected evidence producers?
+- [ ] Can independent evidence producers tie offers to specific value floors, antivalue ceilings, metrics, material claims, milestones, phases, risks, or declared antivalues?
 - [ ] Are unexpected or supplemental evidence offers prioritized lower unless accepted as equivalent, necessary, materially useful, or complementary?
 - [ ] Are antivalues declared?
+- [ ] Is antivalue non-compliance separated from automatic complaint creation?
 - [ ] Can projects game easy metrics?
 - [ ] Is there a mechanism to challenge weak metrics?
 
@@ -408,6 +414,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are raw comments, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, corporate-group proximity, and closure labels prevented from directly updating formal reputation?
 - [ ] Are related companies, owners, controllers, directors, and key professionals affected only when review establishes role, control, conflict, negligence, direct participation, repeated pattern, or demonstrated responsibility?
 - [ ] Are complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause treated as procedural signals rather than direct negative reputation inputs?
+- [ ] Can failed value floors, exceeded antivalue ceilings, or undeclared antivalues become reviewed role-specific Reputation Inputs or Responsibility Events?
 - [ ] Are severe events kept visibly inspectable even when aggregate scores recover over time?
 
 ## 4. Funding checklist
@@ -531,7 +538,7 @@ Highest-priority integration checks:
 9. Ensure tutored mode decisions and timeouts become public civic objects.
 10. Ensure beneficiary privacy does not create anonymous formal power.
 11. Ensure discovery visibility is explainable and user-customizable.
-12. Ensure Project Evidential Contracts define fulfillment evidence needs rather than preselected evidence producers.
+12. Ensure Project Evidential Contracts define fulfillment/control evidence needs rather than preselected evidence producers.
 13. Ensure material rule changes are classified as Administrative Rule Change, System Implementation Change, or Protocol Change Proposal, with public reason, effective date, transition rule, and audit trace.
 14. Ensure distributed fiscalization remains protocol-selected, conflict-checked, risk-adjusted, auditable, and capped against unlimited secondary fiscalization or duplicate evidence funding.
 ```

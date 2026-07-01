@@ -361,12 +361,43 @@ hard rules + AI semantic evaluation + community observation when needed
 
 It should not be a single AI that decides everything.
 
+## Value floors and antivalue ceilings
+
+The metric validator should also validate the project's H012 Value-Antivalue Profile.
+
+The validator must distinguish:
+
+- value floor metrics: minimum positive commitments the project must reach;
+- antivalue ceiling metrics: maximum negative effects the project must not exceed.
+
+Value icons primarily expose the positive side of the value thesis. Antivalue ceilings are not marketing icons and are not complaints by default. They are control commitments that should remain visible in the project detail, evidential contract, fiscalization layer, and audit trail.
+
+Example:
+
+```text
+Project:
+  Neighborhood plaza renovation.
+
+Value floor:
+  The plaza remains publicly usable after completion.
+
+Antivalue ceiling:
+  Construction noise must not exceed 30 dB at 08:00, 40 dB at 14:00,
+  40 dB at 18:00, and 25 dB at 00:00 in defined measurement points.
+
+Fulfillment/control evidence:
+  Noise map by zone, four measurement times, five days per week,
+  measurement method, device record, and fiscalizer review.
+```
+
 ## Hard-rule validation
 
 Hard rules check minimum structure:
 
 - Does the metric have a number or measurable target?
+- Does the metric declare whether it is a value floor or an antivalue ceiling?
 - Does it define beneficiaries or affected group?
+- Does it define affected parties, zones, assets, or common goods where relevant?
 - Does it define a timeframe?
 - Does it define a unit of measurement?
 - Does it define required evidence?
@@ -430,7 +461,7 @@ These answers should become part of the Project Evidential Contract.
 
 The validator should not merely ask whether a fulfillment evidence item exists. It should check whether the proposed fulfillment evidence is coherent with the value, metric, beneficiary group, risk, and milestone being claimed.
 
-The validator should not require the proposer to name or control the future evidence producer. The proposer defines the fulfillment evidence need; independent evidence producers later submit offers or commitments tied to specific metrics, claims, milestones, phases, risks, or antivalues.
+The validator should not require the proposer to name or control the future evidence producer. The proposer defines the fulfillment/control evidence need; independent evidence producers later submit offers or commitments tied to specific value floors, antivalue ceilings, metrics, claims, milestones, phases, risks, or declared antivalues.
 
 Evidence-producer offers that satisfy an accepted contract need should receive higher eligibility priority. Unexpected fulfillment evidence may still be admissible if a fiscalizer, reviewer, or protocol rule accepts it as equivalent, necessary, materially useful, or complementary within the available control budget.
 

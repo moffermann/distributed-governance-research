@@ -124,7 +124,7 @@ The system should record:
 - actor;
 - project;
 - fulfillment evidence type;
-- value commitment, metric, material claim, milestone, phase, risk, or antivalue addressed;
+- value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue addressed;
 - related evidential contract requirement where known;
 - related fulfillment evidence need where known;
 - expected timing;
@@ -160,7 +160,7 @@ Confirmo que esta evidencia es verdadera según mi conocimiento.
 The form should collect:
 
 - fulfillment evidence type;
-- value commitment, metric, material claim, milestone, phase, risk, or antivalue addressed;
+- value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue addressed;
 - associated milestone;
 - associated metric;
 - material claim supported or contradicted, where known;

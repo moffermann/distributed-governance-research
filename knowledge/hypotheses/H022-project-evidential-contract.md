@@ -38,7 +38,7 @@ A project should declare:
 - KPIs or success indicators;
 - what fulfillment evidence will demonstrate fulfillment;
 - which material information claims must be evidenced;
-- which fulfillment evidence is required for each milestone, metric, budget line, risk, or antivalue where relevant;
+- which fulfillment/control evidence is required for each value floor, antivalue ceiling, milestone, metric, budget line, risk, or declared antivalue where relevant;
 - which fulfillment evidence is required for each project phase where relevant;
 - which source roles can observe, produce, corroborate, or verify that fulfillment evidence;
 - what fiscalization profile or control package is required;
@@ -48,7 +48,19 @@ A project should declare:
 
 The contract should be versioned. If the project later weakens or materially changes its evidential contract, the change should be visible, auditable, and handled through the ordinary reformulation or review rules where applicable.
 
-The contract defines fulfillment evidence needs, not preselected evidence producers. A proposer, modeler, or executor should not control the later evidence producers who verify its own claims. Independent evidence producers may submit offers or commitments tied to specific value commitments, metrics, material claims, milestones, phases, risks, or antivalues.
+Under H012, the contract should include the project's `Value-Antivalue Profile`:
+
+```text
+Value floors:
+  minimum positive commitments the project must reach.
+
+Antivalue ceilings:
+  maximum negative effects the project must not exceed.
+```
+
+Both should define the required fulfillment/control evidence, measurement method, timing, source roles, fiscalizer/reviewer method, and consequence of failure or excess.
+
+The contract defines fulfillment/control evidence needs, not preselected evidence producers. A proposer, modeler, or executor should not control the later evidence producers who verify its own claims. Independent evidence producers may submit offers or commitments tied to specific value floors, antivalue ceilings, metrics, material claims, milestones, phases, risks, or declared antivalues.
 
 Fulfillment evidence that matches the accepted contract should receive higher eligibility priority. Fulfillment/control evidence that was not explicitly listed may still be accepted when it is equivalent, necessary, materially useful, or complementary within the available control budget, but it should not automatically displace the minimum fulfillment evidence needs defined before funding.
 
@@ -57,6 +69,7 @@ Fulfillment evidence that matches the accepted contract should receive higher el
 A Project Evidential Contract should include at least:
 
 - promised value or value thesis;
+- value floors and antivalue ceilings where applicable;
 - metric or qualitative commitment;
 - material information claims created by the promise;
 - fulfillment evidence type required;
@@ -140,6 +153,7 @@ Validation should check:
 - whether critical decisions require non-executor corroboration;
 - whether disbursement milestones have fulfillment evidence and review rules;
 - whether risk and antivalue claims have fulfillment evidence or monitoring where relevant;
+- whether antivalue ceilings have thresholds, affected zones or parties, measurement method, frequency, evidence source roles, and consequences;
 - whether privacy and protected-identity rules are defined for sensitive fulfillment evidence;
 - whether country, operating-mode, or competent-authority requirements apply.
 
@@ -170,7 +184,7 @@ Evidence producers should be able to read the accepted fulfillment evidence need
 
 An evidence-producer offer should identify:
 
-- the metric, value commitment, material claim, milestone, phase, risk, or antivalue addressed;
+- the value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue addressed;
 - the fulfillment evidence to be produced;
 - the method;
 - timing;

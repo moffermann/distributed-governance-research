@@ -189,6 +189,18 @@ Rule:
 
 > No value icon without metrics. No metrics without fulfillment evidence.
 
+H012 extends the value thesis into a `Value-Antivalue Profile`:
+
+```text
+Value floors:
+  minimum positive commitments the project must reach.
+
+Antivalue ceilings:
+  maximum negative effects the project must not exceed.
+```
+
+Antivalue ceilings are not complaints. They are declared project constraints verified through fulfillment/control evidence and fiscalization. A formal complaint may later be filed if a ceiling is exceeded, omitted, or misrepresented, but it must follow the complaint process.
+
 The system should first search the value catalog before generating new values. AI may propose a new value only when there is no adequate existing catalog value.
 
 Promised value should be verified through a Value Verification Package, not isolated metrics. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
@@ -222,9 +234,9 @@ is not enough to measure sports value. The project must measure actual participa
 
 Each project should also define a Project Evidential Contract.
 
-The contract states how fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
+The contract states how fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
 
-The contract defines fulfillment evidence needs rather than named evidence producers. Evidence producers may later offer fulfillment evidence tied to a specific metric, material claim, milestone, phase, risk, or antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected fulfillment evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment/control evidence needs rather than named evidence producers. Evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected fulfillment/control evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
 
 The contract is proportional:
 
@@ -296,6 +308,8 @@ Accepted
 ```
 
 Verified discovery may create reputation credit or compensation only after review confirms that the discovered information was material and useful. AI may flag anomalies, duplicates, missing fulfillment evidence, privacy risks, or contradictions, but it does not decide truth, fraud, responsibility, fund release, or legal consequences by itself.
+
+Failure to reach a value floor, exceeding an antivalue ceiling, or discovering an undeclared antivalue can become a reviewed reputation input or responsibility event only through the relevant evaluation, fiscalization, or responsibility path. It does not automatically become a complaint.
 
 Evidence item states:
 

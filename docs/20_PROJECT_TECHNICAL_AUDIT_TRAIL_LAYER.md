@@ -66,6 +66,7 @@ Layer 5 should include technical traceability for:
 1a. Project variation and reformulation records
 1b. Project phases and phase gates
 2. Value thesis history
+2a. Value-Antivalue Profile history
 3. Metric history
 4. Project evidential contract history
 5. Budget history
@@ -193,6 +194,29 @@ Examples:
 - fulfillment evidence obligations changed.
 
 Layer 5 should make clear whether a project changed what it promised after receiving support.
+
+## 2a. Value-Antivalue Profile history
+
+Track the project's accepted value floors and antivalue ceilings.
+
+For each floor or ceiling, show:
+
+- project version;
+- floor or ceiling type;
+- value commitment or negative effect controlled;
+- affected beneficiaries, affected parties, zones, assets, or common goods;
+- threshold: minimum for value floors, maximum for antivalue ceilings;
+- measurement or review method;
+- timing and frequency;
+- required fulfillment/control evidence;
+- evidence source roles;
+- fiscalizer or reviewer method;
+- mitigation, correction, compensation, reformulation, or closure path where applicable;
+- disbursement, retention, responsibility, reputation, pause, or revocation consequence where applicable;
+- complaint reference only where a complaint was explicitly filed;
+- final evaluation status.
+
+Layer 5 should make clear that failing a value floor or exceeding an antivalue ceiling is not automatically a complaint. It is a reviewed fulfillment/control issue that may later support a complaint if one is explicitly filed.
 
 ## 3. Metric history
 

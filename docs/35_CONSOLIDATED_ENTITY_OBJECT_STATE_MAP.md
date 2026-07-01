@@ -199,6 +199,7 @@ Key attributes:
 - modeler;
 - executor;
 - value theses;
+- value-antivalue profile;
 - value verification packages;
 - beneficiaries;
 - budget;
@@ -223,6 +224,7 @@ Key attributes:
 - closure conditions;
 - risks;
 - antivalues;
+- value floors and antivalue ceilings where applicable;
 - current state;
 - current version;
 - audit trail.
@@ -232,6 +234,7 @@ Key relationships:
 ```text
 Project has many ProjectVersions
 Project has many ValueTheses
+Project has one ValueAntivalueProfile
 Project has many ValueVerificationPackages
 Project has many BeneficiaryGroups
 Project has one or more Budgets
@@ -260,6 +263,50 @@ Project has ThresholdPolicy or threshold policy reference
 Project has many AuditEvents
 Project has one current State
 ```
+
+## Value-Antivalue Profile
+
+A structured project profile defining the positive floors the project must reach and the negative ceilings it must not exceed.
+
+Attributes:
+
+- project;
+- project version;
+- value floors;
+- antivalue ceilings;
+- affected beneficiaries, affected parties, assets, zones, or common goods;
+- metric or qualitative commitment per floor or ceiling;
+- threshold: minimum target for value floors, maximum limit for antivalue ceilings;
+- measurement or review method;
+- timing and frequency;
+- required fulfillment/control evidence;
+- accepted evidence source roles;
+- fiscalizer or reviewer method;
+- mitigation, correction, compensation, reformulation, or closure path where applicable;
+- disbursement, retention, closure, responsibility, reputation, pause, or revocation consequences where applicable;
+- complaint path reference where an actor explicitly files a complaint;
+- audit trail.
+
+States:
+
+```text
+Draft
+In validation
+Accepted
+Requires adjustment
+Under review
+Superseded by reformulation
+Closed
+```
+
+Rules:
+
+- value floors are minimum positive commitments;
+- antivalue ceilings are maximum negative effects;
+- antivalue ceilings are not complaints by default;
+- fulfillment/control evidence verifies floors and ceilings;
+- complaint evidence enters only when a complaint is explicitly filed and processed;
+- failure to reach a floor, exceeding a ceiling, or discovering an undeclared antivalue may become a reviewed Reputation Input or Responsibility Event by role.
 
 ## Support Signal
 
@@ -378,13 +425,17 @@ Attributes:
 
 - project;
 - project version;
+- value-antivalue profile reference;
 - value promises covered;
+- value floors covered;
+- antivalue ceilings covered;
 - metrics and qualitative commitments covered;
 - material information claims covered;
 - fulfillment evidence needs;
 - milestone fulfillment evidence requirements;
 - budget-line fulfillment evidence requirements where relevant;
 - risk and antivalue fulfillment evidence requirements where relevant;
+- floor/ceiling threshold and measurement method where relevant;
 - fulfillment/control evidence types;
 - fulfillment/control evidence source roles: executor, beneficiary, affected party, evidence producer, fiscalizer, technical record, external register, or other;
 - corroboration requirement;
@@ -401,6 +452,7 @@ Relationships:
 
 ```text
 ProjectEvidentialContract belongs to Project
+ProjectEvidentialContract references ValueAntivalueProfile
 ProjectEvidentialContract covers ValueVerificationPackages
 ProjectEvidentialContract defines FulfillmentEvidenceNeeds
 ProjectEvidentialContract constrains EvidenceProducer offers and EvidenceItems
@@ -851,7 +903,7 @@ Rule:
 
 ## Fulfillment Evidence Need
 
-A predefined need for fulfillment evidence linked to a value commitment, metric, material claim, milestone, phase, risk, or antivalue.
+A predefined need for fulfillment/control evidence linked to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue.
 
 A fulfillment evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced and under what review conditions.
 
@@ -861,7 +913,7 @@ Attributes:
 - project;
 - project version;
 - related value thesis or value verification package;
-- related metric, material claim, milestone, phase, risk, or antivalue;
+- related value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue;
 - fulfillment evidence type expected;
 - expected source role or corroboration path;
 - timing;

@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[concepts/value-antivalue-profile-v0|Value-Antivalue Profile v0]]
+- [[hypotheses/H012-distributed-value-antivalue-management|H012 — Distributed Value and Antivalue Management]]
 - [[concepts/systemic-pause-material-suspension-v0|Systemic Pause, Material Suspension, and Final Resolution v0]]
 - [[hypotheses/H013-pause-mitigation-revocation-governance|H013 — Pause, Mitigation, and Revocation Governance]]
 - [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
@@ -173,6 +175,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 - [[concepts/systemic-pause-material-suspension-v0|Systemic Pause, Material Suspension, and Final Resolution v0]]
+- [[concepts/value-antivalue-profile-v0|Value-Antivalue Profile v0]]
 
 ## Foundational session distillations
 
@@ -199,6 +202,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
+- [[concepts/value-antivalue-profile-v0|Value-Antivalue Profile v0]]
 
 ## Functional matrix
 
@@ -211,6 +215,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H012-distributed-value-antivalue-management|H012 — Distributed Value and Antivalue Management]]
 - [[hypotheses/H013-pause-mitigation-revocation-governance|H013 — Pause, Mitigation, and Revocation Governance]]
 - [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]
 - [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]

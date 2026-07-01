@@ -499,7 +499,7 @@ Evidence examples:
 - field observations;
 - documents.
 
-Evidence producers may later submit offers or commitments that identify which metric, value commitment, material claim, milestone, phase, risk, or antivalue their evidence will address.
+Evidence producers may later submit offers or commitments that identify which value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue their evidence will address.
 
 Eligibility priority:
 
@@ -517,6 +517,10 @@ Supplemental evidence outside the contract:
 Rule:
 
 > There is no promised value without a reasonable way to measure and verify it.
+
+H012 adds the corresponding negative-side rule:
+
+> There is no declared antivalue ceiling without a reasonable way to observe, measure, or review whether the project stays below it.
 
 Value verification should use a package of metrics and evidence. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
 
@@ -686,6 +690,9 @@ What could go wrong?
 Who could be excluded?
 What negative effects could occur?
 What execution risks exist?
+What negative effect must the project not exceed?
+Who or what zone could be affected?
+How will that ceiling be measured or reviewed?
 How will they be mitigated?
 ```
 
@@ -706,13 +713,21 @@ Possible antivalues:
 - exclusion of non-registered children
 - benefit concentrated in one small group
 - insufficient use of resources
+
+Antivalue ceiling:
+- nighttime noise must remain below the declared dB ceiling at defined measurement points
+
+Evidence:
+- noise map by zone, measured at declared times and frequency
 ```
 
 Rule:
 
-> A serious project declares not only value, but also risks, limits, and possible negative effects.
+> A serious project declares not only value floors, but also risks, limits, and antivalue ceilings where relevant.
 
 Where relevant, the project must declare common-good impact through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+.
+
+Antivalue ceilings are normally evaluated through fulfillment/control evidence and fiscalization. If a value floor is not reached or an antivalue ceiling is exceeded, the result may affect disbursement, correction, mitigation, closure, or role-specific reputation after review. It becomes a formal complaint only if an actor explicitly files a complaint under the complaint process.
 
 ## 13. Assisted validation by rules and AI
 
@@ -724,6 +739,7 @@ Validation dimensions:
 - coherence;
 - beneficiary clarity;
 - value metrics;
+- value floors and antivalue ceilings;
 - evidence adequacy;
 - Project Evidential Contract completeness;
 - budget consistency;

@@ -63,6 +63,18 @@ The exact package depends on the value type and project risk.
 
 The package defines fulfillment evidence needs and source-role expectations. It should not preselect the independent evidence producers who later verify the project.
 
+H012 adds that the package should distinguish positive floors from negative ceilings:
+
+```text
+Value floor:
+  minimum positive commitment to reach.
+
+Antivalue ceiling:
+  maximum negative effect not to exceed.
+```
+
+Both may require metrics, qualitative commitments, fulfillment/control evidence, fiscalizer review, and role-specific consequences.
+
 ## Minimum v0 rule
 
 For every promised value:
@@ -74,6 +86,7 @@ For every promised value:
 4. Beneficiary feedback or confirmation should be included when relevant.
 5. Antivalues and risks must be reviewed at closure.
 6. The fiscalizer may mark formal compliance as weak if the value is not reasonably demonstrated.
+7. Antivalue ceilings should be reviewed against their declared thresholds, measurement method, affected zones or parties, and required fulfillment/control evidence.
 ```
 
 ## Relationship with material information claims
@@ -115,7 +128,7 @@ H022 defines the ex ante Project Evidential Contract.
 
 The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, fulfillment evidence needs, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
 
-Independent evidence producers may later offer fulfillment evidence tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Fulfillment evidence that satisfies accepted package needs has higher eligibility priority, while unexpected fulfillment evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+Independent evidence producers may later offer fulfillment/control evidence tied to specific value floors, antivalue ceilings, metrics, material claims, milestones, phases, risks, or declared antivalues. Fulfillment/control evidence that satisfies accepted package needs has higher eligibility priority, while unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Example:
 

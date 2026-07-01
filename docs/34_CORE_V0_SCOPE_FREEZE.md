@@ -157,6 +157,9 @@ Core rules:
 - selecting a value creates metric obligations;
 - metrics require fulfillment evidence;
 - core value commitments should map to fulfillment evidence needs;
+- value commitments are value floors the project must reach;
+- relevant antivalues should be declared as ceilings the project must not exceed;
+- antivalue ceilings require proportional fulfillment/control evidence, measurement or review method, affected scope, and consequence where applicable;
 - each project must define a proportional Project Evidential Contract;
 - value verification uses a package of metrics, fulfillment evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels;
 - vague value claims must be reformulated before publication.
@@ -193,11 +196,11 @@ Projects must clarify who benefits and how beneficiaries are counted or confirme
 
 Core v0 includes a Project Evidential Contract.
 
-The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment evidence types, fulfillment evidence source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, and privacy/access rules.
+The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, fulfillment evidence source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
 
 The contract is project-specific and proportional, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
 
-The contract defines fulfillment evidence needs, not preselected evidence producers. Independent evidence producers may later offer fulfillment evidence tied to a metric, material claim, milestone, phase, risk, or antivalue. Contract-matched fulfillment evidence has higher eligibility priority; unexpected fulfillment evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment/control evidence needs, not preselected evidence producers. Independent evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Contract-matched fulfillment/control evidence has higher eligibility priority; unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Citizen-facing views should summarize it as "how this project will be verified"; Layer 5 preserves the full versioned contract and changes.
 

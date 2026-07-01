@@ -241,14 +241,14 @@ Evidence producers should work against the accepted Project Evidential Contract 
 
 The contract tells evidence producers:
 
-- which project promise, metric, milestone, claim, risk, or antivalue needs fulfillment evidence;
+- which value floor, antivalue ceiling, project promise, metric, milestone, claim, risk, or declared antivalue needs fulfillment/control evidence;
 - what fulfillment evidence type is expected;
 - when it should be produced;
 - what privacy or protected-identity rules apply;
 - whether independent or corroborating evidence is required;
 - how the fiscalizer or reviewer will use the evidence.
 
-The contract defines fulfillment evidence needs, not preselected producers. Evidence producers should submit offers or commitments identifying the specific metric, material claim, milestone, phase, risk, or antivalue their fulfillment/control evidence will address.
+The contract defines fulfillment/control evidence needs, not preselected producers. Evidence producers should submit offers or commitments identifying the specific value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue their fulfillment/control evidence will address.
 
 Example:
 

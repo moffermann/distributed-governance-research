@@ -18,6 +18,16 @@ value generated - antivalue generated = perceived net social value
 
 The system does not require a central authority to compute this perfectly. It requires transparency so society can evaluate the tradeoff.
 
+## Value-Antivalue Profile
+
+The Value-Antivalue Profile records the project's value floors and antivalue ceilings.
+
+Value floors are minimum positive commitments the project must reach. Antivalue ceilings are maximum negative effects the project must not exceed.
+
+Both should be connected to metrics, fulfillment/control evidence, fiscalization, disbursement, closure, complaint paths, and role-specific reputation where applicable.
+
+An antivalue ceiling is not a complaint. A complaint may later be filed if an actor alleges that a ceiling was exceeded, omitted, or misrepresented, but it must follow the ordinary complaint process.
+
 ## Mitigation Project
 
 A mitigation project is a project whose primary goal is to reduce the antivalue created by another project.

@@ -46,7 +46,7 @@ It does not by itself validate milestones, release funds, close complaints, or d
 
 ## 2. Fulfillment/control evidence production
 
-Evidence producers collect or submit fulfillment/control evidence linked to a value commitment, metric, material claim, milestone, phase, risk, or antivalue.
+Evidence producers collect or submit fulfillment/control evidence linked to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue.
 
 Fulfillment/control evidence production may be voluntary or funded, but paid evidence missions should be tied to accepted fulfillment evidence needs and should not become unlimited evidence overfunding.
 

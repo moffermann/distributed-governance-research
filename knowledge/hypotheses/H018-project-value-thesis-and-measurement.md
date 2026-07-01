@@ -37,6 +37,14 @@ A project should declare:
 - what antivalue it may produce;
 - what happens if it fails.
 
+H012 frames this as a `Value-Antivalue Profile`:
+
+```text
+value floors + antivalue ceilings
+```
+
+Value commitments are floors the project must reach. Antivalue constraints are ceilings the project must not exceed. Both should be connected to the Project Evidential Contract and to fulfillment/control evidence needs.
+
 ## Value commitments and metrics
 
 Different projects require different metrics. A puppet show, a highway, a hospital, a basic science project, and a heritage preservation project should not be evaluated with the same metric set.
@@ -71,7 +79,7 @@ But the proposer should not preselect the evidence producers who will later veri
 
 Evidence producers should submit independent offers or commitments. Each offer should identify:
 
-- which value commitment, metric, material claim, milestone, phase, risk, or antivalue it addresses;
+- which value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue it addresses;
 - what fulfillment evidence it will produce;
 - how it will produce it;
 - when it will produce it;
@@ -109,6 +117,8 @@ The package may include:
 - contradiction or complaint paths;
 - risk and antivalue checks;
 - closure and reputation effects.
+
+For H012 alignment, the package should distinguish whether each metric is verifying a positive value floor or monitoring a negative antivalue ceiling.
 
 The package is the value-specific part of the Project Evidential Contract.
 
@@ -174,6 +184,8 @@ Corresponding fulfillment evidence needs may include:
 - fulfillment evidence of public access and later use.
 
 If the design phase produces incomplete courts, wrong dimensions, missing required bathrooms or accessibility commitments, or weaker public access, the issue is not a minor metric gap. It may be a failed value commitment, a design-phase failure, or a material value reformulation under C017/H021.
+
+If the accepted project also declares an antivalue ceiling, such as maximum noise around the facility during specified hours, fulfillment/control evidence should verify whether that ceiling was respected. Exceeding the ceiling is an antivalue non-compliance finding; it may affect disbursement, closure, mitigation, or role-specific reputation after review, but it becomes a formal complaint only if a complaint is explicitly filed under H024/C004.
 
 ## Formal evaluation and social signals
 

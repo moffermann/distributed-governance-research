@@ -311,15 +311,17 @@ It should define:
 - problem addressed;
 - intended beneficiaries;
 - why the project matters;
-- core value commitments or metrics;
+- core value commitments or metrics as value floors;
+- antivalue constraints as ceilings where relevant;
 - fulfillment evidence needs for each core commitment;
+- fulfillment/control evidence needs for each antivalue ceiling;
 - relevant source roles for fulfillment/control evidence production or corroboration;
 - review method or actor where applicable;
 - disbursement, closure, reformulation, complaint, or reputation consequence where applicable;
 - what happens if the project is not performed;
 - relevant risks or tradeoffs.
 
-The value thesis is not merely descriptive. It is the project identity anchor for C017 reformulation, C018 value fulfillment, H022 evidence design, and C010 value verification.
+The value thesis is not merely descriptive. It is the project identity anchor for C017 reformulation, C018 value fulfillment, H022 evidence design, C010 value verification, and H012 value-antivalue governance.
 
 ### 4. KPIs
 
@@ -330,6 +332,7 @@ Each KPI should include:
 - name;
 - description;
 - target;
+- whether it is a value floor or antivalue ceiling;
 - measurement method;
 - evidence required;
 - reporting frequency;
@@ -347,6 +350,9 @@ A project should define a `Project Evidential Contract`.
 The evidential contract connects:
 
 - promised value;
+- Value-Antivalue Profile;
+- value floors;
+- antivalue ceilings;
 - metrics and qualitative commitments;
 - material information claims;
 - milestones;
@@ -354,6 +360,7 @@ The evidential contract connects:
 - risk and antivalue declarations;
 - fulfillment/control evidence types;
 - fulfillment evidence needs per value commitment;
+- fulfillment/control evidence needs per antivalue ceiling;
 - fulfillment/control evidence source roles;
 - corroboration requirements;
 - fiscalizer or reviewer responsibility;
@@ -361,7 +368,7 @@ The evidential contract connects:
 
 The contract is not a universal centralized evidence code. It is project-specific, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
 
-The contract defines fulfillment evidence needs, not preselected evidence producers. Evidence producers may later offer or commit to produce specific fulfillment/control evidence tied to a metric, material claim, milestone, phase, risk, or antivalue.
+The contract defines fulfillment/control evidence needs, not preselected evidence producers. Evidence producers may later offer or commit to produce specific fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue.
 
 Fulfillment evidence that satisfies a contract need has higher eligibility priority. Fulfillment/control evidence outside the accepted contract may still be considered when a fiscalizer, reviewer, or protocol rule treats it as equivalent, necessary, materially useful, or complementary within the available control budget.
 
@@ -530,12 +537,17 @@ A project declares:
 - risks;
 - possible externalities;
 - declared antivalues;
+- antivalue ceilings where measurable or reviewable;
+- affected parties, assets, or zones;
+- measurement method, timing, and required fulfillment/control evidence where applicable;
 - mitigation plans;
 - detected undeclared antivalues if discovered later.
 
 Where relevant, a project must declare common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+.
 
-Undeclared antivalues may affect fiscalization, reputation, mitigation, pause, or revocation.
+Declared antivalues are normally evaluated against their ceilings through fulfillment/control evidence and fiscalization. A formal complaint is not automatic; it must be explicitly filed and processed through the complaint model.
+
+Undeclared antivalues may affect fiscalization, correction, mitigation, compensation, disbursement, closure, role-specific reputation, systemic pause, or revocation after reviewed basis.
 
 ### 9. Relationships with other objects
 

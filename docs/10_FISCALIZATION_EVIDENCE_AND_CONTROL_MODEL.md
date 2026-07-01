@@ -127,20 +127,23 @@ Every project should define a Project Evidential Contract before execution fundi
 
 The contract states how project promises will be evidenced and reviewed. It connects:
 
-- value promises;
+- value promises as value floors;
+- antivalue constraints as antivalue ceilings;
 - metrics and qualitative commitments;
 - material information claims;
 - milestones and budget lines where relevant;
-- risks and antivalues;
+- risks and declared antivalues;
 - fulfillment evidence needs and fulfillment/control evidence types;
 - fulfillment evidence source roles;
 - corroboration requirements;
 - responsible fiscalization or review;
 - complaint, correction, disbursement, closure, and responsibility effects.
 
+Under H012, positive value commitments are evaluated as floors and negative declared effects are evaluated as ceilings. A project may fail because it does not reach a promised value floor, exceeds an accepted antivalue ceiling, or hides a material antivalue. That failure does not automatically become a complaint. It first produces a control finding, correction path, disbursement effect, Responsibility Event, or reviewed Reputation Input as applicable; a formal complaint must still be explicitly filed and processed through the complaint rules.
+
 The contract is project-specific and proportional. It may use value-catalog defaults, project-type templates, threshold policies, operating-mode rules, or country-specific requirements, but it should not become a single centralized evidence code for every domain.
 
-The contract defines fulfillment evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific metrics, material claims, milestones, phases, risks, or antivalues. Contract-matched fulfillment evidence needs have higher eligibility priority, while unexpected fulfillment evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment/control evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific value floors, antivalue ceilings, material claims, milestones, phases, risks, or declared antivalues. Contract-matched fulfillment/control evidence needs have higher eligibility priority, while unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Examples:
 
@@ -266,7 +269,7 @@ The executor should not directly pay or appoint the actors responsible for valid
 
 Control-cost discovery may proceed in parallel with execution funding. This means that fiscalizers, evidence producers, and technical reviewers may submit lightweight offers while citizens are still funding the execution budget.
 
-Evidence-producer offers should identify which accepted fulfillment evidence need, metric, material claim, milestone, phase, risk, or antivalue they address. Offers outside the accepted evidential contract should normally be treated as lower priority unless the fiscalizer, reviewer, or protocol accepts them as useful to the control package.
+Evidence-producer offers should identify which accepted fulfillment/control evidence need, value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue they address. Offers outside the accepted evidential contract should normally be treated as lower priority unless the fiscalizer, reviewer, or protocol accepts them as useful to the control package.
 
 However, execution funding and control funding remain distinct closures:
 
