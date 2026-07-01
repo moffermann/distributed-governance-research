@@ -164,6 +164,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Hypothesis or cluster | Classification | Reason |
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
+| Incentive-compatible distributed trust `H003` | Core v0 framing / cross-cutting principle | Needed to explain why the architecture can rely on distributed actors without collapsing into blind faith: trust comes from role-specific incentives, verifiable material claims, contextualized evidence, contradiction paths, responsible review, consequences, and auditability. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
 | Personal AI guides `H005` | Extension v1+ with Core v0 compatibility boundary | Useful for reducing participation cost, but not required for the first coherent model. Core v0 only requires that any connected guide remain assistance infrastructure, not a civic actor, delegate, automatic allocation profile, hidden recommender, or source of material action without explicit citizen confirmation or a separately auditable platform rule. |
 | Assisted deliberation context `H006` | Core v0 | Needed to improve decision quality before material citizen actions while preserving citizen judgment, source visibility, correction, dissent, and the C008 rule that AI assists but does not decide. |

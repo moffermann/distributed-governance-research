@@ -47,6 +47,7 @@ H007 is aligned: continuous performance evaluation is represented as role-compar
 H006 is aligned: assisted deliberation is represented as an Assisted Deliberation Context for material citizen actions. It gives citizens concise, source-visible, correctable context before funding, supporting, objecting, delegating, offering control work, funding complaint review, or reviewing material reformulation where applicable. It structures "why consider this", "what to review carefully", and "dissent / alerts / unresolved issues" without deciding, ranking, certifying truth, allocating funds, suppressing dissent, or replacing citizen judgment.
 H005 is aligned: full personal AI guides remain Extension v1+, while Core v0 defines compatibility boundaries for any connected guide. A personal guide may summarize, compare, translate, draft, warn, and help configure citizen choices, but it cannot become a civic actor, delegate, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
 H004 is aligned: institutional monopoly reduction now targets opaque, non-contestable monopoly power rather than public ownership by label. Core v0 distinguishes public authorities from state-owned operators: authorities cannot be judge and party in scopes they control, while state-owned operators may compete as ordinary eligible organizations in non-conflicted modes under disclosure, equal evidence, fiscalization, assurance, complaint, revocation, and reputation rules.
+H003 is aligned: distributed trust is now incentive-compatible distributed trust. Trust does not mean faith in many actors; it emerges when role-specific incentives, material claims, contextualized evidence, corroboration, contradiction, responsible review, payment/disbursement conditions, reputation, responsibility, consequences, and auditability are connected.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -181,7 +182,9 @@ The fifty-ninth residual cleanup aligned H005 with C008, H006, H041, the delegat
 
 The sixtieth residual cleanup aligned H004 with the refined C007 public-authority/operator boundary: institutional monopoly reduction now targets opaque, non-contestable monopoly power rather than public ownership by label. The cleanup distinguishes public authorities from state-owned operators, preserves the judge-and-party exclusion in tutored scopes, allows state-owned operators as ordinary eligible organizations only where control/privilege checks pass, and uses utilities/concession-like operation as the primary natural-monopoly example.
 
-Next review candidate: H003 distributed trust.
+The sixty-first residual cleanup aligned H003 with H008, H014, H015, H016, H022, and H023: distributed trust is not blind faith in multiple actors or blockchain-style registry integrity by itself. Core v0 trust is produced by role-specific incentive alignment, verifiable material claims, contextualized evidence, contradiction paths, responsible review, payment/disbursement conditions, reputation and responsibility consequences, simple citizen-facing trust labels, and Layer 5 auditability.
+
+Next review candidate: H002 distributed resource allocation.
 
 Approximate current maturity:
 

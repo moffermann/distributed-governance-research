@@ -231,13 +231,28 @@ The project generally prefers algorithms as coordinators, not sovereign decision
 
 ## Distributed Trust
 
-Distributed trust is the principle that trust should emerge from verification, auditability, traceability, reputation, and multiple independent actors rather than blind dependence on one central authority.
+Distributed trust is the principle that confidence should emerge from incentive alignment, verification, auditability, traceability, reputation, contradiction paths, and multiple accountable actors rather than blind dependence on one central authority.
 
 Key phrase:
 
-> We do not need to trust whoever publishes the information. We need to be able to verify it.
+> Trust is not created by believing more actors. It is created when the system aligns incentives and makes claims verifiable, contestable, reviewable, and consequential.
 
-Distributed trust can apply to information, institutions, contracts, funding, arbitration, and governance.
+In Core v0, distributed trust applies through a material-claim chain:
+
+```text
+Material Claim
+→ contextualized evidence
+→ corroboration / contradiction / complaint path
+→ responsible review
+→ EvaluationRecord where formal effect exists
+→ accountability, reputation, payment, correction, or responsibility consequence
+→ citizen-facing trust signal
+→ audit trail
+```
+
+Distributed trust can apply to information, institutions, contracts, funding, fiscalization, complaints, delegation, reputation, arbitration-like future applications, and governance.
+
+It is not trustless automation, blockchain by default, popularity as truth, or AI as truth-decider. A tamper-resistant registry can preserve a false statement; it does not prove the statement is true, complete, useful, or produced under aligned incentives.
 
 ---
 

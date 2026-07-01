@@ -12,6 +12,27 @@ It does not replace the detailed design documents. It provides a coherent v0 blu
 
 The system does not begin by abolishing every institution. It begins by creating a functional layer where public/social value can be proposed, funded, executed, verified, contested, and improved with less concentration of discretionary power.
 
+## Distributed trust principle
+
+Core v0 does not ask citizens to trust a single authority, executor, platform, AI system, fiscalizer, or crowd signal blindly.
+
+Trust should emerge from role-specific incentive alignment and traceable verification:
+
+```text
+Material Claim
+→ contextualized evidence
+→ corroboration, contradiction, or complaint path
+→ responsible review
+→ EvaluationRecord where formal effect exists
+→ accountability, reputation, payment, correction, or responsibility consequence
+→ citizen-facing trust signal
+→ audit trail
+```
+
+This means each role should have reasons to behave reliably. Evidence producers are paid and reputationally evaluated for useful evidence, not for favoring the executor. Executors receive disbursements only through milestone, evidence, and review rules. Fiscalizers build reputation through independent, complete, and timely review. Delegates retain trust through visible delegated-action reports. Administrators and authorities preserve trust by publishing rule changes, Governance Resolutions, and timeout effects.
+
+The citizen surface may show simple labels such as `Self-reported`, `Corroborated`, `Disputed`, `Contradicted`, `Accepted`, `Insufficient`, `Corrected`, or `Reviewed`. Layer 5 preserves the full chain behind those labels.
+
 ## v0 design goal
 
 The v0 goal is not to solve the entire state. It is to create a working architecture for one or more bounded public functions or pilots.
@@ -315,7 +336,7 @@ Executor-submitted material is self-reported support unless corroborated. Critic
 
 Complaint Evidence belongs to the complaint file. It supports, refutes, clarifies, or contextualizes an allegation. It may become relevant to fulfillment review only if the responsible fiscalizer, reviewer, competent authority, or protocol rule accepts it for that purpose.
 
-Core v0 also treats material project statements as accountable claims. Claims that affect funding, execution readiness, disbursement, closure, risk, beneficiary trust, or reputation should be traceable to actor, role, contextualized evidence, contradiction, review status, correction history, and responsibility or verified-discovery effects where applicable.
+Core v0 also treats material project statements as accountable claims. Claims that affect funding, execution readiness, disbursement, closure, risk, beneficiary trust, or reputation should be traceable to actor, role, contextualized evidence, contradiction, review status, correction history, incentives, payment or disbursement effects, and responsibility or verified-discovery effects where applicable.
 
 Citizen-facing reliability labels may remain simple:
 

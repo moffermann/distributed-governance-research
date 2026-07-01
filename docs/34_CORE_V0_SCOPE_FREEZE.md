@@ -256,6 +256,26 @@ An EvaluationRecord should preserve the evaluation context, evaluated dimension,
 
 Ordinary citizen interfaces should remain simple: users report what they saw, experienced, confirmed, contradicted, or complained about. The technical layer records whether that input remains a soft public signal or becomes part of a formal fulfillment, disbursement, closure, complaint, responsibility, or reputation review.
 
+### 7b. Distributed trust principle
+
+Core v0 includes distributed trust as a cross-cutting principle, not as a separate role or bureaucracy.
+
+Distributed trust means that confidence in project information, evidence, fiscalization, disbursement, delegation, reputation, and governance decisions should emerge from:
+
+- role-specific incentive alignment;
+- accountable material claims;
+- contextualized evidence;
+- corroboration and contradiction paths;
+- responsible review;
+- payment, disbursement, reputation, correction, revocation, or responsibility consequences where applicable;
+- auditability.
+
+Rule:
+
+> Trust is not created by believing more actors. It is created when the system aligns incentives and makes claims verifiable, contestable, reviewable, and consequential.
+
+Citizen-facing trust labels may remain simple, such as self-reported, corroborated, disputed, contradicted, accepted, insufficient, corrected, or reviewed. Layer 5 preserves the full claim, evidence, incentive, review, and consequence chain.
+
 ### 8. Fiscalization model
 
 Core v0 includes accountable fiscalization.

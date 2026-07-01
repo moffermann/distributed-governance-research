@@ -1416,6 +1416,8 @@ Attributes:
 - contradiction, justified objection, complaint, or review references;
 - AI anomaly reference where applicable;
 - current review status;
+- incentive or obligation context for the responsible role;
+- payment, disbursement, reputation, correction, revocation, or responsibility consequence references where applicable;
 - correction history;
 - responsibility event references;
 - verified discovery references;
@@ -1431,12 +1433,14 @@ Disputed
 Contradicted
 Corrected
 Accepted
+Insufficient for claimed effect
+Reviewed for formal effect
 Withdrawn
 ```
 
 Rule:
 
-> Material claims are not hidden technical trivia. They are the accountable statements that connect project promises, contextualized evidence, contradictions, review, responsibility, and verified discovery.
+> Material claims are not hidden technical trivia. They are the accountable statements that connect project promises, contextualized evidence, incentives, contradictions, review, responsibility, verified discovery, and consequences.
 
 ## Evidence Item
 

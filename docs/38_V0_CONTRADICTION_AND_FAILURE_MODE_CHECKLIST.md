@@ -516,6 +516,17 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are missing timestamp, location, linkage, method, or metadata limitations visible where they matter for the formal effect claimed?
 - [ ] Can citizens understand contextualized evidence status without reading raw files?
 
+## 6a. Distributed trust checklist
+
+- [ ] Does each material trust signal trace back to a material claim, actor role, contextualized evidence, and review status?
+- [ ] Are the incentives of each role visible enough to explain why the actor would produce reliable behavior?
+- [ ] Are evidence producers paid or reputationally rewarded for useful, sufficient, traceable evidence rather than for favoring the executor?
+- [ ] Can submitted evidence be corroborated, contradicted, marked insufficient, corrected, or rejected?
+- [ ] Are fiscalizers, reviewers, or competent authorities responsible for formal evaluation rather than raw evidence, AI flags, or popularity?
+- [ ] Are payment, disbursement, reputation, correction, revocation, or responsibility effects tied to reviewed findings rather than unsupported trust?
+- [ ] Do citizen-facing labels such as self-reported, corroborated, disputed, contradicted, accepted, insufficient, corrected, or reviewed expose a path to Layer 5 source records?
+- [ ] Is blockchain-like registry integrity prevented from being treated as truth by itself?
+
 ## 7. Fiscalization checklist
 
 - [x] Who selects fiscalizers?
