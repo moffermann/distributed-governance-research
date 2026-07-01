@@ -68,7 +68,7 @@ Required conditions may include:
 - Project Evidential Contract configured;
 - milestones defined;
 - disbursement milestone plan validated with no unresolved critical failures;
-- no blocking complaints;
+- no admitted blocking complaints or scoped systemic pauses;
 - required documents complete;
 - guarantees or retentions configured where applicable;
 - operating mode requirements satisfied.
@@ -347,7 +347,7 @@ Released:
 $2.400.000
 
 Reason:
-complete fulfillment evidence, fiscalizer approval, no blocking complaints.
+complete fulfillment evidence, fiscalizer approval, no admitted blocking complaints or scoped systemic pauses.
 ```
 
 Example partial release:
@@ -448,9 +448,12 @@ If complaint is blocking:
 Disbursement connected to the affected scope pauses only if the complaint has a valid blocking status under the applicable policy, protocol, contract, competent authority resolution, or court/regulator order where required.
 ```
 
+Fiscalizer admissibility may create a scoped systemic pause for the affected disbursement, milestone, phase, budget line, evidence item, or actor relationship. That pause blocks release inside the platform while the review, correction, mitigation, referral, or final resolution proceeds.
+
 A blocking complaint should identify what it blocks:
 
 - whole project;
+- project phase;
 - specific milestone;
 - specific budget line;
 - specific contextualized evidence item;
@@ -463,7 +466,11 @@ A blocking complaint should identify what it blocks:
 
 H024 boundary:
 
-> A submitted complaint, support threshold, reserved review funding, or fiscalizer quote does not by itself block disbursement. For legally regulated projects, platform review does not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights. Those effects require a court order, regulator order, or competent authority resolution where applicable.
+> A submitted complaint, support threshold, reserved review funding, or fiscalizer quote does not by itself block disbursement. After admissibility, the system may pause only the affected funding/disbursement scope. For legally regulated projects, platform review does not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights. Those effects require a court order, regulator order, competent authority resolution, or enforceable obligation where applicable.
+
+Reputation boundary:
+
+> A disbursement pause caused by complaint admissibility is procedural context. Formal negative reputation effects require final resolution, founded responsibility, confirmed non-compliance, a role-specific Responsibility Event, or an external decision that establishes responsibility.
 
 ## 14. Remaining or unused funds
 
@@ -534,7 +541,7 @@ Fulfillment evidence:
 Reviewed by fiscalizer
 
 Alerts:
-0 blocking complaints
+0 admitted blocking complaints or scoped systemic pauses
 ```
 
 Example problem case:
@@ -543,7 +550,7 @@ Example problem case:
 Disbursement paused
 
 Reason:
-There is a blocking complaint associated with Milestone 2.
+An admitted complaint created a scoped systemic pause for Milestone 2.
 
 What happens next:
 Executor must respond and the fiscalizer must review additional evidence.

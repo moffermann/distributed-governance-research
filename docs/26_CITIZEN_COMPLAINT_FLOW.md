@@ -79,8 +79,9 @@ A complaint may point to a material information claim, but the citizen should no
 11. Citizens may support and reserve conditional review funding
 12. Fiscalizer publishes quote without seeing reserved funding totals
 13. If support threshold and quoted review funding are reached, fiscalizer reviews admissibility
-14. Project actors may respond where review proceeds
-15. Resolution or referral is published and traceable
+14. If admitted, the fiscalizer records affected scope and any scoped systemic pause
+15. Project actors may respond where review proceeds
+16. Resolution, referral, or final outcome is published and traceable
 ```
 
 ## 1. Explanation
@@ -144,7 +145,7 @@ Tu denuncia puede:
 - quedar registrada como observación formal;
 - pedir respuesta al ejecutor;
 - pedir revisión al fiscalizador;
-- bloquear temporalmente avance o desembolso si es grave;
+- bloquear temporalmente avance o desembolso dentro del sistema si es grave y tiene alcance definido;
 - ser rechazada si no tiene antecedentes o evidencia suficiente;
 - afectar reputación si se demuestra mala fe reiterada.
 ```
@@ -236,9 +237,14 @@ Funding pending
 Ready for admissibility review
 In admissibility review
 Needs more information
+Admitted non-blocking
+Admitted with scoped systemic pause
 Sent to executor response
 Sent to fiscalizer review
+Referred to competent authority
 In external authority review
+External suspension ordered
+Final resolution pending
 Open
 Blocking
 Resolved
@@ -283,9 +289,15 @@ Rule:
 
 > Not every complaint blocks a project. Blocking status must be explicit, justified, and reviewable.
 
+A blocking complaint creates a scoped systemic effect inside the platform. It may pause execution funding, disbursement, milestone approval, phase gate acceptance, closure, or use of disputed evidence for the affected scope.
+
+It should not automatically stop complaint review funding, control funding, mitigation funding, correction funding, referral preparation, or separable unaffected scopes.
+
 For legally regulated projects, including environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform should not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights by itself.
 
 For those cases, the platform may fund review, create a fiscalizer report, prepare a complaint evidence index, and generate a referral package. Operational suspension requires a court order, regulator order, or competent authority resolution.
+
+Complaint filing, support, review funding, fiscalizer quote, admissibility, referral, or pending systemic pause should be visible as procedural status. They should not directly become a formal negative reputation input unless a final resolution, founded complaint outcome, confirmed non-compliance, or role-specific Responsibility Event establishes responsibility.
 
 ## 7. Actor response
 
@@ -342,6 +354,7 @@ The trace should include:
 - reserved funding status after quote publication;
 - support and objection counts as separate signals;
 - reviewer/fiscalizer admission result;
+- affected scope and any scoped systemic pause;
 - referral package where applicable;
 - authority or court order where legal effect occurs.
 
@@ -376,6 +389,8 @@ The complaint flow should not:
 - treat objections as a numeric veto against complaint review;
 - show reserved review funding totals to the fiscalizer before quote publication;
 - let the platform replace courts, regulators, or competent authorities for regulated project suspension;
+- treat complaint admissibility or referral as final responsibility;
+- turn a pending systemic pause directly into a negative reputation update;
 - expose sensitive complainant information without rules;
 - allow unresolved blocking complaints to disappear silently;
 - punish good-faith complaints just because they are rejected.

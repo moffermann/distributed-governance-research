@@ -397,11 +397,14 @@ Rejected as not applicable to project
 Rejected as duplicate
 Admitted non-blocking
 Preliminary blocking
+Admitted with scoped systemic pause
 Confirmed blocking
 In executor response
 In fiscalizer review
 In external review
 Referred to competent authority
+External suspension ordered
+Final resolution pending
 Resolved founded
 Resolved unfounded
 Closed
@@ -425,6 +428,30 @@ Complaint about fiscalizer → independent reviewer / second fiscalizer / protoc
 Complaint about conflict of fiscalizer → independent review.
 Complaint about platform or protocol → meta-governance or administrative review path.
 ```
+
+## Complaint admissibility and referral record
+
+When a complaint reaches the configured support, quote, review-funding, and minimum complaint-evidence requirements, the competent reviewer or fiscalizer may create a `Complaint Admissibility / Referral Record`.
+
+This record is not a final judgment. It records why the complaint is admitted, rejected, escalated, or referred, and what scoped system effects follow while the issue is reviewed.
+
+Minimum fields:
+
+- complaint reference;
+- fiscalizer or competent reviewer;
+- admissibility result;
+- affected scope;
+- non-blocking, blocking, or systemic-pause classification;
+- funding, disbursement, milestone, phase, or closure effect;
+- complaint evidence index and actor responses considered;
+- external authority, regulator, or court referral reference where applicable;
+- requested material or legal measure, if any;
+- rule for lifting, narrowing, maintaining, or escalating the system effect;
+- reputation status: pending signal, reviewed input, or no reputation effect.
+
+Rule:
+
+> Complaint admissibility may create a scoped system effect, but it does not by itself prove final responsibility or create a formal negative reputation input.
 
 ## Rejected complaints
 
@@ -504,9 +531,17 @@ Rule:
 
 > Blocking should be targeted to the affected object, not automatically total.
 
+Blocking effects inside the platform should be described as systemic effects. They may pause new execution funding, fund release, milestone approval, phase gate acceptance, closure, or use of a disputed evidence item for the affected scope.
+
+They should not automatically stop complaint review funding, control funding, mitigation funding, correction funding, authority-referral preparation, or unaffected scopes where those are separable.
+
 Legal and regulated project boundary:
 
 > For legally regulated projects, including environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform should not stop operations, revoke permits, halt construction, impose sanctions, or suspend legal rights by itself. It may fund review, create a fiscalizer report, prepare an evidence index, and generate a referral package. Operational suspension requires a court order, regulator order, or competent authority resolution.
+
+Reputation boundary:
+
+> Complaint filing, support, funding, quote, admissibility, referral, or pending systemic pause are procedural signals. A formal negative `Reputation Input` requires final resolution, founded responsibility, confirmed non-compliance, a role-specific Responsibility Event, or an external order/resolution that establishes responsibility.
 
 ## Citizen actions on a complaint
 
@@ -551,6 +586,8 @@ Complaint is a formal review entity with complaint evidence, scope, support, obj
 Final rule:
 
 > A complaint presented by a citizen does not automatically count as a real project complaint. It must provide complaint evidence or initial supporting material, identify affected scope, and pass admission by the competent reviewer. Rejected complaints remain traceable but do not damage the project. Admitted complaints may be non-blocking or blocking, and blocking must be scoped to the affected object.
+
+An admitted complaint may create a scoped systemic pause inside the platform. That can block execution funding, disbursement, milestone advancement, phase gates, closure, or disputed evidence use for the affected scope. Material/legal suspension and final responsibility require the competent external order, enforceable obligation, final review, or founded resolution applicable to the case.
 
 H024 alignment:
 

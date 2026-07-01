@@ -218,12 +218,25 @@ In tutored mode, the administrator or tutored authority may configure concrete v
 
 Pause applies when execution, disbursement, or a milestone must temporarily stop until a critical condition is resolved.
 
+Core v0 distinguishes:
+
+```text
+Systemic pause
+Material or legal suspension
+Final resolution
+```
+
+A systemic pause is an internal platform/protocol effect. It can stop execution funding, disbursement, milestone advancement, phase gate acceptance, closure, or use of disputed evidence for the affected scope.
+
+A material or legal suspension is an external-world effect, such as a physical construction halt, permit suspension, operational prohibition, sanction, or legal-right suspension. For regulated projects, it requires a court order, regulator order, competent authority resolution, enforceable legal rule, or enforceable accepted obligation.
+
 Types of pause:
 
 ```text
 Execution pause
 Disbursement pause
 Specific milestone pause
+Specific phase pause
 Full project pause
 ```
 
@@ -251,6 +264,8 @@ Pause should show:
 - what is paused;
 - why it is paused;
 - who or what rule triggered it;
+- affected scope;
+- whether it is a systemic pause or an externally ordered material/legal suspension;
 - what must happen next;
 - what happens to funds;
 - what happens to deadlines;
@@ -262,18 +277,20 @@ Example:
 Project paused
 
 Reason:
-blocking complaint about declared beneficiaries.
+admitted complaint about declared beneficiaries.
 
 Effect:
-no new funds will be released until the complaint is resolved.
+no execution funds or milestone funds for the affected scope will be released until the complaint is resolved, corrected, narrowed, or referred according to the applicable rule.
 
 Next:
 executor must respond and fiscalizer must review additional evidence.
 ```
 
+Complaint review, control, mitigation, correction, or referral-preparation funding may continue where the applicable policy allows. The purpose is to stop contested advancement without preventing the system from paying for verification or correction.
+
 ### Rule
 
-> Pause is temporary control, not silent cancellation.
+> Pause is temporary control, not silent cancellation and not automatic physical enforcement.
 
 ## 4. Revocation
 
@@ -300,7 +317,7 @@ Revoked
 
 Effects:
 
-- execution stops;
+- system authorization ends or is converted into the applicable closure/recovery path;
 - unreleased funds are blocked;
 - already released funds are reviewed;
 - retentions or guarantees may activate;
@@ -322,9 +339,11 @@ Effect:
 remaining funds are blocked, released funds are reviewed, executor reputation is affected, and unreleased citizen contributions return or reassign according to each citizen's rules.
 ```
 
+Where the project is legally regulated, material execution stop, permit revocation, legal sanction, or operational suspension must come from the competent authority, court, regulator, or enforceable accepted obligation. The platform revokes system authorization and funding effects; it does not pretend to be the external legal authority.
+
 ### Rule
 
-> Revocation requires a traceable decision connected to evidence, review, complaint, or protocol rule.
+> Revocation requires a traceable decision connected to evidence, review, complaint, competent-authority decision, or protocol rule.
 
 ## Treatment of funds
 
@@ -347,6 +366,8 @@ remaining funds are blocked, released funds are reviewed, executor reputation is
 - unreleased funds remain retained;
 - released funds may be reviewed if related to the issue;
 - deadlines may pause or continue depending on protocol.
+- new execution funding or disbursement may stop only for the affected scope;
+- complaint review, control, correction, mitigation, or referral funding may continue where allowed.
 
 ### Revocation
 
@@ -382,7 +403,7 @@ Released funds cannot be freely withdrawn.
 
 ```text
 This project is temporarily paused.
-No new funds will be released until the stated issue is resolved.
+No execution funds will be released for the affected scope until the stated issue is resolved.
 ```
 
 ### Revocation
@@ -422,7 +443,7 @@ State:
 Paused
 
 Reason:
-blocking complaint
+admitted complaint created a scoped systemic pause
 
 Required action:
 respond to complaint and upload additional evidence.
@@ -460,6 +481,8 @@ Required trace:
 - new state;
 - reason;
 - actor or rule that triggered it;
+- affected scope;
+- systemic pause, material/legal suspension, or final resolution classification;
 - contextualized evidence considered;
 - related complaints;
 - funds affected;
@@ -469,6 +492,8 @@ Required trace:
 - active Reformulation Policy or policy reference where applicable;
 - executor responses;
 - fiscalizer decision;
+- authority or court order where material/legal effect occurs;
+- rule for lifting, narrowing, maintaining, or escalating the pause;
 - notifications sent;
 - reputation effects;
 - timestamp.
@@ -522,8 +547,9 @@ Rules:
 
 - not every complaint pauses;
 - not every observation blocks;
-- pause requires explicit reason;
-- revocation requires review and evidence;
+- pause requires explicit reason and affected scope;
+- systemic pause should not be confused with material/legal suspension;
+- revocation requires review, evidence, competent-authority decision, or applicable protocol rule;
 - rejected good-faith complaints should not be punished as abuse.
 
 ## Summary flow
@@ -543,6 +569,8 @@ Problem detected
 
 Closure category is procedural context. Reputation should be updated primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, evidence corrections, and role-specific responsibility events.
 
+Complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause are procedural signals. They may be visible in project history, but formal negative reputation requires final resolution, founded responsibility, confirmed non-compliance, a role-specific Responsibility Event, or an external decision that establishes responsibility.
+
 ## What this flow should not do
 
 This flow should not:
@@ -554,6 +582,8 @@ This flow should not:
 - let weak complaints automatically destroy projects;
 - hide fund treatment;
 - hide reputation consequences;
+- treat admissibility or referral as final responsibility;
+- treat systemic pause as physical or legal suspension where no external authority or enforceable obligation exists;
 - confuse pause with closure.
 
 ## Design rule

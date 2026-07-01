@@ -35,15 +35,20 @@ flowchart TD
 
     AR --> AD{Admissible and scoped?}
     AD -->|No| N[Rejected or redirected to comment or objection]
-    AD -->|Yes| ER[Executor, fiscalizer, or actor response]
+    AD -->|Yes| ARR[Complaint Admissibility / Referral Record]
+    ARR --> SEP{Scoped system effect?}
+    SEP -->|Yes| SYS[Scoped systemic pause]
+    SEP -->|No| OBS[Admitted non-blocking]
+    SYS --> ER[Executor, fiscalizer, or actor response]
+    OBS --> ER
     ER --> RV[Review complaint evidence and responses]
-    RV --> REG{Regulated legal effect needed?}
+    RV --> REG{Material or legal suspension needed?}
     REG -->|Yes| REF[Referral package to competent authority or court]
-    REG -->|No| IMP[Protocol effect if allowed]
+    REG -->|No| IMP[System correction, mitigation, or closure effect if allowed]
 
     REF --> L{Resolution or authority order}
     IMP --> L
-    L -->|Founded| M[Correction, mitigation, recovery, responsibility event, or authority action]
+    L -->|Founded| M[Correction, mitigation, recovery, final resolution, responsibility event, or authority action]
     L -->|Not supported| NS[Rejected as unsupported]
     L -->|Resolved| O[Resolved]
 
@@ -56,4 +61,4 @@ flowchart TD
 
 ## Rule
 
-> Complaints must be easy to file, hard to ignore, and structured enough to review fairly. Review requires the configured support threshold, fiscalizer quote, and funded review path. Regulated operational effects require the competent authority or court where applicable.
+> Complaints must be easy to file, hard to ignore, and structured enough to review fairly. Review requires the configured support threshold, fiscalizer quote, and funded review path. Admissibility may create a scoped systemic pause, but material/legal suspension and final responsibility require the applicable competent authority, enforceable obligation, final review, or founded resolution.

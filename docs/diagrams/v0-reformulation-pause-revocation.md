@@ -14,7 +14,7 @@ flowchart TD
     B -->|Operational change preserving value thesis| D[Operational Reformulation]
     B -->|Material value change| MV[Material Reformulation Proposal]
     B -->|Substitutive change| S[Substitutive Reformulation]
-    B -->|Temporary blocker| E[Paused]
+    B -->|Temporary blocker| E[Scoped Systemic Pause]
     B -->|Severe issue or impossibility| F[Revoked]
 
     C --> C1[Submit correction]
@@ -36,8 +36,13 @@ flowchart TD
     S --> S1[New project or original closure under original terms]
     S1 --> F3
 
-    E --> E1[Resolve blocker]
+    E --> E0[Define affected scope and funding boundary]
+    E0 --> E1[Review, correct, mitigate, or refer]
     E1 -->|Resolved| G
+    E1 -->|External material/legal effect needed| EA[Competent authority, court, regulator, or enforceable obligation]
+    EA --> E2[Authority order or final resolution]
+    E2 -->|Resolved or narrowed| G
+    E2 -->|Confirmed severe issue| F
     E1 -->|Unresolved or severe| F
 
     F --> F1[Block unreleased funds]
@@ -52,5 +57,7 @@ flowchart TD
 ## Rule
 
 > Operational reformulation may preserve the value thesis. Material value reformulation cannot silently rewrite what funders financed and beneficiaries expected.
+
+> A systemic pause is a platform effect with affected scope and funding boundary. Physical halt, permit revocation, legal sanction, or operational suspension requires competent external authority, legal rule, court/regulator order, or enforceable accepted obligation where applicable.
 
 > Substitutive reformulation is not the same project; it should become a new project or close, fail, or revoke the original under its original terms.

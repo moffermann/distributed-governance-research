@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[concepts/systemic-pause-material-suspension-v0|Systemic Pause, Material Suspension, and Final Resolution v0]]
+- [[hypotheses/H013-pause-mitigation-revocation-governance|H013 — Pause, Mitigation, and Revocation Governance]]
 - [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
 - [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
@@ -170,6 +172,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
+- [[concepts/systemic-pause-material-suspension-v0|Systemic Pause, Material Suspension, and Final Resolution v0]]
 
 ## Foundational session distillations
 
@@ -208,6 +211,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H013-pause-mitigation-revocation-governance|H013 — Pause, Mitigation, and Revocation Governance]]
 - [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]
 - [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]
 - [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]

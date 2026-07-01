@@ -423,6 +423,8 @@ Citizen-facing views should keep this simple with labels such as `Minor correcti
 
 Reformulation limits and timing are configurable by the active project, public-function, operating-mode, or protocol policy. Core v0 requires the policy to be visible, traceable, and enforceable; it does not impose one universal maximum number of reformulations or one universal minimum period between reformulations. In tutored mode, the administrator or tutored authority may configure concrete values.
 
+Pause must distinguish systemic platform effects from material/legal suspension. A systemic pause can stop affected execution funding, disbursement, milestone advancement, phase gate acceptance, closure, or disputed evidence use. A material/legal suspension, such as physical construction halt, permit suspension, operational prohibition, sanction, or legal-right suspension, requires competent external authority, legal rule, court/regulator order, or enforceable accepted obligation where applicable.
+
 ### 17. Complaint model
 
 Complaints are formal review triggers. Not every complaint blocks a project. Blocking status must be explicit, justified, and reviewable.
@@ -441,7 +443,11 @@ After minimum structural validation, a complaint is immediately sent to the prim
 
 Review starts only after the complaint reaches the configured support threshold within the support window, the fiscalizer quote is published, and reserved or available review funding reaches the quoted review cost.
 
-For legally regulated projects, such as environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform does not replace courts, regulators, or competent authorities. Platform review may create reports, complaint evidence indexes, referral packages, and public traceability, but operational suspension, permit revocation, legal sanction, or construction halt requires a competent authority or judicial decision where applicable.
+After admissibility, the competent reviewer or fiscalizer should record affected scope and any scoped systemic pause. System effects may block execution funding, fund release, milestone advancement, phase gate acceptance, closure, or use of disputed evidence for the affected scope. Complaint review, control, correction, mitigation, or referral funding may continue where the applicable rule allows.
+
+For legally regulated projects, such as environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform does not replace courts, regulators, or competent authorities. Platform review may create reports, complaint evidence indexes, referral packages, scoped systemic pauses, and public traceability, but material/legal suspension, operational suspension, permit revocation, legal sanction, or construction halt requires a competent authority, regulator, or judicial decision where applicable.
+
+Complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause are procedural signals. They may be visible in public history, but formal negative reputation requires final resolution, founded responsibility, confirmed non-compliance, a role-specific Responsibility Event, or an external order/resolution that establishes responsibility.
 
 ### 18. Delegation model
 

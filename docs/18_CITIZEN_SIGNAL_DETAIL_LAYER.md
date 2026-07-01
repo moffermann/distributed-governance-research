@@ -463,13 +463,13 @@ Reserved review funding:
 Activates after fiscalizer quote and support threshold
 
 Project status:
-Observed until the blocking complaint is resolved.
+Observed until the admitted blocking complaint or scoped systemic pause is resolved.
 
 [View complaints]
 [File complaint]
 ```
 
-Complaint detail should show the applicable complaint policy, support window, quote status, reserved review funding status, and whether any legal or regulated effect requires referral to a court, regulator, or competent authority.
+Complaint detail should show the applicable complaint policy, support window, quote status, reserved review funding status, affected scope, any scoped systemic pause, and whether any material/legal effect requires referral to a court, regulator, or competent authority.
 
 ## 10. Missing condition detail
 

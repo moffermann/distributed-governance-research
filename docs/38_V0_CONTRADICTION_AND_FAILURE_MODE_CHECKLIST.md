@@ -104,7 +104,7 @@ Create and use the `Evidence Producer` role. Executor self-report is useful cont
 
 ### Accepted v0 rule
 
-`Complaint` is a formal review entity with complaint evidence, scope, support, objections, duplicate grouping, review, admission, and resolution. Citizen-submitted complaints must provide complaint evidence or initial supporting material, identify affected scope, and pass admission by the competent reviewer before creating blocking effects. Blocking must be scoped to the affected object.
+`Complaint` is a formal review entity with complaint evidence, scope, support, objections, duplicate grouping, review, admission, and resolution. Citizen-submitted complaints must provide complaint evidence or initial supporting material, identify affected scope, and pass admission by the competent reviewer before creating blocking effects. Blocking must be scoped to the affected object. Admissibility may create a scoped systemic pause inside the platform, but material/legal suspension and final responsibility require the applicable competent authority, enforceable obligation, final review, or founded resolution.
 
 ---
 
@@ -407,6 +407,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are Reputation Summaries treated as citizen-facing navigation layers rather than the source of formal judgment?
 - [ ] Are raw comments, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, corporate-group proximity, and closure labels prevented from directly updating formal reputation?
 - [ ] Are related companies, owners, controllers, directors, and key professionals affected only when review establishes role, control, conflict, negligence, direct participation, repeated pattern, or demonstrated responsibility?
+- [ ] Are complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause treated as procedural signals rather than direct negative reputation inputs?
 - [ ] Are severe events kept visibly inspectable even when aggregate scores recover over time?
 
 ## 4. Funding checklist
@@ -426,6 +427,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Does every disbursement have evidence?
 - [ ] Does every disbursement have fiscalizer review?
 - [ ] Are blocking issues checked before release?
+- [ ] Does a complaint-based disbursement block identify affected scope and distinguish systemic pause from material/legal suspension?
 - [ ] Are partial releases governed by pre-defined rules?
 - [ ] Are retained funds visible?
 - [ ] Is every release auditable?
@@ -464,6 +466,9 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are complaint review findings separated from the complainant's own evaluation?
 - [ ] Are blocking criteria explicit?
 - [ ] Can complaints be scoped to a milestone, budget line, contextualized evidence item, or actor?
+- [ ] Does admissibility create a Complaint Admissibility / Referral Record before any scoped systemic pause?
+- [ ] Are complaint review/control/correction/mitigation/referral funds distinguished from execution funds during a pause?
+- [ ] Does the model require court, regulator, competent authority, legal rule, or enforceable obligation before claiming material/legal suspension?
 - [ ] Are weak or abusive complaints handled without discouraging good-faith complaints?
 - [ ] Does every complaint have a visible status?
 
@@ -519,7 +524,7 @@ Highest-priority integration checks:
 2. Ensure public institutions are external actors, not ordinary internal participants.
 3. Ensure funding is described as commitment until project closure, not free withdrawal.
 4. Ensure fiscalization and evidence production are distinct control roles.
-5. Ensure complaints are formal entities with admission, scope, and blocking status.
+5. Ensure complaints are formal entities with admission, scope, blocking status, admissibility/referral records, scoped systemic pause, and material/legal boundary.
 6. Ensure value verification uses packages, not isolated metrics, and maps core value commitments to fulfillment evidence needs.
 7. Ensure disbursement milestones require coherent pre-funding validation.
 8. Ensure project phases prevent release of later-phase execution funds before prerequisite phase gates are accepted.

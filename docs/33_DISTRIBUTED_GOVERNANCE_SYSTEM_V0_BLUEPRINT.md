@@ -561,7 +561,11 @@ After minimum structural validation, the complaint is immediately sent to the pr
 
 Complaint objections are counter-signals and counterevidence, not numeric vetoes. They do not reduce support count or automatically close a complaint.
 
-For legally regulated projects, platform review can create public traceability, a fiscalizer report, a complaint evidence index, or a referral package. It does not replace a court, regulator, or competent authority for operational suspension, permit revocation, legal sanction, or construction halt.
+If admitted, the reviewer or fiscalizer should record the affected scope and any scoped systemic pause. A systemic pause can stop execution funding, disbursement, milestone advancement, phase gate acceptance, closure, or use of disputed evidence for the affected scope.
+
+For legally regulated projects, platform review can create public traceability, a fiscalizer report, a complaint evidence index, a scoped systemic pause, or a referral package. It does not replace a court, regulator, or competent authority for material/legal suspension, operational suspension, permit revocation, legal sanction, or construction halt.
+
+Complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause are procedural signals. Formal negative reputation requires final resolution, founded complaint outcome, confirmed non-compliance, role-specific Responsibility Event, or an external decision that establishes responsibility.
 
 ### Delegation
 
@@ -732,6 +736,8 @@ Rules:
 - no revocation without traceable reason;
 - no treating every complaint as automatic project destruction.
 
+Pause must distinguish systemic platform effects from material/legal suspension. The platform may pause affected system scope, funding, disbursement, milestone advancement, phase gate acceptance, or closure. Physical construction halt, permit revocation, sanction, or legal-right suspension requires competent external authority, legal rule, court/regulator order, or enforceable accepted obligation where applicable.
+
 Operational reformulations may preserve the value thesis. Material value reformulations cannot unilaterally rewrite what funders financed and beneficiaries expected; they require visible cause analysis, preserved history, funding effects, and role-specific responsibility review.
 
 H021 adds the project variation classification test before the response path is chosen:
@@ -784,6 +790,8 @@ Closure must show:
 Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, fulfillment evidence corrections, and responsibility events.
 
 Citizen, beneficiary, funder, and affected-party evaluations may remain visible as soft or experiential signals. They become formal reputation inputs only when the relevant review path connects them to verified fulfillment, founded complaint correction, or role-specific responsibility.
+
+Complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause are procedural signals. They may be visible in project history, but formal negative reputation requires final resolution, founded responsibility, confirmed non-compliance, role-specific Responsibility Event, or an external decision that establishes responsibility.
 
 Verified discovery may create positive role-specific reputation when a reviewed contribution materially improves information reliability, prevents loss, corrects false or manipulated contextualized evidence, or reveals a hidden issue. Raw accusations, AI anomaly flags, and popularity signals do not create reputation effects by themselves.
 

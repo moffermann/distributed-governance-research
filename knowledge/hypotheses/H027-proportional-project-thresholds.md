@@ -110,7 +110,7 @@ To become execution-ready:
 Funding complete.
 Minimum attendance commitment declared.
 Basic evidence plan accepted.
-No blocking complaint.
+No admitted blocking complaint or scoped systemic pause.
 ```
 
 Procedural burden profile:
@@ -222,7 +222,7 @@ This project still needs:
 Funding.
 One fiscalizer.
 Permit document.
-No unresolved blocking complaint.
+No unresolved admitted blocking complaint or scoped systemic pause.
 ```
 
 The deeper layers should show why those conditions apply:

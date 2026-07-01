@@ -134,7 +134,7 @@ Misleading claim with project effect:
   correction, visible history, possible disbursement delay, possible Responsibility Event.
 
 Hidden conflict, false contextualized evidence, or beneficiary manipulation:
-  complaint review, role-specific reputation loss, guarantee or retention effect, funding release block where rules allow.
+  complaint review, reviewed role-specific Reputation Input where responsibility is established, guarantee or retention effect, funding release block where rules allow.
 
 Severe fraud or concealment:
   revocation path, recovery, authority referral, sanctions, and durable reputation impact.

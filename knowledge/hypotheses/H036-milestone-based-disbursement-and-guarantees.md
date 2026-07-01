@@ -101,7 +101,7 @@ Normal case:
 Milestone 1 evidence is accepted, the fiscalizer approves, no blocker exists, and the system generates a Financial Order for the first release.
 
 Problem case:
-Milestone 2 evidence is incomplete and a blocking complaint is open. The affected amount remains retained. The citizen sees that disbursement is paused, not a complex treasury workflow.
+Milestone 2 evidence is incomplete and an admitted complaint creates a scoped systemic pause for the affected disbursement. The affected amount remains retained. The citizen sees that disbursement is paused, not a complex treasury workflow.
 
 Failure case:
 If the project is later revoked, unreleased funds return or reassign by rule, retentions or guarantees may activate, and already released funds are reviewed as justified, disputed, or non-compliant.

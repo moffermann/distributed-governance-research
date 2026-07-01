@@ -292,7 +292,7 @@ Citizen-facing requirements:
 Funding complete.
 Expected attendance declared.
 Basic evidence plan accepted.
-No blocking complaint.
+No admitted blocking complaint or scoped systemic pause.
 ```
 
 No independent admissibility review is required unless the policy detects a special risk.
@@ -364,7 +364,7 @@ Funding.
 Permit document.
 Admissibility review.
 One fiscalizer.
-No unresolved blocking complaint.
+No unresolved admitted blocking complaint or scoped systemic pause.
 ```
 
 Layer 5 preserves:

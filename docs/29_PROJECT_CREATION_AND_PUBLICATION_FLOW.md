@@ -597,7 +597,7 @@ Possible threshold dimensions:
 - common-good impact declaration;
 - related-party safeguards;
 - tutored-scope review where the operating mode requires it;
-- absence or resolution of blocking complaints.
+- absence or resolution of admitted blocking complaints or scoped systemic pauses.
 
 Example:
 
@@ -614,7 +614,7 @@ Accepted executor.
 Permit documentation.
 Independent control package.
 Procedural burden profile: Reinforced.
-No unresolved blocking complaint.
+No unresolved admitted blocking complaint or scoped systemic pause.
 Tutored duplication review if configured.
 ```
 
@@ -634,7 +634,7 @@ Construction phase cannot become execution-ready until:
 - execution funding reserved or complete;
 - control package accepted;
 - construction disbursement milestone plan valid;
-- no blocking complaint affects the design or construction baseline.
+- no admitted blocking complaint or scoped systemic pause affects the design or construction baseline.
 ```
 
 ### Requirement discovery and admissibility review

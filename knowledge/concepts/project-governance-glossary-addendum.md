@@ -26,13 +26,37 @@ Example: a plant generates jobs but also bad odors. A mitigation project may ins
 
 ## Pause
 
-A pause is a temporary protective stop applied to a project when relevant antivalue or serious noncompliance appears.
+A pause is a temporary protective stop applied to a project when relevant antivalue, serious noncompliance, admitted complaint, unresolved phase gate, or other critical condition appears.
 
 A pause is not the same as revocation. It creates time for evidence, mitigation, fiscalization, and social validation.
 
+## Systemic Pause
+
+A systemic pause is an internal platform/protocol effect. It may stop execution funding, disbursement, milestone advancement, phase gate acceptance, closure, or disputed evidence use for an affected scope.
+
+It does not by itself create physical construction halt, permit suspension, operational prohibition, sanction, or legal-right suspension.
+
+## Material or Legal Suspension
+
+Material or legal suspension is an external-world effect such as physical construction halt, permit suspension, operational prohibition, legal sanction, or suspension of legal rights.
+
+For regulated projects, it requires a court order, regulator order, competent authority resolution, enforceable legal rule, or enforceable accepted obligation.
+
+## Complaint Admissibility / Referral Record
+
+A Complaint Admissibility / Referral Record is the reviewed record created when the competent reviewer or fiscalizer decides whether a complaint can proceed after the configured support, quote, review-funding, and minimum complaint-evidence requirements are met.
+
+It records admissibility, affected scope, systemic effects, referral package, and reputation status. It is not a final finding of responsibility by itself.
+
+## Final Resolution
+
+Final resolution is the reviewed or externally competent outcome that can support closure, revocation, compensation, recovery, or role-specific reputation effects.
+
+It may come from a court, regulator, competent authority, final fiscalization conclusion where protocol gives that effect, confirmed non-compliance, confirmed absence of non-compliance, or reviewed project closure/revocation rule.
+
 ## Revocation
 
-Revocation is the termination of a project's authorization, funding, or legitimacy inside the system.
+Revocation is the termination of a project's authorization, funding, or legitimacy inside the system. For regulated projects, material/legal suspension or permit effects still require the competent external authority, legal rule, court/regulator order, or enforceable accepted obligation where applicable.
 
 Revocation should be more demanding than pause because it destroys or ends the project rather than temporarily suspending it.
 
@@ -115,6 +139,8 @@ The reputation input chain distinguishes:
 - `Reputation Summary`: citizen-facing navigation layer over role-specific records.
 
 Raw comments, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, proximity to a failed project, or closure labels should not directly update formal reputation.
+
+Complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause are procedural signals unless a final resolution, founded responsibility, confirmed non-compliance, role-specific Responsibility Event, or external decision establishes responsibility.
 
 ## Time-Weighted Reputation
 

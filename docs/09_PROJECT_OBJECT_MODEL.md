@@ -463,7 +463,7 @@ Thresholds may include:
 - common-good impact declaration;
 - related-party safeguards;
 - tutored-scope review where the operating mode requires it;
-- absence or resolution of blocking complaints.
+- absence or resolution of admitted blocking complaints or scoped systemic pauses.
 
 The concrete thresholds depend on project type, public function, risk, complexity, territory, operating mode, and protocol rules. They should not be one universal formula for every project.
 

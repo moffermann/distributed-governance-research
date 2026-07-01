@@ -215,7 +215,7 @@ Milestone: M-2
 Action: release payment
 Amount: 3000000
 Destination: Executor account
-Cause: milestone approved + evidence sufficient + no blocking complaint
+Cause: milestone approved + evidence sufficient + no admitted blocking complaint or scoped systemic pause
 Rule: disbursement schedule v0
 Status: ready for execution
 ```

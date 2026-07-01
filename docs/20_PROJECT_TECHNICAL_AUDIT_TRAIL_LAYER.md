@@ -71,9 +71,11 @@ Layer 5 should include technical traceability for:
 5. Budget history
 6. Funding and custody trace
 7. Milestone and disbursement trace
+7a. Systemic pause records
 8. Evidence archive and material information claim trace
 9. Fiscalization reports
 10. Complaint and review trace
+10a. Complaint admissibility / referral records
 11. Civic support and justified objection trace
 12. Conflict-of-interest declarations
 13. Actor and role events
@@ -321,6 +323,23 @@ For each milestone, show:
 
 Layer 5 should explain why money was or was not released.
 
+## 7a. Systemic pause records
+
+For each systemic pause, show:
+
+- project;
+- affected scope: whole project, phase, milestone, disbursement, budget line, contextualized evidence item, actor relationship, legal/safety condition, or closure;
+- trigger: complaint admissibility/referral record, fiscalization finding, phase gate failure, contradictory evidence, authority notice, safety/legal condition, operating-mode suspension, or protocol rule;
+- funding boundary: execution funding blocked, complaint review funding allowed, control funding allowed, correction funding allowed, mitigation funding allowed, referral funding allowed, or unaffected scope allowed;
+- disbursement, milestone, phase gate, closure, evidence-use, or actor-scope effect;
+- actor or rule that triggered it;
+- reviewer/fiscalizer decision;
+- rule for lifting, narrowing, maintaining, escalating, or converting it into final resolution;
+- material/legal suspension reference where applicable;
+- reputation status.
+
+Layer 5 should make clear that systemic pause is a platform effect, not physical/legal suspension by itself.
+
 ## 8. Evidence archive
 
 Layer 5 should contain the full evidence archive, subject to privacy and safety rules.
@@ -415,6 +434,36 @@ Include the complete trace of complaints and reviews:
 - required support count;
 - support window start and end;
 - support threshold result;
+- fiscalizer quote and review-funding status;
+- admissibility result;
+- affected scope;
+- systemic pause effect where applicable;
+- external authority, court, or regulator referral where applicable;
+- authority or court order where material/legal effect occurs;
+- final resolution;
+- reputation status: procedural signal, reviewed input, or no reputation effect.
+
+## 10a. Complaint admissibility / referral records
+
+For each admitted, rejected, escalated, or referred complaint, preserve the `Complaint Admissibility / Referral Record`.
+
+Include:
+
+- complaint reference;
+- reviewer or fiscalizer;
+- admissibility result;
+- affected scope;
+- non-blocking, blocking, or systemic-pause classification;
+- execution funding, disbursement, milestone, phase gate, closure, evidence-use, or actor-scope effect;
+- complaint evidence index;
+- actor responses considered;
+- referral package reference;
+- requested material or legal measure, if any;
+- rule for lifting, narrowing, maintaining, or escalating the system effect;
+- authority, regulator, or court order where material/legal effect occurs;
+- reputation status and final resolution reference.
+
+Layer 5 should make clear that admissibility can create a scoped system effect, but final responsibility and material/legal suspension require the applicable reviewed basis or external competent authority.
 - quote requested timestamp;
 - quote deadline;
 - fiscalizer or reviewer quote, scope, deliverables, cost, and conflict declaration;

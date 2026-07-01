@@ -361,7 +361,7 @@ Example:
 
 ```text
 Small cultural workshop:
-Funding, expected attendees, basic evidence plan, no blocking complaint.
+Funding, expected attendees, basic evidence plan, no admitted blocking complaint or scoped systemic pause.
 
 Macul multi-court facility:
 Funding, accepted executor, permit documents, control package, public access rules, related-party safeguards if applicable, and tutored duplication review if configured.
@@ -1525,6 +1525,7 @@ Attributes:
 - fiscalizer quote reference;
 - quoted review cost;
 - review funding status;
+- admissibility/referral record references;
 - competent authority referral reference where applicable;
 - status;
 - blocking status;
@@ -1564,7 +1565,92 @@ Rules:
 - reaching the support threshold creates eligibility for funded review, not proof that the complaint is true;
 - review funding remains conditional until the fiscalizer quote is published and the support threshold is reached;
 - the fiscalizer should not see reserved review funding totals before submitting the quote;
+- complaint admissibility may create scoped systemic effects inside the platform, not final responsibility by itself;
 - regulated project suspension, permit revocation, legal sanction, or operational halt requires a court order, regulator order, or competent authority resolution where applicable.
+
+## Complaint Admissibility / Referral Record
+
+A reviewed record of whether a complaint proceeds after support, quote, funding, and minimum complaint-evidence requirements are met.
+
+Attributes:
+
+- complaint;
+- reviewer or fiscalizer;
+- admissibility result;
+- affected scope;
+- non-blocking, blocking, or systemic-pause classification;
+- system effects: execution funding, disbursement, milestone, phase gate, closure, evidence-use, or actor-scope effects;
+- complaint evidence index;
+- actor responses considered;
+- external authority, court, or regulator referral reference where applicable;
+- requested material or legal measure where applicable;
+- rule for lifting, narrowing, maintaining, or escalating the system effect;
+- reputation status: pending signal, reviewed input, or no reputation effect;
+- final resolution reference where applicable;
+- timestamp;
+- audit trail.
+
+States:
+
+```text
+Pending admissibility
+Rejected
+Admitted non-blocking
+Admitted with scoped systemic pause
+Referred to competent authority
+External suspension ordered
+Final resolution pending
+Resolved founded
+Resolved unfounded
+Closed
+Appealed
+```
+
+Rules:
+
+- admissibility is not final proof of responsibility;
+- systemic pause can affect only the identified scope;
+- complaint review, control, correction, mitigation, or referral funding may continue where rules allow;
+- material/legal suspension requires external authority, legal rule, court/regulator order, or enforceable accepted obligation where applicable;
+- formal negative reputation requires final resolution, founded responsibility, confirmed non-compliance, role-specific Responsibility Event, or external decision establishing responsibility.
+
+## Systemic Pause Record
+
+A scoped platform/protocol effect that temporarily restricts project advancement inside the system.
+
+Attributes:
+
+- project;
+- affected object: whole project, phase, milestone, disbursement, budget line, contextualized evidence item, actor relationship, legal/safety condition, or closure;
+- trigger: complaint admissibility/referral record, fiscalization finding, phase gate failure, contradictory evidence, authority notice, safety/legal condition, operating-mode suspension, or protocol rule;
+- systemic effects: stop execution funding, block release, retain funds, prevent milestone advancement, prevent phase gate acceptance, block closure, restrict disputed evidence use, or block actor action;
+- funding boundary: execution funding blocked, complaint review funding allowed, control funding allowed, correction funding allowed, mitigation funding allowed, referral funding allowed, or unaffected scope allowed;
+- material/legal suspension reference where applicable;
+- lifting, narrowing, maintaining, escalation, or conversion rule;
+- current status;
+- responsible reviewer or rule;
+- timestamps;
+- audit trail.
+
+States:
+
+```text
+Proposed
+Active
+Narrowed
+Maintained
+Lifted
+Escalated to material/legal authority
+Converted to final resolution
+Closed
+```
+
+Rules:
+
+- systemic pause is temporary control, not silent cancellation;
+- systemic pause affects only the defined scope;
+- systemic pause does not by itself create physical halt, permit revocation, legal sanction, or legal-right suspension;
+- pending systemic pause is procedural context, not a direct negative reputation input.
 
 ## Complaint Review Policy
 
@@ -2205,7 +2291,8 @@ Audit trail:
 - Fiscalization report connects contextualized evidence to review outcome.
 - Responsible fiscalization is assigned through protocol-selected Control Subprojects or fiscalization assignments, while open observation and contextualized evidence production remain broader participation layers.
 - Disbursement connects phase, milestone, fulfillment evidence, fiscalization, and money state.
-- Complaint can affect project state, milestone state, contextualized evidence state, or disbursement state.
+- Complaint can affect project state, milestone state, contextualized evidence state, or disbursement state through a scoped complaint status, admissibility/referral record, blocking condition, systemic pause, competent-authority decision, or final resolution.
+- Systemic Pause Record connects an affected scope, trigger, funding boundary, system effect, lifting/escalation rule, and material/legal suspension reference where applicable.
 - Administrative Rule Changes, System Implementation Changes, and Protocol Change Proposals must reference affected rules, project states, effective dates, transition rules, and audit events where material.
 - Delegation affects funding action authority, not citizen identity.
 - Automatic profile affects allocation rule, not delegation.

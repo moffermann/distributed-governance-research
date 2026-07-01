@@ -31,7 +31,7 @@ flowchart TD
     B --> CC
     D --> CC
     MP --> CC
-    Q -->|no active blocking complaint| CC
+    Q -->|no active systemic pause or blocking complaint| CC
 
     CC -->|No| OP
     CC -->|Yes| ER[Execution Ready for relevant phase]

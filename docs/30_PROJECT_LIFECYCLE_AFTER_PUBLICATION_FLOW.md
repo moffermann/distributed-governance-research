@@ -70,7 +70,7 @@ Possible closure conditions:
 - required documents complete;
 - guarantees or retentions configured;
 - minimum admissible control package complete;
-- no blocking complaint;
+- no admitted blocking complaint or scoped systemic pause;
 - moderation completed if operating mode requires it;
 - required protocol checks passed.
 
@@ -110,7 +110,7 @@ This check should confirm:
 - the project version is stable;
 - required prior phase gates are accepted where applicable;
 - funding commitments are enough;
-- no blocking complaint is active;
+- no admitted blocking complaint or scoped systemic pause is active;
 - fiscalization is configured;
 - Project Evidential Contract and fulfillment evidence obligations are configured;
 - the minimum admissible control package is accepted where control is required;
@@ -435,6 +435,12 @@ Replacing the sports school with an unrelated community event is not the same pr
 
 A project may be paused when execution or disbursement should temporarily stop.
 
+Core v0 distinguishes systemic pause from material/legal suspension.
+
+A systemic pause is an internal platform effect. It may stop execution funding, disbursement, milestone approval, phase gate acceptance, closure, or disputed evidence use for the affected scope.
+
+A material/legal suspension is an external effect such as construction halt, permit suspension, operational prohibition, sanction, or legal-right suspension. For regulated projects, it requires the competent court, regulator, authority, legal rule, or enforceable accepted obligation.
+
 Possible reasons:
 
 - blocking complaint;
@@ -452,12 +458,14 @@ Pause should show:
 - what is paused;
 - why;
 - who triggered it;
+- affected scope;
+- whether the effect is systemic or externally ordered;
 - what must happen next;
 - whether funding, execution, or only disbursement is affected.
 
 ### Rule
 
-> Pause is temporary control, not silent cancellation.
+> Pause is temporary control, not silent cancellation and not automatic physical enforcement.
 
 ## 12. Revocation
 
@@ -486,9 +494,11 @@ Revocation should define:
 - final public explanation;
 - appeal or review path where applicable.
 
+For legally regulated projects, platform revocation ends or changes system authorization, funding, disbursement, closure, and audit effects. It does not by itself create material execution halt, permit revocation, legal sanction, or operational suspension unless an external competent authority, court, regulator, legal rule, or enforceable accepted obligation creates that effect.
+
 ### Rule
 
-> Revocation must be traceable, justified, and connected to evidence or rule-based review.
+> Revocation must be traceable, justified, and connected to evidence, rule-based review, competent-authority decision, or final resolution.
 
 ## 13. Closure
 
@@ -530,6 +540,8 @@ Closure should include:
 
 After closure, role-based reputation may be affected.
 
+Complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause are procedural signals. They may appear in public project history, but they should not directly become formal negative reputation updates.
+
 Relevant roles:
 
 - executor;
@@ -552,6 +564,8 @@ Examples:
 ### Rule
 
 > Reputation follows role responsibility. It should not collapse all participation into one generic score.
+
+Formal negative reputation requires final resolution, founded responsibility, confirmed non-compliance, a role-specific Responsibility Event, or an external order/resolution that establishes responsibility.
 
 ## Citizen-facing status map
 

@@ -121,6 +121,23 @@ For legally regulated projects, such as mining, energy, infrastructure, water, e
 
 In those cases, a fiscalizer report may create a review report, complaint evidence index, or referral package, but it must not stop construction, revoke a permit, impose legal sanction, or suspend a regulated operation by itself. Operational suspension requires a court order, regulator order, or competent authority resolution.
 
+## Relationship with H013 systemic pause
+
+H013 distinguishes between:
+
+```text
+complaint admissibility / referral record
+systemic pause inside the platform
+material or legal suspension outside the platform
+final resolution
+```
+
+A complaint that reaches support, quote, funding, and admissibility requirements may trigger a scoped system effect before final legal resolution. The effect must identify the affected scope and may pause execution funding, disbursement, milestone advancement, phase gate acceptance, closure, or use of disputed evidence inside the platform.
+
+That does not necessarily stop physical work, revoke a permit, impose a sanction, or suspend a legal right. Those material/legal effects require the competent court, regulator, authority, legal rule, or enforceable obligation where applicable.
+
+Admissibility and referral are public procedural signals. They should not directly become formal negative reputation updates. A formal `Reputation Input` requires final resolution, founded complaint outcome, confirmed non-compliance, role-specific Responsibility Event, or an external decision that establishes responsibility.
+
 ## False complaints
 
 False or malicious complaints should create reputational and possibly financial consequences for those who file or support them in bad faith.
@@ -189,7 +206,7 @@ route it to the fiscalizer for quote
 allow support and reserved review funding
 fund review if support and quoted cost thresholds are reached
 produce a fiscalizer review report or referral package if admissible
-keep the project effect as non-blocking unless a competent authority orders otherwise
+keep any platform effect scoped to system status, funding, disbursement, milestone, phase, or referral effects unless a competent authority orders material/legal suspension
 ```
 
 ## Open questions

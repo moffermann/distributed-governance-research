@@ -21,7 +21,7 @@ flowchart TD
     E --> F[Fulfillment Evidence Submitted]
     F --> G[Corroboration and Fiscalizer Review]
     G --> H{Blocking issue?}
-    H -->|Yes| I[Pause, block, or correction]
+    H -->|Yes| I[Scoped systemic pause, block, or correction]
     H -->|No| J{Review outcome}
 
     J -->|Approved| K[Generate valid financial order]
@@ -40,4 +40,4 @@ flowchart TD
 
 ## Rule
 
-> Funding is commitment. Later-phase funds may be reserved before a phase gate is accepted, but they are not released until the gate passes. Treasury or custody executes protocol-valid orders, but does not decide civic value, project priority, fulfillment evidence validity, or discretionary disbursement.
+> Funding is commitment. Later-phase funds may be reserved before a phase gate is accepted, but they are not released until the gate passes. A complaint or review blocker must identify affected scope and any systemic pause. Treasury or custody executes protocol-valid orders, but does not decide civic value, project priority, fulfillment evidence validity, or discretionary disbursement.
