@@ -329,7 +329,7 @@ fulfillment evaluation -> may update value fulfillment score
 responsibility event -> may update role-specific reputation
 ```
 
-The reputation record should preserve the evaluation context and formal effect instead of treating all evaluations as equivalent.
+The Reputation Input and Reputation Update should preserve the evaluation context and formal effect instead of treating all evaluations as equivalent.
 
 ## Closure category as context
 
@@ -395,6 +395,14 @@ This preserves C012's rule: reputation is affected by demonstrated responsibilit
 ## Reputation update object
 
 The system should represent formal reputation updates as explicit objects.
+
+H014 frames this as a four-step chain:
+
+```text
+Reputation Signal -> Reputation Input -> Reputation Update -> Reputation Summary
+```
+
+The value fulfillment score, founded complaint correction, EvaluationRecord, Responsibility Event, verified discovery, or reviewer finding is the Reputation Input. The score change is the Reputation Update. The citizen-facing display is the Reputation Summary.
 
 Possible object:
 

@@ -188,6 +188,14 @@ Delegate repeatedly ignored warning signals → delegate reputation affected.
 Complainant filed repeated malicious complaints → complainant reputation affected.
 ```
 
+H014 adds the reputation input chain around this rule:
+
+```text
+signal -> reviewed reputation input -> role-specific reputation update -> citizen-facing summary
+```
+
+A Responsibility Event is one type of formal Reputation Input. It does not update every related actor by association; it updates only the actor and role connected to the demonstrated obligation breach.
+
 ## Relationship with complaints
 
 A founded complaint can trigger a responsibility event if it demonstrates a role-specific obligation breach.
@@ -235,7 +243,9 @@ Complainant or observer positive event:
 A verified actor found a duplicate invoice that materially improved project control.
 ```
 
-Negative effects should use `Responsibility Event`. Positive effects may use a role-specific reputation record for verified discovery, where the discovery was material, useful, and confirmed by review.
+Negative effects should use `Responsibility Event`. Positive effects may use a role-specific Reputation Input for verified discovery, where the discovery was material, useful, and confirmed by review.
+
+Under H014, verified discovery may become a positive Reputation Input only after review confirms materiality, usefulness, actor role, and formal effect. Raw accusations, unreviewed evidence, and AI anomaly flags remain signals until reviewed.
 
 ## Relationship with project closure
 

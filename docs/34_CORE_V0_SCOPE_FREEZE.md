@@ -465,7 +465,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, material information claims, verified discoveries, fiscalization, complaints, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, material information claims, verified discoveries, fiscalization, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 
@@ -517,6 +517,14 @@ Rule:
 > Reputation follows role responsibility. It is not one generic social score.
 
 Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, fulfillment evidence corrections, verified discoveries, and responsibility events by role.
+
+Core v0 uses the H014 reputation input chain:
+
+```text
+Reputation Signal -> Reputation Input -> Reputation Update -> Reputation Summary
+```
+
+Raw opinion, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, and closure labels do not directly update formal reputation. Related organizations or holding-linked companies may be visible, but formal effects require a reviewed role, control, conflict, negligence, direct participation, repeated pattern, or responsibility basis.
 
 ### 24. Discovery visibility and customization
 

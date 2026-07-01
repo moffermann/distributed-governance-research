@@ -547,7 +547,7 @@ A project may be linked to:
 - operating mode;
 - complaint;
 - fiscalization process;
-- reputation records;
+- reputation signals, reputation inputs, reputation updates, and reputation summaries;
 - delegation-generated actions;
 - evidence records;
 - guarantee records.

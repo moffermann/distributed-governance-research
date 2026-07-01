@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
+- [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]
 - [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
@@ -165,6 +167,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 - [[concepts/core-glossary-v0|Core Glossary v0]]
 - [[concepts/project-governance-glossary-addendum|Project Governance Glossary Addendum]]
+- [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 
@@ -190,6 +193,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/distributed-trust|Distributed Trust]]
 - [[concepts/algorithm-as-coordinator|Algorithm as Coordinator]]
 - [[concepts/distributed-planning-architecture|Distributed Planning Architecture]]
+- [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 
@@ -204,6 +208,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]
 - [[hypotheses/H015-observability-based-evaluation|H015 — Observability-Based Evaluation]]
 - [[hypotheses/H016-distributed-fiscalization-ecosystem|H016 — Distributed Fiscalization Ecosystem]]
 - [[hypotheses/H017-meta-governance-protocol-evolution|H017 — Meta-Governance and Protocol Evolution]]

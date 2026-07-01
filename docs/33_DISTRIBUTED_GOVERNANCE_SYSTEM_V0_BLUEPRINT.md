@@ -787,6 +787,14 @@ Citizen, beneficiary, funder, and affected-party evaluations may remain visible 
 
 Verified discovery may create positive role-specific reputation when a reviewed contribution materially improves information reliability, prevents loss, corrects false or manipulated contextualized evidence, or reveals a hidden issue. Raw accusations, AI anomaly flags, and popularity signals do not create reputation effects by themselves.
 
+H014 organizes this as a traceable chain:
+
+```text
+Reputation Signal -> Reputation Input -> Reputation Update -> Reputation Summary
+```
+
+Signals are visible context. Inputs are reviewed sources that may affect reputation. Updates apply an input to an actor in a specific role. Summaries are citizen-facing navigation layers over the role-specific records.
+
 ## Reputation
 
 Reputation must be role-based.
@@ -802,6 +810,8 @@ Examples:
 Rule:
 
 > Reputation follows role responsibility. It should not collapse all participation into one generic score.
+
+Related organizations, holding-linked companies, owners, directors, controllers, project leads, technical leads, and financial leads may be visible in the relationship graph, but reputation effects require a reviewed role-specific basis. Mere proximity to a failed project, raw public criticism, or shared corporate group membership should not automatically alter reputation.
 
 ## Operating modes
 

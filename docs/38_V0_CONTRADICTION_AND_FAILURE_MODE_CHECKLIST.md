@@ -399,6 +399,16 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Can projects game easy metrics?
 - [ ] Is there a mechanism to challenge weak metrics?
 
+## 3a. Reputation checklist
+
+- [ ] Are Reputation Signals separated from formal Reputation Inputs?
+- [ ] Does every Reputation Input identify actor, role, source, reviewed basis, severity or weight basis, and formal effect?
+- [ ] Does every Reputation Update reference a reviewed input, previous reputation, new reputation, weight or decay rule, severity rule, and appeal/review status?
+- [ ] Are Reputation Summaries treated as citizen-facing navigation layers rather than the source of formal judgment?
+- [ ] Are raw comments, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, corporate-group proximity, and closure labels prevented from directly updating formal reputation?
+- [ ] Are related companies, owners, controllers, directors, and key professionals affected only when review establishes role, control, conflict, negligence, direct participation, repeated pattern, or demonstrated responsibility?
+- [ ] Are severe events kept visibly inspectable even when aggregate scores recover over time?
+
 ## 4. Funding checklist
 
 - [ ] Is funding clearly a conditional commitment?

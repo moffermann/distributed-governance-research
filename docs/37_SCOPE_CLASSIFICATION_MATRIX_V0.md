@@ -163,6 +163,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 |---|---|---|
 | Foundational critique and comparative model hypotheses | Core v0 framing | Needed to explain why the model exists. |
 | Project-based governance hypotheses | Core v0 | Project is the core operating unit. |
+| Reputation architecture `H014` | Core v0 | Needed to define how reputation moves from signal to reviewed input to role-specific update to citizen-facing summary without becoming a generic social score, popularity vote, closure-label penalty, or guilt by association. |
 | Observability-based evaluation `H015` | Core v0 | Needed to prevent open opinion, beneficiary experience, technical review, fiscalizer conclusions, complaint findings, fulfillment evaluation, and reputation inputs from collapsing into one undifferentiated evaluation. Formal effects require dimension-scoped and effect-scoped EvaluationRecords. |
 | Distributed fiscalization ecosystem `H016` | Core v0 | Needed to make fiscalization distributed in available actors and fulfillment/control evidence sources, but protocol-selected in responsible assignment through eligibility, conflict, independence, risk, budget, methodology, auditability, and capped supplemental control. |
 | Project value thesis and measurement `H018` | Core v0 | Needed to make each financeable project declare a value thesis, core commitments, proportional verification package, fulfillment evidence needs, and review consequences before resources are committed. |

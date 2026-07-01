@@ -242,6 +242,9 @@ Project has one ProjectEvidentialContract
 Project has many FulfillmentEvidenceNeeds
 Project has many EvidenceItems
 Project has many EvaluationRecords
+Project has many ReputationSignals
+Project has many ReputationInputs
+Project has many ReputationUpdates
 Project has FiscalizationRequirement
 Project has many FiscalizerOffers
 Project has many FundingCommitments
@@ -1241,7 +1244,7 @@ Attributes:
 
 - project;
 - project phase where applicable;
-- related value thesis, metric, milestone, budget line, complaint, evidence item, fiscalization report, or reputation record where applicable;
+- related value thesis, metric, milestone, budget line, complaint, evidence item, fiscalization report, reputation input, or reputation update where applicable;
 - evaluation context: soft public signal, experiential evaluation, fulfillment evaluation, technical or professional review, fiscalization conclusion, complaint review finding, or reputation input;
 - evaluated dimension;
 - actor;
@@ -1267,7 +1270,7 @@ EvaluationRecord may reference Milestone
 EvaluationRecord may reference EvidenceItem
 EvaluationRecord may reference Complaint
 EvaluationRecord may reference FiscalizationReport
-EvaluationRecord may contribute to ReputationRecord after review
+EvaluationRecord may contribute to ReputationInput after review
 ```
 
 Rule:
@@ -1784,21 +1787,92 @@ Continuity rule:
 
 ## Reputation Record
 
-Role-specific reputation event.
+Role-specific reputation history container.
+
+Core v0 should not treat reputation as one undifferentiated score. H014 separates the reputation chain into:
+
+```text
+Reputation Signal
+Reputation Input
+Reputation Update
+Reputation Summary
+```
+
+### Reputation Signal
+
+Visible context without direct formal effect.
+
+Attributes:
+
+- actor or source where known;
+- role or relationship context where known;
+- project or object;
+- signal type: citizen satisfaction, beneficiary experience, funder concern, public criticism, raw complaint, unreviewed evidence, AI anomaly flag, or other soft context;
+- related EvaluationRecord or EvidenceItem where applicable;
+- privacy or protected-identity status;
+- timestamp;
+- audit trail.
+
+Rule:
+
+> Signals may be visible, aggregated, contradicted, or routed into review, but they do not directly update formal reputation.
+
+### Reputation Input
+
+Reviewed source that may affect role-specific reputation.
+
+Attributes:
+
+- actor affected;
+- role affected;
+- project or object;
+- source type: value fulfillment score, metric breakdown, EvaluationRecord, founded complaint correction, Responsibility Event, evidence correction, verified discovery, fiscalizer/reviewer finding, or protocol-defined role-performance review;
+- source reference;
+- obligation or performance dimension;
+- review basis;
+- severity or weight basis;
+- formal reputation effect;
+- appeal or review status;
+- timestamp;
+- audit trail.
+
+### Reputation Update
+
+Formal score or status change applied to an actor in a specific role.
 
 Attributes:
 
 - actor;
-- role;
+- role affected;
 - project or object;
-- event type;
-- outcome;
-- evidence;
-- responsibility event reference where applicable;
-- verified discovery reference where applicable;
+- reputation input reference;
+- previous reputation;
+- new reputation;
+- weight used;
+- decay or time-weight rule;
+- severity rule;
+- citizen-facing explanation;
+- appeal or review status;
 - timestamp;
-- weight or severity;
-- appeal/review status.
+- audit trail.
+
+### Reputation Summary
+
+Citizen-facing navigation layer over role-specific records.
+
+Attributes:
+
+- actor;
+- visible roles;
+- role-specific current summaries;
+- recent performance;
+- severe responsibility events visible separately;
+- confidence or data sufficiency status;
+- detail links.
+
+Rule:
+
+> Reputation follows reviewed role responsibility and verified role performance. Raw opinion, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, corporate-group proximity, or closure labels should not directly update formal reputation.
 
 ## Operating Mode
 
@@ -2135,7 +2209,7 @@ Audit trail:
 - Administrative Rule Changes, System Implementation Changes, and Protocol Change Proposals must reference affected rules, project states, effective dates, transition rules, and audit events where material.
 - Delegation affects funding action authority, not citizen identity.
 - Automatic profile affects allocation rule, not delegation.
-- Reputation connects actor, role, and outcome.
+- Reputation connects signals, reviewed inputs, actors, roles, updates, summaries, and outcomes.
 - Audit event records all significant transitions.
 
 ## 7. Next use

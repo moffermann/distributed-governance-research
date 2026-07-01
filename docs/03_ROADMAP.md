@@ -36,6 +36,7 @@ H017 is aligned: meta-governance and protocol evolution are Core v0 as a minimum
 H016 is aligned: fiscalization is distributed in available actors and fulfillment/control evidence sources, but protocol-selected in responsible assignment. Open observation, fulfillment/control evidence production, responsible fiscalization, technical or reinforced fiscalization, and capped secondary fiscalization remain distinct layers; executor-controlled selection, direct payment, unlimited secondary control, and popularity-only fiscalizer selection are excluded.
 Evidence-context taxonomy is aligned: Core v0 now distinguishes Complaint Evidence, Fulfillment Evidence, Control Evidence, Contradiction Evidence, Administrative Observability Data, and Research Evidence. Bare Evidence Item remains only as a technical object with required evidence_context.
 H015 is aligned: formal evaluation is dimension-scoped and effect-scoped. Citizen observations, beneficiary experience, technical review, fiscalizer conclusions, complaint findings, fulfillment evaluations, and reputation inputs remain distinct evaluation contexts; formal effects such as disbursement, closure, responsibility, or reputation require an EvaluationRecord with observability basis, authority or qualification basis, contextualized evidence used, evaluation type, effect, and review status.
+H014 is aligned: reputation moves through a traceable chain from Reputation Signal to reviewed Reputation Input to role-specific Reputation Update to citizen-facing Reputation Summary. Raw opinion, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, proximity to failed projects, corporate-group proximity, and closure labels do not directly update formal reputation.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -148,7 +149,9 @@ The forty-eighth residual cleanup resolved the evidence terminology ambiguity su
 
 The forty-ninth residual cleanup aligned H015 with the v0 value-verification, fiscalization, evidence-production, reputation, audit, scope-freeze, classification matrix, object-map, glossary, and checklist model: formal evaluation is now scoped by evaluated dimension and formal effect. Core v0 distinguishes soft public signals, experiential evaluations, fulfillment evaluations, technical or professional reviews, fiscalization conclusions, complaint review findings, and reputation inputs. Ordinary citizens can still report what they saw or experienced, while formal effects require a traceable EvaluationRecord.
 
-Next review candidate: H014 reputation input boundaries and role-specific scoring, now after the H015 evaluation-context boundary.
+The fiftieth residual cleanup aligned H014 with the v0 reputation, evaluation, responsibility, value-fulfillment, audit, scope-freeze, classification matrix, project-object model, object-map, glossary, and checklist model: reputation now moves through Reputation Signal, Reputation Input, Reputation Update, and Reputation Summary. Core v0 rejects direct reputation effects from raw opinion, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, project proximity, corporate-group proximity, or closure labels. Related companies, owners, controllers, directors, and key professionals may be visible, but formal reputation effects require a reviewed role, control, conflict, negligence, direct participation, repeated pattern, or demonstrated responsibility basis.
+
+Next review candidate: H013 pause, mitigation, and revocation governance.
 
 Approximate current maturity:
 
@@ -281,7 +284,7 @@ Actors:
   citizen, organization, proposer, modeler, executor, fiscalizer, evidence producer, funder, delegator, delegate, moderator, complainant, beneficiary, affected party, institution, custodian.
 
 Objects:
-  project, project version, value thesis, value icon, metric, evidence, milestone, budget, disbursement, retention, fiscalization offer, fiscalization report, complaint, comment, civic wallet, allocation profile, delegation, reputation record, operating mode, audit event.
+  project, project version, value thesis, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, fiscalization offer, fiscalization report, complaint, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, operating mode, audit event.
 
 States:
   draft, in validation, requires adjustment, ready to publish, open, execution-ready, in execution, correction required, paused, requires reformulation, under review, revoked, closed, expired.

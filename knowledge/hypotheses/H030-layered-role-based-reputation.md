@@ -10,12 +10,13 @@ Formal reputation updates should be based on verified value fulfillment, metric 
 
 This hypothesis is aligned with:
 
+- `knowledge/concepts/reputation-input-chain-v0.md`;
 - `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md`;
 - `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md`;
 - `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md`;
 - `docs/34_CORE_V0_SCOPE_FREEZE.md`.
 
-H030 should be read as the reputation-visibility architecture. C012 defines when responsibility can affect a role. C018 defines how value fulfillment and closure context should affect reputation.
+H030 should be read as the reputation-visibility architecture. H014 defines the signal-input-update-summary chain. C012 defines when responsibility can affect a role. C018 defines how value fulfillment and closure context should affect reputation.
 
 ## Rationale
 
@@ -128,20 +129,33 @@ A user should be able to inspect why a score is low or high.
 
 ## Formal reputation inputs
 
+H014 separates the reputation chain into:
+
+```text
+Reputation Signal
+Reputation Input
+Reputation Update
+Reputation Summary
+```
+
 Formal reputation updates should be explicit objects or records derived from:
 
 - project value fulfillment score;
 - predefined metric weights;
+- EvaluationRecord with reputation effect;
 - accepted fulfillment evidence;
 - fiscalizer evaluation;
 - founded complaint corrections;
 - role-specific Responsibility Events;
+- verified discovery;
 - severity and responsibility type;
 - previous reputation;
 - update weight or decay rule;
 - appeal or review status where applicable.
 
 Citizen evaluations, comments, and informal satisfaction signals may be visible as soft context, but they should not automatically create formal sanctions or reputation updates.
+
+A raw signal becomes a formal reputation input only through review. A formal input becomes a reputation update only for the actor and role identified by the reviewed record.
 
 ## Responsibility Events
 
@@ -215,6 +229,8 @@ If someone was a poor executor but has no history as a modeler or fiscalizer, th
 
 A failed project should also not automatically damage every connected actor. A funder, delegate, fiscalizer, evidence producer, or beneficiary should be affected only when a role-specific responsibility record demonstrates a relevant obligation breach.
 
+Related organizations or holding-linked companies should follow the same rule. A shared controller, related company, owner, director, or professional may be shown in the project relationship graph, but formal reputation effects require demonstrated role responsibility, control, hidden conflict, negligence, direct participation, or repeated pattern.
+
 ## Transparency as the mechanism
 
 The mechanism is not hidden judgment. The mechanism is layered transparency.
@@ -269,9 +285,11 @@ Every formal reputation update should preserve:
 - actor;
 - role affected;
 - project or object reference;
+- reputation input reference;
 - closure category where applicable;
 - value fulfillment score where applicable;
 - metric breakdown;
+- EvaluationRecord reference where applicable;
 - evidence and fiscalization references;
 - founded complaint references;
 - Responsibility Event references;

@@ -105,6 +105,17 @@ Role-based reputation tracks the performance of people and institutions accordin
 
 A project lead, technical lead, financial auditor, legal representative, and beneficiary should not all affect reputation in the same way.
 
+## Reputation Input Chain
+
+The reputation input chain distinguishes:
+
+- `Reputation Signal`: visible context without direct formal effect.
+- `Reputation Input`: reviewed source that may affect role-specific reputation.
+- `Reputation Update`: formal score or status change applied to an actor in a role.
+- `Reputation Summary`: citizen-facing navigation layer over role-specific records.
+
+Raw comments, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, proximity to a failed project, or closure labels should not directly update formal reputation.
+
 ## Time-Weighted Reputation
 
 Time-weighted reputation gives more weight to recent performance and gradually reduces the weight of older events.
