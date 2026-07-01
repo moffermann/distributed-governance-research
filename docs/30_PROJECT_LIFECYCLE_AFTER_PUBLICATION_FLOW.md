@@ -68,7 +68,8 @@ Possible closure conditions:
 - evidence producers committed;
 - beneficiary information declared or confirmed;
 - required documents complete;
-- guarantees or retentions configured;
+- Financial Assurance Profile configured;
+- required guarantee materialized where applicable;
 - minimum admissible control package complete;
 - no admitted blocking complaint or scoped systemic pause;
 - moderation completed if operating mode requires it;
@@ -118,7 +119,8 @@ This check should confirm:
 - disbursement milestone plan has no unresolved critical validation failures;
 - disbursement rules are defined;
 - executor has accepted responsibility;
-- required documents and guarantees are complete;
+- required documents are complete;
+- required guarantees or equivalent assurance instruments are materialized where applicable;
 - operating mode requirements are satisfied.
 
 If approved, status becomes:
@@ -134,6 +136,8 @@ Execution-ready means:
 - the project or phase may begin execution under the approved plan;
 - funds remain controlled and are released by rule;
 - milestones, evidence, fiscalization, and reporting obligations become active.
+
+For Core v0, assurance is not limited to construction. A care-service project, school-supply project, workshop, food delivery project, or infrastructure project may all require the configured global guarantee or equivalent materialized assurance before execution-ready status if they receive execution funding.
 
 ### Rule
 

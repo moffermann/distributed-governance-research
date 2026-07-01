@@ -393,6 +393,8 @@ Once funds are released by milestones:
 
 This prevents arbitrary withdrawals from destabilizing projects while preserving citizen protection through traceability, fiscalization, complaints, retentions, guarantees, recovery, returned balances, and reputation consequences.
 
+Under H011, guarantees are not construction-only. Care services, school-supply purchases, workshops, food support, health support, infrastructure, and other execution-financeable projects may all have a Financial Assurance Profile. Required guarantees or equivalent instruments are not considered materialized until confirmed by the relevant custodian, guarantor, insurer, treasury, bank, escrow provider, or lawful equivalent.
+
 The same rule applies to integrated design-and-execution projects. A citizen does not receive a free withdrawal right merely because the design is pending. But if the design phase fails the public baseline or requires material reformulation, unreleased execution-phase balances follow the policy-defined failure or reformulation treatment.
 
 ## Reformulation rule

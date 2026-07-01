@@ -125,7 +125,7 @@ Possible conditions:
 - fiscalizer required;
 - evidence producers required;
 - beneficiary confirmation;
-- guarantees or retentions;
+- financial protection / guarantee status;
 - moderation completed, if applicable;
 - required documents complete.
 

@@ -221,6 +221,7 @@ Key attributes:
 - reformulation policy or policy reference;
 - variation control history;
 - threshold policy or policy reference;
+- Financial Assurance Profile;
 - closure conditions;
 - risks;
 - antivalues;
@@ -260,6 +261,8 @@ Project has many ProjectVariationRecords
 Project has many ReformulationProposals
 Project has ReformulationPolicy or reformulation policy reference
 Project has ThresholdPolicy or threshold policy reference
+Project has one FinancialAssuranceProfile where execution funding is allowed
+Project has one or more GuaranteeMaterializationRecords where assurance is required
 Project has many AuditEvents
 Project has one current State
 ```
@@ -365,6 +368,9 @@ Attributes:
 - source: protocol, project type rule, public-function rule, tutored authority configuration, country implementation, or other authorized source;
 - threshold dimensions applied;
 - procedural burden profile: light, standard, reinforced, critical, or configured equivalent;
+- financial assurance profile or assurance rule reference;
+- global guarantee percentage where H011 applies;
+- eligible budget basis for assurance;
 - threshold values where concrete values exist;
 - conditions affected: publication, funding, execution-ready status, disbursement, closure, reformulation, pause, or review;
 - required-document checklist where applicable;
@@ -389,6 +395,7 @@ Possible threshold dimensions:
 - evidence producer commitments;
 - permits or required documents;
 - procedural burden profile;
+- financial assurance and guarantee materialization;
 - admissibility review;
 - common-good impact declaration;
 - related-party safeguards;
@@ -399,6 +406,10 @@ Possible threshold dimensions:
 Rule:
 
 > Thresholds are proportional project conditions, not a universal approval formula. The citizen surface shows what is missing; the audit layer shows why the condition applies and who or what rule defined it.
+
+Anti-self-classification rule:
+
+> The proposer, designer, or executor may describe project facts, but must not self-select a lower threshold, burden profile, risk class, or guarantee requirement when that classification reduces obligations.
 
 Document rule:
 
@@ -978,6 +989,8 @@ Attributes:
 - contingency;
 - guarantees;
 - retentions;
+- Financial Assurance Profile reference;
+- eligible execution budget basis for guarantee calculation;
 - current version.
 
 ## Budget Line
@@ -1096,6 +1109,7 @@ Attributes:
 - amount;
 - action: commit, reserve, retain, release, return, reassign, recover, execute guarantee, or close balance;
 - milestone, closure, complaint, guarantee, or recovery reference where applicable;
+- Financial Assurance Profile or Guarantee Materialization Record reference where relevant;
 - rule applied;
 - fulfillment evidence or fiscalization reference where applicable;
 - destination or ledger account;
@@ -1107,6 +1121,93 @@ Attributes:
 Rule:
 
 > The protocol generates valid financial orders. The custodian executes them or reports closed technical/legal execution blocks; it does not decide civic value or project priority.
+
+## Financial Assurance Profile
+
+A project-level or phase-level object defining how execution funding is financially protected if the project fails, is abandoned, falls below value floors, exceeds antivalue ceilings, misuses funds, or enters correction, mitigation, revocation, closure, return, reassignment, or recovery.
+
+Attributes:
+
+- profile id;
+- project;
+- project phase where applicable;
+- policy reference;
+- protocol version;
+- eligible budget basis;
+- global guarantee percentage applied;
+- required guarantee amount;
+- retention rule;
+- protected advance-payment rule where applicable;
+- financial instrument type;
+- responsible actor;
+- custodian or guarantor;
+- materialization status;
+- execution conditions;
+- release conditions;
+- failure treatment;
+- citizen-facing summary;
+- audit trail.
+
+Relationships:
+
+```text
+FinancialAssuranceProfile belongs to Project
+FinancialAssuranceProfile may belong to ProjectPhase
+FinancialAssuranceProfile references ThresholdPolicy
+FinancialAssuranceProfile may require GuaranteeMaterializationRecord
+FinancialAssuranceProfile may be referenced by FinancialOrder
+FinancialAssuranceProfile may be affected by AdministrativeRuleChange
+```
+
+Rule:
+
+> Financial assurance is not construction-specific. It applies to every execution-financeable social project, including care, supplies, workshops, food support, services, and infrastructure.
+
+Core v0 guarantee rule:
+
+```text
+required guarantee =
+eligible execution budget or phase budget * global guarantee percentage
+```
+
+The global percentage is configured by the administrator, active protocol, operating mode, or lawful country implementation rule, not by the proposer, designer, or executor.
+
+## Guarantee Materialization Record
+
+A record proving that the required guarantee, deposit, insurance, bond, escrow, retention, or equivalent instrument has been confirmed by a lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or country-specific mechanism.
+
+Attributes:
+
+- record id;
+- project;
+- project phase where applicable;
+- Financial Assurance Profile reference;
+- responsible actor;
+- required guarantee percentage;
+- eligible budget basis;
+- required guarantee amount;
+- instrument type: cash deposit, bond, insurance, escrow, retention, or equivalent;
+- custodian or guarantor id;
+- custodian confirmation reference;
+- amount confirmed;
+- validity period;
+- execution conditions;
+- release conditions;
+- status: pending, materialized, insufficient, expired, executed, released;
+- timestamp;
+- audit reference.
+
+Relationships:
+
+```text
+GuaranteeMaterializationRecord belongs to FinancialAssuranceProfile
+GuaranteeMaterializationRecord may be referenced by FinancialOrder
+GuaranteeMaterializationRecord may be referenced by AuditEvents
+```
+
+Rule:
+
+> An executor-uploaded document is not enough by itself. Guarantee materialization requires confirmation by the external custodian, guarantor, insurer, treasury, bank, escrow provider, or lawful equivalent.
 
 ## Supplemental Control Contribution
 

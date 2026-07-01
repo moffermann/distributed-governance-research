@@ -25,6 +25,8 @@ H027 defines how applicable thresholds are selected and exposed. H035 defines bu
 
 H020 defines the procedural depth of those thresholds through a `Procedural Burden Profile`. The same Threshold Policy may therefore say both what conditions apply and how demanding those conditions are.
 
+H011 defines the financial assurance boundary: guarantee requirements, eligible budget basis, and materialization conditions must be defined by the active policy, administrator, protocol, operating mode, or lawful country implementation rule, not by the proposer, designer, or executor.
+
 ## Rationale
 
 Different projects fail in different ways.
@@ -57,6 +59,8 @@ The policy should record:
 
 - threshold types that apply;
 - procedural burden profile;
+- financial assurance rule or Financial Assurance Profile reference;
+- global guarantee percentage and eligible budget basis where H011 applies;
 - source of authority or protocol reference;
 - citizen-facing explanation;
 - technical audit reference;
@@ -64,6 +68,10 @@ The policy should record:
 - whether the value is fixed, configurable, or country-specific.
 
 The system may help classify the project, but algorithms should not become sovereign deciders. AI or rules may suggest the applicable threshold policy; accountable protocol, operating-mode, or authorized tutored governance defines the binding rule.
+
+The project actor may describe facts that affect threshold selection, but may not self-select a lower threshold, burden profile, risk class, or guarantee requirement.
+
+For Core v0, a global guarantee percentage is the preferred assurance baseline. Future differentiated assurance formulas may use objective parameters, but should be adopted only through visible administrative or protocol rules rather than proposer-selected categories.
 
 ## Threshold types
 
@@ -82,6 +90,7 @@ Additional v0 threshold dimensions may include:
 
 - control-package threshold;
 - evidence threshold;
+- financial assurance and guarantee materialization threshold;
 - admissibility-review threshold;
 - phase-gate threshold where applicable;
 - disbursement milestone validation;
@@ -250,6 +259,7 @@ H027 rejects:
 
 - one universal approval formula for every project;
 - hidden threshold changes after citizens have funded or followed a project;
+- proposer-selected categories that reduce guarantee, fiscalization, evidence, or document obligations;
 - treating funding as the only legitimacy signal;
 - treating popularity as a substitute for technical feasibility or lawful authority;
 - forcing heavy technical review on every small project;
@@ -263,6 +273,8 @@ H027 rejects:
 
 > Thresholds should be simple at the citizen surface, explicit in the project record, and auditable in the technical layer.
 
+> Proportional thresholds are policy-selected, not self-selected by the actor seeking funding.
+
 ## Status
 
-Core project-classification and execution-readiness hypothesis. Aligned with the v0 parallel closure, control-package, operating-mode, and citizen-simplicity rules.
+Core project-classification and execution-readiness hypothesis. Aligned with the v0 parallel closure, control-package, operating-mode, financial assurance, and citizen-simplicity rules.

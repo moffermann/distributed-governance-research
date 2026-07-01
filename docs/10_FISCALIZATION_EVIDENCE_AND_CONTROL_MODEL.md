@@ -262,6 +262,7 @@ execution budget
 responsible fiscalization budget
 fulfillment evidence mission budget
 contingency / extraordinary review budget
+financial assurance requirement
 guarantees or retentions, if applicable
 ```
 
@@ -621,7 +622,7 @@ For ordinary citizens, the interface should show a simplified project sheet:
 - risk level;
 - whether fiscalization is included;
 - whether fulfillment evidence is required;
-- whether guarantees or retentions apply;
+- whether financial protection, guarantees, or retentions apply;
 - current status;
 - simple action buttons: fund, support, delegate, follow, provide fulfillment evidence, report problem.
 

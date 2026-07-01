@@ -34,6 +34,7 @@ Its role is administrative and fiduciary:
 - report signed authorized allocation amounts where configured;
 - record allocations;
 - retain funds until conditions are met;
+- confirm guarantee materialization where the custodian or guarantor role applies;
 - execute protocol-valid financial orders;
 - disburse funds by milestone when the protocol authorizes release;
 - execute guarantees or retentions when required;
@@ -52,6 +53,7 @@ tax declaration / payment
 → citizen allocation to projects
 → project reaches funding target
 → funds retained / escrowed
+→ required guarantee materialized by custodian or guarantor where applicable
 → milestone evidence
 → fiscalization if required
 → system generates Financial Order
@@ -75,7 +77,7 @@ Financial effect:
 The amount becomes committed and later retained for the project.
 
 Disbursement:
-The custodian pays the executor only after a valid Financial Order states that the milestone, evidence, fiscalization, and blocking-condition checks allow release.
+The custodian pays the executor only after a valid Financial Order states that the milestone, evidence, fiscalization, financial assurance, and blocking-condition checks allow release.
 ```
 
 ## Separation of roles
@@ -116,6 +118,7 @@ Each financial movement should record:
 - amount;
 - action: commit, retain, release, return, reassign, recover, execute guarantee, or close;
 - rule applied;
+- Financial Assurance Profile or Guarantee Materialization Record reference where relevant;
 - milestone, evidence, fiscalization, complaint, or closure reference where relevant;
 - custodian execution status;
 - rejection cause if any;

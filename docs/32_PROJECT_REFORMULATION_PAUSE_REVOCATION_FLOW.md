@@ -320,7 +320,7 @@ Effects:
 - system authorization ends or is converted into the applicable closure/recovery path;
 - unreleased funds are blocked;
 - already released funds are reviewed;
-- retentions or guarantees may activate;
+- retentions, guarantees, or other Financial Assurance Profile mechanisms may activate;
 - unused funds are returned or reassigned according to rules;
 - resolution is recorded;
 - role-based reputation may be affected;
@@ -372,7 +372,7 @@ Where the project is legally regulated, material execution stop, permit revocati
 ### Revocation
 
 - unreleased funds are returned or reassigned;
-- retained funds may be used according to protocol, guarantee, recovery, or return rules;
+- retained or guaranteed funds may be used according to protocol, Financial Assurance Profile, recovery, or return rules;
 - already released funds are classified as justified, disputed, or non-compliant;
 - recovery or sanctions may apply where rules allow.
 

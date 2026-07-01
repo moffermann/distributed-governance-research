@@ -72,7 +72,9 @@ Revocation should be more demanding than pause because it destroys or ends the p
 
 ## Financial Assurance
 
-Financial assurance is the set of mechanisms that ensures projects can respond when they fail or generate undeclared antivalue.
+Financial assurance is the set of mechanisms that ensures projects can respond when they fail, abandon execution, misuse funds, fall below value floors, exceed antivalue ceilings, or generate undeclared antivalue.
+
+It is not construction-specific. It applies to care projects, service delivery, purchases, workshops, food or health support, infrastructure, and other execution-financeable social projects.
 
 Examples:
 
@@ -82,6 +84,26 @@ Examples:
 - retained funds;
 - escrow-like custody;
 - milestone-based disbursement.
+
+In Core v0, financial assurance is recorded through a `Financial Assurance Profile`. The guarantee percentage should be configured by the active administrator, protocol, operating mode, or lawful country implementation rule, not by the proposer, designer, or executor.
+
+## Financial Assurance Profile
+
+A Financial Assurance Profile records the project's applicable guarantee rule, eligible budget basis, required amount, retention or protected-advance rules, custodian or guarantor, materialization status, release conditions, execution conditions, failure treatment, citizen-facing summary, and audit trail.
+
+For Core v0, the preferred baseline is a global guarantee percentage:
+
+```text
+required guarantee = eligible execution budget or phase budget * global guarantee percentage
+```
+
+Future differentiated formulas may exist, but should be based on objective policy parameters and visible rule changes, not proposer-selected categories.
+
+## Guarantee Materialization Record
+
+A Guarantee Materialization Record is the trace proving that the required guarantee, deposit, insurance, bond, escrow, retention, or equivalent instrument has been confirmed by a lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or country-specific mechanism.
+
+An executor-uploaded document is not enough by itself. Materialization requires external confirmation and an audit reference.
 
 ## Fiscalizer
 

@@ -18,6 +18,8 @@ This hypothesis is aligned with:
 
 H036 should be read as the financing-control rule that connects funding commitment, milestone validation, evidence, fiscalization, guarantees, retentions, and custody execution.
 
+H011 now defines the upstream financial assurance requirement: every execution-financeable project should have a Financial Assurance Profile, and Core v0 should use a global guarantee percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. H036 governs how funds are released, retained, returned, reassigned, recovered, or subject to guarantee execution after that assurance profile exists.
+
 ## Rationale
 
 A funded project should not automatically receive all resources upfront. Immediate full transfer increases the risk of abandonment, misuse, poor execution, or fraud.
@@ -53,8 +55,10 @@ The project design should define:
 
 - payment milestones;
 - evidence required for each milestone;
+- Financial Assurance Profile reference;
 - retention percentage;
 - guarantees or performance bonds;
+- guarantee materialization requirement where applicable;
 - conditions for pausing disbursement;
 - conditions for executing guarantees;
 - conditions for final release;
@@ -111,7 +115,7 @@ If the project is later revoked, unreleased funds return or reassign by rule, re
 
 Small, low-risk projects may receive simpler or faster disbursement.
 
-Large, risky, complex, or high-antivalue projects should have stronger staged release, higher guarantees, independent fiscalization, and retained funds.
+Large, risky, complex, or high-antivalue projects should have stronger staged release, independent fiscalization, retained funds, and additional lawful assurance instruments only where the active policy defines objective conditions. The executor should not be able to reduce guarantee obligations by self-declaring a lower project category.
 
 Protected advance payments may exist when a project cannot begin without early purchases, permits, materials, deposits, or supplier reservations. They should be treated as protected advances, not as ordinary completed-progress milestones, and should require appropriate safeguards such as supplier identification, direct supplier payment, escrow, guarantee, retention, invoice path, or later verification.
 

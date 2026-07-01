@@ -377,6 +377,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Does every project have a responsible executor before execution funding?
 - [x] Are Idea, draft project, and open financeable project clearly separated?
 - [ ] Does every project have value thesis, beneficiaries, metrics, evidence, fiscalization, risks, and antivalues?
+- [ ] Does every execution-financeable project have a Financial Assurance Profile?
+- [ ] Is financial assurance treated as universal across social projects, not only construction or infrastructure?
 - [ ] If the project uses phases, are phase deliverables, gates, dependencies, and failure treatment explicit?
 - [ ] Are project versions immutable?
 - [ ] Are reformulations visible?
@@ -426,6 +428,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Are unused funds handled clearly?
 - [ ] Are funders notified of material changes?
 - [ ] If execution funding is phase-specific, does the citizen see whether funds are reserved pending a phase gate?
+- [ ] Does the active policy define the guarantee percentage or assurance requirement instead of the proposer, designer, or executor?
+- [ ] Is a required guarantee treated as materialized only after custodian, guarantor, insurer, treasury, bank, escrow, or lawful equivalent confirmation?
 
 ## 5. Disbursement checklist
 
@@ -437,6 +441,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Does a complaint-based disbursement block identify affected scope and distinguish systemic pause from material/legal suspension?
 - [ ] Are partial releases governed by pre-defined rules?
 - [ ] Are retained funds visible?
+- [ ] Does release check the Financial Assurance Profile and Guarantee Materialization Record where applicable?
 - [ ] Is every release auditable?
 - [ ] Are later-phase funds blocked when prerequisite phase gates are pending, rejected, or materially reformulated?
 

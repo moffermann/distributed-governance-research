@@ -70,7 +70,8 @@ Required conditions may include:
 - disbursement milestone plan validated with no unresolved critical failures;
 - no admitted blocking complaints or scoped systemic pauses;
 - required documents complete;
-- guarantees or retentions configured where applicable;
+- Financial Assurance Profile configured;
+- required guarantee, retention, insurance, escrow, or equivalent assurance materialized where applicable;
 - operating mode requirements satisfied.
 
 Execution-ready does not mean automatic release of the full budget.
@@ -326,6 +327,7 @@ The financial order should include:
 - amount;
 - action: release, retain, return, reassign, recover, or execute guarantee;
 - rule applied;
+- Financial Assurance Profile or Guarantee Materialization Record reference where relevant;
 - fulfillment evidence and fiscalization references where relevant;
 - blocking-condition status;
 - destination or ledger account;
@@ -388,15 +390,20 @@ Possible mechanisms:
 
 Partial release is allowed only when the disbursement milestone plan defines separable components, accepted fulfillment evidence for completed components, explicit retained amount, clear condition for releasing retained funds, fiscalizer explanation, and citizen-facing summary.
 
-## 11. Guarantees and retentions
+## 11. Financial assurance, guarantees, and retentions
 
-Medium, large, high-risk, remote, or hard-to-reverse projects may require retentions or guarantees.
+H011 requires every execution-financeable project to have a Financial Assurance Profile. This is not limited to construction. Care delivery, school-supply purchases, workshops, food support, health support, infrastructure, and other social projects can all fail, abandon execution, misuse funds, or require recovery.
 
-Example:
+For Core v0, the required guarantee amount should be calculated from the active global guarantee percentage:
 
 ```text
-10% of the project budget remains retained until final closure.
+required_guarantee_amount =
+eligible_execution_budget_or_phase_budget * global_guarantee_percentage
 ```
+
+The proposer, designer, or executor should not choose a lower guarantee percentage or self-classify the project into a lower assurance category.
+
+The required guarantee, deposit, insurance, bond, escrow, retention, or equivalent instrument is materialized only when a lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or equivalent mechanism confirms it. An uploaded document from the executor is not sufficient by itself.
 
 Retentions may help:
 
@@ -408,7 +415,25 @@ Retentions may help:
 
 ### Rule
 
-> The harder a project is to reverse or verify, the more important retention becomes.
+> The executor may satisfy assurance requirements, but cannot define the assurance requirement that applies to itself.
+
+> A guarantee is materialized only after external custodian or guarantor confirmation.
+
+Examples:
+
+```text
+Elderly care:
+  monthly release, retained future service funds, and guarantee materialization protect continuity if the executor abandons care visits.
+
+School supplies:
+  direct supplier payment, invoice path, delivery evidence, and retained funds protect against incomplete kit delivery.
+
+Workshop:
+  release by verified sessions or attendance periods protects against inflated attendance.
+
+Infrastructure:
+  release remains blocked until phase gates, control, assurance, and milestone evidence are satisfied.
+```
 
 ## 12. Failed milestone
 
@@ -676,6 +701,17 @@ Blocked
 Returned
 Reassigned
 In recovery
+```
+
+Assurance states:
+
+```text
+Assurance pending
+Guarantee materialized
+Guarantee insufficient
+Guarantee expired
+Guarantee executed
+Guarantee released
 ```
 
 Citizen-facing labels may be simplified, but the technical states should remain traceable.

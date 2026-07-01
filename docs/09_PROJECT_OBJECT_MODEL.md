@@ -19,6 +19,7 @@ It is a concrete proposal for public or social action that declares:
 - how it will be executed;
 - how progress will be measured;
 - what evidential contract will verify fulfillment;
+- what financial assurance protects execution funding;
 - how it can be fiscalized;
 - what risks, externalities, or antivalues may exist.
 
@@ -38,7 +39,7 @@ Project:
   financeable operational unit;
   created by a citizen or organization;
   associated with a public function or project classification;
-  declares value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, responsible actors, risks, and fiscalization conditions.
+  declares value thesis, budget, phases where applicable, KPIs, milestones, evidential contract, financial assurance profile, responsible actors, risks, and fiscalization conditions.
 ```
 
 ## Required executor rule
@@ -438,6 +439,10 @@ After funding → no ordinary free withdrawal.
 
 Funding is a commitment until project closure. If a project fails, citizen protection comes through traceability, fiscalization, complaints, guarantees, recovery, returned balances, reassignment rules, and reputation consequences.
 
+Every execution-financeable project should declare or reference a Financial Assurance Profile. This profile is not construction-specific. It applies to care services, supply purchases, workshops, infrastructure, and any other project that receives execution funding.
+
+For Core v0, the guarantee requirement should follow a global percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. The proposer, designer, or executor may describe project facts, but may not choose a lower guarantee percentage, risk class, or procedural burden profile for itself.
+
 For phased projects, funding may be phase-specific:
 
 ```text
@@ -462,6 +467,7 @@ Thresholds may include:
 
 - execution funding;
 - phase gate acceptance where applicable;
+- Financial Assurance Profile and guarantee materialization where required;
 - beneficiary or attendance commitments;
 - fiscalization and control package closure;
 - evidence producer commitments;
@@ -472,7 +478,9 @@ Thresholds may include:
 - tutored-scope review where the operating mode requires it;
 - absence or resolution of admitted blocking complaints or scoped systemic pauses.
 
-The concrete thresholds depend on project type, public function, risk, complexity, territory, operating mode, and protocol rules. They should not be one universal formula for every project.
+The concrete thresholds depend on project type, public function, risk, complexity, territory, operating mode, and protocol rules. They should not be one universal formula for every project. However, H011 uses a global guarantee percentage for Core v0 financial assurance unless a later visible policy adopts objective parameter-based differentiation.
+
+Threshold selection should not depend on proposer-selected categories that reduce guarantees, fiscalization, evidence, or document obligations. The project actor may describe facts; the active policy determines the binding threshold.
 
 Example:
 
@@ -491,7 +499,7 @@ Citizen-facing displays should show only the applicable conditions and what is m
 
 For phased projects, execution-ready may apply to the relevant phase. A parent project may be open and collecting execution-phase commitments while a design phase is still under review, but the construction or execution phase is not execution-ready until prerequisite phase gates, control package, fulfillment evidence requirements, and blocking checks are complete.
 
-### 6. Milestones, disbursement, and guarantees
+### 6. Milestones, disbursement, and financial assurance
 
 A project may include:
 
@@ -499,8 +507,10 @@ A project may include:
 - amount associated with each milestone;
 - evidence required for each milestone;
 - disbursement condition;
+- Financial Assurance Profile reference;
 - retention rules;
 - guarantees or bonds;
+- guarantee materialization requirement;
 - conditions for executing guarantees.
 
 The project should also include a structured Disbursement Milestone plan with release amounts, partial-release rules, retention rules, fulfillment evidence requirements, and advance-payment protections where applicable.
@@ -510,6 +520,24 @@ Funding completion does not imply full immediate transfer to the executor. Funds
 Projects with unresolved critical failures in their disbursement milestone plan should not receive execution funding commitments. A pending design gate is not a critical failure if the phase plan, minimum public-value baseline, reserved-fund rule, and failure-treatment rule are explicit.
 
 Where phases are used, the disbursement milestone plan should identify which milestones and releases belong to each phase. Design funds may be released against accepted design deliverables. Construction or execution funds cannot be released until the prerequisite design phase gate is accepted.
+
+A guarantee is not materialized by executor self-report alone. The required deposit, bond, insurance, escrow, retention, or equivalent instrument should have a Guarantee Materialization Record confirmed by a lawful custodian, guarantor, insurer, bank, treasury, escrow provider, or other country-specific mechanism.
+
+Examples:
+
+```text
+Elderly care:
+  service-period release, retention, and guarantee materialization protect against abandonment or false service delivery.
+
+School supplies:
+  direct supplier payment, invoice path, delivery evidence, and retained funds protect against incomplete kit delivery.
+
+Workshops:
+  release by verified session or attendance period protects against inflated attendance or missing sessions.
+
+Infrastructure:
+  construction release remains blocked until design gate, control package, assurance, and milestone conditions are satisfied.
+```
 
 ### 7. Evidence and fiscalization
 
@@ -562,7 +590,8 @@ A project may be linked to:
 - reputation signals, reputation inputs, reputation updates, and reputation summaries;
 - delegation-generated actions;
 - evidence records;
-- guarantee records.
+- Financial Assurance Profile;
+- Guarantee Materialization Records.
 
 Public institutions are not ordinary internal project actors in Core v0. They may appear as external legal, budgetary, auditing, regulatory, permitting, or infrastructure references, but they do not propose, execute, fiscalize, moderate, or compete for distributed project financing inside the Core v0 baseline.
 

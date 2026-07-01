@@ -291,7 +291,9 @@ Include:
 - control cost;
 - fiscalization cost;
 - evidence production cost;
-- guarantees or retentions.
+- guarantees or retentions;
+- Financial Assurance Profile reference;
+- Guarantee Materialization Record where applicable.
 
 Layer 5 should allow reviewers to understand how the budget evolved.
 
@@ -307,6 +309,8 @@ Include:
 - releases;
 - returned or reassigned amounts;
 - custody status;
+- financial assurance status;
+- guarantee materialization status where applicable;
 - disbursement rules;
 - release dates;
 - milestone relation;
@@ -324,6 +328,8 @@ construction funding reserved pending design gate
 construction funding released after design acceptance
 funds returned, reassigned, or reconfirmed after failed design gate
 ```
+
+Layer 5 should also distinguish assurance for non-construction projects. For example, elderly care, school-supply delivery, workshops, or food support may have service-period retentions, direct supplier payment, guarantees, insurance, or equivalent instruments even though no construction occurs.
 
 ## 7. Milestone and disbursement trace
 

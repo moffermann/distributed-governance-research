@@ -168,6 +168,7 @@ This includes:
 - disbursement;
 - return of unused funds;
 - recovery;
+- guarantee materialization confirmation where the custodian or guarantor role applies;
 - guarantee execution;
 - financial audit trail.
 
@@ -199,6 +200,7 @@ A financial order should include:
 - financial action;
 - cause;
 - rule applied;
+- Financial Assurance Profile or Guarantee Materialization Record reference where relevant;
 - evidence or milestone reference;
 - fiscalizer or protocol condition, where applicable;
 - complaint/blocking status;
@@ -246,6 +248,7 @@ The custodian can:
 - receive valid financial orders;
 - execute payments;
 - retain funds;
+- confirm guarantee materialization where it holds, validates, or reports the applicable instrument;
 - return funds;
 - record balances;
 - reject an order only for closed technical or legal causes;

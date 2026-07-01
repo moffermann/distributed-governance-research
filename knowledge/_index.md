@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[concepts/financial-assurance-profile-v0|Financial Assurance Profile v0]]
+- [[hypotheses/H011-financial-assurance-and-revocability|H011 — Financial Assurance and Project Revocability]]
 - [[concepts/value-antivalue-profile-v0|Value-Antivalue Profile v0]]
 - [[hypotheses/H012-distributed-value-antivalue-management|H012 — Distributed Value and Antivalue Management]]
 - [[concepts/systemic-pause-material-suspension-v0|Systemic Pause, Material Suspension, and Final Resolution v0]]
@@ -176,6 +178,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 - [[concepts/systemic-pause-material-suspension-v0|Systemic Pause, Material Suspension, and Final Resolution v0]]
 - [[concepts/value-antivalue-profile-v0|Value-Antivalue Profile v0]]
+- [[concepts/financial-assurance-profile-v0|Financial Assurance Profile v0]]
 
 ## Foundational session distillations
 
@@ -203,6 +206,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
 - [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
 - [[concepts/value-antivalue-profile-v0|Value-Antivalue Profile v0]]
+- [[concepts/financial-assurance-profile-v0|Financial Assurance Profile v0]]
 
 ## Functional matrix
 
@@ -215,6 +219,7 @@ See the complete hypothesis list in the repository under `knowledge/hypotheses/`
 
 Recently aligned residual-audit hypotheses:
 
+- [[hypotheses/H011-financial-assurance-and-revocability|H011 — Financial Assurance and Project Revocability]]
 - [[hypotheses/H012-distributed-value-antivalue-management|H012 — Distributed Value and Antivalue Management]]
 - [[hypotheses/H013-pause-mitigation-revocation-governance|H013 — Pause, Mitigation, and Revocation Governance]]
 - [[hypotheses/H014-reputation-architecture|H014 — Reputation Architecture]]

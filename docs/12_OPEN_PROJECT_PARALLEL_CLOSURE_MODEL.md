@@ -135,7 +135,8 @@ Possible closure conditions include:
 - required fiscalizer or fiscalizers confirmed;
 - required evidence producer commitments met;
 - beneficiary information declared or confirmed where applicable;
-- required guarantees or retentions configured;
+- Financial Assurance Profile configured;
+- required guarantee materialized where applicable;
 - required moderation completed if operating mode requires it;
 - no unresolved blocking complaint;
 - required control budget completed;

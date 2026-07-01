@@ -62,6 +62,14 @@ The `Threshold Policy` says which conditions apply.
 
 The `Procedural Burden Profile` says how deep those conditions must be.
 
+H011 adds an assurance boundary:
+
+```text
+The proposer, designer, or executor may describe project facts, but may not choose the guarantee percentage, risk class, or burden profile that lowers its own obligations.
+```
+
+For the Core v0 baseline, financial assurance should use a global guarantee percentage configured by the administrator, active protocol, operating mode, or lawful country implementation rule. Differentiated guarantee percentages by project class should remain later protocol or country implementation work unless they are defined by objective policy parameters and not by proposer self-selection.
+
 ## Procedural burden profiles
 
 ### 1. Light burden
@@ -81,7 +89,7 @@ Likely requirements:
 - simple budget;
 - basic evidence of execution;
 - comments and social signals;
-- low or no guarantee;
+- no additional category-specific guarantee beyond the active global assurance rule;
 - no complex fiscalization;
 - no independent admissibility review unless a special risk appears.
 
@@ -103,7 +111,8 @@ Likely requirements:
 - basic reporting;
 - beneficiary feedback;
 - light fiscalization;
-- possible retention or guarantee;
+- global guarantee requirement where configured;
+- possible retention or protected release rule;
 - required documents checked for completeness.
 
 ### 3. Reinforced burden
@@ -123,7 +132,7 @@ Likely requirements:
 - stronger project modeling;
 - explicit design and construction phases where design deliverables gate later execution;
 - permits or land-use documents where applicable;
-- guarantees or retentions;
+- global guarantee requirement and retentions or protected release rules where applicable;
 - execution milestones;
 - independent fiscalization;
 - Project Evidential Contract with stronger corroboration;
@@ -147,7 +156,7 @@ Examples:
 Likely requirements:
 
 - full modeling;
-- strong guarantees;
+- global guarantee requirement plus stronger lawful assurance instruments only where the active policy defines objective conditions;
 - independent and specialized review;
 - expert fiscalization;
 - externality and antivalue analysis;
@@ -173,6 +182,7 @@ AI may:
 
 AI should not:
 
+- let the proposer, designer, or executor self-select a lower profile or guarantee requirement;
 - validate that a legal permit is legally sufficient;
 - certify that an environmental study is correct;
 - decide that a consultation process is valid;
@@ -384,6 +394,7 @@ Layer 5 preserves:
 - Administrators may configure profiles too lightly for risky projects.
 - Administrators may configure profiles too heavily and discourage participation.
 - Proposers may try to under-classify risky projects.
+- A global guarantee percentage may overburden some small social projects or underprotect some large or complex projects.
 - Independent reviewers may be scarce or expensive.
 - Paid admissibility review may become a gatekeeping market.
 - Authorities may delay tutored admissibility review.
@@ -394,6 +405,8 @@ Layer 5 preserves:
 - keep citizen-facing conditions simple;
 - expose profile rationale and source;
 - use visible Threshold Policies;
+- prevent proposer-selected categories from reducing guarantee, evidence, fiscalization, or document obligations;
+- keep the Core v0 guarantee percentage global unless a future objective parameter-based policy is adopted through visible rule change;
 - let AI suggest and explain but not bind;
 - route paid review through Control Subproject rules;
 - require conflict declarations and independence checks for reviewers;
@@ -407,8 +420,10 @@ Layer 5 preserves:
 
 > AI may help discover requirements, but accountable rules, competent authorities, independent reviewers, fiscalizers, or protocol-defined bodies validate acceptability where validation is required.
 
+> Procedural burden may be proportional, but it must not be self-classified by the actor who benefits from lower burden.
+
 ## Status
 
 Aligned Core v0 usability and viability hypothesis.
 
-H020 now functions as the procedural-depth layer of H027 Threshold Policies, with admissibility review handled through C020 authority review or C002/C013 Control Subproject rules where needed.
+H020 now functions as the procedural-depth layer of H027 Threshold Policies, with H011 financial assurance, anti-self-classification, and admissibility review handled through C020 authority review or C002/C013 Control Subproject rules where needed.

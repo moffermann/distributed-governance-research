@@ -157,7 +157,9 @@ Key rule:
 
 A project draft may exist internally while being prepared. Public executorless demand should be modeled as an `Idea`, not as an open financeable project. A project cannot be published for execution financing without an identified and accepted responsible executor.
 
-Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The policy should include or reference a `Procedural Burden Profile` so small low-risk projects do not receive the same procedural burden as infrastructure, regulated, irreversible, or high-antivalue projects. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
+Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The policy should include or reference a `Procedural Burden Profile` so small low-risk projects do not receive the same procedural burden as infrastructure, regulated, irreversible, or high-antivalue projects. Thresholds, burden profiles, and assurance requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces obligations. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
+
+H011 adds a universal Financial Assurance Profile for execution-financeable projects. In Core v0, the guarantee requirement should use a global percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. This assurance applies across social projects, including care, supplies, workshops, infrastructure, and services.
 
 AI and rules may help discover required documents and suggest a burden profile, but they should not certify document acceptability by themselves. Where the Threshold Policy requires project acceptability review, tutored mode routes review to the competent authority under C020, while non-tutored or open modes may use an independent `Control Subproject: Project Admissibility Review` under C002/C013 rules.
 
@@ -529,6 +531,8 @@ Funds are released only after closure conditions, milestones, fulfillment eviden
 
 Funding is not a freely reversible expression of preference. After financing, ordinary withdrawal is not allowed; failure is handled through traceability, complaints, retentions, guarantees, recovery, returned balances, and reputation consequences.
 
+Financial assurance is not construction-specific. A project that delivers elderly care, school supplies, workshops, food support, health support, or infrastructure may all require the configured assurance before execution-ready status or fund release. The required guarantee is materialized only when confirmed by the relevant custodian, guarantor, insurer, treasury, bank, escrow provider, or lawful equivalent.
+
 ### Following
 
 Following is observation and notification only.
@@ -666,7 +670,7 @@ Open does not mean execution may start.
 
 A project becomes execution-ready only when all applicable closure conditions are complete.
 
-For phased projects, execution-ready may apply to a specific phase. A parent project can be open and receive reserved construction funding while the design phase is pending, but construction is not execution-ready until the design phase is accepted and the construction phase satisfies its threshold and control requirements.
+For phased projects, execution-ready may apply to a specific phase. A parent project can be open and receive reserved execution funding while a prior design or preparation phase is pending, but the later execution phase is not execution-ready until the prerequisite phase is accepted and the phase satisfies its threshold, control, assurance, and guarantee-materialization requirements.
 
 ## Lifecycle after publication
 
@@ -705,6 +709,8 @@ Each release requires:
 
 Before a project can receive execution funding commitments, its disbursement milestone plan should pass specialized validation for milestone coherence, fulfillment evidence requirements, release amounts, partial-release rules, retentions, protected advance-payment rules, and phase-gate treatment where applicable. Unresolved critical validation failures block financing.
 
+Before funds are released, the disbursement check should also confirm the applicable Financial Assurance Profile and any required Guarantee Materialization Record.
+
 A pending design gate is not by itself a critical validation failure if the phase plan, public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It is a release blocker: later-phase execution funds remain reserved until the prerequisite design phase is accepted.
 
 Money states:
@@ -726,7 +732,7 @@ In recovery
 
 Remaining funds do not automatically belong to the executor.
 
-The platform may generate `Financial Orders` for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. Treasury, a custodian, escrow service, bank, or country-specific financial infrastructure executes valid orders and reports status. It does not decide project value, select projects, fiscalize milestones, or reject payments by civic preference.
+The platform may generate `Financial Orders` for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. Treasury, a custodian, escrow service, bank, or country-specific financial infrastructure executes valid orders and reports status. The same external infrastructure or a lawful guarantor may also confirm guarantee materialization. It does not decide project value, select projects, fiscalize milestones, define guarantee requirements by discretion, or reject payments by civic preference.
 
 ## Reformulation, pause, and revocation
 

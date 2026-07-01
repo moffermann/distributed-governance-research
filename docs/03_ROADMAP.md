@@ -6,7 +6,7 @@ This roadmap defines the working path for the Distributed Governance Research pr
 
 The project has now moved from broad discovery into v0 consolidation. The primary C001-C025 integration pass has propagated the accepted contradiction resolutions into the main core corpus.
 
-Current working decision, 2026-06-30:
+Current working decision, 2026-07-01:
 
 ```text
 Run a residual audit of diagrams, indexes, and stale references next.
@@ -39,6 +39,7 @@ H015 is aligned: formal evaluation is dimension-scoped and effect-scoped. Citize
 H014 is aligned: reputation moves through a traceable chain from Reputation Signal to reviewed Reputation Input to role-specific Reputation Update to citizen-facing Reputation Summary. Raw opinion, popularity, suspicion, unfounded complaints, unreviewed evidence, AI anomaly flags, proximity to failed projects, corporate-group proximity, and closure labels do not directly update formal reputation.
 H013 is aligned: project conflict handling now distinguishes complaint admissibility/referral records, scoped systemic pause, material/legal suspension, final resolution, mitigation/correction, revocation, and role-specific reputation effects. A fiscalizer may trigger system effects inside the platform, but material/legal suspension requires competent external authority, legal rule, or enforceable obligation where applicable.
 H012 is aligned: projects now use a Value-Antivalue Profile with value floors and antivalue ceilings. Values are minimum positive commitments to reach; antivalues are maximum negative effects not to exceed. Both connect to metrics, fulfillment/control evidence, fiscalization, disbursement, closure, complaint paths only when explicitly triggered, and reviewed role-specific reputation or responsibility effects.
+H011 is aligned: every execution-financeable project now uses a Financial Assurance Profile. Financial assurance is universal across social projects, not construction-specific; Core v0 uses a global guarantee percentage configured by administrator, protocol, operating mode, or lawful country implementation rule; proposers, designers, and executors cannot self-select lower assurance categories; guarantee materialization requires custodian, guarantor, insurer, treasury, bank, escrow, or lawful equivalent confirmation.
 Project-local skills are consolidated under tools/skills/.
 The legacy skills/ path is retired as an active skill location.
 ```
@@ -157,7 +158,9 @@ The fifty-first residual cleanup aligned H013 with the v0 complaint, disbursemen
 
 The fifty-second residual cleanup aligned H012 with the v0 value thesis, Project Evidential Contract, Value Verification Package, evidence-context, evaluation, reputation, complaint, project-object, creation-flow, audit, scope-freeze, classification matrix, entity-map, and glossary model: projects now define a Value-Antivalue Profile with value floors and antivalue ceilings. Value floors are minimum positive commitments the project must reach. Antivalue ceilings are maximum negative effects the project must not exceed. Both require proportional metrics or qualitative commitments, fulfillment/control evidence, measurement or review method, affected scope, fiscalizer/reviewer handling, and consequences. Failed value floors, exceeded antivalue ceilings, or undeclared antivalues may affect disbursement, correction, mitigation, closure, role-specific reputation, responsibility, pause, or revocation after review, but they do not automatically become complaints; a formal complaint must be explicitly filed and processed under H024/C004.
 
-Next review candidate: H011 financial assurance and project revocability.
+The fifty-third residual cleanup aligned H011 with the v0 threshold, procedural burden, disbursement, custody, lifecycle, project-object, audit, scope-freeze, classification matrix, entity-map, dashboard, and citizen-funding model: every execution-financeable project now has a Financial Assurance Profile. Assurance is not construction-specific; it applies to care services, school-supply purchases, workshops, food or health support, infrastructure, and other social projects. Core v0 uses a global guarantee percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule, with future differentiated formulas left to objective parameter-based policy. The proposer, designer, or executor may describe project facts but cannot self-select a lower burden, risk class, guarantee percentage, or assurance requirement. Required guarantees or equivalent instruments become materialized only after confirmation by a lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or equivalent mechanism.
+
+Next review candidate: H010 primary responsibility principle.
 
 Approximate current maturity:
 
@@ -290,7 +293,7 @@ Actors:
   citizen, organization, proposer, modeler, executor, fiscalizer, evidence producer, funder, delegator, delegate, moderator, complainant, beneficiary, affected party, institution, custodian.
 
 Objects:
-  project, project version, value thesis, value-antivalue profile, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, operating mode, audit event.
+  project, project version, value thesis, value-antivalue profile, financial assurance profile, guarantee materialization record, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, operating mode, audit event.
 
 States:
   draft, in validation, requires adjustment, ready to publish, open, execution-ready, in execution, correction required, paused, requires reformulation, under review, revoked, closed, expired.

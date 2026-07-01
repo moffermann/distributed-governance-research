@@ -306,7 +306,8 @@ Possible budget lines:
 - fiscalization;
 - evidence production;
 - contingency;
-- guarantees or retentions where applicable.
+- guarantees or retentions where applicable;
+- Financial Assurance Profile.
 
 Example:
 
@@ -324,6 +325,10 @@ Budget lines:
 ```
 
 The system should detect inconsistencies.
+
+The system should also calculate the applicable financial assurance requirement from the active H011 rule. For Core v0, this means applying the configured global guarantee percentage to the eligible execution budget or phase budget.
+
+The proposer, designer, or executor may explain budget facts and advance-payment needs, but should not choose the guarantee percentage, risk class, or procedural burden profile that lowers its own obligations.
 
 Examples:
 
@@ -587,6 +592,8 @@ The policy explains which conditions must be completed before publication, execu
 
 The policy should also expose the project's `Procedural Burden Profile` under H020. This defines how deep the required documents, evidence, guarantees, fiscalization, admissibility review, and technical checks must be.
 
+Under H011, the Threshold Policy should also expose the project's Financial Assurance Profile or assurance requirement. Required guarantees or equivalent instruments must be confirmed through a Guarantee Materialization Record before the affected project or phase becomes execution-ready.
+
 Possible threshold dimensions:
 
 - execution funding;
@@ -597,6 +604,7 @@ Possible threshold dimensions:
 - technical validation;
 - permits or documents;
 - procedural burden profile;
+- financial assurance and guarantee materialization;
 - admissibility review where required;
 - common-good impact declaration;
 - related-party safeguards;

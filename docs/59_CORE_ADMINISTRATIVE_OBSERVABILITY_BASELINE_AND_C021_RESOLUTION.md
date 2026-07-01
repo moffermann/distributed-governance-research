@@ -221,6 +221,7 @@ fiscalization reports submitted
 observations issued
 observations resolved
 fiscalization challenges
+required guarantees materialized
 guarantees or retentions executed
 ```
 

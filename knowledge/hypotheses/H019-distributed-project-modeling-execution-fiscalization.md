@@ -46,7 +46,7 @@ The modeler should produce a minimum design package proportional to the project.
 - minimum public-value baseline;
 - risks;
 - declared antivalue;
-- recommended guarantees;
+- assurance-relevant facts or recommended safeguards;
 - execution requirements;
 - fiscalization criteria;
 - Project Evidential Contract inputs;
@@ -59,6 +59,8 @@ Accepts a design and assumes responsibility for implementation.
 The executor reviews the design, identifies errors, observes risks, and decides whether to accept execution.
 
 If the same actor designs and executes, the actor still occupies both roles for traceability. Self-acceptance of the design is not enough when the project type, risk, budget, related-party structure, or threshold policy requires independent design-phase verification.
+
+The modeler may identify facts relevant to H011 financial assurance, but does not define the binding guarantee percentage or assurance requirement. Those requirements come from the active Threshold Policy, administrator, protocol, operating mode, or lawful country implementation rule.
 
 ### 3. Fiscalizer
 

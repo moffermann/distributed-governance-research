@@ -113,6 +113,7 @@ A project must include:
 - milestones;
 - metrics;
 - Project Evidential Contract and fulfillment evidence obligations;
+- Financial Assurance Profile;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - risks;
@@ -137,6 +138,10 @@ Rule:
 Rule:
 
 > The applicable threshold policy should include or reference a procedural burden profile. AI may help discover required documents and missing conditions, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
+
+Rule:
+
+> Thresholds, procedural burden profiles, and assurance requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces guarantees, evidence, fiscalization, documents, or review obligations.
 
 Rule:
 
@@ -268,6 +273,8 @@ Core v0 includes:
 - no immediate release to executor;
 - no ordinary withdrawal after financing;
 - return, reassignment, recovery, guarantee, or retention handling only through project failure, closure, complaint, or reformulation rules;
+- global Core v0 financial assurance percentage configured by administrator, active protocol, operating mode, or lawful country implementation rule;
+- Guarantee Materialization Record where assurance is required;
 - automatic following after funding.
 
 Rule:
@@ -299,7 +306,9 @@ Core v0 also requires a coherent Disbursement Milestone plan before execution fu
 
 A pending design gate is not itself a critical validation failure if the phase plan, minimum public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It blocks release, not necessarily funding commitments.
 
-Financial execution/custody is external infrastructure. The platform or protocol may generate financial orders for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. The custodian executes valid orders and reports status; it does not select projects, evaluate civic value, fiscalize milestones, or make discretionary disbursement judgments.
+Financial assurance is universal across execution-financeable projects, not construction-specific. Care services, supply purchases, workshops, food support, infrastructure, and other social projects may all require the active global guarantee or equivalent assurance. The proposer, designer, or executor may satisfy the requirement but cannot define the guarantee percentage or self-classify into a lower assurance obligation.
+
+Financial execution/custody is external infrastructure. The platform or protocol may generate financial orders for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. The custodian executes valid orders and reports status; it may confirm guarantee materialization where applicable, but it does not select projects, evaluate civic value, fiscalize milestones, or make discretionary disbursement judgments.
 
 Money states:
 
