@@ -65,9 +65,11 @@ Possible organization types:
 - union;
 - NGO;
 - local group;
+- concessionaire;
+- state-owned or publicly owned operator where eligible under the active C007 boundary;
 - other recognized organization.
 
-Core v0 organizations are internal non-state actors. Public institutions are external legal, budgetary, auditing, regulatory, or infrastructure actors unless a country implementation explicitly departs from the Core v0 baseline.
+Core v0 organizations are internal eligible collective actors. Public authorities are external legal, budgetary, auditing, regulatory, tutored-scope, or infrastructure actors for any scope they control. State-owned or publicly owned operators may be internal organizations only when the active rules classify them as eligible, ownership/control relationships are declared, and no authority privilege or judge-and-party conflict exists.
 
 An organization may act as:
 
@@ -80,9 +82,9 @@ An organization may act as:
 - funder where rules allow;
 - technical assistant.
 
-### Public Institution / External Authority
+### Public Authority / External Authority
 
-A public institution is external to the internal actor set in Core v0.
+A public authority is external to the internal actor set in Core v0 for any scope in which it exercises legal, budgetary, regulatory, eligibility, admissibility, tutored, fiscal, adjudicative, coercive, or oversight power.
 
 It may act as:
 
@@ -106,6 +108,25 @@ It should not act as:
 - internal moderator of competing projects;
 - discretionary project payment authority;
 - recipient of distributed project financing.
+
+### State-Owned Operator / Public Enterprise
+
+A state-owned operator, public enterprise, municipally owned company, public utility, or publicly controlled service company is not automatically the same as a public authority.
+
+It is represented as an `Organization` when eligible.
+
+Additional attributes:
+
+- public ownership percentage or control basis;
+- controlling public authority or ownership chain;
+- board appointment or management control relationships;
+- subsidy, guarantee, treasury, or debt-backstop relationships;
+- regulatory privileges, exclusive rights, concession rights, or permit advantages;
+- relationship to any authority that defines Planning Scope, eligibility, admissibility, fiscalization, disbursement, sanctions, or tutored review for the same scope.
+
+Rule:
+
+> A state-owned operator may participate internally only when it acts as an ordinary accountable operator under equal rules. In tutored mode, an operator controlled by the same authority that defines scope or admissibility is excluded by default.
 
 ## 2. Role entities
 

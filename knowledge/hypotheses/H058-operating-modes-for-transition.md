@@ -31,7 +31,7 @@ When a public function operates in tutored mode:
 - every tutored operating mode should have a public timeout policy before projects are submitted;
 - if the authority does not decide within the configured review window, the platform should create a Review Timeout Resolution automatically;
 - timeout consequences may include visibility only, escalation, community override, or automatic approval, but they must be configured publicly before submission;
-- external tutored-scope moderation remains compatible with C007 because the public authority does not become an internal project actor.
+- external tutored-scope moderation remains compatible with C007 because the public authority does not become an internal project actor and does not privilege a controlled operator inside the same scope.
 
 Example:
 

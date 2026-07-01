@@ -83,7 +83,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C003/C015: executor material is self-report unless corroborated; contextualized evidence publication is privacy-assisted.
 - C004: complaints are formal scoped review objects, not unstructured comments.
 - C005/C006: funding is commitment; treasury/custody executes valid orders without governing project value.
-- C007/C020: public institutions are external authorities; material tutored decisions become Governance Resolutions or Review Timeout Resolutions.
+- C007/C020: public authorities are external in scopes they control; state-owned operators require control/privilege checks; material tutored decisions become Governance Resolutions or Review Timeout Resolutions.
 - C008/C016: AI assists validation; protocol rules and responsible actors remain accountable.
 - H008: the full accountability loop runs from accepted promise through fulfillment/control evidence, formal evaluation, Project Closure Accountability Record, financial closure, and role-specific reputation.
 - C009: citizen layers translate complexity progressively.

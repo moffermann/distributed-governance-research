@@ -55,9 +55,11 @@ Examples:
 - community organization;
 - NGO;
 - local group;
+- concessionaire;
+- state-owned or publicly owned operator where eligible under the active C007 boundary;
 - other legally or socially recognized collective actor.
 
-Organization type should be treated as an attribute, not as a separate actor class unless implementation requires it.
+Organization type, ownership, control, and authority relationships should be treated as attributes, not as separate actor classes unless implementation requires it.
 
 Possible organization roles include:
 
@@ -73,7 +75,9 @@ Possible organization roles include:
 - technical assistant;
 - evidence producer.
 
-Core v0 excludes public institutions from this internal organization set. Public institutions remain external legal, budgetary, regulatory, auditing, or infrastructure actors unless a later country implementation deliberately changes the model.
+Core v0 excludes public authorities from the internal organization set when they exercise legal, budgetary, regulatory, eligibility, admissibility, tutored, fiscal, or oversight power over the same scope.
+
+State-owned or publicly owned operators are not automatically excluded by ownership label alone. They may be eligible organizations only when they act as ordinary accountable operators, disclose ownership/control relationships, and do not carry privileged authority, approval, admissibility, regulatory, funding, fiscalization, disbursement, or tutored-control power over the same scope.
 
 ## Identity and verification
 
@@ -166,7 +170,7 @@ Minimum Core v0 incompatibilities:
 
 1. The executor should not be the fiscalizer of the same project.
 2. A fiscalizer should not fiscalize a project where they have a direct economic interest.
-3. A public institution should not participate as an internal project actor while also exercising tutored or external authority over the same system.
+3. A public authority should not participate as an internal project actor while also exercising tutored, regulatory, funding, admissibility, fiscal, or external authority over the same system or scope.
 4. A technical administrator should not alter substantive rules unless authorized by the applicable Administrative Rule Change, System Implementation Change, Protocol Change Proposal, or tutored operating-mode authority, with public versioning and audit trace where material.
 5. A delegate must act only within the scope of the delegation they accepted.
 6. A proposer, modeler, and executor may be the same actor, but that accumulation must be transparent.
@@ -175,13 +179,13 @@ Related-party relationships among proposers, modelers, executors, fiscalizers, e
 
 When a project combines design and execution, the same actor or related actors may occupy both roles if declared. This does not allow self-validation of the design phase where the Threshold Policy requires independent review. Execution-phase funds may remain reserved while the design phase is pending, but they cannot be released until the relevant phase gate is accepted.
 
-## Public institutions
+## Public authorities and state-owned operators
 
-Public institutions are external to the internal Core v0 actor model.
+Public authorities are external to the internal Core v0 actor model for any scope in which they exercise authority.
 
-They are not ordinary organizations competing inside the distributed project system.
+They are not ordinary organizations competing inside the distributed project system when they define scope, review admissibility, regulate, fiscalize, control disbursement, control the budget, enforce sanctions, or issue tutored Governance Resolutions for the same scope.
 
-In Core v0, public institutions should not act inside the system as:
+In Core v0, public authorities should not act inside the system as:
 
 - project proposer;
 - project modeler;
@@ -192,7 +196,7 @@ In Core v0, public institutions should not act inside the system as:
 - internal moderator of competing projects;
 - recipient of distributed project financing.
 
-Public institutions may still act externally as:
+Public authorities may still act externally as:
 
 - legal framework setter;
 - budget allocator or budget remover;
@@ -203,6 +207,18 @@ Public institutions may still act externally as:
 - provider of country-specific infrastructure such as identity, treasury, custody, or legal registries.
 
 If a country chooses a tutored mode, institutional decisions that affect project publication, rejection, timeout, review, operating mode, or rule configuration should be represented as public governance-resolution objects, not hidden internal moderation.
+
+State-owned companies, municipal companies, public enterprises, and public utilities are handled separately from public authorities when they act only as service operators. They may be represented as `Organization` actors where the active rules allow them and the C007 boundary is satisfied.
+
+Minimum conditions:
+
+- public ownership and control relationships are declared;
+- subsidy, guarantee, treasury backstop, concession, or exclusive-right relationships are declared;
+- the operator receives no privileged approval, admissibility, fiscalization, disbursement, or regulatory path;
+- independent fulfillment/control evidence and fiscalization apply;
+- role-specific reputation, complaint, correction, revocation, and replacement paths apply.
+
+In tutored mode, an operator controlled by the same authority that defines scope or admissibility is excluded by default.
 
 ## Treasury / revenue authority
 
@@ -219,7 +235,7 @@ Their possible external functions include:
 - enabling disbursement;
 - supporting financial traceability.
 
-However, they do not decide project value, approve ordinary projects, fiscalize results, or participate in internal governance under Core v0. If an implementing country grants a public institution broader internal powers, that is a country-specific departure from the Core v0 baseline and should be documented as such.
+However, they do not decide project value, approve ordinary projects by civic discretion, fiscalize results, or participate in internal governance under Core v0. If an implementing country grants a public authority broader internal powers, that is a country-specific departure from the Core v0 baseline and should be documented as such.
 
 If a citizen-level amount formula depends on tax, vulnerability, territorial-priority, or other sensitive external data, the platform should receive only the authorized amount, eligibility status, formula version, explanation code, and audit reference from the competent provider. It should not receive the citizen's raw tax declaration or sensitive registry file.
 
@@ -241,7 +257,7 @@ It should be modeled separately from actors.
 
 ## Principle
 
-> The system has two internal base actor types: citizens and non-state organizations. Public institutions remain external legal, budgetary, auditing, or infrastructure actors in Core v0. Everything else is a role, attribute, or infrastructure unless a later implementation requires additional actor classes. Roles are accumulable by default, except where conflict of interest or control relationships require explicit incompatibility.
+> The system has two internal base actor types: citizens and organizations. Public authorities remain external legal, budgetary, auditing, regulatory, tutored-scope, or infrastructure actors for the scopes they control. State-owned operators may be eligible organizations only when ownership/control relationships are declared and no authority privilege or judge-and-party conflict exists. Everything else is a role, attribute, or infrastructure unless a later implementation requires additional actor classes. Roles are accumulable by default, except where conflict of interest or control relationships require explicit incompatibility.
 
 ## Status
 

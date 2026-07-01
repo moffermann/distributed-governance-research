@@ -191,11 +191,11 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |
 | Funding, civic wallet, notification, custody-boundary, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, follow-up, financial-order traceability, and visible citizen control. |
 | Related-party conflict of interest `H028` | Core v0 | Needed to prevent public resources from becoming hidden private self-financing while preserving proportional treatment for declared relationships. |
-| Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-institution participation. |
+| Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-authority participation in scopes they control. |
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
 | Meta-governance protocol change `H017` | Core v0 conceptual / minimum rule-change path | Needed to explain protocol evolution without hidden authority: v0 distinguishes project reformulation, administrative rule changes, system implementation changes, and non-tutored protocol change proposals, while full constitutional meta-governance remains v1+. |
 | Emergency as urgency attribute `H052` | Core v0 | Treats emergencies without separate architecture. |
-| Existing institution as equal actor `H056` | Superseded / Country implementation departure | C007 excludes public institutions from internal Core v0 participation. A country may deliberately depart from this, but it is not the Core v0 baseline. |
+| Existing institution as equal actor `H056` | Refined / Core v0 boundary plus country implementation | C007 no longer excludes every publicly owned operator by label. It excludes public authorities from internal roles in scopes they control and excludes authority-controlled operators in tutored or conflicted scopes by default. State-owned operators may participate only as ordinary eligible organizations where the public-authority/operator boundary is satisfied. |
 | Tutored transition moderation `H057` | Core v0 / transition | Needed for pilots and bounded rollout. |
 | Operating modes `H058` | Core v0 / transition | Needed to move from closed to open functions safely. |
 | Transparent project discovery `H031` | Core v0 | Discovery must be explainable, non-commercial, and auditable. |
@@ -232,7 +232,8 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Sanctions, recovery, and appeals | Country implementation | Depends on administrative law. |
 | Budget percentage migrated to the system | Country implementation | Political and fiscal decision. |
 | Authority-defined planning scopes in tutored mode | Country implementation with Core transparency boundary | The authority may define what is open to distributed financing in a tutored public function, but the scope and material scope decisions must be public, versioned, and auditable. |
-| Public institution participation inside the platform | Country implementation departure | Core v0 excludes it; any country-specific exception must be explicit, justified, and traceable. |
+| Public authority participation inside the platform | Country implementation departure | Core v0 excludes public authorities from internal participation in scopes they control; any country-specific exception must be explicit, justified, independently reviewed, and traceable. |
+| State-owned operator participation | Core v0 boundary + country implementation details | Public ownership alone does not exclude an operator. Eligibility depends on operating mode, control relationships, privilege, independent fiscalization, disclosure, and equal accountability rules. Sector-specific rules depend on country implementation. |
 
 ## Out-of-scope clusters for Core v0
 

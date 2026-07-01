@@ -4,7 +4,7 @@
 
 Core financing and participation hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]], and [[H049-delegate-resignation-and-notification|H049]].
 
-Delegation and automatic allocation must preserve the v0 actor boundary: public institutions are not internal delegates, and AI assistance is infrastructure rather than a delegate or civic actor.
+Delegation and automatic allocation must preserve the v0 actor boundary: public authorities are not internal delegates in scopes they control, and AI assistance is infrastructure rather than a delegate or civic actor.
 
 ## Hypothesis
 
@@ -29,7 +29,7 @@ The default rule functions as a civic autopilot.
 A citizen can:
 
 - allocate resources manually;
-- delegate allocation to an eligible citizen or non-state organization;
+- delegate allocation to an eligible citizen or eligible organization;
 - choose a published allocation profile or portfolio rule;
 - use AI assistance to understand options or configure preferences;
 - configure a personal automatic rule;
@@ -46,16 +46,16 @@ The civic autopilot must distinguish delegation, profiles, and AI assistance.
 ```text
 Allowed in Core v0:
   Delegate allocation to a trusted citizen.
-  Delegate allocation to an eligible non-state civic/private organization.
+  Delegate allocation to an eligible civic/private or operator organization where the C007 boundary allows it.
   Use a published allocation profile or portfolio rule.
   Ask AI assistance to explain tradeoffs or help configure preferences.
 
 Not allowed in Core v0:
-  Delegate allocation to a public institution as an internal actor.
+  Delegate allocation to a public authority as an internal actor in a scope it controls.
   Delegate allocation to an AI guide as if it were a representative.
 ```
 
-Public institutions may still act externally according to C007, and AI may still assist according to C008. Neither becomes the internal delegate that exercises civic allocation authority.
+Public authorities may still act externally according to C007, and AI may still assist according to C008. Neither becomes the internal delegate that exercises civic allocation authority.
 
 ## Monthly allocation
 

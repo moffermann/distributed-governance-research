@@ -38,7 +38,7 @@ H005 concerns a private or user-specific assistant aligned with one citizen's pr
 
 H005 is not delegation.
 
-Delegation is explicit scoped authority given to an eligible citizen or non-state organization. A personal AI guide cannot be a delegate, cannot hold represented weight, cannot accept delegation, and cannot act as an internal civic actor.
+Delegation is explicit scoped authority given to an eligible citizen or eligible organization. A personal AI guide cannot be a delegate, cannot hold represented weight, cannot accept delegation, and cannot act as an internal civic actor.
 
 H005 is not an automatic allocation profile.
 

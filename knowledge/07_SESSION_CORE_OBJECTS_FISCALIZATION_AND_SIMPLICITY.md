@@ -14,7 +14,7 @@ Current controlling rules:
 
 - C001 separates `Idea` from `Project`: public executorless demand is an Idea, not an open financeable project.
 - C002/C013 model fiscalization and fulfillment/control evidence work through control packages and Control Subprojects, with execution funding and control-cost discovery moving in parallel.
-- C007 excludes public institutions from internal Core v0 participation.
+- C007 now distinguishes public authorities from state-owned operators: public authorities remain external in scopes they control, while state-owned operators are eligible only where the C007 control/privilege boundary allows it.
 - C020 allows external tutored-scope moderation by public authorities where configured, but material decisions must become Governance Resolutions or Review Timeout Resolutions.
 
 If this session conflicts with a C### resolution, the accepted C### resolution controls.
@@ -71,7 +71,7 @@ C007 later narrowed this list for Core v0 by removing state entities from
 internal participation.
 ```
 
-Core v0 internal organizations are non-state actors. Public institutions remain external legal, budgetary, auditing, regulatory, infrastructure, or tutored-scope review authorities where configured.
+Core v0 internal organizations are eligible collective actors. Public authorities remain external legal, budgetary, auditing, regulatory, infrastructure, or tutored-scope review authorities where configured. State-owned operators may be eligible only where they are not exercising authority, do not receive privileged review, and disclose ownership/control relationships.
 
 ## 3. Treasury / revenue authority
 

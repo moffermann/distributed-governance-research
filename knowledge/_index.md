@@ -4,6 +4,8 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[concepts/public-authority-operator-boundary-v0|Public Authority / State-Owned Operator Boundary v0]]
+- [[hypotheses/H004-institutional-monopolies|H004 - Institutional Monopoly Reduction]]
 - [[hypotheses/H005-ai-personal-guides|H005 - Personal AI Guides for Participation]]
 - [[hypotheses/H006-assisted-deliberation|H006 - Assisted Deliberation Context]]
 - [[hypotheses/H007-continuous-performance-evaluation|H007 - Continuous Performance Visibility]]
@@ -51,7 +53,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|Evidence Producers and C003 Resolution v0]]
 - [[../docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|Assisted Evidence Publication and C015 Resolution v0]]
 - [[../docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION|Value Verification and C010 Resolution v0]]
-- [[../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|Public Institution Exclusion and C007 Resolution v0]]
+- [[../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|Public Authority and State-Owned Operator Boundary and C007 Resolution v0]]
 - [[../docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|Funding Commitment and C005 Resolution v0]]
 - [[../docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|Complaint Entity and C004 Resolution v0]]
 - [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
@@ -137,7 +139,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
 - [[../docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|Complaint Entity and C004 Resolution v0]]
 - [[../docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|Funding Commitment and C005 Resolution v0]]
-- [[../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|Public Institution Exclusion and C007 Resolution v0]]
+- [[../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|Public Authority and State-Owned Operator Boundary and C007 Resolution v0]]
 - [[../docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION|Value Verification and C010 Resolution v0]]
 - [[../docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|Assisted Evidence Publication and C015 Resolution v0]]
 - [[../docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|Evidence Producers and C003 Resolution v0]]
@@ -179,6 +181,7 @@ Start here when navigating the project in Obsidian or GitHub.
 ## Core glossary
 
 - [[concepts/core-glossary-v0|Core Glossary v0]]
+- [[concepts/public-authority-operator-boundary-v0|Public Authority / State-Owned Operator Boundary v0]]
 - [[concepts/project-governance-glossary-addendum|Project Governance Glossary Addendum]]
 - [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]
 - [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
@@ -207,6 +210,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[concepts/functional-state-architecture|Functional State Architecture]]
 - [[concepts/institutional-taxonomy|Institutional Taxonomy]]
 - [[concepts/distributed-trust|Distributed Trust]]
+- [[concepts/public-authority-operator-boundary-v0|Public Authority / State-Owned Operator Boundary v0]]
 - [[concepts/algorithm-as-coordinator|Algorithm as Coordinator]]
 - [[concepts/distributed-planning-architecture|Distributed Planning Architecture]]
 - [[concepts/reputation-input-chain-v0|Reputation Input Chain v0]]

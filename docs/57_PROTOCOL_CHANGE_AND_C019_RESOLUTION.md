@@ -114,7 +114,7 @@ In a public-sector pilot, this may be:
 ```text
 the implementing ministry
 the administrative authority responsible for the pilot
-the public institution operating the system
+the public authority or authorized administrator operating the implementation context
 ```
 
 This authority may configure protocol parameters within its mandate.

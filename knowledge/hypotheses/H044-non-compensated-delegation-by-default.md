@@ -12,7 +12,7 @@ Delegation should be non-compensated by default. A delegate should not normally 
 
 ## Rationale
 
-Delegation is based on trust. A citizen or community delegates because they trust an eligible person, non-state organization, eligible university or expert group, foundation, or local group to act according to their values.
+Delegation is based on trust. A citizen or community delegates because they trust an eligible person, eligible organization, eligible university or expert group, foundation, or local group to act according to their values.
 
 If delegation becomes directly remunerated, it may create a new market for capturing civic preferences and managing citizen allocations for profit.
 

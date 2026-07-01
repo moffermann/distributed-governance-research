@@ -50,7 +50,7 @@ Layer 5 is mainly for:
 - auditors;
 - journalists;
 - researchers;
-- public institutions;
+- public authorities and external public reviewers;
 - civil society organizations;
 - expert citizens;
 - project reviewers;

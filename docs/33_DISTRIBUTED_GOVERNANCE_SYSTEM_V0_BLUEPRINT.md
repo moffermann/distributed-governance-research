@@ -68,11 +68,15 @@ An organization may be:
 - union;
 - NGO;
 - local community group;
+- concessionaire;
+- state-owned or publicly owned operator where eligible under the active C007 boundary;
 - other legal or civic organization.
 
-Organization type is an attribute, not a separate actor class.
+Organization type, ownership, control, and authority relationships are attributes, not separate actor classes by default.
 
-Core v0 excludes public institutions from the internal actor set. Public institutions remain external legal, budgetary, auditing, regulatory, or infrastructure actors. They may define the country framework, provide treasury or identity integration, and issue public governance resolutions in tutored modes, but they do not propose, execute, fiscalize, moderate, or compete for distributed project financing inside Core v0.
+Core v0 excludes public authorities from the internal actor set for any scope in which they exercise legal, budgetary, regulatory, eligibility, admissibility, tutored, fiscal, or oversight power. Public authorities may define the country framework, provide treasury or identity integration, and issue public Governance Resolutions in tutored modes, but they do not use that authority position to propose, execute, fiscalize, moderate, or compete for distributed project financing inside the same scope.
+
+State-owned or publicly owned operators are not automatically excluded by public ownership alone. They may participate as ordinary eligible organizations only when they disclose ownership/control relationships, receive no privileged approval or review path, and accept the same value, evidence, fiscalization, assurance, disbursement, complaint, revocation, and reputation rules as other operators. In tutored mode, an operator controlled by the same authority that defines scope or admissibility is excluded by default.
 
 ## Core roles
 
@@ -89,7 +93,7 @@ Important roles:
 - voter where voting applies;
 - delegator;
 - delegate;
-- moderator where protocol-defined and not a public institution acting as an internal participant;
+- moderator where protocol-defined and not a public authority acting as an internal participant in a scope it controls;
 - complainant;
 - evaluator;
 - commenter;
@@ -109,7 +113,7 @@ Examples:
 
 Related-party relationships do not automatically invalidate a project, but they must be declared and classified. Low or indirect conflicts may proceed with visible warnings; relevant conflicts may require independent control and public-benefit safeguards; severe or hidden conflicts may require reformulation, actor exclusion, disbursement blocking, rejection, or a role-specific responsibility review.
 
-Public institutions may not use operating-mode authority to become internal project competitors. Material tutored decisions should be represented as public governance-resolution objects.
+Public authorities may not use operating-mode authority to become internal project competitors or to privilege controlled operators. Material tutored decisions should be represented as public governance-resolution objects.
 
 ## Core object: idea
 
@@ -550,7 +554,7 @@ Delegating
 Configuring automatic allocation profile
 ```
 
-Participation capacity support is also part of Core v0, but only through ordinary transparent project paths and assistance layers. A participation-support project may help citizens understand projects, translate material, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. It does not receive hidden delegation commissions, does not allocate citizen balances without explicit accepted delegation, does not turn AI into a civic actor, and does not make public institutions internal project participants.
+Participation capacity support is also part of Core v0, but only through ordinary transparent project paths and assistance layers. A participation-support project may help citizens understand projects, translate material, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. It does not receive hidden delegation commissions, does not allocate citizen balances without explicit accepted delegation, does not turn AI into a civic actor, and does not make public authorities internal project participants in scopes they control.
 
 Personal AI guides remain Extension v1+. If a personal guide connects to Core v0, it must stay within the C008 assistance boundary: it may summarize, compare, translate, draft, warn, and help configure citizen choices, but it cannot become a delegate, civic actor, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
 
@@ -1010,7 +1014,7 @@ Out of scope or future extension:
 - full distributed construction of a national roadmap;
 - complex subdelegation and paid delegation markets;
 - universal replacement of public institutions;
-- public institutions as internal project competitors;
+- public authorities or authority-controlled operators as internal project competitors in the same controlled scope;
 - full legal implementation by country;
 - advanced macro-budget balancing;
 - full common-good charter governance;

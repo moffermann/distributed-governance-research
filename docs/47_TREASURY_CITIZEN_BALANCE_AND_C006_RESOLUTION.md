@@ -331,11 +331,11 @@ Once a citizen funds a project, the amount is committed until project closure. T
 
 If the project fails or closes with unused/recovered funds, the system may return or reassign available balances according to protocol and citizen configuration.
 
-## Relation to public institution exclusion
+## Relation to public authority boundary
 
 This resolution is consistent with C007.
 
-Public institutions do not participate as internal actors. Treasury may appear only as external infrastructure or country implementation mechanism.
+Treasury, revenue authorities, custodians, and equivalent public financial bodies act as external infrastructure or country implementation mechanisms. They do not become internal civic actors merely because they move money, report allocation amounts, or execute valid financial orders.
 
 It is not a project actor, fiscalizer, proposer, executor, or moderator.
 
@@ -361,7 +361,7 @@ This resolution should inform future updates to:
 - project lifecycle after publication;
 - consolidated entity/object/state map;
 - funding commitment model;
-- public institution exclusion model;
+- public authority / state-owned operator boundary;
 - future implementable schema.
 
 ## Remaining risks

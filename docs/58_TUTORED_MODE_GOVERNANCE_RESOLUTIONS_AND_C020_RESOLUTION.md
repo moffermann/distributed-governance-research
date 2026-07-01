@@ -84,7 +84,7 @@ The ministry already has an approved traditional project for the same multi-cour
 
 The authority may reject or request reformulation because the proposal would duplicate public spending and distort the pilot scope.
 
-This is allowed as external tutored-scope moderation. It is not allowed as ordinary internal project moderation by a competing public institution.
+This is allowed as external tutored-scope moderation. It is not allowed as ordinary internal project moderation by a competing public authority or by an authority that privileges its own controlled operator.
 
 The decision should create a Governance Resolution:
 
@@ -334,13 +334,13 @@ Automatic approval after timeout is valid only if it is configured before submis
 
 ## Relationship with C007
 
-C007 excludes public institutions from acting as ordinary internal actors in v0.
+C007 excludes public authorities from acting as ordinary internal actors in any scope they control in v0.
 
 Therefore, tutored governance is not an ordinary internal project role. It is an external implementation condition represented by the platform.
 
 The authority may perform external tutored-scope moderation according to the tutored operating mode, including eligibility, duplication, scope, and compatibility review. But the system must expose the resolution, the responsible authority or process, the reason, and the timeout record.
 
-This preserves the C007 exclusion: the public authority does not become a project proposer, executor, fiscalizer, internal ordinary moderator, delegate, or competitor for distributed project financing.
+This preserves the C007 boundary: the public authority does not become a project proposer, executor, fiscalizer, internal ordinary moderator, delegate, or competitor for distributed project financing in the same controlled scope. A state-owned or publicly owned operator controlled by that authority is also excluded by default inside that tutored scope, because the authority family would be judge and party.
 
 ## Relationship with C019
 

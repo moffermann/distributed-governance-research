@@ -6,15 +6,16 @@ During a partial transition pilot, the public function opened by an implementing
 
 In this tutored operating mode, projects associated with that public function pass through institutional moderation before publication.
 
-This moderation is administered by the implementing public institution or its designated administrators.
+This moderation is administered by the implementing public authority or its designated administrators.
 
 H009 now frames this as `Planning Scope Alignment`: the authority may define or interpret the active Planning Scope in tutored mode, but the scope and material scope decisions must be public, versioned, and auditable.
 
 Integrated C007/C020 correction:
 
 ```text
-The public institution remains an external authority, not an internal project actor.
+The public authority remains external, not an internal project actor.
 The authority may perform external tutored-scope moderation when the operating mode grants it review authority.
+The authority may not use tutored-scope power to privilege its own controlled operator inside the same scope.
 Material tutored decisions must become public Governance Resolution objects.
 Review silence must become a public Review Timeout Resolution under the configured timeout policy.
 ```

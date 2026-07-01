@@ -33,7 +33,7 @@ Protected identity does not create an anonymous comment layer.
 
 The per-comment rule is specific to the comment layer. It does not limit the broader protected-identity mechanism. Under H029/C024, complaints, testimony, evidence submissions, beneficiary confirmations, and other sensitive formal actions may also request protected identity when public exposure creates a justified risk.
 
-C007 also refined actor participation. Public institutions should not appear as ordinary internal commenters competing in the same civic layer as citizens and non-state organizations. If a public institution needs to respond, review, explain, or reject something, it should do so as an external authority response, tutored-scope review action, or Governance Resolution where material.
+C007 also refined actor participation. Public authorities should not appear as ordinary internal commenters competing in the same civic layer as citizens and organizations for scopes they control. If a public authority needs to respond, review, explain, or reject something, it should do so as an external authority response, tutored-scope review action, or Governance Resolution where material. If a state-owned operator is eligible and participates as an ordinary project actor, its project comments or responses are treated like those of any other proposer, executor, or organization, with ownership/control relationships visible.
 
 ## The contradiction
 
@@ -124,7 +124,7 @@ The system may use privacy-protecting display rules where justified under C024, 
 
 Responsible project roles should not be anonymous.
 
-Public institutions should not use the ordinary comment layer as internal project participants. If they act under external authority, the response should be labeled as external, and material decisions should be represented through the governance-resolution or audit-trail mechanisms defined elsewhere.
+Public authorities should not use the ordinary comment layer as internal project participants in scopes they control. If they act under external authority, the response should be labeled as external, and material decisions should be represented through the governance-resolution or audit-trail mechanisms defined elsewhere. Eligible state-owned operators participating as ordinary project actors use the same comment and response rules as other organizations.
 
 ## Comment types
 

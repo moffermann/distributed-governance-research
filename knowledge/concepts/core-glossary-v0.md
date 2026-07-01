@@ -62,6 +62,24 @@ This project does not assume that institutions must disappear. It asks which ins
 
 ---
 
+## Public Authority
+
+A public authority is a public institution when it exercises legal, budgetary, regulatory, eligibility, admissibility, tutored, fiscal, adjudicative, coercive, or oversight power.
+
+In Core v0, public authorities remain external to the internal actor model for any scope they control. They may define legal frameworks, allocate budgets, issue permits, audit externally, enforce general law, or issue Governance Resolutions in tutored mode, but they should not use that authority position to compete as project proposer, executor, fiscalizer, delegate, or ordinary internal moderator in the same scope.
+
+---
+
+## State-Owned Operator / Public Enterprise
+
+A state-owned operator is a publicly owned or publicly controlled enterprise acting as a service provider, utility, concessionaire, supplier, or executor rather than as a public authority.
+
+Public ownership alone does not always exclude it from Core v0. It may participate as an ordinary eligible organization only where the active C007 boundary is satisfied: ownership and control relationships are declared, no privileged approval or review path exists, no authority conflict exists, independent fiscalization applies, and the operator accepts the same evidence, disbursement, guarantee, complaint, revocation, and reputation rules as other operators.
+
+In tutored mode, an operator controlled by the same authority that defines scope or admissibility is excluded by default.
+
+---
+
 ## Institutional Monopoly
 
 An institutional monopoly exists when a single institution has exclusive authority, funding, or legitimacy to perform a function, regardless of performance.
@@ -69,9 +87,12 @@ An institutional monopoly exists when a single institution has exclusive authori
 The project distinguishes between:
 
 - monopolies that may be functionally justified, such as defense;
-- monopolies that may create weak accountability, such as centralized resource allocation ministries.
+- natural or territorial monopolies that may require competition for the market rather than competition inside the market, such as utilities;
+- monopolies that may create weak accountability, such as centralized resource allocation ministries or opaque service monopolies.
 
-A central claim of the theory is that many institutional failures are caused less by the existence of institutions and more by monopoly status combined with weak accountability.
+A central claim of the theory is that many institutional failures are caused less by the existence of institutions or public ownership and more by monopoly status combined with weak accountability, weak contestability, and low transparency.
+
+The target is not public ownership by itself. The target is opaque monopoly power without evidence, fiscalization, performance consequences, revocation, replacement, or public auditability.
 
 ---
 

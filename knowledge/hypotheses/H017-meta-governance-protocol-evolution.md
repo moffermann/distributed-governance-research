@@ -112,7 +112,7 @@ The same rule-change discipline applies differently depending on the operating m
 
 ## Tutored mode
 
-In a tutored operating mode, the implementing ministry, administrator, or authorized public institution may configure rules within its mandate.
+In a tutored operating mode, the implementing ministry, administrator, or authorized public authority may configure rules within its mandate.
 
 That authority is external to ordinary project participation. It does not become an internal proposer, executor, fiscalizer, or ordinary moderator.
 

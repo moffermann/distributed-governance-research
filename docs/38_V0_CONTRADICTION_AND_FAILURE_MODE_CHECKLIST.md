@@ -132,7 +132,7 @@ Separate citizen funding capacity from project payment execution. Treasury infor
 
 ---
 
-## C007 — Public institution as equal actor vs tutored moderation by institution
+## C007 — Public authority as equal actor vs state-owned operator participation
 
 **Severity:** High
 **Status:** Resolved
@@ -140,7 +140,9 @@ Separate citizen funding capacity from project payment execution. Treasury infor
 
 ### Accepted v0 rule
 
-Public institutions are external to the system, not internal participants. They cannot propose, execute, fiscalize, moderate, or compete for distributed project financing inside Core v0. They may define the legal framework, allocate or remove budget, audit externally, enforce general law, and provide country-specific infrastructure such as custody or treasury integration where required.
+Public authorities are external to the internal actor model for any scope in which they exercise legal, budgetary, regulatory, eligibility, admissibility, tutored, fiscal, adjudicative, coercive, or oversight power. They cannot use that authority position to propose, execute, fiscalize, moderate, or compete for distributed project financing inside the same scope.
+
+State-owned or publicly owned operators are not automatically excluded by ownership label alone. They may participate only as ordinary eligible organizations where the active C007 boundary is satisfied: ownership/control relationships are declared, no privileged approval or review path exists, independent fiscalization applies, and no judge-and-party conflict exists. In tutored mode, an operator controlled by the same authority that defines scope or admissibility is excluded by default.
 
 ---
 
@@ -410,7 +412,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Does every responsibility-heavy role require acceptance?
 - [ ] Are role conflicts declared?
 - [ ] Can an actor hold conflicting roles in the same project?
-- [x] Are public institutions kept external to internal project participation under Core v0?
+- [x] Are public authorities kept external to internal project participation in scopes they control under Core v0?
+- [x] Are state-owned operators distinguished from public authorities and checked for control, privilege, and operating-mode conflicts?
 - [x] Are material tutored decisions represented as public governance-resolution objects?
 - [ ] Does role-based reputation match actual responsibility?
 
@@ -572,7 +575,8 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 - [ ] Is there a review date or maturity condition?
 - [ ] Can institutional moderation be audited?
 - [ ] Do tutored planning-scope decisions create Governance Resolution or equivalent public review traces where material?
-- [x] Are public institutions external to internal project competition under Core v0?
+- [x] Are public authorities external to internal project competition in scopes they control under Core v0?
+- [ ] Are authority-controlled operators blocked by default in tutored scopes where their controlling authority defines scope or admissibility?
 - [ ] Is transition scope bounded?
 
 ## 12. Audit checklist
@@ -594,7 +598,7 @@ Highest-priority integration checks:
 
 ```text
 1. Ensure Idea and Project are distinct in all core documents.
-2. Ensure public institutions are external actors, not ordinary internal participants.
+2. Ensure public authorities are external actors in scopes they control, while eligible state-owned operators are treated through the C007 control and privilege boundary rather than by ownership label alone.
 3. Ensure funding is described as commitment until project closure, not free withdrawal.
 4. Ensure fiscalization and evidence production are distinct control roles.
 5. Ensure complaints are formal entities with admission, scope, blocking status, admissibility/referral records, scoped systemic pause, and material/legal boundary.

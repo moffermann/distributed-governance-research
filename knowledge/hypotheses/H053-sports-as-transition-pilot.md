@@ -80,7 +80,7 @@ Required platform record:
   and suggested next path.
 ```
 
-This is compatible with C007 because the ministry is not acting as an internal project actor, executor, fiscalizer, ordinary moderator, or competitor. It is exercising external tutored-scope review under a configured operating mode.
+This is compatible with C007 because the ministry is not acting as an internal project actor, executor, fiscalizer, ordinary moderator, or competitor. It is exercising external tutored-scope review under a configured operating mode. The ministry also should not use that tutored authority to privilege a controlled sports corporation or other authority-linked operator inside the same pilot.
 
 If the authority does not issue a decision within the configured review window, C020 requires a public Review Timeout Resolution under the mode's predeclared timeout policy.
 
@@ -124,7 +124,7 @@ H053 should not be used to claim that:
 - sports must move from tutored mode to open mode;
 - good pilot metrics automatically increase the assigned budget;
 - the sports institution must disappear or cede authority;
-- public institutions may compete internally for project funding;
+- public authorities or authority-controlled operators may compete internally for project funding in the same tutored scope;
 - the platform decides the pace of institutional transition.
 
 Those decisions remain with the country, jurisdiction, or authorized governance process. The platform represents the chosen operating mode, records decisions, exposes evidence, and supports public audit.

@@ -12,7 +12,7 @@ Delegation concentration should be allowed, but made fully transparent. The syst
 
 ## Rationale
 
-If many citizens trust an eligible person, non-state organization, eligible university or expert group, foundation, or local group, the system should not prohibit that delegation merely because it becomes large.
+If many citizens trust an eligible person, eligible organization, eligible university or expert group, foundation, or local group, the system should not prohibit that delegation merely because it becomes large.
 
 However, delegation creates influence. If a delegate accumulates significant authority over civic allocation, complaints, fiscalization, evaluation, or other delegated actions, that concentration must be visible.
 

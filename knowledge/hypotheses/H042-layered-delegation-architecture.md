@@ -4,7 +4,7 @@
 
 Core delegation architecture hypothesis aligned with [[../../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[../../docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]], [[../../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|C011]], [[../../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], [[H033-system-defined-default-allocation-rule|H033]], [[H034-configurable-allocation-profiles|H034]], [[H038-monthly-use-it-or-allocate-it-cycle|H038]], and [[H043-transparent-delegation-concentration|H043]] through [[H049-delegate-resignation-and-notification|H049]].
 
-Core v0 delegation may be assigned to eligible citizens or non-state organizations, with explicit scope, delegate acceptance, visible concentration, represented-weight disclosure, system-generated reports, no automatic compensation, and immediate revocation for future authority. Public institutions are not internal delegates, and AI assistance is not a delegate or civic actor.
+Core v0 delegation may be assigned to eligible citizens or eligible organizations, with explicit scope, delegate acceptance, visible concentration, represented-weight disclosure, system-generated reports, no automatic compensation, and immediate revocation for future authority. Public authorities are not internal delegates in scopes they control, and AI assistance is not a delegate or civic actor.
 
 For budget delegation, the citizen must have selected or acknowledged a base allocation profile or fallback rule before delegation becomes active. If delegation is revoked, rejected, expired, or resigned, that previously selected base rule resumes for future allocation.
 
@@ -16,7 +16,7 @@ Delegation of civic participation should be flexible but layered, so citizens ca
 
 Not every citizen will want to review projects, configure allocation rules, evaluate evidence, or participate directly in every governance decision.
 
-Delegation makes the system viable by allowing citizens to participate through trusted eligible citizens or non-state organizations. Automatic allocation profiles and configured allocation rules also support low-friction participation, but they are not delegates or civic actors.
+Delegation makes the system viable by allowing citizens to participate through trusted eligible citizens or eligible organizations. Automatic allocation profiles and configured allocation rules also support low-friction participation, but they are not delegates or civic actors.
 
 However, excessive delegation options can make the system difficult to use. The interface should therefore provide simple defaults and deeper configuration only when requested.
 
@@ -88,7 +88,7 @@ Allowed:
 
 ```text
 Delegate my sports allocation to a trusted citizen.
-Delegate my education allocation to a non-state civic organization.
+Delegate my education allocation to an eligible civic organization.
 Ask AI assistance to explain the options before deciding.
 Use an allocation profile for local youth sports as an automatic rule, not as a delegate.
 ```
@@ -96,11 +96,11 @@ Use an allocation profile for local youth sports as an automatic rule, not as a 
 Not allowed in Core v0:
 
 ```text
-Delegate my allocation to the Ministry of Sports as an internal delegate.
+Delegate my allocation to the Ministry of Sports as an internal delegate in a scope it controls.
 Delegate my funding decisions to an AI guide as if it were a representative.
 ```
 
-Public institutions may have external implementation roles under C007, and AI may assist under C008. Neither becomes the internal actor exercising delegated civic authority.
+Public authorities may have external implementation roles under C007, and AI may assist under C008. Neither becomes the internal actor exercising delegated civic authority.
 
 Allocation profiles are also not civic actors. They are citizen-configured rules that may operate when no active delegation governs the same balance or scope, and they provide continuity when budget delegation ends.
 
@@ -108,12 +108,12 @@ Allocation profiles are also not civic actors. They are citizen-configured rules
 
 ### 1. Simple delegation
 
-The citizen can delegate a broad budget allocation scope to a trusted eligible citizen or non-state organization.
+The citizen can delegate a broad budget allocation scope to a trusted eligible citizen or eligible organization.
 
 Example:
 
 ```text
-Delegate my civic allocation to Non-State Organization X.
+Delegate my civic allocation to Eligible Organization X.
 ```
 
 This should be available as a quick action, but budget delegation should not become active until the citizen has a base allocation profile or fallback rule.
@@ -275,7 +275,7 @@ Delegation should be:
 - not a money-ownership transfer;
 - not an automatic allocation profile;
 - not an AI actor;
-- not an internal public-institution role;
+- not an internal public-authority role in a scope the authority controls;
 - simple in the first version, with more detailed time-bound and custom controls left for later versions.
 
 ## Principle
@@ -284,4 +284,4 @@ Delegation should be:
 
 ## Remaining design questions
 
-Participation and delegation hypothesis aligned with C007, C008, C011, C023, H033, H034, H038, and H043-H049. Extends H025, H034 and H041. Remaining design work belongs mostly to implementation detail and future extensions: delegate eligibility checks, organization verification, gray-zone public-institution boundary enforcement, allocation-profile governance, AI assistance boundaries, cap configuration, advanced scoped delegation, time-bound delegation, and paid delegation markets.
+Participation and delegation hypothesis aligned with C007, C008, C011, C023, H033, H034, H038, and H043-H049. Extends H025, H034 and H041. Remaining design work belongs mostly to implementation detail and future extensions: delegate eligibility checks, organization verification, public-authority/operator boundary enforcement, allocation-profile governance, AI assistance boundaries, cap configuration, advanced scoped delegation, time-bound delegation, and paid delegation markets.

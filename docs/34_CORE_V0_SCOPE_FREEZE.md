@@ -40,17 +40,18 @@ Citizen
 Organization
 ```
 
-Organization is a neutral umbrella for non-state collective actors such as companies, nonprofits, universities, clubs, associations, cooperatives, unions, NGOs, local groups, and similar entities.
+Organization is a neutral umbrella for eligible collective actors such as companies, nonprofits, universities, clubs, associations, cooperatives, unions, NGOs, local groups, concessionaires, state-owned operators where eligible, and similar entities.
 
-Organization type is an attribute, not a separate actor class.
+Organization type, ownership, control, and authority relationships are attributes, not separate actor classes by default.
 
 Integrated C007 correction:
 
 ```text
-Core v0 internal organizations exclude public institutions.
+Core v0 excludes public authorities from internal roles in any scope where they exercise authority.
+State-owned or publicly owned operators may be eligible only when the active C007 boundary is satisfied.
 ```
 
-Public institutions remain external legal, budgetary, auditing, regulatory, or infrastructure actors. They do not propose, execute, fiscalize, moderate, or compete for distributed project financing inside Core v0.
+Public authorities remain external legal, budgetary, auditing, regulatory, tutored-scope, or infrastructure actors. They do not use authority over a scope to propose, execute, fiscalize, moderate, or compete for distributed project financing inside that same scope. State-owned operators may participate as ordinary eligible organizations only where they disclose control relationships, receive no privileged approval or review path, and accept the same accountability rules as other operators.
 
 ### 2. Role model
 
@@ -69,7 +70,7 @@ Core roles:
 - affected party;
 - delegator;
 - delegate;
-- moderator where protocol-defined and not a public institution acting as an internal participant;
+- moderator where protocol-defined and not a public authority acting as an internal participant in a scope it controls;
 - evaluator where enabled.
 
 Roles are accumulable unless conflict rules prevent it.
@@ -400,7 +401,7 @@ AI-generated summaries or warnings must be visibly labeled, traceable, and corre
 
 Core v0 includes flows for funding, following, fiscalizer offers, fulfillment evidence production, comments/questions, complaints, delegation, and automatic allocation profiles.
 
-Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public institutions acting as internal project participants.
+Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public authorities acting as internal project participants in scopes they control.
 
 Full personal AI guides are Extension v1+. Core v0 only defines the compatibility boundary: a connected personal guide may summarize, compare, translate, draft, warn, and help configure choices, but it cannot become a delegate, civic actor, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
 
@@ -694,7 +695,8 @@ These depend on the implementing jurisdiction:
 - privacy standards;
 - procurement compatibility;
 - institutional moderation authority;
-- any departure from the Core v0 rule that public institutions remain external to internal project participation;
+- any departure from the Core v0 rule that public authorities remain external to internal project participation in scopes they control;
+- eligibility rules for state-owned or publicly owned operators where they are not exercising authority;
 - sector chosen for pilot;
 - official budget percentage migrated to the system;
 - sanctions and recovery mechanisms;
@@ -711,7 +713,7 @@ Core v0 does not solve:
 - all macroeconomic effects;
 - final constitutional design;
 - universal moral ranking of all public values.
-- public institutions as internal competitors for distributed project financing under the Core v0 baseline.
+- public authorities or authority-controlled operators as internal competitors for distributed project financing in the same controlled scope under the Core v0 baseline.
 
 ## Immediate next use of this freeze
 

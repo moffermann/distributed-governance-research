@@ -82,7 +82,7 @@ This prevents:
 - fraudulent funding;
 - manipulation.
 
-### 2. Public institutional identity
+### 2. Public role and institutional identity
 
 Required for actors who exercise formal institutional or economic roles:
 

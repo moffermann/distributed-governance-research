@@ -73,7 +73,7 @@ personal allocation authority over non-withdrawable public-purpose funds
 
 ## Individual allocation amount
 
-If a public institution, authority, or protocol assigns a percentage of a public budget to distributed allocation, the system must still define how much of that assignable pool corresponds to each eligible citizen.
+If a public authority, institutional administrator, or protocol assigns a percentage of a public budget to distributed allocation, the system must still define how much of that assignable pool corresponds to each eligible citizen.
 
 Core v0 should not impose one universal formula. The formula should be configured by the competent authority, institutional administrator, protocol, or country implementation, and should be public, versioned, auditable, and explainable to citizens.
 
@@ -134,7 +134,7 @@ Example:
 30% weighted by territorial priority or social vulnerability
 ```
 
-This preserves a simple universal base while allowing a public institution to express a legitimate policy priority.
+This preserves a simple universal base while allowing a competent public authority or protocol to express a legitimate policy priority.
 
 ## Allocation Amount Provider
 

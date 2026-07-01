@@ -677,7 +677,7 @@ A project may be linked to:
 - Financial Assurance Profile;
 - Guarantee Materialization Records.
 
-Public institutions are not ordinary internal project actors in Core v0. They may appear as external legal, budgetary, auditing, regulatory, permitting, or infrastructure references, but they do not propose, execute, fiscalize, moderate, or compete for distributed project financing inside the Core v0 baseline.
+Public authorities are not ordinary internal project actors in Core v0 for scopes they control. They may appear as external legal, budgetary, auditing, regulatory, permitting, tutored-scope, or infrastructure references, but they do not use that authority position to propose, execute, fiscalize, moderate, or compete for distributed project financing in the same scope. State-owned or publicly owned operators may appear as project actors only where the C007 public-authority/operator boundary is satisfied.
 
 ## Project states
 

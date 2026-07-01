@@ -87,7 +87,8 @@ These questions belong to the implementing country or jurisdiction, not the core
 - when to increase or reduce distributed budget share;
 - what laws must be changed;
 - which institution operates or hosts the platform;
-- whether a country deliberately departs from Core v0 by allowing public institutions to act inside the platform;
+- whether a country deliberately departs from Core v0 by allowing public authorities to act internally in scopes they control;
+- eligibility rules for state-owned or publicly owned operators where they are not exercising public authority;
 - what external datasets are used for comparison;
 - what political adoption pace is chosen;
 - what sector-specific KPIs are used;

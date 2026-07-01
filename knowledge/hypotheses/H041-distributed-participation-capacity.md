@@ -4,7 +4,7 @@
 
 Core participation-capacity hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]], [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], and the Core v0 delegation baseline in [[H042-layered-delegation-architecture|H042]] through [[H049-delegate-resignation-and-notification|H049]].
 
-Participation capacity can be distributed and fundable without turning public institutions, AI systems, support providers, automatic allocation profiles, or delegates into interchangeable concepts. Support work may be funded as ordinary transparent projects. Delegated authority remains a separate scoped authorization to eligible citizens or non-state organizations. AI remains assistance infrastructure. Public institutions remain external to internal Core v0 project participation.
+Participation capacity can be distributed and fundable without turning public authorities, AI systems, support providers, automatic allocation profiles, or delegates into interchangeable concepts. Support work may be funded as ordinary transparent projects. Delegated authority remains a separate scoped authorization to eligible citizens or eligible organizations. AI remains assistance infrastructure. Public authorities remain external to internal Core v0 project participation in scopes they control.
 
 ## Hypothesis
 
@@ -47,7 +47,7 @@ Automatic allocation profile:
   The citizen configures a rule or accepts a public default so allocation continues without manual selection.
 
 Delegation:
-  The citizen gives scoped, accepted, revocable authority to an eligible citizen or non-state organization.
+  The citizen gives scoped, accepted, revocable authority to an eligible citizen or eligible organization.
 
 Participation-support project:
   A transparent project helps people understand, translate, document, model, audit, or participate.
@@ -56,7 +56,7 @@ AI assistance:
   AI explains, summarizes, translates, detects risk, suggests, or helps configure, but does not become an actor.
 ```
 
-The same non-state organization may appear in more than one role only if each role remains separate and visible. For example, a community sports association may run a funded help-desk project and also accept delegation from citizens, but the help desk is not an automatic delegation commission and the delegated authority does not arise from the help-desk budget.
+The same eligible organization may appear in more than one role only if each role remains separate and visible. For example, a community sports association may run a funded help-desk project and also accept delegation from citizens, but the help desk is not an automatic delegation commission and the delegated authority does not arise from the help-desk budget.
 
 ## C007 and C008 alignment
 
@@ -66,7 +66,7 @@ Allowed support examples:
 
 ```text
 A neighborhood organization helps residents understand project options.
-A non-state civic organization receives delegated authority after explicit acceptance.
+An eligible civic organization receives delegated authority after explicit acceptance.
 An evidence-support project helps a community document facts.
 An AI assistant explains a project, translates content, or helps configure a profile.
 A participation-support project helps older residents compare sports projects in Macul.
@@ -75,13 +75,13 @@ A participation-support project helps older residents compare sports projects in
 Rejected Core v0 patterns:
 
 ```text
-A public ministry becomes an internal delegate for citizens.
+A public authority becomes an internal delegate for citizens in a scope it controls.
 An AI guide receives delegated allocation authority as if it were a person.
 A support project receives an automatic percentage of all civic allocation delegated to its operator.
 A support provider silently pushes citizens into one preferred delegate without visible relationship disclosure.
 ```
 
-This keeps assistance broad while preserving accountability: delegated authority belongs only to verified eligible actors, while configured profiles apply citizen-selected rules. Neither public institutions acting internally nor AI infrastructure receive delegated civic authority.
+This keeps assistance broad while preserving accountability: delegated authority belongs only to verified eligible actors, while configured profiles apply citizen-selected rules. Neither public authorities acting internally in controlled scopes nor AI infrastructure receive delegated civic authority.
 
 ## Participation support boundaries
 
@@ -100,7 +100,7 @@ Participation-support projects may not:
 - receive hidden delegation commissions;
 - allocate citizen balances unless they also hold an explicit accepted delegation;
 - impersonate citizens;
-- become a public institution acting as an internal Core v0 actor;
+- become a public authority acting as an internal Core v0 actor in a scope it controls;
 - turn AI assistance into final civic authority;
 - hide funding, conflicts, relationships, or recommended delegates;
 - force citizens to delegate instead of funding, following, commenting, or configuring profiles directly.
@@ -126,7 +126,7 @@ The system should include interfaces, explanations, simplified views, delegation
 
 ## Delegation
 
-Delegation is part of the participation architecture, but it is not the same as support. A citizen can delegate participation to trusted citizens or eligible non-state organizations without losing the ability to revoke or change that delegation.
+Delegation is part of the participation architecture, but it is not the same as support. A citizen can delegate participation to trusted citizens or eligible organizations without losing the ability to revoke or change that delegation.
 
 An automatic allocation profile is also not a delegate. It is a configured rule or accepted fallback that acts only under the citizen's selected parameters and may resume when delegation ends.
 
@@ -156,4 +156,4 @@ Remaining design questions:
 - accessibility standards;
 - funding limits for participation support;
 - AI assistance visibility and correction rules in citizen-support contexts;
-- whether country implementations may provide external public assistance without turning public institutions into internal Core v0 actors.
+- whether country implementations may provide external public assistance without turning public authorities into internal Core v0 actors in scopes they control.

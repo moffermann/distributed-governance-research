@@ -2,29 +2,26 @@
 
 ## Status
 
-Superseded for Core v0 by [[../../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]] and clarified by [[../../docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]].
+Refined for Core v0 by [[../../docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[../concepts/public-authority-operator-boundary-v0|Public Authority / State-Owned Operator Boundary v0]], and [[../../docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]].
 
-This hypothesis is retained as historical reasoning and as a possible country-specific departure from the Core v0 baseline. It should not guide Core v0 unless the user explicitly reopens C007.
+The original version is superseded as stated. It treated existing public institutions as possible equal internal actors. The refined Core v0 position separates public authorities from state-owned operators.
 
-## Superseding rule
+## Refined rule
 
-Core v0 excludes public institutions from internal project participation.
+Core v0 does not allow a public authority to compete internally in a scope where it exercises authority.
 
-Public institutions cannot propose, execute, fiscalize, act as ordinary internal platform moderators, or compete for distributed project financing inside the system v0.
+Public authorities cannot use legal, budgetary, regulatory, eligibility, admissibility, tutored, fiscal, adjudicative, coercive, or oversight power while also acting as internal project proposer, executor, fiscalizer, ordinary moderator, delegate, or beneficiary of distributed project financing in the same scope.
 
-They may define the legal framework, allocate or remove budget, audit externally, enforce general law, provide country-specific infrastructure such as custody or treasury integration where required, and perform institutional tutored moderation where a configured operating mode grants that authority.
+State-owned or publicly owned operators are different. They may participate as ordinary eligible organizations only where the active C007 boundary is satisfied.
 
-## Institutional tutored moderation
-
-Under tutored mode, the public authority does moderate projects in practical terms.
-
-The distinction is not whether the authority moderates. The distinction is how and from which position it moderates.
+## Public authority exclusion
 
 Not allowed:
 
 ```text
-The ministry enters the platform as an ordinary internal moderator,
-silently approves or rejects projects, competes for the same funds,
+The ministry enters the platform as an ordinary internal actor,
+silently approves or rejects projects,
+competes for the same funds,
 or uses moderation while also acting as proposer, executor, or fiscalizer.
 ```
 
@@ -41,43 +38,60 @@ If it does not decide within the configured review window,
 the system creates a public Review Timeout Resolution under C020.
 ```
 
+This is moderation in practical terms, but it is external tutored-scope authority. It does not make the ministry an internal project actor, ordinary moderator, executor, fiscalizer, delegate, or competitor.
+
+## State-owned operator eligibility
+
+Earlier Core v0 language excluded state-owned entities by default. That was too broad.
+
+A state-owned company, public enterprise, municipally owned company, public utility, or publicly controlled service company may be eligible as an ordinary operator when:
+
+- it is not exercising public authority in the same scope;
+- it is not controlled by the authority that decides admissibility or Planning Scope in a tutored mode;
+- ownership, control, subsidy, guarantee, concession, and regulatory relationships are declared;
+- it receives no privileged approval, fiscalization, disbursement, or review path;
+- it accepts the same value floors, antivalue ceilings, guarantees, fulfillment/control evidence, fiscalization, complaint, revocation, and role-specific reputation rules as private or civic operators.
+
 Example:
 
 ```text
-The Ministry of Sports opens 5% of its budget under tutored mode.
-A civic organization proposes a multi-court complex in Macul.
-The ministry already has an approved traditional project
-for the same facility in the same location.
-
-The ministry may reject the platform project for duplication,
-but the rejection must be a public Governance Resolution
-with responsible authority, reason, applied scope rule,
-review date, affected project, and suggested next path.
+A state-owned sanitary company competes in an open mode against private
+concessionaires to operate a service project.
 ```
 
-This is moderation, but it is institutional tutored moderation. It does not make the ministry an internal project actor, ordinary moderator, executor, fiscalizer, or competitor.
+This may be allowed if the operator has no privileged authority path and the project is evaluated under the same accountability architecture.
+
+Counterexample:
+
+```text
+A ministry controls a tutored sports pilot and its controlled public
+sports corporation competes as executor inside that same pilot.
+```
+
+This is excluded by default because the authority family is judge and party.
 
 ## Historical rejected hypothesis
 
-Earlier version allowed the incumbent public institution to participate internally under equal rules.
+Earlier H056 allowed incumbent public institutions to participate internally under equal rules.
 
-This is no longer the Core v0 position.
+That broad claim remains rejected.
 
-## Historical rationale
+Equal formal rules do not remove the deeper conflict when the same authority family controls legal mandate, budget, Planning Scope, admissibility, review timing, regulatory pressure, or tutored-mode decisions.
 
-The earlier version tried to solve institutional privilege by equal treatment: if an incumbent institution entered the system, it would have to follow the same transparency, funding, evidence, fiscalization, reputation, conflict-disclosure, complaint, and revocation rules as everyone else.
+The refined solution is not blanket public/private exclusion. It is functional separation:
 
-C007 rejects that approach for Core v0 because equal formal rules do not remove the deeper conflict: a public institution may still hold external authority, legal mandate, budgetary power, administrative influence, or tutored-mode control while competing inside the same platform.
-
-The current Core v0 solution is exclusion from internal project participation, not equalized internal participation. Tutored moderation is treated separately as an institutional authority function that must be public, time-bounded, reasoned, and auditable.
+```text
+Public authority -> external authority role.
+State-owned operator -> possible internal organization only if conflict checks pass.
+```
 
 ## Measurement caveat retained for country departures
 
-If a country deliberately departs from Core v0 and allows institutional internal participation, that participation should be highly visible in observability metrics so evaluators can distinguish public-institution execution from non-institutional execution.
+If a country deliberately departs from Core v0 and allows a public authority to participate internally in a scope it controls, that participation should be highly visible in observability metrics so evaluators can distinguish authority-linked execution from ordinary operator execution.
 
-Such a departure should also preserve independent fiscalization and should not allow the institution to fiscalize itself.
+Such a departure should preserve independent fiscalization and should not allow the authority or its controlled operator to fiscalize itself.
 
-Any country-specific departure that allows internal public-institution participation should be explicit, justified, and distinguishable from Core v0. It should not be confused with allowed institutional tutored moderation.
+Any country-specific departure should be explicit, justified, independently reviewed where possible, and distinguishable from Core v0. It should not be confused with allowed institutional tutored moderation or with eligible state-owned operator participation in non-conflicted scopes.
 
 ## Personnel transition is out of core scope
 
@@ -89,6 +103,7 @@ The implementing state decides, according to its laws, labor rules, public admin
 - move into support, training, or assistance functions;
 - move into country-defined institutional roles outside the Core v0 internal actor baseline;
 - move into oversight roles where appropriate;
+- transition to public enterprises or operators;
 - transition to other functions;
 - remain outside the pilot.
 
@@ -96,8 +111,8 @@ The model can provide transparency and metrics, but it should not prescribe pers
 
 ## Current principle
 
-> Core v0 keeps public institutions outside internal project participation. In tutored mode, a public authority may moderate eligibility, scope, duplication, or compatibility as an institutional tutored authority, but every material decision or timeout must be public, traceable, and auditable. Personnel transition belongs to the implementing state, not the core architecture.
+> Core v0 excludes public authorities from internal participation in scopes they control. It may allow state-owned operators as ordinary eligible organizations where ownership/control relationships are declared, no authority privilege exists, and the same accountability rules apply.
 
 ## Historical status
 
-Transition-design hypothesis. Superseded as a Core v0 rule by C007.
+Transition-design hypothesis. Broad equal internal participation by public authorities remains superseded by C007. State-owned operator eligibility is now handled by the public-authority/operator boundary.
