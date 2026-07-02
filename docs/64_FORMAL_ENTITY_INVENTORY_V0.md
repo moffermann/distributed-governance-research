@@ -480,6 +480,26 @@ Tutored
 Semi-open
 Open
 Suspended
+Mode change proposed
+Mode change under review
+Mode change rejected
+Mode change resolution issued
+Transition rule published
+Submitted for tutored review
+Review window open
+Governance resolution issued
+Review timeout resolution issued
+Timeout policy effect pending
+Visibility only
+Escalated
+Community override open
+Automatic approval check
+Approved for publication
+Rejected
+Reformulation requested
+Additional information required
+Outside scope
+Closed with no opening
 ```
 
 ## 13. Macul multi-court example
