@@ -260,6 +260,9 @@ Minimum records:
 
 ```text
 public functions by operating mode
+planning scopes with essential-service protection
+underfunded protected scopes
+continuity targets changed
 governance resolutions issued
 projects approved under tutored review
 projects rejected under tutored review
@@ -276,6 +279,7 @@ Purpose:
 
 ```text
 Show whether tutored governance is operating transparently or becoming silent gatekeeping.
+Show whether protected essential scopes are being starved, overprotected, or revised without trace.
 ```
 
 ## H. Rule-change and protocol trace metrics

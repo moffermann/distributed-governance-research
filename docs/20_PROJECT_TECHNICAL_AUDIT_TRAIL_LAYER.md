@@ -240,6 +240,9 @@ Examples:
 - Planning Scope reference changed;
 - project declared outside active scope;
 - reclassification suggested;
+- essential service protection status changed;
+- protected floor, service-provision lane, planning-continuity target, or funding-lane treatment changed;
+- underfunded protected scope indicator changed;
 - Primary Responsibility Anchor edited;
 - value icons added or removed;
 - value thesis edited;
@@ -251,6 +254,8 @@ Examples:
 Layer 5 should make clear whether a project changed what it promised after receiving support.
 
 For tutored or semi-open modes, Layer 5 should show the scope source and any Governance Resolution or review trace used to decide that a project is inside scope, outside scope, duplicate, or in need of reclassification.
+
+For essential or continuity-sensitive scopes, Layer 5 should also preserve the protected floor, distributed service lane, continuity target, planning period, interruption tolerance where applicable, funding-lane treatment, underfunding indicator, and any Governance Resolution, Administrative Rule Change, or equivalent record that revised the target.
 
 ## 2a. Value-Antivalue Profile history
 
@@ -849,6 +854,8 @@ For threshold policy decisions, Layer 5 should preserve:
 - document acceptability reviewer or authority where applicable;
 - admissibility review status where applicable;
 - affected-party mapping or consultation requirements where applicable;
+- essential-service protection treatment where applicable;
+- protected floor, service lane, planning-continuity target, reserve/default/non-assignable treatment, and underfunding indicator where applicable;
 - Required Evidence Package requirement and status where applicable;
 - Project Legitimacy Profile requirement and status where applicable;
 - citizen-facing explanation;

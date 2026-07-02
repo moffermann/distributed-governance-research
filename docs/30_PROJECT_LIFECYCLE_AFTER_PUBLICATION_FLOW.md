@@ -121,6 +121,7 @@ This check should confirm:
 - Required Evidence Package is complete where the active policy requires it;
 - required Project Legitimacy Profile conditions are complete or explicitly marked not required;
 - affected-party mapping, notification, observation-window, consultation, or plan-review Readiness Evidence is submitted and reviewed where required;
+- Essential Service Protection treatment is satisfied where the active Planning Scope requires a protected floor, service lane, continuity target, reserve-backed rule, or underfunding visibility;
 - no unresolved material warning is hidden behind a favorable citizen-facing label such as `almost funded`, `approved`, `recommended`, or `execution-ready`;
 - conditional approvals identify approving role or authority, criterion source, scope, date or version, and remaining conditions where material;
 - the Value Verification Package has no unresolved A004 evidence-coverage gaps for value floors, formal secondary values, antivalue ceilings, material value claims, or relevant metrics;
@@ -156,6 +157,8 @@ For Core v0, assurance is not limited to construction. A care-service project, s
 For phased projects, execution-ready is phase-sensitive. A parent project may collect construction funding while the design phase is pending, but the construction phase does not become execution-ready and construction funds cannot be released until the design phase gate is accepted.
 
 Where a design or preparation phase has affected-party legitimacy conditions, execution-ready also depends on the required affected-party map, community-consultation Readiness Evidence, unresolved-objection handling, and independent corroboration or fiscalizer/reviewer acceptance defined by the active Threshold Policy. A fully funded phase may therefore remain not execution-ready.
+
+Where a project belongs to an essential or continuity-sensitive scope, execution-ready should also confirm that the project is in an eligible funding lane and does not weaken the protected floor, continuity target, or beneficiary-protection conditions. If a new authority has revised the planning target, the project should reference the public rule-change record that governs the transition.
 
 Supplemental control funding after execution-ready does not reopen this transition by default. A project may remain execution-ready while additional control-only funding is reserved for one secondary fiscalizer, fiscalization audit, or distinct fulfillment/control evidence work. Any blocking effect from supplemental control must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
 

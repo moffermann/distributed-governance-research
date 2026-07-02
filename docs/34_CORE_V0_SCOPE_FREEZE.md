@@ -171,6 +171,14 @@ Rule:
 
 > Every financeable project must align with an active Planning Scope. Core v0 requires the scope used for eligibility to be visible, versioned, and auditable, but it does not define the full mechanism for constructing a national, regional, communal, or thematic roadmap.
 
+Essential service protection rule:
+
+> Where a Planning Scope affects essential guarantees, continuity, emergency capacity, redistribution, vulnerable beneficiaries, universal access, or low-visibility groups, it should identify the protected guarantee floor, service-provision lane, planning-continuity target where applicable, funding-lane treatment, underfunding indicator, and cream-skimming safeguards. Essential service protection does not exclude distributed service provision; it prevents essential floors and continuity targets from being hidden inside popularity cycles or central political discretion.
+
+Rule-change rule:
+
+> A government, authority, protocol, or tutored administrator may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace that states effects on existing projects, beneficiaries, continuity obligations, protected floors, and distributed funding lanes.
+
 Rule:
 
 > Project phases are part of Core v0 where they are needed to keep funding, deliverables, verification, and disbursement coherent. A design-and-execution project may receive execution-phase commitments while design is pending, but execution funds cannot be released until the design phase gate is accepted.
@@ -337,6 +345,7 @@ Core v0 includes:
 
 - bounded distributed resource allocation;
 - assignable civic wallet separated from a non-assignable common pool;
+- essential service protection through protected floors, distributed service lanes, and planning-continuity targets where applicable;
 - civic wallet or civic allocation right;
 - public, versioned allocation amount rules;
 - equal allocation for all eligible citizens as a simple explicit formula option;
@@ -359,6 +368,10 @@ Rule:
 Distributed allocation boundary:
 
 > Citizens, delegates, allocation profiles, and public default rules allocate only the configured assignable share of public-purpose resources, and only to eligible projects or protocol-authorized control, complaint-review, mitigation, planning, or fiscalization vehicles inside active scopes. Distributed allocation does not replace the non-assignable common pool, project eligibility review, execution readiness, disbursement review, or fulfillment evaluation.
+
+Essential floor boundary:
+
+> A protected essential floor may be non-assignable, reserve-backed, default-assigned, or otherwise protected by the active Planning Scope, while the service-provision lane may still be opened to eligible distributed projects. Ordinary citizen funding can improve, complement, expand, or compete in service delivery, but it should not be the only source of a declared minimum guarantee where the scope defines one.
 
 Phase funding rule:
 

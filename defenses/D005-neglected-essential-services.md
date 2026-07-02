@@ -14,23 +14,29 @@ Phase 3 paired review completed. Accepted resolution: `docs/71_ESSENTIAL_SERVICE
 
 The attack argues that distributed allocation may favor visible, emotionally salient, organized, local, or low-conflict projects while neglecting essential services, low-visibility populations, continuity functions, emergency reserves, redistribution, maintenance, or universal guarantees.
 
+The stronger version also recognizes that centralized political allocation already creates similar failures: a change in government can redirect budgets toward a new agenda and leave services such as older-adult care continuity underfunded for years despite substantial citizen demand.
+
 ## Objective evaluation
 
 - Classification: founded as a scope and implementation risk.
 - Why it is founded: citizen attention, delegation, and discovery can underfund diffuse, unpopular, technical, or long-term needs.
-- Why it is not fatal to the architecture: the model explicitly bounds distributed allocation to a configured assignable share and preserves a non-assignable common pool for functions that should not depend on popularity or monthly attention.
+- Why it is not fatal to the architecture: the model explicitly bounds distributed allocation to a configured assignable share, preserves protected floors or reserve-backed baselines for functions that should not depend only on popularity, and can expose planning-continuity targets that centralized politics may hide or revise opaquely.
 - Difference of judgment: medium. Some disagreement will be country-specific: how much budget is assignable, which services are protected, and how essential-service boundaries are defined.
 - Editorial distortion risk: high if the attack forces the project into either "all public functions must be centralized" or "all public spending should be assignable." The project's line is functional-layer separation.
 
 ## Response
 
-The defense is that distributed allocation is bounded, not universal.
+The defense is that distributed allocation is bounded, not universal, and that essential-service protection should be a floor-and-lane test rather than an exclusion of distributed service provision.
 
 The system does not claim that every public budget should become citizen-assignable. It supports distributed resource allocation only for the configured assignable public-purpose share, inside active scopes, eligibility rules, threshold policies, phase gates, evidence, fiscalization, and audit controls.
 
-Essential guarantees, emergency reserves, core justice/security/defense guarantees, macro fiscal obligations, debt service, and other functions that should not depend on popularity can remain in a non-assignable common pool.
+Essential guarantees, emergency reserves, core justice/security/defense guarantees, macro fiscal obligations, debt service, and other functions that should not depend only on popularity can remain in a non-assignable common pool, reserve-backed baseline, default-assigned lane, or equivalent protected funding rule.
 
-For a sports pilot, the fact that local courts receive strong funding should not starve elder care, emergency services, or disability support if those functions are protected by common-pool rules, Planning Scope boundaries, default allocation rules, reserve pools, or continuity classifications.
+For a sports pilot, the fact that local courts receive strong funding should not starve elder care, emergency services, or disability support if those functions are protected by common-pool rules, Planning Scope boundaries, default allocation rules, reserve pools, continuity classifications, and public planning targets.
+
+This does not mean that elder care, disability services, urgent care, or similar services must be centrally operated. The public/legal guarantee layer can be protected while the service-provision layer remains contestable and financeable through eligible projects, providers, concessions, nonprofits, private firms, cooperatives, state-owned operators where eligible, or community organizations under equal evidence, fiscalization, continuity, complaint, revocation, and reputation rules.
+
+Compared with today's model, the distributed layer can also make neglected services more visible. If the current authority deprioritizes older-adult care, citizens who disagree can fund eligible care projects directly, while the system still exposes whether the protected continuity target is underfunded.
 
 ## Project-document basis
 
@@ -55,10 +61,12 @@ For a sports pilot, the fact that local courts receive strong funding should not
 Define an `Essential Service Protection` test for Planning Scopes:
 
 - does the scope affect universal guarantees, vulnerable beneficiaries, continuity, emergency capacity, redistribution, or low-visibility groups;
+- what protected floor and planning-continuity target apply, if any;
 - which part of the function is public/legal guarantee versus service provision;
 - which budget lanes are non-assignable, default-assigned, reserve-backed, or citizen-assignable;
 - what underfunding indicator should be visible;
 - whether providers are prevented from cream-skimming easy beneficiaries.
+- whether a change in roadmap or government priority must create a Governance Resolution, Administrative Rule Change, or equivalent public trace before weakening the target.
 
 ## Applies to
 
@@ -72,9 +80,9 @@ Define an `Essential Service Protection` test for Planning Scopes:
 
 ## Defense strength and residual risk
 
-Defense strength: strong against the claim that the architecture requires essential services to depend on popularity. Moderate against country-level misuse.
+Defense strength: stronger after A005 refinement. The architecture now protects essential floors and planning-continuity targets while preserving distributed service provision and citizen capacity to fund centrally neglected needs. Moderate against country-level misuse.
 
-Residual risk: an implementing authority may push hard obligations into assignable funding to avoid responsibility. That should be visible as a governance and budgetary design failure, not hidden as citizen choice.
+Residual risk: an implementing authority may push hard obligations into assignable funding to avoid responsibility, or may overprotect scopes to block competition. A later government may also try to revise continuity targets for political reasons. These should be visible as governance and budgetary design failures, not hidden as citizen choice.
 
 ## Decision
 

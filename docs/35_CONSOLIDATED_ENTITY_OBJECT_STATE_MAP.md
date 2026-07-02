@@ -311,6 +311,12 @@ Attributes:
 - excluded or out-of-scope project types where relevant;
 - territorial level;
 - related budget or allocation boundary where relevant;
+- essential service protection status where relevant;
+- protected guarantee floor where relevant;
+- planning-continuity target, planning period, and interruption tolerance where relevant;
+- service-provision lane classification: citizen-assignable, default-assigned, reserve-backed, non-assignable, or excluded;
+- underfunding indicator for protected low-visibility needs where relevant;
+- cream-skimming or vulnerable-beneficiary safeguard references where relevant;
 - responsible authority or process;
 - effective date;
 - review or expiration date where applicable;
@@ -326,15 +332,24 @@ PlanningScope belongs to OperatingMode or ProtocolVersion where applicable
 PlanningScope may be configured by AdministrativeRuleChange
 PlanningScope may be interpreted by GovernanceResolution in tutored mode
 PlanningScope may be referenced by PrimaryResponsibilityAnchor
+PlanningScope may be affected by Essential Service Protection rules
 ```
 
 Rule:
 
 > Core v0 requires active planning-scope alignment for financeable projects. It does not define the full distributed construction of national, regional, communal, or thematic roadmaps.
 
+Essential-service rule:
+
+> Where a scope affects essential guarantees, continuity, emergency capacity, redistribution, vulnerable beneficiaries, universal access, or low-visibility groups, it should separate the protected public/legal guarantee floor from the distributed service-provision lane. The service lane may remain open to eligible providers, but the minimum floor or planning-continuity target should not depend only on monthly popularity.
+
 Tutored-mode rule:
 
 > In tutored mode, the authority may define or interpret the active Planning Scope, but material scope decisions must be public, versioned, and auditable under C020.
+
+Planning-continuity change rule:
+
+> A change in government, authority, protocol, or operating mode may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace.
 
 ## Primary Responsibility Anchor
 
@@ -502,6 +517,8 @@ Possible threshold dimensions:
 - common-good impact declaration;
 - related-party safeguards;
 - affected-party visibility, mapping, and consultation;
+- essential service protection where the scope affects essential guarantees or continuity;
+- protected floor, reserve-backed, default-assigned, non-assignable, or distributed service-lane treatment where applicable;
 - tutored-scope review;
 - complaint or blocking-condition clearance.
 
@@ -1284,6 +1301,7 @@ Attributes:
 - owner;
 - period;
 - public function, program, or budget scope;
+- budget lane treatment: assignable, default-assigned, reserve-backed, non-assignable, or excluded where applicable;
 - authorized allocation amount;
 - available amount;
 - committed amount;
@@ -1298,6 +1316,10 @@ Attributes:
 Rule:
 
 > Civic allocation is a public allocation right, not private withdrawable cash.
+
+Essential-service boundary:
+
+> A civic wallet allocates only the assignable lane. Protected floors, reserve-backed continuity needs, and non-assignable common-pool functions remain governed by the active Planning Scope, Allocation Amount Rule, Threshold Policy, or country implementation.
 
 Citizen-facing rule:
 
@@ -1315,6 +1337,7 @@ Attributes:
 - amount;
 - source: direct, delegated, automatic profile;
 - funding target: design phase, execution phase, minimum control, supplemental control where applicable;
+- funding lane treatment: ordinary assignable, default-assigned, reserve-backed, protected-floor complement, or excluded where applicable;
 - status;
 - timestamp;
 - commitment and failure-handling rule;

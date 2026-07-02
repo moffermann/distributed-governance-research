@@ -4,7 +4,7 @@
 
 Show the relationship between delegation and automatic allocation, including base-profile continuity, delegation priority, concentration visibility, and revocation.
 
-Related resolutions: C011, C023. Related hypotheses: H042, H043, H044, H045, H046, H047, H048, H049.
+Related resolutions: C011, C023, A005. Related hypotheses: H042, H043, H044, H045, H046, H047, H048, H049.
 
 ```mermaid
 flowchart TD
@@ -31,11 +31,14 @@ flowchart TD
     R --> S[Profile active]
     S --> T{Active delegation governs same balance or scope?}
     T -->|Yes| U[Automatic rule skipped; delegation has priority]
-    T -->|No| V[System allocates by citizen-defined rules]
+    T -->|No| EL{Eligible assignable lane?}
+    EL -->|No: protected floor or excluded lane| X[Skip and report reason]
+    EL -->|Yes| V[System allocates by citizen-defined rules]
     U --> W[Report and audit trail]
+    X --> W
     V --> W
 ```
 
 ## Rule
 
-> Delegation authorizes another actor and has priority within its scope. Budget delegation requires a selected or acknowledged base allocation profile before activation. Automatic allocation applies citizen-defined rules only where no active delegation governs the same balance or scope. If delegation is revoked, rejected, expired, or resigned, the previously selected base rule resumes for future allocation.
+> Delegation authorizes another actor and has priority within its scope. Budget delegation requires a selected or acknowledged base allocation profile before activation. Automatic allocation applies citizen-defined rules only where no active delegation governs the same balance or scope and only inside eligible assignable lanes. It cannot allocate non-assignable protected floors or excluded lanes. If delegation is revoked, rejected, expired, or resigned, the previously selected base rule resumes for future allocation.

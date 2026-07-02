@@ -211,6 +211,19 @@ Before a project can become financeable, it should reference an active Planning 
 
 The Planning Scope defines what kinds of projects are currently open to distributed financing under the relevant public function, operating mode, pilot, protocol, approved roadmap line, or country implementation rule.
 
+Where the scope affects essential guarantees, continuity, emergency capacity, redistribution, vulnerable beneficiaries, universal access, or low-visibility groups, the system should also run the A005 `Essential Service Protection` test. The creator should see whether the project belongs to:
+
+```text
+eligible civic-allocation lane;
+distributed service lane;
+reserve-backed continuity need;
+protected common-pool function;
+underfunded protected scope;
+not civic-assignable.
+```
+
+The test should preserve the distinction between public/legal guarantee and service provision. A care-service project may be eligible for distributed funding even when the minimum continuity floor is reserve-backed or non-assignable.
+
 Example:
 
 ```text
@@ -239,6 +252,8 @@ Possible next steps:
 ```
 
 In tutored mode, the competent authority may define or review planning scope. Material scope decisions should create a Governance Resolution or review trace under C020.
+
+If an authority or later government changes an essential planning target, such as an older-adult care continuity goal, the change should be represented as a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace before it affects project eligibility or funding lanes.
 
 ## 5. Define beneficiaries
 
@@ -697,6 +712,8 @@ Possible threshold dimensions:
 - common-good impact declaration;
 - related-party safeguards;
 - tutored-scope review where the operating mode requires it;
+- essential-service protection where the scope affects guarantees, continuity, emergency capacity, redistribution, vulnerable beneficiaries, universal access, or low-visibility groups;
+- funding-lane treatment: citizen-assignable, default-assigned, reserve-backed, non-assignable, or excluded;
 - absence or resolution of admitted blocking complaints or scoped systemic pauses.
 
 Example:
@@ -835,6 +852,7 @@ Validation dimensions:
 - coherence;
 - Primary Responsibility Anchor clarity;
 - Planning Scope alignment;
+- Essential Service Protection status where the scope affects protected floors, continuity targets, or low-visibility groups;
 - Project Legitimacy Profile completeness where required;
 - beneficiary clarity;
 - value metrics;
@@ -922,6 +940,24 @@ consultation evidence pending
 ```
 
 The preview should also show source-linked approval or review status where material.
+
+Essential or continuity-sensitive scopes should also preview simple scope labels:
+
+```text
+Older-adult home-care visits
+
+Scope:
+Older-adult care continuity 2026-2030
+
+Lane:
+Distributed service lane.
+
+Planning target:
+Maintain minimum home-care continuity for eligible beneficiaries.
+
+Signal:
+Underfunded protected scope.
+```
 
 Example:
 

@@ -113,6 +113,28 @@ Rule:
 
 > A favorable summary should not hide the limits of the approval behind it.
 
+## 3a. Planning scope and essential-service treatment
+
+Layer 4 should show the Planning Scope in citizen language, especially where A005 applies.
+
+Example:
+
+```text
+Planning scope:
+Older-adult care continuity 2026-2030.
+
+This project:
+Eligible distributed service lane.
+
+Protected floor:
+Minimum continuity is reserve-backed outside ordinary project funding.
+
+Current signal:
+Underfunded protected scope.
+```
+
+This prevents two confusions: citizens should not think a service project replaces the whole public guarantee, and authorities should not be able to hide that a protected continuity target remains underfunded.
+
 ## 4. Main responsibility and value promised
 
 Start with the project's main responsibility in citizen language.

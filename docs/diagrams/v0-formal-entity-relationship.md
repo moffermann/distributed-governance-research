@@ -8,7 +8,7 @@ This diagram is a conceptual ERD baseline, not a database schema. It focuses on 
 
 Source baseline: `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
 
-Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002, A003.
+Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002, A003, A004, A005.
 
 ```mermaid
 erDiagram
@@ -69,6 +69,8 @@ erDiagram
     PLANNING_SCOPE {
         string planning_scope_id
         string source
+        string essential_service_status
+        string service_lane_classification
         string status
     }
 
@@ -232,12 +234,14 @@ erDiagram
 
     FUNDING_COMMITMENT {
         string commitment_id
+        string funding_lane
         string commitment_state
     }
 
     CIVIC_WALLET {
         string wallet_id
         string allocation_scope
+        string assignable_lane
     }
 
     FINANCIAL_ORDER {
@@ -527,6 +531,8 @@ erDiagram
     OPERATING_MODE ||--o{ GOVERNANCE_RESOLUTION : produces
     OPERATING_MODE ||--o{ REVIEW_TIMEOUT_RESOLUTION : produces
     GOVERNANCE_RESOLUTION ||--o{ PLANNING_SCOPE : may_interpret
+    GOVERNANCE_RESOLUTION ||--o{ PLANNING_SCOPE : may_revise_essential_target
+    ADMINISTRATIVE_RULE_CHANGE ||--o{ PLANNING_SCOPE : may_revise_essential_target
     REVIEW_TIMEOUT_RESOLUTION ||--o{ PROJECT : may_affect
     ADMINISTRATIVE_RULE_CHANGE ||--o{ PROTOCOL_VERSION : updates
     SYSTEM_IMPLEMENTATION_CHANGE ||--o{ PROTOCOL_VERSION : implements
@@ -566,6 +572,7 @@ erDiagram
 - `MaterialInformationClaim` also covers material approval labels, conditions, omissions, source categories, and unresolved warnings. Existing external approval systems may remain external, but their material outputs should be source-linked where they affect citizen decisions.
 - `FiscalizerEligibilityReputationProfile` is contextual to a fiscalization assignment. It explains eligibility criteria, comparable-project reputation, workload, repeat relationships, dependency concentration, warnings, and safeguards; it is not a generic CV, universal score, or automatic selector.
 - `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. A004 requires a coverage status so a narrow metric cannot stand in for unverified value dimensions.
+- A005 is represented as fields and state on `PlanningScope`, not as a new ordinary project role. It requires protected floor, distributed service lane, planning-continuity target, funding-lane treatment, and underfunding visibility where a scope affects essential guarantees or continuity.
 - `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
 - `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.
 - `EvidenceProducerQualificationStandard` declares the qualification, method, instrument/tool, metadata, and report basis needed where a fulfillment/control evidence need supports a hard KPI or formal effect.
@@ -580,6 +587,8 @@ erDiagram
 ```text
 Idea: build multi-courts in Macul
 -> Project: Design and Construction of Multi-Courts in Macul
+-> Planning Scope: sports scope eligible for civic allocation
+-> A005 check: older-adult care continuity, disability service access, and emergency capacity remain protected planning targets outside the sports popularity cycle
 -> Project Phases: Design, then Construction
 -> Metrics: court dimensions, accessibility, bathrooms, public access, noise ceilings
 -> A004 coverage check: dimensions, safety, access, bathrooms/accessibility, public use, and declared noise ceiling each need evidence coverage

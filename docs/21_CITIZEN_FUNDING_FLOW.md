@@ -12,6 +12,8 @@ Funding is one of the central actions of the distributed governance system. The 
 
 Funding is also a bounded allocation action. A citizen can allocate only from the configured assignable civic balance and only to a project, phase lane, control package, complaint-review cost, mitigation activity, or other public-purpose vehicle that is eligible under the active Planning Scope, Threshold Policy, and operating-mode rules.
 
+If the active Planning Scope marks a function as a protected essential floor, reserve-backed continuity need, non-assignable common-pool function, or excluded lane, ordinary citizen funding cannot be routed to that floor as if it were a normal project. Citizens may still fund eligible distributed service-provision projects, complementary improvements, fiscalization, or expansion lanes where the scope marks them as assignable, default-assigned, or otherwise financeable.
+
 For phased projects, funding may be attached to a phase-specific lane. A citizen may fund a design phase, an execution phase, a minimum control package, or supplemental control where allowed.
 
 Execution-phase funding may be accepted while a required design phase is still pending, but it remains reserved or conditional. It cannot be released for construction or execution until the design phase gate is accepted.
@@ -155,6 +157,7 @@ The system should enforce simple rules:
 
 - the citizen cannot assign more than their available civic allocation;
 - the citizen cannot assign more than the project still needs, unless the protocol allows controlled overfunding;
+- the citizen cannot assign ordinary civic-wallet funds to a non-assignable protected floor or excluded lane;
 - the citizen can assign their full available balance;
 - the citizen can cancel before confirming;
 - the system should show the remaining citizen balance after the selected amount.
@@ -241,6 +244,22 @@ Design phase pending review.
 Your contribution is reserved.
 It cannot be released for construction unless the design package is accepted.
 If the design is rejected or materially changes the promise, the active policy defines whether funds return, reassign, remain reserved after reconfirmation, or follow a reformulation rule.
+```
+
+If the project belongs to an essential or continuity-sensitive scope, the summary should expose the lane:
+
+```text
+Scope:
+Older-adult care continuity 2026-2030
+
+Lane:
+Distributed service project.
+
+Protected floor:
+Baseline continuity is reserve-backed outside this contribution.
+
+Current signal:
+Underfunded protected scope.
 ```
 
 ## 4. Funding confirmation
@@ -358,6 +377,8 @@ Funding should remain separate from civic support.
 The system may ask whether the citizen also wants to support the project publicly as a civic signal, but financial amount should not count as extra social legitimacy.
 
 The system should also avoid implying that funding proves affected-party approval. For projects with a required Project Legitimacy Profile, the funding confirmation should preserve labels such as `community consultation evidence pending`, `affected-party issue pending`, or `public access condition unresolved` where applicable.
+
+For essential-service scopes, funding confirmation should also preserve labels such as `eligible distributed service lane`, `reserve-backed continuity need`, `underfunded protected scope`, or `not civic-assignable` where applicable. This prevents citizens from mistaking a distributed service contribution for the whole public guarantee.
 
 Example:
 

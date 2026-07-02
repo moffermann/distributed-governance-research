@@ -83,6 +83,17 @@ You can assign it to projects, delegate it, or let your automatic profile distri
 
 This creates immediate context: the citizen understands that the system is not just informational. They have allocative power.
 
+If the active program includes protected essential scopes, the Home layer may also expose simple signals without turning them into a feed:
+
+```text
+Protected scopes:
+Older-adult care continuity: underfunded protected scope
+Emergency reserve: not civic-assignable
+Disability access services: distributed service lane open
+```
+
+These labels should link to the relevant Planning Scope, not to hidden algorithmic prioritization.
+
 ## B. Urgent now
 
 Layer 0 may show one or two urgent highlighted projects.

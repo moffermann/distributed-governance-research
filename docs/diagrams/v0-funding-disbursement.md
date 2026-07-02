@@ -4,11 +4,13 @@
 
 Show that citizen funding is a commitment and that disbursement is conditional release through milestone, fulfillment evidence, fiscalization, and custody rules.
 
-Related resolutions: C005, C006, C016, H011, H019, A003.
+Related resolutions: C005, C006, C016, H011, H019, A003, A005.
 
 ```mermaid
 flowchart TD
-    A[Citizen finances project] --> B[Funding Commitment]
+    A[Citizen finances project] --> L{Eligible assignable lane?}
+    L -->|No: protected floor or excluded lane| LN[Do not accept ordinary funding; show scope reason]
+    L -->|Yes| B[Funding Commitment]
     B --> C[Committed: not released]
     C --> D{Execution-ready conditions met?}
     D -->|No| C
@@ -40,8 +42,9 @@ flowchart TD
     BL --> N
     PR --> N
     AR --> N
+    LN --> N
 ```
 
 ## Rule
 
-> Funding is commitment. Later-phase funds may be reserved before a phase gate is accepted, but they are not released until the gate passes, required financial assurance is materialized, and the responsible fiscalizer is eligible for the assigned scope with a sufficient report for the claimed effect. A complaint or review blocker must identify affected scope and any systemic pause. Treasury or custody executes protocol-valid orders and may confirm guarantee materialization, but does not decide civic value, project priority, fulfillment evidence validity, or discretionary disbursement.
+> Funding is commitment. Ordinary civic-wallet funding applies only to eligible assignable lanes; protected essential floors, reserve-backed common-pool obligations, or excluded lanes require their own visible rule. Later-phase funds may be reserved before a phase gate is accepted, but they are not released until the gate passes, required financial assurance is materialized, and the responsible fiscalizer is eligible for the assigned scope with a sufficient report for the claimed effect. A complaint or review blocker must identify affected scope and any systemic pause. Treasury or custody executes protocol-valid orders and may confirm guarantee materialization, but does not decide civic value, project priority, fulfillment evidence validity, or discretionary disbursement.

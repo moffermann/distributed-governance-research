@@ -454,6 +454,22 @@ Fiscalization reports must expose sufficiency fields: scope, methodology, eviden
 
 ---
 
+## A005 — Neglected essential services
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`
+
+### Accepted v0 rule
+
+Distributed allocation is bounded and should not move essential guarantees into popularity cycles. Planning Scopes that affect essential guarantees, continuity, emergency capacity, redistribution, vulnerable beneficiaries, universal access, or low-visibility groups should expose an Essential Service Protection test: protected guarantee floor, distributed service-provision lane, planning-continuity target where applicable, funding-lane treatment, underfunding indicator, and cream-skimming safeguards.
+
+This is not an argument for central operation of all essential services. Eligible providers may compete or participate in the distributed service lane under equal evidence, fiscalization, continuity, complaint, revocation, replacement, and reputation rules. The protected floor prevents minimum guarantees from depending only on monthly popularity, while the distributed lane lets citizens finance centrally neglected priorities.
+
+> A change in government or operating authority may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -549,6 +565,9 @@ Fiscalization reports must expose sufficiency fields: scope, methodology, eviden
 - [ ] Is funding clearly a conditional commitment?
 - [ ] Is distributed allocation bounded to the configured assignable public-purpose share rather than the whole public budget?
 - [ ] Are non-assignable common-pool functions protected from popularity, discovery visibility, delegation concentration, and monthly attention effects?
+- [ ] Where essential services are involved, does the Planning Scope distinguish protected floor, distributed service lane, planning-continuity target, and funding-lane treatment?
+- [ ] Are underfunded protected scopes visible without creating hidden algorithmic allocation?
+- [ ] Are ordinary civic-wallet allocations blocked from non-assignable protected floors or excluded lanes?
 - [ ] Are citizen allocation, project eligibility, execution readiness, disbursement approval, and fulfillment evaluation kept separate?
 - [ ] Is funding completion prevented from being displayed as legitimacy, community approval, or affected-party consent?
 - [ ] Is money prevented from going directly to executor before conditions?
@@ -661,6 +680,7 @@ Fiscalization reports must expose sufficiency fields: scope, methodology, eviden
 
 - [ ] Is operating mode visible?
 - [ ] Are active Planning Scopes visible, versioned, and auditable?
+- [ ] Do essential or continuity-sensitive Planning Scopes expose protected floors, distributed service lanes, continuity targets, underfunding indicators, and rule-change records?
 - [ ] Is tutored mode justified?
 - [ ] Is there a review date or maturity condition?
 - [ ] Can institutional moderation be audited?

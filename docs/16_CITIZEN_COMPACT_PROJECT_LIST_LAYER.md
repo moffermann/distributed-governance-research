@@ -164,6 +164,17 @@ Core v0 excludes paid promotion and opaque manual boosting.
 
 Ordering, recommendation, urgency, and funding-progress labels must not suppress unresolved material warnings. If a project has a pending design gate, conditional approval, unresolved Required Evidence Need, material complaint status, missing public-access condition, or legitimacy-profile issue, the compact card should show a short warning with a path to the source.
 
+For essential or continuity-sensitive scopes, compact lists should also preserve scope labels where material:
+
+```text
+distributed service lane
+reserve-backed continuity need
+underfunded protected scope
+not civic-assignable
+```
+
+A project may be eligible for civic funding as a service-provision lane while the minimum public guarantee remains protected outside ordinary allocation.
+
 ## Compact project item
 
 Each project in the list should be displayed as a compact card.

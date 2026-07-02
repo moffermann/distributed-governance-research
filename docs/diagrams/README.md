@@ -39,6 +39,7 @@ The Delegation state diagram now separates base rules, request/acceptance, activ
 The Operating Mode transition state diagram now separates mode changes, tutored review, timeout policies, publication effects, suspension effects, and external authority boundaries.
 The Governance Resolution sequence diagram now separates authority decision, required public fields, timeout records, citizen audit actions, configured clarification or correction paths, audit events, and observability effects.
 The Audit Event schema diagram now separates actor/role context, object reference, transition, source record, rule/version, effect, visibility/privacy, append-only correction, Layer 5 access, and observability projection.
+The planning and ERD diagrams now represent A005 Essential Service Protection as protected floor, distributed service lane, planning-continuity target, funding-lane treatment, underfunded protected scope visibility, and rule-change trace for essential target revisions.
 
 ## Format rule
 

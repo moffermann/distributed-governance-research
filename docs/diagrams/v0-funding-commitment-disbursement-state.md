@@ -12,12 +12,13 @@ Source baseline:
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md`
 - `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`
 - `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`
+- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`
 - `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`
 - `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
 - `docs/diagrams/v0-project-object-state-with-phase-substates.md`
 - `docs/diagrams/v0-complaint-evidence-and-review-state.md`
 
-Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, C005, C006, C016.
+Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, C005, C006, C016, A005.
 
 ## Funding Commitment State Machine
 
@@ -26,7 +27,9 @@ This state machine tracks the committed amount or funding lane. It does not deci
 ```mermaid
 stateDiagram-v2
     [*] --> Available
-    Available --> Committed: funder confirms amount
+    Available --> LaneCheck: funder selects target
+    LaneCheck --> Committed: eligible assignable lane
+    LaneCheck --> Closed: protected floor, non-assignable, or excluded lane
 
     Committed --> Reserved: eligible target and custody reservation accepted
     Committed --> Returned: target invalid before reservation
@@ -191,6 +194,7 @@ stateDiagram-v2
 ## State Rules
 
 - `Committed` means the funder made a serious funding commitment. It is not ordinary support and is not freely withdrawable.
+- `LaneCheck` means the system verifies that the target is an eligible assignable lane. Ordinary civic-wallet funding cannot enter non-assignable protected floors or excluded lanes.
 - `Reserved` means the amount is held for a project, phase lane, control package, complaint-review cost, mitigation activity, or other eligible public-purpose vehicle. It is not released to the executor.
 - `Paused` means a scoped systemic pause affects the relevant funding, disbursement, milestone, phase, budget line, evidence item, or actor relationship. It is platform scope, not necessarily material or legal suspension.
 - `Blocked` means a release cannot proceed until a named blocker is resolved.

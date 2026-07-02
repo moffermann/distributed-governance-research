@@ -33,7 +33,7 @@ allocation judgment = citizen, delegate, allocation profile, or protocol default
 eligibility boundary = active Planning Scope, Threshold Policy, and applicable operating mode define what may receive financeable status
 execution readiness = project satisfies executor, budget, control, guarantee, phase, evidence, and assurance conditions
 disbursement judgment = milestone, fiscalization, fulfillment/control evidence, and review rules govern release
-common pool protection = non-assignable resources protect functions that cannot depend on popularity or monthly attention
+common pool / protected floor = non-assignable, reserve-backed, default-assigned, or equivalent resources protect essential guarantees and continuity targets that cannot depend only on popularity or monthly attention
 ```
 
 ## Mechanism
@@ -58,7 +58,8 @@ Distributed resource allocation in Core v0 is bounded by five layers:
 2. **Planning and eligibility boundary.** Financeable projects must align with an active `Planning Scope` and satisfy the applicable `Threshold Policy`. Out-of-scope proposals may remain Ideas, drafts, reformulation candidates, or planning inputs, but they are not execution-financeable by default.
 3. **Citizen allocation layer.** Citizens may allocate directly, delegate, select an allocation profile, configure a custom profile, or rely on a public default rule. These are allocation mechanisms, not hidden project-approval authorities.
 4. **Signal separation.** Funding, social support, justified objection, and formal complaint remain separate. Funding improves financial feasibility but does not buy social legitimacy or replace complaint, fiscalization, or review processes.
-5. **Anti-neglect safeguards.** The system must preserve default allocation rules, official profiles, strategic categories, near-completion categories, control/fiscalization lanes, observability of underfunded areas, and non-assignable pools so low-visibility but essential functions are not silently starved.
+5. **Anti-neglect safeguards.** The system must preserve default allocation rules, official profiles, strategic categories, near-completion categories, control/fiscalization lanes, observability of underfunded areas, planning-continuity targets, and non-assignable or reserve-backed protected floors so low-visibility but essential functions are not silently starved.
+6. **Essential service floor-and-lane rule.** Essential or continuity-sensitive scopes should distinguish the public/legal guarantee floor from the contestable service-provision lane. The floor may require common-pool, reserve-backed, default-assigned, or excluded treatment; the service lane may still be open to eligible distributed providers under evidence, fiscalization, continuity, complaint, revocation, replacement, and reputation rules.
 
 ## Macul example
 
@@ -76,6 +77,12 @@ There are active objections about court dimensions.
 ```
 
 The audit layer preserves the detailed planning-scope rule, threshold policy, phase gate, evidence needs, fiscalization package, objections, complaints, and funding-status records.
+
+Older-adult care example:
+
+A Planning Scope may define `Older-adult care continuity 2026-2030` with a minimum continuity floor, annual coverage target, interruption tolerance, and underfunding indicator. The protected floor should not disappear because the government of the day has a different agenda, and a later authority should revise it only through a public, versioned, auditable rule-change path.
+
+The same scope may still open a distributed service lane for eligible home-care providers, transport services, food support, residence fiscalization, caregiver support, or complementary care projects. This lets citizens finance care priorities that are neglected by centralized politics while preventing the minimum continuity guarantee from depending only on monthly popularity.
 
 ## Relationship to later hypotheses
 
@@ -97,7 +104,7 @@ H002 does not claim that:
 - funding alone proves legitimacy;
 - algorithms should decide public value;
 - citizen allocation replaces fiscalization, evidence, courts, regulators, or competent authorities;
-- low-visibility services should depend entirely on citizen attention;
+- low-visibility services or essential floors should depend entirely on citizen attention;
 - distributed allocation will outperform centralized allocation without good information, role incentives, evidence, fiscalization, and accountability.
 
 ## Status

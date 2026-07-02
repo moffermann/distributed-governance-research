@@ -123,6 +123,7 @@ Antes de decidir:
 Por qué considerarlo:
 - alineado con el plan deportivo comunal;
 - beneficia a niños y comunidad local.
+- pertenece a un ámbito protegido subfinanciado, si aplica.
 
 Qué revisar:
 - diseño todavía pendiente de aprobación;
@@ -327,6 +328,7 @@ Examples:
 - faltan condiciones de cierre;
 - el proyecto requiere reformulación;
 - existen alertas relevantes sobre el proyecto.
+- el proyecto pertenece a un scope esencial y su carril de financiamiento o piso protegido requiere explicación.
 
 Alerts should be concise and clickable.
 

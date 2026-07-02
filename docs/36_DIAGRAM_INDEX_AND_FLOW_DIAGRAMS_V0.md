@@ -90,7 +90,7 @@ Generated SVG outputs:
 The diagram set now reflects these accepted C001-C025 corrections:
 
 - H001: diagrams should separate functional layers rather than treating a sector, institution, or public/private label as one block.
-- H002: funding and allocation diagrams should show bounded assignable public-purpose resources, not unconstrained public budget allocation.
+- H002/A005: funding and allocation diagrams should show bounded assignable public-purpose resources, protected essential floors, distributed service lanes, reserve-backed or default-assigned continuity treatment where applicable, and non-assignable common-pool boundaries, not unconstrained public budget allocation.
 - H003: trust diagrams should show incentives, accountable claims, evidence context, contradiction, review, consequences, and auditability rather than assuming distributed actors are trustworthy by default.
 - C001: `Idea` is separate from `Project`; ideas are not financeable.
 - H016/C002/C013: fiscalization is distributed in available actors and fulfillment/control evidence sources, but responsible control is protocol-selected, conflict-checked, risk-adjusted, capped, and closed in parallel with execution funding.
@@ -101,7 +101,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C008/C016: AI assists validation; protocol rules and responsible actors remain accountable.
 - H008: the full accountability loop runs from accepted promise through fulfillment/control evidence, formal evaluation, Project Closure Accountability Record, financial closure, and role-specific reputation.
 - C009: citizen layers translate complexity progressively.
-- H009: financeable projects must align with an active Planning Scope, while full distributed roadmap construction through votable planning areas remains an open extension question.
+- H009/A005: financeable projects must align with an active Planning Scope, while full distributed roadmap construction through votable planning areas remains an open extension question. Where a scope affects essential guarantees or continuity, diagrams should expose protected floor, distributed service lane, planning-continuity target, funding-lane treatment, underfunding indicator, and public rule-change trace.
 - H018: project value theses connect to value verification packages, fulfillment evidence needs, and evidential contracts before publication as financeable projects.
 - H019: design, execution, and fiscalization remain distinct responsibilities; Project Phases may gate later-phase funding release in integrated design-and-execution projects.
 - H020/H027: proportional burden and threshold policies define required documents, admissibility review, and visible missing conditions without turning AI into the binding authority.
@@ -116,6 +116,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - A002: material visibility must be represented where citizen-facing labels, approval status, AI summaries, discovery ordering, urgency, recommendation, or funding progress could hide material conditions. Approval labels should preserve source role or authority, criterion source, scope, date or version, and unresolved conditions where material.
 - A003: fiscalizer selection, assignment, and reports should represent project-specific eligibility, contextual fiscalizer reputation, repeat relationships, dependency concentration, report sufficiency, replacement, secondary fiscalization, and fiscalization-audit triggers where material.
 - A004: value verification diagrams should show an evidence-coverage check before funding or formal effects. Each value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric should map to required fulfillment/control evidence needs, while A013 separately reviews submitted evidence quality and producer/method fit.
+- A005: Planning Scope and funding diagrams should show Essential Service Protection as a floor-and-lane test. Essential guarantees may be protected outside ordinary citizen allocation while eligible distributed service projects remain financeable. Material changes to continuity targets should route through Governance Resolution, Administrative Rule Change, or equivalent audit trace.
 - A013: hard KPI fulfillment/control evidence must represent producer qualification standards, method/protocol fit, instrument or tool basis, metadata/provenance, report limitations, evidence quality review, and probative fitness before disbursement, closure, responsibility, reputation, or formal fiscalization effects.
 
 ## Evidence diagram rule

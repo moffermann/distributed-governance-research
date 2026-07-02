@@ -12,7 +12,9 @@ It also provides the base allocation rule that resumes when budget delegation is
 
 > Automatic allocation is a citizen-configured rule for distributing their civic allocation. It is not delegation to another actor and it is not a hidden system decision.
 
-Automatic allocation can execute only inside the configured assignable public-purpose share and only toward eligible projects or protocol-authorized control, complaint-review, mitigation, planning, or fiscalization vehicles. It cannot allocate the non-assignable common pool, bypass project eligibility, override phase gates, release funds, or treat profile output as proof of social legitimacy.
+Automatic allocation can execute only inside the configured assignable public-purpose share and only toward eligible projects or protocol-authorized control, complaint-review, mitigation, planning, or fiscalization vehicles. It cannot allocate the non-assignable common pool, a protected essential floor marked as non-assignable, an excluded lane, bypass project eligibility, override phase gates, release funds, or treat profile output as proof of social legitimacy.
+
+Where a Planning Scope exposes an underfunded protected target, an official or citizen-selected profile may route assignable funds toward the distributed service lane only if the lane, reason, and rule are visible. The profile should not silently convert a protected floor into ordinary popularity funding.
 
 On first active use of the platform, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that profile.
 
@@ -116,6 +118,16 @@ Create custom profile
 Hold available balance until manual decision, if the protocol allows it
 ```
 
+Official profiles may include transparent options such as:
+
+```text
+Support underfunded protected scopes
+Support continuity-sensitive services
+Support low-visibility beneficiary groups
+```
+
+These options must show the active Planning Scope and whether the contribution funds an assignable service lane, not a non-assignable protected floor.
+
 If the citizen later delegates budget allocation, the selected base profile remains stored but inactive within the delegated scope while delegation is active.
 
 If delegation ends, the selected base profile resumes from the next applicable allocation cycle.
@@ -192,6 +204,7 @@ Necesitan fiscalizador
 Con mucha evidencia comprometida
 Nuevos proyectos
 Proyectos con baja concentración de financiamiento
+Ámbitos protegidos subfinanciados, si existe un carril asignable
 ```
 
 ## 5. Control preferences
@@ -222,6 +235,7 @@ Use system default allocation
 Broaden criteria gradually
 Hold until next period if allowed
 Delegate fallback to selected delegate
+Route to underfunded protected scopes only where the profile and lane are public
 ```
 
 Core v0 should avoid indefinite accumulation unless the broader protocol allows it.

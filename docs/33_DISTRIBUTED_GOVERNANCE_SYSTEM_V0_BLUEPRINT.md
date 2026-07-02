@@ -192,7 +192,20 @@ Under H002, distributed resource allocation is bounded rather than unconstrained
 
 Under H009, every financeable project should align with an active `Planning Scope`: a public-function, pilot, operating-mode, protocol, approved roadmap, or authorized planning line that is currently open to distributed financing. Core v0 does not define how a national roadmap is created or voted. It only requires the active scope used for project eligibility to be visible, versioned, and auditable.
 
+A005 adds that Planning Scopes should run an `Essential Service Protection` test where the scope affects essential guarantees, continuity, emergency capacity, redistribution, vulnerable beneficiaries, universal access, or low-visibility groups. The test should distinguish the protected public/legal guarantee floor from the contestable service-provision lane, record any planning-continuity target, classify the funding lane as citizen-assignable, default-assigned, reserve-backed, non-assignable, or excluded, and expose underfunded protected scopes. This protects against both popularity-driven neglect and central political neglect.
+
+Example:
+
+```text
+Older-adult care continuity 2026-2030:
+  protected floor -> minimum continuity for eligible beneficiaries;
+  distributed lane -> eligible care, transport, food, caregiver support, or residence-fiscalization projects;
+  observability -> underfunded protected scope if the continuity target is not met.
+```
+
 In tutored mode, the planning scope may be authority-defined. This is acceptable only as an external implementation condition under C020: material scope decisions, rejections, or reclassifications should be public Governance Resolution objects or equivalent review traces. An out-of-scope idea should not disappear; it can remain an Idea, be reclassified, be reformulated, or become input for future planning-scope governance.
+
+A change in government or operating authority may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace. The change should disclose effects on beneficiaries, continuity obligations, existing projects, protected floors, and distributed funding lanes.
 
 Under H010, every financeable project should declare one `Primary Responsibility Anchor`: the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable. Secondary contributions are allowed, but they must not dilute the anchor. If a secondary contribution is presented as a formal promise, it needs proportional metrics, fulfillment/control evidence, and review consequences.
 
@@ -1106,7 +1119,9 @@ It may support:
 
 Citizen-level allocation amounts may be calculated through a public, versioned formula configured by the competent authority, institutional administrator, protocol, or country implementation. The simplest supported formula should be equal allocation for all eligible citizens. Other formulas may be contribution-weighted, inverse or redistributive, hybrid, or externally calculated.
 
-Core v0 distinguishes the assignable civic wallet from a non-assignable common pool. The assignable side can fund eligible projects, phase-specific funding lanes, minimum control packages, supplemental control where allowed, complaint-review costs, mitigation, and other protocol-authorized public-purpose vehicles. The non-assignable side may remain for defense, core security, justice guarantees, macro fiscal obligations, emergency reserves, debt service, or other functions that should not depend on popularity, discovery visibility, delegation concentration, or monthly citizen attention.
+Core v0 distinguishes the assignable civic wallet from a non-assignable common pool. The assignable side can fund eligible projects, phase-specific funding lanes, minimum control packages, supplemental control where allowed, complaint-review costs, mitigation, and other protocol-authorized public-purpose vehicles. The non-assignable side may remain for defense, core security, justice guarantees, macro fiscal obligations, emergency reserves, debt service, protected essential floors, or other functions that should not depend only on popularity, discovery visibility, delegation concentration, or monthly citizen attention.
+
+Essential service protection does not require centralized state service provision. A protected floor may coexist with a distributed service lane where eligible public, private, nonprofit, cooperative, concession-like, state-owned where eligible, or community operators compete to provide service under the same value, evidence, fiscalization, continuity, complaint, revocation, replacement, and reputation rules.
 
 If the formula depends on sensitive tax, vulnerability, territorial-priority, or registry data, the platform should not receive the raw dataset. It should consume only an authorized allocation amount from an `Allocation Amount Provider`, such as treasury, tax authority, social registry, ministry system, lawful custodian, or signed batch file.
 

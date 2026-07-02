@@ -189,6 +189,25 @@ Distributed allocation does not mean all budgets become individually assignable.
 
 ---
 
+## Essential Service Protection
+
+Essential service protection is the A005 floor-and-lane test used by Planning Scopes and funding eligibility rules.
+
+It separates:
+
+- the protected public/legal guarantee floor;
+- the visible planning-continuity target;
+- the distributed or contestable service-provision lane;
+- the budget treatment: citizen-assignable, default-assigned, reserve-backed, non-assignable, or excluded;
+- the underfunding indicator for low-visibility protected needs;
+- the safeguards against cream-skimming easy beneficiaries.
+
+The concept does not mean that essential services must be centrally operated. A public guarantee may remain protected while eligible public, private, nonprofit, cooperative, concession-like, state-owned where eligible, or community operators provide services under equal evidence, fiscalization, continuity, complaint, revocation, replacement, and reputation rules.
+
+It also protects against central political neglect. If a government or operating authority changes a continuity target, the change should be public, versioned, auditable, and connected to a Governance Resolution, Administrative Rule Change, or equivalent record.
+
+---
+
 ## Value
 
 Value is not limited to economic return.

@@ -261,7 +261,9 @@ The eighty-ninth residual cleanup consolidated A013 / `docs/79_EVIDENCE_QUALITY_
 
 The ninetieth residual cleanup propagated A004 across the core corpus, citizen surfaces, value/metric validator, fiscalization, disbursement, audit trail, object model, schema draft, responsibility matrix, glossary, checklist, and affected diagrams. The accepted implementation is an evidence-coverage matrix inside the `ValueVerificationPackage` and `ProjectEvidentialContract`. It marks `coverage complete`, `coverage weak`, `coverage gap`, `metric gap`, or `under correction` before funding and formal effects. A004 remains separate from A013: coverage asks whether required evidence needs were defined; quality asks whether submitted evidence later satisfies those needs.
 
-Next review candidate: continue Phase 3 propagation with A005 / `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`.
+The ninety-first residual cleanup propagated A005 / `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md` across the core corpus, funding and automatic-allocation flows, citizen surfaces, Planning Scope and Threshold Policy definitions, administrative observability, responsibility matrix, schema draft, glossary, checklist, and affected diagrams. The accepted implementation is an Essential Service Protection floor-and-lane test inside Planning Scopes and funding eligibility: protected essential floor, distributed service lane, planning-continuity target, funding-lane treatment, underfunding indicator, and public rule-change trace. It protects against both popularity-driven neglect and central political neglect while preserving distributed provision of essential services where eligible.
+
+Next review candidate: continue Phase 3 propagation with A006 / `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`.
 
 Approximate current maturity:
 
@@ -418,7 +420,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** attack and defense queues prepared; paired review integrated into accepted resolutions; core propagation active. A001-A004 and A013 have been propagated into the core corpus.
+**Status:** attack and defense queues prepared; paired review integrated into accepted resolutions; core propagation active. A001-A005 and A013 have been propagated into the core corpus.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -616,11 +618,12 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Review and propagate A005 / `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`.
-2. Preserve the A004/A013 boundary during later propagation: evidence coverage and submitted-evidence quality are separate checks.
-3. Continue propagating accepted Phase 3 resolutions in order unless a dependency requires reordering.
-4. Keep detailed scoring, calibration registries, AI-generated-material detection, and country-specific legal admissibility as future implementation or legal-mapping work unless reopened explicitly.
-5. Then resume formal system modeling, literature mapping, and paper architecture.
+1. Review and propagate A006 / `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`.
+2. Preserve the A005/A006 boundary during later propagation: essential-service protection is a Planning Scope floor-and-lane test, while continuity-risk classification governs projects that carry ongoing obligations.
+3. Preserve the A004/A013 boundary during later propagation: evidence coverage and submitted-evidence quality are separate checks.
+4. Continue propagating accepted Phase 3 resolutions in order unless a dependency requires reordering.
+5. Keep detailed scoring, calibration registries, AI-generated-material detection, and country-specific legal admissibility as future implementation or legal-mapping work unless reopened explicitly.
+6. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
 ## Operating rule
