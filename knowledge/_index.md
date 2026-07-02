@@ -191,6 +191,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/diagrams/v0-reformulation-pause-revocation|Diagram - Reformulation, Pause, and Revocation v0]]
 - [[../docs/diagrams/v0-tutored-mode-governance-resolution|Diagram - Tutored Mode Governance Resolution v0]]
 - [[../docs/diagrams/v0-audit-trail-pattern|Diagram - Audit Trail Pattern v0]]
+- [[../docs/diagrams/v0-formal-entity-relationship|Diagram - Formal Entity Relationship Baseline v0]]
 - [[../docs/diagrams/distributed-planning-architecture-v1|Diagram - Distributed Planning Architecture v1]]
 
 ## Core glossary

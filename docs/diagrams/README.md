@@ -17,6 +17,7 @@ Generated images may be exported for papers, slides, or visual review, but the M
 - `v0-reformulation-pause-revocation.md`
 - `v0-tutored-mode-governance-resolution.md`
 - `v0-audit-trail-pattern.md`
+- `v0-formal-entity-relationship.md`
 
 ## Format rule
 

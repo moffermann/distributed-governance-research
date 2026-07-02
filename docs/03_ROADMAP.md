@@ -198,7 +198,9 @@ The sixty-sixth residual cleanup aligned the Phase 2 roadmap, consolidated entit
 
 The sixty-seventh residual cleanup created `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the Phase 2 formal entity baseline. The inventory separates actors, contextual roles, project objects, value/evidence/evaluation objects, funding and custody objects, fiscalization/control objects, complaint and pause objects, citizen interaction signals, delegation/allocation objects, reputation/read-model objects, governance/system-change objects, primary state groups, and non-entities. It preserves the rule that `Contextualized Evidence Item` is the technical evidence record and that formal effects require `evidence_context`, review, and effect-specific evaluation.
 
-Next review candidate: create the first Phase 2 entity relationship diagram from the formal entity inventory, then use it to detect missing relationships before state-diagram drafting.
+The sixty-eighth residual cleanup created the first Phase 2 entity relationship diagram at `docs/diagrams/v0-formal-entity-relationship.md` and generated its SVG output. The ERD is a primary relationship baseline rather than a database schema: it connects actors, contextual role assignments, projects, phases, planning scope, value thesis, evidential contracts, fulfillment evidence needs, contextualized evidence items, evaluation records, fiscalization, funding commitments, financial orders, complaints, systemic pause, closure accountability, responsibility, reputation, delegation, operating modes, governance resolutions, protocol versions, and audit events.
+
+Next review candidate: inspect the ERD for missing or misleading relationships, then draft the project object state diagram with phase substates.
 
 Approximate current maturity:
 

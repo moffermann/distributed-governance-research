@@ -65,6 +65,7 @@ Primary Mermaid sources:
 9. `docs/diagrams/v0-reformulation-pause-revocation.md`
 10. `docs/diagrams/v0-tutored-mode-governance-resolution.md`
 11. `docs/diagrams/v0-audit-trail-pattern.md`
+12. `docs/diagrams/v0-formal-entity-relationship.md`
 
 Conceptual planning diagram:
 
@@ -111,7 +112,6 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Entity relationship diagram from docs/64_FORMAL_ENTITY_INVENTORY_V0.md
 Project object state diagram with all substates
 Funding commitment state diagram
 Complaint evidence and complaint review state diagram
@@ -129,3 +129,5 @@ Audit event schema diagram
 > Diagrams are not decorative. They are tools for detecting missing states, hidden authority, uncontrolled money movement, and weak accountability.
 
 Phase 2 diagrams should use `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the formal entity baseline and `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md` as the detailed narrative source.
+
+The first Phase 2 ERD now lives at `docs/diagrams/v0-formal-entity-relationship.md`. It is a primary relationship baseline, not a database schema.
