@@ -255,6 +255,56 @@ In tutored mode, the competent authority may define or review planning scope. Ma
 
 If an authority or later government changes an essential planning target, such as an older-adult care continuity goal, the change should be represented as a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace before it affects project eligibility or funding lanes.
 
+## 4a. Classify continuity risk
+
+After Planning Scope alignment, the project should declare whether it is:
+
+```text
+one-time
+phased
+recurring
+continuity-critical
+emergency
+maintenance-dependent
+```
+
+This is the A006 project-level test. It is separate from A005: a Planning Scope may protect an essential floor, while an individual project may still need to say whether its own service, operation, maintenance, or beneficiary support continues beyond the initial funded period.
+
+For recurring, continuity-critical, emergency, or maintenance-dependent projects, publication validation should require:
+
+- minimum funded service period;
+- staffing, maintenance, or operation obligation;
+- future funding dependency warning;
+- beneficiary-protection and wind-down rule;
+- reserve, retention, guarantee, or non-assignable-pool reference where applicable;
+- renewal alert date or trigger;
+- continuity-need Idea generation or update rule where follow-on financing may be required;
+- continuity evidence inputs, such as beneficiary support, beneficiary observations, fulfillment/control evidence, fiscalizer observations, and outcome summaries;
+- eligibility rule for the current executor and alternative eligible executors to propose a follow-on project.
+
+Rule:
+
+> A continuity renewal window creates public visibility and a path to an Idea or follow-on project. It does not renew the current project automatically and does not give the current executor a privileged right to continue.
+
+Example:
+
+```text
+Project:
+Six-month older-adult home-care service in Macul
+
+Continuity risk:
+continuity-critical
+
+Citizen label:
+funds first six months
+
+Renewal:
+open continuity-need Idea 60 days before service period ends
+
+Follow-on proposals:
+current provider may apply; alternative eligible providers may also apply
+```
+
 ## 5. Define beneficiaries
 
 The system forces a clear distinction among beneficiary types.
@@ -714,6 +764,8 @@ Possible threshold dimensions:
 - tutored-scope review where the operating mode requires it;
 - essential-service protection where the scope affects guarantees, continuity, emergency capacity, redistribution, vulnerable beneficiaries, universal access, or low-visibility groups;
 - funding-lane treatment: citizen-assignable, default-assigned, reserve-backed, non-assignable, or excluded;
+- continuity risk classification where the project is recurring, continuity-critical, emergency, or maintenance-dependent;
+- renewal-window and continuity-need Idea treatment where follow-on funding may be required;
 - absence or resolution of admitted blocking complaints or scoped systemic pauses.
 
 Example:
@@ -853,6 +905,7 @@ Validation dimensions:
 - Primary Responsibility Anchor clarity;
 - Planning Scope alignment;
 - Essential Service Protection status where the scope affects protected floors, continuity targets, or low-visibility groups;
+- Continuity Risk Classification where the project or phase creates ongoing service, operation, maintenance, emergency, or beneficiary-dependence obligations;
 - Project Legitimacy Profile completeness where required;
 - beneficiary clarity;
 - value metrics;
@@ -906,6 +959,8 @@ Where an existing approval, review, or criterion is used to support publication,
 
 Projects with unresolved critical failures in their disbursement milestone plan, phase plan, or threshold policy cannot be published for execution funding commitments. A pending design gate is not a critical failure if the phase plan, minimum public-value baseline, reserved-fund rule, and failure-treatment rule are explicit.
 
+A project with unresolved A006 continuity fields also cannot be published for execution funding commitments when it is recurring, continuity-critical, emergency, or maintenance-dependent. The proposer cannot make a continuity-dependent project look cheaper by omitting staffing, maintenance, follow-on funding dependency, beneficiary-protection, or wind-down treatment.
+
 ## 15. Citizen preview
 
 Before publication, the creator sees how the project will appear to citizens.
@@ -957,6 +1012,24 @@ Maintain minimum home-care continuity for eligible beneficiaries.
 
 Signal:
 Underfunded protected scope.
+```
+
+Continuity-sensitive projects should also preview project-level labels:
+
+```text
+Older-adult home-care visits
+
+Continuity:
+funds first six months
+
+Renewal:
+renewal window opens 60 days before period end
+
+Follow-on need:
+continuity idea will open if follow-on funding is needed
+
+Exit:
+wind-down rule declared
 ```
 
 Example:

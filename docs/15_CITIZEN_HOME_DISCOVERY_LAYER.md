@@ -94,6 +94,15 @@ Disability access services: distributed service lane open
 
 These labels should link to the relevant Planning Scope, not to hidden algorithmic prioritization.
 
+If an A006 continuity renewal window is open, the Home layer may expose simple project or Idea signals:
+
+```text
+Home-care visits in Macul: renewal window open
+Multi-court maintenance: maintenance not funded
+```
+
+These labels should link to the continuity-need Idea, eligible follow-on project, or source project. They should not imply automatic renewal of the current executor.
+
 ## B. Urgent now
 
 Layer 0 may show one or two urgent highlighted projects.

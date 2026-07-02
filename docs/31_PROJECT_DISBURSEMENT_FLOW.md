@@ -74,6 +74,7 @@ Required conditions may include:
 - required documents complete;
 - Financial Assurance Profile configured;
 - required guarantee, retention, insurance, escrow, or equivalent assurance materialized where applicable;
+- Continuity Risk Classification, funded service period, renewal trigger, beneficiary-protection rule, and wind-down rule configured where the project or phase is recurring, continuity-critical, emergency, or maintenance-dependent;
 - operating mode requirements satisfied.
 
 Execution-ready does not mean automatic release of the full budget.
@@ -119,6 +120,7 @@ For phased projects, the milestone calendar activates for the relevant accepted 
 Each milestone should have:
 
 - phase reference where applicable;
+- continuity period or service period reference where applicable;
 - maximum releasable amount;
 - required fulfillment evidence;
 - value, antivalue, material claim, or metric coverage reference;
@@ -490,6 +492,27 @@ Infrastructure:
   release remains blocked until phase gates, control, assurance, and milestone evidence are satisfied.
 ```
 
+For continuity-sensitive services, disbursement should also preserve whether the release pays the current service period, a follow-on period, a maintenance obligation, replacement/transition work, mitigation, or wind-down. The citizen-facing surface may remain simple, but Layer 5 should retain the budget line, period, renewal trigger, beneficiary-protection rule, and evidence used for each release.
+
+Example continuity release:
+
+```text
+Project:
+Older-adult home-care visits in Macul
+
+Current period:
+Months 1-6
+
+Release:
+Month 4 service payment
+
+Retention:
+future service reserve
+
+Renewal:
+continuity window opens before Month 5 ends
+```
+
 ## 12. Failed milestone
 
 If a milestone fails:
@@ -647,6 +670,24 @@ Design review is not accepted yet.
 What happens next:
 The designer/executor must correct the design package or request reformulation.
 No construction money is released while this gate remains unresolved.
+```
+
+Example continuity case:
+
+```text
+Continuity funding active
+
+Current funded period:
+Months 1-6
+
+Latest release:
+Month 4 approved
+
+Renewal:
+continuity window opens before Month 5 ends
+
+If renewal is not funded:
+wind-down rule applies.
 ```
 
 Example supplemental control case:

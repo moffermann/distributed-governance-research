@@ -14,6 +14,8 @@ Phase 3 paired review completed. Accepted resolution: `docs/72_CONTINUITY_RISK_C
 
 The attack argues that project funding may be too volatile for services requiring continuity, staffing, maintenance, beneficiary protection, or long-term commitments. In the Macul example, courts may be built but maintenance, bathrooms, lighting, safety, and public access operations may later fail because no stable maintenance funding closes.
 
+The stronger version also compares the model against current public budgeting. Today, continuity projects often request renewed financing near the end of a period and may be reduced, delayed, or cancelled by political priority changes without public visibility, result-based continuity evidence, mitigation planning, or beneficiary-centered warning.
+
 ## Objective evaluation
 
 - Classification: founded for recurring and continuity-critical services.
@@ -24,11 +26,15 @@ The attack argues that project funding may be too volatile for services requirin
 
 ## Response
 
-The defense is that continuity risk should be explicit before funding, not discovered after beneficiaries are dependent.
+The defense is that continuity risk should be explicit before funding and visible again before expiration, not discovered after beneficiaries are dependent.
 
 The architecture works best for bounded projects, but it can support continuity services if the project declares minimum funding duration, service-interruption risk, wind-down rules, beneficiary protection, staffing assumptions, maintenance obligations, retained future-service funds, and applicable non-assignable reserve or guarantee support.
 
+For recurring, continuity-critical, or maintenance-dependent projects, the system should also open a visible continuity renewal window before the financed period ends. The renewal signal should normally become or update an Idea, so beneficiaries, citizens, affected parties, fiscalizers, and evidence producers can support the continuity need, attach contextual evidence, and inspect current-period results. The current executor may propose a follow-on project, but so may alternative eligible executors; there is no automatic renewal or incumbent privilege.
+
 For Macul, construction funding and maintenance funding should not be hidden inside one vague promise. The project sheet should say whether maintenance is included, separately funded, recurring, assigned to an operator, protected by reserve, or outside the current project scope.
+
+For older-adult care, a six-month care project should expose before expiration whether continuity funding is missing, what fulfillment/control evidence supports continuation, what beneficiaries or representatives report, what fiscalizers observed, and what wind-down rule applies if no follow-on project closes financing.
 
 ## Project-document basis
 
@@ -59,8 +65,12 @@ Add continuity-risk fields:
 - beneficiary protection and wind-down rule;
 - maintenance or staffing plan;
 - future funding dependency warning;
+- renewal alert date or trigger;
+- continuity-need Idea generation or update rule;
+- continuity evidence inputs from beneficiaries, affected parties, fiscalizers, current-period fulfillment/control evidence, and closure/accountability records where available;
+- eligibility rule for current and alternative executors;
 - reserve, retention, guarantee, or non-assignable-pool reference where applicable;
-- citizen-facing label: "funds only initial period" or "maintenance not funded" where true.
+- citizen-facing label: "funds only initial period", "maintenance not funded", "renewal window open", or "continuity idea open" where true.
 
 ## Applies to
 
@@ -71,13 +81,14 @@ Add continuity-risk fields:
 - care, health, education, maintenance, and emergency support;
 - disbursement and retention rules;
 - financial assurance.
+- continuity renewal Ideas and project-creation pathways.
 
 ## Defense strength and residual risk
 
-Defense strength: moderate. The architecture can represent the problem, but Core v0 has not yet fully defined continuity-project governance.
+Defense strength: moderate to strong after refinement. The architecture can represent continuity risk, expose renewal needs before interruption, and route follow-on demand into Ideas and ordinary project competition. Core v0 still does not guarantee that future funding will close.
 
-Residual risk: implementers or proposers may frame continuity-dependent projects as one-time outputs to make them easier to fund. That should become a material information claim and possible responsibility event if misleading.
+Residual risk: implementers or proposers may frame continuity-dependent projects as one-time outputs to make them easier to fund. That should become a material information claim and possible responsibility event if misleading. Current executors may also try to convert renewal visibility into incumbent protection; the rule should keep renewal public but competitively open.
 
 ## Decision
 
-The attack is founded. It does not defeat distributed allocation, but it requires a continuity-risk classification and funding-stability fields before the model is mature for recurring or care-sensitive services.
+The attack is founded. It does not defeat distributed allocation, but it requires a continuity-risk classification, funding-stability fields, and a visible continuity-renewal path before the model is mature for recurring or care-sensitive services.

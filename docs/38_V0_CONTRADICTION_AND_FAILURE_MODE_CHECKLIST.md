@@ -468,6 +468,22 @@ This is not an argument for central operation of all essential services. Eligibl
 
 > A change in government or operating authority may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace.
 
+## A006 — Volatile funding and underfunded continuity
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`
+
+### Accepted v0 rule
+
+Projects that create ongoing service, staffing, maintenance, emergency, or beneficiary-dependence obligations should declare a Continuity Risk Classification before funding. They should not be presented as one-time projects when they are recurring, continuity-critical, emergency, or maintenance-dependent.
+
+Where A006 applies, the project or phase should expose the minimum funded service period, future funding dependency warning, staffing or maintenance obligation, beneficiary-protection rule, wind-down rule, renewal trigger, and reserve/retention/guarantee reference where applicable.
+
+Before the funded period ends, a visible Continuity Renewal Window may generate or update a continuity-need Idea. Beneficiaries, citizens, affected parties, fiscalizers, and evidence producers may support the Idea or attach contextual evidence. The current executor and alternative eligible executors may propose follow-on projects, but the renewal window does not renew the current executor automatically.
+
+This compares against real current practice: continuity funding can already be reduced, delayed, or cancelled through political priority changes without public visibility, traceability, mitigation, or result-based review. A006 does not guarantee future funding; it makes the continuity need visible, contestable, financeable, and auditable before interruption.
+
 ---
 
 # B. Checklist by system area
@@ -492,6 +508,9 @@ This is not an argument for central operation of all essential services. Eligibl
 - [ ] Does every execution-financeable project have a Financial Assurance Profile?
 - [ ] Is financial assurance treated as universal across social projects, not only construction or infrastructure?
 - [ ] If the project uses phases, are phase deliverables, gates, dependencies, and failure treatment explicit?
+- [ ] If the project is recurring, continuity-critical, emergency, or maintenance-dependent, does it expose Continuity Risk Classification, funded service period, renewal trigger, future funding dependency, beneficiary protection, and wind-down rule?
+- [ ] If follow-on funding may be required, does the project create or update a continuity-need Idea before interruption rather than hiding the need until service ends?
+- [ ] Is the current executor allowed to propose continuity without receiving automatic renewal or privileged selection?
 - [x] Are material claims, approval labels, and unresolved conditions source-linked where they affect citizen decisions?
 - [ ] Where affected-party legitimacy conditions apply, does the project have a Project Legitimacy Profile tied to Threshold Policy and Required Evidence Package records?
 - [ ] Are required affected-party maps, consultation evidence, observation windows, or plan-review records present before execution-ready status where the policy requires them?
@@ -672,6 +691,7 @@ This is not an argument for central operation of all essential services. Eligibl
 - [x] Do compact cards surface unresolved material warnings?
 - [x] Is project discovery explainable?
 - [x] Are urgent/promoted-looking slots rule-based?
+- [ ] Do citizen surfaces preserve A006 labels such as `funds first six months`, `maintenance not funded`, `renewal window open`, `continuity idea open`, or `wind-down rule declared` where material?
 - [x] Can users customize Home categories without changing project eligibility?
 - [ ] Are citizen-facing states mapped from technical states?
 - [x] Do approval labels expose approving role or authority, criterion source, scope, date or version, and unresolved conditions where material?

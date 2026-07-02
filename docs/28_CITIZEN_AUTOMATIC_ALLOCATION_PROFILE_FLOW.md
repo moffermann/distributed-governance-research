@@ -16,6 +16,8 @@ Automatic allocation can execute only inside the configured assignable public-pu
 
 Where a Planning Scope exposes an underfunded protected target, an official or citizen-selected profile may route assignable funds toward the distributed service lane only if the lane, reason, and rule are visible. The profile should not silently convert a protected floor into ordinary popularity funding.
 
+Where a continuity renewal window or continuity-need Idea is open under A006, a profile may route assignable funds only to eligible follow-on projects, maintenance projects, mitigation, wind-down work, or other protocol-authorized vehicles. It must not automatically renew the current executor, fund a non-assignable protected floor, or treat the existence of a renewal window as proof that the follow-on project is valid.
+
 On first active use of the platform, the citizen should select or acknowledge a base allocation profile. The public system default may be selected as that profile.
 
 Budget delegation should not become active until the citizen has a selected base allocation profile or fallback rule.
@@ -123,10 +125,13 @@ Official profiles may include transparent options such as:
 ```text
 Support underfunded protected scopes
 Support continuity-sensitive services
+Support open continuity renewal needs
 Support low-visibility beneficiary groups
 ```
 
 These options must show the active Planning Scope and whether the contribution funds an assignable service lane, not a non-assignable protected floor.
+
+For open continuity renewal needs, the option should also show whether the profile funds the current service period, a follow-on project, maintenance, replacement, mitigation, or wind-down.
 
 If the citizen later delegates budget allocation, the selected base profile remains stored but inactive within the delegated scope while delegation is active.
 
@@ -328,6 +333,7 @@ The automatic profile flow should not:
 - allow budget delegation to activate with no base profile or fallback rule;
 - ignore project control conditions;
 - allocate to projects with blocking issues if rules forbid it;
+- automatically renew an expiring continuity project or privilege the current executor;
 - hide why a project was selected;
 - trap the citizen in a profile they cannot change;
 - accumulate unused allocation indefinitely unless the protocol explicitly allows it.

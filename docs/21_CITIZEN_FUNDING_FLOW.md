@@ -20,6 +20,8 @@ Execution-phase funding may be accepted while a required design phase is still p
 
 Funding completion also does not close affected-party legitimacy conditions. If the active Threshold Policy requires affected-party mapping, nearby-project notification, community consultation evidence, plan review, or unresolved-objection handling, those conditions remain visible and may block execution-ready status even when the funding target is complete.
 
+For recurring, continuity-critical, emergency, or maintenance-dependent projects, funding must also preserve the A006 continuity label. Citizens should know whether they are funding a one-time output, the current service period, a follow-on period, maintenance, replacement, mitigation, wind-down, or a continuity project generated from an Idea. Funding a bounded period must not be presented as funding indefinite service.
+
 ## Main question
 
 The flow answers:
@@ -262,6 +264,22 @@ Current signal:
 Underfunded protected scope.
 ```
 
+If the project itself has continuity risk, the summary should expose the project-level continuity label:
+
+```text
+You are funding:
+Months 1-6 of older-adult home-care visits
+
+Continuity:
+funds first six months
+
+Renewal:
+continuity window opens before Month 5 ends
+
+If not renewed:
+wind-down rule declared
+```
+
 ## 4. Funding confirmation
 
 After confirmation, the citizen receives a simple confirmation.
@@ -379,6 +397,8 @@ The system may ask whether the citizen also wants to support the project publicl
 The system should also avoid implying that funding proves affected-party approval. For projects with a required Project Legitimacy Profile, the funding confirmation should preserve labels such as `community consultation evidence pending`, `affected-party issue pending`, or `public access condition unresolved` where applicable.
 
 For essential-service scopes, funding confirmation should also preserve labels such as `eligible distributed service lane`, `reserve-backed continuity need`, `underfunded protected scope`, or `not civic-assignable` where applicable. This prevents citizens from mistaking a distributed service contribution for the whole public guarantee.
+
+For continuity-sensitive projects, funding confirmation should preserve labels such as `one-time project`, `maintenance not funded`, `funds first six months`, `renewal window open`, `continuity idea open`, `continuity protected`, or `wind-down rule declared` where applicable. This prevents citizens from mistaking an initial or follow-on service period for indefinite continuity.
 
 Example:
 
@@ -499,6 +519,8 @@ The funding flow should not:
 - present supplemental control funding as money for the executor;
 - fund duplicate evidence or unlimited fiscalizers.
 - hide that construction funding is reserved while the design phase is pending;
+- hide that continuity funding covers only a bounded service period or that maintenance is not funded;
+- imply that a continuity renewal window automatically renews the current executor;
 - move funds between phases without a visible rule and audit trail.
 
 ## Design rule

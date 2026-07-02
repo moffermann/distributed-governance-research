@@ -71,6 +71,12 @@ The fallback must be:
 
 Monthly automatic allocation creates a continuous flow of resources into the project ecosystem and reduces financing bottlenecks.
 
+## Continuity-sensitive projects
+
+Monthly allocation can help continuity needs receive steady attention, but it should not hide that a project funds only a bounded period. Where a project is recurring, continuity-critical, emergency, or maintenance-dependent, the funding surface should preserve the A006 continuity label, renewal trigger, and wind-down rule.
+
+If a funded continuity period is approaching its end, the system may route eligible profile or fallback allocations toward follow-on projects, maintenance, mitigation, wind-down, or a continuity project generated from a public Idea. The automatic cycle should not automatically renew the current executor and should not treat a renewal window as proof that a follow-on project is valid.
+
 ## Relationship to project funding
 
 Projects still close when they reach their funding target. Monthly allocation helps projects reach targets without waiting for annual or sporadic citizen participation.

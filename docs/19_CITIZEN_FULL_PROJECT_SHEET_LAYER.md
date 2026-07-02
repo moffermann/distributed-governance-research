@@ -135,6 +135,34 @@ Underfunded protected scope.
 
 This prevents two confusions: citizens should not think a service project replaces the whole public guarantee, and authorities should not be able to hide that a protected continuity target remains underfunded.
 
+## 3b. Continuity risk and renewal treatment
+
+Layer 4 should also show A006 project-level continuity labels where the project itself is recurring, continuity-critical, emergency, or maintenance-dependent.
+
+Example:
+
+```text
+Continuity:
+funds first six months.
+
+Maintenance:
+not funded after the initial period.
+
+Renewal:
+continuity window opens 60 days before the funded period ends.
+
+Follow-on need:
+continuity-need Idea will be opened if follow-on funding is required.
+
+Executor:
+current provider may apply again; alternative eligible providers may also propose.
+
+Exit:
+wind-down rule declared.
+```
+
+This prevents two additional confusions: citizens should not think a bounded period is indefinite continuity, and the current executor should not be presented as automatically renewed merely because a renewal window is open.
+
 ## 4. Main responsibility and value promised
 
 Start with the project's main responsibility in citizen language.

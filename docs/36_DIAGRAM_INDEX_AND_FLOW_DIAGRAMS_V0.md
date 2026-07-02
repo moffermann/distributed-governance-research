@@ -91,6 +91,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 
 - H001: diagrams should separate functional layers rather than treating a sector, institution, or public/private label as one block.
 - H002/A005: funding and allocation diagrams should show bounded assignable public-purpose resources, protected essential floors, distributed service lanes, reserve-backed or default-assigned continuity treatment where applicable, and non-assignable common-pool boundaries, not unconstrained public budget allocation.
+- H002/A006: funding and lifecycle diagrams should show that recurring, continuity-critical, emergency, or maintenance-dependent projects fund bounded periods unless a follow-on project closes funding. Continuity renewal windows and continuity-need Ideas create visibility, not automatic renewal of the current executor.
 - H003: trust diagrams should show incentives, accountable claims, evidence context, contradiction, review, consequences, and auditability rather than assuming distributed actors are trustworthy by default.
 - C001: `Idea` is separate from `Project`; ideas are not financeable.
 - H016/C002/C013: fiscalization is distributed in available actors and fulfillment/control evidence sources, but responsible control is protocol-selected, conflict-checked, risk-adjusted, capped, and closed in parallel with execution funding.
@@ -117,6 +118,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - A003: fiscalizer selection, assignment, and reports should represent project-specific eligibility, contextual fiscalizer reputation, repeat relationships, dependency concentration, report sufficiency, replacement, secondary fiscalization, and fiscalization-audit triggers where material.
 - A004: value verification diagrams should show an evidence-coverage check before funding or formal effects. Each value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric should map to required fulfillment/control evidence needs, while A013 separately reviews submitted evidence quality and producer/method fit.
 - A005: Planning Scope and funding diagrams should show Essential Service Protection as a floor-and-lane test. Essential guarantees may be protected outside ordinary citizen allocation while eligible distributed service projects remain financeable. Material changes to continuity targets should route through Governance Resolution, Administrative Rule Change, or equivalent audit trace.
+- A006: Project, funding, disbursement, and lifecycle diagrams should show Continuity Risk Classification, funded service period, renewal trigger, continuity-need Idea, follow-on project route, wind-down treatment, and no automatic incumbent renewal where applicable.
 - A013: hard KPI fulfillment/control evidence must represent producer qualification standards, method/protocol fit, instrument or tool basis, metadata/provenance, report limitations, evidence quality review, and probative fitness before disbursement, closure, responsibility, reputation, or formal fiscalization effects.
 
 ## Evidence diagram rule

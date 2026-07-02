@@ -12,7 +12,7 @@ Source baseline:
 - `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
 - `docs/diagrams/v0-formal-entity-relationship.md`
 
-Related sources: H008, H011, H013, H016, H018, H019, H021, H022, C005, C016, C017, C018, C024.
+Related sources: H008, H011, H013, H016, H018, H019, H021, H022, C005, C016, C017, C018, C024, A006.
 
 ## Parent Project State Machine
 
@@ -52,6 +52,10 @@ stateDiagram-v2
     UnderExtraordinaryReview --> RequiresReformulation: material change required
     UnderExtraordinaryReview --> Revoked: severe issue confirmed
 
+    InExecution --> ContinuityRenewalWindow: funded continuity period nearing end
+    ContinuityRenewalWindow --> InExecution: current period continues while renewal visible
+    ContinuityRenewalWindow --> ClosureAccountability: period ends, wind-down, replacement, or no renewal
+
     InExecution --> ClosureAccountability: execution complete or final outcome reached
     Revoked --> ClosureAccountability: final accountability required
     Expired --> ClosureAccountability: final accountability required
@@ -86,6 +90,9 @@ stateDiagram-v2
     PhaseExecutionReady --> PhasePaused: scoped blocker prevents start
 
     PhaseInExecution --> EvidenceSubmitted: milestone or phase evidence submitted
+    PhaseInExecution --> PhaseContinuityRenewalWindow: operational period nearing end
+    PhaseContinuityRenewalWindow --> PhaseInExecution: current period continues while renewal visible
+    PhaseContinuityRenewalWindow --> PhaseClosed: period ends, wind-down, replacement, or no renewal
     EvidenceSubmitted --> UnderReview: fiscalizer or reviewer evaluates
     UnderReview --> PhaseCompleted: evidence and gate accepted
     UnderReview --> PhaseCorrectionRequired: evidence or deliverable insufficient
@@ -112,6 +119,7 @@ stateDiagram-v2
 - A phase-level pause, rejection, correction, or review escalates to the parent `Project` only when the related `SystemicPauseRecord`, `EvaluationRecord`, `ComplaintAdmissibilityReferralRecord`, `ProjectVariationRecord`, or `ReformulationProposal` declares a project-level affected scope.
 - `ExecutionReady` may apply to the parent project, a specific phase, or both. A later phase can remain `FundingReserved` or `PrerequisitePending` while an earlier phase is `PhaseInExecution`.
 - `ClosureAccountability` is a parent project state because final accountability must summarize promises, phases, evidence, fiscalization, money treatment, responsibility events, and reputation inputs.
+- `ContinuityRenewalWindow` and `PhaseContinuityRenewalWindow` are visibility states for A006. They may generate or update a continuity-need Idea and allow follow-on proposals, but they do not automatically renew the current executor.
 - Phase closure does not equal project closure unless all required phases and final project accountability conditions are complete.
 
 ## Macul Example Trace
@@ -138,6 +146,11 @@ Parent project -> remains InExecution unless the review record declares project-
 If design removes required bathrooms, changes court dimensions, or weakens public access:
 Design phase -> PhaseRequiresReformulation
 Parent project -> RequiresReformulation if the accepted public-value baseline cannot be preserved
+
+If maintenance or access management is funded for only twelve months:
+Operational phase -> PhaseContinuityRenewalWindow before period end
+Continuity need -> Idea for follow-on maintenance or replacement provider
+Current executor -> may propose follow-on project, but has no automatic renewal
 ```
 
 ## Boundary With Other State Machines

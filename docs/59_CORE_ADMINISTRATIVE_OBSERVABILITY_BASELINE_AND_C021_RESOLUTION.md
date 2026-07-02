@@ -263,6 +263,10 @@ public functions by operating mode
 planning scopes with essential-service protection
 underfunded protected scopes
 continuity targets changed
+continuity-critical projects approaching funded-period end
+continuity renewal windows opened
+continuity-need Ideas generated
+follow-on continuity projects funded / unfunded / pending
 governance resolutions issued
 projects approved under tutored review
 projects rejected under tutored review

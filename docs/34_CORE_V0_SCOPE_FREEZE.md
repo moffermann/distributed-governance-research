@@ -117,6 +117,7 @@ A project must include:
 - metrics;
 - Project Evidential Contract and fulfillment evidence obligations;
 - Financial Assurance Profile;
+- Continuity Risk Classification where the project is recurring, continuity-critical, emergency, or maintenance-dependent;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - risks;
@@ -142,6 +143,10 @@ Rule:
 Rule:
 
 > For projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the applicable threshold policy should require proportional affected-party mapping and consultation conditions. These conditions may require nearby-project notification, an observation window, field visits, plan presentation, community meetings, surveys, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace. They are not a universal vote or automatic veto.
+
+Continuity rule:
+
+> Projects that create ongoing service, staffing, maintenance, emergency, or beneficiary-dependence obligations should declare a Continuity Risk Classification before funding. The classification should expose whether the project is one-time, phased, recurring, continuity-critical, emergency, or maintenance-dependent, and should include the minimum funded period, future funding dependency warning, beneficiary-protection rule, wind-down rule, and renewal visibility where applicable.
 
 Comparative accountability rule:
 
@@ -352,6 +357,7 @@ Core v0 includes:
 - externally provided authorized allocation amounts where sensitive data is required;
 - conditional project funding;
 - phase-specific funding lanes where applicable;
+- continuity funding labels and renewal windows where applicable;
 - funding target;
 - committed funds;
 - no immediate release to executor;
@@ -376,6 +382,10 @@ Essential floor boundary:
 Phase funding rule:
 
 > A citizen must know whether a contribution funds design, reserved execution, minimum control, or supplemental control. Reserved execution funding may count toward a later phase but cannot be released while a prerequisite phase gate is pending, rejected, or materially reformulated.
+
+Continuity funding rule:
+
+> A citizen must know when funding covers only an initial service period, when maintenance is not funded, when continuity is protected by reserve or guarantee, and when a continuity renewal window or continuity-need Idea is open. A renewal window makes the need visible; it does not renew the project automatically or privilege the current executor.
 
 Allocation amount rule:
 
@@ -527,6 +537,7 @@ Open project
 → correction / pause / reformulation / revocation if needed
 → closure
 → Project Closure Accountability Record
+→ continuity renewal window / continuity-need Idea where applicable
 → final evaluation and reputation effects
 ```
 

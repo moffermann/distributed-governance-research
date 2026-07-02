@@ -4,7 +4,7 @@
 
 Show the project lifecycle after publication, including validation, execution readiness, reformulation, review, revocation, and closure.
 
-Related resolutions: C005, C016, C017, C018, H008, H011, H019, A001, A002, A003.
+Related resolutions: C005, C016, C017, C018, H008, H011, H019, A001, A002, A003, A006.
 
 ```mermaid
 stateDiagram-v2
@@ -40,6 +40,10 @@ stateDiagram-v2
     UnderExtraordinaryReview --> InExecution: review clears issue
     UnderExtraordinaryReview --> Revoked: severe issue confirmed
 
+    InExecution --> ContinuityRenewalWindow: funded continuity period approaching end
+    ContinuityRenewalWindow --> InExecution: current period continues while window open
+    ContinuityRenewalWindow --> ClosureAccountability: period ends, wind-down, replacement, or no renewal
+
     FundingOpen --> Expired
     OpenProject --> Revoked
     Paused --> Revoked
@@ -52,4 +56,4 @@ stateDiagram-v2
 
 ## Rule
 
-> A project advances through validated conditions and review, not self-declared progress. Execution readiness should not hide unresolved material warnings behind favorable labels. Closure requires a Project Closure Accountability Record. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.
+> A project advances through validated conditions and review, not self-declared progress. Execution readiness should not hide unresolved material warnings behind favorable labels. For continuity-sensitive projects, a renewal window exposes the follow-on need and may generate an Idea, but it does not automatically renew the current executor. Closure requires a Project Closure Accountability Record. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.

@@ -21,11 +21,14 @@ The architecture lets citizens, delegates, and allocation profiles fund projects
 
 Conditional project funding improves accountability, but volatile funding can interrupt services, strand partially funded work, encourage short-termism, or make actors overpromise to close budgets.
 
+This is not unique to distributed funding. In current public systems, continuity projects often must request renewed financing near the end of a funded period, and that renewal can be reduced, delayed, or cancelled when political priorities change. The difference is often opacity: beneficiaries may not see the funding gap, the reasons for interruption, the results of the current period, or the mitigation plan before the service is affected.
+
 Example:
 
 ```text
 A community care project hires staff for older adults after one funding cycle.
 The next cycle shifts attention to visible infrastructure, leaving care continuity unfunded.
+The continuity need is not visible as an Idea, beneficiaries cannot easily support or evidence the need, and no competing follow-on provider can propose replacement before interruption.
 ```
 
 ## Recommended resolution path
@@ -35,6 +38,9 @@ The next cycle shifts attention to visible infrastructure, leaving care continui
 - Preserve non-assignable or reserve pools for emergency and continuity obligations where needed.
 - Show funding volatility risk before citizens fund.
 - Add reformulation and wind-down rules for continuity projects that do not close future funding.
+- Open a visible renewal window before a continuity period expires.
+- Generate or update an Idea for the continuity need where follow-on financing may be required, so beneficiaries and citizens can support the need and attach contextual evidence.
+- Allow the current executor and alternative eligible executors to propose follow-on continuity projects under the ordinary project rules, without automatic renewal or incumbent privilege.
 
 ## Theoretical base and citations
 
@@ -72,7 +78,10 @@ A Macul sports facility is built, but no stable maintenance project closes fundi
 - Are beneficiaries protected during wind-down?
 - Are citizens warned when funding only covers a partial service period?
 - Are non-assignable reserves available for protected continuity functions?
+- Does an expiring continuity project open a public renewal window before service interruption?
+- Can beneficiaries, affected parties, fiscalizers, and citizens support or evidence the continuity need through an Idea?
+- Can the current executor and alternative eligible executors propose a follow-on project without automatic renewal?
 
 ## Expected resolution output
 
-A Phase 3 resolution should define a continuity-risk classification and funding-stability fields for projects with ongoing obligations.
+A Phase 3 resolution should define a continuity-risk classification, funding-stability fields, and a visible continuity renewal path for projects with ongoing obligations.

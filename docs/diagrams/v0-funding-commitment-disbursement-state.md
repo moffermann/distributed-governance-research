@@ -13,12 +13,13 @@ Source baseline:
 - `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`
 - `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`
 - `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`
+- `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`
 - `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`
 - `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
 - `docs/diagrams/v0-project-object-state-with-phase-substates.md`
 - `docs/diagrams/v0-complaint-evidence-and-review-state.md`
 
-Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, C005, C006, C016, A005.
+Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, C005, C006, C016, A005, A006.
 
 ## Funding Commitment State Machine
 
@@ -28,8 +29,10 @@ This state machine tracks the committed amount or funding lane. It does not deci
 stateDiagram-v2
     [*] --> Available
     Available --> LaneCheck: funder selects target
-    LaneCheck --> Committed: eligible assignable lane
+    LaneCheck --> ContinuityCheck: eligible assignable lane
     LaneCheck --> Closed: protected floor, non-assignable, or excluded lane
+    ContinuityCheck --> Committed: period, renewal, and wind-down clear
+    ContinuityCheck --> Closed: continuity fields missing for required target
 
     Committed --> Reserved: eligible target and custody reservation accepted
     Committed --> Returned: target invalid before reservation
@@ -119,11 +122,13 @@ stateDiagram-v2
     BlockerCheck --> BlockedByComplaintPause: admitted scoped complaint pause affects this scope
     BlockerCheck --> BlockedByPhaseGate: prerequisite gate not accepted
     BlockerCheck --> BlockedByAssurance: guarantee, retention, insurance, escrow, or equivalent not materialized
+    BlockerCheck --> BlockedByContinuityRule: continuity period, renewal, replacement, or wind-down condition missing
     BlockerCheck --> BlockedByEvidenceContradiction: fulfillment or control evidence contradicted
     BlockerCheck --> ReleaseDecisionReady: no relevant blocker
 
     BlockedByComplaintPause --> BlockerCheck: pause lifted or narrowed
     BlockedByAssurance --> BlockerCheck: assurance materialized or corrected
+    BlockedByContinuityRule --> BlockerCheck: continuity condition corrected
     BlockedByEvidenceContradiction --> FiscalizationReview: contradiction resolved or corroboration added
 
     ReleaseDecisionReady --> FullReleaseApproved: all releasable conditions met
@@ -195,6 +200,7 @@ stateDiagram-v2
 
 - `Committed` means the funder made a serious funding commitment. It is not ordinary support and is not freely withdrawable.
 - `LaneCheck` means the system verifies that the target is an eligible assignable lane. Ordinary civic-wallet funding cannot enter non-assignable protected floors or excluded lanes.
+- `ContinuityCheck` means the system verifies A006 labels where the target is recurring, continuity-critical, emergency, or maintenance-dependent. A funding commitment should not imply indefinite service when it funds only a bounded period, and a renewal window should not automatically renew the current executor.
 - `Reserved` means the amount is held for a project, phase lane, control package, complaint-review cost, mitigation activity, or other eligible public-purpose vehicle. It is not released to the executor.
 - `Paused` means a scoped systemic pause affects the relevant funding, disbursement, milestone, phase, budget line, evidence item, or actor relationship. It is platform scope, not necessarily material or legal suspension.
 - `Blocked` means a release cannot proceed until a named blocker is resolved.
@@ -229,6 +235,12 @@ BlockedByPhaseGate remains active, or the project/phase enters correction, refor
 If an admitted complaint affects only the disputed construction budget line:
 Reserved -> Paused or Blocked only for that affected scope.
 Unrelated scopes continue if their gates, evidence, assurance, and fiscalization conditions are satisfied.
+
+Continuity example:
+An older-adult home-care project funds months 1-6.
+Before month 6, the continuity renewal window may generate an Idea for a follow-on service period.
+Funding the follow-on project passes through LaneCheck and ContinuityCheck again.
+The current provider may apply, but no state transition grants automatic renewal.
 ```
 
 ## Boundary With Other State Machines
@@ -244,4 +256,4 @@ Funding and disbursement states change only through explicit records: phase gate
 
 ## Rule
 
-> Funding is commitment, reservation is not release, release requires evidence, eligible fiscalization, and sufficient report basis, guarantees require external materialization, custodian execution is technical/legal rather than civic judgment, and unused or recovered funds follow protocol and citizen rules instead of ordinary withdrawal.
+> Funding is commitment, reservation is not release, release requires evidence, eligible fiscalization, sufficient report basis, and A006 continuity treatment where applicable; guarantees require external materialization, custodian execution is technical/legal rather than civic judgment, and unused or recovered funds follow protocol and citizen rules instead of ordinary withdrawal.

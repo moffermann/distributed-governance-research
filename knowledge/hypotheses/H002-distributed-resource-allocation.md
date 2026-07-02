@@ -52,7 +52,7 @@ Organizations that demonstrate results, maintain role-specific reputation, satis
 
 ## Boundary rule
 
-Distributed resource allocation in Core v0 is bounded by five layers:
+Distributed resource allocation in Core v0 is bounded by seven layers:
 
 1. **Public budget boundary.** The model distinguishes the assignable civic wallet from a non-assignable common pool. Defense, core security, justice guarantees, macro fiscal obligations, emergency reserves, debt service, or other essential functions may remain outside citizen-by-citizen allocation.
 2. **Planning and eligibility boundary.** Financeable projects must align with an active `Planning Scope` and satisfy the applicable `Threshold Policy`. Out-of-scope proposals may remain Ideas, drafts, reformulation candidates, or planning inputs, but they are not execution-financeable by default.
@@ -60,6 +60,7 @@ Distributed resource allocation in Core v0 is bounded by five layers:
 4. **Signal separation.** Funding, social support, justified objection, and formal complaint remain separate. Funding improves financial feasibility but does not buy social legitimacy or replace complaint, fiscalization, or review processes.
 5. **Anti-neglect safeguards.** The system must preserve default allocation rules, official profiles, strategic categories, near-completion categories, control/fiscalization lanes, observability of underfunded areas, planning-continuity targets, and non-assignable or reserve-backed protected floors so low-visibility but essential functions are not silently starved.
 6. **Essential service floor-and-lane rule.** Essential or continuity-sensitive scopes should distinguish the public/legal guarantee floor from the contestable service-provision lane. The floor may require common-pool, reserve-backed, default-assigned, or excluded treatment; the service lane may still be open to eligible distributed providers under evidence, fiscalization, continuity, complaint, revocation, replacement, and reputation rules.
+7. **Continuity project rule.** Recurring, continuity-critical, emergency, or maintenance-dependent projects should expose the funded service period, future funding dependency, renewal trigger, beneficiary-protection rule, wind-down rule, and continuity-need Idea path where applicable. Allocation may support follow-on projects, but it should not imply indefinite service or automatic renewal of the current executor.
 
 ## Macul example
 
@@ -83,6 +84,8 @@ Older-adult care example:
 A Planning Scope may define `Older-adult care continuity 2026-2030` with a minimum continuity floor, annual coverage target, interruption tolerance, and underfunding indicator. The protected floor should not disappear because the government of the day has a different agenda, and a later authority should revise it only through a public, versioned, auditable rule-change path.
 
 The same scope may still open a distributed service lane for eligible home-care providers, transport services, food support, residence fiscalization, caregiver support, or complementary care projects. This lets citizens finance care priorities that are neglected by centralized politics while preventing the minimum continuity guarantee from depending only on monthly popularity.
+
+A six-month home-care project inside that lane should still disclose that it funds only six months, when a renewal window opens, what evidence from the current period supports continuation, what wind-down rule protects beneficiaries if follow-on financing fails, and whether the current provider or alternative eligible providers may present follow-on projects. The continuity need may become an Idea before interruption rather than a hidden budget request.
 
 ## Relationship to later hypotheses
 

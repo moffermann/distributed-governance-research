@@ -122,6 +122,8 @@ This check should confirm:
 - required Project Legitimacy Profile conditions are complete or explicitly marked not required;
 - affected-party mapping, notification, observation-window, consultation, or plan-review Readiness Evidence is submitted and reviewed where required;
 - Essential Service Protection treatment is satisfied where the active Planning Scope requires a protected floor, service lane, continuity target, reserve-backed rule, or underfunding visibility;
+- Continuity Risk Classification is complete where the project or phase is recurring, continuity-critical, emergency, or maintenance-dependent;
+- renewal-window, continuity-need Idea, beneficiary-protection, and wind-down treatment are declared where follow-on funding may be required;
 - no unresolved material warning is hidden behind a favorable citizen-facing label such as `almost funded`, `approved`, `recommended`, or `execution-ready`;
 - conditional approvals identify approving role or authority, criterion source, scope, date or version, and remaining conditions where material;
 - the Value Verification Package has no unresolved A004 evidence-coverage gaps for value floors, formal secondary values, antivalue ceilings, material value claims, or relevant metrics;
@@ -159,6 +161,8 @@ For phased projects, execution-ready is phase-sensitive. A parent project may co
 Where a design or preparation phase has affected-party legitimacy conditions, execution-ready also depends on the required affected-party map, community-consultation Readiness Evidence, unresolved-objection handling, and independent corroboration or fiscalizer/reviewer acceptance defined by the active Threshold Policy. A fully funded phase may therefore remain not execution-ready.
 
 Where a project belongs to an essential or continuity-sensitive scope, execution-ready should also confirm that the project is in an eligible funding lane and does not weaken the protected floor, continuity target, or beneficiary-protection conditions. If a new authority has revised the planning target, the project should reference the public rule-change record that governs the transition.
+
+Where the project itself is recurring, continuity-critical, emergency, or maintenance-dependent, execution-ready should also confirm that citizens can see the funded service period, maintenance or staffing obligation, future funding dependency warning, renewal trigger, beneficiary-protection rule, and wind-down rule. Execution-ready does not mean that future periods are funded unless the project explicitly says so.
 
 Supplemental control funding after execution-ready does not reopen this transition by default. A project may remain execution-ready while additional control-only funding is reserved for one secondary fiscalizer, fiscalization audit, or distinct fulfillment/control evidence work. Any blocking effect from supplemental control must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
 
@@ -563,6 +567,7 @@ Closure should include:
 - fiscalizer final report;
 - unresolved observations;
 - complaints status;
+- continuity result where applicable: renewal window opened, continuity-need Idea created, follow-on project linked, replacement pending, wind-down completed, or continuity gap unresolved;
 - lessons or notes;
 - reputation effects.
 
@@ -578,6 +583,7 @@ This record connects:
 - which affected-party observations or consultation evidence were considered where relevant;
 - which EvaluationRecords and FiscalizationReports support the closure;
 - which fiscalizer eligibility/profile warnings, report limitations, or secondary-audit findings affected closure;
+- which continuity evidence, beneficiary observations, funding gap, or wind-down risks should feed a continuity-need Idea where applicable;
 - what happened to released, retained, returned, reassigned, recovered, or guarantee-executed funds;
 - which issues remain unresolved;
 - which Responsibility Events, Reputation Inputs, or no-reputation-effect findings resulted.
@@ -587,6 +593,20 @@ This record connects:
 > Closure must explain what was promised, what was actually delivered, what evidence supports that conclusion, and what happened to the money.
 
 > A project cannot close as fulfilled when its main commitments remain unsupported by sufficient, reviewed, traceable fulfillment/control evidence.
+
+### Continuity renewal before or after closure
+
+For recurring, continuity-critical, emergency, or maintenance-dependent projects, the system should not wait until service interruption to expose the next need. Before the funded period ends, the project should open a continuity renewal window according to its declared trigger.
+
+The renewal window may generate or update a public Idea such as:
+
+```text
+Continuity need for older-adult home care in Macul 2027
+```
+
+The Idea can receive beneficiary support, citizen support, contextual evidence, current-period fulfillment/control evidence, fiscalizer observations, closure/accountability references, comments, justified objections, and associated project proposals.
+
+The current executor may propose a follow-on continuity project, but alternative eligible executors may also propose replacement or improved continuity projects. The renewal window is a visibility and accountability mechanism, not automatic extension of the existing project.
 
 ## 14. Final evaluation and reputation
 

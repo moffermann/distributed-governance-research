@@ -175,6 +175,18 @@ not civic-assignable
 
 A project may be eligible for civic funding as a service-provision lane while the minimum public guarantee remains protected outside ordinary allocation.
 
+For A006 project-level continuity risk, compact lists should also preserve short labels where material:
+
+```text
+funds first six months
+maintenance not funded
+renewal window open
+continuity idea open
+wind-down rule declared
+```
+
+These labels describe the project or phase, not the whole Planning Scope.
+
 ## Compact project item
 
 Each project in the list should be displayed as a compact card.

@@ -8,7 +8,7 @@ This diagram is a conceptual ERD baseline, not a database schema. It focuses on 
 
 Source baseline: `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
 
-Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002, A003, A004, A005.
+Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002, A003, A004, A005, A006.
 
 ```mermaid
 erDiagram
@@ -29,12 +29,14 @@ erDiagram
         string idea_id
         string idea_state
         string visibility_status
+        string source_project_ref
     }
 
     PROJECT {
         string project_id
         string current_state
         string operating_scope
+        string continuity_risk_classification
     }
 
     PROJECT_VERSION {
@@ -46,6 +48,7 @@ erDiagram
         string project_phase_id
         string phase_type
         string phase_state
+        string continuity_period
     }
 
     PROJECT_VARIATION_RECORD {
@@ -230,11 +233,13 @@ erDiagram
         string budget_line_id
         string line_purpose
         string funding_lane
+        string continuity_purpose
     }
 
     FUNDING_COMMITMENT {
         string commitment_id
         string funding_lane
+        string continuity_label
         string commitment_state
     }
 
@@ -264,11 +269,13 @@ erDiagram
     DISBURSEMENT {
         string disbursement_id
         string disbursement_state
+        string continuity_period_ref
     }
 
     FINANCIAL_ASSURANCE_PROFILE {
         string assurance_profile_id
         string assurance_rule
+        string continuity_protection_rule
     }
 
     GUARANTEE_MATERIALIZATION_RECORD {
@@ -323,6 +330,7 @@ erDiagram
     PROJECT_CLOSURE_ACCOUNTABILITY_RECORD {
         string closure_record_id
         string closure_status
+        string continuity_result
     }
 
     RESPONSIBILITY_EVENT {
@@ -402,6 +410,7 @@ erDiagram
 
     ACTOR ||--o{ IDEA : may_create
     IDEA ||--o{ PROJECT : may_generate
+    PROJECT ||--o{ IDEA : may_generate_continuity_need
     ACTOR ||--o{ SUPPORT_SIGNAL : creates
     ACTOR ||--o{ JUSTIFIED_OBJECTION_SIGNAL : creates
     ACTOR ||--o{ COMMENT : writes
@@ -514,6 +523,7 @@ erDiagram
     SYSTEMIC_PAUSE_RECORD }o--o| ROLE_ASSIGNMENT : may_restrict_actor_action
 
     PROJECT ||--o{ PROJECT_CLOSURE_ACCOUNTABILITY_RECORD : closes_with
+    PROJECT_CLOSURE_ACCOUNTABILITY_RECORD ||--o{ IDEA : may_feed_continuity_need
     PROJECT_CLOSURE_ACCOUNTABILITY_RECORD ||--o{ EVALUATION_RECORD : includes
     PROJECT_CLOSURE_ACCOUNTABILITY_RECORD ||--o{ FISCALIZATION_REPORT : includes
     PROJECT_CLOSURE_ACCOUNTABILITY_RECORD ||--o{ RESPONSIBILITY_EVENT : may_create
@@ -573,6 +583,7 @@ erDiagram
 - `FiscalizerEligibilityReputationProfile` is contextual to a fiscalization assignment. It explains eligibility criteria, comparable-project reputation, workload, repeat relationships, dependency concentration, warnings, and safeguards; it is not a generic CV, universal score, or automatic selector.
 - `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. A004 requires a coverage status so a narrow metric cannot stand in for unverified value dimensions.
 - A005 is represented as fields and state on `PlanningScope`, not as a new ordinary project role. It requires protected floor, distributed service lane, planning-continuity target, funding-lane treatment, and underfunding visibility where a scope affects essential guarantees or continuity.
+- A006 is represented as fields and relationships on `Project`, `ProjectPhase`, `BudgetLine`, `FundingCommitment`, `Disbursement`, `FinancialAssuranceProfile`, `ProjectClosureAccountabilityRecord`, and `Idea`. It requires continuity classification, funded period, renewal trigger, continuity-need Idea path, wind-down treatment, and no automatic incumbent renewal where a project has ongoing obligations.
 - `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
 - `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.
 - `EvidenceProducerQualificationStandard` declares the qualification, method, instrument/tool, metadata, and report basis needed where a fulfillment/control evidence need supports a hard KPI or formal effect.
@@ -589,6 +600,7 @@ Idea: build multi-courts in Macul
 -> Project: Design and Construction of Multi-Courts in Macul
 -> Planning Scope: sports scope eligible for civic allocation
 -> A005 check: older-adult care continuity, disability service access, and emergency capacity remain protected planning targets outside the sports popularity cycle
+-> A006 check: multi-court maintenance and access management are either funded for a stated period or labeled maintenance not funded; any renewal need becomes an Idea before interruption
 -> Project Phases: Design, then Construction
 -> Metrics: court dimensions, accessibility, bathrooms, public access, noise ceilings
 -> A004 coverage check: dimensions, safety, access, bathrooms/accessibility, public use, and declared noise ceiling each need evidence coverage

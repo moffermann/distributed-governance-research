@@ -41,6 +41,8 @@ The Governance Resolution sequence diagram now separates authority decision, req
 The Audit Event schema diagram now separates actor/role context, object reference, transition, source record, rule/version, effect, visibility/privacy, append-only correction, Layer 5 access, and observability projection.
 The planning and ERD diagrams now represent A005 Essential Service Protection as protected floor, distributed service lane, planning-continuity target, funding-lane treatment, underfunded protected scope visibility, and rule-change trace for essential target revisions.
 
+Project, funding, disbursement, and ERD diagrams now represent A006 Continuity Risk Classification as funded service period, renewal trigger, continuity-need Idea, follow-on project path, wind-down treatment, and no automatic renewal of the current executor where applicable.
+
 ## Format rule
 
 Use Mermaid inside Markdown. Keep diagrams readable in Git diffs. Add generated image files only as secondary artifacts when there is a clear presentation or publication need.

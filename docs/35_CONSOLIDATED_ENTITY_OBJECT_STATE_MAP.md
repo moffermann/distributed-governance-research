@@ -189,6 +189,8 @@ Key attributes:
 - comments;
 - structured objections;
 - associated projects;
+- source project or expiring continuity project reference where generated from a continuity renewal window;
+- continuity need, funding gap, or service-interruption risk where applicable;
 - current status;
 - audit trail.
 
@@ -196,6 +198,7 @@ Key relationships:
 
 ```text
 Idea may generate many Projects
+Idea may be generated from an expiring Project or ProjectPhase
 Idea has many SupportSignals
 Idea has many Comments
 Idea has many Followers
@@ -247,6 +250,13 @@ Key attributes:
 - variation control history;
 - threshold policy or policy reference;
 - Financial Assurance Profile;
+- Continuity Risk Classification where applicable;
+- minimum funded service period where applicable;
+- maintenance, staffing, or operation obligation where applicable;
+- future funding dependency warning where applicable;
+- renewal alert date or trigger where applicable;
+- beneficiary protection and wind-down rule where applicable;
+- continuity-need Idea reference where generated;
 - closure conditions;
 - Project Closure Accountability Record where applicable;
 - risks;
@@ -292,10 +302,15 @@ Project has ReformulationPolicy or reformulation policy reference
 Project has ThresholdPolicy or threshold policy reference
 Project has one FinancialAssuranceProfile where execution funding is allowed
 Project has one or more GuaranteeMaterializationRecords where assurance is required
+Project may generate or reference one or more continuity-need Ideas
 Project may have one ProjectClosureAccountabilityRecord
 Project has many AuditEvents
 Project has one current State
 ```
+
+Continuity-risk rule:
+
+> A project that is recurring, continuity-critical, emergency, or maintenance-dependent should not be treated as a one-time project. It should expose the funded service period, future funding dependency, staffing or maintenance obligation, beneficiary-protection rule, wind-down rule, renewal window, and continuity-need Idea path where applicable. The renewal path creates visibility and competition; it does not automatically extend the current executor.
 
 ## Planning Scope
 
@@ -829,6 +844,8 @@ Attributes:
 - phase budget or funding lane;
 - phase funding target;
 - phase funding status;
+- continuity risk classification where the phase carries ongoing service, maintenance, emergency, or operation obligations;
+- phase funded service period and renewal trigger where applicable;
 - phase deliverables;
 - minimum public-value baseline where the phase gates later execution;
 - phase evidential requirements or Project Evidential Contract section;
@@ -872,6 +889,7 @@ ProjectPhase may have many EvidenceItems
 ProjectPhase may reference ProjectEvidentialContract
 ProjectPhase may reference FiscalizationRequirement or ControlSubproject
 ProjectPhase may be affected by ProjectVariationRecord
+ProjectPhase may generate or reference a continuity-need Idea
 ProjectPhase may generate AuditEvents
 ```
 
@@ -882,6 +900,10 @@ Rule:
 Design-and-execution rule:
 
 > If a parent project combines design and execution, execution funding may be collected in parallel but remains reserved or conditionally committed until the required design phase is accepted. Construction or execution disbursement cannot occur against an unaudited design.
+
+Continuity phase rule:
+
+> If a phase is operational, recurring, maintenance-dependent, or continuity-critical, its funding lane should state the service period it covers, whether follow-on financing is required, what happens if no follow-on project closes funding, and whether a renewal Idea should open before the phase ends.
 
 Example:
 
@@ -1250,6 +1272,7 @@ Attributes:
 - contingency;
 - guarantees;
 - retentions;
+- continuity reserve, renewal, maintenance, or wind-down budget where applicable;
 - Financial Assurance Profile reference;
 - eligible execution budget basis for guarantee calculation;
 - current version.
@@ -1262,6 +1285,7 @@ Attributes:
 - amount;
 - justification;
 - phase where applicable;
+- continuity purpose where applicable: current service period, follow-on period, maintenance, staffing, renewal, replacement, mitigation, or wind-down;
 - linked milestone;
 - executor controlled or control controlled;
 - status.
@@ -1338,6 +1362,7 @@ Attributes:
 - source: direct, delegated, automatic profile;
 - funding target: design phase, execution phase, minimum control, supplemental control where applicable;
 - funding lane treatment: ordinary assignable, default-assigned, reserve-backed, protected-floor complement, or excluded where applicable;
+- continuity label where the commitment covers only an initial service period, maintenance gap, renewal window, or continuity-need Idea;
 - status;
 - timestamp;
 - commitment and failure-handling rule;
@@ -1362,6 +1387,10 @@ Rule:
 Phase rule:
 
 > Funding commitments may target a phase-specific lane. Execution-phase commitments may be accepted while a required design phase is pending, but they remain reserved or conditional and cannot be released to execution until the design phase gate is accepted.
+
+Continuity funding rule:
+
+> A funding commitment to a continuity-sensitive project should preserve whether it funds the current period, a follow-on period, a maintenance obligation, a wind-down/mitigation action, or a continuity-need project generated from an Idea. Citizens should not be led to believe they funded indefinite service when the commitment covers only a bounded period.
 
 ## Financial Order
 
@@ -1411,6 +1440,7 @@ Attributes:
 - materialization status;
 - execution conditions;
 - release conditions;
+- continuity replacement, wind-down, or beneficiary-protection conditions where applicable;
 - failure treatment;
 - citizen-facing summary;
 - audit trail.
@@ -1429,6 +1459,10 @@ FinancialAssuranceProfile may be affected by AdministrativeRuleChange
 Rule:
 
 > Financial assurance is not construction-specific. It applies to every execution-financeable social project, including care, supplies, workshops, food support, services, and infrastructure.
+
+Continuity assurance rule:
+
+> For continuity-critical projects, assurance may support replacement, transition, compensation, retained future service funds, or wind-down protection if the executor abandons service, funding renewal fails, or a follow-on provider is needed under the active rule.
 
 Core v0 guarantee rule:
 
@@ -1998,6 +2032,7 @@ Attributes:
 - fulfillment evidence considered;
 - fiscalizer report;
 - blocking check;
+- continuity period, renewal window, or wind-down reference where applicable;
 - rule applied;
 - status;
 - timestamp.
@@ -2041,6 +2076,7 @@ Attributes:
 - technical, financial, beneficiary, affected-party, or authority reviews where applicable;
 - unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
 - financial closure: released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- continuity result where applicable: renewed, follow-on Idea opened, follow-on project linked, replacement pending, wind-down completed, or continuity gap unresolved;
 - closure outcome: fulfilled, partially fulfilled, unfulfilled, revoked, expired, or reformulated into new version;
 - Responsibility Events where reviewed responsibility is established;
 - Reputation Inputs or no-reputation-effect findings;
@@ -2058,6 +2094,7 @@ ProjectClosureAccountabilityRecord references EvidenceItems
 ProjectClosureAccountabilityRecord references EvaluationRecords
 ProjectClosureAccountabilityRecord references FiscalizationReports
 ProjectClosureAccountabilityRecord may reference Disbursements and FinancialOrders
+ProjectClosureAccountabilityRecord may feed continuity renewal Ideas
 ProjectClosureAccountabilityRecord may create or reference ResponsibilityEvents
 ProjectClosureAccountabilityRecord may create or reference ReputationInputs
 ProjectClosureAccountabilityRecord may feed PerformanceHistorySurface

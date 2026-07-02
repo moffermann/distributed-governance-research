@@ -396,6 +396,7 @@ Include:
 - funding target;
 - commitments;
 - phase-specific funding lane where applicable;
+- continuity period, renewal, replacement, maintenance, or wind-down funding lane where applicable;
 - releases;
 - returned or reassigned amounts;
 - custody status;
@@ -421,6 +422,8 @@ funds returned, reassigned, or reconfirmed after failed design gate
 
 Layer 5 should also distinguish assurance for non-construction projects. For example, elderly care, school-supply delivery, workshops, or food support may have service-period retentions, direct supplier payment, guarantees, insurance, or equivalent instruments even though no construction occurs.
 
+For recurring, continuity-critical, emergency, or maintenance-dependent projects, Layer 5 should preserve the Continuity Risk Classification, minimum funded service period, staffing/maintenance obligation, future funding dependency warning, renewal trigger, continuity-need Idea reference where generated, beneficiary-protection and wind-down rule, current and alternative executor eligibility rule, and reserve/retention/guarantee/replacement references where applicable.
+
 ## 7. Milestone and disbursement trace
 
 For each milestone, show:
@@ -436,6 +439,7 @@ For each milestone, show:
 - approval or rejection;
 - disbursement decision;
 - prerequisite phase-gate check where applicable;
+- continuity period, renewal window, replacement, or wind-down reference where applicable;
 - amount released;
 - comments or observations;
 - delays;
@@ -533,6 +537,7 @@ For each closure record, include:
 - Project Evidential Contract version;
 - Required Evidence Package status where applicable;
 - Project Legitimacy Profile status where required;
+- Continuity Risk Classification and renewal-window status where applicable;
 - value floors and antivalue ceilings evaluated;
 - expected fulfillment/control evidence;
 - submitted fulfillment/control evidence;
@@ -543,6 +548,7 @@ For each closure record, include:
 - affected-party mapping, consultation, or observation Readiness Evidence considered where applicable;
 - unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
 - released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- continuity result where applicable: renewed, follow-on Idea opened, follow-on project linked, replacement pending, wind-down completed, or continuity gap unresolved;
 - closure outcome;
 - Responsibility Events;
 - Reputation Inputs or no-reputation-effect findings;
@@ -856,6 +862,7 @@ For threshold policy decisions, Layer 5 should preserve:
 - affected-party mapping or consultation requirements where applicable;
 - essential-service protection treatment where applicable;
 - protected floor, service lane, planning-continuity target, reserve/default/non-assignable treatment, and underfunding indicator where applicable;
+- project-level Continuity Risk Classification, renewal-window rule, continuity-need Idea generation rule, and wind-down treatment where applicable;
 - Required Evidence Package requirement and status where applicable;
 - Project Legitimacy Profile requirement and status where applicable;
 - citizen-facing explanation;

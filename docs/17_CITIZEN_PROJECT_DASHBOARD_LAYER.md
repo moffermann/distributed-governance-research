@@ -185,6 +185,9 @@ Sin gaps críticos / gap de evidencia / gap de métrica
 
 👥 Participación de afectados
 Consulta vecinal pendiente, si aplica
+
+Continuidad
+Periodo financiado y regla de salida declarados, si aplica
 ```
 
 Only show conditions that apply to the specific project.
@@ -195,6 +198,7 @@ Possible conditions:
 - phase gate accepted, where applicable;
 - executor confirmed;
 - value-verification coverage status;
+- continuity risk classification and renewal treatment, where applicable;
 - fiscalizer required;
 - evidence producers required;
 - beneficiary confirmation;

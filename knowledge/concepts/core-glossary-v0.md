@@ -208,6 +208,24 @@ It also protects against central political neglect. If a government or operating
 
 ---
 
+## Continuity Risk Classification
+
+Continuity risk classification is the A006 project-level test used to prevent ongoing obligations from being hidden inside one-time project framing.
+
+It classifies a project or phase as one-time, phased, recurring, continuity-critical, emergency, maintenance-dependent, or another configured equivalent. Projects that are recurring, continuity-critical, or maintenance-dependent should declare the minimum funded service period, staffing or maintenance obligations, future funding dependency warning, beneficiary-protection rule, wind-down rule, and any reserve, retention, guarantee, or non-assignable-pool reference.
+
+This concept is separate from Essential Service Protection. A005 protects public guarantee floors and planning-continuity targets at the Planning Scope level. A006 governs projects that create practical continuity obligations, even when the surrounding scope is not an essential public guarantee.
+
+## Continuity Renewal Window
+
+A continuity renewal window is the A006 visibility period opened before a recurring, continuity-critical, or maintenance-dependent project reaches the end of its funded period.
+
+It does not renew the project automatically and does not give the current executor a privileged right to continue. It exposes the ending date, interruption risk, affected beneficiaries or service users subject to privacy rules, current-period fulfillment/control evidence, fiscalizer observations, funding gap, and wind-down rule.
+
+The default public vehicle for a follow-on need is an Idea, such as `Continuity need for older-adult home care in Macul 2027`. Beneficiaries, citizens, affected parties, fiscalizers, and evidence producers may support it or contribute contextual evidence. The current executor or alternative eligible executors may then present ordinary financeable continuity projects under the same threshold, evidence, fiscalization, funding, assurance, complaint, and reputation rules.
+
+---
+
 ## Value
 
 Value is not limited to economic return.
