@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/64_FORMAL_ENTITY_INVENTORY_V0|Formal Entity Inventory v0]]
 - [[hypotheses/H001-functional-distribution|H001 - Functional Layer Distribution Principle]]
 - [[hypotheses/H002-distributed-resource-allocation|H002 - Bounded Distributed Resource Allocation]]
 - [[hypotheses/H003-distributed-trust|H003 - Incentive-Compatible Distributed Trust]]
@@ -62,6 +63,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
 - [[../docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|Idea Entity, Navigation, and C001 Resolution v0]]
 - [[../docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|v0 Contradiction and Failure-Mode Checklist]]
+- [[../docs/64_FORMAL_ENTITY_INVENTORY_V0|Formal Entity Inventory v0]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/diagrams/README|Diagram Sources]]
@@ -138,6 +140,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
 - [[../docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|v0 Contradiction and Failure-Mode Checklist]]
+- [[../docs/64_FORMAL_ENTITY_INVENTORY_V0|Formal Entity Inventory v0]]
 - [[../docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|Idea Entity, Navigation, and C001 Resolution v0]]
 - [[../docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|Control Subprojects and C002 Resolution v0]]
 - [[../docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|Complaint Entity and C004 Resolution v0]]
@@ -166,6 +169,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Phase 2 formalization entry points
 
+- [[../docs/64_FORMAL_ENTITY_INVENTORY_V0|Formal Entity Inventory v0]]
 - [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]

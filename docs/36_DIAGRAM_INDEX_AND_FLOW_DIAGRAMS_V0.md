@@ -111,7 +111,7 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Entity relationship diagram
+Entity relationship diagram from docs/64_FORMAL_ENTITY_INVENTORY_V0.md
 Project object state diagram with all substates
 Funding commitment state diagram
 Complaint evidence and complaint review state diagram
@@ -127,3 +127,5 @@ Audit event schema diagram
 ## Design rule
 
 > Diagrams are not decorative. They are tools for detecting missing states, hidden authority, uncontrolled money movement, and weak accountability.
+
+Phase 2 diagrams should use `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the formal entity baseline and `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md` as the detailed narrative source.

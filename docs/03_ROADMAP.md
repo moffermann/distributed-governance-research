@@ -196,7 +196,9 @@ The sixty-fifth residual cleanup audited foundational session notes and the miss
 
 The sixty-sixth residual cleanup aligned the Phase 2 roadmap, consolidated entity/object/state map, diagram index, scope classification matrix, and knowledge index for formal modeling. The cleanup prevents `Evidence` from appearing as an undifferentiated operational object in the next entity inventory: formal modeling should use `Contextualized Evidence Item` as the technical record with required `evidence_context`, and should separately model Fulfillment Evidence Needs, Project Evidential Contracts, complaint evidence and review, control evidence, contradiction evidence, evaluation records, fiscalization, disbursement, closure, and reputation effects.
 
-Next review candidate: prepare the Phase 2 formal entity inventory from the consolidated map, using the disambiguated evidence, evaluation, fiscalization, complaint, funding, delegation, and operating-mode objects.
+The sixty-seventh residual cleanup created `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the Phase 2 formal entity baseline. The inventory separates actors, contextual roles, project objects, value/evidence/evaluation objects, funding and custody objects, fiscalization/control objects, complaint and pause objects, citizen interaction signals, delegation/allocation objects, reputation/read-model objects, governance/system-change objects, primary state groups, and non-entities. It preserves the rule that `Contextualized Evidence Item` is the technical evidence record and that formal effects require `evidence_context`, review, and effect-specific evaluation.
+
+Next review candidate: create the first Phase 2 entity relationship diagram from the formal entity inventory, then use it to detect missing relationships before state-diagram drafting.
 
 Approximate current maturity:
 
@@ -315,7 +317,7 @@ Goal: convert the v0 blueprint and detailed flows into a coherent analytical mod
 
 Deliverables:
 
-- system entity inventory;
+- system entity inventory baseline;
 - object model with attributes and relationships;
 - state diagrams for projects, delegations, complaints, contextualized evidence items, fiscalization, funding, and operating modes;
 - funding and disbursement flow diagrams;
