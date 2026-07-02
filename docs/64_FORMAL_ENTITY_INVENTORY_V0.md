@@ -221,8 +221,8 @@ Roles are contextual assignments held by actors. They should be modeled separate
 | Entity | Type | Purpose | Created / modified by | Stateful? | Main relationships / formal effects / risks |
 |---|---|---|---|---|---|
 | Operating Mode | Governance state object | Defines how open or moderated a public function is. | Protocol, authority, or country implementation. | Yes | Modes include Closed, Tutored, Semi-open, Open, Suspended. Controls scope, thresholds, review authority. |
-| Governance Resolution | Public tutored decision object | Records material tutored-mode decision and reason. | Public authority in configured tutored mode. | Yes | Prevents silent authority discretion; may approve, reject, request reformulation, or interpret scope. |
-| Review Timeout Resolution | Public timeout object | Records effect when configured review window expires without authority decision. | System under predeclared timeout policy. | Yes | Avoids indefinite silent blocking. |
+| Governance Resolution | Public tutored decision object | Records a material tutored-mode decision, rule, reason, suggested next action, and audit reference. | Public authority or authorized process in configured tutored mode. | Yes | Prevents silent authority discretion; may approve, reject, request reformulation, require information, interpret scope, or route a configured correction path. |
+| Review Timeout Resolution | Public timeout object | Records that a configured review window expired without authority decision and applies the predeclared timeout policy. | System under predeclared timeout policy. | Yes | Avoids indefinite silent blocking; may route to visibility only, escalation, community override, or automatic approval check where configured. |
 | Protocol Version | Rule-version object | Records active rule set governing decisions and state transitions. | Administrative Rule Change, Protocol Change Proposal, or implementation path. | Yes | Important decisions should reference it. |
 | Administrative Rule Change | Rule-change object | Records material parameter, threshold, eligibility, review period, guarantee, complaint, funding deadline, or operational rule change. | Authority/admin/protocol path depending on mode. | Yes | Must include reason, scope, effective date, transition rule, audit trail. |
 | System Implementation Change | Technical change object | Records software, AI, validator, schema, migration, interface, or algorithmic release with governance relevance. | Technical operator implementing approved rule or release. | Yes | Must not hide substantive governance changes. |
@@ -502,6 +502,30 @@ Outside scope
 Closed with no opening
 ```
 
+### Governance resolution and review timeout resolution states
+
+```text
+Decision expected
+Draft resolution package
+Field completeness check
+Needs correction
+Published governance resolution
+Timeout detected
+Timeout completeness check
+Published timeout resolution
+Timeout policy effect pending
+Citizen audit open
+Clarification requested
+Clarification answered
+Appeal or correction path open
+Correction or reversal issued
+Escalated
+Community override open
+Automatic approval check
+Closed
+Aggregated for observability
+```
+
 ## 13. Macul multi-court example
 
 The "Design and Construction of Multi-Courts in Macul" example should map as follows:
@@ -549,13 +573,10 @@ The following should not be modeled as primary entities unless a later design st
 
 This inventory should be used to produce:
 
-1. an entity relationship diagram;
-2. a project object state diagram with phase substates;
-3. a contextualized evidence item state diagram;
-4. a complaint evidence and review state diagram;
-5. a funding/disbursement state diagram;
-6. a control subproject and fiscalization assignment diagram;
-7. a responsibility matrix by role.
+1. additional Phase 2 entity and state diagrams where gaps appear;
+2. the remaining Audit Event schema diagram;
+3. a responsibility matrix by role;
+4. a future implementable object schema draft.
 
 ## Design rule
 

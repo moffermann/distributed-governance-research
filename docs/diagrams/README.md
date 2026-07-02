@@ -26,6 +26,7 @@ Generated images may be exported for papers, slides, or visual review, but the M
 - `v0-control-subproject-fiscalization-assignment-state.md`
 - `v0-delegation-state.md`
 - `v0-operating-mode-transition-state.md`
+- `v0-governance-resolution-sequence.md`
 
 The formal ERD has completed its first relationship audit. The Project object state diagram with phase substates now separates parent `Project` states from operational `ProjectPhase` substates.
 The Contextualized Evidence Item state diagram now separates evidence context, review status, sufficiency, report linkage, formal evaluation use, and no-effect archival.
@@ -35,6 +36,7 @@ The Project Evidential Contract state diagram now separates contract baseline, f
 The Control Subproject and Fiscalization Assignment state diagram now separates control requirements, offer selection, package funding, fiscalizer and evidence mission assignment, reports, secondary audit, replacement, formal effects, and reputation review.
 The Delegation state diagram now separates base rules, request/acceptance, active scope, represented weight, cap visibility, reports, revocation, resignation, expiry, and fallback activation.
 The Operating Mode transition state diagram now separates mode changes, tutored review, timeout policies, publication effects, suspension effects, and external authority boundaries.
+The Governance Resolution sequence diagram now separates authority decision, required public fields, timeout records, citizen audit actions, configured clarification or correction paths, audit events, and observability effects.
 
 ## Format rule
 

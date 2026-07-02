@@ -2432,16 +2432,23 @@ A public civic object recording a material tutored-mode decision.
 
 Attributes:
 
-- authority;
-- affected project or rule;
-- decision;
-- reason;
-- evidence or criteria considered;
-- review window;
-- comments/support/objections;
+- resolution id;
+- related project or request;
+- public function;
+- operating mode;
+- decision type;
+- decision result;
+- responsible authority or authorized process;
+- responsible official or role, where legally publishable;
+- decision date;
+- rule or eligibility criterion applied;
+- plain-language reason;
+- suggested next action;
+- appeal or correction path, if configured;
+- citizen-facing summary;
+- public comments, support, objections, follows, or clarification requests;
 - status;
-- timestamp;
-- audit trail.
+- audit trail reference.
 
 ## Review Timeout Resolution
 
@@ -2449,14 +2456,20 @@ A public civic object created when a tutored review window expires without autho
 
 Attributes:
 
-- affected project or request;
-- responsible authority;
+- timeout resolution id;
+- related project or request;
+- public function;
+- operating mode;
+- submission date;
+- review deadline;
+- days elapsed;
+- responsible authority or process;
 - configured timeout policy;
-- expiration date;
-- automatic effect;
-- public comments/support/objections;
+- automatic consequence, if any;
+- citizen-facing summary;
+- public comments, support, objections, follows, or clarification requests;
 - status;
-- audit trail.
+- audit trail reference.
 
 ## Protocol Version
 

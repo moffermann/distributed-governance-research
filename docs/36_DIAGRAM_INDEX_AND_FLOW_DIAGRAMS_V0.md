@@ -74,6 +74,7 @@ Primary Mermaid sources:
 18. `docs/diagrams/v0-control-subproject-fiscalization-assignment-state.md`
 19. `docs/diagrams/v0-delegation-state.md`
 20. `docs/diagrams/v0-operating-mode-transition-state.md`
+21. `docs/diagrams/v0-governance-resolution-sequence.md`
 
 Conceptual planning diagram:
 
@@ -120,7 +121,6 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Governance resolution sequence diagram
 Audit event schema diagram
 ```
 
@@ -149,3 +149,5 @@ The Control Subproject and Fiscalization Assignment state diagram now lives at `
 The Delegation state diagram now lives at `docs/diagrams/v0-delegation-state.md`. It separates base-rule selection, delegation scope, concentration disclosure, request, acceptance, active delegated authority, delegated action records, represented weight, configured cap effects, reports, revocation, resignation, expiry, and fallback activation.
 
 The Operating Mode transition state diagram now lives at `docs/diagrams/v0-operating-mode-transition-state.md`. It separates Closed, Tutored, Semi-open, Open, Suspended, mode-change review, transition rules, tutored review windows, Governance Resolutions, Review Timeout Resolutions, timeout policy effects, and platform versus external-authority boundaries.
+
+The Governance Resolution sequence diagram now lives at `docs/diagrams/v0-governance-resolution-sequence.md`. It separates authority decision, required public fields, timeout creation, citizen audit actions, configured clarification/correction/appeal paths, audit events, and aggregate observability effects.
