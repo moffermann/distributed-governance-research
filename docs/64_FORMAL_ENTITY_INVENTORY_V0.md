@@ -191,7 +191,7 @@ Roles are contextual assignments held by actors. They should be modeled separate
 
 | Entity | Type | Purpose | Created / modified by | Stateful? | Main relationships / formal effects / risks |
 |---|---|---|---|---|---|
-| Support Signal | Civic signal | Reversible positive support for idea or project. | Verified actor. | Yes | Counts as social support where policy uses it. Not funding. Withdrawn support stops counting but remains auditable. |
+| Support Signal | Civic signal | Reversible positive support for an idea, project, or complaint-review activation where policy permits. | Verified actor. | Yes | Counts as social support where policy uses it. Not funding, complaint evidence, fulfillment evidence, evaluation, or reputation input by itself. Withdrawn support stops counting but remains auditable. |
 | Justified Objection Signal | Civic signal | Reversible structured concern that is not a complaint by default. | Verified actor. | Yes | May inform deliberation, review, or later complaint. Active counts exclude withdrawn signals. |
 | Comment | Interaction object | Public or protected-identity question/comment. | Verified actor. | Yes | Supports clarification and deliberation. Does not by itself create formal complaint, evaluation, or reputation effect. |
 | Protected Identity Request | Privacy/safety object | Requests contextual identity protection for sensitive formal action. | Verified actor, AI-assisted or restricted review where applicable. | Yes | May apply to comments, complaints, evidence, testimony, beneficiary confirmation, affected-party report. Does not create anonymity for formal power. |

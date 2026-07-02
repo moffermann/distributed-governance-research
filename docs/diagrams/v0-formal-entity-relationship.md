@@ -4,7 +4,7 @@
 
 Show the primary entity relationships that should guide Phase 2 formal modeling.
 
-This diagram is a conceptual ERD baseline, not a database schema. It focuses on the relationships needed to preserve accountability: actor, role, project, value promise, evidence context, fiscalization, funding, complaint handling, closure, reputation, governance, and audit traceability.
+This diagram is a conceptual ERD baseline, not a database schema. It focuses on the relationships needed to preserve accountability: actor, contextual role, idea/project boundary, value promise, metrics, evidence context, fiscalization, funding lanes, complaint handling, scoped pause, closure, reputation, governance, and audit traceability.
 
 Source baseline: `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
 
@@ -25,6 +25,12 @@ erDiagram
         string status
     }
 
+    IDEA {
+        string idea_id
+        string idea_state
+        string visibility_status
+    }
+
     PROJECT {
         string project_id
         string current_state
@@ -40,6 +46,24 @@ erDiagram
         string project_phase_id
         string phase_type
         string phase_state
+    }
+
+    PROJECT_VARIATION_RECORD {
+        string variation_record_id
+        string variation_type
+        string effect_scope
+    }
+
+    REFORMULATION_PROPOSAL {
+        string reformulation_id
+        string reformulation_state
+        string affected_commitment
+    }
+
+    REFORMULATION_POLICY {
+        string reformulation_policy_id
+        string review_rule
+        string transition_rule
     }
 
     PLANNING_SCOPE {
@@ -77,6 +101,12 @@ erDiagram
     VALUE_VERIFICATION_PACKAGE {
         string package_id
         string verification_scope
+    }
+
+    METRIC {
+        string metric_id
+        string metric_type
+        string target_direction
     }
 
     PROJECT_EVIDENTIAL_CONTRACT {
@@ -124,6 +154,12 @@ erDiagram
         string status
     }
 
+    FISCALIZER_OFFER {
+        string fiscalizer_offer_id
+        string offer_status
+        string proposed_method
+    }
+
     FISCALIZATION_ASSIGNMENT {
         string assignment_id
         string assignment_scope
@@ -138,6 +174,12 @@ erDiagram
     BUDGET {
         string budget_id
         string budget_status
+    }
+
+    BUDGET_LINE {
+        string budget_line_id
+        string line_purpose
+        string funding_lane
     }
 
     FUNDING_COMMITMENT {
@@ -159,6 +201,12 @@ erDiagram
     CUSTODIAN {
         string custodian_id
         string custodian_type
+    }
+
+    DISBURSEMENT_MILESTONE_PLAN {
+        string plan_id
+        string release_rule
+        string retention_rule
     }
 
     DISBURSEMENT {
@@ -200,6 +248,24 @@ erDiagram
         string pause_record_id
         string affected_scope
         string pause_state
+    }
+
+    SUPPORT_SIGNAL {
+        string support_signal_id
+        string target_type
+        string signal_state
+    }
+
+    JUSTIFIED_OBJECTION_SIGNAL {
+        string objection_signal_id
+        string target_type
+        string signal_state
+    }
+
+    COMMENT {
+        string comment_id
+        string target_type
+        string visibility_mode
     }
 
     PROJECT_CLOSURE_ACCOUNTABILITY_RECORD {
@@ -275,21 +341,49 @@ erDiagram
     }
 
     ACTOR ||--o{ ROLE_ASSIGNMENT : holds
-    ROLE_ASSIGNMENT }o--|| PROJECT : scoped_to
+    ROLE_ASSIGNMENT }o--o| PROJECT : may_scope_to_project
+    ROLE_ASSIGNMENT }o--o| PROJECT_PHASE : may_scope_to_phase
+    ROLE_ASSIGNMENT }o--o| CONTROL_SUBPROJECT : may_scope_to_control
+    ROLE_ASSIGNMENT }o--o| COMPLAINT : may_scope_to_complaint
+    ROLE_ASSIGNMENT }o--o| PLANNING_SCOPE : may_scope_to_scope
     ROLE_ASSIGNMENT ||--o{ AUDIT_EVENT : records
+
+    ACTOR ||--o{ IDEA : may_create
+    IDEA ||--o{ PROJECT : may_generate
+    ACTOR ||--o{ SUPPORT_SIGNAL : creates
+    ACTOR ||--o{ JUSTIFIED_OBJECTION_SIGNAL : creates
+    ACTOR ||--o{ COMMENT : writes
+    IDEA ||--o{ SUPPORT_SIGNAL : may_receive
+    IDEA ||--o{ JUSTIFIED_OBJECTION_SIGNAL : may_receive
+    IDEA ||--o{ COMMENT : may_receive
+    PROJECT ||--o{ SUPPORT_SIGNAL : may_receive
+    PROJECT ||--o{ JUSTIFIED_OBJECTION_SIGNAL : may_receive
+    PROJECT ||--o{ COMMENT : may_receive
+    COMPLAINT ||--o{ SUPPORT_SIGNAL : may_receive_activation_support
+    COMPLAINT ||--o{ COMMENT : may_receive
 
     PLANNING_SCOPE ||--o{ PROJECT : governs
     OPERATING_MODE ||--o{ PLANNING_SCOPE : configures
     THRESHOLD_POLICY ||--o{ PROJECT : constrains
     PROTOCOL_VERSION ||--o{ THRESHOLD_POLICY : governs
+    PROTOCOL_VERSION ||--o{ REFORMULATION_POLICY : governs
     PROJECT ||--|| PRIMARY_RESPONSIBILITY_ANCHOR : has
     PROJECT ||--o{ PROJECT_VERSION : versions
     PROJECT ||--o{ PROJECT_PHASE : phases
+    PROJECT ||--o{ PROJECT_VARIATION_RECORD : records_variation
+    PROJECT_PHASE ||--o{ PROJECT_VARIATION_RECORD : may_record_variation
+    PROJECT_VARIATION_RECORD ||--o| REFORMULATION_PROPOSAL : may_require
+    REFORMULATION_POLICY ||--o{ REFORMULATION_PROPOSAL : governs
+    REFORMULATION_PROPOSAL ||--o{ PROJECT_VERSION : may_create_version
 
     PROJECT ||--|| VALUE_THESIS : declares
     PROJECT ||--|| VALUE_ANTIVALUE_PROFILE : defines
     VALUE_THESIS ||--o{ VALUE_VERIFICATION_PACKAGE : contains
     VALUE_ANTIVALUE_PROFILE ||--o{ VALUE_VERIFICATION_PACKAGE : constrains
+    VALUE_VERIFICATION_PACKAGE ||--o{ METRIC : defines
+    VALUE_ANTIVALUE_PROFILE ||--o{ METRIC : sets_ceilings
+    METRIC ||--o{ FULFILLMENT_EVIDENCE_NEED : requires_evidence
+    METRIC ||--o{ EVALUATION_RECORD : evaluated_by
     VALUE_VERIFICATION_PACKAGE ||--o{ FULFILLMENT_EVIDENCE_NEED : defines
     PROJECT ||--|| PROJECT_EVIDENTIAL_CONTRACT : requires
     PROJECT_EVIDENTIAL_CONTRACT ||--o{ FULFILLMENT_EVIDENCE_NEED : defines
@@ -303,7 +397,11 @@ erDiagram
     EVALUATION_RECORD ||--o{ RESPONSIBILITY_EVENT : may_create
 
     PROJECT ||--|| FISCALIZATION_REQUIREMENT : has
+    FISCALIZATION_REQUIREMENT ||--o{ CONTROL_SUBPROJECT : may_require
     PROJECT ||--o{ CONTROL_SUBPROJECT : has_control_work
+    CONTROL_SUBPROJECT ||--o{ FISCALIZER_OFFER : receives_offer
+    FISCALIZATION_REQUIREMENT ||--o{ FISCALIZER_OFFER : invites_offer
+    FISCALIZER_OFFER ||--o| FISCALIZATION_ASSIGNMENT : may_be_accepted_as
     CONTROL_SUBPROJECT ||--o{ FISCALIZATION_ASSIGNMENT : assigns
     ROLE_ASSIGNMENT ||--o{ FISCALIZATION_ASSIGNMENT : performs
     FISCALIZATION_ASSIGNMENT ||--o{ FISCALIZATION_REPORT : produces
@@ -311,11 +409,17 @@ erDiagram
     CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ FISCALIZATION_REPORT : considered_by
 
     PROJECT ||--|| BUDGET : has
+    BUDGET ||--o{ BUDGET_LINE : contains
     CIVIC_WALLET ||--o{ FUNDING_COMMITMENT : commits
-    FUNDING_COMMITMENT }o--|| PROJECT : funds
+    FUNDING_COMMITMENT }o--o| PROJECT : may_fund_project
     FUNDING_COMMITMENT }o--o| CONTROL_SUBPROJECT : may_fund_control
+    FUNDING_COMMITMENT }o--o| COMPLAINT_REVIEW_QUOTE : may_fund_review
+    FUNDING_COMMITMENT }o--o| BUDGET_LINE : may_fund_lane
+    PROJECT ||--o{ DISBURSEMENT_MILESTONE_PLAN : plans_release
+    PROJECT_PHASE ||--o{ DISBURSEMENT_MILESTONE_PLAN : gates_release
+    DISBURSEMENT_MILESTONE_PLAN ||--o{ DISBURSEMENT : gates
     PROJECT ||--o{ DISBURSEMENT : receives
-    PROJECT_PHASE ||--o{ DISBURSEMENT : gates
+    PROJECT_PHASE ||--o{ DISBURSEMENT : may_gate
     EVALUATION_RECORD ||--o{ DISBURSEMENT : may_authorize_or_block
     DISBURSEMENT ||--o{ FINANCIAL_ORDER : generates
     FINANCIAL_ORDER }o--|| CUSTODIAN : executed_by
@@ -330,7 +434,11 @@ erDiagram
     COMPLAINT ||--o{ COMPLAINT_ADMISSIBILITY_REFERRAL_RECORD : reviewed_as
     COMPLAINT ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : includes_complaint_evidence
     COMPLAINT_ADMISSIBILITY_REFERRAL_RECORD ||--o{ SYSTEMIC_PAUSE_RECORD : may_trigger
-    SYSTEMIC_PAUSE_RECORD }o--|| PROJECT : affects_scope
+    SYSTEMIC_PAUSE_RECORD }o--o| PROJECT : may_affect_project
+    SYSTEMIC_PAUSE_RECORD }o--o| PROJECT_PHASE : may_affect_phase
+    SYSTEMIC_PAUSE_RECORD }o--o| DISBURSEMENT : may_block_disbursement
+    SYSTEMIC_PAUSE_RECORD }o--o| CONTEXTUALIZED_EVIDENCE_ITEM : may_restrict_evidence_use
+    SYSTEMIC_PAUSE_RECORD }o--o| ROLE_ASSIGNMENT : may_restrict_actor_action
 
     PROJECT ||--o{ PROJECT_CLOSURE_ACCOUNTABILITY_RECORD : closes_with
     PROJECT_CLOSURE_ACCOUNTABILITY_RECORD ||--o{ EVALUATION_RECORD : includes
@@ -355,17 +463,34 @@ erDiagram
     SYSTEM_IMPLEMENTATION_CHANGE ||--o{ PROTOCOL_VERSION : implements
     PROTOCOL_VERSION ||--o{ AUDIT_EVENT : referenced_by
 
+    IDEA ||--o{ AUDIT_EVENT : records
     PROJECT ||--o{ AUDIT_EVENT : records
+    PROJECT_PHASE ||--o{ AUDIT_EVENT : records
+    PROJECT_VARIATION_RECORD ||--o{ AUDIT_EVENT : records
+    REFORMULATION_PROPOSAL ||--o{ AUDIT_EVENT : records
     CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ AUDIT_EVENT : records
+    EVALUATION_RECORD ||--o{ AUDIT_EVENT : records
+    FISCALIZATION_ASSIGNMENT ||--o{ AUDIT_EVENT : records
+    FISCALIZATION_REPORT ||--o{ AUDIT_EVENT : records
     COMPLAINT ||--o{ AUDIT_EVENT : records
+    COMPLAINT_ADMISSIBILITY_REFERRAL_RECORD ||--o{ AUDIT_EVENT : records
+    SYSTEMIC_PAUSE_RECORD ||--o{ AUDIT_EVENT : records
     FUNDING_COMMITMENT ||--o{ AUDIT_EVENT : records
     DISBURSEMENT ||--o{ AUDIT_EVENT : records
+    PROJECT_CLOSURE_ACCOUNTABILITY_RECORD ||--o{ AUDIT_EVENT : records
+    RESPONSIBILITY_EVENT ||--o{ AUDIT_EVENT : records
+    REPUTATION_UPDATE ||--o{ AUDIT_EVENT : records
     GOVERNANCE_RESOLUTION ||--o{ AUDIT_EVENT : records
 ```
 
 ## Modeling notes
 
-- `RoleAssignment` is used as the ERD bridge between actor identity, contextual role, and project scope. It represents the traceable fact that an actor holds a role in a specific context.
+- `RoleAssignment` is the ERD bridge between actor identity, contextual role, and operational scope. It may be scoped to a project, phase, control subproject, complaint, planning scope, or another protocol-defined object. It must not imply that every role acts over the whole project.
+- `Idea` is separate from `Project`. Ideas may receive support, objections, comments, and followers, but they are not financeable or executable until converted into a valid project.
+- `SupportSignal`, `JustifiedObjectionSignal`, and `Comment` are civic signals. They may inform thresholds, deliberation, complaint activation, or review context where policy permits, but they are not funding, complaint evidence, fulfillment evidence, evaluation, or reputation input by themselves.
+- `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. This prevents value promises from remaining purely rhetorical.
+- `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
+- `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.
 - `ContextualizedEvidenceItem` is the technical evidence record. Formal effects depend on `EvidenceContext`, review status, corroboration, and an effect-specific `EvaluationRecord`.
 - `PerformanceHistorySurface`, `ReputationSummary`, and `AssistedDeliberationContext` are derived read models. This ERD shows `PerformanceHistorySurface` only where reviewed records feed it.
 - Financial custody is external infrastructure. `Custodian` executes valid `FinancialOrder` records; it does not decide civic value, project priority, or fulfillment.
@@ -374,14 +499,16 @@ erDiagram
 ## Macul example trace
 
 ```text
-Actor as Proposer/Modeler
--> Project
--> Project Phase: Design
--> Project Evidential Contract
--> Fulfillment Evidence Need
--> Contextualized Evidence Item with evidence_context
--> Evaluation Record / Fiscalization Report
--> Disbursement, Systemic Pause, Closure, Responsibility, or Reputation effect
+Idea: build multi-courts in Macul
+-> Project: Design and Construction of Multi-Courts in Macul
+-> Project Phases: Design, then Construction
+-> Metrics: court dimensions, accessibility, bathrooms, public access, noise ceilings
+-> Project Evidential Contract and Fulfillment Evidence Needs
+-> Design-phase fiscalization report / evaluation record
+-> Execution funding remains committed or reserved until design gate acceptance
+-> Complaint about deficient design may trigger a scoped Systemic Pause Record
+-> Pause may block construction-phase disbursement without automatically cancelling the whole project
+-> Closure, responsibility events, and role-specific reputation depend on reviewed records
 ```
 
 ## Rule

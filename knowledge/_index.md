@@ -170,6 +170,7 @@ Start here when navigating the project in Obsidian or GitHub.
 ## Phase 2 formalization entry points
 
 - [[../docs/64_FORMAL_ENTITY_INVENTORY_V0|Formal Entity Inventory v0]]
+- [[../docs/diagrams/v0-formal-entity-relationship|Formal Entity Relationship Baseline v0]]
 - [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]

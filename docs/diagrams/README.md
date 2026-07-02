@@ -19,6 +19,8 @@ Generated images may be exported for papers, slides, or visual review, but the M
 - `v0-audit-trail-pattern.md`
 - `v0-formal-entity-relationship.md`
 
+The formal ERD has completed its first relationship audit. It is the corrected input for the next Project object state diagram with phase substates.
+
 ## Format rule
 
 Use Mermaid inside Markdown. Keep diagrams readable in Git diffs. Add generated image files only as secondary artifacts when there is a clear presentation or publication need.

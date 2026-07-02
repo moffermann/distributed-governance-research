@@ -131,3 +131,5 @@ Audit event schema diagram
 Phase 2 diagrams should use `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the formal entity baseline and `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md` as the detailed narrative source.
 
 The first Phase 2 ERD now lives at `docs/diagrams/v0-formal-entity-relationship.md`. It is a primary relationship baseline, not a database schema.
+
+The first ERD relationship audit has been completed. The ERD now preserves the `Idea` to `Project` boundary, uses scoped role assignments, connects metrics to value and evidence requirements, distinguishes funding targets by lane, includes fiscalizer offers and reformulation objects, and treats systemic pause as a scoped platform effect rather than an automatic whole-project or material/legal suspension. The next formal diagram should draft the `Project` object state diagram with phase substates using this corrected ERD as input.
