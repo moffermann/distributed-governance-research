@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/diagrams/v0-funding-commitment-disbursement-state|Funding Commitment and Disbursement State v0]]
 - [[../docs/diagrams/v0-complaint-evidence-and-review-state|Complaint Evidence and Review State v0]]
 - [[../docs/diagrams/v0-contextualized-evidence-item-state|Contextualized Evidence Item State v0]]
 - [[../docs/diagrams/v0-project-object-state-with-phase-substates|Project Object State with Phase Substates v0]]
@@ -177,6 +178,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/diagrams/v0-project-object-state-with-phase-substates|Project Object State with Phase Substates v0]]
 - [[../docs/diagrams/v0-contextualized-evidence-item-state|Contextualized Evidence Item State v0]]
 - [[../docs/diagrams/v0-complaint-evidence-and-review-state|Complaint Evidence and Review State v0]]
+- [[../docs/diagrams/v0-funding-commitment-disbursement-state|Funding Commitment and Disbursement State v0]]
 - [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
@@ -194,6 +196,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/diagrams/v0-contextualized-evidence-item-state|Diagram - Contextualized Evidence Item State v0]]
 - [[../docs/diagrams/v0-open-project-parallel-closure|Diagram - Open Project Parallel Closure v0]]
 - [[../docs/diagrams/v0-funding-disbursement|Diagram - Funding and Disbursement v0]]
+- [[../docs/diagrams/v0-funding-commitment-disbursement-state|Diagram - Funding Commitment and Disbursement State v0]]
 - [[../docs/diagrams/v0-evidence-fiscalization|Diagram - Contextualized Evidence and Fiscalization v0]]
 - [[../docs/diagrams/v0-complaint-review|Diagram - Complaint and Review v0]]
 - [[../docs/diagrams/v0-complaint-evidence-and-review-state|Diagram - Complaint Evidence and Review State v0]]

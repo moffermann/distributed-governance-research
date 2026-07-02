@@ -315,13 +315,27 @@ Closed
 Available
 Committed
 Reserved
+Pending review
+Approved for release
+Financial order issued
+Custodian execution blocked
+Paused
 Blocked
-Released
 Retained
+Released partially
+Released totally
 Returned
 Reassigned
+In recovery
 Recovered
+Loss recorded
+Financial closure pending
+Assurance pending
+Guarantee materialized
+Guarantee insufficient
+Guarantee expired
 Guarantee executed
+Guarantee released
 Closed
 ```
 
