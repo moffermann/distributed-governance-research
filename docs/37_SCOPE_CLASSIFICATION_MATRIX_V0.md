@@ -36,7 +36,9 @@ Examples:
 - Planning Scope Alignment;
 - Primary Responsibility Anchor;
 - value thesis;
-- evidence;
+- Project Evidential Contract;
+- fulfillment/control evidence needs;
+- contextualized evidence items with required evidence context;
 - fiscalization;
 - funding commitment;
 - disbursement;
@@ -280,8 +282,10 @@ actor
 → project
 → value promise
 → funding commitment
-→ evidence
-→ fiscalization
+→ Project Evidential Contract
+→ fulfillment/control evidence need
+→ contextualized evidence item with required evidence context
+→ fiscalization / formal evaluation
 → milestone
 → disbursement
 → complaint/correction if needed

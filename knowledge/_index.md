@@ -164,6 +164,14 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION|Beneficiary Privacy, Protected Identity, and C024 Resolution v0]]
 - [[../docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|Project Discovery Visibility, User Customization, and C025 Resolution v0]]
 
+## Phase 2 formalization entry points
+
+- [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
+- [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
+- [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
+- [[concepts/evidence-context-taxonomy-v0|Evidence Context Taxonomy v0]]
+- [[concepts/evaluation-context-taxonomy-v0|Evaluation Context Taxonomy v0]]
+
 ## Diagram sources
 
 - [[../docs/diagrams/README|Diagram Sources]]

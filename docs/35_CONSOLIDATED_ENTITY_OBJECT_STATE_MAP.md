@@ -1446,11 +1446,13 @@ Rule:
 
 A piece of material used to verify, contradict, or evaluate a project, complaint, control task, material claim, or administrative observability issue.
 
+For formal modeling, this should be read as a `Contextualized Evidence Item`. A bare evidence item is only a technical record. Its formal use depends on required `evidence_context`, source role, review status, corroboration, and the specific effect being claimed.
+
 Attributes:
 
 - project;
 - project phase where applicable;
-- evidence context: complaint, fulfillment, control, contradiction, administrative observability, or research;
+- evidence context (required): complaint, fulfillment, control, contradiction, administrative observability, or research;
 - milestone;
 - metric;
 - fulfillment evidence need or complaint evidence relation where applicable;
@@ -1478,13 +1480,17 @@ Rule:
 
 > Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. Complaint evidence may trigger or support review, but it does not become fulfillment evidence unless accepted for that purpose by the responsible reviewer, fiscalizer, competent authority, or protocol rule.
 
+Context rule:
+
+> The same material may be relevant in more than one evidence context, but each formal use must be separately classified and reviewed. A photo, document, testimony, sensor record, or report should not produce complaint, fulfillment, control, contradiction, reputation, disbursement, or closure effects merely because it exists in the archive.
+
 States:
 
 ```text
 Expected
 Submitted
 Pending review
-Accepted as evidence
+Accepted for declared context
 Accepted only as contextual material
 Insufficient for fulfillment effect
 Needs corroboration
@@ -2724,7 +2730,7 @@ Audit trail:
 - Contextualized evidence items must connect to evidence context and to phase, milestone, metric, fulfillment evidence need, material claim, complaint, or review issue where applicable.
 - Fiscalization report connects contextualized evidence to review outcome.
 - Responsible fiscalization is assigned through protocol-selected Control Subprojects or fiscalization assignments, while open observation and contextualized evidence production remain broader participation layers.
-- Disbursement connects phase, milestone, fulfillment evidence, fiscalization, and money state.
+- Disbursement connects phase, milestone, reviewed fulfillment/control evidence, fiscalization, and money state.
 - Complaint can affect project state, milestone state, contextualized evidence state, or disbursement state through a scoped complaint status, admissibility/referral record, blocking condition, systemic pause, competent-authority decision, or final resolution.
 - Systemic Pause Record connects an affected scope, trigger, funding boundary, system effect, lifting/escalation rule, and material/legal suspension reference where applicable.
 - Administrative Rule Changes, System Implementation Changes, and Protocol Change Proposals must reference affected rules, project states, effective dates, transition rules, and audit events where material.
@@ -2737,11 +2743,14 @@ Audit trail:
 
 This map should be used to create:
 
+- formal entity inventory;
 - entity relationship diagram;
 - project lifecycle state diagram;
 - funding/disbursement state diagram;
-- contextualized evidence/fiscalization diagram;
-- complaint resolution diagram;
+- contextualized evidence item state diagram;
+- project evidential contract / fulfillment evidence need diagram;
+- fiscalization and control subproject diagram;
+- complaint evidence and complaint resolution diagram;
 - delegation diagram;
 - role responsibility matrix;
 - implementable object schema draft.

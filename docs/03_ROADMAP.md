@@ -194,7 +194,9 @@ The sixty-fourth residual cleanup refined H001 after the health/urgent-care obje
 
 The sixty-fifth residual cleanup audited foundational session notes and the missing-functions addendum for stale H001-H003 language. The cleanup preserves historical discovery notes while adding v0 alignment notes for functional-layer distribution, bounded assignable allocation, incentive-compatible distributed trust, and the complaint-evidence versus fulfillment/control-evidence distinction where old generic evidence language could confuse the reader. It also narrows older funding language from direct citizen allocation of taxes or resources to configured assignable public-purpose shares inside eligibility, planning, fiscalization, phase, and common-pool boundaries.
 
-Next review candidate: residual audit of remaining maps and indexes affected by H001-H003 and C001-C025, then prepare the Phase 2 formal entity inventory.
+The sixty-sixth residual cleanup aligned the Phase 2 roadmap, consolidated entity/object/state map, diagram index, scope classification matrix, and knowledge index for formal modeling. The cleanup prevents `Evidence` from appearing as an undifferentiated operational object in the next entity inventory: formal modeling should use `Contextualized Evidence Item` as the technical record with required `evidence_context`, and should separately model Fulfillment Evidence Needs, Project Evidential Contracts, complaint evidence and review, control evidence, contradiction evidence, evaluation records, fiscalization, disbursement, closure, and reputation effects.
+
+Next review candidate: prepare the Phase 2 formal entity inventory from the consolidated map, using the disambiguated evidence, evaluation, fiscalization, complaint, funding, delegation, and operating-mode objects.
 
 Approximate current maturity:
 
@@ -262,10 +264,10 @@ Core v0 modules now include:
 - entity and role map;
 - project lifecycle;
 - planning scope alignment;
-- value thesis, value icons, metrics, and evidence;
+- value thesis, value icons, metrics, and fulfillment/control evidence needs;
 - project creation and publication;
 - open-project and parallel closure model;
-- fiscalization and evidence production;
+- fiscalization and contextualized evidence production;
 - complaints and review triggers;
 - milestone-based disbursement and retentions;
 - reformulation, pause, revocation, and closure controls;
@@ -315,7 +317,7 @@ Deliverables:
 
 - system entity inventory;
 - object model with attributes and relationships;
-- state diagrams for projects, delegations, complaints, evidence, fiscalization, funding, and operating modes;
+- state diagrams for projects, delegations, complaints, contextualized evidence items, fiscalization, funding, and operating modes;
 - funding and disbursement flow diagrams;
 - fiscalization and complaint flow diagrams;
 - delegation flow diagram;
@@ -330,10 +332,13 @@ Candidate entity groups:
 
 ```text
 Actors:
-  citizen, organization, proposer, modeler, executor, fiscalizer, evidence producer, funder, delegator, delegate, moderator, complainant, beneficiary, affected party, institution, custodian.
+  citizen, organization, public authority / external authority, state-owned operator where eligible, custodian, allocation amount provider.
+
+Roles:
+  proposer, modeler/designer, executor, fiscalizer, evidence producer, funder, follower, commenter, complainant, beneficiary, affected party, delegator, delegate, evaluator, technical assistant.
 
 Objects:
-  project, project version, planning scope, value thesis, value-antivalue profile, financial assurance profile, guarantee materialization record, value icon, metric, evidence, evaluation record, milestone, budget, disbursement, retention, project closure accountability record, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, civic wallet, allocation profile, delegation, reputation signal, reputation input, reputation update, reputation summary, performance history surface, assisted deliberation context, operating mode, audit event.
+  project, project version, project phase, planning scope, primary responsibility anchor, value thesis, value-antivalue profile, value verification package, project evidential contract, fulfillment evidence need, contextualized evidence item, evidence context, material information claim, evaluation record, metric, milestone, budget, funding commitment, disbursement, retention, financial assurance profile, guarantee materialization record, control subproject, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, justified objection signal, support signal, civic wallet, allocation profile, delegation, related-party conflict review, responsibility event, reputation signal, reputation input, reputation update, reputation summary, performance history surface, assisted deliberation context, governance resolution, review timeout resolution, administrative rule change, system implementation change, protocol version, operating mode, audit event.
 
 States:
   draft, in validation, requires adjustment, ready to publish, open, execution-ready, in execution, correction required, paused, requires reformulation, under review, revoked, closed, expired.
@@ -365,7 +370,7 @@ Priority objections:
 - delegation concentration;
 - moderation abuse in transition pilots;
 - scope creep and excessive complexity;
-- false or incomplete evidence;
+- false, incomplete, or context-misclassified evidence;
 - related-party projects;
 - common-good charter conflicts;
 - resistance by incumbent institutions;
@@ -439,7 +444,7 @@ Candidate structure:
 2. Problem: institutional concentration, information failure, and allocation opacity
 3. Existing literatures and related models
 4. Core proposal: project-based distributed governance
-5. Value thesis, evidence, and fiscalization
+5. Value thesis, contextualized evidence, and fiscalization
 6. Distributed allocation and civic tax wallets
 7. Delegation, reputation, and participation capacity
 8. Meta-governance and protocol evolution

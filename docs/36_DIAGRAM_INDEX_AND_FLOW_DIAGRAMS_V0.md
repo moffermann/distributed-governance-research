@@ -78,6 +78,9 @@ Generated SVG outputs:
 
 The diagram set now reflects these accepted C001-C025 corrections:
 
+- H001: diagrams should separate functional layers rather than treating a sector, institution, or public/private label as one block.
+- H002: funding and allocation diagrams should show bounded assignable public-purpose resources, not unconstrained public budget allocation.
+- H003: trust diagrams should show incentives, accountable claims, evidence context, contradiction, review, consequences, and auditability rather than assuming distributed actors are trustworthy by default.
 - C001: `Idea` is separate from `Project`; ideas are not financeable.
 - H016/C002/C013: fiscalization is distributed in available actors and fulfillment/control evidence sources, but responsible control is protocol-selected, conflict-checked, risk-adjusted, capped, and closed in parallel with execution funding.
 - C003/C015: executor material is self-report unless corroborated; contextualized evidence publication is privacy-assisted.
@@ -99,6 +102,10 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C022: projects declare common-good impacts where relevant.
 - C025: discovery is explainable, user-configurable, non-commercial, and auditable.
 
+## Evidence diagram rule
+
+Future formal diagrams should not use a bare `Evidence` node as if all evidence had the same meaning. They may use `Contextualized Evidence Item` as the technical object, but process diagrams should identify the relevant context: Complaint Evidence, Fulfillment Evidence, Control Evidence, Contradiction Evidence, Administrative Observability Data, or Research Evidence. Complaint review, fulfillment evaluation, fiscalization, disbursement, closure, reputation, and legal referral should be shown as distinct effects.
+
 ## Diagram refinement backlog
 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
@@ -107,8 +114,9 @@ The next diagram refinements should be created as separate Mermaid sources befor
 Entity relationship diagram
 Project object state diagram with all substates
 Funding commitment state diagram
-Complaint state diagram
-Contextualized evidence item state diagram
+Complaint evidence and complaint review state diagram
+Contextualized evidence item state diagram with required evidence_context
+Project evidential contract / fulfillment evidence need diagram
 Control subproject state diagram
 Delegation state diagram
 Operating mode transition diagram
