@@ -278,6 +278,9 @@ Design review pending, if applicable
 📎 Evidence producers
 2 of 4 committed
 
+👥 Affected-party participation
+Community consultation evidence pending, if applicable
+
 🚩 Blocking complaints
 0
 ```
@@ -289,6 +292,15 @@ Design review pending, if applicable
 For phased projects, the condition should identify the relevant phase. A construction phase may have funding reserved but still not be execution-ready because the design phase has not been accepted.
 
 The sheet should show the threshold policy that explains why those conditions apply.
+
+Where affected-party mapping or consultation is required, the full sheet should show the simple citizen status and let the citizen inspect the source records:
+
+```text
+Affected-party status:
+Nearby residents notified.
+Plan presentation evidence pending.
+Public access objection unresolved.
+```
 
 Example:
 
@@ -306,6 +318,8 @@ The project builds a public facility, may need permits, and requires independent
 ## 9. Civic support and justified objections
 
 Show social support and justified objections separately from funding.
+
+Funding completion should not be labeled as community approval. Support, justified objections, affected-party observations, consultation evidence, and formal complaints remain separate signals.
 
 Example:
 

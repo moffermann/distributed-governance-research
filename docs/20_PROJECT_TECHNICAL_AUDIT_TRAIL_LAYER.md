@@ -487,6 +487,7 @@ For each closure record, include:
 - Planning Scope and Primary Responsibility Anchor;
 - accepted Value-Antivalue Profile;
 - Project Evidential Contract version;
+- Project Legitimacy Profile status where required;
 - value floors and antivalue ceilings evaluated;
 - expected fulfillment/control evidence;
 - submitted fulfillment/control evidence;
@@ -494,6 +495,7 @@ For each closure record, include:
 - EvaluationRecords by dimension;
 - FiscalizationReport final reference;
 - technical, financial, beneficiary, affected-party, or authority reviews where applicable;
+- affected-party mapping, consultation, or observation evidence considered where applicable;
 - unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
 - released, retained, returned, reassigned, recovered, or guarantee-executed funds;
 - closure outcome;
@@ -798,6 +800,8 @@ For threshold policy decisions, Layer 5 should preserve:
 - document completeness status;
 - document acceptability reviewer or authority where applicable;
 - admissibility review status where applicable;
+- affected-party mapping or consultation requirements where applicable;
+- Project Legitimacy Profile requirement and status where applicable;
 - citizen-facing explanation;
 - changes to the threshold policy after publication, if any.
 
@@ -828,6 +832,9 @@ Examples:
 - urgent-slot reason;
 - recommendation reason;
 - list ordering mode;
+- nearby-project or followed-scope reason;
+- affected-party consultation-window notification;
+- legitimacy-condition update visibility reason;
 - filters applied;
 - protocol rule for rotation;
 - whether the user customized Home categories;

@@ -16,6 +16,8 @@ For phased projects, funding may be attached to a phase-specific lane. A citizen
 
 Execution-phase funding may be accepted while a required design phase is still pending, but it remains reserved or conditional. It cannot be released for construction or execution until the design phase gate is accepted.
 
+Funding completion also does not close affected-party legitimacy conditions. If the active Threshold Policy requires affected-party mapping, nearby-project notification, community consultation evidence, plan review, or unresolved-objection handling, those conditions remain visible and may block execution-ready status even when the funding target is complete.
+
 ## Main question
 
 The flow answers:
@@ -355,6 +357,8 @@ Funding should remain separate from civic support.
 
 The system may ask whether the citizen also wants to support the project publicly as a civic signal, but financial amount should not count as extra social legitimacy.
 
+The system should also avoid implying that funding proves affected-party approval. For projects with a required Project Legitimacy Profile, the funding confirmation should preserve labels such as `community consultation evidence pending`, `affected-party issue pending`, or `public access condition unresolved` where applicable.
+
 Example:
 
 ```text
@@ -464,6 +468,7 @@ The funding flow should not:
 
 - imply that money is immediately transferred to the executor;
 - imply that a larger amount creates more social support;
+- imply that funding completion creates community legitimacy or affected-party approval;
 - hide release conditions;
 - present funding as freely withdrawable after confirmation;
 - require technical understanding before funding;

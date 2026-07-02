@@ -138,12 +138,13 @@ effect_refs
 | Object | Required core fields | Key refs / effects | Notes |
 |---|---|---|---|
 | `Idea` | `idea_id`, `title`, `problem_or_demand`, `territory`, `status`, `support_count_ref`, `comment_refs` | May generate `Project` records. | Not financeable for execution. |
-| `Project` | `project_id`, `title`, `summary`, `territory`, `current_state`, `current_version_ref`, `planning_scope_ref`, `primary_responsibility_anchor_ref`, `threshold_policy_ref`, `audit_refs` | Parent for phases, funding, evidence, fiscalization, complaints, closure, reputation. | Financeable executable unit. |
+| `Project` | `project_id`, `title`, `summary`, `territory`, `current_state`, `current_version_ref`, `planning_scope_ref`, `primary_responsibility_anchor_ref`, `threshold_policy_ref`, `legitimacy_profile_ref`, `audit_refs` | Parent for phases, funding, evidence, fiscalization, complaints, closure, reputation. | Financeable executable unit; legitimacy profile applies where required by threshold policy. |
 | `ProjectVersion` | `project_version_id`, `project_id`, `version_number`, `changed_fields_ref`, `reason`, `supersedes_ref`, `audit_refs` | Preserves promise and design history. | No silent editing of core promises. |
 | `ProjectPhase` | `phase_id`, `project_id`, `phase_type`, `phase_order`, `phase_state`, `deliverables`, `budget_lane_ref`, `gate_requirements`, `successor_phase_refs` | Gates funding release and execution transitions. | Design-and-execution projects use this to reserve later funds without releasing them prematurely. |
 | `PlanningScope` | `scope_id`, `public_function`, `territory`, `operating_mode_ref`, `source`, `eligible_project_types`, `effective_at`, `status` | Governs project eligibility and publication. | Tutored interpretations require visible governance resolution or review trace. |
 | `PrimaryResponsibilityAnchor` | `anchor_id`, `project_id`, `anchor_statement`, `public_function_or_scope_ref`, `primary_value_family`, `secondary_contributions` | Connects classification, funding, evaluation, fiscalization, closure, and reputation. | Prevents bundled accountability dilution. |
 | `ThresholdPolicy` | `policy_id`, `scope`, `source`, `procedural_burden_profile`, `conditions`, `required_documents`, `reviewer_or_authority_ref`, `effective_version_ref` | Controls publication, funding, execution-ready status, disbursement, closure, review, and reformulation. | Proposers/designers/executors cannot self-select lower burden where obligations decrease. |
+| `ProjectLegitimacyProfile` | `profile_id`, `project_id`, `project_version_ref`, `affected_scope`, `affected_party_map_ref`, `exposure_types`, `required_consultation_evidence_need_refs`, `submitted_evidence_refs`, `unresolved_objection_refs`, `review_route_refs`, `citizen_status`, `audit_refs` | Aggregates affected-party mapping, consultation evidence, objections, Planning Scope review, complaint routes, Governance Resolutions, or authority traces where applicable. | Not a vote, veto, popularity score, or proof created by funding. |
 | `RelatedPartyConflictReview` | `conflict_review_id`, `target_project_ref`, `actor_role_refs`, `relationship_type`, `severity_classification`, `disclosure_status`, `review_status`, `effect_refs` | May trigger warnings, safeguards, exclusion, blocking, reformulation, rejection, complaint review, or responsibility review. | Applies especially to holding-linked design/execution/control relationships. |
 
 ## Value, Evidence, and Evaluation Schemas
@@ -170,7 +171,7 @@ effect_refs
 | `BudgetLine` | `budget_line_id`, `budget_ref`, `purpose`, `amount`, `phase_ref`, `funding_lane`, `disbursement_rule_ref` | Separates execution, control, guarantee, evidence mission, mitigation, or review costs. | Enables lane-specific closure and release rules. |
 | `AllocationAmountRule` | `rule_id`, `scope`, `formula_version`, `eligibility_basis`, `provider_ref`, `privacy_rule`, `effective_at` | Feeds civic allocation without exposing raw sensitive data. | Equal allocation is an explicit simple option. |
 | `CivicWallet` | `wallet_id`, `actor_ref`, `allocation_amount_rule_ref`, `available_amount`, `committed_amount`, `status` | Supports funding, delegation, and automatic profiles. | Non-withdrawable public allocation right, not private cash. |
-| `FundingCommitment` | `commitment_id`, `wallet_or_actor_ref`, `target_object_ref`, `funding_lane`, `amount`, `state`, `delegation_or_profile_ref` | May reserve funds for project, phase, control, complaint review, or mitigation. | Funding is commitment, not proof of readiness or fulfillment. |
+| `FundingCommitment` | `commitment_id`, `wallet_or_actor_ref`, `target_object_ref`, `funding_lane`, `amount`, `state`, `delegation_or_profile_ref` | May reserve funds for project, phase, control, complaint review, or mitigation. | Funding is commitment, not proof of legitimacy, readiness, disbursement approval, or fulfillment. |
 | `Disbursement` | `disbursement_id`, `project_or_phase_ref`, `budget_line_ref`, `milestone_or_gate_ref`, `review_refs`, `state`, `amount` | Leads to financial order only after review and blockers clear. | May be released, retained, blocked, returned, reassigned, recovered, or closed. |
 | `FinancialOrder` | `financial_order_id`, `order_type`, `source_balance_ref`, `destination_ref`, `amount`, `rule_context_ref`, `custodian_ref`, `execution_status` | Custodian executes or reports technical/legal block. | Does not decide value. |
 | `FinancialAssuranceProfile` | `assurance_profile_id`, `project_ref`, `basis_rule_ref`, `required_percentage_or_formula`, `eligible_budget_basis`, `status` | Required where assurance applies before affected funds release. | Applies beyond construction. |
@@ -244,6 +245,8 @@ An implementable system should reject or block confirmation of material effects 
 ```text
 No state transition without AuditEvent.
 No formal evidence use without evidence_context.
+No funding-complete label as legitimacy proof.
+No execution-ready transition where required affected-party mapping or consultation evidence remains pending.
 No disbursement without funding source, budget line, milestone/phase gate, review basis, and financial order path.
 No closure as fulfilled without reviewed fulfillment/control evidence or limitation statement.
 No reputation update without reviewed ReputationInput.

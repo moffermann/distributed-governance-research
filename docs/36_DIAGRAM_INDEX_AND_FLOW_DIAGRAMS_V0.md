@@ -112,6 +112,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C021: administrative observability baseline is core; full universal panel remains extension.
 - C022: projects declare common-good impacts where relevant.
 - C025: discovery is explainable, user-configurable, non-commercial, and auditable.
+- A001: funding, support, delegation, and discovery visibility do not establish legitimacy; high affected-party projects use a threshold-driven Project Legitimacy Profile with affected-party mapping, consultation evidence, asynchronous nearby-project participation, and review routes where applicable.
 
 ## Evidence diagram rule
 
@@ -131,7 +132,7 @@ Phase 2 diagrams should use `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the forma
 
 The first Phase 2 ERD now lives at `docs/diagrams/v0-formal-entity-relationship.md`. It is a primary relationship baseline, not a database schema.
 
-The first ERD relationship audit has been completed. The ERD now preserves the `Idea` to `Project` boundary, uses scoped role assignments, connects metrics to value and evidence requirements, distinguishes funding targets by lane, includes fiscalizer offers and reformulation objects, and treats systemic pause as a scoped platform effect rather than an automatic whole-project or material/legal suspension.
+The first ERD relationship audit has been completed. The ERD now preserves the `Idea` to `Project` boundary, uses scoped role assignments, connects metrics to value and evidence requirements, distinguishes funding targets by lane, includes fiscalizer offers and reformulation objects, treats systemic pause as a scoped platform effect rather than an automatic whole-project or material/legal suspension, and represents Project Legitimacy Profile as a threshold-driven profile rather than a vote, veto, or proof created by funding.
 
 The Project object state diagram with phase substates now lives at `docs/diagrams/v0-project-object-state-with-phase-substates.md`. It separates parent `Project` states from operational `ProjectPhase` substates and preserves the rule that phase blockers escalate to project-level state only when a formal scoped record declares a broader affected scope.
 

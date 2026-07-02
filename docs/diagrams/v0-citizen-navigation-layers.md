@@ -4,12 +4,13 @@
 
 Show how citizens move from simple discovery to deeper auditability without making the first screen administratively heavy.
 
-Related resolutions: C009, C021, C024, C025.
+Related resolutions: C009, C021, C024, C025, A001.
 
 ```mermaid
 flowchart TD
     L0[Layer 0: Home and Discovery]
     HC[User-configurable Home categories]
+    NS[Nearby or followed-scope discovery]
     UR[Urgent or recommended item with visible reason]
     L1[Layer 1: Compact Project List]
     OM[Visible ordering mode and switch control]
@@ -19,8 +20,10 @@ flowchart TD
     L5[Layer 5: Technical Audit Trail]
 
     L0 --> HC
+    L0 --> NS
     L0 --> UR
     HC -->|value, need, territory, search, Explore| L1
+    NS -->|new nearby project, design change, consultation window, affected-party observation request| L1
     UR -->|reason visible| L1
     L1 --> OM
     OM -->|select project| L2
@@ -34,4 +37,4 @@ flowchart TD
 
 ## Rule
 
-> The citizen starts with simple navigation, can customize the Home surface, sees why projects are highlighted or ordered, and can progressively reach full auditability by choice.
+> The citizen starts with simple navigation, can customize the Home surface, follow nearby or thematic scopes, see why projects are highlighted or ordered, participate asynchronously in affected-party windows, and progressively reach full auditability by choice.

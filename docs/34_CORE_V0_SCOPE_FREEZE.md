@@ -141,6 +141,10 @@ Rule:
 
 Rule:
 
+> For projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the applicable threshold policy should require proportional affected-party mapping and consultation conditions. These conditions may require nearby-project notification, an observation window, field visits, plan presentation, community meetings, surveys, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace. They are not a universal vote or automatic veto.
+
+Rule:
+
 > The applicable threshold policy should include or reference a procedural burden profile. AI may help discover required documents and missing conditions, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
 
 Rule:
@@ -150,6 +154,10 @@ Rule:
 Rule:
 
 > Funding, support, justified objection, and formal complaint are separate project signals. Support and justified objection are reversible; funding and formal complaints follow their own rules.
+
+Rule:
+
+> Funding completion does not establish project legitimacy. Citizen-facing surfaces should distinguish `funding complete` from unresolved affected-party issues, community-consultation evidence, public-access conditions, Planning Scope disputes, complaints, or competent-authority requirements.
 
 Rule:
 
@@ -219,6 +227,8 @@ The contract defines how project fulfillment will be evidenced before execution 
 The contract is project-specific and proportional, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
 
 The contract defines fulfillment/control evidence needs, not preselected evidence producers. Independent evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Contract-matched fulfillment/control evidence has higher eligibility priority; unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+
+Where legitimacy conditions apply, the contract may include design-phase or preparation-phase evidence needs for affected-party mapping, plan review, community consultation, asynchronous observations, survey records, neighborhood-organization evidence, unresolved objections, and independent corroboration. Pre-execution consultation evidence is not automatically final fulfillment evidence, but it may be required before execution-ready status. Later affected-party observations may become fulfillment/control evidence for declared values or antivalues.
 
 Citizen-facing views should summarize it as "how this project will be verified"; Layer 5 preserves the full versioned contract and changes.
 
@@ -398,6 +408,10 @@ Layer 5: Technical audit trail
 Rule:
 
 > Simple by default, clickable by signal, deeply auditable by choice.
+
+Discovery rule:
+
+> Citizens may follow geographic or thematic discovery views such as `near me`. Nearby-project discovery should support asynchronous participation in new project publication, design changes, consultation windows, affected-party observations, and legitimacy-condition updates without requiring attendance at a single physical meeting.
 
 ### 12a. Assisted deliberation context
 

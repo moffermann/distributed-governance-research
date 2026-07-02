@@ -8,7 +8,7 @@ This diagram is a conceptual ERD baseline, not a database schema. It focuses on 
 
 Source baseline: `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
 
-Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025.
+Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001.
 
 ```mermaid
 erDiagram
@@ -81,6 +81,12 @@ erDiagram
         string threshold_policy_id
         string burden_profile
         string source
+    }
+
+    PROJECT_LEGITIMACY_PROFILE {
+        string legitimacy_profile_id
+        string affected_scope
+        string citizen_status
     }
 
     PRIMARY_RESPONSIBILITY_ANCHOR {
@@ -365,9 +371,11 @@ erDiagram
     PLANNING_SCOPE ||--o{ PROJECT : governs
     OPERATING_MODE ||--o{ PLANNING_SCOPE : configures
     THRESHOLD_POLICY ||--o{ PROJECT : constrains
+    THRESHOLD_POLICY ||--o{ PROJECT_LEGITIMACY_PROFILE : may_require
     PROTOCOL_VERSION ||--o{ THRESHOLD_POLICY : governs
     PROTOCOL_VERSION ||--o{ REFORMULATION_POLICY : governs
     PROJECT ||--|| PRIMARY_RESPONSIBILITY_ANCHOR : has
+    PROJECT ||--o| PROJECT_LEGITIMACY_PROFILE : may_require
     PROJECT ||--o{ PROJECT_VERSION : versions
     PROJECT ||--o{ PROJECT_PHASE : phases
     PROJECT ||--o{ PROJECT_VARIATION_RECORD : records_variation
@@ -388,10 +396,14 @@ erDiagram
     PROJECT ||--|| PROJECT_EVIDENTIAL_CONTRACT : requires
     PROJECT_EVIDENTIAL_CONTRACT ||--o{ FULFILLMENT_EVIDENCE_NEED : defines
     PROJECT_PHASE ||--o{ FULFILLMENT_EVIDENCE_NEED : may_require
+    PROJECT_LEGITIMACY_PROFILE ||--o{ FULFILLMENT_EVIDENCE_NEED : may_require_consultation_need
 
     PROJECT ||--o{ MATERIAL_INFORMATION_CLAIM : contains
     MATERIAL_INFORMATION_CLAIM ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : supported_or_contradicted_by
     FULFILLMENT_EVIDENCE_NEED ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : addressed_by
+    PROJECT_LEGITIMACY_PROFILE ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : receives_mapping_or_consultation_evidence
+    PROJECT_LEGITIMACY_PROFILE ||--o{ JUSTIFIED_OBJECTION_SIGNAL : tracks_unresolved
+    PROJECT_LEGITIMACY_PROFILE ||--o{ COMPLAINT : may_route_to
     EVIDENCE_CONTEXT ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : classifies
     CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ EVALUATION_RECORD : used_in
     EVALUATION_RECORD ||--o{ RESPONSIBILITY_EVENT : may_create
@@ -488,6 +500,7 @@ erDiagram
 - `RoleAssignment` is the ERD bridge between actor identity, contextual role, and operational scope. It may be scoped to a project, phase, control subproject, complaint, planning scope, or another protocol-defined object. It must not imply that every role acts over the whole project.
 - `Idea` is separate from `Project`. Ideas may receive support, objections, comments, and followers, but they are not financeable or executable until converted into a valid project.
 - `SupportSignal`, `JustifiedObjectionSignal`, and `Comment` are civic signals. They may inform thresholds, deliberation, complaint activation, or review context where policy permits, but they are not funding, complaint evidence, fulfillment evidence, evaluation, or reputation input by themselves.
+- `ProjectLegitimacyProfile` is a threshold-driven profile, not a vote, veto, popularity score, or legal-authority object. It exposes affected-party mapping, consultation evidence, unresolved legitimacy objections, and review routes where funding alone would otherwise be mistaken for approval.
 - `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. This prevents value promises from remaining purely rhetorical.
 - `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
 - `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.

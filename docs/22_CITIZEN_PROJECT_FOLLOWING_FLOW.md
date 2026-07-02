@@ -27,6 +27,7 @@ A citizen can follow a project from:
 - urgent project highlight;
 - search result;
 - recommendation;
+- nearby-project or followed-scope discovery view;
 - after funding, commenting, denouncing, fiscalizing, or producing evidence.
 
 Visible button:
@@ -95,6 +96,8 @@ Examples:
 
 - fiscalizer confirmed;
 - funding completed;
+- affected-party consultation window opened;
+- design package or plan presentation published;
 - milestone completed;
 - important evidence delivered;
 - relevant complaint resolved;
@@ -110,6 +113,7 @@ Examples:
 - fiscalization reports;
 - metric updates;
 - evidence review status;
+- affected-party observations or unresolved legitimacy issues;
 - non-blocking complaints;
 - project history updates.
 
@@ -174,6 +178,7 @@ Material actions include:
 - offering as fiscalizer;
 - offering as evidence producer;
 - submitting evidence;
+- submitting an affected-party observation;
 - commenting;
 - filing a complaint;
 - confirming beneficiary participation;

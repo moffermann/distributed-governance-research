@@ -17,18 +17,32 @@ A001 is partially founded and does not distort the project when it is read as a 
 
 Funding, support, delegation, and discovery visibility do not by themselves establish legitimacy. A project with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure should carry a proportional `Project Legitimacy Profile`.
 
+The profile is not a plebiscite, a veto layer, or a new authority role. It is a traceable legitimacy-status profile fed by the existing project model: `ThresholdPolicy`, `ProjectEvidentialContract`, contextualized evidence, affected-party observations, justified objections, complaint paths, fiscalizer or reviewer findings, and Governance Resolution records where applicable.
+
+The active `ThresholdPolicy` should decide whether affected-party mapping or community-consultation evidence is required, and how deep that requirement must be. Low-risk projects may only need visible publication, nearby-project discovery, and an observation window. Higher-impact design or preparation phases may require field visits, community meetings, plan review, affected-party surveys, neighborhood documentation, or independent review before execution readiness.
+
 The profile should identify:
 
 - affected-party map;
 - rights, access, public guarantee, or common-good exposure;
+- required affected-party mapping or consultation evidence needs;
+- submitted affected-party mapping, consultation, or observation evidence;
 - unresolved legitimacy objections;
 - affected-party notification or observation path;
 - route to Planning Scope review, complaint, Governance Resolution, or competent authority where applicable;
 - citizen-facing warning when funding is complete but legitimacy conditions remain disputed.
 
+Affected-party mapping may be drafted by the proposer or designer because they know the project assumptions, but the system should not treat executor-controlled reports as sufficient where the active policy requires independent corroboration. Independent evidence producers, fiscalizers, reviewers, verified beneficiaries, affected residents, neighborhood organizations, or competent authorities may submit or corroborate the relevant contextualized evidence according to the project evidential contract and threshold policy.
+
+Neighborhood associations, community boards, or similar local organizations may act as fulfillment/control evidence producers where eligible, but they do not automatically represent every affected resident. Their evidence should remain inspectable, contestable, and complemented by asynchronous individual participation through project discovery, follow, comments, justified objections, affected-party observations, or complaint paths.
+
 ## Macul example
 
 `Design and Construction of Multi-court Facility in Macul` may be fully funded by sports groups. That funding does not answer whether nearby residents, schools, disabled users, or affected parties had a meaningful channel to contest noise, bathrooms, accessibility, public access, or school-use conflicts. The project can show `funding complete` while also showing `legitimacy condition disputed` or `affected-party review pending`.
+
+The current institutional analogue is not discarded: today, a principal or proposer may hold field visits, neighborhood meetings, plan presentations, and community-validation activities. Core v0 keeps those activities, but makes them auditable and less dependent on executor self-report. The Macul design phase can require a community consultation evidence need: plans and dimensions shown to affected residents, meeting minutes, asynchronous project-page observations, survey results, unresolved objections, and independent evidence-producer or fiscalizer corroboration before the construction phase becomes execution-ready.
+
+Residents do not need to attend one meeting at one hour to participate. A resident who follows the `near me` discovery view can be notified when the Macul project is published, inspect the design package, submit an affected-party observation about nighttime noise or missing bathrooms, support or object with reasons, follow changes, or file a formal complaint if the issue becomes a complaint matter.
 
 ## Citizen simplicity
 
@@ -37,6 +51,8 @@ Ordinary citizens should not see a legal memo. They should see compact labels su
 - `Funding complete`;
 - `Affected-party issue pending`;
 - `Public access condition unresolved`;
+- `Community consultation evidence pending`;
+- `Nearby residents notified`;
 - `Legitimacy review not required for this low-risk project`.
 
 ## Transparency and accountability effect
@@ -51,4 +67,4 @@ The profile prevents dashboards, proponents, delegates, or authorities from usin
 
 ## Integration target
 
-This resolution should inform Planning Scope alignment, project publication, funding closure labels, execution-ready review, and citizen-facing project status.
+This resolution should inform Planning Scope alignment, project publication, threshold policies, project evidential contracts, design-phase evidence needs, funding closure labels, execution-ready review, discovery/nearby-project notification, citizen-facing project status, affected-party observations, and closure accountability where affected-party evidence is used to evaluate values or antivalues.

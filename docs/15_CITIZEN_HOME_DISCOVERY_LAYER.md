@@ -18,6 +18,7 @@ The citizen should not be forced to evaluate many projects immediately. They sho
 - by territory;
 - by project need;
 - by urgency;
+- by nearby project or affected scope;
 - by recommendation;
 - by search;
 - by delegation or automatic allocation profile.
@@ -45,8 +46,9 @@ A. Citizen allocation / available amount
 B. Urgent now, maximum 1 or 2 projects
 C. Explore by value
 D. Projects that need something
-E. Search / filters
-F. Delegate or configure automatic profile
+E. Nearby projects / followed scopes
+F. Search / filters
+G. Delegate or configure automatic profile
 ```
 
 The citizen may personalize the Home categories without changing project eligibility or public visibility rules.
@@ -59,6 +61,7 @@ Allowed personal controls:
 - hide categories from Home;
 - restore the default layout;
 - edit declared discovery preferences.
+- follow geographic or thematic discovery views such as `near me`.
 
 Hidden categories must remain reachable through Explore, filters, and search.
 
@@ -164,6 +167,7 @@ Examples:
 🛡 Need fiscalizer
 📎 Need evidence producer
 👥 Need beneficiary confirmation
+🗣 Need affected-party consultation
 ⏳ Almost execution-ready
 📍 Near me
 ```
@@ -179,7 +183,26 @@ A citizen who cannot or does not want to fund may still help by:
 - commenting;
 - reporting problems.
 
-## E. Search and filters
+## E. Nearby projects / followed scopes
+
+Layer 0 should let a citizen follow geographic or thematic discovery scopes, such as `near me`, a commune, neighborhood, school area, beneficiary group, or public-function scope.
+
+This allows affected citizens to learn about projects asynchronously when they are published or materially changed.
+
+Examples:
+
+```text
+Near me
+
+New project: Design and Construction of Multi-court Facility in Macul
+Status: community consultation evidence pending
+Why shown: project territory overlaps your followed area
+[View] [Follow] [Submit observation]
+```
+
+Following a nearby scope does not fund, approve, vote, block, or fiscalize a project. It only creates a notification and discovery relationship that helps affected people participate without needing to attend one physical meeting at one specific time.
+
+## F. Search and filters
 
 Layer 0 should include a simple search entry.
 
@@ -193,7 +216,7 @@ Search should lead to the compact project list.
 
 Search is not the main interface, but it should be available for users who know what they want.
 
-## F. Delegate or configure automatic profile
+## G. Delegate or configure automatic profile
 
 The citizen should be able to avoid manual project selection.
 

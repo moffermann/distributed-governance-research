@@ -197,11 +197,15 @@ Under H010, every financeable project should declare one `Primary Responsibility
 
 Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The policy should include or reference a `Procedural Burden Profile` so small low-risk projects do not receive the same procedural burden as infrastructure, regulated, irreversible, or high-antivalue projects. Thresholds, burden profiles, and assurance requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces obligations. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
 
+For projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the Threshold Policy should also require a proportional affected-party mapping and consultation condition. This condition is not a vote or veto. It defines what affected-party map, notification path, observation window, field visit, community meeting, plan-review record, survey, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace is needed before publication, execution-ready status, disbursement, or closure where applicable.
+
 H011 adds a universal Financial Assurance Profile for execution-financeable projects. In Core v0, the guarantee requirement should use a global percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. This assurance applies across social projects, including care, supplies, workshops, infrastructure, and services.
 
 AI and rules may help discover required documents and suggest a burden profile, but they should not certify document acceptability by themselves. Where the Threshold Policy requires project acceptability review, tutored mode routes review to the competent authority under C020, while non-tutored or open modes may use an independent `Control Subproject: Project Admissibility Review` under C002/C013 rules.
 
 Projects should expose funding, social support, justified objections, and formal complaints as separate signals. Support and justified objection are reversible civic signals. Funding is a financial commitment governed by funding rules. A complaint is a formal review object.
+
+Funding closure is not a legitimacy finding. A project may show `funding complete` while also showing `affected-party issue pending`, `community consultation evidence pending`, or `public access condition unresolved` where the active Threshold Policy requires those conditions.
 
 Projects may also expose phase-specific funding lanes where needed. A design-and-execution project may receive execution-phase funding commitments while the design phase is pending, but those commitments remain reserved and cannot be released until the design phase gate is accepted.
 
@@ -279,6 +283,8 @@ Each project should also define a Project Evidential Contract.
 The contract states how fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
 
 The contract defines fulfillment/control evidence needs rather than named evidence producers. Evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected fulfillment/control evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
+
+Where affected-party legitimacy conditions apply, the contract may include design-phase or preparation-phase evidence needs for affected-party mapping, plan presentation, community consultation, asynchronous observations, survey records, neighborhood-organization evidence, unresolved objections, and independent corroboration. Pre-execution consultation evidence does not prove final value fulfillment by itself, but it may block or condition execution readiness when the active policy requires it. During execution or closure, affected-party observations may also become fulfillment/control evidence for values or antivalues such as access, noise, safety, service availability, or public-use commitments.
 
 The contract is proportional:
 
@@ -457,11 +463,12 @@ It includes:
 - available civic allocation;
 - urgent now, maximum one or two projects;
 - explore by value;
+- nearby projects or scopes the citizen follows;
 - projects that need something;
 - search;
 - delegation or automatic profile.
 
-Home categories may be reordered, pinned, collapsed, or hidden by the citizen for personal navigation. Hidden categories remain reachable through Explore, filters, and search. Urgent and recommended visibility must show reasons, and Core v0 excludes paid promotion and opaque manual boosting.
+Home categories may be reordered, pinned, collapsed, followed, or hidden by the citizen for personal navigation. Hidden categories remain reachable through Explore, filters, and search. A citizen may follow a geographic or thematic discovery view such as `near me` so new nearby projects, material design changes, consultation windows, affected-party observation requests, or legitimacy-condition updates can appear asynchronously without requiring attendance at a single neighborhood meeting. Urgent and recommended visibility must show reasons, and Core v0 excludes paid promotion and opaque manual boosting.
 
 ### Layer 1 — Compact project list
 

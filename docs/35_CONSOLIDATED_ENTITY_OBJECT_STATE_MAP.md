@@ -238,6 +238,7 @@ Key attributes:
 - related-party conflict classification where applicable;
 - public-benefit safeguards where applicable;
 - common-good impact declarations where relevant;
+- Project Legitimacy Profile where required;
 - active support count;
 - active justified objection count;
 - funding target;
@@ -497,7 +498,7 @@ Possible threshold dimensions:
 - admissibility review;
 - common-good impact declaration;
 - related-party safeguards;
-- affected-party visibility;
+- affected-party visibility, mapping, and consultation;
 - tutored-scope review;
 - complaint or blocking-condition clearance.
 
@@ -512,6 +513,55 @@ Anti-self-classification rule:
 Document rule:
 
 > AI and rules may help discover required documents, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
+
+Affected-party rule:
+
+> Where a project has rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the active Threshold Policy should require proportional affected-party mapping and consultation evidence. This condition may require nearby-project notification, observation windows, field visits, plan presentation, community meetings, surveys, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace. It is not a universal vote or veto.
+
+## Project Legitimacy Profile
+
+A traceable project profile showing whether funding, support, affected-party mapping, consultation evidence, planning-scope alignment, objections, complaints, and authority or reviewer routes are coherent enough for the project's current stage.
+
+This is not a plebiscite, veto object, popularity score, or source of legal authority. It aggregates and exposes legitimacy-relevant conditions already governed by Threshold Policy, Project Evidential Contract, contextualized evidence, affected-party observations, justified objections, complaints, Governance Resolutions, competent-authority traces, and audit events.
+
+Attributes:
+
+- project;
+- project version;
+- territory and affected scope;
+- affected-party map or map reference;
+- affected-party basis: beneficiaries, neighbors, users, non-users, vulnerable groups, public-access users, common-good asset users, regulated or legally affected parties;
+- rights, access, public guarantee, vulnerable-beneficiary, common-good, or territory-wide exposure;
+- required affected-party mapping or consultation evidence needs;
+- submitted affected-party mapping, consultation, survey, meeting, field-visit, plan-review, or asynchronous observation evidence;
+- neighborhood-organization evidence producer references where applicable;
+- independent corroboration or fiscalizer/reviewer reference where required;
+- unresolved legitimacy objections;
+- related Planning Scope review, complaint, Governance Resolution, or competent-authority route;
+- citizen-facing status label;
+- audit trail.
+
+Relationships:
+
+```text
+ProjectLegitimacyProfile belongs to Project
+ProjectLegitimacyProfile references ThresholdPolicy
+ProjectLegitimacyProfile may reference ProjectEvidentialContract
+ProjectLegitimacyProfile may reference FulfillmentEvidenceNeed
+ProjectLegitimacyProfile may reference ContextualizedEvidenceItem
+ProjectLegitimacyProfile may reference JustifiedObjectionSignal
+ProjectLegitimacyProfile may reference Complaint
+ProjectLegitimacyProfile may reference GovernanceResolution
+ProjectLegitimacyProfile may reference AuditEvent
+```
+
+Rule:
+
+> Funding complete, support count, delegation weight, or discovery visibility do not establish legitimacy by themselves. A project may be fully funded while its Project Legitimacy Profile still shows affected-party issue pending, community consultation evidence pending, public access condition unresolved, Planning Scope dispute, or competent-authority route required.
+
+Community evidence rule:
+
+> A neighborhood association, community board, or similar local organization may act as an evidence producer where eligible, but it does not automatically represent every affected resident. Its evidence remains contextualized, inspectable, contestable, and complemented by asynchronous individual participation through nearby-project discovery, follow, comments, justified objections, affected-party observations, or complaints.
 
 Example:
 
@@ -1012,7 +1062,7 @@ Rule:
 
 ## Fulfillment Evidence Need
 
-A predefined need for fulfillment/control evidence linked to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue.
+A predefined need for fulfillment/control evidence linked to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, declared antivalue, or required affected-party mapping and consultation condition.
 
 A fulfillment evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced and under what review conditions.
 
@@ -1022,7 +1072,7 @@ Attributes:
 - project;
 - project version;
 - related value thesis or value verification package;
-- related value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue;
+- related value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, declared antivalue, or affected-party consultation condition;
 - fulfillment evidence type expected;
 - expected source role or corroboration path;
 - timing;
@@ -1040,6 +1090,7 @@ FulfillmentEvidenceNeed belongs to ProjectEvidentialContract
 FulfillmentEvidenceNeed may belong to ValueVerificationPackage
 FulfillmentEvidenceNeed may reference Metric
 FulfillmentEvidenceNeed may reference ProjectPhase
+FulfillmentEvidenceNeed may reference ProjectLegitimacyProfile
 FulfillmentEvidenceNeed may be addressed by EvidenceProducer offers or commitments
 FulfillmentEvidenceNeed may be satisfied, weakened, contradicted, or left unresolved by EvidenceItems with fulfillment context
 ```
@@ -1047,6 +1098,10 @@ FulfillmentEvidenceNeed may be satisfied, weakened, contradicted, or left unreso
 Rule:
 
 > Contract-matched fulfillment evidence needs have higher eligibility priority for control funding. Unexpected fulfillment evidence may still be admitted when equivalent, necessary, materially useful, or complementary within the available control budget.
+
+Affected-party consultation note:
+
+> Pre-execution affected-party mapping, plan-presentation, survey, or neighborhood-meeting evidence is usually design-phase or preparation-phase contextualized evidence, not proof that final value was fulfilled. It can still be required before execution-ready status, and later affected-party observations may become fulfillment/control evidence for values or antivalues such as access, noise, safety, service availability, or public-use commitments.
 
 ## Beneficiary Group
 

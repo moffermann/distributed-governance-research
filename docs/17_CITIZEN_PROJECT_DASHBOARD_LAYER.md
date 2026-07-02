@@ -175,6 +175,9 @@ Faltan $4.440.000
 
 📎 Evidencia
 2 de 4 productores de evidencia comprometidos
+
+👥 Participación de afectados
+Consulta vecinal pendiente, si aplica
 ```
 
 Only show conditions that apply to the specific project.
@@ -187,6 +190,7 @@ Possible conditions:
 - fiscalizer required;
 - evidence producers required;
 - beneficiary confirmation;
+- affected-party mapping or consultation, where applicable;
 - financial protection / guarantee status;
 - moderation completed, if applicable;
 - required documents complete.
@@ -264,6 +268,8 @@ Rules:
 - support shows active positive civic signal;
 - justified objections show active reasoned negative civic signal;
 - complaints show formal review objects.
+
+Funding completion should not be shown as community approval. Where the active Threshold Policy requires it, the dashboard should show simple affected-party status labels such as `nearby residents notified`, `community consultation evidence pending`, `public access condition unresolved`, or `affected-party issue pending`.
 
 Support and justified objection are reversible by the citizen who created them. Withdrawn signals may remain visible in detail or audit layers, but they should not count as active support or active objection.
 

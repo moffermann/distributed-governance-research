@@ -35,6 +35,7 @@ The Implementable Object Schema Draft has been created: common field primitives,
 The Phase 3 attack queue has been created under `attacks/`: eighteen attack briefs A001-A018 now prepare the next architecture-attack round with description, project location, problem, recommended resolution path, theoretical base, social reasons, conflict-of-interest risks, inconsistencies, stress scenarios, review checklists, and expected resolution outputs.
 The Phase 3 defense queue has been created under `defenses/`: eighteen defense briefs D001-D018 are paired with A001-A018 and classify each attack as founded, partially founded, unresolved, a difference of judgment, or an editorial-distortion risk while citing project documents and literature anchors.
 The Phase 3 attack-defense review has been integrated into accepted resolution documents `docs/67` through `docs/84`: each founded or partially founded attack now has a proportional accepted improvement that preserves the project's functional editorial line and is cross-referenced from its A00N and D00N files.
+A001 propagation is integrated: Project Legitimacy Profile is now represented as a threshold-driven, evidence-fed profile using affected-party mapping, consultation evidence, nearby-project asynchronous participation, independent evidence-producer or reviewer corroboration where required, and citizen-facing labels that prevent funding completion from being treated as legitimacy.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -248,7 +249,9 @@ The eighty-third residual cleanup created the Phase 3 defense queue in `defenses
 
 The eighty-fourth residual cleanup reviewed all Phase 3 attack-defense pairs and created accepted resolution documents `docs/67` through `docs/84`: Project Legitimacy Profile, Material Visibility, Fiscalizer Quality and Capture Indicators, Metric Gaming Test, Essential Service Protection, Continuity Risk Classification, Conflict-of-Review Handling, Platform Influence Audit, Participation Equity Indicators, Delegation Concentration Stress Thresholds, Tutored Moderation Abuse Test, Complexity Budget, Evidence Quality Review, Related-Party Relationship Graph, Common-Good Impact Sufficiency Test, Incumbent Resistance Indicators, Disbursement Gaming Tests, and Collusion Observability. Each attack and defense file now references its integrated resolution.
 
-Next review candidate: propagate the accepted Phase 3 A001-A018 resolutions into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where the new objects or tests need explicit representation.
+The eighty-fifth residual cleanup propagated A001 / `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md` into the core architecture, scope freeze, entity map, formal inventory, scope matrix, contradiction checklist, implementable schema draft, citizen home/following/dashboard/full-sheet/funding flows, creation/publication and lifecycle flows, Layer 5 audit trail, and affected diagrams. The integration clarifies that affected-party mapping and community consultation are proportional evidence conditions, not votes or vetoes, and that nearby-project discovery enables asynchronous participation.
+
+Next review candidate: propagate A002 / `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md` into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where material visibility or information-capture controls need explicit representation.
 
 Approximate current maturity:
 
@@ -603,10 +606,10 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Propagate accepted Phase 3 resolutions `docs/67` through `docs/84` into affected core documents.
-2. Update the contradiction/failure-mode checklist with the new Phase 3 resolution outcomes.
-3. Update formal inventory/schema references where new objects, tests, indicators, or review fields must become explicit.
-4. Identify which Phase 3 improvements require diagrams or additional state transitions.
+1. Propagate A002 / `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md` into affected core documents.
+2. Update the contradiction/failure-mode checklist with the A002 outcome.
+3. Update formal inventory/schema references where A002 material visibility controls must become explicit.
+4. Identify whether A002 requires diagram or state-transition updates.
 5. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
