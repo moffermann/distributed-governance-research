@@ -66,6 +66,7 @@ Primary Mermaid sources:
 10. `docs/diagrams/v0-tutored-mode-governance-resolution.md`
 11. `docs/diagrams/v0-audit-trail-pattern.md`
 12. `docs/diagrams/v0-formal-entity-relationship.md`
+13. `docs/diagrams/v0-project-object-state-with-phase-substates.md`
 
 Conceptual planning diagram:
 
@@ -112,10 +113,9 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Project object state diagram with all substates
-Funding commitment state diagram
-Complaint evidence and complaint review state diagram
 Contextualized evidence item state diagram with required evidence_context
+Complaint evidence and complaint review state diagram
+Funding commitment state diagram
 Project evidential contract / fulfillment evidence need diagram
 Control subproject state diagram
 Delegation state diagram
@@ -132,4 +132,6 @@ Phase 2 diagrams should use `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the forma
 
 The first Phase 2 ERD now lives at `docs/diagrams/v0-formal-entity-relationship.md`. It is a primary relationship baseline, not a database schema.
 
-The first ERD relationship audit has been completed. The ERD now preserves the `Idea` to `Project` boundary, uses scoped role assignments, connects metrics to value and evidence requirements, distinguishes funding targets by lane, includes fiscalizer offers and reformulation objects, and treats systemic pause as a scoped platform effect rather than an automatic whole-project or material/legal suspension. The next formal diagram should draft the `Project` object state diagram with phase substates using this corrected ERD as input.
+The first ERD relationship audit has been completed. The ERD now preserves the `Idea` to `Project` boundary, uses scoped role assignments, connects metrics to value and evidence requirements, distinguishes funding targets by lane, includes fiscalizer offers and reformulation objects, and treats systemic pause as a scoped platform effect rather than an automatic whole-project or material/legal suspension.
+
+The Project object state diagram with phase substates now lives at `docs/diagrams/v0-project-object-state-with-phase-substates.md`. It separates parent `Project` states from operational `ProjectPhase` substates and preserves the rule that phase blockers escalate to project-level state only when a formal scoped record declares a broader affected scope.

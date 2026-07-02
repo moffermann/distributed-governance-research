@@ -20,6 +20,7 @@ C025 is resolved: discovery may organize attention, but Home categories are user
 C001-C025 have been propagated into the main core documents, contradiction checklist, citizen flows, and superseded hypotheses.
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
 The first Phase 2 formal ERD has completed its relationship audit: it now preserves scoped role assignments, idea/project separation, metric-to-evidence traceability, lane-specific funding targets, fiscalizer offers, reformulation objects, and scoped systemic pause effects.
+The Project object state diagram with phase substates has been created: parent `Project` states are separated from operational `ProjectPhase` substates, and phase blockers escalate only through scoped formal records.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -203,7 +204,9 @@ The sixty-eighth residual cleanup created the first Phase 2 entity relationship 
 
 The sixty-ninth residual cleanup audited the Phase 2 ERD for missing or misleading relationships. The cleanup added the `Idea` boundary, civic signals, metrics, budget lines, disbursement milestone plans, fiscalizer offers, project variation and reformulation objects, optional role scopes, lane-specific funding targets, and scoped systemic pause targets. It also clarified that complaint-review support is a civic support signal, not complaint evidence, fulfillment evidence, evaluation, or reputation input by itself.
 
-Next review candidate: draft the project object state diagram with phase substates using the corrected ERD.
+The seventieth residual cleanup created `docs/diagrams/v0-project-object-state-with-phase-substates.md` and generated two SVG outputs. The diagram separates aggregate parent `Project` states from operational `ProjectPhase` substates, clarifies phase funding reservation and prerequisite gates, and preserves the rule that phase-level correction, pause, rejection, or reformulation affects the whole project only when a scoped formal record declares that broader effect.
+
+Next review candidate: draft the contextualized evidence item state diagram with required `evidence_context`, then connect it to complaint evidence, fulfillment/control evidence, fiscalization reports, disbursement, and closure.
 
 Approximate current maturity:
 

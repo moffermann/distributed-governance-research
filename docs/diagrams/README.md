@@ -18,8 +18,9 @@ Generated images may be exported for papers, slides, or visual review, but the M
 - `v0-tutored-mode-governance-resolution.md`
 - `v0-audit-trail-pattern.md`
 - `v0-formal-entity-relationship.md`
+- `v0-project-object-state-with-phase-substates.md`
 
-The formal ERD has completed its first relationship audit. It is the corrected input for the next Project object state diagram with phase substates.
+The formal ERD has completed its first relationship audit. The Project object state diagram with phase substates now separates parent `Project` states from operational `ProjectPhase` substates.
 
 ## Format rule
 
