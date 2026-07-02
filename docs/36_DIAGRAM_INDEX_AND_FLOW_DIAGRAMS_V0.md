@@ -70,6 +70,7 @@ Primary Mermaid sources:
 14. `docs/diagrams/v0-contextualized-evidence-item-state.md`
 15. `docs/diagrams/v0-complaint-evidence-and-review-state.md`
 16. `docs/diagrams/v0-funding-commitment-disbursement-state.md`
+17. `docs/diagrams/v0-project-evidential-contract-state.md`
 
 Conceptual planning diagram:
 
@@ -116,7 +117,6 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Project evidential contract / fulfillment evidence need diagram
 Control subproject state diagram
 Delegation state diagram
 Operating mode transition diagram
@@ -141,3 +141,5 @@ The Contextualized Evidence Item state diagram now lives at `docs/diagrams/v0-co
 The Complaint Evidence and Review state diagram now lives at `docs/diagrams/v0-complaint-evidence-and-review-state.md`. It separates submitted complaints, minimum-structure review, quote, support window, review funding, admissibility, non-blocking admission, scoped systemic pause, competent-authority referral, external suspension, final resolution, and role-specific consequence paths.
 
 The Funding Commitment and Disbursement state diagram now lives at `docs/diagrams/v0-funding-commitment-disbursement-state.md`. It separates committed, reserved, paused, blocked, retained, approved-for-release, financial-order-issued, custodian-execution-blocked, released, returned, reassigned, recovered, closure, assurance, and guarantee states.
+
+The Project Evidential Contract state diagram now lives at `docs/diagrams/v0-project-evidential-contract-state.md`. It separates contract baseline states, fulfillment evidence need states, contract-matched producer offers, lower-priority out-of-contract offers, quality/sufficiency review, and effect routing into fiscalization, evaluation, disbursement, closure, responsibility, reputation, correction, or reformulation.

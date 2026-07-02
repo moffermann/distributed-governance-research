@@ -22,11 +22,13 @@ Generated images may be exported for papers, slides, or visual review, but the M
 - `v0-contextualized-evidence-item-state.md`
 - `v0-complaint-evidence-and-review-state.md`
 - `v0-funding-commitment-disbursement-state.md`
+- `v0-project-evidential-contract-state.md`
 
 The formal ERD has completed its first relationship audit. The Project object state diagram with phase substates now separates parent `Project` states from operational `ProjectPhase` substates.
 The Contextualized Evidence Item state diagram now separates evidence context, review status, sufficiency, report linkage, formal evaluation use, and no-effect archival.
 The Complaint Evidence and Review state diagram now separates filing, quote, support, funding, admissibility, scoped pause, referral, external suspension, and final resolution.
 The Funding Commitment and Disbursement state diagram now separates commitment, reservation, pause, blocker, retention, release approval, financial order, custodian execution, return, reassignment, recovery, and guarantee states.
+The Project Evidential Contract state diagram now separates contract baseline, fulfillment evidence needs, evidence producer offers, contract-match priority, quality/sufficiency review, and formal effect routing.
 
 ## Format rule
 

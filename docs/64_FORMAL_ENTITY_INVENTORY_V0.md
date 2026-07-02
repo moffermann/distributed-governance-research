@@ -276,6 +276,50 @@ Archived with no formal effect
 Archived with formal effect
 ```
 
+### Project evidential contract and fulfillment evidence need states
+
+```text
+Draft
+Completeness check
+Needs completion
+Under validation
+Requires adjustment
+Accepted baseline
+Published with project
+Funding baseline locked
+Active for execution
+Change proposed
+Minor correction
+Operational variation
+Material reformulation required
+Superseded
+Closure review
+Archived
+Closed
+Need draft
+Need accepted
+Open for offers
+Contract-matched offer
+Out-of-contract offer
+Lower-priority eligible
+Eligibility / conflict review
+Budget pending
+Assigned or accepted
+Expected evidence
+Evidence submitted
+Quality review required
+Satisfied
+Partially satisfied
+Needs corroboration
+Insufficient
+Contradicted
+Missed or late
+Closed satisfied
+Closed rejected
+Closed unfunded
+Closed with effect
+```
+
 ### Complaint states
 
 ```text
