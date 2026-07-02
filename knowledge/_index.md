@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../defenses/README|Phase 3 Defense Queue]]
 - [[../attacks/README|Phase 3 Attack Queue]]
 - [[../docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|Implementable Object Schema Draft v0]]
 - [[../docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|Responsibility Matrix by Role v0]]
@@ -375,6 +376,28 @@ Recently aligned residual-audit hypotheses:
 - [[../attacks/A016-resistance-by-incumbent-institutions|A016 - Resistance by Incumbent Institutions]]
 - [[../attacks/A017-disbursement-gaming|A017 - Disbursement Gaming]]
 - [[../attacks/A018-collusion-among-project-roles|A018 - Collusion Among Project Roles]]
+
+## Phase 3 defense queue
+
+- [[../defenses/README|Phase 3 Defense Queue]]
+- [[../defenses/D001-legitimacy-does-not-follow-from-funding|D001 - Defense Against A001: Legitimacy Does Not Follow From Funding]]
+- [[../defenses/D002-information-capture-and-visibility-control|D002 - Defense Against A002: Information Capture and Visibility Control]]
+- [[../defenses/D003-fiscalizer-capture-or-fiscalization-failure|D003 - Defense Against A003: Fiscalizer Capture or Fiscalization Failure]]
+- [[../defenses/D004-metric-manipulation-and-goodhart-effects|D004 - Defense Against A004: Metric Manipulation and Goodhart Effects]]
+- [[../defenses/D005-neglected-essential-services|D005 - Defense Against A005: Neglected Essential Services]]
+- [[../defenses/D006-volatile-funding-and-underfunded-continuity|D006 - Defense Against A006: Volatile Funding and Underfunded Continuity]]
+- [[../defenses/D007-conflicting-reviews-and-evaluation-fragmentation|D007 - Defense Against A007: Conflicting Reviews and Evaluation Fragmentation]]
+- [[../defenses/D008-platform-or-algorithmic-capture|D008 - Defense Against A008: Platform or Algorithmic Capture]]
+- [[../defenses/D009-inequality-of-participation|D009 - Defense Against A009: Inequality of Participation]]
+- [[../defenses/D010-delegation-concentration|D010 - Defense Against A010: Delegation Concentration]]
+- [[../defenses/D011-moderation-abuse-in-transition-pilots|D011 - Defense Against A011: Moderation Abuse in Transition Pilots]]
+- [[../defenses/D012-scope-creep-and-excessive-complexity|D012 - Defense Against A012: Scope Creep and Excessive Complexity]]
+- [[../defenses/D013-false-incomplete-or-context-misclassified-evidence|D013 - Defense Against A013: False, Incomplete, or Context-Misclassified Evidence]]
+- [[../defenses/D014-related-party-projects-and-hidden-control|D014 - Defense Against A014: Related-Party Projects and Hidden Control]]
+- [[../defenses/D015-common-good-charter-conflicts|D015 - Defense Against A015: Common-Good Charter Conflicts]]
+- [[../defenses/D016-resistance-by-incumbent-institutions|D016 - Defense Against A016: Resistance by Incumbent Institutions]]
+- [[../defenses/D017-disbursement-gaming|D017 - Defense Against A017: Disbursement Gaming]]
+- [[../defenses/D018-collusion-among-project-roles|D018 - Defense Against A018: Collusion Among Project Roles]]
 
 ## Literature
 

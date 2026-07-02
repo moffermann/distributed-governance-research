@@ -33,6 +33,7 @@ The Audit Event schema diagram has been created: actor/process context, role or 
 The Responsibility Matrix by Role has been created: role authority, disclosures, prohibited conflicts, evidence or record outputs, formal effects, reputation exposure, and audit references are separated.
 The Implementable Object Schema Draft has been created: common field primitives, base object fields, actor/role references, object refs, rule/version refs, source records, visibility/privacy fields, effect refs, AuditEvent refs, and minimum object-group field sets are separated.
 The Phase 3 attack queue has been created under `attacks/`: eighteen attack briefs A001-A018 now prepare the next architecture-attack round with description, project location, problem, recommended resolution path, theoretical base, social reasons, conflict-of-interest risks, inconsistencies, stress scenarios, review checklists, and expected resolution outputs.
+The Phase 3 defense queue has been created under `defenses/`: eighteen defense briefs D001-D018 are paired with A001-A018 and classify each attack as founded, partially founded, unresolved, a difference of judgment, or an editorial-distortion risk while citing project documents and literature anchors.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -242,7 +243,9 @@ The eighty-first residual cleanup created `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_D
 
 The eighty-second residual cleanup created the Phase 3 attack queue in `attacks/` and added Phase 3 attack literature anchors to `research/literature-map.md`. The queue covers all Phase 3 priority objections from the roadmap: legitimacy, information capture, fiscalization failure, metric manipulation, neglected essential services, volatile funding, conflicting reviews, platform or algorithmic capture, inequality of participation, delegation concentration, moderation abuse in transition pilots, scope creep and excessive complexity, false/incomplete/context-misclassified evidence, related-party projects, common-good charter conflicts, incumbent resistance, disbursement gaming, and collusion among project roles.
 
-Next review candidate: resolve `attacks/A001-legitimacy-does-not-follow-from-funding.md` through the collaborative resolution workflow, then proceed through A002-A018.
+The eighty-third residual cleanup created the Phase 3 defense queue in `defenses/`. Each defense D001-D018 is paired with attack A001-A018 and includes attack summary, attack reference, objective evaluation, response, project-document basis, bibliographic basis, proposed improvements, application location, defense strength, and residual risk.
+
+Next review candidate: review the pair `attacks/A001-legitimacy-does-not-follow-from-funding.md` and `defenses/D001-legitimacy-does-not-follow-from-funding.md` through the collaborative resolution workflow, decide whether a proportional Project Legitimacy Profile resolution is needed, then proceed through the remaining A002/D002-A018/D018 pairs.
 
 Approximate current maturity:
 
@@ -399,7 +402,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** attack queue prepared; first attack resolution pending.
+**Status:** attack and defense queues prepared; paired review pending.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -427,6 +430,7 @@ Priority objections:
 Deliverables:
 
 - attack briefs / objection files for each major risk;
+- defense briefs paired to each attack brief;
 - failure-mode catalog;
 - contradiction resolution documents;
 - updated contradiction checklist;
@@ -595,10 +599,10 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Continue auditing secondary documents and older hypotheses for stale C001-C025 assumptions.
-2. Update remaining maps or indexes affected by the integration pass.
-3. Identify any residual contradictions introduced by the integrated corpus.
-4. Commit and push each accepted cleanup unit.
+1. Review A001/D001 through the collaborative resolution workflow.
+2. Decide whether D001 requires a formal Project Legitimacy Profile resolution or only a tracked improvement.
+3. Continue paired review through A002/D002-A018/D018.
+4. Convert founded improvements into resolution documents, failure-mode catalog entries, contradiction-checklist updates, or unresolved-objection records.
 5. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
