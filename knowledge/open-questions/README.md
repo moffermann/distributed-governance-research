@@ -10,10 +10,12 @@
 6. How can institutional performance be measured without reducing social value to narrow economic metrics?
 7. What existing literature already covers parts of this theory?
 8. What would be the first real-world experiment or MVP?
-9. How should the system validate the quality, authenticity, relevance, and usefulness of evidence produced by approved or funded evidence producers?
-10. How can a national, regional, communal, or thematic roadmap be constructed through distributed, votable planning areas without recreating centralized planning monopoly or popularity-driven capture?
+9. How can a national, regional, communal, or thematic roadmap be constructed through distributed, votable planning areas without recreating centralized planning monopoly or popularity-driven capture?
 
 ## Specific open questions
 
-- [[evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]]
 - [[distributed-roadmap-construction-governance|Distributed Roadmap Construction Governance]]
+
+## Resolved or bounded questions
+
+- [[evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]] — resolved for Core v0 by `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`; detailed scoring, authenticity, calibration, AI-detection, and country-specific legal admissibility remain implementation or country-implementation questions.

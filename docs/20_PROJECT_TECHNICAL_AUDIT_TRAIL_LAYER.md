@@ -122,6 +122,7 @@ contextualized evidence item and evidence context
 material information claim
 approval source, criterion source, approval scope, or conditional approval reference
 fiscalizer eligibility and reputation profile reference
+evidence producer qualification and method-fit reference
 fiscalization report sufficiency reference
 governance resolution or review timeout resolution
 financial order, disbursement, retention, guarantee, or custody record
@@ -303,6 +304,8 @@ Include:
 - material information claims covered;
 - fulfillment evidence needs;
 - fulfillment/control evidence source roles;
+- producer qualification standards where formal technical proof is required;
+- method, instrument, calibration, validation, metadata, chain-of-custody, and report requirements where relevant;
 - corroboration requirements;
 - evidence-producer offers or commitments linked to each need where applicable;
 - priority treatment for contract-matched, equivalent, unexpected, or supplemental evidence;
@@ -456,21 +459,26 @@ For each contextualized evidence item:
 - evidence type;
 - who produced it;
 - role of producer;
+- producer qualification basis where formal proof is claimed;
+- method, protocol, instrument, tool, calibration, validation, or chain-of-custody reference where relevant;
 - timestamp;
 - location metadata where applicable;
 - associated milestone;
 - associated metric;
 - associated fulfillment evidence need where applicable;
 - evidential contract requirement;
+- qualification/method fit status where relevant;
 - review status;
 - objections or contradictions;
 - integrity information;
 - privacy classification;
 - access level.
 
-Contextualized evidence may include documents, photos, videos, field reports, attendance records, beneficiary confirmations, fiscalizer reports, or other accepted evidence types.
+Contextualized evidence may include documents, photos, videos, field reports, attendance records, beneficiary confirmations, fiscalizer reports, technical measurements, lab reports, survey outputs, sensor records, or other accepted evidence types.
 
 Executor-submitted material should be distinguishable from corroborated non-executor evidence. Contextualized evidence records should show whether AI-assisted privacy review, redaction, metadata removal, or safer-publication tools were applied.
+
+For paid or critical fulfillment/control evidence, Layer 5 should also show why the producer was eligible for the specific evidence need. The audit trail should preserve credential or accreditation references, professional or institutional competence basis, method used, instrument/tool limitations, calibration or validation references where applicable, and the producer's report limitations. This prevents a casual observation from being silently treated as formal KPI proof.
 
 Layer 5 should also preserve material information claim traceability.
 
@@ -532,7 +540,7 @@ For each closure record, include:
 
 Layer 5 should make clear why a project was closed as fulfilled, partially fulfilled, unfulfilled, revoked, expired, or reformulated into a new version.
 
-An evidence item that is dark, unlinked, missing required metadata, or otherwise insufficient may remain in the archive, but the closure trace should show that it was not used as proof of fulfillment unless adequate corroboration or review accepted it for that formal effect.
+An evidence item that is dark, unlinked, missing required metadata, produced by a non-idoneous actor for the claimed hard KPI, or otherwise insufficient may remain in the archive, but the closure trace should show that it was not used as proof of fulfillment unless adequate corroboration or review accepted it for that formal effect.
 
 ## 8b. Performance history source trace
 
@@ -547,7 +555,7 @@ For each actor-role summary, include source references to:
 - Reputation Summaries;
 - financial closure outcomes;
 - final or procedurally classified complaint outcomes;
-- reviewed fulfillment/control evidence sufficiency findings.
+- reviewed fulfillment/control evidence sufficiency, producer-qualification, and method-fit findings.
 
 The trace should preserve the generic category used on the citizen-facing surface and the source records behind it.
 

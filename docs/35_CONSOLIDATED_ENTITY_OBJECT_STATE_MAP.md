@@ -385,6 +385,7 @@ Attributes:
 - timing and frequency;
 - required fulfillment/control evidence;
 - accepted evidence source roles;
+- producer qualification and method standard where the metric requires formal technical proof;
 - fiscalizer or reviewer method;
 - mitigation, correction, compensation, reformulation, or closure path where applicable;
 - disbursement, retention, closure, responsibility, reputation, pause, or revocation consequences where applicable;
@@ -665,6 +666,8 @@ Attributes:
 - floor/ceiling threshold and measurement method where relevant;
 - fulfillment/control evidence types;
 - fulfillment/control evidence source roles: executor, beneficiary, affected party, evidence producer, fiscalizer, technical record, external register, or other;
+- producer qualification standards for formal evidence needs where relevant;
+- method, instrument, calibration, validation, chain-of-custody, metadata, and report requirements where relevant;
 - corroboration requirement;
 - executor self-report treatment;
 - fiscalizer or reviewer responsibility;
@@ -1126,13 +1129,13 @@ Attributes:
 
 Rule:
 
-> Each core metric should identify what fulfillment evidence need can verify it. The project defines the fulfillment evidence need and source role, but should not preselect the independent evidence producer.
+> Each core metric should identify what fulfillment evidence need can verify it. The project defines the fulfillment evidence need, source role, producer qualification standard, and method standard where relevant, but should not preselect the independent evidence producer.
 
 ## Fulfillment Evidence Need
 
 A predefined need for fulfillment/control evidence linked to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue.
 
-A fulfillment evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced and under what review conditions.
+A fulfillment evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced, by what kind of source role or corroboration path, with what producer qualification and method standard where relevant, and under what review conditions.
 
 Attributes:
 
@@ -1143,6 +1146,11 @@ Attributes:
 - related value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue;
 - fulfillment evidence type expected;
 - expected source role or corroboration path;
+- producer qualification standard: credential, certification, license, accreditation, institutional competence, experience, or protocol-defined expertise where relevant;
+- method or protocol required;
+- instrument, tool, calibration, validation, or chain-of-custody requirement where applicable;
+- required metadata and report discipline;
+- probative fitness target: disbursement, phase acceptance, closure, reputation input, responsibility event, complaint referral, legal-path support, or no formal effect;
 - timing;
 - priority: required, recommended, supplemental, or configured equivalent;
 - whether executor self-report is sufficient or corroboration is required;
@@ -1159,8 +1167,13 @@ FulfillmentEvidenceNeed may belong to ValueVerificationPackage
 FulfillmentEvidenceNeed may reference Metric
 FulfillmentEvidenceNeed may reference ProjectPhase
 FulfillmentEvidenceNeed may be addressed by EvidenceProducer offers or commitments
+FulfillmentEvidenceNeed may define or reference EvidenceProducerQualificationStandard
 FulfillmentEvidenceNeed may be satisfied, weakened, contradicted, or left unresolved by EvidenceItems with fulfillment context
 ```
+
+Rule:
+
+> A hard KPI is not satisfied by any evidence item merely because the item is independent from the executor. If the need requires technical or professional proof, the evidence producer must be idoneous for that measurement and the method, instruments, metadata, and report must satisfy the accepted standard.
 
 Rule:
 
@@ -1609,7 +1622,7 @@ Attributes:
 
 Rule:
 
-> Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. Complaint evidence may trigger or support review, but it does not become fulfillment evidence unless accepted for that purpose by the responsible reviewer, fiscalizer, competent authority, or protocol rule.
+> Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. Where the metric requires technical proof, the producer and method must satisfy the applicable qualification standard. Complaint evidence may trigger or support review, but it does not become fulfillment evidence unless accepted for that purpose by the responsible reviewer, fiscalizer, competent authority, or protocol rule.
 
 Context rule:
 
@@ -1727,6 +1740,7 @@ Attributes:
 - required fiscalization layer: open observation, responsible fiscalization, technical review, reinforced fiscalization;
 - required fiscalizer count;
 - required evidence producer count;
+- required evidence producer qualifications and method standards;
 - supplemental fulfillment evidence need count or scope where applicable;
 - secondary fiscalizer slot: none, open, filled, closed;
 - selection model: rotation, random, semi-random among admissible offers, technical/economic scoring, reinforced review, or configured rule;
@@ -1905,6 +1919,7 @@ Attributes:
 - fiscalizer;
 - related evaluation records;
 - fulfillment evidence considered;
+- evidence producer qualification and method-fit findings where relevant;
 - evidence rejected or excluded;
 - fulfillment evidence limitations or unresolved contradictions;
 - scope;
@@ -2512,7 +2527,7 @@ Role-specific category examples:
 - modeler or designer: accepted design deliverables, rework, phase-gate approval record, material design omissions found after review;
 - fiscalizer: timeliness, review completeness, weak-evidence correction record, findings later confirmed, corrected, contradicted, or overturned;
 - fiscalizer contextual profile: eligibility result, comparable-project history, report sufficiency, repeat relationships, dependency concentration, and safeguard history for a specific assignment;
-- evidence producer: accepted evidence rate, insufficient evidence rate, metadata completeness, corroboration usefulness, material corrections after review.
+- evidence producer: qualification-fit rate, accepted evidence rate, insufficient evidence rate, metadata completeness, method adequacy, corroboration usefulness, material corrections after review.
 
 Relationships:
 
@@ -2920,7 +2935,7 @@ Value metrics:
   project modeler proposes commitments and fulfillment evidence needs, validator checks, executor accepts where executing
 
 Fulfillment/control evidence production:
-  evidence producers, beneficiaries, observers, executor self-report where allowed and classified by evidence context
+  evidence producers, beneficiaries, observers, executor self-report where allowed and classified by evidence context; hard KPI evidence requires qualified producers and adequate methods where the accepted need requires it
 
 Fiscalization:
   fiscalizer
@@ -2948,7 +2963,7 @@ Audit trail:
 - Project phase groups phase-specific funding, deliverables, verification, and disbursement gates.
 - Value thesis connects project to value verification packages, metrics, fulfillment evidence needs, and contextualized evidence.
 - Metrics must connect to fulfillment evidence needs and review consequences.
-- Fulfillment evidence needs define what should be evidenced without preselecting evidence producers.
+- Fulfillment evidence needs define what should be evidenced, which source roles may produce or corroborate it, and what producer qualification/method standard applies where relevant, without preselecting named evidence producers.
 - Contextualized evidence items must connect to evidence context and to phase, milestone, metric, fulfillment evidence need, material claim, complaint, or review issue where applicable.
 - Fiscalization report connects contextualized evidence to review outcome.
 - Responsible fiscalization is assigned through protocol-selected Control Subprojects or fiscalization assignments, while open observation and contextualized evidence production remain broader participation layers.

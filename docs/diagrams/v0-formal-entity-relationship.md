@@ -138,11 +138,24 @@ erDiagram
         string status
     }
 
+    EVIDENCE_PRODUCER_QUALIFICATION_STANDARD {
+        string standard_id
+        string qualification_basis
+        string method_or_protocol_rule
+    }
+
     CONTEXTUALIZED_EVIDENCE_ITEM {
         string evidence_item_id
         string evidence_context
         string review_status
         string sufficiency_status
+    }
+
+    EVIDENCE_QUALITY_REVIEW {
+        string review_id
+        string qualification_result
+        string method_fit_result
+        string probative_fitness
     }
 
     EVIDENCE_CONTEXT {
@@ -439,6 +452,10 @@ erDiagram
     PROJECT_LEGITIMACY_PROFILE ||--o{ JUSTIFIED_OBJECTION_SIGNAL : tracks_unresolved
     PROJECT_LEGITIMACY_PROFILE ||--o{ COMPLAINT : may_route_to
     EVIDENCE_CONTEXT ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : classifies
+    FULFILLMENT_EVIDENCE_NEED }o--o| EVIDENCE_PRODUCER_QUALIFICATION_STANDARD : requires_where_needed
+    CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ EVIDENCE_QUALITY_REVIEW : reviewed_by
+    EVIDENCE_QUALITY_REVIEW }o--o| EVIDENCE_PRODUCER_QUALIFICATION_STANDARD : checks_against
+    EVIDENCE_QUALITY_REVIEW ||--o{ EVALUATION_RECORD : informs
     CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ EVALUATION_RECORD : used_in
     EVALUATION_RECORD ||--o{ RESPONSIBILITY_EVENT : may_create
 
@@ -520,6 +537,8 @@ erDiagram
     PROJECT_VARIATION_RECORD ||--o{ AUDIT_EVENT : records
     REFORMULATION_PROPOSAL ||--o{ AUDIT_EVENT : records
     CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ AUDIT_EVENT : records
+    EVIDENCE_PRODUCER_QUALIFICATION_STANDARD ||--o{ AUDIT_EVENT : records
+    EVIDENCE_QUALITY_REVIEW ||--o{ AUDIT_EVENT : records
     EVALUATION_RECORD ||--o{ AUDIT_EVENT : records
     FISCALIZER_ELIGIBILITY_REPUTATION_PROFILE ||--o{ AUDIT_EVENT : records
     FISCALIZATION_ASSIGNMENT ||--o{ AUDIT_EVENT : records
@@ -547,7 +566,9 @@ erDiagram
 - `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. This prevents value promises from remaining purely rhetorical.
 - `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
 - `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.
-- `ContextualizedEvidenceItem` is the technical evidence record. Formal effects depend on `EvidenceContext`, review status, corroboration, and an effect-specific `EvaluationRecord`.
+- `EvidenceProducerQualificationStandard` declares the qualification, method, instrument/tool, metadata, and report basis needed where a fulfillment/control evidence need supports a hard KPI or formal effect.
+- `EvidenceQualityReview` records whether a submitted contextualized evidence item fits its declared context, producer qualification standard, method/protocol, metadata/provenance, corroboration, and probative fitness. Detailed scoring and country-specific legal admissibility remain implementation details.
+- `ContextualizedEvidenceItem` is the technical evidence record. Formal effects depend on `EvidenceContext`, producer qualification and method fit where required, review status, corroboration, and an effect-specific `EvaluationRecord`.
 - `PerformanceHistorySurface`, `ReputationSummary`, and `AssistedDeliberationContext` are derived read models. This ERD shows `PerformanceHistorySurface` only where reviewed records feed it.
 - Financial custody is external infrastructure. `Custodian` executes valid `FinancialOrder` records; it does not decide civic value, project priority, or fulfillment.
 - Legal consequences remain outside the platform unless a country implementation grants legal effect. The ERD records platform effects and references external authority effects where applicable.
@@ -560,6 +581,7 @@ Idea: build multi-courts in Macul
 -> Project Phases: Design, then Construction
 -> Metrics: court dimensions, accessibility, bathrooms, public access, noise ceilings
 -> Project Evidential Contract and Fulfillment Evidence Needs
+-> Evidence Producer Qualification Standards for hard KPI evidence
 -> Design-phase fiscalization report / evaluation record
 -> Execution funding remains committed or reserved until design gate acceptance
 -> Complaint about deficient design may trigger a scoped Systemic Pause Record

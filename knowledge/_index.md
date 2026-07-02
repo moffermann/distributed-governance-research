@@ -416,7 +416,7 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|76 - Delegation Concentration Stress Thresholds and A010 Resolution v0]]
 - [[../docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|77 - Tutored Moderation Abuse Test and A011 Resolution v0]]
 - [[../docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|78 - Complexity Budget and A012 Resolution v0]]
-- [[../docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|79 - Evidence Quality Review and A013 Resolution v0]]
+- [[../docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|79 - Formal Evidence Producer Qualification and A013 Resolution v0]]
 - [[../docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|80 - Related-Party Relationship Graph and A014 Resolution v0]]
 - [[../docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION|81 - Common-Good Impact Sufficiency Test and A015 Resolution v0]]
 - [[../docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|82 - Incumbent Resistance Indicators and A016 Resolution v0]]

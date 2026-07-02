@@ -117,6 +117,7 @@ This check should confirm:
 - fiscalization is configured;
 - fiscalizer eligibility and reputation profile is generated and accepted for the assigned scope where responsible fiscalization is required;
 - Project Evidential Contract and fulfillment evidence obligations are configured;
+- evidence producer qualification and method standards are configured for hard KPI evidence where required;
 - Required Evidence Package is complete where the active policy requires it;
 - required Project Legitimacy Profile conditions are complete or explicitly marked not required;
 - affected-party mapping, notification, observation-window, consultation, or plan-review Readiness Evidence is submitted and reviewed where required;
@@ -197,6 +198,7 @@ Each milestone should include:
 - responsible actor;
 - expected output;
 - required evidence;
+- required producer qualification and method standard where the milestone depends on formal technical proof;
 - reviewer;
 - disbursement consequence;
 - correction rule;
@@ -282,9 +284,9 @@ Evidence must be linked to:
 
 > Evidence is not mere decoration. It must be connected to a milestone, metric, value promise, or complaint/review issue.
 
-Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. Hard KPI evidence also requires producer qualification and method fit where the accepted evidence need requires it.
 
-Submitted material that is unclear, unlinked, missing required traceability metadata, or inadequate for the claimed metric may be accepted only as contextual material, marked as insufficient for fulfillment effect, rejected, or sent back for correction. Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
+Submitted material that is unclear, unlinked, missing required traceability metadata, produced by a non-idoneous actor for the claimed hard KPI, or inadequate for the claimed metric may be accepted only as contextual material, marked as insufficient for fulfillment effect, rejected, or sent back for correction. Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
 
 Fulfillment evidence is evaluated against the accepted Project Evidential Contract. If the project changes that contract during execution, the change must preserve history and may require reformulation, notification, or renewed review where it weakens the original promise.
 
@@ -299,6 +301,7 @@ When a phase gate is being evaluated, the fiscalizer, reviewer, certifier, or co
 The review may consider:
 
 - required evidence;
+- producer qualification and method fit where applicable;
 - evidential contract requirements;
 - distinct supplemental evidence where accepted;
 - metric targets;
@@ -354,6 +357,7 @@ The disbursement decision should show:
 - amount requested;
 - amount approved;
 - fulfillment evidence considered;
+- producer qualification and method-fit findings where applicable;
 - fiscalizer decision;
 - any complaint or alert;
 - rule applied;
@@ -603,7 +607,7 @@ Examples:
 - modeler reputation: design quality;
 - fiscalizer reputation: review quality and independence;
 - fiscalizer eligibility profile: whether assignment criteria, contextual history, report sufficiency, and repeat-relationship warnings were handled correctly;
-- evidence producer reputation: reliability and usefulness of evidence.
+- evidence producer reputation: qualification fit, reliability, technical adequacy, traceability, and usefulness of evidence.
 
 ### Rule
 

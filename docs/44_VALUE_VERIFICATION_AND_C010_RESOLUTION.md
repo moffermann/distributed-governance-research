@@ -128,6 +128,8 @@ H022 defines the ex ante Project Evidential Contract.
 
 The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, fulfillment evidence needs, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
 
+Where a value floor, antivalue ceiling, milestone, or material claim depends on a hard technical KPI, the package should also identify the required evidence producer qualification standard, method or protocol, instrument/tool expectations, metadata, and report limitations needed for formal proof. The package does not need to name the final producer, but it must say what kind of qualified producer and method can prove the claim.
+
 Independent evidence producers may later offer fulfillment/control evidence tied to specific value floors, antivalue ceilings, metrics, material claims, milestones, phases, risks, or declared antivalues. Fulfillment/control evidence that satisfies accepted package needs has higher eligibility priority, while unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Example:
@@ -161,6 +163,8 @@ authority or qualification basis where applicable
 contextualized evidence used
 evaluation type
 formal effect
+producer qualification basis where formal proof is claimed
+method, instrument, or protocol basis where relevant
 ```
 
 Example:
@@ -271,8 +275,11 @@ Examples:
 - self-reported evidence only;
 - beneficiary confirmation;
 - independent fulfillment evidence;
+- qualified independent fulfillment evidence using the required method for a hard KPI;
 - contradicted fulfillment evidence;
 - fiscalizer observation.
+
+For hard KPI claims, evidence strength is not only a question of independence or quantity. A citizen's good-faith observation may be useful context, but a formal dimension, safety, laboratory, engineering, medical, accounting, or other technical claim requires a producer whose qualification and method fit the declared evidence need.
 
 ### Antivalue and risk check
 
@@ -308,6 +315,8 @@ Qualitative fulfillment evidence should not be treated as arbitrary narrative. I
 - relevance to value thesis;
 - review status;
 - privacy classification.
+
+When qualitative evidence is used as a formal value-verification input, the package should also state whether ordinary beneficiary experience is enough, whether a structured survey protocol is required, or whether a qualified professional or institution must collect and report the evidence.
 
 ## Fiscalizer conclusion
 
@@ -375,7 +384,7 @@ Replace isolated value metrics with a Value Verification Package.
 
 Final rule:
 
-> Every promised value must be verified through a package of metrics and fulfillment evidence. Activity metrics alone are insufficient. The fiscalizer may mark a project as formally compliant but weak in value if the broader fulfillment evidence does not reasonably demonstrate the promised value.
+> Every promised value must be verified through a package of metrics and fulfillment evidence. Activity metrics alone are insufficient. For hard KPI claims, the package must identify the required producer qualification and method standard before evidence is financed or accepted for formal effects. The fiscalizer may mark a project as formally compliant but weak in value if the broader fulfillment evidence does not reasonably demonstrate the promised value.
 
 H015 complement:
 

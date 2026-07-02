@@ -2,7 +2,9 @@
 
 ## Status
 
-Open question.
+Resolved for Core v0 by `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`.
+
+Detailed authenticity scoring, AI-generation detection, instrument calibration verification, metadata integrity, fraud detection, and country-specific legal admissibility rules remain future implementation or country-implementation work.
 
 ## Source
 
@@ -11,6 +13,16 @@ Captured during H018/H022 refinement on 2026-06-30.
 ## Question
 
 How should the system validate the quality, authenticity, relevance, and usefulness of fulfillment/control evidence produced by approved or funded evidence producers?
+
+Core v0 answer:
+
+The system should not validate formal fulfillment/control evidence only after submission. It should require each formal evidence need to declare a proportional evidence producer qualification and method standard before the evidence is produced or financed.
+
+Formal fulfillment/control evidence is high quality when:
+
+1. the producer is technically idoneous for the specific evidence need;
+2. the method, instrument, protocol, metadata, and report are adequate for the metric or claim;
+3. the resulting evidence is fit for the specific formal effect claimed.
 
 ## Why this matters
 
@@ -28,6 +40,8 @@ An approved or funded fulfillment/control evidence producer may still submit:
 - evidence produced with an undisclosed conflict or weak method.
 
 If fiscalizers rely on weak producer fulfillment/control evidence, the system may release funds, close milestones, update reputation, or validate value fulfillment on an unreliable basis.
+
+The key risk is not only that submitted evidence may be incomplete. It is that a non-idoneous actor may perform a measurement that looks like evidence but cannot reasonably support the formal metric. A citizen may observe that a court seems short, but a hard dimension KPI should require an eligible technical producer, adequate instruments, documented method, and reviewable report.
 
 ## Relationship to current v0 model
 
@@ -70,6 +84,14 @@ The photos are real but show only one angle, do not prove dimensions, do not sho
 
 The fulfillment evidence is independent in form, but weak for the metric. The fiscalizer needs a way to evaluate evidentiary quality rather than merely count the contextualized evidence item as submitted.
 
+Core v0 resolution:
+
+```text
+The evidence need for court dimensions should require an eligible technical producer, such as a qualified topographer, architect, engineer, inspector, certified lab, competent technical institution, or other protocol-eligible professional, using an accepted measurement method and instruments.
+
+Generic photos may remain contextual or corroborating material. They should not release funds for the hard dimension KPI unless the active standard says they are sufficient for that effect.
+```
+
 ## Initial framing
 
 Evidence producers should propose which fulfillment/control evidence they will produce and identify which metric, value commitment, material claim, milestone, phase, or risk the evidence addresses.
@@ -78,39 +100,48 @@ Fulfillment evidence that matches the Project Evidential Contract should have hi
 
 Evidence not explicitly listed in the contract may still be admissible, but should have lower eligibility priority unless a fiscalizer, reviewer, or protocol rule accepts it as equivalent, necessary, materially useful, or complementary within the available control budget.
 
-## Open design questions
+Each evidence producer offer should also identify:
 
-1. What minimum quality metadata should every contextualized evidence item include?
-2. Should evidence producer offers be scored before selection for expected evidentiary usefulness?
-3. How should fiscalizers classify fulfillment/control evidence quality after submission?
-4. What labels should distinguish authentic-but-weak fulfillment/control evidence from false, manipulated, irrelevant, or insufficient evidence?
-5. When should AI-generated or AI-assisted evidence be allowed, disclosed, restricted, or rejected?
-6. What corroboration rules are needed for high-risk milestones, disbursements, or closure?
-7. How should repeated low-quality fulfillment/control evidence affect the evidence producer's reputation?
-8. How should useful unexpected evidence be funded or prioritized without consuming control budgets on unrelated material?
-9. What happens if the fiscalizer accepted fulfillment/control evidence that later proves false or materially weak?
+- the producer's qualification basis for the evidence need;
+- professional title, certification, accreditation, license, institutional competence, or protocol-defined expertise where applicable;
+- method and instruments or tools to be used;
+- calibration, validation, or methodological references where needed;
+- metadata and chain-of-custody treatment where applicable;
+- AI-generated or AI-assisted components;
+- limitations and scope of the resulting report.
 
-## Possible future resolution direction
+## Remaining design questions
 
-A future resolution may need an `Evidence Quality Review` layer or equivalent fields inside `Evidence Item` and `Fiscalization Report`.
+1. What exact metadata fields should each evidence category require by project type, risk, metric, and legal/technical context?
+2. How should producer qualification be scored or classified without creating a closed cartel of experts?
+3. Which registries, professional licenses, institutional accreditations, or prior-performance records can support eligibility?
+4. How should AI-generated or AI-assisted evidence be allowed, disclosed, restricted, or rejected?
+5. What corroboration rules are needed for high-risk milestones, disbursements, or closure?
+6. How should repeated technically unfit, low-quality, false, or manipulated fulfillment/control evidence affect the evidence producer's reputation, payment, eligibility, and responsibility?
+7. How should useful unexpected evidence be funded or prioritized without consuming control budgets on unrelated material?
+8. What happens if the fiscalizer accepted fulfillment/control evidence that later proves false, manipulated, or technically unfit?
+
+## Accepted Core v0 resolution direction
+
+Core v0 should use a proportional `EvidenceProducerQualificationStandard`, implemented either as explicit fields inside the evidence need and offer objects or as a reusable standard object where implementation requires it.
 
 Candidate dimensions:
 
-- relevance to metric or claim;
-- authenticity or provenance;
-- independence;
-- completeness;
-- method quality;
+- producer qualification for the specific metric or claim;
+- credential, license, accreditation, institutional competence, or protocol-defined expertise;
+- independence and conflict status;
+- accepted method, protocol, instrument, tool, or survey design;
+- calibration, validation, or chain-of-custody requirements where applicable;
+- required metadata and raw source records;
+- report discipline: object measured, operations performed, results, limitations, conclusions, and responsible producer;
+- AI-generation or AI-assistance disclosure;
 - corroboration level;
-- timeliness;
-- privacy and consent safety;
-- manipulation or AI-generation risk;
-- usefulness for disbursement, closure, complaint, or reputation.
+- probative fitness for disbursement, closure, complaint referral, responsibility, reputation, or legal-path support.
 
-This should not become heavy pre-approval for ordinary complaint evidence submitted by citizens. The likely rule is proportional: ordinary complaint evidence may remain easy to submit, while paid or critical fulfillment/control evidence used for milestone release, closure, or reputation should receive explicit quality review.
+This should not become heavy pre-approval for ordinary complaint evidence submitted by citizens. The rule is proportional: ordinary complaint evidence may remain easy to submit, while paid or critical fulfillment/control evidence used for KPI verification, milestone release, closure, reputation, complaint referral, or legal-path support should require qualified producers and reviewable methods.
 
 ## Classification
 
-Core v0 open question and failure mode.
+Resolved Core v0 failure mode with residual implementation questions.
 
-The issue should be resolved before finalizing implementable evidence, fiscalization, disbursement, and reputation schemas.
+The issue should inform final implementable evidence, fiscalization, disbursement, closure, reputation, and complaint-referral schemas.

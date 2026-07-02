@@ -187,6 +187,7 @@ Core rules:
 - selecting a value creates metric obligations;
 - metrics require fulfillment evidence;
 - core value commitments should map to fulfillment evidence needs;
+- formal fulfillment/control evidence for hard KPIs requires producer qualification and method standards proportional to the metric;
 - value commitments are value floors the project must reach;
 - relevant antivalues should be declared as ceilings the project must not exceed;
 - antivalue ceilings require proportional fulfillment/control evidence, measurement or review method, affected scope, and consequence where applicable;
@@ -226,11 +227,11 @@ Projects must clarify who benefits and how beneficiaries are counted or confirme
 
 Core v0 includes a Project Evidential Contract.
 
-The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, fulfillment evidence source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
+The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, fulfillment evidence source roles, producer qualification standards, measurement/review method standards, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
 
 The contract is project-specific and proportional, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
 
-The contract defines fulfillment/control evidence needs, not preselected evidence producers. Independent evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Contract-matched fulfillment/control evidence has higher eligibility priority; unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment/control evidence needs, not preselected evidence producers. Each need should state not only what must be evidenced, but also the qualification and method standard required when the evidence has a hard KPI or formal-effect use. Independent evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Contract-matched fulfillment/control evidence has higher eligibility priority only when the offer satisfies the required producer qualification, method, metadata, and report standard. Unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Core v0 also includes a `Required Evidence Package`.
 
@@ -248,15 +249,19 @@ Core v0 distinguishes `Complaint Evidence`, `Readiness Evidence`, `Fulfillment E
 
 Fulfillment Evidence can be produced by executor, fiscalizer, evidence producer, beneficiary, funder, open observer, documents, or integrations.
 
-Fulfillment Evidence must be linked to project, milestone, metric, material information claim where applicable, producer, timestamp, status, and privacy classification.
+Fulfillment Evidence must be linked to project, milestone, metric, material information claim where applicable, producer, producer qualification basis where formal evidence is required, method or protocol, instrument/tool/calibration reference where applicable, timestamp, status, and privacy classification.
 
 Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
 Fulfillment/control evidence should also record sufficiency status for the claimed formal effect. Material that is unclear, unlinked, missing required traceability metadata, or inadequate for the relevant metric may be accepted only as contextual material, marked insufficient for fulfillment effect, rejected, or sent back for correction.
 
+For hard KPIs, insufficiency may come from the producer or method, not only from the submitted file. A real measurement may be formally insufficient if produced by an actor without the required technical idoneity, using inadequate instruments, omitting calibration or chain-of-custody records where required, or failing to describe operations, results, limitations, and conclusions in a responsible report.
+
 Rule:
 
 > Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
+
+> Paid fulfillment/control evidence is funded as formal proof work, not as casual material upload. The system should pay for technically idoneous production of evidence that can support the metric and formal effect claimed.
 
 Complaint Evidence belongs to the complaint file. It supports, refutes, clarifies, or contextualizes an allegation and does not become fulfillment evidence unless accepted for that purpose by a fiscalizer, reviewer, competent authority, or protocol rule.
 
@@ -317,7 +322,7 @@ The executor should not freely appoint or directly control the fiscalizer that v
 
 Fiscalization is proportional to project size, complexity, risk, territory, and beneficiary vulnerability.
 
-Fiscalization, fulfillment evidence missions, technical review, and admissibility review may be modeled as Control Subprojects with budget, methodology, deliverables, fulfillment evidence, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
+Fiscalization, fulfillment evidence missions, technical review, and admissibility review may be modeled as Control Subprojects with budget, methodology, deliverables, fulfillment evidence, producer qualification criteria, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
 
 Responsible fiscalizer assignment should expose a project-specific fiscalizer eligibility and reputation profile. The profile is a contextual read model, not a generic CV, universal score, or automatic selection authority. It should show the applicable eligibility criteria, whether the fiscalizer satisfies this project's expertise, credential, logistics, availability, workload, methodology, budget, and independence requirements, relevant comparable-project performance, and repeat-relationship or capture warnings.
 
@@ -373,7 +378,7 @@ Every disbursement requires:
 - financial order where money movement is required;
 - audit trace.
 
-Core v0 also requires a coherent Disbursement Milestone plan before execution funding commitments. Specialized validation should check milestone fulfillment evidence, release amounts, partial-release rules, retentions, advance-payment protections, and phase-gate treatment where applicable. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
+Core v0 also requires a coherent Disbursement Milestone plan before execution funding commitments. Specialized validation should check milestone fulfillment evidence, required evidence producer qualifications, measurement/review methods, release amounts, partial-release rules, retentions, advance-payment protections, and phase-gate treatment where applicable. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
 
 A pending design gate is not itself a critical validation failure if the phase plan, minimum public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It blocks release, not necessarily funding commitments.
 
@@ -655,7 +660,7 @@ Rule:
 
 > A project cannot close as fulfilled if its main commitments are not supported by sufficient, reviewed, traceable fulfillment/control evidence.
 
-Evidence submission, review, correction, and closure deadlines should be configured through Threshold Policy, Project Evidential Contract, Disbursement Milestone Plan, Operating Mode, protocol rule, or public administrative rule. They should not be improvised after project actors already relied on different rules.
+Evidence submission, producer qualification, measurement/review method, review, correction, and closure deadlines should be configured through Threshold Policy, Project Evidential Contract, Disbursement Milestone Plan, Operating Mode, protocol rule, or public administrative rule. They should not be improvised after project actors already relied on different rules.
 
 ### 23. Role-based reputation
 
@@ -665,7 +670,7 @@ Rule:
 
 > Reputation follows role responsibility. It is not one generic social score.
 
-Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, fulfillment evidence corrections, verified discoveries, and responsibility events by role.
+Closure labels are procedural context, not automatic reputation scores. Reputation should be updated through verified value fulfillment, metric breakdown, founded complaints, fulfillment evidence corrections, producer qualification/method failures where reviewed, verified discoveries, and responsibility events by role.
 
 Core v0 uses the H014 reputation input chain:
 
@@ -698,7 +703,7 @@ Rule:
 
 The surface should compare executors with executors, modelers or designers with modelers or designers, fiscalizers with fiscalizers, evidence producers with evidence producers, and other actors only in the role actually reviewed.
 
-Specific value floors, antivalue ceilings, metrics, evidence items, and closure findings remain auditable in the detail and technical layers. The citizen-facing layer should show compact categories such as completed projects, partial or unfulfilled outcomes, evidence sufficiency pattern, budget closure, correction responsiveness, serious responsibility events, review quality, or evidence usefulness according to role.
+Specific value floors, antivalue ceilings, metrics, evidence items, producer qualification findings, method limitations, and closure findings remain auditable in the detail and technical layers. The citizen-facing layer should show compact categories such as completed projects, partial or unfulfilled outcomes, evidence sufficiency pattern, budget closure, correction responsiveness, serious responsibility events, review quality, or evidence usefulness according to role.
 
 The surface must disclose data sufficiency and comparison limits. It must not become a universal public-value-per-currency score, a popularity ranking, a social-credit mechanism, or an automatic allocation rule.
 

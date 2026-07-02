@@ -40,12 +40,12 @@ stateDiagram-v2
     [*] --> NotRequired
     NotRequired --> RequiredByPolicy: threshold, risk, phase gate, evidence need, complaint, or protocol requires control
 
-    RequiredByPolicy --> ScopeBudgetDraft: scope, methodology, deliverables, budget lane, and requirements drafted
+    RequiredByPolicy --> ScopeBudgetDraft: scope, methodology, producer qualification where needed, deliverables, budget lane, and requirements drafted
     ScopeBudgetDraft --> OpportunityOpen: control opportunity published
     OpportunityOpen --> OfferWindowOpen: fiscalizer, reviewer, auditor, or evidence-producer offers open
 
     OfferWindowOpen --> EligibilityConflictReview: offer window closes or package can be evaluated
-    EligibilityConflictReview --> NoAdmissibleOffer: no offer satisfies eligibility, conflict, method, or budget floor
+    EligibilityConflictReview --> NoAdmissibleOffer: no offer satisfies eligibility, conflict, qualification, method, or budget floor
     NoAdmissibleOffer --> OfferWindowOpen: extend or reopen offer window
     NoAdmissibleOffer --> ScopeBudgetDraft: reformulate control scope or budget
     NoAdmissibleOffer --> ControlFailed: deadline or policy failure
@@ -72,9 +72,9 @@ stateDiagram-v2
     EvidenceCollection --> ReportDraft: fiscalizer or reviewer drafts report
     ReportDraft --> ReportSubmitted: report delivered
 
-    ReportSubmitted --> ReportSufficiencyReview: scope, method, evidence considered, evidence rejected, limits, conflict, formal effect
+    ReportSubmitted --> ReportSufficiencyReview: scope, qualification, method, evidence considered, evidence rejected, limits, conflict, formal effect
     ReportSufficiencyReview --> ReportAccepted: report complete enough for formal use
-    ReportSufficiencyReview --> CorrectionRequested: missing method, weak evidence, unclear finding, or incomplete scope
+    ReportSufficiencyReview --> CorrectionRequested: missing qualification, missing method, weak evidence, unclear finding, or incomplete scope
     CorrectionRequested --> EvidenceCollection: correction or additional evidence requested
 
     ReportAccepted --> ControlCompleted: control deliverable accepted
@@ -101,7 +101,7 @@ This state machine tracks an actor's offer and possible assignment. Submitting a
 ```mermaid
 stateDiagram-v2
     [*] --> OfferDraft
-    OfferDraft --> OfferSubmitted: actor submits scope, method, cost, availability, credentials, and conflict declaration
+    OfferDraft --> OfferSubmitted: actor submits scope, method, cost, availability, qualification basis, credentials, and conflict declaration
 
     OfferSubmitted --> EligibilityCheck
     EligibilityCheck --> RejectedEligibility: actor type, competence, reputation, capacity, or form requirement fails
@@ -234,6 +234,7 @@ flowchart TD
 - The project does not become execution-ready until the execution budget and the minimum admissible control package are both closed where control is required.
 - The executor may object to verifiable conflicts and respond to requests, but it cannot privately appoint, directly pay, remove, or control the fiscalizer or evidence producer who validates its own performance.
 - Lightweight offers are unpaid by default. Payment begins only when an actor is selected or assigned to accepted control work under protocol rules.
+- Evidence-producer offers for formal hard-KPI evidence must satisfy the declared qualification and method standard for the relevant evidence need; otherwise the material may remain contextual but cannot by itself support release, closure, or reputation effects.
 - Low-risk projects may use simple admissible selection; medium-risk projects may use simple technical/economic scoring plus semi-random selection; high-risk projects may require stronger eligibility, conflict review, technical evaluation, and public justification.
 - Responsible fiscalizer selection should expose a project-specific eligibility and reputation profile. This profile is contextual to the assignment and should not become a generic CV, universal score, or automatic selector.
 - Core v0 permits at most one primary responsible fiscalizer and, where protocol permits and funding supports it, one secondary fiscalizer or fiscalization auditor.
@@ -253,7 +254,7 @@ Control subproject:
 Review design package against declared dimensions, public access, bathrooms or accessibility commitments where promised or required, budget refinement, and construction evidence needs.
 
 Offer process:
-Fiscalizers submit methodology, cost, availability, credentials, workload, comparable-project experience, repeat relationships, and conflict declarations.
+Fiscalizers and evidence producers submit methodology, cost, availability, qualification basis, credentials, instrument or tool basis where needed, workload, comparable-project experience, repeat relationships, and conflict declarations.
 
 Selection:
 The executor may disclose concerns but cannot choose the fiscalizer.

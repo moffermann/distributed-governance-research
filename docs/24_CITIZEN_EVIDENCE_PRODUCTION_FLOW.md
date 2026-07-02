@@ -47,6 +47,16 @@ There are two broad forms:
 2. Fulfillment evidence submission during or after execution
 ```
 
+Participation can be informal or formal:
+
+```text
+Informal observation:
+  citizen, beneficiary, affected party, or open observer submits useful contextual material.
+
+Formal evidence mission:
+  eligible producer accepts a paid or assigned evidence need with required qualification, method, metadata, and report standards.
+```
+
 ### Fulfillment evidence commitment
 
 The citizen says they are willing to provide fulfillment evidence later.
@@ -127,11 +137,15 @@ The system should record:
 - value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue addressed;
 - related evidential contract requirement where known;
 - related fulfillment evidence need where known;
+- producer qualification basis where the commitment is for formal evidence;
+- proposed method, instrument, tool, or protocol where the commitment is for formal evidence;
 - expected timing;
 - location or scope;
 - relationship declarations;
 - whether it is voluntary or paid;
 - whether the actor accepts fulfillment evidence standards.
+
+If the evidence need requires professional or technical proof, the offer should ask for the actor's qualification basis before it can be selected for a paid formal evidence mission.
 
 For critical milestones, disbursements, and closures, the system should require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
@@ -171,6 +185,9 @@ The form should collect:
 - location where applicable;
 - file or record;
 - producer role;
+- producer qualification basis where formal proof is claimed;
+- method or protocol used where formal proof is claimed;
+- instrument, tool, calibration, validation, or chain-of-custody reference where applicable;
 - relationship declaration;
 - privacy classification;
 - consent or authority to share if required.
@@ -184,6 +201,8 @@ Paid fulfillment evidence missions are not ordinary public-value projects. They 
 Rules:
 
 - payment is for producing fulfillment evidence that meets standards;
+- payment is for idoneous proof work, not for merely uploading material;
+- formal evidence missions should require the producer qualification, method, metadata, and report standard attached to the relevant evidence need;
 - payment must not depend on fulfillment evidence being favorable to the executor;
 - executor should not directly appoint or pay evidence producers;
 - assignment should follow eligibility, availability, proximity, reputation, rotation, redundancy, or protocol rules.
@@ -192,12 +211,13 @@ Evidence-producer offers may be submitted in parallel with execution funding. Th
 
 After the minimum control package is accepted, supplemental fulfillment evidence funding may support additional producers only when the proposed fulfillment evidence is distinct or complementary to fulfillment evidence already accepted or planned.
 
-Evidence offers that satisfy accepted Project Evidential Contract needs should receive higher eligibility priority. Fulfillment evidence outside the accepted contract may still be useful, but it should normally depend on fiscalizer, reviewer, or protocol acceptance as equivalent, necessary, materially useful, or complementary within the available control budget.
+Evidence offers that satisfy accepted Project Evidential Contract needs should receive higher eligibility priority. For hard KPI evidence, this means the offer satisfies both the evidence topic and the required producer qualification/method standard. Fulfillment evidence outside the accepted contract may still be useful, but it should normally depend on fiscalizer, reviewer, or protocol acceptance as equivalent, necessary, materially useful, or complementary within the available control budget.
 
 The system should not fund unlimited evidence producers. It should reject or close supplemental evidence funding when:
 
 - the fulfillment evidence need is already satisfied;
 - the proposed fulfillment evidence duplicates existing accepted fulfillment evidence;
+- the proposed producer lacks the qualification or method basis required for the formal evidence need;
 - the project already has enough fulfillment evidence for the relevant milestone, territory, beneficiary group, or risk;
 - no admissible distinct fulfillment evidence offer remains.
 
@@ -225,6 +245,8 @@ Used in verified discovery
 ```
 
 Submitted material may be visible and still be insufficient for the formal effect claimed. For example, a dark photo without reliable time, location, milestone link, or useful description may remain contextual material, require corroboration, or be rejected for fulfillment effect.
+
+A submission may also be insufficient because the producer or method is not fit for the claimed effect. For example, a citizen may upload an honest manual measurement of a sports court. That can be accepted as observation or contradiction material, but it should not satisfy a hard dimension KPI if the evidential contract requires a qualified topographer, architect, engineer, inspector, certified institution, or equivalent technical producer using an accepted measurement method.
 
 Example:
 
@@ -311,6 +333,7 @@ Positive effects:
 
 - timely fulfillment evidence;
 - useful fulfillment evidence;
+- technically adequate fulfillment evidence;
 - confirmed accuracy;
 - repeated reliable participation.
 
@@ -319,6 +342,7 @@ Negative effects:
 - false fulfillment evidence;
 - manipulated fulfillment evidence;
 - repeated low-quality submissions;
+- technically unfit measurements submitted as formal proof;
 - undisclosed relevant relationship;
 - refusal to clarify important issues.
 

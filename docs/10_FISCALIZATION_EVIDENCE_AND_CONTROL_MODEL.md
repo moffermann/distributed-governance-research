@@ -8,7 +8,7 @@ The central problem is that the executor has strong incentives to weaken, underf
 
 ## Core rule
 
-> The executor executes. The system and protocol define control requirements. Evidence producers collect fulfillment or control evidence. The fiscalizer evaluates. The community can observe, submit complaint evidence, contradict, and denounce.
+> The executor executes. The system and protocol define control requirements. Evidence producers collect fulfillment or control evidence under the qualification and method standards required by the evidence need. The fiscalizer evaluates. The community can observe, submit complaint evidence, contradict, and denounce.
 
 H015 adds an evaluation-context boundary to this rule:
 
@@ -17,7 +17,7 @@ Evidence capture and formal evaluation are separate functions.
 Formal evaluation is valid only for the project dimension and formal effect that the actor is allowed, qualified, or situated to evaluate.
 ```
 
-This means a neighbor may submit a photo showing that the Macul sports court is closed, incomplete, or different from the accepted design. That submission may become useful fulfillment/control evidence. It does not by itself release funds, close the project, prove breach, assign responsibility, or update reputation until the relevant fiscalizer, reviewer, authority, or protocol path records a formal evaluation for the specific dimension and effect.
+This means a neighbor may submit a photo showing that the Macul sports court is closed, incomplete, or different from the accepted design. That submission may become useful observation, contradiction, complaint evidence, or contextual fulfillment/control material. It does not by itself release funds, close the project, prove breach, assign responsibility, or update reputation until the relevant fiscalizer, reviewer, authority, or protocol path records a formal evaluation for the specific dimension and effect. If the claimed effect depends on a hard KPI such as court dimensions, the evidence need may require a qualified technical producer and accepted measurement method before the material can satisfy the KPI.
 
 H016 frames this as a distributed but protocol-selected fiscalization ecosystem:
 
@@ -64,6 +64,8 @@ Evidence producers collect fulfillment or control evidence, but do not formally 
 
 Fulfillment evidence production can be voluntary or paid.
 
+Voluntary or citizen-produced material may be useful observation or corroboration. Paid or critical fulfillment/control evidence is different: it is formal proof work. It should be performed by a producer whose credential, accreditation, institutional competence, method, instruments or tools, metadata, chain of custody where applicable, and report discipline satisfy the evidence need.
+
 Examples:
 
 - georeferenced photos;
@@ -79,7 +81,7 @@ Fulfillment evidence production strengthens fiscalization because the fiscalizer
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
-Submitted material that is unclear, unlinked, missing required traceability metadata, or inadequate for the claimed metric may be accepted only as contextual material, marked insufficient for fulfillment effect, rejected, or sent back for correction. Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
+Submitted material that is unclear, unlinked, missing required traceability metadata, produced by a non-idoneous actor for the claimed hard KPI, or inadequate for the claimed metric may be accepted only as contextual material, marked insufficient for fulfillment effect, rejected, or sent back for correction. Insufficient evidence is not proof of fraud by itself, but it is also not proof of fulfillment.
 
 ## Information reliability incentives
 
@@ -137,6 +139,8 @@ The contract states how project promises will be evidenced and reviewed. It conn
 - risks and declared antivalues;
 - fulfillment evidence needs and fulfillment/control evidence types;
 - fulfillment evidence source roles;
+- evidence producer qualification and method standards where formal technical proof is required;
+- required metadata, instrument/tool, calibration, validation, chain-of-custody, and report requirements where relevant;
 - corroboration requirements;
 - responsible fiscalization or review;
 - complaint, correction, disbursement, closure, and responsibility effects.
@@ -145,7 +149,7 @@ Under H012, positive value commitments are evaluated as floors and negative decl
 
 The contract is project-specific and proportional. It may use value-catalog defaults, project-type templates, threshold policies, operating-mode rules, or country-specific requirements, but it should not become a single centralized evidence code for every domain.
 
-The contract defines fulfillment/control evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific value floors, antivalue ceilings, material claims, milestones, phases, risks, or declared antivalues. Contract-matched fulfillment/control evidence needs have higher eligibility priority, while unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment/control evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific value floors, antivalue ceilings, material claims, milestones, phases, risks, or declared antivalues. Contract-matched fulfillment/control evidence needs have higher eligibility priority when the offer also satisfies the required qualification, method, metadata, and report standard. Unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Examples:
 
@@ -154,7 +158,7 @@ Sports training project:
 attendance records, activity photos, beneficiary confirmation, evidence-producer observations, and fiscalizer review.
 
 Technical infrastructure project:
-permits, budget-line fulfillment evidence, georeferenced milestones, independent control, technical reception, and public-use evidence.
+permits, budget-line fulfillment evidence, georeferenced milestones, independent control, technical reception, qualified measurements where required, and public-use evidence.
 ```
 
 Fiscalizers evaluate fulfillment evidence against the accepted evidential contract. If the contract is materially weakened after support or funding, the change should be versioned and may require reformulation, notification, renewed review, or responsibility analysis depending on severity.
@@ -191,7 +195,7 @@ Verified discovery may trigger:
 
 ## AI anomaly assistance
 
-AI may help detect missing fulfillment evidence, duplicate records, inconsistent dates, suspicious budget changes, privacy risks, or contradictions between claims and contextualized evidence.
+AI may help detect missing fulfillment evidence, duplicate records, inconsistent dates, suspicious budget changes, weak qualification/method fit, privacy risks, or contradictions between claims and contextualized evidence.
 
 AI should not decide truth or responsibility by itself.
 
@@ -211,12 +215,12 @@ Not allowed:
 declare fraud proven
 assign responsibility event by itself
 release or block funds by itself
-replace fiscalizer, regulator, court, or competent authority
+replace fiscalizer, qualified producer, regulator, court, or competent authority
 ```
 
 ## 3. Responsible fiscalization
 
-The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, fulfillment evidence obligations, guarantees, mitigation commitments, and fiscalization criteria.
+The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, fulfillment evidence obligations, producer qualification/method standards, guarantees, mitigation commitments, and fiscalization criteria.
 
 Each formal fiscalization conclusion should identify the evaluated dimension, actor role, observability basis, authority or qualification basis, contextualized evidence used, method or limitation, evaluation type, formal effect, and review status. A fiscalizer may rely on many evidence sources, but the formal conclusion should not collapse beneficiary experience, citizen observation, technical review, complaint findings, and value fulfillment into one undifferentiated score.
 
@@ -225,6 +229,7 @@ The responsible fiscalizer may use:
 - fulfillment evidence or self-report provided by the executor;
 - fulfillment evidence produced by citizens or organizations;
 - fulfillment evidence missions;
+- qualified technical measurements, inspections, lab results, survey outputs, or professional reports where required;
 - beneficiary confirmations;
 - funder observations;
 - complaints and contradictions;
@@ -242,6 +247,8 @@ Before a responsible assignment is accepted, the system should expose a project-
 - whether the result is eligible, eligible with warning, eligible only with safeguards or secondary audit, or not eligible.
 
 The fiscalizer may integrate evidence and review conclusions into a milestone, phase, or closure report, but the fiscalizer does not replace specialized competence where the active policy requires a technical reviewer, auditor, certifier, laboratory, professional reviewer, regulator, court, or competent authority.
+
+The fiscalizer should therefore verify whether the submitted evidence satisfies the required producer qualification and method standard before relying on it for disbursement, closure, responsibility, reputation, complaint referral, or legal-path support.
 
 Responsible fiscalization is distributed in supply but not arbitrary in assignment. It should be selected through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules rather than by executor preference, ordinary popularity, first funding, or lowest price alone.
 
@@ -286,6 +293,8 @@ The executor should not directly pay or appoint the actors responsible for valid
 Control-cost discovery may proceed in parallel with execution funding. This means that fiscalizers, evidence producers, and technical reviewers may submit lightweight offers while citizens are still funding the execution budget.
 
 Evidence-producer offers should identify which accepted fulfillment/control evidence need, value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue they address. Offers outside the accepted evidential contract should normally be treated as lower priority unless the fiscalizer, reviewer, or protocol accepts them as useful to the control package.
+
+Where the evidence need requires formal proof, evidence-producer offers should also identify the producer's qualification basis, proposed method, instrument/tool standard, calibration or validation basis where applicable, required metadata, chain-of-custody treatment where applicable, and report deliverables.
 
 However, execution funding and control funding remain distinct closures:
 
@@ -347,6 +356,7 @@ A Control Subproject may contain:
 - deliverables;
 - control budget;
 - eligibility criteria;
+- producer qualification and method standards for evidence missions;
 - conflict checks;
 - assigned actor or actor pool;
 - fulfillment evidence requirements;
@@ -408,6 +418,7 @@ Fiscalizers can submit offers associated with the project, declaring:
 - deliverables;
 - timeline;
 - fulfillment evidence requirements;
+- required evidence producer qualifications or technical-review standards where the offer includes evidence missions;
 - declared conflicts of interest;
 - relevant reputation or qualifications;
 - project-specific eligibility basis;
@@ -491,6 +502,8 @@ A fulfillment evidence commitment may include:
 - actor id;
 - relationship to project: funder, beneficiary, neighbor, organization, affected party, other;
 - type of fulfillment evidence offered;
+- qualification basis where the actor claims ability to produce formal evidence;
+- proposed method or instrument/tool where formal proof is claimed;
 - location relevance;
 - expected timing;
 - delivery status;
@@ -510,10 +523,10 @@ Example:
 Mission:
   Visit project site, take georeferenced photos, record short video, interview beneficiaries, and upload fulfillment evidence.
 Payment:
-  Fixed amount if fulfillment evidence satisfies the required format and traceability standards.
+  Fixed amount if fulfillment evidence satisfies the required qualification, method, format, metadata, and traceability standards.
 ```
 
-Paid fulfillment evidence missions allow citizens or organizations to professionalize fulfillment evidence collection without creating a new public-value project for every evidence task. When the mission requires budget, methodology, assignment, deliverables, fulfillment evidence standards, reputation effects, and auditability, it may be represented inside a Control Subproject.
+Paid fulfillment evidence missions allow citizens or organizations to professionalize fulfillment evidence collection without creating a new public-value project for every evidence task. When the mission requires budget, methodology, assignment, deliverables, producer qualification standards, fulfillment evidence standards, reputation effects, and auditability, it may be represented inside a Control Subproject.
 
 ## Fulfillment evidence mission funding
 
@@ -534,6 +547,8 @@ Fulfillment evidence missions should be assigned or selected through system rule
 Possible assignment criteria:
 
 - eligibility;
+- qualification fit for the specific evidence need;
+- method and instrument/tool adequacy;
 - absence of known conflict of interest;
 - reputation;
 - location proximity;
@@ -564,6 +579,7 @@ Controls include:
 - project and control actors declare related-party relationships;
 - contextualized evidence is public and contradictable;
 - fiscalizers and evidence producers carry reputational risk;
+- evidence producer qualification and method fit are reviewed for formal hard-KPI evidence;
 - contextualized evidence can be challenged by beneficiaries, funders, citizens, and other organizations;
 - repeated executor-fiscalizer or executor-evidence-producer relationships are visible;
 - fiscalizer eligibility and contextual reputation are visible for the specific assignment;
@@ -571,6 +587,7 @@ Controls include:
 - fiscalizer dependency concentration and repeat relationships are treated as warnings, safeguards, or disqualification inputs according to the active policy;
 - suspicious patterns are flagged;
 - false or manipulated contextualized evidence can produce strong reputational penalties;
+- technically unfit evidence submitted as formal proof can affect payment, eligibility, reputation, or responsibility after review;
 - medium and large projects may require redundant fulfillment evidence sources;
 - fiscalizer validation does not close the possibility of later complaint or fraud review.
 - supplemental control funding is capped and does not permit unlimited fiscalizers or unlimited evidence producers.

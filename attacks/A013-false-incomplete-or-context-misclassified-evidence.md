@@ -6,7 +6,7 @@ Reviewed in paired Phase 3 review. Improvements integrated in `docs/79_EVIDENCE_
 
 ## Description
 
-The model distinguishes complaint evidence, fulfillment evidence, control evidence, contradiction evidence, administrative observability data, and research evidence. This attack asks whether evidence can still be false, low quality, AI-generated, irrelevant, incomplete, or used in the wrong procedural context.
+The model distinguishes complaint evidence, fulfillment evidence, control evidence, contradiction evidence, administrative observability data, and research evidence. This attack asks whether evidence can still be false, low quality, AI-generated, irrelevant, incomplete, technically unfit, produced by a non-idoneous actor, or used in the wrong procedural context.
 
 ## Location in current project
 
@@ -19,7 +19,7 @@ The model distinguishes complaint evidence, fulfillment evidence, control eviden
 
 ## Problem
 
-Independence from the executor does not make evidence true. A funded evidence producer may submit material that is authentic but irrelevant, technically real but incomplete, copied, AI-generated, manipulated, or classified under the wrong evidence context.
+Independence from the executor does not make evidence true or probative. A funded evidence producer may submit material that is authentic but irrelevant, technically real but incomplete, copied, AI-generated, manipulated, produced without the required technical qualifications, produced with inadequate instruments or method, or classified under the wrong evidence context.
 
 Example:
 
@@ -27,12 +27,14 @@ Example:
 The Macul evidence producer submits photos of courts.
 The photos do not prove dimensions, bathrooms, accessibility, public access, date, location, or completion status.
 The evidence is independent but insufficient for the claimed metric.
+Even an honest citizen measurement of court dimensions with a school ruler or household tape is not equivalent to a qualified technical measurement by an eligible topographer, architect, engineer, inspector, certified lab, competent technical institution, or other protocol-eligible producer when the KPI requires formal dimension proof.
 ```
 
 ## Recommended resolution path
 
-- Add an `EvidenceQualityReview` layer or equivalent fields in `ContextualizedEvidenceItem`, `FiscalizationReport`, and `EvaluationRecord`.
-- Review relevance, provenance, independence, completeness, method, corroboration, timeliness, metadata, AI-generation risk, and usefulness.
+- Add an `EvidenceProducerQualificationStandard` and `EvidenceQualityReview` layer or equivalent fields in `FulfillmentEvidenceNeed`, `EvidenceProducerOffer`, `ContextualizedEvidenceItem`, `FiscalizationReport`, and `EvaluationRecord`.
+- For each hard KPI or formal effect, define required producer qualification, credential, accreditation, institutional competence, method, instrument/tool, calibration or validation rule, metadata, report discipline, and chain of custody where applicable.
+- Review relevance, provenance, independence, producer idoneity, completeness, method, corroboration, timeliness, metadata, AI-generation risk, and usefulness.
 - Keep citizen complaint evidence easy to submit, but apply stricter quality review to paid or critical fulfillment/control evidence.
 - Require context confirmation before formal use.
 - Penalize repeated low-quality or false fulfillment/control evidence by role and context.
@@ -47,20 +49,21 @@ The evidence is independent but insufficient for the claimed metric.
 
 ## Social reasons
 
-Bad evidence can release money, close projects, damage reputations, or dismiss valid complaints. Evidence quality is therefore not a technical detail; it is a trust foundation.
+Bad evidence can release money, close projects, damage reputations, or dismiss valid complaints. Evidence quality is therefore not a technical detail; it is a trust foundation. Paid fulfillment/control evidence exists because formal measurement and reporting require qualified producers who can assume responsibility for what they declare.
 
 ## Conflicts of interest
 
 - Evidence producers may be paid for volume, not usefulness.
+- Non-idoneous producers may win missions cheaply and produce material that looks like proof but has no probative value.
 - Fiscalizers may over-rely on easy evidence.
 - Executors may coordinate with independent-looking producers.
 - AI tools can generate plausible but false reports.
 
 ## Inconsistencies to test
 
-- C003 creates independent evidence producers, but quality validation remains open.
-- C015 separates publication from proof, but citizen-facing labels may still imply proof.
-- The schema includes sufficiency status, but not yet a full authenticity model.
+- C003 creates independent evidence producers, but independence without A013 qualification and method review would still be insufficient.
+- C015 separates publication from proof, but citizen-facing labels may still imply proof if qualification, method fit, and sufficiency are not exposed clearly.
+- The schema now includes A013 qualification and quality review gates, but detailed authenticity scoring, AI-generated-material detection, and calibration verification remain future implementation work.
 
 ## Stress scenario
 
@@ -69,11 +72,13 @@ Construction funds are released after fiscalizer acceptance of photos and a shor
 ## Review checklist
 
 - Does every formal evidence use have confirmed evidence context?
+- Does every hard KPI evidence need define producer qualification and method standards before financing or review?
 - Are required metadata fields proportional to the claimed effect?
+- Are producer credentials, method, instruments, calibration, and report limitations visible where relevant?
 - Can authentic-but-insufficient evidence be labeled without implying fraud?
 - Are AI-generated or AI-assisted materials disclosed?
 - Does poor evidence affect the evidence producer's role reputation?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should resolve the open evidence-quality validation question before final implementable evidence and disbursement schemas are treated as complete.
+Resolved in `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`: hard KPI fulfillment/control evidence requires a declared producer qualification and method standard before the evidence is financed, produced, reviewed, or used for disbursement, closure, responsibility, reputation, or formal fiscalization effects. Detailed scoring, AI-generated-material detection, calibration registries, and country-specific legal admissibility remain implementation details.

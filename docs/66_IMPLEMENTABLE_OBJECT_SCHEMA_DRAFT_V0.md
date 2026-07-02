@@ -158,11 +158,13 @@ effect_refs
 | `Metric` | `metric_id`, `project_version_ref`, `dimension`, `target_or_threshold`, `measurement_method`, `timing`, `evidence_need_refs`, `review_consequence` | Must connect to evidence needs and review effects. | Avoids vague or moving targets. |
 | `ValueVerificationPackage` | `package_id`, `project_version_ref`, `covered_values`, `metric_refs`, `evidence_need_refs`, `source_role_rules`, `status` | Bridges value commitments to the evidential contract. | Citizen surface may show a simple verification summary. |
 | `ProjectEvidentialContract` | `contract_id`, `project_version_ref`, `value_profile_ref`, `evidence_need_refs`, `corroboration_rules`, `privacy_rules`, `effect_rules`, `status` | Governs fulfillment/control evidence eligibility and priority. | Defines needs, not preselected producers. |
-| `FulfillmentEvidenceNeed` | `need_id`, `contract_ref`, `metric_or_claim_ref`, `expected_source_roles`, `required_metadata`, `review_rule`, `status` | Evidence producers may offer to satisfy it after the relevant work, service, value, antivalue, milestone, or phase deliverable is performed. | Contract-matched offers receive higher priority; pre-execution readiness evidence is separate. |
+| `EvidenceProducerQualificationStandard` | `standard_id`, `target_need_ref`, `required_credentials_or_competence`, `accepted_method_or_protocol`, `instrument_or_tool_standard`, `calibration_or_validation_rule`, `chain_of_custody_rule`, `report_requirements`, `legal_or_professional_basis_ref`, `status` | Defines the producer and method standard required for formal fulfillment/control evidence. | May be embedded in a need or implemented as a reusable object. Country implementations map it to applicable legal, technical, professional, or administrative rules. |
+| `FulfillmentEvidenceNeed` | `need_id`, `contract_ref`, `metric_or_claim_ref`, `expected_source_roles`, `producer_qualification_standard_ref`, `required_metadata`, `method_or_protocol_rule`, `review_rule`, `status` | Evidence producers may offer to satisfy it after the relevant work, service, value, antivalue, milestone, or phase deliverable is performed. | Contract-matched offers receive higher priority only when they satisfy the qualification, method, metadata, and report standard; pre-execution readiness evidence is separate. |
 | `MaterialInformationClaim` | `claim_id`, `project_or_object_ref`, `claim_text_or_value`, `responsible_role_ref`, `materiality_basis`, `source_record_refs`, `approval_or_criterion_ref`, `approval_scope_or_condition`, `supporting_evidence_refs`, `review_status`, `citizen_visibility_status`, `material_warning_status` | May connect to contradiction, correction, complaint, responsibility, reputation, citizen-facing warning, or visibility correction. | Captures statements, approval labels, conditions, omissions, and limitations that affect funding, legitimacy, readiness, disbursement, closure, complaint review, risk, trust, or reputation. |
-| `ContextualizedEvidenceItem` | `evidence_item_id`, `submitted_by_role_ref`, `evidence_context`, `target_object_ref`, `metadata`, `privacy_classification`, `review_status`, `sufficiency_status` | May support complaint, readiness, fulfillment, control, contradiction, observability, or research only after context review. | Bare evidence is not a formal object. |
+| `ContextualizedEvidenceItem` | `evidence_item_id`, `submitted_by_role_ref`, `evidence_context`, `target_object_ref`, `producer_qualification_basis_refs`, `method_or_protocol_used`, `instrument_or_tool_refs`, `metadata`, `privacy_classification`, `review_status`, `sufficiency_status` | May support complaint, readiness, fulfillment, control, contradiction, observability, or research only after context review. | Bare evidence is not a formal object. Formal fulfillment/control use requires qualification and method fit where the evidence need demands it. |
 | `EvidenceContext` | `context_id`, `evidence_item_ref`, `proposed_context`, `confirmed_context`, `confirmed_by_role_ref`, `effect_scope`, `status` | Prevents complaint evidence, readiness evidence, fulfillment evidence, and control evidence from being mixed. | Same material may have multiple reviewed contexts. |
-| `EvaluationRecord` | `evaluation_id`, `evaluation_context`, `evaluated_dimension`, `authority_or_qualification_basis`, `evidence_refs`, `effect_type`, `effect_scope`, `review_status` | May affect disbursement, closure, correction, responsibility, reputation, or complaint outcome. | Formal effects require scoped evaluation. |
+| `EvidenceQualityReview` | `review_id`, `evidence_item_ref`, `need_or_standard_ref`, `producer_qualification_result`, `method_fit_result`, `metadata_completeness_result`, `provenance_or_chain_result`, `corroboration_result`, `probative_fitness_result`, `limitations`, `reviewer_role_ref`, `status` | Reviews whether an item can support the claimed formal effect. | Not a generic truth oracle. It classifies fit for a specific need/effect. |
+| `EvaluationRecord` | `evaluation_id`, `evaluation_context`, `evaluated_dimension`, `authority_or_qualification_basis`, `evidence_refs`, `evidence_quality_review_refs`, `effect_type`, `effect_scope`, `review_status` | May affect disbursement, closure, correction, responsibility, reputation, or complaint outcome. | Formal effects require scoped evaluation and evidence-quality/qualification fit where applicable. |
 | `VerifiedDiscovery` | `discovery_id`, `source_role_ref`, `hidden_issue_ref`, `evidence_refs`, `review_result`, `materiality_finding`, `visibility_effect_refs`, `effect_refs` | May create reward, reputation input, correction, complaint, responsibility, warning, visibility correction, or disbursement effect after review. | AI anomaly flags alone are not discoveries. |
 
 ## Funding, Disbursement, and Custody Schemas
@@ -183,11 +185,11 @@ effect_refs
 
 | Object | Required core fields | Key refs / effects | Notes |
 |---|---|---|---|
-| `ControlSubproject` | `control_subproject_id`, `target_project_ref`, `scope`, `budget_ref`, `required_by_policy_ref`, `state`, `minimum_package_rule` | Creates fiscalization/evidence/control opportunities. | Minimum package should close before execution readiness where required. |
+| `ControlSubproject` | `control_subproject_id`, `target_project_ref`, `scope`, `budget_ref`, `required_by_policy_ref`, `state`, `minimum_package_rule`, `qualification_standard_refs` | Creates fiscalization/evidence/control opportunities. | Minimum package should close before execution readiness where required. Evidence missions are paid proof work, not casual uploads. |
 | `FiscalizationOffer` | `offer_id`, `actor_role_ref`, `target_control_ref`, `methodology`, `budget_or_quote`, `conflict_declaration`, `eligibility_status`, `comparable_experience_summary`, `current_workload`, `repeat_relationship_refs` | Can become fiscalization assignment if selected. | Popularity-only selection excluded for responsible control. |
 | `FiscalizerEligibilityReputationProfile` | `profile_id`, `target_control_ref`, `fiscalizer_role_ref`, `eligibility_criteria_refs`, `competence_match`, `availability_status`, `workload_status`, `methodology_fit`, `budget_fit`, `independence_status`, `contextual_history_refs`, `repeat_relationship_refs`, `dependency_concentration`, `warning_status`, `safeguard_refs`, `citizen_summary`, `audit_refs` | Informs assignment, safeguards, replacement, secondary audit, and reputation review. | Derived read model; not a generic CV, universal score, or automatic selector. |
 | `FiscalizationAssignment` | `assignment_id`, `fiscalizer_role_ref`, `scope`, `methodology`, `deadline`, `budget_line_ref`, `state`, `conflict_status`, `eligibility_profile_ref`, `capture_warning_status` | Produces reports, review findings, corrections, or formal-path triggers. | Protocol-selected or accepted through control subproject. |
-| `FiscalizationReport` | `report_id`, `assignment_ref`, `evidence_refs`, `evidence_rejected_refs`, `scope`, `methodology`, `findings`, `limitations`, `formal_effect_claimed`, `recommended_effects`, `report_sufficiency_status`, `review_status` | May support EvaluationRecords, disbursement, correction, complaint review, closure, responsibility review, or reputation. | Fiscalization itself must be auditable. |
+| `FiscalizationReport` | `report_id`, `assignment_ref`, `evidence_refs`, `evidence_quality_review_refs`, `evidence_rejected_refs`, `scope`, `methodology`, `findings`, `limitations`, `formal_effect_claimed`, `recommended_effects`, `report_sufficiency_status`, `review_status` | May support EvaluationRecords, disbursement, correction, complaint review, closure, responsibility review, or reputation. | Fiscalization itself must be auditable and must not rely on technically unfit evidence for hard formal effects. |
 
 ## Complaint, Pause, and Conflict Schemas
 
@@ -248,10 +250,12 @@ An implementable system should reject or block confirmation of material effects 
 ```text
 No state transition without AuditEvent.
 No formal evidence use without evidence_context.
+No hard-KPI fulfillment/control evidence effect without producer qualification and method fit where the accepted evidence need requires it.
 No funding-complete label as legitimacy proof.
 No execution-ready transition where required affected-party mapping or consultation evidence remains pending.
 No readiness condition satisfied with fulfillment evidence unless the evidence item is also explicitly classified and reviewed as Readiness Evidence for that effect.
 No disbursement without funding source, budget line, milestone/phase gate, review basis, and financial order path.
+No disbursement for a metric requiring professional or technical proof when the evidence producer qualification, method, instrument/tool, required metadata, or report discipline is missing or insufficient.
 No closure as fulfilled without reviewed fulfillment/control evidence or limitation statement.
 No reputation update without reviewed ReputationInput.
 No responsible fiscalizer assignment without project-specific eligibility criteria, conflict/dependency review, and contextual reputation profile where fiscalization is required.
@@ -281,6 +285,12 @@ FiscalizationAssignment or competent tutored review creates FiscalizationReport 
 Evidence:
 Photos, measurements, attendance/access records, and affected-party observations enter as ContextualizedEvidenceItems with evidence_context.
 
+Court dimensions:
+Formal dimension evidence references an accepted qualification standard, such as a qualified topographer, architect, engineer, inspector, certified lab, competent technical institution, or other protocol-eligible professional using accepted measurement methods and traceable instruments.
+
+Citizen observation:
+A neighbor's informal measurement may support contradiction or complaint review, but it does not satisfy the hard dimension KPI unless a reviewer accepts it only for a narrower effect.
+
 Complaint:
 Complaint uses Complaint Evidence context and ComplaintReviewPolicy. It does not automatically become fulfillment evidence.
 
@@ -298,7 +308,7 @@ AuditEvents connect each role action, object transition, rule version, source re
 
 1. Whether implementation should use event sourcing, relational tables, document collections, or a hybrid model.
 2. Exact enumerations for statuses, effect types, privacy tiers, and procedural burden profiles.
-3. Evidence authenticity and quality scoring, including AI-generation risk and metadata integrity.
+3. Detailed evidence authenticity and quality scoring, including AI-generation risk, metadata integrity, instrument calibration verification, producer credential verification, and fraud detection.
 4. Country-specific legal integrations for identity, treasury, permits, registries, courts, and sanctions.
 5. Access-control mapping from the responsibility matrix to actual permissions.
 6. Data retention, export, redaction, and public snapshot rules.

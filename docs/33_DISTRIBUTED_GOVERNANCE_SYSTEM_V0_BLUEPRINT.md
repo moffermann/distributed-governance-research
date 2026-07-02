@@ -29,7 +29,7 @@ Material Claim
 → audit trail
 ```
 
-This means each role should have reasons to behave reliably. Evidence producers are paid and reputationally evaluated for useful evidence, not for favoring the executor. Executors receive disbursements only through milestone, evidence, and review rules. Fiscalizers build reputation through independent, complete, and timely review. Delegates retain trust through visible delegated-action reports. Administrators and authorities preserve trust by publishing rule changes, Governance Resolutions, and timeout effects.
+This means each role should have reasons to behave reliably. Evidence producers are paid and reputationally evaluated for technically adequate, useful, traceable evidence, not for favoring the executor. Formal fulfillment/control evidence missions are funded because they require qualified producers, adequate methods, appropriate instruments or tools, and responsibility for the resulting report. Executors receive disbursements only through milestone, evidence, and review rules. Fiscalizers build reputation through independent, complete, and timely review. Delegates retain trust through visible delegated-action reports. Administrators and authorities preserve trust by publishing rule changes, Governance Resolutions, and timeout effects.
 
 The citizen surface may show simple labels such as `Self-reported`, `Corroborated`, `Disputed`, `Contradicted`, `Accepted`, `Insufficient`, `Corrected`, or `Reviewed`. Layer 5 preserves the full chain behind those labels.
 
@@ -253,7 +253,7 @@ The system should first search the value catalog before generating new values. A
 
 Promised value should be verified through a Value Verification Package, not isolated metrics. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
 
-Each core value commitment should map to fulfillment evidence needs. The project defines what must be evidenced, when, by which source role or corroboration path, and with what review consequence. It should not preselect the independent evidence producers who later verify the project.
+Each core value commitment should map to fulfillment evidence needs. The project defines what must be evidenced, when, by which source role or corroboration path, with what producer qualification and method standard, and with what review consequence. It should not preselect the independent evidence producers who later verify the project.
 
 ## Metrics and fulfillment evidence
 
@@ -282,9 +282,9 @@ is not enough to measure sports value. The project must measure actual participa
 
 Each project should also define a Project Evidential Contract.
 
-The contract states how fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, source roles, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
+The contract states how fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, source roles, required producer qualification, accepted measurement or review method, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
 
-The contract defines fulfillment/control evidence needs rather than named evidence producers. Evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected fulfillment/control evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
+The contract defines fulfillment/control evidence needs rather than named evidence producers. For each hard KPI or formal effect, the need should declare the required producer qualification and method standard: credential, certification, accreditation, institutional competence, professional experience, instrument or tool class, calibration or validation reference, metadata, chain of custody where required, report discipline, and limitation statement. Evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Offers that match the accepted contract and satisfy the required qualification/method standard receive higher eligibility priority; unexpected fulfillment/control evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
 
 Each project should also define a `Required Evidence Package` before publication or execution-readiness effects apply. It contains `RequiredEvidenceNeed` records selected by threshold policy, phase gates, public-function rules, common-good exposure, affected-party exposure, legal/technical conditions, or country implementation.
 
@@ -350,13 +350,25 @@ Fulfillment Evidence must be linked to:
 - value promise;
 - material information claim where applicable;
 - producer;
+- producer qualification basis where formal evidence is required;
+- measurement, inspection, survey, test, or review method where formal evidence is required;
+- instrument, tool, calibration, validation, or chain-of-custody reference where applicable;
 - timestamp;
 - traceability metadata where required;
+- report limitations where applicable;
 - review status;
 - sufficiency status for the claimed formal effect;
 - privacy classification.
 
-Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. Where the metric depends on technical measurement, legal compliance, regulated inspection, laboratory work, survey validity, or specialized professional judgment, the producer must be qualified for that evidence need and the method must be adequate for the formal effect claimed.
+
+Example:
+
+```text
+Macul court dimensions:
+  citizen observation may trigger contradiction or complaint;
+  formal fulfillment evidence should come from a qualified technical producer using an accepted measurement method and traceable report.
+```
 
 Complaint Evidence belongs to the complaint file. It supports, refutes, clarifies, or contextualizes an allegation. It may become relevant to fulfillment review only if the responsible fiscalizer, reviewer, competent authority, or protocol rule accepts it for that purpose.
 
@@ -382,7 +394,7 @@ Material warning
 Source linked
 ```
 
-Verified discovery may create reputation credit or compensation only after review confirms that the discovered information was material and useful. AI may flag anomalies, duplicates, missing fulfillment evidence, privacy risks, or contradictions, but it does not decide truth, fraud, responsibility, fund release, or legal consequences by itself.
+Verified discovery may create reputation credit or compensation only after review confirms that the discovered information was material and useful. AI may flag anomalies, duplicates, missing fulfillment evidence, weak producer qualification, privacy risks, or contradictions, but it does not decide truth, fraud, professional idoneity, responsibility, fund release, or legal consequences by itself.
 
 Failure to reach a value floor, exceeding an antivalue ceiling, or discovering an undeclared antivalue can become a reviewed reputation input or responsibility event only through the relevant evaluation, fiscalization, or responsibility path. It does not automatically become a complaint.
 
@@ -961,7 +973,7 @@ Examples:
 - executor reputation: execution performance;
 - modeler reputation: design quality;
 - fiscalizer reputation: review quality and independence;
-- evidence producer reputation: accuracy and usefulness;
+- evidence producer reputation: technical adequacy, accuracy, traceability, usefulness, and correction history;
 - complainant reputation: good-faith signal quality or abuse patterns.
 
 Rule:
@@ -994,7 +1006,7 @@ Examples:
 - executors: completed projects, partial or unfulfilled projects, milestone reliability, evidence sufficiency pattern, budget closure, correction responsiveness, severe responsibility events;
 - modelers/designers: accepted design deliverables, rework, phase-gate approval record, material design omissions found after review;
 - fiscalizers: timeliness, review completeness, weak-evidence correction record, findings later confirmed, corrected, contradicted, or overturned;
-- evidence producers: accepted evidence rate, insufficient evidence rate, metadata completeness, corroboration usefulness, material corrections after review.
+- evidence producers: qualification-fit rate, accepted evidence rate, insufficient evidence rate, metadata completeness, method adequacy, corroboration usefulness, material corrections after review.
 
 The detailed values, metrics, antivalue ceilings, evidence items, and closure records remain available in Layer 5. The ordinary citizen-facing history should be generic and comparable by role, with drill-down when the user needs to inspect the source.
 

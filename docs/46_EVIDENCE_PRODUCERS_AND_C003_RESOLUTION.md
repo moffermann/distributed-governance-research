@@ -14,7 +14,7 @@ Accepted as the v0 resolution for C003.
 
 > The system should not depend on the executor as the primary source of fulfillment evidence.
 
-The executor may submit material, but project verification, critical milestones, disbursements, and closure should rely on fulfillment evidence produced or corroborated by evidence producers, fiscalizers, technical records, verified beneficiaries, or other non-executor sources.
+The executor may submit material, but project verification, critical milestones, disbursements, and closure should rely on fulfillment evidence produced or corroborated by evidence producers, fiscalizers, technical records, verified beneficiaries, or other non-executor sources. After A013, this independence rule must be read together with producer idoneity: formal hard-KPI evidence also requires the producer qualification and method standard defined by the accepted evidence need.
 
 ## The contradiction
 
@@ -50,6 +50,8 @@ The system should include a role called `Evidence Producer`.
 An evidence producer is an actor whose function is to document, record, observe, capture, or produce fulfillment evidence or control evidence about project execution.
 
 The evidence producer is not necessarily the executor.
+
+For formal hard-KPI evidence, the evidence producer is not merely a person who uploads material. The actor must satisfy the qualification, method, instrument/tool, metadata, chain-of-custody, and report requirements attached to the relevant fulfillment/control evidence need.
 
 Possible evidence producers:
 
@@ -129,6 +131,8 @@ Every contextualized evidence item should record:
 - source role;
 - source relationship to project;
 - whether the source is executor, beneficiary, fiscalizer, evidence producer, citizen observer, or external register;
+- producer qualification basis where formal proof is claimed;
+- method, instrument/tool, calibration, validation, or chain-of-custody reference where applicable;
 - date and time;
 - object verified;
 - project milestone or complaint relation;
@@ -156,6 +160,8 @@ External official or documentary record
 
 These labels do not automatically decide truth, but they help determine evidentiary weight.
 
+For hard KPIs, independence labels are not enough. A citizen observation may be useful, but a formal dimension, laboratory, technical-compliance, survey-validity, or professional-review KPI may require a qualified producer using an accepted method.
+
 ## Corroboration
 
 Critical evidence should be corroborated when risk or money exposure is high.
@@ -176,7 +182,7 @@ Fulfillment/control evidence requirements should scale with risk.
 
 Low-risk or low-value milestones may accept lighter evidence.
 
-Higher-risk milestones should require stronger non-executor corroboration.
+Higher-risk milestones should require stronger non-executor corroboration and, where the metric requires technical proof, qualified producers with adequate methods.
 
 Examples:
 
@@ -188,7 +194,7 @@ Medium risk:
 Executor report + evidence producer record + beneficiary confirmation.
 
 High risk:
-Evidence producer record + fiscalizer observation + documentary/technical corroboration.
+Qualified evidence producer record + fiscalizer observation + documentary/technical corroboration.
 ```
 
 ## Relationship with assisted evidence publication
@@ -243,12 +249,15 @@ The contract tells evidence producers:
 
 - which value floor, antivalue ceiling, project promise, metric, milestone, claim, risk, or declared antivalue needs fulfillment/control evidence;
 - what fulfillment evidence type is expected;
+- what producer qualification and method standard applies where formal proof is required;
 - when it should be produced;
 - what privacy or protected-identity rules apply;
 - whether independent or corroborating evidence is required;
 - how the fiscalizer or reviewer will use the evidence.
 
 The contract defines fulfillment/control evidence needs, not preselected producers. Evidence producers should submit offers or commitments identifying the specific value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue their fulfillment/control evidence will address.
+
+Where the offer claims to satisfy a formal evidence need, it should also identify the producer's qualification basis, method, instruments or tools, calibration or validation basis where applicable, metadata, chain-of-custody treatment where applicable, and report deliverables.
 
 Example:
 
@@ -267,6 +276,8 @@ Evidence producers may still submit useful unexpected fulfillment evidence, but 
 
 Fulfillment evidence that satisfies an accepted contract need should have higher eligibility priority. Unexpected fulfillment/control evidence may be considered when it is equivalent, necessary, materially useful, or complementary within the available control budget, but it should not automatically replace the minimum fulfillment evidence needs defined before funding.
 
+For formal hard-KPI evidence, "satisfies an accepted contract need" means both topical match and qualification/method fit.
+
 ## C003 final resolution
 
 C003 is resolved as follows:
@@ -277,7 +288,7 @@ Create and use the Evidence Producer role. Do not treat executor-submitted mater
 
 Final rule:
 
-> Fulfillment evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation. Evidence items should connect to material claims, carry an explicit evidence context, and may create responsibility or verified-discovery effects only after review. When evidence is used for formal fulfillment, disbursement, closure, complaint, or reputation consequences, the system should also record the applicable evaluation context, evaluated dimension, authority or qualification basis, and formal effect.
+> Fulfillment evidence should not depend on the executor. The executor may submit self-reported material, but critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. For hard KPIs, the evidence producer must also satisfy the accepted qualification and method standard. The fiscalizer may produce evidence, but evidence-production must be recorded separately from evaluation. Evidence items should connect to material claims, carry an explicit evidence context, and may create responsibility or verified-discovery effects only after review. When evidence is used for formal fulfillment, disbursement, closure, complaint, or reputation consequences, the system should also record the applicable evaluation context, evaluated dimension, producer qualification/method basis, authority or qualification basis, and formal effect.
 
 ## Documents that should eventually reflect this resolution
 
@@ -297,6 +308,7 @@ This resolution should inform future updates to:
 
 - Evidence producer may become costly.
 - Evidence producer may be captured by executor.
+- Evidence producer may be independent but technically unqualified for the hard KPI.
 - Fiscalizer may over-rely on own evidence.
 - AI-generated evidence may still bypass controls.
 - Low-risk projects may become overburdened by evidence rules.
@@ -306,7 +318,7 @@ This resolution should inform future updates to:
 - scale fulfillment/control evidence requirements by risk;
 - require relationship and conflict declarations;
 - distinguish evidence production from dimension-scoped and effect-scoped evaluation;
-- record source and role metadata;
+- record source, role, producer qualification, and method metadata;
 - require corroboration for critical milestones;
 - allow lightweight evidence for low-risk projects;
 - use technical capture methods where feasible.

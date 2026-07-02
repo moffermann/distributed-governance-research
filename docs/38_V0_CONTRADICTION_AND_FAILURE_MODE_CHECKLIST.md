@@ -578,16 +578,18 @@ Fiscalization reports must expose sufficiency fields: scope, methodology, eviden
 - [ ] Is contextualized evidence privacy classified?
 - [ ] Is contradiction evidence allowed?
 - [ ] Are independent fulfillment/control evidence requirements defined for risky projects?
+- [ ] Do hard KPI evidence needs define producer qualification and method standards before evidence is financed or used?
 - [ ] Is false, manipulated, or low-quality contextualized evidence penalized by role and evidence context?
 - [ ] Can insufficient evidence be accepted only as contextual material without proving fulfillment?
-- [ ] Are missing timestamp, location, linkage, method, or metadata limitations visible where they matter for the formal effect claimed?
+- [ ] Are missing credential, accreditation, instrument, calibration, chain-of-custody, timestamp, location, linkage, method, or metadata limitations visible where they matter for the formal effect claimed?
 - [ ] Can citizens understand contextualized evidence status without reading raw files?
 
 ## 6a. Distributed trust checklist
 
 - [ ] Does each material trust signal trace back to a material claim, actor role, contextualized evidence, and review status?
 - [ ] Are the incentives of each role visible enough to explain why the actor would produce reliable behavior?
-- [ ] Are evidence producers paid or reputationally rewarded for useful, sufficient, traceable evidence rather than for favoring the executor?
+- [ ] Are evidence producers paid or reputationally rewarded for technically adequate, useful, sufficient, traceable evidence rather than for favoring the executor?
+- [ ] Is paid fulfillment/control evidence treated as formal proof work requiring idoneous producers and adequate methods, not as casual material upload?
 - [ ] Can submitted evidence be corroborated, contradicted, marked insufficient, corrected, or rejected?
 - [ ] Are fiscalizers, reviewers, or competent authorities responsible for formal evaluation rather than raw evidence, AI flags, or popularity?
 - [ ] Are payment, disbursement, reputation, correction, revocation, or responsibility effects tied to reviewed findings rather than unsupported trust?

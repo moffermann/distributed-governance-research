@@ -142,6 +142,8 @@ accepted reformulations, if applicable
 
 The metric weights must be defined before funding begins, not after execution.
 
+For hard KPI inputs, `accepted fulfillment evidence` means evidence accepted for the claimed formal effect after context review, producer qualification review, method/protocol fit, metadata/provenance review, and fiscalizer or reviewer evaluation where required. Ordinary observations or soft public signals may provide context, but they do not carry the same reputational weight as qualified formal proof.
+
 Example:
 
 ```text
@@ -422,6 +424,7 @@ value fulfillment score
 metric breakdown
 fiscalizer evaluation reference
 accepted fulfillment evidence references
+evidence quality or producer qualification review references, where applicable
 founded complaint references
 responsibility event references
 base score adjustment
@@ -459,12 +462,12 @@ Numeric reputation updates communicate performance over time.
 C018 is resolved as follows:
 
 ```text
-Do not calculate reputation directly from project closure labels. Use closure category as procedural context, but calculate the executor's numeric reputation update primarily from verified fulfillment of the project's value thesis and predeclared metrics, adjusted by founded complaints, contextualized evidence corrections, and role-specific responsibility events. Reputation should be visible to future funders, use a weighted moving average or decay mechanism, and remain role-specific.
+Do not calculate reputation directly from project closure labels. Use closure category as procedural context, but calculate the executor's numeric reputation update primarily from verified fulfillment of the project's value thesis and predeclared metrics, adjusted by founded complaints, contextualized evidence corrections, producer qualification and method-fit findings where formal evidence is required, and role-specific responsibility events. Reputation should be visible to future funders, use a weighted moving average or decay mechanism, and remain role-specific.
 ```
 
 Final rule:
 
-> What matters reputationally is not merely how the project closed, but how much of the promised value was verified, what evidence supports that result, and what founded infractions or responsibility events were established by role.
+> What matters reputationally is not merely how the project closed, but how much of the promised value was verified, what evidence supports that result, whether formal evidence met the required producer qualification and method standard where applicable, and what founded infractions or responsibility events were established by role.
 
 ## Documents that should eventually reflect this resolution
 

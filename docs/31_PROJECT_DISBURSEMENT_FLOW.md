@@ -67,6 +67,7 @@ Required conditions may include:
 - fiscalizer eligibility and reputation profile accepted for the assigned scope where responsible fiscalization is required;
 - minimum admissible control package accepted where required;
 - Project Evidential Contract configured;
+- formal evidence producer qualification and method standards configured for hard KPI milestones where required;
 - milestones defined;
 - disbursement milestone plan validated with no unresolved critical failures;
 - no admitted blocking complaints or scoped systemic pauses;
@@ -118,6 +119,7 @@ Each milestone should have:
 - phase reference where applicable;
 - maximum releasable amount;
 - required fulfillment evidence;
+- required evidence producer qualification and method standard where the milestone depends on hard technical, professional, legal, or regulated proof;
 - responsible fiscalizer;
 - deadline;
 - approval criteria;
@@ -230,6 +232,8 @@ Fulfillment evidence should be linked to:
 - metric;
 - evidential contract requirement;
 - evidence producer;
+- producer qualification basis where formal proof is required;
+- method, instrument, tool, calibration, validation, or chain-of-custody references where applicable;
 - timestamp;
 - traceability metadata where required;
 - privacy classification;
@@ -239,7 +243,11 @@ Fulfillment evidence should be linked to:
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
+For hard KPIs, the evidence must also satisfy the producer qualification and method standard declared in the Project Evidential Contract or applicable Threshold Policy. A real but informal measurement can remain contextual, contradictory, or complaint-support material without satisfying the formal milestone.
+
 If submitted fulfillment evidence does not satisfy the evidential contract, the fiscalizer may accept it only as contextual material, mark it insufficient for fulfillment effect, request correction or additional fulfillment evidence, approve partially where the disbursement plan allows it, or reject the milestone.
+
+If the submitted fulfillment evidence was produced by an actor who lacks the required credential, accreditation, institutional competence, instrument, method, metadata, or report discipline for the claimed KPI, the fiscalizer should mark it insufficient for that formal effect even if the material is honest or useful for context.
 
 Example:
 
@@ -254,6 +262,19 @@ Disbursement effect:
 No full release until adequate evidence or corroboration is submitted.
 ```
 
+Example producer-fit failure:
+
+```text
+Submitted evidence:
+Citizen measurement of court length using a household tape or school ruler.
+
+Review status:
+Accepted as observation / insufficient for hard dimension KPI.
+
+Disbursement effect:
+No release for the dimension-dependent construction milestone until qualified technical measurement is submitted or corroborated under the accepted standard.
+```
+
 ## 7. Fiscalizer review
 
 The fiscalizer reviews whether the milestone was fulfilled.
@@ -263,6 +284,7 @@ Where the disbursement depends on a phase gate, the fiscalizer, reviewer, certif
 The review may consider:
 
 - required fulfillment evidence;
+- evidence producer qualification and method fit;
 - evidential contract references;
 - distinct supplemental fulfillment evidence where accepted;
 - metric targets;
@@ -296,6 +318,7 @@ Possible blockers:
 - blocking complaint open;
 - prerequisite phase gate pending, rejected, or requiring correction;
 - fulfillment evidence contradicted and unresolved;
+- required evidence producer qualification or method fit missing for a hard KPI milestone;
 - fiscalizer report missing;
 - formal review triggered by supplemental control finding;
 - milestone late without accepted justification;
@@ -340,6 +363,8 @@ Block because of complaint
 
 The platform should not generate a full release order when the required fulfillment/control evidence is inconclusive, insufficient, contradicted, or accepted only as contextual material for the relevant milestone.
 
+The platform also should not generate a release order when the evidence need requires qualified technical or professional proof and the submitted evidence lacks the required producer qualification, method, instrument/tool traceability, metadata, or report discipline.
+
 When a decision requires money movement, the system should generate a `Financial Order` for the custodian, treasury integration, escrow service, bank, or other country-specific financial execution mechanism.
 
 The financial order should include:
@@ -352,6 +377,7 @@ The financial order should include:
 - rule applied;
 - Financial Assurance Profile or Guarantee Materialization Record reference where relevant;
 - fulfillment evidence and fiscalization references where relevant;
+- evidence producer qualification/method review references where relevant;
 - blocking-condition status;
 - destination or ledger account;
 - protocol authorization or signature.
@@ -695,6 +721,7 @@ Required trace:
 - financial order ID where applicable;
 - custodian execution status where applicable;
 - fulfillment evidence considered;
+- evidence producer qualification and method-fit findings where relevant;
 - fiscalizer decision;
 - fiscalizer eligibility/profile reference where material;
 - fiscalization report sufficiency status;

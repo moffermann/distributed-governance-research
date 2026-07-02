@@ -64,6 +64,17 @@ That measurement is `Fulfillment Evidence` because it supports or contradicts fu
 
 Affected-party consultation before execution is not `Fulfillment Evidence` by default. Later affected-party observations may become `Fulfillment Evidence` or `Control Evidence` if they verify actual values or antivalues such as noise, public access, safety, service availability, beneficiary experience, or use after execution.
 
+Formal fulfillment evidence for hard KPIs requires more than contextual relevance. Where a metric depends on technical measurement, professional judgment, regulated inspection, laboratory testing, survey validity, legal compliance, or another specialized domain, the related `FulfillmentEvidenceNeed` should declare a proportional producer qualification and method standard.
+
+Example:
+
+```text
+A citizen may observe that the Macul court looks too small.
+A qualified topographer, architect, engineer, inspector, certified lab, competent technical institution, or protocol-eligible professional may be required to produce formal dimension evidence.
+```
+
+The citizen observation may trigger contradiction, complaint, or review. The formal KPI evidence requires technical idoneity, appropriate method, traceable instruments or tools, required metadata, and a responsible report.
+
 ### Control Evidence
 
 `Control Evidence` is material produced, captured, or commissioned through fiscalization, evidence missions, technical review, admissibility review, or another control process.
@@ -80,6 +91,8 @@ A selected control subproject performs a field visit and produces georeferenced 
 ```
 
 The field visit output is `Control Evidence`; its procedural use determines whether it supports fulfillment review, complaint review, or both.
+
+Paid control evidence follows the same proportional producer-qualification rule. A paid evidence mission is not funded merely to upload material; it is funded to produce evidence that satisfies the method, credential, metadata, and probative-fitness requirements of the assigned evidence need.
 
 ### Contradiction Evidence
 
@@ -130,6 +143,10 @@ Recommended additional fields:
 procedural_use
 target_object
 source_role
+producer_qualification_basis
+method_or_protocol
+instrument_or_tool_standard
+chain_of_custody_ref
 review_status
 decision_effect
 ```
@@ -153,6 +170,16 @@ Example:
 ```text
 A citizen can complain that Macul court dimensions appear wrong.
 A technical reviewer or fiscalizer formally evaluates whether the dimensions comply.
+```
+
+The actor who produces the underlying formal measurement must also be idoneous for that measurement. For hard KPIs, the system should distinguish:
+
+```text
+Observation:
+  useful signal from a citizen, beneficiary, affected party, or open observer.
+
+Formal measurement:
+  evidence produced by an actor with the required credential, method, instrument, metadata, and responsibility basis.
 ```
 
 ## Readiness boundary

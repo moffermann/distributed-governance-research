@@ -172,9 +172,9 @@ Secondary contributions should be marked as formal commitments only when the pro
 
 Rule:
 
-> A value icon is not marketing. Every accepted value creates metric and fulfillment evidence obligations.
+> A value icon is not marketing. Every accepted value creates metric, fulfillment evidence, and producer/method standard obligations where formal proof is required.
 
-The creator should not only select a value icon. The creator should also accept the value commitments, metrics, and fulfillment evidence needs attached to that value. The fulfillment evidence needs later guide independent evidence-producer offers and fiscalizer review.
+The creator should not only select a value icon. The creator should also accept the value commitments, metrics, fulfillment evidence needs, and qualification/method standards attached to that value where relevant. The fulfillment evidence needs later guide independent evidence-producer offers and fiscalizer review.
 
 Example:
 
@@ -484,6 +484,8 @@ Each milestone should define:
 
 Milestones that affect payment should belong to a structured Disbursement Milestone plan with release amounts, partial-release rules, retentions, advance-payment protections where applicable, and fulfillment evidence requirements.
 
+Where a milestone depends on a hard KPI, the plan should also identify the required evidence producer qualification and method standard before funding begins.
+
 Example:
 
 ```text
@@ -522,13 +524,14 @@ It should connect:
 - milestone or budget line where relevant;
 - fulfillment evidence need;
 - expected fulfillment/control evidence source role or corroboration path;
+- required producer qualification, method, instrument/tool, metadata, chain-of-custody, and report standards where formal proof is required;
 - whether executor self-report is enough or corroboration is required;
 - timing of evidence;
 - fiscalizer or reviewer role;
 - contradiction, complaint, correction, disbursement, closure, or responsibility effect where applicable;
 - privacy or protected-identity rule where relevant.
 
-The contract defines fulfillment evidence needs, not preselected evidence producers. The creator, modeler, or executor should not control who later produces independent fulfillment evidence for its own claims.
+The contract defines fulfillment evidence needs, not preselected evidence producers. The creator, modeler, or executor should not control who later produces independent fulfillment evidence for its own claims. For hard KPIs, the contract should define the kind of qualified producer and method required, such as technical measurement, certified inspection, laboratory report, valid survey method, or professional review.
 
 Example for sports:
 
@@ -564,11 +567,13 @@ Evidence examples:
 
 Evidence producers may later submit offers or commitments that identify which value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue their evidence will address.
 
+Where formal proof is claimed, offers should also identify the producer's qualification basis, proposed method, instruments or tools, calibration or validation basis where applicable, required metadata, chain-of-custody treatment where applicable, and report deliverables.
+
 Eligibility priority:
 
 ```text
 Contract-matched fulfillment evidence need:
-  high priority.
+  high priority when the offer also satisfies the required qualification and method standard.
 
 Equivalent or materially useful unexpected evidence:
   medium priority, if accepted by fiscalizer, reviewer, or protocol rule.
@@ -642,9 +647,9 @@ The creator may see why this is required, but cannot arbitrarily remove required
 
 Rule:
 
-> The executor does not freely define who fiscalizes it and does not directly control payment to the fiscalizer.
+> The executor does not freely define who fiscalizes it and does not directly control payment to the fiscalizer or evidence producer.
 
-Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Executor-produced material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. Hard KPI evidence requires qualified producers and adequate methods where the accepted evidence need requires it.
 
 ## 12. Define threshold policy
 
@@ -666,6 +671,7 @@ Possible threshold dimensions:
 - beneficiary or attendance commitments;
 - fiscalization and control package;
 - evidence producer commitments;
+- evidence producer qualification and method standards where formal proof is required;
 - technical validation;
 - permits or documents;
 - procedural burden profile;
@@ -817,6 +823,7 @@ Validation dimensions:
 - value metrics;
 - value floors and antivalue ceilings;
 - evidence adequacy;
+- producer qualification and method adequacy where formal proof is required;
 - Project Evidential Contract completeness;
 - budget consistency;
 - milestone consistency;
@@ -1047,6 +1054,7 @@ This flow should not:
 - allow execution funding without responsible executor;
 - allow value icons without metrics;
 - allow metrics without evidence;
+- allow hard KPI evidence without required producer qualification and method standards;
 - publish a project with a weak or missing evidential contract;
 - hide phase gates in design-and-execution projects;
 - release construction funds against an unaudited design;

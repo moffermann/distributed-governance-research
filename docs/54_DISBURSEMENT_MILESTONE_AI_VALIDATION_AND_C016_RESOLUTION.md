@@ -91,6 +91,7 @@ Accepted v0 rules:
 6. Critical validation failures block financeable publication until corrected.
 7. Partial release is allowed only when the milestone contains a validated partial-release rule.
 8. Where a project uses phases, the plan must identify which milestones and release amounts belong to each phase and which prerequisite phase gates block later-phase release.
+9. Where a milestone release depends on a hard KPI, the milestone must identify the required producer qualification standard, method or protocol, instrument/tool expectation, metadata, and report basis before execution funding can be accepted.
 ```
 
 ## Disbursement Milestone entity
@@ -110,6 +111,8 @@ milestone-specific metric
 verifiable result
 measurement method
 required evidence
+required evidence producer qualification standard, where applicable
+required method, protocol, instrument, calibration, or tool standard, where applicable
 Project Evidential Contract reference
 evidence acceptance rule
 responsible executor
@@ -150,6 +153,7 @@ The validator checks questions such as:
 Does every milestone describe a verifiable result?
 Does the evidence actually support the claimed result?
 Does the milestone evidence match the Project Evidential Contract?
+Where a hard KPI controls release, does the milestone define the qualified producer type and method needed to prove it?
 Is the payment tied to the evidence?
 Is partial release supported by a formula?
 Is a supposedly divisible milestone actually measurable by parts?
@@ -374,6 +378,7 @@ budget exists
 milestones exist
 milestone metrics exist
 required evidence exists
+required producer qualification and method standards exist where hard KPI evidence controls release
 release rules exist
 AI milestone validation has no unresolved Red issues
 citizen-facing disbursement summary exists
@@ -439,12 +444,12 @@ For Red cases, the project should not be financeable yet.
 C016 is resolved as follows:
 
 ```text
-Create a structured Disbursement Milestone entity and require specialized AI validation before a project is published as financeable. The AI does not approve the project's social value and does not estimate the exact economic value of every milestone. It checks whether milestones, phase-gate release rules where applicable, evidence, Project Evidential Contract references, release amounts, partial-release rules, retentions, and advance-payment protections are coherent enough for funding and later fiscalization. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
+Create a structured Disbursement Milestone entity and require specialized AI validation before a project is published as financeable. The AI does not approve the project's social value and does not estimate the exact economic value of every milestone. It checks whether milestones, phase-gate release rules where applicable, evidence, required producer qualification and method standards where hard KPIs control release, Project Evidential Contract references, release amounts, partial-release rules, retentions, and advance-payment protections are coherent enough for funding and later fiscalization. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
 ```
 
 Final rule:
 
-> No project may receive execution funding commitments until its disbursement milestone plan and applicable phase-gate funding treatment have passed specialized AI validation with no unresolved critical failures.
+> No project may receive execution funding commitments until its disbursement milestone plan and applicable phase-gate funding treatment have passed specialized AI validation with no unresolved critical failures, including missing qualification or method standards where hard KPI evidence controls release.
 
 A pending design phase gate is not itself a critical validation failure when the project explicitly defines the design baseline, reserved execution-funding rule, release block, and failure or reformulation treatment. It is a disbursement blocker until accepted.
 

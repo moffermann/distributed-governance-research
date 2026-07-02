@@ -27,6 +27,7 @@ Source baseline:
 - `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`
 - `docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md`
 - `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`
+- `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`
 - `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`
 - `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
 - `docs/diagrams/v0-contextualized-evidence-item-state.md`
@@ -79,7 +80,7 @@ This state machine tracks a requirement and the producer offers or commitments t
 ```mermaid
 stateDiagram-v2
     [*] --> NeedDraft
-    NeedDraft --> NeedAccepted: tied to value floor, antivalue ceiling, metric, claim, milestone, phase, risk, or policy
+    NeedDraft --> NeedAccepted: tied to value floor, antivalue ceiling, metric, claim, milestone, phase, risk, policy, and required standard where applicable
     NeedAccepted --> OpenForOffers: visible to eligible evidence producers
 
     OpenForOffers --> ContractMatchedOffer: offer addresses accepted need
@@ -91,7 +92,7 @@ stateDiagram-v2
     ContractMatchedOffer --> EligibilityConflictReview
     LowerPriorityEligible --> EligibilityConflictReview
 
-    EligibilityConflictReview --> RejectedConflictOrDuplicate: conflict, capture risk, duplication, or weak method
+    EligibilityConflictReview --> RejectedConflictOrDuplicate: conflict, capture risk, duplication, weak qualification, or weak method
     EligibilityConflictReview --> BudgetPending: offer admissible and funding needed
     EligibilityConflictReview --> AssignedOrAccepted: voluntary or already funded work accepted
 
@@ -102,12 +103,12 @@ stateDiagram-v2
     ExpectedEvidence --> EvidenceSubmitted: ContextualizedEvidenceItem linked
     ExpectedEvidence --> MissedOrLate: deadline missed
 
-    EvidenceSubmitted --> QualityReviewRequired: relevance, metadata, authenticity, independence, completeness, and corroboration checked
-    QualityReviewRequired --> Satisfied: sufficient for declared need
-    QualityReviewRequired --> PartiallySatisfied: useful but incomplete
-    QualityReviewRequired --> NeedsCorroboration: cannot support formal effect alone
-    QualityReviewRequired --> Insufficient: weak, unclear, missing metadata, or irrelevant for claimed effect
-    QualityReviewRequired --> Contradicted: credible contradictory material exists
+    EvidenceSubmitted --> QualificationQualityReview: producer qualification, method, metadata, authenticity, independence, completeness, and corroboration checked
+    QualificationQualityReview --> Satisfied: sufficient for declared need
+    QualificationQualityReview --> PartiallySatisfied: useful but incomplete
+    QualificationQualityReview --> NeedsCorroboration: cannot support formal effect alone
+    QualificationQualityReview --> Insufficient: weak, unclear, missing metadata, non-idoneous producer, weak method, or irrelevant for claimed effect
+    QualificationQualityReview --> Contradicted: credible contradictory material exists
 
     PartiallySatisfied --> ExpectedEvidence: remaining evidence still expected
     NeedsCorroboration --> ExpectedEvidence: corroborating evidence requested
@@ -128,7 +129,7 @@ stateDiagram-v2
 
 ## Value-to-Effect Routing
 
-This flowchart shows how the contract connects project promises to formal effects. It also marks the unresolved evidence-quality issue as a boundary, not as a solved scoring model.
+This flowchart shows how the contract connects project promises to formal effects. It marks the A013 producer-qualification and method-fit gate while leaving detailed scoring, calibration, AI-detection, and country-specific admissibility rules for implementation.
 
 ```mermaid
 flowchart TD
@@ -141,7 +142,7 @@ flowchart TD
     EO[Evidence Producer Offer or commitment]
     CP[Control Subproject or assignment where needed]
     CEI[Contextualized Evidence Item with fulfillment or control context]
-    EQ[Evidence quality / sufficiency review]
+    EQ[Evidence qualification / quality / sufficiency review]
     FR[Fiscalization Report]
     ER[EvaluationRecord]
     DIS[Disbursement decision]
@@ -149,7 +150,7 @@ flowchart TD
     RE[ResponsibilityEvent]
     RI[ReputationInput]
     COR[Correction, mitigation, or reformulation]
-    OQ[Open question: evidence quality validation model]
+    OQ[Future implementation: scoring, calibration, AI detection, legal mapping]
     AUD[AuditEvent]
 
     VT --> VAP
@@ -173,7 +174,7 @@ flowchart TD
     EO --> AUD
     ER --> AUD
 
-    OQ -. unresolved scoring and authenticity model .-> EQ
+    OQ -. detailed implementation remains future .-> EQ
     CEI -. publication is not validation .-> EQ
     EO -. accepted offer is not proof .-> CEI
 ```
@@ -183,12 +184,12 @@ flowchart TD
 - `Project Evidential Contract` is part of the financeable project baseline. A project should not receive execution funding without a proportional accepted contract.
 - The contract is versioned. A material weakening of value metrics, evidence needs, source roles, phase gates, disbursement criteria, or review consequences requires reformulation or review rather than silent editing.
 - `Value Verification Package` is the value-specific portion of the evidential contract. It should avoid isolated input metrics and connect each value floor or antivalue ceiling to evidence and review consequences.
-- `Fulfillment Evidence Need` defines what must be evidenced. It does not name the final evidence producer as part of the project promise.
-- Evidence producer offers that match the accepted contract receive higher eligibility priority.
+- `Fulfillment Evidence Need` defines what must be evidenced. Where the need supports a hard KPI or formal effect, it also defines the required producer qualification and method/protocol standard. It does not name the final evidence producer as part of the project promise.
+- Evidence producer offers that match the accepted contract, including required qualification and method standards where applicable, receive higher eligibility priority.
 - Out-of-contract fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary, but normally has lower priority and should not consume control budget ahead of accepted minimum needs.
 - An accepted evidence producer offer, paid mission, or assignment is not proof of fulfillment. It only creates an expected evidence task.
-- Submitted evidence becomes a `ContextualizedEvidenceItem` with fulfillment or control context. It still needs review before disbursement, closure, responsibility, reputation, or complaint effects.
-- Evidence-quality validation remains an open Core v0 question. This diagram recognizes the required gate but does not finalize a scoring or authenticity model.
+- Submitted evidence becomes a `ContextualizedEvidenceItem` with fulfillment or control context. It still needs producer-qualification, method-fit, context, metadata, authenticity, completeness, corroboration, and sufficiency review before disbursement, closure, responsibility, reputation, or complaint effects.
+- A013 resolves the Core v0 gate: formal hard-KPI fulfillment/control evidence must be produced by a qualified or otherwise idoneous actor using an adequate method and report basis. Detailed scoring, calibration registries, AI-generated-material detection, and country-specific legal admissibility remain implementation details.
 
 ## Macul Example Trace
 
@@ -212,15 +213,15 @@ Fulfillment Evidence Need:
 verify that construction delivered courts with accepted dimensions and public access.
 
 Evidence producer offer:
-field measurement visit, georeferenced photos, public-access observation, and short report linked to the construction milestone.
+qualified field measurement visit, declared measurement method and instrument basis, georeferenced photos, public-access observation, and short report linked to the construction milestone.
 
 Priority:
 high if the offer directly satisfies the accepted need.
 lower if it only provides generic photos not tied to dimensions, access, bathrooms, milestone, date, or location.
 
 Quality risk:
-photos may be real but incomplete, taken from one angle, missing metadata, AI-altered, or irrelevant to the claimed dimension metric.
-The fiscalizer cannot rely on them for release or closure until the quality and sufficiency review supports the intended effect.
+photos may be real but incomplete, taken from one angle, missing metadata, AI-altered, produced by a non-idoneous actor for a hard dimension KPI, or irrelevant to the claimed metric.
+The fiscalizer cannot rely on them for release or closure until the qualification, method-fit, quality, and sufficiency review supports the intended effect.
 ```
 
 ## Boundary With Other State Machines
@@ -236,4 +237,4 @@ It defines the ex ante contract and the evidence-need lifecycle that those other
 
 ## Rule
 
-> The project must declare how fulfillment will be known before execution funding. That declaration creates evidence needs, not captive producers, and submitted evidence creates review material, not automatic truth or automatic formal effects.
+> The project must declare how fulfillment will be known before execution funding. That declaration creates evidence needs and required producer/method standards where formal proof is needed, not captive producers, and submitted evidence creates review material, not automatic truth or automatic formal effects.

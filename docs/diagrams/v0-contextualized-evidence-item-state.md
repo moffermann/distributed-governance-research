@@ -15,6 +15,7 @@ Source baseline:
 - `docs/26_CITIZEN_COMPLAINT_FLOW.md`
 - `docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW.md`
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md`
+- `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`
 
 Related sources: H008, H012, H015, H016, H018, H022, H023, H024, C002, C003, C004, C005, C013, C015, C016, C018, C024.
 
@@ -39,9 +40,9 @@ stateDiagram-v2
     PrivacySafetyReview --> IntakeRejected: unsafe or unlawful to retain
     RestrictedVisibility --> PendingReview: reviewer access logged
 
-    PendingReview --> AcceptedForDeclaredContext: sufficient for proposed context
+    PendingReview --> AcceptedForDeclaredContext: sufficient for proposed context and required standard
     PendingReview --> AcceptedAsContextualMaterial: useful but insufficient for claimed effect
-    PendingReview --> InsufficientForClaimedEffect: does not satisfy needed proof
+    PendingReview --> InsufficientForClaimedEffect: does not satisfy needed proof, qualification, or method
     PendingReview --> NeedsCorroboration: plausible but not enough alone
     PendingReview --> Observed: recorded as observation only
     PendingReview --> Rejected: irrelevant, unreliable, duplicate, or unusable
@@ -111,6 +112,7 @@ flowchart TD
 - The same underlying source material may produce more than one contextualized evidence item or more than one reviewed context. Each formal use must be separately classified, reviewed, and auditable.
 - `Complaint Evidence` supports, refutes, or contextualizes a complaint. It does not prove complaint merit or produce a project blocker by itself.
 - `Fulfillment Evidence` is used to verify value floors, antivalue ceilings, metrics, milestones, phase gates, disbursement conditions, closure, or role-relevant accountability.
+- Formal fulfillment/control evidence for hard KPIs must also satisfy the declared producer qualification and method/protocol standard before it can support a formal effect.
 - `Control Evidence` is produced through fiscalization, technical review, evidence missions, admissibility review, or other control work. It may later support fulfillment review, complaint review, contradiction review, or verified discovery depending on accepted context.
 - `Contradiction Evidence` challenges a material information claim, evidence item, report, or conclusion. It may trigger correction, corroboration, complaint review, extraordinary review, or verified discovery only after review.
 - `Administrative Observability Data` audits the platform and transition process. It is not automatically complaint evidence or fulfillment evidence.
@@ -119,6 +121,7 @@ flowchart TD
 ## Formal Effect Rules
 
 - Accepted evidence is not the same as formal evaluation. Formal effects require an `EvaluationRecord`, `FiscalizationReport`, `ComplaintAdmissibilityReferralRecord`, `SystemicPauseRecord`, `ProjectClosureAccountabilityRecord`, `ResponsibilityEvent`, or another scoped formal record.
+- For hard technical KPIs, a contextualized evidence item is not accepted for the declared formal context unless producer qualification, method/protocol fit, instrument or tool basis, required metadata, and report limitations fit the relevant evidence need.
 - Executor-submitted material is self-report unless corroborated by accepted non-executor evidence, fiscalizer review, beneficiary confirmation, technical record, or other valid source.
 - Evidence accepted only as contextual material may remain visible and useful, but it cannot by itself release funds, close a milestone as fulfilled, prove a complaint, or update reputation.
 - Contradicted or insufficient evidence is not proof of fraud by itself. It is also not proof of fulfillment.
@@ -134,13 +137,13 @@ Complaint Evidence context:
 used to support a complaint alleging that the design/construction does not match the accepted baseline.
 
 Fulfillment Evidence context:
-reviewed against court dimensions, bathroom/accessibility commitments, public-access rules, construction milestone, or phase gate.
+reviewed against court dimensions, bathroom/accessibility commitments, public-access rules, construction milestone, or phase gate. A formal court-dimension KPI requires a qualified or otherwise protocol-idoneous producer, adequate measurement method, instrument basis, metadata, and report.
 
 Control Evidence context:
 if produced by an assigned field visit or fiscalization mission.
 
 Possible result:
-Accepted only as contextual material if the photo is dark, lacks location metadata, or is not tied to a specific milestone.
+Accepted only as contextual material if the photo is dark, lacks location metadata, is not tied to a specific milestone, or cannot prove the hard KPI because the producer or method is not idoneous for that claimed effect.
 
 Possible formal effect:
 No construction disbursement release unless an EvaluationRecord or FiscalizationReport accepts sufficient fulfillment/control evidence for the relevant phase gate or milestone.
