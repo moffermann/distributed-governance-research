@@ -440,6 +440,38 @@ Reputation review
 Closed
 ```
 
+### Delegation and allocation states
+
+```text
+Base rule check
+Base rule required
+Base rule selected
+Scope selected
+Delegate selected
+Concentration disclosed
+Request draft
+Request sent
+Acceptance pending
+Accepted
+Active
+Delegated action recorded
+Report queued
+Report generated
+Rejected
+Revoked
+Resigned
+Expired
+Eligibility lost
+Base rule resumed
+Closed
+Automatic profile active
+Automatic profile inactive under delegation
+Automatic profile skipped by delegation priority
+Configured cap disclosed
+Full represented weight used
+Capped represented weight used
+```
+
 ### Governance mode states
 
 ```text

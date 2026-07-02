@@ -72,6 +72,7 @@ Primary Mermaid sources:
 16. `docs/diagrams/v0-funding-commitment-disbursement-state.md`
 17. `docs/diagrams/v0-project-evidential-contract-state.md`
 18. `docs/diagrams/v0-control-subproject-fiscalization-assignment-state.md`
+19. `docs/diagrams/v0-delegation-state.md`
 
 Conceptual planning diagram:
 
@@ -118,7 +119,6 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Delegation state diagram
 Operating mode transition diagram
 Governance resolution sequence diagram
 Audit event schema diagram
@@ -145,3 +145,5 @@ The Funding Commitment and Disbursement state diagram now lives at `docs/diagram
 The Project Evidential Contract state diagram now lives at `docs/diagrams/v0-project-evidential-contract-state.md`. It separates contract baseline states, fulfillment evidence need states, contract-matched producer offers, lower-priority out-of-contract offers, quality/sufficiency review, and effect routing into fiscalization, evaluation, disbursement, closure, responsibility, reputation, correction, or reformulation.
 
 The Control Subproject and Fiscalization Assignment state diagram now lives at `docs/diagrams/v0-control-subproject-fiscalization-assignment-state.md`. It separates control requirements, offer windows, eligibility and conflict review, package funding, assignment acceptance, active control work, evidence collection, fiscalization reports, secondary audit, replacement, formal-path effects, and role-specific reputation review.
+
+The Delegation state diagram now lives at `docs/diagrams/v0-delegation-state.md`. It separates base-rule selection, delegation scope, concentration disclosure, request, acceptance, active delegated authority, delegated action records, represented weight, configured cap effects, reports, revocation, resignation, expiry, and fallback activation.
