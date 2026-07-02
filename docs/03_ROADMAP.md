@@ -34,6 +34,7 @@ The Responsibility Matrix by Role has been created: role authority, disclosures,
 The Implementable Object Schema Draft has been created: common field primitives, base object fields, actor/role references, object refs, rule/version refs, source records, visibility/privacy fields, effect refs, AuditEvent refs, and minimum object-group field sets are separated.
 The Phase 3 attack queue has been created under `attacks/`: eighteen attack briefs A001-A018 now prepare the next architecture-attack round with description, project location, problem, recommended resolution path, theoretical base, social reasons, conflict-of-interest risks, inconsistencies, stress scenarios, review checklists, and expected resolution outputs.
 The Phase 3 defense queue has been created under `defenses/`: eighteen defense briefs D001-D018 are paired with A001-A018 and classify each attack as founded, partially founded, unresolved, a difference of judgment, or an editorial-distortion risk while citing project documents and literature anchors.
+The Phase 3 attack-defense review has been integrated into accepted resolution documents `docs/67` through `docs/84`: each founded or partially founded attack now has a proportional accepted improvement that preserves the project's functional editorial line and is cross-referenced from its A00N and D00N files.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -245,7 +246,9 @@ The eighty-second residual cleanup created the Phase 3 attack queue in `attacks/
 
 The eighty-third residual cleanup created the Phase 3 defense queue in `defenses/`. Each defense D001-D018 is paired with attack A001-A018 and includes attack summary, attack reference, objective evaluation, response, project-document basis, bibliographic basis, proposed improvements, application location, defense strength, and residual risk.
 
-Next review candidate: review the pair `attacks/A001-legitimacy-does-not-follow-from-funding.md` and `defenses/D001-legitimacy-does-not-follow-from-funding.md` through the collaborative resolution workflow, decide whether a proportional Project Legitimacy Profile resolution is needed, then proceed through the remaining A002/D002-A018/D018 pairs.
+The eighty-fourth residual cleanup reviewed all Phase 3 attack-defense pairs and created accepted resolution documents `docs/67` through `docs/84`: Project Legitimacy Profile, Material Visibility, Fiscalizer Quality and Capture Indicators, Metric Gaming Test, Essential Service Protection, Continuity Risk Classification, Conflict-of-Review Handling, Platform Influence Audit, Participation Equity Indicators, Delegation Concentration Stress Thresholds, Tutored Moderation Abuse Test, Complexity Budget, Evidence Quality Review, Related-Party Relationship Graph, Common-Good Impact Sufficiency Test, Incumbent Resistance Indicators, Disbursement Gaming Tests, and Collusion Observability. Each attack and defense file now references its integrated resolution.
+
+Next review candidate: propagate the accepted Phase 3 A001-A018 resolutions into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where the new objects or tests need explicit representation.
 
 Approximate current maturity:
 
@@ -402,7 +405,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** attack and defense queues prepared; paired review pending.
+**Status:** attack and defense queues prepared; paired review integrated into accepted resolutions; core propagation pending.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -431,6 +434,7 @@ Deliverables:
 
 - attack briefs / objection files for each major risk;
 - defense briefs paired to each attack brief;
+- accepted Phase 3 resolution documents for founded non-distorting attacks;
 - failure-mode catalog;
 - contradiction resolution documents;
 - updated contradiction checklist;
@@ -599,10 +603,10 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Review A001/D001 through the collaborative resolution workflow.
-2. Decide whether D001 requires a formal Project Legitimacy Profile resolution or only a tracked improvement.
-3. Continue paired review through A002/D002-A018/D018.
-4. Convert founded improvements into resolution documents, failure-mode catalog entries, contradiction-checklist updates, or unresolved-objection records.
+1. Propagate accepted Phase 3 resolutions `docs/67` through `docs/84` into affected core documents.
+2. Update the contradiction/failure-mode checklist with the new Phase 3 resolution outcomes.
+3. Update formal inventory/schema references where new objects, tests, indicators, or review fields must become explicit.
+4. Identify which Phase 3 improvements require diagrams or additional state transitions.
 5. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 

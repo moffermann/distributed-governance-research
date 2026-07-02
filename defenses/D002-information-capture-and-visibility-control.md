@@ -1,5 +1,9 @@
 # D002 - Defense Against A002: Information Capture and Visibility Control
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A002-information-capture-and-visibility-control.md`

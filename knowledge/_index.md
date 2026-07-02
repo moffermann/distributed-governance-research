@@ -4,6 +4,9 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION|Project Legitimacy Profile and A001 Resolution v0]]
+- [[../docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION|Material Visibility and A002 Resolution v0]]
+- [[../docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION|Fiscalizer Quality and Capture Indicators and A003 Resolution v0]]
 - [[../defenses/README|Phase 3 Defense Queue]]
 - [[../attacks/README|Phase 3 Attack Queue]]
 - [[../docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|Implementable Object Schema Draft v0]]
@@ -398,6 +401,27 @@ Recently aligned residual-audit hypotheses:
 - [[../defenses/D016-resistance-by-incumbent-institutions|D016 - Defense Against A016: Resistance by Incumbent Institutions]]
 - [[../defenses/D017-disbursement-gaming|D017 - Defense Against A017: Disbursement Gaming]]
 - [[../defenses/D018-collusion-among-project-roles|D018 - Defense Against A018: Collusion Among Project Roles]]
+
+## Phase 3 accepted attack-defense resolutions
+
+- [[../docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION|67 - Project Legitimacy Profile and A001 Resolution v0]]
+- [[../docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION|68 - Material Visibility and A002 Resolution v0]]
+- [[../docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION|69 - Fiscalizer Quality and Capture Indicators and A003 Resolution v0]]
+- [[../docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|70 - Metric Gaming Test and A004 Resolution v0]]
+- [[../docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION|71 - Essential Service Protection and A005 Resolution v0]]
+- [[../docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION|72 - Continuity Risk Classification and A006 Resolution v0]]
+- [[../docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION|73 - Conflict of Review Handling and A007 Resolution v0]]
+- [[../docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION|74 - Platform Influence Audit and A008 Resolution v0]]
+- [[../docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|75 - Participation Equity Indicators and A009 Resolution v0]]
+- [[../docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|76 - Delegation Concentration Stress Thresholds and A010 Resolution v0]]
+- [[../docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|77 - Tutored Moderation Abuse Test and A011 Resolution v0]]
+- [[../docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|78 - Complexity Budget and A012 Resolution v0]]
+- [[../docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|79 - Evidence Quality Review and A013 Resolution v0]]
+- [[../docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|80 - Related-Party Relationship Graph and A014 Resolution v0]]
+- [[../docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION|81 - Common-Good Impact Sufficiency Test and A015 Resolution v0]]
+- [[../docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|82 - Incumbent Resistance Indicators and A016 Resolution v0]]
+- [[../docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|83 - Disbursement Gaming Tests and A017 Resolution v0]]
+- [[../docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|84 - Collusion Observability and A018 Resolution v0]]
 
 ## Literature
 

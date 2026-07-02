@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared for Phase 3 review. Not resolved.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md`.
 
 ## Description
 

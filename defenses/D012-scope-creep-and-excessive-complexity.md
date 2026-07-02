@@ -1,5 +1,9 @@
 # D012 - Defense Against A012: Scope Creep and Excessive Complexity
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A012-scope-creep-and-excessive-complexity.md`

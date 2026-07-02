@@ -1,5 +1,9 @@
 # D011 - Defense Against A011: Moderation Abuse in Transition Pilots
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A011-moderation-abuse-in-transition-pilots.md`

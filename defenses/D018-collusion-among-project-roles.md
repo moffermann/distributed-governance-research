@@ -1,5 +1,9 @@
 # D018 - Defense Against A018: Collusion Among Project Roles
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A018-collusion-among-project-roles.md`

@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared for Phase 3 review. Not resolved.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`.
 
 ## Description
 

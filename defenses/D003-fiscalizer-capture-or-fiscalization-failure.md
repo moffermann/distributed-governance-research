@@ -1,5 +1,9 @@
 # D003 - Defense Against A003: Fiscalizer Capture or Fiscalization Failure
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A003-fiscalizer-capture-or-fiscalization-failure.md`

@@ -1,5 +1,9 @@
 # D013 - Defense Against A013: False, Incomplete, or Context-Misclassified Evidence
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A013-false-incomplete-or-context-misclassified-evidence.md`

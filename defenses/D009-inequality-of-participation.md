@@ -1,5 +1,9 @@
 # D009 - Defense Against A009: Inequality of Participation
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A009-inequality-of-participation.md`

@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared for Phase 3 review. Not resolved.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`.
 
 ## Description
 

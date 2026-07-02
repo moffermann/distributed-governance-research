@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared for Phase 3 review. Not resolved.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md`.
 
 ## Description
 

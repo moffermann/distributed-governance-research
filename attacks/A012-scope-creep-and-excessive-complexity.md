@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared for Phase 3 review. Not resolved.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`.
 
 ## Description
 

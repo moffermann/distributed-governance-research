@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared for Phase 3 review. Not resolved.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`.
 
 ## Description
 

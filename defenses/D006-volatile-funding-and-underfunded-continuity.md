@@ -1,5 +1,9 @@
 # D006 - Defense Against A006: Volatile Funding and Underfunded Continuity
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A006-volatile-funding-and-underfunded-continuity.md`

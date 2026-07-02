@@ -1,5 +1,9 @@
 # D017 - Defense Against A017: Disbursement Gaming
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A017-disbursement-gaming.md`

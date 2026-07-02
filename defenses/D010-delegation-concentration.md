@@ -1,5 +1,9 @@
 # D010 - Defense Against A010: Delegation Concentration
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A010-delegation-concentration.md`

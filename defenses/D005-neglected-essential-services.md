@@ -1,5 +1,9 @@
 # D005 - Defense Against A005: Neglected Essential Services
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A005-neglected-essential-services.md`

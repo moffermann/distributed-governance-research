@@ -1,5 +1,9 @@
 # D016 - Defense Against A016: Resistance by Incumbent Institutions
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A016-resistance-by-incumbent-institutions.md`

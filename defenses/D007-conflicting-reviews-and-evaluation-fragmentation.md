@@ -1,5 +1,9 @@
 # D007 - Defense Against A007: Conflicting Reviews and Evaluation Fragmentation
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A007-conflicting-reviews-and-evaluation-fragmentation.md`

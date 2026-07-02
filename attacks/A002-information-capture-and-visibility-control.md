@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared for Phase 3 review. Not resolved.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md`.
 
 ## Description
 

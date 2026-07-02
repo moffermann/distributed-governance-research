@@ -1,5 +1,9 @@
 # D008 - Defense Against A008: Platform or Algorithmic Capture
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A008-platform-or-algorithmic-capture.md`

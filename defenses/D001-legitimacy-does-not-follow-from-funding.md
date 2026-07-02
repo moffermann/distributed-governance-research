@@ -1,5 +1,9 @@
 # D001 - Defense Against A001: Legitimacy Does Not Follow From Funding
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A001-legitimacy-does-not-follow-from-funding.md`

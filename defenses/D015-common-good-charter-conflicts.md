@@ -1,5 +1,9 @@
 # D015 - Defense Against A015: Common-Good Charter Conflicts
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A015-common-good-charter-conflicts.md`

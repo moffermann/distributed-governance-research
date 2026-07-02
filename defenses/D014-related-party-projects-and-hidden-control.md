@@ -1,5 +1,9 @@
 # D014 - Defense Against A014: Related-Party Projects and Hidden Control
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A014-related-party-projects-and-hidden-control.md`

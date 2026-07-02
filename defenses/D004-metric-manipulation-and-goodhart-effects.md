@@ -1,5 +1,9 @@
 # D004 - Defense Against A004: Metric Manipulation and Goodhart Effects
 
+## Integration status
+
+Phase 3 paired review completed. Accepted resolution: `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`.
+
 ## Attack reference
 
 - Attack file: `attacks/A004-metric-manipulation-and-goodhart-effects.md`
