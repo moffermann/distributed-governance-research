@@ -75,6 +75,7 @@ Primary Mermaid sources:
 19. `docs/diagrams/v0-delegation-state.md`
 20. `docs/diagrams/v0-operating-mode-transition-state.md`
 21. `docs/diagrams/v0-governance-resolution-sequence.md`
+22. `docs/diagrams/v0-audit-event-schema.md`
 
 Conceptual planning diagram:
 
@@ -118,11 +119,9 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 
 ## Diagram refinement backlog
 
-The next diagram refinements should be created as separate Mermaid sources before generated images:
+The current formal diagram refinement backlog is complete for this pass.
 
-```text
-Audit event schema diagram
-```
+Future diagram refinements should be opened from newly discovered responsibility-matrix, schema, implementation, or review gaps.
 
 ## Design rule
 
@@ -151,3 +150,5 @@ The Delegation state diagram now lives at `docs/diagrams/v0-delegation-state.md`
 The Operating Mode transition state diagram now lives at `docs/diagrams/v0-operating-mode-transition-state.md`. It separates Closed, Tutored, Semi-open, Open, Suspended, mode-change review, transition rules, tutored review windows, Governance Resolutions, Review Timeout Resolutions, timeout policy effects, and platform versus external-authority boundaries.
 
 The Governance Resolution sequence diagram now lives at `docs/diagrams/v0-governance-resolution-sequence.md`. It separates authority decision, required public fields, timeout creation, citizen audit actions, configured clarification/correction/appeal paths, audit events, and aggregate observability effects.
+
+The Audit Event schema diagram now lives at `docs/diagrams/v0-audit-event-schema.md`. It separates actor/role context, object reference, state or material-value transition, rule/version context, source records, effects, visibility/privacy treatment, append-only lifecycle, correction events, Layer 5 access, and observability projections.

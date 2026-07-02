@@ -2628,22 +2628,36 @@ Immutable record of relevant system activity.
 
 Attributes:
 
+- event id;
+- event type;
+- occurred timestamp;
+- recorded timestamp;
+- actor or system process;
+- role, delegation basis, authority context, or automatic-process basis;
 - object type;
 - object id;
-- actor;
-- event type;
-- previous state;
-- new state;
-- data changed;
-- rule applied;
-- protocol version;
+- affected scope;
+- previous state or previous material value, where applicable;
+- new state or new material value, where applicable;
+- transition label;
+- changed fields reference where applicable;
+- source record reference;
+- rule, threshold policy, operating mode, or protocol version applied;
 - rule-change object reference where applicable;
 - implementation version where applicable;
 - material AI assistance reference where applicable;
+- contextualized evidence item and evidence context where applicable;
+- material information claim reference where applicable;
+- governance resolution or review timeout resolution reference where applicable;
+- financial, responsibility, or reputation effect reference where applicable;
 - discovery visibility reason where applicable;
-- timestamp;
-- visibility;
-- privacy classification.
+- effect type;
+- effect scope;
+- effect status;
+- visibility tier;
+- privacy classification;
+- protected identity request reference where applicable;
+- previous event or integrity reference where applicable.
 
 ## 4. Project state map
 

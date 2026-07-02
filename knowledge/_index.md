@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/diagrams/v0-audit-event-schema|Audit Event Schema v0]]
 - [[../docs/diagrams/v0-governance-resolution-sequence|Governance Resolution Sequence v0]]
 - [[../docs/diagrams/v0-operating-mode-transition-state|Operating Mode Transition State v0]]
 - [[../docs/diagrams/v0-delegation-state|Delegation State v0]]
@@ -189,6 +190,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/diagrams/v0-delegation-state|Delegation State v0]]
 - [[../docs/diagrams/v0-operating-mode-transition-state|Operating Mode Transition State v0]]
 - [[../docs/diagrams/v0-governance-resolution-sequence|Governance Resolution Sequence v0]]
+- [[../docs/diagrams/v0-audit-event-schema|Audit Event Schema v0]]
 - [[../docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|Consolidated Entity, Object, and State Map v0]]
 - [[../docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|Diagram Index and Flow Diagrams v0]]
 - [[../docs/37_SCOPE_CLASSIFICATION_MATRIX_V0|Scope Classification Matrix v0]]
@@ -218,6 +220,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/diagrams/v0-tutored-mode-governance-resolution|Diagram - Tutored Mode Governance Resolution v0]]
 - [[../docs/diagrams/v0-operating-mode-transition-state|Diagram - Operating Mode Transition State v0]]
 - [[../docs/diagrams/v0-governance-resolution-sequence|Diagram - Governance Resolution Sequence v0]]
+- [[../docs/diagrams/v0-audit-event-schema|Diagram - Audit Event Schema v0]]
 - [[../docs/diagrams/v0-audit-trail-pattern|Diagram - Audit Trail Pattern v0]]
 - [[../docs/diagrams/v0-formal-entity-relationship|Diagram - Formal Entity Relationship Baseline v0]]
 - [[../docs/diagrams/distributed-planning-architecture-v1|Diagram - Distributed Planning Architecture v1]]

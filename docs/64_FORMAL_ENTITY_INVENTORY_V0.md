@@ -227,7 +227,7 @@ Roles are contextual assignments held by actors. They should be modeled separate
 | Administrative Rule Change | Rule-change object | Records material parameter, threshold, eligibility, review period, guarantee, complaint, funding deadline, or operational rule change. | Authority/admin/protocol path depending on mode. | Yes | Must include reason, scope, effective date, transition rule, audit trail. |
 | System Implementation Change | Technical change object | Records software, AI, validator, schema, migration, interface, or algorithmic release with governance relevance. | Technical operator implementing approved rule or release. | Yes | Must not hide substantive governance changes. |
 | Protocol Change Proposal | Non-tutored protocol-change object | Proposes visible rule change in non-tutored mode. | Eligible actor or process. | Yes | Requires public reason, review, approval path, implementation, transition rule. |
-| Audit Event | Immutable audit record | Records relevant system activity, state transitions, rule references, and actors. | System. | Yes | Base traceability object for all material actions. |
+| Audit Event | Immutable audit record | Records actor/process, role context, object, scope, transition, source, rule/version, effect, visibility/privacy treatment, and integrity reference for material activity. | System. | Yes | Base traceability object for all material actions; corrections are linked events, not silent edits. |
 
 ## 12. Primary state groups for modeling
 
@@ -526,6 +526,26 @@ Closed
 Aggregated for observability
 ```
 
+### Audit event schema and lifecycle states
+
+```text
+Capture requested
+Context resolved
+Rule attached
+Source and effect attached
+Visibility / privacy assigned
+Completeness check
+Capture incomplete
+Append ready
+Appended immutable
+Citizen projection generated
+Layer 5 available
+Observability updated
+Export snapshot linked
+Corrective event linked
+Capture abandoned
+```
+
 ## 13. Macul multi-court example
 
 The "Design and Construction of Multi-Courts in Macul" example should map as follows:
@@ -574,9 +594,8 @@ The following should not be modeled as primary entities unless a later design st
 This inventory should be used to produce:
 
 1. additional Phase 2 entity and state diagrams where gaps appear;
-2. the remaining Audit Event schema diagram;
-3. a responsibility matrix by role;
-4. a future implementable object schema draft.
+2. a responsibility matrix by role;
+3. a future implementable object schema draft.
 
 ## Design rule
 

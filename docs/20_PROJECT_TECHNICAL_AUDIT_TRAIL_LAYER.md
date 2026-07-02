@@ -88,6 +88,48 @@ Layer 5 should include technical traceability for:
 18. Data export and verification tools
 ```
 
+## Audit event record minimum schema
+
+Layer 5 should be backed by append-only `AuditEvent` records.
+
+Every material system effect should be reconstructable as:
+
+```text
+actor or system process
+role, delegation basis, authority context, or automatic-process basis
+target object
+affected scope
+previous state or material value
+new state or material value
+transition label
+source record
+rule, threshold policy, operating mode, or protocol version applied
+effect type and effect scope
+visibility tier
+privacy classification
+timestamp
+previous event or integrity reference where applicable
+```
+
+Conditional references should be attached where material:
+
+```text
+changed fields reference
+rule-change object reference
+implementation version
+material AI assistance reference
+contextualized evidence item and evidence context
+material information claim
+governance resolution or review timeout resolution
+financial order, disbursement, retention, guarantee, or custody record
+responsibility event, reputation input, or reputation update
+protected identity request
+discovery visibility reason
+export snapshot
+```
+
+If an audit event is later corrected, reversed, narrowed, or superseded, the correction should create a new linked audit event. The original event should not be silently edited away.
+
 ## 1. Project versions
 
 Show every meaningful project version.
