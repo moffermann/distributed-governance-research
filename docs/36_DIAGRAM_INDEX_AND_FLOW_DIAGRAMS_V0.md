@@ -112,7 +112,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C021: administrative observability baseline is core; full universal panel remains extension.
 - C022: projects declare common-good impacts where relevant.
 - C025: discovery is explainable, user-configurable, non-commercial, and auditable.
-- A001: funding, support, delegation, and discovery visibility do not establish legitimacy; high affected-party projects use a threshold-driven Project Legitimacy Profile with affected-party mapping, consultation evidence, asynchronous nearby-project participation, and review routes where applicable.
+- A001: funding, support, delegation, and discovery visibility do not establish legitimacy; high affected-party projects use a threshold-driven Project Legitimacy Profile with Required Evidence Package needs, Readiness Evidence for affected-party mapping and consultation, asynchronous nearby-project participation, and review routes where applicable.
 
 ## Evidence diagram rule
 

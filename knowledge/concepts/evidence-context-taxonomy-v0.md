@@ -12,7 +12,9 @@ Accepted terminology rule for Core v0 cleanup.
 
 ## Core rule
 
-> Do not use bare `evidence` for system objects when the evidence has procedural consequences. Use an explicit context such as `Complaint Evidence`, `Fulfillment Evidence`, `Control Evidence`, or `Administrative Observability Data`. `Evidence Item` may remain as a generic technical object only when it has a required context or purpose field.
+> Do not use bare `evidence` for system objects when the evidence has procedural consequences. Use an explicit context such as `Complaint Evidence`, `Readiness Evidence`, `Fulfillment Evidence`, `Control Evidence`, or `Administrative Observability Data`. `Evidence Item` may remain as a generic technical object only when it has a required context or purpose field.
+
+`RequiredEvidenceNeed` and `RequiredEvidencePackage` are requirement objects, not evidence contexts. They define what evidence must exist before a project, project phase, or country-implementation rule can produce an effect such as publication, financing, phase acceptance, execution-ready status, disbursement, closure, or responsibility review.
 
 ## Evidence contexts
 
@@ -32,9 +34,25 @@ A resident submits photos alleging that the Macul multi-court project lacks requ
 
 Those photos are `Complaint Evidence` until a reviewer or fiscalizer uses them in the complaint review.
 
+### Readiness Evidence
+
+`Readiness Evidence` is material required before execution or before a material project effect to show that a project, idea-to-project conversion, or project phase is sufficiently defined, reviewed, consulted, or authorized to proceed.
+
+It may support publication, project admissibility, design acceptance, phase gates, execution-ready status, disbursement preconditions, common-good safeguards, affected-party legitimacy conditions, or competent-authority boundaries.
+
+It does not prove final fulfillment of the value thesis by itself.
+
+Examples:
+
+```text
+The Macul multi-court project submits reviewed plans, dimensions, public-access commitments, affected-party map, neighborhood consultation records, asynchronous resident observations, and permit or compatibility documents before construction can become execution-ready.
+```
+
+Those materials are `Readiness Evidence` for the construction phase. If a separately funded design phase promised to produce plans or consultation records, the same submitted material may also be evaluated as fulfillment of that design-phase deliverable, but only under a separate explicit context and effect.
+
 ### Fulfillment Evidence
 
-`Fulfillment Evidence` is material used to verify whether a project fulfilled its value thesis, core value commitments, metrics, milestones, phase gates, deliverables, disbursement conditions, closure conditions, or reputation-relevant obligations.
+`Fulfillment Evidence` is material used during execution, at milestone review, at phase completion, or at closure to verify whether a project fulfilled its value thesis, core value commitments, metrics, deliverables, disbursement conditions, closure conditions, or reputation-relevant obligations.
 
 Example:
 
@@ -43,6 +61,8 @@ A technical measurement confirms whether the Macul courts match the accepted dim
 ```
 
 That measurement is `Fulfillment Evidence` because it supports or contradicts fulfillment of the accepted design and value commitments.
+
+Affected-party consultation before execution is not `Fulfillment Evidence` by default. Later affected-party observations may become `Fulfillment Evidence` or `Control Evidence` if they verify actual values or antivalues such as noise, public access, safety, service availability, beneficiary experience, or use after execution.
 
 ### Control Evidence
 
@@ -96,6 +116,7 @@ Minimum field:
 ```text
 evidence_context:
   complaint
+  readiness
   fulfillment
   control
   contradiction
@@ -134,6 +155,26 @@ A citizen can complain that Macul court dimensions appear wrong.
 A technical reviewer or fiscalizer formally evaluates whether the dimensions comply.
 ```
 
+## Readiness boundary
+
+Readiness evaluation is also different from fulfillment evaluation.
+
+Actors may submit readiness evidence before execution to show that the project has met preconditions. That evidence can block or permit project effects, but it does not prove that the promised public value was later delivered.
+
+Example:
+
+```text
+Macul residents can submit observations during the design consultation window.
+Those observations can affect the construction phase gate.
+They do not prove whether the final courts were built correctly or whether the project later respected the noise ceiling.
+```
+
+## Comparative accountability note
+
+Core v0 intentionally asks more of the system than many current project processes require. Today, affected parties often have limited opportunities to participate, participation is tied to narrow physical meetings, and projects are rarely evaluated against the values originally promised or the expectations of beneficiaries and affected parties.
+
+The proposed model raises that accountability floor with lower participation cost, broader reach, greater visibility, and more traceable feedback. It does not assume that current institutional practice already does this well.
+
 ## Design rule
 
-> Complaint evidence opens, supports, refutes, or contextualizes review. Fulfillment evidence verifies promised value. Control evidence is produced by review infrastructure. Administrative observability data audits the system. Research evidence supports the theory. Do not collapse these into one undifferentiated evidence object.
+> Complaint evidence opens, supports, refutes, or contextualizes review. Readiness evidence verifies pre-execution or pre-effect conditions. Fulfillment evidence verifies promised value after relevant work or service delivery. Control evidence is produced by review infrastructure. Administrative observability data audits the system. Research evidence supports the theory. Do not collapse these into one undifferentiated evidence object.

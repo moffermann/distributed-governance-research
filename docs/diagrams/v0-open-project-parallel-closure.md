@@ -15,8 +15,9 @@ flowchart TD
     OP --> F[Execution Funding Commitments]
     OP --> FS[Fiscalizer Offers]
     OP --> EP[Evidence Producer Commitments for fulfillment/control evidence]
+    OP --> RP[Required Evidence Package]
     OP --> LP[Project Legitimacy Profile if required]
-    OP --> AP[Affected-party map, notification, consultation, or observation evidence if required]
+    OP --> AP[Affected-party map, notification, consultation, or observation Readiness Evidence if required]
     OP --> CP[Control Subproject or Control Package]
     OP --> B[Beneficiary or Affected-Party Confirmation]
     OP --> D[Required Documents and Permits]
@@ -30,6 +31,7 @@ flowchart TD
     F --> CC{Closure Conditions Complete?}
     FS --> CC
     EP --> CC
+    RP --> CC
     LP --> CC
     AP --> CC
     CP --> CC
@@ -45,4 +47,4 @@ flowchart TD
 
 ## Rule
 
-> A project becomes execution-ready only when its applicable threshold policy is visible and the required execution funding, phase gates, control capacity, fulfillment/control evidence capacity, legitimacy profile conditions where required, affected-party mapping or consultation evidence where required, documents, financial assurance, complaints, and disbursement-plan validation are coherent.
+> A project becomes execution-ready only when its applicable threshold policy is visible and the required execution funding, phase gates, control capacity, fulfillment/control evidence capacity, Required Evidence Package, legitimacy profile conditions where required, affected-party mapping or consultation Readiness Evidence where required, documents, financial assurance, complaints, and disbursement-plan validation are coherent.

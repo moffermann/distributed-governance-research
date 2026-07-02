@@ -269,6 +269,8 @@ Project has one or more Budgets
 Project may have many ProjectPhases
 Project has many Milestones
 Project has DisbursementMilestonePlan
+Project has one RequiredEvidencePackage where required
+Project has many RequiredEvidenceNeeds
 Project has one ProjectEvidentialContract
 Project has many FulfillmentEvidenceNeeds
 Project has many EvidenceItems
@@ -514,6 +516,72 @@ Document rule:
 
 > AI and rules may help discover required documents, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
 
+## Required Evidence Package
+
+A project-level or phase-level package listing evidence that must exist before a project effect can occur.
+
+This package is separate from the Project Evidential Contract. The evidential contract defines how promised value and antivalues will be verified. The required evidence package defines what must be submitted, reviewed, or corroborated before publication, financing, phase acceptance, execution-ready status, disbursement, closure, or responsibility review where the active policy requires it.
+
+For `Idea` objects, a required evidence package may be drafted or recommended to help mature the idea into a project, but lack of project-level readiness evidence should not block the existence of the idea itself.
+
+Attributes:
+
+- package id;
+- project or project phase;
+- idea reference where optional pre-project maturation applies;
+- source policy: Threshold Policy, phase gate, public-function rule, common-good exposure, affected-party exposure, legal/technical condition, operating mode, protocol version, or country implementation;
+- required evidence need references;
+- current completeness status;
+- reviewer, fiscalizer, authority, or corroboration path where applicable;
+- citizen-facing missing-condition labels;
+- audit trail.
+
+Relationships:
+
+```text
+RequiredEvidencePackage belongs to Project or ProjectPhase
+RequiredEvidencePackage may reference Idea for optional maturation
+RequiredEvidencePackage references ThresholdPolicy
+RequiredEvidencePackage contains RequiredEvidenceNeeds
+RequiredEvidencePackage may affect ProjectLegitimacyProfile
+RequiredEvidencePackage may gate publication, funding, phase acceptance, execution-ready status, disbursement, closure, or responsibility review
+```
+
+Rule:
+
+> Every project should have the required evidence package selected by its active policy before material project effects apply. Ideas may carry optional readiness drafts, but project-level mandatory evidence applies when an idea becomes a project or project phase.
+
+## Required Evidence Need
+
+A mandatory or conditionally mandatory evidence requirement selected by policy before a project effect can occur.
+
+Attributes:
+
+- need id;
+- package reference;
+- target object: idea draft, project, project version, project phase, design package, budget line, common-good asset, affected scope, or authority route;
+- required evidence context, usually `Readiness Evidence`;
+- requirement category: affected-party mapping, community consultation, plan review, technical document, permit/compatibility, common-good safeguard, vulnerable-beneficiary safeguard, risk/antivalue baseline, financial assurance confirmation, or other policy-defined category;
+- expected source role or corroboration path;
+- whether executor/proposer self-report is enough or independent corroboration is required;
+- timing and deadline;
+- effect if missing or insufficient;
+- privacy or protected-identity constraints;
+- audit trail.
+
+Relationships:
+
+```text
+RequiredEvidenceNeed belongs to RequiredEvidencePackage
+RequiredEvidenceNeed may be satisfied, weakened, contradicted, or left unresolved by ContextualizedEvidenceItems with readiness context
+RequiredEvidenceNeed may be reviewed by Fiscalizer, Reviewer, Evidence Producer, Competent Authority, or protocol-defined role
+RequiredEvidenceNeed may inform ProjectLegitimacyProfile
+```
+
+Rule:
+
+> Required evidence is not automatically fulfillment evidence. A community consultation record, reviewed plan, permit document, affected-party map, or common-good safeguard can block execution-ready status as Readiness Evidence without proving final value fulfillment.
+
 Affected-party rule:
 
 > Where a project has rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the active Threshold Policy should require proportional affected-party mapping and consultation evidence. This condition may require nearby-project notification, observation windows, field visits, plan presentation, community meetings, surveys, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace. It is not a universal vote or veto.
@@ -522,7 +590,7 @@ Affected-party rule:
 
 A traceable project profile showing whether funding, support, affected-party mapping, consultation evidence, planning-scope alignment, objections, complaints, and authority or reviewer routes are coherent enough for the project's current stage.
 
-This is not a plebiscite, veto object, popularity score, or source of legal authority. It aggregates and exposes legitimacy-relevant conditions already governed by Threshold Policy, Project Evidential Contract, contextualized evidence, affected-party observations, justified objections, complaints, Governance Resolutions, competent-authority traces, and audit events.
+This is not a plebiscite, veto object, popularity score, or source of legal authority. It aggregates and exposes legitimacy-relevant conditions already governed by Threshold Policy, Required Evidence Package, contextualized readiness evidence, affected-party observations, justified objections, complaints, Governance Resolutions, competent-authority traces, and audit events.
 
 Attributes:
 
@@ -532,8 +600,8 @@ Attributes:
 - affected-party map or map reference;
 - affected-party basis: beneficiaries, neighbors, users, non-users, vulnerable groups, public-access users, common-good asset users, regulated or legally affected parties;
 - rights, access, public guarantee, vulnerable-beneficiary, common-good, or territory-wide exposure;
-- required affected-party mapping or consultation evidence needs;
-- submitted affected-party mapping, consultation, survey, meeting, field-visit, plan-review, or asynchronous observation evidence;
+- required affected-party mapping or consultation Readiness Evidence needs;
+- submitted affected-party mapping, consultation, survey, meeting, field-visit, plan-review, or asynchronous observation Readiness Evidence;
 - neighborhood-organization evidence producer references where applicable;
 - independent corroboration or fiscalizer/reviewer reference where required;
 - unresolved legitimacy objections;
@@ -546,9 +614,9 @@ Relationships:
 ```text
 ProjectLegitimacyProfile belongs to Project
 ProjectLegitimacyProfile references ThresholdPolicy
-ProjectLegitimacyProfile may reference ProjectEvidentialContract
-ProjectLegitimacyProfile may reference FulfillmentEvidenceNeed
-ProjectLegitimacyProfile may reference ContextualizedEvidenceItem
+ProjectLegitimacyProfile references RequiredEvidencePackage where required
+ProjectLegitimacyProfile may reference RequiredEvidenceNeed
+ProjectLegitimacyProfile may reference ContextualizedEvidenceItem with readiness context
 ProjectLegitimacyProfile may reference JustifiedObjectionSignal
 ProjectLegitimacyProfile may reference Complaint
 ProjectLegitimacyProfile may reference GovernanceResolution
@@ -1062,7 +1130,7 @@ Rule:
 
 ## Fulfillment Evidence Need
 
-A predefined need for fulfillment/control evidence linked to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, declared antivalue, or required affected-party mapping and consultation condition.
+A predefined need for fulfillment/control evidence linked to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue.
 
 A fulfillment evidence need is not the same as an evidence item and is not a preselected evidence producer. It states what must be evidenced and under what review conditions.
 
@@ -1072,7 +1140,7 @@ Attributes:
 - project;
 - project version;
 - related value thesis or value verification package;
-- related value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, declared antivalue, or affected-party consultation condition;
+- related value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue;
 - fulfillment evidence type expected;
 - expected source role or corroboration path;
 - timing;
@@ -1090,7 +1158,6 @@ FulfillmentEvidenceNeed belongs to ProjectEvidentialContract
 FulfillmentEvidenceNeed may belong to ValueVerificationPackage
 FulfillmentEvidenceNeed may reference Metric
 FulfillmentEvidenceNeed may reference ProjectPhase
-FulfillmentEvidenceNeed may reference ProjectLegitimacyProfile
 FulfillmentEvidenceNeed may be addressed by EvidenceProducer offers or commitments
 FulfillmentEvidenceNeed may be satisfied, weakened, contradicted, or left unresolved by EvidenceItems with fulfillment context
 ```
@@ -1098,10 +1165,6 @@ FulfillmentEvidenceNeed may be satisfied, weakened, contradicted, or left unreso
 Rule:
 
 > Contract-matched fulfillment evidence needs have higher eligibility priority for control funding. Unexpected fulfillment evidence may still be admitted when equivalent, necessary, materially useful, or complementary within the available control budget.
-
-Affected-party consultation note:
-
-> Pre-execution affected-party mapping, plan-presentation, survey, or neighborhood-meeting evidence is usually design-phase or preparation-phase contextualized evidence, not proof that final value was fulfilled. It can still be required before execution-ready status, and later affected-party observations may become fulfillment/control evidence for values or antivalues such as access, noise, safety, service availability, or public-use commitments.
 
 ## Beneficiary Group
 

@@ -205,7 +205,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Operating modes `H058` | Core v0 / transition | Needed to move from closed to open functions safely. |
 | Transparent project discovery `H031` | Core v0 | Discovery must be explainable, non-commercial, and auditable. |
 | Simple Home customization and visible list ordering `C025` | Core v0 | Needed to prevent discovery from becoming a hidden allocator. |
-| Project Legitimacy Profile and affected-party consultation `A001` | Core v0 | Needed to prevent funding, support, delegation, or discovery visibility from being treated as legitimacy. The profile remains proportional and evidence-based: low-risk projects may only need visible publication and nearby observation, while higher-impact projects may require affected-party mapping, consultation evidence, independent corroboration, and review routes before execution-ready status. |
+| Required Evidence Package, Readiness Evidence, and Project Legitimacy Profile `A001` | Core v0 | Needed to prevent funding, support, delegation, or discovery visibility from being treated as legitimacy. The profile remains proportional and evidence-based: low-risk projects may only need visible publication and nearby observation, while higher-impact projects may require affected-party mapping, consultation Readiness Evidence, independent corroboration, and review routes before execution-ready status. |
 | Common-good impact declaration `C022` | Core v0 | Projects must declare relevant common-good impacts without importing full charter governance. |
 | Administrative observability baseline `C021` | Core v0 | Required to operate and audit the first coherent system. |
 

@@ -600,7 +600,7 @@ The contract should be proportional. A small sports workshop may need attendance
 
 For phased projects, the contract should identify which evidence applies to each phase.
 
-Where the active Threshold Policy requires affected-party legitimacy conditions, the contract should include a design-phase or preparation-phase evidence need for affected-party mapping and consultation. This may include plan presentation, field visit records, meeting minutes, asynchronous project-page observations, survey results, neighborhood-organization evidence, unresolved objections, and independent corroboration by an eligible evidence producer, fiscalizer, reviewer, or competent authority.
+Where the active Threshold Policy requires affected-party legitimacy conditions, the project or phase should include a `Required Evidence Package` with `Readiness Evidence` needs for affected-party mapping and consultation. This may include plan presentation, field visit records, meeting minutes, asynchronous project-page observations, survey results, neighborhood-organization evidence, unresolved objections, and independent corroboration by an eligible evidence producer, fiscalizer, reviewer, or competent authority.
 
 This evidence is not a popularity vote and does not automatically prove final fulfillment. It can be required before execution-ready status, and later affected-party observations may become fulfillment/control evidence for declared values or antivalues such as access, noise, safety, service availability, or public-use commitments.
 
@@ -608,7 +608,7 @@ Example:
 
 ```text
 Design phase:
-design package, dimensions, public-access conditions, budget refinement, affected-party map, consultation evidence, permit or compatibility requirements, and reviewer acceptance.
+design package, dimensions, public-access conditions, budget refinement, affected-party map, readiness consultation evidence, permit or compatibility requirements, and reviewer acceptance.
 
 Construction phase:
 georeferenced construction evidence, fiscalizer visits, budget-line evidence, completion proof, public-use evidence, and beneficiary or community observations.
@@ -660,6 +660,7 @@ Possible threshold dimensions:
 
 - execution funding;
 - planning scope alignment;
+- required evidence package completeness;
 - phase gate acceptance where applicable;
 - affected-party mapping or consultation evidence where applicable;
 - beneficiary or attendance commitments;

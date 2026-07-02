@@ -115,8 +115,9 @@ This check should confirm:
 - no admitted blocking complaint or scoped systemic pause is active;
 - fiscalization is configured;
 - Project Evidential Contract and fulfillment evidence obligations are configured;
+- Required Evidence Package is complete where the active policy requires it;
 - required Project Legitimacy Profile conditions are complete or explicitly marked not required;
-- affected-party mapping, notification, observation-window, consultation, or plan-review evidence is submitted and reviewed where required;
+- affected-party mapping, notification, observation-window, consultation, or plan-review Readiness Evidence is submitted and reviewed where required;
 - the minimum admissible control package is accepted where control is required;
 - milestone plan is complete;
 - disbursement milestone plan has no unresolved critical validation failures;
@@ -148,7 +149,7 @@ For Core v0, assurance is not limited to construction. A care-service project, s
 
 For phased projects, execution-ready is phase-sensitive. A parent project may collect construction funding while the design phase is pending, but the construction phase does not become execution-ready and construction funds cannot be released until the design phase gate is accepted.
 
-Where a design or preparation phase has affected-party legitimacy conditions, execution-ready also depends on the required affected-party map, community-consultation evidence, unresolved-objection handling, and independent corroboration or fiscalizer/reviewer acceptance defined by the active Threshold Policy. A fully funded phase may therefore remain not execution-ready.
+Where a design or preparation phase has affected-party legitimacy conditions, execution-ready also depends on the required affected-party map, community-consultation Readiness Evidence, unresolved-objection handling, and independent corroboration or fiscalizer/reviewer acceptance defined by the active Threshold Policy. A fully funded phase may therefore remain not execution-ready.
 
 Supplemental control funding after execution-ready does not reopen this transition by default. A project may remain execution-ready while additional control-only funding is reserved for one secondary fiscalizer, fiscalization audit, or distinct fulfillment/control evidence work. Any blocking effect from supplemental control must enter through the ordinary complaint, extraordinary review, pause, blocking, or disbursement-control path.
 
@@ -283,7 +284,7 @@ Submitted material that is unclear, unlinked, missing required traceability meta
 
 Fulfillment evidence is evaluated against the accepted Project Evidential Contract. If the project changes that contract during execution, the change must preserve history and may require reformulation, notification, or renewed review where it weakens the original promise.
 
-In an integrated design-and-execution project, design-phase evidence is evaluated before construction release. A design package for the Macul multi-court project should evidence dimensions, access rules, bathrooms or accessibility commitments where required, budget refinement, affected-party map, plan-presentation or community-consultation evidence where required, permit or compatibility requirements, and construction fulfillment evidence requirements.
+In an integrated design-and-execution project, design-phase evidence is evaluated before construction release. A design package for the Macul multi-court project should include Readiness Evidence for dimensions, access rules, bathrooms or accessibility commitments where required, budget refinement, affected-party map, plan-presentation or community-consultation evidence where required, permit or compatibility requirements, and construction fulfillment evidence requirements.
 
 ## 7. Fiscalizer review
 

@@ -199,6 +199,8 @@ Each project should also declare or reference a visible `Threshold Policy` defin
 
 For projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the Threshold Policy should also require a proportional affected-party mapping and consultation condition. This condition is not a vote or veto. It defines what affected-party map, notification path, observation window, field visit, community meeting, plan-review record, survey, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace is needed before publication, execution-ready status, disbursement, or closure where applicable.
 
+This intentionally asks more than many current project processes provide. Affected parties often receive little notice, must attend narrow physical meetings to be heard, or never see whether a project later delivered the values promised. Core v0 raises that accountability floor with lower participation cost, broader reach, greater visibility, and more traceable feedback.
+
 H011 adds a universal Financial Assurance Profile for execution-financeable projects. In Core v0, the guarantee requirement should use a global percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. This assurance applies across social projects, including care, supplies, workshops, infrastructure, and services.
 
 AI and rules may help discover required documents and suggest a burden profile, but they should not certify document acceptability by themselves. Where the Threshold Policy requires project acceptability review, tutored mode routes review to the competent authority under C020, while non-tutored or open modes may use an independent `Control Subproject: Project Admissibility Review` under C002/C013 rules.
@@ -284,7 +286,9 @@ The contract states how fulfillment will be evidenced before execution starts. I
 
 The contract defines fulfillment/control evidence needs rather than named evidence producers. Evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Offers that match the accepted contract receive higher eligibility priority; unexpected fulfillment/control evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
 
-Where affected-party legitimacy conditions apply, the contract may include design-phase or preparation-phase evidence needs for affected-party mapping, plan presentation, community consultation, asynchronous observations, survey records, neighborhood-organization evidence, unresolved objections, and independent corroboration. Pre-execution consultation evidence does not prove final value fulfillment by itself, but it may block or condition execution readiness when the active policy requires it. During execution or closure, affected-party observations may also become fulfillment/control evidence for values or antivalues such as access, noise, safety, service availability, or public-use commitments.
+Each project should also define a `Required Evidence Package` before publication or execution-readiness effects apply. It contains `RequiredEvidenceNeed` records selected by threshold policy, phase gates, public-function rules, common-good exposure, affected-party exposure, legal/technical conditions, or country implementation.
+
+Where affected-party legitimacy conditions apply, the package may include design-phase or preparation-phase `Readiness Evidence` needs for affected-party mapping, plan presentation, community consultation, asynchronous observations, survey records, neighborhood-organization evidence, unresolved objections, and independent corroboration. Pre-execution consultation evidence does not prove final value fulfillment by itself, but it may block or condition execution readiness when the active policy requires it. During execution or closure, affected-party observations may also become fulfillment/control evidence for values or antivalues such as access, noise, safety, service availability, or public-use commitments.
 
 The contract is proportional:
 
@@ -306,6 +310,7 @@ Minimum evidence contexts:
 
 ```text
 Complaint Evidence
+Readiness Evidence
 Fulfillment Evidence
 Control Evidence
 Contradiction Evidence
@@ -314,6 +319,17 @@ Research Evidence
 ```
 
 `Evidence Item` may remain as a generic technical object only when it records an evidence context.
+
+Readiness Evidence can come from:
+
+- proposer or designer submissions, when treated as claims to be reviewed;
+- independent evidence producers;
+- fiscalizers or reviewers;
+- verified affected parties or beneficiaries;
+- neighborhood organizations where eligible;
+- technical documents, permits, plans, compatibility records, or authorized integrations.
+
+Readiness Evidence can block or permit publication, phase gates, execution-ready status, disbursement preconditions, or other configured effects. It does not prove final project fulfillment by itself.
 
 Fulfillment Evidence can come from:
 

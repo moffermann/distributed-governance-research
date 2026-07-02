@@ -68,6 +68,7 @@ Before execution funding, the project defines what will later be evaluated:
 Information may come from many sources:
 
 - executor self-report;
+- Readiness Evidence;
 - Fulfillment Evidence;
 - Control Evidence;
 - Complaint Evidence;

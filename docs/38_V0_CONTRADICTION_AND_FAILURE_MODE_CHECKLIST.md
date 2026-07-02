@@ -414,7 +414,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 
 ### Accepted v0 rule
 
-Funding, support, delegation, and discovery visibility do not establish legitimacy by themselves. Projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure should carry a proportional Project Legitimacy Profile fed by Threshold Policy conditions, Project Evidential Contract needs, contextualized evidence, affected-party observations, justified objections, complaint paths, fiscalizer/reviewer findings, Governance Resolutions, or competent-authority traces where applicable.
+Funding, support, delegation, and discovery visibility do not establish legitimacy by themselves. Projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure should carry a proportional Project Legitimacy Profile fed by Threshold Policy conditions, Required Evidence Package needs, contextualized Readiness Evidence, affected-party observations, justified objections, complaint paths, fiscalizer/reviewer findings, Governance Resolutions, or competent-authority traces where applicable.
 
 Affected-party mapping and consultation should be required proportionally. Low-risk projects may only need visible publication, nearby-project discovery, and an observation window. Higher-impact design or preparation phases may require field visits, community meetings, plan review, surveys, neighborhood documentation, independent evidence-producer input, or fiscalizer/reviewer corroboration before execution-ready status.
 
@@ -444,8 +444,9 @@ Affected-party mapping and consultation should be required proportionally. Low-r
 - [ ] Does every execution-financeable project have a Financial Assurance Profile?
 - [ ] Is financial assurance treated as universal across social projects, not only construction or infrastructure?
 - [ ] If the project uses phases, are phase deliverables, gates, dependencies, and failure treatment explicit?
-- [ ] Where affected-party legitimacy conditions apply, does the project have a Project Legitimacy Profile tied to Threshold Policy and Project Evidential Contract records?
+- [ ] Where affected-party legitimacy conditions apply, does the project have a Project Legitimacy Profile tied to Threshold Policy and Required Evidence Package records?
 - [ ] Are required affected-party maps, consultation evidence, observation windows, or plan-review records present before execution-ready status where the policy requires them?
+- [ ] Are pre-execution required evidence records classified as Readiness Evidence rather than Fulfillment Evidence unless they are separately reviewed for a fulfillment effect?
 - [ ] Are project versions immutable?
 - [ ] Are reformulations visible?
 - [ ] Can project history be reconstructed from audit events?

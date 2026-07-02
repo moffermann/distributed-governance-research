@@ -325,6 +325,28 @@ material weakening of beneficiary verification; reformulation or review required
 
 Layer 5 should make it impossible to silently change how project fulfillment will be proven after citizens have funded or supported the project.
 
+## 4a. Required evidence package history
+
+Track the Required Evidence Package separately from the Project Evidential Contract.
+
+Include:
+
+- package version;
+- target object: idea draft, project, project version, project phase, design package, budget line, common-good asset, affected scope, or authority route;
+- source policy: Threshold Policy, phase gate, public-function rule, common-good exposure, affected-party exposure, legal/technical condition, operating mode, protocol version, or country implementation;
+- RequiredEvidenceNeeds;
+- expected evidence context, especially Readiness Evidence for pre-execution or pre-effect conditions;
+- submitted ContextualizedEvidenceItems;
+- reviewer, fiscalizer, evidence producer, authority, or corroboration path;
+- completeness and sufficiency status;
+- missing-condition labels shown to citizens;
+- effect blocked or allowed;
+- audit references.
+
+Rule:
+
+> Readiness Evidence can gate publication, phase acceptance, execution-ready status, disbursement, or other effects without proving final value fulfillment.
+
 ## 5. Budget history
 
 Track budget changes and budget structure.
@@ -487,6 +509,7 @@ For each closure record, include:
 - Planning Scope and Primary Responsibility Anchor;
 - accepted Value-Antivalue Profile;
 - Project Evidential Contract version;
+- Required Evidence Package status where applicable;
 - Project Legitimacy Profile status where required;
 - value floors and antivalue ceilings evaluated;
 - expected fulfillment/control evidence;
@@ -495,7 +518,7 @@ For each closure record, include:
 - EvaluationRecords by dimension;
 - FiscalizationReport final reference;
 - technical, financial, beneficiary, affected-party, or authority reviews where applicable;
-- affected-party mapping, consultation, or observation evidence considered where applicable;
+- affected-party mapping, consultation, or observation Readiness Evidence considered where applicable;
 - unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
 - released, retained, returned, reassigned, recovered, or guarantee-executed funds;
 - closure outcome;
@@ -801,6 +824,7 @@ For threshold policy decisions, Layer 5 should preserve:
 - document acceptability reviewer or authority where applicable;
 - admissibility review status where applicable;
 - affected-party mapping or consultation requirements where applicable;
+- Required Evidence Package requirement and status where applicable;
 - Project Legitimacy Profile requirement and status where applicable;
 - citizen-facing explanation;
 - changes to the threshold policy after publication, if any.

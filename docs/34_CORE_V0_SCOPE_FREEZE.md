@@ -143,6 +143,10 @@ Rule:
 
 > For projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the applicable threshold policy should require proportional affected-party mapping and consultation conditions. These conditions may require nearby-project notification, an observation window, field visits, plan presentation, community meetings, surveys, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace. They are not a universal vote or automatic veto.
 
+Comparative accountability rule:
+
+> Core v0 may require more participation and accountability than many current project processes provide. The point is not to replicate current weak practice, but to create lower-cost participation with broader reach, greater visibility, and more traceable feedback.
+
 Rule:
 
 > The applicable threshold policy should include or reference a procedural burden profile. AI may help discover required documents and missing conditions, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
@@ -228,13 +232,17 @@ The contract is project-specific and proportional, but constrained by value-cata
 
 The contract defines fulfillment/control evidence needs, not preselected evidence producers. Independent evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Contract-matched fulfillment/control evidence has higher eligibility priority; unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
 
-Where legitimacy conditions apply, the contract may include design-phase or preparation-phase evidence needs for affected-party mapping, plan review, community consultation, asynchronous observations, survey records, neighborhood-organization evidence, unresolved objections, and independent corroboration. Pre-execution consultation evidence is not automatically final fulfillment evidence, but it may be required before execution-ready status. Later affected-party observations may become fulfillment/control evidence for declared values or antivalues.
+Core v0 also includes a `Required Evidence Package`.
+
+The package contains `RequiredEvidenceNeed` records required by threshold policy, phase gates, public-function rules, common-good exposure, affected-party exposure, legal/technical conditions, or country implementation. It applies to projects and project phases. Ideas may carry optional required-evidence drafts when that helps maturation, but an idea should not be blocked merely because it lacks project-level readiness evidence.
+
+Where legitimacy conditions apply, the required package may include design-phase or preparation-phase `Readiness Evidence` needs for affected-party mapping, plan review, community consultation, asynchronous observations, survey records, neighborhood-organization evidence, unresolved objections, and independent corroboration. Pre-execution consultation evidence is not automatically final fulfillment evidence, but it may be required before execution-ready status. Later affected-party observations may become fulfillment/control evidence for declared values or antivalues.
 
 Citizen-facing views should summarize it as "how this project will be verified"; Layer 5 preserves the full versioned contract and changes.
 
 ### 7. Contextualized evidence model
 
-Core v0 distinguishes `Complaint Evidence`, `Fulfillment Evidence`, `Control Evidence`, `Contradiction Evidence`, `Administrative Observability Data`, and `Research Evidence`.
+Core v0 distinguishes `Complaint Evidence`, `Readiness Evidence`, `Fulfillment Evidence`, `Control Evidence`, `Contradiction Evidence`, `Administrative Observability Data`, and `Research Evidence`.
 
 `Evidence Item` may remain as the generic object only when it records an explicit evidence context.
 
