@@ -120,6 +120,7 @@ implementation version
 material AI assistance reference
 contextualized evidence item and evidence context
 material information claim
+value-verification coverage status or coverage-gap reference
 approval source, criterion source, approval scope, or conditional approval reference
 fiscalizer eligibility and reputation profile reference
 evidence producer qualification and method-fit reference
@@ -284,6 +285,8 @@ For each metric:
 - metric changes;
 - reason for change;
 - validator results;
+- A004 evidence-coverage status;
+- unmeasured value dimensions or metric-gaming risks identified before acceptance;
 - accepted alternative metrics;
 - measurement method;
 - fulfillment evidence needs;
@@ -302,6 +305,8 @@ Include:
 - value promises covered;
 - metrics or qualitative commitments covered;
 - material information claims covered;
+- evidence-coverage matrix for value floors, formal secondary values, antivalue ceilings, material claims, and relevant metrics;
+- coverage gaps, weak coverage, metric gaps, or corrections;
 - fulfillment evidence needs;
 - fulfillment/control evidence source roles;
 - producer qualification standards where formal technical proof is required;

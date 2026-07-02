@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
@@ -72,6 +72,6 @@ A sports workshop reports 100 enrolled children but attendance is low, sessions 
 - Are metric changes versioned before funding or reformulation?
 - Are hard-to-measure values given qualitative review paths?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should define a metric-gaming test inside the `ValueVerificationPackage` and `ProjectEvidentialContract`.
+Resolved in `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`: the metric-gaming test is a required evidence-coverage check inside the `ValueVerificationPackage` and `ProjectEvidentialContract`. Every declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric must identify the fulfillment/control evidence needed to verify it. A004 defines coverage; A013 separately evaluates whether submitted evidence satisfies those needs with sufficient quality, producer qualification, and method fit.

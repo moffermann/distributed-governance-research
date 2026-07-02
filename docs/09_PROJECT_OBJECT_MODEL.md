@@ -372,6 +372,7 @@ It should define:
 - antivalue constraints as ceilings where relevant;
 - fulfillment evidence needs for each core commitment;
 - fulfillment/control evidence needs for each antivalue ceiling;
+- A004 evidence-coverage status for every value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric;
 - relevant source roles for fulfillment/control evidence production or corroboration;
 - review method or actor where applicable;
 - disbursement, closure, reformulation, complaint, or reputation consequence where applicable;
@@ -402,6 +403,8 @@ KPIs are not sufficient by themselves. Each promised value should be verified th
 
 Each core metric should map to an evidence need. The project may define the type, timing, source role, corroboration need, and consequence of missing evidence, but it should not preselect the independent evidence producers who will later verify the project.
 
+The A004 metric-gaming test should be applied before the project becomes financeable: can the project satisfy a narrow KPI while leaving a declared value dimension, beneficiary experience, affected-party impact, or antivalue ceiling unverified? If yes, the Value Verification Package should show `coverage gap`, `coverage weak`, or `metric gap` until corrected.
+
 ### 4a. Project Evidential Contract
 
 A project should define a `Project Evidential Contract`.
@@ -421,6 +424,7 @@ The evidential contract connects:
 - fulfillment evidence needs per value commitment;
 - fulfillment/control evidence needs per antivalue ceiling;
 - fulfillment/control evidence source roles;
+- evidence-coverage status and coverage-gap references;
 - corroboration requirements;
 - fiscalizer or reviewer responsibility;
 - disbursement, closure, complaint, and responsibility effects.

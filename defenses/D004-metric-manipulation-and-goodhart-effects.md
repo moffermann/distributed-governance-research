@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`.
+Phase 3 paired review completed and propagated. Accepted resolution: `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`.
 
 ## Attack reference
 
@@ -53,13 +53,14 @@ For Macul, a court-count metric is weak unless it is joined with dimensions, saf
 
 ## Proposed improvements
 
-Add a metric-gaming test to the `ValueVerificationPackage` and `ProjectEvidentialContract`:
+Add a metric-gaming / evidence-coverage test to the `ValueVerificationPackage` and `ProjectEvidentialContract`:
 
 - does the metric measure an input, activity, output, outcome, continuity condition, or antivalue ceiling;
 - what relevant value dimension remains unmeasured;
 - what gaming behavior would let the actor satisfy the metric while defeating the value;
 - what beneficiary or affected-party contradiction path applies;
 - whether metric change after funding requires correction, operational variation, material reformulation, or new project.
+- whether every declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric has required fulfillment/control evidence needs.
 
 ## Applies to
 
@@ -74,10 +75,10 @@ Add a metric-gaming test to the `ValueVerificationPackage` and `ProjectEvidentia
 
 ## Defense strength and residual risk
 
-Defense strength: strong conceptually, moderate operationally.
+Defense strength: stronger after A004 propagation. The architecture now treats metric-gaming as a required evidence-coverage check before funding and formal effects, while A013 separately handles quality and sufficiency of submitted evidence.
 
-Residual risk: fiscalizers may apply qualitative judgment inconsistently, beneficiaries may be selectively measured, and proposers may still prefer easy metrics. This requires explicit metric-gaming prompts and reviewable metric design.
+Residual risk: fiscalizers may apply qualitative judgment inconsistently, beneficiaries may be selectively measured, and proposers may still prefer easy metrics. This requires explicit coverage status, reviewable metric design, and visible coverage-gap labels.
 
 ## Decision
 
-The attack is founded but already central to the model. The architecture should not abandon metrics; it should finalize the metric-gaming test and enforce broader verification before disbursement, closure, and reputation effects.
+The attack is founded but already central to the model. The architecture should not abandon metrics; it should enforce evidence coverage for each value and antivalue commitment before funding, disbursement, closure, and reputation effects.

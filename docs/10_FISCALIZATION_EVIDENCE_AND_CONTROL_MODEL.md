@@ -138,6 +138,7 @@ The contract states how project promises will be evidenced and reviewed. It conn
 - milestones and budget lines where relevant;
 - risks and declared antivalues;
 - fulfillment evidence needs and fulfillment/control evidence types;
+- evidence-coverage status for each value floor, formal secondary value, antivalue ceiling, material claim, and relevant metric;
 - fulfillment evidence source roles;
 - evidence producer qualification and method standards where formal technical proof is required;
 - required metadata, instrument/tool, calibration, validation, chain-of-custody, and report requirements where relevant;
@@ -150,6 +151,8 @@ Under H012, positive value commitments are evaluated as floors and negative decl
 The contract is project-specific and proportional. It may use value-catalog defaults, project-type templates, threshold policies, operating-mode rules, or country-specific requirements, but it should not become a single centralized evidence code for every domain.
 
 The contract defines fulfillment/control evidence needs, not preselected evidence producers. Evidence producers and technical reviewers may later submit offers tied to specific value floors, antivalue ceilings, material claims, milestones, phases, risks, or declared antivalues. Contract-matched fulfillment/control evidence needs have higher eligibility priority when the offer also satisfies the required qualification, method, metadata, and report standard. Unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+
+The fiscalization model should distinguish A004 from A013. A004 asks whether the accepted contract defined the evidence needed to verify each declared value or antivalue dimension. A013 asks whether a submitted evidence item later satisfies that need. If the contract lets an executor satisfy a narrow metric while leaving usability, access, beneficiary experience, affected-party impact, or an antivalue ceiling unverified, the fiscalizer should mark a coverage gap or weak package rather than treating later evidence review as enough to cure the design defect.
 
 Examples:
 
@@ -220,7 +223,7 @@ replace fiscalizer, qualified producer, regulator, court, or competent authority
 
 ## 3. Responsible fiscalization
 
-The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, fulfillment evidence obligations, producer qualification/method standards, guarantees, mitigation commitments, and fiscalization criteria.
+The responsible fiscalizer evaluates whether a project, milestone, or obligation has been fulfilled against the accepted design, KPIs, milestones, A004 evidence-coverage obligations, fulfillment evidence obligations, producer qualification/method standards, guarantees, mitigation commitments, and fiscalization criteria.
 
 Each formal fiscalization conclusion should identify the evaluated dimension, actor role, observability basis, authority or qualification basis, contextualized evidence used, method or limitation, evaluation type, formal effect, and review status. A fiscalizer may rely on many evidence sources, but the formal conclusion should not collapse beneficiary experience, citizen observation, technical review, complaint findings, and value fulfillment into one undifferentiated score.
 

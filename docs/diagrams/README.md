@@ -33,7 +33,7 @@ The formal ERD has completed its first relationship audit. The Project object st
 The Contextualized Evidence Item state diagram now separates evidence context, review status, sufficiency, report linkage, formal evaluation use, and no-effect archival.
 The Complaint Evidence and Review state diagram now separates filing, quote, support, funding, admissibility, scoped pause, referral, external suspension, and final resolution.
 The Funding Commitment and Disbursement state diagram now separates commitment, reservation, pause, blocker, retention, release approval, financial order, custodian execution, return, reassignment, recovery, and guarantee states.
-The Project Evidential Contract state diagram now separates contract baseline, fulfillment evidence needs, evidence producer offers, contract-match priority, quality/sufficiency review, and formal effect routing.
+The Project Evidential Contract state diagram now separates contract baseline, A004 evidence coverage, fulfillment evidence needs, evidence producer offers, contract-match priority, A013 qualification/quality/sufficiency review, and formal effect routing.
 The Control Subproject and Fiscalization Assignment state diagram now separates control requirements, offer selection, package funding, fiscalizer and evidence mission assignment, reports, secondary audit, replacement, formal effects, and reputation review.
 The Delegation state diagram now separates base rules, request/acceptance, active scope, represented weight, cap visibility, reports, revocation, resignation, expiry, and fallback activation.
 The Operating Mode transition state diagram now separates mode changes, tutored review, timeout policies, publication effects, suspension effects, and external authority boundaries.

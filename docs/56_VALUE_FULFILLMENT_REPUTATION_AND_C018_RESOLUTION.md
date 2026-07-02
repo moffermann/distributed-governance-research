@@ -142,6 +142,8 @@ accepted reformulations, if applicable
 
 The metric weights must be defined before funding begins, not after execution.
 
+The value fulfillment score should not treat an uncovered dimension as verified. If A004 marked a value floor, formal secondary value, antivalue ceiling, material value claim, or relevant metric as a coverage gap or weak coverage, the reputation input should expose that limitation rather than convert a narrow metric into full value fulfillment.
+
 For hard KPI inputs, `accepted fulfillment evidence` means evidence accepted for the claimed formal effect after context review, producer qualification review, method/protocol fit, metadata/provenance review, and fiscalizer or reviewer evaluation where required. Ordinary observations or soft public signals may provide context, but they do not carry the same reputational weight as qualified formal proof.
 
 Example:

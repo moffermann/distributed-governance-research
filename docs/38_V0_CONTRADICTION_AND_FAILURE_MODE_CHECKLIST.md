@@ -222,7 +222,7 @@ Use a layered translation model: citizens see simple state labels and relevant a
 
 ### Accepted v0 rule
 
-Replace isolated value metrics with a `Value Verification Package`. Activity metrics alone are insufficient. Each promised value must be verified through metrics, fulfillment evidence needs, accepted fulfillment evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels.
+Replace isolated value metrics with a `Value Verification Package`. Activity metrics alone are insufficient. Each promised value must be verified through metrics, fulfillment evidence needs, accepted fulfillment evidence, qualitative context where relevant, beneficiary signals, fiscalizer judgment, complaints, and contradiction channels. A004 adds that the package must pass an evidence-coverage check for every value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric.
 
 ---
 
@@ -506,6 +506,9 @@ Fiscalization reports must expose sufficiency fields: scope, methodology, eviden
 - [ ] Does every antivalue ceiling define measurement or review method, timing/frequency, required fulfillment/control evidence, and review consequence?
 - [ ] Is every core value commitment linked to a fulfillment evidence need?
 - [ ] Is every metric linked to fulfillment evidence needs and review consequences?
+- [ ] Does the Value Verification Package include an A004 evidence-coverage matrix for value floors, formal secondary values, antivalue ceilings, material value claims, and relevant metrics?
+- [ ] Are coverage gaps, weak coverage, metric gaps, or under-correction states visible before funding or formal effects?
+- [ ] Can the project satisfy a narrow metric while leaving usability, access, beneficiary experience, affected-party impact, continuity, or an antivalue ceiling unverified?
 - [ ] Is every formal evaluation scoped to a dimension and formal effect?
 - [ ] Are soft public signals distinguished from fulfillment evaluation, technical review, fiscalization conclusions, complaint findings, and reputation inputs?
 - [ ] Does every formal evaluation record its actor role, observability basis, authority or qualification basis, and contextualized evidence used where applicable?

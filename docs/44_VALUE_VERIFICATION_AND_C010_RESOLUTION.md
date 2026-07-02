@@ -54,6 +54,7 @@ A value verification package may include:
 - beneficiary confirmation;
 - fiscalizer observation;
 - fulfillment evidence items;
+- evidence-coverage matrix for value floors, formal secondary values, antivalue ceilings, material claims, and metrics;
 - material information claims and corrections;
 - risk and antivalue review;
 - contradiction or complaint signals;
@@ -87,6 +88,7 @@ For every promised value:
 5. Antivalues and risks must be reviewed at closure.
 6. The fiscalizer may mark formal compliance as weak if the value is not reasonably demonstrated.
 7. Antivalue ceilings should be reviewed against their declared thresholds, measurement method, affected zones or parties, and required fulfillment/control evidence.
+8. Every value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric must pass an evidence-coverage check or be marked as a coverage gap before funding or formal effects.
 ```
 
 ## Relationship with material information claims
@@ -127,6 +129,26 @@ This keeps the citizen-facing signal simple while making the technical value-ver
 H022 defines the ex ante Project Evidential Contract.
 
 The Value Verification Package is the value-specific part of that contract. It explains how each promised value will be verified through metrics, fulfillment evidence needs, qualitative context, beneficiary signals, fiscalizer judgment, complaints, contradictions, risk review, and final assessment.
+
+A004 adds that the package must be checked for required evidence coverage. The package should answer, for each value-relevant commitment:
+
+```text
+What value or antivalue dimension is claimed?
+What metric or qualitative commitment represents it?
+What fulfillment/control evidence is necessary to verify it?
+What beneficiary, affected-party, contradiction, or qualitative review path is required where direct experience matters?
+What formal consequence applies if the evidence is missing, weak, contradicted, or later fails A013 review?
+```
+
+The accepted status should be one of:
+
+```text
+coverage complete
+coverage weak
+coverage gap
+metric gap
+under correction
+```
 
 Where a value floor, antivalue ceiling, milestone, or material claim depends on a hard technical KPI, the package should also identify the required evidence producer qualification standard, method or protocol, instrument/tool expectations, metadata, and report limitations needed for formal proof. The package does not need to name the final producer, but it must say what kind of qualified producer and method can prove the claim.
 
@@ -213,6 +235,9 @@ attendance lists, photos, calendar, evidence producer observations.
 
 Antivalue check:
 exclusion, concentration in one closed group, low actual participation.
+
+Coverage status:
+not just sessions held; the package covers reach, continuity, beneficiary experience, and exclusion risk.
 ```
 
 ## Metric types
@@ -384,7 +409,7 @@ Replace isolated value metrics with a Value Verification Package.
 
 Final rule:
 
-> Every promised value must be verified through a package of metrics and fulfillment evidence. Activity metrics alone are insufficient. For hard KPI claims, the package must identify the required producer qualification and method standard before evidence is financed or accepted for formal effects. The fiscalizer may mark a project as formally compliant but weak in value if the broader fulfillment evidence does not reasonably demonstrate the promised value.
+> Every promised value must be verified through a package of metrics and fulfillment evidence. Activity metrics alone are insufficient. The package must pass an A004 evidence-coverage check for each value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric. For hard KPI claims, the package must identify the required producer qualification and method standard before evidence is financed or accepted for formal effects. The fiscalizer may mark a project as formally compliant but weak in value if the broader fulfillment evidence does not reasonably demonstrate the promised value.
 
 H015 complement:
 

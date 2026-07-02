@@ -45,6 +45,8 @@ value floors + antivalue ceilings
 
 Value commitments are floors the project must reach. Antivalue constraints are ceilings the project must not exceed. Both should be connected to the Project Evidential Contract and to fulfillment/control evidence needs.
 
+A004 adds an evidence-coverage requirement: each value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric should identify the fulfillment/control evidence needed to verify it. This is not a demand for a fixed number of evidence items. It is a check that the project cannot satisfy a narrow metric while leaving the promised value unproven.
+
 ## Value commitments and metrics
 
 Different projects require different metrics. A puppet show, a highway, a hospital, a basic science project, and a heritage preservation project should not be evaluated with the same metric set.
@@ -121,6 +123,18 @@ The package may include:
 For H012 alignment, the package should distinguish whether each metric is verifying a positive value floor or monitoring a negative antivalue ceiling.
 
 The package is the value-specific part of the Project Evidential Contract.
+
+The package should also classify A004 coverage status:
+
+```text
+coverage complete
+coverage weak
+coverage gap
+metric gap
+under correction
+```
+
+A013 remains separate: after evidence is produced, evidence quality review asks whether the submitted evidence satisfies the accepted need with sufficient qualification, method fit, traceability, and probative value.
 
 It should be visible in simple form to citizens and fully auditable in Layer 5.
 

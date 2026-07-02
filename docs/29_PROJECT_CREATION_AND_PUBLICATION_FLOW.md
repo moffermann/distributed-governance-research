@@ -176,6 +176,23 @@ Rule:
 
 The creator should not only select a value icon. The creator should also accept the value commitments, metrics, fulfillment evidence needs, and qualification/method standards attached to that value where relevant. The fulfillment evidence needs later guide independent evidence-producer offers and fiscalizer review.
 
+Before the value package can be accepted, the system should run the A004 evidence-coverage check:
+
+```text
+Does every value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric have required fulfillment/control evidence?
+Could the project satisfy a narrow metric while leaving the promised value unverified?
+Is beneficiary or affected-party evaluation required for dimensions only those actors can observe?
+```
+
+Citizen-facing status may remain simple:
+
+```text
+verification package strong
+evidence coverage gap
+metric gap
+metric under correction
+```
+
 Example:
 
 ```text

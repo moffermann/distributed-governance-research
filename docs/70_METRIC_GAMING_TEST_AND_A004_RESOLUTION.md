@@ -40,6 +40,27 @@ The metric-gaming test should ask:
 - what beneficiary, affected-party, contradiction, or qualitative review path is available;
 - does changing the metric require correction, operational variation, material reformulation, or a new project.
 
+Operationally, this should be implemented as an evidence-coverage matrix inside the `ValueVerificationPackage` and `ProjectEvidentialContract`, not as a separate evidence layer. The matrix should map:
+
+- each declared value floor;
+- each formal secondary value;
+- each antivalue ceiling;
+- each material value claim;
+- each metric or qualitative commitment;
+- each required fulfillment/control evidence need;
+- each beneficiary, affected-party, contradiction, or qualitative review path where relevant;
+- each formal consequence: publication block, financeable block, phase-gate block, disbursement block, closure limitation, correction, reformulation, responsibility event, or reputation input.
+
+Coverage status should be explicit:
+
+```text
+coverage complete
+coverage weak
+coverage gap
+metric gap
+under correction
+```
+
 ## Boundary with A013
 
 A004 defines coverage: what evidence is necessary to avoid metric gaming.

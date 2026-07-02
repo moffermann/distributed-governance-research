@@ -210,6 +210,28 @@ Because value is partly subjective and partly measurable, the theory does not re
 
 ---
 
+## Value Verification Package
+
+A Value Verification Package is the value-specific part of a project's evidential contract.
+
+It connects value floors, formal secondary values, antivalue ceilings, material value claims, metrics, qualitative commitments, fulfillment/control evidence needs, source roles, review consequences, and citizen-facing verification summaries.
+
+Core v0 uses this package to prevent isolated metrics from substituting for public value.
+
+---
+
+## Evidence Coverage Check
+
+An Evidence Coverage Check is the A004 test inside the Value Verification Package and Project Evidential Contract.
+
+It asks which fulfillment/control evidence is necessary to verify each declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric.
+
+It is not a fixed number of evidence items by project size. It detects whether a project could satisfy a narrow metric while leaving the promised value, beneficiary experience, affected-party impact, or antivalue ceiling unverified.
+
+Evidence coverage is separate from evidence quality. A004 checks whether the necessary evidence needs were defined; A013 checks whether submitted evidence later satisfies those needs.
+
+---
+
 ## Algorithm as Coordinator
 
 An algorithm as coordinator does not decide for people. It records, aggregates, structures, and executes decisions made by people.

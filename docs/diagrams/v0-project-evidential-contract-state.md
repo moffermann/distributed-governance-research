@@ -24,6 +24,7 @@ Source baseline:
 - `knowledge/hypotheses/H018-project-value-thesis-and-measurement.md`
 - `knowledge/hypotheses/H022-project-evidential-contract.md`
 - `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`
+- `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`
 - `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`
 - `docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md`
 - `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`
@@ -42,11 +43,13 @@ This state machine tracks the contract baseline. It is not the same as the state
 stateDiagram-v2
     [*] --> Draft
     Draft --> CompletenessCheck: proposer or modeler submits value verification package
-    CompletenessCheck --> NeedsCompletion: missing value floor, antivalue ceiling, metric, source role, timing, or consequence
+    CompletenessCheck --> NeedsCompletion: missing value floor, formal secondary value, antivalue ceiling, metric, source role, timing, or consequence
     NeedsCompletion --> Draft: completion submitted
 
-    CompletenessCheck --> UnderValidation: minimum structure complete
-    UnderValidation --> RequiresAdjustment: weak metric, missing evidence need, capture risk, or unclear review effect
+    CompletenessCheck --> CoverageCheck: minimum structure complete
+    CoverageCheck --> NeedsCompletion: value dimension lacks required evidence coverage
+    CoverageCheck --> UnderValidation: coverage complete enough
+    UnderValidation --> RequiresAdjustment: weak metric, coverage gap, missing evidence need, capture risk, or unclear review effect
     RequiresAdjustment --> UnderValidation: adjusted contract submitted
 
     UnderValidation --> AcceptedBaseline: reviewer, protocol, threshold policy, or admissibility path accepts
@@ -129,7 +132,7 @@ stateDiagram-v2
 
 ## Value-to-Effect Routing
 
-This flowchart shows how the contract connects project promises to formal effects. It marks the A013 producer-qualification and method-fit gate while leaving detailed scoring, calibration, AI-detection, and country-specific admissibility rules for implementation.
+This flowchart shows how the contract connects project promises to formal effects. It marks the A004 evidence-coverage gate before evidence production and the A013 producer-qualification and method-fit gate after evidence submission.
 
 ```mermaid
 flowchart TD
@@ -137,6 +140,7 @@ flowchart TD
     VAP[Value-Antivalue Profile]
     M[Metric or qualitative commitment]
     VVP[Value Verification Package]
+    COV[A004 evidence coverage check]
     PEC[Project Evidential Contract]
     FEN[Fulfillment Evidence Need]
     EO[Evidence Producer Offer or commitment]
@@ -156,7 +160,8 @@ flowchart TD
     VT --> VAP
     VAP --> M
     M --> VVP
-    VVP --> PEC
+    VVP --> COV
+    COV --> PEC
     PEC --> FEN
     FEN --> EO
     EO --> CP
@@ -183,7 +188,8 @@ flowchart TD
 
 - `Project Evidential Contract` is part of the financeable project baseline. A project should not receive execution funding without a proportional accepted contract.
 - The contract is versioned. A material weakening of value metrics, evidence needs, source roles, phase gates, disbursement criteria, or review consequences requires reformulation or review rather than silent editing.
-- `Value Verification Package` is the value-specific portion of the evidential contract. It should avoid isolated input metrics and connect each value floor or antivalue ceiling to evidence and review consequences.
+- `Value Verification Package` is the value-specific portion of the evidential contract. It should avoid isolated input metrics and connect each value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric to required evidence and review consequences.
+- A004 evidence coverage asks whether the required evidence set covers the promise. It is separate from A013 submitted-evidence quality review.
 - `Fulfillment Evidence Need` defines what must be evidenced. Where the need supports a hard KPI or formal effect, it also defines the required producer qualification and method/protocol standard. It does not name the final evidence producer as part of the project promise.
 - Evidence producer offers that match the accepted contract, including required qualification and method standards where applicable, receive higher eligibility priority.
 - Out-of-contract fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary, but normally has lower priority and should not consume control budget ahead of accepted minimum needs.
@@ -208,6 +214,9 @@ for example, maximum construction noise at declared times and points where the p
 
 Project Evidential Contract:
 design package, dimension verification, public-access rule verification, bathroom/accessibility review, construction milestone evidence, georeferenced site evidence, fiscalizer review, and final public-use evidence.
+
+A004 coverage check:
+`number of courts built` is insufficient by itself. The package must cover dimensions, safety, public access, bathrooms or accessibility where required, actual use, and declared noise ceiling.
 
 Fulfillment Evidence Need:
 verify that construction delivered courts with accepted dimensions and public access.

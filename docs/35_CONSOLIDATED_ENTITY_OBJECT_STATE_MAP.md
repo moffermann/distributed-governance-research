@@ -1068,6 +1068,9 @@ Attributes:
 - core value commitments;
 - metrics and qualitative commitments;
 - fulfillment evidence needs per commitment;
+- evidence-coverage matrix for value floors, formal secondary values, antivalue ceilings, material value claims, and relevant metrics;
+- coverage status: complete, weak, gap, metric gap, or under correction;
+- metric-gaming risk notes and unmeasured value dimensions;
 - expected fulfillment evidence source roles or corroboration paths;
 - beneficiary signal requirements where relevant;
 - fiscalizer or reviewer method;
@@ -1094,6 +1097,10 @@ ValueVerificationPackage may be affected by Complaint or VerifiedDiscovery
 Rule:
 
 > Value verification uses packages, not isolated metrics. Activity metrics alone are insufficient when they do not reasonably demonstrate the promised value.
+
+Rule:
+
+> A value verification package should pass an A004 evidence-coverage check before funding and formal effects. The check asks which fulfillment/control evidence is necessary to verify each declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric. It is not a fixed count of evidence items by project size.
 
 ## Value Icon
 
@@ -1124,12 +1131,19 @@ Attributes:
 - beneficiary group;
 - fulfillment evidence need;
 - evidential contract requirement reference;
+- covered value floor, formal secondary value, antivalue ceiling, or material claim;
+- coverage status: covered, weakly covered, gap, or under correction;
+- gaming risk note: how the metric could be satisfied while defeating the value;
 - validation status;
 - fulfillment status.
 
 Rule:
 
 > Each core metric should identify what fulfillment evidence need can verify it. The project defines the fulfillment evidence need, source role, producer qualification standard, and method standard where relevant, but should not preselect the independent evidence producer.
+
+Rule:
+
+> A metric is weak when it can be satisfied while leaving an accepted value dimension, beneficiary experience, affected-party impact, or antivalue ceiling unverified.
 
 ## Fulfillment Evidence Need
 
@@ -1144,6 +1158,7 @@ Attributes:
 - project version;
 - related value thesis or value verification package;
 - related value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue;
+- evidence coverage role: primary, corroborating, experiential, affected-party, contradiction, or supplemental;
 - fulfillment evidence type expected;
 - expected source role or corroboration path;
 - producer qualification standard: credential, certification, license, accreditation, institutional competence, experience, or protocol-defined expertise where relevant;

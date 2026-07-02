@@ -456,10 +456,14 @@ The validator asks:
 - When is evidence expected?
 - Can the evidence be contradicted or audited?
 - Is the evidence proportional to the value claim?
+- Does the complete required evidence set cover every value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric?
+- Can the project satisfy the metric while leaving a promised value dimension or beneficiary/affected-party experience unverified?
 
 These answers should become part of the Project Evidential Contract.
 
 The validator should not merely ask whether a fulfillment evidence item exists. It should check whether the proposed fulfillment evidence is coherent with the value, metric, beneficiary group, risk, and milestone being claimed.
+
+This is the A004 evidence-coverage check. It is not a fixed count of evidence items. It asks which evidence is necessary to verify the declared value or antivalue and whether the package leaves a gaming path open.
 
 The validator should not require the proposer to name or control the future evidence producer. The proposer defines the fulfillment/control evidence need; independent evidence producers later submit offers or commitments tied to specific value floors, antivalue ceilings, metrics, claims, milestones, phases, risks, or declared antivalues.
 
@@ -491,6 +495,8 @@ The validator should return simple results for the proponent:
 Approved
 Requires adjustments
 Weak or not verifiable
+Evidence coverage gap
+Metric gap
 ```
 
 With explanations such as:
@@ -500,6 +506,8 @@ The metric is clear, but lacks evidence.
 The metric measures an input, not the declared value.
 The metric is not connected to the selected value.
 The metric satisfies the minimum requirements.
+The package does not verify an important value dimension.
+The package verifies construction count but not usability, access, or beneficiary use.
 ```
 
 ## Disagreement with generated metrics

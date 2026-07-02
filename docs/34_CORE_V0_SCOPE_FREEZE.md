@@ -186,6 +186,7 @@ Core rules:
 - value icons are not marketing decorations;
 - selecting a value creates metric obligations;
 - metrics require fulfillment evidence;
+- each declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric requires an evidence-coverage check;
 - core value commitments should map to fulfillment evidence needs;
 - formal fulfillment/control evidence for hard KPIs requires producer qualification and method standards proportional to the metric;
 - value commitments are value floors the project must reach;
@@ -227,11 +228,13 @@ Projects must clarify who benefits and how beneficiaries are counted or confirme
 
 Core v0 includes a Project Evidential Contract.
 
-The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, fulfillment evidence source roles, producer qualification standards, measurement/review method standards, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
+The contract defines how project fulfillment will be evidenced before execution starts. It connects value promises, value floors, formal secondary values, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, evidence-coverage status, fulfillment evidence source roles, producer qualification standards, measurement/review method standards, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
 
 The contract is project-specific and proportional, but constrained by value-catalog requirements, protocol minimums, threshold policies, operating mode, risk, and competent-authority boundaries where applicable.
 
 The contract defines fulfillment/control evidence needs, not preselected evidence producers. Each need should state not only what must be evidenced, but also the qualification and method standard required when the evidence has a hard KPI or formal-effect use. Independent evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Contract-matched fulfillment/control evidence has higher eligibility priority only when the offer satisfies the required producer qualification, method, metadata, and report standard. Unexpected fulfillment/control evidence may still be accepted when equivalent, necessary, materially useful, or complementary within the available control budget.
+
+The value-verification package should include an A004 evidence-coverage check. It should mark `coverage complete`, `coverage weak`, `coverage gap`, `metric gap`, or `under correction` before funding and before formal effects. Missing coverage means the project has not shown how the promised value or antivalue will be verified; poor submitted evidence is handled later under A013.
 
 Core v0 also includes a `Required Evidence Package`.
 

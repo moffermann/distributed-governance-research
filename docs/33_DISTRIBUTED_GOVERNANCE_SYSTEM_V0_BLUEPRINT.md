@@ -167,6 +167,7 @@ A project must contain:
 - project phases where applicable;
 - milestones;
 - metrics;
+- evidence-coverage status for value floors, formal secondary values, antivalue ceilings, material value claims, and relevant metrics;
 - Project Evidential Contract and fulfillment evidence obligations;
 - fiscalization requirements;
 - related-party and conflict declarations;
@@ -255,6 +256,8 @@ Promised value should be verified through a Value Verification Package, not isol
 
 Each core value commitment should map to fulfillment evidence needs. The project defines what must be evidenced, when, by which source role or corroboration path, with what producer qualification and method standard, and with what review consequence. It should not preselect the independent evidence producers who later verify the project.
 
+A004 adds a metric-gaming / evidence-coverage check: each declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric should identify the fulfillment/control evidence needed to verify it. The check is not a fixed count of evidence items by project size. It asks whether the package covers the dimensions that matter for the promise and whether a narrow metric could be satisfied while the value remains unproven.
+
 ## Metrics and fulfillment evidence
 
 For each promised value, the project must define measurable commitments.
@@ -280,11 +283,30 @@ Buying 100 balls
 
 is not enough to measure sports value. The project must measure actual participation, sessions, use, attendance, or equivalent value-relevant output.
 
+The metric validator should also classify evidence coverage:
+
+```text
+coverage complete
+coverage weak
+coverage gap
+metric gap
+under correction
+```
+
+Example:
+
+```text
+Macul multi-courts:
+`number of courts built` is not enough if the package does not cover dimensions, safety, public access, bathrooms or accessibility commitments where required, actual use, and noise ceilings where declared.
+```
+
 Each project should also define a Project Evidential Contract.
 
-The contract states how fulfillment will be evidenced before execution starts. It connects value promises, value floors, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, source roles, required producer qualification, accepted measurement or review method, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
+The contract states how fulfillment will be evidenced before execution starts. It connects value promises, value floors, formal secondary values, antivalue ceilings, metrics, milestones, material information claims, risk and antivalue declarations, fulfillment/control evidence types, evidence-coverage status, source roles, required producer qualification, accepted measurement or review method, corroboration requirements, fiscalizer review, disbursement effects, complaint paths, closure evaluation, responsibility, reputation, and privacy/access rules.
 
 The contract defines fulfillment/control evidence needs rather than named evidence producers. For each hard KPI or formal effect, the need should declare the required producer qualification and method standard: credential, certification, accreditation, institutional competence, professional experience, instrument or tool class, calibration or validation reference, metadata, chain of custody where required, report discipline, and limitation statement. Evidence producers may later offer fulfillment/control evidence tied to a value floor, antivalue ceiling, metric, material claim, milestone, phase, risk, or declared antivalue. Offers that match the accepted contract and satisfy the required qualification/method standard receive higher eligibility priority; unexpected fulfillment/control evidence can still be admitted when it is equivalent, necessary, materially useful, or complementary within the available control budget.
+
+A004 and A013 remain separate: A004 checks whether the project defined the necessary evidence needs for the promise; A013 checks whether submitted evidence later satisfies those needs with sufficient producer qualification, method fit, traceability, and probative fitness.
 
 Each project should also define a `Required Evidence Package` before publication or execution-readiness effects apply. It contains `RequiredEvidenceNeed` records selected by threshold policy, phase gates, public-function rules, common-good exposure, affected-party exposure, legal/technical conditions, or country implementation.
 

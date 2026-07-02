@@ -88,6 +88,8 @@ No project may receive execution funding commitments until its disbursement mile
 
 The disbursement milestone plan should reference the accepted Project Evidential Contract. This avoids releasing funds against fulfillment evidence criteria invented after execution has already started.
 
+The plan should also reference the accepted A004 evidence-coverage status for each release-relevant value floor, formal secondary value, antivalue ceiling, material value claim, and metric. A milestone cannot safely release funds when the value dimension it pays for has no defined fulfillment/control evidence need.
+
 If the executor proposes to change milestones, fulfillment evidence requirements, disbursement criteria, fiscalization conditions, or beneficiary targets during execution, the change must be classified under H021 before any affected funds are released. Operational variations follow the active Reformulation Policy; material value changes require the C017 Reformulation Proposal path.
 
 If the project combines design and construction, construction funds may be committed while the design phase is pending only when the phase baseline, phase gate, release block, and fund-treatment rule are explicit. Those funds cannot be released while the design phase is pending, rejected, or materially reformulated.
@@ -119,6 +121,7 @@ Each milestone should have:
 - phase reference where applicable;
 - maximum releasable amount;
 - required fulfillment evidence;
+- value, antivalue, material claim, or metric coverage reference;
 - required evidence producer qualification and method standard where the milestone depends on hard technical, professional, legal, or regulated proof;
 - responsible fiscalizer;
 - deadline;
@@ -230,6 +233,7 @@ Fulfillment evidence should be linked to:
 - project phase where applicable;
 - milestone;
 - metric;
+- value floor, formal secondary value, antivalue ceiling, or material claim where relevant;
 - evidential contract requirement;
 - evidence producer;
 - producer qualification basis where formal proof is required;
@@ -242,6 +246,8 @@ Fulfillment evidence should be linked to:
 - review status.
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+
+If a disbursement request exposes that the accepted package did not define evidence for a release-relevant value dimension, the issue is an A004 coverage gap, not merely a missing file. The proper response is correction, milestone-plan adjustment, reformulation, or blocking under the active rule before funds are released.
 
 For hard KPIs, the evidence must also satisfy the producer qualification and method standard declared in the Project Evidential Contract or applicable Threshold Policy. A real but informal measurement can remain contextual, contradictory, or complaint-support material without satisfying the formal milestone.
 

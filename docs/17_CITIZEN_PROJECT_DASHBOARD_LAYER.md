@@ -179,6 +179,9 @@ Perfil requerido: infraestructura deportiva + accesibilidad + visita a terreno
 📎 Evidencia
 2 de 4 productores de evidencia comprometidos
 
+🧭 Cobertura de verificación
+Sin gaps críticos / gap de evidencia / gap de métrica
+
 👥 Participación de afectados
 Consulta vecinal pendiente, si aplica
 ```
@@ -190,6 +193,7 @@ Possible conditions:
 - funding;
 - phase gate accepted, where applicable;
 - executor confirmed;
+- value-verification coverage status;
 - fiscalizer required;
 - evidence producers required;
 - beneficiary confirmation;

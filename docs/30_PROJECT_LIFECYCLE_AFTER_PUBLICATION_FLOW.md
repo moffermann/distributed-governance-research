@@ -123,6 +123,7 @@ This check should confirm:
 - affected-party mapping, notification, observation-window, consultation, or plan-review Readiness Evidence is submitted and reviewed where required;
 - no unresolved material warning is hidden behind a favorable citizen-facing label such as `almost funded`, `approved`, `recommended`, or `execution-ready`;
 - conditional approvals identify approving role or authority, criterion source, scope, date or version, and remaining conditions where material;
+- the Value Verification Package has no unresolved A004 evidence-coverage gaps for value floors, formal secondary values, antivalue ceilings, material value claims, or relevant metrics;
 - the minimum admissible control package is accepted where control is required;
 - milestone plan is complete;
 - disbursement milestone plan has no unresolved critical validation failures;
@@ -198,6 +199,7 @@ Each milestone should include:
 - responsible actor;
 - expected output;
 - required evidence;
+- covered value floor, formal secondary value, antivalue ceiling, material value claim, or metric;
 - required producer qualification and method standard where the milestone depends on formal technical proof;
 - reviewer;
 - disbursement consequence;

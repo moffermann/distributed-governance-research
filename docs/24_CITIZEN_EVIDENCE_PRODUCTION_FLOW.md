@@ -213,6 +213,8 @@ After the minimum control package is accepted, supplemental fulfillment evidence
 
 Evidence offers that satisfy accepted Project Evidential Contract needs should receive higher eligibility priority. For hard KPI evidence, this means the offer satisfies both the evidence topic and the required producer qualification/method standard. Fulfillment evidence outside the accepted contract may still be useful, but it should normally depend on fiscalizer, reviewer, or protocol acceptance as equivalent, necessary, materially useful, or complementary within the available control budget.
 
+Evidence producers do not fix A004 coverage gaps merely by offering random additional evidence. If a project has no accepted evidence need for an important value floor, formal secondary value, antivalue ceiling, material claim, or metric, the project package must be corrected or reformulated. Evidence-producer offers can help satisfy defined needs or propose equivalent/complementary evidence, but the accepted contract should still show which value dimension the evidence covers.
+
 The system should not fund unlimited evidence producers. It should reject or close supplemental evidence funding when:
 
 - the fulfillment evidence need is already satisfied;

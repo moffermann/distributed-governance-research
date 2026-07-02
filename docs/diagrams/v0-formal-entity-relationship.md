@@ -119,12 +119,14 @@ erDiagram
     VALUE_VERIFICATION_PACKAGE {
         string package_id
         string verification_scope
+        string coverage_status
     }
 
     METRIC {
         string metric_id
         string metric_type
         string target_direction
+        string coverage_status
     }
 
     PROJECT_EVIDENTIAL_CONTRACT {
@@ -563,7 +565,7 @@ erDiagram
 - `ProjectLegitimacyProfile` is a threshold-driven profile, not a vote, veto, popularity score, or legal-authority object. It exposes affected-party mapping, consultation Readiness Evidence, unresolved legitimacy objections, and review routes where funding alone would otherwise be mistaken for approval.
 - `MaterialInformationClaim` also covers material approval labels, conditions, omissions, source categories, and unresolved warnings. Existing external approval systems may remain external, but their material outputs should be source-linked where they affect citizen decisions.
 - `FiscalizerEligibilityReputationProfile` is contextual to a fiscalization assignment. It explains eligibility criteria, comparable-project reputation, workload, repeat relationships, dependency concentration, warnings, and safeguards; it is not a generic CV, universal score, or automatic selector.
-- `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. This prevents value promises from remaining purely rhetorical.
+- `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. A004 requires a coverage status so a narrow metric cannot stand in for unverified value dimensions.
 - `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
 - `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.
 - `EvidenceProducerQualificationStandard` declares the qualification, method, instrument/tool, metadata, and report basis needed where a fulfillment/control evidence need supports a hard KPI or formal effect.
@@ -580,6 +582,7 @@ Idea: build multi-courts in Macul
 -> Project: Design and Construction of Multi-Courts in Macul
 -> Project Phases: Design, then Construction
 -> Metrics: court dimensions, accessibility, bathrooms, public access, noise ceilings
+-> A004 coverage check: dimensions, safety, access, bathrooms/accessibility, public use, and declared noise ceiling each need evidence coverage
 -> Project Evidential Contract and Fulfillment Evidence Needs
 -> Evidence Producer Qualification Standards for hard KPI evidence
 -> Design-phase fiscalization report / evaluation record

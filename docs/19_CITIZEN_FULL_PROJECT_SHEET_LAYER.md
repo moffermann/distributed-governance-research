@@ -145,7 +145,19 @@ Each value should show:
 - who benefits;
 - how it is measured;
 - how it is verified;
+- whether the required evidence coverage is complete, weak, missing, or under correction;
 - current status.
+
+Citizen-facing coverage labels should stay compact:
+
+```text
+Verification package strong
+Evidence coverage gap
+Metric gap
+Metric under correction
+```
+
+The detail layer should show which value floor, formal secondary value, antivalue ceiling, material value claim, or metric lacks required fulfillment/control evidence.
 
 ## 5. Beneficiaries
 

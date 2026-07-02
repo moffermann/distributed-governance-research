@@ -88,6 +88,7 @@ Dashboard:
 💬 Comentarios: 35
 🚩 Denuncias: 0
 📎 Evidencias: 12
+🧭 Verificación: package strong
 
 Warnings:
 Declared relationship: the executing club will also use the facility under public access rules.
@@ -240,6 +241,19 @@ Clicking opens:
 ## Evidence by project stage
 
 The meaning of the evidence count may vary by stage.
+
+### Verification coverage
+
+Shows whether the project has defined the evidence needed to verify each declared value and antivalue.
+
+Possible labels:
+
+- verification package strong;
+- evidence coverage gap;
+- metric gap;
+- metric under correction.
+
+This is not a judgment that submitted evidence is already true or sufficient. It only shows whether the project has defined how the promised value will be verified.
 
 Before execution:
 
