@@ -383,6 +383,63 @@ Guarantee released
 Closed
 ```
 
+### Control subproject and fiscalization assignment states
+
+```text
+Not required
+Required by policy
+Scope / budget draft
+Opportunity open
+Offer window open
+Eligibility / conflict review
+No admissible offer
+Package pending funding
+Control funding open
+Control funding failed
+Package selectable
+Package selected
+Assignment acceptance
+Minimum control package closed
+Active control
+Evidence collection
+Report draft
+Report submitted
+Report accepted
+Correction requested
+Secondary audit open
+Extraordinary review triggered
+Replacement required
+Control completed
+Control failed
+Offer draft
+Offer submitted
+Eligibility check
+Rejected eligibility
+Conflict review
+Rejected conflict
+Flagged conflict
+Admissible offer
+Admissible with safeguards
+Selection review
+Not selected
+Selected primary fiscalizer
+Selected secondary auditor
+Selected evidence mission
+Acceptance pending
+Active assignment
+Evidence capture
+Contextualized evidence submitted
+Review work
+Report correction required
+Finding no blocking effect
+Finding requires formal path
+Formal path opened
+Resigned or removed
+Assignment completed
+Reputation review
+Closed
+```
+
 ### Governance mode states
 
 ```text
