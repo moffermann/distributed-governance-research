@@ -32,6 +32,7 @@ The Governance Resolution sequence diagram has been created: authority decisions
 The Audit Event schema diagram has been created: actor/process context, role or authority basis, object reference, transition, source record, rule/version, effect, visibility/privacy treatment, append-only correction pattern, Layer 5 access, and observability projections are separated.
 The Responsibility Matrix by Role has been created: role authority, disclosures, prohibited conflicts, evidence or record outputs, formal effects, reputation exposure, and audit references are separated.
 The Implementable Object Schema Draft has been created: common field primitives, base object fields, actor/role references, object refs, rule/version refs, source records, visibility/privacy fields, effect refs, AuditEvent refs, and minimum object-group field sets are separated.
+The Phase 3 attack queue has been created under `attacks/`: eighteen attack briefs A001-A018 now prepare the next architecture-attack round with description, project location, problem, recommended resolution path, theoretical base, social reasons, conflict-of-interest risks, inconsistencies, stress scenarios, review checklists, and expected resolution outputs.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -239,7 +240,9 @@ The eightieth residual cleanup created `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0
 
 The eighty-first residual cleanup created `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md`. The draft separates logical schema from storage/API design, defines shared primitives such as ActorRef, RoleContextRef, ObjectRef, RuleContextRef, SourceRecordRef, AuditRef, VisibilityPrivacy, EffectRef, and VersionRef, and defines minimum implementable fields for actor, role, project, scope, value, evidence, funding, custody, fiscalization, complaint, signal, delegation, reputation, governance, rule-change, and audit objects.
 
-Next review candidate: begin Phase 3 - Attack the Architecture, starting with a failure-mode catalog and stress-test scenarios for legitimacy, evidence quality, fiscalizer capture, metric manipulation, delegation concentration, related-party projects, volatile funding, and collusion among project roles.
+The eighty-second residual cleanup created the Phase 3 attack queue in `attacks/` and added Phase 3 attack literature anchors to `research/literature-map.md`. The queue covers all Phase 3 priority objections from the roadmap: legitimacy, information capture, fiscalization failure, metric manipulation, neglected essential services, volatile funding, conflicting reviews, platform or algorithmic capture, inequality of participation, delegation concentration, moderation abuse in transition pilots, scope creep and excessive complexity, false/incomplete/context-misclassified evidence, related-party projects, common-good charter conflicts, incumbent resistance, disbursement gaming, and collusion among project roles.
+
+Next review candidate: resolve `attacks/A001-legitimacy-does-not-follow-from-funding.md` through the collaborative resolution workflow, then proceed through A002-A018.
 
 Approximate current maturity:
 
@@ -396,7 +399,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** active through residual post-integration audit; broader stress testing follows integration.
+**Status:** attack queue prepared; first attack resolution pending.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -423,7 +426,7 @@ Priority objections:
 
 Deliverables:
 
-- objection files for each major risk;
+- attack briefs / objection files for each major risk;
 - failure-mode catalog;
 - contradiction resolution documents;
 - updated contradiction checklist;

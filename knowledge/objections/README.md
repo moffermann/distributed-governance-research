@@ -2,6 +2,13 @@
 
 This folder stores objections that must be taken seriously.
 
+The current Phase 3 working queue lives in `../../attacks/`:
+
+- `../../attacks/README.md`
+- `../../attacks/A001-legitimacy-does-not-follow-from-funding.md` through `../../attacks/A018-collusion-among-project-roles.md`
+
+Those files are attack briefs, not accepted resolutions. Each should later become a resolved objection, contradiction resolution, accepted risk, deferred item, or explicit unresolved objection.
+
 ## Current major objection families
 
 1. **Legitimacy:** Why would people accept decisions from distributed institutions?

@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../attacks/README|Phase 3 Attack Queue]]
 - [[../docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|Implementable Object Schema Draft v0]]
 - [[../docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|Responsibility Matrix by Role v0]]
 - [[../docs/diagrams/v0-audit-event-schema|Audit Event Schema v0]]
@@ -352,6 +353,28 @@ Recently aligned residual-audit hypotheses:
 - [[open-questions/evidence-producer-evidence-quality-validation|Fulfillment/Control Evidence Quality Validation]]
 - [[open-questions/distributed-roadmap-construction-governance|Distributed Roadmap Construction Governance]]
 - [[objections/README|Objections]]
+
+## Phase 3 attack queue
+
+- [[../attacks/README|Phase 3 Attack Queue]]
+- [[../attacks/A001-legitimacy-does-not-follow-from-funding|A001 - Legitimacy Does Not Follow From Funding]]
+- [[../attacks/A002-information-capture-and-visibility-control|A002 - Information Capture and Visibility Control]]
+- [[../attacks/A003-fiscalizer-capture-or-fiscalization-failure|A003 - Fiscalizer Capture or Fiscalization Failure]]
+- [[../attacks/A004-metric-manipulation-and-goodhart-effects|A004 - Metric Manipulation and Goodhart Effects]]
+- [[../attacks/A005-neglected-essential-services|A005 - Neglected Essential Services]]
+- [[../attacks/A006-volatile-funding-and-underfunded-continuity|A006 - Volatile Funding and Underfunded Continuity]]
+- [[../attacks/A007-conflicting-reviews-and-evaluation-fragmentation|A007 - Conflicting Reviews and Evaluation Fragmentation]]
+- [[../attacks/A008-platform-or-algorithmic-capture|A008 - Platform or Algorithmic Capture]]
+- [[../attacks/A009-inequality-of-participation|A009 - Inequality of Participation]]
+- [[../attacks/A010-delegation-concentration|A010 - Delegation Concentration]]
+- [[../attacks/A011-moderation-abuse-in-transition-pilots|A011 - Moderation Abuse in Transition Pilots]]
+- [[../attacks/A012-scope-creep-and-excessive-complexity|A012 - Scope Creep and Excessive Complexity]]
+- [[../attacks/A013-false-incomplete-or-context-misclassified-evidence|A013 - False, Incomplete, or Context-Misclassified Evidence]]
+- [[../attacks/A014-related-party-projects-and-hidden-control|A014 - Related-Party Projects and Hidden Control]]
+- [[../attacks/A015-common-good-charter-conflicts|A015 - Common-Good Charter Conflicts]]
+- [[../attacks/A016-resistance-by-incumbent-institutions|A016 - Resistance by Incumbent Institutions]]
+- [[../attacks/A017-disbursement-gaming|A017 - Disbursement Gaming]]
+- [[../attacks/A018-collusion-among-project-roles|A018 - Collusion Among Project Roles]]
 
 ## Literature
 
