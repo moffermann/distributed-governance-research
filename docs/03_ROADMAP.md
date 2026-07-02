@@ -21,6 +21,7 @@ C001-C025 have been propagated into the main core documents, contradiction check
 The v0 diagram index has been converted into a master index, the main v0 diagrams now live as canonical Mermaid sources under `docs/diagrams/`, and Mermaid CLI is installed locally through npm for reproducible SVG generation.
 The first Phase 2 formal ERD has completed its relationship audit: it now preserves scoped role assignments, idea/project separation, metric-to-evidence traceability, lane-specific funding targets, fiscalizer offers, reformulation objects, and scoped systemic pause effects.
 The Project object state diagram with phase substates has been created: parent `Project` states are separated from operational `ProjectPhase` substates, and phase blockers escalate only through scoped formal records.
+The Contextualized Evidence Item state diagram has been created: evidence context, privacy/safety review, sufficiency, corroboration, contradiction, report linkage, formal evaluation use, verified discovery, and no-effect archival are separated.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -206,7 +207,9 @@ The sixty-ninth residual cleanup audited the Phase 2 ERD for missing or misleadi
 
 The seventieth residual cleanup created `docs/diagrams/v0-project-object-state-with-phase-substates.md` and generated two SVG outputs. The diagram separates aggregate parent `Project` states from operational `ProjectPhase` substates, clarifies phase funding reservation and prerequisite gates, and preserves the rule that phase-level correction, pause, rejection, or reformulation affects the whole project only when a scoped formal record declares that broader effect.
 
-Next review candidate: draft the contextualized evidence item state diagram with required `evidence_context`, then connect it to complaint evidence, fulfillment/control evidence, fiscalization reports, disbursement, and closure.
+The seventy-first residual cleanup created `docs/diagrams/v0-contextualized-evidence-item-state.md` and generated two SVG outputs. The diagram separates contextualized evidence intake, context correction, privacy/safety review, restricted visibility, sufficiency review, observed/contextual/insufficient/corroboration/contradiction states, report linkage, EvaluationRecord use, verified discovery, and archival with or without formal effect. It also updated the formal inventory's evidence item state list.
+
+Next review candidate: draft the complaint evidence and complaint review state diagram using the contextualized evidence state diagram as the evidence substrate.
 
 Approximate current maturity:
 

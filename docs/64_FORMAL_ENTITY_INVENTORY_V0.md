@@ -257,6 +257,10 @@ Expired
 ```text
 Expected
 Submitted
+Context check
+Context correction required
+Privacy / safety review
+Restricted visibility
 Pending review
 Accepted for declared context
 Accepted only as contextual material
@@ -266,7 +270,10 @@ Observed
 Rejected
 Contradicted
 Linked to report
+Used in evaluation record
 Used in verified discovery
+Archived with no formal effect
+Archived with formal effect
 ```
 
 ### Complaint states

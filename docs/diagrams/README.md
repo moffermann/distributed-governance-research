@@ -19,8 +19,10 @@ Generated images may be exported for papers, slides, or visual review, but the M
 - `v0-audit-trail-pattern.md`
 - `v0-formal-entity-relationship.md`
 - `v0-project-object-state-with-phase-substates.md`
+- `v0-contextualized-evidence-item-state.md`
 
 The formal ERD has completed its first relationship audit. The Project object state diagram with phase substates now separates parent `Project` states from operational `ProjectPhase` substates.
+The Contextualized Evidence Item state diagram now separates evidence context, review status, sufficiency, report linkage, formal evaluation use, and no-effect archival.
 
 ## Format rule
 

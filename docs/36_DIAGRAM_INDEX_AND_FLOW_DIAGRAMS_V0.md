@@ -67,6 +67,7 @@ Primary Mermaid sources:
 11. `docs/diagrams/v0-audit-trail-pattern.md`
 12. `docs/diagrams/v0-formal-entity-relationship.md`
 13. `docs/diagrams/v0-project-object-state-with-phase-substates.md`
+14. `docs/diagrams/v0-contextualized-evidence-item-state.md`
 
 Conceptual planning diagram:
 
@@ -113,7 +114,6 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Contextualized evidence item state diagram with required evidence_context
 Complaint evidence and complaint review state diagram
 Funding commitment state diagram
 Project evidential contract / fulfillment evidence need diagram
@@ -135,3 +135,5 @@ The first Phase 2 ERD now lives at `docs/diagrams/v0-formal-entity-relationship.
 The first ERD relationship audit has been completed. The ERD now preserves the `Idea` to `Project` boundary, uses scoped role assignments, connects metrics to value and evidence requirements, distinguishes funding targets by lane, includes fiscalizer offers and reformulation objects, and treats systemic pause as a scoped platform effect rather than an automatic whole-project or material/legal suspension.
 
 The Project object state diagram with phase substates now lives at `docs/diagrams/v0-project-object-state-with-phase-substates.md`. It separates parent `Project` states from operational `ProjectPhase` substates and preserves the rule that phase blockers escalate to project-level state only when a formal scoped record declares a broader affected scope.
+
+The Contextualized Evidence Item state diagram now lives at `docs/diagrams/v0-contextualized-evidence-item-state.md`. It separates evidence intake, context classification, privacy/safety review, sufficiency review, corroboration, contradiction, report linkage, evaluation use, verified discovery, and archived no-effect states. It preserves the rule that contextualized evidence does not directly create complaint, disbursement, closure, responsibility, reputation, or legal effects.
