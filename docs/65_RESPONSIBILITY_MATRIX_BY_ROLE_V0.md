@@ -1,0 +1,191 @@
+# Responsibility Matrix by Role v0
+
+## Purpose
+
+This document defines the Core v0 responsibility matrix by role for the Distributed Governance System.
+
+It translates the entity inventory and object/state map into a practical accountability view:
+
+```text
+Which role may do what?
+Which role must disclose what?
+Which role is not allowed to decide?
+Which records does the role create or review?
+Which formal effects can follow?
+Which reputation or responsibility consequences may attach?
+Which AuditEvents must preserve traceability?
+```
+
+The matrix is not an implementation permission system yet. It is the responsibility baseline that should guide the implementable object schema draft, future policy rules, and later access-control design.
+
+## Status
+
+Accepted as the Phase 2 responsibility matrix baseline.
+
+Source baseline:
+
+- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md`
+- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
+- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
+- `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md`
+- `docs/diagrams/v0-formal-entity-relationship.md`
+- `docs/diagrams/v0-audit-event-schema.md`
+- `knowledge/concepts/evidence-context-taxonomy-v0.md`
+- `knowledge/concepts/evaluation-context-taxonomy-v0.md`
+
+## Core principle
+
+> A role is a scoped responsibility context, not a general power label.
+
+An actor may hold multiple roles, but each role has separate authority, duties, conflicts, records, effects, reputation treatment, and audit references.
+
+Example:
+
+```text
+Organization A may be the executor of Project X.
+The same organization may be an evidence producer in Project Y.
+Its executor reputation in Project X and evidence-producer reputation in Project Y should not collapse into one undifferentiated score.
+```
+
+## Matrix rules
+
+### 1. Actor identity and role responsibility are separate
+
+`Citizen`, `Organization`, `Public Authority`, `Custodian`, and `Allocation Amount Provider` are actor categories or external actors.
+
+`Proposer`, `Modeler / Designer`, `Executor`, `Fiscalizer`, `Evidence Producer`, `Complainant`, `Delegate`, and similar labels are contextual roles.
+
+### 2. Formal effect requires a valid source path
+
+No role creates formal effects merely by expressing an opinion.
+
+Formal effects such as publication, execution readiness, disbursement, systemic pause, closure, responsibility, reputation update, or complaint outcome require the relevant source object, review basis, rule/version, and `AuditEvent`.
+
+### 3. Self-report is allowed but not independent proof
+
+Executors, proposers, and modelers may submit information and contextualized evidence, but their material is self-report unless corroborated or accepted by an eligible review path for the relevant formal effect.
+
+### 4. Public authority is external in controlled scopes
+
+A public authority may issue Governance Resolutions, provide infrastructure, enforce law, or perform external tutored-scope review. It should not become an internal proposer, executor, fiscalizer, evidence producer, delegate, or ordinary moderator in the same controlled scope.
+
+### 5. Platform effects and legal effects are distinct
+
+The platform may block funding release, require correction, publish a governance resolution, record a systemic pause, or route a case to a competent authority.
+
+Legal sanctions, court orders, material construction halts, permit effects, license revocation, or administrative penalties require the applicable external legal path unless a country implementation legally grants the platform that power.
+
+### 6. Reputation is role-specific
+
+Reputation follows reviewed role performance. Raw popularity, unfounded complaints, AI anomaly flags, proximity to a failed project, or corporate group proximity do not directly update formal reputation.
+
+## Matrix fields
+
+Each role is evaluated through these fields:
+
+```text
+Role
+Primary authority
+Required disclosures or inputs
+Decision limits and prohibited conflicts
+Records, evidence, or outputs
+Formal effects that may follow
+Reputation or responsibility exposure
+Audit references
+```
+
+## Project Delivery and Review Roles
+
+| Role | Primary authority | Required disclosures or inputs | Decision limits and prohibited conflicts | Records, evidence, or outputs | Formal effects that may follow | Reputation or responsibility exposure | Audit references |
+|---|---|---|---|---|---|---|---|
+| Proposer | Initiates a project proposal, demand-to-project conversion, or reformulation request. | Identity, actor type, related-party relationships, ownership/control relationships where relevant, project purpose, Planning Scope reference, value thesis, initial budget, proposed roles. | Cannot self-validate eligibility, lower burden profile, guarantee requirement, evidence requirements, or fiscalization requirements. Cannot hide related-party relationships. | Project draft, Project Version, disclosures, Value Thesis, initial Budget, Related-Party Conflict declarations, Reformulation Proposal where applicable. | Publication path may open only after validation and threshold checks. Misrepresentation may trigger correction, rejection, complaint review, Responsibility Event, or reputation input. | Proposer-role reputation may be affected by repeated false promises, hidden conflicts, material omissions, or successful accountable proposals. | AuditEvents for proposal creation, disclosure changes, project versioning, validation result, reformulation, and related-party review. |
+| Modeler / Designer | Defines technical model, phases, deliverables, budget structure, metrics, evidence needs, and phase gates. | Design assumptions, professional or technical basis where relevant, relationship to proposer/executor/fiscalizer, required permits/documents, value and antivalue metrics, phase dependencies. | Cannot self-certify design adequacy where independent review is required. Cannot weaken evidence requirements after support/funding without versioning and review. Related design-and-execution actors require disclosure and safeguards. | Project Phase plan, Value Verification Package, Project Evidential Contract, Fulfillment Evidence Needs, Budget Lines, Threshold Policy inputs, design deliverables. | Design-phase acceptance may allow later-phase funds to become releasable only through the relevant phase gate. Weak design may trigger correction, reformulation, rejection, responsibility review, or reputation input. | Designer-role reputation may reflect accepted designs, rework, omissions, phase-gate failures, or material corrections after review. | AuditEvents for design submission, phase creation, evidence contract changes, phase-gate review, design correction, and accepted/rejected deliverables. |
+| Executor | Accepts responsibility for execution and delivery under the accepted project version, phases, milestones, value floors, antivalue ceilings, and budget. | Executor acceptance, capability, conflicts, related-party status, guarantees/assurance where required, execution plan, milestone acceptance, risk and antivalue handling. | Cannot fiscalize own project, release funds to itself, decide value fulfillment, or make self-report sufficient for critical effects. Cannot bypass design gates, fiscalization, disbursement review, or assurance requirements. | Execution updates, milestone reports, executor self-report evidence, correction responses, mitigation actions, closure inputs, guarantee-related obligations. | Execution progress may support disbursement only after required evidence and review. Failure may trigger correction, retained funds, systemic pause, responsibility event, complaint path, closure classification, or reputation input. | Executor-role reputation may reflect completion, milestone reliability, evidence sufficiency, correction responsiveness, budget closure, serious failures, or founded complaints. | AuditEvents for executor acceptance, milestone updates, evidence submission, disbursement requests, correction responses, closure, and responsibility outcomes. |
+| Fiscalizer | Performs responsible fiscalization, review, or control assignment under protocol-selected or accepted assignment. | Eligibility, conflict declaration, methodology, scope, review budget, assignment acceptance, limitations, evidence sources considered. | Cannot be selected by executor for responsible control. Cannot hide conflicts. Cannot create material/legal suspension by itself unless external law grants that authority. Cannot treat unsupported evidence as fulfillment proof. | Fiscalization Offer, Fiscalization Assignment, Fiscalization Report, evidence review notes, finding, correction request, EvaluationRecord support, complaint admissibility/referral support. | May support disbursement approval, correction requirement, EvaluationRecord, complaint admissibility, systemic pause inside platform, closure classification, responsibility review, or reputation input. | Fiscalizer-role reputation may reflect timeliness, completeness, later-confirmed findings, corrected findings, weak-evidence handling, conflict issues, or poor review. | AuditEvents for offer, eligibility/conflict review, assignment, report submission, finding, correction, replacement, secondary audit, and formal effect routing. |
+| Evidence Producer | Produces fulfillment/control evidence or other contextualized material tied to a need, contract, mission, observation, or control subproject. | Evidence source role, method, scope, timing, metadata where required, conflict status, relation to project actors, proposed evidence context, limitations. | Does not decide fulfillment, disbursement, closure, responsibility, or reputation. Evidence outside the Project Evidential Contract may be eligible but lower priority unless equivalent, necessary, or materially useful. | Contextualized Evidence Item, evidence metadata, evidence producer offer, mission output, corrections, source limitations. | Evidence may support EvaluationRecord, fiscalization, disbursement, closure, complaint processing, verified discovery, or reputation only after contextual review. | Evidence-producer reputation may reflect accepted evidence rate, insufficiency, metadata completeness, corroboration usefulness, false evidence, corrections, or AI-generated/low-quality material where reviewed. | AuditEvents for offer, assignment, evidence submission, context classification, privacy review, quality/sufficiency review, correction, acceptance, rejection, or formal use. |
+| Evaluator | Produces or records a formal evaluation in a defined context and effect scope. | Evaluation context, evaluated dimension, observability basis, authority/qualification basis, evidence used, rule/version, limitations. | Cannot mix evaluation contexts or create effects outside assigned authority. Cannot convert raw opinion into formal effect without review basis. | EvaluationRecord, effect classification, source references, review status, limitation statement. | May support disbursement, closure, responsibility, reputation input, correction, complaint outcome, or no-effect archival depending on scope. | Evaluator-role reputation may attach only where evaluator performance is itself reviewed or assigned. | AuditEvents for evaluation creation, source evidence linkage, effect routing, correction, appeal/review status, and final use. |
+| Technical Assistant | Helps prepare, translate, structure, validate completeness, or explain technical information without becoming the responsible decision-maker. | Scope of assistance, actor served, AI/tool use where material, limitation of authority, conflicts where relevant. | Cannot become hidden proposer, fiscalizer, evaluator, authority, or truth-decider. Cannot certify legal/document acceptability unless separately authorized. | Drafting support, completeness checklist, AI assistance trace, translated summary, technical note. | May improve completeness or deliberation but should not directly create publication, disbursement, closure, responsibility, or reputation effects. | Technical-assistant reputation may be considered only if the role becomes a formal paid/assigned service with reviewed outcomes. | AuditEvents or assistance traces where material to project validation, citizen-facing explanation, AI assistance, or document preparation. |
+
+## Civic Participation and Signal Roles
+
+| Role | Primary authority | Required disclosures or inputs | Decision limits and prohibited conflicts | Records, evidence, or outputs | Formal effects that may follow | Reputation or responsibility exposure | Audit references |
+|---|---|---|---|---|---|---|---|
+| Funder | Commits assignable public-purpose resources to an eligible project, phase lane, control package, complaint-review cost, or other authorized vehicle. | Verified identity, available civic wallet/allocation amount, delegation or automatic profile basis where applicable, target object, funding lane. | Funding does not prove legitimacy, execution readiness, disbursement approval, or fulfillment. Committed funds are governed by funding, reformulation, failure, return, reassignment, and closure rules. | Funding Commitment, lane-specific commitment, delegated funding action, automatic-profile action where configured. | Can help reach funding target or control funding threshold. Funds remain conditional until release rules are satisfied. | Funder reputation is generally not formal Core v0 reputation unless abuse, fraud, or role-specific funding manipulation is later defined. | AuditEvents for commitment, reservation, withdrawal where allowed, reassignment, return, delegated action, and funding state change. |
+| Follower | Tracks a project, idea, resolution, complaint, or actor surface for updates. | Verified identity and notification preferences where needed. | Following does not create support, funding, complaint, reputation, evaluation, or formal priority by itself. | Follow record, notification preferences. | May receive notices and improve citizen-facing transparency. No direct formal project effect. | No ordinary formal reputation exposure. | AuditEvents or lightweight interaction records for follow/unfollow where material. |
+| Commenter | Asks questions or comments under identity and visibility rules. | Verified identity; protected identity request where justified; comment target; source or claim where material. | Comment is not a complaint, evaluation, evidence, or reputation input by itself. Must not create anonymous formal power. Abuse may be moderated under visible rules. | Comment, clarification request, protected identity request where applicable. | May trigger clarification, deliberation, correction, or later complaint/evidence path only through configured process. | Commenter reputation generally not formal unless abuse, verified discovery, or contribution quality is later reviewed under defined rules. | AuditEvents for material comments, protected identity review, moderation, clarification request, or conversion into another formal path. |
+| Complainant | Files a formal complaint and assumes responsibility for the allegation under complaint rules. | Verified identity, complaint issue, affected scope, complaint evidence, legal/responsibility acknowledgment, protected identity request where justified. | Complaint filing does not automatically suspend material execution or create negative reputation. Complaint must pass support, quote, funding, admissibility, and review rules to proceed where configured. | Complaint, Complaint Evidence, support request, complaint funding reservation, complainant response, additional evidence. | May lead to admissibility review, scoped systemic pause, referral, correction, mitigation, final resolution, responsibility event, or reputation input after review. | Complainant-role reputation may reflect good-faith signal quality or abusive/bad-faith findings where reviewed. | AuditEvents for filing, evidence attachment, quote, support threshold, review funding, admissibility, referral, final resolution, and bad-faith review where applicable. |
+| Beneficiary | Receives intended value or service and may provide experience, confirmation, contradiction, or protected feedback. | Beneficiary status or representation basis where needed, privacy treatment, confirmation source, protected identity request where justified. | Beneficiary feedback is not automatically formal evaluation or fulfillment proof unless accepted through the evidential contract or review path. Privacy may restrict public visibility. | Beneficiary confirmation, feedback, contextualized evidence, protected identity request, experience signal. | May support fulfillment evidence, contradiction, complaint, evaluation, closure, or assisted deliberation after review. | Beneficiaries should not receive punitive reputation effects for ordinary feedback. False formal submissions may be handled only under careful protected-subject rules. | AuditEvents for protected confirmation, evidence context, privacy review, use in EvaluationRecord, closure, or complaint path. |
+| Affected Party | Reports externalities, antivalues, harm, omissions, or common-good impacts. | Affected-party basis, affected scope, location/time where relevant, privacy/protection request, evidence or observation. | Affected-party report is not automatically a complaint or proof of harm. It must enter the relevant evidence, objection, complaint, or review path. | Contextualized Evidence Item, Justified Objection Signal, Complaint Evidence where complaint filed, affected-party observation. | May support antivalue review, mitigation, correction, complaint, systemic pause, or reputation/responsibility effect after review. | Affected parties should be protected from retaliation; formal abuse handling should be cautious and reviewed. | AuditEvents for report submission, evidence context, privacy review, review use, mitigation, complaint conversion, or correction. |
+
+## Allocation and Delegation Roles
+
+| Role | Primary authority | Required disclosures or inputs | Decision limits and prohibited conflicts | Records, evidence, or outputs | Formal effects that may follow | Reputation or responsibility exposure | Audit references |
+|---|---|---|---|---|---|---|---|
+| Delegator | Grants scoped participation or allocation authority to a delegate. | Verified identity, delegation scope, base/fallback allocation rule, duration where configured, revocation path. | Delegation does not erase citizen identity or transfer legal personhood. Past valid delegated actions are not retroactively invalidated by revocation. | Delegation request, acceptance where required, scope, revocation, fallback/base rule. | Delegate may act within scope until revocation, expiry, resignation, cap, or eligibility loss. | Delegator reputation generally not formal for ordinary delegation choices. | AuditEvents for request, acceptance, active authority, delegated action, revocation, expiry, fallback activation. |
+| Delegate | Acts within delegated participation or allocation scope. | Acceptance, eligibility, conflicts where relevant, delegated scope, represented weight, concentration disclosure, reporting basis. | Cannot exceed scope, hide represented weight, override citizen revocation, or use delegation to become hidden platform authority. Hard caps are configurable, not universal. | Delegation acceptance, delegated action records, system-generated report, abstention/conflict disclosures where material. | May allocate funds, support, object, or take other configured actions inside delegation scope. | Delegate-role reputation may reflect reporting, conflict handling, abuse, concentration concerns, or successful accountable representation where reviewed. | AuditEvents for acceptance, delegated action, represented weight, report generation, cap handling, revocation, resignation, or eligibility loss. |
+| Automatic Profile Owner | Configures automatic allocation preferences for low-friction participation. | Verified identity, profile selection, active rules, priority relative to delegation, fallback behavior. | Automatic profile cannot override active delegation, project eligibility, phase gates, citizen confirmation rules, or protocol limits. | Automatic Allocation Profile, preference configuration, execution trace. | May create funding commitments only when active rule permits and no higher-priority delegation or blocker applies. | No ordinary formal reputation exposure. | AuditEvents for profile creation, activation, skipped action, funding action, deactivation, and fallback use. |
+
+## External, Infrastructure, and Governance Actors
+
+| Actor or context | Primary authority | Required disclosures or inputs | Decision limits and prohibited conflicts | Records, evidence, or outputs | Formal effects that may follow | Reputation or responsibility exposure | Audit references |
+|---|---|---|---|---|---|---|---|
+| Public Authority / External Authority | Defines or applies legal, regulatory, budgetary, eligibility, tutored, coercive, fiscal, or oversight authority in controlled scopes. | Legal mandate, responsible authority/process, rule/version, review window, timeout policy where applicable, public reason for material decisions. | Cannot be an internal proposer, executor, fiscalizer, evidence producer, delegate, ordinary moderator, or competitor in the same controlled scope. Authority action remains external unless country law says otherwise. | Governance Resolution, Review Timeout Resolution where system-created after silence, external order reference, registry/permit/custody input, legal decision reference. | May approve/reject in tutored review, interpret scope, refer, enforce law, or create external legal effects. Platform records visible effects and boundaries. | Public-authority accountability is mostly external/legal/political in Core v0, but platform observability records delays, decisions, reasons, and timeouts. | AuditEvents for tutored decisions, timeouts, rule references, external orders, authority responses, and operating-mode effects. |
+| State-Owned Operator / Public Enterprise where eligible | Acts as an ordinary eligible organization only when C007 boundary permits it. | Ownership/control relationships, authority relationships, privileges, subsidies, concessions, permits, equal-accountability acceptance. | Excluded by default inside tutored scope controlled by the same authority. Cannot receive privileged approval, fiscalization, disbursement, or complaint handling. | Same records as the internal role it holds: proposal, execution, evidence, fiscalization, etc., plus public-ownership disclosure. | Same formal effects as ordinary organizations in the same role, under equal rules and independent fiscalization. | Role-specific reputation applies under equal rules, with control/privilege context visible. | AuditEvents for eligibility review, control disclosure, role assignment, project actions, and conflict review. |
+| Custodian / Treasury / Financial Custody Provider | Executes protocol-valid financial orders and reports closed technical/legal execution blocks. | Valid order, account or destination validation, custody status, legal/technical block reason where applicable. | Does not decide civic value, project priority, fulfillment, or reputation. Should not release funds without valid order and required assurance conditions. | Financial Order execution, release, retention, return, reassignment, recovery, guarantee execution, custody block record. | Moves money according to valid order or blocks execution for defined technical/legal reasons. | Accountability depends on custody implementation; platform records execution or block trace. | AuditEvents for order receipt, execution, block, release, return, recovery, guarantee execution, and financial closure. |
+| Allocation Amount Provider | Provides authorized assignable public-purpose amounts or eligibility status without exposing raw sensitive data. | Formula version, eligibility status, authorized amount, explanation code, audit reference, privacy constraints. | Does not decide project funding targets or citizen preferences. Should not expose raw sensitive tax, vulnerability, registry, or territorial-priority data to the platform. | Allocation amount batch, eligibility update, formula/version reference. | Updates civic wallet/allocation capacity. | External accountability depends on country implementation; platform records amount source and version. | AuditEvents for amount import, formula/version reference, eligibility update, correction, and privacy treatment. |
+| System / Protocol Automation | Coordinates rules, state transitions, audit records, projections, deadlines, timeouts, and generated summaries. | Active protocol version, rule source, object state, actor context, source record, timeout policy, privacy rules. | Is coordinator, validator, recorder, and enforcer of configured rules. It is not a sovereign value-decider, judge, fiscalizer, or truth-decider. | AuditEvent, generated status, timeout record, notification, observability metric, citizen-facing read model. | May apply configured platform effects such as state transition, publication gate, timeout consequence, funding reservation, or projection update. | System behavior is audited through protocol/version and implementation-change records, not reputation. | AuditEvents for every material automated transition, rule application, timeout, projection, AI assistance reference, and implementation version where material. |
+
+## Macul Multi-Court Responsibility Example
+
+```text
+Project:
+Design and Construction of Multi-Courts in Macul.
+
+Proposer:
+Submits the project and declares related parties.
+
+Modeler / Designer:
+Defines court dimensions, bathrooms/accessibility where required, public access rules, phases, budget, metrics, and evidence needs.
+
+Executor:
+Accepts construction or service delivery responsibility, but cannot release construction funds or validate its own fulfillment.
+
+Evidence Producer:
+May produce geotagged photos, measurements, attendance/access records, or affected-party observations, but does not decide fulfillment.
+
+Fiscalizer:
+Reviews design-phase gate, evidence sufficiency, construction milestones, and antivalue ceilings such as noise or safety conditions.
+
+Funder:
+May fund both design and execution lanes, but execution funds remain reserved until the design phase gate and control conditions pass.
+
+Public Authority in tutored mode:
+May reject the project as duplicate or out of scope, but must issue a Governance Resolution or be subject to Review Timeout Resolution rules.
+
+AuditEvent:
+Records each role action, rule/version, object transition, evidence use, disbursement effect, and correction.
+```
+
+## Boundary With Future Access Control
+
+This responsibility matrix is not yet:
+
+- a database permission table;
+- an API authorization contract;
+- a legal liability code;
+- a final reputation formula;
+- a complete country-specific administrative procedure.
+
+It is the Core v0 responsibility baseline that future implementation should preserve.
+
+## Open Risks
+
+1. Role accumulation may still create practical conflicts even when formally disclosed.
+2. Evidence quality validation remains unresolved and should be attacked in Phase 3.
+3. Country implementations may grant legal powers or impose legal duties that Core v0 does not specify.
+4. Too much matrix detail may become bureaucratic if imposed uniformly on low-risk projects.
+5. Public authority accountability is visible in the platform but still depends partly on external legal and political systems.
+
+## Design rule
+
+> Every role must have bounded authority, visible obligations, traceable outputs, explicit decision limits, and role-specific accountability.

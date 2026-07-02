@@ -6,7 +6,7 @@ This document starts Phase 2 formal system modeling for the Distributed Governan
 
 It converts the consolidated narrative map into a formal inventory of actors, roles, objects, policies, records, stateful entities, read models, and audit objects.
 
-It is not yet a database schema, API contract, class model, or implementation specification. It is the baseline that should guide the next entity relationship diagram, state diagrams, responsibility matrix, and future schema draft.
+It is not yet a database schema, API contract, class model, or implementation specification. It is the baseline that guides the entity relationship diagram, state diagrams, responsibility matrix, and future schema draft.
 
 ## Status
 
@@ -594,8 +594,7 @@ The following should not be modeled as primary entities unless a later design st
 This inventory should be used to produce:
 
 1. additional Phase 2 entity and state diagrams where gaps appear;
-2. a responsibility matrix by role;
-3. a future implementable object schema draft.
+2. a future implementable object schema draft.
 
 ## Design rule
 

@@ -2711,6 +2711,8 @@ Requires reformulation → Closed
 
 ## 5. Responsibility matrix summary
 
+The dedicated responsibility matrix baseline lives at `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md`.
+
 ```text
 Project design:
   proposer, modeler, executor if accepted, design-phase reviewer where required
@@ -2779,7 +2781,7 @@ This map should be used to create:
 - fiscalization and control subproject diagram;
 - complaint evidence and complaint resolution diagram;
 - delegation diagram;
-- role responsibility matrix;
+- responsibility matrix baseline;
 - implementable object schema draft.
 
 ## Design rule
