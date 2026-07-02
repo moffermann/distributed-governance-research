@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|Implementable Object Schema Draft v0]]
 - [[../docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|Responsibility Matrix by Role v0]]
 - [[../docs/diagrams/v0-audit-event-schema|Audit Event Schema v0]]
 - [[../docs/diagrams/v0-governance-resolution-sequence|Governance Resolution Sequence v0]]
@@ -182,6 +183,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 - [[../docs/64_FORMAL_ENTITY_INVENTORY_V0|Formal Entity Inventory v0]]
 - [[../docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|Responsibility Matrix by Role v0]]
+- [[../docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|Implementable Object Schema Draft v0]]
 - [[../docs/diagrams/v0-formal-entity-relationship|Formal Entity Relationship Baseline v0]]
 - [[../docs/diagrams/v0-project-object-state-with-phase-substates|Project Object State with Phase Substates v0]]
 - [[../docs/diagrams/v0-contextualized-evidence-item-state|Contextualized Evidence Item State v0]]

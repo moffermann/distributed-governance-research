@@ -2770,7 +2770,7 @@ Audit trail:
 
 ## 7. Next use
 
-This map should be used to create:
+This map has been used to create the current Phase 2 formalization baseline:
 
 - formal entity inventory;
 - entity relationship diagram;
@@ -2783,6 +2783,8 @@ This map should be used to create:
 - delegation diagram;
 - responsibility matrix baseline;
 - implementable object schema draft.
+
+The next use is Phase 3 stress testing: attack the architecture for failure modes, capture vectors, weak incentives, and unresolved objections.
 
 ## Design rule
 

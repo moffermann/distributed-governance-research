@@ -31,6 +31,7 @@ The Operating Mode transition state diagram has been created: Closed, Tutored, S
 The Governance Resolution sequence diagram has been created: authority decisions, required public fields, timeout records, citizen audit actions, configured clarification/correction/appeal paths, audit events, and aggregate observability effects are separated.
 The Audit Event schema diagram has been created: actor/process context, role or authority basis, object reference, transition, source record, rule/version, effect, visibility/privacy treatment, append-only correction pattern, Layer 5 access, and observability projections are separated.
 The Responsibility Matrix by Role has been created: role authority, disclosures, prohibited conflicts, evidence or record outputs, formal effects, reputation exposure, and audit references are separated.
+The Implementable Object Schema Draft has been created: common field primitives, base object fields, actor/role references, object refs, rule/version refs, source records, visibility/privacy fields, effect refs, AuditEvent refs, and minimum object-group field sets are separated.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -236,7 +237,9 @@ The seventy-ninth residual cleanup created `docs/diagrams/v0-audit-event-schema.
 
 The eightieth residual cleanup created `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md`. The matrix separates actors from roles and defines role authority, required disclosures, prohibited conflicts, records/evidence/outputs, formal effects, reputation or responsibility exposure, and AuditEvent references for project delivery roles, civic participation roles, delegation/allocation roles, public authorities, state-owned operators, custodians, allocation amount providers, and system/protocol automation.
 
-Next review candidate: draft the implementable object schema, including common field primitives, object identifiers, state fields, actor/role references, source records, rule/version references, visibility/privacy fields, AuditEvent references, and minimum field sets by object group.
+The eighty-first residual cleanup created `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md`. The draft separates logical schema from storage/API design, defines shared primitives such as ActorRef, RoleContextRef, ObjectRef, RuleContextRef, SourceRecordRef, AuditRef, VisibilityPrivacy, EffectRef, and VersionRef, and defines minimum implementable fields for actor, role, project, scope, value, evidence, funding, custody, fiscalization, complaint, signal, delegation, reputation, governance, rule-change, and audit objects.
+
+Next review candidate: begin Phase 3 - Attack the Architecture, starting with a failure-mode catalog and stress-test scenarios for legitimacy, evidence quality, fiscalizer capture, metric manipulation, delegation concentration, related-party projects, volatile funding, and collusion among project roles.
 
 Approximate current maturity:
 
@@ -366,7 +369,8 @@ Deliverables:
 - meta-governance flow;
 - transition flow;
 - observability panel specification;
-- responsibility matrix by role.
+- responsibility matrix by role;
+- implementable object schema draft.
 
 Candidate entity groups:
 

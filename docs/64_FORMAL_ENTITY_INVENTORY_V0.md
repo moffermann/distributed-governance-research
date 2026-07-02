@@ -591,10 +591,13 @@ The following should not be modeled as primary entities unless a later design st
 
 ## 16. Immediate next use
 
-This inventory should be used to produce:
+This inventory has now produced:
 
-1. additional Phase 2 entity and state diagrams where gaps appear;
-2. a future implementable object schema draft.
+1. the Phase 2 entity relationship and state/sequence/schema diagram set;
+2. the responsibility matrix by role;
+3. the implementable object schema draft.
+
+The next use is Phase 3 architecture attack and stress testing, not another automatic expansion of Core v0.
 
 ## Design rule
 
