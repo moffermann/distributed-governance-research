@@ -54,10 +54,11 @@ For organizations:
 2. System explains role and responsibility
 3. Eligibility and relationship check
 4. Offer form
-5. Offer record is shown in the project
-6. Selection or acceptance process
-7. Confirmation and role activation
-8. Reporting and reputation consequences
+5. Project-specific eligibility and reputation profile
+6. Offer record is shown in the project
+7. Selection or acceptance process
+8. Confirmation and role activation
+9. Reporting and reputation consequences
 ```
 
 ## 1. Role explanation
@@ -84,9 +85,12 @@ Possible checks:
 - actor type: citizen or organization;
 - minimum reputation or credentials if required;
 - declared relationship with executor;
+- repeat relationships with proposer, modeler/designer, executor, evidence producer, supplier, territory, or holding group;
 - availability for required dates;
+- current workload;
 - territory or travel feasibility;
 - required expertise for project type;
+- comparable-project fiscalization history where required;
 - current ability to accept this role.
 
 The system should ask direct questions:
@@ -111,6 +115,9 @@ The offer should include:
 - travel or logistics needs;
 - qualifications or experience;
 - relationships declared;
+- comparable-project experience where required;
+- current workload;
+- known repeat relationships or dependency concentration;
 - evidence/report deliverables;
 - acceptance of responsibility and reputation effects.
 
@@ -141,7 +148,46 @@ Presupuesto requerido:
 $800.000
 ```
 
-## 4. Visibility
+## 4. Project-specific eligibility and reputation profile
+
+Before selection, the offer should produce or update a contextual fiscalizer profile for this project.
+
+This profile is not a generic CV, universal reputation score, or automatic selection engine. It explains why the actor is or is not eligible for this project under the active policy.
+
+It should show:
+
+- eligibility criteria for this project;
+- whether required expertise, credentials, logistics, availability, workload, methodology, budget, and independence conditions are satisfied;
+- relevant reviewed performance in comparable project types;
+- report completeness, timeliness, later-confirmed findings, corrected or overturned findings, and insufficient-report history;
+- repeat relationships or dependency concentration;
+- result: eligible, eligible with warning, eligible with safeguards, requires secondary audit, or not eligible.
+
+Example:
+
+```text
+Fiscalizer eligibility profile
+
+Project:
+Design and Construction of Multi-Courts in Macul
+
+Eligibility:
+Sports-infrastructure review: met
+Accessibility review: partial, requires reinforcement
+Availability: met
+Methodology: field measurement + document review
+
+Contextual reputation:
+12 comparable reviews
+9 complete reports
+2 corrected reports
+1 report insufficient for fund release
+
+Relationship warning:
+6 prior reviews involving companies from the executor's holding group
+```
+
+## 5. Visibility
 
 The offer should be visible enough for community observation.
 
@@ -154,11 +200,13 @@ Visible fields should include:
 - relationships declared;
 - qualifications summary;
 - methodology summary;
+- eligibility result and warning status;
+- comparable-performance summary where relevant;
 - status.
 
 Private data may be redacted according to privacy rules.
 
-## 5. Selection or acceptance
+## 6. Selection or acceptance
 
 Selection depends on project rules.
 
@@ -171,6 +219,7 @@ Medium, large, remote, or technically complex projects may require:
 - eligibility checks;
 - relationship review;
 - reputation weighting;
+- project-specific eligibility and reputation profile review;
 - independent selection rule;
 - random or semi-random assignment among eligible offers;
 - approval by the protocol-defined mechanism.
@@ -181,7 +230,7 @@ Rule:
 
 After the primary fiscalizer is accepted, Core v0 may allow at most one secondary fiscalizer or fiscalization auditor if supplemental control funding and an admissible offer exist. This secondary role reviews, contrasts, or audits the primary fiscalization. It does not replace the primary fiscalizer and does not block execution automatically.
 
-## 6. Confirmation
+## 7. Confirmation
 
 When accepted:
 
@@ -203,7 +252,7 @@ Responsabilidades:
 
 The project is automatically added to Following.
 
-## 7. Rejection or pending status
+## 8. Rejection or pending status
 
 If the offer is rejected or pending, the actor should see why.
 
@@ -218,8 +267,9 @@ Examples:
 - another eligible fiscalizer was selected;
 - budget does not fit the control budget;
 - required expertise not met.
+- contextual reputation or repeat-relationship warning requires safeguards.
 
-## 8. Responsibility and reputation
+## 9. Responsibility and reputation
 
 Accepted fiscalizers gain role-based responsibility.
 
@@ -233,6 +283,9 @@ Reputation may be affected by:
 - late reports;
 - undisclosed relationship;
 - community review of fiscalization quality.
+- later-confirmed findings;
+- corrected, contradicted, or overturned reports;
+- repeated insufficient reports in comparable project types.
 
 ## What this flow should not do
 
@@ -243,6 +296,8 @@ This flow should not:
 - hide declared relationships;
 - hide fiscalization cost;
 - hide methodology and deliverables;
+- hide project-specific eligibility criteria;
+- hide contextual relationship or dependency warnings;
 - activate responsibility without explicit acceptance;
 - rely only on first-come-first-served selection for complex projects;
 - create unlimited secondary fiscalizers or fiscalization auditors.

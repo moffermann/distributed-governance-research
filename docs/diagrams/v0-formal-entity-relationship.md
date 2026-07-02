@@ -8,7 +8,7 @@ This diagram is a conceptual ERD baseline, not a database schema. It focuses on 
 
 Source baseline: `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
 
-Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002.
+Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002, A003.
 
 ```mermaid
 erDiagram
@@ -192,9 +192,16 @@ erDiagram
         string status
     }
 
+    FISCALIZER_ELIGIBILITY_REPUTATION_PROFILE {
+        string profile_id
+        string eligibility_status
+        string warning_status
+    }
+
     FISCALIZATION_REPORT {
         string report_id
         string report_status
+        string sufficiency_status
     }
 
     BUDGET {
@@ -441,10 +448,14 @@ erDiagram
     CONTROL_SUBPROJECT ||--o{ FISCALIZER_OFFER : receives_offer
     FISCALIZATION_REQUIREMENT ||--o{ FISCALIZER_OFFER : invites_offer
     FISCALIZER_OFFER ||--o| FISCALIZATION_ASSIGNMENT : may_be_accepted_as
+    FISCALIZER_OFFER ||--o| FISCALIZER_ELIGIBILITY_REPUTATION_PROFILE : informs
     CONTROL_SUBPROJECT ||--o{ FISCALIZATION_ASSIGNMENT : assigns
     ROLE_ASSIGNMENT ||--o{ FISCALIZATION_ASSIGNMENT : performs
+    ROLE_ASSIGNMENT ||--o{ FISCALIZER_ELIGIBILITY_REPUTATION_PROFILE : reviewed_for_assignment
+    FISCALIZER_ELIGIBILITY_REPUTATION_PROFILE ||--o| FISCALIZATION_ASSIGNMENT : supports_selection
     FISCALIZATION_ASSIGNMENT ||--o{ FISCALIZATION_REPORT : produces
     FISCALIZATION_REPORT ||--o{ EVALUATION_RECORD : supports
+    FISCALIZATION_REPORT ||--o{ REPUTATION_INPUT : may_create_for_fiscalizer
     CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ FISCALIZATION_REPORT : considered_by
 
     PROJECT ||--|| BUDGET : has
@@ -510,6 +521,7 @@ erDiagram
     REFORMULATION_PROPOSAL ||--o{ AUDIT_EVENT : records
     CONTEXTUALIZED_EVIDENCE_ITEM ||--o{ AUDIT_EVENT : records
     EVALUATION_RECORD ||--o{ AUDIT_EVENT : records
+    FISCALIZER_ELIGIBILITY_REPUTATION_PROFILE ||--o{ AUDIT_EVENT : records
     FISCALIZATION_ASSIGNMENT ||--o{ AUDIT_EVENT : records
     FISCALIZATION_REPORT ||--o{ AUDIT_EVENT : records
     COMPLAINT ||--o{ AUDIT_EVENT : records
@@ -531,6 +543,7 @@ erDiagram
 - `RequiredEvidencePackage` and `RequiredEvidenceNeed` represent mandatory pre-effect evidence, usually with Readiness Evidence context. They are separate from fulfillment evidence needs.
 - `ProjectLegitimacyProfile` is a threshold-driven profile, not a vote, veto, popularity score, or legal-authority object. It exposes affected-party mapping, consultation Readiness Evidence, unresolved legitimacy objections, and review routes where funding alone would otherwise be mistaken for approval.
 - `MaterialInformationClaim` also covers material approval labels, conditions, omissions, source categories, and unresolved warnings. Existing external approval systems may remain external, but their material outputs should be source-linked where they affect citizen decisions.
+- `FiscalizerEligibilityReputationProfile` is contextual to a fiscalization assignment. It explains eligibility criteria, comparable-project reputation, workload, repeat relationships, dependency concentration, warnings, and safeguards; it is not a generic CV, universal score, or automatic selector.
 - `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. This prevents value promises from remaining purely rhetorical.
 - `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
 - `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.

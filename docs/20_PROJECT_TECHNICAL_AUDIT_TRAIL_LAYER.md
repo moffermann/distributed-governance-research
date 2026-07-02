@@ -121,6 +121,8 @@ material AI assistance reference
 contextualized evidence item and evidence context
 material information claim
 approval source, criterion source, approval scope, or conditional approval reference
+fiscalizer eligibility and reputation profile reference
+fiscalization report sufficiency reference
 governance resolution or review timeout resolution
 financial order, disbursement, retention, guarantee, or custody record
 responsibility event, reputation input, or reputation update
@@ -603,6 +605,11 @@ Include complete fiscalization records:
 - fiscalization requirement and risk tier;
 - fiscalizer offers submitted;
 - eligibility, conflict, and admissibility results;
+- fiscalizer eligibility and reputation profile for the specific assignment;
+- project-specific eligibility criteria and source rule;
+- comparable-project performance basis;
+- current workload or availability status where material;
+- repeat-relationship and dependency-concentration indicators;
 - selection rule used;
 - selection reason and non-selection reasons where material;
 - responsible fiscalizer;
@@ -610,7 +617,10 @@ Include complete fiscalization records:
 - evidence producers;
 - methodology;
 - scope;
+- evidence considered;
+- evidence rejected or excluded;
 - evidential contract reviewed;
+- report sufficiency status;
 - reports;
 - observations;
 - objections;

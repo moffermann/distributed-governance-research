@@ -148,7 +148,7 @@ Instead:
 ```text
 1. The execution budget receives funding.
 2. Fiscalizer and evidence-producer offers arrive in parallel.
-3. The system filters admissible offers.
+3. The system filters admissible offers and generates project-specific fiscalizer eligibility/reputation profiles.
 4. When execution funding closes, new contributions fund the control budget.
 5. After each control contribution, the system checks whether an admissible control package can be selected and funded.
 6. When execution and control are both closed, the project becomes execution-ready.
@@ -208,6 +208,8 @@ technical review, if required
 ```
 
 After each new control contribution, the system checks whether the available control budget can fund an admissible package.
+
+For responsible fiscalization, admissibility includes the fiscalizer's project-specific eligibility and reputation profile: required competence, method, availability, workload, budget fit, independence, contextual performance, repeat relationships, dependency concentration, and safeguards where material.
 
 If yes, the system selects the package according to transparent rules.
 
@@ -292,6 +294,10 @@ travel/logistics estimate
 availability
 qualification summary
 relationship/conflict declaration
+project-specific eligibility basis
+current workload
+comparable fiscalization experience where required
+repeat relationships and dependency concentration where material
 acceptance of role responsibility if selected
 ```
 

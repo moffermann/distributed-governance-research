@@ -319,6 +319,8 @@ Fiscalization is proportional to project size, complexity, risk, territory, and 
 
 Fiscalization, fulfillment evidence missions, technical review, and admissibility review may be modeled as Control Subprojects with budget, methodology, deliverables, fulfillment evidence, comments, auditability, and reputation. Control selection must be protocolized, conflict-checked, risk-adjusted, and auditable.
 
+Responsible fiscalizer assignment should expose a project-specific fiscalizer eligibility and reputation profile. The profile is a contextual read model, not a generic CV, universal score, or automatic selection authority. It should show the applicable eligibility criteria, whether the fiscalizer satisfies this project's expertise, credential, logistics, availability, workload, methodology, budget, and independence requirements, relevant comparable-project performance, and repeat-relationship or capture warnings.
+
 Core v0 also allows limited supplemental control funding after minimum control closure: at most one secondary fiscalizer or fiscalization auditor, plus distinct additional fulfillment evidence needs. Supplemental control never funds execution, expands project scope, creates unlimited fiscalizers, or blocks execution automatically.
 
 ### 9. Funding model
@@ -583,7 +585,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, Project Closure Accountability Records, Assisted Deliberation Context source traces, material information claims, verified discoveries, fiscalization, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, Project Closure Accountability Records, Assisted Deliberation Context source traces, material information claims, verified discoveries, fiscalization, fiscalizer eligibility and contextual reputation profiles, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 

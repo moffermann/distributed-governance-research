@@ -64,6 +64,7 @@ Required conditions may include:
 - prerequisite phase gate accepted where applicable;
 - responsible executor accepted;
 - fiscalizer confirmed;
+- fiscalizer eligibility and reputation profile accepted for the assigned scope where responsible fiscalization is required;
 - minimum admissible control package accepted where required;
 - Project Evidential Contract configured;
 - milestones defined;
@@ -272,7 +273,8 @@ The review may consider:
 - comments;
 - complaints;
 - prior warnings;
-- protocol rules.
+- protocol rules;
+- fiscalizer eligibility/profile warnings where they affect report weight or safeguards;
 - secondary fiscalizer or fiscalization-audit findings where accepted.
 
 Possible review results:
@@ -664,6 +666,8 @@ The fiscalizer should see:
 - amount requested;
 - approval criteria;
 - protocol rule.
+- fiscalizer eligibility/profile status;
+- report sufficiency requirements.
 
 Possible decision actions:
 
@@ -692,6 +696,8 @@ Required trace:
 - custodian execution status where applicable;
 - fulfillment evidence considered;
 - fiscalizer decision;
+- fiscalizer eligibility/profile reference where material;
+- fiscalization report sufficiency status;
 - supplemental control reports considered where applicable;
 - blockers checked;
 - complaints considered;

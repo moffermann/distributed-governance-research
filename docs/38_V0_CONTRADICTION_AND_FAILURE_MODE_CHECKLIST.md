@@ -438,6 +438,22 @@ Compact citizen surfaces may use short summaries, AI assistance, project cards, 
 
 ---
 
+## A003 — Fiscalizer capture or fiscalization failure
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`
+
+### Accepted v0 rule
+
+Responsible fiscalization remains distributed in available supply but protocol-selected in assignment. Every responsible fiscalizer assignment should expose a project-specific eligibility and reputation profile or equivalent derived surface. This profile is not a generic CV, universal score, or automatic selector; it shows the eligibility criteria for the specific project, whether the fiscalizer meets those criteria, what contextual performance history is relevant, and what relationship, workload, dependency, or capture warnings apply.
+
+Fiscalization reports must expose sufficiency fields: scope, methodology, evidence considered, evidence rejected, limitations, conflicts, and formal effect claimed. Repeat relationships, dependency concentration, delayed corrections, later-confirmed findings, corrected or overturned findings, and insufficient-report history should be visible and formally relevant.
+
+> The system does not need perfect fiscalizers. It needs fiscalizers whose selection, eligibility, conflicts, methods, limitations, repeated patterns, and failures are public, reviewable, and reputationally consequential.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -589,6 +605,11 @@ Compact citizen surfaces may use short summaries, AI assistance, project cards, 
 - [x] Are supplemental fiscalization and evidence missions capped against unlimited control overfunding?
 - [ ] Are fiscalizer evidence-capture functions distinguished from fiscalizer evaluation functions?
 - [ ] Do fiscalization conclusions identify the evaluated dimension, evidence considered, limitations, and formal effect?
+- [x] Does each responsible fiscalizer assignment expose project-specific eligibility criteria?
+- [x] Does each fiscalizer assignment expose a contextual eligibility and reputation profile rather than a generic score?
+- [x] Are repeat relationships, dependency concentration, workload, and comparable-project history visible where material?
+- [x] Do fiscalization reports identify scope, methodology, evidence considered, evidence rejected, limitations, conflicts, sufficiency, and formal effect claimed?
+- [x] Can quality/capture warnings trigger safeguards, replacement, secondary fiscalization, fiscalization audit, or responsibility review through defined rules?
 - [ ] Does final fiscalization feed the Project Closure Accountability Record rather than remain an isolated report?
 - [ ] Can fiscalizers resign or be replaced?
 - [ ] Are fiscalizer reports public or privacy-filtered?

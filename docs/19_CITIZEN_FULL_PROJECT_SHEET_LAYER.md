@@ -441,6 +441,9 @@ Pending
 This project requires:
 1 responsible fiscalizer
 
+Eligibility profile required:
+Sports-infrastructure review, accessibility review, field visit, report methodology, and independence from executor/designer.
+
 What will be reviewed:
 - activity completion
 - attendance
@@ -458,11 +461,30 @@ Fundación Control Ciudadano
 Declared relationship with executor:
 No declared relationship
 
+Eligibility for this project:
+Eligible with no warning
+
+Contextual reputation:
+8 comparable reports, 7 complete, 1 corrected.
+
 Expected reports:
 3
 
 Delivered reports:
 0
+```
+
+If warnings exist, show them in compact form:
+
+```text
+Fiscalizer profile:
+Eligible with warning.
+
+Warning:
+Repeated relationship with companies from the executor's holding group.
+
+Safeguard:
+Secondary fiscalization audit required before construction-phase release.
 ```
 
 ## 14. Declared risks and antivalues

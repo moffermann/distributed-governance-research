@@ -232,6 +232,15 @@ The responsible fiscalizer may use:
 
 The responsible fiscalizer is reputationally accountable for the quality, independence, timeliness, and reliability of its fiscalization.
 
+Before a responsible assignment is accepted, the system should expose a project-specific fiscalizer eligibility and reputation profile. This is not a generic CV or universal score. It is a contextual read model that explains:
+
+- the eligibility criteria required by this project, phase, threshold policy, or control subproject;
+- whether the fiscalizer satisfies the required expertise, credential, competence, territory/logistics, availability, workload, methodology, budget, and independence conditions;
+- relevant reviewed performance in comparable project types or fiscalization scopes;
+- report completeness, timeliness, later-confirmed findings, corrected or overturned findings, insufficient-report history, and limitation patterns;
+- repeat relationships with the proposer, modeler/designer, executor, evidence producer, supplier, territory, or holding group;
+- whether the result is eligible, eligible with warning, eligible only with safeguards or secondary audit, or not eligible.
+
 The fiscalizer may integrate evidence and review conclusions into a milestone, phase, or closure report, but the fiscalizer does not replace specialized competence where the active policy requires a technical reviewer, auditor, certifier, laboratory, professional reviewer, regulator, court, or competent authority.
 
 Responsible fiscalization is distributed in supply but not arbitrary in assignment. It should be selected through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules rather than by executor preference, ordinary popularity, first funding, or lowest price alone.
@@ -400,7 +409,11 @@ Fiscalizers can submit offers associated with the project, declaring:
 - timeline;
 - fulfillment evidence requirements;
 - declared conflicts of interest;
-- relevant reputation or qualifications.
+- relevant reputation or qualifications;
+- project-specific eligibility basis;
+- current workload and availability;
+- comparable-project experience where required;
+- known repeat relationships or dependency concentration relevant to the assignment.
 
 The offer helps discover the real cost of fiscalizing a project. Offers are lightweight and unpaid by default. Payment belongs to accepted control work after a fiscalizer, evidence producer, or reviewer becomes part of the selected control package or Control Subproject.
 
@@ -411,6 +424,8 @@ This is especially important for remote or extreme-zone projects, where the true
 Not every fiscalization offer should be allowed to become part of the accepted control package.
 
 Fiscalization offers must first satisfy the minimum control requirements defined by protocol for the project's risk, size, location, technical complexity, and possible conflicts.
+
+The offer review should produce or update the fiscalizer eligibility and reputation profile for the specific assignment. The profile should not select the fiscalizer by itself; it should make the selection reasons, warnings, and disqualifications inspectable before assignment.
 
 The winning criterion should not simply be:
 
@@ -551,6 +566,9 @@ Controls include:
 - fiscalizers and evidence producers carry reputational risk;
 - contextualized evidence can be challenged by beneficiaries, funders, citizens, and other organizations;
 - repeated executor-fiscalizer or executor-evidence-producer relationships are visible;
+- fiscalizer eligibility and contextual reputation are visible for the specific assignment;
+- report sufficiency is reviewed through scope, methodology, evidence considered, evidence rejected, limitations, conflicts, and claimed formal effect;
+- fiscalizer dependency concentration and repeat relationships are treated as warnings, safeguards, or disqualification inputs according to the active policy;
 - suspicious patterns are flagged;
 - false or manipulated contextualized evidence can produce strong reputational penalties;
 - medium and large projects may require redundant fulfillment evidence sources;

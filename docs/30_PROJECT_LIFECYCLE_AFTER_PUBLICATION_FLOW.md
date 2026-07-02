@@ -115,6 +115,7 @@ This check should confirm:
 - funding commitments are enough;
 - no admitted blocking complaint or scoped systemic pause is active;
 - fiscalization is configured;
+- fiscalizer eligibility and reputation profile is generated and accepted for the assigned scope where responsible fiscalization is required;
 - Project Evidential Contract and fulfillment evidence obligations are configured;
 - Required Evidence Package is complete where the active policy requires it;
 - required Project Legitimacy Profile conditions are complete or explicitly marked not required;
@@ -308,7 +309,8 @@ The review may consider:
 - comments;
 - complaints;
 - prior warnings;
-- protocol rules.
+- protocol rules;
+- fiscalizer eligibility/profile warnings where they affect report weight or safeguards;
 - secondary fiscalization or fiscalization-audit findings where accepted.
 
 Possible review outcomes:
@@ -566,6 +568,7 @@ This record connects:
 - which evidence was accepted, rejected, contradicted, insufficient, or accepted only as contextual material;
 - which affected-party observations or consultation evidence were considered where relevant;
 - which EvaluationRecords and FiscalizationReports support the closure;
+- which fiscalizer eligibility/profile warnings, report limitations, or secondary-audit findings affected closure;
 - what happened to released, retained, returned, reassigned, recovered, or guarantee-executed funds;
 - which issues remain unresolved;
 - which Responsibility Events, Reputation Inputs, or no-reputation-effect findings resulted.
@@ -599,6 +602,7 @@ Examples:
 - executor reputation: execution performance;
 - modeler reputation: design quality;
 - fiscalizer reputation: review quality and independence;
+- fiscalizer eligibility profile: whether assignment criteria, contextual history, report sufficiency, and repeat-relationship warnings were handled correctly;
 - evidence producer reputation: reliability and usefulness of evidence.
 
 ### Rule

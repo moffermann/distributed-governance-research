@@ -11,6 +11,7 @@ Source baseline:
 - `docs/21_CITIZEN_FUNDING_FLOW.md`
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md`
 - `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`
+- `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`
 - `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`
 - `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
 - `docs/diagrams/v0-project-object-state-with-phase-substates.md`
@@ -97,11 +98,11 @@ stateDiagram-v2
     BlockedByPhaseGate --> PendingPhaseGate: correction or new gate review submitted
 
     MilestoneActive --> FulfillmentEvidenceSubmitted: executor, producer, or control actor submits material
-    FulfillmentEvidenceSubmitted --> FiscalizationReview: fiscalizer or reviewer starts review
+    FulfillmentEvidenceSubmitted --> FiscalizationReview: eligible fiscalizer or reviewer starts review
 
-    FiscalizationReview --> ReviewApproved: approved
+    FiscalizationReview --> ReviewApproved: profile, report, evidence, and effect sufficient
     FiscalizationReview --> ApprovedWithObservations: partial or conditional approval
-    FiscalizationReview --> CorrectionRequired: evidence or deliverable insufficient
+    FiscalizationReview --> CorrectionRequired: evidence, deliverable, report, or profile safeguard insufficient
     FiscalizationReview --> Rejected: milestone fails
     FiscalizationReview --> ExtraordinaryReview: serious contradiction or control finding
 
@@ -239,4 +240,4 @@ Funding and disbursement states change only through explicit records: phase gate
 
 ## Rule
 
-> Funding is commitment, reservation is not release, release requires evidence and fiscalization, guarantees require external materialization, custodian execution is technical/legal rather than civic judgment, and unused or recovered funds follow protocol and citizen rules instead of ordinary withdrawal.
+> Funding is commitment, reservation is not release, release requires evidence, eligible fiscalization, and sufficient report basis, guarantees require external materialization, custodian execution is technical/legal rather than civic judgment, and unused or recovered funds follow protocol and citizen rules instead of ordinary withdrawal.

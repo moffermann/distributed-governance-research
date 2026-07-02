@@ -114,6 +114,7 @@ The diagram set now reflects these accepted C001-C025 corrections:
 - C025: discovery is explainable, user-configurable, non-commercial, and auditable.
 - A001: funding, support, delegation, and discovery visibility do not establish legitimacy; high affected-party projects use a threshold-driven Project Legitimacy Profile with Required Evidence Package needs, Readiness Evidence for affected-party mapping and consultation, asynchronous nearby-project participation, and review routes where applicable.
 - A002: material visibility must be represented where citizen-facing labels, approval status, AI summaries, discovery ordering, urgency, recommendation, or funding progress could hide material conditions. Approval labels should preserve source role or authority, criterion source, scope, date or version, and unresolved conditions where material.
+- A003: fiscalizer selection, assignment, and reports should represent project-specific eligibility, contextual fiscalizer reputation, repeat relationships, dependency concentration, report sufficiency, replacement, secondary fiscalization, and fiscalization-audit triggers where material.
 
 ## Evidence diagram rule
 

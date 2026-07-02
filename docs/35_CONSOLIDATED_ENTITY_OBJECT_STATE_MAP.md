@@ -1734,6 +1734,9 @@ Attributes:
 - report count;
 - control budget;
 - expertise needed;
+- eligibility criteria for fiscalizer assignment;
+- contextual performance criteria where relevant;
+- capture indicator rule;
 - risk basis;
 - status.
 
@@ -1754,6 +1757,7 @@ Attributes:
 - fulfillment evidence requirements;
 - eligibility rule;
 - conflict checks;
+- fiscalizer eligibility and reputation profile reference where applicable;
 - selection rule;
 - assigned actor or actors;
 - status;
@@ -1790,6 +1794,10 @@ Attributes:
 - availability;
 - relationships declared;
 - qualifications;
+- comparable-project experience;
+- current workload;
+- dependency concentration or repeat-relationship disclosure;
+- project-specific eligibility basis;
 - admissibility result;
 - selection reason or non-selection reason;
 - conflict review result;
@@ -1820,10 +1828,12 @@ Attributes:
 - assignment type: primary fiscalizer, secondary fiscalizer, fiscalization auditor;
 - selection rule reference;
 - selection reason;
+- eligibility and reputation profile reference;
 - scope;
 - reports required;
 - relationship declarations;
 - conflict review result;
+- capture warning status;
 - replacement or resignation condition;
 - start date;
 - status.
@@ -1839,6 +1849,51 @@ Resigned
 Removed
 ```
 
+## Fiscalizer Eligibility and Reputation Profile
+
+A contextual read model that explains why a fiscalizer is eligible, eligible with warnings, eligible only with safeguards, or not eligible for a specific project, phase, milestone, complaint review, or control subproject.
+
+It is not a generic CV, universal reputation score, or automatic selection engine. It is derived from project-specific eligibility criteria, reviewed fiscalization history, relationship declarations, report quality records, and source-linked audit records.
+
+Attributes:
+
+- target project, phase, milestone, complaint, or control subproject;
+- fiscalizer actor and role assignment;
+- assignment type considered: primary fiscalizer, secondary fiscalizer, fiscalization auditor, technical reviewer, or control reviewer;
+- eligibility criteria source: Threshold Policy, Fiscalization Requirement, Control Subproject, protocol rule, operating mode, or country implementation rule;
+- required expertise, credentials, competence, territorial/logistics capacity, availability, current workload, methodology fit, budget fit, independence requirement, and risk-tier suitability;
+- eligibility result: eligible, eligible with warning, eligible with safeguards, requires secondary audit, or not eligible;
+- contextual reputation basis: comparable project type, public function, territory, risk tier, technical domain, actor role reviewed, and data sufficiency status;
+- prior comparable assignments;
+- report completeness history;
+- timeliness history;
+- later-confirmed findings;
+- corrected, contradicted, overturned, or insufficient reports;
+- repeat relationships by proposer, modeler/designer, executor, evidence producer, supplier, territory, and holding group;
+- dependency concentration;
+- declared conflicts and detected relationship warnings;
+- safeguards required: observation window, stronger evidence requirement, secondary fiscalizer, fiscalization audit, non-related reviewer, replacement, or rejection;
+- source records: FiscalizationOffers, FiscalizationAssignments, FiscalizationReports, EvaluationRecords, ResponsibilityEvents, ReputationInputs, ReputationSummaries, RelatedPartyConflictReviews, AuditEvents;
+- citizen-facing summary;
+- audit trail.
+
+States:
+
+```text
+Draft
+Generated
+Needs review
+Eligible
+Eligible with warning
+Eligible with safeguards
+Not eligible
+Superseded
+```
+
+Rule:
+
+> A fiscalizer may be excellent in one domain and ineligible for another. Fiscalizer reputation must be contextual to the assignment, comparable project type, risk tier, and required competence rather than reduced to a generic score.
+
 ## Fiscalization Report
 
 A fiscalizer's review output.
@@ -1850,11 +1905,17 @@ Attributes:
 - fiscalizer;
 - related evaluation records;
 - fulfillment evidence considered;
+- evidence rejected or excluded;
 - fulfillment evidence limitations or unresolved contradictions;
+- scope;
+- methodology;
+- conflicts and limitations declared;
 - metric evaluation;
 - conclusion;
 - observations;
 - disbursement recommendation;
+- formal effect claimed;
+- report sufficiency status;
 - closure accountability reference where the report supports final closure;
 - timestamp;
 - status.
@@ -2450,6 +2511,7 @@ Role-specific category examples:
 - executor: completion outcomes, milestone reliability, budget closure, correction responsiveness, severe responsibility events;
 - modeler or designer: accepted design deliverables, rework, phase-gate approval record, material design omissions found after review;
 - fiscalizer: timeliness, review completeness, weak-evidence correction record, findings later confirmed, corrected, contradicted, or overturned;
+- fiscalizer contextual profile: eligibility result, comparable-project history, report sufficiency, repeat relationships, dependency concentration, and safeguard history for a specific assignment;
 - evidence producer: accepted evidence rate, insufficient evidence rate, metadata completeness, corroboration usefulness, material corrections after review.
 
 Relationships:

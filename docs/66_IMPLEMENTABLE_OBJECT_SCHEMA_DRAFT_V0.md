@@ -184,9 +184,10 @@ effect_refs
 | Object | Required core fields | Key refs / effects | Notes |
 |---|---|---|---|
 | `ControlSubproject` | `control_subproject_id`, `target_project_ref`, `scope`, `budget_ref`, `required_by_policy_ref`, `state`, `minimum_package_rule` | Creates fiscalization/evidence/control opportunities. | Minimum package should close before execution readiness where required. |
-| `FiscalizationOffer` | `offer_id`, `actor_role_ref`, `target_control_ref`, `methodology`, `budget_or_quote`, `conflict_declaration`, `eligibility_status` | Can become fiscalization assignment if selected. | Popularity-only selection excluded for responsible control. |
-| `FiscalizationAssignment` | `assignment_id`, `fiscalizer_role_ref`, `scope`, `methodology`, `deadline`, `budget_line_ref`, `state`, `conflict_status` | Produces reports, review findings, corrections, or formal-path triggers. | Protocol-selected or accepted through control subproject. |
-| `FiscalizationReport` | `report_id`, `assignment_ref`, `evidence_refs`, `findings`, `limitations`, `recommended_effects`, `review_status` | May support EvaluationRecords, disbursement, correction, complaint review, closure, or reputation. | Fiscalization itself must be auditable. |
+| `FiscalizationOffer` | `offer_id`, `actor_role_ref`, `target_control_ref`, `methodology`, `budget_or_quote`, `conflict_declaration`, `eligibility_status`, `comparable_experience_summary`, `current_workload`, `repeat_relationship_refs` | Can become fiscalization assignment if selected. | Popularity-only selection excluded for responsible control. |
+| `FiscalizerEligibilityReputationProfile` | `profile_id`, `target_control_ref`, `fiscalizer_role_ref`, `eligibility_criteria_refs`, `competence_match`, `availability_status`, `workload_status`, `methodology_fit`, `budget_fit`, `independence_status`, `contextual_history_refs`, `repeat_relationship_refs`, `dependency_concentration`, `warning_status`, `safeguard_refs`, `citizen_summary`, `audit_refs` | Informs assignment, safeguards, replacement, secondary audit, and reputation review. | Derived read model; not a generic CV, universal score, or automatic selector. |
+| `FiscalizationAssignment` | `assignment_id`, `fiscalizer_role_ref`, `scope`, `methodology`, `deadline`, `budget_line_ref`, `state`, `conflict_status`, `eligibility_profile_ref`, `capture_warning_status` | Produces reports, review findings, corrections, or formal-path triggers. | Protocol-selected or accepted through control subproject. |
+| `FiscalizationReport` | `report_id`, `assignment_ref`, `evidence_refs`, `evidence_rejected_refs`, `scope`, `methodology`, `findings`, `limitations`, `formal_effect_claimed`, `recommended_effects`, `report_sufficiency_status`, `review_status` | May support EvaluationRecords, disbursement, correction, complaint review, closure, responsibility review, or reputation. | Fiscalization itself must be auditable. |
 
 ## Complaint, Pause, and Conflict Schemas
 
@@ -253,6 +254,7 @@ No readiness condition satisfied with fulfillment evidence unless the evidence i
 No disbursement without funding source, budget line, milestone/phase gate, review basis, and financial order path.
 No closure as fulfilled without reviewed fulfillment/control evidence or limitation statement.
 No reputation update without reviewed ReputationInput.
+No responsible fiscalizer assignment without project-specific eligibility criteria, conflict/dependency review, and contextual reputation profile where fiscalization is required.
 No public authority moderation without GovernanceResolution or ReviewTimeoutResolution where tutored review applies.
 No rule change without version, public reason, effective date, transition rule, and audit trace.
 No protected identity without verified actor and protected identity request record.

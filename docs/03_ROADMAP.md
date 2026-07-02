@@ -253,7 +253,9 @@ The eighty-fifth residual cleanup propagated A001 / `docs/67_PROJECT_LEGITIMACY_
 
 The eighty-sixth residual cleanup propagated A002 / `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md` into the core architecture, scope freeze, entity map, formal inventory, responsibility matrix, implementable schema draft, contradiction checklist, citizen home/list/dashboard/full-sheet layers, project creation/publication and lifecycle flows, Layer 5 audit trail, and affected diagrams. The integration clarifies that A002 is not a claim that current systems lack approvers or criteria; rather, existing investment, procurement, municipal, environmental, technical, or sector approvals should become source-linked material claims where they affect citizen funding, legitimacy, execution readiness, disbursement, trust, closure, complaint review, or reputation. Compact citizen surfaces may stay simple, but approval, urgency, recommendation, AI-summary, almost-funded, or execution-ready labels must not hide unresolved material warnings.
 
-Next review candidate: propagate A003 / `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md` into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where fiscalizer quality, capture, replacement, or secondary-audit controls need explicit representation.
+The eighty-seventh residual cleanup propagated A003 / `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md` into the fiscalization model, core architecture, scope freeze, entity map, formal inventory, responsibility matrix, implementable schema draft, contradiction checklist, fiscalizer offer flow, citizen dashboard/full-sheet layers, lifecycle and disbursement flows, H016, Layer 5 audit trail, and affected diagrams. The integration adds a project-specific `Fiscalizer Eligibility and Reputation Profile` as a contextual read model, not a generic CV, universal score, or automatic selector. Responsible fiscalizer assignment now exposes eligibility criteria, comparable-project fiscalizer history, workload, methodology fit, report sufficiency, repeat relationships, dependency concentration, warnings, safeguards, replacement, secondary fiscalization, and fiscalization-audit triggers where material.
+
+Next review candidate: propagate A004 / `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md` into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where metric manipulation, Goodhart effects, value floors, antivalue ceilings, or metric-gaming tests need explicit representation.
 
 Approximate current maturity:
 
@@ -396,7 +398,7 @@ Roles:
   proposer, modeler/designer, executor, fiscalizer, evidence producer, funder, follower, commenter, complainant, beneficiary, affected party, delegator, delegate, evaluator, technical assistant.
 
 Objects:
-  project, project version, project phase, planning scope, primary responsibility anchor, value thesis, value-antivalue profile, value verification package, project evidential contract, fulfillment evidence need, contextualized evidence item, evidence context, material information claim, evaluation record, metric, milestone, budget, funding commitment, disbursement, retention, financial assurance profile, guarantee materialization record, control subproject, fiscalization offer, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, justified objection signal, support signal, civic wallet, allocation profile, delegation, related-party conflict review, responsibility event, reputation signal, reputation input, reputation update, reputation summary, performance history surface, assisted deliberation context, governance resolution, review timeout resolution, administrative rule change, system implementation change, protocol version, operating mode, audit event.
+  project, project version, project phase, planning scope, primary responsibility anchor, value thesis, value-antivalue profile, value verification package, project evidential contract, fulfillment evidence need, contextualized evidence item, evidence context, material information claim, evaluation record, metric, milestone, budget, funding commitment, disbursement, retention, financial assurance profile, guarantee materialization record, control subproject, fiscalization offer, fiscalizer eligibility and reputation profile, fiscalization report, complaint, complaint admissibility/referral record, systemic pause record, comment, justified objection signal, support signal, civic wallet, allocation profile, delegation, related-party conflict review, responsibility event, reputation signal, reputation input, reputation update, reputation summary, performance history surface, assisted deliberation context, governance resolution, review timeout resolution, administrative rule change, system implementation change, protocol version, operating mode, audit event.
 
 States:
   draft, in validation, requires adjustment, ready to publish, open, execution-ready, in execution, correction required, paused, requires reformulation, under review, revoked, closed, expired.
@@ -608,10 +610,10 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Propagate A003 / `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md` into affected core documents.
-2. Update the contradiction/failure-mode checklist with the A003 outcome.
-3. Update formal inventory/schema references where fiscalizer quality and capture indicators must become explicit.
-4. Identify whether A003 requires diagram or state-transition updates.
+1. Propagate A004 / `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md` into affected core documents.
+2. Update the contradiction/failure-mode checklist with the A004 outcome.
+3. Update formal inventory/schema references where metric-gaming tests must become explicit.
+4. Identify whether A004 requires diagram or state-transition updates.
 5. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 

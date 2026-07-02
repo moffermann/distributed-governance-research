@@ -134,7 +134,7 @@ Possible closure conditions include:
 - active Planning Scope alignment confirmed;
 - required funding reached;
 - required prior phase gate accepted where applicable;
-- required fiscalizer or fiscalizers confirmed;
+- required fiscalizer or fiscalizers confirmed with project-specific eligibility/profile review where responsible fiscalization is required;
 - required evidence producer commitments met;
 - beneficiary information declared or confirmed where applicable;
 - Financial Assurance Profile configured;

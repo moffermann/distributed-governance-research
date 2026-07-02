@@ -4,7 +4,7 @@
 
 Fiscalization should not be a single central monopoly.
 
-It can become a distributed ecosystem of specialized, reputable, auditable fiscalizers, evidence producers, technical reviewers, and observers, but responsible fiscalization must be selected through protocolized independence, eligibility, conflict, risk, budget, and auditability rules.
+It can become a distributed ecosystem of specialized, reputable, auditable fiscalizers, evidence producers, technical reviewers, and observers, but responsible fiscalization must be selected through protocolized independence, eligibility, conflict, risk, budget, contextual reputation, and auditability rules.
 
 The minimum chain is:
 
@@ -121,7 +121,9 @@ Possible fiscalizers include:
 - civil society organizations;
 - certified independent inspectors.
 
-Eligibility depends on project risk, domain, territory, required competence, conflicts, reputation, and operating mode.
+Eligibility depends on project risk, domain, territory, required competence, conflicts, contextual reputation, repeat relationships, dependency concentration, workload, methodology fit, and operating mode.
+
+Each responsible fiscalizer assignment should expose a project-specific fiscalizer eligibility and reputation profile. This profile is not a generic CV, universal score, or automatic selector. It explains which eligibility criteria apply to this project or phase, whether the fiscalizer satisfies them, what comparable-project performance history is relevant, and what capture or relationship warnings apply.
 
 ## Selection rule
 
@@ -199,6 +201,9 @@ They should make capture harder, riskier, more visible, and less sufficient:
 - executor does not directly pay fiscalizers or evidence producers;
 - related-party relationships are declared and classified;
 - repeated executor-fiscalizer or executor-evidence-producer patterns are visible;
+- repeat relationships by proposer, modeler/designer, executor, evidence producer, supplier, territory, or holding group are visible where material;
+- fiscalizer dependency concentration and workload are visible where material;
+- report sufficiency is reviewed through scope, methodology, evidence considered, evidence rejected, limitations, conflicts, and formal effect claimed;
 - reports are public or privacy-filtered but auditable;
 - evidence is contradictable;
 - complaints may challenge fiscalization quality;
@@ -250,7 +255,7 @@ Concerns can be submitted as contextualized evidence, comments, or complaints.
 Secondary fiscalization exists only under protocol limits.
 ```
 
-Layer 5 preserves the full selection criteria, offers, conflicts, methodology, contextualized evidence considered, fiscalizer reports, reputation effects, and audit trail.
+Layer 5 preserves the full selection criteria, eligibility profile, contextual reputation basis, offers, conflicts, methodology, contextualized evidence considered, evidence rejected, fiscalizer reports, report sufficiency, reputation effects, and audit trail.
 
 ## Relationship to accepted v0 resolutions
 
@@ -272,7 +277,7 @@ H016 is aligned with:
 - fulfillment/control evidence quality, authenticity, AI-generation risk, and usefulness remain a separate open question;
 - small projects may become overburdened if fiscalization rules are not proportional.
 
-These risks do not defeat distributed fiscalization. They require proportional selection, transparent conflict records, capped supplemental control, reviewability, and role-specific reputation.
+These risks do not defeat distributed fiscalization. They require proportional selection, transparent conflict records, contextual eligibility and reputation profiles, capped supplemental control, reviewability, and role-specific reputation.
 
 ## Principle
 

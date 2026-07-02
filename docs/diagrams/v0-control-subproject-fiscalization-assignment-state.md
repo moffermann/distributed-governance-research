@@ -29,7 +29,7 @@ Source baseline:
 - `docs/diagrams/v0-project-evidential-contract-state.md`
 - `docs/diagrams/v0-funding-commitment-disbursement-state.md`
 
-Related sources: C002, C003, C013, C016, H008, H013, H015, H016, H018, H019, H022, H023.
+Related sources: C002, C003, C013, C016, H008, H013, H015, H016, H018, H019, H022, H023, A003.
 
 ## Control Subproject State Machine
 
@@ -50,8 +50,10 @@ stateDiagram-v2
     NoAdmissibleOffer --> ScopeBudgetDraft: reformulate control scope or budget
     NoAdmissibleOffer --> ControlFailed: deadline or policy failure
 
-    EligibilityConflictReview --> PackagePendingFunding: admissible package exists but funding incomplete
-    EligibilityConflictReview --> PackageSelectable: admissible package is fundable
+    EligibilityConflictReview --> EligibilityProfileGenerated: fiscalizer eligibility and contextual reputation profile created
+    EligibilityProfileGenerated --> PackagePendingFunding: admissible package exists but funding incomplete
+    EligibilityProfileGenerated --> PackageSelectable: admissible package is fundable
+    EligibilityProfileGenerated --> NoAdmissibleOffer: eligibility, profile warning, or safeguard cannot be satisfied
 
     PackagePendingFunding --> ControlFundingOpen: control budget contributions open
     ControlFundingOpen --> PackageSelectable: budget sufficient for admissible package
@@ -70,8 +72,9 @@ stateDiagram-v2
     EvidenceCollection --> ReportDraft: fiscalizer or reviewer drafts report
     ReportDraft --> ReportSubmitted: report delivered
 
-    ReportSubmitted --> ReportAccepted: report complete enough for formal use
-    ReportSubmitted --> CorrectionRequested: missing method, weak evidence, unclear finding, or incomplete scope
+    ReportSubmitted --> ReportSufficiencyReview: scope, method, evidence considered, evidence rejected, limits, conflict, formal effect
+    ReportSufficiencyReview --> ReportAccepted: report complete enough for formal use
+    ReportSufficiencyReview --> CorrectionRequested: missing method, weak evidence, unclear finding, or incomplete scope
     CorrectionRequested --> EvidenceCollection: correction or additional evidence requested
 
     ReportAccepted --> ControlCompleted: control deliverable accepted
@@ -102,7 +105,9 @@ stateDiagram-v2
 
     OfferSubmitted --> EligibilityCheck
     EligibilityCheck --> RejectedEligibility: actor type, competence, reputation, capacity, or form requirement fails
-    EligibilityCheck --> ConflictReview: eligibility passes
+    EligibilityCheck --> EligibilityProfileReview: project-specific criteria and contextual history evaluated
+    EligibilityProfileReview --> RejectedEligibility: profile does not meet assignment criteria
+    EligibilityProfileReview --> ConflictReview: eligibility passes or safeguards possible
 
     ConflictReview --> RejectedConflict: severe conflict or hidden relationship risk
     ConflictReview --> FlaggedConflict: declared or detected conflict needs visible treatment
@@ -166,6 +171,7 @@ flowchart TD
     CR[Control Requirement]
     CS[Control Subproject]
     FO[Fiscalizer Offer]
+    FERP[Fiscalizer Eligibility and Reputation Profile]
     EO[Evidence Producer Offer]
     TR[Technical Reviewer or auditor offer]
     ECR[Eligibility and conflict review]
@@ -192,7 +198,8 @@ flowchart TD
     FO --> ECR
     EO --> ECR
     TR --> ECR
-    ECR --> CPS
+    ECR --> FERP
+    FERP --> CPS
     CPS --> FA
     CPS --> EMA
     FA --> FR
@@ -209,6 +216,7 @@ flowchart TD
     SPR --> DIS
     CS --> AUD
     CPS --> AUD
+    FERP --> AUD
     FA --> AUD
     FR --> AUD
     ER --> AUD
@@ -227,6 +235,7 @@ flowchart TD
 - The executor may object to verifiable conflicts and respond to requests, but it cannot privately appoint, directly pay, remove, or control the fiscalizer or evidence producer who validates its own performance.
 - Lightweight offers are unpaid by default. Payment begins only when an actor is selected or assigned to accepted control work under protocol rules.
 - Low-risk projects may use simple admissible selection; medium-risk projects may use simple technical/economic scoring plus semi-random selection; high-risk projects may require stronger eligibility, conflict review, technical evaluation, and public justification.
+- Responsible fiscalizer selection should expose a project-specific eligibility and reputation profile. This profile is contextual to the assignment and should not become a generic CV, universal score, or automatic selector.
 - Core v0 permits at most one primary responsible fiscalizer and, where protocol permits and funding supports it, one secondary fiscalizer or fiscalization auditor.
 - Secondary fiscalization audits the primary fiscalization. It does not replace the primary fiscalizer and does not automatically block execution or disbursement.
 - Serious findings from control work must enter a formal path: complaint, extraordinary review, correction, scoped pause, disbursement block, reformulation, responsibility review, or closure effect.
@@ -244,11 +253,11 @@ Control subproject:
 Review design package against declared dimensions, public access, bathrooms or accessibility commitments where promised or required, budget refinement, and construction evidence needs.
 
 Offer process:
-Fiscalizers submit methodology, cost, availability, credentials, and conflict declarations.
+Fiscalizers submit methodology, cost, availability, credentials, workload, comparable-project experience, repeat relationships, and conflict declarations.
 
 Selection:
 The executor may disclose concerns but cannot choose the fiscalizer.
-Protocol selects an admissible independent fiscalizer.
+Protocol selects an admissible independent fiscalizer after the project-specific eligibility and reputation profile is reviewed.
 
 Execution-ready effect:
 Construction funding may be reserved, but construction execution and release remain blocked until the design gate and the minimum control package are accepted.

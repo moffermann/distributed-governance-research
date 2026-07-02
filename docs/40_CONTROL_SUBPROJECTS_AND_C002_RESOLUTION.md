@@ -87,6 +87,7 @@ Main Project
 → requires control
 → opens fiscalization/control subproject process
 → receives fiscalizer/control offers
+→ generates project-specific fiscalizer eligibility and reputation profiles
 → assigns control subproject by protocol
 → uses control reports for milestones and disbursement
 ```
@@ -143,6 +144,8 @@ The executor should not choose its own fiscalizer.
 But the platform should also not select fiscalizers through opaque discretion.
 
 Therefore, fiscalization offers should be handled through a protocolized selection process similar to a lightweight procurement or tender process.
+
+Selection should expose a project-specific fiscalizer eligibility and reputation profile. This profile shows the criteria for the parent project or control subproject, the fiscalizer's eligibility for that specific scope, contextual performance in comparable projects, declared or detected repeat relationships, dependency concentration, workload/capacity, and safeguards required. It is not a generic reputation score and does not select the fiscalizer by itself.
 
 ## Selection flow
 
@@ -342,6 +345,8 @@ Fiscalization is modeled as a Control Subproject associated with a parent projec
 Final rule:
 
 > Fiscalization may be structured as a project-like control subproject with budget, methodology, deliverables, evidence, comments, auditability, and reputation. However, it is not selected by ordinary popularity or by the executor. It is selected through a protocolized, risk-adjusted process based on eligibility, conflict checks, technical/economic criteria, and auditability.
+
+> The selection record should expose the project-specific fiscalizer eligibility and reputation profile, including comparable-project history, repeat relationships, dependency concentration, report sufficiency history, warnings, and safeguards where material.
 
 Supplemental rule:
 

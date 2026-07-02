@@ -460,6 +460,20 @@ Fiscalization cost is a control cost and should be separated from executor-contr
 
 Fiscalization, fulfillment evidence missions, technical review, and admissibility review may be structured as Control Subprojects associated with the parent project. Control selection must be protocolized, risk-adjusted, conflict-checked, and auditable, not chosen by the executor or ordinary popularity.
 
+Responsible fiscalizer assignment should expose a project-specific fiscalizer eligibility and reputation profile. This profile is a derived surface, not a generic CV, universal score, or automatic selector. It should show the criteria required by the project, phase, threshold policy, or control subproject; whether the fiscalizer satisfies expertise, credential, logistics, availability, workload, methodology, budget, and independence conditions; relevant reviewed performance in comparable project types; and relationship or capture warnings.
+
+Citizen-facing labels may remain simple:
+
+```text
+Eligible for this project
+Eligibility warning
+Limitations declared
+Repeat relationship visible
+Secondary audit triggered
+```
+
+Layer 5 preserves the full eligibility criteria, source records, comparable-performance basis, repeat-relationship indicators, dependency concentration, selection reason, report sufficiency, and subsequent reputation effects.
+
 After the minimum admissible control package is accepted, supplemental control funding may support at most one secondary fiscalizer or fiscalization auditor and distinct additional fulfillment evidence needs. It does not fund execution, expand project scope, create unlimited fiscalization, or block execution automatically.
 
 ## Citizen interface layers
@@ -591,6 +605,7 @@ Layer 5 contains complete traceability:
 - material information claim and verified-discovery trace;
 - approval criteria, source records, conditional approvals, and unresolved material warning history;
 - fiscalization reports;
+- fiscalizer eligibility and contextual reputation profile;
 - complaint trace;
 - relationship declarations;
 - role events;

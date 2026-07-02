@@ -174,6 +174,7 @@ Faltan $4.440.000
 
 🛡 Fiscalización
 0 de 1 fiscalizador requerido
+Perfil requerido: infraestructura deportiva + accesibilidad + visita a terreno
 
 📎 Evidencia
 2 de 4 productores de evidencia comprometidos
@@ -349,12 +350,14 @@ Faltan $4.440.000
 
 🛡 Fiscalización
 0 de 1 fiscalizador requerido
+Perfil requerido: infraestructura deportiva + accesibilidad + visita a terreno
 
 📎 Evidencia
 2 de 4 productores de evidencia comprometidos
 
 Acciones:
 [Financiar]
+[Ver criterios de fiscalización]
 [Ofrecerme como fiscalizador]
 [Aportar evidencia]
 [Seguir]

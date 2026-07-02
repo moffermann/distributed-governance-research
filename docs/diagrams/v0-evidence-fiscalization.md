@@ -4,7 +4,7 @@
 
 Show how contextualized evidence enters review, how executor self-report is separated from corroborated non-executor evidence, and how material information claims can lead to correction, verified discovery, or responsibility review.
 
-Related resolutions: C002, C003, C015, H008, H023.
+Related resolutions: C002, C003, C015, H008, H023, A003.
 
 ```mermaid
 flowchart TD
@@ -30,7 +30,8 @@ flowchart TD
     IC --> RQ[Request more contextualized evidence or control action]
     ES -->|Yes| CV{Corroboration sufficient for critical decision?}
     CV -->|No| RQ[Request more contextualized evidence or control action]
-    CV -->|Yes| F[Fiscalizer reviews]
+    CV -->|Yes| FP[Fiscalizer eligibility/profile valid for this scope]
+    FP --> F[Fiscalizer reviews]
 
     F --> R{Review result}
     R -->|Approved| A[Milestone approved]
@@ -39,6 +40,7 @@ flowchart TD
     R -->|Rejected| RJ[Milestone rejected]
     R -->|Extraordinary review| X[Extraordinary review]
     R -->|Material information issue| IR[Claim correction, verified discovery, or responsibility review]
+    R -->|Weak fiscalizer report| FQ[Report correction, replacement, secondary audit, or responsibility review]
 
     A --> AE[Audit event]
     AO --> AE
@@ -46,9 +48,10 @@ flowchart TD
     RJ --> AE
     X --> AE
     IR --> AE
+    FQ --> AE
     RQ --> AE
 ```
 
 ## Rule
 
-> Evidence producers create verifiable fulfillment/control material. Executor material is self-report unless corroborated. Insufficient evidence may remain contextual, require corroboration, or be rejected for fulfillment effect. Fiscalizers evaluate compliance after contextualized evidence exists. AI may flag anomalies, but verified discovery, responsibility, and fund effects require review.
+> Evidence producers create verifiable fulfillment/control material. Executor material is self-report unless corroborated. Insufficient evidence may remain contextual, require corroboration, or be rejected for fulfillment effect. Fiscalizers evaluate compliance after contextualized evidence exists and after the fiscalizer is eligible for the assigned scope. AI may flag anomalies, but verified discovery, responsibility, fiscalizer-quality consequences, and fund effects require review.
