@@ -255,7 +255,9 @@ The eighty-sixth residual cleanup propagated A002 / `docs/68_MATERIAL_VISIBILITY
 
 The eighty-seventh residual cleanup propagated A003 / `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md` into the fiscalization model, core architecture, scope freeze, entity map, formal inventory, responsibility matrix, implementable schema draft, contradiction checklist, fiscalizer offer flow, citizen dashboard/full-sheet layers, lifecycle and disbursement flows, H016, Layer 5 audit trail, and affected diagrams. The integration adds a project-specific `Fiscalizer Eligibility and Reputation Profile` as a contextual read model, not a generic CV, universal score, or automatic selector. Responsible fiscalizer assignment now exposes eligibility criteria, comparable-project fiscalizer history, workload, methodology fit, report sufficiency, repeat relationships, dependency concentration, warnings, safeguards, replacement, secondary fiscalization, and fiscalization-audit triggers where material.
 
-Next review candidate: propagate A004 / `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md` into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where metric manipulation, Goodhart effects, value floors, antivalue ceilings, or metric-gaming tests need explicit representation.
+The eighty-eighth residual cleanup refined A004 / `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md` before broad propagation. A004 is now framed as required fulfillment/control evidence coverage by declared value floor, formal secondary value, antivalue ceiling, material value claim, and metric, not as a new evidence layer and not as a fixed numeric evidence count by project size. It explicitly separates A004 coverage from A013 evidence quality/sufficiency: A004 asks which evidence is necessary to verify each value or antivalue, while A013 asks whether submitted evidence is relevant, authentic enough, complete, contextualized, corroborated, and sufficient for formal effects.
+
+Next review candidate: review and propagate A013 / `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md` before broad A004 propagation, so evidence coverage and evidence quality/sufficiency remain cleanly separated.
 
 Approximate current maturity:
 
@@ -610,10 +612,10 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Propagate A004 / `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md` into affected core documents.
-2. Update the contradiction/failure-mode checklist with the A004 outcome.
-3. Update formal inventory/schema references where metric-gaming tests must become explicit.
-4. Identify whether A004 requires diagram or state-transition updates.
+1. Review A013 / `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md` as the next collaborative resolution point.
+2. Clarify how `EvidenceQualityReview` evaluates relevance, authenticity, completeness, context, corroboration, AI-generation risk, usefulness, and sufficiency for formal effects.
+3. Update affected evidence, fiscalization, disbursement, closure, reputation, schema, and diagram references for A013 after acceptance.
+4. Return to broad A004 propagation using the clarified boundary: A004 covers required evidence needs by value/antivalue; A013 covers submitted-evidence quality and sufficiency.
 5. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
