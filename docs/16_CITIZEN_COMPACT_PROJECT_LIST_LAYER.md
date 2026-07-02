@@ -199,6 +199,8 @@ It should include:
 - value icons;
 - funding progress;
 - missing amount;
+- funding attempt and deadline where relevant;
+- previous expired-unfunded or cloned-from label where relevant;
 - project state;
 - missing closure conditions where relevant;
 - unresolved material warnings where relevant;
@@ -220,6 +222,7 @@ Actividad deportiva gratuita y sostenida para 80 niños.
 
 $7,560,000 of $12,000,000
 Missing $4,440,000
+Attempt 1 · closes in 8 days
 
 State:
 Open project

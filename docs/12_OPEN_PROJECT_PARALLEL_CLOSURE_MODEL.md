@@ -119,8 +119,10 @@ If the project never completes its closure conditions within the allowed time, t
 
 - reformulated;
 - extended under protocol rules;
-- closed without execution;
+- expired unfunded or closed without execution;
 - returned or reassigned according to funding rules.
+
+The allowed time should be represented through a visible `FundingAttempt` for each financeable project, phase, or funding lane. Extension is permitted only under objective and capped rules, such as high funding progress, strong funding velocity, active support growth, continuity risk, essential-service lane, or near-completion without material blockers.
 
 ## Closure conditions
 
@@ -197,6 +199,7 @@ Paused
 Observed
 Reformulation required
 Expired
+Expired unfunded
 Revoked
 ```
 

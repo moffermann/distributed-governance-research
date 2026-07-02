@@ -246,6 +246,8 @@ Key attributes:
 - active justified objection count;
 - funding target;
 - funding deadline;
+- active FundingAttempt reference;
+- funding attempt history;
 - reformulation policy or policy reference;
 - variation control history;
 - threshold policy or policy reference;
@@ -291,6 +293,7 @@ Project has many ReputationUpdates
 Project has FiscalizationRequirement
 Project has many FiscalizerOffers
 Project has many FundingCommitments
+Project has many FundingAttempts
 Project has many Complaints
 Project has many Comments
 Project has many SupportSignals
@@ -1363,6 +1366,7 @@ Attributes:
 - funding target: design phase, execution phase, minimum control, supplemental control where applicable;
 - funding lane treatment: ordinary assignable, default-assigned, reserve-backed, protected-floor complement, or excluded where applicable;
 - continuity label where the commitment covers only an initial service period, maintenance gap, renewal window, or continuity-need Idea;
+- funding attempt reference;
 - status;
 - timestamp;
 - commitment and failure-handling rule;
@@ -1391,6 +1395,65 @@ Phase rule:
 Continuity funding rule:
 
 > A funding commitment to a continuity-sensitive project should preserve whether it funds the current period, a follow-on period, a maintenance obligation, a wind-down/mitigation action, or a continuity-need project generated from an Idea. Citizens should not be led to believe they funded indefinite service when the commitment covers only a bounded period.
+
+Funding-window rule:
+
+> A funding commitment should reference the active FundingAttempt where applicable. If the attempt expires unfunded before release, eligible unused commitments return, reassign, or follow the citizen's selected/default rule. This is not ordinary voluntary withdrawal.
+
+## Funding Attempt
+
+A lightweight record for one attempt to finance a project, project phase, project version, or funding lane.
+
+Attributes:
+
+- project;
+- project version;
+- project phase or funding lane where applicable;
+- target amount;
+- attempt number;
+- window start;
+- window end;
+- extension policy or policy reference;
+- extension count;
+- maximum extension count or exhaustion rule where configured;
+- support and funding progress snapshot;
+- readiness, blocker, and material-warning snapshot where relevant;
+- outcome;
+- fund-treatment result;
+- republished-from, cloned-from, or source-attempt reference where applicable;
+- audit trail.
+
+States:
+
+```text
+Funding open
+Funding target reached
+Extended
+Expired unfunded
+Reformulation required
+Republished
+Cloned into new project
+Closed
+```
+
+Relationships:
+
+```text
+FundingAttempt belongs to Project, ProjectVersion, ProjectPhase, or funding lane
+FundingAttempt has many FundingCommitments
+FundingAttempt may reference ReformulationPolicy or extension policy
+FundingAttempt may produce FinancialOrders for return, reassignment, or balance closure
+FundingAttempt may reference source FundingAttempt when republished or cloned
+FundingAttempt records AuditEvents
+```
+
+Rule:
+
+> A financeable lane cannot remain open indefinitely. If the active FundingAttempt fails to reach financing closure within its visible window, the project or lane becomes Expired Unfunded unless a bounded extension or reformulation route applies.
+
+Budget-liquidity boundary:
+
+> FundingAttempt expiry is Core v0. Budget Liquidity Smoothing is optional Extension v1+ or country implementation and must use public, capped, stress-tested fiscal rules rather than hidden virtual money.
 
 ## Financial Order
 
@@ -2961,6 +3024,7 @@ Under extraordinary review
 Revoked
 Closed
 Expired
+Expired unfunded
 ```
 
 Project-level states remain simple for citizens. Phase-level states may show more precise internal progress, such as `Design submitted for review`, `Design accepted`, or `Construction funding reserved`.
@@ -2987,9 +3051,11 @@ Under extraordinary review → In execution
 Under extraordinary review → Revoked
 In execution → Closed
 Open project → Expired
+Open project → Expired unfunded
 Open project → Revoked
 Paused → Revoked
 Requires reformulation → Closed
+Expired unfunded → Closed
 ```
 
 ## 5. Responsibility matrix summary

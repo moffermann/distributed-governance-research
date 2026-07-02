@@ -394,6 +394,9 @@ Track money status without exposing unnecessary private information.
 Include:
 
 - funding target;
+- funding attempt number;
+- funding window start and end;
+- extension policy, extension count, and extension reason where applicable;
 - commitments;
 - phase-specific funding lane where applicable;
 - continuity period, renewal, replacement, maintenance, or wind-down funding lane where applicable;
@@ -408,6 +411,7 @@ Include:
 - phase-gate relation where applicable;
 - public aggregate funding data;
 - direct versus delegated allocation where relevant.
+- expired unfunded outcome, republication, clone, or source-attempt reference where applicable.
 
 Privacy-protected individual funding details should follow the system's identity and privacy rules.
 
@@ -418,6 +422,22 @@ design funding released against design deliverables
 construction funding reserved pending design gate
 construction funding released after design acceptance
 funds returned, reassigned, or reconfirmed after failed design gate
+```
+
+For projects or funding lanes that do not reach financing closure, Layer 5 should show the `FundingAttempt` outcome:
+
+```text
+Attempt 2:
+Expired unfunded
+
+Progress at expiry:
+68% funded
+
+Extension:
+Not granted because material readiness evidence was missing
+
+Fund treatment:
+Unused commitments returned to citizen default rules
 ```
 
 Layer 5 should also distinguish assurance for non-construction projects. For example, elderly care, school-supply delivery, workshops, or food support may have service-period retentions, direct supplier payment, guarantees, insurance, or equivalent instruments even though no construction occurs.

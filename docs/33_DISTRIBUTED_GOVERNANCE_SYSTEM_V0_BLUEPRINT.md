@@ -174,7 +174,8 @@ A project must contain:
 - risks;
 - antivalues;
 - funding target;
-- funding deadline;
+- funding deadline or funding window;
+- active Funding Attempt and attempt history;
 - reformulation policy or policy reference;
 - threshold policy or policy reference;
 - social support and justified objection signals;
@@ -228,6 +229,8 @@ Projects should expose funding, social support, justified objections, and formal
 Funding closure is not a legitimacy finding. A project may show `funding complete` while also showing `affected-party issue pending`, `community consultation evidence pending`, or `public access condition unresolved` where the active Threshold Policy requires those conditions.
 
 Projects may also expose phase-specific funding lanes where needed. A design-and-execution project may receive execution-phase funding commitments while the design phase is pending, but those commitments remain reserved and cannot be released until the design phase gate is accepted.
+
+Projects may not wait for financing forever. Each financeable project, phase, or funding lane should expose a visible funding window through a traceable `FundingAttempt`. If the window expires without financing closure, the project or lane becomes `Expired Unfunded` unless the active policy allows a bounded objective extension or routes the project into reformulation. Eligible unused commitments return, reassign, or follow the citizen's selected/default allocation rule. Republication and cloning preserve source-attempt history instead of resetting the record.
 
 ## Value thesis and value icons
 
@@ -898,6 +901,8 @@ In recovery
 Remaining funds do not automatically belong to the executor.
 
 The platform may generate `Financial Orders` for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. Treasury, a custodian, escrow service, bank, or country-specific financial infrastructure executes valid orders and reports status. The same external infrastructure or a lawful guarantor may also confirm guarantee materialization. It does not decide project value, select projects, fiscalize milestones, define guarantee requirements by discretion, or reject payments by civic preference.
+
+Budget Liquidity Smoothing is not required for Core v0. A future or country-specific implementation may use a public, capped, stress-tested policy to manage cyclical allocation capacity against an authorized annual or period budget. It must not become hidden virtual money or treasury discretion. Treasury may report and execute a lawful smoothing rule, but it cannot choose projects, alter civic priorities, validate evidence, select fiscalizers, or approve disbursements by preference.
 
 ## Reformulation, pause, and revocation
 

@@ -55,6 +55,8 @@ The citizen should be able to choose a fallback rule, such as:
 - redirect to fiscalization or mitigation;
 - hold only until the next monthly cycle, not indefinitely.
 
+Returned funds from expired funding attempts should re-enter this same logic unless the active policy or citizen default routes them elsewhere. A project that did not reach financing closure should not keep committed balances idle after the funding window expires.
+
 ## Default fallback
 
 If the citizen does not configure fallback behavior, the system should apply a simple default fallback defined by the protocol.
@@ -80,6 +82,16 @@ If a funded continuity period is approaching its end, the system may route eligi
 ## Relationship to project funding
 
 Projects still close when they reach their funding target. Monthly allocation helps projects reach targets without waiting for annual or sporadic citizen participation.
+
+H040 and the Funding Window Expiry resolution add the complementary rule: each financeable lane has a visible funding window. If the lane expires unfunded, eligible unused commitments return, reassign, or follow the citizen's selected/default allocation rule.
+
+Automatic profiles may include a visible preference for eligible projects that are close to funding completion. This is ordinary citizen/profile allocation logic, not hidden treasury leverage.
+
+## Budget liquidity smoothing boundary
+
+Future implementations may use a public `Budget Liquidity Smoothing` policy to manage cyclical allocation capacity against an authorized annual or period budget. That policy is not required for Core v0 and should not be treated as uncontrolled virtual money.
+
+Any such policy belongs to Extension v1+ or country implementation and requires public formula, budget cap, open-commitment stress test, reserve/coverage rule, cycle adjustment, and audit trail.
 
 ## Principle
 

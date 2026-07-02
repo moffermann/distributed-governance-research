@@ -156,6 +156,41 @@ When project conditions are met, system generates financial order
 Custodian/Treasury executes payment
 ```
 
+If a funding attempt expires unfunded, the system may generate return, reassignment, or balance-adjustment records under the active rule. The citizen did not freely withdraw; the project or lane reached a protocol-defined outcome.
+
+## Budget liquidity smoothing boundary
+
+Some implementations may want to manage cyclical allocation capacity against an annual or period budget. This should be framed as `Budget Liquidity Smoothing`, not as uncontrolled leverage or hidden virtual citizen money.
+
+Budget Liquidity Smoothing may become a country implementation or Extension v1+ capability where lawful public finance rules allow it.
+
+It may use information such as:
+
+- authorized annual or period budget;
+- monthly or cycle allocation base;
+- actual executed payments;
+- open commitment ratio;
+- near-funded eligible project amount;
+- expired or returned commitments;
+- stress test assuming many projects close financing at once.
+
+It must require:
+
+- explicit legal, protocol, or administrative authority;
+- public formula;
+- annual or period budget cap;
+- maximum open commitment ratio;
+- conservative reserve or coverage rule;
+- adjustment rule for later cycles;
+- full audit trail;
+- no discretionary project selection by Treasury.
+
+The smoothing policy may accelerate limited allocation capacity or completion-buffer capacity, but it must not hide fiscal risk, exceed authorized budget, or let Treasury choose civic priorities.
+
+Rule:
+
+> Budget Liquidity Smoothing is optional future fiscal infrastructure. Treasury or custody may report and execute a valid smoothing rule, but it must not decide project value, project priority, evidence, fiscalization, complaint outcome, or discretionary disbursement.
+
 ## Module B: Financial Execution / Custody
 
 The financial execution module handles the movement and state of money after the citizen commits funds to projects.

@@ -503,12 +503,15 @@ Each explicit phase should define:
 
 - purpose;
 - budget or funding lane;
+- funding window or Funding Attempt rule;
 - deliverables;
 - responsible actor or role;
 - evidence and review requirements;
 - readiness gate;
 - dependency on prior phases;
 - failure or reformulation treatment.
+
+For each financeable lane, the creator should declare or inherit the visible funding window, extension policy, and fund-treatment rule. A lane that cannot explain what happens if the funding attempt expires should not be opened for citizen funding.
 
 ### Integrated design-and-execution project
 
@@ -779,6 +782,7 @@ Current protocol + tutored sports operating mode.
 
 Conditions:
 Funding target.
+Funding window and attempt-expiry rule.
 Accepted executor.
 Permit documentation.
 Independent control package.

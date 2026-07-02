@@ -12,6 +12,8 @@ Funding is one of the central actions of the distributed governance system. The 
 
 Funding is also a bounded allocation action. A citizen can allocate only from the configured assignable civic balance and only to a project, phase lane, control package, complaint-review cost, mitigation activity, or other public-purpose vehicle that is eligible under the active Planning Scope, Threshold Policy, and operating-mode rules.
 
+Funding is also time-bounded by the active `FundingAttempt`. A project, phase, or lane cannot hold citizen commitments indefinitely while waiting for financing closure.
+
 If the active Planning Scope marks a function as a protected essential floor, reserve-backed continuity need, non-assignable common-pool function, or excluded lane, ordinary citizen funding cannot be routed to that floor as if it were a normal project. Citizens may still fund eligible distributed service-provision projects, complementary improvements, fiscalization, or expansion lanes where the scope marks them as assignable, default-assigned, or otherwise financeable.
 
 For phased projects, funding may be attached to a phase-specific lane. A citizen may fund a design phase, an execution phase, a minimum control package, or supplemental control where allowed.
@@ -443,6 +445,9 @@ After funding:
 If the project fails before release:
   unused committed funds may return, reassign, or follow the citizen's default rule.
 
+If the funding attempt expires unfunded:
+  eligible unreleased and unused commitments return, reassign, or follow the citizen's default rule according to the visible policy.
+
 If the phase gate fails before release:
   phase-specific unused funds may return, reassign, remain reserved after reconfirmation, or follow the citizen's default rule according to the active policy.
 
@@ -458,6 +463,37 @@ This prevents arbitrary withdrawals from destabilizing projects while preserving
 Under H011, guarantees are not construction-only. Care services, school-supply purchases, workshops, food support, health support, infrastructure, and other execution-financeable projects may all have a Financial Assurance Profile. Required guarantees or equivalent instruments are not considered materialized until confirmed by the relevant custodian, guarantor, insurer, treasury, bank, escrow provider, or lawful equivalent.
 
 The same rule applies to integrated design-and-execution projects. A citizen does not receive a free withdrawal right merely because the design is pending. But if the design phase fails the public baseline or requires material reformulation, unreleased execution-phase balances follow the policy-defined failure or reformulation treatment.
+
+## Funding window and attempt expiry
+
+Before funding, the citizen should see the active funding attempt in simple terms:
+
+```text
+Funding window:
+Open until 2026-09-30
+
+Attempt:
+Second funding attempt
+
+If not funded by the deadline:
+Your unused commitment will return to your available balance or follow your automatic profile.
+```
+
+The detailed audit layer records the formal `FundingAttempt`: target lane, target amount, window start, window end, extension policy, extension count, support and funding progress, readiness/blocker snapshot where relevant, and fund-treatment rule.
+
+If the project reaches the end of its funding window without financing closure, the citizen-facing state should be `Did not reach funding` or equivalent. The technical outcome is `Expired Unfunded`.
+
+The active policy may allow a bounded extension when objective conditions are met, such as high funding progress, strong funding velocity, active support growth, continuity risk, essential-service lane, or near-completion without material blockers. The citizen surface should show the reason and new deadline.
+
+Republished or cloned projects should preserve visible history:
+
+```text
+Previously expired unfunded
+Third funding attempt
+Cloned from a prior proposal
+```
+
+Funding expiry is not ordinary withdrawal by personal regret. It is the project or lane failing to reach a protocol-defined condition.
 
 ## Reformulation rule
 
@@ -498,9 +534,10 @@ Citizen clicks Fund
 → confirms
 → contribution becomes committed
 → if phase-specific, contribution is attached to the selected phase or funding lane
+→ commitment is attached to the active Funding Attempt and visible funding window
 → project is added to following
 → funds are released only by phase gates, conditions, milestones, evidence, and fiscalization
-→ if project fails, expires, or is reformulated, the citizen receives policy-defined notice and fund-treatment information
+→ if project fails, expires unfunded, or is reformulated, the citizen receives policy-defined notice and fund-treatment information
 ```
 
 ## What this flow should not do
@@ -512,6 +549,7 @@ The funding flow should not:
 - imply that funding completion creates community legitimacy or affected-party approval;
 - hide release conditions;
 - present funding as freely withdrawable after confirmation;
+- hide the active funding window or what happens if the funding attempt expires;
 - require technical understanding before funding;
 - let the citizen lose track of a funded project;
 - hide what happens if a project fails, expires, or is reformulated.

@@ -14,12 +14,13 @@ Source baseline:
 - `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`
 - `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`
 - `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`
+- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md`
 - `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`
 - `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
 - `docs/diagrams/v0-project-object-state-with-phase-substates.md`
 - `docs/diagrams/v0-complaint-evidence-and-review-state.md`
 
-Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, C005, C006, C016, A005, A006.
+Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, H038, H040, C005, C006, C016, A005, A006.
 
 ## Funding Commitment State Machine
 
@@ -31,16 +32,21 @@ stateDiagram-v2
     Available --> LaneCheck: funder selects target
     LaneCheck --> ContinuityCheck: eligible assignable lane
     LaneCheck --> Closed: protected floor, non-assignable, or excluded lane
-    ContinuityCheck --> Committed: period, renewal, and wind-down clear
+    ContinuityCheck --> FundingAttemptCheck: period, renewal, and wind-down clear
     ContinuityCheck --> Closed: continuity fields missing for required target
+    FundingAttemptCheck --> Committed: active funding window
+    FundingAttemptCheck --> Closed: no active funding attempt
 
     Committed --> Reserved: eligible target and custody reservation accepted
     Committed --> Returned: target invalid before reservation
+    Committed --> Returned: funding attempt expires unfunded before reservation
     Committed --> Reassigned: default reassignment rule applies
 
     Reserved --> PendingDisbursementReview: milestone or phase requests release
     Reserved --> Paused: scoped systemic pause affects this funding scope
     Reserved --> Blocked: phase gate, assurance, evidence, legal, or policy blocker
+    Reserved --> Returned: funding attempt expires unfunded before financing closure
+    Reserved --> Reassigned: citizen or protocol default after expired attempt
 
     Paused --> Reserved: pause lifted or narrowed
     Paused --> Blocked: blocker confirmed
@@ -201,6 +207,7 @@ stateDiagram-v2
 - `Committed` means the funder made a serious funding commitment. It is not ordinary support and is not freely withdrawable.
 - `LaneCheck` means the system verifies that the target is an eligible assignable lane. Ordinary civic-wallet funding cannot enter non-assignable protected floors or excluded lanes.
 - `ContinuityCheck` means the system verifies A006 labels where the target is recurring, continuity-critical, emergency, or maintenance-dependent. A funding commitment should not imply indefinite service when it funds only a bounded period, and a renewal window should not automatically renew the current executor.
+- `FundingAttemptCheck` means the system verifies that the selected project, phase, or lane has an active funding window. If the funding attempt expires before financing closure, eligible unused commitments return, reassign, or follow default rules.
 - `Reserved` means the amount is held for a project, phase lane, control package, complaint-review cost, mitigation activity, or other eligible public-purpose vehicle. It is not released to the executor.
 - `Paused` means a scoped systemic pause affects the relevant funding, disbursement, milestone, phase, budget line, evidence item, or actor relationship. It is platform scope, not necessarily material or legal suspension.
 - `Blocked` means a release cannot proceed until a named blocker is resolved.
@@ -209,6 +216,7 @@ stateDiagram-v2
 - `CustodianExecutionBlocked` is limited to closed technical or legal causes. The custodian does not decide civic value, project priority, evidence validity, fiscalization, or discretionary disbursement.
 - `ReleasedPartially` is allowed only when the disbursement milestone plan defines separable components, accepted evidence for completed components, retained amount, release condition, fiscalizer explanation, and citizen-facing summary.
 - `Returned`, `Reassigned`, and `Recovered` are protocol/citizen-rule outcomes for unused, unreleased, retained, guaranteed, or recovered funds. They are not ordinary withdrawal by personal regret.
+- `Expired unfunded` is a project or FundingAttempt outcome. It is not ordinary withdrawal and does not erase attempt history.
 - `GuaranteeMaterialized` requires external confirmation by a custodian, guarantor, insurer, treasury, bank, escrow provider, or lawful equivalent. An uploaded executor document is not enough.
 
 ## Macul Example Trace

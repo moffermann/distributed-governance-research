@@ -311,6 +311,12 @@ Committed, not released to the executor.
 
 Release:
 By milestones, evidence, and validation.
+
+Funding attempt:
+Attempt 1, open until 2026-09-30.
+
+If not fully funded:
+Eligible unused commitments return, reassign, or follow the citizen's default rule.
 ```
 
 For phased projects, the budget section should show phase funding lanes.
@@ -359,6 +365,7 @@ To become execution-ready:
 
 💰 Funding
 $7,560,000 of $12,000,000
+Attempt 1, closes in 8 days
 
 🧩 Phase gate
 Design review pending, if applicable

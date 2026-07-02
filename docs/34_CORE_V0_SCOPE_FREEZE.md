@@ -123,7 +123,8 @@ A project must include:
 - risks;
 - antivalues;
 - funding target;
-- funding deadline;
+- funding deadline or funding window;
+- active Funding Attempt and attempt history;
 - reformulation policy or policy reference;
 - threshold policy or policy reference;
 - social support and justified objection signals;
@@ -147,6 +148,10 @@ Rule:
 Continuity rule:
 
 > Projects that create ongoing service, staffing, maintenance, emergency, or beneficiary-dependence obligations should declare a Continuity Risk Classification before funding. The classification should expose whether the project is one-time, phased, recurring, continuity-critical, emergency, or maintenance-dependent, and should include the minimum funded period, future funding dependency warning, beneficiary-protection rule, wind-down rule, and renewal visibility where applicable.
+
+Funding-window rule:
+
+> Projects, phases, and financeable lanes may not hold civic commitments indefinitely. Each financeable lane should have a visible Funding Attempt with window start, window end, target, extension policy, attempt number, and fund-treatment rule. If the attempt expires without financing closure, the outcome is Expired Unfunded unless a bounded objective extension or reformulation path applies. Eligible unused commitments return, reassign, or follow the citizen's default rule.
 
 Comparative accountability rule:
 
@@ -359,6 +364,7 @@ Core v0 includes:
 - phase-specific funding lanes where applicable;
 - continuity funding labels and renewal windows where applicable;
 - funding target;
+- funding window and Funding Attempt history;
 - committed funds;
 - no immediate release to executor;
 - no ordinary withdrawal after financing;
@@ -386,6 +392,14 @@ Phase funding rule:
 Continuity funding rule:
 
 > A citizen must know when funding covers only an initial service period, when maintenance is not funded, when continuity is protected by reserve or guarantee, and when a continuity renewal window or continuity-need Idea is open. A renewal window makes the need visible; it does not renew the project automatically or privilege the current executor.
+
+Funding expiry rule:
+
+> A citizen must know the active funding window, attempt number, extension status, and what happens to eligible unused commitments if the attempt expires unfunded. Expiry is a project/protocol outcome, not ordinary voluntary withdrawal.
+
+Budget liquidity boundary:
+
+> Budget Liquidity Smoothing is optional Extension v1+ or country implementation. It may manage cyclical allocation capacity against authorized annual or period budgets only through public formula, cap, stress test, reserve/coverage rule, cycle adjustment, and audit trail. It is not hidden virtual money and does not give Treasury discretionary project-priority power.
 
 Allocation amount rule:
 

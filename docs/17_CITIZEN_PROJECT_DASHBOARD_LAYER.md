@@ -195,6 +195,7 @@ Only show conditions that apply to the specific project.
 Possible conditions:
 
 - funding;
+- active funding window and Funding Attempt;
 - phase gate accepted, where applicable;
 - executor confirmed;
 - value-verification coverage status;
@@ -218,6 +219,10 @@ Under review.
 Construction phase
 Funding reserved.
 Funds are not released until design is accepted.
+
+Funding attempt
+Open until 2026-09-30.
+If this attempt expires, unused commitments return or follow profile.
 ```
 
 Each condition is clickable.

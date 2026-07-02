@@ -53,6 +53,8 @@ A project card should include:
 - funding progress;
 - remaining amount;
 - closing deadline;
+- funding attempt label where relevant;
+- expired-unfunded or republished history label where relevant;
 - visible warnings where relevant;
 - signal dashboard;
 - primary action button;
@@ -78,6 +80,7 @@ Financiamiento:
 $7.560.000 reunidos de $12.000.000
 Faltan $4.440.000
 Cierra en 8 días
+Intento de financiamiento: 1
 
 Dashboard:
 👥 Beneficiarios: 80
@@ -283,6 +286,9 @@ The first layer should show:
 - amount already funded;
 - amount remaining;
 - deadline or time remaining;
+- active Funding Attempt number where relevant;
+- extension status where relevant;
+- fund-treatment summary if the attempt expires unfunded;
 - funding progress bar.
 
 Example:
@@ -291,6 +297,7 @@ Example:
 $7.560.000 reunidos de $12.000.000
 Faltan $4.440.000
 Cierra en 8 días
+Si no se financia: vuelve a tu perfil automático
 ```
 
 This is clearer than showing only a percentage.

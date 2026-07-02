@@ -41,6 +41,7 @@ Examples:
 - contextualized evidence items with required evidence context;
 - fiscalization;
 - funding commitment;
+- funding attempts and bounded funding windows;
 - disbursement;
 - complaints;
 - lifecycle states;
@@ -71,6 +72,7 @@ Examples:
 - pilot sector;
 - administrative appeal rules;
 - percentage of public budget migrated.
+- budget liquidity smoothing where allowed by fiscal law or authorized implementation.
 
 ### Out of scope
 
@@ -195,7 +197,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Proportional project thresholds `H027` | Core v0 | Needed to define visible, proportional execution-readiness conditions without imposing one universal approval formula. |
 | Value thesis / KPI / evidence hypotheses | Core v0 | Needed to prevent vague promises and connect value commitments to fulfillment evidence needs, independent fulfillment/control evidence offers, fiscalization, closure, and reputation. |
 | Fiscalization and control hypotheses | Core v0 | Needed for trust and disbursement. |
-| Funding, civic wallet, notification, custody-boundary, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, follow-up, financial-order traceability, and visible citizen control. |
+| Funding, civic wallet, notification, custody-boundary, funding-window, and allocation hypotheses `H025-H040` | Core v0 | Needed for distributed allocation, conditional funding, bounded Funding Attempts, expiry of unfunded attempts, follow-up, financial-order traceability, and visible citizen control. Budget Liquidity Smoothing remains Extension v1+ / country implementation. |
 | Related-party conflict of interest `H028` | Core v0 | Needed to prevent public resources from becoming hidden private self-financing while preserving proportional treatment for declared relationships. |
 | Participation capacity and support projects `H041` | Core v0 / ordinary project path | Helps citizens participate without creating hidden authority, hidden delegation payments, AI actors, or internal public-authority participation in scopes they control. |
 | Delegation basic architecture `H042-H049` | Core v0, simple version | Needed for scalable participation. |
@@ -219,6 +221,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Full common-good charter governance | Extension v1+ | Core v0 only requires impact declaration and charter relationship where an active charter exists. |
 | Advanced delegation beyond simple scoped delegation | Extension v1+ | Adds complexity not required for v0. |
 | Paid delegation markets | Extension v1+ | Raises incentive and capture questions; Core v0 excludes automatic commissions for delegation. |
+| Budget Liquidity Smoothing | Extension v1+ / country implementation | Potentially useful for managing cyclical allocation capacity against authorized annual or period budgets, but it requires public finance authority, budget caps, open-commitment stress tests, reserve/coverage rules, cycle adjustments, and audit. Core v0 only preserves compatibility and excludes hidden virtual money or treasury discretion over project priority. |
 | Subdelegation | Extension v1+ | Not required for v0. |
 | Time-bound delegation | Extension v1+ | Useful later, not necessary for first model. |
 | Public Value Return per Peso `H059` | Extension v1+ | Valuable comparison tool but risky to over-centralize early. |

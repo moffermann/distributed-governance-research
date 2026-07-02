@@ -12,7 +12,7 @@ Source baseline:
 - `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
 - `docs/diagrams/v0-formal-entity-relationship.md`
 
-Related sources: H008, H011, H013, H016, H018, H019, H021, H022, C005, C016, C017, C018, C024, A006.
+Related sources: H008, H011, H013, H016, H018, H019, H021, H022, H040, C005, C016, C017, C018, C024, A006, Funding Window Expiry.
 
 ## Parent Project State Machine
 
@@ -28,6 +28,7 @@ stateDiagram-v2
     OpenProject --> ExecutionReady: all applicable project or first-phase gates complete
     OpenProject --> RequiresReformulation: material issue before execution
     OpenProject --> Expired: deadline expires without valid closure
+    OpenProject --> ExpiredUnfunded: funding attempt expires unfunded
     OpenProject --> Revoked: severe pre-execution failure
 
     ExecutionReady --> InExecution: controlled execution starts
@@ -59,6 +60,7 @@ stateDiagram-v2
     InExecution --> ClosureAccountability: execution complete or final outcome reached
     Revoked --> ClosureAccountability: final accountability required
     Expired --> ClosureAccountability: final accountability required
+    ExpiredUnfunded --> ClosureAccountability: funding attempt and fund treatment recorded
     ClosureAccountability --> Closed: promise, evidence, money, and responsibility recorded
     Closed --> [*]
 ```
@@ -73,6 +75,7 @@ stateDiagram-v2
     Planned --> FundingOpen: phase funding lane opens
     FundingOpen --> FundingReserved: target reached or later-phase funds reserved
     FundingOpen --> PhaseExpired: phase funding deadline expires
+    FundingOpen --> PhaseExpiredUnfunded: funding attempt expires unfunded
 
     FundingReserved --> PrerequisitePending: prior gate, document, control, or assurance missing
     PrerequisitePending --> GatePendingReview: prerequisite package submitted
@@ -109,6 +112,7 @@ stateDiagram-v2
 
     PhaseCompleted --> PhaseClosed: phase accountability recorded
     PhaseExpired --> PhaseClosed: unused funds handled
+    PhaseExpiredUnfunded --> PhaseClosed: unused commitments returned or reassigned
     PhaseClosed --> [*]
 ```
 
@@ -120,6 +124,7 @@ stateDiagram-v2
 - `ExecutionReady` may apply to the parent project, a specific phase, or both. A later phase can remain `FundingReserved` or `PrerequisitePending` while an earlier phase is `PhaseInExecution`.
 - `ClosureAccountability` is a parent project state because final accountability must summarize promises, phases, evidence, fiscalization, money treatment, responsibility events, and reputation inputs.
 - `ContinuityRenewalWindow` and `PhaseContinuityRenewalWindow` are visibility states for A006. They may generate or update a continuity-need Idea and allow follow-on proposals, but they do not automatically renew the current executor.
+- `ExpiredUnfunded` and `PhaseExpiredUnfunded` mean the relevant FundingAttempt failed to reach financing closure within its visible window. Eligible unused commitments return, reassign, or follow default rules; attempt history remains visible.
 - Phase closure does not equal project closure unless all required phases and final project accountability conditions are complete.
 
 ## Macul Example Trace

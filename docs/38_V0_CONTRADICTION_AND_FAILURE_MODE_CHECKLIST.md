@@ -120,6 +120,8 @@ Create and use the `Evidence Producer` role. Executor self-report is useful cont
 
 No ordinary withdrawal after financing. Funding is a commitment until project closure. Project failure is handled through traceability, fiscalization, complaints, guarantees, recovery, returned balances, and reputation consequences, not through free withdrawal.
 
+Funding-window expiry is a project/protocol outcome, not ordinary withdrawal. A financeable lane should have a visible Funding Attempt. If it expires unfunded, eligible unused commitments return, reassign, or follow the citizen's default rule.
+
 ---
 
 ## C006 — Treasury is not a civic actor, but custody and disbursement require authority
@@ -131,6 +133,8 @@ No ordinary withdrawal after financing. Funding is a commitment until project cl
 ### Accepted v0 rule
 
 Separate citizen funding capacity from project payment execution. Treasury informs how much each citizen may finance and executes protocol-valid financial orders. It does not choose projects, decide public value, select fiscalizers, validate evidence, or govern civic allocation.
+
+Budget Liquidity Smoothing, if implemented later, must be public, capped, stress-tested, and authorized by country or protocol rules. It must not become hidden virtual money or treasury discretion over project priority.
 
 ---
 
@@ -591,6 +595,11 @@ This compares against real current practice: continuity funding can already be r
 - [ ] Is funding completion prevented from being displayed as legitimacy, community approval, or affected-party consent?
 - [ ] Is money prevented from going directly to executor before conditions?
 - [x] Is funding described as commitment until closure rather than free withdrawal?
+- [ ] Does each financeable project, phase, or lane have a visible funding window and Funding Attempt?
+- [ ] If a funding attempt expires unfunded, are eligible unused commitments returned, reassigned, or routed through the citizen's default rule?
+- [ ] Are funding-window extensions objective, capped, visible, and tied to a policy source?
+- [ ] Are republication and cloning histories preserved rather than reset?
+- [ ] If Budget Liquidity Smoothing exists, is it public, capped, stress-tested, audited, and separated from treasury discretion over project priority?
 - [ ] Are delegated and automatic allocations distinguishable?
 - [ ] Are unused funds handled clearly?
 - [ ] Are funders notified of material changes?

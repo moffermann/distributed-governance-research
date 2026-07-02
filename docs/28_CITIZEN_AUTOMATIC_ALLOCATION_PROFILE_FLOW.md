@@ -22,6 +22,8 @@ On first active use of the platform, the citizen should select or acknowledge a 
 
 Budget delegation should not become active until the citizen has a selected base allocation profile or fallback rule.
 
+When a funding attempt expires unfunded, returned or releasable commitments may follow the citizen's automatic allocation profile or selected fallback rule. A profile may include a transparent preference for eligible projects close to funding completion, but it must not route funds into expired, materially blocked, non-assignable, or ineligible lanes.
+
 ## Main question
 
 ```text
@@ -126,12 +128,15 @@ Official profiles may include transparent options such as:
 Support underfunded protected scopes
 Support continuity-sensitive services
 Support open continuity renewal needs
+Support eligible projects close to funding completion
 Support low-visibility beneficiary groups
 ```
 
 These options must show the active Planning Scope and whether the contribution funds an assignable service lane, not a non-assignable protected floor.
 
 For open continuity renewal needs, the option should also show whether the profile funds the current service period, a follow-on project, maintenance, replacement, mitigation, or wind-down.
+
+For close-to-completion routing, the option should show the active funding window, remaining gap, deadline, blocker status, and whether the project is eligible for funding-window extension or ordinary allocation. The profile should not keep funding commitments locked after a funding attempt expires.
 
 If the citizen later delegates budget allocation, the selected base profile remains stored but inactive within the delegated scope while delegation is active.
 

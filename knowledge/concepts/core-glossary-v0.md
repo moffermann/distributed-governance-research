@@ -189,6 +189,26 @@ Distributed allocation does not mean all budgets become individually assignable.
 
 ---
 
+## Funding Attempt
+
+A Funding Attempt is the bounded funding-window record for a project, project version, phase, or funding lane.
+
+It records the target amount, lane, attempt number, window start, window end, extension policy, extension count, progress snapshot, outcome, fund-treatment rule, and source-attempt reference where a project is republished or cloned.
+
+If the window expires without financing closure, the outcome is `Expired Unfunded` unless a bounded extension or reformulation path applies. Eligible unused commitments return, reassign, or follow the citizen's selected/default rule. This is not ordinary voluntary withdrawal.
+
+---
+
+## Budget Liquidity Smoothing
+
+Budget Liquidity Smoothing is an optional future or country-specific fiscal policy for managing cyclical allocation capacity against an authorized annual or period budget.
+
+It is not uncontrolled leverage and not hidden virtual citizen money. A valid implementation would require public formula, budget cap, open-commitment stress test, reserve or coverage rule, cycle adjustment, audit trail, and separation from Treasury discretion over project priority.
+
+Core v0 preserves compatibility with this idea but does not require it.
+
+---
+
 ## Essential Service Protection
 
 Essential service protection is the A005 floor-and-lane test used by Planning Scopes and funding eligibility rules.

@@ -760,6 +760,7 @@ Required trace:
 
 - project;
 - phase where applicable;
+- funding attempt reference where the decision returns or reassigns unused commitments;
 - milestone;
 - requested amount;
 - approved amount;
@@ -803,6 +804,8 @@ Returned
 Reassigned
 In recovery
 ```
+
+Returned or reassigned states may be triggered by unused or unreleased balances at closure, failed phase gate, revocation, recovery, or an `Expired Unfunded` FundingAttempt. The latter is a funding-lifecycle outcome, not a disbursement approval and not ordinary voluntary withdrawal.
 
 Assurance states:
 

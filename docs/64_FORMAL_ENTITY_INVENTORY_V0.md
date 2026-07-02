@@ -163,7 +163,9 @@ Roles are contextual assignments held by actors. They should be modeled separate
 |---|---|---|---|---|---|
 | Budget | Financial object | Defines project funding needs. | Project modeler/proposer; validated by rules. | Yes | Connects to funding target, budget lines, control budget, disbursement. |
 | Budget Line | Financial detail object | Separates purposes such as execution, control, guarantee, evidence mission, mitigation, continuity, maintenance, renewal, replacement, wind-down, or review. | Project modeler/proposer; reviewed where needed. | Yes | Enables lane-specific closure and disbursement. Continuity-sensitive lines should state whether they fund the current period, follow-on period, staffing, maintenance, mitigation, or wind-down. |
+| Funding Attempt | Funding lifecycle object | Records one bounded attempt to finance a project, project version, phase, or funding lane. | Project publication process; updated by funding commitments, extension policy, expiry, reformulation, republication, or cloning. | Yes | Prevents indefinite commitment lock. Records window start/end, attempt number, target, extension count, outcome, fund treatment, and source attempt where republished or cloned. |
 | Allocation Amount Rule | Policy object | Defines how assignable public-purpose capacity is calculated. | Country implementation, public formula, protocol, or authority configuration. | Yes | Feeds civic wallet without exposing raw sensitive data. May distinguish ordinary assignable, default-assigned, reserve-backed, or excluded lanes where the Planning Scope protects essential floors. |
+| Budget Liquidity Policy | Optional fiscal policy object | Smooths cyclical allocation capacity against an authorized annual or period budget where lawful. | Country implementation, protocol, or authorized public finance rule. | Yes | Extension v1+ / country implementation. Requires public formula, budget cap, open-commitment stress test, reserve or coverage rule, cycle adjustment, and audit trail. Does not let Treasury choose projects. |
 | Civic Wallet / Civic Allocation | Allocation account / ledger object | Records non-withdrawable assignable public-purpose capacity. | Allocation provider and platform ledger. | Yes | Supports funding, delegation, automatic profiles. Not private cash. |
 | Funding Commitment | Commitment object | Reserves assignable resources for eligible project, continuity project, phase, idea-derived project, or control vehicle. | Citizen, delegate, automatic profile, or allowed actor. | Yes | Funding is commitment, not proof of legitimacy, execution readiness, disbursement approval, fulfillment, or indefinite service continuity. |
 | Financial Order | Financial instruction | Instructs custodian to release, retain, return, reassign, recover, execute guarantee, or close balance. | Protocol-valid system path after conditions. | Yes | Custodian executes or reports technical/legal block. |
@@ -259,6 +261,20 @@ Under extraordinary review
 Revoked
 Closed
 Expired
+Expired unfunded
+```
+
+### Funding Attempt states
+
+```text
+Funding open
+Funding target reached
+Extended
+Expired unfunded
+Reformulation required
+Republished
+Cloned into new project
+Closed
 ```
 
 ### Evidence item states

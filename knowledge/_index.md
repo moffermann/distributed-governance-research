@@ -4,6 +4,7 @@ Start here when navigating the project in Obsidian or GitHub.
 
 ## Recent additions
 
+- [[../docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|Funding Window Expiry and Budget Liquidity Smoothing Resolution v0]]
 - [[../docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION|Project Legitimacy Profile and A001 Resolution v0]]
 - [[../docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION|Material Visibility and A002 Resolution v0]]
 - [[../docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION|Fiscalizer Quality and Capture Indicators and A003 Resolution v0]]
@@ -167,6 +168,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|Assisted Evidence Publication and C015 Resolution v0]]
 - [[../docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|Evidence Producers and C003 Resolution v0]]
 - [[../docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|Treasury, Citizen Balance, and C006 Resolution v0]]
+- [[../docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|Funding Window Expiry and Budget Liquidity Smoothing Resolution v0]]
 - [[../docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION|AI Assistance and C008 Resolution v0]]
 - [[../docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|Layered Citizen State Translation and C009 Resolution v0]]
 - [[../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|Delegation Priority and C011 Resolution v0]]
@@ -422,6 +424,7 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|82 - Incumbent Resistance Indicators and A016 Resolution v0]]
 - [[../docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|83 - Disbursement Gaming Tests and A017 Resolution v0]]
 - [[../docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|84 - Collusion Observability and A018 Resolution v0]]
+- [[../docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|85 - Funding Window Expiry and Budget Liquidity Smoothing Resolution v0]]
 
 ## Literature
 

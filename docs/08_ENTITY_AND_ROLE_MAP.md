@@ -233,9 +233,11 @@ Their possible external functions include:
 - receiving tax or budget data;
 - transferring or custodying public resources;
 - enabling disbursement;
+- executing return or reassignment orders when a funding attempt expires unfunded;
+- reporting or executing a lawful Budget Liquidity Smoothing policy where country implementation allows it;
 - supporting financial traceability.
 
-However, they do not decide project value, approve ordinary projects by civic discretion, fiscalize results, or participate in internal governance under Core v0. If an implementing country grants a public authority broader internal powers, that is a country-specific departure from the Core v0 baseline and should be documented as such.
+However, they do not decide project value, approve ordinary projects by civic discretion, choose which projects receive liquidity smoothing, fiscalize results, or participate in internal governance under Core v0. If an implementing country grants a public authority broader internal powers, that is a country-specific departure from the Core v0 baseline and should be documented as such.
 
 If a citizen-level amount formula depends on tax, vulnerability, territorial-priority, or other sensitive external data, the platform should receive only the authorized amount, eligibility status, formula version, explanation code, and audit reference from the competent provider. It should not receive the citizen's raw tax declaration or sensitive registry file.
 

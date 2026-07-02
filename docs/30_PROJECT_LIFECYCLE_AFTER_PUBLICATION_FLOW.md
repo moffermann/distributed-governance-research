@@ -100,6 +100,19 @@ Construction funding: reserved
 Construction release: blocked until design accepted
 ```
 
+Open projects also have a visible funding window through the active `FundingAttempt`. If the attempt expires without financing closure, the project or funding lane should move to `Expired Unfunded`, unless the active policy allows a bounded extension or routes the project into reformulation.
+
+The dashboard should show:
+
+```text
+Funding attempt: 2
+Funding window: open until 2026-09-30
+Extension status: 0/1 extensions used
+If this attempt fails: unused commitments return or follow profile
+```
+
+Funding-window extension must be objective and capped where configured. It may depend on funding progress, funding velocity, active support growth, continuity risk, essential-service lane, readiness evidence, blocker status, and prior attempt history. It should not create indefinitely open projects.
+
 ### Rule
 
 > A project does not become ready because it passed a rigid sequence. It becomes ready because all applicable closure conditions are complete.
@@ -113,6 +126,7 @@ This check should confirm:
 - the project version is stable;
 - required prior phase gates are accepted where applicable;
 - funding commitments are enough;
+- active Funding Attempt has reached financing closure or remains valid under an accepted extension rule;
 - no admitted blocking complaint or scoped systemic pause is active;
 - fiscalization is configured;
 - fiscalizer eligibility and reputation profile is generated and accepted for the assigned scope where responsible fiscalization is required;

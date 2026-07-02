@@ -105,6 +105,8 @@ But these are project/protocol states, not free withdrawal by the funder.
 
 For phased projects, a failed prerequisite phase gate is also a project/protocol state. If a citizen reserved funds for construction while the design phase was pending, those funds do not become freely withdrawable by personal regret. They follow the active phase failure, reformulation, return, reassignment, or reconfirmation rule.
 
+Funding-window expiry is also a project/protocol state. If the project or funding lane does not reach financing closure within its visible funding window, the active `FundingAttempt` may expire unfunded. Eligible unreleased and unused commitments then return, reassign, or follow the citizen's selected/default rule according to the active policy. This does not create ordinary voluntary withdrawal.
+
 ## Ordinary project modification
 
 Ordinary project modifications do not reopen withdrawal rights.
@@ -171,6 +173,7 @@ Funds may return or be reassigned when they are:
 - not yet released;
 - retained;
 - unused at closure;
+- attached to an expired unfunded Funding Attempt;
 - recovered through guarantees;
 - recovered through enforcement;
 - returned after revocation;
@@ -197,6 +200,27 @@ It does not automatically reopen ordinary withdrawal rights.
 
 This keeps v0 stable and avoids excessive complexity.
 
+## Funding attempt expiry
+
+Core v0 should not let projects wait for funding forever.
+
+Every financeable project, project phase, or funding lane should have a visible funding window represented by a traceable `FundingAttempt`.
+
+If the window expires without financing closure, the outcome is `Expired Unfunded`, unless the active policy allows a bounded extension or routes the project into reformulation.
+
+The attempt history remains visible:
+
+- attempt number;
+- funding target;
+- window start and end;
+- progress at expiry;
+- support and readiness snapshot where relevant;
+- extension count;
+- fund-treatment outcome;
+- republication or clone reference where applicable.
+
+Republishing or cloning after expiry should not erase prior history. Failed funding is not automatically a negative reputation event, but repeated misleading, abusive, or spam-like attempts may become a reviewed responsibility or reputation input.
+
 ## Interface implication
 
 The funding action should be called `Financiar`, not `Asignar`, when the citizen commits resources to projects.
@@ -219,7 +243,7 @@ C005 is resolved as follows:
 No ordinary withdrawal after financing.
 Funding is commitment until project closure.
 Rumors, comments, ordinary changes, or regret do not release the funder.
-Project failure is handled through retentions, guarantees, recovery, reputation, and return/reassignment of unused or recovered funds.
+Project failure or expired unfunded financing is handled through retentions, guarantees, recovery, reputation where reviewed, and return/reassignment of unused, unreleased, or recovered funds.
 ```
 
 Final rule:
