@@ -281,14 +281,30 @@ Archived with formal effect
 ```text
 Draft
 Submitted
-Awaiting quote
-Awaiting support / review funding
+Needs more information
+Pending quote
+Quote fallback
+Support window open
+Support threshold not reached
+Funding pending
 Ready for admissibility review
-Admissible
+In admissibility review
 Inadmissible
+Admitted non-blocking
+Admitted with scoped systemic pause
 Referred to competent authority
 Under review
-Resolved
+Actor response
+External authority review
+External suspension ordered
+Correction or mitigation
+Final resolution pending
+Resolved founded
+Resolved unfounded
+Resolved partially founded
+Closed with no finding
+Reopened
+Appealed
 Abusive or bad-faith finding where reviewed
 Closed
 ```

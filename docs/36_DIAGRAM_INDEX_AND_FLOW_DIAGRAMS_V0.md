@@ -68,6 +68,7 @@ Primary Mermaid sources:
 12. `docs/diagrams/v0-formal-entity-relationship.md`
 13. `docs/diagrams/v0-project-object-state-with-phase-substates.md`
 14. `docs/diagrams/v0-contextualized-evidence-item-state.md`
+15. `docs/diagrams/v0-complaint-evidence-and-review-state.md`
 
 Conceptual planning diagram:
 
@@ -114,7 +115,6 @@ Future formal diagrams should not use a bare `Evidence` node as if all evidence 
 The next diagram refinements should be created as separate Mermaid sources before generated images:
 
 ```text
-Complaint evidence and complaint review state diagram
 Funding commitment state diagram
 Project evidential contract / fulfillment evidence need diagram
 Control subproject state diagram
@@ -137,3 +137,5 @@ The first ERD relationship audit has been completed. The ERD now preserves the `
 The Project object state diagram with phase substates now lives at `docs/diagrams/v0-project-object-state-with-phase-substates.md`. It separates parent `Project` states from operational `ProjectPhase` substates and preserves the rule that phase blockers escalate to project-level state only when a formal scoped record declares a broader affected scope.
 
 The Contextualized Evidence Item state diagram now lives at `docs/diagrams/v0-contextualized-evidence-item-state.md`. It separates evidence intake, context classification, privacy/safety review, sufficiency review, corroboration, contradiction, report linkage, evaluation use, verified discovery, and archived no-effect states. It preserves the rule that contextualized evidence does not directly create complaint, disbursement, closure, responsibility, reputation, or legal effects.
+
+The Complaint Evidence and Review state diagram now lives at `docs/diagrams/v0-complaint-evidence-and-review-state.md`. It separates submitted complaints, minimum-structure review, quote, support window, review funding, admissibility, non-blocking admission, scoped systemic pause, competent-authority referral, external suspension, final resolution, and role-specific consequence paths.
