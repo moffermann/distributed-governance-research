@@ -130,6 +130,7 @@ Qué revisar:
 
 Disensos / alertas:
 - relación declarada entre diseñador y ejecutor.
+- aprobación de diseño todavía no cubre baños/accesibilidad.
 
 [Ver contexto]
 ```
@@ -141,6 +142,7 @@ Rules:
 - label AI-generated summaries where applicable;
 - do not state what the citizen should do;
 - do not hide objections, insufficient information, or unresolved issues.
+- do not hide approval scope, conditional approval, or pending material requirements where they affect funding, readiness, disbursement, or trust.
 
 ## 6. Project state
 
@@ -225,6 +227,21 @@ Full policy and audit trail available.
 ```
 
 The citizen should see what is missing first. The deeper view can explain the policy source, operating mode, protocol version, and tutored review rule if applicable.
+
+Approval or review labels should be source-linked. A dashboard may say that a project passed a municipal, investment, environmental, technical, or protocol review, but it should also show the relevant scope and unresolved conditions where material.
+
+Example:
+
+```text
+Design review:
+Accepted with conditions.
+
+Scope:
+Court dimensions and surface accepted.
+
+Still pending:
+Bathroom/accessibility evidence and public-access rules.
+```
 
 ## 8. Main actions
 

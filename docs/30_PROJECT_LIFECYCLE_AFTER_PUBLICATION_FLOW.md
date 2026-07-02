@@ -71,6 +71,7 @@ Possible closure conditions:
 - required documents complete;
 - Financial Assurance Profile configured;
 - required guarantee materialized where applicable;
+- material information claims, approval labels, and unresolved warnings source-linked where material;
 - minimum admissible control package complete;
 - no admitted blocking complaint or scoped systemic pause;
 - moderation completed if operating mode requires it;
@@ -118,6 +119,8 @@ This check should confirm:
 - Required Evidence Package is complete where the active policy requires it;
 - required Project Legitimacy Profile conditions are complete or explicitly marked not required;
 - affected-party mapping, notification, observation-window, consultation, or plan-review Readiness Evidence is submitted and reviewed where required;
+- no unresolved material warning is hidden behind a favorable citizen-facing label such as `almost funded`, `approved`, `recommended`, or `execution-ready`;
+- conditional approvals identify approving role or authority, criterion source, scope, date or version, and remaining conditions where material;
 - the minimum admissible control package is accepted where control is required;
 - milestone plan is complete;
 - disbursement milestone plan has no unresolved critical validation failures;

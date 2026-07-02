@@ -1521,7 +1521,9 @@ Phase rule:
 
 ## Material Information Claim
 
-A statement that can affect funding, execution readiness, disbursement, closure, risk evaluation, beneficiary trust, or reputation.
+A statement, approval label, condition, warning, omission, or limitation that can affect funding, legitimacy, execution readiness, disbursement, closure, complaint review, risk evaluation, beneficiary trust, or reputation.
+
+Material information claims may originate in the platform, a project field, a proposer statement, a technical design, a procurement or investment document, a municipal or sector review, an environmental approval, a fiscalization report, a contextualized evidence item, a verified discovery, or another source record. Current institutional approval paths may remain external, but their material outputs should become source-linked claims when they shape citizen-facing decisions.
 
 Attributes:
 
@@ -1529,11 +1531,15 @@ Attributes:
 - claim text or structured value;
 - responsible actor;
 - responsible actor role;
+- source record, approval record, criterion source, or authority/reviewer reference where applicable;
+- approval scope, condition, date, version, or limitation where applicable;
 - affected object: value thesis, metric, fulfillment evidence need, beneficiary group, budget line, milestone, contextualized evidence item, complaint, fiscalization report, risk, antivalue, or relationship declaration;
 - supporting evidence references with context;
 - contradiction, justified objection, complaint, or review references;
 - AI anomaly reference where applicable;
 - current review status;
+- citizen visibility status;
+- material warning status;
 - incentive or obligation context for the responsible role;
 - payment, disbursement, reputation, correction, revocation, or responsibility consequence references where applicable;
 - correction history;
@@ -1551,6 +1557,9 @@ Disputed
 Contradicted
 Corrected
 Accepted
+Approved with conditions
+Material warning visible
+Source linked
 Insufficient for claimed effect
 Reviewed for formal effect
 Withdrawn
@@ -1559,6 +1568,10 @@ Withdrawn
 Rule:
 
 > Material claims are not hidden technical trivia. They are the accountable statements that connect project promises, contextualized evidence, incentives, contradictions, review, responsibility, verified discovery, and consequences.
+
+Visibility rule:
+
+> If an `approved`, `almost funded`, `execution-ready`, `recommended`, or AI-generated summary label depends on a material claim, the citizen-facing surface should expose the source category and unresolved warning state in compact form, while Layer 5 preserves the full record.
 
 ## Evidence Item
 
@@ -1666,7 +1679,7 @@ Rule:
 
 ## Verified Discovery
 
-A review-confirmed discovery of material hidden information, false or manipulated contextualized evidence, KPI manipulation, undeclared conflict, material omission, or relevant contradiction.
+A review-confirmed discovery of material hidden information, false or manipulated contextualized evidence, KPI manipulation, undeclared conflict, material omission, misleading visibility, conditional approval hidden from citizen-facing summaries, or relevant contradiction.
 
 Attributes:
 

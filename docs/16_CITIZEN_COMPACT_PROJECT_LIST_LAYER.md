@@ -162,6 +162,8 @@ Shown because: Sports + near your commune + needs fiscalizer.
 
 Core v0 excludes paid promotion and opaque manual boosting.
 
+Ordering, recommendation, urgency, and funding-progress labels must not suppress unresolved material warnings. If a project has a pending design gate, conditional approval, unresolved Required Evidence Need, material complaint status, missing public-access condition, or legitimacy-profile issue, the compact card should show a short warning with a path to the source.
+
 ## Compact project item
 
 Each project in the list should be displayed as a compact card.
@@ -176,6 +178,8 @@ It should include:
 - missing amount;
 - project state;
 - missing closure conditions where relevant;
+- unresolved material warnings where relevant;
+- source-linked approval or review status where material;
 - key signal counts;
 - direct action button.
 
@@ -199,6 +203,9 @@ Open project
 
 Needs:
 🛡 0/1 fiscalizer · 📎 2/4 evidence producers
+
+Warnings:
+Design gate pending · consultation evidence pending
 
 Signals:
 👥 80   💰 1,240   💬 35   🚩 0   📎 12

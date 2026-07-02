@@ -99,6 +99,7 @@ It should not become a general project feed.
 - no opaque manual favoritism;
 - rotation should be rule-based;
 - the reason for urgency should be visible;
+- unresolved material warnings should remain visible when they exist;
 - the citizen can ignore this block and continue browsing.
 
 ### Valid reasons for urgent highlighting
@@ -196,11 +197,14 @@ Near me
 
 New project: Design and Construction of Multi-court Facility in Macul
 Status: community consultation evidence pending
+Warning: design gate not accepted yet
 Why shown: project territory overlaps your followed area
 [View] [Follow] [Submit observation]
 ```
 
 Following a nearby scope does not fund, approve, vote, block, or fiscalize a project. It only creates a notification and discovery relationship that helps affected people participate without needing to attend one physical meeting at one specific time.
+
+Nearby discovery should not hide material context. If a project is shown because it is close to the citizen, the compact entry should also show source-linked material warnings such as pending consultation evidence, conditional approval, unresolved design gate, active complaint status, or missing public-access condition where applicable.
 
 ## F. Search and filters
 

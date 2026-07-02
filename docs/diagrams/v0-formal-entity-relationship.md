@@ -8,7 +8,7 @@ This diagram is a conceptual ERD baseline, not a database schema. It focuses on 
 
 Source baseline: `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
 
-Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001.
+Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002.
 
 ```mermaid
 erDiagram
@@ -153,6 +153,14 @@ erDiagram
     MATERIAL_INFORMATION_CLAIM {
         string claim_id
         string claim_status
+        string source_link_status
+        string material_warning_status
+    }
+
+    VERIFIED_DISCOVERY {
+        string discovery_id
+        string materiality_finding
+        string visibility_effect
     }
 
     EVALUATION_RECORD {
@@ -417,6 +425,8 @@ erDiagram
 
     PROJECT ||--o{ MATERIAL_INFORMATION_CLAIM : contains
     MATERIAL_INFORMATION_CLAIM ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : supported_or_contradicted_by
+    MATERIAL_INFORMATION_CLAIM ||--o{ VERIFIED_DISCOVERY : may_be_corrected_by
+    VERIFIED_DISCOVERY ||--o{ AUDIT_EVENT : records
     FULFILLMENT_EVIDENCE_NEED ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : addressed_by
     PROJECT_LEGITIMACY_PROFILE ||--o{ CONTEXTUALIZED_EVIDENCE_ITEM : receives_mapping_or_consultation_evidence
     PROJECT_LEGITIMACY_PROFILE ||--o{ JUSTIFIED_OBJECTION_SIGNAL : tracks_unresolved
@@ -494,6 +504,7 @@ erDiagram
 
     IDEA ||--o{ AUDIT_EVENT : records
     PROJECT ||--o{ AUDIT_EVENT : records
+    MATERIAL_INFORMATION_CLAIM ||--o{ AUDIT_EVENT : records
     PROJECT_PHASE ||--o{ AUDIT_EVENT : records
     PROJECT_VARIATION_RECORD ||--o{ AUDIT_EVENT : records
     REFORMULATION_PROPOSAL ||--o{ AUDIT_EVENT : records
@@ -519,6 +530,7 @@ erDiagram
 - `SupportSignal`, `JustifiedObjectionSignal`, and `Comment` are civic signals. They may inform thresholds, deliberation, complaint activation, or review context where policy permits, but they are not funding, complaint evidence, fulfillment evidence, evaluation, or reputation input by themselves.
 - `RequiredEvidencePackage` and `RequiredEvidenceNeed` represent mandatory pre-effect evidence, usually with Readiness Evidence context. They are separate from fulfillment evidence needs.
 - `ProjectLegitimacyProfile` is a threshold-driven profile, not a vote, veto, popularity score, or legal-authority object. It exposes affected-party mapping, consultation Readiness Evidence, unresolved legitimacy objections, and review routes where funding alone would otherwise be mistaken for approval.
+- `MaterialInformationClaim` also covers material approval labels, conditions, omissions, source categories, and unresolved warnings. Existing external approval systems may remain external, but their material outputs should be source-linked where they affect citizen decisions.
 - `Metric` connects value floors and antivalue ceilings to fulfillment evidence needs and evaluation records. This prevents value promises from remaining purely rhetorical.
 - `FundingCommitment` is lane-specific. It may fund project execution, control work, complaint review, or a budget line, but it does not prove legitimacy, execution readiness, disbursement approval, or fulfillment.
 - `SystemicPauseRecord` is scoped. It may affect a project, phase, disbursement, evidence use, or actor action inside the platform, but it is not automatically a material/legal suspension of real-world work.

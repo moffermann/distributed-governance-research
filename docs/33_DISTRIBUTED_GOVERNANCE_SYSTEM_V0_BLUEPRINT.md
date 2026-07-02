@@ -362,6 +362,12 @@ Complaint Evidence belongs to the complaint file. It supports, refutes, clarifie
 
 Core v0 also treats material project statements as accountable claims. Claims that affect funding, execution readiness, disbursement, closure, risk, beneficiary trust, or reputation should be traceable to actor, role, contextualized evidence, contradiction, review status, correction history, incentives, payment or disbursement effects, and responsibility or verified-discovery effects where applicable.
 
+This does not assume that existing institutions have no approval processes. In current public systems, projects may already be approved through investment, procurement, municipal, environmental, technical, or sector-specific procedures. Core v0 adds a visibility rule: when an approval, criterion, pending condition, omission, or limitation is material to citizen funding, legitimacy, execution readiness, disbursement, trust, closure, complaint review, or reputation, it should become a source-linked `MaterialInformationClaim` or equivalent record visible in citizen surfaces and reconstructable in Layer 5.
+
+Rule:
+
+> An `approved`, `almost funded`, `execution-ready`, `recommended`, or AI-generated project summary must not hide material unresolved conditions. Formal approvals should expose the approving role or authority, criterion source, scope, date or version, and unresolved conditions where material.
+
 Citizen-facing reliability labels may remain simple:
 
 ```text
@@ -371,6 +377,9 @@ Disputed
 Contradicted
 Corrected
 Accepted
+Approved with conditions
+Material warning
+Source linked
 ```
 
 Verified discovery may create reputation credit or compensation only after review confirms that the discovered information was material and useful. AI may flag anomalies, duplicates, missing fulfillment evidence, privacy risks, or contradictions, but it does not decide truth, fraud, responsibility, fund release, or legal consequences by itself.
@@ -486,6 +495,8 @@ It includes:
 
 Home categories may be reordered, pinned, collapsed, followed, or hidden by the citizen for personal navigation. Hidden categories remain reachable through Explore, filters, and search. A citizen may follow a geographic or thematic discovery view such as `near me` so new nearby projects, material design changes, consultation windows, affected-party observation requests, or legitimacy-condition updates can appear asynchronously without requiring attendance at a single neighborhood meeting. Urgent and recommended visibility must show reasons, and Core v0 excludes paid promotion and opaque manual boosting.
 
+Layer 0 may keep the interface short, but it should not let urgency, recommendation, popularity, proximity, or funding progress suppress material warnings. If a highlighted project has a pending design gate, an unresolved required evidence need, a material complaint status, a conditional approval, or a legitimacy-profile issue, the citizen-facing entry point should show a compact warning and a route to the source.
+
 ### Layer 1 — Compact project list
 
 Layer 1 lets citizens compare projects quickly.
@@ -497,6 +508,8 @@ Each compact item shows:
 - value icons;
 - funding progress;
 - missing conditions;
+- unresolved material warnings;
+- source-linked approval or review status where material;
 - signal counts;
 - contextual action button.
 
@@ -576,6 +589,7 @@ Layer 5 contains complete traceability:
 - project evidential contract history;
 - contextualized evidence archive;
 - material information claim and verified-discovery trace;
+- approval criteria, source records, conditional approvals, and unresolved material warning history;
 - fiscalization reports;
 - complaint trace;
 - relationship declarations;

@@ -251,7 +251,9 @@ The eighty-fourth residual cleanup reviewed all Phase 3 attack-defense pairs and
 
 The eighty-fifth residual cleanup propagated A001 / `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md` into the core architecture, scope freeze, entity map, formal inventory, scope matrix, contradiction checklist, implementable schema draft, citizen home/following/dashboard/full-sheet/funding flows, creation/publication and lifecycle flows, Layer 5 audit trail, and affected diagrams. The integration clarifies that affected-party mapping and community consultation are proportional Readiness Evidence conditions represented through Required Evidence Package needs, not votes, vetoes, or fulfillment evidence by default, and that nearby-project discovery enables asynchronous participation with lower participation cost, broader reach, greater visibility, and more traceable feedback.
 
-Next review candidate: propagate A002 / `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md` into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where material visibility or information-capture controls need explicit representation.
+The eighty-sixth residual cleanup propagated A002 / `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md` into the core architecture, scope freeze, entity map, formal inventory, responsibility matrix, implementable schema draft, contradiction checklist, citizen home/list/dashboard/full-sheet layers, project creation/publication and lifecycle flows, Layer 5 audit trail, and affected diagrams. The integration clarifies that A002 is not a claim that current systems lack approvers or criteria; rather, existing investment, procurement, municipal, environmental, technical, or sector approvals should become source-linked material claims where they affect citizen funding, legitimacy, execution readiness, disbursement, trust, closure, complaint review, or reputation. Compact citizen surfaces may stay simple, but approval, urgency, recommendation, AI-summary, almost-funded, or execution-ready labels must not hide unresolved material warnings.
+
+Next review candidate: propagate A003 / `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md` into affected core documents, the contradiction/failure-mode checklist, formal inventory/schema references, and any diagrams where fiscalizer quality, capture, replacement, or secondary-audit controls need explicit representation.
 
 Approximate current maturity:
 
@@ -606,10 +608,10 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Propagate A002 / `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md` into affected core documents.
-2. Update the contradiction/failure-mode checklist with the A002 outcome.
-3. Update formal inventory/schema references where A002 material visibility controls must become explicit.
-4. Identify whether A002 requires diagram or state-transition updates.
+1. Propagate A003 / `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md` into affected core documents.
+2. Update the contradiction/failure-mode checklist with the A003 outcome.
+3. Update formal inventory/schema references where fiscalizer quality and capture indicators must become explicit.
+4. Identify whether A003 requires diagram or state-transition updates.
 5. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 

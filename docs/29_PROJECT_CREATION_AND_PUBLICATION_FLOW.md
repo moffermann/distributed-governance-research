@@ -829,6 +829,8 @@ Validation dimensions:
 - threshold policy completeness;
 - procedural burden profile;
 - required-document completeness;
+- material information claim and source-link completeness;
+- approval scope, criterion source, and unresolved-condition visibility where applicable;
 - admissibility-review requirement where applicable;
 - duplicate or overlapping project detection;
 - operating mode rules.
@@ -857,6 +859,8 @@ Requires adjustments:
 AI helps identify issues, but protocol rules define mandatory requirements.
 
 AI may suggest documents, burden profile, review needs, and missing conditions. It should not certify that a permit, technical study, consultation process, environmental document, or legal authorization is substantively valid.
+
+Where an existing approval, review, or criterion is used to support publication, the validation result should preserve its source, scope, date or version, and unresolved material conditions. The system should not let a creator publish a favorable citizen-facing label while burying a material limitation in a technical appendix.
 
 Projects with unresolved critical failures in their disbursement milestone plan, phase plan, or threshold policy cannot be published for execution funding commitments. A pending design gate is not a critical failure if the phase plan, minimum public-value baseline, reserved-fund rule, and failure-treatment rule are explicit.
 
@@ -888,6 +892,23 @@ Needs:
 
 Threshold policy:
 Medium public sports project
+
+Warnings:
+consultation evidence pending
+```
+
+The preview should also show source-linked approval or review status where material.
+
+Example:
+
+```text
+Design and Construction of Multi-court Facility in Macul
+
+Approval status:
+Design review accepted with conditions.
+
+Still pending:
+Bathroom/accessibility evidence and public-access rules.
 ```
 
 For phased projects, the preview should show phase status without exposing unnecessary technical detail.

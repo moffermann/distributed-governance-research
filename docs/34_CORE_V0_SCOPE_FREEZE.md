@@ -262,6 +262,12 @@ Complaint Evidence belongs to the complaint file. It supports, refutes, clarifie
 
 Core v0 includes material information claims as the accountable statements that connect project promises, contextualized evidence, contradictions, review, correction, responsibility, and verified discovery. Ordinary citizens may see simple reliability labels, while Layer 5 preserves the full trace.
 
+Core v0 does not assume that current public systems lack approvers or criteria. Projects may already be approved through investment, procurement, municipal, environmental, technical, or sector-specific processes. The Core v0 rule is that material approval outputs, criteria, unresolved conditions, and limitations should not remain dispersed only in technical files. Where they affect funding, legitimacy, execution readiness, disbursement, trust, closure, complaint review, or reputation, they should be represented as source-linked material claims or equivalent records.
+
+Rule:
+
+> Citizen-facing labels such as `approved`, `almost funded`, `execution-ready`, `recommended`, or AI-generated summaries must expose material warnings and source categories when unresolved conditions remain.
+
 Verified discovery may be rewarded or recognized only after review confirms materiality and usefulness. AI may assist with anomaly, duplicate, privacy, or contradiction detection, but it does not decide truth, fraud, responsibility, fund release, or legal consequences.
 
 ### 7a. Evaluation context model
@@ -703,6 +709,8 @@ Core v0 includes transparent discovery controls:
 - hidden categories remain available through Explore and search;
 - project lists must show ordering mode;
 - urgent and recommended projects must show why they appear;
+- urgent, recommended, popular, almost-funded, or nearby project surfaces must not hide unresolved material warnings;
+- material approval labels should expose approving role or authority, criterion source, scope, date or version, and unresolved conditions where material;
 - paid promotion and opaque manual boosting are excluded.
 
 ### 25. Basic observability baseline

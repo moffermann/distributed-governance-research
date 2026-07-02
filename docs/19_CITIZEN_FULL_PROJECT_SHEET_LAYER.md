@@ -41,21 +41,22 @@ Layer 4 should include:
 ```text
 1. Citizen summary
 2. Assisted deliberation context
-3. Main responsibility and value promised
-4. Beneficiaries
-5. Who will do it
-6. Budget
-7. Project phases where applicable
-8. Conditions to become execution-ready
-9. Civic support and justified objections
-10. Execution plan and milestones
-11. Evidence committed
-12. Fiscalization
-13. Declared risks and antivalues
-14. Relevant comments
-15. Complaints
-16. Change history
-17. Access to full audit trail
+3. Material approval and warning summary
+4. Main responsibility and value promised
+5. Beneficiaries
+6. Who will do it
+7. Budget
+8. Project phases where applicable
+9. Conditions to become execution-ready
+10. Civic support and justified objections
+11. Execution plan and milestones
+12. Evidence committed
+13. Fiscalization
+14. Declared risks and antivalues
+15. Relevant comments
+16. Complaints
+17. Change history
+18. Access to full audit trail
 ```
 
 ## 1. Citizen summary
@@ -84,7 +85,35 @@ Each item should show or link to its source category and status. AI-generated su
 
 This section should not recommend a final action, certify truth, rank the project, or hide relevant disagreement.
 
-## 3. Main responsibility and value promised
+## 3. Material approval and warning summary
+
+Layer 4 should translate formal approvals, review outputs, pending conditions, and limitations into citizen language.
+
+This does not replace current approval processes. If a project has investment, procurement, municipal, environmental, technical, or protocol review records, Layer 4 should show what was approved, by whom or by which role, under which criterion source, with what scope, and which material conditions remain unresolved.
+
+Example:
+
+```text
+Approvals and warnings
+
+Design review:
+Accepted with conditions.
+
+What was accepted:
+Court dimensions and surface plan.
+
+Still pending:
+Bathroom/accessibility evidence, public-access rules, and neighborhood consultation evidence.
+
+Sources:
+Design review record, Required Evidence Package, affected-party consultation need.
+```
+
+Rule:
+
+> A favorable summary should not hide the limits of the approval behind it.
+
+## 4. Main responsibility and value promised
 
 Start with the project's main responsibility in citizen language.
 
@@ -118,7 +147,7 @@ Each value should show:
 - how it is verified;
 - current status.
 
-## 4. Beneficiaries
+## 5. Beneficiaries
 
 Show who receives the benefit and distinguish beneficiary types.
 
@@ -142,7 +171,7 @@ Pending until execution begins.
 
 > Do not mix direct, indirect, estimated, and confirmed beneficiaries.
 
-## 5. Who will do it
+## 6. Who will do it
 
 Present the executor in citizen language.
 
@@ -193,7 +222,7 @@ Status:
 Allowed with safeguards.
 ```
 
-## 6. Budget
+## 7. Budget
 
 The budget should be understandable, not an accounting dump.
 
@@ -235,7 +264,7 @@ Funding may be reserved.
 Release blocked until design accepted.
 ```
 
-## 7. Project phases where applicable
+## 8. Project phases where applicable
 
 If the project has phases, show them in plain language.
 
@@ -257,7 +286,7 @@ Rule:
 
 > The citizen should understand which phase is active, which phase is blocked, and why later-phase funds are not released yet.
 
-## 8. Conditions to become execution-ready
+## 9. Conditions to become execution-ready
 
 Show the parallel closure conditions that apply to the project.
 
@@ -315,7 +344,7 @@ Applies because:
 The project builds a public facility, may need permits, and requires independent fiscalization before execution.
 ```
 
-## 9. Civic support and justified objections
+## 10. Civic support and justified objections
 
 Show social support and justified objections separately from funding.
 
@@ -345,7 +374,7 @@ Rule:
 
 > Support and justified objections are reversible civic signals. They do not withdraw funding and do not replace formal complaints.
 
-## 10. Execution plan and milestones
+## 11. Execution plan and milestones
 
 Show the plan in citizen language.
 
@@ -375,7 +404,7 @@ Deadline: month 6
 Fulfillment evidence: final report, total attendance, beneficiary confirmation
 ```
 
-## 11. Evidence committed
+## 12. Evidence committed
 
 Show what evidence the project has committed to produce.
 
@@ -399,7 +428,7 @@ Pending: 6
 Observed: 0
 ```
 
-## 12. Fiscalization
+## 13. Fiscalization
 
 Show who reviews the project and what is reviewed.
 
@@ -436,7 +465,7 @@ Delivered reports:
 0
 ```
 
-## 13. Declared risks and antivalues
+## 14. Declared risks and antivalues
 
 The project sheet should show not only promised value, but also possible negative effects or risks declared by the project.
 
@@ -463,7 +492,7 @@ Possible antivalues:
 
 > The citizen project sheet should show both promised value and declared risks or possible negative effects.
 
-## 14. Relevant comments
+## 15. Relevant comments
 
 Do not show every comment by default. Show a useful synthesis.
 
@@ -484,7 +513,7 @@ Main topics:
 [See full conversation]
 ```
 
-## 15. Complaints
+## 16. Complaints
 
 Show complaint status clearly.
 
@@ -531,7 +560,7 @@ The full sheet should distinguish:
 
 Support and objections to complaints should be shown separately. Objections do not reduce the support count required by the active complaint policy.
 
-## 16. Change history
+## 17. Change history
 
 Show a citizen-readable version history.
 
@@ -550,7 +579,7 @@ Beneficiary number corrected from 100 to 80.
 
 Layer 4 should show meaningful changes, not raw technical records.
 
-## 17. Access to full audit trail
+## 18. Access to full audit trail
 
 Layer 4 should end with access to Layer 5.
 

@@ -120,11 +120,13 @@ implementation version
 material AI assistance reference
 contextualized evidence item and evidence context
 material information claim
+approval source, criterion source, approval scope, or conditional approval reference
 governance resolution or review timeout resolution
 financial order, disbursement, retention, guarantee, or custody record
 responsibility event, reputation input, or reputation update
 protected identity request
 discovery visibility reason
+material warning visibility state
 export snapshot
 ```
 
@@ -859,12 +861,15 @@ Examples:
 - nearby-project or followed-scope reason;
 - affected-party consultation-window notification;
 - legitimacy-condition update visibility reason;
+- material warning shown or suppressed state;
+- approval label source, criterion source, scope, date or version, and unresolved conditions where material;
+- AI-generated summary source categories and limitations;
 - filters applied;
 - protocol rule for rotation;
 - whether the user customized Home categories;
 - aggregate funding from search, category navigation, urgent highlights, recommendations, delegation, and automatic profiles.
 
-The ordinary citizen does not need to see every technical ranking detail, but reviewers should be able to reconstruct whether discovery acted as a hidden allocator.
+The ordinary citizen does not need to see every technical ranking detail, approval file, tender base, permit, or appendix, but reviewers should be able to reconstruct whether discovery acted as a hidden allocator or whether a favorable citizen-facing label hid a material condition.
 
 ## 18. Data export and verification tools
 

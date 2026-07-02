@@ -159,11 +159,11 @@ effect_refs
 | `ValueVerificationPackage` | `package_id`, `project_version_ref`, `covered_values`, `metric_refs`, `evidence_need_refs`, `source_role_rules`, `status` | Bridges value commitments to the evidential contract. | Citizen surface may show a simple verification summary. |
 | `ProjectEvidentialContract` | `contract_id`, `project_version_ref`, `value_profile_ref`, `evidence_need_refs`, `corroboration_rules`, `privacy_rules`, `effect_rules`, `status` | Governs fulfillment/control evidence eligibility and priority. | Defines needs, not preselected producers. |
 | `FulfillmentEvidenceNeed` | `need_id`, `contract_ref`, `metric_or_claim_ref`, `expected_source_roles`, `required_metadata`, `review_rule`, `status` | Evidence producers may offer to satisfy it after the relevant work, service, value, antivalue, milestone, or phase deliverable is performed. | Contract-matched offers receive higher priority; pre-execution readiness evidence is separate. |
-| `MaterialInformationClaim` | `claim_id`, `project_or_object_ref`, `claim_text_or_value`, `responsible_role_ref`, `materiality_basis`, `supporting_evidence_refs`, `review_status` | May connect to contradiction, correction, complaint, responsibility, or reputation. | Captures statements that affect funding, readiness, disbursement, closure, risk, trust, or reputation. |
+| `MaterialInformationClaim` | `claim_id`, `project_or_object_ref`, `claim_text_or_value`, `responsible_role_ref`, `materiality_basis`, `source_record_refs`, `approval_or_criterion_ref`, `approval_scope_or_condition`, `supporting_evidence_refs`, `review_status`, `citizen_visibility_status`, `material_warning_status` | May connect to contradiction, correction, complaint, responsibility, reputation, citizen-facing warning, or visibility correction. | Captures statements, approval labels, conditions, omissions, and limitations that affect funding, legitimacy, readiness, disbursement, closure, complaint review, risk, trust, or reputation. |
 | `ContextualizedEvidenceItem` | `evidence_item_id`, `submitted_by_role_ref`, `evidence_context`, `target_object_ref`, `metadata`, `privacy_classification`, `review_status`, `sufficiency_status` | May support complaint, readiness, fulfillment, control, contradiction, observability, or research only after context review. | Bare evidence is not a formal object. |
 | `EvidenceContext` | `context_id`, `evidence_item_ref`, `proposed_context`, `confirmed_context`, `confirmed_by_role_ref`, `effect_scope`, `status` | Prevents complaint evidence, readiness evidence, fulfillment evidence, and control evidence from being mixed. | Same material may have multiple reviewed contexts. |
 | `EvaluationRecord` | `evaluation_id`, `evaluation_context`, `evaluated_dimension`, `authority_or_qualification_basis`, `evidence_refs`, `effect_type`, `effect_scope`, `review_status` | May affect disbursement, closure, correction, responsibility, reputation, or complaint outcome. | Formal effects require scoped evaluation. |
-| `VerifiedDiscovery` | `discovery_id`, `source_role_ref`, `hidden_issue_ref`, `evidence_refs`, `review_result`, `materiality_finding`, `effect_refs` | May create reward, reputation input, correction, complaint, responsibility, or disbursement effect after review. | AI anomaly flags alone are not discoveries. |
+| `VerifiedDiscovery` | `discovery_id`, `source_role_ref`, `hidden_issue_ref`, `evidence_refs`, `review_result`, `materiality_finding`, `visibility_effect_refs`, `effect_refs` | May create reward, reputation input, correction, complaint, responsibility, warning, visibility correction, or disbursement effect after review. | AI anomaly flags alone are not discoveries. |
 
 ## Funding, Disbursement, and Custody Schemas
 
@@ -206,7 +206,7 @@ effect_refs
 | `JustifiedObjectionSignal` | `objection_id`, `actor_ref`, `target_object_ref`, `reason_category`, `explanation`, `status`, `linked_complaint_ref` | May inform deliberation, review, or complaint. | Not a complaint by default. |
 | `Comment` | `comment_id`, `actor_ref`, `target_object_ref`, `body_or_summary`, `visibility_privacy`, `protected_identity_ref`, `status` | May trigger clarification or deliberation. | Not formal complaint/evaluation/evidence by itself. |
 | `ProtectedIdentityRequest` | `request_id`, `actor_ref`, `target_action_ref`, `risk_basis`, `review_result`, `display_identity`, `access_rule_ref`, `status` | Applies to sensitive comments, complaints, evidence, testimony, beneficiary confirmations, or affected-party reports. | Verified actor remains known to authorized process. |
-| `AssistedDeliberationContext` | `context_id`, `target_object_ref`, `decision_context`, `source_item_refs`, `ai_assistance_ref`, `status`, `citizen_summary` | Helps citizens review material actions. | Does not decide, rank, certify truth, allocate funds, or suppress dissent. |
+| `AssistedDeliberationContext` | `context_id`, `target_object_ref`, `decision_context`, `source_item_refs`, `material_warning_refs`, `ai_assistance_ref`, `status`, `citizen_summary` | Helps citizens review material actions and unresolved conditions. | Does not decide, rank, certify truth, allocate funds, suppress dissent, or hide source categories. |
 
 ## Delegation and Allocation Schemas
 
@@ -257,6 +257,8 @@ No public authority moderation without GovernanceResolution or ReviewTimeoutReso
 No rule change without version, public reason, effective date, transition rule, and audit trace.
 No protected identity without verified actor and protected identity request record.
 No AI assistance treated as actor, evaluator, fiscalizer, or truth-decider by default.
+
+No approval, almost-funded, recommended, urgent, execution-ready, or AI-summary label without source-linked material claims and unresolved-condition visibility where material.
 ```
 
 ## Macul Multi-Court Schema Trace

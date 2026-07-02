@@ -422,6 +422,22 @@ Affected-party mapping and consultation should be required proportionally. Low-r
 
 ---
 
+## A002 — Information capture through visibility control
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md`
+
+### Accepted v0 rule
+
+Core v0 does not assume that current public systems lack project approvers or criteria. Existing investment, procurement, municipal, environmental, technical, or sector approvals may remain legally external to the platform. The platform requirement is material visibility: approvals, criteria, pending conditions, omissions, limitations, and review outputs that affect funding, legitimacy, execution readiness, disbursement, trust, closure, complaint review, or reputation must be represented as source-linked `MaterialInformationClaim` records or equivalent source references.
+
+Compact citizen surfaces may use short summaries, AI assistance, project cards, urgency labels, recommendations, and discovery ordering, but those surfaces must not hide unresolved material warnings. Citizen-facing labels should distinguish popularity, funding state, evidence sufficiency, fiscalization status, complaint status, design readiness, legitimacy conditions, and conditional approvals.
+
+> The problem is not that approvals do not exist today. The problem is that approval criteria, conditions, omissions, and compliance traces can be dispersed across technical records while citizens see only a favorable surface label.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -444,6 +460,7 @@ Affected-party mapping and consultation should be required proportionally. Low-r
 - [ ] Does every execution-financeable project have a Financial Assurance Profile?
 - [ ] Is financial assurance treated as universal across social projects, not only construction or infrastructure?
 - [ ] If the project uses phases, are phase deliverables, gates, dependencies, and failure treatment explicit?
+- [x] Are material claims, approval labels, and unresolved conditions source-linked where they affect citizen decisions?
 - [ ] Where affected-party legitimacy conditions apply, does the project have a Project Legitimacy Profile tied to Threshold Policy and Required Evidence Package records?
 - [ ] Are required affected-party maps, consultation evidence, observation windows, or plan-review records present before execution-ready status where the policy requires them?
 - [ ] Are pre-execution required evidence records classified as Readiness Evidence rather than Fulfillment Evidence unless they are separately reviewed for a fulfillment effect?
@@ -607,10 +624,12 @@ Affected-party mapping and consultation should be required proportionally. Low-r
 - [ ] Is the ordinary citizen view simple?
 - [ ] Are signals clickable?
 - [ ] Can technical detail be reached when needed?
+- [x] Do compact cards surface unresolved material warnings?
 - [x] Is project discovery explainable?
 - [x] Are urgent/promoted-looking slots rule-based?
 - [x] Can users customize Home categories without changing project eligibility?
 - [ ] Are citizen-facing states mapped from technical states?
+- [x] Do approval labels expose approving role or authority, criterion source, scope, date or version, and unresolved conditions where material?
 
 ## 11. Transition checklist
 
@@ -632,6 +651,7 @@ Affected-party mapping and consultation should be required proportionally. Low-r
 - [x] Can project history be reconstructed?
 - [x] Are AI-assisted decisions recorded when material?
 - [x] Are governance resolutions, review timeouts, and material discovery reasons auditable?
+- [x] Are material visibility warnings, approval-source records, and source-linked AI summaries auditable?
 
 # C. Current integration priorities
 

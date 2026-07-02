@@ -4,7 +4,7 @@
 
 Show the project lifecycle after publication, including validation, execution readiness, reformulation, review, revocation, and closure.
 
-Related resolutions: C005, C016, C017, C018, H008, H011, H019.
+Related resolutions: C005, C016, C017, C018, H008, H011, H019, A001, A002.
 
 ```mermaid
 stateDiagram-v2
@@ -16,7 +16,7 @@ stateDiagram-v2
     ReadyToPublish --> OpenProject
 
     OpenProject --> FundingOpen
-    FundingOpen --> ClosureReview: target, assurance, and control conditions met
+    FundingOpen --> ClosureReview: target, assurance, control, and material visibility conditions met
     ClosureReview --> OpenProject: missing closure condition
     ClosureReview --> PhaseGateReview: phase gate required
     PhaseGateReview --> OpenProject: gate pending or correction required
@@ -52,4 +52,4 @@ stateDiagram-v2
 
 ## Rule
 
-> A project advances through validated conditions and review, not self-declared progress. Closure requires a Project Closure Accountability Record. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.
+> A project advances through validated conditions and review, not self-declared progress. Execution readiness should not hide unresolved material warnings behind favorable labels. Closure requires a Project Closure Accountability Record. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.

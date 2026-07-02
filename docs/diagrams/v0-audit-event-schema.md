@@ -16,7 +16,7 @@ Source baseline:
 - `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`
 - `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md`
 
-Related sources: C008, C019, C020, C021, C024, C025, H003, H008, H015, H017.
+Related sources: C008, C019, C020, C021, C024, C025, H003, H008, H015, H017, A002.
 
 ## Audit Event Schema
 
@@ -80,6 +80,8 @@ classDiagram
         source_record_id
         evidence_context_if_any
         material_claim_ref
+        approval_or_criterion_ref
+        unresolved_condition_ref
         effect_type
         effect_scope
         effect_status
@@ -99,6 +101,8 @@ classDiagram
         governance_resolution_ref
         timeout_resolution_ref
         discovery_visibility_reason_ref
+        material_warning_ref
+        source_category_list_ref
         export_snapshot_ref
     }
 
@@ -210,12 +214,15 @@ material AI assistance reference
 contextualized evidence item reference
 evidence context
 material information claim reference
+approval source, criterion source, scope, condition, or limitation reference
 governance resolution reference
 review timeout resolution reference
 financial order, disbursement, or guarantee reference
 responsibility, reputation input, or reputation update reference
 protected identity request reference
 discovery visibility reason reference
+material warning visibility state
+AI-generated summary source categories and limitations
 export snapshot reference
 ```
 
@@ -227,6 +234,7 @@ export snapshot reference
 - Privacy classification and protected identity references preserve auditability without exposing protected personal data to unauthorized viewers.
 - AI assistance may be referenced as a material assistance trace, but it is not treated as actor, authority, evaluator, fiscalizer, or truth-decider by default.
 - Discovery visibility reasons are recorded only when visibility materially affects attention, funding, legitimacy, or auditability.
+- Approval, almost-funded, execution-ready, recommended, urgent, or AI-summary labels should be reconstructable to source records and unresolved material-warning state when material.
 - Observability metrics are derived from audit events and source objects. They should not become hidden decision scores.
 
 ## Macul Sports Example Trace

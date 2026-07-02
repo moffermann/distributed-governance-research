@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Show how an idea becomes a financeable project only after responsibility, value, budget, Project Evidential Contract, fiscalization, common-good impact, related-party conflict, and disbursement plan requirements are coherent.
+Show how an idea becomes a financeable project only after responsibility, value, budget, Project Evidential Contract, fiscalization, common-good impact, related-party conflict, material visibility, and disbursement plan requirements are coherent.
 
-Related references: C001, C002, C008, C010, C013, C016, C020, C022, H018, H019, H020, H022, H027, H028.
+Related references: C001, C002, C008, C010, C013, C016, C020, C022, H018, H019, H020, H022, H027, H028, A001, A002.
 
 ```mermaid
 flowchart TD
@@ -31,18 +31,21 @@ flowchart TD
     TP --> DOC[Required documents, phase gates, and admissibility review needs]
     DOC --> CTRL[Control package and fiscalization requirements]
     CTRL --> RA[Risks, antivalues, and mitigation]
-    RA --> AS[Assisted validation by rules and AI]
+    RA --> MIC[Material claims, approval source links, and unresolved warnings]
+    MIC --> AS[Assisted validation by rules and AI]
 
     AS -->|missing documents| DOC
+    AS -->|hidden material warning| MIC
     AS -->|review required| AR[Authority or Control Subproject review]
     AR -->|accepted| CP
     AR -->|requires adjustment| P
     AS -->|critical issue| B
     AS -->|requires adjustment| P
     AS -->|valid| CP[Citizen preview]
+    CP -->|warning missing from citizen surface| MIC
     CP --> OP[Publish as Open Project]
 ```
 
 ## Rule
 
-> Ideas capture demand. Projects execute responsibility. AI may assist requirement discovery, but publication depends on protocol rules, an accepted evidential contract, required documents, threshold policy, procedural burden profile, and accountable project roles or reviewers where applicable.
+> Ideas capture demand. Projects execute responsibility. AI may assist requirement discovery, but publication depends on protocol rules, an accepted evidential contract, required documents, threshold policy, procedural burden profile, material visibility of claims and approval conditions, and accountable project roles or reviewers where applicable.
