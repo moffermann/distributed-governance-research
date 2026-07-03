@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.0 (July 2026)**
+**Working paper — v1.1 (July 2026). Revised after an adversarial referee pass whose report and fixes are part of the public record.**
 
 ## Abstract
 
@@ -604,4 +604,5 @@ simulation code and full result tables
 (`scripts/simulation/allocation-sim.mjs`,
 `research/simulation-results.md`), the architecture corpus (`docs/`,
 `knowledge/`), and the complete adversarial record (`attacks/`,
-`defenses/`, resolutions `docs/67`–`docs/89`).*
+`defenses/`, accepted resolutions to date `docs/67`–`docs/89`; eleven
+second-round pairs remain under open review).*
