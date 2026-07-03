@@ -33,8 +33,8 @@ For Macul, one holding designing and constructing the facility can be legitimate
 ## Project-document basis
 
 - `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:7` states that related-party links do not automatically make a project illegitimate, but must be declared, classified, exposed, and handled with proportional safeguards.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:51` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:63` define proportional conflict categories from declared low conflict to hidden or misrepresented conflict.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:106` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:108` gives the design-and-build holding example and requires phase planning and independent design-gate verification where policy requires it.
+- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:53` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:65` define proportional conflict categories from declared low conflict to hidden or misrepresented conflict.
+- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:108` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:110` gives the design-and-build holding example and requires phase planning and independent design-gate verification where policy requires it.
 - `docs/09_PROJECT_OBJECT_MODEL.md:83` allows the same actor to design and execute only with traceability and without self-acceptance where independent review is required.
 - `docs/09_PROJECT_OBJECT_MODEL.md:282` requires related-party and conflict declarations among proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries.
 - `docs/09_PROJECT_OBJECT_MODEL.md:303` states that a Macul multi-court project may be legitimate even when a local club uses the facility, if public access and independent control are declared.

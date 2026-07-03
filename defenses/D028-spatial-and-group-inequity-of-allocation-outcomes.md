@@ -36,7 +36,7 @@ The concession is direct. Core v0 mandates no equalization mechanism and no outc
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:92` defines the equal-for-all-eligible-citizens formula in which each citizen receives the same civic allocation amount, the input-equity improvement over the status quo.
+- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:94` defines the equal-for-all-eligible-citizens formula in which each citizen receives the same civic allocation amount, the input-equity improvement over the status quo.
 - `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:122` provides a redistributive or inverse formula that assigns larger amounts by vulnerability, access, or territorial priority.
 - `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:134` shows a hybrid formula weighting part of the allocation by territorial priority or social vulnerability, making equalization representable.
 - `knowledge/hypotheses/H033-system-defined-default-allocation-rule.md:74` routes a share of the default allocation toward regional or local projects, a hook for territorial routing.

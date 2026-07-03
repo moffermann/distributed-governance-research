@@ -43,7 +43,7 @@ For Macul, the contribution-weighted migration described in the attack should no
 - `knowledge/principles/P002-social-sovereignty-over-value.md:5` states that society is sovereign in assigning value, which the attack argues is not honored when an administrator sets the amount formula.
 - `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md:20` states that Treasury informs authorized funding capacity and executes valid movements but does not decide projects or priorities by discretionary judgment.
 - `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md:407` concedes that allocation formulas may hide political choices if not published.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:825` lists the official budget percentage migrated to the system as a country-implementation decision, confirming migration is external law, not platform configuration.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:831` lists the official budget percentage migrated to the system as a country-implementation decision, confirming migration is external law, not platform configuration.
 
 ## Bibliographic basis
 

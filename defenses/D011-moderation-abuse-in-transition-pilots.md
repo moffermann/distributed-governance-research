@@ -37,7 +37,7 @@ For Macul, rejecting a private multi-court project as duplicate may be valid if 
 - `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:68` requires a public Governance Resolution for material rejection.
 - `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:181` requires tutored review not to create indefinite waiting states.
 - `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:197` requires a Review Timeout Resolution when the authority misses the configured review window.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:400` summarizes that every material tutored decision and silence must become public.
+- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:104` summarizes that every material tutored decision and silence must become public.
 - `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:26` states that a public authority may not be judge and party in the same distributed-governance scope.
 - `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:93` excludes a state-owned or publicly controlled operator in tutored scope when controlled or privileged by the same authority.
 - `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md:263` through `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md:278` require observable tutored approvals, rejections, reasons, timeouts, and delays.

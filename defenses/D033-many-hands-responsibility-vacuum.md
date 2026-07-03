@@ -36,7 +36,7 @@ The concession is genuine and doctrinal. Role-based reputation is not a remedy a
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H010-primary-responsibility-principle.md:7` defines the Primary Responsibility Anchor as the accountability center for classification, funding, evaluation, and fiscalization, showing the model already fixes a single responsibility center for delivery.
+- `knowledge/hypotheses/H010-primary-responsibility-principle.md:217` defines the Primary Responsibility Anchor as the accountability center for classification, funding, evaluation, and fiscalization, showing the model already fixes a single responsibility center for delivery.
 - `knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md:5` assigns responsibility for undeclared antivalue to the project, an abstraction that is not a legal person a victim can sue.
 - `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:82` states that legal sanctions, construction halts, and penalties require the external legal path unless a country implementation grants that power, defining the no-legal-effects boundary.
 - `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:157` records the executor accepting the required post-closure coverage mechanism as part of execution responsibility.

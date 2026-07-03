@@ -36,12 +36,12 @@ For Macul, if all formal records exist but later discovery shows the evidence pr
 - `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:574` states that the architecture should not depend on perfect conflict detection.
 - `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:582` through `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:598` list safeguards: executor does not choose or directly pay, related-party status is declared, false evidence penalties exist, repeated relationships are visible, and supplemental control is capped.
 - `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md:190` states that hidden collusion is possible.
-- `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md:192` notes that the system cannot perfectly detect every friendship, off-platform payment, repeated relationship, holding-linked dependency, or informal pressure.
+- `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md:194` notes that the system cannot perfectly detect every friendship, off-platform payment, repeated relationship, holding-linked dependency, or informal pressure.
 - `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:40` states that one actor may hold multiple roles only with separate authority, duties, conflicts, records, effects, reputation treatment, and audit references.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:183` records the remaining risk that role accumulation may create practical conflicts even when disclosed.
+- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:192` records the remaining risk that role accumulation may create practical conflicts even when disclosed.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:43` requires objects carrying state, authority, responsibility, funding, review, evidence, reputation, or formal effect to reference AuditEvent records.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:163` defines `VerifiedDiscovery` as able to create reward, reputation input, correction, complaint, responsibility, or disbursement effects after review.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:220` defines `ResponsibilityEvent` as reviewed and role-specific, with possible effects on reputation, eligibility, disbursement, correction, revocation, or legal referral.
+- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:229` defines `ResponsibilityEvent` as reviewed and role-specific, with possible effects on reputation, eligibility, disbursement, correction, revocation, or legal referral.
 - `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as integration of observability through existing objects — the A014 relationship graph, VerifiedDiscovery, and ResponsibilityEvent — with detection machinery bounded out of Core v0.
 
 ## Bibliographic basis

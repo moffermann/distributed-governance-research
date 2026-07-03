@@ -43,7 +43,7 @@ The concession is real. Visible funding progress is intrinsic social proof that 
 - `knowledge/hypotheses/H031-transparent-project-discovery-layer.md:24` distinguishes the decision layer that allocates resources from the discovery layer that only helps people find projects.
 - `knowledge/hypotheses/H026-support-vs-financing-signals.md:47` states that support, funding, and complaint signals do not automatically substitute for each other, keeping social proof separate from feasibility.
 - `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md:28` forbids compact surfaces from hiding pending required evidence, complaint status, or design gates, so delivery accountability survives herded funding.
-- `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md:42` records that causal exposure-to-funding attribution is not a Core v0 gate, confirming herding is not yet measured.
+- `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md:38` records that causal exposure-to-funding attribution is not a Core v0 gate, confirming herding is not yet measured.
 
 ## Bibliographic basis
 

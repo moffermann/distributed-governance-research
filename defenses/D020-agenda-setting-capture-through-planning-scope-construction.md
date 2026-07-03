@@ -38,7 +38,7 @@ Under P001, the comparison is against a current ministry that defines its own pr
 
 - `knowledge/open-questions/distributed-roadmap-construction-governance.md:13` states that Core v0 does not yet define how the planning scope or national roadmap itself is built.
 - `knowledge/open-questions/distributed-roadmap-construction-governance.md:102` sets the working principle that Core v0 should not pretend roadmap construction is solved while keeping projects aligned to visible active scopes.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:183` requires every financeable project to align with an active Planning Scope that is visible, versioned, and auditable, while stating Core v0 does not define the full roadmap-construction mechanism.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:185` requires every financeable project to align with an active Planning Scope that is visible, versioned, and auditable, while stating Core v0 does not define the full roadmap-construction mechanism.
 - `knowledge/hypotheses/H009-binding-evolutionary-planning.md:104` requires no silent removal of project categories from financing, against which agenda-narrowing must leave a trace.
 - `knowledge/hypotheses/H009-binding-evolutionary-planning.md:156` states that outside-scope does not mean socially worthless, only not currently eligible for execution financing.
 - `knowledge/hypotheses/H057-public-function-funding-scope-gating.md:11` states the authority may define or interpret the active Planning Scope in tutored mode, but the scope and material scope decisions must be public, versioned, and auditable.

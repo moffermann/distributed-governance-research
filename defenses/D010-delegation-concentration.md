@@ -38,8 +38,8 @@ For Macul, a high-concentration sports delegate can remain legitimate if citizen
 - `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md:185` allows configurable caps but does not impose them globally.
 - `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md:326` summarizes the v0 rule: visible before delegation, during delegated action, in reports, and in administrative observability.
 - `docs/27_CITIZEN_DELEGATION_FLOW.md:7` defines delegation as simple, explicit, accepted, and immediately revocable for future actions.
-- `docs/27_CITIZEN_DELEGATION_FLOW.md:266` requires baseline reports to be generated primarily from the delegated-action audit trail.
-- `knowledge/hypotheses/H043-transparent-delegation-concentration.md:159` states that delegation concentration is not forbidden, but must never be hidden, automatically monetized, or reported as personal-only action.
+- `docs/27_CITIZEN_DELEGATION_FLOW.md:270` requires baseline reports to be generated primarily from the delegated-action audit trail.
+- `knowledge/hypotheses/H043-transparent-delegation-concentration.md:165` states that delegation concentration is not forbidden, but must never be hidden, automatically monetized, or reported as personal-only action.
 
 ## Bibliographic basis
 

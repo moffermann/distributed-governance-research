@@ -42,11 +42,11 @@ For older-adult care, a six-month care project should expose before expiration w
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:13` states that phased project funds may be collected in advance but cannot be released until prerequisite phase deliverables are accepted.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:41` states that citizen funding does not immediately release money to the executor.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:59` through `docs/31_PROJECT_DISBURSEMENT_FLOW.md:79` define execution-ready checks and state that execution-ready does not mean automatic full release.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:412` allows partial release only with separable components, accepted evidence, explicit retention, and clear release conditions.
+- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:449` allows partial release only with separable components, accepted evidence, explicit retention, and clear release conditions.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:416` through `docs/31_PROJECT_DISBURSEMENT_FLOW.md:427` define universal financial assurance beyond construction and prohibit self-selected lower assurance.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:447` identifies monthly release, retained future service funds, and guarantee materialization as continuity protections for care services.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:173` allows `FundingCommitment` to reserve funds for project, phase, control, complaint review, or mitigation.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:176` defines `FinancialAssuranceProfile` as applicable before affected funds release and beyond construction.
+- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:488` identifies monthly release, retained future service funds, and guarantee materialization as continuity protections for care services.
+- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:180` allows `FundingCommitment` to reserve funds for project, phase, control, complaint review, or mitigation.
+- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:183` defines `FinancialAssuranceProfile` as applicable before affected funds release and beyond construction.
 
 ## Bibliographic basis
 
