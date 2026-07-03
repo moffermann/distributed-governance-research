@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed from the external-review round (public-law reviewer, round 2). Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md`.
 
 ## Description
 
@@ -75,6 +75,6 @@ A pilot municipality's legal counsel reviews the platform before launch and asks
 - Does the Allocation Mandate record carry the characterization alongside the authorization?
 - Has the country-implementation menu documented the consequences of each characterization option?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a characterization menu and pilot default for the citizen allocation act, recorded in the Allocation Mandate and disclosed on the citizen surface, with doctrinal construction explicitly external.
+The accepted resolution defined a characterization menu and pilot default for the citizen allocation act, recorded in the Allocation Mandate and disclosed on the citizen surface, with doctrinal construction explicitly external.

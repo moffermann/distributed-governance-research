@@ -84,8 +84,8 @@ These briefs originate from the five-profile external-review simulation of `docs
 
 | Attack | Title | Origin | Status |
 |---|---|---|---|
-| `A034` | Legal Characterization of the Citizen Allocation Act | public-law reviewer, round 2 | pending paired review |
-| `A035` | Administrative Capacity Cost of Tutored Operation | public-sector practitioner reviewer, round 2 | pending paired review |
+| `A034` | Legal Characterization of the Citizen Allocation Act | public-law reviewer, round 2 | resolved in `docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md` |
+| `A035` | Administrative Capacity Cost of Tutored Operation | public-sector practitioner reviewer, round 2 | resolved in `docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md` |
 
 ## Standard review routine
 

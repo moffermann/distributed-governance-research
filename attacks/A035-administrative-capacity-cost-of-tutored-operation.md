@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed from the external-review round (public-sector practitioner reviewer, round 2). Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md`.
 
 ## Description
 
@@ -75,6 +75,6 @@ Three municipalities launch tutored pilots the same year. The one that assigned 
 - Does authority-side AI assistance exist for resolution drafting and window tracking, with decisions remaining human?
 - Does the first pilot commit to measuring hours per resolution type as an explicit deliverable?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define an administrative capacity declaration for tutored scopes, authority-side assistance boundaries, and capacity-calibrated timeout configuration, with empirical staffing measurement as a first-pilot deliverable.
+The accepted resolution defined an Administrative Capacity Declaration for tutored scopes, authority-side assistance boundaries, and capacity-calibrated timeout configuration, with empirical staffing measurement as a first-pilot deliverable.

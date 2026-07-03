@@ -441,6 +441,8 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION|98 - Clientelism Pattern Indicators and A030 Resolution v0]]
 - [[../docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION|99 - Motive Neutrality Boundary and A031 Resolution v0]]
 - [[../docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION|100 - Long Horizon Lanes and A032 Resolution v0]]
+- [[../docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|102 - Allocation Act Characterization and A034 Resolution v0]]
+- [[../docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|103 - Administrative Capacity Declaration and A035 Resolution v0]]
 
 ## Literature
 

@@ -86,6 +86,15 @@ These defenses are paired with the second-round attack queue `A019`-`A033` in `a
 | `D032` | `A032` | Intertemporal Myopia and Long-Term Underinvestment | Partially founded — resolved in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md` |
 | `D033` | `A033` | The Problem of Many Hands: Responsibility Vacuum | Founded — resolved in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md` |
 
+## External-review round defense queue (D034-D035)
+
+Paired with the external-review round attacks in `attacks/`; both defenses apply the P001 comparative rule to the status-quo comparator the attacks omit (the state official's allocation act; the pre-existing approval labor).
+
+| Defense | Attack | Title | Classification |
+|---|---|---|---|
+| `D034` | `A034` | Legal Characterization of the Citizen Allocation Act | Founded (characterization gap) — resolved in `docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md` |
+| `D035` | `A035` | Administrative Capacity Cost of Tutored Operation | Founded (deployment precondition, comparatively bounded) — resolved in `docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md` |
+
 ## Use
 
 The next Phase 3 work should review each attack-defense pair. Where a defense marks the risk as unresolved or materially founded, the project should either create a formal resolution document, update core documents, or preserve the objection as an explicit unresolved limitation.

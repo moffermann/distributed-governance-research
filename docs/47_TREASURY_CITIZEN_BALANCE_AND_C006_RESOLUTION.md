@@ -36,7 +36,7 @@ The `Citizen Funding Account` records how much a citizen is allowed to allocate 
 
 It is not necessarily a bank account.
 
-It is a ledger of authorized civic funding capacity.
+It is a ledger of authorized civic funding capacity. ^rc81aea66
 
 ## What Treasury reports
 

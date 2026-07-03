@@ -120,7 +120,7 @@ These KPIs should be usable across public functions, not only for a specific min
 
 - number of participating citizens; ^r18b8b069
 - number of delegators;
-- direct versus delegated participation;
+- direct versus delegated participation; ^raf79bbcc
 - participation frequency;
 - territorial distribution;
 - social and demographic distribution where lawful and ethical to measure.

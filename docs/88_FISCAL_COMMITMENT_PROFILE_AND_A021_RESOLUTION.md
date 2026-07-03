@@ -21,7 +21,7 @@ The fiscal commitment behind each Planning Scope is a public, versioned profile,
 
 Minimum elements:
 
-- Fiscal Commitment Profile per Planning Scope: migrated percentage, indexation rule, delivery-latency target, and cycle horizon;
+- Fiscal Commitment Profile per Planning Scope: migrated percentage, indexation rule, delivery-latency target, and cycle horizon; ^rb8432d7d
 - expected-versus-actual delivery dates of signed balances;
 - order-to-execution latency distribution and an aggregate `unexecuted valid order` indicator;
 - a real-value-preservation warning where nominal allocation amounts are not inflation-adjusted;

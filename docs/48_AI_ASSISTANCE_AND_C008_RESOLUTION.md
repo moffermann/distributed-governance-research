@@ -12,7 +12,7 @@ Accepted as the v0 resolution for C008.
 
 ## Core principle
 
-> AI assists; the protocol decides.
+> AI assists; the protocol decides. ^r8d26dff0
 
 AI is infrastructure. It is not a civic actor, fiscalizer, executor, citizen, delegate, moderator, or authority.
 

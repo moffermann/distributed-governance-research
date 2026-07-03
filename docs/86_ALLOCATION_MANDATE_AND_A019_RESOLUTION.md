@@ -11,7 +11,7 @@ Paired review:
 
 ## Resolution decision
 
-A019 is founded as a system-level authorization gap and does not distort the project when it is read as requiring the platform to record the democratic mandate that external law supplies, not to manufacture one. The corpus already treats budget migration and formula choice as country-implementation decisions, but it nowhere requires each active Planning Scope to carry the authorization behind them. The accepted resolution is an `Allocation Mandate` record per active Planning Scope.
+A019 is founded as a system-level authorization gap and does not distort the project when it is read as requiring the platform to record the democratic mandate that external law supplies, not to manufacture one. The corpus already treats budget migration and formula choice as country-implementation decisions, but it nowhere requires each active Planning Scope to carry the authorization behind them. The accepted resolution is an `Allocation Mandate` record per active Planning Scope. ^rc17d69ad
 
 Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through an existing object: the mandate is a minimal record attached to the Planning Scope, giving visibility of an external authorization rather than constructing that authorization. It makes the missing authorization inspectable; it does not add a new adjudicating entity.
 

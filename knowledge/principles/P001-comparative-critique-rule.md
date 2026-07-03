@@ -2,7 +2,7 @@
 
 ## Principle
 
-Every critique of the distributed governance model must be compared explicitly with how the current institutional model solves the same problem.
+Every critique of the distributed governance model must be compared explicitly with how the current institutional model solves the same problem. ^r27fc82cd
 
 ## Rationale
 

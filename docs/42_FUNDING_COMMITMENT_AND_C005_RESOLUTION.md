@@ -4,7 +4,7 @@
 
 This document resolves contradiction C005 from the v0 contradiction checklist.
 
-C005 was originally framed as a tension among funder withdrawal, fund locking, project reformulation, and default rules when funders do not respond. The resolution simplifies the model: financing a project is a serious commitment until project closure, not a reversible like or temporary reservation.
+C005 was originally framed as a tension among funder withdrawal, fund locking, project reformulation, and default rules when funders do not respond. The resolution simplifies the model: financing a project is a serious commitment until project closure, not a reversible like or temporary reservation. ^r00dec5ee
 
 ## Status
 
@@ -105,7 +105,7 @@ But these are project/protocol states, not free withdrawal by the funder.
 
 For phased projects, a failed prerequisite phase gate is also a project/protocol state. If a citizen reserved funds for construction while the design phase was pending, those funds do not become freely withdrawable by personal regret. They follow the active phase failure, reformulation, return, reassignment, or reconfirmation rule.
 
-Funding-window expiry is also a project/protocol state. If the project or funding lane does not reach financing closure within its visible funding window, the active `FundingAttempt` may expire unfunded. Eligible unreleased and unused commitments then return, reassign, or follow the citizen's selected/default rule according to the active policy. This does not create ordinary voluntary withdrawal.
+Funding-window expiry is also a project/protocol state. If the project or funding lane does not reach financing closure within its visible funding window, the active `FundingAttempt` may expire unfunded. Eligible unreleased and unused commitments then return, reassign, or follow the citizen's selected/default rule according to the active policy. This does not create ordinary voluntary withdrawal. ^r12952ee4
 
 ## Ordinary project modification
 

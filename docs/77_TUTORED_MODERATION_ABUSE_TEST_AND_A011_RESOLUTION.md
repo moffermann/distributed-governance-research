@@ -21,10 +21,10 @@ Tutored decisions and tutored silence are already public civic objects under C02
 
 Minimum Core v0 data:
 
-- decision type and decision result;
+- decision type and decision result; ^r0150e5d2
 - standardized rejection reason category where practical;
 - public function, Planning Scope, operating mode, and rule/version applied;
-- responsible authority or authorized process;
+- responsible authority or authorized process; ^ra01bc110
 - submission date, review deadline, decision date, review time, and timeout status;
 - suggested next path;
 - authority-controlled, privileged, or authority-linked operator flag where the relationship is known or declared;
