@@ -377,7 +377,7 @@ The executor should not privately appoint or control the actor responsible for v
 
 Control burden follows an explicit proportionality ladder rather than one-size rules: light for small reversible projects, standard, reinforced, and critical for large, technical, remote, irreversible, or vulnerable-beneficiary projects — the applicable band is set by the project's threshold policy, and proposers cannot self-select a lighter band (`knowledge/hypotheses/H020-proportional-procedural-burden.md`).
 
-Two honest constraints come with this. In small territories the pool of independent qualified fiscalizers can be thin — sometimes one person, sometimes related to the executor — so the system exposes control-supply density per territory and domain, and thin-market fallbacks (remote review, cross-territory assignment, relaxed-but-disclosed selection) are explicit country-implementation choices, not silent workarounds (`docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`). And before any money moves, every execution-financeable project must name its **Duty-of-Care Anchor**: the solvent, reachable legal person answerable to third parties if the project physically harms someone, backed by proportionate coverage — so a victim always has a defendant, visible on the project's public sheet (`docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`).
+Two honest constraints come with this. In small territories the pool of independent qualified fiscalizers can be thin — sometimes one person, sometimes related to the executor — so the system exposes control-supply density per territory and domain, and thin-market fallbacks (remote review, cross-territory assignment, relaxed-but-disclosed selection) are explicit country-implementation choices, not silent workarounds (`docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`). And before any money moves, every execution-financeable project must name its **Duty-of-Care Anchor**: the solvent, reachable legal person answerable to third parties if the project physically harms someone, backed by coverage proportionate to physical risk — a grassroots training program needs modest coverage, a construction project needs real insurance — so the requirement protects victims without pricing out exactly the small executors a pilot targets (`docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`).
 
 ## 7. Project Closure Accountability Record / Reputation Update
 
@@ -772,7 +772,9 @@ next phase.
 
 This model does not eliminate the need for public authority.
 
-In a tutored pilot the public authority's control surface is concrete, not rhetorical: it defines the Planning Scope, reviews admissibility, duplication, and eligibility, and can approve, reject, or reclassify projects — but every material decision must be issued as a public **Governance Resolution** with reasons and a declared review window, and silence past the deadline automatically produces a public **Review Timeout Resolution** under a pre-configured timeout policy (`docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`). The authority keeps its veto; it loses only the ability to exercise it invisibly. One boundary is absolute: an authority may not be judge and party — it cannot compete as an operator inside a scope it controls (`docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`).
+In a tutored pilot the public authority's control surface is concrete, not rhetorical: it defines the Planning Scope, reviews admissibility, duplication, and eligibility, and can approve, reject, or reclassify projects — but every material decision must be issued as a public **Governance Resolution** with reasons and a declared review window, and silence past the deadline automatically produces a public **Review Timeout Resolution** under a pre-configured timeout policy (`docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`). The authority keeps its veto; it loses only the ability to exercise it invisibly. What silence produces is not left to doctrine: the consequence of a lapsed deadline — from visibility-only through escalation to community override or automatic approval — is configured publicly at the operating-mode level before any project is submitted, so neither applicants nor the authority discover the direction of administrative silence after the fact.
+
+Two honest costs are declared rather than hidden. Operating a tutored scope consumes real administrative capacity — issuing reasoned resolutions within review windows, running admissibility review, coordinating control — and the corpus does not yet quantify that staffing cost; it is recorded as an open attack on the model (`attacks/A035-administrative-capacity-cost-of-tutored-operation.md`). And the legal characterization of the citizen's allocation act itself — what kind of act it is in administrative law, and what review rights a funder has when committed funds are reassigned — is mechanically specified but doctrinally open, likewise recorded (`attacks/A034-legal-characterization-of-the-citizen-allocation-act.md`). One boundary is absolute: an authority may not be judge and party — it cannot compete as an operator inside a scope it controls (`docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`).
 
 Several elements may remain centralized, tutored, or country-specific:
 
@@ -860,7 +862,17 @@ The architecture may use digital infrastructure, but it is not reducible to on-c
 
 ## Minimum publishable contribution
 
-This is a working paper in institutional design, at the intersection of public administration, mechanism design, and civic technology. Its central theoretical contribution is the functional distribution principle — decompose state activity into layers and distribute only those whose observability can beat monopoly — made concrete in a complete architecture, and validated formally, computationally, and adversarially (the full manuscript is `drafts/paper.md`). The minimum contribution can be stated as follows:
+This is a working paper in institutional design, at the intersection of public administration, mechanism design, and civic technology. Its central theoretical contribution is the functional distribution principle, stated precisely in the companion manuscript: a layer of state activity is a candidate for distribution only when three conditions hold together —
+
+```text
+its failures under monopoly are information and incentive failures,
+not coordination-of-force failures;
+distributed provision can be made more observable than monopoly provision;
+and the layer can be bounded so its failure does not cascade into
+the non-distributable layers.
+```
+
+The principle is made concrete in a complete architecture and validated formally, computationally, and adversarially (the full manuscript is `drafts/paper.md`, Section 3). The minimum contribution can be stated as follows:
 
 ```text
 This paper proposes a functional architecture for distributed public project governance. It decomposes public-resource allocation into a project lifecycle governed by Planning Scopes, Value Theses, Evidential Contracts, Conditional Funding, Control Packages, Milestone Disbursement, Closure Accountability, and Reputation Updates. The model shows how bounded public projects can be opened to distributed participation without relying on popularity alone, executor self-reporting, or uncontrolled transfer of funds.

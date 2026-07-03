@@ -76,6 +76,17 @@ A second attack round was proposed after the first queue was reviewed and resolv
 | `A032` | Intertemporal Myopia and Long-Term Underinvestment | formation bias against long-horizon value (beyond A006 continuity) | pending paired review |
 | `A033` | The Problem of Many Hands: Responsibility Vacuum | harm accountability without collusion (beyond A018) | pending paired review |
 
+Note: A019-A033 have since completed paired review; their accepted resolutions are `docs/86` through `docs/100` (see `defenses/README.md`).
+
+## External-review round attack queue (A034-A035)
+
+These briefs originate from the five-profile external-review simulation of `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md` (round 2): reviewer questions that the corpus could not answer with existing anchors were converted into attacks per the standing rule that only serious unresolved objections become formal attack files.
+
+| Attack | Title | Origin | Status |
+|---|---|---|---|
+| `A034` | Legal Characterization of the Citizen Allocation Act | public-law reviewer, round 2 | pending paired review |
+| `A035` | Administrative Capacity Cost of Tutored Operation | public-sector practitioner reviewer, round 2 | pending paired review |
+
 ## Standard review routine
 
 For each attack:
