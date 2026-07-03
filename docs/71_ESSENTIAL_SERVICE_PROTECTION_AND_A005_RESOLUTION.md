@@ -11,7 +11,7 @@ Paired review:
 
 ## Resolution decision
 
-A005 is founded and does not distort the project when it preserves bounded distributed allocation and compares the model against real institutional allocation, not against an ideal central state. Central political discretion can also interrupt continuity, hide underfunding, and keep low-priority services underfinanced for years when a government changes agenda.
+A005 is founded and does not distort the project when it preserves bounded distributed allocation and compares the model against real institutional allocation, not against an ideal central state. Central political discretion can also interrupt continuity, hide underfunding, and keep low-priority services underfinanced for years when a government changes agenda. ^r1e71c059
 
 The project rejects two distorted conclusions:
 
@@ -67,13 +67,13 @@ This prevents two opposite failures:
 - authorities or project promoters moving hard obligations into citizen popularity dynamics without visibility;
 - authorities hiding or starving continuity needs because the current political agenda deprioritizes them.
 
-The system should make both central political neglect and popularity-driven neglect visible.
+The system should make both central political neglect and popularity-driven neglect visible. ^rf821ddba
 
 ## Residual risks
 
 - The exact common-pool boundary is country implementation.
 - Authorities may define protected scopes too narrowly or too broadly.
-- Low-visibility needs may still require outreach and participation-capacity support.
+- Low-visibility needs may still require outreach and participation-capacity support. ^r91c050a9
 - Planning targets can become too rigid if revision rules do not allow justified public change.
 - Default-assigned or reserve-backed lanes can become hidden allocation if their rules are not public and auditable.
 

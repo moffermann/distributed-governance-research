@@ -15,7 +15,7 @@ This hypothesis is aligned with:
 - `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`;
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md`.
 
-H037 should be read as a Core v0 infrastructure boundary plus country implementation dependency. The abstract boundary is Core v0: custody and disbursement must be separated from civic decision-making. The specific legal custodian, treasury API, escrow structure, tax integration, and enforceability mechanics depend on the implementing country.
+H037 should be read as a Core v0 infrastructure boundary plus country implementation dependency. The abstract boundary is Core v0: custody and disbursement must be separated from civic decision-making. The specific legal custodian, treasury API, escrow structure, tax integration, and enforceability mechanics depend on the implementing country. ^r508104d0
 
 ## Rationale
 

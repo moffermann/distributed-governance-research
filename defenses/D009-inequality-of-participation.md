@@ -32,14 +32,14 @@ For Macul, a support project could help older residents read project sheets, upl
 
 ## Project-document basis
 
-- `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:5` states that the architecture may be complex but ordinary citizen participation must remain simple.
-- `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:13` defines the rule: simple to participate, deep to audit.
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md:11` states that formal openness alone does not create equal participation.
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md:17` says the system must help actors with lower technical, financial, linguistic, or organizational capacity participate meaningfully.
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md:98` through `knowledge/hypotheses/H041-distributed-participation-capacity.md:106` prohibit hidden delegation commissions, citizen impersonation, and forced delegation.
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md:139` gives the Macul example of direct participation, default allocation, delegation, and participation support.
-- `docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md:7` preserves deep transparency while keeping ordinary participation simple.
-- `docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md:56` allows protected identity for comments, complaints, testimony, evidence, beneficiary confirmations, or affected-party reports.
+- [[P006-layered-complexity-and-citizen-simplicity#^r98089f8d|knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md]] states that the architecture may be complex but ordinary citizen participation must remain simple.
+- [[P006-layered-complexity-and-citizen-simplicity#^r4954f825|knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md]] defines the rule: simple to participate, deep to audit.
+- [[H041-distributed-participation-capacity#^rf1f6e7b2|knowledge/hypotheses/H041-distributed-participation-capacity.md]] states that formal openness alone does not create equal participation.
+- [[H041-distributed-participation-capacity#^r455a5b5a|knowledge/hypotheses/H041-distributed-participation-capacity.md]] says the system must help actors with lower technical, financial, linguistic, or organizational capacity participate meaningfully.
+- [[H041-distributed-participation-capacity#Participation support boundaries|knowledge/hypotheses/H041-distributed-participation-capacity.md]] prohibit hidden delegation commissions, citizen impersonation, and forced delegation.
+- [[H041-distributed-participation-capacity#^r94d038a7|knowledge/hypotheses/H041-distributed-participation-capacity.md]] gives the Macul example of direct participation, default allocation, delegation, and participation support.
+- [[14_LAYERED_CITIZEN_INTERFACE_MODEL#^re3bcd897|docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md]] preserves deep transparency while keeping ordinary participation simple.
+- [[62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION#Resolution|docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md]] allows protected identity for comments, complaints, testimony, evidence, beneficiary confirmations, or affected-party reports.
 
 ## Bibliographic basis
 

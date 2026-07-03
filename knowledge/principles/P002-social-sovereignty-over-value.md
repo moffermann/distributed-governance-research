@@ -2,7 +2,7 @@
 
 ## Principle
 
-The definition of social value and social antivalue should not be monopolized by a central authority, expert committee, algorithm, or institution. Society is sovereign in assigning value.
+The definition of social value and social antivalue should not be monopolized by a central authority, expert committee, algorithm, or institution. Society is sovereign in assigning value. ^r37610f41
 
 ## Rationale
 
@@ -16,7 +16,7 @@ The system should make information visible and comparable, but it should not rep
 
 ## Antivalue
 
-The same applies to antivalue. The system should not create a hidden authority that decides which harms matter and which do not. It should surface harms, require declarations, activate guarantees when undeclared harms appear, and allow society to evaluate the net value of the project.
+The same applies to antivalue. The system should not create a hidden authority that decides which harms matter and which do not. It should surface harms, require declarations, activate guarantees when undeclared harms appear, and allow society to evaluate the net value of the project. ^r005f4f9f
 
 ## Important distinction
 

@@ -36,14 +36,14 @@ Under P001, current constitutions and by-laws also leave amendment rules to be i
 
 ## Project-document basis
 
-- `docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md:17` states the system may evolve but rule changes must be visible, versioned, justified, non-surprising, and governed by the operating mode in effect.
-- `docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md:153` records that the exact voting mechanics can remain future work — the deferral stated openly.
-- `docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md:155` requires that non-tutored protocol change must not be an invisible administrator edit.
-- `knowledge/hypotheses/H017-meta-governance-protocol-evolution.md:29` sets the v0 requirement to prevent silent rule changes, hidden authority, surprise retroactivity, and untraceable software changes.
-- `knowledge/hypotheses/H017-meta-governance-protocol-evolution.md:135` states the exact approval mechanics may remain future work while protocol changes must not be invisible administrator edits.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:673` states Core v0 does not force countries to exit tutored mode and requires tutored decisions and silence to become public civic objects.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:813` lists detailed non-tutored protocol voting mechanics as Extension v1+, confirming the deferral is declared.
-- `knowledge/hypotheses/H058-operating-modes-for-transition.md:115` states open-mode control happens through transparency, fiscalization, reputation, complaints, guarantees, and observability — the state whose amendment rule remains unwritten.
+- [[57_PROTOCOL_CHANGE_AND_C019_RESOLUTION#^r4ed28192|docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md]] states the system may evolve but rule changes must be visible, versioned, justified, non-surprising, and governed by the operating mode in effect.
+- [[57_PROTOCOL_CHANGE_AND_C019_RESOLUTION#^r8baa4b65|docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md]] records that the exact voting mechanics can remain future work — the deferral stated openly.
+- [[57_PROTOCOL_CHANGE_AND_C019_RESOLUTION#^rdf942859|docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md]] requires that non-tutored protocol change must not be an invisible administrator edit.
+- [[H017-meta-governance-protocol-evolution#^ra48a6bed|knowledge/hypotheses/H017-meta-governance-protocol-evolution.md]] sets the v0 requirement to prevent silent rule changes, hidden authority, surprise retroactivity, and untraceable software changes.
+- [[H017-meta-governance-protocol-evolution#^rd26475e4|knowledge/hypotheses/H017-meta-governance-protocol-evolution.md]] states the exact approval mechanics may remain future work while protocol changes must not be invisible administrator edits.
+- [[34_CORE_V0_SCOPE_FREEZE#^r2dfe7183|docs/34_CORE_V0_SCOPE_FREEZE.md]] states Core v0 does not force countries to exit tutored mode and requires tutored decisions and silence to become public civic objects.
+- [[34_CORE_V0_SCOPE_FREEZE#^r0bcc0e34|docs/34_CORE_V0_SCOPE_FREEZE.md]] lists detailed non-tutored protocol voting mechanics as Extension v1+, confirming the deferral is declared.
+- [[H058-operating-modes-for-transition#^r57196499|knowledge/hypotheses/H058-operating-modes-for-transition.md]] states open-mode control happens through transparency, fiscalization, reputation, complaints, guarantees, and observability — the state whose amendment rule remains unwritten.
 
 ## Bibliographic basis
 

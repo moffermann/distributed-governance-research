@@ -23,7 +23,7 @@ The filename is retained for link stability, but the operative rule is now the p
 
 ## Core rule
 
-> A public authority may not be judge and party inside the same distributed-governance scope. A state-owned or publicly owned operator may participate only when it acts as an ordinary accountable operator under equal rules and does not carry approval, admissibility, regulatory, fiscal, funding, or tutored-control power over the same scope.
+> A public authority may not be judge and party inside the same distributed-governance scope. A state-owned or publicly owned operator may participate only when it acts as an ordinary accountable operator under equal rules and does not carry approval, admissibility, regulatory, fiscal, funding, or tutored-control power over the same scope. ^ree650ebd
 
 In short:
 
@@ -57,7 +57,7 @@ Who is merely offering to execute, operate, evidence, or support a project under
 
 A public authority is a ministry, municipality, regulator, agency, public office, treasury body, court, police body, administrative authority, or equivalent body when it exercises legal, budgetary, tutored, regulatory, fiscal, adjudicative, coercive, eligibility, admissibility, or scope-setting power.
 
-Public authorities are external to the internal actor model for the scope they control.
+Public authorities are external to the internal actor model for the scope they control. ^r28013fb6
 
 They may act externally as:
 
@@ -90,7 +90,7 @@ Because that authority has approval or admissibility power, it should not also c
 
 Default Core v0 rule:
 
-> In tutored mode, a state-owned or publicly controlled operator is excluded from internal project competition when it is controlled by, directed by, materially privileged by, or materially dependent on the same authority that defines scope, reviews admissibility, approves publication, controls relevant budget, or regulates the same distributed-financing scope.
+> In tutored mode, a state-owned or publicly controlled operator is excluded from internal project competition when it is controlled by, directed by, materially privileged by, or materially dependent on the same authority that defines scope, reviews admissibility, approves publication, controls relevant budget, or regulates the same distributed-financing scope. ^rcaf1ef8c
 
 Example not allowed:
 
@@ -166,7 +166,7 @@ Any state-owned operator or public-enterprise participant must declare:
 - relationship to any authority that defines Planning Scope, eligibility, admissibility, fiscalization, disbursement, or sanctions for the same scope;
 - related-party relationships with proposers, modelers, executors, fiscalizers, evidence producers, funders, beneficiaries, operators, owners, revenue recipients, or suppliers.
 
-These declarations are handled through the related-party and conflict-review architecture. Disclosure does not automatically invalidate participation, but hidden or misrepresented control relationships may trigger reformulation, exclusion, disbursement blocking, rejection, complaint review, responsibility review, or reputation effects.
+These declarations are handled through the related-party and conflict-review architecture. Disclosure does not automatically invalidate participation, but hidden or misrepresented control relationships may trigger reformulation, exclusion, disbursement blocking, rejection, complaint review, responsibility review, or reputation effects. ^r79baceec
 
 ## Internal role eligibility after C007
 
@@ -311,4 +311,4 @@ This resolution should inform:
 
 ## Design rule
 
-> Public/private status is not the primary governance boundary. Authority, control, privilege, contestability, accountability, and operating mode are the boundary.
+> Public/private status is not the primary governance boundary. Authority, control, privilege, contestability, accountability, and operating mode are the boundary. ^rb1a52f8e

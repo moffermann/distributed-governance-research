@@ -32,14 +32,14 @@ For Macul, a fiscalizer report that does not inspect dimensions, accessibility, 
 
 ## Project-document basis
 
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:11` separates executor execution, evidence production, fiscalizer evaluation, and community complaint/contradiction.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:26` states that only protocol-selected, conflict-checked, eligible, auditable actors become responsible fiscalizers.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:80` treats executor-submitted material as self-report unless corroborated.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:256` rejects executor preference, ordinary popularity, first funding, or lowest price alone as responsible-fiscalizer selection bases.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:570` says the system should assume hidden collusion is possible.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:582` through `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:598` list anti-collusion safeguards: executor does not choose or directly pay, related-party status is declared, repeated relationships are visible, false evidence can have penalties, and supplemental control is capped.
-- `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md:286` defines the core principle: not a perfect fiscalizer, but a distributed, protocol-selected ecosystem.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:110` states that a fiscalizer cannot be selected by the executor, hide conflicts, create material/legal suspension by itself unless law grants authority, or treat unsupported evidence as fulfillment proof.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL#^rc2482cd2|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] separates executor execution, evidence production, fiscalizer evaluation, and community complaint/contradiction.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL#Core rule|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] states that only protocol-selected, conflict-checked, eligible, auditable actors become responsible fiscalizers.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL#^rff29d0e0|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] treats executor-submitted material as self-report unless corroborated.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL#^r00b6d1d8|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] rejects executor preference, ordinary popularity, first funding, or lowest price alone as responsible-fiscalizer selection bases.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL#^r57ae0787|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] says the system should assume hidden collusion is possible.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL#Anti-capture protections|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] list anti-collusion safeguards: executor does not choose or directly pay, related-party status is declared, repeated relationships are visible, false evidence can have penalties, and supplemental control is capped.
+- [[H016-distributed-fiscalization-ecosystem#^r8a766959|knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md]] defines the core principle: not a perfect fiscalizer, but a distributed, protocol-selected ecosystem.
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0#Project Delivery and Review Roles|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]] states that a fiscalizer cannot be selected by the executor, hide conflicts, create material/legal suspension by itself unless law grants authority, or treat unsupported evidence as fulfillment proof.
 
 ## Bibliographic basis
 

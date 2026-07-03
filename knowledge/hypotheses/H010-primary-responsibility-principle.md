@@ -214,4 +214,4 @@ The v0 rule should therefore be applied through proportional validation and revi
 
 ## Status
 
-Aligned Core v0 accountability hypothesis. H010 defines the Primary Responsibility Anchor as the project-level accountability center that connects roadmap attachment, value thesis, Project Evidential Contract, phase structure, disbursement, closure, and role-specific reputation.
+Aligned Core v0 accountability hypothesis. H010 defines the Primary Responsibility Anchor as the project-level accountability center that connects roadmap attachment, value thesis, Project Evidential Contract, phase structure, disbursement, closure, and role-specific reputation. ^rabc21f1b

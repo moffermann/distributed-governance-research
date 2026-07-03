@@ -140,7 +140,7 @@ confirmed non-compliance
 accepted reformulations, if applicable
 ```
 
-The metric weights must be defined before funding begins, not after execution.
+The metric weights must be defined before funding begins, not after execution. ^r36df0dc8
 
 The value fulfillment score should not treat an uncovered dimension as verified. If A004 marked a value floor, formal secondary value, antivalue ceiling, material value claim, or relevant metric as a coverage gap or weak coverage, the reputation input should expose that limitation rather than convert a narrow metric into full value fulfillment.
 
@@ -321,7 +321,7 @@ These signals may be shown publicly, aggregated, or used as soft context.
 
 They should not automatically create formal sanctions.
 
-Formal reputation updates require verified project metrics, accepted fulfillment evidence, fiscalizer evaluation, or founded complaints connected to role obligations.
+Formal reputation updates require verified project metrics, accepted fulfillment evidence, fiscalizer evaluation, or founded complaints connected to role obligations. ^ra6d710f4
 
 H015 adds the evaluation-context boundary:
 

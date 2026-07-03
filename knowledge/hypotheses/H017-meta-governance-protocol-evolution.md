@@ -26,7 +26,7 @@ If the system itself must evolve, someone or something must determine how protoc
 
 If that power is concentrated in a small authority, the system may recreate the same concentration of power it tries to avoid.
 
-The v0 requirement is not to implement a complete constitutional meta-governance system. The v0 requirement is to prevent silent rule changes, hidden authority, surprise retroactivity, and untraceable software changes.
+The v0 requirement is not to implement a complete constitutional meta-governance system. The v0 requirement is to prevent silent rule changes, hidden authority, surprise retroactivity, and untraceable software changes. ^ra48a6bed
 
 ## Engineering analogy
 
@@ -132,7 +132,7 @@ Tutored authority may configure parameters, but material changes must be:
 
 In non-tutored or open modes, major protocol changes should follow a visible Protocol Change Proposal path.
 
-The exact approval mechanics may remain future work. Core v0 only requires that protocol changes are not invisible administrator edits.
+The exact approval mechanics may remain future work. Core v0 only requires that protocol changes are not invisible administrator edits. ^rd26475e4
 
 Minimum path:
 

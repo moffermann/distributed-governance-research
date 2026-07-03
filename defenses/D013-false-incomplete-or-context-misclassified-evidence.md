@@ -42,7 +42,7 @@ For Macul, photos may be accepted as contextual material, rejected as insufficie
 - `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md` now pairs evidence-producer independence with A013's qualification and method standard for formal hard-KPI evidence.
 - `docs/diagrams/v0-project-evidential-contract-state.md` now routes submitted evidence through qualification, method-fit, quality, and sufficiency review before formal effects.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md` defines `EvidenceProducerQualificationStandard`, `EvidenceQualityReview`, and validation gates that block hard-KPI effects where producer qualification or method fit is missing.
-- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as a justified mechanism-heavy integration: unfit formal evidence defeats the auditable-evidence core claim, and the standard binds only Threshold Policy-marked formal, paid, or hard-effect evidence needs.
+- [[P007-integrate-or-bound-rule#^r520eddb3|knowledge/principles/P007-integrate-or-bound-rule.md]] classifies this as a justified mechanism-heavy integration: unfit formal evidence defeats the auditable-evidence core claim, and the standard binds only Threshold Policy-marked formal, paid, or hard-effect evidence needs.
 
 ## Bibliographic basis
 

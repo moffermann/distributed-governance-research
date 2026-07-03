@@ -2,7 +2,7 @@
 
 ## Principle
 
-A founded attack produces a new Core v0 mechanism only when the failure mode, left unanswered, would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by bounding: an explicit scope boundary, visible residual risk, and a recorded limitation statement.
+A founded attack produces a new Core v0 mechanism only when the failure mode, left unanswered, would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by bounding: an explicit scope boundary, visible residual risk, and a recorded limitation statement. ^r520eddb3
 
 ## Rationale
 

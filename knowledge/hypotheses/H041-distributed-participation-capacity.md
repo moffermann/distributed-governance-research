@@ -8,15 +8,15 @@ Participation capacity can be distributed and fundable without turning public au
 
 ## Hypothesis
 
-A distributed governance system should not assume that formal openness alone creates equal participation. It must allow the capacity to participate, understand projects, produce evidence, audit, translate, configure allocation rules, delegate, and assist communities to become distributed and fundable without blurring authority, identity, or accountability.
+A distributed governance system should not assume that formal openness alone creates equal participation. It must allow the capacity to participate, understand projects, produce evidence, audit, translate, configure allocation rules, delegate, and assist communities to become distributed and fundable without blurring authority, identity, or accountability. ^rf1f6e7b2
 
 ## Rationale
 
-If only wealthy actors, large corporations, universities, think tanks, or technically sophisticated groups can produce evidence and navigate the platform, the system may reproduce existing power asymmetries even if formal access is open.
+If only wealthy actors, large corporations, universities, think tanks, or technically sophisticated groups can produce evidence and navigate the platform, the system may reproduce existing power asymmetries even if formal access is open. ^re5b2547d
 
-A system is not truly distributed merely because everyone can theoretically participate. It must also support mechanisms that help actors with lower technical, financial, linguistic, or organizational capacity participate meaningfully.
+A system is not truly distributed merely because everyone can theoretically participate. It must also support mechanisms that help actors with lower technical, financial, linguistic, or organizational capacity participate meaningfully. ^r455a5b5a
 
-A009 clarifies the standard: Core v0 should improve the current institutional baseline, not solve perfect participation. Current meetings, consultations, digital notices, and neighborhood representation already exclude many older adults, disabled people, workers, caregivers, and digitally disconnected residents. Core v0 improves that baseline through asynchronous visibility, protected identity, simple actions, delegation transparency, support projects, and threshold-policy participation evidence where required.
+A009 clarifies the standard: Core v0 should improve the current institutional baseline, not solve perfect participation. Current meetings, consultations, digital notices, and neighborhood representation already exclude many older adults, disabled people, workers, caregivers, and digitally disconnected residents. Core v0 improves that baseline through asynchronous visibility, protected identity, simple actions, delegation transparency, support projects, and threshold-policy participation evidence where required. ^rf17fffc9
 
 ## Capacity as an ecosystem function
 
@@ -136,7 +136,7 @@ An automatic allocation profile is also not a delegate. It is a configured rule 
 
 AI-guided assistance may help citizens understand delegation options, compare delegates, or configure allocation profiles, but it is not itself a delegate.
 
-Full personal AI guides remain Extension v1+. If connected to the platform, they are compatibility-limited assistance tools: they may summarize, compare, translate, draft, warn, and help configure choices, but they do not become civic actors, delegates, automatic allocation profiles, or sources of material civic action without explicit citizen confirmation or a separately auditable platform rule.
+Full personal AI guides remain Extension v1+. If connected to the platform, they are compatibility-limited assistance tools: they may summarize, compare, translate, draft, warn, and help configure choices, but they do not become civic actors, delegates, automatic allocation profiles, or sources of material civic action without explicit citizen confirmation or a separately auditable platform rule. ^r94d038a7
 
 ## Example
 

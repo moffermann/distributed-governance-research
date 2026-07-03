@@ -32,14 +32,14 @@ For Macul, an AI assistant may summarize objections about noise, bathrooms, and 
 
 ## Project-document basis
 
-- `knowledge/concepts/algorithm-as-coordinator.md:3` defines the central boundary: algorithm as coordinator, not decider.
-- `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:7` states that AI may assist, detect, summarize, suggest, transform, and warn, but is not an actor and does not make final civic, financial, reputational, or legal decisions.
-- `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:209` states that AI cannot be final authority over projects, funds, evidence truth, complaints, sanctions, reputation, fiscalizers, citizen choices, or closure.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:17` states that discovery may organize attention but must not become a hidden allocator.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:427` requires visible and switchable ordering, explained recommendations, no paid promotion, no opaque manual boosting, and bounded discovery observability.
-- `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md:940` requires material discovery and visibility traces where they may affect funding or legitimacy.
-- `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md:836` requires reviewers to reconstruct whether discovery acted as a hidden allocator.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:215` defines AssistedDeliberationContext as a read model that helps citizens review actions but does not decide, rank, certify truth, allocate funds, or suppress dissent.
+- [[algorithm-as-coordinator#^rd5bd6cd6|knowledge/concepts/algorithm-as-coordinator.md]] defines the central boundary: algorithm as coordinator, not decider.
+- [[48_AI_ASSISTANCE_AND_C008_RESOLUTION#^re758c6e7|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]] states that AI may assist, detect, summarize, suggest, transform, and warn, but is not an actor and does not make final civic, financial, reputational, or legal decisions.
+- [[48_AI_ASSISTANCE_AND_C008_RESOLUTION#^r318cb914|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]] states that AI cannot be final authority over projects, funds, evidence truth, complaints, sanctions, reputation, fiscalizers, citizen choices, or closure.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#^rd7ea4ce8|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] states that discovery may organize attention but must not become a hidden allocator.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#C025 final resolution|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] requires visible and switchable ordering, explained recommendations, no paid promotion, no opaque manual boosting, and bounded discovery observability.
+- [[20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER#^r82c23f17|docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md]] requires material discovery and visibility traces where they may affect funding or legitimacy.
+- [[20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER#^rb7be98b2|docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md]] requires reviewers to reconstruct whether discovery acted as a hidden allocator.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Citizen Signal, Privacy, and Deliberation Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines AssistedDeliberationContext as a read model that helps citizens review actions but does not decide, rank, certify truth, allocate funds, or suppress dissent.
 
 ## Bibliographic basis
 

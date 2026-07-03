@@ -32,15 +32,15 @@ For Macul, the project should disclose whether it reduces green area, changes pu
 
 ## Project-document basis
 
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:11` requires projects to declare relevant common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization.
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:19` states that full common-good governance is an extension, while project-level impact declaration is Core v0 where material.
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:155` through `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:171` list required common-good declaration fields.
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:216` states that if no active charter exists, the project is not automatically blocked merely because it affects a common good.
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:334` summarizes the C022 rule: visible, commentable, fiscalizable, auditable impact declaration in Core v0; full charter mechanics remain Extension v1+.
-- `knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md:5` states that a project is responsible for undeclared antivalue discovered during execution.
-- `docs/09_PROJECT_OBJECT_MODEL.md:662` requires relevant common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:547` includes lightweight common-good impact declaration in project creation while leaving full charter governance to Extension v1+.
-- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as a bounded resolution with a thin integrated test: disclosure through existing surfaces, with the charter system itself kept out of Core v0.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION#^r589e643c|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]] requires projects to declare relevant common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION#^r07dbbf7d|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]] states that full common-good governance is an extension, while project-level impact declaration is Core v0 where material.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION#Minimum declaration fields|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]] list required common-good declaration fields.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION#^r1bd1788b|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]] states that if no active charter exists, the project is not automatically blocked merely because it affects a common good.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION#C022 final resolution|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]] summarizes the C022 rule: visible, commentable, fiscalizable, auditable impact declaration in Core v0; full charter mechanics remain Extension v1+.
+- [[P003-project-responsibility-for-undeclared-antivalue#^r0c7f3f7e|knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md]] states that a project is responsible for undeclared antivalue discovered during execution.
+- [[09_PROJECT_OBJECT_MODEL#^r2667af61|docs/09_PROJECT_OBJECT_MODEL.md]] requires relevant common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization.
+- [[34_CORE_V0_SCOPE_FREEZE#^r922d03d6|docs/34_CORE_V0_SCOPE_FREEZE.md]] includes lightweight common-good impact declaration in project creation while leaving full charter governance to Extension v1+.
+- [[P007-integrate-or-bound-rule#^r520eddb3|knowledge/principles/P007-integrate-or-bound-rule.md]] classifies this as a bounded resolution with a thin integrated test: disclosure through existing surfaces, with the charter system itself kept out of Core v0.
 
 ## Bibliographic basis
 

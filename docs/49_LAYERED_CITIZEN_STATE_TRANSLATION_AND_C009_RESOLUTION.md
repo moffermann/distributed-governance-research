@@ -234,7 +234,7 @@ Keep full technical state internally, but translate it into citizen-facing aggre
 
 Final rule:
 
-> Every technical state must have a citizen-facing translation. The first view should be simple and actionable, while deeper layers preserve full transparency and audit detail.
+> Every technical state must have a citizen-facing translation. The first view should be simple and actionable, while deeper layers preserve full transparency and audit detail. ^r5a5ae7e7
 
 ## Documents that should eventually reflect this resolution
 

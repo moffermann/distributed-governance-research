@@ -80,7 +80,7 @@ design published
 
 The executor cannot later avoid responsibility by claiming that the accepted design contained errors, risks, or antivalues that were reasonably detectable during the review and acceptance phase.
 
-If the same actor designs and executes the project, the actor holds both roles for traceability. That accumulation is allowed when declared, but self-acceptance of the design does not replace independent design-phase verification where the Threshold Policy, related-party safeguards, risk level, or project type requires it.
+If the same actor designs and executes the project, the actor holds both roles for traceability. That accumulation is allowed when declared, but self-acceptance of the design does not replace independent design-phase verification where the Threshold Policy, related-party safeguards, risk level, or project type requires it. ^r35ef3dd2
 
 ## Role attributes versus reputational responsibility
 
@@ -279,7 +279,7 @@ The project should record which actor designed the project, which executor accep
 
 These fields are role attributes for traceability. They do not override the responsibility rule: execution responsibility is assumed by the executor once the executor accepts the design.
 
-The project should also record related-party and conflict declarations among relevant actors, including proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries.
+The project should also record related-party and conflict declarations among relevant actors, including proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries. ^r53584c6b
 
 Conflict handling is proportional:
 
@@ -659,7 +659,7 @@ A project declares:
 - mitigation plans;
 - detected undeclared antivalues if discovered later.
 
-Where relevant, a project must declare common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+.
+Where relevant, a project must declare common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization. If an active common-good charter exists, the project must declare its relationship to that charter. Full common-good charter governance remains Extension v1+. ^r2667af61
 
 Declared antivalues are normally evaluated against their ceilings through fulfillment/control evidence and fiscalization. A formal complaint is not automatic; it must be explicitly filed and processed through the complaint model.
 

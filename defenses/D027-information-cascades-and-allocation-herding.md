@@ -36,14 +36,14 @@ The concession is real. Visible funding progress is intrinsic social proof that 
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H035-funding-target-closure-rule.md:5` states that a project closes each funding round at its declared target and commitments are not freely withdrawable, capping how much a viral project can absorb.
-- `knowledge/hypotheses/H035-funding-target-closure-rule.md:89` states that the system should not allow indefinite overfunding by default, forcing surplus attention to spill elsewhere.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:17` states that discovery may organize attention but must not become a hidden allocator.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:135` lists random rotation among the switchable ordering modes, providing a non-accumulative alternative to "most supported."
-- `knowledge/hypotheses/H031-transparent-project-discovery-layer.md:24` distinguishes the decision layer that allocates resources from the discovery layer that only helps people find projects.
-- `knowledge/hypotheses/H026-support-vs-financing-signals.md:47` states that support, funding, and complaint signals do not automatically substitute for each other, keeping social proof separate from feasibility.
-- `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md:28` forbids compact surfaces from hiding pending required evidence, complaint status, or design gates, so delivery accountability survives herded funding.
-- `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md:38` records that causal exposure-to-funding attribution is not a Core v0 gate, confirming herding is not yet measured.
+- [[H035-funding-target-closure-rule#^r76961cf6|knowledge/hypotheses/H035-funding-target-closure-rule.md]] states that a project closes each funding round at its declared target and commitments are not freely withdrawable, capping how much a viral project can absorb.
+- [[H035-funding-target-closure-rule#^r12302376|knowledge/hypotheses/H035-funding-target-closure-rule.md]] states that the system should not allow indefinite overfunding by default, forcing surplus attention to spill elsewhere.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#^rd7ea4ce8|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] states that discovery may organize attention but must not become a hidden allocator.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#Project list order|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] lists random rotation among the switchable ordering modes, providing a non-accumulative alternative to "most supported."
+- [[H031-transparent-project-discovery-layer#Distinction|knowledge/hypotheses/H031-transparent-project-discovery-layer.md]] distinguishes the decision layer that allocates resources from the discovery layer that only helps people find projects.
+- [[H026-support-vs-financing-signals#^r60e9026a|knowledge/hypotheses/H026-support-vs-financing-signals.md]] states that support, funding, and complaint signals do not automatically substitute for each other, keeping social proof separate from feasibility.
+- [[74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION#^r546ebdf3|docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md]] forbids compact surfaces from hiding pending required evidence, complaint status, or design gates, so delivery accountability survives herded funding.
+- [[74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION#^re763e768|docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md]] records that causal exposure-to-funding attribution is not a Core v0 gate, confirming herding is not yet measured.
 
 ## Bibliographic basis
 

@@ -44,7 +44,7 @@ financial feasibility = committed funding or control funding
 formal complaint = structured review process with evidence, admissibility, and procedural effects
 ```
 
-These signals may inform a `Threshold Policy`, visibility, discovery, observation, review priority, or civic legitimacy profile, but they do not automatically substitute for each other.
+These signals may inform a `Threshold Policy`, visibility, discovery, observation, review priority, or civic legitimacy profile, but they do not automatically substitute for each other. ^r60e9026a
 
 ## Reversible civic signals
 
@@ -150,7 +150,7 @@ Active objection count falls. The historical objection trace remains visible. No
 
 Wealthy individuals may be able to fund more projects. This is not necessarily illegitimate, especially if they already contribute more through taxes. However, their financial contribution should be visible, traceable, and separated from broad social support.
 
-Large funding concentration may be relevant to transparency, related-party review, or legitimacy analysis, but it should not become hidden extra civic weight.
+Large funding concentration may be relevant to transparency, related-party review, or legitimacy analysis, but it should not become hidden extra civic weight. ^rb2249dfb
 
 ## Formal complaints are different
 

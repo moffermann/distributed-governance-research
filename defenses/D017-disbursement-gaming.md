@@ -32,17 +32,17 @@ For Macul, buying materials may justify a limited protected release only if the 
 
 ## Project-document basis
 
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:11` states that disbursement is conditional release of retained resources based on milestones, fulfillment evidence, fiscalization, and absence of blocking issues.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:13` states that later-phase funds may be collected in advance but cannot be released until prerequisite phase deliverables are accepted.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:89` requires disbursement milestone plans and phase-gate funding treatment to be coherent before execution funding commitments.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:97` blocks construction release while design is pending, rejected, or materially reformulated.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:251` treats executor material as self-report unless corroborated for critical milestones, disbursements, and closure.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:373` prohibits full release orders where required fulfillment/control evidence is inconclusive, insufficient, contradicted, or only contextual.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:449` allows partial release only with separable components, accepted evidence, explicit retained amount, clear release condition, fiscalizer explanation, and citizen-facing summary.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:464` requires guarantee materialization to be confirmed by an external lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or equivalent.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:181` defines `Disbursement` as leading to financial order only after review and blockers clear.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:260` sets a schema gate: no disbursement without funding source, budget line, milestone/phase gate, review basis, and financial order path.
-- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as an integration: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r8644a839|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] states that disbursement is conditional release of retained resources based on milestones, fulfillment evidence, fiscalization, and absence of blocking issues.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^rf808c335|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] states that later-phase funds may be collected in advance but cannot be released until prerequisite phase deliverables are accepted.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^raaae9665|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] requires disbursement milestone plans and phase-gate funding treatment to be coherent before execution funding commitments.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^rd7c230c4|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] blocks construction release while design is pending, rejected, or materially reformulated.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r129769d8|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] treats executor material as self-report unless corroborated for critical milestones, disbursements, and closure.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r005b421a|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] prohibits full release orders where required fulfillment/control evidence is inconclusive, insufficient, contradicted, or only contextual.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r07a4bda9|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] allows partial release only with separable components, accepted evidence, explicit retained amount, clear release condition, fiscalizer explanation, and citizen-facing summary.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r0166c42b|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] requires guarantee materialization to be confirmed by an external lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or equivalent.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Funding, Disbursement, and Custody Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines `Disbursement` as leading to financial order only after review and blockers clear.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Minimal Validation Gates|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] sets a schema gate: no disbursement without funding source, budget line, milestone/phase gate, review basis, and financial order path.
+- [[P007-integrate-or-bound-rule#^r520eddb3|knowledge/principles/P007-integrate-or-bound-rule.md]] classifies this as an integration: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects.
 
 ## Bibliographic basis
 

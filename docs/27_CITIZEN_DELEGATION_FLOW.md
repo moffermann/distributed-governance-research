@@ -4,7 +4,7 @@
 
 This document freezes the citizen delegation flow.
 
-Delegation allows a citizen to authorize another actor to act within a defined scope. In Core v0, delegation should be simple, explicit, accepted by the delegate, and immediately revocable for future actions.
+Delegation allows a citizen to authorize another actor to act within a defined scope. In Core v0, delegation should be simple, explicit, accepted by the delegate, and immediately revocable for future actions. ^r6d31cfd2
 
 ## Core principle
 
@@ -164,7 +164,7 @@ Community Sports Help Desk, if funded as an ordinary project
 
 The system should not hide concentration. It should make it visible.
 
-Core v0 does not impose a universal hard cap on delegation concentration. If citizens voluntarily concentrate delegated authority in a trusted actor, that is a legitimate civic choice. The system must show concentration before delegation, during delegated action, in delegate reports, and in administrative observability.
+Core v0 does not impose a universal hard cap on delegation concentration. If citizens voluntarily concentrate delegated authority in a trusted actor, that is a legitimate civic choice. The system must show concentration before delegation, during delegated action, in delegate reports, and in administrative observability. ^rb47f66a0
 
 A010 adds stress signals as a short warning and detail-on-demand layer. When concentration is high, the interface may show represented-weight warning status, the affected scope or action type, report-sufficiency status, related-delegate or support-provider relationships, delegate funding to related projects, and any configured cap effect. These signals should come from existing delegation, report, disclosure, and audit records rather than a new citizen-facing bureaucracy.
 
@@ -267,7 +267,7 @@ If a configured cap limits represented weight for a specific action type, the ca
 
 The citizen should receive delegated-action reports.
 
-The Core v0 baseline should be generated primarily by the system from the delegated-action audit trail. The delegate may add short explanations, but the citizen should not depend on manually written delegate reports to know what happened.
+The Core v0 baseline should be generated primarily by the system from the delegated-action audit trail. The delegate may add short explanations, but the citizen should not depend on manually written delegate reports to know what happened. ^r5a8628a2
 
 Reports may include:
 

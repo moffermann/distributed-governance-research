@@ -17,7 +17,7 @@ Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution in
 
 ## Rule added to Core v0
 
-Related-party status is not automatic invalidity. Hidden, severe, or control-relevant relationships require stronger safeguards, correction, blocking, exclusion, complaint review, responsibility review, or reputation effects.
+Related-party status is not automatic invalidity. Hidden, severe, or control-relevant relationships require stronger safeguards, correction, blocking, exclusion, complaint review, responsibility review, or reputation effects. ^rb4b2bf65
 
 Minimum relationship graph:
 
@@ -25,7 +25,7 @@ Minimum relationship graph:
 - board or management control;
 - supplier and subcontractor relationships where material;
 - repeated fiscalizer/evidence-producer relationships;
-- delegate or funder relationships to project actors;
+- delegate or funder relationships to project actors; ^r2765ddd6
 - authority-linked operator status;
 - hidden-conflict escalation rule.
 

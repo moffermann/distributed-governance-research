@@ -20,7 +20,7 @@ An idea is not a project in an early state. It is a separate civic entity.
 
 A project is a financeable and executable commitment. It requires an executor, budget, milestones, evidence, fiscalization, and responsibility.
 
-An idea is a civic demand or proposal. It can express value, beneficiaries, territory, and support, but it does not execute anything and cannot receive project funding.
+An idea is a civic demand or proposal. It can express value, beneficiaries, territory, and support, but it does not execute anything and cannot receive project funding. ^rbf4e6afb
 
 ## Definition of Idea
 

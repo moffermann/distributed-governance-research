@@ -4,7 +4,7 @@
 
 This document resolves contradiction C008 from the v0 contradiction checklist.
 
-C008 was originally framed as the tension between using AI to scale the system and preventing AI from becoming an unaccountable authority. The final resolution is simple: AI may assist, detect, summarize, suggest, transform, and warn, but it is not an actor and does not make final civic, financial, reputational, or legal decisions.
+C008 was originally framed as the tension between using AI to scale the system and preventing AI from becoming an unaccountable authority. The final resolution is simple: AI may assist, detect, summarize, suggest, transform, and warn, but it is not an actor and does not make final civic, financial, reputational, or legal decisions. ^re758c6e7
 
 ## Status
 
@@ -206,7 +206,7 @@ AI is assistance infrastructure, not a system actor or authority.
 
 Final rule:
 
-> AI may assist, detect, summarize, transform, suggest, and warn, but it cannot be the final authority over projects, funds, evidence truth, complaints, sanctions, reputation, fiscalizers, citizen choices, or closure. Material AI suggestions should be visible, traceable, and correctable.
+> AI may assist, detect, summarize, transform, suggest, and warn, but it cannot be the final authority over projects, funds, evidence truth, complaints, sanctions, reputation, fiscalizers, citizen choices, or closure. Material AI suggestions should be visible, traceable, and correctable. ^r318cb914
 
 ## Documents that should eventually reflect this resolution
 

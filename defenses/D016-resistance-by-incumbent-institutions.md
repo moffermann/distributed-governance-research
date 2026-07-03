@@ -32,14 +32,14 @@ For a tutored sports pilot, the system should show scope opened, budget share, a
 
 ## Project-document basis
 
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:40` states that the platform should not pretend to decide when a country must move from tutored to open mode.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:407` requires every material tutored decision and silence to become public through Governance Resolutions or Review Timeout Resolutions.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:453` states that the platform cannot force distributed governance onto a country, but can prevent tutored governance from hiding behind the platform.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:26` states that a public authority may not be judge and party inside the same scope.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:314` states that public/private status is not the primary boundary; authority, control, privilege, contestability, accountability, and operating mode are.
-- `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md:430` requires a minimal administrative observability baseline across lifecycle, funding, disbursement, evidence, fiscalization, complaints, operating-mode decisions, governance resolutions, timeouts, rule changes, and concentration indicators.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:195` defines complaint admissibility/referral records that may route to scoped platform effects or external authority references.
-- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as a bounded resolution: indicators over existing objects, with the political limit recorded openly rather than mechanized away.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r4325fc0d|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] states that the platform should not pretend to decide when a country must move from tutored to open mode.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#C020 final resolution|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] requires every material tutored decision and silence to become public through Governance Resolutions or Review Timeout Resolutions.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r0a7c9421|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] states that the platform cannot force distributed governance onto a country, but can prevent tutored governance from hiding behind the platform.
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION#^ree650ebd|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]] states that a public authority may not be judge and party inside the same scope.
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION#^rb1a52f8e|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]] states that public/private status is not the primary boundary; authority, control, privilege, contestability, accountability, and operating mode are.
+- [[59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION#C021 final resolution|docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md]] requires a minimal administrative observability baseline across lifecycle, funding, disbursement, evidence, fiscalization, complaints, operating-mode decisions, governance resolutions, timeouts, rule changes, and concentration indicators.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Control, Fiscalization, and Review Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines complaint admissibility/referral records that may route to scoped platform effects or external authority references.
+- [[P007-integrate-or-bound-rule#^r520eddb3|knowledge/principles/P007-integrate-or-bound-rule.md]] classifies this as a bounded resolution: indicators over existing objects, with the political limit recorded openly rather than mechanized away.
 
 ## Bibliographic basis
 

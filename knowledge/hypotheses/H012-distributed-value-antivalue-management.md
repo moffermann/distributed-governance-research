@@ -27,7 +27,7 @@ Value Commitment = floor the project must reach
 Antivalue Constraint = ceiling the project must not exceed
 ```
 
-The system should not treat an antivalue as a complaint by default. An antivalue is a declared or discovered negative dimension of the project. It is normally managed through measurement, fulfillment/control evidence, fiscalization, correction, mitigation, disbursement effects, closure effects, and role-specific responsibility.
+The system should not treat an antivalue as a complaint by default. An antivalue is a declared or discovered negative dimension of the project. It is normally managed through measurement, fulfillment/control evidence, fiscalization, correction, mitigation, disbursement effects, closure effects, and role-specific responsibility. ^r5baf4f5e
 
 A complaint is a later explicit procedural action. It may use evidence of a failed value floor, exceeded antivalue ceiling, false evidence, missing mitigation, or undeclared antivalue, but it must still follow the ordinary H024/C004 complaint process.
 
@@ -92,7 +92,7 @@ Did the project reach the promised value floor?
 Did the project stay below the declared antivalue ceiling?
 ```
 
-The evidence can later support a complaint, but only if someone explicitly files a complaint and the complaint follows the H024/C004 process.
+The evidence can later support a complaint, but only if someone explicitly files a complaint and the complaint follows the H024/C004 process. ^rf0e403dd
 
 ## Complaint boundary
 

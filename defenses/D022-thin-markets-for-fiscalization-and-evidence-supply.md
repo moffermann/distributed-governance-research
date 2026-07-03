@@ -34,14 +34,14 @@ For the rural water committee, the honest concession is that if the only accredi
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H027-proportional-project-thresholds.md:5` states that not every project should require the same combination of financing, technical validation, or institutional control.
-- `knowledge/hypotheses/H020-proportional-procedural-burden.md:7` requires design, guarantees, fiscalization, and evidence to be proportional to the project's size, risk, complexity, and territory.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:637` sets the small-project control model as executor self-report plus open observation plus voluntary fulfillment evidence.
-- `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md:68` limits the higher producer-qualification standard to paid evidence or hard formal effects, keeping citizen observation easy.
-- `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md:436` recognizes remote and extreme-zone fiscalization cost, including travel, lodging, and multiple visits, as a fundable control component.
-- `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md:228` sets low-risk control selection as rotation or random selection among admissible fiscalizers rather than a heavy procedure.
-- `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md:106` funds the control subproject from the parent project's control budget, separating supply cost from the executor.
-- `knowledge/hypotheses/H020-proportional-procedural-burden.md:398` records the residual risk that independent reviewers may be scarce or expensive, the exact thin-market condition the attack names.
+- [[H027-proportional-project-thresholds#^r668ec788|knowledge/hypotheses/H027-proportional-project-thresholds.md]] states that not every project should require the same combination of financing, technical validation, or institutional control.
+- [[H020-proportional-procedural-burden#^r42cc39cf|knowledge/hypotheses/H020-proportional-procedural-burden.md]] requires design, guarantees, fiscalization, and evidence to be proportional to the project's size, risk, complexity, and territory.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL#Proportionality|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] sets the small-project control model as executor self-report plus open observation plus voluntary fulfillment evidence.
+- [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION#^re75cdb8c|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]] limits the higher producer-qualification standard to paid evidence or hard formal effects, keeping citizen observation easy.
+- [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION#Relationship with execution-ready state|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]] recognizes remote and extreme-zone fiscalization cost, including travel, lodging, and multiple visits, as a fundable control component.
+- [[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION#Low-risk projects|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]] sets low-risk control selection as rotation or random selection among admissible fiscalizers rather than a heavy procedure.
+- [[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION#^r757f12a9|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]] funds the control subproject from the parent project's control budget, separating supply cost from the executor.
+- [[H020-proportional-procedural-burden#^r26dda873|knowledge/hypotheses/H020-proportional-procedural-burden.md]] records the residual risk that independent reviewers may be scarce or expensive, the exact thin-market condition the attack names.
 
 ## Bibliographic basis
 

@@ -30,7 +30,7 @@ The roadmap-construction mechanism remains unresolved.
 
 ## Planning Scope
 
-A `Planning Scope` is a public, versioned scope that defines what kinds of projects are eligible for distributed financing under a public function, operating mode, pilot, protocol, territorial rule, or authorized planning line.
+A `Planning Scope` is a public, versioned scope that defines what kinds of projects are eligible for distributed financing under a public function, operating mode, pilot, protocol, territorial rule, or authorized planning line. ^r96b47655
 
 It may be created by different sources depending on the operating mode and country implementation:
 
@@ -101,7 +101,7 @@ It requires:
 - public reason where scope changes materially;
 - audit trail;
 - no hidden eligibility boundaries;
-- no silent removal of project categories from financing.
+- no silent removal of project categories from financing. ^r14adef1d
 
 ## Boundary with H010
 
@@ -153,7 +153,7 @@ Core v0 should not create execution financing for out-of-scope projects by defau
 
 Rule:
 
-> Outside-scope does not mean socially worthless. It means not currently eligible for execution financing under the active scope.
+> Outside-scope does not mean socially worthless. It means not currently eligible for execution financing under the active scope. ^r49239a17
 
 ## Future distributed roadmap construction
 

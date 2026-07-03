@@ -2,9 +2,9 @@
 
 ## Hypothesis
 
-All projects should share the same conceptual structure, but not the same procedural burden.
+All projects should share the same conceptual structure, but not the same procedural burden. ^r0c61d1b6
 
-The level of design, documents, guarantees, fiscalization, admissibility review, evidence, and evaluation should be proportional to the project's size, risk, complexity, irreversibility, vulnerable beneficiaries, territory, public-function sensitivity, common-good impact, technical requirements, and potential antivalue.
+The level of design, documents, guarantees, fiscalization, admissibility review, evidence, and evaluation should be proportional to the project's size, risk, complexity, irreversibility, vulnerable beneficiaries, territory, public-function sensitivity, common-good impact, technical requirements, and potential antivalue. ^r42cc39cf
 
 Where project phases are used, the phase plan and phase-gate deliverables should also be proportional. A small workshop should not need a heavy phase structure. A design-and-construction project may need explicit design and construction phases because later execution funding depends on accepted design deliverables.
 
@@ -395,7 +395,7 @@ Layer 5 preserves:
 
 - Administrators may configure profiles too lightly for risky projects.
 - Administrators may configure profiles too heavily and discourage participation.
-- Proposers may try to under-classify risky projects.
+- Proposers may try to under-classify risky projects. ^r26dda873
 - A global guarantee percentage may overburden some small social projects or underprotect some large or complex projects.
 - Independent reviewers may be scarce or expensive.
 - Paid admissibility review may become a gatekeeping market.

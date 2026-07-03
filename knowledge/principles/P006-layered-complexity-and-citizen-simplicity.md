@@ -2,7 +2,7 @@
 
 ## Principle
 
-The architecture may be complex, but ordinary citizen participation must remain simple.
+The architecture may be complex, but ordinary citizen participation must remain simple. ^r98089f8d
 
 The system should distinguish between protocol complexity, operational complexity, expert complexity, and citizen experience.
 
@@ -10,7 +10,7 @@ The first three can be deep. The last one must be simple.
 
 ## Core formulation
 
-> Simple to participate. Deep to audit. Complex only when the citizen chooses to go deeper in a specific context.
+> Simple to participate. Deep to audit. Complex only when the citizen chooses to go deeper in a specific context. ^r4954f825
 
 ## Rationale
 

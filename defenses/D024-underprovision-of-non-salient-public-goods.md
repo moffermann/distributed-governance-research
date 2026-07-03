@@ -34,14 +34,14 @@ For the commune, the drainage upgrade sits above the essential floor, so the def
 
 ## Project-document basis
 
-- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md:24` defines the floor-and-lane rule protecting an essential floor separately from the contestable service lane.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:57` sets the public budget boundary distinguishing the assignable wallet from a non-assignable common pool of essential functions.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:61` requires anti-neglect safeguards including strategic categories and observability of underfunded areas so low-visibility functions are not silently starved.
-- `knowledge/hypotheses/H033-system-defined-default-allocation-rule.md:71` gives an example default rule that channels funds across strategic, near-completion, regional, control, and new-project categories by rule.
-- `docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md:128` lists an official profile option to support underfunded protected scopes through a visible assignable lane.
-- `knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md:31` applies the configured or protocol-defined default allocation rule when the citizen does not act, routing inactive funds by rule rather than salience.
-- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md:14` sets the comparison baseline as real institutional allocation, not an ideal central state, since central discretion also hides underfunding.
-- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md:76` records the residual risk that low-visibility needs still require outreach and participation-capacity support.
+- [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION#Resolution decision|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]] defines the floor-and-lane rule protecting an essential floor separately from the contestable service lane.
+- [[H002-distributed-resource-allocation#^rdf3fe4e3|knowledge/hypotheses/H002-distributed-resource-allocation.md]] sets the public budget boundary distinguishing the assignable wallet from a non-assignable common pool of essential functions.
+- [[H002-distributed-resource-allocation#^r1722756d|knowledge/hypotheses/H002-distributed-resource-allocation.md]] requires anti-neglect safeguards including strategic categories and observability of underfunded areas so low-visibility functions are not silently starved.
+- [[H033-system-defined-default-allocation-rule#Example default rule|knowledge/hypotheses/H033-system-defined-default-allocation-rule.md]] gives an example default rule that channels funds across strategic, near-completion, regional, control, and new-project categories by rule.
+- [[28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW#Base profile selection|docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md]] lists an official profile option to support underfunded protected scopes through a visible assignable lane.
+- [[H038-monthly-use-it-or-allocate-it-cycle#^r5cecbdca|knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md]] applies the configured or protocol-defined default allocation rule when the citizen does not act, routing inactive funds by rule rather than salience.
+- [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION#^r1e71c059|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]] sets the comparison baseline as real institutional allocation, not an ideal central state, since central discretion also hides underfunding.
+- [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION#^r91c050a9|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]] records the residual risk that low-visibility needs still require outreach and participation-capacity support.
 
 ## Bibliographic basis
 

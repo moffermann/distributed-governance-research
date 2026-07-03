@@ -38,15 +38,15 @@ For older-adult care, a six-month care project should expose before expiration w
 
 ## Project-document basis
 
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:11` defines disbursement as conditional release based on milestones, fulfillment evidence, fiscalization, and absence of blockers.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:13` states that phased project funds may be collected in advance but cannot be released until prerequisite phase deliverables are accepted.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:41` states that citizen funding does not immediately release money to the executor.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:59` through `docs/31_PROJECT_DISBURSEMENT_FLOW.md:79` define execution-ready checks and state that execution-ready does not mean automatic full release.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:449` allows partial release only with separable components, accepted evidence, explicit retention, and clear release conditions.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:416` through `docs/31_PROJECT_DISBURSEMENT_FLOW.md:427` define universal financial assurance beyond construction and prohibit self-selected lower assurance.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:488` identifies monthly release, retained future service funds, and guarantee materialization as continuity protections for care services.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:180` allows `FundingCommitment` to reserve funds for project, phase, control, complaint review, or mitigation.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:183` defines `FinancialAssuranceProfile` as applicable before affected funds release and beyond construction.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r8644a839|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] defines disbursement as conditional release based on milestones, fulfillment evidence, fiscalization, and absence of blockers.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^rf808c335|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] states that phased project funds may be collected in advance but cannot be released until prerequisite phase deliverables are accepted.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^rf80f3910|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] states that citizen funding does not immediately release money to the executor.
+- [[31_PROJECT_DISBURSEMENT_FLOW#2. Execution-ready project|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] define execution-ready checks and state that execution-ready does not mean automatic full release.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r07a4bda9|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] allows partial release only with separable components, accepted evidence, explicit retention, and clear release conditions.
+- [[31_PROJECT_DISBURSEMENT_FLOW#9. Disbursement decision|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] define universal financial assurance beyond construction and prohibit self-selected lower assurance.
+- [[31_PROJECT_DISBURSEMENT_FLOW#Rule|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] identifies monthly release, retained future service funds, and guarantee materialization as continuity protections for care services.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Funding, Disbursement, and Custody Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] allows `FundingCommitment` to reserve funds for project, phase, control, complaint review, or mitigation.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Funding, Disbursement, and Custody Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines `FinancialAssuranceProfile` as applicable before affected funds release and beyond construction.
 
 ## Bibliographic basis
 

@@ -445,7 +445,7 @@ For Deporte, you must include participation or attendance.
 
 ## Evidence validation
 
-Metrics must be linked to evidence.
+Metrics must be linked to evidence. ^r79fdd97e
 
 A metric is not enough if there is no way to verify it.
 

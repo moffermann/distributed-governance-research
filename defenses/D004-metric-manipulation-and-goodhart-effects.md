@@ -32,16 +32,16 @@ For Macul, a court-count metric is weak unless it is joined with dimensions, saf
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H018-project-value-thesis-and-measurement.md:24` identifies the risk of attractive value with weak or input-only metrics.
-- `knowledge/hypotheses/H018-project-value-thesis-and-measurement.md:46` connects value floors and antivalue ceilings to the Project Evidential Contract and fulfillment/control evidence needs.
-- `knowledge/hypotheses/H018-project-value-thesis-and-measurement.md:54` states that metrics should not be only input measures.
-- `knowledge/hypotheses/H018-project-value-thesis-and-measurement.md:107` requires a proportional Value Verification Package for every promised value.
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md:15` states that metrics are instruments of verification, not substitutes for public value.
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md:42` replaces isolated metrics with a Value Verification Package.
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md:84` through `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md:89` require non-input-only metrics, evidence linkage, beneficiary confirmation where relevant, risk checks, and antivalue-ceiling review.
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md:388` states that a project should not be approved, closed as fulfilled, or fully released solely because one narrow metric was met.
-- `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md:143` requires metric weights before funding begins.
-- `docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md:448` states that metrics must be linked to evidence.
+- [[H018-project-value-thesis-and-measurement#^r74573eb0|knowledge/hypotheses/H018-project-value-thesis-and-measurement.md]] identifies the risk of attractive value with weak or input-only metrics.
+- [[H018-project-value-thesis-and-measurement#^rbc8194be|knowledge/hypotheses/H018-project-value-thesis-and-measurement.md]] connects value floors and antivalue ceilings to the Project Evidential Contract and fulfillment/control evidence needs.
+- [[H018-project-value-thesis-and-measurement#^reaf2a7fd|knowledge/hypotheses/H018-project-value-thesis-and-measurement.md]] states that metrics should not be only input measures.
+- [[H018-project-value-thesis-and-measurement#^r36d55ad5|knowledge/hypotheses/H018-project-value-thesis-and-measurement.md]] requires a proportional Value Verification Package for every promised value.
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION#^r836f6a1c|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]] states that metrics are instruments of verification, not substitutes for public value.
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION#^ra78252bd|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]] replaces isolated metrics with a Value Verification Package.
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION#Minimum v0 rule|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]] require non-input-only metrics, evidence linkage, beneficiary confirmation where relevant, risk checks, and antivalue-ceiling review.
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION#^r804c04ab|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]] states that a project should not be approved, closed as fulfilled, or fully released solely because one narrow metric was met.
+- [[56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION#^r36df0dc8|docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md]] requires metric weights before funding begins.
+- [[13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR#^r79fdd97e|docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md]] states that metrics must be linked to evidence.
 
 ## Bibliographic basis
 

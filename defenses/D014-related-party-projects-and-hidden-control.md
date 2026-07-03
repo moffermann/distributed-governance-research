@@ -32,15 +32,15 @@ For Macul, one holding designing and constructing the facility can be legitimate
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:7` states that related-party links do not automatically make a project illegitimate, but must be declared, classified, exposed, and handled with proportional safeguards.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:53` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:65` define proportional conflict categories from declared low conflict to hidden or misrepresented conflict.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:108` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:110` gives the design-and-build holding example and requires phase planning and independent design-gate verification where policy requires it.
-- `docs/09_PROJECT_OBJECT_MODEL.md:83` allows the same actor to design and execute only with traceability and without self-acceptance where independent review is required.
-- `docs/09_PROJECT_OBJECT_MODEL.md:282` requires related-party and conflict declarations among proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries.
-- `docs/09_PROJECT_OBJECT_MODEL.md:303` states that a Macul multi-court project may be legitimate even when a local club uses the facility, if public access and independent control are declared.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:169` states that hidden or misrepresented control relationships may trigger reformulation, exclusion, disbursement blocking, rejection, complaint review, responsibility review, or reputation effects.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:147` defines `RelatedPartyConflictReview` with severity classification, disclosure status, review status, and effect references.
-- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies the relationship graph as integration through existing objects — observability over declarations already required by the role model — with verification depth bounded to country implementation.
+- [[H028-related-party-conflict-of-interest#^r8a873e54|knowledge/hypotheses/H028-related-party-conflict-of-interest.md]] states that related-party links do not automatically make a project illegitimate, but must be declared, classified, exposed, and handled with proportional safeguards.
+- [[H028-related-party-conflict-of-interest#Proportional conflict handling|knowledge/hypotheses/H028-related-party-conflict-of-interest.md]] define proportional conflict categories from declared low conflict to hidden or misrepresented conflict.
+- [[H028-related-party-conflict-of-interest#Design-and-build holding|knowledge/hypotheses/H028-related-party-conflict-of-interest.md]] gives the design-and-build holding example and requires phase planning and independent design-gate verification where policy requires it.
+- [[09_PROJECT_OBJECT_MODEL#^r35ef3dd2|docs/09_PROJECT_OBJECT_MODEL.md]] allows the same actor to design and execute only with traceability and without self-acceptance where independent review is required.
+- [[09_PROJECT_OBJECT_MODEL#^r53584c6b|docs/09_PROJECT_OBJECT_MODEL.md]] requires related-party and conflict declarations among proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries.
+- [[09_PROJECT_OBJECT_MODEL#2. Actors and roles|docs/09_PROJECT_OBJECT_MODEL.md]] states that a Macul multi-court project may be legitimate even when a local club uses the facility, if public access and independent control are declared.
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION#^r79baceec|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]] states that hidden or misrepresented control relationships may trigger reformulation, exclusion, disbursement blocking, rejection, complaint review, responsibility review, or reputation effects.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Core Project and Scope Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines `RelatedPartyConflictReview` with severity classification, disclosure status, review status, and effect references.
+- [[P007-integrate-or-bound-rule#^r520eddb3|knowledge/principles/P007-integrate-or-bound-rule.md]] classifies the relationship graph as integration through existing objects — observability over declarations already required by the role model — with verification depth bounded to country implementation.
 
 ## Bibliographic basis
 

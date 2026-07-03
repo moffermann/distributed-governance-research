@@ -16,7 +16,7 @@ Core v0 should include an `Assisted Deliberation Context` for material citizen d
 
 This is a citizen-facing context surface, not a new decision authority.
 
-It may be generated through structured data, protocol rules, human contributions, expert review, and AI assistance, but it must remain source-visible, correctable, and non-binding.
+It may be generated through structured data, protocol rules, human contributions, expert review, and AI assistance, but it must remain source-visible, correctable, and non-binding. ^r89232a1b
 
 ## Boundary with neighboring concepts
 

@@ -34,14 +34,14 @@ For Macul, the platform cannot stop the finance ministry from cutting five perce
 
 ## Project-document basis
 
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md:20` states that Treasury informs authorized funding capacity and executes valid movements but does not decide projects, priorities, or disbursements by discretionary judgment.
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md:289` restricts the custodian to rejecting an order only for closed technical or legal causes.
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md:408` records the residual risk that external amount providers may be unavailable or delayed, which is precisely the strangulation vector the attack names.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:377` requires the system to generate a Financial Order whenever money must move, making each execution a traceable, signed event.
-- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md:242` confirms Treasury may provide balance and smoothing inputs where lawful but still does not decide civic value or priority.
-- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md:281` records the residual risk that Treasury or administrators may use smoothing parameters as hidden political steering.
-- `knowledge/hypotheses/H037-public-revenue-custody-and-disbursement.md:18` states that the custody boundary is Core v0 but the specific legal custodian, tax integration, and enforceability mechanics depend on the implementing country.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:57` sets the public budget boundary distinguishing the assignable civic wallet from a non-assignable common pool of essential fiscal obligations.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION#^r4514aed9|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]] states that Treasury informs authorized funding capacity and executes valid movements but does not decide projects, priorities, or disbursements by discretionary judgment.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION#^rb74ea438|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]] restricts the custodian to rejecting an order only for closed technical or legal causes.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION#^rce81992b|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]] records the residual risk that external amount providers may be unavailable or delayed, which is precisely the strangulation vector the attack names.
+- [[31_PROJECT_DISBURSEMENT_FLOW#^r39d08ff2|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] requires the system to generate a Financial Order whenever money must move, making each execution a traceable, signed event.
+- [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION#^r9bfae111|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]] confirms Treasury may provide balance and smoothing inputs where lawful but still does not decide civic value or priority.
+- [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION#^rc469ba02|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]] records the residual risk that Treasury or administrators may use smoothing parameters as hidden political steering.
+- [[H037-public-revenue-custody-and-disbursement#^r508104d0|knowledge/hypotheses/H037-public-revenue-custody-and-disbursement.md]] states that the custody boundary is Core v0 but the specific legal custodian, tax integration, and enforceability mechanics depend on the implementing country.
+- [[H002-distributed-resource-allocation#^rdf3fe4e3|knowledge/hypotheses/H002-distributed-resource-allocation.md]] sets the public budget boundary distinguishing the assignable civic wallet from a non-assignable common pool of essential fiscal obligations.
 
 ## Bibliographic basis
 

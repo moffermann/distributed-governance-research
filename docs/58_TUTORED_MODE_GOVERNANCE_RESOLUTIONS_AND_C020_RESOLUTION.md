@@ -8,7 +8,7 @@ C020 was originally framed as the risk that tutored or semi-open operating modes
 
 The system does not hold sovereignty over that decision.
 
-The real v0 problem is opaque tutored governance: rejected projects, delayed reviews, unexplained eligibility decisions, hidden responsible authorities, and silence without public auditability.
+The real v0 problem is opaque tutored governance: rejected projects, delayed reviews, unexplained eligibility decisions, hidden responsible authorities, and silence without public auditability. ^r2bd91f8a
 
 ## Status
 
@@ -20,7 +20,7 @@ Accepted as the v0 resolution for C020.
 
 Tutored mode may be temporary, indefinite, or permanent depending on the implementing country or authorized governance process.
 
-But every tutored governance decision must be traceable, explainable, and open to citizen audit.
+But every tutored governance decision must be traceable, explainable, and open to citizen audit. ^r63e1af13
 
 ## The corrected contradiction
 
@@ -37,7 +37,7 @@ Tutored mode is acceptable as an external implementation decision.
 Tutored opacity is the contradiction.
 ```
 
-The platform should not pretend to decide when a country must move from tutored mode to semi-open or open mode. That decision belongs to the competent political, legal, administrative, or governance authority.
+The platform should not pretend to decide when a country must move from tutored mode to semi-open or open mode. That decision belongs to the competent political, legal, administrative, or governance authority. ^r4325fc0d
 
 However, if the authority uses the platform in tutored mode, the platform must not hide the authority's decisions from public scrutiny.
 
@@ -65,7 +65,7 @@ without a suggested next path,
 and without a public space where citizens can observe or object.
 ```
 
-The accepted v0 rule is that the rejection must create a public governance-resolution object.
+The accepted v0 rule is that the rejection must create a public governance-resolution object. ^r3762dc61
 
 Under H009, these eligibility and scope boundaries are represented as Planning Scope decisions. The authority may define or interpret the active scope in tutored mode, but it must not hide that scope or its material application.
 
@@ -101,7 +101,7 @@ Change location, complement the existing project, reclassify, or reformulate.
 
 ## Governance Resolution
 
-Every material tutored governance decision should create a public object:
+Every material tutored governance decision should create a public object: ^r777f8758
 
 ```text
 Governance Resolution
@@ -116,7 +116,7 @@ Governance resolutions may include:
 - request for reformulation;
 - request for reclassification;
 - eligibility decision;
-- planning-scope interpretation or change;
+- planning-scope interpretation or change; ^r73238832
 - confirmation that the project is outside the tutored public-function scope;
 - special condition imposed before publication;
 - reversal or correction of a prior tutored decision.
@@ -178,7 +178,7 @@ The goal is civic auditability, not a mandatory appeal bureaucracy for every rej
 
 ## Review window for tutored project submissions
 
-Submitting a project for tutored review must not create an indefinite waiting state.
+Submitting a project for tutored review must not create an indefinite waiting state. ^rd27eade9
 
 Each tutored operating mode should declare a maximum review window.
 
@@ -194,7 +194,7 @@ The v0 requirement is not that every country use 30 days. The v0 requirement is 
 
 ## Review Timeout Resolution
 
-If the authority does not issue a governance resolution within the configured review window, the system should automatically create:
+If the authority does not issue a governance resolution within the configured review window, the system should automatically create: ^rd5ed4814
 
 ```text
 Review Timeout Resolution
@@ -450,4 +450,4 @@ This resolution should inform future updates to:
 
 ## Design rule
 
-> The platform cannot force distributed governance onto a country, but it can prevent tutored governance from hiding behind the platform.
+> The platform cannot force distributed governance onto a country, but it can prevent tutored governance from hiding behind the platform. ^r0a7c9421

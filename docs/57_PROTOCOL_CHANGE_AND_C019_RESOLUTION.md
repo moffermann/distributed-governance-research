@@ -14,7 +14,7 @@ Accepted as the v0 resolution for C019.
 
 ## Core principle
 
-> The system may evolve, but rule changes must be visible, versioned, justified, non-surprising, and governed by the operating mode in effect.
+> The system may evolve, but rule changes must be visible, versioned, justified, non-surprising, and governed by the operating mode in effect. ^r4ed28192
 
 A tutored operating mode may give an administrator or implementing ministry authority to configure rules.
 
@@ -150,9 +150,9 @@ rollback path
 
 This may involve citizen proposal, community review, voting, delegated voting, protocol-defined approval bodies, or other open mechanisms depending on implementation.
 
-The exact voting mechanics can remain future work.
+The exact voting mechanics can remain future work. ^r8baa4b65
 
-The v0 requirement is that non-tutored protocol change must not be an invisible administrator edit.
+The v0 requirement is that non-tutored protocol change must not be an invisible administrator edit. ^rdf942859
 
 ## Rule-change object fields
 

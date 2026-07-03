@@ -14,7 +14,7 @@ It converts the formal entity inventory, diagrams, audit event schema, and respo
 - migration planning;
 - prototype implementation.
 
-This is not yet a final database schema, API specification, class model, smart contract, legal implementation, or country-specific data model.
+This is not yet a final database schema, API specification, class model, smart contract, legal implementation, or country-specific data model. ^re7800b2c
 
 ## Status
 
@@ -40,7 +40,7 @@ The objects below are logical objects. A later implementation may store them in 
 
 ### 2. Every material object needs traceability
 
-Objects that carry state, authority, responsibility, funding, review, evidence, reputation, or formal effect should reference `AuditEvent` records.
+Objects that carry state, authority, responsibility, funding, review, evidence, reputation, or formal effect should reference `AuditEvent` records. ^r68b92440
 
 ### 3. Actor, role, and object references must stay separate
 

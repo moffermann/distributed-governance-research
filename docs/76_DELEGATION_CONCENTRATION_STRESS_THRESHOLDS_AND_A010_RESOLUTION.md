@@ -17,7 +17,7 @@ Core v0 should not create a new delegation-concentration authority, a separate p
 
 ## Rule added to Core v0
 
-Delegation concentration remains allowed by default, but significant concentration should trigger visible stress indicators, report-sufficiency requirements, and related-delegate checks.
+Delegation concentration remains allowed by default, but significant concentration should trigger visible stress indicators, report-sufficiency requirements, and related-delegate checks. ^r5aca18ca
 
 Stress thresholds are warning and escalation rules over existing records. They are not a new default cap and do not block voluntary delegation unless a public, explicit, predeclared cap or rule applies.
 
@@ -27,7 +27,7 @@ Minimum additions:
 - threshold source or rule reference;
 - related-delegate cluster indicators;
 - disclosure of support-provider-and-delegate relationships;
-- delegate funding to related projects observability;
+- delegate funding to related projects observability; ^r75a529e1
 - cap-effect disclosure where configured;
 - report-sufficiency checks for high-concentration delegates;
 - immediate revocation path visibility.

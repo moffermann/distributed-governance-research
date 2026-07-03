@@ -36,14 +36,14 @@ Where the attack is genuinely founded is that aggregate signals cannot distingui
 
 ## Project-document basis
 
-- `knowledge/principles/P002-social-sovereignty-over-value.md:5` states society is sovereign in assigning value, which forbids the platform from policing whether a citizen's motive is expressive or deliberative.
-- `knowledge/principles/P002-social-sovereignty-over-value.md:19` requires the system to surface harms, require declarations, and activate guarantees when undeclared harms appear, letting society evaluate net value rather than a central authority.
-- `knowledge/hypotheses/H012-distributed-value-antivalue-management.md:30` states an antivalue is managed through measurement, evidence, fiscalization, correction, and disbursement or closure effects rather than treated as a complaint by default.
-- `knowledge/hypotheses/H012-distributed-value-antivalue-management.md:95` states evidence can support a complaint only if someone explicitly files one following the complaint process, so a contested antivalue is not a free-standing weapon.
-- `knowledge/hypotheses/H026-support-vs-financing-signals.md:47` states support, objection, funding, and complaint signals do not automatically substitute for each other.
-- `knowledge/hypotheses/H026-support-vs-financing-signals.md:153` states large funding concentration must not become hidden extra civic weight.
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:265` states the common-good impact declaration must not create a hidden central authority that decides which goods matter.
-- `knowledge/hypotheses/H035-funding-target-closure-rule.md:89` states the system should not allow indefinite overfunding by default, bounding brigade funding at the funding target.
+- [[P002-social-sovereignty-over-value#^r37610f41|knowledge/principles/P002-social-sovereignty-over-value.md]] states society is sovereign in assigning value, which forbids the platform from policing whether a citizen's motive is expressive or deliberative.
+- [[P002-social-sovereignty-over-value#^r005f4f9f|knowledge/principles/P002-social-sovereignty-over-value.md]] requires the system to surface harms, require declarations, and activate guarantees when undeclared harms appear, letting society evaluate net value rather than a central authority.
+- [[H012-distributed-value-antivalue-management#^r5baf4f5e|knowledge/hypotheses/H012-distributed-value-antivalue-management.md]] states an antivalue is managed through measurement, evidence, fiscalization, correction, and disbursement or closure effects rather than treated as a complaint by default.
+- [[H012-distributed-value-antivalue-management#^rf0e403dd|knowledge/hypotheses/H012-distributed-value-antivalue-management.md]] states evidence can support a complaint only if someone explicitly files one following the complaint process, so a contested antivalue is not a free-standing weapon.
+- [[H026-support-vs-financing-signals#^r60e9026a|knowledge/hypotheses/H026-support-vs-financing-signals.md]] states support, objection, funding, and complaint signals do not automatically substitute for each other.
+- [[H026-support-vs-financing-signals#^rb2249dfb|knowledge/hypotheses/H026-support-vs-financing-signals.md]] states large funding concentration must not become hidden extra civic weight.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION#^r8f1f50c6|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]] states the common-good impact declaration must not create a hidden central authority that decides which goods matter.
+- [[H035-funding-target-closure-rule#^r12302376|knowledge/hypotheses/H035-funding-target-closure-rule.md]] states the system should not allow indefinite overfunding by default, bounding brigade funding at the funding target.
 
 ## Bibliographic basis
 

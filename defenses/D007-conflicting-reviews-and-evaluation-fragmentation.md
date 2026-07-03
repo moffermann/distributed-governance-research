@@ -39,12 +39,12 @@ Overall closure: not available until open evaluation conflicts are resolved or s
 
 ## Project-document basis
 
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:306` states that formal evaluation is dimension-scoped and effect-scoped.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:310` separates soft citizen input from formal fulfillment, disbursement, closure, complaint, responsibility, or reputation review.
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md:176` states that beneficiary feedback, affected-party experience, citizen observations, expert opinions, fiscalizer conclusions, complaint findings, and reputation inputs should not collapse into one undifferentiated score.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:162` defines `EvaluationRecord` with evaluation context, evaluated dimension, authority or qualification basis, evidence refs, effect type, effect scope, and review status.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:112` says an evaluator cannot mix evaluation contexts or create effects outside assigned authority.
-- `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md:324` requires formal reputation updates to come from verified metrics, accepted fulfillment evidence, fiscalizer evaluation, or founded complaints connected to role obligations.
+- [[34_CORE_V0_SCOPE_FREEZE#^rb7d40b09|docs/34_CORE_V0_SCOPE_FREEZE.md]] states that formal evaluation is dimension-scoped and effect-scoped.
+- [[34_CORE_V0_SCOPE_FREEZE#^r10f159f2|docs/34_CORE_V0_SCOPE_FREEZE.md]] separates soft citizen input from formal fulfillment, disbursement, closure, complaint, responsibility, or reputation review.
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION#^r16045dbf|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]] states that beneficiary feedback, affected-party experience, citizen observations, expert opinions, fiscalizer conclusions, complaint findings, and reputation inputs should not collapse into one undifferentiated score.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Value, Evidence, and Evaluation Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines `EvaluationRecord` with evaluation context, evaluated dimension, authority or qualification basis, evidence refs, effect type, effect scope, and review status.
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0#Project Delivery and Review Roles|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]] says an evaluator cannot mix evaluation contexts or create effects outside assigned authority.
+- [[56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION#^ra6d710f4|docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md]] requires formal reputation updates to come from verified metrics, accepted fulfillment evidence, fiscalizer evaluation, or founded complaints connected to role obligations.
 
 ## Bibliographic basis
 

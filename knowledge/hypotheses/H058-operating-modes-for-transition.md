@@ -112,7 +112,7 @@ Small local sports projects publish directly, but high-budget infrastructure pro
 
 Projects operate under the ordinary distributed protocol without institutional pre-publication moderation.
 
-Control happens through transparency, fiscalization, reputation, complaints, guarantees, and observability.
+Control happens through transparency, fiscalization, reputation, complaints, guarantees, and observability. ^r57196499
 
 ### 5. Suspended mode
 

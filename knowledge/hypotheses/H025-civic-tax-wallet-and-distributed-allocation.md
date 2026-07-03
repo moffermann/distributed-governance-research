@@ -75,7 +75,7 @@ personal allocation authority over non-withdrawable public-purpose funds
 
 If a public authority, institutional administrator, or protocol assigns a percentage of a public budget to distributed allocation, the system must still define how much of that assignable pool corresponds to each eligible citizen.
 
-Core v0 should not impose one universal formula. The formula should be configured by the competent authority, institutional administrator, protocol, or country implementation, and should be public, versioned, auditable, and explainable to citizens.
+Core v0 should not impose one universal formula. The formula should be configured by the competent authority, institutional administrator, protocol, or country implementation, and should be public, versioned, auditable, and explainable to citizens. ^rab1ecb9e
 
 Recommended formula options:
 
@@ -89,9 +89,9 @@ Externally calculated formula
 
 ### Equal for all eligible citizens
 
-This is the simplest option.
+This is the simplest option. ^rcdc0167c
 
-Each eligible citizen receives the same civic allocation amount for the relevant period, program, territory, or public function.
+Each eligible citizen receives the same civic allocation amount for the relevant period, program, territory, or public function. ^r2e7340e8
 
 Example:
 
@@ -115,11 +115,11 @@ This option is easy to explain, minimizes sensitive data needs, and works well f
 
 A formula may assign larger amounts to citizens who declared or paid more taxes, if the competent authority chooses that rule.
 
-This can be defended as contribution-weighted allocation, but it increases the relative allocation power of higher-income citizens and should be visible as such.
+This can be defended as contribution-weighted allocation, but it increases the relative allocation power of higher-income citizens and should be visible as such. ^ra8ce5b11
 
 ### Redistributive or inverse formula
 
-A formula may assign larger amounts to citizens with lower declared tax contribution, higher vulnerability, lower access, or higher territorial priority.
+A formula may assign larger amounts to citizens with lower declared tax contribution, higher vulnerability, lower access, or higher territorial priority. ^rcf4f1501
 
 This can be defended as a redistributive or priority-sensitive rule, but it must not require the platform to receive the citizen's full tax, income, or social file.
 

@@ -103,7 +103,7 @@ A main project may have:
 
 ## Funding of control subprojects
 
-The control subproject should be funded from the parent project's control budget.
+The control subproject should be funded from the parent project's control budget. ^r757f12a9
 
 The control budget may include:
 

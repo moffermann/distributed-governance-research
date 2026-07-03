@@ -61,7 +61,7 @@ Released
 
 The Financial Assurance Profile should be defined or referenced before financeable publication.
 
-Required guarantees or equivalent instruments must be materialized before the affected project or phase becomes execution-ready and before the corresponding funds are released.
+Required guarantees or equivalent instruments must be materialized before the affected project or phase becomes execution-ready and before the corresponding funds are released. ^r64c5aef5
 
 For phased projects, an execution phase may receive reserved funding while a prior design or preparation phase is pending, but release remains blocked until phase-gate, control-package, and guarantee-materialization conditions are satisfied.
 
@@ -93,7 +93,7 @@ Construction funds remain reserved until design gate, control package, guarantee
 
 ## Boundary
 
-Financial assurance reduces loss and preserves leverage. It does not promise zero risk, full recovery of spent funds, or replacement of courts, regulators, lawful custodians, insurers, or competent authorities.
+Financial assurance reduces loss and preserves leverage. It does not promise zero risk, full recovery of spent funds, or replacement of courts, regulators, lawful custodians, insurers, or competent authorities. ^r94bd9c38
 
 ## Status
 

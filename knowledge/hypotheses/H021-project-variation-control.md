@@ -249,7 +249,7 @@ Layer 5 should preserve the full classification, approval path, policy reference
 
 ## Principle
 
-> A project is not approved as a general intention. It is approved as a specific version with defined value, evidence, budget, and responsibility commitments.
+> A project is not approved as a general intention. It is approved as a specific version with defined value, evidence, budget, and responsibility commitments. ^r0c67837c
 
 ## Status
 

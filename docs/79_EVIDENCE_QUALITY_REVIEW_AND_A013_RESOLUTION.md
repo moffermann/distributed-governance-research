@@ -65,7 +65,7 @@ The fiscalizer should not treat photos or informal measurements as proof of regu
 
 ## Citizen simplicity
 
-Citizen observations, complaint evidence, beneficiary feedback, and affected-party reports remain easy to submit. They may alert the system, add context, contradict claims, or trigger formal review.
+Citizen observations, complaint evidence, beneficiary feedback, and affected-party reports remain easy to submit. They may alert the system, add context, contradict claims, or trigger formal review. ^re75cdb8c
 
 The higher qualification standard applies when evidence is paid or used for hard formal effects: KPI verification, phase gates, milestone disbursement, closure, formal responsibility, reputation, complaint referral, or legal-path support.
 

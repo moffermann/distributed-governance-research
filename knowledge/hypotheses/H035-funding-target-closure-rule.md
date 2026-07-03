@@ -2,7 +2,7 @@
 
 ## Hypothesis
 
-A project should close each funding round once it reaches or exceeds the declared target for that specific budget lane. Once funded, financial commitments should not be freely withdrawable.
+A project should close each funding round once it reaches or exceeds the declared target for that specific budget lane. Once funded, financial commitments should not be freely withdrawable. ^r76961cf6
 
 The system should distinguish execution funding, minimum control funding, and limited supplemental control funding. Closing the execution budget does not automatically make the project execution-ready if the minimum admissible control package is still incomplete.
 
@@ -86,7 +86,7 @@ Status: execution-ready
 
 ## No automatic overfunding
 
-The system should not allow indefinite overfunding by default.
+The system should not allow indefinite overfunding by default. ^r12302376
 
 If a project wants to expand scope, it should create a new project, new version, or separate expansion phase with its own scope, financing target, KPIs, and evidential contract.
 

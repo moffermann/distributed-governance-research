@@ -17,7 +17,7 @@ Accepted as the v0 resolution for C006.
 
 ## Core principle
 
-> Treasury informs authorized funding capacity and executes valid financial movements, but it does not decide projects, priorities, fiscalizers, evidence, complaints, or disbursements by discretionary judgment.
+> Treasury informs authorized funding capacity and executes valid financial movements, but it does not decide projects, priorities, fiscalizers, evidence, complaints, or disbursements by discretionary judgment. ^r4514aed9
 
 ## Key separation
 
@@ -286,7 +286,7 @@ The custodian can:
 - confirm guarantee materialization where it holds, validates, or reports the applicable instrument;
 - return funds;
 - record balances;
-- reject an order only for closed technical or legal causes;
+- reject an order only for closed technical or legal causes; ^rb74ea438
 - report execution status;
 - provide financial audit trail.
 
@@ -404,8 +404,8 @@ This resolution should inform future updates to:
 - Treasury or custodian may demand more data than needed.
 - Financial infrastructure may become a political control point.
 - Citizen balance calculation may be opaque.
-- Allocation formulas may hide political choices if not published.
-- External amount providers may be unavailable or delayed.
+- Allocation formulas may hide political choices if not published. ^rc8c5451a
+- External amount providers may be unavailable or delayed. ^rce81992b
 - Balance update delays may cause stale funding capacity.
 - Custodian legal blocks may interrupt project execution.
 

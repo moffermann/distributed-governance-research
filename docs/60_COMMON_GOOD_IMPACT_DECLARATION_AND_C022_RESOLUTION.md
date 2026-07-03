@@ -8,7 +8,7 @@ C022 was originally framed as a tension between classifying common-good governan
 
 The accepted resolution separates full common-good governance from project-level common-good impact declaration.
 
-Core v0 does not include the full common-good charter system. However, Core v0 should require projects to declare relevant common-good impacts through the ordinary project fields for affected assets, affected parties, risks, antivalues, evidence, and fiscalization.
+Core v0 does not include the full common-good charter system. However, Core v0 should require projects to declare relevant common-good impacts through the ordinary project fields for affected assets, affected parties, risks, antivalues, evidence, and fiscalization. ^r589e643c
 
 ## Status
 
@@ -16,7 +16,7 @@ Accepted as the v0 resolution for C022.
 
 ## Core principle
 
-> A common-good governance program is an extension. A project-level common-good impact declaration is Core v0 when a project materially affects a common good.
+> A common-good governance program is an extension. A project-level common-good impact declaration is Core v0 when a project materially affects a common good. ^r07dbbf7d
 
 The system should not ignore common-good conflicts merely because full common-good charter governance is not part of Core v0.
 
@@ -213,7 +213,7 @@ Some projects exist precisely to protect, restore, or improve a common good.
 
 ## No automatic block when no charter exists
 
-If no active common-good charter exists, the project should not be automatically blocked merely because it affects a common good.
+If no active common-good charter exists, the project should not be automatically blocked merely because it affects a common good. ^r1bd1788b
 
 Accepted pattern:
 
@@ -262,7 +262,7 @@ Depending on severity, it may trigger:
 
 ## Not a hidden authority
 
-The common-good impact declaration should not create a hidden central authority that decides which goods matter.
+The common-good impact declaration should not create a hidden central authority that decides which goods matter. ^r8f1f50c6
 
 The system should surface the information and allow society, affected parties, fiscalizers, and reviewers to evaluate it.
 

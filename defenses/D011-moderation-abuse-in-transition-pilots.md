@@ -32,15 +32,15 @@ For Macul, rejecting a private multi-court project as duplicate may be valid if 
 
 ## Project-document basis
 
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:11` identifies opaque tutored governance as the real v0 problem.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:23` requires every tutored governance decision to be traceable, explainable, and open to citizen audit.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:68` requires a public Governance Resolution for material rejection.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:181` requires tutored review not to create indefinite waiting states.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:197` requires a Review Timeout Resolution when the authority misses the configured review window.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:104` summarizes that every material tutored decision and silence must become public.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:26` states that a public authority may not be judge and party in the same distributed-governance scope.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:93` excludes a state-owned or publicly controlled operator in tutored scope when controlled or privileged by the same authority.
-- `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md:263` through `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md:278` require observable tutored approvals, rejections, reasons, timeouts, and delays.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r2bd91f8a|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] identifies opaque tutored governance as the real v0 problem.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r63e1af13|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] requires every tutored governance decision to be traceable, explainable, and open to citizen audit.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r3762dc61|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] requires a public Governance Resolution for material rejection.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^rd27eade9|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] requires tutored review not to create indefinite waiting states.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^rd5ed4814|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] requires a Review Timeout Resolution when the authority misses the configured review window.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r777f8758|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] summarizes that every material tutored decision and silence must become public.
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION#^ree650ebd|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]] states that a public authority may not be judge and party in the same distributed-governance scope.
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION#^rcaf1ef8c|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]] excludes a state-owned or publicly controlled operator in tutored scope when controlled or privileged by the same authority.
+- [[59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION#G. Operating mode and governance-resolution metrics|docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md]] require observable tutored approvals, rejections, reasons, timeouts, and delays.
 
 ## Bibliographic basis
 

@@ -25,7 +25,7 @@ Core v0 requires only proportional controls:
 - citizens may reorder, pin, collapse, follow, hide, and reset Home categories;
 - project lists must show and allow switching ordering modes;
 - urgent, recommended, nearby, followed-scope, closing-soon, almost-funded, or similar attention labels must show their reason where material;
-- compact surfaces must not hide unresolved material warnings, conditional approvals, pending required evidence, complaint status, design gates, or legitimacy-profile conditions;
+- compact surfaces must not hide unresolved material warnings, conditional approvals, pending required evidence, complaint status, design gates, or legitimacy-profile conditions; ^r546ebdf3
 - paid promotion and opaque manual boosting are excluded;
 - AI summaries or assistance that materially affect validation, publication, funding, evidence, complaints, disbursement, discovery, or rule changes must be labeled, source-linked, traceable, and correctable;
 - validation or completeness assistance must not certify truth, accept evidence, approve projects, release funds, update reputation, or create legal consequences by itself;
@@ -35,7 +35,7 @@ Core v0 does not add:
 
 - a separate `PlatformInfluenceRecord`;
 - per-impression ranking logs as a universal requirement;
-- causal exposure-to-funding attribution as a Core v0 gate;
+- causal exposure-to-funding attribution as a Core v0 gate; ^re763e768
 - a public algorithmic audit dashboard for ordinary citizens;
 - a new Layer 2+ surface dedicated to platform influence.
 

@@ -34,14 +34,14 @@ For the Macul sports program, the honest concession stands: the drainage can exp
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md:11` defines the composite program as a coordination container aggregating multiple interdependent projects.
-- `knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md:121` allows a program to require that it becomes executable only if all critical child projects are funded.
-- `knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md:130` requires that a project's dependency on other projects be visible to citizens before they fund it.
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md:33` defines the Planning Scope that situates each financeable project inside a public function, providing the coherence layer.
-- `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md:13` states that a project becomes executable only when it completes all applicable closure conditions, not through a rigid sequence.
-- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md:107` makes Expired Unfunded a protocol outcome that returns or reassigns eligible unreleased commitments rather than stranding paid money.
-- `knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md:7` concedes that composite programs are Extension v1+, not a Core v0 requirement, so cross-project coordination is thin by default.
-- `knowledge/hypotheses/H021-project-variation-control.md:252` states that a project is approved as a specific version with defined commitments, which is the accountability benefit fragmentation preserves.
+- [[H051-composite-programs-as-project-aggregators#^rf8fdc534|knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md]] defines the composite program as a coordination container aggregating multiple interdependent projects.
+- [[H051-composite-programs-as-project-aggregators#Approval and financing logic|knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md]] allows a program to require that it becomes executable only if all critical child projects are funded.
+- [[H051-composite-programs-as-project-aggregators#^rf76c7bb4|knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md]] requires that a project's dependency on other projects be visible to citizens before they fund it.
+- [[H009-binding-evolutionary-planning#^r96b47655|knowledge/hypotheses/H009-binding-evolutionary-planning.md]] defines the Planning Scope that situates each financeable project inside a public function, providing the coherence layer.
+- [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL#^r5e4c60cd|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]] states that a project becomes executable only when it completes all applicable closure conditions, not through a rigid sequence.
+- [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION#^r7a8e9ff1|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]] makes Expired Unfunded a protocol outcome that returns or reassigns eligible unreleased commitments rather than stranding paid money.
+- [[H051-composite-programs-as-project-aggregators#^r9ab52738|knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md]] concedes that composite programs are Extension v1+, not a Core v0 requirement, so cross-project coordination is thin by default.
+- [[H021-project-variation-control#^r0c67837c|knowledge/hypotheses/H021-project-variation-control.md]] states that a project is approved as a specific version with defined commitments, which is the accountability benefit fragmentation preserves.
 
 ## Bibliographic basis
 

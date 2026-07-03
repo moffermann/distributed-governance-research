@@ -28,11 +28,11 @@ Core v0 rule:
 - participation inequality should be treated as a visible risk or observability concern where material, not as automatic veto or proof of illegitimacy;
 - funding, support, delegation weight, discovery visibility, or meeting attendance must not be presented as full affected-party representation;
 - where an active Threshold Policy requires affected-party mapping, consultation, observation windows, or readiness evidence, missing required participation evidence may block or condition publication, execution-ready status, disbursement, or closure under that policy;
-- where no such requirement applies, low participation, missing voices, or concentration signals may inform warnings, assisted deliberation, administrative review, research, or future policy improvement, but they do not automatically block the project;
+- where no such requirement applies, low participation, missing voices, or concentration signals may inform warnings, assisted deliberation, administrative review, research, or future policy improvement, but they do not automatically block the project; ^r6f43bd5d
 - participation-support projects remain ordinary transparent projects with budget, executor responsibility, fulfillment/control evidence, fiscalization, comments, complaints, and auditability;
 - a support provider that also receives delegation, recommends projects, receives project funding, or has related-party ties should disclose those relationships where material;
 - protected identity may support vulnerable participation under C024, but it must not become anonymous formal power;
-- administrative, authority, research, or country implementations may add privacy-aware participation-equity indicators, but those are Extension v1+ or implementation observability, not a new Core v0 layer.
+- administrative, authority, research, or country implementations may add privacy-aware participation-equity indicators, but those are Extension v1+ or implementation observability, not a new Core v0 layer. ^rd61b0f81
 
 ## Macul example
 

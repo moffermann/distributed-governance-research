@@ -2,7 +2,7 @@
 
 ## Principle
 
-Public-resource allocation through a distributed system must distinguish between supporting a project that produces public value and subsidizing the private interest of the actor funding or proposing it.
+Public-resource allocation through a distributed system must distinguish between supporting a project that produces public value and subsidizing the private interest of the actor funding or proposing it. ^rd49010f5
 
 ## Rationale
 

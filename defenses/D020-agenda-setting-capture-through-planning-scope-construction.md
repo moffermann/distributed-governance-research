@@ -36,15 +36,15 @@ Under P001, the comparison is against a current ministry that defines its own pr
 
 ## Project-document basis
 
-- `knowledge/open-questions/distributed-roadmap-construction-governance.md:13` states that Core v0 does not yet define how the planning scope or national roadmap itself is built.
-- `knowledge/open-questions/distributed-roadmap-construction-governance.md:102` sets the working principle that Core v0 should not pretend roadmap construction is solved while keeping projects aligned to visible active scopes.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:187` requires every financeable project to align with an active Planning Scope that is visible, versioned, and auditable, while stating Core v0 does not define the full roadmap-construction mechanism.
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md:104` requires no silent removal of project categories from financing, against which agenda-narrowing must leave a trace.
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md:156` states that outside-scope does not mean socially worthless, only not currently eligible for execution financing.
-- `knowledge/hypotheses/H057-public-function-funding-scope-gating.md:11` states the authority may define or interpret the active Planning Scope in tutored mode, but the scope and material scope decisions must be public, versioned, and auditable.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:104` requires every material tutored governance decision to create a public Governance Resolution object.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:119` lists planning-scope interpretation or change among the decisions that must become Governance Resolutions.
-- `docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION.md:23` defines an Idea as a civic proposal expressing public value or social demand before it becomes projects, keeping out-of-scope demand visible.
+- [[distributed-roadmap-construction-governance#^r188eeca1|knowledge/open-questions/distributed-roadmap-construction-governance.md]] states that Core v0 does not yet define how the planning scope or national roadmap itself is built.
+- [[distributed-roadmap-construction-governance#^r35e31a17|knowledge/open-questions/distributed-roadmap-construction-governance.md]] sets the working principle that Core v0 should not pretend roadmap construction is solved while keeping projects aligned to visible active scopes.
+- [[34_CORE_V0_SCOPE_FREEZE#^r3ec590bd|docs/34_CORE_V0_SCOPE_FREEZE.md]] requires every financeable project to align with an active Planning Scope that is visible, versioned, and auditable, while stating Core v0 does not define the full roadmap-construction mechanism.
+- [[H009-binding-evolutionary-planning#^r14adef1d|knowledge/hypotheses/H009-binding-evolutionary-planning.md]] requires no silent removal of project categories from financing, against which agenda-narrowing must leave a trace.
+- [[H009-binding-evolutionary-planning#^r49239a17|knowledge/hypotheses/H009-binding-evolutionary-planning.md]] states that outside-scope does not mean socially worthless, only not currently eligible for execution financing.
+- [[H057-public-function-funding-scope-gating#^re803d690|knowledge/hypotheses/H057-public-function-funding-scope-gating.md]] states the authority may define or interpret the active Planning Scope in tutored mode, but the scope and material scope decisions must be public, versioned, and auditable.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r777f8758|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] requires every material tutored governance decision to create a public Governance Resolution object.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION#^r73238832|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] lists planning-scope interpretation or change among the decisions that must become Governance Resolutions.
+- [[39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION#^rbf4e6afb|docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION.md]] defines an Idea as a civic proposal expressing public value or social demand before it becomes projects, keeping out-of-scope demand visible.
 
 ## Bibliographic basis
 

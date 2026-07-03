@@ -187,11 +187,11 @@ This creates reviewability without creating unlimited fiscalization.
 
 ## Capture risk
 
-A fiscalizer may be captured by whoever funds it or by the group that wants a particular outcome. The system should reduce this through transparency, disclosure, reputation, reviewability, and the possibility of challenge.
+A fiscalizer may be captured by whoever funds it or by the group that wants a particular outcome. The system should reduce this through transparency, disclosure, reputation, reviewability, and the possibility of challenge. ^r7ffe1099
 
 The system should assume that hidden collusion is possible.
 
-It cannot perfectly detect every friendship, off-platform payment, repeated relationship, holding-linked dependency, or informal pressure.
+It cannot perfectly detect every friendship, off-platform payment, repeated relationship, holding-linked dependency, or informal pressure. ^rfdde35b4
 
 Therefore capture protections should not depend on perfect detection.
 
@@ -283,7 +283,7 @@ These risks do not defeat distributed fiscalization. They require proportional s
 
 ## Principle
 
-> We do not solve the problem of fiscalization by finding a perfect fiscalizer. We solve it by creating a distributed but protocol-selected ecosystem where fiscalizers are transparent, auditable, reputable, replaceable, and unable to validate the projects they secretly control.
+> We do not solve the problem of fiscalization by finding a perfect fiscalizer. We solve it by creating a distributed but protocol-selected ecosystem where fiscalizers are transparent, auditable, reputable, replaceable, and unable to validate the projects they secretly control. ^r8a766959
 
 ## Status
 

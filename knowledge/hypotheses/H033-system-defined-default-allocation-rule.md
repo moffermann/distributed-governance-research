@@ -20,7 +20,7 @@ Many people will remain inactive. If their assignable civic funds remain indefin
 
 Therefore, the system needs a default rule.
 
-The default rule should solve inactivity without becoming a hidden decision. A citizen who never onboards may be governed by the public protocol default. A citizen who onboards should explicitly accept that default or choose another base profile.
+The default rule should solve inactivity without becoming a hidden decision. A citizen who never onboards may be governed by the public protocol default. A citizen who onboards should explicitly accept that default or choose another base profile. ^r08bcd5be
 
 ## Civic autopilot
 

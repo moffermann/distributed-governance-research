@@ -34,14 +34,14 @@ For the commune, the defense concedes the sharp edge: a fifteen-year slope-stabi
 
 ## Project-document basis
 
-- `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md:20` requires projects to declare whether they are one-time, phased, recurring, continuity-critical, emergency, or maintenance-dependent.
-- `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md:37` opens a visible continuity renewal window before a funded period ends.
-- `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md:49` surfaces the continuity need as an Idea before interruption rather than as an automatic extension.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:57` sets the public budget boundary removing catastrophic long-horizon obligations from citizen-by-citizen allocation.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:63` states the continuity project rule exposing funded service period, renewal trigger, and wind-down rule.
-- `knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md:78` preserves the continuity label, renewal trigger, and wind-down rule on the monthly funding surface for maintenance-dependent projects.
-- `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md:16` sets the comparison baseline: current continuity funding is reduced, delayed, or cancelled under discretion without visibility.
-- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md:46` requires every financeable lane to have a visible funding window, the re-exposure the attack names and the multi-year representation phases rely on.
+- [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION#^r2eba1d3e|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]] requires projects to declare whether they are one-time, phased, recurring, continuity-critical, emergency, or maintenance-dependent.
+- [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION#^r275c757d|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]] opens a visible continuity renewal window before a funded period ends.
+- [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION#^r4346cafb|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]] surfaces the continuity need as an Idea before interruption rather than as an automatic extension.
+- [[H002-distributed-resource-allocation#^rdf3fe4e3|knowledge/hypotheses/H002-distributed-resource-allocation.md]] sets the public budget boundary removing catastrophic long-horizon obligations from citizen-by-citizen allocation.
+- [[H002-distributed-resource-allocation#^rb5ee5d09|knowledge/hypotheses/H002-distributed-resource-allocation.md]] states the continuity project rule exposing funded service period, renewal trigger, and wind-down rule.
+- [[H038-monthly-use-it-or-allocate-it-cycle#^r1769ff15|knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md]] preserves the continuity label, renewal trigger, and wind-down rule on the monthly funding surface for maintenance-dependent projects.
+- [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION#^r22e546c9|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]] sets the comparison baseline: current continuity funding is reduced, delayed, or cancelled under discretion without visibility.
+- [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION#^rf903e965|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]] requires every financeable lane to have a visible funding window, the re-exposure the attack names and the multi-year representation phases rely on.
 
 ## Bibliographic basis
 

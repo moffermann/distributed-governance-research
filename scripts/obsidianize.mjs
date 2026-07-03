@@ -49,9 +49,18 @@ const inFence = (p, n) => {
   return fenceStateCache.get(p)[n - 1];
 };
 
+const nearestHeading = (lines, num) => {
+  for (let i = num - 1; i >= 0; i--) {
+    const m = lines[i].match(/^#{1,6}\s+(.*)$/);
+    if (m) return m[1].replace(/[[\]|#^]/g, "").trim();
+  }
+  return null;
+};
+
 const plans = new Map(); // target -> Map(lineNum -> id)
 const manual = [];
 let converted = 0;
+let headingRefs = 0;
 
 const defenseEdits = new Map(); // defense path -> text
 
@@ -70,7 +79,20 @@ for (const d of dirs) {
       const refs = [...bullet.matchAll(/`((docs|knowledge)\/[^`:]+):(\d+)`/g)];
       const isRange = refs.length > 1 && new Set(refs.map((r) => r[1])).size === 1 && /through/.test(bullet);
       if (isRange) {
-        manual.push(`RANGE   ${path}: ${refs.map((r) => `${r[1]}:${r[3]}`).join(" .. ")}`);
+        // Ranges collapse to a heading reference covering the range start.
+        const [, target, , aStr] = refs[0];
+        const [, , , bStr] = refs[refs.length - 1];
+        if (!existsSync(target)) continue;
+        const lines = loadLines(target);
+        const heading = nearestHeading(lines, parseInt(aStr, 10));
+        if (!heading) {
+          manual.push(`RANGE   ${path}: ${target}:${aStr} .. :${bStr} (no enclosing heading)`);
+          continue;
+        }
+        const basename = target.split("/").pop().replace(/\.md$/, "");
+        const span = `\`${target}:${aStr}\` through \`${target}:${bStr}\``;
+        text = text.replace(span, `[[${basename}#${heading}|${target}]]`);
+        headingRefs++;
         continue;
       }
       for (const ref of refs) {
@@ -79,12 +101,17 @@ for (const d of dirs) {
         if (!existsSync(target)) continue;
         const lines = loadLines(target);
         const line = lines[num - 1] ?? "";
-        if (inFence(target, num)) {
-          manual.push(`FENCE   ${path}: ${target}:${num} (block IDs cannot live inside code fences)`);
-          continue;
-        }
-        if (line.trim().startsWith("|")) {
-          manual.push(`TABLE   ${path}: ${target}:${num} (block IDs cannot target table rows)`);
+        if (inFence(target, num) || line.trim().startsWith("|")) {
+          // Block IDs cannot live inside fences or target table rows: fall
+          // back to a heading reference for the enclosing section.
+          const heading = nearestHeading(lines, num);
+          if (!heading) {
+            manual.push(`NOHEAD  ${path}: ${target}:${num}`);
+            continue;
+          }
+          const basename = target.split("/").pop().replace(/\.md$/, "");
+          text = text.replace(full, `[[${basename}#${heading}|${target}]]`);
+          headingRefs++;
           continue;
         }
         const id = `r${hash(target + "::" + line.trim())}`;
@@ -99,7 +126,7 @@ for (const d of dirs) {
   }
 }
 
-console.log(`plan: convert ${converted} anchors across ${defenseEdits.size} defense files`);
+console.log(`plan: convert ${converted} anchors to block refs and ${headingRefs} to heading refs across ${defenseEdits.size} defense files`);
 console.log(`plan: inject block IDs into ${plans.size} target documents:`);
 for (const [target, m] of [...plans.entries()].sort()) {
   console.log(`  ${target}: ${m.size} block ID(s) at line(s) ${[...m.keys()].sort((a, b) => a - b).join(", ")}`);

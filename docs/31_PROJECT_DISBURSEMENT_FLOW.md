@@ -8,9 +8,9 @@ Disbursement is one of the most trust-sensitive parts of the system. It defines 
 
 ## Core principle
 
-> Disbursement is not payment by trust. It is conditional release of retained resources, based on milestones, fulfillment evidence, fiscalization, and absence of relevant blocking issues.
+> Disbursement is not payment by trust. It is conditional release of retained resources, based on milestones, fulfillment evidence, fiscalization, and absence of relevant blocking issues. ^r8644a839
 
-For phased projects, disbursement is also phase-gated. Funds committed to a later execution phase may be collected in advance, but they cannot be released until prerequisite phase deliverables are accepted.
+For phased projects, disbursement is also phase-gated. Funds committed to a later execution phase may be collected in advance, but they cannot be released until prerequisite phase deliverables are accepted. ^rf808c335
 
 ## Main question
 
@@ -38,7 +38,7 @@ When, why, and under what controls can project funds be released?
 
 ## 1. Funds committed
 
-When citizens fund a project, money is not immediately released to the executor.
+When citizens fund a project, money is not immediately released to the executor. ^rf80f3910
 
 Initial state:
 
@@ -86,7 +86,7 @@ For phased projects, execution-ready may apply to the relevant phase. Constructi
 
 > Execution-ready authorizes controlled execution. It does not authorize uncontrolled payment.
 
-No project may receive execution funding commitments until its disbursement milestone plan and any applicable phase-gate funding treatment are coherent enough for funding and later fiscalization.
+No project may receive execution funding commitments until its disbursement milestone plan and any applicable phase-gate funding treatment are coherent enough for funding and later fiscalization. ^raaae9665
 
 The disbursement milestone plan should reference the accepted Project Evidential Contract. This avoids releasing funds against fulfillment evidence criteria invented after execution has already started.
 
@@ -94,7 +94,7 @@ The plan should also reference the accepted A004 evidence-coverage status for ea
 
 If the executor proposes to change milestones, fulfillment evidence requirements, disbursement criteria, fiscalization conditions, or beneficiary targets during execution, the change must be classified under H021 before any affected funds are released. Operational variations follow the active Reformulation Policy; material value changes require the C017 Reformulation Proposal path.
 
-If the project combines design and construction, construction funds may be committed while the design phase is pending only when the phase baseline, phase gate, release block, and fund-treatment rule are explicit. Those funds cannot be released while the design phase is pending, rejected, or materially reformulated.
+If the project combines design and construction, construction funds may be committed while the design phase is pending only when the phase baseline, phase gate, release block, and fund-treatment rule are explicit. Those funds cannot be released while the design phase is pending, rejected, or materially reformulated. ^rd7c230c4
 
 Example:
 
@@ -248,7 +248,7 @@ Fulfillment evidence should be linked to:
 - limitation statement where relevant;
 - review status.
 
-Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
+Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources. ^r129769d8
 
 If a disbursement request exposes that the accepted package did not define evidence for a release-relevant value dimension, the issue is an A004 coverage gap, not merely a missing file. The proper response is correction, milestone-plan adjustment, reformulation, or blocking under the active rule before funds are released.
 
@@ -370,11 +370,11 @@ Send to extraordinary review
 Block because of complaint
 ```
 
-The platform should not generate a full release order when the required fulfillment/control evidence is inconclusive, insufficient, contradicted, or accepted only as contextual material for the relevant milestone.
+The platform should not generate a full release order when the required fulfillment/control evidence is inconclusive, insufficient, contradicted, or accepted only as contextual material for the relevant milestone. ^r005b421a
 
 The platform also should not generate a release order when the evidence need requires qualified technical or professional proof and the submitted evidence lacks the required producer qualification, method, instrument/tool traceability, metadata, or report discipline.
 
-When a decision requires money movement, the system should generate a `Financial Order` for the custodian, treasury integration, escrow service, bank, or other country-specific financial execution mechanism.
+When a decision requires money movement, the system should generate a `Financial Order` for the custodian, treasury integration, escrow service, bank, or other country-specific financial execution mechanism. ^r39d08ff2
 
 The financial order should include:
 
@@ -446,7 +446,7 @@ Possible mechanisms:
 
 > The system should be able to recognize real progress without releasing resources over insufficient fulfillment evidence.
 
-Partial release is allowed only when the disbursement milestone plan defines separable components, accepted fulfillment evidence for completed components, explicit retained amount, clear condition for releasing retained funds, fiscalizer explanation, and citizen-facing summary.
+Partial release is allowed only when the disbursement milestone plan defines separable components, accepted fulfillment evidence for completed components, explicit retained amount, clear condition for releasing retained funds, fiscalizer explanation, and citizen-facing summary. ^r07a4bda9
 
 ## 11. Financial assurance, guarantees, and retentions
 
@@ -461,7 +461,7 @@ eligible_execution_budget_or_phase_budget * global_guarantee_percentage
 
 The proposer, designer, or executor should not choose a lower guarantee percentage or self-classify the project into a lower assurance category.
 
-The required guarantee, deposit, insurance, bond, escrow, retention, or equivalent instrument is materialized only when a lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or equivalent mechanism confirms it. An uploaded document from the executor is not sufficient by itself.
+The required guarantee, deposit, insurance, bond, escrow, retention, or equivalent instrument is materialized only when a lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or equivalent mechanism confirms it. An uploaded document from the executor is not sufficient by itself. ^r0166c42b
 
 Retentions may help:
 

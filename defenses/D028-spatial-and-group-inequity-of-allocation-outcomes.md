@@ -36,14 +36,14 @@ The concession is direct. Core v0 mandates no equalization mechanism and no outc
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:94` defines the equal-for-all-eligible-citizens formula in which each citizen receives the same civic allocation amount, the input-equity improvement over the status quo.
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:122` provides a redistributive or inverse formula that assigns larger amounts by vulnerability, access, or territorial priority.
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:134` shows a hybrid formula weighting part of the allocation by territorial priority or social vulnerability, making equalization representable.
-- `knowledge/hypotheses/H033-system-defined-default-allocation-rule.md:74` routes a share of the default allocation toward regional or local projects, a hook for territorial routing.
-- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md:24` defines the protected-floor-plus-distributed-lane pattern that a territorial or group equity target could reuse.
-- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md:70` states the system should make both central political neglect and popularity-driven neglect visible.
-- `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md:35` defers privacy-aware participation-equity indicators to Extension v1+ or implementation observability, confirming outcome equity is not yet a Core v0 layer.
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md:15` acknowledges that formal openness can reproduce existing power asymmetries when capacity is unevenly distributed.
+- [[H025-civic-tax-wallet-and-distributed-allocation#^r2e7340e8|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]] defines the equal-for-all-eligible-citizens formula in which each citizen receives the same civic allocation amount, the input-equity improvement over the status quo.
+- [[H025-civic-tax-wallet-and-distributed-allocation#^rcf4f1501|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]] provides a redistributive or inverse formula that assigns larger amounts by vulnerability, access, or territorial priority.
+- [[H025-civic-tax-wallet-and-distributed-allocation#Hybrid formula|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]] shows a hybrid formula weighting part of the allocation by territorial priority or social vulnerability, making equalization representable.
+- [[H033-system-defined-default-allocation-rule#Example default rule|knowledge/hypotheses/H033-system-defined-default-allocation-rule.md]] routes a share of the default allocation toward regional or local projects, a hook for territorial routing.
+- [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION#Resolution decision|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]] defines the protected-floor-plus-distributed-lane pattern that a territorial or group equity target could reuse.
+- [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION#^rf821ddba|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]] states the system should make both central political neglect and popularity-driven neglect visible.
+- [[75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION#^rd61b0f81|docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md]] defers privacy-aware participation-equity indicators to Extension v1+ or implementation observability, confirming outcome equity is not yet a Core v0 layer.
+- [[H041-distributed-participation-capacity#^re5b2547d|knowledge/hypotheses/H041-distributed-participation-capacity.md]] acknowledges that formal openness can reproduce existing power asymmetries when capacity is unevenly distributed.
 
 ## Bibliographic basis
 

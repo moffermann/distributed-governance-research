@@ -13,11 +13,11 @@ Paired review:
 
 A006 is founded and does not distort the project. The project rejects the distorted conclusion that all ongoing services must be centrally operated. The accepted resolution is to classify continuity risk before funding, require funding-stability fields where relevant, and create a visible renewal path before continuity funding expires.
 
-The comparison baseline is not an ideal stable state budget. In current public systems, continuity projects often must request new funding near the end of a financed period. That funding can be reduced, delayed, or cancelled even under the same government when priorities change. This creates discretion without visibility, traceability, mitigation, result evaluation, or beneficiary-centered continuity planning.
+The comparison baseline is not an ideal stable state budget. In current public systems, continuity projects often must request new funding near the end of a financed period. That funding can be reduced, delayed, or cancelled even under the same government when priorities change. This creates discretion without visibility, traceability, mitigation, result evaluation, or beneficiary-centered continuity planning. ^r22e546c9
 
 ## Rule added to Core v0
 
-Projects should declare whether they are one-time, phased, recurring, continuity-critical, emergency, or maintenance-dependent. Continuity-critical, recurring, or maintenance-dependent projects require explicit funding-stability, beneficiary-protection, and renewal-visibility fields.
+Projects should declare whether they are one-time, phased, recurring, continuity-critical, emergency, or maintenance-dependent. Continuity-critical, recurring, or maintenance-dependent projects require explicit funding-stability, beneficiary-protection, and renewal-visibility fields. ^r2eba1d3e
 
 Minimum fields:
 
@@ -34,7 +34,7 @@ Minimum fields:
 
 ## Continuity renewal window
 
-When a recurring, continuity-critical, or maintenance-dependent project approaches the end of its funded period, the system should open a visible `Continuity Renewal Window`.
+When a recurring, continuity-critical, or maintenance-dependent project approaches the end of its funded period, the system should open a visible `Continuity Renewal Window`. ^r275c757d
 
 The window does not renew the project automatically and does not give the current executor a privileged right to continue. It exposes:
 
@@ -46,7 +46,7 @@ The window does not renew the project automatically and does not give the curren
 - whether the continuity need belongs to a protected A005 floor, an assignable distributed service lane, or another funding lane;
 - whether the current executor, replacement executors, or multiple eligible providers may present continuity proposals.
 
-The default public vehicle for this renewal signal is an `Idea`, not an automatic project extension:
+The default public vehicle for this renewal signal is an `Idea`, not an automatic project extension: ^r4346cafb
 
 ```text
 Idea:

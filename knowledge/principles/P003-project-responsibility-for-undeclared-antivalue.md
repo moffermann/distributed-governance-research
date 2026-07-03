@@ -2,7 +2,7 @@
 
 ## Principle
 
-A project is responsible for the antivalue it fails to declare, even if that antivalue is discovered during execution rather than before financing.
+A project is responsible for the antivalue it fails to declare, even if that antivalue is discovered during execution rather than before financing. ^r0c7f3f7e
 
 ## Rationale
 

@@ -4,7 +4,7 @@
 
 A distributed public-resource allocation system must prevent actors from redirecting public resources toward projects that primarily benefit themselves, their companies, family members, controllers, or related parties.
 
-Related-party links do not automatically make a project illegitimate. They must be declared, classified, exposed to public scrutiny, and handled with proportional safeguards.
+Related-party links do not automatically make a project illegitimate. They must be declared, classified, exposed to public scrutiny, and handled with proportional safeguards. ^r8a873e54
 
 ## Resolution alignment
 

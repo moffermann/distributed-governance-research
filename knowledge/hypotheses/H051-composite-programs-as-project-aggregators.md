@@ -4,11 +4,11 @@
 
 Extension v1+ coordination-pattern hypothesis aligned with [[../../docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|C022]] and [[H050-common-good-governance-program|H050]].
 
-Composite programs are useful grouping and dependency containers, not a Core v0 requirement, not a full common-good governance program, and not a replacement for project-level accountability.
+Composite programs are useful grouping and dependency containers, not a Core v0 requirement, not a full common-good governance program, and not a replacement for project-level accountability. ^r9ab52738
 
 ## Hypothesis
 
-In an advanced implementation, some public goals may require a composite program that aggregates multiple interdependent projects. A composite program is not a separate governance architecture; it is a coordination container that groups projects whose value depends on being executed together.
+In an advanced implementation, some public goals may require a composite program that aggregates multiple interdependent projects. A composite program is not a separate governance architecture; it is a coordination container that groups projects whose value depends on being executed together. ^rf8fdc534
 
 ## Rationale
 
@@ -127,7 +127,7 @@ or:
 Program phase 1 becomes executable when projects A, B, and C are funded.
 ```
 
-The program should not hide funding conditions from citizens. If a project is valuable only when other projects are funded, that dependency should be visible before citizens fund it.
+The program should not hide funding conditions from citizens. If a project is valuable only when other projects are funded, that dependency should be visible before citizens fund it. ^rf76c7bb4
 
 The program should also avoid pooling responsibility into an abstract parent. Failure of a child project should remain attributable to the responsible project actors, while the program view records how that failure affects the larger goal.
 

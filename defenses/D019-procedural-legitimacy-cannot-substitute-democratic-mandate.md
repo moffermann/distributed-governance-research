@@ -36,14 +36,14 @@ For Macul, the contribution-weighted migration described in the attack should no
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:78` states the amount formula is configured by the competent authority, institutional administrator, protocol, or country implementation, and must be public, versioned, auditable, and explainable.
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:92` states that equal for all eligible citizens is the simplest option, the default the attack treats as displaced.
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md:118` states a contribution-weighted formula increases the relative allocation power of higher-income citizens and should be visible as such.
-- `knowledge/hypotheses/H033-system-defined-default-allocation-rule.md:23` requires that the default rule solve inactivity without becoming a hidden decision and that an onboarded citizen explicitly accept the default or choose another base profile.
-- `knowledge/principles/P002-social-sovereignty-over-value.md:5` states that society is sovereign in assigning value, which the attack argues is not honored when an administrator sets the amount formula.
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md:20` states that Treasury informs authorized funding capacity and executes valid movements but does not decide projects or priorities by discretionary judgment.
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md:407` concedes that allocation formulas may hide political choices if not published.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:843` lists the official budget percentage migrated to the system as a country-implementation decision, confirming migration is external law, not platform configuration.
+- [[H025-civic-tax-wallet-and-distributed-allocation#^rab1ecb9e|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]] states the amount formula is configured by the competent authority, institutional administrator, protocol, or country implementation, and must be public, versioned, auditable, and explainable.
+- [[H025-civic-tax-wallet-and-distributed-allocation#^rcdc0167c|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]] states that equal for all eligible citizens is the simplest option, the default the attack treats as displaced.
+- [[H025-civic-tax-wallet-and-distributed-allocation#^ra8ce5b11|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]] states a contribution-weighted formula increases the relative allocation power of higher-income citizens and should be visible as such.
+- [[H033-system-defined-default-allocation-rule#^r08bcd5be|knowledge/hypotheses/H033-system-defined-default-allocation-rule.md]] requires that the default rule solve inactivity without becoming a hidden decision and that an onboarded citizen explicitly accept the default or choose another base profile.
+- [[P002-social-sovereignty-over-value#^r37610f41|knowledge/principles/P002-social-sovereignty-over-value.md]] states that society is sovereign in assigning value, which the attack argues is not honored when an administrator sets the amount formula.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION#^r4514aed9|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]] states that Treasury informs authorized funding capacity and executes valid movements but does not decide projects or priorities by discretionary judgment.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION#^rc8c5451a|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]] concedes that allocation formulas may hide political choices if not published.
+- [[34_CORE_V0_SCOPE_FREEZE#^rb0cac211|docs/34_CORE_V0_SCOPE_FREEZE.md]] lists the official budget percentage migrated to the system as a country-implementation decision, confirming migration is external law, not platform configuration.
 
 ## Bibliographic basis
 

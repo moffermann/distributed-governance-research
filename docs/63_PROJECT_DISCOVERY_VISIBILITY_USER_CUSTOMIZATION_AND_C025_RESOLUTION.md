@@ -4,7 +4,7 @@
 
 This document resolves contradiction C025 from the v0 contradiction checklist.
 
-C025 was originally framed as the risk that project discovery, urgent highlights, recommendations, and category ordering could bias resource allocation. Even when the system does not directly allocate money, interface visibility can shape citizen attention, and attention can influence funding.
+C025 was originally framed as the risk that project discovery, urgent highlights, recommendations, and category ordering could bias resource allocation. Even when the system does not directly allocate money, interface visibility can shape citizen attention, and attention can influence funding. ^r6da5e362
 
 The final v0 resolution is not to remove discovery. A large project system needs discovery. The resolution is to make discovery simple, explainable, user-configurable, non-commercial, and auditable.
 
@@ -14,7 +14,7 @@ Accepted as the v0 resolution for C025.
 
 ## Core principle
 
-> Discovery may organize attention, but it must not become a hidden allocator.
+> Discovery may organize attention, but it must not become a hidden allocator. ^rd7ea4ce8
 
 The discovery layer can help citizens find projects.
 
@@ -293,7 +293,7 @@ Decision layer:
 
 ## Observability rule
 
-Because discovery influences attention, the system should preserve enough visibility for review without turning Core v0 into a ranking-surveillance system.
+Because discovery influences attention, the system should preserve enough visibility for review without turning Core v0 into a ranking-surveillance system. ^r590a7c23
 
 Core v0 observability should include the material reasons and settings that explain discovery surfaces:
 

@@ -1,6 +1,6 @@
 # Concept — Algorithm as Coordinator, Not Decider
 
-A critical distinction in the theory is between an algorithm that decides and an algorithm that coordinates.
+A critical distinction in the theory is between an algorithm that decides and an algorithm that coordinates. ^rd5bd6cd6
 
 ## Decider model
 

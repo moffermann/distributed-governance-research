@@ -4,7 +4,7 @@
 
 This document consolidates the citizen-facing interface model for the distributed governance system.
 
-The goal is to preserve deep transparency and auditability while keeping ordinary citizen participation simple.
+The goal is to preserve deep transparency and auditability while keeping ordinary citizen participation simple. ^re3bcd897
 
 The interface should not force users into a separate advanced mode. Instead, the citizen moves progressively from simple navigation into deeper detail only when interested.
 

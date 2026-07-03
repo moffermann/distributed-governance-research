@@ -10,7 +10,7 @@ This model simplifies citizen participation and better reflects distributed gove
 
 ## Core idea
 
-> A project becomes executable not because it passed a long sequential process, but because it completed all applicable closure conditions.
+> A project becomes executable not because it passed a long sequential process, but because it completed all applicable closure conditions. ^r5e4c60cd
 
 A project can be open for multiple forms of participation at the same time:
 

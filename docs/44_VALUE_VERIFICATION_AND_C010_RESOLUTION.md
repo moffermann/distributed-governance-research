@@ -12,7 +12,7 @@ Accepted as the v0 resolution for C010.
 
 ## Core principle
 
-> Metrics are instruments of verification, not substitutes for public value.
+> Metrics are instruments of verification, not substitutes for public value. ^r836f6a1c
 
 A project should not be considered successful merely because it satisfied one isolated metric if the broader fulfillment evidence shows that the promised value was weak, distorted, or not reasonably produced.
 
@@ -39,7 +39,7 @@ Without metrics, promises become vague. With narrow metrics, value can be gamed.
 
 ## Resolution
 
-Core v0 should use a `Value Verification Package` instead of isolated metrics.
+Core v0 should use a `Value Verification Package` instead of isolated metrics. ^ra78252bd
 
 Each promised value should be verified through multiple dimensions rather than a single number.
 
@@ -173,7 +173,7 @@ If the project changes the evidential contract after support or funding, the val
 
 H015 adds that value verification must distinguish evaluation context.
 
-Beneficiary feedback, affected-party experience, citizen observations, expert opinions, fiscalizer conclusions, complaint findings, and reputation inputs should not collapse into one undifferentiated score.
+Beneficiary feedback, affected-party experience, citizen observations, expert opinions, fiscalizer conclusions, complaint findings, and reputation inputs should not collapse into one undifferentiated score. ^r16045dbf
 
 For every formal value-verification input, the technical layer should record:
 
@@ -385,7 +385,7 @@ A citizen may click deeper to see the fulfillment evidence and metric package.
 
 ## Anti-gaming rule
 
-A project should not be approved, closed as fulfilled, or fully released solely because one narrow metric was met.
+A project should not be approved, closed as fulfilled, or fully released solely because one narrow metric was met. ^r804c04ab
 
 Rule:
 

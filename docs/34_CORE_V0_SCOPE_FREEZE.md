@@ -144,7 +144,7 @@ Rule:
 
 Rule:
 
-> Each project should expose the applicable threshold policy that explains which proportional conditions must be satisfied for publication, execution-ready status, disbursement, or closure.
+> Each project should expose the applicable threshold policy that explains which proportional conditions must be satisfied for publication, execution-ready status, disbursement, or closure. ^r97a50a88
 
 Rule:
 
@@ -164,7 +164,7 @@ Comparative accountability rule:
 
 Rule:
 
-> The applicable threshold policy should include or reference a procedural burden profile. AI may help discover required documents and missing conditions, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it.
+> The applicable threshold policy should include or reference a procedural burden profile. AI may help discover required documents and missing conditions, but document acceptability is validated only by the competent authority, independent reviewer, certifier, fiscalizer, or protocol-defined review body where the active policy requires it. ^r686efce3
 
 Rule:
 
@@ -184,7 +184,7 @@ Rule:
 
 Rule:
 
-> Every financeable project must align with an active Planning Scope. Core v0 requires the scope used for eligibility to be visible, versioned, and auditable, but it does not define the full mechanism for constructing a national, regional, communal, or thematic roadmap.
+> Every financeable project must align with an active Planning Scope. Core v0 requires the scope used for eligibility to be visible, versioned, and auditable, but it does not define the full mechanism for constructing a national, regional, communal, or thematic roadmap. ^r3ec590bd
 
 Essential service protection rule:
 
@@ -192,7 +192,7 @@ Essential service protection rule:
 
 Rule-change rule:
 
-> A government, authority, protocol, or tutored administrator may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace that states effects on existing projects, beneficiaries, continuity obligations, protected floors, and distributed funding lanes.
+> A government, authority, protocol, or tutored administrator may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace that states effects on existing projects, beneficiaries, continuity obligations, protected floors, and distributed funding lanes. ^r6ed8fe0e
 
 Rule:
 
@@ -303,11 +303,11 @@ Verified discovery may be rewarded or recognized only after review confirms mate
 
 ### 7a. Evaluation context model
 
-Core v0 includes `EvaluationRecord` as a technical audit object for formal evaluations.
+Core v0 includes `EvaluationRecord` as a technical audit object for formal evaluations. ^rb7d40b09
 
 Formal evaluation is dimension-scoped and effect-scoped. A citizen observation, beneficiary experience, technical review, fiscalization conclusion, complaint finding, fulfillment evaluation, and reputation input may all concern the same project, but they do not have the same authority or effect.
 
-An EvaluationRecord should preserve the evaluation context, evaluated dimension, actor role, observability basis, authority or qualification basis where relevant, contextualized evidence used, evaluation type, formal effect, review status, and audit trace.
+An EvaluationRecord should preserve the evaluation context, evaluated dimension, actor role, observability basis, authority or qualification basis where relevant, contextualized evidence used, evaluation type, formal effect, review status, and audit trace. ^r10f159f2
 
 Ordinary citizen interfaces should remain simple: users report what they saw, experienced, confirmed, contradicted, or complained about. The technical layer records whether that input remains a soft public signal or becomes part of a formal fulfillment, disbursement, closure, complaint, responsibility, or reputation review.
 
@@ -382,7 +382,7 @@ Rule:
 
 > Funding is a conditional commitment, not immediate payment and not a freely reversible expression of preference.
 
-Distributed allocation boundary:
+Distributed allocation boundary: ^r98952864
 
 > Citizens, delegates, allocation profiles, and public default rules allocate only the configured assignable share of public-purpose resources, and only to eligible projects or protocol-authorized control, complaint-review, mitigation, planning, or fiscalization vehicles inside active scopes. Distributed allocation does not replace the non-assignable common pool, project eligibility review, execution readiness, disbursement review, or fulfillment evaluation.
 
@@ -544,7 +544,7 @@ Idea
 
 `Idea` is the source object for civic demand. It is not a project state and is not financeable until converted into a project with accepted executor responsibility.
 
-Project creation also includes lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, fulfillment evidence needs, and fiscalization. Full common-good charter governance remains Extension v1+.
+Project creation also includes lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, fulfillment evidence needs, and fiscalization. Full common-good charter governance remains Extension v1+. ^r922d03d6
 
 A015 reinforces this as a minimum common-good impact sufficiency test over that existing declaration, not a charter system: affected assets and parties identified; no impact, uncertain impact with explanation, or impact with explanation declared; evidence and fiscalization required where impact is plausible; active-charter relationship declared where a charter exists; unexplained overuse of `uncertain` prohibited; and material omissions connected to fiscalization, complaint, mitigation, responsibility, and reputation effects. Core v0 does not add a common-good registry, charter voting, or platform adjudication of common-good compatibility, and conflicts requiring legal, environmental, cultural, or scientific authority route to external channels.
 
@@ -670,7 +670,7 @@ Open
 Suspended
 ```
 
-Core v0 does not force countries to exit tutored mode. It requires material tutored decisions and tutored silence to become public civic objects through Governance Resolution and Review Timeout Resolution mechanisms.
+Core v0 does not force countries to exit tutored mode. It requires material tutored decisions and tutored silence to become public civic objects through Governance Resolution and Review Timeout Resolution mechanisms. ^r2dfe7183
 
 In tutored mode, a competent authority or authorized implementation administrator may define the active Planning Scope for the public function opened to distributed financing. This is a country implementation or tutored operating-mode condition, not a solved distributed roadmap-construction mechanism. The scope and material scope decisions must be public, versioned, and auditable.
 
@@ -810,7 +810,7 @@ These should not be part of Core v0 unless later shown necessary:
 - full common-good subordinate charter system;
 - complex canary releases;
 - full constitutional meta-governance implementation;
-- detailed non-tutored protocol voting mechanics;
+- detailed non-tutored protocol voting mechanics; ^r0bcc0e34
 - distributed national roadmap construction or votable planning-area governance;
 - advanced capture-prediction scoring;
 - advanced inferred recommender systems;
@@ -840,7 +840,7 @@ These depend on the implementing jurisdiction:
 - any departure from the Core v0 rule that public authorities remain external to internal project participation in scopes they control;
 - eligibility rules for state-owned or publicly owned operators where they are not exercising authority;
 - sector chosen for pilot;
-- official budget percentage migrated to the system;
+- official budget percentage migrated to the system; ^rb0cac211
 - sanctions and recovery mechanisms;
 - appeal and administrative review rules.
 

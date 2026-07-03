@@ -41,13 +41,13 @@ The correct defense is to make the separation operational:
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:57` separates the assignable civic wallet from the non-assignable common pool.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:58` requires financeable projects to align with an active `Planning Scope` and applicable `Threshold Policy`.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:60` states that funding, support, objection, and formal complaint remain separate, and that funding does not buy social legitimacy.
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md:193` says popularity does not substitute for execution readiness, disbursement review, or fulfillment evaluation.
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md:195` requires every financeable project to align with a visible, versioned, auditable active Planning Scope.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:385` states that distributed allocation does not replace common-pool protection, eligibility review, execution readiness, disbursement review, or fulfillment evaluation.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:173` defines `FundingCommitment` as commitment, not proof of readiness or fulfillment.
+- [[H002-distributed-resource-allocation#^rdf3fe4e3|knowledge/hypotheses/H002-distributed-resource-allocation.md]] separates the assignable civic wallet from the non-assignable common pool.
+- [[H002-distributed-resource-allocation#^rd1bc7414|knowledge/hypotheses/H002-distributed-resource-allocation.md]] requires financeable projects to align with an active `Planning Scope` and applicable `Threshold Policy`.
+- [[H002-distributed-resource-allocation#^r3c4ab89d|knowledge/hypotheses/H002-distributed-resource-allocation.md]] states that funding, support, objection, and formal complaint remain separate, and that funding does not buy social legitimacy.
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT#^r0721cddc|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]] says popularity does not substitute for execution readiness, disbursement review, or fulfillment evaluation.
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT#^r385acf08|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]] requires every financeable project to align with a visible, versioned, auditable active Planning Scope.
+- [[34_CORE_V0_SCOPE_FREEZE#^r98952864|docs/34_CORE_V0_SCOPE_FREEZE.md]] states that distributed allocation does not replace common-pool protection, eligibility review, execution readiness, disbursement review, or fulfillment evaluation.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Funding, Disbursement, and Custody Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines `FundingCommitment` as commitment, not proof of readiness or fulfillment.
 
 ## Bibliographic basis
 

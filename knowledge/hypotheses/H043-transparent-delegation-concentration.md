@@ -142,7 +142,7 @@ The same represented weight should appear in:
 - Citizens may ignore concentration warnings.
 - Popular delegates may become de facto political machines even without automatic compensation.
 - Related delegates may split influence across multiple entities to reduce visible concentration.
-- Participation-support projects may become indirect delegation-acquisition tools if not transparent.
+- Participation-support projects may become indirect delegation-acquisition tools if not transparent. ^r3063fd6c
 - Too many warnings may create fatigue.
 - Configurable caps may be used politically or inconsistently.
 
@@ -162,7 +162,7 @@ The same represented weight should appear in:
 
 ## Principle
 
-> Delegation concentration is not forbidden, but it must never be hidden, automatically monetized, or reported as if high-weight delegated actions were personal-only actions.
+> Delegation concentration is not forbidden, but it must never be hidden, automatically monetized, or reported as if high-weight delegated actions were personal-only actions. ^r300d71bb
 
 ## Research note
 

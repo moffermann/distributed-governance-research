@@ -36,14 +36,14 @@ The concession is genuine and doctrinal. Role-based reputation is not a remedy a
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H010-primary-responsibility-principle.md:217` defines the Primary Responsibility Anchor as the accountability center for classification, funding, evaluation, and fiscalization, showing the model already fixes a single responsibility center for delivery.
-- `knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md:5` assigns responsibility for undeclared antivalue to the project, an abstraction that is not a legal person a victim can sue.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:82` states that legal sanctions, construction halts, and penalties require the external legal path unless a country implementation grants that power, defining the no-legal-effects boundary.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:157` records the executor accepting the required post-closure coverage mechanism as part of execution responsibility.
-- `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md:15` states that reputation attaches to demonstrated role responsibility, not proximity to a failed project, confirming reputation is not a victim remedy.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:60` places public authorities external to the internal actor model for scopes they control, which the attack reads as distancing the state from execution.
-- `knowledge/concepts/financial-assurance-profile-v0.md:64` requires guarantees or equivalent instruments to be materialized before execution-ready status and before funds are released, interposing a solvent party before money moves.
-- `knowledge/concepts/financial-assurance-profile-v0.md:96` states that financial assurance does not replace courts, regulators, insurers, or competent authorities, confirming apportionment remains external.
+- [[H010-primary-responsibility-principle#^rabc21f1b|knowledge/hypotheses/H010-primary-responsibility-principle.md]] defines the Primary Responsibility Anchor as the accountability center for classification, funding, evaluation, and fiscalization, showing the model already fixes a single responsibility center for delivery.
+- [[P003-project-responsibility-for-undeclared-antivalue#^r0c7f3f7e|knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md]] assigns responsibility for undeclared antivalue to the project, an abstraction that is not a legal person a victim can sue.
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0#^r28e9b55b|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]] states that legal sanctions, construction halts, and penalties require the external legal path unless a country implementation grants that power, defining the no-legal-effects boundary.
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0#Macul Multi-Court Responsibility Example|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]] records the executor accepting the required post-closure coverage mechanism as part of execution responsibility.
+- [[51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION#^r3ec4169a|docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md]] states that reputation attaches to demonstrated role responsibility, not proximity to a failed project, confirming reputation is not a victim remedy.
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION#^r28013fb6|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]] places public authorities external to the internal actor model for scopes they control, which the attack reads as distancing the state from execution.
+- [[financial-assurance-profile-v0#^r64c5aef5|knowledge/concepts/financial-assurance-profile-v0.md]] requires guarantees or equivalent instruments to be materialized before execution-ready status and before funds are released, interposing a solvent party before money moves.
+- [[financial-assurance-profile-v0#^r94bd9c38|knowledge/concepts/financial-assurance-profile-v0.md]] states that financial assurance does not replace courts, regulators, insurers, or competent authorities, confirming apportionment remains external.
 
 ## Bibliographic basis
 

@@ -32,15 +32,15 @@ For the Macul project, a compact card may say "almost funded" or "sports access,
 
 ## Project-document basis
 
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:7` recognizes that discovery and recommendations can bias resource allocation by shaping attention.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:17` states that discovery must not become a hidden allocator.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:60` excludes opaque manual boosting in Core v0.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:296` requires discovery influence to be measured.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:427` requires switchable ordering, explained urgent highlights, explained recommendations, no paid promotion, and discovery-influence observability.
-- `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:209` states that AI may assist but cannot be final authority over projects, funds, evidence truth, complaints, sanctions, reputation, fiscalizers, citizen choices, or closure.
-- `knowledge/hypotheses/H006-assisted-deliberation.md:19` requires assisted deliberation to remain source-visible, correctable, and non-binding.
-- `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md:940` requires material discovery and visibility traces where they may affect funding or legitimacy.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:163` defines `MaterialInformationClaim` for statements affecting funding, readiness, disbursement, closure, risk, trust, or reputation.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#^r6da5e362|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] recognizes that discovery and recommendations can bias resource allocation by shaping attention.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#^rd7ea4ce8|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] states that discovery must not become a hidden allocator.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#Resolution|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] excludes opaque manual boosting in Core v0.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#^r590a7c23|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] requires discovery influence to be measured.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION#C025 final resolution|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]] requires switchable ordering, explained urgent highlights, explained recommendations, no paid promotion, and discovery-influence observability.
+- [[48_AI_ASSISTANCE_AND_C008_RESOLUTION#^r318cb914|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]] states that AI may assist but cannot be final authority over projects, funds, evidence truth, complaints, sanctions, reputation, fiscalizers, citizen choices, or closure.
+- [[H006-assisted-deliberation#^r89232a1b|knowledge/hypotheses/H006-assisted-deliberation.md]] requires assisted deliberation to remain source-visible, correctable, and non-binding.
+- [[20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER#^r82c23f17|docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md]] requires material discovery and visibility traces where they may affect funding or legitimacy.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#Value, Evidence, and Evaluation Schemas|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines `MaterialInformationClaim` for statements affecting funding, readiness, disbursement, closure, risk, trust, or reputation.
 
 ## Bibliographic basis
 

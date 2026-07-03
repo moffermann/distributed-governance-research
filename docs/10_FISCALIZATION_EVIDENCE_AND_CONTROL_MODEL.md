@@ -8,7 +8,7 @@ The central problem is that the executor has strong incentives to weaken, underf
 
 ## Core rule
 
-> The executor executes. The system and protocol define control requirements. Evidence producers collect fulfillment or control evidence under the qualification and method standards required by the evidence need. The fiscalizer evaluates. The community can observe, submit complaint evidence, contradict, and denounce.
+> The executor executes. The system and protocol define control requirements. Evidence producers collect fulfillment or control evidence under the qualification and method standards required by the evidence need. The fiscalizer evaluates. The community can observe, submit complaint evidence, contradict, and denounce. ^rc2482cd2
 
 H015 adds an evaluation-context boundary to this rule:
 
@@ -77,7 +77,7 @@ Examples:
 - physical verification of goods or infrastructure;
 - testimony from affected or benefited parties.
 
-Fulfillment evidence production strengthens fiscalization because the fiscalizer does not depend only on the executor's own reports.
+Fulfillment evidence production strengthens fiscalization because the fiscalizer does not depend only on the executor's own reports. ^rff29d0e0
 
 Executor-submitted material is self-reported support unless corroborated. Critical milestones, disbursements, and closures require fulfillment evidence produced or corroborated by evidence producers, fiscalizers, verified beneficiaries, technical records, or other non-executor sources.
 
@@ -253,7 +253,7 @@ The fiscalizer may integrate evidence and review conclusions into a milestone, p
 
 The fiscalizer should therefore verify whether the submitted evidence satisfies the required producer qualification and method standard before relying on it for disbursement, closure, responsibility, reputation, complaint referral, or legal-path support.
 
-Responsible fiscalization is distributed in supply but not arbitrary in assignment. It should be selected through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules rather than by executor preference, ordinary popularity, first funding, or lowest price alone.
+Responsible fiscalization is distributed in supply but not arbitrary in assignment. It should be selected through protocolized eligibility, conflict, independence, risk, budget, methodology, and auditability rules rather than by executor preference, ordinary popularity, first funding, or lowest price alone. ^r00b6d1d8
 
 Citizen observation, beneficiary confirmation, fulfillment evidence production, complaint evidence, and complaints can strengthen or challenge the fiscalizer's work, but they do not automatically replace the responsible fiscalizer.
 
@@ -567,11 +567,11 @@ A simple first-come-first-served rule may be acceptable for low-risk tasks, but 
 
 ## Anti-capture premise
 
-The system should assume that hidden collusion is possible.
+The system should assume that hidden collusion is possible. ^r57ae0787
 
 It may be impossible to detect every friendship, informal payment, hidden relationship, or off-platform compensation.
 
-Therefore the architecture should not depend on perfect conflict detection.
+Therefore the architecture should not depend on perfect conflict detection. ^rd9b8ba01
 
 Instead, it should make capture harder, riskier, and less sufficient.
 

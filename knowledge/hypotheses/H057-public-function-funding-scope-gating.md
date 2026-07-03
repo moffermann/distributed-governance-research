@@ -8,7 +8,7 @@ In this tutored operating mode, projects associated with that public function pa
 
 This moderation is administered by the implementing public authority or its designated administrators.
 
-H009 now frames this as `Planning Scope Alignment`: the authority may define or interpret the active Planning Scope in tutored mode, but the scope and material scope decisions must be public, versioned, and auditable.
+H009 now frames this as `Planning Scope Alignment`: the authority may define or interpret the active Planning Scope in tutored mode, but the scope and material scope decisions must be public, versioned, and auditable. ^re803d690
 
 Integrated C007/C020 correction:
 

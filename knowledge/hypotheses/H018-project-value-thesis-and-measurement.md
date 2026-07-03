@@ -21,7 +21,7 @@ A distributed architecture does not discover social value as one objective truth
 
 Instead, it lets projects propose value theses that citizens, funders, beneficiaries, fiscalizers, evidence producers, and affected parties can support, evaluate, compare, challenge, and revise.
 
-The risk is not only that projects may lack metrics. The deeper risk is that a project may declare attractive value, define weak or input-only metrics, fail to connect those metrics to fulfillment evidence needs, or let the proposer indirectly control the fulfillment-evidence architecture.
+The risk is not only that projects may lack metrics. The deeper risk is that a project may declare attractive value, define weak or input-only metrics, fail to connect those metrics to fulfillment evidence needs, or let the proposer indirectly control the fulfillment-evidence architecture. ^r74573eb0
 
 ## Value thesis
 
@@ -43,7 +43,7 @@ H012 frames this as a `Value-Antivalue Profile`:
 value floors + antivalue ceilings
 ```
 
-Value commitments are floors the project must reach. Antivalue constraints are ceilings the project must not exceed. Both should be connected to the Project Evidential Contract and to fulfillment/control evidence needs.
+Value commitments are floors the project must reach. Antivalue constraints are ceilings the project must not exceed. Both should be connected to the Project Evidential Contract and to fulfillment/control evidence needs. ^rbc8194be
 
 A004 adds an evidence-coverage requirement: each value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric should identify the fulfillment/control evidence needed to verify it. This is not a demand for a fixed number of evidence items. It is a check that the project cannot satisfy a narrow metric while leaving the promised value unproven.
 
@@ -51,7 +51,7 @@ A004 adds an evidence-coverage requirement: each value floor, formal secondary v
 
 Different projects require different metrics. A puppet show, a highway, a hospital, a basic science project, and a heritage preservation project should not be evaluated with the same metric set.
 
-The metric follows the thesis of value.
+The metric follows the thesis of value. ^reaf2a7fd
 
 Metrics should not be only input measures.
 
@@ -104,7 +104,7 @@ This prevents the control budget from being consumed by unrelated fulfillment ev
 
 ## Relationship with Value Verification Package
 
-For every promised value, the project should define a proportional `Value Verification Package`.
+For every promised value, the project should define a proportional `Value Verification Package`. ^r36d55ad5
 
 The package may include:
 

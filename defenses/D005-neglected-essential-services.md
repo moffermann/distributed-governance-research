@@ -40,13 +40,13 @@ Compared with today's model, the distributed layer can also make neglected servi
 
 ## Project-document basis
 
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:57` distinguishes the assignable civic wallet from a non-assignable common pool.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:61` requires anti-neglect safeguards, including default allocation rules, official profiles, strategic categories, underfunded-area observability, and non-assignable pools.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md:117` leaves the budget percentage and common-pool boundary as country implementation questions.
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md:1161` identifies non-assignable resources for defense, security, justice guarantees, macro obligations, emergency reserves, debt service, and functions that should not depend on popularity, visibility, delegation concentration, or monthly attention.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:385` states that distributed allocation does not replace the non-assignable common pool.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:195` allows tutored or authority-defined Planning Scopes while requiring them to be public, versioned, and auditable.
-- `knowledge/open-questions/distributed-roadmap-construction-governance.md:13` records that Core v0 does not yet define full national roadmap construction.
+- [[H002-distributed-resource-allocation#^rdf3fe4e3|knowledge/hypotheses/H002-distributed-resource-allocation.md]] distinguishes the assignable civic wallet from a non-assignable common pool.
+- [[H002-distributed-resource-allocation#^r1722756d|knowledge/hypotheses/H002-distributed-resource-allocation.md]] requires anti-neglect safeguards, including default allocation rules, official profiles, strategic categories, underfunded-area observability, and non-assignable pools.
+- [[H002-distributed-resource-allocation#^rc0fbbe90|knowledge/hypotheses/H002-distributed-resource-allocation.md]] leaves the budget percentage and common-pool boundary as country implementation questions.
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT#^rc45f2a80|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]] identifies non-assignable resources for defense, security, justice guarantees, macro obligations, emergency reserves, debt service, and functions that should not depend on popularity, visibility, delegation concentration, or monthly attention.
+- [[34_CORE_V0_SCOPE_FREEZE#^r98952864|docs/34_CORE_V0_SCOPE_FREEZE.md]] states that distributed allocation does not replace the non-assignable common pool.
+- [[34_CORE_V0_SCOPE_FREEZE#^r6ed8fe0e|docs/34_CORE_V0_SCOPE_FREEZE.md]] allows tutored or authority-defined Planning Scopes while requiring them to be public, versioned, and auditable.
+- [[distributed-roadmap-construction-governance#^r188eeca1|knowledge/open-questions/distributed-roadmap-construction-governance.md]] records that Core v0 does not yet define full national roadmap construction.
 
 ## Bibliographic basis
 

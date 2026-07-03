@@ -37,7 +37,7 @@ Source baseline:
 
 > A role is a scoped responsibility context, not a general power label.
 
-An actor may hold multiple roles, but each role has separate authority, duties, conflicts, records, effects, reputation treatment, and audit references.
+An actor may hold multiple roles, but each role has separate authority, duties, conflicts, records, effects, reputation treatment, and audit references. ^r902e34bf
 
 Example:
 
@@ -79,7 +79,7 @@ When a public authority, protocol, or operating administrator defines or changes
 
 The platform may block funding release, require correction, publish a governance resolution, record a systemic pause, or route a case to a competent authority.
 
-Legal sanctions, court orders, material construction halts, permit effects, license revocation, or administrative penalties require the applicable external legal path unless a country implementation legally grants the platform that power.
+Legal sanctions, court orders, material construction halts, permit effects, license revocation, or administrative penalties require the applicable external legal path unless a country implementation legally grants the platform that power. ^r28e9b55b
 
 ### 7. Reputation is role-specific
 
@@ -189,7 +189,7 @@ It is the Core v0 responsibility baseline that future implementation should pres
 
 ## Open Risks
 
-1. Role accumulation may still create practical conflicts even when formally disclosed.
+1. Role accumulation may still create practical conflicts even when formally disclosed. ^rc8505bdd
 2. Detailed evidence quality scoring, authenticity validation, credential registry integration, calibration checks, AI-generation detection, and fraud detection remain future implementation or country-implementation work after A013.
 3. Country implementations may grant legal powers or impose legal duties that Core v0 does not specify.
 4. Too much matrix detail may become bureaucratic if imposed uniformly on low-risk projects.

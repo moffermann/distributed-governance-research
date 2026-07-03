@@ -28,7 +28,7 @@ For onboarded citizens, the system-defined default should be either the selected
 
 Unassigned monthly funds should not simply accumulate forever.
 
-If the citizen does not act, the system applies the configured, selected, or protocol-defined default allocation rule.
+If the citizen does not act, the system applies the configured, selected, or protocol-defined default allocation rule. ^r5cecbdca
 
 If delegation ends because of revocation, rejection, expiration, or delegate resignation, the next applicable monthly cycle should use the citizen's previously selected base allocation profile or fallback rule.
 
@@ -75,7 +75,7 @@ Monthly automatic allocation creates a continuous flow of resources into the pro
 
 ## Continuity-sensitive projects
 
-Monthly allocation can help continuity needs receive steady attention, but it should not hide that a project funds only a bounded period. Where a project is recurring, continuity-critical, emergency, or maintenance-dependent, the funding surface should preserve the A006 continuity label, renewal trigger, and wind-down rule.
+Monthly allocation can help continuity needs receive steady attention, but it should not hide that a project funds only a bounded period. Where a project is recurring, continuity-critical, emergency, or maintenance-dependent, the funding surface should preserve the A006 continuity label, renewal trigger, and wind-down rule. ^r1769ff15
 
 If a funded continuity period is approaching its end, the system may route eligible profile or fallback allocations toward follow-on projects, maintenance, mitigation, wind-down, or a continuity project generated from a public Idea. The automatic cycle should not automatically renew the current executor and should not treat a renewal window as proof that a follow-on project is valid.
 

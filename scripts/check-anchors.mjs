@@ -161,7 +161,7 @@ for (const path of allMd) {
   // by vault-relative path, or by unique basename anywhere in the corpus.
   // Block references ([[file#^id]]) additionally require the ^id marker to
   // exist inside the resolved file.
-  for (const m of text.matchAll(/\[\[([^\]|#^]+)(#\^([A-Za-z0-9-]+))?(?:#[^\]|^]*)?(?:\|[^\]]*)?\]\]/g)) {
+  for (const m of text.matchAll(/\[\[([^\]|#]+)(?:#(\^)?([^\]|]+))?(?:\|[^\]]*)?\]\]/g)) {
     const target = m[1].trim();
     if (!target || target.startsWith("http")) continue;
     const cand = target.endsWith(".md") ? target : `${target}.md`;
@@ -180,10 +180,22 @@ for (const path of allMd) {
       continue;
     }
     if (m[3]) {
-      const blockId = m[3];
-      if (!readFileSync(resolved, "utf8").includes(`^${blockId}`)) {
-        console.log(`DEAD BLOCKREF ${path}: [[${target}#^${blockId}]] (no ^${blockId} in ${resolved})`);
-        linkBroken++;
+      const frag = m[3].trim();
+      const body = readFileSync(resolved, "utf8");
+      if (m[2]) {
+        if (!body.includes(`^${frag}`)) {
+          console.log(`DEAD BLOCKREF ${path}: [[${target}#^${frag}]] (no ^${frag} in ${resolved})`);
+          linkBroken++;
+        }
+      } else {
+        const wanted = frag.toLowerCase();
+        const found = body
+          .split(/\r?\n/)
+          .some((l) => /^#{1,6}\s+/.test(l) && l.replace(/^#{1,6}\s+/, "").replace(/[[\]|#^]/g, "").trim().toLowerCase() === wanted);
+        if (!found) {
+          console.log(`DEAD HEADING  ${path}: [[${target}#${frag}]] (no such heading in ${resolved})`);
+          linkBroken++;
+        }
       }
     }
   }

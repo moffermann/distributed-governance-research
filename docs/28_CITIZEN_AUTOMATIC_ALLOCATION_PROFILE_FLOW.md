@@ -10,7 +10,7 @@ It also provides the base allocation rule that resumes when budget delegation is
 
 ## Core principle
 
-> Automatic allocation is a citizen-configured rule for distributing their civic allocation. It is not delegation to another actor and it is not a hidden system decision.
+> Automatic allocation is a citizen-configured rule for distributing their civic allocation. It is not delegation to another actor and it is not a hidden system decision. ^r3b93d8e5
 
 Automatic allocation can execute only inside the configured assignable public-purpose share and only toward eligible projects or protocol-authorized control, complaint-review, mitigation, planning, or fiscalization vehicles. It cannot allocate the non-assignable common pool, a protected essential floor marked as non-assignable, an excluded lane, bypass project eligibility, override phase gates, release funds, or treat profile output as proof of social legitimacy.
 
@@ -314,7 +314,7 @@ Reports should explain why allocations happened.
 
 Reports should also state whether any automatic rule was skipped because active delegation had priority.
 
-The citizen may configure report channel and frequency, but each profile run should remain available in-app. App-only or silent notification mode must not hide allocation history, skipped-rule explanations, fallback activation, or the profile that resumed after delegation ended.
+The citizen may configure report channel and frequency, but each profile run should remain available in-app. App-only or silent notification mode must not hide allocation history, skipped-rule explanations, fallback activation, or the profile that resumed after delegation ended. ^r3ee67de6
 
 ## 10. Edit, pause, or deactivate
 

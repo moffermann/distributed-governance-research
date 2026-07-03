@@ -12,7 +12,7 @@ Accepted as the v0 resolution for C012.
 
 ## Core principle
 
-> Reputation is affected by demonstrated responsibility in a specific role, not by mere proximity to a failed project.
+> Reputation is affected by demonstrated responsibility in a specific role, not by mere proximity to a failed project. ^r3ec4169a
 
 There is no automatic collective reputation penalty for everyone involved in a failed project.
 

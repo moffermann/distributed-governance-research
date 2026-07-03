@@ -2,7 +2,7 @@
 
 ## Hypothesis
 
-Projects should define approval and execution thresholds according to their nature. Not every project should require the same combination of financing, social support, technical validation, legitimacy, or institutional control.
+Projects should define approval and execution thresholds according to their nature. Not every project should require the same combination of financing, social support, technical validation, legitimacy, or institutional control. ^r668ec788
 
 In Core v0, these thresholds should be represented as a visible `Threshold Policy` or policy reference connected to the project, public function, operating mode, and protocol rules. The platform should not impose one universal threshold formula for every project.
 

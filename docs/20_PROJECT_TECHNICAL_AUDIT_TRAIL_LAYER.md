@@ -833,7 +833,7 @@ For each role event:
 - role;
 - date;
 - acceptance status;
-- resignation or replacement if any;
+- resignation or replacement if any; ^rb7be98b2
 - scope;
 - conflict declarations;
 - reputation-relevant outcomes.
@@ -937,7 +937,7 @@ Tutored decisions and tutored silence should be auditable civic objects, not hid
 
 ## 17. Discovery visibility reasons
 
-Layer 5 should preserve material discovery and visibility traces where they may affect funding or legitimacy.
+Layer 5 should preserve material discovery and visibility traces where they may affect funding or legitimacy. ^r82c23f17
 
 Examples:
 

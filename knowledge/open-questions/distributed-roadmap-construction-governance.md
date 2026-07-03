@@ -10,7 +10,7 @@ This question was raised during the H009 consolidation.
 
 Core v0 now requires `Planning Scope Alignment`: projects must attach to an active public-function, pilot, operating-mode, roadmap, or authorized planning line before receiving execution financing.
 
-However, Core v0 does not yet define how the planning scope or national roadmap itself is built.
+However, Core v0 does not yet define how the planning scope or national roadmap itself is built. ^r188eeca1
 
 The user proposed a possible future direction:
 
@@ -99,4 +99,4 @@ It becomes necessary later if the theory wants to explain how planning itself ca
 
 ## Working principle
 
-> Core v0 should not pretend that roadmap construction is solved. It should keep projects aligned to visible active scopes while preserving the future possibility of distributed, votable planning areas.
+> Core v0 should not pretend that roadmap construction is solved. It should keep projects aligned to visible active scopes while preserving the future possibility of distributed, votable planning areas. ^r35e31a17

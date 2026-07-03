@@ -118,7 +118,7 @@ These KPIs should be usable across public functions, not only for a specific min
 
 ### 1. Citizen adoption
 
-- number of participating citizens;
+- number of participating citizens; ^r18b8b069
 - number of delegators;
 - direct versus delegated participation;
 - participation frequency;
@@ -129,7 +129,7 @@ These KPIs should be usable across public functions, not only for a specific min
 
 - percentage of the function's budget assigned through distributed mechanisms;
 - percentage effectively executed;
-- percentage handled by default allocation rules;
+- percentage handled by default allocation rules; ^re91893f2
 - unused or reassigned funds;
 - rate of budget migration over time.
 

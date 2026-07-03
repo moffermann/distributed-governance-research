@@ -43,7 +43,7 @@ The project should not remain open indefinitely. It should expire unfunded, retu
 
 ## Core v0 resolution
 
-Every financeable project or phase funding lane must have a visible funding window.
+Every financeable project or phase funding lane must have a visible funding window. ^rf903e965
 
 The project must record:
 
@@ -104,7 +104,7 @@ If the funding window expires without reaching the required financing and closur
 
 `Expired Unfunded` is not ordinary funder withdrawal.
 
-It is a project/protocol outcome. Eligible unreleased and unused commitments follow the configured treatment:
+It is a project/protocol outcome. Eligible unreleased and unused commitments follow the configured treatment: ^r7a8e9ff1
 
 - return to citizen available balance;
 - reassign under the citizen's automatic allocation profile;
@@ -239,7 +239,7 @@ Any future implementation should require:
 - audit trail showing base allocation, smoothing amount, reason, and later compensation;
 - clear distinction between authorized allocation capacity and actual payment execution.
 
-Treasury may provide balance, budget, cash-execution, or authorized smoothing inputs where lawful, but it still does not decide civic value, project priority, fiscalizer selection, evidence quality, complaint outcome, or discretionary disbursement.
+Treasury may provide balance, budget, cash-execution, or authorized smoothing inputs where lawful, but it still does not decide civic value, project priority, fiscalizer selection, evidence quality, complaint outcome, or discretionary disbursement. ^r9bfae111
 
 ## Relationship to C005
 
@@ -278,7 +278,7 @@ Core v0 makes these events visible, citizen-facing, and auditable. It also prese
 - Extension rules may be gamed through artificial support or concentrated small commitments.
 - Repeated republication may clutter discovery and hide weak demand.
 - Liquidity smoothing may become fiscal illusion if poorly capped.
-- Treasury or administrators may use smoothing parameters as hidden political steering.
+- Treasury or administrators may use smoothing parameters as hidden political steering. ^rc469ba02
 
 ## Mitigations
 

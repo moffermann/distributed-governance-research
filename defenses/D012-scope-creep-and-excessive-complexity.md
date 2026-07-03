@@ -32,17 +32,17 @@ For a small school-supplies project, the model should support a low-risk fast pa
 
 ## Project-document basis
 
-- `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:5` states that architecture may be complex but ordinary citizen participation must remain simple.
-- `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:13` states the rule: simple to participate, deep to audit.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:147` requires each project to expose the applicable Threshold Policy.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:167` ties procedural burden profiles to Threshold Policy and competent review.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:167` prohibits proposers, designers, or executors from self-selecting lower burden when obligations decrease.
-- `knowledge/hypotheses/H020-proportional-procedural-burden.md:5` states that all projects share conceptual structure, but not the same procedural burden.
-- `knowledge/hypotheses/H020-proportional-procedural-burden.md:7` makes burden proportional to size, risk, complexity, irreversibility, vulnerable beneficiaries, territory, public-function sensitivity, common-good impact, technical requirements, and potential antivalue.
-- `docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md:237` requires every technical state to have a simple, actionable citizen-facing translation while deeper layers preserve full audit detail.
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md:604` states that a formal entity exists only if it carries responsibility, state, traceability, rule application, formal effect, or necessary citizen-facing explanation that cannot be safely derived from another record.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:17` states that the schema draft is not yet a final database schema, API specification, class model, smart contract, legal implementation, or country-specific data model.
-- `knowledge/principles/P007-integrate-or-bound-rule.md:5` states that a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects; otherwise it is bounded with a recorded limitation.
+- [[P006-layered-complexity-and-citizen-simplicity#^r98089f8d|knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md]] states that architecture may be complex but ordinary citizen participation must remain simple.
+- [[P006-layered-complexity-and-citizen-simplicity#^r4954f825|knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md]] states the rule: simple to participate, deep to audit.
+- [[34_CORE_V0_SCOPE_FREEZE#^r97a50a88|docs/34_CORE_V0_SCOPE_FREEZE.md]] requires each project to expose the applicable Threshold Policy.
+- [[34_CORE_V0_SCOPE_FREEZE#^r686efce3|docs/34_CORE_V0_SCOPE_FREEZE.md]] ties procedural burden profiles to Threshold Policy and competent review.
+- [[34_CORE_V0_SCOPE_FREEZE#^r686efce3|docs/34_CORE_V0_SCOPE_FREEZE.md]] prohibits proposers, designers, or executors from self-selecting lower burden when obligations decrease.
+- [[H020-proportional-procedural-burden#^r0c61d1b6|knowledge/hypotheses/H020-proportional-procedural-burden.md]] states that all projects share conceptual structure, but not the same procedural burden.
+- [[H020-proportional-procedural-burden#^r42cc39cf|knowledge/hypotheses/H020-proportional-procedural-burden.md]] makes burden proportional to size, risk, complexity, irreversibility, vulnerable beneficiaries, territory, public-function sensitivity, common-good impact, technical requirements, and potential antivalue.
+- [[49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION#^r5a5ae7e7|docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md]] requires every technical state to have a simple, actionable citizen-facing translation while deeper layers preserve full audit detail.
+- [[64_FORMAL_ENTITY_INVENTORY_V0#13. Macul multi-court example|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]] states that a formal entity exists only if it carries responsibility, state, traceability, rule application, formal effect, or necessary citizen-facing explanation that cannot be safely derived from another record.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0#^re7800b2c|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] states that the schema draft is not yet a final database schema, API specification, class model, smart contract, legal implementation, or country-specific data model.
+- [[P007-integrate-or-bound-rule#^r520eddb3|knowledge/principles/P007-integrate-or-bound-rule.md]] states that a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects; otherwise it is bounded with a recorded limitation.
 
 ## Bibliographic basis
 
