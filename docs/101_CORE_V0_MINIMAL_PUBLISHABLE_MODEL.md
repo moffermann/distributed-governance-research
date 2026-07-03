@@ -30,8 +30,10 @@ If a complaint shows 20% of the beneficiaries were false, the verified
 score drops, the difference is corrected, and the organization's public
 track record carries the result into every future project it proposes.
 
-Everything that follows generalizes this example. If the example makes
-sense, the model will too.
+Everything that follows generalizes this example. (The worked example
+later in this document runs the same school under a different, largely
+successful scenario — the two sets of numbers describe different runs,
+not an inconsistency.) If the example makes sense, the model will too.
 
 ## Motivation and guiding question
 
@@ -629,7 +631,7 @@ The executor's reputation updates from this verified score, adjusted by any foun
 
 ## And year two?
 
-A sports school is not only built — it must survive its second year, and second years are where projects like this usually die. The model treats continuity as a first-class dimension: projects declare whether they are one-time, recurring, or maintenance-dependent; a project that funds six months of training shows citizens `funds first six months` and `maintenance not funded` labels rather than implying permanence; and before a funded period ends, a visible **Continuity Renewal Window** opens so the follow-on need becomes a public Idea competing for funding on its merits — no silent expiry, and no automatic incumbent renewal either (`docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`).
+A sports school is not only built — it must survive its second year, and second years are where such projects most often fail. The model treats continuity as a first-class dimension: projects declare whether they are one-time, recurring, or maintenance-dependent; a project that funds six months of training shows citizens `funds first six months` and `maintenance not funded` labels rather than implying permanence; and before a funded period ends, a visible **Continuity Renewal Window** opens so the follow-on need becomes a public Idea competing for funding on its merits — no silent expiry, and no automatic incumbent renewal either (`docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`).
 
 ## What prevents abuse
 
@@ -720,11 +722,17 @@ they must be reviewed, and if founded they can block payments, correct
 scores, and mark responsibility. Sensitive complaints can be filed under
 protected identity.
 
-**What if I have no time?** Then the system still works for you: your
-allocation follows the public default rule (which tracks published
-planning priorities), or a delegate you chose. The simulation evidence
-below shows the design does not depend on citizens becoming full-time
-evaluators — it was built for busy people.
+**What if I have no time?** Your allocation then follows the public
+default rule (which tracks published planning priorities), or a delegate
+you chose. The simulation evidence below shows the design does not
+depend on citizens becoming full-time evaluators; inattention is a
+designed-for condition, not a failure mode.
+
+**Who pays the independent inspectors?** Not the executor. Control work
+is financed from a separated control budget attached to the project — a
+distinct line citizens fund alongside execution — and inspectors are
+assigned by protocol rule, so the money that pays verification never
+passes through the hands being verified (`docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`, `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`).
 
 The interface follows the same principle in layers: a simple card with
 plain status labels for everyone, expandable detail for the curious, and
