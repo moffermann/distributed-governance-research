@@ -71,6 +71,7 @@ Possible closure conditions:
 - required documents complete;
 - Financial Assurance Profile configured;
 - required guarantee materialized where applicable;
+- Post-Closure Coverage Profile configured and coverage mechanism accepted or materialized where applicable;
 - material information claims, approval labels, and unresolved warnings source-linked where material;
 - minimum admissible control package complete;
 - no admitted blocking complaint or scoped systemic pause;
@@ -148,6 +149,7 @@ This check should confirm:
 - executor has accepted responsibility;
 - required documents are complete;
 - required guarantees or equivalent assurance instruments are materialized where applicable;
+- required post-closure coverage mechanism is declared, accepted, and materialized or confirmed where applicable;
 - operating mode requirements are satisfied.
 
 If approved, status becomes:
@@ -165,6 +167,8 @@ Execution-ready means:
 - milestones, evidence, fiscalization, and reporting obligations become active.
 
 For Core v0, assurance is not limited to construction. A care-service project, school-supply project, workshop, food delivery project, or infrastructure project may all require the configured global guarantee or equivalent materialized assurance before execution-ready status if they receive execution funding.
+
+For execution-financeable projects, execution-ready should also expose the post-closure coverage that will apply after project closure where required. This may be an executor direct warranty or equivalent insurance, bond, guarantee, escrow, retention, or lawful coverage mechanism. The project actor may satisfy the mechanism, but cannot choose a weaker window or scope when the active policy controls it.
 
 ### Rule
 
@@ -581,6 +585,7 @@ Closure should include:
 - fiscalizer final report;
 - unresolved observations;
 - complaints status;
+- post-closure coverage mechanism, window, covered scope, and expiry route where applicable;
 - continuity result where applicable: renewal window opened, continuity-need Idea created, follow-on project linked, replacement pending, wind-down completed, or continuity gap unresolved;
 - lessons or notes;
 - reputation effects.
@@ -599,6 +604,7 @@ This record connects:
 - which fiscalizer eligibility/profile warnings, report limitations, or secondary-audit findings affected closure;
 - which continuity evidence, beneficiary observations, funding gap, or wind-down risks should feed a continuity-need Idea where applicable;
 - what happened to released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- which post-closure coverage mechanism remains active, expired, executed, or routed externally where applicable;
 - which issues remain unresolved;
 - which Responsibility Events, Reputation Inputs, or no-reputation-effect findings resulted.
 
@@ -607,6 +613,8 @@ This record connects:
 > Closure must explain what was promised, what was actually delivered, what evidence supports that conclusion, and what happened to the money.
 
 > A project cannot close as fulfilled when its main commitments remain unsupported by sufficient, reviewed, traceable fulfillment/control evidence.
+
+> Closure does not keep ordinary platform complaints open forever. Covered post-closure complaints, contradictory evidence, hidden antivalues, or defect claims may be reviewed inside the platform only during the declared post-closure accountability window and within the covered scope. After expiry or outside scope, citizens are routed to the competent external path unless a final external decision later becomes recordable under the active rule.
 
 ### Continuity renewal before or after closure
 
@@ -668,6 +676,9 @@ Paused
 Requires reformulation
 Revoked
 Closed
+Post-closure coverage active
+Post-closure review in progress
+Coverage expired - external route
 ```
 
 Deeper technical states appear in Layer 5.

@@ -74,6 +74,7 @@ Required conditions may include:
 - required documents complete;
 - Financial Assurance Profile configured;
 - required guarantee, retention, insurance, escrow, or equivalent assurance materialized where applicable;
+- Post-Closure Coverage Profile configured and direct warranty or equivalent coverage accepted/materialized where applicable;
 - Continuity Risk Classification, funded service period, renewal trigger, beneficiary-protection rule, and wind-down rule configured where the project or phase is recurring, continuity-critical, emergency, or maintenance-dependent;
 - operating mode requirements satisfied.
 
@@ -476,6 +477,10 @@ Retentions may help:
 
 > A guarantee is materialized only after external custodian or guarantor confirmation.
 
+Post-closure coverage is a separate but related check. Before final release or financial closure, the disbursement path should confirm whether the active project requires an executor direct warranty or equivalent insurance, bond, guarantee, escrow, retention, or lawful coverage mechanism. If required, the coverage window, covered dimensions, response path, amount or cap, and materialization or acceptance record should be linked before the project closes.
+
+> The final disbursement should not erase covered post-closure accountability. Covered defects, hidden antivalues, or contradictory evidence discovered during the active window may trigger warranty response, correction, mitigation, coverage execution, responsibility review, reputation input, or no-effect finding.
+
 Examples:
 
 ```text
@@ -586,6 +591,7 @@ Funds may remain unused because of:
 - unused retention;
 - project revocation;
 - project expiration.
+- post-closure coverage expiry or clean release of a retention where the active rule allows it.
 
 Possible treatment:
 
@@ -833,6 +839,8 @@ The disbursement flow should not:
 - hide retained amounts;
 - treat remaining funds as executor property;
 - make release decisions without audit trace;
+- treat final release as waiver of the declared post-closure coverage window;
+- accept post-closure platform complaints after coverage expiry except to record a competent external decision where the active rule allows it;
 - confuse citizen-facing simplicity with lack of control.
 
 ## Design rule

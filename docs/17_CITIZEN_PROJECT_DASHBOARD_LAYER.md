@@ -186,6 +186,9 @@ Sin gaps críticos / gap de evidencia / gap de métrica
 👥 Participación de afectados
 Consulta vecinal pendiente, si aplica
 
+Post-cierre
+Garantía directa 180 días, si aplica
+
 Continuidad
 Periodo financiado y regla de salida declarados, si aplica
 ```
@@ -205,6 +208,7 @@ Possible conditions:
 - beneficiary confirmation;
 - affected-party mapping or consultation, where applicable;
 - financial protection / guarantee status;
+- post-closure coverage status where execution funding requires it;
 - moderation completed, if applicable;
 - required documents complete.
 
@@ -250,6 +254,12 @@ Example:
 ```text
 Design review:
 Accepted with conditions.
+
+Post-closure coverage:
+Executor direct warranty, 180 days.
+
+After expiry:
+external legal, regulatory, contract, or competent-authority route.
 
 Scope:
 Court dimensions and surface accepted.

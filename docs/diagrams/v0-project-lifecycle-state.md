@@ -4,7 +4,7 @@
 
 Show the project lifecycle after publication, including validation, execution readiness, reformulation, review, revocation, and closure.
 
-Related resolutions: C005, C016, C017, C018, H008, H011, H019, H040, A001, A002, A003, A006, Funding Window Expiry.
+Related resolutions: C005, C016, C017, C018, H008, H011, H019, H040, A001, A002, A003, A006, A007, Funding Window Expiry.
 
 ```mermaid
 stateDiagram-v2
@@ -53,10 +53,17 @@ stateDiagram-v2
     Revoked --> ClosureAccountability
     Expired --> ClosureAccountability
     ExpiredUnfunded --> ClosureAccountability
-    ClosureAccountability --> Closed: promise, evidence, money, and responsibility recorded
+    ClosureAccountability --> PostClosureCoverageActive: coverage window active
+    ClosureAccountability --> Closed: no platform coverage window
+    PostClosureCoverageActive --> PostClosureReview: covered complaint or contradiction admitted
+    PostClosureReview --> PostClosureCoverageActive: no effect or correction complete
+    PostClosureReview --> ClosureAccountability: correction, mitigation, responsibility, or coverage effect recorded
+    PostClosureCoverageActive --> Closed: coverage window expires
+    Closed --> ExternalDecisionRecorded: competent external decision later recorded
+    ExternalDecisionRecorded --> Closed: historical, responsibility, or reputation effect recorded where allowed
     Closed --> [*]
 ```
 
 ## Rule
 
-> A project advances through validated conditions and review, not self-declared progress. Execution readiness should not hide unresolved material warnings behind favorable labels. Open funding is bounded by a visible Funding Attempt; if the window expires without valid closure, the project or lane becomes Expired Unfunded unless a bounded extension or reformulation route applies. For continuity-sensitive projects, a renewal window exposes the follow-on need and may generate an Idea, but it does not automatically renew the current executor. Closure requires a Project Closure Accountability Record. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.
+> A project advances through validated conditions and review, not self-declared progress. Execution readiness should not hide unresolved material warnings behind favorable labels. Open funding is bounded by a visible Funding Attempt; if the window expires without valid closure, the project or lane becomes Expired Unfunded unless a bounded extension or reformulation route applies. For continuity-sensitive projects, a renewal window exposes the follow-on need and may generate an Idea, but it does not automatically renew the current executor. Closure requires a Project Closure Accountability Record and, where required, an active or expired Post-Closure Coverage Profile. Closure labels are procedural context; reputation depends on verified fulfillment and responsibility events.

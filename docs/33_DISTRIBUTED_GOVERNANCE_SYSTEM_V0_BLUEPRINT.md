@@ -169,6 +169,7 @@ A project must contain:
 - metrics;
 - evidence-coverage status for value floors, formal secondary values, antivalue ceilings, material value claims, and relevant metrics;
 - Project Evidential Contract and fulfillment evidence obligations;
+- Post-Closure Coverage Profile where execution funding is allowed;
 - fiscalization requirements;
 - related-party and conflict declarations;
 - risks;
@@ -214,13 +215,15 @@ When a recurring, continuity-critical, or maintenance-dependent project approach
 
 Under H010, every financeable project should declare one `Primary Responsibility Anchor`: the main roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable. Secondary contributions are allowed, but they must not dilute the anchor. If a secondary contribution is presented as a formal promise, it needs proportional metrics, fulfillment/control evidence, and review consequences.
 
-Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, or closure. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The policy should include or reference a `Procedural Burden Profile` so small low-risk projects do not receive the same procedural burden as infrastructure, regulated, irreversible, or high-antivalue projects. Thresholds, burden profiles, and assurance requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces obligations. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
+Each project should also declare or reference a visible `Threshold Policy` defining which proportional conditions apply before publication, execution-ready status, disbursement, closure, or post-closure coverage where applicable. Thresholds may depend on project type, public function, risk, complexity, territory, operating mode, common-good impact, related-party safeguards, and protocol rules. The policy should include or reference a `Procedural Burden Profile` so small low-risk projects do not receive the same procedural burden as infrastructure, regulated, irreversible, or high-antivalue projects. Thresholds, burden profiles, assurance requirements, and post-closure coverage requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces obligations. The platform should show simple missing conditions to citizens and preserve the policy source in the audit trail.
 
 For projects with rights, access, vulnerable-beneficiary, territory-wide, common-good, or high affected-party exposure, the Threshold Policy should also require a proportional affected-party mapping and consultation condition. This condition is not a vote or veto. It defines what affected-party map, notification path, observation window, field visit, community meeting, plan-review record, survey, neighborhood documentation, independent evidence-producer input, fiscalizer review, or competent-authority trace is needed before publication, execution-ready status, disbursement, or closure where applicable.
 
 This intentionally asks more than many current project processes provide. Affected parties often receive little notice, must attend narrow physical meetings to be heard, or never see whether a project later delivered the values promised. Core v0 raises that accountability floor with lower participation cost, broader reach, greater visibility, and more traceable feedback.
 
 H011 adds a universal Financial Assurance Profile for execution-financeable projects. In Core v0, the guarantee requirement should use a global percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. This assurance applies across social projects, including care, supplies, workshops, infrastructure, and services.
+
+A007 adds a `Post-Closure Coverage Profile` for execution-financeable projects where post-closure accountability is required. The profile is related to financial assurance but is not the same object: financial assurance protects execution funds and failure risk, while post-closure coverage defines who responds after closure for covered defects, hidden antivalues, contradictory evidence, correction, mitigation, replacement, or warranty review. The valid Core v0 mechanisms are `Executor Direct Warranty` or `Equivalent Insurance / Bond / Coverage`, with duration and scope defined by Threshold Policy, contract, operating mode, protocol, or country implementation rather than by proposer, designer, or executor discretion.
 
 AI and rules may help discover required documents and suggest a burden profile, but they should not certify document acceptability by themselves. Where the Threshold Policy requires project acceptability review, tutored mode routes review to the competent authority under C020, while non-tutored or open modes may use an independent `Control Subproject: Project Admissibility Review` under C002/C013 rules.
 
@@ -877,7 +880,7 @@ Each release requires:
 
 Before a project can receive execution funding commitments, its disbursement milestone plan should pass specialized validation for milestone coherence, fulfillment evidence requirements, release amounts, partial-release rules, retentions, protected advance-payment rules, and phase-gate treatment where applicable. Unresolved critical validation failures block financing.
 
-Before funds are released, the disbursement check should also confirm the applicable Financial Assurance Profile and any required Guarantee Materialization Record.
+Before funds are released, the disbursement check should also confirm the applicable Financial Assurance Profile, any required Guarantee Materialization Record, and any required Post-Closure Coverage Profile or coverage-materialization reference.
 
 A pending design gate is not by itself a critical validation failure if the phase plan, public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It is a release blocker: later-phase execution funds remain reserved until the prerequisite design phase is accepted.
 
@@ -901,6 +904,8 @@ In recovery
 Remaining funds do not automatically belong to the executor.
 
 The platform may generate `Financial Orders` for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. Treasury, a custodian, escrow service, bank, or country-specific financial infrastructure executes valid orders and reports status. The same external infrastructure or a lawful guarantor may also confirm guarantee materialization. It does not decide project value, select projects, fiscalize milestones, define guarantee requirements by discretion, or reject payments by civic preference.
+
+Where a covered post-closure finding requires money movement, correction cost coverage, retained amount release, guarantee execution, insurance or bond use, or equivalent response, the platform may generate the valid financial or coverage order. The custodian, insurer, guarantor, escrow provider, or lawful equivalent executes or reports the technical/legal block; it does not decide value fulfillment, complaint truth, or reputation.
 
 Budget Liquidity Smoothing is not required for Core v0. A future or country-specific implementation may use a public, capped, stress-tested policy to manage cyclical allocation capacity against an authorized annual or period budget. It must not become hidden virtual money or treasury discretion. Treasury may report and execute a lawful smoothing rule, but it cannot choose projects, alter civic priorities, validate evidence, select fiscalizers, or approve disbursements by preference.
 
@@ -975,6 +980,7 @@ Closure must show:
 - unused funds;
 - complaints status;
 - fiscalizer final report;
+- post-closure coverage mechanism, active window, covered scope, and expiry route where applicable;
 - reputation effects.
 
 Under H008, closure should create a `Project Closure Accountability Record`. This record aggregates the accepted project promises, expected fulfillment/control evidence, submitted evidence, evidence sufficiency status, EvaluationRecords, FiscalizationReports, financial closure, unresolved issues, Responsibility Events, Reputation Inputs, and citizen-facing closure explanation.
@@ -991,6 +997,8 @@ which roles became responsible for which outcomes
 ```
 
 A project cannot close as fulfilled when its main commitments remain unsupported by sufficient, reviewed, traceable fulfillment/control evidence.
+
+Closure also does not mean indefinite internal complaint availability. If the project has an active Post-Closure Coverage Profile, covered complaints, contradictory evidence, hidden antivalues, or defects may be reviewed inside the platform only during the declared window and within the declared scope. After the window expires, or when the issue is outside coverage, the ordinary route is external: court, regulator, comptroller, contract enforcement, competent authority, or another country-specific path. A final external decision may later be recorded where the active rule allows responsibility, reputation, or historical correction effects.
 
 Reputation should not be calculated directly from closure labels alone. Closure category is procedural context; role-specific reputation updates should derive primarily from verified fulfillment of the value thesis, metric breakdown, founded complaints, fulfillment evidence corrections, and responsibility events.
 

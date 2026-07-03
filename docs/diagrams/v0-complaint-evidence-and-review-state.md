@@ -15,7 +15,7 @@ Source baseline:
 - `docs/26_CITIZEN_COMPLAINT_FLOW.md`
 - `docs/diagrams/v0-contextualized-evidence-item-state.md`
 
-Related sources: H013, H014, H015, H016, H024, C004, C005, C014, C024.
+Related sources: H013, H014, H015, H016, H024, C004, C005, C014, C024, A007.
 
 ## Complaint State Machine
 
@@ -23,7 +23,11 @@ Related sources: H013, H014, H015, H016, H024, C004, C005, C014, C024.
 stateDiagram-v2
     [*] --> Draft
     Draft --> Submitted: verified actor submits complaint
-    Submitted --> MinimumStructureReview: allegation, scope, and initial material checked
+    Submitted --> PostClosureCoverageCheck: target project closed
+    Submitted --> MinimumStructureReview: target project open
+    PostClosureCoverageCheck --> MinimumStructureReview: active coverage and covered scope
+    PostClosureCoverageCheck --> ExternalRouteOnly: expired or out of scope
+    ExternalRouteOnly --> Closed: external route explained
 
     MinimumStructureReview --> NeedsMoreInformation: missing scope or complaint evidence
     NeedsMoreInformation --> MinimumStructureReview: information supplied
@@ -130,6 +134,8 @@ flowchart TD
 ## State Rules
 
 - `Submitted` means a verified actor filed a complaint. It does not mean the allegation is true.
+- `PostClosureCoverageCheck` applies only when the target project is already closed. Platform review continues only if the active Post-Closure Coverage Profile is open and covers the issue.
+- `ExternalRouteOnly` means ordinary platform review is not available because the post-closure window expired or the issue is outside covered scope. The citizen is routed to court, regulator, comptroller, contract, competent authority, or country-specific channels, and a later final external decision may be recorded where allowed.
 - `SupportWindowOpen` means citizens may support, object, contribute complaint evidence, and reserve conditional review funding. Support is attention for review, not proof.
 - `PendingQuote` and `FundingPending` are procedural funding states. They do not block project execution or disbursement by themselves.
 - `ReadyForAdmissibilityReview` requires configured support, quote, review funding, and minimum complaint evidence or initial supporting material.
@@ -170,6 +176,9 @@ No physical construction halt unless a competent authority, court, regulator, le
 
 Final effect:
 If review confirms defective design, the system may require correction, reformulation, retained funds, revocation, ResponsibilityEvent, or role-specific ReputationInput for the responsible designer, executor, fiscalizer, or other actor.
+
+If the same complaint is filed after project closure:
+the system first checks the Post-Closure Coverage Profile. A day-60 complaint inside a 180-day executor warranty can proceed to platform review if the issue is covered. A day-900 complaint after coverage expiry is routed externally, and the platform records a final external decision only if the active rule allows it.
 ```
 
 ## Boundary With Other State Machines

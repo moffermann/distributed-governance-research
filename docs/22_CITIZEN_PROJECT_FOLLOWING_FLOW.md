@@ -84,6 +84,7 @@ Examples:
 - project becomes execution-ready;
 - project enters execution;
 - project closes;
+- post-closure coverage becomes active or expires;
 - project is paused;
 - project is reformulated;
 - blocking complaint appears.
@@ -101,6 +102,7 @@ Examples:
 - milestone completed;
 - important evidence delivered;
 - relevant complaint resolved;
+- covered post-closure review opened or closed;
 - budget or beneficiary change.
 
 ### Detailed
@@ -125,6 +127,7 @@ Examples:
 
 - material reformulation;
 - pause, revocation, or closure;
+- post-closure coverage expiry or external-route notice;
 - complaint or fiscalization issue requiring attention;
 - funding-treatment event;
 - Governance Resolution or Review Timeout Resolution affecting the followed project.

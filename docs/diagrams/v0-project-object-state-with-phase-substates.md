@@ -12,7 +12,7 @@ Source baseline:
 - `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
 - `docs/diagrams/v0-formal-entity-relationship.md`
 
-Related sources: H008, H011, H013, H016, H018, H019, H021, H022, H040, C005, C016, C017, C018, C024, A006, Funding Window Expiry.
+Related sources: H008, H011, H013, H016, H018, H019, H021, H022, H040, C005, C016, C017, C018, C024, A006, A007, Funding Window Expiry.
 
 ## Parent Project State Machine
 
@@ -61,7 +61,14 @@ stateDiagram-v2
     Revoked --> ClosureAccountability: final accountability required
     Expired --> ClosureAccountability: final accountability required
     ExpiredUnfunded --> ClosureAccountability: funding attempt and fund treatment recorded
-    ClosureAccountability --> Closed: promise, evidence, money, and responsibility recorded
+    ClosureAccountability --> PostClosureCoverageActive: coverage window active
+    ClosureAccountability --> Closed: no platform coverage window
+    PostClosureCoverageActive --> PostClosureReview: covered complaint or contradiction admitted
+    PostClosureReview --> PostClosureCoverageActive: no effect or correction complete
+    PostClosureReview --> ClosureAccountability: correction, mitigation, responsibility, or coverage effect recorded
+    PostClosureCoverageActive --> Closed: coverage window expires
+    Closed --> ExternalDecisionRecorded: competent external decision later recorded
+    ExternalDecisionRecorded --> Closed: historical, responsibility, or reputation effect recorded where allowed
     Closed --> [*]
 ```
 
@@ -123,6 +130,7 @@ stateDiagram-v2
 - A phase-level pause, rejection, correction, or review escalates to the parent `Project` only when the related `SystemicPauseRecord`, `EvaluationRecord`, `ComplaintAdmissibilityReferralRecord`, `ProjectVariationRecord`, or `ReformulationProposal` declares a project-level affected scope.
 - `ExecutionReady` may apply to the parent project, a specific phase, or both. A later phase can remain `FundingReserved` or `PrerequisitePending` while an earlier phase is `PhaseInExecution`.
 - `ClosureAccountability` is a parent project state because final accountability must summarize promises, phases, evidence, fiscalization, money treatment, responsibility events, and reputation inputs.
+- `PostClosureCoverageActive` is a parent project state for the declared post-closure accountability window. Covered issues may be reviewed inside the platform only while the window is active and within covered scope.
 - `ContinuityRenewalWindow` and `PhaseContinuityRenewalWindow` are visibility states for A006. They may generate or update a continuity-need Idea and allow follow-on proposals, but they do not automatically renew the current executor.
 - `ExpiredUnfunded` and `PhaseExpiredUnfunded` mean the relevant FundingAttempt failed to reach financing closure within its visible window. Eligible unused commitments return, reassign, or follow default rules; attempt history remains visible.
 - Phase closure does not equal project closure unless all required phases and final project accountability conditions are complete.

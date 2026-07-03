@@ -252,6 +252,7 @@ Key attributes:
 - variation control history;
 - threshold policy or policy reference;
 - Financial Assurance Profile;
+- Post-Closure Coverage Profile where execution funding is allowed;
 - Continuity Risk Classification where applicable;
 - minimum funded service period where applicable;
 - maintenance, staffing, or operation obligation where applicable;
@@ -305,6 +306,7 @@ Project has ReformulationPolicy or reformulation policy reference
 Project has ThresholdPolicy or threshold policy reference
 Project has one FinancialAssuranceProfile where execution funding is allowed
 Project has one or more GuaranteeMaterializationRecords where assurance is required
+Project has one PostClosureCoverageProfile where execution funding is allowed
 Project may generate or reference one or more continuity-need Ideas
 Project may have one ProjectClosureAccountabilityRecord
 Project has many AuditEvents
@@ -1536,6 +1538,69 @@ eligible execution budget or phase budget * global guarantee percentage
 
 The global percentage is configured by the administrator, active protocol, operating mode, or lawful country implementation rule, not by the proposer, designer, or executor.
 
+## Post-Closure Coverage Profile
+
+A project-level or phase-level object defining whether and how post-closure issues can be reviewed, corrected, mitigated, paid for, or routed after project closure.
+
+This is distinct from the Financial Assurance Profile. Financial assurance protects execution funding and recovery. Post-closure coverage defines the accountability window and coverage source after the project has been closed by the responsible fiscalization and closure path.
+
+Attributes:
+
+- profile id;
+- project;
+- project phase or covered scope where applicable;
+- Threshold Policy or policy reference;
+- post-closure accountability window start;
+- post-closure accountability window end;
+- coverage mechanism: Executor Direct Warranty or Equivalent Insurance / Bond / Coverage;
+- coverage provider or responsible actor;
+- covered dimensions: defects, value floors, antivalue ceilings, public access, safety, service quality, continuity, or other configured dimensions;
+- excluded dimensions;
+- response deadline;
+- review or fiscalization path;
+- correction, mitigation, replacement, insurance, guarantee, or external-route rule;
+- coverage amount, cap, or limitation where applicable;
+- link to FinancialAssuranceProfile, GuaranteeMaterializationRecord, insurance, bond, escrow, retention, or lawful equivalent where applicable;
+- status;
+- citizen-facing summary;
+- audit trail.
+
+States:
+
+```text
+Draft
+Required
+Pending coverage confirmation
+Active
+Post-closure review active
+Correction or mitigation required
+Coverage executed
+Expired
+External route only
+Closed
+```
+
+Relationships:
+
+```text
+PostClosureCoverageProfile belongs to Project
+PostClosureCoverageProfile may belong to ProjectPhase
+PostClosureCoverageProfile references ThresholdPolicy
+PostClosureCoverageProfile may reference FinancialAssuranceProfile
+PostClosureCoverageProfile may require GuaranteeMaterializationRecord, insurance, bond, escrow, retention, or equivalent coverage
+PostClosureCoverageProfile may generate post-closure ComplaintReviewPolicy effects
+PostClosureCoverageProfile may produce EvaluationRecords, ResponsibilityEvents, ReputationInputs, FinancialOrders, or external-route records
+PostClosureCoverageProfile records AuditEvents
+```
+
+Rule:
+
+> Every execution-financeable project should declare post-closure coverage before execution readiness or final closure. Coverage may be provided as an Executor Direct Warranty or as equivalent insurance, bond, guarantee, escrow, retention, or lawful coverage. The proposer, designer, or executor cannot self-select a weaker warranty period, coverage scope, or coverage mechanism when the active Threshold Policy requires more.
+
+Post-closure complaint rule:
+
+> After project closure, ordinary platform complaints are accepted only within the active post-closure accountability window and only for covered dimensions. After the window expires, ordinary claims should route to external legal, regulatory, contract, court, or competent-authority channels. A final external decision may later be recorded where the active rule allows responsibility, reputation, or historical-correction effects.
+
 ## Guarantee Materialization Record
 
 A record proving that the required guarantee, deposit, insurance, bond, escrow, retention, or equivalent instrument has been confirmed by a lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or country-specific mechanism.
@@ -2139,6 +2204,7 @@ Attributes:
 - technical, financial, beneficiary, affected-party, or authority reviews where applicable;
 - unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
 - financial closure: released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- post-closure coverage result where applicable: executor warranty active, equivalent coverage active, coverage executed, coverage expired, or external route only;
 - continuity result where applicable: renewed, follow-on Idea opened, follow-on project linked, replacement pending, wind-down completed, or continuity gap unresolved;
 - closure outcome: fulfilled, partially fulfilled, unfulfilled, revoked, expired, or reformulated into new version;
 - Responsibility Events where reviewed responsibility is established;
@@ -2156,6 +2222,7 @@ ProjectClosureAccountabilityRecord references ProjectEvidentialContract
 ProjectClosureAccountabilityRecord references EvidenceItems
 ProjectClosureAccountabilityRecord references EvaluationRecords
 ProjectClosureAccountabilityRecord references FiscalizationReports
+ProjectClosureAccountabilityRecord may reference PostClosureCoverageProfile
 ProjectClosureAccountabilityRecord may reference Disbursements and FinancialOrders
 ProjectClosureAccountabilityRecord may feed continuity renewal Ideas
 ProjectClosureAccountabilityRecord may create or reference ResponsibilityEvents

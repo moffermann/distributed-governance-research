@@ -55,6 +55,7 @@ A project card should include:
 - closing deadline;
 - funding attempt label where relevant;
 - expired-unfunded or republished history label where relevant;
+- post-closure coverage label where relevant;
 - visible warnings where relevant;
 - signal dashboard;
 - primary action button;
@@ -81,6 +82,7 @@ $7.560.000 reunidos de $12.000.000
 Faltan $4.440.000
 Cierra en 8 días
 Intento de financiamiento: 1
+Cobertura post-cierre: garantía directa 180 días
 
 Dashboard:
 👥 Beneficiarios: 80
@@ -92,6 +94,7 @@ Dashboard:
 🚩 Denuncias: 0
 📎 Evidencias: 12
 🧭 Verificación: package strong
+🧾 Cobertura: garantía activa al cierre
 
 Warnings:
 Declared relationship: the executing club will also use the facility under public access rules.
@@ -301,6 +304,27 @@ Si no se financia: vuelve a tu perfil automático
 ```
 
 This is clearer than showing only a percentage.
+
+## Post-closure coverage display
+
+Where the project receives execution funding and post-closure coverage is required, the card may show one compact signal:
+
+```text
+Coverage:
+executor warranty 180 days
+
+or
+
+Coverage:
+insurance / bond
+
+or
+
+Coverage:
+expired - external route
+```
+
+Clicking opens the project dashboard or full sheet where the citizen can see the window, covered scope, mechanism, and external route after expiry.
 
 ## First-layer language
 

@@ -117,6 +117,7 @@ A project must include:
 - metrics;
 - Project Evidential Contract and fulfillment evidence obligations;
 - Financial Assurance Profile;
+- Post-Closure Coverage Profile where execution funding is allowed;
 - Continuity Risk Classification where the project is recurring, continuity-critical, emergency, or maintenance-dependent;
 - fiscalization requirements;
 - related-party and conflict declarations;
@@ -163,7 +164,7 @@ Rule:
 
 Rule:
 
-> Thresholds, procedural burden profiles, and assurance requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces guarantees, evidence, fiscalization, documents, or review obligations.
+> Thresholds, procedural burden profiles, assurance requirements, and post-closure coverage requirements must not be self-selected by the proposer, designer, or executor when lower classification reduces guarantees, evidence, fiscalization, documents, review obligations, coverage windows, or coverage scope.
 
 Rule:
 
@@ -424,6 +425,8 @@ A pending design gate is not itself a critical validation failure if the phase p
 
 Financial assurance is universal across execution-financeable projects, not construction-specific. Care services, supply purchases, workshops, food support, infrastructure, and other social projects may all require the active global guarantee or equivalent assurance. The proposer, designer, or executor may satisfy the requirement but cannot define the guarantee percentage or self-classify into a lower assurance obligation.
 
+Post-closure coverage is also required for execution-financeable projects where the active Threshold Policy requires it. The project should declare whether covered post-closure accountability will be handled through `Executor Direct Warranty` or `Equivalent Insurance / Bond / Coverage`. The proposer, designer, or executor may provide or pay for the mechanism, but cannot define a weaker window or scope when the policy, contract, operating mode, protocol, or country implementation controls it.
+
 Financial execution/custody is external infrastructure. The platform or protocol may generate financial orders for release, retention, return, reassignment, recovery, guarantee execution, or balance closure. The custodian executes valid orders and reports status; it may confirm guarantee materialization where applicable, but it does not select projects, evaluate civic value, fiscalize milestones, or make discretionary disbursement judgments.
 
 Money states:
@@ -452,6 +455,8 @@ Where project phases exist, `Open project` may also gather phase-specific fundin
 Rule:
 
 > A project becomes execution-ready when all applicable closure conditions are complete, not because it passed a rigid sequence.
+
+Execution readiness for an execution-financeable project should also confirm the applicable Post-Closure Coverage Profile where required. A project may not treat final disbursement as a release from covered post-closure defects, hidden antivalues, or contradictory evidence discovered inside the declared window.
 
 ### 12. Citizen interface layers
 
@@ -607,6 +612,8 @@ After admissibility, the competent reviewer or fiscalizer should record affected
 
 For legally regulated projects, such as environmental, mining, energy, infrastructure, water, health, safety, territorial, or permit-based projects, the platform does not replace courts, regulators, or competent authorities. Platform review may create reports, complaint evidence indexes, referral packages, scoped systemic pauses, and public traceability, but material/legal suspension, operational suspension, permit revocation, legal sanction, or construction halt requires a competent authority, regulator, or judicial decision where applicable.
 
+After project closure, the ordinary platform complaint path should not remain open indefinitely. A complaint, contradictory evidence item, hidden antivalue allegation, or defect claim may proceed inside the platform only if the active Post-Closure Coverage Profile is still open and the issue falls within its covered scope. Outside that window or scope, the citizen is routed to an external court, regulator, comptroller, contract, competent authority, or country-specific path. A final external resolution may later be recorded where the active rule allows responsibility, reputation, or historical correction effects.
+
 Complaint filing, support, quote, funding, admissibility, referral, and pending systemic pause are procedural signals. They may be visible in public history, but formal negative reputation requires final resolution, founded responsibility, confirmed non-compliance, a role-specific Responsibility Event, or an external order/resolution that establishes responsibility.
 
 ### 18. Delegation model
@@ -631,7 +638,7 @@ On first active use, the citizen should select or acknowledge a base allocation 
 
 ### 20. Technical audit trail
 
-Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, Project Closure Accountability Records, Assisted Deliberation Context source traces, material information claims, verified discoveries, fiscalization, fiscalizer eligibility and contextual reputation profiles, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
+Core v0 requires Layer 5 auditability for project versions, value history, metrics, Project Evidential Contract history, budget, custody trace, milestones, disbursements, contextualized evidence, EvaluationRecords, Project Closure Accountability Records, Post-Closure Coverage Profiles, Assisted Deliberation Context source traces, material information claims, verified discoveries, fiscalization, fiscalizer eligibility and contextual reputation profiles, complaints, reputation signals, reputation inputs, reputation updates, role events, relationship declarations, moderation decisions, and protocol references.
 
 Layer 5 should also preserve project phases, phase gates, phase funding lanes, design-gate decisions, reserved execution funding status, and phase failure or reformulation treatment.
 
@@ -692,6 +699,7 @@ This record aggregates:
 - EvaluationRecords and FiscalizationReports;
 - unresolved complaints, contradictions, observations, or systemic pauses;
 - financial closure;
+- post-closure coverage mechanism, window, covered scope, and expiry route where applicable;
 - closure outcome;
 - Responsibility Events;
 - Reputation Inputs or no-reputation-effect findings;
@@ -702,6 +710,8 @@ Rule:
 > A project cannot close as fulfilled if its main commitments are not supported by sufficient, reviewed, traceable fulfillment/control evidence.
 
 Evidence submission, producer qualification, measurement/review method, review, correction, and closure deadlines should be configured through Threshold Policy, Project Evidential Contract, Disbursement Milestone Plan, Operating Mode, protocol rule, or public administrative rule. They should not be improvised after project actors already relied on different rules.
+
+Post-closure accountability should be configured before closure through the Post-Closure Coverage Profile. During the active window, covered complaints or contradictory evidence may trigger review, correction, mitigation, warranty response, insurance/bond/coverage execution, responsibility events, reputation inputs, or no-effect findings. After expiry or outside scope, ordinary platform complaint review closes and the proper route is external unless a competent external decision later becomes recordable under the active rule.
 
 ### 23. Role-based reputation
 

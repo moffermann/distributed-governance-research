@@ -14,6 +14,8 @@ This flow concerns `Complaint Evidence`. Complaint evidence supports, refutes, c
 
 Complaints are submitted by verified actors. Visible identity is the default where no special risk exists, but a complainant may request protected identity when public exposure creates a retaliation, safety, privacy, or beneficiary-protection risk. Protected identity is not an anonymous complaint: the system retains restricted accountability and authorized reviewers may verify identity under access-log rules.
 
+For closed projects, this flow applies only when the active Post-Closure Coverage Profile is still open and the complaint issue falls inside the covered scope. If the coverage window expired or the issue is outside scope, the system should route the citizen to the external legal, regulatory, contractual, comptroller, court, or competent-authority path, and may later record a final external decision where the active rule allows it.
+
 ## Main question
 
 ```text
@@ -73,15 +75,16 @@ A complaint may point to a material information claim, but the citizen should no
 5. System asks project area affected
 6. Citizen chooses visible identity or requests protected identity if justified
 7. Citizen reviews possible consequences
-8. Complaint is submitted
-9. System immediately sends complaint to fiscalizer for quote
-10. Complaint opens support window
-11. Citizens may support and reserve conditional review funding
-12. Fiscalizer publishes quote without seeing reserved funding totals
-13. If support threshold and quoted review funding are reached, fiscalizer reviews admissibility
-14. If admitted, the fiscalizer records affected scope and any scoped systemic pause
-15. Project actors may respond where review proceeds
-16. Resolution, referral, or final outcome is published and traceable
+8. If the project is closed, system checks the Post-Closure Coverage Profile
+9. Complaint is submitted or routed externally if post-closure coverage is expired/out of scope
+10. System immediately sends complaint to fiscalizer for quote where platform review proceeds
+11. Complaint opens support window
+12. Citizens may support and reserve conditional review funding
+13. Fiscalizer publishes quote without seeing reserved funding totals
+14. If support threshold and quoted review funding are reached, fiscalizer reviews admissibility
+15. If admitted, the fiscalizer records affected scope and any scoped systemic pause or covered post-closure review path
+16. Project actors may respond where review proceeds
+17. Resolution, referral, or final outcome is published and traceable
 ```
 
 ## 1. Explanation
@@ -244,6 +247,9 @@ Sent to fiscalizer review
 Referred to competent authority
 In external authority review
 External suspension ordered
+Post-closure coverage check
+Post-closure review active
+Coverage expired - external route
 Final resolution pending
 Open
 Blocking
@@ -268,6 +274,31 @@ Bloqueante
 Resuelta
 Rechazada
 Reabierta
+Cobertura vencida: vía externa
+```
+
+## 5a. Post-closure coverage check
+
+If the target project is already closed, the system should not treat the complaint as an ordinary always-open platform review.
+
+The system should check:
+
+- whether the project has a Post-Closure Coverage Profile;
+- whether the coverage window is still active;
+- whether the issue is inside the covered dimensions;
+- whether the mechanism is executor direct warranty or equivalent insurance, bond, guarantee, escrow, retention, or lawful coverage;
+- which reviewer, fiscalizer, insurer, guarantor, custodian, or external authority path applies.
+
+If the complaint is covered, it proceeds through the ordinary support, quote, funding, admissibility, response, review, and resolution rules, with post-closure effects limited to the covered scope.
+
+If the complaint is not covered because the window expired or the issue is out of scope, the citizen should receive a clear external-route explanation:
+
+```text
+This project is closed and its platform coverage window has expired.
+
+You can still use the external legal, regulatory, contract, court, comptroller, or competent-authority route where applicable.
+
+If a competent external decision is later issued, the system may record it if the active rule allows responsibility, reputation, or historical correction effects.
 ```
 
 ## 6. Blocking complaints
@@ -389,6 +420,7 @@ The complaint flow should not:
 - treat objections as a numeric veto against complaint review;
 - show reserved review funding totals to the fiscalizer before quote publication;
 - let the platform replace courts, regulators, or competent authorities for regulated project suspension;
+- keep ordinary post-closure platform complaints open after the declared coverage window expires;
 - treat complaint admissibility or referral as final responsibility;
 - turn a pending systemic pause directly into a negative reputation update;
 - expose sensitive complainant information without rules;

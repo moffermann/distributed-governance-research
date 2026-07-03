@@ -490,6 +490,22 @@ This compares against real current practice: continuity funding can already be r
 
 ---
 
+## A007 — Conflicting reviews and post-closure accountability
+
+**Severity:** Medium / High
+**Status:** Resolved
+**Resolution document:** `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`
+
+### Accepted v0 rule
+
+Formal evaluations must be dimension-scoped and effect-scoped. A fiscalizer report, beneficiary observation, technical measurement, complaint finding, fulfillment evaluation, and reputation input may concern the same project without producing the same formal effect.
+
+Before closure, conflicting evidence or complaints use ordinary complaint, fiscalization, pause, correction, retention, mitigation, disbursement-blocking, and review paths.
+
+After closure, ordinary platform complaints do not remain open forever. Execution-financeable projects that require post-closure accountability should declare a Post-Closure Coverage Profile with either `Executor Direct Warranty` or `Equivalent Insurance / Bond / Coverage`. Covered complaints, contradictory evidence, hidden antivalues, or defect claims may proceed inside the platform only during the declared window and within the covered scope. After expiry or outside scope, the route is external: court, regulator, comptroller, contract enforcement, competent authority, or country-specific path. A final external decision may later be recorded where the active rule allows responsibility, reputation, or historical correction effects.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -510,6 +526,9 @@ This compares against real current practice: continuity funding can already be r
 - [ ] Does every financeable project reference an active Planning Scope?
 - [ ] Does every project have value thesis, beneficiaries, metrics, evidence, fiscalization, risks, and antivalues?
 - [ ] Does every execution-financeable project have a Financial Assurance Profile?
+- [ ] Does every execution-financeable project that requires post-closure accountability have a Post-Closure Coverage Profile?
+- [ ] Does the profile state whether coverage is Executor Direct Warranty or Equivalent Insurance / Bond / Coverage?
+- [ ] Are the post-closure window, covered dimensions, excluded dimensions, response path, and expiry route defined before closure?
 - [ ] Is financial assurance treated as universal across social projects, not only construction or infrastructure?
 - [ ] If the project uses phases, are phase deliverables, gates, dependencies, and failure treatment explicit?
 - [ ] If the project is recurring, continuity-critical, emergency, or maintenance-dependent, does it expose Continuity Risk Classification, funded service period, renewal trigger, future funding dependency, beneficiary protection, and wind-down rule?
@@ -618,6 +637,7 @@ This compares against real current practice: continuity funding can already be r
 - [ ] Are partial releases governed by pre-defined rules?
 - [ ] Are retained funds visible?
 - [ ] Does release check the Financial Assurance Profile and Guarantee Materialization Record where applicable?
+- [ ] Does final release or closure preserve any active post-closure warranty, insurance, bond, guarantee, escrow, retention, or equivalent coverage reference?
 - [ ] Is every release auditable?
 - [ ] Are later-phase funds blocked when prerequisite phase gates are pending, rejected, or materially reformulated?
 
@@ -678,6 +698,9 @@ This compares against real current practice: continuity funding can already be r
 - [ ] Does admissibility create a Complaint Admissibility / Referral Record before any scoped systemic pause?
 - [ ] Are complaint review/control/correction/mitigation/referral funds distinguished from execution funds during a pause?
 - [ ] Does the model require court, regulator, competent authority, legal rule, or enforceable obligation before claiming material/legal suspension?
+- [ ] If the project is closed, does the complaint path first check whether the Post-Closure Coverage Profile is active and covers the issue?
+- [ ] Are expired or out-of-scope post-closure complaints routed externally instead of processed as ordinary platform complaints?
+- [ ] Can final external decisions be recorded without treating mere external filing as proof or reputation input?
 - [ ] Are weak or abusive complaints handled without discouraging good-faith complaints?
 - [ ] Does every complaint have a visible status?
 
@@ -752,7 +775,8 @@ Highest-priority integration checks:
 13. Ensure material rule changes are classified as Administrative Rule Change, System Implementation Change, or Protocol Change Proposal, with public reason, effective date, transition rule, and audit trace.
 14. Ensure distributed fiscalization remains protocol-selected, conflict-checked, risk-adjusted, auditable, and capped against unlimited secondary fiscalization or duplicate evidence funding.
 15. Ensure every financeable project aligns with an active Planning Scope while keeping full distributed roadmap construction as an explicit open question.
-16. Ensure project closure creates an accountability record connecting promise, fulfillment/control evidence, evaluation, financial closure, responsibility, reputation, and unresolved issues.
+16. Ensure project closure creates an accountability record connecting promise, fulfillment/control evidence, evaluation, financial closure, post-closure coverage, responsibility, reputation, and unresolved issues.
+17. Ensure post-closure complaints are accepted inside the platform only within an active covered window and otherwise routed externally.
 ```
 
 ## Proposed next working method

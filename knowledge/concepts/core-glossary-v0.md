@@ -199,6 +199,43 @@ If the window expires without financing closure, the outcome is `Expired Unfunde
 
 ---
 
+## Financial Assurance Profile
+
+A Financial Assurance Profile is the Core v0 object that defines the financial protection required for an execution-financeable project or phase before execution readiness, disbursement, or release.
+
+It may require a guarantee, retention, insurance, bond, escrow, treasury confirmation, bank confirmation, or lawful equivalent. In Core v0 the default guarantee percentage is externally configured by administrator, protocol, operating mode, or country implementation, not self-selected by the proposer, designer, or executor.
+
+Financial assurance protects execution funds, failure treatment, recovery, retentions, and release discipline. It is related to, but distinct from, post-closure coverage.
+
+---
+
+## Post-Closure Coverage Profile
+
+A Post-Closure Coverage Profile is the Core v0 object that defines who responds after project closure for covered defects, hidden antivalues, contradictory evidence, correction, mitigation, replacement, warranty review, or equivalent post-closure accountability.
+
+The two Core v0 mechanisms are:
+
+```text
+Executor Direct Warranty
+Equivalent Insurance / Bond / Coverage
+```
+
+The proposer, designer, or executor may provide or pay for the mechanism, but cannot freely choose a weaker coverage window or scope when the active Threshold Policy, contract, operating mode, protocol, Financial Assurance Profile, or country implementation controls it.
+
+The profile should state the active window, covered dimensions, excluded dimensions, response path, amount or cap where relevant, responsible actor or provider, and the route after expiry.
+
+---
+
+## Post-Closure Accountability Window
+
+A Post-Closure Accountability Window is the time-limited period after closure during which covered complaints, contradictory evidence, hidden antivalues, or defects may still be processed inside the platform under the active Post-Closure Coverage Profile.
+
+Inside the window, a covered issue may trigger fiscalizer or competent-reviewer evaluation, correction, mitigation, warranty response, insurance/bond/coverage execution, responsibility review, reputation input, or no-effect finding.
+
+After the window expires, or when the issue is outside the covered scope, ordinary platform complaint review closes. Citizens should use the external legal, regulatory, contractual, comptroller, court, or competent-authority route. The platform may later record a final external decision where the active rule allows responsibility, reputation, or historical correction effects.
+
+---
+
 ## Budget Liquidity Smoothing
 
 Budget Liquidity Smoothing is an optional future or country-specific fiscal policy for managing cyclical allocation capacity against an authorized annual or period budget.

@@ -4,7 +4,7 @@
 
 Show that execution readiness depends on the project's applicable threshold policy and multiple closure conditions, including both execution funding and independent control capacity.
 
-Related references: H011, H019, H027, C002, C003, C013, C016, A001.
+Related references: H011, H019, H027, C002, C003, C013, C016, A001, A007.
 
 ```mermaid
 flowchart TD
@@ -22,6 +22,7 @@ flowchart TD
     OP --> B[Beneficiary or Affected-Party Confirmation]
     OP --> D[Required Documents and Permits]
     OP --> AS[Financial Assurance Profile and guarantee materialization]
+    OP --> PC[Post-Closure Coverage Profile if required]
     OP --> C[Comments and Questions]
     OP --> Q[Complaints]
     OP --> MP[Disbursement Milestone Plan Validation]
@@ -38,6 +39,7 @@ flowchart TD
     B --> CC
     D --> CC
     AS --> CC
+    PC --> CC
     MP --> CC
     Q -->|no active systemic pause or blocking complaint| CC
 
@@ -47,4 +49,4 @@ flowchart TD
 
 ## Rule
 
-> A project becomes execution-ready only when its applicable threshold policy is visible and the required execution funding, phase gates, control capacity, fulfillment/control evidence capacity, Required Evidence Package, legitimacy profile conditions where required, affected-party mapping or consultation Readiness Evidence where required, documents, financial assurance, complaints, and disbursement-plan validation are coherent.
+> A project becomes execution-ready only when its applicable threshold policy is visible and the required execution funding, phase gates, control capacity, fulfillment/control evidence capacity, Required Evidence Package, legitimacy profile conditions where required, affected-party mapping or consultation Readiness Evidence where required, documents, financial assurance, post-closure coverage where required, complaints, and disbursement-plan validation are coherent.

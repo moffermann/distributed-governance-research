@@ -282,6 +282,21 @@ If not renewed:
 wind-down rule declared
 ```
 
+If the project receives execution funding and requires post-closure coverage, the summary should expose the simple coverage label:
+
+```text
+After closure:
+covered by executor direct warranty for 180 days
+
+or
+
+After closure:
+covered by insurance / bond
+
+If coverage expires:
+later claims use the external legal, regulatory, contract, or competent-authority route.
+```
+
 ## 4. Funding confirmation
 
 After confirmation, the citizen receives a simple confirmation.
@@ -462,6 +477,8 @@ This prevents arbitrary withdrawals from destabilizing projects while preserving
 
 Under H011, guarantees are not construction-only. Care services, school-supply purchases, workshops, food support, health support, infrastructure, and other execution-financeable projects may all have a Financial Assurance Profile. Required guarantees or equivalent instruments are not considered materialized until confirmed by the relevant custodian, guarantor, insurer, treasury, bank, escrow provider, or lawful equivalent.
 
+Under A007, execution-financeable projects may also expose a Post-Closure Coverage Profile. This does not give funders a free post-release withdrawal right. It tells them what covered path remains after closure: executor direct warranty, equivalent insurance/bond/coverage, active window, covered scope, and external route after expiry.
+
 The same rule applies to integrated design-and-execution projects. A citizen does not receive a free withdrawal right merely because the design is pending. But if the design phase fails the public baseline or requires material reformulation, unreleased execution-phase balances follow the policy-defined failure or reformulation treatment.
 
 ## Funding window and attempt expiry
@@ -553,6 +570,7 @@ The funding flow should not:
 - require technical understanding before funding;
 - let the citizen lose track of a funded project;
 - hide what happens if a project fails, expires, or is reformulated.
+- hide the declared post-closure coverage mechanism, window, or expiry route where execution funding requires it;
 - accept unlimited post-closure control contributions;
 - present supplemental control funding as money for the executor;
 - fund duplicate evidence or unlimited fiscalizers.

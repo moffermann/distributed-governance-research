@@ -257,7 +257,9 @@ Responsible fiscalization is distributed in supply but not arbitrary in assignme
 
 Citizen observation, beneficiary confirmation, fulfillment evidence production, complaint evidence, and complaints can strengthen or challenge the fiscalizer's work, but they do not automatically replace the responsible fiscalizer.
 
-For final closure, fiscalization outputs should feed the Project Closure Accountability Record together with evidence sufficiency status, EvaluationRecords, financial closure, unresolved contradictions, Responsibility Events, and Reputation Inputs or no-reputation-effect findings.
+For final closure, fiscalization outputs should feed the Project Closure Accountability Record together with evidence sufficiency status, EvaluationRecords, financial closure, unresolved contradictions, Responsibility Events, Reputation Inputs or no-reputation-effect findings, and the active Post-Closure Coverage Profile where applicable.
+
+Post-closure fiscalization is not an unlimited ordinary complaint channel. If a closed project has an active post-closure accountability window and the issue falls inside the covered scope, the fiscalizer or competent reviewer may evaluate later contradictory evidence, hidden antivalues, or defects and route the result to correction, mitigation, warranty response, insurance/bond/coverage execution, responsibility review, reputation input, or no-effect finding. After expiry or outside scope, the citizen should be routed to the external legal, regulatory, contractual, or competent-authority path; the platform may later record a final external decision where the active rule allows it.
 
 ## 4. Technical or reinforced fiscalization
 
@@ -667,6 +669,7 @@ For ordinary citizens, the interface should show a simplified project sheet:
 - whether fiscalization is included;
 - whether fulfillment evidence is required;
 - whether financial protection, guarantees, or retentions apply;
+- whether post-closure warranty, insurance, bond, or equivalent coverage is active;
 - current status;
 - simple action buttons: fund, support, delegate, follow, provide fulfillment evidence, report problem.
 

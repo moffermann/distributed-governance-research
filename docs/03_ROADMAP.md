@@ -267,7 +267,9 @@ The ninety-second residual cleanup propagated A006 / `docs/72_CONTINUITY_RISK_CL
 
 The ninety-third residual cleanup accepted and propagated `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md` before A007. The accepted implementation adds a Core v0 `FundingAttempt` and `Expired Unfunded` outcome so financeable projects, phases, and lanes cannot hold civic commitments indefinitely while waiting for financing closure. Eligible unused commitments return, reassign, or follow citizen defaults when attempts expire. Republication and cloning preserve attempt history. Budget Liquidity Smoothing is preserved as Extension v1+ / country implementation only: public, capped, stress-tested, audited, tied to authorized budgets, and separated from treasury discretion over project priority.
 
-Next review candidate: continue Phase 3 propagation with A007 / `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`.
+The ninety-fourth residual cleanup propagated A007 / `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md` across the core corpus, fiscalization, complaint flow, funding, disbursement, lifecycle, entity maps, formal inventory, schema draft, responsibility matrix, glossary, checklist, citizen surfaces, Layer 5 audit trail, and affected diagrams. The accepted implementation keeps pre-closure conflicts inside ordinary complaint, fiscalization, pause, correction, retention, mitigation, disbursement-blocking, and review paths, but adds a Core v0 `Post-Closure Coverage Profile` for execution-financeable projects where post-closure accountability is required. Covered post-closure complaints, contradictory evidence, hidden antivalues, or defect claims can proceed inside the platform only during the declared window and within covered scope, through either `Executor Direct Warranty` or `Equivalent Insurance / Bond / Coverage`. After expiry or outside scope, ordinary platform complaints route externally, while final competent external decisions may later be recorded where the active rule allows responsibility, reputation, or historical correction effects.
+
+Next review candidate: continue Phase 3 propagation with A008 / `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`.
 
 Approximate current maturity:
 
@@ -424,7 +426,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** attack and defense queues prepared; paired review integrated into accepted resolutions; core propagation active. A001-A006, A013, and the accepted Funding Window Expiry / Budget Liquidity Smoothing interstitial resolution have been propagated into the core corpus.
+**Status:** attack and defense queues prepared; paired review integrated into accepted resolutions; core propagation active. A001-A007, A013, and the accepted Funding Window Expiry / Budget Liquidity Smoothing interstitial resolution have been propagated into the core corpus.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -622,13 +624,14 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Review and propagate A007 / `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`.
-2. Preserve the A005/A006 boundary during later propagation: essential-service protection is a Planning Scope floor-and-lane test, while continuity-risk classification governs projects that carry ongoing obligations and may generate continuity-need Ideas before funded periods expire.
-3. Preserve the Funding Window Expiry boundary: FundingAttempt and Expired Unfunded are Core v0, while Budget Liquidity Smoothing remains Extension v1+ / country implementation.
-4. Preserve the A004/A013 boundary during later propagation: evidence coverage and submitted-evidence quality are separate checks.
-5. Continue propagating accepted Phase 3 resolutions in order unless a dependency requires reordering.
-6. Keep detailed scoring, calibration registries, AI-generated-material detection, country-specific legal admissibility, and Budget Liquidity Smoothing implementation details as future implementation or legal-mapping work unless reopened explicitly.
-7. Then resume formal system modeling, literature mapping, and paper architecture.
+1. Review and propagate A008 / `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`.
+2. Preserve the A007 boundary during later propagation: pre-closure conflicts use ordinary complaint/fiscalization paths; post-closure platform review requires an active covered Post-Closure Coverage Profile; expired or out-of-scope claims route externally.
+3. Preserve the A005/A006 boundary during later propagation: essential-service protection is a Planning Scope floor-and-lane test, while continuity-risk classification governs projects that carry ongoing obligations and may generate continuity-need Ideas before funded periods expire.
+4. Preserve the Funding Window Expiry boundary: FundingAttempt and Expired Unfunded are Core v0, while Budget Liquidity Smoothing remains Extension v1+ / country implementation.
+5. Preserve the A004/A013 boundary during later propagation: evidence coverage and submitted-evidence quality are separate checks.
+6. Continue propagating accepted Phase 3 resolutions in order unless a dependency requires reordering.
+7. Keep detailed scoring, calibration registries, AI-generated-material detection, country-specific legal admissibility, post-closure insurance/warranty enforcement mechanics, and Budget Liquidity Smoothing implementation details as future implementation or legal-mapping work unless reopened explicitly.
+8. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
 ## Operating rule

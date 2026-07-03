@@ -20,7 +20,7 @@ Source baseline:
 - `docs/diagrams/v0-project-object-state-with-phase-substates.md`
 - `docs/diagrams/v0-complaint-evidence-and-review-state.md`
 
-Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, H038, H040, C005, C006, C016, A005, A006.
+Related sources: H008, H011, H013, H016, H019, H022, H024, H036, H037, H038, H040, C005, C006, C016, A005, A006, A007.
 
 ## Funding Commitment State Machine
 
@@ -90,7 +90,10 @@ stateDiagram-v2
 
     Returned --> Closed
     Reassigned --> Closed
-    FinancialClosurePending --> Closed
+    FinancialClosurePending --> PostClosureCoverageActive: coverage window active
+    FinancialClosurePending --> Closed: no platform coverage window
+    PostClosureCoverageActive --> InRecovery: covered correction, mitigation, or coverage execution
+    PostClosureCoverageActive --> Closed: coverage window expires cleanly
     LossRecorded --> Closed
     Closed --> [*]
 ```
@@ -128,12 +131,14 @@ stateDiagram-v2
     BlockerCheck --> BlockedByComplaintPause: admitted scoped complaint pause affects this scope
     BlockerCheck --> BlockedByPhaseGate: prerequisite gate not accepted
     BlockerCheck --> BlockedByAssurance: guarantee, retention, insurance, escrow, or equivalent not materialized
+    BlockerCheck --> BlockedByPostClosureCoverage: required post-closure coverage not accepted or materialized
     BlockerCheck --> BlockedByContinuityRule: continuity period, renewal, replacement, or wind-down condition missing
     BlockerCheck --> BlockedByEvidenceContradiction: fulfillment or control evidence contradicted
     BlockerCheck --> ReleaseDecisionReady: no relevant blocker
 
     BlockedByComplaintPause --> BlockerCheck: pause lifted or narrowed
     BlockedByAssurance --> BlockerCheck: assurance materialized or corrected
+    BlockedByPostClosureCoverage --> BlockerCheck: coverage accepted, materialized, or corrected
     BlockedByContinuityRule --> BlockerCheck: continuity condition corrected
     BlockedByEvidenceContradiction --> FiscalizationReview: contradiction resolved or corroboration added
 
@@ -212,12 +217,14 @@ stateDiagram-v2
 - `Paused` means a scoped systemic pause affects the relevant funding, disbursement, milestone, phase, budget line, evidence item, or actor relationship. It is platform scope, not necessarily material or legal suspension.
 - `Blocked` means a release cannot proceed until a named blocker is resolved.
 - `Retained` means funds remain held after partial progress, incomplete evidence, correction need, guarantee rule, complaint-linked risk, or closure condition.
+- `PostClosureCoverageActive` means a declared post-closure accountability window remains open after closure. Covered issues can trigger correction, mitigation, coverage execution, recovery, responsibility review, or no-effect findings; expired or out-of-scope issues route externally.
 - `ApprovedForRelease` means the platform may generate a `FinancialOrder`; it does not mean the custodian has executed the payment.
 - `CustodianExecutionBlocked` is limited to closed technical or legal causes. The custodian does not decide civic value, project priority, evidence validity, fiscalization, or discretionary disbursement.
 - `ReleasedPartially` is allowed only when the disbursement milestone plan defines separable components, accepted evidence for completed components, retained amount, release condition, fiscalizer explanation, and citizen-facing summary.
 - `Returned`, `Reassigned`, and `Recovered` are protocol/citizen-rule outcomes for unused, unreleased, retained, guaranteed, or recovered funds. They are not ordinary withdrawal by personal regret.
 - `Expired unfunded` is a project or FundingAttempt outcome. It is not ordinary withdrawal and does not erase attempt history.
 - `GuaranteeMaterialized` requires external confirmation by a custodian, guarantor, insurer, treasury, bank, escrow provider, or lawful equivalent. An uploaded executor document is not enough.
+- Post-closure coverage may be executor direct warranty or equivalent insurance, bond, guarantee, escrow, retention, or lawful coverage. It is separate from ordinary funding withdrawal and from indefinite post-closure platform complaint availability.
 
 ## Macul Example Trace
 
@@ -260,8 +267,8 @@ This diagram does not replace:
 - the complaint evidence and review state diagram;
 - the future control subproject and fiscalization assignment diagram.
 
-Funding and disbursement states change only through explicit records: phase gates, fulfillment/control evidence review, fiscalization reports, evaluation records, systemic pause records, financial assurance confirmation, financial orders, custodian execution status, closure accountability, recovery records, and audit events.
+Funding and disbursement states change only through explicit records: phase gates, fulfillment/control evidence review, fiscalization reports, evaluation records, systemic pause records, financial assurance confirmation, Post-Closure Coverage Profile records, financial orders, custodian execution status, closure accountability, recovery records, and audit events.
 
 ## Rule
 
-> Funding is commitment, reservation is not release, release requires evidence, eligible fiscalization, sufficient report basis, and A006 continuity treatment where applicable; guarantees require external materialization, custodian execution is technical/legal rather than civic judgment, and unused or recovered funds follow protocol and citizen rules instead of ordinary withdrawal.
+> Funding is commitment, reservation is not release, release requires evidence, eligible fiscalization, sufficient report basis, A006 continuity treatment where applicable, and A007 post-closure coverage where required; guarantees or coverage instruments require external materialization where applicable, custodian execution is technical/legal rather than civic judgment, and unused or recovered funds follow protocol and citizen rules instead of ordinary withdrawal.

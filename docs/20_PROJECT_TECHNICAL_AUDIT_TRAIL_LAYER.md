@@ -75,6 +75,9 @@ Layer 5 should include technical traceability for:
 7a. Systemic pause records
 8. Evidence archive and material information claim trace
 8a. Project closure accountability trace
+8b. Post-closure coverage trace
+8c. Performance history source trace
+8d. Assisted deliberation context trace
 9. Fiscalization reports
 10. Complaint and review trace
 10a. Complaint admissibility / referral records
@@ -383,7 +386,8 @@ Include:
 - evidence production cost;
 - guarantees or retentions;
 - Financial Assurance Profile reference;
-- Guarantee Materialization Record where applicable.
+- Guarantee Materialization Record where applicable;
+- Post-Closure Coverage Profile reference where applicable.
 
 Layer 5 should allow reviewers to understand how the budget evolved.
 
@@ -405,6 +409,7 @@ Include:
 - custody status;
 - financial assurance status;
 - guarantee materialization status where applicable;
+- post-closure coverage status, coverage provider, coverage amount or cap, and expiry where applicable;
 - disbursement rules;
 - release dates;
 - milestone relation;
@@ -441,6 +446,8 @@ Unused commitments returned to citizen default rules
 ```
 
 Layer 5 should also distinguish assurance for non-construction projects. For example, elderly care, school-supply delivery, workshops, or food support may have service-period retentions, direct supplier payment, guarantees, insurance, or equivalent instruments even though no construction occurs.
+
+Layer 5 should also distinguish post-closure coverage from financial assurance. For example, the Macul multi-court project may close with a 180-day executor direct warranty, while an older-adult care project may close with a service-quality response window or equivalent insurance/bond coverage. These mechanisms should show the active window, covered scope, provider, response path, expiry, and external route after expiry.
 
 For recurring, continuity-critical, emergency, or maintenance-dependent projects, Layer 5 should preserve the Continuity Risk Classification, minimum funded service period, staffing/maintenance obligation, future funding dependency warning, renewal trigger, continuity-need Idea reference where generated, beneficiary-protection and wind-down rule, current and alternative executor eligibility rule, and reserve/retention/guarantee/replacement references where applicable.
 
@@ -568,6 +575,7 @@ For each closure record, include:
 - affected-party mapping, consultation, or observation Readiness Evidence considered where applicable;
 - unresolved observations, complaints, contradictions, systemic pauses, or limitation statements;
 - released, retained, returned, reassigned, recovered, or guarantee-executed funds;
+- post-closure coverage result: executor warranty active, equivalent coverage active, coverage executed, expired, or external route only where applicable;
 - continuity result where applicable: renewed, follow-on Idea opened, follow-on project linked, replacement pending, wind-down completed, or continuity gap unresolved;
 - closure outcome;
 - Responsibility Events;
@@ -578,7 +586,25 @@ Layer 5 should make clear why a project was closed as fulfilled, partially fulfi
 
 An evidence item that is dark, unlinked, missing required metadata, produced by a non-idoneous actor for the claimed hard KPI, or otherwise insufficient may remain in the archive, but the closure trace should show that it was not used as proof of fulfillment unless adequate corroboration or review accepted it for that formal effect.
 
-## 8b. Performance history source trace
+## 8b. Post-closure coverage trace
+
+For projects with a Post-Closure Coverage Profile, preserve:
+
+- profile id and project/phase scope;
+- Threshold Policy, contract, protocol, operating mode, or country-implementation source;
+- mechanism: executor direct warranty or equivalent insurance, bond, guarantee, escrow, retention, or lawful coverage;
+- provider or responsible actor;
+- active window start and end;
+- covered dimensions and excluded dimensions;
+- response deadline and review path;
+- link to Financial Assurance Profile, Guarantee Materialization Record, insurance, bond, escrow, retention, or equivalent instrument where applicable;
+- covered post-closure complaints, contradictory evidence, hidden antivalue claims, defect claims, and outcomes;
+- coverage execution, correction, mitigation, no-effect finding, expiry, or external-route records;
+- final external decisions recorded after expiry where the active rule allows them.
+
+Layer 5 should make clear that post-closure coverage is time-limited and scope-limited. It is not indefinite platform jurisdiction, and expiry does not erase external legal, regulatory, contractual, or competent-authority routes.
+
+## 8c. Performance history source trace
 
 Layer 5 should show which reviewed records feed any Performance History Surface shown to citizens.
 
@@ -609,7 +635,7 @@ Layer 5 should also show comparison limits, such as small sample size, incompara
 
 The Performance History Surface should not create formal effects by itself. Formal effects must still come from the underlying EvaluationRecords, Responsibility Events, Reputation Inputs, financial orders, complaint outcomes, or other reviewed source objects.
 
-## 8c. Assisted deliberation context trace
+## 8d. Assisted deliberation context trace
 
 Layer 5 should show which sources fed an Assisted Deliberation Context.
 
@@ -686,6 +712,7 @@ Include the complete trace of complaints and reviews:
 - issue type;
 - complaint evidence attached;
 - complaint review policy and version;
+- post-closure coverage check where the target project is closed;
 - required support count;
 - support window start and end;
 - support threshold result;
@@ -693,6 +720,7 @@ Include the complete trace of complaints and reviews:
 - admissibility result;
 - affected scope;
 - systemic pause effect where applicable;
+- covered post-closure review path or external-route result where applicable;
 - external authority, court, or regulator referral where applicable;
 - authority or court order where material/legal effect occurs;
 - final resolution;
@@ -708,6 +736,7 @@ Include:
 - reviewer or fiscalizer;
 - admissibility result;
 - affected scope;
+- Post-Closure Coverage Profile reference where the target project is closed;
 - non-blocking, blocking, or systemic-pause classification;
 - execution funding, disbursement, milestone, phase gate, closure, evidence-use, or actor-scope effect;
 - complaint evidence index;

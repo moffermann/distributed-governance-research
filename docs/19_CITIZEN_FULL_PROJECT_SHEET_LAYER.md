@@ -319,6 +319,22 @@ If not fully funded:
 Eligible unused commitments return, reassign, or follow the citizen's default rule.
 ```
 
+Where execution funding requires post-closure coverage, the budget section should also show:
+
+```text
+Post-closure coverage:
+executor direct warranty
+
+Window:
+180 days after closure
+
+Covered:
+declared defects, covered antivalues, and covered contradictory evidence
+
+After expiry:
+external legal, regulatory, contract, or competent-authority route
+```
+
 For phased projects, the budget section should show phase funding lanes.
 
 Example:
@@ -378,6 +394,9 @@ Design review pending, if applicable
 
 👥 Affected-party participation
 Community consultation evidence pending, if applicable
+
+Post-closure coverage
+Executor direct warranty accepted, if applicable
 
 🚩 Blocking complaints
 0
@@ -647,6 +666,8 @@ The full sheet should distinguish:
 - complaints under admissibility review;
 - admitted non-blocking complaints;
 - blocking complaints;
+- covered post-closure complaints inside the active coverage window;
+- post-closure complaints routed externally because coverage expired or the issue is outside scope;
 - referred complaints where a competent authority or court is required.
 
 Support and objections to complaints should be shown separately. Objections do not reduce the support count required by the active complaint policy.
