@@ -2,16 +2,32 @@
 
 This folder contains standalone review packets by reviewer profile.
 
-Each subfolder contains a `review-packet.md` that can be sent directly to a reviewer in that profile.
+Each subfolder contains:
+
+```text
+review-packet.md     English version
+review-packet.es.md  Spanish version
+```
+
+Use the language that best fits the reviewer.
 
 ## Packets
 
 ```text
 Public-Law/review-packet.md
+Public-Law/review-packet.es.md
+
 Academic/review-packet.md
+Academic/review-packet.es.md
+
 Systems-Architect/review-packet.md
+Systems-Architect/review-packet.es.md
+
 Public-Sector-Practitioner/review-packet.md
+Public-Sector-Practitioner/review-packet.es.md
+
 Non-Expert-Reader/review-packet.md
+Non-Expert-Reader/review-packet.es.md
 ```
 
 ## Common source documents
