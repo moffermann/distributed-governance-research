@@ -671,7 +671,7 @@ This prevents the system from treating all uploaded documents or photos as equal
 
 The executor should not control the actor responsible for validating its performance.
 
-Separation alone is not enough — separate actors can still be bribed. The formal note derives the collusion-proofness condition: buying a fraudulent approval must cost more than the fraud gains, which the model achieves by protocol assignment (strangers cannot form durable corrupt relationships, and a bribe offer to a stranger risks being reported), visible repeat-pairing (so relationships cannot quietly re-form), reputational stakes that are forfeited if approved fraud is later discovered, and — for critical milestones — requiring several independent approvals, which multiplies the price of collusion while the fraud's gain stays fixed ([[formal-models|research/formal-models.md]], Proposition 4).
+Separation alone is not enough — separate actors can still be bribed. The formal note derives the collusion-proofness condition: buying a fraudulent approval must cost more than the fraud gains, which the model achieves by protocol assignment (strangers cannot form durable corrupt relationships, and a bribe offer to a stranger risks being reported), visible repeat-pairing (so relationships cannot quietly re-form), reputational stakes that are forfeited if approved fraud is later discovered, and — for critical milestones — requiring several independent approvals, which multiplies the price of collusion while the fraud's gain stays fixed (the formal note, Proposition 4).
 
 ## 5. Complaints are formal review triggers
 
@@ -753,7 +753,7 @@ was validated three ways before publication:
   resolutions `docs/67`–`docs/100`, rule `knowledge/principles/P007`).
 - **Formally.** The disbursement and anti-collusion mechanisms are proven
   as incentive-compatibility and collusion-proofness conditions, with the
-  design levers appearing as explicit terms ([[formal-models|research/formal-models.md]]).
+  design levers appearing as explicit terms (the formal companion note).
 - **Computationally.** A 10,000-agent simulation of realistic citizen
   attention found that funding caps curb concentration but not quality,
   that allocation quality is carried by the planning-anchored default
@@ -813,7 +813,7 @@ Its claim is more modest:
 
 ## Where this sits in the literature
 
-The model builds on known ground and says so. Ostrom's design principles for self-governed commons — bounded scope, accountable monitoring, graduated sanctions — reappear here as software-enforced objects. Participatory budgeting (Wampler's Brazilian evidence and its successors) established citizen allocation but documented engagement decay and a weak link between allocation and verified delivery — precisely the two margins this model redesigns. The DAO literature demonstrated rule-encoded collective funding and its plutocratic failure modes, which this model avoids by rejecting token voting and anonymous actors. And the field-experimental audit literature (Olken's Indonesian road projects) cautions that professional verification outperforms crowd monitoring for procurement fraud — a caution this architecture absorbs by making professional fiscalization, not crowd observation, the payment-gating layer. Full citations and positioning are in the companion manuscript ([[paper|drafts/paper.md]], Section 2).
+The model builds on known ground and says so. Ostrom's design principles for self-governed commons — bounded scope, accountable monitoring, graduated sanctions — reappear here as software-enforced objects. Participatory budgeting (Wampler's Brazilian evidence and its successors) established citizen allocation but documented engagement decay and a weak link between allocation and verified delivery — precisely the two margins this model redesigns. The DAO literature demonstrated rule-encoded collective funding and its plutocratic failure modes, which this model avoids by rejecting token voting and anonymous actors. And the field-experimental audit literature (Olken's Indonesian road projects) cautions that professional verification outperforms crowd monitoring for procurement fraud — a caution this architecture absorbs by making professional fiscalization, not crowd observation, the payment-gating layer. Full citations and positioning are in the companion manuscript (Section 2 of the manuscript).
 
 ## Why this is not just participatory budgeting
 
@@ -872,7 +872,7 @@ and the layer can be bounded so its failure does not cascade into
 the non-distributable layers.
 ```
 
-The principle is made concrete in a complete architecture and validated formally, computationally, and adversarially (the full manuscript is [[paper|drafts/paper.md]], Section 3). The minimum contribution can be stated as follows:
+The principle is made concrete in a complete architecture and validated formally, computationally, and adversarially (manuscript Section 3). The minimum contribution can be stated as follows:
 
 ```text
 This paper proposes a functional architecture for distributed public project governance. It decomposes public-resource allocation into a project lifecycle governed by Planning Scopes, Value Theses, Evidential Contracts, Conditional Funding, Control Packages, Milestone Disbursement, Closure Accountability, and Reputation Updates. The model shows how bounded public projects can be opened to distributed participation without relying on popularity alone, executor self-reporting, or uncontrolled transfer of funds.
@@ -886,9 +886,9 @@ Already answered inside the corpus (with pointers, so reviewers do not re-litiga
 
 - *Which public function first?* Local sports and recreation — argued below and in [[H053-sports-as-transition-pilot|knowledge/hypotheses/H053-sports-as-transition-pilot.md]].
 - *How much burden for small projects?* The proportional burden ladder, set by threshold policy, never self-selected (`knowledge/hypotheses/H020`, `docs/78`).
-- *How are fiscalizers selected in high-risk cases?* Protocol assignment plus independent corroboration for critical milestones, with the collusion-proofness condition derived formally (`docs/84`, [[formal-models|research/formal-models.md]]).
+- *How are fiscalizers selected in high-risk cases?* Protocol assignment plus independent corroboration for critical milestones, with the collusion-proofness condition derived formally (the collusion-observability resolution and the formal note).
 - *How do tutored modes transition?* Through published operating modes with maturity metrics, and open mode is gated on resolving constitutional mechanics (`knowledge/hypotheses/H058`, `docs/91`).
-- *Does the model depend on high citizen attention?* No — the simulation shows the default anchor carries allocation quality and decay is buffered where the anchor is strong ([[simulation-results|research/simulation-results.md]]).
+- *Does the model depend on high citizen attention?* No — the simulation shows the default anchor carries allocation quality and decay is buffered where the anchor is strong (the simulation results).
 
 Genuinely open:
 
@@ -922,7 +922,7 @@ Reasons:
 - citizens understand the value;
 - failure modes are real but manageable.
 
-Technically, a pilot's preconditions are already specified rather than improvised: the schema draft defines the minimal validation gates any implementation must enforce (no publication without a coherent evidential contract, no disbursement without review basis and financial-order path, no state transition without an audit event), and it names the integrations that remain external by design — identity provider, treasury custody, and legal registries ([[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]]).
+Technically, a pilot's preconditions are already specified rather than improvised: the schema draft defines the minimal validation gates any implementation must enforce (no publication without a coherent evidential contract, no disbursement without review basis and financial-order path, no state transition without an audit event), and it names the integrations that remain external by design — identity provider, treasury custody, and legal registries (the schema draft, referenced above).
 
 ## Final summary
 
