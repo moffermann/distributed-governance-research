@@ -375,6 +375,10 @@ A019 allocation mandate:
 
 > A019 allocation mandate: Core v0 adds no mandate entity; the Allocation Mandate is a versioned record on PlanningScope naming external authorization, with AuditEvents on every change.
 
+A020 agenda limitation:
+
+> A020 agenda limitation: Core v0 adds no scope-construction entity; agenda power is observable through Allocation Mandate, versioned scope definitions, Governance Resolutions, timeout records, and Idea volume, and remains centralized — a declared limitation.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

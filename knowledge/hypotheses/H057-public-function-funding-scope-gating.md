@@ -10,6 +10,8 @@ This moderation is administered by the implementing public authority or its desi
 
 H009 now frames this as `Planning Scope Alignment`: the authority may define or interpret the active Planning Scope in tutored mode, but the scope and material scope decisions must be public, versioned, and auditable. ^re803d690
 
+H057 is aligned with [[../../docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|A020]]: a tutored authority's power to define or interpret the active scope is the agenda-setting power A020 bounds, so scope narrowing or reclassification must surface as a versioned Governance Resolution with a timeout and leave an inspectable trace rather than silently excluding whole classes of demand.
+
 Integrated C007/C020 correction:
 
 ```text

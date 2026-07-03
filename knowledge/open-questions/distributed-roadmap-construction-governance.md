@@ -100,3 +100,7 @@ It becomes necessary later if the theory wants to explain how planning itself ca
 ## Working principle
 
 > Core v0 should not pretend that roadmap construction is solved. It should keep projects aligned to visible active scopes while preserving the future possibility of distributed, votable planning areas. ^r35e31a17
+
+## Status note
+
+A020 / `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md` formalized this question as the architecture's principal open limitation rather than solving it: whoever constructs Planning Scopes exercises the second face of power, and Core v0 makes that exercise observable — Allocation Mandate records, versioned scope definitions, scope changes as Governance Resolutions with timeouts, and out-of-scope demand visible as Ideas with per-category volume — but not distributed. The simulation quantified the weight of the gap by finding that planner knowledge dominates allocation quality, so who constructs the scopes matters more than how citizens allocate within them. The question remains open and gates open-mode deployment at scale.

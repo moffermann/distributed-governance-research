@@ -686,6 +686,22 @@ Core v0 records and exposes the mandate; it does not create, validate, or adjudi
 
 ---
 
+## A020 - Agenda-setting capture through planning scope construction
+
+**Severity:** High
+**Status:** Resolved (bounded as open limitation)
+**Resolution document:** `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A020 is founded and partially unresolved. Whoever constructs Planning Scopes exercises the second face of power, deciding what citizens may fund at all before any allocation, support, or fiscalization occurs, and the corpus itself classifies roadmap and planning-area construction as an unresolved open question. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution: Core v0 gains no mechanism that governs who constructs the roadmap; it carries interim observability over existing objects and records the political limit openly rather than claiming to solve roadmap-construction governance.
+
+Agenda-setting power over scope construction is documented, versioned, and contestable through visibility only; it is not distributed by Core v0. The minimum interim observability is: every Planning Scope carries its Allocation Mandate record (A019) and a versioned scope definition; scope changes and interpretations surface as Governance Resolutions with declared review windows and timeout policies (C020); and out-of-scope demand stays visible as Ideas (C001), with volume observability per rejected or out-of-scope category. In Macul, a ministry narrowing the sports scope to exclude skate parks must do it in a versioned, publicly reasoned scope change rather than a silent omission, while skate-park Ideas keep accumulating visibly as unmet demand that a future construction mechanism would consume.
+
+Core v0 does not define who constructs the roadmap or compel any authority to act on unmet demand; full distributed roadmap construction remains Extension v1+, and a first-instance narrow framing produces no removed-category trace because nothing was ever included. Limitation statement: whoever constructs Planning Scopes exercises the second face of power, and Core v0 makes that exercise observable but not distributed — a declared open limitation of the architecture, the acknowledged constitutional gap in `knowledge/open-questions/distributed-roadmap-construction-governance.md`, a blocker for open-mode deployment at scale, and a primary item for the paper's limitations section.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -947,6 +963,8 @@ Core v0 records and exposes the mandate; it does not create, validate, or adjudi
 - [ ] Is there a review date or maturity condition?
 - [ ] Can institutional moderation be audited?
 - [ ] Do tutored planning-scope decisions create Governance Resolution or equivalent public review traces where material?
+- [ ] Does every Planning Scope change or interpretation surface as a versioned Governance Resolution with a timeout?
+- [ ] Is out-of-scope demand preserved as visible Ideas with per-category volume observability rather than silently discarded?
 - [x] Does A011 preserve minimum data for later moderation-pattern audit without creating a Core v0 abuse tribunal or dashboard?
 - [ ] Do tutored decisions record reason category where practical, rule/version, responsible authority/process, review time, timeout status, and known authority-linked operator context?
 - [x] Are public authorities external to internal project competition in scopes they control under Core v0?
@@ -955,6 +973,7 @@ Core v0 records and exposes the mandate; it does not create, validate, or adjudi
 - [ ] Is authority-linked operator participation and public-operator privilege (subsidies, guarantees, data access) visible?
 - [ ] Are independent versus controlled fiscalization rates and pilot-versus-incumbent-baseline outcomes observable?
 - [ ] Is the political limit recorded openly — no Core v0 mechanism compels transition or protects the migrated budget share?
+- [ ] Is the roadmap-construction open question kept visible as the architecture's principal open limitation, gating open-mode deployment at scale?
 - [ ] Is transition scope bounded?
 
 ## 12. Audit checklist

@@ -90,6 +90,8 @@ A018 reinforces this further as collusion observability over existing objects, n
 
 A019 adds an Allocation Mandate record on Planning Scope, not mandate-construction machinery. Every active Planning Scope records the democratic mandate that authorized its budget migration and allocation formula — mandate source, authorizing legal instrument, migrated share, formula version with an explicit higher-authorization flag and authority for departures from equal-per-citizen, and version history — distinct from the procedural Administrative Rule Change machinery. Core v0 records and exposes that mandate; it does not create, validate, or adjudicate it, so mandate construction remains external constitutional law and country implementation, and the democratic-deficit critique of substituting atomized allocation for representative appropriation stays a recorded open normative debate.
 
+A020 is bounded as an open limitation, not solved. Whoever constructs Planning Scopes exercises the second face of power, deciding what citizens may fund at all before allocation, support, or fiscalization occurs, and Core v0 adds no scope-construction mechanism. It carries interim observability over existing objects instead: every Planning Scope shows its Allocation Mandate record and versioned definition, scope changes and interpretations surface as Governance Resolutions with timeouts, and out-of-scope demand stays visible as Ideas with per-category volume observability, so agenda-setting power is documented, versioned, and contestable through visibility only. Who constructs the roadmap remains the acknowledged constitutional gap and a blocker for open-mode deployment at scale — deferred, not denied.
+
 ### 2a. Idea object
 
 Core v0 includes `Idea` as a separate civic-demand object.
@@ -827,6 +829,7 @@ These should not be part of Core v0 unless later shown necessary:
 - per-project actuarial guarantee calibration and automated milestone-design scoring beyond the A017 disbursement-gaming tests;
 - automated collusion-detection engines, network-analysis scoring, and investigative capability beyond the A018 collusion observability surfaces;
 - mandate construction, referendum machinery, and formula adjudication beyond the A019 Allocation Mandate record, which the platform records but does not generate;
+- distributed roadmap-construction governance beyond the A020 interim observability — deferred, not denied: agenda-setting power stays visible and versioned, while who constructs Planning Scopes remains an open question and a prerequisite for open mode at scale;
 - full multi-sector implementation.
 
 ## Country implementation decisions

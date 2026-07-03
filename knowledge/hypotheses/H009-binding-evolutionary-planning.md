@@ -188,6 +188,8 @@ However, this is not ready for Core v0 because it still needs answers to:
 
 This is recorded as a future open question, not discarded.
 
+H009 is aligned with [[../../docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|A020]]: the unresolved Roadmap Construction Governance concept that H009 splits off from Planning Scope Alignment is exactly the agenda-setting power A020 formalizes as the architecture's principal open limitation. Core v0 makes scope construction observable — versioned scope definitions, scope changes and interpretations as Governance Resolutions with timeouts, and out-of-scope demand visible as Ideas with per-category volume — but it does not distribute who constructs the scopes, which remains the acknowledged constitutional gap gating open-mode deployment at scale.
+
 ## Examples
 
 ### Sports project inside scope
