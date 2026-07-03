@@ -86,6 +86,8 @@ Related-party relationships do not automatically invalidate a project, but they 
 
 A014 reinforces this as a minimum related-party relationship graph and severity model, not a new Core v0 entity. The graph is observability over declarations already required by `RelatedPartyConflictReview` and the role model, covering ownership and control chains, board or management control, material supplier and subcontractor relationships, repeated fiscalizer/evidence-producer relationships, delegate or funder relationships to project actors, and authority-linked operator status where material; declared proximity stays proportional while hidden or control-relevant relationships escalate to correction, blocking, exclusion, complaint, responsibility, or reputation effects. The same graph serves A018 collusion observability. Core v0 does not require beneficial-ownership verification or corporate-registry integration; verification depth is a country implementation decision and graph analytics remain Extension v1+.
 
+A018 reinforces this further as collusion observability over existing objects, not a detection engine. Because role separation is necessary but not sufficient, Core v0 exposes relationship, repetition, timing, and outcome patterns across project roles and material suppliers: repeated actor-cluster visibility across projects, the same A014 relationship-and-control graph reused across roles and suppliers, timing-anomaly and outcome-pattern review surfaces feeding human review, independent corroboration for critical milestones, the verified-discovery route for hidden coordination, and cross-role responsibility events where collusion is confirmed. Core v0 does not require an automated collusion-detection engine, network-analysis scoring, or investigative capability; pattern surfaces feed human review, complaint, and verified-discovery paths, prosecution remains external law, and the claim is comparative — collusion becomes harder, riskier, and more discoverable than under opaque institutional monopoly, while purely off-platform coordination among formally compliant actors can remain invisible.
+
 ### 2a. Idea object
 
 Core v0 includes `Idea` as a separate civic-demand object.
@@ -821,6 +823,7 @@ These should not be part of Core v0 unless later shown necessary:
 - common-good registry, charter voting, and platform common-good adjudication beyond the A015 sufficiency test;
 - transition enforcement, migrated-budget protection, resistance-pattern analytics, and cross-country transition comparisons beyond the A016 incumbent-resistance indicators;
 - per-project actuarial guarantee calibration and automated milestone-design scoring beyond the A017 disbursement-gaming tests;
+- automated collusion-detection engines, network-analysis scoring, and investigative capability beyond the A018 collusion observability surfaces;
 - full multi-sector implementation.
 
 ## Country implementation decisions

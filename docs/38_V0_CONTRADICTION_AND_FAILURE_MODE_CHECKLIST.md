@@ -654,6 +654,22 @@ Core v0 does not require per-project actuarial guarantee calibration, automated 
 
 ---
 
+## A018 - Collusion among project roles
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A018 is founded and does not distort the project when it is treated as a systemic stress test rather than a demand for impossible perfect detection. Core v0 handles it as collusion observability across role clusters and response paths for confirmed hidden coordination. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects and bounds detection: the relationship-and-control graph is the same graph defined for A014, timing and outcome patterns are administrative-observability review surfaces rather than an automated detection engine, and the response paths reuse VerifiedDiscovery and ResponsibilityEvent.
+
+Role separation is necessary but not sufficient. The system should expose relationship, repetition, timing, and outcome patterns across project roles and material suppliers. The minimum observability is: repeated actor-cluster visibility across projects; the A014 relationship-and-control graph reused across roles and suppliers; timing-anomaly review for evidence, fiscalizer reports, disbursement requests, and complaints; outcome-pattern review for unusually favorable or fast approvals; independent corroboration requirements for critical milestones; a verified-discovery route for hidden coordination; and cross-role responsibility event handling where collusion is confirmed. In Macul, if a proposer, designer, executor, evidence producer, and fiscalizer are formally separate but repeatedly coordinate reports and releases, the system should make the cluster visible, reopen affected effects where rules allow, create role-specific responsibility events, correct reputation inputs, and block unreleased funds where justified.
+
+Core v0 does not require an automated collusion-detection engine, network-analysis scoring, or investigative capability. Pattern surfaces feed human review, complaint, and verified-discovery paths; automated anomaly scoring remains Extension v1+, and prosecution of confirmed collusion remains external law. Limitation statement: purely off-platform coordination among formally compliant actors can remain invisible to the system; the architecture's claim is comparative — collusion becomes harder, riskier, and more discoverable than under opaque institutional monopoly — not that collusion is eliminated.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -667,6 +683,7 @@ Core v0 does not require per-project actuarial guarantee calibration, automated 
 - [x] Are material tutored decisions represented as public governance-resolution objects?
 - [ ] Is the minimum related-party relationship graph (ownership/control, board control, material suppliers, repeated control relationships, delegate/funder ties, authority-linked operators) visible where material?
 - [ ] Is the A014 relationship graph reused for A018 collusion observability rather than duplicated?
+- [ ] Are repeated actor clusters across projects visible, reusing the A014 relationship-and-control graph across roles and suppliers rather than a duplicate?
 - [ ] Does role-based reputation match actual responsibility?
 
 ## 2. Project object checklist
@@ -849,6 +866,9 @@ Core v0 does not require per-project actuarial guarantee calibration, automated 
 - [ ] Can fiscalizers resign or be replaced?
 - [ ] Are fiscalizer reports public or privacy-filtered?
 - [ ] Does fiscalizer reputation update after closure?
+- [ ] Do timing-anomaly and outcome-pattern surfaces feed human review, complaint, and verified-discovery paths rather than automated verdicts?
+- [ ] Do critical milestones require independent corroboration, and can confirmed hidden coordination produce cross-role responsibility events?
+- [ ] Is the comparative claim preserved — collusion made harder, riskier, and more discoverable, never promised eliminated?
 
 ## 8. Complaint checklist
 

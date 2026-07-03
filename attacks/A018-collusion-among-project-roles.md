@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
@@ -75,6 +75,6 @@ All formal records exist for Macul: project phase, evidence, fiscalizer report, 
 - Can verified discovery reopen effects?
 - Does collusion create role-specific and cross-role responsibility events?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should define collusion observability and response paths across role clusters, not only individual conflicts.
+The Phase 3 resolution defined collusion observability and response paths across role clusters, not only individual conflicts.

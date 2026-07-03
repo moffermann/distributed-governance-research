@@ -211,6 +211,8 @@ They should make capture harder, riskier, more visible, and less sufficient:
 - fiscalizer reputation is updated by role, not by generic popularity;
 - supplemental control funding is capped.
 
+H016 is aligned with [[../../docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|A018]]: because role separation across proposer, designer, executor, evidence producer, fiscalizer, and suppliers is necessary but not sufficient, Core v0 exposes collusion observability over existing objects rather than a detection engine. Repeated actor clusters become visible across projects through the A014 relationship-and-control graph reused across roles and suppliers, timing-anomaly and outcome-pattern surfaces feed human review, critical milestones require independent corroboration, verified discovery can expose hidden coordination, and confirmed collusion produces cross-role responsibility events. Consistent with the capture-risk position above, the claim is comparative — collusion becomes harder, riskier, and more discoverable than under opaque institutional monopoly — not that purely off-platform coordination among formally compliant actors is eliminated; automated collusion detection, network-analysis scoring, and investigative capability remain Extension v1+, and prosecution remains external law.
+
 ## Key distinction
 
 The executor of a paused project may propose or finance mitigation, but it should not control the fiscalizer whose report determines whether the pause is lifted.

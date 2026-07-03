@@ -34,8 +34,8 @@ For a small school-supplies project, the model should support a low-risk fast pa
 
 - `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:5` states that architecture may be complex but ordinary citizen participation must remain simple.
 - `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:13` states the rule: simple to participate, deep to audit.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:145` requires each project to expose the applicable Threshold Policy.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:165` ties procedural burden profiles to Threshold Policy and competent review.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:147` requires each project to expose the applicable Threshold Policy.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:167` ties procedural burden profiles to Threshold Policy and competent review.
 - `docs/34_CORE_V0_SCOPE_FREEZE.md:167` prohibits proposers, designers, or executors from self-selecting lower burden when obligations decrease.
 - `knowledge/hypotheses/H020-proportional-procedural-burden.md:5` states that all projects share conceptual structure, but not the same procedural burden.
 - `knowledge/hypotheses/H020-proportional-procedural-burden.md:7` makes burden proportional to size, risk, complexity, irreversibility, vulnerable beneficiaries, territory, public-function sensitivity, common-good impact, technical requirements, and potential antivalue.

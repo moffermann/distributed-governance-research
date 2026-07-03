@@ -39,7 +39,7 @@ For Macul, the project should disclose whether it reduces green area, changes pu
 - `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md:334` summarizes the C022 rule: visible, commentable, fiscalizable, auditable impact declaration in Core v0; full charter mechanics remain Extension v1+.
 - `knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md:5` states that a project is responsible for undeclared antivalue discovered during execution.
 - `docs/09_PROJECT_OBJECT_MODEL.md:662` requires relevant common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:545` includes lightweight common-good impact declaration in project creation while leaving full charter governance to Extension v1+.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:547` includes lightweight common-good impact declaration in project creation while leaving full charter governance to Extension v1+.
 - `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as a bounded resolution with a thin integrated test: disclosure through existing surfaces, with the charter system itself kept out of Core v0.
 
 ## Bibliographic basis
