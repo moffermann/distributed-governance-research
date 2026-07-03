@@ -623,6 +623,7 @@ The following should not be modeled as primary entities unless a later design st
 | Closure label | Procedural state or summary; not automatic reputation effect. |
 | Legal sanction or court order | External legal effect; system may record reference and platform consequences but does not create it unless country law grants that power. |
 | Universal project score | Out of Core v0. Public value return per peso and advanced benchmarking remain extensions. |
+| Participation-equity indicator | Not a Core v0 primary entity. A009 is handled through Threshold Policy requirements, Project Legitimacy Profile status, Required Evidence Package needs, protected identity, delegation concentration visibility, participation-support project disclosures, AuditEvents, and optional administrative observability. Advanced participation-gap or inclusion analytics remain Extension v1+ or country implementation. |
 
 ## 15. Open risks for Phase 2
 

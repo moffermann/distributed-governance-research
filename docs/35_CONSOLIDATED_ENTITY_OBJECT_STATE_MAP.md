@@ -669,6 +669,10 @@ Community evidence rule:
 
 > A neighborhood association, community board, or similar local organization may act as an evidence producer where eligible, but it does not automatically represent every affected resident. Its evidence remains contextualized, inspectable, contestable, and complemented by asynchronous individual participation through nearby-project discovery, follow, comments, justified objections, affected-party observations, or complaints.
 
+A009 participation-equity boundary:
+
+> Core v0 does not add a separate participation-equity entity. Low participation, missing voices, or concentration should not be treated as automatic vetoes or proof of illegitimacy unless the active Threshold Policy makes the relevant affected-party mapping, consultation, observation, or readiness evidence a formal condition. Participation gaps are otherwise warnings, assisted-deliberation context, administrative observability, or future policy inputs.
+
 Example:
 
 ```text

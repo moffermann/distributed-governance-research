@@ -177,6 +177,8 @@ It should answer:
 - where the citizen can help;
 - what signals deserve attention.
 
+Where participation limits are material, the project card should use simple labels rather than demographic dashboards. Examples include `consultation evidence pending`, `affected-party issue pending`, or `participation-support relationship disclosed`. Under A009, low participation is not an automatic veto unless the active Threshold Policy makes the missing affected-party mapping, consultation, observation, or readiness evidence a formal condition.
+
 Example:
 
 ```text

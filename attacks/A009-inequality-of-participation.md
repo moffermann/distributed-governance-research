@@ -32,9 +32,10 @@ Older adults nearby do not use the platform and do not object to accessibility o
 
 - Preserve layered simplicity for ordinary actions.
 - Support participation-assistance projects while preventing hidden delegation purchase.
-- Expose participation concentration and underrepresented affected-party gaps.
+- Make participation concentration and underrepresented affected-party gaps visible where material and privacy-safe.
 - Keep delegation revocable and reported.
 - Add assisted deliberation that shows dissent and missing voices without deciding for citizens.
+- Treat advanced participation-equity measurement as implementation or Extension v1+ observability, not as a universal Core v0 gate.
 
 ## Theoretical base and citations
 
@@ -75,4 +76,4 @@ The system shows strong funding and support for a project, but most affected par
 
 ## Expected resolution output
 
-A Phase 3 resolution should define participation-equity indicators without turning Core v0 into a full social-policy engine.
+A Phase 3 resolution should define a participation-equity boundary: Core v0 should improve the current weak participation baseline through asynchronous visibility, protected identity, delegation transparency, participation-support projects, and threshold-policy participation evidence where required, without turning Core v0 into a full social-policy engine or requiring perfect representativeness before projects can proceed.

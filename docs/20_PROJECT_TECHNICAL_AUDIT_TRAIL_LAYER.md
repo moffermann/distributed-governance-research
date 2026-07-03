@@ -959,6 +959,20 @@ The ordinary citizen does not need to see every technical ranking detail, approv
 
 Core v0 does not require universal per-impression user-level ranking logs, causal exposure-to-funding attribution, or a separate public platform-influence dashboard. Those tools may be useful as Extension v1+ or country/administrator observability where the implementation can support them without turning ordinary participation into a technical audit exercise.
 
+## 17a. Participation equity boundary
+
+Layer 5 may preserve privacy-aware participation observability where material, especially for projects with affected-party, vulnerable-beneficiary, rights, access, territory-wide, or common-good exposure.
+
+Examples:
+
+- whether affected-party mapping, consultation, observation windows, or plan-review evidence were required by Threshold Policy;
+- whether the required participation evidence was pending, submitted, reviewed, or insufficient;
+- relationship disclosures for participation-support providers that also receive delegation, recommend projects, receive project funding, or have related-party ties;
+- aggregate or privacy-preserving traces of participation concentration where implementation supports them;
+- protected-identity request traces without exposing protected personal identity to unauthorized viewers.
+
+Core v0 does not require a separate participation-equity object, universal demographic measurement, or perfect representativeness before projects can proceed. Low participation, missing voices, or concentration may inform warnings, assisted deliberation, administrative observability, research, or future policy improvement. They become blockers only when the active Threshold Policy makes the relevant affected-party mapping, consultation, observation, or readiness evidence a formal condition.
+
 ## 18. Data export and verification tools
 
 Layer 5 should support external review.

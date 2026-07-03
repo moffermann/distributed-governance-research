@@ -509,6 +509,8 @@ Core v0 includes flows for funding, following, fiscalizer offers, fulfillment ev
 
 Core v0 also includes participation capacity support through ordinary project rules and assistance layers. Support projects may help citizens understand projects, translate content, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. They do not create hidden authority, automatic delegation commissions, AI civic actors, or public authorities acting as internal project participants in scopes they control.
 
+A009 is a participation-equity boundary over this baseline. Core v0 improves current low-participation practices through asynchronous visibility, nearby-project following, protected identity, delegation transparency, and ordinary participation-support projects, but it does not require perfect representativeness, universal demographic measurement, or a new participation-equity object. Missing voices or concentration are blocking only when the active Threshold Policy requires the relevant affected-party mapping, consultation, observation window, or readiness evidence; otherwise they remain warnings, assisted-deliberation context, administrative observability, or future policy inputs.
+
 Full personal AI guides are Extension v1+. Core v0 only defines the compatibility boundary: a connected personal guide may summarize, compare, translate, draft, warn, and help configure choices, but it cannot become a delegate, civic actor, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
 
 Core v0 includes configurable civic notifications as a simple user-experience baseline: citizens may configure channels, intensity, and frequency for external interruptions, but material in-app civic records should remain visible for affected projects, allocation profiles, delegations, complaints, reformulations, governance resolutions, and timeout resolutions.
@@ -797,6 +799,7 @@ These should not be part of Core v0 unless later shown necessary:
 - advanced capture-prediction scoring;
 - advanced inferred recommender systems;
 - advanced platform-influence analytics, causal exposure-to-funding metrics, and ranking-bias dashboards;
+- advanced participation-equity analytics, demographic gap measurement, accessibility outreach metrics, and inclusion dashboards;
 - detailed sector-specific KPI libraries beyond pilot needs;
 - full common-good charter governance;
 - full multi-sector implementation.

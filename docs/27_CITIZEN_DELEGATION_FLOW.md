@@ -168,6 +168,8 @@ Core v0 does not impose a universal hard cap on delegation concentration. If cit
 
 Core v0 also does not pay delegates automatically for accumulated delegations. Participation-support projects may exist separately, but they must be ordinary transparent projects rather than hidden delegation commissions.
 
+Under A009, delegation and participation support should be treated as ways to reduce participation cost compared with current low-attendance practices, not as proof that all affected voices are represented. A delegate's represented weight and any linked participation-support funding should be visible, while low participation or missing voices become blockers only when the active Threshold Policy requires the relevant affected-party mapping, consultation, observation, or readiness evidence.
+
 ## 5. Confirmation request
 
 Example:

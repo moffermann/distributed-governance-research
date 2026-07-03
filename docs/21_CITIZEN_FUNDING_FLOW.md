@@ -22,6 +22,8 @@ Execution-phase funding may be accepted while a required design phase is still p
 
 Funding completion also does not close affected-party legitimacy conditions. If the active Threshold Policy requires affected-party mapping, nearby-project notification, community consultation evidence, plan review, or unresolved-objection handling, those conditions remain visible and may block execution-ready status even when the funding target is complete.
 
+Funding support also should not be presented as full affected-party representation. Under A009, a project may be popular or quickly funded while older adults, disabled people, workers, caregivers, or digitally disconnected residents have not participated. That gap is a warning or observability concern unless the active Threshold Policy makes the missing affected-party mapping, consultation, observation window, or readiness evidence a formal condition.
+
 For recurring, continuity-critical, emergency, or maintenance-dependent projects, funding must also preserve the A006 continuity label. Citizens should know whether they are funding a one-time output, the current service period, a follow-on period, maintenance, replacement, mitigation, wind-down, or a continuity project generated from an Idea. Funding a bounded period must not be presented as funding indefinite service.
 
 ## Main question
@@ -564,6 +566,7 @@ The funding flow should not:
 - imply that money is immediately transferred to the executor;
 - imply that a larger amount creates more social support;
 - imply that funding completion creates community legitimacy or affected-party approval;
+- imply that funding completion proves broad participation or representation of all affected groups;
 - hide release conditions;
 - present funding as freely withdrawable after confirmation;
 - hide the active funding window or what happens if the funding attempt expires;

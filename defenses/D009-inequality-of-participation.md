@@ -51,14 +51,14 @@ For Macul, a support project could help older residents read project sheets, upl
 
 ## Proposed improvements
 
-Add participation-equity indicators:
+Apply a participation-equity boundary through existing mechanisms:
 
-- affected-party gap signal for high-impact projects;
-- participation concentration by territory, beneficiary group, or delegate cluster;
-- participation-support funding visibility;
-- warnings when support providers also receive delegation or recommend projects;
-- protected-identity usage and abuse monitoring;
-- citizen-facing "missing affected voices" prompt where relevant.
+- do not present funding, support, delegation weight, discovery visibility, or meeting attendance as full affected-party representation;
+- keep threshold-policy affected-party mapping, consultation, observation windows, and readiness evidence enforceable where they are explicitly required;
+- make low participation, missing voices, participation concentration, or support-provider relationships visible where material and privacy-safe, without making them automatic vetoes;
+- keep participation-support funding visible when a delegate, project actor, or recommender also operates a support project;
+- preserve protected identity for vulnerable participation under C024 without creating anonymous formal power;
+- treat advanced participation-equity metrics as Extension v1+ or country/administrator observability.
 
 ## Applies to
 
@@ -73,8 +73,8 @@ Add participation-equity indicators:
 
 Defense strength: moderate to strong. The architecture recognizes participation inequality, but full inclusion cannot be solved by platform design alone.
 
-Residual risk: digitally skilled, organized, or well-funded actors may still dominate. The system should measure and expose that dominance rather than pretend open access is enough.
+Residual risk: digitally skilled, organized, or well-funded actors may still dominate. The system should make material dominance and missing-voice risks visible where possible, while acknowledging that full participation equality requires offline outreach, social policy, accessibility work, and country-specific implementation beyond Core v0.
 
 ## Decision
 
-The attack is founded. It does not defeat the project, but it requires participation-equity indicators and anti-capture rules for participation-support work.
+The attack is founded. It does not defeat the project, and it should not inflate Core v0. It requires a participation-equity boundary: improve the current weak participation baseline, preserve required affected-party evidence where threshold policy demands it, disclose support-provider capture risks, and leave advanced equity indicators to implementation or Extension v1+ observability.

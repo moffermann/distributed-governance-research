@@ -274,6 +274,7 @@ No AI assistance treated as actor, evaluator, fiscalizer, or truth-decider by de
 No approval, almost-funded, recommended, urgent, execution-ready, or AI-summary label without source-linked material claims and unresolved-condition visibility where material.
 
 No separate PlatformInfluenceRecord required in Core v0. Platform-influence boundaries are represented through existing discovery fields, AssistedDeliberationContext traces, source-linked AI-assistance records, AuditEvents, and the applicable SystemImplementationChange, AdministrativeRuleChange, GovernanceResolution, or ProtocolChangeProposal path.
+No separate ParticipationEquityIndicator required in Core v0. Participation-equity boundaries are represented through existing ThresholdPolicy requirements, ProjectLegitimacyProfile status, RequiredEvidencePackage needs, ContextualizedEvidenceItems, Delegation and DelegatedActionRecord concentration fields, ProtectedIdentityRequest records, participation-support project disclosures, AuditEvents, and administrative observability where implemented.
 ```
 
 ## Macul Multi-Court Schema Trace
@@ -326,6 +327,7 @@ AuditEvents connect each role action, object transition, rule version, source re
 5. Access-control mapping from the responsibility matrix to actual permissions.
 6. Data retention, export, redaction, and public snapshot rules.
 7. Whether later implementations should add advanced platform-influence analytics, causal exposure-to-funding metrics, ranking-bias dashboards, or per-impression logs without making them Core v0 requirements.
+8. Whether later implementations should add privacy-aware participation-equity analytics, demographic participation-gap measurement, accessibility outreach metrics, or authority-facing inclusion dashboards without making perfect participation a Core v0 requirement.
 7. Performance implications of reconstructing read models from audit/event history.
 
 ## Boundary With Phase 3

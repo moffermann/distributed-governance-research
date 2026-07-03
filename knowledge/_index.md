@@ -414,7 +414,7 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION|72 - Continuity Risk Classification and A006 Resolution v0]]
 - [[../docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION|73 - Conflict of Review Handling and A007 Resolution v0]]
 - [[../docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION|74 - Platform Influence Boundary and A008 Resolution v0]]
-- [[../docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|75 - Participation Equity Indicators and A009 Resolution v0]]
+- [[../docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|75 - Participation Equity Boundary and A009 Resolution v0]]
 - [[../docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|76 - Delegation Concentration Stress Thresholds and A010 Resolution v0]]
 - [[../docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|77 - Tutored Moderation Abuse Test and A011 Resolution v0]]
 - [[../docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|78 - Complexity Budget and A012 Resolution v0]]

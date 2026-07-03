@@ -524,6 +524,24 @@ Advanced platform-influence analytics, ranking-bias dashboards, causal exposure-
 
 ---
 
+## A009 — Inequality of participation
+
+**Severity:** Medium / High
+**Status:** Resolved
+**Resolution document:** `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A009 is founded, but it is a participation-equity boundary rather than a new Core v0 entity or mandatory indicator layer. The system should be compared against current institutional practice, where physical meetings, narrow notice channels, working-hour sessions, low attendance, family representation, digital exclusion, disability barriers, and weak traceability already produce unequal participation.
+
+Core v0 improves that baseline through asynchronous discovery, nearby-project following, protected identity, simple citizen actions, delegation visibility, participation-support projects, required affected-party evidence where Threshold Policy demands it, and auditability.
+
+Funding, support, delegation weight, discovery visibility, or meeting attendance must not be presented as full affected-party representation. Low participation, missing voices, or concentration may create warnings, assisted-deliberation context, administrative observability, research inputs, or future policy improvement. They do not automatically veto a project or prove illegitimacy unless the active Threshold Policy already requires the relevant affected-party mapping, consultation, observation window, or readiness evidence for the affected effect.
+
+Participation-support projects remain ordinary transparent projects. Support providers that also receive delegation, recommend projects, receive project funding, or have related-party ties should disclose those relationships where material. Advanced participation-equity metrics remain Extension v1+ or country/administrator observability.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -555,6 +573,7 @@ Advanced platform-influence analytics, ranking-bias dashboards, causal exposure-
 - [x] Are material claims, approval labels, and unresolved conditions source-linked where they affect citizen decisions?
 - [ ] Where affected-party legitimacy conditions apply, does the project have a Project Legitimacy Profile tied to Threshold Policy and Required Evidence Package records?
 - [ ] Are required affected-party maps, consultation evidence, observation windows, or plan-review records present before execution-ready status where the policy requires them?
+- [ ] Is low participation treated as warning/observability unless Threshold Policy makes the missing participation evidence a formal condition?
 - [ ] Are pre-execution required evidence records classified as Readiness Evidence rather than Fulfillment Evidence unless they are separately reviewed for a fulfillment effect?
 - [ ] Are project versions immutable?
 - [ ] Are reformulations visible?
@@ -732,6 +751,8 @@ Advanced platform-influence analytics, ranking-bias dashboards, causal exposure-
 - [x] Is concentration visible?
 - [ ] Are delegate actions reported?
 - [ ] Does delegate reputation reflect delegated decisions?
+- [x] Are participation-support projects separated from delegation commissions, hidden authority, and automatic citizen allocation?
+- [ ] Are material relationships between support providers, delegates, proponents, executors, or recommenders disclosed where relevant?
 
 ## 10. Interface checklist
 
@@ -742,6 +763,7 @@ Advanced platform-influence analytics, ranking-bias dashboards, causal exposure-
 - [x] Is project discovery explainable?
 - [x] Are urgent/promoted-looking slots rule-based?
 - [x] Is A008 handled through existing discovery, AI-assistance, and rule-change controls rather than a new Core v0 entity?
+- [x] Is A009 handled as a boundary without requiring perfect participation or a new Core v0 indicator layer?
 - [ ] Do citizen surfaces preserve A006 labels such as `funds first six months`, `maintenance not funded`, `renewal window open`, `continuity idea open`, or `wind-down rule declared` where material?
 - [x] Can users customize Home categories without changing project eligibility?
 - [ ] Are citizen-facing states mapped from technical states?

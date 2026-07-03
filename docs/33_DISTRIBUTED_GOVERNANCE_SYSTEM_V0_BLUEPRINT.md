@@ -690,6 +690,8 @@ Configuring automatic allocation profile
 
 Participation capacity support is also part of Core v0, but only through ordinary transparent project paths and assistance layers. A participation-support project may help citizens understand projects, translate material, produce fulfillment evidence, file comments or complaints, model proposals, or configure profiles and delegation. It does not receive hidden delegation commissions, does not allocate citizen balances without explicit accepted delegation, does not turn AI into a civic actor, and does not make public authorities internal project participants in scopes they control.
 
+A009 adds a boundary, not a new participation-equity entity. Core v0 should improve the current institutional baseline through asynchronous discovery, nearby-project following, protected identity, simple actions, delegation visibility, participation-support projects, and required affected-party evidence where Threshold Policy demands it. It does not require perfect representativeness, universal demographic measurement, or full participation equality before projects proceed. Low participation, missing voices, or concentration may become warnings, assisted-deliberation context, administrative observability, or future policy inputs; they block only when the active Threshold Policy already requires the relevant mapping, consultation, observation, or readiness evidence.
+
 Personal AI guides remain Extension v1+. If a personal guide connects to Core v0, it must stay within the C008 assistance boundary: it may summarize, compare, translate, draft, warn, and help configure citizen choices, but it cannot become a delegate, civic actor, automatic allocation profile, fiscalizer, authority, hidden recommender, or source of material civic action without explicit citizen confirmation or a separately configured auditable platform rule.
 
 ### Funding
@@ -1169,6 +1171,7 @@ Out of scope or future extension:
 - full common-good charter governance;
 - full personal AI guides;
 - advanced inferred recommender systems;
+- advanced participation-equity analytics, demographic gap measurement, and inclusion dashboards;
 - deep predictive scoring as a decision authority.
 
 ## Future extensions
@@ -1182,6 +1185,7 @@ Potential later versions:
 - common-good governance programs;
 - composite programs;
 - institutional observability dashboards;
+- participation-equity and accessibility outreach observability;
 - transition maturity metrics;
 - AI-assisted project generation and catalog governance;
 - advanced fraud and capture detection;

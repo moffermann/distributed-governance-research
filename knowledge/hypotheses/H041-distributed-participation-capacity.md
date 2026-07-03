@@ -2,7 +2,7 @@
 
 ## Status
 
-Core participation-capacity hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]], [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], and the Core v0 delegation baseline in [[H042-layered-delegation-architecture|H042]] through [[H049-delegate-resignation-and-notification|H049]].
+Core participation-capacity hypothesis aligned with [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|C008]], [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], [[75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|A009]], and the Core v0 delegation baseline in [[H042-layered-delegation-architecture|H042]] through [[H049-delegate-resignation-and-notification|H049]].
 
 Participation capacity can be distributed and fundable without turning public authorities, AI systems, support providers, automatic allocation profiles, or delegates into interchangeable concepts. Support work may be funded as ordinary transparent projects. Delegated authority remains a separate scoped authorization to eligible citizens or eligible organizations. AI remains assistance infrastructure. Public authorities remain external to internal Core v0 project participation in scopes they control.
 
@@ -15,6 +15,8 @@ A distributed governance system should not assume that formal openness alone cre
 If only wealthy actors, large corporations, universities, think tanks, or technically sophisticated groups can produce evidence and navigate the platform, the system may reproduce existing power asymmetries even if formal access is open.
 
 A system is not truly distributed merely because everyone can theoretically participate. It must also support mechanisms that help actors with lower technical, financial, linguistic, or organizational capacity participate meaningfully.
+
+A009 clarifies the standard: Core v0 should improve the current institutional baseline, not solve perfect participation. Current meetings, consultations, digital notices, and neighborhood representation already exclude many older adults, disabled people, workers, caregivers, and digitally disconnected residents. Core v0 improves that baseline through asynchronous visibility, protected identity, simple actions, delegation transparency, support projects, and threshold-policy participation evidence where required.
 
 ## Capacity as an ecosystem function
 
@@ -105,6 +107,8 @@ Participation-support projects may not:
 - hide funding, conflicts, relationships, or recommended delegates;
 - force citizens to delegate instead of funding, following, commenting, or configuring profiles directly.
 
+Under A009, participation-support projects also should not be presented as proof that all affected parties were reached. They reduce participation cost and may improve evidence or access, but missing voices become blockers only when the active Threshold Policy requires the relevant affected-party mapping, consultation, observation, or readiness evidence.
+
 ## Evidence capacity
 
 A small community should not need to own a think tank to challenge a corporation.
@@ -142,7 +146,7 @@ A separate project called `Community Sports Help Desk for Older Residents` may r
 
 ## Principle
 
-> Formal openness is not enough. Participation capacity must also be distributed, assisted, and fundable.
+> Formal openness is not enough. Participation capacity must also be distributed, assisted, and fundable, while recognizing that Core v0 improves current weak participation practices rather than guaranteeing perfect representativeness.
 
 ## Remaining design questions
 
