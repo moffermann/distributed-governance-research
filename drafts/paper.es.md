@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.3 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y una revisión metodológica del autor sobre la simulación, ambas parte del registro público.**
+**Working paper — v1.4 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y revisiones metodológicas del autor sobre la simulación y su encuadre, todas parte del registro público.**
 
-*Traducción al español del working paper v1.3 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.4 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff.*
 
@@ -48,10 +48,16 @@ arquitectura; los dos últimos ataques fueron generados por una revisión extern
 simulada de cinco perfiles del documento acompañante de este artículo. El
 resultado es una arquitectura cuyas limitaciones forman parte de su
 especificación y cuyo registro de revisión es en sí mismo público. Enunciamos
-esas limitaciones con franqueza: la construcción de las agendas de planificación
-permanece centralizada y es, según nuestra propia simulación, la restricción
-vinculante; la dependencia fiscal respecto del Estado establecido es medible
-pero no exigible; y aún no se ha realizado ningún piloto empírico.
+esas limitaciones con franqueza: en los modos de operación cerrado y tutelado
+que la arquitectura especifica para los pilotos, las agendas de planificación
+las construye la autoridad implementadora, y la calidad informativa de esa
+construcción es, según nuestra propia simulación, la restricción vinculante
+sobre la calidad de la asignación —la trayectoria diseñada es una fijación de
+agenda abierta y socialmente construida, cuya viabilidad dentro del modelo mide
+el cuarto experimento y cuya mecánica de elicitación sigue siendo un problema de
+diseño supeditado a condiciones; la dependencia fiscal respecto del Estado
+establecido es medible pero no exigible; y aún no se ha realizado ningún piloto
+empírico.
 
 **Palabras clave:** gobernanza distribuida, presupuesto participativo, diseño de
 mecanismos, gobernanza policéntrica, rendición de cuentas pública, simulación
@@ -127,8 +133,9 @@ se le hizo. Nuestras contribuciones son:
    sin dependencias y con semilla fija, de 10.000 ciudadanos pone a prueba los
    supuestos conductuales de la arquitectura bajo ignorancia racional, atención
    de descubrimiento limitada y cascadas de prueba social. Los resultados
-   disciplinan el diseño: apoyan algunas afirmaciones, afilan otras y cuantifican
-   la vulnerabilidad más importante de la arquitectura.
+   disciplinan el diseño: apoyan algunas afirmaciones, afilan otras, cuantifican
+   el apalancamiento concentrado en la capa de construcción de ámbitos, y miden
+   una construcción abierta viable de ella.
 
 4. **Validación adversarial como método** (Sección 7). La arquitectura fue
    atacada sistemáticamente —treinta y cinco resúmenes de ataque anclados en las
@@ -449,13 +456,13 @@ planificador casi perfectamente informado (r ≈ 0.97) alcanza sel(θ) ≈ 0.71
 (≈ 0.35–0.43)— mientras que quintuplicar la atención ciudadana (α de 2% a 10%)
 mueve la selección de calidad a lo sumo en ≈ 0.08 en los regímenes impulsados por
 saliencia y esencialmente nada en los anclados en valores por defecto. Degradar
-el conocimiento del planificador de casi perfecto a moderado (r ≈ 0.97 → 0.55)
+la calidad informativa del vector de casi perfecta a moderada (r ≈ 0.97 → 0.55)
 cuesta ≈ 0.29 de selección de calidad —mucho más de lo que cualquier ganancia de
 atención factible recupera. Dos salvedades mantienen honesto este hallazgo. El
 predominio de los valores por defecto es en parte por construcción —la regla por
 defecto es un asignador determinista correlacionado con θ que retiene la mayor
 parte del presupuesto— de modo que el contenido informativo es el
-*condicionamiento*: cuánto determina el conocimiento del planificador el valor
+*condicionamiento*: cuánto determina la calidad informativa del vector el valor
 del ancla, y cuán poco lo sustituye la atención ciudadana. Y un panel de
 sensibilidad (variando el tamaño de muestra del evaluador y la fuerza de la
 prueba social) muestra que el ordenamiento de regímenes es robusto salvo bajo
@@ -463,12 +470,32 @@ prueba social muy fuerte, donde los regímenes convergen dentro del ruido porque
 la amplificación fuerte también propaga la señal de calidad de los evaluadores;
 las magnitudes dependen de los parámetros y no están calibradas. Lo que sobrevive
 a todas las variaciones es el ordenamiento y el predominio de la calidad
-informativa del vector de pesos —lo que cuantifica la vulnerabilidad central de
-la arquitectura: porque los valores por defecto son poderosos, quien construye
-los ámbitos de planificación y sus pesos tiene la calidad de la asignación en sus
-manos. La limitación de fijación de agenda (Sección 8) no es una limitación entre
-muchas; por estos números es la restricción vinculante. Dos cosas que E1–E3 no
-pueden afirmar, y que un borrador anterior sobreinterpretó al afirmarlas: el
+informativa del vector de pesos —lo que cuantifica el apalancamiento concentrado
+en aquello que construye el vector que gobierna la porción asignada pasivamente.
+Dos hechos arquitectónicos acotan correctamente ese enunciado, y la formulación
+de un borrador anterior ("la vulnerabilidad central de la arquitectura... quien
+construye los ámbitos de planificación tiene la calidad de la asignación en sus
+manos") carecía de ambos. Primero, la capa por defecto es sustituible, no
+obligatoriamente central: el autopiloto cívico del corpus ofrece a cada ciudadano
+asignación manual, delegación, perfiles de asignación publicados, una regla
+automática personal, o el valor por defecto del sistema —un ciudadano en proceso
+de incorporación debe seleccionar o reconocer explícitamente un perfil base, y
+solo la porción de ciudadanos que nunca se involucra sigue necesariamente el
+valor por defecto del sistema, el cual a su vez opera bajo un Allocation Mandate
+registrado. Segundo, la construcción centralizada de los pesos de ámbito es una
+propiedad de los modos de transición cerrado y tutelado, no de la arquitectura:
+los modos de operación son estados configurados por país, y la trayectoria
+diseñada apunta hacia la construcción abierta (el Hallazgo 4 mide su viabilidad
+dentro del modelo). Lo que los números establecen es, por tanto, un condicional:
+la calidad informativa de los vectores que gobiernan la porción pasiva es la
+restricción vinculante sobre la calidad de la asignación, quienquiera o lo que sea
+que los provea —un proveedor capturado o ignorante es el modo de falla, uno bien
+informado o bien agregado es el activo, y aleatorizar el vector para escapar de la
+captura compraría neutralidad al precio de una calidad casi aleatoria para la
+porción pasiva. La discusión sobre la fijación de agenda (Sección 8) no es una
+limitación entre muchas; por estos números es la restricción vinculante —y, a
+diferencia del statu quo, es una visible, versionada y sustituible. Dos cosas que
+E1–E3 no pueden afirmar, y que un borrador anterior sobreinterpretó al afirmarlas: el
 origen del vector de pesos queda sin especificar (r es una propiedad del vector,
 no de una oficina estatal), y la multitud modelada porta prueba social pero
 ningún conocimiento —de modo que estos experimentos comparan atención frente a
@@ -592,21 +619,34 @@ más abajo como el primer punto del trabajo futuro.
 Enunciadas según la propia regla del método —cada una es una frontera registrada
 con un riesgo residual nombrado.
 
-**La fijación de agenda permanece centralizada, y es lo que más importa.** Core
-v0 hace los ámbitos de planificación públicos, versionados, portadores de mandato
-y disputables mediante la visibilidad, pero no distribuye su construcción.
-Nuestra propia simulación muestra que la calidad informativa del vector de pesos
-predomina sobre todo otro margen de calidad, y quien construye el ámbito ejerce
-la segunda cara del poder (Bachrach and Baratz 1962; Schattschneider 1960) sobre
-todo lo que está aguas abajo. E4 cambia el carácter de esta limitación sin
-eliminarla: la construcción abierta de los pesos a partir de señales ciudadanas
-agregadas es mensurablemente viable y robusta frente a la escala en el modelo, de
-modo que la restricción ya no es si la construcción distribuida puede funcionar
-en principio sino si un mecanismo de elicitación puede mantener las señales
-dispersas honestas, no sesgadas y representativas bajo la presión de la
-manipulación, el clientelismo y la asignación expresiva —un problema de diseño
-que el corpus supedita a condiciones en lugar de dar por resuelto. Este sigue
-siendo el principal problema abierto de la arquitectura, ahora con un premio
+**La fijación de agenda está centralizada en los modos de transición, y es lo que
+más importa.** En los modos de operación cerrado y tutelado que Core v0 especifica
+para los pilotos, la autoridad implementadora construye los ámbitos de
+planificación; la arquitectura hace esa construcción pública, versionada,
+portadora de mandato y disputable mediante la visibilidad, pero en esos modos no
+la distribuye. Nuestra propia simulación muestra que la calidad informativa del
+vector de pesos predomina sobre todo otro margen de calidad, y quien construye el
+ámbito ejerce la segunda cara del poder (Bachrach and Baratz 1962;
+Schattschneider 1960) sobre todo lo que está aguas abajo. Tres cosas acotan la
+limitación con honestidad. Es una propiedad de los modos de transición, no de la
+arquitectura: los modos de operación son estados configurados por país, y la
+trayectoria diseñada es una fijación de agenda abierta y socialmente construida.
+Es más estrecha que la porción pasiva: los ciudadanos involucrados asignan
+manualmente, delegan, o adoptan perfiles configurables, de modo que los pesos de
+la autoridad gobiernan plenamente solo la porción que nunca se involucra. Y ahora
+está medida en lugar de supuesta: E4 muestra que la construcción abierta de los
+pesos a partir de señales ciudadanas agregadas es viable y robusta frente a la
+escala en el modelo, de modo que la restricción ya no es si la construcción
+distribuida puede funcionar en principio sino si un mecanismo de elicitación puede
+mantener las señales dispersas honestas, no sesgadas y representativas bajo la
+presión de la manipulación, el clientelismo y la asignación expresiva —un problema
+de diseño que el corpus supedita a condiciones en lugar de dar por resuelto. La
+línea base comparativa también corresponde a este párrafo: bajo el modelo
+institucional actual, la totalidad del presupuesto sigue un vector construido
+centralmente que no es ni publicado, ni versionado, ni sustituible, ni anulable
+por ciudadano alguno. Los modos de transición reproducen esa centralización de
+manera visible y revocable; el modo abierto está diseñado para terminarla. Este
+sigue siendo el principal problema abierto de la arquitectura, ahora con un premio
 medido asociado a resolverlo.
 
 **La legitimidad procedimental no es mandato democrático.** La plataforma
