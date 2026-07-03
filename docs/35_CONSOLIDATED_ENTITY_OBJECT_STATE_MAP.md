@@ -448,6 +448,10 @@ Rules:
 - complaint evidence enters only when a complaint is explicitly filed and processed;
 - failure to reach a floor, exceeding a ceiling, or discovering an undeclared antivalue may become a reviewed Reputation Input or Responsibility Event by role.
 
+A015 common-good sufficiency:
+
+> A015 common-good sufficiency: Core v0 does not add a charter entity or common-good registry; the sufficiency test binds through the existing common-good impact declaration, ValueAntivalueProfile, evidence needs, and fiscalization paths. A project plausibly affecting a common good identifies affected assets and parties, declares no impact, uncertain impact with explanation, or impact with explanation, avoids unexplained overuse of `uncertain`, and connects material omissions to fiscalization, complaint, mitigation, responsibility, and reputation effects; charter voting and platform common-good adjudication remain Extension v1+.
+
 ## Support Signal
 
 A reversible positive civic signal attached to an idea or project.

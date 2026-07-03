@@ -2,9 +2,11 @@
 
 ## Status
 
-Extension v1+ hypothesis aligned with [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|C022]].
+Extension v1+ hypothesis aligned with [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|C022]] and [[81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION|A015]].
 
 Full common-good governance is not part of Core v0. Core v0 only requires lightweight project-level common-good impact declaration where relevant, including affected assets, affected parties, risks, antivalues, evidence, fiscalization, and active-charter relationship disclosure when an active charter already exists.
+
+Under [[81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION|A015]], that declaration carries a minimum common-good impact sufficiency test as the Core v0 floor: affected assets and parties identified; no impact, uncertain impact with explanation, or impact with explanation; evidence and fiscalization where impact is plausible; active-charter relationship where a charter exists; no unexplained overuse of `uncertain`; and material omissions connected to fiscalization, complaint, mitigation, responsibility, and reputation effects. The full governance program described in this hypothesis, including the registry, charter voting, and adjudication mechanics below, remains the Extension v1+ layer above that floor.
 
 ## Hypothesis
 

@@ -606,6 +606,22 @@ Core v0 does not require beneficial-ownership verification, corporate-registry i
 
 ---
 
+## A015 - Common-good charter conflicts
+
+**Severity:** Medium / High
+**Status:** Resolved
+**Resolution document:** `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A015 is founded but bounded, and does not distort the project when it strengthens project-level common-good disclosure without importing the full Extension v1+ charter system. Core v0 handles it as a minimum common-good impact sufficiency test over the existing C022 common-good impact declaration rather than a charter registry, charter voting, or platform adjudication authority. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this integrates a thin disclosure test through existing declaration, evidence, and fiscalization surfaces and bounds everything else.
+
+A project that plausibly affects a common good should not proceed with a vague or unexplained impact declaration. The sufficiency test requires identifying affected assets and affected parties; declaring no impact, uncertain impact, or impact with explanation; requiring evidence and fiscalization where impact is plausible; requiring an active-charter relationship if a charter exists; prohibiting unexplained overuse of `uncertain`; and connecting material omissions to fiscalization, complaint, mitigation, responsibility, and reputation effects.
+
+Core v0 does not require a common-good registry, charter voting, or platform adjudication of common-good compatibility. Full registry and charter mechanics remain Extension v1+, and conflicts requiring legal, environmental, cultural, or scientific authority route to external channels. Limitation statement: without a charter system, the sufficiency test relies on declaration honesty plus affected-party and fiscalizer contestation, so systematically underdeclared impacts in communities with weak contestation capacity remain an open exposure.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -627,6 +643,8 @@ Core v0 does not require beneficial-ownership verification, corporate-registry i
 - [x] Are Idea, draft project, and open financeable project clearly separated?
 - [ ] Does every financeable project reference an active Planning Scope?
 - [ ] Does every project have value thesis, beneficiaries, metrics, evidence, fiscalization, risks, and antivalues?
+- [ ] Does a project plausibly affecting a common good declare affected assets, affected parties, and either no impact, uncertain impact with explanation, or impact with explanation?
+- [ ] Is the full charter system (registry, voting, adjudication) kept out of Core v0 as Extension v1+ while the common-good sufficiency test binds through the existing impact declaration?
 - [ ] Does every execution-financeable project have a Financial Assurance Profile?
 - [ ] Does every execution-financeable project that requires post-closure accountability have a Post-Closure Coverage Profile?
 - [ ] Does the profile state whether coverage is Executor Direct Warranty or Equivalent Insurance / Bond / Coverage?
@@ -667,6 +685,7 @@ Core v0 does not require beneficial-ownership verification, corporate-registry i
 - [ ] Are value commitments represented as floors the project must reach?
 - [ ] Are relevant antivalues represented as ceilings the project must not exceed?
 - [ ] Does every antivalue ceiling identify affected parties, zones, assets, or common goods where applicable?
+- [ ] Is unexplained overuse of `uncertain` prevented and does plausible common-good impact trigger evidence and fiscalization needs?
 - [ ] Does every antivalue ceiling define measurement or review method, timing/frequency, required fulfillment/control evidence, and review consequence?
 - [ ] Is every core value commitment linked to a fulfillment evidence need?
 - [ ] Is every metric linked to fulfillment evidence needs and review consequences?
@@ -810,6 +829,7 @@ Core v0 does not require beneficial-ownership verification, corporate-registry i
 - [ ] Are expired or out-of-scope post-closure complaints routed externally instead of processed as ordinary platform complaints?
 - [ ] Can final external decisions be recorded without treating mere external filing as proof or reputation input?
 - [ ] Are weak or abusive complaints handled without discouraging good-faith complaints?
+- [ ] Do material common-good omissions connect to fiscalization, complaint, mitigation, responsibility, and reputation effects?
 - [ ] Does every complaint have a visible status?
 
 ## 9. Delegation checklist

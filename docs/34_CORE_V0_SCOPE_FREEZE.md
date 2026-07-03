@@ -542,6 +542,8 @@ Idea
 
 Project creation also includes lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, fulfillment evidence needs, and fiscalization. Full common-good charter governance remains Extension v1+.
 
+A015 reinforces this as a minimum common-good impact sufficiency test over that existing declaration, not a charter system: affected assets and parties identified; no impact, uncertain impact with explanation, or impact with explanation declared; evidence and fiscalization required where impact is plausible; active-charter relationship declared where a charter exists; unexplained overuse of `uncertain` prohibited; and material omissions connected to fiscalization, complaint, mitigation, responsibility, and reputation effects. Core v0 does not add a common-good registry, charter voting, or platform adjudication of common-good compatibility, and conflicts requiring legal, environmental, cultural, or scientific authority route to external channels.
+
 For integrated design-and-execution projects, creation must define the phase baseline and gate before accepting execution-phase commitments. Example: `Design and Construction of Multi-court Facility in Macul` may reserve construction funding while the design is reviewed, but construction cannot become execution-ready if the design omits required bathrooms, changes court dimensions materially, weakens public access, or fails the accepted baseline.
 
 ### 15. Project lifecycle after publication
@@ -812,6 +814,7 @@ These should not be part of Core v0 unless later shown necessary:
 - beneficial-ownership registry verification and relationship-graph analytics;
 - detailed sector-specific KPI libraries beyond pilot needs;
 - full common-good charter governance;
+- common-good registry, charter voting, and platform common-good adjudication beyond the A015 sufficiency test;
 - full multi-sector implementation.
 
 ## Country implementation decisions

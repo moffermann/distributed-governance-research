@@ -823,6 +823,8 @@ The creator should not start with a giant technical form. The system should assi
 
 Project creation should include lightweight common-good impact declaration where relevant through affected assets, affected parties, risks, antivalues, fulfillment evidence needs, and fiscalization. Full common-good charter governance remains a later extension.
 
+A015 adds a sufficiency test over the existing common-good impact declaration, not a charter system: a project that plausibly affects a common good should identify affected assets and affected parties, declare no impact, uncertain impact with explanation, or impact with explanation, provide evidence and fiscalization where impact is plausible, declare an active-charter relationship where a charter exists, avoid unexplained overuse of `uncertain`, and connect material omissions to fiscalization, complaint, mitigation, responsibility, and reputation effects. Core v0 does not add a common-good registry, charter voting, or platform adjudication of common-good compatibility; those remain Extension v1+, and conflicts requiring legal, environmental, cultural, or scientific authority route to external channels.
+
 When a project combines design and execution, creation should define explicit `Project Phases`. The design phase should produce an auditable design package and a minimum public-value baseline before any later execution phase can release funds.
 
 Example:
@@ -1177,6 +1179,7 @@ Out of scope or future extension:
 - full legal implementation by country;
 - advanced macro-budget balancing;
 - full common-good charter governance;
+- common-good registry, charter voting, and platform common-good adjudication beyond the A015 sufficiency test;
 - full personal AI guides;
 - advanced inferred recommender systems;
 - advanced participation-equity analytics, demographic gap measurement, and inclusion dashboards;

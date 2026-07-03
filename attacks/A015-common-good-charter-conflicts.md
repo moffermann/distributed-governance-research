@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
@@ -73,6 +73,6 @@ A plaza renovation project removes informal sports areas used by teenagers. The 
 - Can affected parties raise issues without formal charter machinery?
 - Are omissions connected to fiscalization, complaints, and responsibility?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should define a minimum common-good impact sufficiency test for Core v0.
+Resolved in `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`: a minimum common-good impact sufficiency test over the existing C022 common-good impact declaration rather than a charter system, registry, or platform adjudication authority. A project that plausibly affects a common good identifies affected assets and affected parties, declares no impact, uncertain impact with explanation, or impact with explanation, provides evidence and fiscalization where impact is plausible, declares an active-charter relationship where a charter exists, avoids unexplained overuse of `uncertain`, and connects material omissions to fiscalization, complaint, mitigation, responsibility, and reputation effects. Full charter registry, charter voting, and platform common-good adjudication remain Extension v1+, and conflicts requiring legal, environmental, cultural, or scientific authority route to external channels.
