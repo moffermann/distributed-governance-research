@@ -407,6 +407,30 @@ A026 identity-provider failure modes:
 
 > A026 identity-provider failure modes: Core v0 adds no identity entity and no detection engine; declared failure modes and purpose-bound access auditing read from verified identity, protected identity (C014/C024), the complaint flow, and AuditEvents on every act-to-identity access.
 
+A027 herding observability:
+
+> A027 herding observability: Core v0 adds no herding entity; funding-velocity-versus-evidence-maturity, funding-source independence, and discovery-slot concentration signals read from citizen discovery and project-list ordering (C025), the support-versus-financing separation (H026), the funding-target closure rule (H035), and administrative observability, with closure the structural cascade truncator.
+
+A028 territorial and group outcome observability:
+
+> A028 territorial and group outcome observability: Core v0 adds no equity entity; funding per capita by comuna, funded-project density against need weights, and capture share by organized proposers read from the audit trail, PlanningScope, the civic tax wallet and allocation formula (H025), and the default allocation rule (H033), with equalization a documented, authorized country-implementation choice.
+
+A029 composite-program dependencies:
+
+> A029 composite-program dependencies: Core v0 adds no dependency entity; hard cross-project dependency declarations, program-level funding coherence, and stranded-complement warnings read from the existing Composite Program object (H051), project and phase funding attempts, and Planning Scope alignment (H009), with components' funding attempts kept independent.
+
+A030 clientelism pattern indicators:
+
+> A030 clientelism pattern indicators: Core v0 adds no clientelism entity; repeat broker-beneficiary alignments, geographic delegation blocs, and support-provider concentration read from delegation and the Delegate role (C019), participation-support projects, the related-party relationship graph (A014), delegated-action reports, and the complaint and competent-authority referral paths, as leads rather than verdicts.
+
+A031 motive-neutrality boundary:
+
+> A031 motive-neutrality boundary: Core v0 adds no motive or polarization entity; the boundary and funding-bloc correlation observability read from social sovereignty over value (P002), value icons and antivalue-ceiling declarations (H012), support and justified-objection signals (H026), the common-good impact declaration (C022), the funding-target closure rule (H035), and the deliberation surface, with material effects gated identically regardless of motive.
+
+A032 long-horizon lanes:
+
+> A032 long-horizon lanes: Core v0 adds no intertemporal entity; long-horizon lane need-weights and funding-share-by-time-to-benefit observability read from Planning Scope (H009), the monthly allocation cycle (H038), continuity-risk classification (A006), citizen funding and automatic allocation profiles, and administrative observability, with the non-assignable pool retained as the structural shield.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

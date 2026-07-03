@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 

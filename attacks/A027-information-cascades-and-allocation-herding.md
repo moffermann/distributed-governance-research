@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

@@ -814,6 +814,102 @@ The identity provider is pre-existing state infrastructure — the civil registr
 
 ---
 
+## A027 - Information cascades and allocation herding
+
+**Severity:** Medium/High
+**Status:** Resolved
+**Resolution document:** `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A027 is founded. Visible funding progress, active-support counts, and delegate follower numbers turn each citizen's allocation into a public signal that later, weakly-informed citizens rationally imitate, so early and partly arbitrary advantages compound into cascades and Matthew effects only loosely correlated with underlying value, and the pathology needs no manipulating operator — it is structural to displaying cumulative social proof at all. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates herding observability through existing objects — discovery ordering, the support-versus-financing separation, funding-target closure, and administrative observability — and bounds the deeper visibility redesign: cascades attack the discovery-helps-citizens-find-value claim and cannot be ignored, but their control fits existing objects and the residual is a measurement gap, not a missing primary entity.
+
+Herding is measured and made observable, not prevented: funding progress stays visible and the platform surfaces the cumulative-advantage dynamics acting on it. The minimum elements are funding-velocity-versus-evidence-maturity indicators that flag projects whose money outruns their evidence or support breadth; funding-source independence signals including the share of funding arriving after high-visibility exposure; discovery-slot concentration observability so the amplification granted by "most supported" and "almost funded" ordering is itself visible; and funding-target closure (H035) retained as the structural cascade truncator with its claim stated honestly. Per `research/simulation-results.md` experiment E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, because the truncated surplus spills to the next most visible project rather than the next best one, so quality selection depends on the default anchor, not the cap. In Macul, when two comparable sports projects launch the same week and one crosses its target first on early commitments, closure caps how much it can absorb and the new indicators flag that its velocity outran its evidence and that most of its money arrived after it topped the "almost funded" sort, so an observer sees a herded leader named as such rather than reading a full bar as proof of merit.
+
+Core v0 does not hide funding progress, does not rank exclusively by non-accumulative orderings, and does not adjudicate whether an individual citizen imitated the crowd; advanced de-herding mechanisms — blind early windows, staged reveal, exposure equalization — remain Extension v1+. Limitation statement: visible social proof is intrinsic to a transparent funding surface, so herding is measured and bounded, not prevented, and allocation quality depends on the default anchor rather than on the funding cap — a declared limitation for the paper.
+
+---
+
+## A028 - Spatial and group inequity of allocation outcomes
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A028 is founded. Even with strictly equal per-citizen wallets and equal capacity, allocation outcomes concentrate where social capital, organizational density, and proposal-writing capacity already concentrate, so equal inputs produce unequal territorial and group results; horizontal fiscal equity is not guaranteed by equal individual inputs but requires equalization the model does not contain. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution with core observability: outcome inequity attacks the fairness claim of equal wallets and cannot be ignored, but the audit trail already makes per-territory outcomes reconstructable and the equalization machinery is representable through existing objects — the H025 formula layer, the H033 default rule, planning-scope lanes, and the non-assignable pool — so Core v0 integrates the observability minimally and bounds the redistribution as a political choice.
+
+Per-territory and per-group allocation outcomes are observable as core administrative observability: Core v0 mandates that the distribution of outcomes be measured, not that outcomes be equalized. The minimum elements are funding per capita by comuna as a standing, versioned public metric; funded-project density against planning-scope need weights; capture share by organized proposers so concentration among high-capacity actors is visible; and an explicit input-equity versus outcome-equity distinction in the model's own language so equal wallets are not presented as evidence of fair outcomes. Equalization capability is documented as available and unmandated — redistributive and hybrid allocation-amount formulas (H025), planning-scope lanes and the A005 floor-and-lane pattern reused for a distinct territorial or group equity target, the H033 default rule's territorial routing, and preferential supply-side funding of proposal, modeling, and fiscalization support in low-capacity territories — each a versioned, publicly authorized, auditable country-implementation choice rather than a silent administrator setting. In Macul, where an organized comuna captures eight times the per-capita allocation of a marginal one of equal size, the architecture now sees the gap from the audit trail as a standing metric and can route against it through a redistributive formula, a territorial floor, or supply-side support, but only if the implementing country configures it.
+
+Core v0 mandates outcome observability, not outcome equality; equalization mechanisms — floors, matching, compensatory routing, redistributive formulas — remain country implementation or Extension v1+, modeled on but distinct from the essential-service floors. Limitation statement: with equal wallets and no equalization configured, organized territories will out-capture marginalized ones by default, and the architecture makes that measurable for the first time but does not prevent it — how much to equalize is a political choice, not an architectural one.
+
+---
+
+## A029 - Program fragmentation and lost complementarities
+
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A029 is partially founded. Decomposing public action into independently proposed, funded, and closed projects can strand complementarities — cross-project linkages where one component is worthless without another, multi-year coherence, and procurement economies of scale — and although Composite Programs already aggregate interdependent projects, each component still lives or dies by its own funding attempt, so partial funding can produce stranded half-systems. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through the existing Composite Program object (H051) rather than adding a new primary entity: fragmentation threatens the coordinated-delivery claim and cannot be ignored, but the coordination structure already exists — program aggregation, Planning Scope alignment, parallel closure, and funding-window expiry — and the fix is to make cross-project dependencies declarable and program-level coherence visible, while bundled all-or-nothing funding stays bounded to Extension v1+.
+
+A project may declare hard dependencies on other projects inside a Composite Program, and program-level funding coherence is visible before citizens fund; components keep independent funding attempts, and Core v0 does not make funding all-or-nothing across a program. The minimum elements are cross-project dependency declarations inside composite programs, so a component can state that it requires another (X requires Y) visibly before funding; program-level funding-coherence visibility showing which components are funded and unfunded, with stranded-complement warnings when a prerequisite funds and its dependents do not; dependency-aware funding windows, so a dependent component's window can reference its prerequisite's state rather than expiring blindly against it; and open acknowledgement that procurement-scale losses are a real cost of modularity. In Macul, a sports program of four linked projects — multi-court build, night lighting, an access ramp with drainage, and a two-year maintenance plan — where the courts and lighting fund quickly while the drainage expires, now declares and shows the drainage dependency before citizens fund the courts, warns that a funded build is stranding without its complement, and keeps the funded money reserved behind closure rather than paying for a half-system, even though Core v0 still does not make the courts' funding conditional on the drainage.
+
+Components keep independent funding attempts — Core v0 has no all-or-nothing program funding, and conditional or escrowed bundle funding with automatic return, along with shared procurement and shared control packages across linked projects, remains Extension v1+. Limitation statement: complementarities can still strand at the program level when prerequisites fund and dependents do not, and modularity's benefits — smaller blast radius, comparability, exit options — are bought at scale-economy costs the corpus does not hide.
+
+---
+
+## A030 - Clientelism migration into distributed allocation
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A030 is founded as an adaptation risk. Clientelist machines adapt to new institutions rather than dying with the old ones: brokers migrate in as delegates, participation-support providers, community organizations, or intermediaries, exchanging allocation behavior for private favors arranged entirely off the platform, and the quid pro quo is invisible by construction, so relationship graphs and related-party declarations never capture it. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through the A014 related-party relationship graph and the delegation records rather than adding a new entity or a hard anti-broker ban: off-platform clientelism attacks the anti-capture claim and cannot be ignored, but the on-platform half of the exchange — equally invisible today — is already traceable, so the fix is to surface repeated patterns as leads while the off-platform act routes to external law (test 4).
+
+The platform makes the on-platform half of a clientelist exchange traceable and surfaces pattern-level indicators over time; it does not adjudicate the off-platform favor, which is named as a distinct risk with a documented observability boundary. The minimum elements are repeat broker-beneficiary alignments across cycles; geographic delegation blocs correlated with related-project funding; participation-support providers whose assisted citizens' allocations concentrate on related actors; and indicators that feed review, complaint, and verified-discovery paths as leads, never automatic verdicts, with participation-support projects carrying anti-conditioning declarations and independent beneficiary confirmation. In Macul, a funded participation-support operator offering off-platform paperwork help, food parcels, and job referrals to residents who delegate their sports-scope allocation to it is never seen exchanging the food parcel, but its represented weight across four neighborhoods, its delegated-action pattern, and its funding of allied projects are recorded and comparable over time, so a fiscalizer or electoral-integrity authority has a traceable pattern to act on rather than nothing; a citizen can revoke a delegation privately and immediately for future actions, exiting a coercive relationship without the broker observing the exit at action time.
+
+Off-platform quid pro quo remains invisible by construction; sanction of vote-buying-style exchange is external law, routed to complaint, competent-authority, or electoral-integrity channels, and Core v0 imposes no hard anti-broker ban — community organization and brokerage are not treated as clientelism per se. Limitation statement: the platform makes machine-style allocation patterns statistically visible over time — a real improvement over street-level clientelism's full invisibility — but a careful machine trading entirely off-platform favors, and splitting influence across multiple entities, remains undetectable from within.
+
+---
+
+## A031 - Polarization and symbolic capture of allocation
+
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A031 is partially founded. Allocation can become an identity battleground: funding and defunding turn into tribal signaling, coordinated brigade-funding and boycott campaigns mobilize around projects, and value/antivalue declarations become culture-war terrain, while aggregate signals cannot by themselves distinguish a broadly legitimate project from a well-mobilized one — yet expressive, identity-driven allocation is legitimate citizen choice, and the platform's job is not to police motive. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution: polarization threatens the social-sovereignty-over-value claim and cannot be ignored, but the control fits existing objects — antivalue management, affected-party evidence, threshold policies, funding-target closure, and administrative observability — and the residual is a deliberation-quality problem, not a missing mechanism, since a platform that discounted "tribal" support would arrogate to itself exactly the authority over value that P002 denies it.
+
+Citizens' reasons for funding are not platform business, and material effects stay gated identically regardless of motive; the platform does not police motive, moderate viewpoint, or attach effects to any polarization score. The minimum elements are reasons for funding kept outside the platform's authority (P002), so no motive-policing and no viewpoint moderation of allocation; material effects gated identically regardless of motive, so antivalue declarations route through measurement and fiscalization, affected-party evidence and threshold policies bind, and a contested antivalue supports a complaint only if someone files one; funding-bloc correlation observability — synchronized timing, shared origin, reciprocal brigading across paired projects — as research and administrative data only, without discounting either side's signals; and funding-target closure (H035) bounding brigade amplitude on any single project so a faction cannot pour unbounded funding into a favorite to overwhelm a rival. In Macul, where a migrant-run football school and a rival club's facility become proxies in an identity dispute and each faction brigades the other with contested antivalue declarations and counter-mobilized funding, both projects keep their expressive support and objections, but the antivalue claims still route through measurement and fiscalization, so tribal funding buys feasibility, not a waiver from the noise data or the closure rule.
+
+Core v0 does no motive policing, no viewpoint moderation of allocation, and attaches no platform effect to any polarization score; mobilization-pattern indicators are observability only, and deliberation-surface protections and contextual protected identity are supported but do not judge why citizens act. Limitation statement: expressive allocation can still shift aggregate spending toward symbolic battlegrounds and a hostile comment surface can drive out moderates — the architecture guarantees the fights stay materially accountable, not that they stop being fights.
+
+---
+
+## A032 - Intertemporal myopia and long-term underinvestment
+
+**Severity:** Medium/High
+**Status:** Resolved
+**Resolution document:** `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A032 is partially founded. Monthly allocation cycles reward visible near-term outputs and renewal windows re-expose long-horizon commitments to each cycle's shifting attention, so hyperbolic discounting tilts new funding away from maintenance, prevention, and intergenerational infrastructure, and future citizens are unrepresented in every funding attempt — but the goods most vulnerable to myopia are already shielded structurally, and the sharp edge is new long-horizon value above the floor. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution built on existing structures: formation-stage myopia threatens the aggregate-citizen-valuation claim and cannot be ignored, but the control fits existing objects — Planning Scopes, the non-assignable pool, continuity-risk classification (A006), and administrative observability — and the residual, an unrepresented future, is a declared limitation, not a mechanism Core v0 can supply.
+
+Planning Scopes may define long-horizon lanes whose need-weights flow into the default allocation, and intertemporal allocation is observable; Core v0 does not discount-correct citizen preferences or force intergenerational weights. The minimum elements are planning-scope long-horizon lanes — maintenance, prevention, infrastructure — whose need-weights flow into default allocation as a transparent, versioned public choice; intertemporal allocation observability — funding share by time-to-benefit horizon, and deferred-maintenance indicators — so under-funding of durable value is measurable before failure; continuity-risk classification (A006) plus the non-assignable pool retained as the structural shields for existing obligations, pulling maintenance and continuity needs into protected renewal paths; and renewal windows made visible before expiry so a long-horizon commitment's re-exposure is surfaced rather than silent. In Macul, a fifteen-year stormwater and slope-stabilization need whose benefit is a landslide that never happens, losing month after month to visible plazas and courts, is pulled into a protected renewal path where it is a continuity obligation, or carried into the default by a planning-scope long-horizon lane where it is genuinely new value, and the funding share by time-to-benefit horizon makes the under-investment arguable before the slope fails rather than diagnosed afterward.
+
+Core v0 does not discount-correct citizen preferences or force intergenerational weights, and future citizens remain unrepresented in funding attempts; multi-cycle or endowment lanes insulated from per-cycle attention remain Extension v1+. Limitation statement: formation bias against new long-horizon value above the floor is real and mitigated only insofar as planning-scope lanes and defaults carry it — which the simulation shows is exactly where allocation quality lives, tying this limitation to the A020 agenda constraint over who sets planning-scope weights.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -861,6 +957,8 @@ The identity provider is pre-existing state infrastructure — the civil registr
 - [ ] Does every required object, field, state, or procedural step name the material failure mode it controls?
 - [ ] Do new v0 entities pass the cannot-be-safely-derived test before entering the formal inventory?
 - [ ] Are Extension v1+ ideas kept out of Core v0 by default under the P007 integrate-or-bound rule?
+- [ ] Can a component in a Composite Program declare hard dependencies on other components, visible before citizens fund?
+- [ ] Does the program surface funding coherence with stranded-complement warnings when a prerequisite funds and its dependents do not, while components keep independent funding attempts?
 
 ## 2a. Public guarantee and service provision checklist
 
@@ -898,6 +996,8 @@ The identity provider is pre-existing state infrastructure — the civil registr
 - [ ] Is antivalue non-compliance separated from automatic complaint creation?
 - [ ] Can projects game easy metrics?
 - [ ] Is there a mechanism to challenge weak metrics?
+- [ ] Are material effects gated identically regardless of motive — antivalue declarations routed through measurement and fiscalization rather than discounted as "tribal" or amplified by mobilization?
+- [ ] Is funding-bloc correlation (synchronized timing, shared origin, reciprocal brigading) observable as research and administrative data only, without attaching any platform effect to a polarization score?
 
 ## 3a. Reputation checklist
 
@@ -951,6 +1051,12 @@ The identity provider is pre-existing state infrastructure — the civil registr
 - [ ] Does advance payment carry recoverability, retention, direct supplier payment, guarantee, or equivalent protection?
 - [ ] Above the essential floor, is the salience gradient observable as funding per category against declared planning-scope need weights across salient-versus-non-salient and preventive-versus-remedial lanes?
 - [ ] Is any default weighting toward under-allocated non-salient categories a disclosed, versioned protocol choice, with inactive budget routed by planning priority rather than salience?
+- [ ] Are herding indicators observable above the funding surface — funding velocity versus evidence maturity, funding-source independence, and discovery-slot concentration — with funding progress kept visible rather than hidden?
+- [ ] Is funding-target closure retained as the structural cascade truncator, with its claim bounded to concentration and completion breadth rather than quality selection?
+- [ ] Are per-territory and per-group allocation outcomes observable — funding per capita by comuna, funded-project density against need weights, and capture share by organized proposers?
+- [ ] Is the input-equity versus outcome-equity distinction stated so equal wallets are not presented as fair outcomes, with equalization left to authorized country implementation rather than a silent setting?
+- [ ] May Planning Scopes define long-horizon lanes whose need-weights flow into the default allocation, with funding share by time-to-benefit horizon and deferred-maintenance indicators observable?
+- [ ] Are renewal windows surfaced before expiry, with continuity-risk classification (A006) and the non-assignable pool retained as the structural shields for existing obligations?
 
 ## 5. Disbursement checklist
 
@@ -1061,6 +1167,8 @@ The identity provider is pre-existing state infrastructure — the civil registr
 - [ ] Are related-delegate, support-provider, or related-project relationships visible where material to concentration risk?
 - [ ] Are the per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation measured and versioned, with active-core concentration tracked across cycles?
 - [ ] Does citizen-facing legitimacy language distinguish deliberate evaluation from default and profile carry-over rather than presenting carry-over as considered choice?
+- [ ] Are pattern-level clientelism indicators — repeat broker-beneficiary alignments and geographic delegation blocs correlated with related-project funding — surfaced as leads to review, complaint, and referral paths rather than automatic verdicts?
+- [ ] Do participation-support projects carry anti-conditioning declarations and independent beneficiary confirmation, and can a citizen revoke a delegation privately for future actions?
 
 ## 10. Interface checklist
 

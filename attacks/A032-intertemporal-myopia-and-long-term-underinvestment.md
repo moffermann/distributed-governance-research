@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

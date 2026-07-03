@@ -79,6 +79,8 @@ Monthly allocation can help continuity needs receive steady attention, but it sh
 
 If a funded continuity period is approaching its end, the system may route eligible profile or fallback allocations toward follow-on projects, maintenance, mitigation, wind-down, or a continuity project generated from a public Idea. The automatic cycle should not automatically renew the current executor and should not treat a renewal window as proof that a follow-on project is valid.
 
+H038 is aligned with [[../../docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION|A032]]: because the monthly cadence rewards visible near-term outputs and re-exposes long-horizon commitments to each cycle's shifting attention, A032 lets Planning Scopes define long-horizon lanes — maintenance, prevention, infrastructure — whose need-weights flow into the default allocation, makes intertemporal allocation observable through funding share by time-to-benefit horizon and deferred-maintenance indicators, and surfaces renewal windows before expiry rather than silently. Continuity-risk classification (A006) and the non-assignable pool remain the structural shields for existing obligations; Core v0 does not discount-correct citizen preferences or force intergenerational weights, and multi-cycle or endowment lanes insulated from per-cycle attention remain Extension v1+.
+
 ## Relationship to project funding
 
 Projects still close when they reach their funding target. Monthly allocation helps projects reach targets without waiting for annual or sporadic citizen participation.

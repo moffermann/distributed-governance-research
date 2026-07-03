@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

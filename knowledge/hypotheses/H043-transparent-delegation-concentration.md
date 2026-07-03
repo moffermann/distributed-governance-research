@@ -94,6 +94,8 @@ Warnings should inform. They should not shame the citizen, block voluntary deleg
 
 A010 stress thresholds reinforce this rule without creating a new primary entity or universal cap. A stress threshold is a warning, reporting, disclosure, or observability condition derived from existing delegation records, delegated-action records, reports, related-party disclosures, participation-support disclosures, AuditEvents, and administrative observability.
 
+H043 is aligned with [[../../docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION|A030]]: because a popular delegate can become a de facto political machine trading allocation behavior for off-platform favors, A030 reuses the delegation records and the A014 related-party graph to surface pattern-level clientelism indicators over time — repeat broker-beneficiary alignments across cycles, geographic delegation blocs correlated with related-project funding, and participation-support providers whose assisted citizens concentrate on related actors — feeding review, complaint, and referral paths as leads, never automatic verdicts. The on-platform half of the exchange is made traceable while the off-platform quid pro quo stays invisible and its sanction remains external law, and a citizen can revoke a delegation privately for future actions without the broker observing the exit at action time.
+
 ## Citizen visibility
 
 When a citizen chooses a delegate, the interface should show the delegate's existing level of influence.

@@ -309,7 +309,9 @@ The one-hundred-eleventh residual cleanup accepted the external-review round res
 
 The one-hundred-twelfth residual cleanup propagated the first batch of second-round resolutions, A022-A026 / `docs/90` through `docs/94`, into the core corpus as bounded observability per P007: control-supply density observability with thin-market fallbacks as country implementation (A022); open-mode deployment gated on resolving constitutional decision mechanics (A023); salience-bias observability above the protected floor (A024); engagement-decay and active-core metrics joined to functional transition maturity with citizen-facing legitimacy language bounded by the simulation evidence (A025); and declared identity-provider failure modes with purpose-bound access auditing (A026). Each aligned the blueprint, scope freeze, entity/state map, scope matrix, formal inventory, schema draft, checklist, topical hypotheses, and its briefs; none added a primary entity.
 
-Next review candidate: core propagation of docs/95-100 and docs/102-103, or the post-manuscript validation program.
+The one-hundred-thirteenth residual cleanup propagated the second batch of second-round resolutions, A027-A032 / `docs/95` through `docs/100`, into the core corpus per P007: herding observability with the funding-target closure rule's claim bounded by the simulation evidence (A027); territorial and group outcome observability with equalization as country implementation (A028); cross-project dependency declarations and stranded-complement warnings in composite programs (A029); pattern-level clientelism indicators feeding review paths, never automatic verdicts (A030); the motive-neutrality boundary — motives free, material effects gated (A031); and long-horizon lanes in Planning Scopes with intertemporal allocation observability (A032). Each aligned the blueprint, scope freeze, entity/state map, scope matrix, formal inventory, schema draft, checklist, topical hypotheses, and its briefs; none added a primary entity.
+
+Next review candidate: core propagation of docs/102-103, or the post-manuscript validation program.
 
 Approximate current maturity:
 

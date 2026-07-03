@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 

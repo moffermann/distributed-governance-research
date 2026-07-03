@@ -81,6 +81,8 @@ Culture projects remain reachable through Explore, filters, and search.
 - regional or communal relevance;
 - inferred strategic relevance inside the roadmap.
 
+H031 is aligned with [[../../docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION|A027]]: because discovery signals such as projects close to funding completion, high social support, and "most supported" ordering turn cumulative advantage into social proof that later, weakly-informed citizens rationally imitate, Core v0 makes the amplification itself observable — funding-velocity-versus-evidence-maturity indicators, funding-source independence signals, and discovery-slot concentration — while funding-target closure (H035) truncates any single cascade. Herding is measured and bounded rather than prevented, since visible social proof is intrinsic to a transparent discovery surface, and allocation quality still depends on the default anchor rather than the funding cap.
+
 ## Strategic relevance
 
 Some projects may be strategically important even if they are not immediately popular.

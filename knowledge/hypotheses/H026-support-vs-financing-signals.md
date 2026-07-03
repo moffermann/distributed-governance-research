@@ -152,6 +152,8 @@ Wealthy individuals may be able to fund more projects. This is not necessarily i
 
 Large funding concentration may be relevant to transparency, related-party review, or legitimacy analysis, but it should not become hidden extra civic weight. ^rb2249dfb
 
+H026 is aligned with [[../../docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION|A031]]: because a well-funded or well-supported project is not thereby broadly legitimate, A031 keeps material effects gated identically regardless of motive — antivalue declarations route through measurement and fiscalization, and a contested antivalue supports a complaint only if someone files one — while making funding-bloc correlation (synchronized timing, shared origin, reciprocal brigading across paired projects) observable as research and administrative data only. The platform does not police the reasons citizens fund or object (P002) and attaches no effect to any polarization score, and funding-target closure (H035) bounds how much a single faction can pour into one project, so tribal mobilization buys feasibility, not a waiver from the evidence.
+
 ## Formal complaints are different
 
 A justified objection can say:

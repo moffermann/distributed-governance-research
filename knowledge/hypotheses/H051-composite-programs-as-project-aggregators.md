@@ -129,6 +129,8 @@ Program phase 1 becomes executable when projects A, B, and C are funded.
 
 The program should not hide funding conditions from citizens. If a project is valuable only when other projects are funded, that dependency should be visible before citizens fund it. ^rf76c7bb4
 
+H051 is aligned with [[../../docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION|A029]]: because each child project still lives or dies by its own funding attempt, A029 makes cross-project dependencies declarable and program-level funding coherence visible before citizens fund — a component can state that it requires another (X requires Y), the program surface warns with a stranded-complement warning when a prerequisite funds and its dependents do not, and a dependent component's funding window can reference its prerequisite's state rather than expiring blindly against it. Core v0 keeps components' funding attempts independent rather than adopting all-or-nothing program funding, so complementarities can still strand when a prerequisite funds and its dependents do not, and conditional or escrowed bundle funding with automatic return remains Extension v1+.
+
 The program should also avoid pooling responsibility into an abstract parent. Failure of a child project should remain attributable to the responsible project actors, while the program view records how that failure affects the larger goal.
 
 ## Relationship with child projects
