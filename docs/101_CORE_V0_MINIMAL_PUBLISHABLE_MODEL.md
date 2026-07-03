@@ -169,6 +169,25 @@ The system therefore shifts the center of gravity from institutional trust to tr
 
 The full repository contains many objects. For publication, the minimal model can be explained through seven core objects. Implementers should treat these seven as the didactic surface of a larger specified system: the implementable schema draft (`docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md`), the formal entity inventory (`docs/64_FORMAL_ENTITY_INVENTORY_V0.md`), and the consolidated state map (`docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`) carry the full object relations and state machines this document compresses.
 
+How the seven didactic objects map to the real schema (`docs/66`):
+
+```text
+Planning Scope        → PlanningScope (with Allocation Mandate and
+                        Fiscal Commitment records, versioned)
+Project               → Project, ProjectPhase, RoleAssignment
+Value Thesis          → ValueAntivalueProfile, Metric
+Evidential Contract   → ProjectEvidentialContract, FulfillmentEvidenceNeed,
+                        ContextualizedEvidenceItem
+Funding Attempt       → CivicWallet, FundingAttempt, FundingCommitment,
+                        Disbursement, FinancialOrder, FinancialAssuranceProfile
+Control Package       → ControlSubproject, FiscalizationOffer,
+                        FiscalizationAssignment, FiscalizationReport
+Closure / Reputation  → ClosureAccountabilityRecord, PostClosureCoverageProfile,
+                        ResponsibilityEvent, reputation input chain
+```
+
+Two objects cut across all seven and deserve naming even in the minimal model. **ThresholdPolicy** is the engine of proportionality: it decides which closure conditions, evidence standards, control depth, and guarantees a given project must satisfy — nearly every gate in this document reads its parameters from it. **AuditEvent** is the immutable spine: the schema's standing rule is that no state transition happens without one, which is what makes every claim in this document inspectable after the fact. Reputation, likewise, never attaches to a person in the abstract — it attaches to an actor in a specific RoleAssignment, which is why one organization can be a strong executor and a weak fiscalizer without the scores contaminating each other.
+
 ## 1. Planning Scope
 
 A Planning Scope defines what kinds of projects are currently eligible for distributed financing.
@@ -381,6 +400,8 @@ citizen-facing explanation
 
 The closure category is descriptive. The reputational core is the verified fulfillment of the value thesis.
 
+Closure is also not the end of accountability: execution-financeable projects carry a post-closure coverage window — an executor warranty or equivalent insurance/bond — during which covered defects, contradictory evidence, or hidden harms can still be reviewed inside the platform (`docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`).
+
 Example:
 
 ```text
@@ -430,7 +451,7 @@ Planning Scope
 → Reputation Update
 ```
 
-One clarification: the arrows show logical dependency, not a waiting line. A published project gathers its funding, its fiscalizer, its evidence commitments, and its beneficiary confirmations **in parallel**, and becomes executable only when all conditions its threshold policy requires have closed — whichever order they close in (`docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`).
+One clarification: the arrows show logical dependency, not a waiting line. A published project gathers its funding, its fiscalizer, its evidence commitments, and its beneficiary confirmations **in parallel**, and becomes executable only when all conditions its threshold policy requires have closed — whichever order they close in. The project's actual lifecycle states are Draft → Open → Execution-ready → In execution → Closed, with defined exceptional states (paused, reformulated, revoked, expired unfunded) rather than improvised ones (`docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`).
 
 ## Step 1 — A scope is opened
 
@@ -642,7 +663,7 @@ fiscalization evidence
 closure evidence
 ```
 
-This prevents the system from treating all uploaded documents or photos as equally probative.
+This prevents the system from treating all uploaded documents or photos as equally probative. The context is a mandatory gate, not a label: evidence used for hard formal effects — KPI verification, milestone payment, closure — must additionally come from a producer whose qualifications and methods fit the evidence need, so a citizen's photo can trigger review but cannot, by itself, certify a construction milestone (`docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`).
 
 ## 4. Fiscalization is separated from execution
 
@@ -669,6 +690,8 @@ A project cannot promise 100 beneficiaries, deliver 50, change the metric to 50 
 Administrative or protocol rule changes must be public, versioned, justified, and have transition rules.
 
 In tutored mode, an administrator may configure rules within its mandate, but cannot change the rules silently, overnight, or retroactively against actors who planned under a previous rule.
+
+Rule changes are not one undifferentiated category: the corpus distinguishes administrative rule changes (parameters and thresholds), system implementation changes (software, algorithms, schemas), and protocol change proposals (the rules of the game themselves), each with its own visibility, versioning, and adaptation requirements (`docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md`).
 
 ## What you, a citizen, actually do
 
@@ -878,6 +901,8 @@ Reasons:
 - fiscalization can be proportional;
 - citizens understand the value;
 - failure modes are real but manageable.
+
+Technically, a pilot's preconditions are already specified rather than improvised: the schema draft defines the minimal validation gates any implementation must enforce (no publication without a coherent evidential contract, no disbursement without review basis and financial-order path, no state transition without an audit event), and it names the integrations that remain external by design — identity provider, treasury custody, and legal registries (`docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md`).
 
 ## Final summary
 
