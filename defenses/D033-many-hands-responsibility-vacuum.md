@@ -41,7 +41,7 @@ The concession is genuine and doctrinal. Role-based reputation is not a remedy a
 - `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:82` states that legal sanctions, construction halts, and penalties require the external legal path unless a country implementation grants that power, defining the no-legal-effects boundary.
 - `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:157` records the executor accepting the required post-closure coverage mechanism as part of execution responsibility.
 - `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md:15` states that reputation attaches to demonstrated role responsibility, not proximity to a failed project, confirming reputation is not a victim remedy.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:62` places public authorities external to the internal actor model for scopes they control, which the attack reads as distancing the state from execution.
+- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:60` places public authorities external to the internal actor model for scopes they control, which the attack reads as distancing the state from execution.
 - `knowledge/concepts/financial-assurance-profile-v0.md:64` requires guarantees or equivalent instruments to be materialized before execution-ready status and before funds are released, interposing a solvent party before money moves.
 - `knowledge/concepts/financial-assurance-profile-v0.md:96` states that financial assurance does not replace courts, regulators, insurers, or competent authorities, confirming apportionment remains external.
 

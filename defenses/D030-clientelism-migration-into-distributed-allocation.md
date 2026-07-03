@@ -36,12 +36,12 @@ For the peri-urban operator, the defense is not that the platform detects the mu
 
 ## Project-document basis
 
-- `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md:18` states significant concentration should trigger visible stress indicators, report sufficiency, and related-delegate checks.
-- `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md:27` adds delegate-funding-to-related-projects observability as a minimum indicator.
+- `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md:20` states significant concentration should trigger visible stress indicators, report sufficiency, and related-delegate checks.
+- `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md:30` adds delegate-funding-to-related-projects observability as a minimum indicator.
 - `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md:18` states related-party status is not automatic invalidity while hidden or severe relationships require stronger safeguards.
 - `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md:26` includes delegate or funder relationships to project actors in the on-platform relationship graph.
 - `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:64` routes hidden or misrepresented conflict to complaint or review, possible pause or disbursement block, correction, and a role-specific Responsibility Event when proven.
-- `knowledge/hypotheses/H043-transparent-delegation-concentration.md:142` concedes that participation-support projects may become indirect delegation-acquisition tools if not transparent — the migration vehicle the attack names.
+- `knowledge/hypotheses/H043-transparent-delegation-concentration.md:145` concedes that participation-support projects may become indirect delegation-acquisition tools if not transparent — the migration vehicle the attack names.
 - `knowledge/principles/P005-separation-public-support-private-benefit.md:5` requires distinguishing support for public value from subsidy of the actor's private interest, enforceable only for observable benefit.
 - `docs/27_CITIZEN_DELEGATION_FLOW.md:167` requires concentration to be shown before delegation, during delegated action, in reports, and in administrative observability, with no universal hard cap and no automatic delegate payment.
 
