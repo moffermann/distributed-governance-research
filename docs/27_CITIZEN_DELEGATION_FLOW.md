@@ -166,6 +166,8 @@ The system should not hide concentration. It should make it visible.
 
 Core v0 does not impose a universal hard cap on delegation concentration. If citizens voluntarily concentrate delegated authority in a trusted actor, that is a legitimate civic choice. The system must show concentration before delegation, during delegated action, in delegate reports, and in administrative observability.
 
+A010 adds stress signals as a short warning and detail-on-demand layer. When concentration is high, the interface may show represented-weight warning status, the affected scope or action type, report-sufficiency status, related-delegate or support-provider relationships, delegate funding to related projects, and any configured cap effect. These signals should come from existing delegation, report, disclosure, and audit records rather than a new citizen-facing bureaucracy.
+
 Core v0 also does not pay delegates automatically for accumulated delegations. Participation-support projects may exist separately, but they must be ordinary transparent projects rather than hidden delegation commissions.
 
 Under A009, delegation and participation support should be treated as ways to reduce participation cost compared with current low-attendance practices, not as proof that all affected voices are represented. A delegate's represented weight and any linked participation-support funding should be visible, while low participation or missing voices become blockers only when the active Threshold Policy requires the relevant affected-party mapping, consultation, observation, or readiness evidence.
@@ -274,6 +276,10 @@ Reports may include:
 - amounts assigned;
 - represented weight used;
 - concentration signal at the time of action;
+- stress-warning status, where applicable;
+- report-sufficiency status for high-concentration delegates, where applicable;
+- cap effect, where configured;
+- related-delegate, support-provider, or related-project warning, where material;
 - projects followed;
 - alerts;
 - conflicts or abstentions;
@@ -370,6 +376,8 @@ The delegation flow should not:
 - hide scope;
 - hide concentration;
 - hide represented weight when a delegate acts;
+- hide concentration stress-warning, report-sufficiency, or cap-effect status where applicable;
+- hide material related-delegate, support-provider, or related-project relationships;
 - hide separate participation-support funding received by a delegate;
 - create automatic delegation commissions;
 - hide the fallback that resumes if delegation ends;

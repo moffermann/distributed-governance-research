@@ -626,6 +626,8 @@ Delegation has priority over automatic allocation within the delegated scope. Co
 
 Concentration visibility includes active delegators, delegated allocation, scopes, territory, represented weight, trend, conflicts, separate participation-support funding where relevant, and configured cap effects if any.
 
+A010 adds stress indicators as bounded reinforcement, not a new model layer. High concentration may require represented-weight warnings by scope/action type, report-sufficiency status, related-delegate or support-provider relationship disclosure, delegate funding to related projects observability, and cap-effect visibility where configured. These signals are derived from existing delegation, report, disclosure, audit, and administrative-observability records; Core v0 does not add a universal anti-concentration cap or a separate concentration authority.
+
 Delegation is non-compensated by default. Delegates do not receive automatic commissions, fees, or percentages of delegated civic allocation. Participation-support services may be funded only as separate transparent projects under ordinary project rules.
 
 Budget delegation requires a selected base allocation profile or fallback rule before activation. If delegation later ends, that previously selected rule resumes for future allocation.

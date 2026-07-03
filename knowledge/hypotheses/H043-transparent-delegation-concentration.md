@@ -2,9 +2,9 @@
 
 ## Status
 
-Core v0 delegation-concentration hypothesis aligned with [[H042-layered-delegation-architecture|H042]], [[../../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], [[H044-non-compensated-delegation-by-default|H044]], [[H045-delegated-action-weight|H045]], and [[H046-delegated-action-reporting|H046]].
+Core v0 delegation-concentration hypothesis aligned with [[H042-layered-delegation-architecture|H042]], [[../../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], [[H044-non-compensated-delegation-by-default|H044]], [[H045-delegated-action-weight|H045]], [[H046-delegated-action-reporting|H046]], and [[../../docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|A010]].
 
-The original rule is preserved: voluntary delegation concentration is allowed by default, but it must never be hidden. The clarification is that concentration visibility now includes represented weight, action scopes, delegated budget, territory, trends, conflicts, separate participation-support funding, delegated-action reports, revocation/resignation signals, and any configured cap effects.
+The original rule is preserved: voluntary delegation concentration is allowed by default, but it must never be hidden. The clarification is that concentration visibility now includes represented weight, action scopes, delegated budget, territory, trends, conflicts, separate participation-support funding, delegated-action reports, revocation/resignation signals, A010 stress-warning and report-sufficiency status where applicable, and any configured cap effects.
 
 ## Hypothesis
 
@@ -38,6 +38,8 @@ The system should show:
 - conflicts of interest;
 - related-party warnings;
 - separate participation-support funding, if any;
+- A010 stress-warning status, where applicable;
+- report-sufficiency status for high-concentration delegation, where applicable;
 - revocation and resignation trends;
 - concentration trend over time;
 - configured caps and cap effects, if any.
@@ -89,6 +91,8 @@ This delegate represents 28% of delegated sports allocation in this commune.
 ```
 
 Warnings should inform. They should not shame the citizen, block voluntary delegation by default, or imply that concentration is automatically illegitimate.
+
+A010 stress thresholds reinforce this rule without creating a new primary entity or universal cap. A stress threshold is a warning, reporting, disclosure, or observability condition derived from existing delegation records, delegated-action records, reports, related-party disclosures, participation-support disclosures, AuditEvents, and administrative observability.
 
 ## Citizen visibility
 
@@ -150,6 +154,8 @@ The same represented weight should appear in:
 - generate delegated-action reports from the audit trail;
 - keep revocation simple and immediate for future actions;
 - show separate participation-support funding where relevant;
+- show report-sufficiency status for high-concentration delegates where applicable;
+- show material related-delegate, support-provider, or related-project ties where applicable;
 - exclude automatic delegation commissions from Core v0;
 - include concentration metrics in administrative observability;
 - make any configured cap public before it affects delegation.

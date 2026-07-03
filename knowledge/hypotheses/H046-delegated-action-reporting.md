@@ -2,7 +2,7 @@
 
 ## Status
 
-Core v0 delegation-accountability hypothesis aligned with [[../../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|C011]], [[../../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], [[H047-immediate-delegation-revocation|H047]], [[H048-delegation-request-and-acceptance|H048]], and [[H049-delegate-resignation-and-notification|H049]].
+Core v0 delegation-accountability hypothesis aligned with [[../../docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|C011]], [[../../docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|C023]], [[../../docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|A010]], [[H047-immediate-delegation-revocation|H047]], [[H048-delegation-request-and-acceptance|H048]], and [[H049-delegate-resignation-and-notification|H049]].
 
 Delegated-action reporting should be simple for citizens and low-bureaucracy for delegates. The Core v0 baseline should be generated primarily by the system from traceable delegated actions. Delegates may add explanations, but the system should not depend on heavy manual reports to make revocation meaningful.
 
@@ -34,6 +34,10 @@ Reports may include:
 - budget allocated;
 - represented weight used;
 - delegation concentration signal at the time of action;
+- A010 stress-warning status, where applicable;
+- report-sufficiency status for high-concentration delegation, where applicable;
+- cap effect, where a configured public cap applies;
+- material related-delegate, support-provider, or related-project warnings;
 - conflicts of interest declared;
 - abstentions;
 - base allocation profile inactivity while delegation is active, where relevant;
@@ -136,6 +140,8 @@ The simple report should show the summary. Detail views should expose:
 - represented weight;
 - budget amount, where applicable;
 - linked project or governance object;
+- stress-warning, report-sufficiency, and cap-effect status where applicable;
+- material support-provider, related-delegate, or related-project relationships;
 - conflicts, abstentions, or related-party warnings;
 - delegate explanation, if provided;
 - audit event reference;
@@ -162,11 +168,12 @@ Past delegated funding remains governed by the ordinary funding commitment rules
 - Delegates may provide optional explanations that are formally correct but not very meaningful.
 - Some delegated actions may involve restricted visibility because of privacy, beneficiary protection, legal safety, or protocol rules.
 - High-concentration delegates may still influence many citizens even with clear reporting.
+- Stress indicators may become too complex if every relationship check is forced into the ordinary citizen summary.
 
 ## Principle
 
-> Delegation requires periodic accountability from delegate to delegator, but Core v0 should make the baseline report system-generated, traceable, simple, and configurable. Delegate explanations may enrich the report, but should not become a heavy manual bureaucracy.
+> Delegation requires periodic accountability from delegate to delegator, but Core v0 should make the baseline report system-generated, traceable, simple, and configurable. High-concentration delegation should expose stress-warning and report-sufficiency status without making ordinary reports a heavy manual bureaucracy.
 
 ## Research note
 
-Extension of H042, H043, and H045. Superseded where necessary by C011, C023, H047, H048, and H049.
+Extension of H042, H043, and H045. Superseded where necessary by C011, C023, A010, H047, H048, and H049.

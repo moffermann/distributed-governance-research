@@ -31,10 +31,11 @@ It funds projects designed by related clubs and suppliers while reports remain f
 ## Recommended resolution path
 
 - Keep concentration warnings before delegation and represented-weight disclosure when delegates act.
-- Add relationship-graph indicators for related delegates.
+- Add proportional related-delegate indicators through existing delegation, related-party disclosure, participation-support, and audit records.
 - Require system-generated delegated-action reports with meaningful summaries.
 - Preserve immediate revocation for future actions.
 - Treat hard caps as configurable and public, not default universal rules.
+- Avoid creating a new concentration authority, universal veto, or heavy mandatory network-analysis layer for Core v0.
 
 ## Theoretical base and citations
 
@@ -75,4 +76,4 @@ A delegate controls enough represented weight to fund most projects in a plannin
 
 ## Expected resolution output
 
-A Phase 3 resolution should define delegation-concentration stress thresholds, related-delegate observability, and report sufficiency.
+A Phase 3 resolution should define delegation-concentration stress thresholds, related-delegate observability, and report sufficiency as reinforcement of existing delegation/reporting/audit mechanisms, not as a new Core v0 primary entity or universal cap.

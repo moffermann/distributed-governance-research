@@ -51,7 +51,7 @@ For Macul, a high-concentration sports delegate can remain legitimate if citizen
 
 ## Proposed improvements
 
-Add delegation-concentration stress thresholds:
+Add delegation-concentration stress thresholds as proportional warning and reporting rules over existing records:
 
 - high represented-weight warning thresholds by scope and action type;
 - related-delegate cluster indicators;
@@ -59,6 +59,8 @@ Add delegation-concentration stress thresholds:
 - delegate funding to related projects observability;
 - cap-effect disclosure where configured;
 - report-sufficiency checks for high-concentration delegates.
+
+These improvements should reinforce `Delegation`, `DelegatedActionRecord`, system-generated reports, related-party disclosures, participation-support project disclosures, AuditEvents, and administrative observability. They should not create a new Core v0 primary entity, a universal hard cap, or a default veto over voluntary delegation.
 
 ## Applies to
 
@@ -74,8 +76,8 @@ Add delegation-concentration stress thresholds:
 
 Defense strength: strong against hidden concentration, moderate against voluntary concentration.
 
-Residual risk: citizens may ignore warnings and reports. The system can make concentration visible and revocable; it should not silently override every voluntary concentration unless a public, predeclared cap applies.
+Residual risk: citizens may ignore warnings and reports. The system can make concentration visible, reportable, and revocable; it should not silently override every voluntary concentration unless a public, predeclared cap or rule applies.
 
 ## Decision
 
-The attack is founded but does not defeat delegation. Phase 3 should add stress thresholds, related-delegate observability, and report-sufficiency rules.
+The attack is founded but does not defeat delegation. Phase 3 should add stress thresholds, related-delegate observability, and report-sufficiency rules as a bounded reinforcement of C023.

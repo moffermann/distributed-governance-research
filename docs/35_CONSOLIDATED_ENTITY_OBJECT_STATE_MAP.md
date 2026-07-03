@@ -2535,6 +2535,10 @@ Attributes:
 - base allocation profile or fallback rule at activation, for budget delegation;
 - concentration signal at activation;
 - concentration signal during reporting;
+- concentration stress-warning status, where applicable;
+- concentration threshold rule reference, where applicable;
+- report-sufficiency status for high-concentration delegation, where applicable;
+- material related-delegate, support-provider, or related-project disclosure references;
 - concentration trend;
 - revocation and resignation trend signals.
 
@@ -2556,6 +2560,10 @@ Rule:
 Concentration visibility rule:
 
 > Concentration visibility should include active delegators, delegated allocation, scopes, territory, represented weight, trend, conflicts, related-party warnings, separate participation-support funding where relevant, and configured cap effects if any.
+
+A010 stress-threshold rule:
+
+> Delegation-concentration stress thresholds are derived warning, reporting, disclosure, and observability rules over existing records. High concentration may trigger represented-weight warnings by scope/action type, report-sufficiency status, material related-delegate/support-provider/project disclosures, and cap-effect visibility where configured. Core v0 should not create a separate concentration authority, universal hard cap, or new primary entity for this purpose.
 
 Delegated-action weight rule:
 

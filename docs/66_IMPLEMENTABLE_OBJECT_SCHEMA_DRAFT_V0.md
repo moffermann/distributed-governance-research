@@ -218,8 +218,8 @@ effect_refs
 
 | Object | Required core fields | Key refs / effects | Notes |
 |---|---|---|---|
-| `Delegation` | `delegation_id`, `delegator_actor_ref`, `delegate_actor_ref`, `scope`, `accepted_at`, `status`, `base_rule_ref`, `cap_rule_ref` | Authorizes delegated actions inside scope. | Revocation is immediate for future actions and non-retroactive for past valid actions. |
-| `DelegatedActionRecord` | `delegated_action_id`, `delegation_ref`, `action_type`, `target_object_ref`, `represented_weight`, `resulting_object_ref`, `audit_ref` | Feeds reports and concentration visibility. | Delegate action does not erase citizen identity. |
+| `Delegation` | `delegation_id`, `delegator_actor_ref`, `delegate_actor_ref`, `scope`, `accepted_at`, `status`, `base_rule_ref`, `cap_rule_ref`, `concentration_signal`, `stress_threshold_rule_ref`, `reporting_preference_ref`, `relationship_disclosure_refs` | Authorizes delegated actions inside scope and feeds concentration visibility. | Revocation is immediate for future actions and non-retroactive for past valid actions. Stress threshold fields are warnings/reporting references, not a new default cap. |
+| `DelegatedActionRecord` | `delegated_action_id`, `delegation_ref`, `action_type`, `target_object_ref`, `represented_weight`, `cap_effect`, `stress_warning_ref`, `report_ref`, `resulting_object_ref`, `audit_ref` | Feeds reports, represented-weight visibility, cap-effect visibility, and concentration observability. | Delegate action does not erase citizen identity. Cap effects exist only where a configured public rule applies. |
 | `AutomaticAllocationProfile` | `profile_id`, `actor_ref`, `rule_preferences`, `priority_rule`, `status`, `fallback_behavior` | May create funding commitments when no higher-priority delegation or blocker applies. | Cannot override eligibility, phase gates, or citizen confirmation rules. |
 
 ## Reputation, Responsibility, and Performance Schemas
@@ -275,6 +275,7 @@ No approval, almost-funded, recommended, urgent, execution-ready, or AI-summary 
 
 No separate PlatformInfluenceRecord required in Core v0. Platform-influence boundaries are represented through existing discovery fields, AssistedDeliberationContext traces, source-linked AI-assistance records, AuditEvents, and the applicable SystemImplementationChange, AdministrativeRuleChange, GovernanceResolution, or ProtocolChangeProposal path.
 No separate ParticipationEquityIndicator required in Core v0. Participation-equity boundaries are represented through existing ThresholdPolicy requirements, ProjectLegitimacyProfile status, RequiredEvidencePackage needs, ContextualizedEvidenceItems, Delegation and DelegatedActionRecord concentration fields, ProtectedIdentityRequest records, participation-support project disclosures, AuditEvents, and administrative observability where implemented.
+No separate DelegationConcentrationStressThreshold object required in Core v0. A010 stress thresholds are represented through Delegation and DelegatedActionRecord fields, represented-weight warnings, configured cap references, delegated-action report sufficiency, related-party and participation-support disclosures, AuditEvents, and administrative observability. Advanced delegation-network analysis or anti-cluster algorithms remain Extension v1+ or implementation-level observability.
 ```
 
 ## Macul Multi-Court Schema Trace

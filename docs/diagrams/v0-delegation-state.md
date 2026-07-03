@@ -165,6 +165,7 @@ flowchart TD
 - Automatic allocation profiles remain stored but inactive or skipped where active delegation governs the same scope.
 - Delegated actions must record scope, represented weight, delegate identity, delegated action type, cap effects where applicable, and audit reference.
 - Delegation concentration is allowed by default, but it must be visible before delegation, during delegated action, in reports, and in observability.
+- A010 stress thresholds are warning, report-sufficiency, disclosure, and observability conditions over existing delegation records, not new delegation states or a universal cap.
 - Core v0 does not impose a universal hard cap. If a cap exists, it must be configured and visible before it affects delegation.
 - Revocation is immediate for future authority and non-retroactive.
 - Delegate resignation is allowed and affects only future authority.

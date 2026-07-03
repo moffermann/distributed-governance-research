@@ -542,6 +542,22 @@ Participation-support projects remain ordinary transparent projects. Support pro
 
 ---
 
+## A010 - Delegation concentration
+
+**Severity:** Medium / High
+**Status:** Resolved
+**Resolution document:** `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A010 is founded as a concentration risk, but it is a bounded reinforcement of C023 rather than a new Core v0 entity, authority, or universal hard cap. Voluntary delegation concentration remains allowed by default when citizens choose it, but high concentration should trigger stress indicators through existing delegation, reporting, disclosure, audit, and administrative-observability mechanisms.
+
+Core v0 stress indicators may include represented-weight warnings by scope and action type, report-sufficiency status for high-concentration delegates, related-delegate or support-provider relationship disclosure, delegate funding to related projects observability, cap-effect disclosure where a configured public cap applies, and immediate revocation path visibility.
+
+Advanced delegation-network analytics, anti-cluster algorithms, and concentration dashboards remain Extension v1+ or country/administrator observability unless a specific implementation adopts them.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -749,10 +765,13 @@ Participation-support projects remain ordinary transparent projects. Support pro
 - [x] Are automatic allocation and delegation separate?
 - [x] Is delegation priority over automatic allocation explicit?
 - [x] Is concentration visible?
+- [x] Are A010 stress warnings represented through existing delegation/reporting/audit records rather than a new concentration authority?
+- [ ] Are high-concentration delegated actions linked to represented weight, cap effect where configured, and report-sufficiency status?
 - [ ] Are delegate actions reported?
 - [ ] Does delegate reputation reflect delegated decisions?
 - [x] Are participation-support projects separated from delegation commissions, hidden authority, and automatic citizen allocation?
 - [ ] Are material relationships between support providers, delegates, proponents, executors, or recommenders disclosed where relevant?
+- [ ] Are related-delegate, support-provider, or related-project relationships visible where material to concentration risk?
 
 ## 10. Interface checklist
 
