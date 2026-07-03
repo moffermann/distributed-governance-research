@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

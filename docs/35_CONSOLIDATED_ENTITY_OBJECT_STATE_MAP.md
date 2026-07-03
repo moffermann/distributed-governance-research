@@ -387,6 +387,26 @@ A033 duty of care:
 
 > A033 duty of care: Core v0 adds no liability entity; the Duty-of-Care Anchor is a pre-disbursement record naming the answerable legal person, tied to FinancialAssuranceProfile, Post-Closure Coverage, and AuditEvents.
 
+A022 control-supply observability:
+
+> A022 control-supply observability: Core v0 adds no control-supply entity; supply-density and thin-market signals read from PlanningScope, Control Subproject selection, FiscalizationAssignment history, and guarantee pricing, with thin-market handling a disclosed country-implementation choice.
+
+A023 open-mode gate:
+
+> A023 open-mode gate: Core v0 adds no meta-governance entity; the gate is a deployment precondition over OperatingMode and the C019 ProtocolChangeProposal shell, barring open mode until constitutional-level decision mechanics are published.
+
+A024 salience-bias observability:
+
+> A024 salience-bias observability: Core v0 adds no preference-correction entity; the salience gradient reads from PlanningScope need weights, citizen funding and automatic allocation profiles, the default allocation rule, and the discovery surface, above the essential floor.
+
+A025 engagement-decay observability:
+
+> A025 engagement-decay observability: Core v0 adds no participation entity; the participation mix and active-core concentration read from automatic allocation profiles, delegation, the default allocation rule, and feed the existing H054 functional transition maturity metrics.
+
+A026 identity-provider failure modes:
+
+> A026 identity-provider failure modes: Core v0 adds no identity entity and no detection engine; declared failure modes and purpose-bound access auditing read from verified identity, protected identity (C014/C024), the complaint flow, and AuditEvents on every act-to-identity access.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

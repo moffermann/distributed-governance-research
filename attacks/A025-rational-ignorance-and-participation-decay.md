@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

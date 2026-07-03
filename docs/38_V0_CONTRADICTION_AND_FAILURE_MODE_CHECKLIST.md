@@ -734,6 +734,86 @@ The platform records the duty-bearer and provisions coverage; it does not adjudi
 
 ---
 
+## A022 - Thin markets for fiscalization and evidence supply
+
+**Severity:** Medium/High
+**Status:** Resolved
+**Resolution document:** `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A022 is partially founded. The architecture already scales control to project size and risk and reserves the heavy producer-qualification standard for paid, hard, formal-effect evidence, so most thin-market projects carry no infrastructure-grade control bill; but none of that manufactures supply where the qualified market is genuinely empty, and in a small commune or narrow technical domain the admissible set of independent, unrelated, affordable fiscalizers can collapse to a single firm or a handful of people all related to the executor. Core v0 handles it as control-supply density observability by territory and domain plus explicit, disclosed thin-market handling routes chosen as country implementation. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with thin integrated observability: supply-density signals attach to the existing Planning Scope, Control Subproject selection, and fiscalization records rather than a new adjudicating entity, and scarcity is made visible before publication rather than discovered at control-package closure.
+
+Control-supply density is an observable property of each Planning Scope and territory, and thin-market handling is an explicit, disclosed country-implementation choice rather than a silent lowering of standards. The minimum elements are: control-supply density observability by territory and domain (eligible fiscalizers and evidence producers per scope, offer rates, fee levels, and repeat-assignment concentration); a thin-market indicator surfaced before publication so a structural gap is named as such rather than mislabelled as low demand; explicit thin-market handling routes as country choices (remote and documentary evidence, cross-territory and pooled assignment, and relaxed-but-disclosed selection under stronger safeguards and longer observation windows); priced compensation for weak verification per `research/formal-models.md` Proposition 2, so a package with thin control supply carries a higher guarantee rather than a diluted standard; and an explicit territorial control-cost line funding travel, logistics, and access. In Macul, a rural water committee's chlorination upgrade sits in the light-burden band, and where the only accredited sanitary engineer within reach is the committee president's cousin the thinness indicator names the empty admissible set before publication and the disclosed fallback is chosen openly rather than left to stall silently.
+
+Core v0 records and surfaces control-supply density and handles thin markets through disclosed routes; it cannot conjure qualified verifiers. Supply creation — training, accreditation subsidies, and market building — is country implementation, and treating the thinness indicator and shared-control patterns as expanding the supplier base over time is Extension v1+ work. Limitation statement: in a genuinely empty market a monopolist controller is a real unresolved scenario, and conflict-free selection can be impossible where everyone qualified is related, so observability surfaces the gap and pricing compensates for weak verification, but neither creates suppliers where none exist.
+
+---
+
+## A023 - Meta-governance vacuum in open mode
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A023 is founded as an admitted deferral. C019 and H017 define the procedural envelope of rule change — change types, versioning, non-surprise, effective dates, transition rules, and rollback — but decline to specify how a non-tutored, open-mode protocol change is decided: who votes, with what weights, under what quorum, and how constitutional-level rules are protected differently from operational parameters. Rule-level capture is the highest-leverage attack surface in any governance system, so an open mode shipped with an unspecified amendment rule invites whoever first proposes a concrete mechanism to entrench themselves. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds — it formalizes the gate, not the mechanics: open mode must not deploy until constitutional-level decision mechanics are resolved and published, while C019's procedural shell stays binding in every mode.
+
+Open-mode deployment is gated: no public function may exit into open mode until constitutional-level decision mechanics — who votes on protocol changes, with what weights and quorum, and how constitutional rules differ from operational ones — are resolved and published. The C019 procedural shell remains binding in every mode; tutored and semi-open pilots may run indefinitely under existing Governance Resolution and Review Timeout machinery, where the implementing authority is the decision authority and its acts and silences become public civic objects; when the mechanics are later designed, no proposal may define the mechanism by which it is itself ratified, and identity, allocation authorization, and the amendment rule are entrenched behind the constitutional tier; and participation and concentration metrics attach to any eventual protocol-change vote, since low turnout is the classic capture vector. In Macul, the sports pilot runs in tutored or semi-open mode and cannot exit into open mode by configuration: a delegate bloc proposing both a threshold-lowering change and the mechanism ratifying its own proposal would be attempting exactly the silent self-ratifying amendment C019's non-surprise principle forbids.
+
+Core v0 fixes the gate and keeps the procedural shell binding; it does not define the open-mode amendment mechanics, which remain undefined by design. Tiered protocol-rule levels, a fixed non-self-amending amendment rule, default entrenchment, and vote-participation metrics are future constitutional work, and full constitutional meta-governance remains Extension v1+. Limitation statement: the architecture's mature state is unspecified at its highest-leverage layer, so any premature open-mode deployment would face rule-level capture with no defense, and until the gate is written as an enforced precondition the protection rests on principle rather than on a mechanical check.
+
+---
+
+## A024 - Underprovision of non-salient public goods
+
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A024 is partially founded. Atomized voluntary allocation inherits the documented biases of charitable giving — identifiable-victim salience, warm glow, and preference for photogenic outputs — so above the protected floor abstract, preventive, statistical-life goods such as drainage, disease prevention, data infrastructure, and routine maintenance can be under-allocated relative to their welfare value even under fully honest participation. But the architecture never routes the whole budget through salience-driven choice: the non-assignable pool and the essential floors (A005) exclude precisely the catastrophic-underprovision goods, and system-defined defaults channel inactive citizens' funds by rule rather than salience. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with observability, exposing the salience gradient through existing objects — Planning Scope, citizen funding and automatic allocation profiles, the default allocation rule, and administrative observability — rather than correcting citizen preferences or imposing a welfare function.
+
+Above the essential floor, the salience gradient in citizen allocation is an observable property, and any default weighting toward under-allocated non-salient categories is a disclosed, versioned public protocol choice rather than a hidden nudge; default allocation rules route inactive budget by planning priority, not salience. The minimum elements are: salience-bias observability above the protected floor (funding per category against declared planning-scope need weights, across salient-versus-non-salient and preventive-versus-remedial lanes); underfunded-need indicators and non-salient-category visibility in the discovery surface; the non-assignable pool and essential floors (A005) kept distinct as the structural answer for catastrophic tails; default allocation rules routing inactive budget by planning priority; a transparent, versioned default-rule weighting toward under-allocated non-salient categories gated by threshold policy; and optional harm-averted and resilience framing so abstract benefits are more legible. In Macul, citizens fund a riverside plaza enthusiastically while a stormwater drainage upgrade attracts almost no allocation, and the portfolio view shows funding per category against declared need so the neighborhood sees the abstract good under-funded before the flood rather than diagnosing it two winters later.
+
+Core v0 exposes the salience gradient and routes inactive budget by planning priority; it does not correct citizen preferences or impose a welfare function. Portfolio-level rebalancing toward non-salient goods beyond defaults and visibility is gated by threshold policy rather than mandated, and treating it as a stronger planning-scope instrument is Extension v1+ work. Limitation statement: above the floor the salience gradient is real, and correcting it beyond defaults and visibility is a political choice for planning-scope governance rather than the platform, so even with observability and a disclosed default weighting honest citizens may keep directing free choice toward salient projects and no view forces the abstract good to win.
+
+---
+
+## A025 - Rational ignorance and participation decay
+
+**Severity:** Medium/High
+**Status:** Resolved
+**Resolution document:** `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A025 is founded as a behavioral prediction. Each citizen's monthly civic allocation is individually small, so by Downsian logic the rational return on careful evaluation is near zero and most citizens route their allocation through the cheapest channel — the public default, a stored profile, or a trusted delegate — while participatory-budgeting evidence shows active evaluation spiking at launch and decaying over subsequent cycles, leaving a shrinking, self-selected active core whose choices are then displayed as the aggregated will of the whole. The architecture never assumed universal active judgment — its intermediation channels are designed, visible, revocable, and auditable — but engagement decay and active-core concentration are not currently measured. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates metrics through the existing H054 transition-maturity object, which already lists the share handled by default allocation and direct-versus-delegated participation.
+
+The mix of manual, profile-driven, delegated, and default allocation is a measured, versioned public property of each cycle, and citizen-facing legitimacy language must distinguish considered choice from default and profile carry-over; engagement decay and active-core concentration are tracked across cycles, not only at launch. The minimum elements are per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation as versioned public metrics; active-core concentration indicators tracking whether the same minority persists across cycles; citizen-facing legitimacy language distinguishing deliberate evaluation from carry-over; cadence-fatigue review of the monthly cycle for decay effects; and these signals fed into H054 functional transition maturity rather than an internal-only dashboard. The simulation (`research/simulation-results.md`) vindicates the designed-intermediation position — allocation quality is carried by the institutional default anchor conditioned on planner knowledge, while quintupling citizen attention moves quality selection by at most ~0.08 and essentially nothing in default-anchored regimes — so decay must be measured and disclosed, not denied. In Macul, where perhaps 4% evaluate projects manually after launch novelty fades, the multi-court project's funding is decomposed into deliberate evaluation, stored profiles, delegates, and untouched default, so a journalist asking how many people actually evaluated the winners gets a real answer.
+
+Core v0 measures and discloses the participation mix; it does not mandate participation quotas or engagement targets, and cohort-refresh or sampling mechanisms that periodically renew the active core remain Extension v1+ options subject to visibility and audit. Limitation statement: if the active core shrinks enough, distributed control becomes intermediated control with better bookkeeping, and while better bookkeeping is a real improvement over a zero-observability baseline, measurement does not by itself reverse decay and the system must not present default and profile allocation as considered choice.
+
+---
+
+## A026 - Identity infrastructure failure and surveillance
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A026 is partially founded. The verified-identity baseline (P004) makes the external identity provider the system's deepest dependency: whoever compromises, coerces, or misconfigures it can mint Sybil identities to capture allocation or silently exclude targeted citizens, so the platform's Sybil resistance collapses to the provider's integrity. The second harm is chilling: binding a real identity to every civic act accumulates a longitudinal record of political behavior, and because the platform and any authority with lawful access can see through contextual protected identity, citizens contemplating complaints against powerful actors self-censor. Contextual protected identity already exists for these cases, its access is gated and auditable, and the provider is pre-existing state infrastructure, so under `knowledge/principles/P001-comparative-critique-rule.md` the marginal delta is the linking of civic acts, not the creation of the dossier. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with minimal records — declared failure modes, compromise-response procedures, and purpose-bound access auditing through the existing verified-identity, protected-identity, complaint, and audit-trail objects rather than adopting anonymity or building a detection engine.
+
+The identity provider is a declared critical dependency with enumerated failure modes and compromise-response procedures, and every access to the linkage between a civic act and a verified identity is itself an audited event with a stated purpose; protected-identity contexts remain the chilling-effect answer, and sensitive act-to-identity linkage carries retention limits where country law allows. The minimum elements are: declared provider failure modes — compromise, coercion, outage, and wrongful exclusion — with response procedures including re-verification windows, action freezes, and retroactive audit; purpose-bound access auditing where every access to act-to-identity linkage is an AuditEvent carrying its purpose, auditable by an independent party rather than only the acceding authority; protected-identity contexts (C014/C024) retained with a heightened, adversarial de-anonymization threshold for complaints against executors, authorities, and the operator; retention limits and data-minimization on sensitive linkage where law allows; and verified identity preserved as the anti-Sybil baseline (P004), not replaced by an anonymous formal layer. In Macul, a worker filing an unsafe-construction complaint against a politically connected executor appears as a verified protected complainant, and piercing that protection requires the heightened adversarial threshold and is itself an audited event checkable by an independent party rather than a routine review an allied official could invoke.
+
+The identity provider is pre-existing state infrastructure — the civil registry, referenced conceptually as a ClaveUnica-style mechanism — and Core v0 neither replaces it nor adopts anonymity. Provider-independent anomaly detection, federation, and substitution that would remove the single point of failure are Extension v1+ work, and the marginal exposure Core v0 governs is the linkage of civic acts, bounded by purpose-limited logged access rather than open display. Limitation statement: platform-side visibility of protected identities plus lawful state access means chilling effects on complaints against powerful actors are reduced, not eliminated, and provider compromise remains a single point of failure whose ultimate mitigation is jurisdictional rather than platform-side.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -869,6 +949,8 @@ The platform records the duty-bearer and provisions coverage; it does not adjudi
 - [ ] Does the active policy define the guarantee percentage or assurance requirement instead of the proposer, designer, or executor?
 - [ ] Is a required guarantee treated as materialized only after custodian, guarantor, insurer, treasury, bank, escrow, or lawful equivalent confirmation?
 - [ ] Does advance payment carry recoverability, retention, direct supplier payment, guarantee, or equivalent protection?
+- [ ] Above the essential floor, is the salience gradient observable as funding per category against declared planning-scope need weights across salient-versus-non-salient and preventive-versus-remedial lanes?
+- [ ] Is any default weighting toward under-allocated non-salient categories a disclosed, versioned protocol choice, with inactive budget routed by planning priority rather than salience?
 
 ## 5. Disbursement checklist
 
@@ -941,6 +1023,8 @@ The platform records the duty-bearer and provisions coverage; it does not adjudi
 - [ ] Do timing-anomaly and outcome-pattern surfaces feed human review, complaint, and verified-discovery paths rather than automated verdicts?
 - [ ] Do critical milestones require independent corroboration, and can confirmed hidden coordination produce cross-role responsibility events?
 - [ ] Is the comparative claim preserved — collusion made harder, riskier, and more discoverable, never promised eliminated?
+- [ ] Is control-supply density observable by territory and domain, with a thin-market indicator surfaced before publication rather than discovered at control-package closure?
+- [ ] Where control supply is thin, is any relaxed selection a disclosed country-implementation choice under named safeguards, with priced compensation for weak verification rather than a silent standard drop?
 
 ## 8. Complaint checklist
 
@@ -975,6 +1059,8 @@ The platform records the duty-bearer and provisions coverage; it does not adjudi
 - [x] Are participation-support projects separated from delegation commissions, hidden authority, and automatic citizen allocation?
 - [ ] Are material relationships between support providers, delegates, proponents, executors, or recommenders disclosed where relevant?
 - [ ] Are related-delegate, support-provider, or related-project relationships visible where material to concentration risk?
+- [ ] Are the per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation measured and versioned, with active-core concentration tracked across cycles?
+- [ ] Does citizen-facing legitimacy language distinguish deliberate evaluation from default and profile carry-over rather than presenting carry-over as considered choice?
 
 ## 10. Interface checklist
 
@@ -1012,6 +1098,8 @@ The platform records the duty-bearer and provisions coverage; it does not adjudi
 - [ ] Are independent versus controlled fiscalization rates and pilot-versus-incumbent-baseline outcomes observable?
 - [ ] Is the political limit recorded openly — no Core v0 mechanism compels transition or protects the migrated budget share?
 - [ ] Is the roadmap-construction open question kept visible as the architecture's principal open limitation, gating open-mode deployment at scale?
+- [ ] Is open-mode deployment gated until constitutional-level decision mechanics are resolved and published, with the C019 procedural shell binding in every mode?
+- [ ] Is any eventual protocol-change vote barred from defining the mechanism that ratifies it, with participation and concentration metrics attached?
 - [ ] Is transition scope bounded?
 
 ## 12. Audit checklist
@@ -1024,6 +1112,8 @@ The platform records the duty-bearer and provisions coverage; it does not adjudi
 - [x] Are governance resolutions, review timeouts, and material discovery reasons auditable?
 - [x] Are material visibility warnings, approval-source records, and source-linked AI summaries auditable?
 - [ ] Is the distinction between visible-and-versioned and democratically-authorized preserved in citizen-facing and audit surfaces?
+- [ ] Is the identity provider a declared critical dependency with enumerated failure modes and compromise-response procedures?
+- [ ] Is every access to act-to-identity linkage an audited event carrying its purpose and checkable by an independent party, with a heightened de-anonymization threshold for complaints against powerful actors?
 
 # C. Current integration priorities
 

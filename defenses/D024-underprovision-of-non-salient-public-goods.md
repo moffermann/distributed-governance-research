@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 

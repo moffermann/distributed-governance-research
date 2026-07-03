@@ -134,6 +134,8 @@ In non-tutored or open modes, major protocol changes should follow a visible Pro
 
 The exact approval mechanics may remain future work. Core v0 only requires that protocol changes are not invisible administrator edits. ^rd26475e4
 
+H017 is aligned with [[../../docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION|A023]]: because H017 defines the procedural envelope of rule change but leaves the non-tutored amendment mechanics as future work, open-mode deployment is gated — no public function may exit into open mode until constitutional-level decision mechanics, who votes on protocol changes with what weights and quorum and how constitutional rules differ from operational ones, are resolved and published, while this procedural shell stays binding in every mode. When those mechanics are designed, no proposal may define the mechanism that ratifies it, and participation and concentration metrics attach to any protocol-change vote.
+
 Minimum path:
 
 ```text

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

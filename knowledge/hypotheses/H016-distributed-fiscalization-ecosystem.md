@@ -193,6 +193,8 @@ The system should assume that hidden collusion is possible.
 
 It cannot perfectly detect every friendship, off-platform payment, repeated relationship, holding-linked dependency, or informal pressure. ^rfdde35b4
 
+H016 is aligned with [[../../docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|A022]]: the distributed fiscalization ecosystem presupposes that qualified, independent fiscalizers and evidence producers exist to select from, so Core v0 makes control-supply density observable by territory and domain and names a thin market before publication rather than at control-package closure. Where the admissible set is genuinely empty, thin-market handling is a disclosed country-implementation choice and priced compensation for weak verification raises the guarantee rather than lowering the standard; the platform surfaces scarcity but cannot conjure verifiers.
+
 Therefore capture protections should not depend on perfect detection.
 
 They should make capture harder, riskier, more visible, and less sufficient:

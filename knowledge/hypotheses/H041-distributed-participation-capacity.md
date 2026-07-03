@@ -16,6 +16,8 @@ If only wealthy actors, large corporations, universities, think tanks, or techni
 
 A system is not truly distributed merely because everyone can theoretically participate. It must also support mechanisms that help actors with lower technical, financial, linguistic, or organizational capacity participate meaningfully. ^r455a5b5a
 
+H041 is aligned with [[../../docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION|A025]]: capacity to participate is not the same as sustained participation, so the mix of manual, profile-driven, delegated, and untouched-default allocation becomes a measured, versioned public property of each cycle, active-core concentration is tracked across cycles, and citizen-facing legitimacy language distinguishes considered choice from default and profile carry-over. These signals feed the H054 functional transition maturity metrics; measurement discloses decay but does not by itself reverse it, and participation quotas remain out of scope.
+
 A009 clarifies the standard: Core v0 should improve the current institutional baseline, not solve perfect participation. Current meetings, consultations, digital notices, and neighborhood representation already exclude many older adults, disabled people, workers, caregivers, and digitally disconnected residents. Core v0 improves that baseline through asynchronous visibility, protected identity, simple actions, delegation transparency, support projects, and threshold-policy participation evidence where required. ^rf17fffc9
 
 ## Capacity as an ecosystem function

@@ -126,6 +126,8 @@ Beneficiary review C: Verified beneficiary #K27B
 
 The same person should not necessarily have a single public alias across all sensitive actions, because a stable alias can be correlated over time. ^r15fbfc76
 
+H029 is aligned with [[../../docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION|A026]]: contextual protected identity is the chilling-effect answer, so A026 retains it with a heightened, adversarial de-anonymization threshold for complaints against executors, authorities, and the operator, and makes every access to act-to-identity linkage an audited event carrying its purpose and checkable by an independent party. The external identity provider is a declared critical dependency with enumerated failure modes, and verified identity is preserved as the anti-Sybil baseline rather than replaced by anonymity.
+
 Example:
 
 ```text

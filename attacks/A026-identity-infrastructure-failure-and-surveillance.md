@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

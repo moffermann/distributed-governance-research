@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

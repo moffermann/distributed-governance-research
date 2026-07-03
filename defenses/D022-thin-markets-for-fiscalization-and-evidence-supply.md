@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 

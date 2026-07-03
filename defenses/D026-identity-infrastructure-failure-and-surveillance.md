@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 
