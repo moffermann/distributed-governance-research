@@ -42,7 +42,7 @@ La tesis central es:
 Por favor empieza por:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 No necesitas leer todo el repositorio.
@@ -138,7 +138,7 @@ Me sería muy valiosa tu revisión desde una perspectiva práctica del sector p�
 Por favor enfócate en qué funcionaría o no funcionaría en una municipalidad, ministerio, programa, línea presupuestaria u oficina pública real.
 
 Documento sugerido de entrada:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Instrucción final

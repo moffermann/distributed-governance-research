@@ -40,7 +40,7 @@ La tesis central es:
 Por favor empieza por:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 No necesitas leer todo el repositorio.
@@ -139,7 +139,7 @@ La pregunta principal para ti no es si la arquitectura es técnicamente interesa
 Por favor sé crítico. Estoy intentando identificar dónde el modelo es jurídicamente frágil o está insuficientemente especificado.
 
 Documento sugerido de entrada:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Instrucción final

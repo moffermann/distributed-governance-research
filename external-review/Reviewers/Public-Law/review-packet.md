@@ -40,7 +40,7 @@ The core thesis is:
 Please start here:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 You do not need to read the full repository.
@@ -139,7 +139,7 @@ The main question for you is not whether the architecture is technically interes
 Please be critical. I am trying to identify where the model is legally fragile or under-specified.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Final instruction

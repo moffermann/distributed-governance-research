@@ -35,7 +35,7 @@ Non-Expert-Reader/review-packet.es.md
 These packets are derived from:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 external-review/core-v0-review-packet.md
 external-review/reviewer-briefs-v0.md
 ```

@@ -55,7 +55,7 @@ Intenta diseñar una mejor forma de manejar algunos proyectos públicos para que
 Por favor empieza por:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 No necesitas leer todo el repositorio.
@@ -134,7 +134,7 @@ La idea básica es que un proyecto público debería decir claramente qué valor
 No necesito una revisión técnica tuya. Necesito saber si la idea se entiende y qué suena poco claro, sospechoso, poco realista o demasiado complicado.
 
 Documento sugerido de entrada:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Instrucción final

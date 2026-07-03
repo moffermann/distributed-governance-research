@@ -55,7 +55,7 @@ La tesis central es:
 Por favor empieza por:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 No necesitas leer todo el repositorio.
@@ -154,7 +154,7 @@ Me sería muy valiosa tu revisión como arquitecto de sistemas/tecnólogo.
 Por favor enfócate en implementabilidad: qué está sobrediseñado, qué falta, qué debería ser manual al principio, qué debería contener el MVP y dónde el modelo de datos o workflow se vuelve demasiado complejo.
 
 Documento sugerido de entrada:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Instrucción final

@@ -55,7 +55,7 @@ The core thesis is:
 Please start here:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 You do not need to read the full repository.
@@ -154,7 +154,7 @@ I would value your review as a systems architect/technologist.
 Please focus on implementability: what is overengineered, what is missing, what should be manual first, what the MVP should contain, and where the data model or workflow becomes too complex.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Final instruction

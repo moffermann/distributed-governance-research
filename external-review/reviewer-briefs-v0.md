@@ -7,7 +7,7 @@ This document is an internal library of reviewer-specific briefs for the Distrib
 It complements:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 external-review/core-v0-review-packet.md
 ```
 
@@ -124,7 +124,7 @@ The main question for you is not whether the architecture is technically interes
 Please be critical. I am trying to identify where the model is legally fragile or under-specified.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## 2. Academic / political economy / public administration reviewer brief
@@ -199,7 +199,7 @@ I am especially interested in whether the contribution is clear, what literature
 Please be direct. I am not looking for validation; I am looking for the strongest objections before public release.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## 3. Systems architect / technologist reviewer brief
@@ -260,7 +260,7 @@ I would value your review as a systems architect/technologist.
 Please focus on implementability: what is overengineered, what is missing, what should be manual first, what the MVP should contain, and where the data model or workflow becomes too complex.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## 4. Public-sector / municipal practitioner reviewer brief
@@ -329,7 +329,7 @@ I would value your review from a practical public-sector perspective.
 Please focus on what would or would not work in a real municipality, ministry, program, budget lane, or public office.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## 5. Intelligent non-expert reader brief
@@ -390,7 +390,7 @@ The basic idea is that a public project should clearly say what value it promise
 I do not need a technical review from you. I need to know whether the idea is understandable and what sounds unclear, suspicious, unrealistic, or too complicated.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Optional additional reviewer profiles

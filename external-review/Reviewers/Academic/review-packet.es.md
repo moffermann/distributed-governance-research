@@ -40,7 +40,7 @@ La tesis central es:
 Por favor empieza por:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 No necesitas leer todo el repositorio.
@@ -138,7 +138,7 @@ Me interesa especialmente saber si la contribución es clara, a qué literatura 
 Por favor sé directo. No busco validación; busco las objeciones más fuertes antes de una publicación pública.
 
 Documento sugerido de entrada:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Instrucción final

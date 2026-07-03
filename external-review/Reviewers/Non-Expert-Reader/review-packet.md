@@ -55,7 +55,7 @@ It is trying to design a better way to manage some public projects so citizens c
 Please start here:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 You do not need to read the full repository.
@@ -134,7 +134,7 @@ The basic idea is that a public project should clearly say what value it promise
 I do not need a technical review from you. I need to know whether the idea is understandable and what sounds unclear, suspicious, unrealistic, or too complicated.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Final instruction

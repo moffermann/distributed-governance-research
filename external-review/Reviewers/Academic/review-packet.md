@@ -40,7 +40,7 @@ The core thesis is:
 Please start here:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 You do not need to read the full repository.
@@ -138,7 +138,7 @@ I am especially interested in whether the contribution is clear, what literature
 Please be direct. I am not looking for validation; I am looking for the strongest objections before public release.
 
 Suggested entry document:
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 ## Final instruction

@@ -15,7 +15,7 @@ The project should improve through criticism. The most useful review is one that
 Start with:
 
 ```text
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
 This is the shortest professional entry point into the project.
@@ -423,7 +423,7 @@ I am not asking you to validate it. I am asking you to attack it.
 
 The main document is:
 
-docs/58_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
+docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 
 If you have time, I would be especially grateful for criticism on:
 
