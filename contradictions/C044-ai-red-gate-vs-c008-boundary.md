@@ -6,13 +6,13 @@ Open — pending author review. Surfaced as a sub-threshold note by the cross-re
 
 ## Contradiction
 
-Side A — the boundary rule, `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:15`: "AI assists; the protocol decides." — with `docs/48:73` listing final decisions AI must not make (e.g., admitting or dismissing complaints as final decision).
+Side A — the boundary rule, `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:15`: "AI assists; the protocol decides." — with `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:73` listing final decisions AI must not make (e.g., admitting or dismissing complaints as final decision).
 
-Side B — the milestone validator, `docs/54` (C016): "The milestone plan must be reviewed by a specialized AI validator before the project can receive funding… Critical validation failures block financeable publication until corrected" (`docs/54:87-90`), with Red defined as "not financeable until corrected" (`docs/54:201,440`).
+Side B — the milestone validator, `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md:87-90` (C016): "The milestone plan must be reviewed by a specialized AI validator before the project can receive funding… Critical validation failures block financeable publication until corrected", with Red defined as "not financeable until corrected" (`docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md:201`).
 
 ## Why they are in tension
 
-An AI whose Red output blocks financeable publication is making a consequential gate decision, not assisting one. The mitigations are real — `docs/54:88` says the validator "does not decide whether the project is valuable," and `docs/54:487` keeps Red blockers "limited to critical non-fiscalizable configurations" — so the defensible reading is compiler-like rule application (the protocol defines what is incoherent; the AI detects it). But C008 never names this exception, and no rule states what a proposer can do against a wrong Red beyond correcting the plan.
+An AI whose Red output blocks financeable publication is making a consequential gate decision, not assisting one. The mitigations are real — `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md:88` says the validator "does not decide whether the project is valuable," and `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md:487` keeps Red blockers "limited to critical non-fiscalizable configurations" — so the defensible reading is compiler-like rule application (the protocol defines what is incoherent; the AI detects it). But C008 never names this exception, and no rule states what a proposer can do against a wrong Red beyond correcting the plan.
 
 ## Author-intent side
 

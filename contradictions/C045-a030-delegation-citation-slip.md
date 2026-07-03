@@ -20,7 +20,7 @@ Side B — mechanical misattribution.
 
 ## Proposed treatment
 
-Change "(C019)" to "(C011, C023)" in `docs/98:55`. One-line fix.
+Change "(C019)" to "(C011, C023)" in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md:55`. One-line fix.
 
 ## Severity
 
