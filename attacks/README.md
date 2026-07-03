@@ -54,6 +54,28 @@ Generated SVG files and `node_modules` were excluded as secondary artifacts or d
 | `A017` | Disbursement Gaming | disbursement gaming | `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md` |
 | `A018` | Collusion Among Project Roles | collusion among project roles | `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md` |
 
+## Second-round attack queue (A019-A033)
+
+A second attack round was proposed after the first queue was reviewed and resolved. These briefs target failure modes not covered by A001-A018, with emphasis on macro-level democratic legitimacy, fiscal and market preconditions, behavioral realism, and aggregate allocation pathologies. They follow the same brief format but are **pending paired Phase 3 review**: no defense briefs or accepted resolutions exist yet.
+
+| Attack | Title | Primary gap attacked | Status |
+|---|---|---|---|
+| `A019` | Procedural Legitimacy Cannot Substitute Democratic Mandate | system-level democratic authorization (beyond A001's project level) | pending paired review |
+| `A020` | Agenda-Setting Capture Through Planning Scope Construction | deferred roadmap/scope construction governance | pending paired review |
+| `A021` | Treasury Dependence and Fiscal Strangulation | credible-commitment failure in the fiscal channel | pending paired review |
+| `A022` | Thin Markets for Fiscalization and Evidence Supply | supply-side control-market failure (beyond A003 capture) | pending paired review |
+| `A023` | Meta-Governance Vacuum in Open Mode | undefined non-tutored protocol decision mechanics | pending paired review |
+| `A024` | Underprovision of Non-Salient Public Goods by Atomized Choice | aggregate allocation bias above essential floors | pending paired review |
+| `A025` | Rational Ignorance and Participation Decay | incentive structure of low-stakes choice (beyond A009 capacity) | pending paired review |
+| `A026` | Identity Infrastructure as Single Point of Failure and Surveillance | P004 verified-identity baseline as attack surface | pending paired review |
+| `A027` | Information Cascades and Allocation Herding | citizen-on-citizen herding (beyond A008 platform steering) | pending paired review |
+| `A028` | Spatial and Group Inequity of Allocation Outcomes | distributive outcome equity (beyond A009 input equity) | pending paired review |
+| `A029` | Program Fragmentation and Lost Complementarities | cross-sectional coordination and economies of scale | pending paired review |
+| `A030` | Clientelism Migration into Distributed Allocation | off-platform quid pro quo invisible to relationship graphs | pending paired review |
+| `A031` | Polarization and Symbolic Capture of Allocation | expressive, identity-driven allocation dynamics | pending paired review |
+| `A032` | Intertemporal Myopia and Long-Term Underinvestment | formation bias against long-horizon value (beyond A006 continuity) | pending paired review |
+| `A033` | The Problem of Many Hands: Responsibility Vacuum | harm accountability without collusion (beyond A018) | pending paired review |
+
 ## Standard review routine
 
 For each attack:
