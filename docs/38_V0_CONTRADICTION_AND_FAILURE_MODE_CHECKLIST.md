@@ -670,6 +670,22 @@ Core v0 does not require an automated collusion-detection engine, network-analys
 
 ---
 
+## A019 - Procedural legitimacy cannot substitute democratic mandate
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A019 is founded as a system-level authorization gap and does not distort the project when it is read as requiring the platform to record the democratic mandate that external law supplies, not to manufacture one. Core v0 handles it as an `Allocation Mandate` record per active Planning Scope. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through an existing object: the mandate is a minimal record attached to the Planning Scope, making the missing authorization inspectable rather than adding a new adjudicating entity.
+
+Every active Planning Scope records the democratic mandate that authorized its budget migration and its allocation formula, distinct from the procedural Administrative Rule Change machinery. The minimum record names the mandate source (statute, ordinance, referendum, or delegated authority); the legal instrument authorizing budget migration; the migrated share; the allocation-amount formula version, with an explicit flag when it departs from equal-per-citizen and the authority that chose the departure; and effective dates with version history. A non-equal allocation formula is a higher-authorization decision than an ordinary parameter edit. In Macul, the 5% sports migration must name the municipal or ministerial instrument that authorized it, and a contribution-weighted formula cannot be presented as neutral configuration: if no instrument exists, the missing record makes the gap visible instead of laundering it through a clean version history.
+
+Core v0 records and exposes the mandate; it does not create, validate, or adjudicate it. Mandate construction remains external constitutional law and country implementation, and verification of the underlying instrument's soundness is outside the platform. Limitation statement: an Allocation Mandate record makes missing authorization visible, but it cannot supply a mandate the law never granted, and the democratic-deficit critique of substituting atomized allocation for representative appropriation remains a recorded open normative debate.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -780,6 +796,8 @@ Core v0 does not require an automated collusion-detection engine, network-analys
 
 - [ ] Is funding clearly a conditional commitment?
 - [ ] Is distributed allocation bounded to the configured assignable public-purpose share rather than the whole public budget?
+- [ ] Does every active Planning Scope carry an Allocation Mandate record naming its mandate source and authorizing instrument?
+- [ ] Are departures from equal-per-citizen allocation flagged as higher-authorization decisions naming the authority that chose them?
 - [ ] Are non-assignable common-pool functions protected from popularity, discovery visibility, delegation concentration, and monthly attention effects?
 - [ ] Where essential services are involved, does the Planning Scope distinguish protected floor, distributed service lane, planning-continuity target, and funding-lane treatment?
 - [ ] Are underfunded protected scopes visible without creating hidden algorithmic allocation?
@@ -948,6 +966,7 @@ Core v0 does not require an automated collusion-detection engine, network-analys
 - [x] Are AI-assisted decisions recorded when material?
 - [x] Are governance resolutions, review timeouts, and material discovery reasons auditable?
 - [x] Are material visibility warnings, approval-source records, and source-linked AI summaries auditable?
+- [ ] Is the distinction between visible-and-versioned and democratically-authorized preserved in citizen-facing and audit surfaces?
 
 # C. Current integration priorities
 

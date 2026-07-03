@@ -22,6 +22,8 @@ Therefore, the system needs a default rule.
 
 The default rule should solve inactivity without becoming a hidden decision. A citizen who never onboards may be governed by the public protocol default. A citizen who onboards should explicitly accept that default or choose another base profile. ^r08bcd5be
 
+H033 is aligned with [[../../docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|A019]]: the system-defined default rule that governs inactive citizens' shares operates under the active Planning Scope's recorded Allocation Mandate, so routing dormant public funds rests on named external authorization rather than protocol configuration alone.
+
 ## Civic autopilot
 
 The default rule functions as a civic autopilot.

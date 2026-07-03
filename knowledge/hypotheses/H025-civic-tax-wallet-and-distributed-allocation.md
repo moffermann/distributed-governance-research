@@ -77,6 +77,8 @@ If a public authority, institutional administrator, or protocol assigns a percen
 
 Core v0 should not impose one universal formula. The formula should be configured by the competent authority, institutional administrator, protocol, or country implementation, and should be public, versioned, auditable, and explainable to citizens. ^rab1ecb9e
 
+H025 is aligned with [[../../docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|A019]]: configuring this formula now presupposes a recorded Allocation Mandate on the active Planning Scope naming the mandate source and the legal instrument that authorized both the budget migration and the formula, distinct from the procedural Administrative Rule Change machinery. A contribution-weighted or otherwise non-equal variant is a higher-authorization decision that must name the authority that chose it, so it cannot be presented as neutral configuration; the platform records that external authorization but never creates it.
+
 Recommended formula options:
 
 ```text

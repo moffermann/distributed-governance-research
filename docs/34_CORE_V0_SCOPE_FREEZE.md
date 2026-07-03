@@ -88,6 +88,8 @@ A014 reinforces this as a minimum related-party relationship graph and severity 
 
 A018 reinforces this further as collusion observability over existing objects, not a detection engine. Because role separation is necessary but not sufficient, Core v0 exposes relationship, repetition, timing, and outcome patterns across project roles and material suppliers: repeated actor-cluster visibility across projects, the same A014 relationship-and-control graph reused across roles and suppliers, timing-anomaly and outcome-pattern review surfaces feeding human review, independent corroboration for critical milestones, the verified-discovery route for hidden coordination, and cross-role responsibility events where collusion is confirmed. Core v0 does not require an automated collusion-detection engine, network-analysis scoring, or investigative capability; pattern surfaces feed human review, complaint, and verified-discovery paths, prosecution remains external law, and the claim is comparative — collusion becomes harder, riskier, and more discoverable than under opaque institutional monopoly, while purely off-platform coordination among formally compliant actors can remain invisible.
 
+A019 adds an Allocation Mandate record on Planning Scope, not mandate-construction machinery. Every active Planning Scope records the democratic mandate that authorized its budget migration and allocation formula — mandate source, authorizing legal instrument, migrated share, formula version with an explicit higher-authorization flag and authority for departures from equal-per-citizen, and version history — distinct from the procedural Administrative Rule Change machinery. Core v0 records and exposes that mandate; it does not create, validate, or adjudicate it, so mandate construction remains external constitutional law and country implementation, and the democratic-deficit critique of substituting atomized allocation for representative appropriation stays a recorded open normative debate.
+
 ### 2a. Idea object
 
 Core v0 includes `Idea` as a separate civic-demand object.
@@ -824,6 +826,7 @@ These should not be part of Core v0 unless later shown necessary:
 - transition enforcement, migrated-budget protection, resistance-pattern analytics, and cross-country transition comparisons beyond the A016 incumbent-resistance indicators;
 - per-project actuarial guarantee calibration and automated milestone-design scoring beyond the A017 disbursement-gaming tests;
 - automated collusion-detection engines, network-analysis scoring, and investigative capability beyond the A018 collusion observability surfaces;
+- mandate construction, referendum machinery, and formula adjudication beyond the A019 Allocation Mandate record, which the platform records but does not generate;
 - full multi-sector implementation.
 
 ## Country implementation decisions

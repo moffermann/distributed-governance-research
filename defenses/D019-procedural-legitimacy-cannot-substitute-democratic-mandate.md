@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 

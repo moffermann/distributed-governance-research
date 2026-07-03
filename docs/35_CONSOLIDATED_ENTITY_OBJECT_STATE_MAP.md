@@ -371,6 +371,10 @@ Planning-continuity change rule:
 
 > A change in government, authority, protocol, or operating mode may revise an essential planning target only through a public, versioned, auditable Governance Resolution, Administrative Rule Change, or equivalent trace.
 
+A019 allocation mandate:
+
+> A019 allocation mandate: Core v0 adds no mandate entity; the Allocation Mandate is a versioned record on PlanningScope naming external authorization, with AuditEvents on every change.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

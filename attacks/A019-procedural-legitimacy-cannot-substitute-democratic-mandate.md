@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
