@@ -458,6 +458,22 @@ Fiscalization reports must expose sufficiency fields: scope, methodology, eviden
 
 ---
 
+## A004 — Metric manipulation and Goodhart effects
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** [[70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md]]
+
+### Accepted v0 rule
+
+A004 is founded: converting public value into metrics, floors, and ceilings invites actors to satisfy the metric while defeating the value — easy metrics, output counting, excluding hard beneficiaries, and post-funding target reformulation. The accepted resolution is a metric gaming test: every metric must link to a value floor, an antivalue ceiling, a material value claim, an evidence need, and a review consequence, and metric changes are versioned, never silent.
+
+The companion evidence-coverage check asks what evidence is necessary to verify each declared value floor, formal secondary value, antivalue ceiling, and material claim — a distinct question from whether the submitted evidence itself is trustworthy, which is A013's subject. The two checks are deliberately separate: coverage is a design-time property of the evidential contract; submitted-evidence quality is a review-time property of what arrives.
+
+Core v0 does not require detailed scoring systems or metric-calibration registries; those remain future implementation work. Limitation statement: no metric test prevents a well-designed metric from being satisfied in letter while the value erodes in ways the antivalue ceilings did not anticipate — the residual defense is complaint, contradiction evidence, and closure review.
+
+---
+
 ## A005 — Neglected essential services
 
 **Severity:** High
@@ -587,6 +603,22 @@ A012 is founded, but Core v0 handles it as a complexity-budget and integrate-or-
 Every new required object, field, state, or procedural step should name the material failure mode it controls. Low-risk projects keep an explicit minimum viable path, higher burdens trigger through ThresholdPolicy rather than being universalized, new v0 entities pass the cannot-be-safely-derived test before entering the formal inventory, and Extension v1+ ideas do not enter Core v0 by default. Citizen-facing screens remain simple and action-oriented while expert and audit detail stays expandable.
 
 Core v0 does not require a quantitative complexity metric, a formal object-count ceiling, or an implementation-cost model; the complexity budget is a qualitative discipline applied at design and review time. Limitation statement: the architecture's procedural burden has not been validated against real users or a working implementation, so the minimum viable low-risk path remains a design commitment rather than a demonstrated property.
+
+---
+
+## A013 - False, incomplete, or context-misclassified evidence
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]]
+
+### Accepted v0 rule
+
+A013 is founded: independence from the executor does not make evidence true, and evidence can be authentic-but-irrelevant, incomplete, manipulated, produced by an unqualified actor, or classified under the wrong procedural context. The accepted resolution is a proportional formal evidence producer qualification standard: paid or critical fulfillment/control evidence must specify producer qualification, measurement method, instrument standard, required metadata, report requirements, and probative fitness for the claimed formal effect, with review outcomes and role-specific responsibility effects.
+
+The standard binds only evidence needs the active Threshold Policy marks as formal, paid, or hard-effect; citizen observations, complaint attachments, and low-risk confirmations remain easy to submit and may trigger review without certifying anything. Evidence context is a mandatory gate: material must not silently migrate from complaint attachment to fulfillment proof.
+
+Core v0 does not require authenticity scoring, AI-generation detection, calibration registries, or court-admissibility guarantees; those remain future implementation or country-implementation work. Limitation statement: the qualification standard verifies that the right kind of actor used the right kind of method — it does not verify that the specific measurement is true, so a qualified producer can still submit false or negligent evidence, and discovery may come only after formal effects occurred.
 
 ---
 

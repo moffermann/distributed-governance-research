@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed and propagated. Accepted resolution: [[70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md]].
+Phase 3 paired review completed and propagated. Accepted resolution: [[70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
