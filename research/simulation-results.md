@@ -89,15 +89,16 @@ attention levels:
 1. **The default anchor dominates.** A default-anchored mix with a
    well-informed planner (λ = 0.8 (r ≈ 0.97)) reaches sel(θ) ≈ 0.71 —
    roughly double any salience-driven configuration.
-2. **Planner knowledge is the binding constraint.** Degrading planner
-   knowledge from near-perfect to moderate (r ≈ 0.97 → 0.55) costs
-   ≈ 0.29 of quality selection (0.71 → 0.42), while quintupling citizen
-   attention (α 2% → 10%) moves sel(θ) by at most ≈ 0.08 in the
-   salience-driven regime and essentially nothing (≤ 0.01) in
-   default-anchored regimes. This quantifies why A020 — who constructs
-   Planning Scopes and their weights — is the architecture's binding
-   constraint: defaults are powerful, so a captured or ignorant scope
-   poisons allocation quality at the root.
+2. **The weight vector's informational quality is the binding
+   constraint.** Degrading it from near-perfect to moderate
+   (r ≈ 0.97 → 0.55) costs ≈ 0.29 of quality selection (0.71 → 0.42),
+   while quintupling citizen attention (α 2% → 10%) moves sel(θ) by at
+   most ≈ 0.08 in the salience-driven regime and essentially nothing
+   (≤ 0.01) in default-anchored regimes. This quantifies why A020 — what
+   constructs Planning Scopes and their weights — is the binding
+   constraint: defaults are powerful, so a captured or ignorant weight
+   vector poisons allocation quality at the root, whoever supplies it
+   (E4 measures the institutional alternatives for supplying it).
 3. **Salience-driven regimes fund salience.** With d = 20%, funding tracks
    salience (sel(s) ≈ 0.52–0.55) far more than quality — the A024/A027
    pathology reproduced quantitatively.
@@ -124,7 +125,7 @@ parameter-dependent and uncalibrated — the robust finding is the ordering
 and the dominance of the weight vector's informational quality over
 attention, not the point values; and the default-follower rule is a deterministic θ-correlated
 allocator holding most of the budget, so its dominance is partly by
-construction — the informative content is *how much* planner knowledge
+construction — the informative content is *how much* the weight vector's informational quality
 conditions it and how little citizen attention compensates for it.
 
 ## E3 — Participation decay is survivable exactly when the anchor is strong

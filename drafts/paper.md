@@ -419,13 +419,13 @@ quality.** A default-anchored mix with a near-perfectly informed planner
 (r ≈ 0.97) reaches sel(θ) ≈ 0.71 — roughly 1.6–2× the salience-driven
 configurations (≈ 0.35–0.43) — while quintupling citizen attention (α from 2% to 10%)
 moves quality selection by at most ≈ 0.08 in salience-driven regimes and
-essentially nothing in default-anchored ones. Degrading planner knowledge
+essentially nothing in default-anchored ones. Degrading the vector's informational quality
 from near-perfect to moderate (r ≈ 0.97 → 0.55) costs ≈ 0.29 of quality
 selection — far more than any feasible attention gain recovers. Two
 qualifications keep this finding honest. The dominance of defaults is
 partly by construction — the default rule is a deterministic θ-correlated
 allocator holding most of the budget — so the informative content is the
-*conditioning*: how much planner knowledge determines the anchor's value,
+*conditioning*: how much the vector's informational quality determines the anchor's value,
 and how little citizen attention substitutes for it. And a sensitivity
 panel (varying evaluator sample size and social-proof strength) shows the
 regime ordering is robust except under very strong social proof, where the
