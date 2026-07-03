@@ -116,5 +116,69 @@ for (const dir of dirs) {
   }
 }
 
-console.log(`\nbroken=${broken} drifted=${drifted} fixed=${fixed}${FIX ? " (fix mode)" : " (report mode; use --fix to apply)"}`);
-process.exit(broken + drifted > fixed ? 1 : 0);
+// ---------------------------------------------------------------------------
+// Corpus-wide reference checks: bare backtick file paths and Obsidian
+// wikilinks. Line anchors only exist in defenses/, but every directory cites
+// files, and knowledge/ links notes with [[wikilinks]]. Both break on rename
+// or deletion; neither depends on line numbers.
+// ---------------------------------------------------------------------------
+
+import { statSync } from "node:fs";
+
+const CORPUS_DIRS = ["docs", "knowledge", "attacks", "defenses", "drafts", "research"];
+let refBroken = 0;
+let linkBroken = 0;
+
+const allMd = [];
+const walk = (dir) => {
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.name === "node_modules" || e.name.startsWith(".")) continue;
+    const p = join(dir, e.name);
+    if (e.isDirectory()) walk(p);
+    else if (e.name.endsWith(".md")) allMd.push(p.replace(/\\/g, "/"));
+  }
+};
+for (const d of CORPUS_DIRS) if (existsSync(d)) walk(d);
+const basenames = new Map();
+for (const p of allMd) {
+  const b = p.split("/").pop().replace(/\.md$/, "");
+  if (!basenames.has(b)) basenames.set(b, []);
+  basenames.get(b).push(p);
+}
+
+for (const path of allMd) {
+  const text = readFileSync(path, "utf8");
+
+  // Bare backtick path references (existence only).
+  for (const m of text.matchAll(/`((docs|knowledge|attacks|defenses)\/[^`:*\n]+\.md)`/g)) {
+    if (!existsSync(m[1])) {
+      console.log(`DEAD PATH     ${path}: ${m[1]}`);
+      refBroken++;
+    }
+  }
+
+  // Obsidian wikilinks: resolve by relative path from the file's directory,
+  // by vault-relative path, or by unique basename anywhere in the corpus.
+  for (const m of text.matchAll(/\[\[([^\]|#^]+)(?:[#^][^\]|]*)?(?:\|[^\]]*)?\]\]/g)) {
+    const target = m[1].trim();
+    if (!target || target.startsWith("http")) continue;
+    const cand = target.endsWith(".md") ? target : `${target}.md`;
+    const fromDir = join(path, "..", cand).replace(/\\/g, "/");
+    const base = cand.split("/").pop().replace(/\.md$/, "");
+    const ok =
+      existsSync(cand) ||
+      existsSync(fromDir) ||
+      existsSync(join("knowledge", cand)) ||
+      basenames.has(base);
+    if (!ok) {
+      console.log(`DEAD WIKILINK ${path}: [[${target}]]`);
+      linkBroken++;
+    }
+  }
+}
+
+console.log(
+  `\nanchors: broken=${broken} drifted=${drifted} fixed=${fixed}${FIX ? " (fix mode)" : " (report mode; use --fix to apply)"}` +
+    `\ncorpus:  dead-paths=${refBroken} dead-wikilinks=${linkBroken}`,
+);
+process.exit(broken + drifted > fixed || refBroken + linkBroken > 0 ? 1 : 0);
