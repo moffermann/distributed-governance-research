@@ -26,7 +26,7 @@ Side B. The A034/A035 resolutions were accepted with the author's own arguments 
 
 ## Proposed treatment
 
-Update `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md:749` to thirty-five, `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md:755` to `docs/67`–`docs/103`, and rewrite the line 784 passage: the two costs remain honestly declared, but they are now *resolved* — the Administrative Capacity Declaration (`docs/103`) and the allocation-act characterization record (`docs/102`) — with their residual limits (no empirical staffing number until a pilot; doctrine external). Wording change only; the honest-costs framing stays.
+Update the "Adversarially" bullet to thirty-five, its resolution range to `docs/67`–`docs/103`, and rewrite the line 784 passage: the two costs remain honestly declared, but they are now *resolved* — the Administrative Capacity Declaration (`docs/103`) and the allocation-act characterization record (`docs/102`) — with their residual limits (no empirical staffing number until a pilot; doctrine external). Wording change only; the honest-costs framing stays.
 
 ## Severity
 
