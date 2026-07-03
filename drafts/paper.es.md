@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.2 (julio de 2026). Revisado tras una ronda adversarial de arbitraje cuyo informe y correcciones forman parte del registro público.**
+**Working paper — v1.3 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y una revisión metodológica del autor sobre la simulación, ambas parte del registro público.**
 
-*Traducción al español del working paper v1.2 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.3 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff.*
 
@@ -31,10 +31,14 @@ intuiciones de diseño de la arquitectura en proposiciones verificables. Segundo
 evidencia computacional: una simulación de 10.000 agentes de asignación bajo
 restricción de atención muestra que el cierre por meta de financiamiento
 funciona como dispositivo anticoncentración pero no como dispositivo de calidad,
-que la calidad de la asignación la sostienen las reglas institucionales por
-defecto y el conocimiento del planificador antes que la atención ciudadana, y
-que la caída de la participación es sobrevivible exactamente allí donde la capa
-por defecto es fuerte —cuantificando qué márgenes de diseño importan. Tercero,
+que la calidad de la asignación la sostiene la calidad informativa del vector de
+pesos que sigue la capa por defecto antes que la atención ciudadana, y que la
+caída de la participación es sobrevivible exactamente allí donde la capa por
+defecto es fuerte; un cuarto experimento preregistrado que modela el conocimiento
+de manera simétrica halla que agregar señales ciudadanas dispersas en ese vector
+supera a la construcción central de ancho de banda fijo en cada escala probada
+—siempre que exista una institución de agregación y que las señales sean
+honestas, no sesgadas y efectivamente recogidas. Tercero,
 método: la arquitectura se desarrolló bajo revisión adversarial sistemática
 —treinta y cinco resúmenes de ataque (attack briefs), cada uno con una defensa
 emparejada y una resolución aceptada bajo una regla explícita de integrar-o-acotar
@@ -458,12 +462,19 @@ prueba social) muestra que el ordenamiento de regímenes es robusto salvo bajo
 prueba social muy fuerte, donde los regímenes convergen dentro del ruido porque
 la amplificación fuerte también propaga la señal de calidad de los evaluadores;
 las magnitudes dependen de los parámetros y no están calibradas. Lo que sobrevive
-a todas las variaciones es el ordenamiento y el predominio del conocimiento del
-planificador —lo que cuantifica la vulnerabilidad central de la arquitectura:
-porque los valores por defecto son poderosos, quien construye los ámbitos de
-planificación y sus pesos tiene la calidad de la asignación en sus manos. La
-limitación de fijación de agenda (Sección 8) no es una limitación entre muchas;
-por estos números es la restricción vinculante.
+a todas las variaciones es el ordenamiento y el predominio de la calidad
+informativa del vector de pesos —lo que cuantifica la vulnerabilidad central de
+la arquitectura: porque los valores por defecto son poderosos, quien construye
+los ámbitos de planificación y sus pesos tiene la calidad de la asignación en sus
+manos. La limitación de fijación de agenda (Sección 8) no es una limitación entre
+muchas; por estos números es la restricción vinculante. Dos cosas que E1–E3 no
+pueden afirmar, y que un borrador anterior sobreinterpretó al afirmarlas: el
+origen del vector de pesos queda sin especificar (r es una propiedad del vector,
+no de una oficina estatal), y la multitud modelada porta prueba social pero
+ningún conocimiento —de modo que estos experimentos comparan atención frente a
+calidad de los pesos, no conocimiento central frente a conocimiento distribuido.
+El Hallazgo 4 se diseñó, tras la revisión del autor, para hacer esa comparación
+de manera adecuada.
 
 **Hallazgo 3: lo que amortigua el decaimiento de la participación es el nivel del
 ancla, no hacia dónde fluye el peso de quienes se van —nuestra propia predicción
@@ -485,12 +496,53 @@ capa institucional, y la alineación de calidad dentro del ciclo aún se erosion
 en los ciclos más tardíos bajo todas las condiciones, de modo que el decaimiento
 se compra, no es gratis.
 
-La simulación también disciplina la retórica: nada en estos resultados apoya
-describir la asignación de Core v0 como "la sabiduría de las multitudes". Su
-descripción honesta es *intermediación inspeccionable con un valor por defecto
-corregible por la ciudadanía*, la cual los resultados muestran que es a la vez
-realista y mejor que la alternativa impulsada por saliencia hacia la que
-convergen las plataformas no estructuradas.
+**Hallazgo 4: las señales dispersas agregadas superan a la construcción central
+de ancho de banda fijo del vector de pesos en cada escala probada —pero solo a
+través de una institución de agregación.** Un cuarto experimento preregistrado
+(diseño y predicciones comprometidos antes de cualquier corrida;
+`research/e4-institutional-knowledge-design.md`) modela el conocimiento de manera
+simétrica en lugar de dotarlo: un planificador con ancho de banda fijo (treinta
+inspecciones profundas; su correlación con la calidad latente es ahora una salida
+medida, que se desploma de 0.81 → 0.37 → 0.17 a medida que el conjunto de
+proyectos crece de 40 → 200 → 1000) frente a un treinta por ciento de la
+ciudadanía que posee cuatro señales locales individualmente pobres cada uno
+(ruido 0.35). Cinco regímenes comparten el mismo mundo y las mismas señales y
+difieren únicamente en la institución de agregación. La predicción preregistrada
+de cruce por escala falló en la dirección informativa: la construcción abierta
+del vector de pesos —un promedio simple de las señales ciudadanas por proyecto—
+supera a la construcción central pura en *cada* escala, incluida la más pequeña,
+donde el planificador inspecciona tres cuartas partes del mundo (sel(θ) 0.76 vs
+0.62 con N = 40; 0.73 vs 0.04 con N = 1000). Doce mil señales ruidosas promedian
+en un vector casi perfecto; treinta buenas inspecciones no pueden competir, y el
+ancho de banda central fijo decae hacia la aleatoriedad a medida que el mundo
+crece. Tres salvedades cargan el peso honesto del hallazgo. Primero, el mismo
+conocimiento disperso *sin* una institución de agregación se desperdicia: el
+régimen no coordinado financia el 0.6–15% de los proyectos y selecciona mal —el
+resultado reivindica los mecanismos de agregación, no la ausencia de mecanismo, y
+la capa de valor-por-defecto-más-cierre de Core v0 es exactamente uno de esos
+mecanismos. Segundo, la agregación vence al ruido, no al sesgo: las señales son no
+sesgadas por construcción, y un sesgo de modo común no correlacionado con la
+calidad (desinformación, asignación expresiva) no se promediaría a cero —solo se
+probó la contaminación endógena por prueba social, que resultó en gran medida
+benigna porque el avance visible del financiamiento está él mismo correlacionado
+con la calidad en un sistema bien anclado. Tercero, la elicitación es no
+estratégica por supuesto; en el despliegue, el reporte de señales se convierte en
+una superficie de manipulación y clientelismo, y la mecánica de la construcción
+abierta de ámbitos sigue siendo un problema de diseño supeditado a condiciones.
+Dentro de esos límites, el hallazgo invierte la lectura que un borrador anterior
+invitaba: la variable vinculante no es quién sostiene la pluma sino cuánta
+información dispersa ingiere la institución de construcción de ámbitos.
+
+La simulación también disciplina la retórica —en ambas direcciones. Nada en
+E1–E3 apoya describir la asignación de Core v0 como "la sabiduría de las
+multitudes": la descripción honesta es *intermediación inspeccionable con un
+valor por defecto corregible por la ciudadanía*, la cual los resultados muestran
+que es a la vez realista y mejor que la alternativa impulsada por saliencia hacia
+la que convergen las plataformas no estructuradas. Y nada en E1–E3 autoriza la
+lectura opuesta —que el conocimiento de la planificación central vence al
+conocimiento distribuido— porque nunca modelaron el conocimiento distribuido;
+cuando E4 lo hace, la agregación gana allí donde se cumplen sus precondiciones
+nombradas. Ambos discursos pierden su eslogan; el diseño conserva sus números.
 
 ## 7. La validación adversarial como método
 
@@ -543,11 +595,19 @@ con un riesgo residual nombrado.
 **La fijación de agenda permanece centralizada, y es lo que más importa.** Core
 v0 hace los ámbitos de planificación públicos, versionados, portadores de mandato
 y disputables mediante la visibilidad, pero no distribuye su construcción.
-Nuestra propia simulación muestra que el conocimiento del planificador predomina
-sobre todo otro margen de calidad. Quien construye el ámbito ejerce la segunda
-cara del poder (Bachrach and Baratz 1962; Schattschneider 1960) sobre todo lo que
-está aguas abajo. Este es el principal problema abierto de la arquitectura, no un
-detalle de implementación.
+Nuestra propia simulación muestra que la calidad informativa del vector de pesos
+predomina sobre todo otro margen de calidad, y quien construye el ámbito ejerce
+la segunda cara del poder (Bachrach and Baratz 1962; Schattschneider 1960) sobre
+todo lo que está aguas abajo. E4 cambia el carácter de esta limitación sin
+eliminarla: la construcción abierta de los pesos a partir de señales ciudadanas
+agregadas es mensurablemente viable y robusta frente a la escala en el modelo, de
+modo que la restricción ya no es si la construcción distribuida puede funcionar
+en principio sino si un mecanismo de elicitación puede mantener las señales
+dispersas honestas, no sesgadas y representativas bajo la presión de la
+manipulación, el clientelismo y la asignación expresiva —un problema de diseño
+que el corpus supedita a condiciones en lugar de dar por resuelto. Este sigue
+siendo el principal problema abierto de la arquitectura, ahora con un premio
+medido asociado a resolverlo.
 
 **La legitimidad procedimental no es mandato democrático.** La plataforma
 registra la autorización externa para la migración presupuestaria y las fórmulas
