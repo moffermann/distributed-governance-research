@@ -638,6 +638,22 @@ Core v0 does not require, and cannot provide, any mechanism that compels institu
 
 ---
 
+## A017 - Disbursement gaming
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A017 is founded and does not distort the project when it improves milestone and release discipline rather than abolishing project disbursement. Core v0 handles it as disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects, not new payment machinery.
+
+Milestone-based disbursement must be reviewed for gaming risk before it can support release. The minimum tests are: every milestone links to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount; advance payment carries recoverability, retention, direct supplier payment, guarantee, or equivalent protection; weak milestone design can trigger designer/modeler responsibility review where it creates avoidable release risk; the fiscalizer states why the evidence supports release, partial release, retention, or rejection; and citizen-facing summaries separate funding, reservation, release, retained funds, and guarantee status. In Macul, `site preparation and materials purchase` should not justify a large release unless it is tied to value-relevant progress, recoverability, retained funds, and evidence beyond receipts.
+
+Core v0 does not require per-project actuarial guarantee calibration, automated milestone-design scoring, or cost-verification machinery. The global v0 guarantee percentage plus configurable ThresholdPolicy retention remains the Core v0 answer; risk-priced guarantees and milestone-design analytics remain Extension v1+ or country implementation. Limitation statement: milestone quality ultimately depends on human review of milestone design; a formally valid but substantively weak milestone plan approved by a weak reviewer can still release funds early, and the architecture's answer is designer responsibility and retention, not detection.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -766,6 +782,7 @@ Core v0 does not require, and cannot provide, any mechanism that compels institu
 - [ ] If execution funding is phase-specific, does the citizen see whether funds are reserved pending a phase gate?
 - [ ] Does the active policy define the guarantee percentage or assurance requirement instead of the proposer, designer, or executor?
 - [ ] Is a required guarantee treated as materialized only after custodian, guarantor, insurer, treasury, bank, escrow, or lawful equivalent confirmation?
+- [ ] Does advance payment carry recoverability, retention, direct supplier payment, guarantee, or equivalent protection?
 
 ## 5. Disbursement checklist
 
@@ -777,6 +794,9 @@ Core v0 does not require, and cannot provide, any mechanism that compels institu
 - [ ] Does a complaint-based disbursement block identify affected scope and distinguish systemic pause from material/legal suspension?
 - [ ] Do hidden or control-relevant relationships escalate to correction, blocking, exclusion, complaint, responsibility, or reputation effects while declared proximity stays proportional?
 - [ ] Is beneficial-ownership verification treated as country implementation rather than a Core v0 promise?
+- [ ] Does every milestone link to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount?
+- [ ] Can avoidably weak milestone design trigger designer/modeler responsibility review, and does the fiscalizer state why evidence supports release, partial release, retention, or rejection?
+- [ ] Do citizen-facing summaries separate funding, reservation, release, retained funds, and guarantee status?
 - [ ] Are partial releases governed by pre-defined rules?
 - [ ] Are retained funds visible?
 - [ ] Does release check the Financial Assurance Profile and Guarantee Materialization Record where applicable?

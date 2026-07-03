@@ -2192,6 +2192,10 @@ Reassigned
 In recovery
 ```
 
+A017 disbursement-gaming tests:
+
+> A017 disbursement-gaming tests: Core v0 adds no new payment entity; the tests bind through DisbursementMilestonePlan, ProjectPhase, BudgetLine, FinancialAssuranceProfile, GuaranteeMaterializationRecord, FiscalizationReport, and Disbursement. Every milestone links to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount; advance payment carries recoverability, retention, direct supplier payment, guarantee, or equivalent protection; avoidably weak milestone design can trigger designer/modeler responsibility review; the fiscalizer states why the evidence supports release, partial release, retention, or rejection; and citizen-facing summaries separate funding, reservation, release, retained funds, and guarantee status. Per-project actuarial guarantee calibration and automated milestone-design scoring remain Extension v1+ / country implementation.
+
 ## Project Closure Accountability Record
 
 The final traceable record that aggregates what the project promised, what was evidenced, what was reviewed, what remained unproven, what happened to the money, and which role-specific consequences followed.

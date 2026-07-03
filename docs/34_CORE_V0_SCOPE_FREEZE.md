@@ -423,6 +423,8 @@ Every disbursement requires:
 
 Core v0 also requires a coherent Disbursement Milestone plan before execution funding commitments. Specialized validation should check milestone fulfillment evidence, required evidence producer qualifications, measurement/review methods, release amounts, partial-release rules, retentions, advance-payment protections, and phase-gate treatment where applicable. Projects with unresolved critical validation failures cannot begin receiving execution funding commitments.
 
+A017 adds disbursement-gaming tests over these existing milestone and assurance objects, not new payment machinery: every milestone links to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount; advance payment carries recoverability, retention, direct supplier payment, guarantee, or equivalent protection; avoidably weak milestone design can trigger designer/modeler responsibility review; the fiscalizer states why the evidence supports release, partial release, retention, or rejection; and citizen-facing summaries separate funding, reservation, release, retained funds, and guarantee status. Per-project actuarial guarantee calibration and automated milestone-design scoring are not Core v0; milestone quality rests on human review backed by designer responsibility and retention.
+
 A pending design gate is not itself a critical validation failure if the phase plan, minimum public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It blocks release, not necessarily funding commitments.
 
 Financial assurance is universal across execution-financeable projects, not construction-specific. Care services, supply purchases, workshops, food support, infrastructure, and other social projects may all require the active global guarantee or equivalent assurance. The proposer, designer, or executor may satisfy the requirement but cannot define the guarantee percentage or self-classify into a lower assurance obligation.
@@ -818,6 +820,7 @@ These should not be part of Core v0 unless later shown necessary:
 - full common-good charter governance;
 - common-good registry, charter voting, and platform common-good adjudication beyond the A015 sufficiency test;
 - transition enforcement, migrated-budget protection, resistance-pattern analytics, and cross-country transition comparisons beyond the A016 incumbent-resistance indicators;
+- per-project actuarial guarantee calibration and automated milestone-design scoring beyond the A017 disbursement-gaming tests;
 - full multi-sector implementation.
 
 ## Country implementation decisions

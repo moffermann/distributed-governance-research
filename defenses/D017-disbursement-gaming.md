@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation.
+Phase 3 paired review completed. Accepted resolution: `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation. Propagated into the core corpus.
 
 ## Attack reference
 

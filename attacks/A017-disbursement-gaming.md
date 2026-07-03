@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
@@ -73,6 +73,6 @@ Funds are released for materials that are later found unsuitable. The executor a
 - Are phase gates and release blockers enforced?
 - Does disbursement failure affect designer, executor, fiscalizer, or reviewer reputation by role?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should define disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release.
+The Phase 3 resolution defined disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release.

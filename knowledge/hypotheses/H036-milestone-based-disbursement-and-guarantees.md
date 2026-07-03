@@ -18,6 +18,8 @@ This hypothesis is aligned with:
 
 H036 should be read as the financing-control rule that connects funding commitment, milestone validation, evidence, fiscalization, guarantees, retentions, and custody execution.
 
+H036 is also aligned with [[../../docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|A017]]: the disbursement-gaming tests are linkage and justification checks over the milestone, assurance, and release objects this hypothesis defines, not new payment machinery. Every milestone must link to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount; advance payment must carry recoverability, retention, direct supplier payment, guarantee, or equivalent protection; avoidably weak milestone design can trigger designer/modeler responsibility review; the fiscalizer must state why the evidence supports release, partial release, retention, or rejection; and citizen-facing summaries must separate funding, reservation, release, retained funds, and guarantee status. Per-project actuarial guarantee calibration and automated milestone-design scoring remain Extension v1+ or country implementation; milestone quality rests on human review backed by designer responsibility and retention.
+
 H011 now defines the upstream financial assurance requirement: every execution-financeable project should have a Financial Assurance Profile, and Core v0 should use a global guarantee percentage configured by the active administrator, protocol, operating mode, or lawful country implementation rule. H036 governs how funds are released, retained, returned, reassigned, recovered, or subject to guarantee execution after that assurance profile exists.
 
 ## Rationale

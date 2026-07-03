@@ -894,6 +894,8 @@ Before a project can receive execution funding commitments, its disbursement mil
 
 Before funds are released, the disbursement check should also confirm the applicable Financial Assurance Profile, any required Guarantee Materialization Record, and any required Post-Closure Coverage Profile or coverage-materialization reference.
 
+A017 adds disbursement-gaming tests over existing milestone and assurance objects, not new payment machinery: every milestone links to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount; advance payment carries recoverability, retention, direct supplier payment, guarantee, or equivalent protection; avoidably weak milestone design can trigger designer/modeler responsibility review; the fiscalizer states why the evidence supports release, partial release, retention, or rejection; and citizen-facing summaries separate funding, reservation, release, retained funds, and guarantee status. Core v0 does not add per-project actuarial guarantee calibration or automated milestone-design scoring; milestone quality rests on human review backed by designer responsibility and retention.
+
 A pending design gate is not by itself a critical validation failure if the phase plan, public-value baseline, reserved-fund rule, and fund-treatment rule are explicit. It is a release blocker: later-phase execution funds remain reserved until the prerequisite design phase is accepted.
 
 Money states:
@@ -1183,6 +1185,7 @@ Out of scope or future extension:
 - full common-good charter governance;
 - common-good registry, charter voting, and platform common-good adjudication beyond the A015 sufficiency test;
 - resistance-pattern analytics, cross-country transition comparisons, and any mechanism that compels institutional transition or protects the migrated budget share beyond the A016 indicators;
+- per-project actuarial guarantee calibration and automated milestone-design scoring beyond the A017 disbursement-gaming tests;
 - full personal AI guides;
 - advanced inferred recommender systems;
 - advanced participation-equity analytics, demographic gap measurement, and inclusion dashboards;
