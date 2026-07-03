@@ -8,7 +8,7 @@ A distributed governance system should not allow anonymous actors in formal part
 
 C024 preserves this principle and clarifies how sensitive participation should work.
 
-Formal alerts and complaints should not be anonymous. When public exposure would create retaliation, safety, privacy, or beneficiary-protection risks, the actor may request protected identity. In that case: ^r84f588a2
+Formal alerts and complaints should not be anonymous. When public exposure would create retaliation, safety, privacy, or beneficiary-protection risks, the actor may request protected identity. In that case:
 
 - the actor remains verified to the system;
 - the public may see a contextual protected display identity;
@@ -40,7 +40,7 @@ All formal actors should have verified identity:
 
 ## Identity mechanism example
 
-In Chile, an identity mechanism such as ClaveUnica could serve as a conceptual reference for verified access. ^r1f6776b9
+In Chile, an identity mechanism such as ClaveUnica could serve as a conceptual reference for verified access.
 
 ## Important distinction
 

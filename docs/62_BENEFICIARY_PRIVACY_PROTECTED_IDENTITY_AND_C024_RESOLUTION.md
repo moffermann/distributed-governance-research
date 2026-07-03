@@ -147,7 +147,7 @@ The public should not need to see:
 - sensitive locations;
 - medical or social-vulnerability details.
 
-Authorized fiscalizers or auditors may verify restricted records when necessary, subject to access logs and privacy rules. ^ref0cf684
+Authorized fiscalizers or auditors may verify restricted records when necessary, subject to access logs and privacy rules.
 
 ## Protected action identity rule
 
@@ -392,7 +392,7 @@ This resolution should inform future updates to:
 - Visible-identity insults may still degrade discussion quality.
 - Protected pseudonyms may become correlatable if implemented poorly.
 - Some beneficiary privacy rules will depend on country law.
-- Powerful actors may retaliate against critics even when identity is protected if context reveals them. ^rc9ff97fd
+- Powerful actors may retaliate against critics even when identity is protected if context reveals them.
 - A narrow legal gate may be expanded improperly into political moderation by a future implementation.
 
 ## Mitigations

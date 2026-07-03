@@ -8,7 +8,7 @@ C023 was originally framed as the risk that the model makes delegation concentra
 
 The accepted resolution is that Core v0 should not impose a universal delegation cap. If citizens freely choose to concentrate delegated authority in a trusted actor, that may be a legitimate collective choice. The system's role is not to force participation to follow a predetermined political philosophy of dispersion.
 
-The system's role is to make delegated concentration visible, auditable, revocable, and configurable where a specific pilot or protocol chooses stricter limits. ^r1f8ac005
+The system's role is to make delegated concentration visible, auditable, revocable, and configurable where a specific pilot or protocol chooses stricter limits.
 
 ## Status
 
@@ -16,7 +16,7 @@ Accepted as the v0 resolution for C023.
 
 ## Core principle
 
-> If citizens voluntarily concentrate delegation, that is their choice. The system must expose the concentration, not override citizen choice with a universal anti-concentration rule. ^r8694832f
+> If citizens voluntarily concentrate delegation, that is their choice. The system must expose the concentration, not override citizen choice with a universal anti-concentration rule.
 
 Distributed governance should increase freedom of civic allocation and representation. It should not replace institutional centralization with a hidden platform ideology that forbids voluntary coordination.
 
@@ -159,7 +159,7 @@ Concentration should be visible at least in these moments:
 
 ## Delegated action weight
 
-When a delegate acts within an accepted delegation scope, the represented weight must be visible. ^rb1bb17d7
+When a delegate acts within an accepted delegation scope, the represented weight must be visible.
 
 Example:
 
@@ -182,7 +182,7 @@ If a configured cap limits represented weight for a specific action type, the ac
 
 ## Configurable caps
 
-Core v0 should allow configurable caps, but should not impose them globally. ^r81c2f1b6
+Core v0 should allow configurable caps, but should not impose them globally.
 
 Caps may be configured by:
 

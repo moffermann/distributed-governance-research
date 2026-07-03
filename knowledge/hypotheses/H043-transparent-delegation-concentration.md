@@ -162,7 +162,7 @@ The same represented weight should appear in:
 
 ## Principle
 
-> Delegation concentration is not forbidden, but it must never be hidden, automatically monetized, or reported as if high-weight delegated actions were personal-only actions. ^r300d71bb
+> Delegation concentration is not forbidden, but it must never be hidden, automatically monetized, or reported as if high-weight delegated actions were personal-only actions.
 
 ## Research note
 

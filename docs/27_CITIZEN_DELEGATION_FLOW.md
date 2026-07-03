@@ -4,7 +4,7 @@
 
 This document freezes the citizen delegation flow.
 
-Delegation allows a citizen to authorize another actor to act within a defined scope. In Core v0, delegation should be simple, explicit, accepted by the delegate, and immediately revocable for future actions. ^r6d31cfd2
+Delegation allows a citizen to authorize another actor to act within a defined scope. In Core v0, delegation should be simple, explicit, accepted by the delegate, and immediately revocable for future actions.
 
 ## Core principle
 
@@ -267,7 +267,7 @@ If a configured cap limits represented weight for a specific action type, the ca
 
 The citizen should receive delegated-action reports.
 
-The Core v0 baseline should be generated primarily by the system from the delegated-action audit trail. The delegate may add short explanations, but the citizen should not depend on manually written delegate reports to know what happened. ^r5a8628a2
+The Core v0 baseline should be generated primarily by the system from the delegated-action audit trail. The delegate may add short explanations, but the citizen should not depend on manually written delegate reports to know what happened.
 
 Reports may include:
 
