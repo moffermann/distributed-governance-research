@@ -312,10 +312,13 @@ environments.
 
 **Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes
 incentive compatibility at rate *p* but lowers honest executors' payoff at
-rate *κ*; a guarantee increase is net-beneficial only if *p* > *κ*. Where
-detection quality is below the local cost of capital, piling on guarantees
-excludes honest low-margin executors without deterring fraud — the formal
-content of the architecture's proportionality discipline.
+rate *κ*; under a designer objective weighing one unit of incentive slack
+equally against one unit of honest-executor payoff, a guarantee increase is
+net-beneficial only if *p* > *κ* (other weightings shift the threshold, not
+the trade-off's structure). Where detection quality is below the local cost
+of capital, piling on guarantees excludes honest low-margin executors
+without deterring fraud — the formal content of the architecture's
+proportionality discipline.
 
 ### 5.2 Collusion-proof fiscalization
 
@@ -338,7 +341,9 @@ what makes shallow-reputation fiscalizer pools workable, at linear control
 cost — which is what proportional threshold policies are for. *Repeat
 relationships are the attack surface*: the friction term exists only while
 relational contracting is prevented, which is why repeat-pairing visibility
-is load-bearing. *Thin markets attack both models at once*: a monopolist
+is load-bearing (we hold the report probability *δ* exogenous to *k*;
+endogenizing it — more approached reviewers, more chances of a report —
+only strengthens the condition). *Thin markets attack both models at once*: a monopolist
 fiscalizer that cannot credibly be excluded loses its forfeitable stake
 (*W* → 0) while also degrading *p* in Proposition 1 — the two conditions
 identify the same environments as fragile, for the same reason.
@@ -380,8 +385,8 @@ is — bounded accordingly.
 
 **Finding 2: the default anchor, not citizen attention, carries allocation
 quality.** A default-anchored mix with a near-perfectly informed planner
-(r ≈ 0.97) reaches sel(θ) ≈ 0.71 — double any salience-driven configuration
-(≈ 0.35–0.43) — while quintupling citizen attention (α from 2% to 10%)
+(r ≈ 0.97) reaches sel(θ) ≈ 0.71 — roughly 1.6–2× the salience-driven
+configurations (≈ 0.35–0.43) — while quintupling citizen attention (α from 2% to 10%)
 moves quality selection by at most ≈ 0.08 in salience-driven regimes and
 essentially nothing in default-anchored ones. Degrading planner knowledge
 from near-perfect to moderate (r ≈ 0.97 → 0.55) costs ≈ 0.29 of quality
@@ -402,14 +407,23 @@ planning scopes and their weights holds the allocation's quality in their
 hands. The agenda-setting limitation (Section 8) is not one limitation
 among many; by these numbers it is the binding constraint.
 
-**Finding 3: participation decay is survivable exactly where the default
-layer is strong.** Decaying active evaluation from 10% to 2% over 24 cycles
-barely moves overall selection when defaults hold 50% of flow; with a weak
-default layer (20%), decay flowing to salience erodes both selection
-(0.388 vs 0.409) and late-cycle quality alignment (0.273 vs 0.321).
-Engagement decay — the documented fate of civic-tech participation
-(Peixoto and Fox 2016) — is a buffered risk here, but the buffer is the
-institutional layer, not citizen virtue.
+**Finding 3: what buffers participation decay is the anchor's level, not
+where the leavers' weight flows — our own prediction failed here.** We
+predicted that decaying active evaluation (10% to 2% over 24 cycles) would
+degrade allocation gracefully only if the released share flowed to
+defaults rather than salience. Exploiting common seeds across conditions,
+the paired analysis rejects this: the destination's effect on overall
+selection is null at both anchor strengths (mean paired differences 0.001
+[−0.031, 0.033] and 0.021 [−0.028, 0.071]), and the only interval
+excluding zero is small and opposite-signed (at a strong anchor, the
+salience destination preserves late-cycle alignment slightly better —
+plausibly because amplified social proof also propagates evaluator
+seeding). What governs robustness to decay is the structural share of the
+default layer itself, Finding 2's variable. Engagement decay — the
+documented fate of civic-tech participation (Peixoto and Fox 2016) — is a
+buffered risk here, but the buffer is the institutional layer's size, and
+within-cycle quality alignment still erodes in later cycles under all
+conditions, so decay is bought, not free.
 
 The simulation also disciplines rhetoric: nothing in these results supports
 describing Core v0 allocation as "the wisdom of crowds." Its honest
@@ -447,9 +461,10 @@ bounded attack must leave three artifacts — an explicit boundary sentence
 ("Core v0 does not require X"), a visible residual risk, and a one-sentence
 limitation statement. The limitations section below is therefore not a
 gesture of humility; it is the accumulated, adversarially generated output
-of the method. Of the thirty-three attacks, none was dismissed; eight of
-the second round were classified founded outright, and the corpus's answer
-to several is an honest "bounded, not solved."
+of the method. Of the thirty-three attacks, none was dismissed; nine of
+the second round's fifteen were classified founded outright and the other
+six partially founded, and the corpus's answer to several is an honest
+"bounded, not solved."
 
 We used the loop with a single design team plus AI assistance; its obvious
 next application is with genuinely independent attackers, which we identify

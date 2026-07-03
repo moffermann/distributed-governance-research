@@ -231,14 +231,30 @@ function simulate({ seed, alpha0, alphaEnd, defaultShare, fallback, caps, corrTh
 }
 
 // --- experiments --------------------------------------------------------------
-const runMany = (params) => {
-  const keys = ["selTheta", "selSalience", "qualityGap", "corrTheta", "gini", "topShare", "fundedRate", "earlyCorr", "lateCorr"];
-  const acc = Object.fromEntries(keys.map((k) => [k, []]));
+const KEYS = ["selTheta", "selSalience", "qualityGap", "corrTheta", "gini", "topShare", "fundedRate", "earlyCorr", "lateCorr"];
+
+const runManyRaw = (params) => {
+  const acc = Object.fromEntries(KEYS.map((k) => [k, []]));
   for (let r = 0; r < RUNS; r++) {
     const out = simulate({ seed: BASE_SEED + r * 7919, ...params });
-    for (const k of keys) acc[k].push(out[k]);
+    for (const k of KEYS) acc[k].push(out[k]);
   }
-  return Object.fromEntries(keys.map((k) => [k, { mean: mean(acc[k]), sd: sd(acc[k]) }]));
+  return acc;
+};
+
+const runMany = (params) => {
+  const acc = runManyRaw(params);
+  return Object.fromEntries(KEYS.map((k) => [k, { mean: mean(acc[k]), sd: sd(acc[k]) }]));
+};
+
+// Paired difference (same seeds across both conditions): mean diff with a
+// 95% CI using t(0.975, df=19)=2.093 for the default 20 runs.
+const pairedDiff = (a, b) => {
+  const diffs = a.map((x, i) => x - b[i]);
+  const m = mean(diffs);
+  const se = sd(diffs) / Math.sqrt(diffs.length);
+  const t = 2.093;
+  return `${m.toFixed(3)} [${(m - t * se).toFixed(3)}, ${(m + t * se).toFixed(3)}]`;
 };
 
 const fmt = (m) => `${m.mean.toFixed(3)}±${m.sd.toFixed(3)}`;
@@ -298,9 +314,17 @@ for (const [sample, eta] of [[4, 3.0], [16, 3.0], [8, 1.0], [8, 6.0]]) {
 console.log("\n## E3 — P3: participation decay 10%→2% over 24 cycles (caps ON, lambda=0.4)\n");
 console.log("| condition | sel(theta) | quality gap | early-cycles corr | late-cycles corr |");
 console.log("|---|---|---|---|---|");
+const e3raw = {};
 for (const d of [0.5, 0.2]) {
   for (const fb of ["default", "salience"]) {
-    const r = runMany({ alpha0: 0.1, alphaEnd: 0.02, defaultShare: d, fallback: fb, caps: true, corrThetaW: 0.4 });
+    const raw = runManyRaw({ alpha0: 0.1, alphaEnd: 0.02, defaultShare: d, fallback: fb, caps: true, corrThetaW: 0.4 });
+    e3raw[`${d}-${fb}`] = raw;
+    const r = Object.fromEntries(KEYS.map((k) => [k, { mean: mean(raw[k]), sd: sd(raw[k]) }]));
     console.log(`| d=${Math.round(d * 100)}%, decay→${fb} | ${fmt(r.selTheta)} | ${fmt(r.qualityGap)} | ${fmt(r.earlyCorr)} | ${fmt(r.lateCorr)} |`);
   }
+}
+console.log("\nPaired differences (default minus salience destination, same seeds, mean [95% CI]):");
+for (const d of [0.5, 0.2]) {
+  const a = e3raw[`${d}-default`], b = e3raw[`${d}-salience`];
+  console.log(`  d=${Math.round(d * 100)}%: sel(theta) ${pairedDiff(a.selTheta, b.selTheta)}; late-cycles corr ${pairedDiff(a.lateCorr, b.lateCorr)}`);
 }

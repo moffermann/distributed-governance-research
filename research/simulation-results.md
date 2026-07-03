@@ -139,16 +139,28 @@ to salience. Caps ON, λ = 0.4 (r ≈ 0.55):
 | d=20%, decay→default  | 0.409±0.081 | 0.268±0.053 | 0.456±0.095 | 0.321±0.092 |
 | d=20%, decay→salience | 0.388±0.073 | 0.252±0.051 | 0.456±0.092 | 0.273±0.075 |
 
-**Reading (P3 confirmed conditionally).** With a strong default anchor
-(d = 50%), the destination of decayed attention is second-order: the anchor
-absorbs the loss and overall selection barely moves. With a weak anchor
-(d = 20%), destination matters in the predicted direction — decay flowing
-to salience erodes both overall selection (0.388 vs 0.409) and late-cycle
-quality alignment (0.273 vs 0.321). Participation decay (A025) is
-survivable, but only because — and only insofar as — the institutional
-default layer is in place. Within-cycle quality alignment declines in later
-cycles under all decay conditions (≈ 0.48 → 0.27–0.34), so decay is not
-free; it is buffered.
+Because the same seeds are used across conditions, paired differences
+(default minus salience destination, mean [95% CI over 20 paired runs])
+are far more powerful than the marginal columns:
+
+| anchor | Δ sel(θ) | Δ late-cycles corr |
+|---|---|---|
+| d = 50% | 0.001 [−0.031, 0.033] | −0.048 [−0.092, −0.004] |
+| d = 20% | 0.021 [−0.028, 0.071] | 0.048 [−0.008, 0.105] |
+
+**Reading (P3 not supported — a cleaner negative result).** The paired
+analysis rejects prediction P3 as stated: the destination of decayed
+attention has no reliable effect on overall selection at either anchor
+strength, and the only interval excluding zero is small and
+*opposite-signed* (at d = 50%, the salience destination preserves
+late-cycle alignment slightly better, plausibly because amplified social
+proof also propagates evaluator seeding, as in E2s). What actually governs
+robustness to decay is the **level** of the default anchor — the
+structural result of E2 — not where the decayed share flows. Participation
+decay (A025) is buffered by the institutional layer; within-cycle quality
+alignment still declines in later cycles under all conditions
+(≈ 0.48 → 0.27–0.34), so decay is not free — but re-routing the leavers
+is not the lever, the anchor is.
 
 ## Implications for the architecture
 

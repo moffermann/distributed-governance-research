@@ -112,6 +112,11 @@ A guarantee increase is net-beneficial for the mechanism only if `p > κ`.
 γ-increase excludes honest executors (lowers `U_D` toward `ū`) at least as
 fast as it deters diversion. ∎
 
+The comparison assumes a mechanism-designer objective that weighs one unit
+of IC slack equally against one unit of honest-executor payoff; under any
+other fixed weighting the threshold shifts but the trade-off's structure —
+deterrence bought at participation — is unchanged.
+
 **Reading.** In environments where detection quality is below the local cost
 of capital, piling on guarantees is a burden that filters out honest
 low-margin executors without deterring fraud — the formal footing for the
@@ -242,7 +247,9 @@ allocation** `1 − α` goes. The three regimes differ exactly there:
 - **P3 (decay degrades gracefully only with defaults).** Letting `α` decay
   across cycles (participation fatigue, A025) degrades corr(funding, θ)
   mildly when the released share flows to defaults, and sharply when it
-  flows to salience.
+  flows to salience. *(Adjudication: not supported — the paired analysis in
+  the simulation results finds the decay destination second-order at both
+  anchor strengths; the protective factor is the anchor level itself.)*
 
 The simulation operationalizes θ, s, w as seeded mixtures — w = λθ + (1−λ)u
 with mixing weight λ ∈ {0.4, 0.8}, whose measured Pearson correlations are
@@ -259,7 +266,10 @@ Stated per P007 discipline, for the paper's limitations section:
   as parameters. Nothing here demonstrates that the platform achieves any
   particular value of them; that is an empirical question for pilots.
 - Model 2's bargaining is reduced-form (bribe = expected loss); richer
-  bargaining or risk aversion changes constants, not the structure.
+  bargaining or risk aversion changes constants, not the structure. The
+  report probability δ is also held exogenous to k, although approaching
+  more fiscalizers should mechanically raise it — endogenizing δ(k) only
+  strengthens the collusion-proofness condition.
 - Model 3's welfare reading assumes planning weights `w` track need — the
   A020 agenda-setting limitation applies with full force: a captured
   Planning Scope poisons the default anchor precisely because defaults are
