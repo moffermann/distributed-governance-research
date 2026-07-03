@@ -1,0 +1,571 @@
+# A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
+
+**Working paper — v1.0 (July 2026)**
+
+## Abstract
+
+Debates about the state are usually conducted over its size — more state or
+less state — rather than its architecture. This paper proposes and defends a
+functional alternative: decompose state activity into functional layers,
+distribute the layers where modern coordination technology outperforms
+institutional monopoly, and keep central the layers where it does not. We
+present a complete reference architecture (Core v0) for the most contestable
+layer, bounded public resource allocation: citizens allocate a legally
+mandated share of an existing public budget across verifiable projects, under
+strict separation of proposing, modeling, executing, evidence-producing, and
+auditing roles; funds move only through milestone-gated conditional release
+backed by externally materialized guarantees; and every consequential act
+leaves a public, layered audit trail. Three contributions distinguish this
+from the participatory-governance literature it builds on. First, mechanism
+design: we derive the incentive-compatibility condition for milestone-gated
+disbursement, a collusion-proofness condition for protocolized fiscalization
+with k-corroboration, and show formally that weak verification environments
+must be priced in financial terms — results that convert the architecture's
+design intuitions into checkable propositions. Second, computational
+evidence: a 10,000-agent simulation of attention-constrained allocation shows
+that funding-target closure works as an anti-concentration device but not a
+quality device, that allocation quality is carried by institutional default
+rules and planner knowledge rather than citizen attention, and that
+participation decay is survivable exactly where the default layer is strong —
+quantifying which design margins matter. Third, method: the architecture was
+developed under systematic adversarial review — thirty-three attack briefs
+with paired defenses, each resolved by an explicit integrate-or-bound rule
+that either adds a mechanism through existing objects or records a boundary
+with a named residual risk. The result is an architecture whose limitations
+are part of its specification. We state those limitations plainly: the
+construction of planning agendas remains centralized and is, by our own
+simulation, the binding constraint; fiscal dependence on the incumbent state
+is measurable but not enforceable; and no empirical pilot has yet been run.
+
+**Keywords:** distributed governance, participatory budgeting, mechanism
+design, polycentric governance, public accountability, agent-based
+simulation, liquid democracy, institutional design.
+
+---
+
+## 1. Introduction
+
+Modern states concentrate three things that do not need to be concentrated
+together: the authority to decide what public money is spent on, the
+operational capacity to execute that spending, and the epistemic authority to
+certify that the spending achieved anything. Where all three sit inside a
+single institutional hierarchy, accountability depends on the hierarchy
+auditing itself. The predictable consequences — discretionary allocation,
+self-reported compliance, capture by concentrated interests, and citizen
+distrust — are documented across every tradition of political economy, from
+regulatory capture (Stigler 1971; Laffont and Tirole 1991) to the audit
+society's ritualized compliance (Power 1997) to the distributional coalitions
+that entrench themselves in stable polities (Olson 1982).
+
+The standard debate responds with quantity: shrink the state or grow it.
+Both positions treat the state as a single object. This paper argues the
+tractable question is architectural, not volumetric: *which functional layers
+of state activity still require central monopoly, and which can now be
+distributed — with better accountability than the status quo — given that
+digital coordination has collapsed the transaction costs that once justified
+hierarchy?* (Hayek 1945; Williamson 1985). Rights guarantees, legitimate
+force, macro-fiscal stability, and enforceable adjudication plausibly remain
+central. Information processing, project-level resource allocation, service
+execution, evidence production, and auditing plausibly do not.
+
+We make the argument concrete rather than programmatic. Core v0 is a
+complete reference architecture for distributing one bounded layer — the
+allocation, execution, and verification of a legally mandated share of an
+existing public budget — developed to the level of named objects, state
+machines, and decision rules (a corpus of eighty-nine architecture documents,
+fifty-nine designed hypotheses, and thirty-three adversarial reviews, all
+public). Citizens receive periodic, non-withdrawable allocation capacity in a
+civic wallet; projects pass through a parallel-closure lifecycle in which
+funding, independent fiscalization, evidence commitments, and beneficiary
+confirmation must all close before execution; the executor never selects or
+pays its own auditors; money moves only on reviewed milestones with retention
+and externally materialized guarantees; and every consequential state
+transition is recorded in a citizen-legible, expert-auditable trail.
+
+The reason to take a design exercise seriously as research is what was done
+to it. Our contributions are:
+
+1. **A functional distribution principle with an explicit comparative
+   discipline.** Critiques of the architecture must be evaluated against how
+   the current institutional model solves the same problem, not against an
+   ideal (Section 3). This blocks the nirvana fallacy in both directions.
+
+2. **Formalization of the core mechanisms** (Section 5). We model
+   milestone-gated disbursement as a principal-agent game and derive its
+   incentive-compatibility condition; we model bribery of protocol-assigned
+   fiscalizers and derive a collusion-proofness condition under
+   k-corroboration; and we prove two design-relevant comparative statics:
+   weak verification must be compensated with financial terms, and
+   guarantees are counterproductive when detection quality falls below the
+   cost of capital.
+
+3. **Computational evidence** (Section 6). A dependency-free, seeded
+   agent-based simulation of 10,000 citizens tests the architecture's
+   behavioral assumptions under rational ignorance, limited discovery
+   attention, and social-proof cascades. The results discipline the design:
+   they support some claims, sharpen others, and quantify the architecture's
+   single most important vulnerability.
+
+4. **Adversarial validation as method** (Section 7). The architecture was
+   attacked systematically — thirty-three attack briefs grounded in the
+   political-science and economics literature, each answered by a paired
+   defense and an explicit resolution under an integrate-or-bound rule. We
+   propose this loop, and its terminating rule, as a reusable method for
+   institutional design research.
+
+Section 8 states limitations with the same care as results, because under
+our method they are results: each is a named, bounded residual risk.
+
+## 2. Related work
+
+**Polycentric governance.** Ostrom's demonstration that common-pool
+resources can be governed by nested, self-organized regimes without central
+monopoly (Ostrom 1990) is the closest intellectual ancestor: her design
+principles — bounded scope, monitoring by accountable monitors, graduated
+sanctions, cheap conflict resolution — reappear here as software-enforced
+objects. The difference is scope and instrument: we target budgeted state
+functions rather than natural-resource commons, and encode the regime in a
+platform whose rule changes are themselves versioned, auditable objects.
+
+**Participatory budgeting.** Porto Alegre-style PB delegates a share of a
+municipal budget to citizen assemblies (Wampler 2007; Baiocchi and Ganuza
+2017). Empirically, PB improves some fiscal outcomes but suffers from
+engagement decay, capture by organized minorities, and weak links between
+allocation and verified delivery (Peixoto and Fox 2016). Core v0 differs on
+exactly those margins: allocation is continuous and individual rather than
+assembly-based; delivery is bound to allocation through evidential contracts
+and conditional disbursement; and the architecture treats low participation
+as a design input (Section 6) rather than a failure to be exhorted away.
+
+**Liquid democracy.** Transitive or scoped delegation promises flexibility
+between direct and representative participation, at the cost of concentration
+(Blum and Zuber 2016; Kahng, Mackenzie and Procaccia 2018). Core v0 adopts
+scoped, revocable, non-compensated delegation with mandatory concentration
+visibility, and — following Michels' (1911) warning rather than dismissing
+it — treats delegate concentration as a monitored risk with stress
+thresholds, not a solved problem.
+
+**Digital and blockchain governance.** The DAO literature demonstrated both
+the feasibility of rule-encoded collective resource allocation and its
+characteristic failure: plutocratic token voting and governance capture (De
+Filippi and Wright 2018). Core v0 is deliberately not a blockchain design —
+identity is verified rather than pseudonymous, and the sovereign state
+remains the source of funds and law — but it imports the lesson that
+meta-governance is the highest-leverage attack surface (Section 8).
+
+**Mechanism design and audit.** Our formal models are elementary
+applications of moral hazard under imperfect observation (Holmström 1979)
+and collusion in supervision hierarchies (Laffont and Tirole 1991), with
+Goodhart's law (Goodhart 1975; Campbell 1976) as the standing warning
+against metric gaming. The contribution is not technical depth but
+specificity: the models' parameters map one-to-one onto named architectural
+objects, so every proposition is an implementable dial.
+
+**What is new.** To our knowledge, no prior work combines (i) a functional
+decomposition of state activity into distributable and non-distributable
+layers, (ii) a complete object-level architecture for the allocation layer,
+(iii) formal incentive analysis of that architecture's specific mechanisms,
+(iv) behavioral simulation of its citizen-facing assumptions, and (v) a
+documented adversarial-review method with an explicit stopping rule.
+
+## 3. The functional distribution principle
+
+We analyze the state as a stack of functional layers rather than a single
+institution: (a) rights guarantees and legitimate force; (b) binding
+adjudication; (c) rule-making; (d) macro-fiscal management; (e) planning and
+prioritization; (f) resource allocation to concrete undertakings; (g)
+execution and service delivery; (h) evidence production about delivery; and
+(i) evaluation and accountability. The distribution principle is:
+
+> A layer is a candidate for distribution when three conditions hold:
+> its failures under monopoly are information and incentive failures rather
+> than coordination-of-force failures; distributed provision can be made
+> *more* observable than monopoly provision; and the layer can be bounded so
+> that its failure does not cascade into the non-distributable layers.
+
+Layers (a), (b), and (d) fail the first or third condition and remain
+central in our design. Layers (f) through (i) pass all three, and Core v0
+distributes them jointly — jointly, because distributing allocation without
+distributing verification reproduces PB's delivery gap, and distributing
+verification without allocation reproduces the audit society.
+
+Layer (e), planning, is the deliberately unresolved case: Core v0 requires
+planning scopes to be public, versioned, and mandate-bearing, but does not
+distribute their construction. Section 6 shows this is not a detail: it is
+the binding constraint of the whole design.
+
+Two methodological rules govern everything that follows. The **comparative
+critique rule** (P001): every objection is evaluated against the current
+institutional baseline, not an ideal — a difficulty shared by both systems
+is a general problem of governance, not a refutation of the proposal. The
+**integrate-or-bound rule** (P007): once the core architecture is complete,
+a founded objection produces a new mechanism only if the failure mode would
+defeat a core claim and cannot be controlled through existing objects;
+otherwise it produces an explicit boundary, a visible residual risk, and a
+limitation statement. The first rule disciplines critics; the second
+disciplines the designers.
+
+## 4. The Core v0 architecture
+
+We summarize the reference architecture at the level needed for the analysis;
+the full object model, state machines, and citizen-interface layers are
+specified in the public corpus.
+
+**Funding.** An implementing authority migrates a legally mandated share of
+an existing budget into individual civic wallets: periodic, non-withdrawable,
+public-purpose allocation capacity, equal per citizen by default. Every
+active planning scope carries an *Allocation Mandate* record naming the
+statute or instrument that authorized the migration and the allocation
+formula — the platform records external authorization; it does not
+manufacture it. A *Fiscal Commitment Profile* per scope makes the migrated
+percentage, indexation, and delivery latency public and versioned, so fiscal
+strangulation by the incumbent treasury is measurable and attributable
+rather than silent. Essential services with continuity obligations are
+protected by non-assignable floors outside citizen-by-citizen popularity.
+
+**Projects and roles.** Financeable projects declare a value thesis with
+verifiable claims, affected parties, risks and anti-values, a phase and
+milestone plan, and an *evidential contract*: what must be proven, by what
+class of qualified producer, with what method, for which formal effect. Six
+roles are structurally separated — proposer, modeler/designer, executor,
+fiscalizer, evidence producer, custodian — with related-party relationships
+declared on a severity-classified graph. The load-bearing rule is that the
+executor never chooses or pays its own fiscalizers or evidence producers:
+control work is financed from a separated control budget and assigned by
+protocol.
+
+**Parallel closure and conditional disbursement.** A published project
+gathers funding commitments, fiscalizer assignments, evidence commitments,
+and beneficiary confirmations concurrently; execution becomes possible only
+when all conditions required by its proportional *threshold policy* close.
+Committed funds are custodied, not transferred: release happens per
+milestone, against reviewed fulfillment evidence, with retention, blocker
+checks, and guarantees materialized by external custodians before any
+release. A *Duty-of-Care Anchor* names, before disbursement, the solvent
+legal person answerable to third parties for physical harm.
+
+**Attention infrastructure.** Citizens act through a layered interface:
+discovery with user-controlled, reason-visible ordering; compact project
+cards; and progressively deeper audit surfaces down to the full trail.
+Non-attending citizens are served by system default allocation rules that
+follow planning-scope priorities, by configurable automatic profiles, and by
+scoped, revocable delegation with concentration visibility. The architecture
+does not assume attentive citizens; it assumes mostly inattentive ones and
+routes their weight through inspectable intermediation (Lupia and McCubbins
+1998).
+
+**Transition.** Deployment proceeds through operating modes — closed,
+tutored, semi-open, open — in which a public authority may retain
+admissibility review, but every material tutored decision, and every
+tutored silence past its deadline, becomes a public governance-resolution
+object. Incumbent-resistance indicators (scope share opened, rejection and
+timeout rates, operator privilege) make symbolic adoption distinguishable
+from real transfer.
+
+## 5. Formal analysis
+
+We state the three models and their results; proofs are one-step algebra
+and appear in the companion note (`research/formal-models.md`). All agents
+are risk-neutral; budgets are normalized to 1.
+
+### 5.1 Milestone-gated disbursement
+
+An executor chooses to deliver a milestone at private cost *c* ∈ (0, 1) or
+to divert. The mechanism releases an advance *a*, holds the remainder for
+reviewed acceptance, recovers a fraction *r* of the advance on confirmed
+non-delivery, seizes a posted guarantee *γ* (carrying cost *κ* per unit),
+and imposes a reputational continuation loss *R*. Review confirms diversion
+with probability *p* — the joint quality of evidence standards, fiscalizer
+independence, and corroboration.
+
+**Proposition 1 (incentive compatibility).** Delivery is optimal iff
+
+> *c* ≤ *p* · [ (1 − *a*(1 − *r*)) + *γ* + *R* ].
+
+Delivery must be cheaper than the detection probability times the total
+stake at risk. Every disbursement-gaming test in the architecture is a term
+in this inequality.
+
+**Proposition 2 (weak verification must be priced).** The minimal guarantee
+sustaining delivery for all *c* ≤ *c̄* is *γ\**(*p*) = max{0, *c̄*/*p* −
+(1 − *a*(1 − *r*)) − *R*}, decreasing and convex in *p*. Where verification
+is weak — thin fiscalization markets, poor evidence quality — the mechanism
+must compensate with smaller advances, more recoverability, larger
+guarantees, or higher-reputation executors. A single global guarantee
+percentage cannot be optimal across heterogeneous verification
+environments.
+
+**Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes
+incentive compatibility at rate *p* but lowers honest executors' payoff at
+rate *κ*; a guarantee increase is net-beneficial only if *p* > *κ*. Where
+detection quality is below the local cost of capital, piling on guarantees
+excludes honest low-margin executors without deterring fraud — the formal
+content of the architecture's proportionality discipline.
+
+### 5.2 Collusion-proof fiscalization
+
+A non-delivered milestone is worth *G* to the executor if fraudulently
+approved. Release requires approval by *k* protocol-assigned fiscalizers,
+each carrying forfeitable stake *W* (future protocol fees plus role
+reputation) and facing post-approval discovery probability *q*. Because
+assignment is protocolized and repeat pairings are visible, executor and
+fiscalizer are strangers: a bribe offer is itself reported with probability
+*δ*, costing the executor penalty *P_e*.
+
+**Proposition 4 (collusion-proofness).** Approval fraud is unsustainable if
+
+> *k* · *q* · *W* ≥ *G* − (*δ* / (1 − *δ*)) · *P_e*,
+
+and in particular whenever *kqW* ≥ *G*. Three corollaries carry design
+weight. *Corroboration substitutes for reputation capital*: the required
+stake per fiscalizer falls linearly in *k*, so redundant review is exactly
+what makes shallow-reputation fiscalizer pools workable, at linear control
+cost — which is what proportional threshold policies are for. *Repeat
+relationships are the attack surface*: the friction term exists only while
+relational contracting is prevented, which is why repeat-pairing visibility
+is load-bearing. *Thin markets attack both models at once*: a monopolist
+fiscalizer that cannot credibly be excluded loses its forfeitable stake
+(*W* → 0) while also degrading *p* in Proposition 1 — the two conditions
+identify the same environments as fragile, for the same reason.
+
+### 5.3 Attention-constrained allocation
+
+Citizens allocate small individual budgets; the pivotal return to evaluating
+projects is negligible, so rational ignorance is the equilibrium (Downs
+1957), and the design question is where the *inattentive* majority's weight
+flows: to salience amplified by social proof (Bikhchandani, Hirshleifer and
+Welch 1992; Salganik, Dodds and Watts 2006), or to institutional default
+rules following planning priorities. The model yields three testable
+predictions — caps tame cascades (P1), defaults anchor quality (P2), decay
+degrades gracefully only with defaults (P3) — evaluated next.
+
+## 6. Computational evidence
+
+We simulate 10,000 citizens over 24 monthly cycles allocating across a
+standing pool of 40 projects with quality *θ*, salience *s* (nearly
+orthogonal to quality), planner need-weights *w* with controlled corr(*θ*,
+*w*) ∈ {0.4, 0.8}, and 3× scarcity (only a minority of projects can
+complete). Evaluators (2–10%) fund the best quality they sample; salience
+followers see a six-slot discovery surface ranked by salience amplified by
+funding progress; default followers' budget fills projects in planning-
+priority order. The funding-target closure rule is toggleable. Twenty
+seeded runs per condition; the code is dependency-free and deterministic
+(`scripts/simulation/allocation-sim.mjs`; full tables in
+`research/simulation-results.md`).
+
+**Finding 1: funding caps are an anti-concentration device, not a quality
+device.** With closure ON, concentration falls (funding Gini 0.732 vs
+0.759), the most salient 5% of projects absorb less (16.8% vs 19.6% of all
+funding), and 15% more projects complete (25.3% vs 21.9%). But quality
+selection is unchanged (sel(θ) ≈ 0.39 vs 0.41): the truncated surplus
+spills to the next most *visible* project, not the next *best* one. The
+architecture's claim for the closure rule should be — and in the corpus now
+is — bounded accordingly.
+
+**Finding 2: the default anchor, not citizen attention, carries allocation
+quality.** A default-anchored mix with a well-informed planner reaches
+sel(θ) ≈ 0.71 — double any salience-driven configuration (≈ 0.35–0.43) —
+while quintupling citizen attention (α from 2% to 10%) moves quality
+selection by only 0.03–0.08. Halving planner knowledge (corr(θ, w) 0.8 →
+0.4) costs an order of magnitude more than any feasible attention gain.
+This quantifies the architecture's central vulnerability: because defaults
+are powerful, whoever constructs planning scopes and their weights holds
+the allocation's quality in their hands. The agenda-setting limitation
+(Section 8) is not one limitation among many; by these numbers it is the
+binding constraint.
+
+**Finding 3: participation decay is survivable exactly where the default
+layer is strong.** Decaying active evaluation from 10% to 2% over 24 cycles
+barely moves overall selection when defaults hold 50% of flow; with a weak
+default layer (20%), decay flowing to salience erodes both selection
+(0.388 vs 0.409) and late-cycle quality alignment (0.273 vs 0.321).
+Engagement decay — the documented fate of civic-tech participation
+(Peixoto and Fox 2016) — is a buffered risk here, but the buffer is the
+institutional layer, not citizen virtue.
+
+The simulation also disciplines rhetoric: nothing in these results supports
+describing Core v0 allocation as "the wisdom of crowds." Its honest
+description is *inspectable intermediation with a citizen-correctable
+default*, which the results show is both realistic and better than the
+salience-driven alternative that unstructured platforms converge to.
+
+## 7. Adversarial validation as method
+
+The architecture was developed under a documented adversarial loop:
+**attack** (a brief stating a failure mode, its location in the corpus, a
+stress scenario, and literature anchors) → **paired defense** (an objective
+evaluation classifying the attack as founded, partially founded, or a
+difference of judgment, with line-anchored citations into the corpus) →
+**resolution** (an accepted document that either integrates a mechanism or
+bounds the risk) → **propagation** (the resolution's constraints threaded
+through every affected architecture document). Two full rounds were run:
+eighteen attacks on the architecture's mechanisms (metric gaming, fiscalizer
+capture, disbursement gaming, collusion, related-party control, complexity,
+incumbent resistance, among others), then fifteen deliberately deeper
+attacks on its political and behavioral foundations (democratic mandate,
+agenda-setting, fiscal dependence, thin markets, meta-governance vacuum,
+rational ignorance, cascades, clientelism, polarization, intertemporal
+myopia, the problem of many hands).
+
+The loop terminates by the integrate-or-bound rule (P007). Its output
+discipline is what distinguishes it from ordinary threat modeling: every
+bounded attack must leave three artifacts — an explicit boundary sentence
+("Core v0 does not require X"), a visible residual risk, and a one-sentence
+limitation statement. The limitations section below is therefore not a
+gesture of humility; it is the accumulated, adversarially generated output
+of the method. Of the thirty-three attacks, none was dismissed; eight of
+the second round were classified founded outright, and the corpus's answer
+to several is an honest "bounded, not solved."
+
+We used the loop with a single design team plus AI assistance; its obvious
+next application is with genuinely independent attackers, which we identify
+below as the first item of future work.
+
+## 8. Limitations
+
+Stated per the method's own rule — each is a recorded boundary with a named
+residual risk.
+
+**Agenda-setting remains centralized, and it matters most.** Core v0 makes
+planning scopes public, versioned, mandate-bearing, and contestable through
+visibility, but does not distribute their construction. Our own simulation
+shows planner knowledge dominates every other quality margin. Whoever
+constructs the scope exercises the second face of power (Bachrach and
+Baratz 1962; Schattschneider 1960) over everything downstream. This is the
+architecture's principal open problem, not an implementation detail.
+
+**Procedural legitimacy is not democratic mandate.** The platform records
+the external authorization for budget migration and allocation formulas
+(the Allocation Mandate); it cannot manufacture authorization the law never
+granted, and the normative debate over substituting atomized allocation for
+representative appropriation (Rosanvallon 2008; Urbinati 2014) remains open.
+Contribution-weighted allocation formulas, in particular, are flagged by
+the architecture as plutocratic departures requiring explicit higher
+authorization.
+
+**Fiscal dependence is measurable, not enforceable.** The state controls
+the budget spigot. The Fiscal Commitment Profile converts strangulation
+from invisible to attributable — delivery latency, unexecuted valid orders,
+mid-cycle share cuts all become public data — but no software compels a
+sovereign to pay (North and Weingast 1989). Credible commitment must come
+from country-level law.
+
+**Verification quality is assumed, then priced.** Propositions 1–4 take
+detection and discovery probabilities as parameters. In thin control
+markets both collapse simultaneously, and the only compensating margins are
+financial terms and imported (remote or cross-territory) verification. The
+architecture prices weak verification; it cannot conjure verifiers.
+
+**Behavioral realism cuts both ways.** The simulation vindicates designing
+for inattentive citizens, but it equally shows that a defaults-weak
+deployment degenerates into salience-driven allocation. Off-platform
+phenomena — clientelist brokerage, expressive polarization, collusion
+conducted entirely outside the system — are made harder and more
+discoverable, never impossible; the architecture's claims are comparative
+(against opaque monopoly), not absolute.
+
+**Meta-governance in open mode is deferred by design.** Rule-change
+procedure, versioning, and non-surprise constraints are specified; the
+constitutional mechanics of who votes on protocol changes in a mature
+open-mode deployment are deliberately not. Open-mode deployment is gated on
+resolving them.
+
+**Epistemically, this is one team's validated design.** The adversarial
+corpus was produced by the same research effort it attacks, with AI
+assistance; the simulation parameters are plausible rather than calibrated
+to a specific PB dataset; and no pilot has been run. The three missing
+validations — independent expert attack, calibration to empirical PB data,
+and a bounded tutored pilot (sports-sector, one municipality) — are the
+research program's next phase, in that order.
+
+## 9. Implementation pathway
+
+The architecture is built for gradual, revocable adoption: a country opens
+one public function (the reference pilot is municipal sports
+infrastructure), migrates a small budget share under a tutored operating
+mode, and retains admissibility review — with every tutored decision and
+delay public by construction. Functional maturity metrics (participation
+mix, default-flow share, fiscalization independence rates, incumbent-
+resistance indicators, fiscal reliability) determine whether the deployment
+earns wider scope, and their trajectories, not rhetoric, answer whether
+distribution outperforms the local baseline. The exit condition is honest
+in both directions: a pilot whose indicators stagnate under incumbent
+throttling documents that fact publicly, which is itself information the
+current system never yields.
+
+## 10. Conclusion
+
+The question this paper answers is not whether states should be bigger or
+smaller, but whether the layers of state activity that fail through
+information and incentive monopoly can be re-architected to fail less. For
+one such layer — bounded public resource allocation with verification — we
+have specified a complete architecture, proved the incentive conditions its
+mechanisms depend on, measured its behavioral assumptions in simulation, and
+subjected the whole to two rounds of documented adversarial review with an
+explicit integrate-or-bound discipline. The result is deliberately modest in
+its claims and unusually explicit about their edges: allocation quality
+rides on institutional defaults whose construction remains the open problem;
+accountability rides on verification whose market conditions must be priced;
+legitimacy rides on mandates the platform can record but not create. What
+distinguishes the proposal is that these edges are specified, monitored,
+and attached to named objects — which is, we argue, what it looks like when
+institutional design is treated as an engineering discipline rather than an
+ideological one.
+
+## References
+
+- Abbott, A. (1988). *The System of Professions*. University of Chicago Press.
+- Akerlof, G. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." *Quarterly Journal of Economics* 84(3).
+- Andreoni, J. (1990). "Impure Altruism and Donations to Public Goods: A Theory of Warm-Glow Giving." *Economic Journal* 100(401).
+- Arnstein, S. (1969). "A Ladder of Citizen Participation." *Journal of the American Institute of Planners* 35(4).
+- Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
+- Baiocchi, G., and E. Ganuza (2017). *Popular Democracy: The Paradox of Participation*. Stanford University Press.
+- Bikhchandani, S., D. Hirshleifer, and I. Welch (1992). "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." *Journal of Political Economy* 100(5).
+- Blum, C., and C. I. Zuber (2016). "Liquid Democracy: Potentials, Problems, and Perspectives." *Journal of Political Philosophy* 24(2).
+- Bovens, M. (2007). "Analysing and Assessing Accountability: A Conceptual Framework." *European Law Journal* 13(4).
+- Buchanan, J., and G. Tullock (1962). *The Calculus of Consent*. University of Michigan Press.
+- Campbell, D. (1976). "Assessing the Impact of Planned Social Change." Occasional Paper 8, Dartmouth College.
+- Dahl, R. (1961). *Who Governs? Democracy and Power in an American City*. Yale University Press.
+- Dahl, R. (1971). *Polyarchy: Participation and Opposition*. Yale University Press.
+- De Filippi, P., and A. Wright (2018). *Blockchain and the Law: The Rule of Code*. Harvard University Press.
+- Downs, A. (1957). *An Economic Theory of Democracy*. Harper.
+- Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
+- Fishkin, J. (2009). *When the People Speak*. Oxford University Press.
+- Fung, A. (2006). "Varieties of Participation in Complex Governance." *Public Administration Review* 66.
+- Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
+- Habermas, J. (1996). *Between Facts and Norms*. MIT Press.
+- Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
+- Hirschman, A. (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
+- Holmström, B. (1979). "Moral Hazard and Observability." *Bell Journal of Economics* 10(1).
+- Holmström, B., and P. Milgrom (1991). "Multitask Principal-Agent Analyses." *Journal of Law, Economics, & Organization* 7.
+- Jensen, M., and W. Meckling (1976). "Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure." *Journal of Financial Economics* 3(4).
+- Kahng, A., S. Mackenzie, and A. Procaccia (2018). "Liquid Democracy: An Algorithmic Perspective." *AAAI*.
+- Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
+- Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
+- Levi, M. (1988). *Of Rule and Revenue*. University of California Press.
+- Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
+- Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
+- North, D. (1990). *Institutions, Institutional Change and Economic Performance*. Cambridge University Press.
+- North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
+- Olson, M. (1965). *The Logic of Collective Action*. Harvard University Press.
+- Olson, M. (1982). *The Rise and Decline of Nations*. Yale University Press.
+- Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.
+- Peixoto, T., and J. Fox (2016). "When Does ICT-Enabled Citizen Voice Lead to Government Responsiveness?" *IDS Bulletin* 47(1).
+- Power, M. (1997). *The Audit Society: Rituals of Verification*. Oxford University Press.
+- Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
+- Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
+- Schattschneider, E. E. (1960). *The Semisovereign People*. Holt, Rinehart and Winston.
+- Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
+- Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
+- Urbinati, N. (2014). *Democracy Disfigured: Opinion, Truth, and the People*. Harvard University Press.
+- Wampler, B. (2007). *Participatory Budgeting in Brazil: Contestation, Cooperation, and Accountability*. Penn State University Press.
+- Williamson, O. (1985). *The Economic Institutions of Capitalism*. Free Press.
+
+---
+
+*Companion materials: formal proofs (`research/formal-models.md`),
+simulation code and full result tables
+(`scripts/simulation/allocation-sim.mjs`,
+`research/simulation-results.md`), the architecture corpus (`docs/`,
+`knowledge/`), and the complete adversarial record (`attacks/`,
+`defenses/`, resolutions `docs/67`–`docs/89`).*
