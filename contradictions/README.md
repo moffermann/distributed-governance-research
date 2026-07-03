@@ -36,6 +36,12 @@ Each `C0NN-slug.md` contains: Status / Contradiction (side A and side B, quoted 
 | [[C041-citizen-language-rule-violated\|C041]] | C009's citizen-language rule violated by the citizen-facing status maps | Medium | Open |
 | [[C042-voter-role-in-early-entity-map\|C042]] | Early entity map carries a "voter" role the consolidated map dropped | Low | Open |
 | [[C043-observed-as-project-state\|C043]] | docs/12 promotes "Observed" to a project-level exceptional state | Low | Open |
+| [[C044-ai-red-gate-vs-c008-boundary\|C044]] | C016's AI Red gate vs C008's assist-not-decide boundary | Medium | Open |
+| [[C045-a030-delegation-citation-slip\|C045]] | A030 resolution misattributes the Delegate role to C019 | Low | Open |
+
+## Audit completion
+
+All eight slices delivered and consolidated (2026-07-03). Twenty open contradictions (C026-C045); every finding verified against the cited files before entry; auditor line numbers corrected where they had drifted. The substantive layers — the 35 triads, the core-vs-resolutions normative seams, the C-vs-A rule seams, formal claims, simulation numbers, reviewer packets, and EN/ES meaning equivalence — audited clean; the contradictions concentrate in state-describing documents (indexes, READMEs, the companion's record section, metadata, early flow docs) that lagged recent progress, plus one genuine normative conflict (C041), one boundary tension between accepted rules (C044), and one framing tension (C035).
 
 ## Clean slices and non-contradiction notes
 
