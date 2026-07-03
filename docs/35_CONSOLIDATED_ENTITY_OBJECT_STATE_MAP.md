@@ -377,7 +377,7 @@ A019 allocation mandate:
 
 A020 agenda limitation:
 
-> A020 agenda limitation: Core v0 adds no scope-construction entity; agenda power is observable through Allocation Mandate, versioned scope definitions, Governance Resolutions, timeout records, and Idea volume, and remains centralized — a declared limitation.
+> A020 agenda limitation: Core v0 adds no scope-construction entity; agenda power is observable through Allocation Mandate, versioned scope definitions, Governance Resolutions, timeout records, and Idea volume, and remains with the implementing authority in the closed and tutored transition modes — a declared limitation of those modes, with distributed construction an open question that gates open-mode deployment.
 
 A021 fiscal commitment:
 

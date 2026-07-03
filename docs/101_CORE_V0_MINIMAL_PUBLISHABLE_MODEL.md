@@ -758,10 +758,15 @@ was validated three ways before publication:
   design levers appearing as explicit terms (the formal companion note).
 - **Computationally.** A 10,000-agent simulation of realistic citizen
   attention found that funding caps curb concentration but not quality,
-  that allocation quality is carried by the planning-anchored default
-  rule, and that participation decay is survivable exactly where that
-  anchor is strong — results that discipline this document's claims
-  rather than decorate them ([[simulation-results|research/simulation-results.md]]).
+  that allocation quality is carried by the informational quality of the
+  weight vector the default layer follows, and that participation decay is
+  survivable exactly where that anchor is strong. A pre-registered fourth
+  experiment then modeled knowledge symmetrically and found that building
+  the weight vector from aggregated dispersed citizen signals beats
+  fixed-bandwidth central construction at every tested scale — provided an
+  aggregation institution exists and signals are honest — results that
+  discipline this document's claims rather than decorate them
+  ([[simulation-results|research/simulation-results.md]]).
 
 Every critique of the model is evaluated against how the current
 institutional system solves the same problem — not against an ideal
@@ -802,7 +807,7 @@ It preserves centralized or legally recognized authority where coercion, rights 
 
 Under the project's own editorial rule ([[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]]), what the model does not solve is declared with its residual risk attached, not hidden in scope language. The principal declared limitations:
 
-- **Agenda-setting stays centralized, and it matters most.** Whoever constructs Planning Scopes shapes everything downstream; the simulation shows planner knowledge dominates allocation quality. Distributing scope construction is the architecture's declared open problem (`docs/87`).
+- **Agenda-setting is centralized in the transition modes, and it matters most.** In the closed and tutored operating modes used for pilots, the implementing authority constructs Planning Scopes, and whoever constructs them shapes everything downstream; the simulation shows the informational quality of the scope's weight vector dominates allocation quality, whoever supplies it. This is a property of the transition modes, not of the architecture: engaged citizens allocate manually, delegate, or configure profiles, and a pre-registered experiment (E4) found that constructing the weights from aggregated citizen signals is viable and scale-robust in the model. The remaining open problem is the elicitation mechanism that keeps dispersed signals honest under gaming and clientelism pressure (`docs/87`, `docs/91`).
 - **Fiscal dependence is measurable, not enforceable.** A determined treasury can still defund the system in full public view; only country law can bind it (`docs/88`).
 - **Open-mode constitutional mechanics are deferred by design.** Who votes on protocol changes in a mature open deployment is unresolved, and open-mode deployment is gated on resolving it (`docs/91`).
 - **Verification cannot be conjured.** In thin markets the model prices weak verification through financial terms and disclosure; it cannot create qualified verifiers (`docs/90`).

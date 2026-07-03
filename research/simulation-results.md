@@ -121,8 +121,8 @@ including the evaluators' quality-directed seeding — an information cascade
 that transmits information. Two honest caveats follow: the headline
 magnitudes of E2 (in particular the ≈ 2× gap at r ≈ 0.97) are
 parameter-dependent and uncalibrated — the robust finding is the ordering
-and the dominance of planner knowledge over attention, not the point
-values; and the default-follower rule is a deterministic θ-correlated
+and the dominance of the weight vector's informational quality over
+attention, not the point values; and the default-follower rule is a deterministic θ-correlated
 allocator holding most of the budget, so its dominance is partly by
 construction — the informative content is *how much* planner knowledge
 conditions it and how little citizen attention compensates for it.
