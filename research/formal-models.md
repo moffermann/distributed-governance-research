@@ -244,9 +244,10 @@ allocation** `1 − α` goes. The three regimes differ exactly there:
   mildly when the released share flows to defaults, and sharply when it
   flows to salience.
 
-The simulation operationalizes θ, s, w with controlled correlations
-(`corr(θ, s) < 1`, `corr(θ, w) ∈ {0.4, 0.8}` scenarios), seeded RNG, and
-reports the three comparisons with effect sizes.
+The simulation operationalizes θ, s, w as seeded mixtures — w = λθ + (1−λ)u
+with mixing weight λ ∈ {0.4, 0.8}, whose measured Pearson correlations are
+≈ 0.55 and ≈ 0.97 respectively (reported at simulation startup) — and
+evaluates the three comparisons with effect sizes.
 
 ---
 

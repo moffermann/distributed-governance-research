@@ -16,9 +16,12 @@ All tables report mean ± sd over 20 seeded runs per condition.
 
 10,000 citizens allocate one unit per monthly cycle over 24 cycles across a
 standing pool of 40 projects. Each project has quality θ ~ U(0,1), salience
-s (corr(θ, s) ≈ 0.2 by construction: viral is mostly not valuable), a
-planning need-weight w with controlled corr(θ, w) ∈ {0.4, 0.8} (planner
-knowledge), and a funding target; the standing pool's targets absorb three
+s (measured corr(θ, s) ≈ 0.24: viral is mostly not valuable), a planning
+need-weight w constructed as a mixture w = λθ + (1−λ)u with mixing weight
+λ ∈ {0.4, 0.8} — **measured Pearson corr(θ, w) ≈ 0.55 and ≈ 0.97
+respectively** (λ is a mixing weight, not a correlation; the simulation
+prints the measured correlations at startup), and a funding target; the
+standing pool's targets absorb three
 times the budget flowing during a project lifetime (6 cycles), so only a
 minority of projects can complete and allocation is a genuine selection
 problem. Unfunded projects expire (Expired Unfunded, doc 85).
@@ -48,7 +51,7 @@ reaching their target.
 ## E1 — Funding caps: anti-concentration, not quality selection
 
 Salience-driven mix (20% defaults, ~75% salience followers, α = 5%),
-corr(θ, w) = 0.4:
+λ = 0.4 (r ≈ 0.55):
 
 | condition | sel(θ) | sel(s) | quality gap | Gini | top-5%-salience share | funded rate |
 |---|---|---|---|---|---|---|
@@ -70,37 +73,64 @@ Caps ON throughout:
 
 | condition | sel(θ) | sel(s) | quality gap | funded rate |
 |---|---|---|---|---|
-| default-anchored (d=80%), corr(θ,w)=0.8, α=2%  | 0.708±0.022 | 0.185±0.067 | 0.473±0.015 | 0.246±0.012 |
-| default-anchored (d=80%), corr(θ,w)=0.4, α=2%  | 0.418±0.048 | 0.119±0.063 | 0.282±0.027 | 0.248±0.012 |
-| salience-driven (d=20%), corr(θ,w)=0.4, α=2%   | 0.350±0.081 | 0.553±0.043 | 0.229±0.053 | 0.264±0.011 |
-| default-anchored (d=80%), corr(θ,w)=0.8, α=5%  | 0.707±0.030 | 0.179±0.089 | 0.474±0.032 | 0.245±0.008 |
-| default-anchored (d=80%), corr(θ,w)=0.4, α=5%  | 0.425±0.040 | 0.126±0.073 | 0.288±0.027 | 0.237±0.011 |
-| salience-driven (d=20%), corr(θ,w)=0.4, α=5%   | 0.392±0.063 | 0.546±0.060 | 0.260±0.043 | 0.253±0.013 |
-| default-anchored (d=80%), corr(θ,w)=0.8, α=10% | 0.702±0.025 | 0.194±0.082 | 0.465±0.023 | 0.240±0.011 |
-| default-anchored (d=80%), corr(θ,w)=0.4, α=10% | 0.426±0.065 | 0.132±0.086 | 0.295±0.049 | 0.230±0.015 |
-| salience-driven (d=20%), corr(θ,w)=0.4, α=10%  | 0.429±0.077 | 0.520±0.039 | 0.284±0.054 | 0.253±0.015 |
+| default-anchored (d=80%), λ=0.8 (r≈0.97), α=2%  | 0.708±0.022 | 0.185±0.067 | 0.473±0.015 | 0.246±0.012 |
+| default-anchored (d=80%), λ=0.4 (r≈0.55), α=2%  | 0.418±0.048 | 0.119±0.063 | 0.282±0.027 | 0.248±0.012 |
+| salience-driven (d=20%), λ=0.4 (r≈0.55), α=2%   | 0.350±0.081 | 0.553±0.043 | 0.229±0.053 | 0.264±0.011 |
+| default-anchored (d=80%), λ=0.8 (r≈0.97), α=5%  | 0.707±0.030 | 0.179±0.089 | 0.474±0.032 | 0.245±0.008 |
+| default-anchored (d=80%), λ=0.4 (r≈0.55), α=5%  | 0.425±0.040 | 0.126±0.073 | 0.288±0.027 | 0.237±0.011 |
+| salience-driven (d=20%), λ=0.4 (r≈0.55), α=5%   | 0.392±0.063 | 0.546±0.060 | 0.260±0.043 | 0.253±0.013 |
+| default-anchored (d=80%), λ=0.8 (r≈0.97), α=10% | 0.702±0.025 | 0.194±0.082 | 0.465±0.023 | 0.240±0.011 |
+| default-anchored (d=80%), λ=0.4 (r≈0.55), α=10% | 0.426±0.065 | 0.132±0.086 | 0.295±0.049 | 0.230±0.015 |
+| salience-driven (d=20%), λ=0.4 (r≈0.55), α=10%  | 0.429±0.077 | 0.520±0.039 | 0.284±0.054 | 0.253±0.015 |
 
 **Reading (P2 strongly confirmed).** Three orderings are stable across all
 attention levels:
 
 1. **The default anchor dominates.** A default-anchored mix with a
-   well-informed planner (corr(θ, w) = 0.8) reaches sel(θ) ≈ 0.71 —
+   well-informed planner (λ = 0.8 (r ≈ 0.97)) reaches sel(θ) ≈ 0.71 —
    roughly double any salience-driven configuration.
-2. **Planner knowledge is the binding constraint.** Halving planner
-   knowledge (0.8 → 0.4) costs more quality selection (≈ 0.71 → 0.42)
-   than quintupling citizen attention gains (α 2% → 10% moves sel(θ) by
-   only ≈ 0.03–0.08). This quantifies why A020 — who constructs Planning
-   Scopes and their weights — is the architecture's binding constraint:
-   defaults are powerful, so a captured or ignorant scope poisons
-   allocation quality at the root.
+2. **Planner knowledge is the binding constraint.** Degrading planner
+   knowledge from near-perfect to moderate (r ≈ 0.97 → 0.55) costs
+   ≈ 0.29 of quality selection (0.71 → 0.42), while quintupling citizen
+   attention (α 2% → 10%) moves sel(θ) by at most ≈ 0.08 in the
+   salience-driven regime and essentially nothing (≤ 0.01) in
+   default-anchored regimes. This quantifies why A020 — who constructs
+   Planning Scopes and their weights — is the architecture's binding
+   constraint: defaults are powerful, so a captured or ignorant scope
+   poisons allocation quality at the root.
 3. **Salience-driven regimes fund salience.** With d = 20%, funding tracks
    salience (sel(s) ≈ 0.52–0.55) far more than quality — the A024/A027
    pathology reproduced quantitatively.
 
+### E2s — Sensitivity of the regime ordering
+
+The default-anchored vs salience-driven ordering at λ = 0.4 (r ≈ 0.55),
+α = 5%, under varied evaluator sample size and social-proof strength:
+
+| variation | default-anchored sel(θ) | salience-driven sel(θ) |
+|---|---|---|
+| SAMPLE=4, η=3  | 0.409±0.058 | 0.386±0.062 |
+| SAMPLE=16, η=3 | 0.403±0.056 | 0.370±0.062 |
+| SAMPLE=8, η=1  | 0.406±0.054 | 0.355±0.063 |
+| SAMPLE=8, η=6  | 0.435±0.049 | 0.457±0.055 |
+
+The ordering is robust to evaluator sample size and to weak social proof.
+At very strong social proof (η = 6) the two regimes converge within noise
+(overlapping ±1 sd): strong amplification propagates whatever signal exists,
+including the evaluators' quality-directed seeding — an information cascade
+that transmits information. Two honest caveats follow: the headline
+magnitudes of E2 (in particular the ≈ 2× gap at r ≈ 0.97) are
+parameter-dependent and uncalibrated — the robust finding is the ordering
+and the dominance of planner knowledge over attention, not the point
+values; and the default-follower rule is a deterministic θ-correlated
+allocator holding most of the budget, so its dominance is partly by
+construction — the informative content is *how much* planner knowledge
+conditions it and how little citizen attention compensates for it.
+
 ## E3 — Participation decay is survivable exactly when the anchor is strong
 
 α decays 10% → 2% over 24 cycles; the released share flows to defaults or
-to salience. Caps ON, corr(θ, w) = 0.4:
+to salience. Caps ON, λ = 0.4 (r ≈ 0.55):
 
 | condition | sel(θ) | quality gap | early-cycles corr | late-cycles corr |
 |---|---|---|---|---|

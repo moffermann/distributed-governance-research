@@ -249,9 +249,26 @@ const header = () => {
   console.log("|---|---|---|---|---|---|---|");
 };
 
-console.log(`runs per condition: ${RUNS}, base seed: ${BASE_SEED}, N=${CONFIG.N}, cycles=${CONFIG.CYCLES}, scarcity=${CONFIG.SCARCITY}x\n`);
+console.log(`runs per condition: ${RUNS}, base seed: ${BASE_SEED}, N=${CONFIG.N}, cycles=${CONFIG.CYCLES}, scarcity=${CONFIG.SCARCITY}x`);
 
-console.log("## E1 — P1: funding-target closure vs unbounded funding\n(salience-driven mix: 20% default / ~75% salience, alpha=5%, corr(theta,w)=0.4)\n");
+// lambda is a mixing weight (w = lambda*theta + (1-lambda)*u), not a Pearson
+// correlation. Report the measured correlation so results are labeled
+// honestly (referee issue M2).
+{
+  const rng = mulberry32(999);
+  for (const lambda of [0.4, 0.8]) {
+    const th = [], ws = [];
+    for (let i = 0; i < 200000; i++) {
+      const t = rng();
+      th.push(t);
+      ws.push(Math.max(0.01, lambda * t + (1 - lambda) * rng()));
+    }
+    console.log(`planner-knowledge mixing weight lambda=${lambda}: measured corr(theta,w)=${pearson(th, ws).toFixed(3)}`);
+  }
+  console.log("");
+}
+
+console.log("## E1 — P1: funding-target closure vs unbounded funding\n(salience-driven mix: 20% default / ~75% salience, alpha=5%, lambda=0.4)\n");
 header();
 console.log(row("caps ON ", runMany({ alpha0: 0.05, alphaEnd: 0.05, defaultShare: 0.2, fallback: "salience", caps: true, corrThetaW: 0.4 })));
 console.log(row("caps OFF", runMany({ alpha0: 0.05, alphaEnd: 0.05, defaultShare: 0.2, fallback: "salience", caps: false, corrThetaW: 0.4 })));
@@ -259,12 +276,26 @@ console.log(row("caps OFF", runMany({ alpha0: 0.05, alphaEnd: 0.05, defaultShare
 console.log("\n## E2 — P2: structural mix and planner knowledge (caps ON)\n");
 header();
 for (const alpha of [0.02, 0.05, 0.1]) {
-  console.log(row(`default-anchored (d=80%), corr(theta,w)=0.8, alpha=${alpha}`, runMany({ alpha0: alpha, alphaEnd: alpha, defaultShare: 0.8, fallback: "default", caps: true, corrThetaW: 0.8 })));
-  console.log(row(`default-anchored (d=80%), corr(theta,w)=0.4, alpha=${alpha}`, runMany({ alpha0: alpha, alphaEnd: alpha, defaultShare: 0.8, fallback: "default", caps: true, corrThetaW: 0.4 })));
-  console.log(row(`salience-driven  (d=20%), corr(theta,w)=0.4, alpha=${alpha}`, runMany({ alpha0: alpha, alphaEnd: alpha, defaultShare: 0.2, fallback: "salience", caps: true, corrThetaW: 0.4 })));
+  console.log(row(`default-anchored (d=80%), lambda=0.8, alpha=${alpha}`, runMany({ alpha0: alpha, alphaEnd: alpha, defaultShare: 0.8, fallback: "default", caps: true, corrThetaW: 0.8 })));
+  console.log(row(`default-anchored (d=80%), lambda=0.4, alpha=${alpha}`, runMany({ alpha0: alpha, alphaEnd: alpha, defaultShare: 0.8, fallback: "default", caps: true, corrThetaW: 0.4 })));
+  console.log(row(`salience-driven  (d=20%), lambda=0.4, alpha=${alpha}`, runMany({ alpha0: alpha, alphaEnd: alpha, defaultShare: 0.2, fallback: "salience", caps: true, corrThetaW: 0.4 })));
 }
 
-console.log("\n## E3 — P3: participation decay 10%→2% over 24 cycles (caps ON, corr(theta,w)=0.4)\n");
+console.log("\n## E2s — sensitivity: regime ordering under varied sample size and social-proof strength (caps ON, lambda=0.4, alpha=5%)\n");
+console.log("| variation | default-anchored sel(theta) | salience-driven sel(theta) |");
+console.log("|---|---|---|");
+for (const [sample, eta] of [[4, 3.0], [16, 3.0], [8, 1.0], [8, 6.0]]) {
+  const saved = { SAMPLE: CONFIG.SAMPLE, ETA: CONFIG.ETA };
+  CONFIG.SAMPLE = sample;
+  CONFIG.ETA = eta;
+  const da = runMany({ alpha0: 0.05, alphaEnd: 0.05, defaultShare: 0.8, fallback: "default", caps: true, corrThetaW: 0.4 });
+  const sd2 = runMany({ alpha0: 0.05, alphaEnd: 0.05, defaultShare: 0.2, fallback: "salience", caps: true, corrThetaW: 0.4 });
+  console.log(`| SAMPLE=${sample}, eta=${eta} | ${fmt(da.selTheta)} | ${fmt(sd2.selTheta)} |`);
+  CONFIG.SAMPLE = saved.SAMPLE;
+  CONFIG.ETA = saved.ETA;
+}
+
+console.log("\n## E3 — P3: participation decay 10%→2% over 24 cycles (caps ON, lambda=0.4)\n");
 console.log("| condition | sel(theta) | quality gap | early-cycles corr | late-cycles corr |");
 console.log("|---|---|---|---|---|");
 for (const d of [0.5, 0.2]) {

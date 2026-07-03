@@ -28,11 +28,13 @@ quality device, that allocation quality is carried by institutional default
 rules and planner knowledge rather than citizen attention, and that
 participation decay is survivable exactly where the default layer is strong —
 quantifying which design margins matter. Third, method: the architecture was
-developed under systematic adversarial review — thirty-three attack briefs
-with paired defenses, each resolved by an explicit integrate-or-bound rule
-that either adds a mechanism through existing objects or records a boundary
-with a named residual risk. The result is an architecture whose limitations
-are part of its specification. We state those limitations plainly: the
+developed under systematic adversarial review — thirty-three attack briefs,
+each with a paired defense; twenty-two resolved to date under an explicit
+integrate-or-bound rule that either adds a mechanism through existing
+objects or records a boundary with a named residual risk, with eleven
+second-round attacks still under open review. The result is an architecture
+whose limitations are part of its specification and whose review state is
+itself public. We state those limitations plainly: the
 construction of planning agendas remains centralized and is, by our own
 simulation, the binding constraint; fiscal dependence on the incumbent state
 is measurable but not enforceable; and no empirical pilot has yet been run.
@@ -109,9 +111,10 @@ to it. Our contributions are:
 4. **Adversarial validation as method** (Section 7). The architecture was
    attacked systematically — thirty-three attack briefs grounded in the
    political-science and economics literature, each answered by a paired
-   defense and an explicit resolution under an integrate-or-bound rule. We
-   propose this loop, and its terminating rule, as a reusable method for
-   institutional design research.
+   defense; twenty-two are resolved under an explicit integrate-or-bound
+   rule and eleven remain under open review, with the review state public
+   by construction. We propose this loop, and its terminating rule, as a
+   reusable method for institutional design research.
 
 Section 8 states limitations with the same care as results, because under
 our method they are results: each is a named, bounded residual risk.
@@ -157,9 +160,21 @@ meta-governance is the highest-leverage attack surface (Section 8).
 applications of moral hazard under imperfect observation (Holmström 1979)
 and collusion in supervision hierarchies (Laffont and Tirole 1991), with
 Goodhart's law (Goodhart 1975; Campbell 1976) as the standing warning
-against metric gaming. The contribution is not technical depth but
-specificity: the models' parameters map one-to-one onto named architectural
-objects, so every proposition is an implementable dial.
+against metric gaming. The closest existing mechanism design for citizen
+allocation of public funds is quadratic (plural) funding (Buterin, Hitzig
+and Weyl 2019), which prices concentration through matching-fund curvature;
+Core v0's funding-target closure rule pursues the same anti-concentration
+goal by truncation rather than pricing, and our simulation results
+(Section 6, Finding 1) delimit what truncation can and cannot achieve. On
+the audit side, Olken's (2007) field experiment on Indonesian road projects
+is the canonical empirical anchor for the detection probabilities our
+Propositions 1–2 take as parameters — and its finding that top-down audit
+outperformed grassroots monitoring for procurement fraud is a caution this
+architecture absorbs by making professional fiscalization, not crowd
+observation, the release-gating layer. The contribution here is not
+technical depth but specificity: the models' parameters map one-to-one
+onto named architectural objects, so every proposition is an implementable
+dial.
 
 **What is new.** To our knowledge, no prior work combines (i) a functional
 decomposition of state activity into distributable and non-distributable
@@ -342,9 +357,10 @@ degrades gracefully only with defaults (P3) — evaluated next.
 ## 6. Computational evidence
 
 We simulate 10,000 citizens over 24 monthly cycles allocating across a
-standing pool of 40 projects with quality *θ*, salience *s* (nearly
-orthogonal to quality), planner need-weights *w* with controlled corr(*θ*,
-*w*) ∈ {0.4, 0.8}, and 3× scarcity (only a minority of projects can
+standing pool of 40 projects with quality *θ*, salience *s* (measured
+corr(*θ*, *s*) ≈ 0.24), planner need-weights *w* = λ*θ* + (1 − λ)*u* with
+mixing weight λ ∈ {0.4, 0.8} — measured corr(*θ*, *w*) ≈ 0.55 and ≈ 0.97
+respectively — and 3× scarcity (only a minority of projects can
 complete). Evaluators (2–10%) fund the best quality they sample; salience
 followers see a six-slot discovery surface ranked by salience amplified by
 funding progress; default followers' budget fills projects in planning-
@@ -363,16 +379,28 @@ architecture's claim for the closure rule should be — and in the corpus now
 is — bounded accordingly.
 
 **Finding 2: the default anchor, not citizen attention, carries allocation
-quality.** A default-anchored mix with a well-informed planner reaches
-sel(θ) ≈ 0.71 — double any salience-driven configuration (≈ 0.35–0.43) —
-while quintupling citizen attention (α from 2% to 10%) moves quality
-selection by only 0.03–0.08. Halving planner knowledge (corr(θ, w) 0.8 →
-0.4) costs an order of magnitude more than any feasible attention gain.
-This quantifies the architecture's central vulnerability: because defaults
-are powerful, whoever constructs planning scopes and their weights holds
-the allocation's quality in their hands. The agenda-setting limitation
-(Section 8) is not one limitation among many; by these numbers it is the
-binding constraint.
+quality.** A default-anchored mix with a near-perfectly informed planner
+(r ≈ 0.97) reaches sel(θ) ≈ 0.71 — double any salience-driven configuration
+(≈ 0.35–0.43) — while quintupling citizen attention (α from 2% to 10%)
+moves quality selection by at most ≈ 0.08 in salience-driven regimes and
+essentially nothing in default-anchored ones. Degrading planner knowledge
+from near-perfect to moderate (r ≈ 0.97 → 0.55) costs ≈ 0.29 of quality
+selection — far more than any feasible attention gain recovers. Two
+qualifications keep this finding honest. The dominance of defaults is
+partly by construction — the default rule is a deterministic θ-correlated
+allocator holding most of the budget — so the informative content is the
+*conditioning*: how much planner knowledge determines the anchor's value,
+and how little citizen attention substitutes for it. And a sensitivity
+panel (varying evaluator sample size and social-proof strength) shows the
+regime ordering is robust except under very strong social proof, where the
+regimes converge within noise because strong amplification also propagates
+the evaluators' quality signal; magnitudes are parameter-dependent and
+uncalibrated. What survives all variations is the ordering and the
+dominance of planner knowledge — which quantifies the architecture's
+central vulnerability: because defaults are powerful, whoever constructs
+planning scopes and their weights holds the allocation's quality in their
+hands. The agenda-setting limitation (Section 8) is not one limitation
+among many; by these numbers it is the binding constraint.
 
 **Finding 3: participation decay is survivable exactly where the default
 layer is strong.** Decaying active evaluation from 10% to 2% over 24 cycles
@@ -398,14 +426,20 @@ evaluation classifying the attack as founded, partially founded, or a
 difference of judgment, with line-anchored citations into the corpus) →
 **resolution** (an accepted document that either integrates a mechanism or
 bounds the risk) → **propagation** (the resolution's constraints threaded
-through every affected architecture document). Two full rounds were run:
-eighteen attacks on the architecture's mechanisms (metric gaming, fiscalizer
-capture, disbursement gaming, collusion, related-party control, complexity,
-incumbent resistance, among others), then fifteen deliberately deeper
-attacks on its political and behavioral foundations (democratic mandate,
-agenda-setting, fiscal dependence, thin markets, meta-governance vacuum,
-rational ignorance, cascades, clientelism, polarization, intertemporal
-myopia, the problem of many hands).
+through every affected architecture document). The loop's current state is
+itself public: the first round — eighteen attacks on the architecture's
+mechanisms (metric gaming, fiscalizer capture, disbursement gaming,
+collusion, related-party control, complexity, incumbent resistance, among
+others) — is fully resolved and propagated. The second round — fifteen
+deliberately deeper attacks on the political and behavioral foundations
+(democratic mandate, agenda-setting, fiscal dependence, thin markets,
+meta-governance vacuum, rational ignorance, cascades, clientelism,
+polarization, intertemporal myopia, the problem of many hands) — has paired
+defenses throughout; four pairs judged referee-critical (mandate,
+agenda-setting, fiscal dependence, many hands) are resolved with corpus
+propagation pending, and the remaining eleven are under open review. The
+method's honesty requirement applies to itself: this paper claims a
+documented loop with a public state, not a finished one.
 
 The loop terminates by the integrate-or-bound rule (P007). Its output
 discipline is what distinguishes it from ordinary threat modeling: every
@@ -524,6 +558,7 @@ ideological one.
 - Blum, C., and C. I. Zuber (2016). "Liquid Democracy: Potentials, Problems, and Perspectives." *Journal of Political Philosophy* 24(2).
 - Bovens, M. (2007). "Analysing and Assessing Accountability: A Conceptual Framework." *European Law Journal* 13(4).
 - Buchanan, J., and G. Tullock (1962). *The Calculus of Consent*. University of Michigan Press.
+- Buterin, V., Z. Hitzig, and E. G. Weyl (2019). "A Flexible Design for Funding Public Goods." *Management Science* 65(11).
 - Campbell, D. (1976). "Assessing the Impact of Planned Social Change." Occasional Paper 8, Dartmouth College.
 - Dahl, R. (1961). *Who Governs? Democracy and Power in an American City*. Yale University Press.
 - Dahl, R. (1971). *Polyarchy: Participation and Opposition*. Yale University Press.
@@ -546,6 +581,7 @@ ideological one.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - North, D. (1990). *Institutions, Institutional Change and Economic Performance*. Cambridge University Press.
+- Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
 - Olson, M. (1965). *The Logic of Collective Action*. Harvard University Press.
 - Olson, M. (1982). *The Rise and Decline of Nations*. Yale University Press.
