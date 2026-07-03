@@ -622,6 +622,22 @@ Core v0 does not require a common-good registry, charter voting, or platform adj
 
 ---
 
+## A016 - Resistance by incumbent institutions
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A016 is founded and does not distort the project when it is treated as transition realism rather than a refutation of the functional architecture. Core v0 handles it as incumbent-resistance observability: transition pilots should expose whether incumbent institutions preserve control through scope, eligibility, delay, operator privilege, data access, treasury integration, fiscalization, or legal choke points. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution: it adds no mechanism against resistance itself, only indicators over existing OperatingMode, PlanningScope, GovernanceResolution, and timeout objects, and it records the political limit openly.
+
+The minimum indicators are the scope share opened to distributed financing; approval, rejection, and timeout rates; rejection-reason comparability; authority-linked operator participation; public-operator privileges, subsidies, guarantees, or data access; independent versus controlled fiscalization rates; and pilot outcomes compared with the incumbent baseline. If a ministry opens a narrow pilot, delays independent projects, approves authority-linked operators, and reports the pilot as participatory, the platform should show those patterns rather than treating publication of individual decisions as sufficient.
+
+Core v0 does not require, and cannot provide, any mechanism that compels institutional transition, protects the migrated budget share, or overrides legal authority. Those levers belong to country implementation and ordinary politics, and the related fiscal channel is attacked separately in `attacks/A021-treasury-dependence-and-fiscal-strangulation.md`. Limitation statement: the architecture makes incumbent resistance measurable and comparable, but a determined incumbent can still strangle a pilot through scope, budget, and legal choke points; this is a declared political limitation of the model, not a solved problem.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -877,6 +893,10 @@ Core v0 does not require a common-good registry, charter voting, or platform adj
 - [ ] Do tutored decisions record reason category where practical, rule/version, responsible authority/process, review time, timeout status, and known authority-linked operator context?
 - [x] Are public authorities external to internal project competition in scopes they control under Core v0?
 - [ ] Are authority-controlled operators blocked by default in tutored scopes where their controlling authority defines scope or admissibility?
+- [ ] Do transition pilots expose scope share opened, approval/rejection/timeout rates, and rejection-reason comparability?
+- [ ] Is authority-linked operator participation and public-operator privilege (subsidies, guarantees, data access) visible?
+- [ ] Are independent versus controlled fiscalization rates and pilot-versus-incumbent-baseline outcomes observable?
+- [ ] Is the political limit recorded openly — no Core v0 mechanism compels transition or protects the migrated budget share?
 - [ ] Is transition scope bounded?
 
 ## 12. Audit checklist

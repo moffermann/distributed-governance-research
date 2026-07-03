@@ -672,6 +672,8 @@ In tutored mode, a competent authority or authorized implementation administrato
 
 A011 is a boundary over tutored moderation, not a new Core v0 abuse tribunal. Core v0 preserves structured case-level data needed for later audit of moderation patterns, including decision result, rejection reason category where practical, scope, rule/version, responsible authority/process, review window, decision date, review time, timeout status, suggested next path, AuditEvent reference, and known authority-linked operator relationships. Full moderation-abuse tests, dashboards, automatic warnings, and operator-concentration analytics remain Extension v1+ or country/administrator observability.
 
+A016 is incumbent-resistance observability over these same operating-mode, planning-scope, governance-resolution, and timeout objects, not a transition-forcing mechanism. Transition pilots should expose the scope share opened to distributed financing; approval, rejection, and timeout rates; rejection-reason comparability; authority-linked operator participation; public-operator privileges, subsidies, guarantees, or data access; independent versus controlled fiscalization rates; and pilot outcomes compared with the incumbent baseline, so symbolic adoption cannot hide real gatekeeping. Core v0 does not require, and cannot provide, any mechanism that compels institutional transition, protects the migrated budget share, or overrides legal authority; those levers belong to country implementation and ordinary politics, and the related fiscal channel is attacked separately in A021. This political limitation is recorded openly: a determined incumbent can still strangle a pilot through scope, budget, and legal choke points.
+
 ### 22. Protocol change governance
 
 Core v0 includes a minimum protocol-change discipline.
@@ -815,6 +817,7 @@ These should not be part of Core v0 unless later shown necessary:
 - detailed sector-specific KPI libraries beyond pilot needs;
 - full common-good charter governance;
 - common-good registry, charter voting, and platform common-good adjudication beyond the A015 sufficiency test;
+- transition enforcement, migrated-budget protection, resistance-pattern analytics, and cross-country transition comparisons beyond the A016 incumbent-resistance indicators;
 - full multi-sector implementation.
 
 ## Country implementation decisions

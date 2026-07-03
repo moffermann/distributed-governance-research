@@ -1096,6 +1096,8 @@ Core v0 does not force a country to leave tutored mode. It requires tutored gove
 
 A011 adds a boundary over this baseline, not a new adjudication layer. Core v0 should preserve structured data needed to audit moderation patterns later: decision result, rejection reason category where practical, scope, rule/version, responsible authority or process, review window, decision date, review time, timeout status, suggested next path, AuditEvent reference, and known authority-linked operator relationships. Formal moderation-abuse dashboards, automatic possible-abuse findings, operator-concentration analytics, and cross-actor rejection-rate comparisons remain Extension v1+ or country/administrator observability.
 
+A016 adds transition-pilot observability, not a transition-forcing mechanism: a pilot should expose whether an incumbent institution preserves control while presenting the pilot as participatory. The minimum incumbent-resistance indicators read from the same OperatingMode, PlanningScope, GovernanceResolution, and timeout objects: scope share opened to distributed financing; approval, rejection, and timeout rates; rejection-reason comparability; authority-linked operator participation; public-operator privileges, subsidies, guarantees, or data access; independent versus controlled fiscalization rates; and pilot outcomes compared with the incumbent baseline. Core v0 adds no mechanism that compels institutional transition, protects the migrated budget share, or overrides legal authority; those levers belong to country implementation and ordinary politics, and the related fiscal channel is attacked separately in A021. The declared limitation is political: a determined incumbent can still strangle a pilot through scope, budget, and legal choke points, and the architecture's claim is only that such strangulation becomes measurable and comparable instead of invisible.
+
 ## Protocol change governance
 
 Core v0 includes a minimum meta-governance discipline for changing system rules.
@@ -1180,6 +1182,7 @@ Out of scope or future extension:
 - advanced macro-budget balancing;
 - full common-good charter governance;
 - common-good registry, charter voting, and platform common-good adjudication beyond the A015 sufficiency test;
+- resistance-pattern analytics, cross-country transition comparisons, and any mechanism that compels institutional transition or protects the migrated budget share beyond the A016 indicators;
 - full personal AI guides;
 - advanced inferred recommender systems;
 - advanced participation-equity analytics, demographic gap measurement, and inclusion dashboards;

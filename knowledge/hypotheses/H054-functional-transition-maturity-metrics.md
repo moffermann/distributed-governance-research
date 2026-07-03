@@ -2,9 +2,11 @@
 
 ## Status
 
-Country-implementation and Extension v1+ transition-evaluation hypothesis aligned with [[../../docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]], [[../../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|C021]], [[H055-universal-institutional-observability-panel|H055]], and [[H058-operating-modes-for-transition|H058]].
+Country-implementation and Extension v1+ transition-evaluation hypothesis aligned with [[../../docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]], [[../../docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|C021]], [[H055-universal-institutional-observability-panel|H055]], [[H058-operating-modes-for-transition|H058]], and [[../../docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|A016]].
 
 H054 defines maturity metrics that can help a country, jurisdiction, public authority, citizens, auditors, and researchers evaluate whether a distributed public function is working well. It does not define mandatory political thresholds, automatic budget migration, automatic exit from tutored mode, or automatic institutional replacement.
+
+Under [[../../docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|A016]], the minimum incumbent-resistance indicators — scope share opened to distributed financing, approval/rejection/timeout rates, rejection-reason comparability, authority-linked operator participation, public-operator privileges, independent versus controlled fiscalization rates, and pilot-versus-incumbent-baseline outcomes — feed this transition maturity measurement by exposing whether an incumbent preserves control while presenting a pilot as participatory. A016 remains bounded observability: it makes resistance measurable and comparable, but adds no mechanism that compels institutional transition or protects the migrated budget share, and the fiscal channel is attacked separately in A021.
 
 ## Hypothesis
 

@@ -41,7 +41,7 @@ The concession is genuine. If the active core shrinks far enough, distributed co
 - `docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md:13` states that automatic allocation is a citizen-configured rule and explicitly not a hidden system decision.
 - `docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md:317` requires each profile run to remain visible in-app, forbidding silent modes that would hide allocation history or skipped-rule explanations.
 - `docs/27_CITIZEN_DELEGATION_FLOW.md:167` states that concentration is a legitimate voluntary choice but must be shown before delegation, during action, in reports, and in administrative observability.
-- `knowledge/hypotheses/H054-functional-transition-maturity-metrics.md:130` already lists the percentage handled by default allocation rules as a budget-migration metric, a hook for decay observability.
+- `knowledge/hypotheses/H054-functional-transition-maturity-metrics.md:132` already lists the percentage handled by default allocation rules as a budget-migration metric, a hook for decay observability.
 - `knowledge/hypotheses/H054-functional-transition-maturity-metrics.md:121` lists direct versus delegated participation as a citizen-adoption metric, the basis for active-core tracking.
 - `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md:31` states that low participation and concentration signals may inform warnings and review without automatically blocking a project.
 

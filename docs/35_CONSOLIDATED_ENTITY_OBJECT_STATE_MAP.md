@@ -2860,6 +2860,10 @@ Attributes:
 - minimum moderation-audit data for tutored decisions;
 - history.
 
+A016 incumbent-resistance observability:
+
+> A016 incumbent-resistance observability: Core v0 adds no resistance entity or enforcement authority; the indicators read from existing OperatingMode, PlanningScope, GovernanceResolution, ReviewTimeoutResolution, and administrative observability records. Transition pilots expose scope share opened, approval/rejection/timeout rates, rejection-reason comparability, authority-linked operator participation, public-operator privileges, independent versus controlled fiscalization rates, and pilot-versus-incumbent-baseline outcomes. Nothing in Core v0 compels institutional transition or protects the migrated budget share; that political limit is recorded openly, and the fiscal channel is attacked separately in A021.
+
 ## Governance Resolution
 
 A public civic object recording a material tutored-mode decision.

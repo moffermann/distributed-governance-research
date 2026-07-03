@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
@@ -72,6 +72,6 @@ An incumbent public institution publishes all Governance Resolutions but rejects
 - Are authority-linked operators tracked?
 - Are aggregate pilot outcomes compared to incumbent baseline?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should define incumbent-resistance indicators and minimum transition-pilot observability.
+Resolved in `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`: incumbent-resistance indicators and minimum transition-pilot observability over existing OperatingMode, PlanningScope, GovernanceResolution, and timeout objects rather than any mechanism that compels institutional transition. Transition pilots expose scope share opened to distributed financing; approval, rejection, and timeout rates; rejection-reason comparability; authority-linked operator participation; public-operator privileges, subsidies, guarantees, or data access; independent versus controlled fiscalization rates; and pilot outcomes compared with the incumbent baseline. The platform cannot force institutional transition or protect the migrated budget share; that political limit is recorded openly, and the fiscal channel is attacked separately in `attacks/A021-treasury-dependence-and-fiscal-strangulation.md`. Resistance-pattern analytics and cross-country transition comparisons remain Extension v1+ / country or administrator observability.

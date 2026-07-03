@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation.
+Phase 3 paired review completed. Accepted resolution: `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation. Propagated into the core corpus.
 
 ## Attack reference
 

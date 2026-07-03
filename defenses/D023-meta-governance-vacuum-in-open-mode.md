@@ -42,7 +42,7 @@ Under P001, current constitutions and by-laws also leave amendment rules to be i
 - `knowledge/hypotheses/H017-meta-governance-protocol-evolution.md:29` sets the v0 requirement to prevent silent rule changes, hidden authority, surprise retroactivity, and untraceable software changes.
 - `knowledge/hypotheses/H017-meta-governance-protocol-evolution.md:135` states the exact approval mechanics may remain future work while protocol changes must not be invisible administrator edits.
 - `docs/34_CORE_V0_SCOPE_FREEZE.md:669` states Core v0 does not force countries to exit tutored mode and requires tutored decisions and silence to become public civic objects.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:807` lists detailed non-tutored protocol voting mechanics as Extension v1+, confirming the deferral is declared.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:809` lists detailed non-tutored protocol voting mechanics as Extension v1+, confirming the deferral is declared.
 - `knowledge/hypotheses/H058-operating-modes-for-transition.md:115` states open-mode control happens through transparency, fiscalization, reputation, complaints, guarantees, and observability — the state whose amendment rule remains unwritten.
 
 ## Bibliographic basis
