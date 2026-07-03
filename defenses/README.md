@@ -64,6 +64,28 @@ The defense files use these evaluation dimensions:
 | `D017` | `A017` | Disbursement Gaming | `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md` |
 | `D018` | `A018` | Collusion Among Project Roles | `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md` |
 
+## Second-round defense queue (D019-D033)
+
+These defenses are paired with the second-round attack queue `A019`-`A033` in `attacks/`. They follow the same structure but are **paired review drafts**: no accepted resolution documents exist yet, and each brief records its own classification honestly, including where the attack is founded and the architecture has no answer beyond observability or explicit deferral.
+
+| Defense | Attack | Title | Classification |
+|---|---|---|---|
+| `D019` | `A019` | Procedural Legitimacy Cannot Substitute Democratic Mandate | Founded (system-level authorization gap) |
+| `D020` | `A020` | Agenda-Setting Capture Through Planning Scope Construction | Founded, partially unresolved |
+| `D021` | `A021` | Treasury Dependence and Fiscal Strangulation | Founded |
+| `D022` | `A022` | Thin Markets for Fiscalization and Evidence Supply | Partially founded |
+| `D023` | `A023` | Meta-Governance Vacuum in Open Mode | Founded (admitted deferral) |
+| `D024` | `A024` | Underprovision of Non-Salient Public Goods by Atomized Choice | Partially founded |
+| `D025` | `A025` | Rational Ignorance and Participation Decay | Founded (behavioral prediction) |
+| `D026` | `A026` | Identity Infrastructure as Single Point of Failure and Surveillance | Partially founded |
+| `D027` | `A027` | Information Cascades and Allocation Herding | Founded |
+| `D028` | `A028` | Spatial and Group Inequity of Allocation Outcomes | Founded |
+| `D029` | `A029` | Program Fragmentation and Lost Complementarities | Partially founded |
+| `D030` | `A030` | Clientelism Migration into Distributed Allocation | Founded (adaptation risk) |
+| `D031` | `A031` | Polarization and Symbolic Capture of Allocation | Partially founded |
+| `D032` | `A032` | Intertemporal Myopia and Long-Term Underinvestment | Partially founded |
+| `D033` | `A033` | The Problem of Many Hands: Responsibility Vacuum | Founded |
+
 ## Use
 
 The next Phase 3 work should review each attack-defense pair. Where a defense marks the risk as unresolved or materially founded, the project should either create a formal resolution document, update core documents, or preserve the objection as an explicit unresolved limitation.
