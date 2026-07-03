@@ -52,14 +52,11 @@ For Macul, rejecting a private multi-court project as duplicate may be valid if 
 
 ## Proposed improvements
 
-Add a tutored-moderation abuse test:
+Add a tutored-moderation abuse boundary:
 
-- rejection rate by reason, scope, actor type, and authority-linked operator;
-- review delay and timeout rate;
-- duplicate or outside-scope reason comparability;
-- operator concentration inside tutored scopes;
-- authority-controlled or privileged operator flag;
-- citizen-facing moderation pattern dashboard.
+- Core v0 should preserve structured rejection reasons, scope, rule/version, responsible authority/process, review window, decision date, review time, timeout status, suggested next path, AuditEvent reference, and known authority-linked operator relationships.
+- Core v0 should expose simple case-level citizen signals such as rejection reason, review delay, timeout recorded, and authority-linked operator present where material.
+- Formal moderation-abuse tests, rejection-rate comparisons by actor type, duplicate/outside-scope comparability analytics, operator-concentration analytics, automatic possible-abuse warnings, and citizen-facing moderation-pattern dashboards remain Extension v1+ or country/administrator observability.
 
 ## Applies to
 
@@ -73,10 +70,10 @@ Add a tutored-moderation abuse test:
 
 ## Defense strength and residual risk
 
-Defense strength: strong for transparency, limited for legal power.
+Defense strength: strong for case-level transparency and future auditability, limited for legal power and aggregate abuse detection in v0.
 
-Residual risk: visibility may not stop an authority that legally controls the scope. The platform cannot force political transition, but it can prevent hidden gatekeeping from being presented as distributed governance.
+Residual risk: visibility may not stop an authority that legally controls the scope. Core v0 may preserve enough data for later pattern audit without immediately exposing every aggregate abuse pattern to ordinary citizens. The platform cannot force political transition, but it can prevent hidden case-level gatekeeping from being presented as distributed governance.
 
 ## Decision
 
-The attack is founded. The architecture has the correct boundary, but Phase 3 should add moderation-abuse metrics and operator-concentration observability for transition pilots.
+The attack is founded. The architecture has the correct boundary, and Phase 3 should keep A011 as a Core v0 data-preservation and transparency boundary while leaving full moderation-abuse analytics for Extension v1+ or country/administrator observability.

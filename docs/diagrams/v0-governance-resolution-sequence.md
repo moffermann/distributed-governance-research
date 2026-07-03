@@ -224,7 +224,9 @@ audit trail reference
 - A timeout consequence must be configured before submission. The administrator must not improvise the consequence after silence occurs.
 - Citizen audit actions are civic visibility and accountability signals. They do not automatically reverse a decision unless the active operating-mode rule explicitly configures a correction, appeal, community override, or automatic-approval mechanism.
 - Governance resolutions and timeout resolutions must reference the operating mode, planning scope, protocol or rule version, audit trail, and affected project or request.
-- The observability baseline aggregates patterns over time. It does not convert metrics into a hidden success score.
+- Governance resolutions and timeout resolutions should preserve A011 minimum moderation-audit fields, including reason category where practical, review time, timeout status, and known authority-linked operator context.
+- The observability baseline aggregates basic patterns over time. Full moderation-abuse dashboards, automatic possible-abuse findings, cross-actor rejection-rate comparisons, and operator-concentration analytics remain Extension v1+ or country/administrator observability.
+- Observability metrics do not convert into a hidden success score or automatic legal reversal.
 - A public authority issuing or failing to issue a resolution remains an external actor under the C007 boundary. It does not become an internal proposer, executor, fiscalizer, delegate, or ordinary moderator in the same controlled scope.
 
 ## Macul Sports Example Trace

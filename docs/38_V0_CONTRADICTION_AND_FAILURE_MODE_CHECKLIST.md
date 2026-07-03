@@ -558,6 +558,22 @@ Advanced delegation-network analytics, anti-cluster algorithms, and concentratio
 
 ---
 
+## A011 - Moderation abuse in transition pilots
+
+**Severity:** Medium / High
+**Status:** Resolved
+**Resolution document:** `docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A011 is founded, but Core v0 handles it as a data-preservation and transparency boundary rather than a new moderation-abuse tribunal. C020 already requires material tutored decisions to become Governance Resolution objects and tutored silence to become Review Timeout Resolution objects. A011 adds that those records should preserve enough structured data for later moderation-pattern audit.
+
+Core v0 should preserve decision result, rejection reason category where practical, Planning Scope, rule/version, responsible authority or process, submission and decision dates, review time, timeout status, suggested next path, AuditEvent reference, and known authority-linked operator relationships. Ordinary citizens should see simple case-level signals such as rejection reason, review delay, timeout recorded, and authority-linked operator present where material.
+
+Formal moderation-abuse dashboards, automatic possible-abuse findings, cross-actor rejection-rate comparisons, duplicate/outside-scope reason comparability analytics, and operator-concentration analytics remain Extension v1+ or country/administrator observability.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -797,6 +813,8 @@ Advanced delegation-network analytics, anti-cluster algorithms, and concentratio
 - [ ] Is there a review date or maturity condition?
 - [ ] Can institutional moderation be audited?
 - [ ] Do tutored planning-scope decisions create Governance Resolution or equivalent public review traces where material?
+- [x] Does A011 preserve minimum data for later moderation-pattern audit without creating a Core v0 abuse tribunal or dashboard?
+- [ ] Do tutored decisions record reason category where practical, rule/version, responsible authority/process, review time, timeout status, and known authority-linked operator context?
 - [x] Are public authorities external to internal project competition in scopes they control under Core v0?
 - [ ] Are authority-controlled operators blocked by default in tutored scopes where their controlling authority defines scope or admissibility?
 - [ ] Is transition scope bounded?

@@ -1,4 +1,4 @@
-# Tutored Moderation Abuse Test and A011 Resolution v0
+# Tutored Moderation Abuse Boundary and A011 Resolution v0
 
 ## Status
 
@@ -11,39 +11,54 @@ Paired review:
 
 ## Resolution decision
 
-A011 is founded and does not distort the project when it targets opaque tutored discretion. The project rejects both distorted extremes: banning all tutored modes or accepting hidden tutored gatekeeping. The accepted resolution is a tutored-moderation abuse test.
+A011 is founded and does not distort the project when it targets opaque tutored discretion. The project rejects both distorted extremes: banning all tutored modes or accepting hidden tutored gatekeeping.
+
+The accepted resolution is a Core v0 boundary plus Extension v1+ analytics. Core v0 must preserve the data needed to audit tutored-moderation patterns, but it does not require a formal moderation-abuse finding, citizen-facing pattern dashboard, automatic abuse score, or platform-level reversal mechanism.
 
 ## Rule added to Core v0
 
-Tutored decisions and tutored silence are already public civic objects. The system should also expose aggregate patterns that indicate possible moderation abuse.
+Tutored decisions and tutored silence are already public civic objects under C020. A011 adds that Core v0 should preserve enough structured data for later audit of moderation patterns.
 
-Minimum metrics:
+Minimum Core v0 data:
 
-- rejection rate by reason, scope, actor type, and authority-linked operator;
-- review delay and timeout rate;
-- duplicate or outside-scope reason comparability;
-- operator concentration inside tutored scopes;
-- authority-controlled or privileged operator flag;
-- citizen-facing moderation pattern dashboard.
+- decision type and decision result;
+- standardized rejection reason category where practical;
+- public function, Planning Scope, operating mode, and rule/version applied;
+- responsible authority or authorized process;
+- submission date, review deadline, decision date, review time, and timeout status;
+- suggested next path;
+- authority-controlled, privileged, or authority-linked operator flag where the relationship is known or declared;
+- AuditEvent reference.
+
+Extension v1+ / country or administrator observability:
+
+- formal tutored-moderation abuse test;
+- citizen-facing moderation pattern dashboard;
+- rejection-rate comparison by reason, scope, actor type, or operator relationship;
+- duplicate or outside-scope reason comparability analytics;
+- operator concentration analytics inside tutored scopes;
+- automatic possible-abuse warnings or scoring.
 
 ## Macul example
 
-If a municipal authority repeatedly rejects independent sports projects as duplicates while approving similar projects by a controlled operator, the pattern should be visible even if each individual rejection has a Governance Resolution.
+If a municipal authority rejects an independent multi-court project in Macul as a duplicate, Core v0 should preserve the reason, rule, scope, authority, dates, timeout status, and any authority-linked operator relationship. If the authority repeatedly rejects independent sports projects as duplicates while approving similar projects by a controlled operator, a V1+ or administrator observability layer can expose that pattern without treating the platform as the legal reversal authority.
 
 ## Citizen simplicity
 
-Citizens should see simple indicators such as `review delayed`, `rejection reason`, `timeout recorded`, `authority-linked operator present`, or `moderation pattern available`.
+Citizens should see simple case-level indicators such as `review delayed`, `rejection reason`, `timeout recorded`, or `authority-linked operator present` where material. A broader `moderation pattern available` dashboard is useful, but it is not required in Core v0.
 
 ## Transparency and accountability effect
 
-This prevents a tutored pilot from becoming symbolic participation with opaque institutional control.
+This preserves the minimum trace needed to prevent tutored pilots from becoming opaque case-by-case gatekeeping. Advanced pattern detection can later show whether the pilot is becoming symbolic participation with institutional control.
 
 ## Residual risks
 
 - Visibility may not legally overturn a valid authority decision.
 - Authorities may choose weak timeout policies.
 - Some scope exclusions may be legitimate and should not be treated as abuse by default.
+- Pattern analytics can mislead if they ignore lawful scope differences, project quality differences, or legitimate duplication.
+- Moving the full dashboard to V1+ means some aggregate abuse may remain harder for ordinary citizens to see in early pilots.
 
 ## Integration target
 
-This resolution should inform OperatingMode, PlanningScope, GovernanceResolution, ReviewTimeoutResolution, state-owned operator eligibility, and administrative observability.
+This resolution should inform OperatingMode, PlanningScope, GovernanceResolution, ReviewTimeoutResolution, state-owned operator eligibility, AuditEvents, basic administrative observability, and future Extension v1+ moderation-pattern analytics.

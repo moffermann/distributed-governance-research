@@ -2,9 +2,11 @@
 
 ## Status
 
-Transition-operation hypothesis aligned with [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]] and [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]].
+Transition-operation hypothesis aligned with [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|C020]], [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|C007]], and [[../../docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|A011]].
 
 Operating modes are technical states that represent country implementation choices. The platform does not force a country to move toward open mode, but it must make tutored decisions, review windows, timeout policies, and tutored silence public, traceable, and auditable.
+
+A011 clarifies that Core v0 should preserve the data needed to audit moderation patterns later, but full moderation-abuse dashboards, automatic possible-abuse findings, and advanced operator-concentration analytics remain Extension v1+ or country/administrator observability.
 
 ## Hypothesis
 
@@ -232,6 +234,7 @@ Potential metrics:
 - projects released from pending moderation after a mode change;
 - transition from tutored to semi-open or open mode.
 - public functions configured as indefinite or permanent tutored mode.
+- minimum A011 moderation-audit fields for tutored decisions, including reason category where practical, rule/version, review time, timeout status, and known authority-linked operator context.
 
 ## Principle
 
@@ -239,4 +242,4 @@ Potential metrics:
 
 ## Remaining design questions
 
-Transition-operation hypothesis aligned with C020 and C007. Extends H054, H055, and H057. Needs further design around mode-change authority, timeout-policy configuration, citizen audit actions on governance resolutions, community override thresholds, automatic-approval safeguards, suspension criteria, and observability for permanent or indefinite tutored modes.
+Transition-operation hypothesis aligned with C020, C007, and A011. Extends H054, H055, and H057. Needs further design around mode-change authority, timeout-policy configuration, citizen audit actions on governance resolutions, community override thresholds, automatic-approval safeguards, suspension criteria, observability for permanent or indefinite tutored modes, and Extension v1+ moderation-pattern analytics.

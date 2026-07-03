@@ -416,7 +416,7 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION|74 - Platform Influence Boundary and A008 Resolution v0]]
 - [[../docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|75 - Participation Equity Boundary and A009 Resolution v0]]
 - [[../docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|76 - Delegation Concentration Stress Thresholds and A010 Resolution v0]]
-- [[../docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|77 - Tutored Moderation Abuse Test and A011 Resolution v0]]
+- [[../docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|77 - Tutored Moderation Abuse Boundary and A011 Resolution v0]]
 - [[../docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|78 - Complexity Budget and A012 Resolution v0]]
 - [[../docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|79 - Formal Evidence Producer Qualification and A013 Resolution v0]]
 - [[../docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|80 - Related-Party Relationship Graph and A014 Resolution v0]]

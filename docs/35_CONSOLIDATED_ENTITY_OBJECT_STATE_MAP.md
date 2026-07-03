@@ -2849,6 +2849,7 @@ Attributes:
 - governance resolutions;
 - review timeout policy;
 - timeout resolutions;
+- minimum moderation-audit data for tutored decisions;
 - history.
 
 ## Governance Resolution
@@ -2868,12 +2869,17 @@ Attributes:
 - decision date;
 - rule or eligibility criterion applied;
 - plain-language reason;
+- standardized rejection reason category, where practical;
 - suggested next action;
 - appeal or correction path, if configured;
 - citizen-facing summary;
 - public comments, support, objections, follows, or clarification requests;
 - status;
 - audit trail reference.
+
+A011 boundary:
+
+> Governance Resolution and Review Timeout Resolution should preserve the data needed for later tutored-moderation pattern audit: decision result, reason category where practical, Planning Scope, rule/version, responsible authority/process, dates, review time, timeout status, suggested next path, AuditEvent reference, and known authority-linked operator relationships. Core v0 does not create a separate `TutoredModerationAbuseTest`, abuse score, citizen-facing pattern dashboard, or platform-level reversal authority.
 
 ## Review Timeout Resolution
 

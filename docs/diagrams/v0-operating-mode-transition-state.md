@@ -169,6 +169,7 @@ flowchart TD
 - Every material tutored decision should create a public `GovernanceResolution`.
 - Every tutored review must have a declared review window and timeout policy before submission.
 - If no decision is issued within the declared review window, the system creates a `ReviewTimeoutResolution`.
+- A011 requires minimum moderation-audit data to be preserved for later pattern review, but does not add a separate abuse-test state, dashboard, or platform-level reversal mechanism in Core v0.
 - Timeout consequences must be preconfigured. They may be visibility only, escalation, community override trigger, or automatic approval subject to non-discretionary checks.
 - A public authority in tutored mode remains an external authority actor. It does not become an internal proposer, executor, fiscalizer, delegate, ordinary moderator, or competitor in the same controlled scope.
 - State-owned or publicly owned operators may participate only where the C007 public-authority/operator boundary permits it.

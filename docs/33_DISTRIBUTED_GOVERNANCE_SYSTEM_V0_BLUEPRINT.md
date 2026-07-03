@@ -1088,6 +1088,8 @@ Operating mode decisions should be visible and traceable.
 
 Core v0 does not force a country to leave tutored mode. It requires tutored governance to be visible. Material tutored decisions should create public Governance Resolution objects, and review silence should create Review Timeout Resolution objects under a publicly configured timeout policy.
 
+A011 adds a boundary over this baseline, not a new adjudication layer. Core v0 should preserve structured data needed to audit moderation patterns later: decision result, rejection reason category where practical, scope, rule/version, responsible authority or process, review window, decision date, review time, timeout status, suggested next path, AuditEvent reference, and known authority-linked operator relationships. Formal moderation-abuse dashboards, automatic possible-abuse findings, operator-concentration analytics, and cross-actor rejection-rate comparisons remain Extension v1+ or country/administrator observability.
+
 ## Protocol change governance
 
 Core v0 includes a minimum meta-governance discipline for changing system rules.

@@ -30,10 +30,11 @@ A municipal authority rejects private sports facility projects as "duplicate" wh
 ## Recommended resolution path
 
 - Require Governance Resolution or Review Timeout Resolution for material tutored decisions.
-- Track rejection reasons, delays, duplicates, scope decisions, and operator concentration.
+- Preserve structured rejection reasons, delays, timeout status, scope decisions, authority/process references, and known authority-linked operator relationships for audit.
 - Separate external authority review from internal participation.
 - Flag authority-controlled operators by default in tutored scopes.
 - Define citizen audit, clarification, correction, or appeal paths without pretending the platform itself creates legal reversal.
+- Treat full moderation-abuse dashboards, automatic abuse warnings, operator-concentration analytics, and cross-actor comparability tests as Extension v1+ or country/administrator observability.
 
 ## Theoretical base and citations
 
@@ -69,9 +70,9 @@ The tutored authority repeatedly rejects projects from independent executors as 
 - Are rejection reasons standardized enough for comparison?
 - Are review delays and timeout policies visible?
 - Are controlled operators identified?
-- Can citizens see aggregate moderation patterns?
+- Is the data needed for later aggregate moderation-pattern audit preserved?
 - Is platform effect separated from legal effect?
 
 ## Expected resolution output
 
-A Phase 3 resolution should define a tutored-moderation abuse test and minimum observability metrics for transition pilots.
+A Phase 3 resolution should define a tutored-moderation abuse boundary: Core v0 preserves minimum case-level and administrative-observability data, while formal abuse tests and citizen-facing moderation-pattern dashboards remain Extension v1+ or country/administrator observability.

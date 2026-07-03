@@ -392,6 +392,13 @@ This public function is configured as tutored with no declared transition path t
 The system records and publishes governance resolutions, timeout resolutions, and aggregate review metrics.
 ```
 
+A011 boundary:
+
+```text
+Core v0 preserves the minimum structured data needed to audit tutored moderation patterns later.
+Formal moderation-abuse tests, automatic possible-abuse findings, citizen-facing pattern dashboards, rejection-rate comparability, and operator-concentration analytics remain Extension v1+ or country/administrator observability.
+```
+
 ## C020 final resolution
 
 C020 is resolved as follows:

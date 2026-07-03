@@ -306,7 +306,7 @@ This resolution should inform:
 - separate external authority review from internal project execution;
 - require independent fiscalization, fulfillment/control evidence, and disbursement rules;
 - require material tutored decisions to become Governance Resolutions;
-- measure duplicate-project rejections, outside-scope rejections, review delays, timeout resolutions, and operator concentration;
+- preserve duplicate-project rejections, outside-scope rejections, review delays, timeout resolutions, and known authority-linked operator context for basic observability and later pattern audit;
 - preserve role-specific reputation and revocation/replacement paths for all operators, including public enterprises.
 
 ## Design rule

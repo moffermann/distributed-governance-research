@@ -18,6 +18,7 @@ The authority may perform external tutored-scope moderation when the operating m
 The authority may not use tutored-scope power to privilege its own controlled operator inside the same scope.
 Material tutored decisions must become public Governance Resolution objects.
 Review silence must become a public Review Timeout Resolution under the configured timeout policy.
+Core v0 preserves minimum data for later moderation-pattern audit, while formal abuse dashboards and advanced comparability analytics remain Extension v1+.
 ```
 
 This is an exception to the fully distributed philosophy, justified by the fact that transition pilots operate inside an existing state structure, with existing budgets, legal mandates, institutional responsibilities, and parallel traditional programs.
@@ -198,6 +199,21 @@ number of reformulations requested;
 number of projects reclassified.
 ```
 
+A011 boundary:
+
+```text
+Core v0 should preserve structured case-level fields for later pattern audit:
+decision result, reason category where practical, Planning Scope, rule/version,
+responsible authority or process, review window, decision date, review time,
+timeout status, suggested next path, AuditEvent reference, and known
+authority-linked operator relationships.
+
+Formal moderation-abuse tests, citizen-facing pattern dashboards,
+automatic possible-abuse warnings, selective-duplicate analytics,
+and operator-concentration analytics remain Extension v1+ or
+country/administrator observability.
+```
+
 ## Parameter configuration
 
 The implementing institution may configure pilot parameters if the pilot design grants it that authority.
@@ -239,7 +255,7 @@ The platform should measure how this moderation regime behaves:
 - concentration of moderation decisions;
 - share of projects blocked before publication.
 
-This allows the country and society to observe whether the tutored operating mode is enabling transition or becoming a bottleneck, without turning each rejected draft into a public reputational event.
+This allows the country and society to observe whether the tutored operating mode is enabling transition or becoming a bottleneck, without turning each rejected draft into a public reputational event. In Core v0, the emphasis is preserving comparable source data and basic administrative observability. Advanced pattern dashboards and formal abuse tests can be added later.
 
 Every tutored review window should have a configured timeout policy. If the authority does not decide within that period, the system should automatically create a Review Timeout Resolution.
 

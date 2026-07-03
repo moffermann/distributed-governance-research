@@ -34,3 +34,7 @@ sequenceDiagram
 ## Rule
 
 > Core v0 does not force a country to leave tutored mode. It requires material tutored decisions and review silence to become visible, time-bounded, auditable civic objects.
+
+A011 boundary:
+
+> Core v0 preserves minimum moderation-audit data for later pattern review. Full abuse tests, citizen-facing moderation-pattern dashboards, automatic possible-abuse findings, and operator-concentration analytics remain Extension v1+ or country/administrator observability.

@@ -271,10 +271,12 @@ governance resolutions issued
 projects approved under tutored review
 projects rejected under tutored review
 rejection reasons
+scope, rule/version, and responsible authority/process for tutored decisions
 review windows
 review time
 review timeouts
 timeout policy used
+known authority-linked operator flag where declared or reviewed
 community override triggers, if enabled
 automatic approvals after timeout, if enabled
 ```
@@ -284,6 +286,13 @@ Purpose:
 ```text
 Show whether tutored governance is operating transparently or becoming silent gatekeeping.
 Show whether protected essential scopes are being starved, overprotected, or revised without trace.
+```
+
+A011 boundary:
+
+```text
+Core v0 preserves the case-level data needed for later moderation-pattern audit.
+Full moderation-abuse dashboards, automatic possible-abuse findings, cross-actor rejection-rate comparisons, duplicate/outside-scope comparability analytics, and operator-concentration analytics remain Extension v1+ or country/administrator observability.
 ```
 
 ## H. Rule-change and protocol trace metrics

@@ -666,6 +666,8 @@ Core v0 does not force countries to exit tutored mode. It requires material tuto
 
 In tutored mode, a competent authority or authorized implementation administrator may define the active Planning Scope for the public function opened to distributed financing. This is a country implementation or tutored operating-mode condition, not a solved distributed roadmap-construction mechanism. The scope and material scope decisions must be public, versioned, and auditable.
 
+A011 is a boundary over tutored moderation, not a new Core v0 abuse tribunal. Core v0 preserves structured case-level data needed for later audit of moderation patterns, including decision result, rejection reason category where practical, scope, rule/version, responsible authority/process, review window, decision date, review time, timeout status, suggested next path, AuditEvent reference, and known authority-linked operator relationships. Full moderation-abuse tests, dashboards, automatic warnings, and operator-concentration analytics remain Extension v1+ or country/administrator observability.
+
 ### 22. Protocol change governance
 
 Core v0 includes a minimum protocol-change discipline.
