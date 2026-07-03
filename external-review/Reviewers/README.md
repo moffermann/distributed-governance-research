@@ -1,5 +1,7 @@
 # Reviewer Send Packets
 
+*All packets © 2026 Mauricio Offermann, CC BY-NC-ND 4.0 — see LICENSE.md at the repository root. Reviewers may share packets verbatim with attribution.*
+
 This folder contains standalone review packets by reviewer profile.
 
 Each subfolder contains:

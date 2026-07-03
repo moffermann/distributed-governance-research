@@ -2,6 +2,8 @@
 
 **Working paper — v1.2 (July 2026). Revised after an adversarial referee pass whose report and fixes are part of the public record.**
 
+*© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff.*
+
 ## Abstract
 
 Debates about the state are usually conducted over its size — more state or

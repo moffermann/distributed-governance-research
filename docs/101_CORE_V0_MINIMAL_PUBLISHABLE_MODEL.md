@@ -1,5 +1,7 @@
 # Core v0 Minimal Publishable Model
 
+*© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 — see LICENSE.md. Companion to the working paper (see CITATION.cff for citation).*
+
 ## Purpose
 
 This document is the shortest professional entry point into the Distributed Governance System v0.

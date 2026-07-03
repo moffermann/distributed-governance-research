@@ -21,3 +21,7 @@ research/             Literature notes and external references
 ## Current status
 
 Early-stage theory building. The first consolidated distillation of the initial  research session is in `knowledge/00_SESSION_2026-06-25_DISTILLATION.md`.
+
+## License and citation
+
+Dual-licensed: research corpus CC BY 4.0; manuscript, publishable model, and reviewer packets CC BY-NC-ND 4.0 (pending venue selection); code MIT. See `LICENSE.md`. To cite this work, see `CITATION.cff`.
