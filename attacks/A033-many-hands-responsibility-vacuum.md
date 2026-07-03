@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`.
 
 ## Description
 
@@ -83,6 +83,6 @@ A distributed pilot funds a sports facility whose roof later fails, injuring a c
 - Can the audit trail produce a harm-attribution package usable by an external court?
 - Is "no role breached its internal obligation" prevented from being treated as "no one is liable to the victim"?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a duty-of-care and third-party-harm accountability standard covering a per-project Duty-of-Care Anchor mapped to a solvent legal person, required proportionate liability coverage, an explicit position on the state's residual duty of care, and a court-usable harm-attribution package, while leaving final liability apportionment to external law.
+Resolved in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`: a `Duty-of-Care Anchor` distinct from the value-focused Primary Responsibility Anchor (H010), plus third-party-harm coverage in the assurance profiles, integrated through existing objects (Financial Assurance Profile, Post-Closure Coverage Profile, responsibility matrix). Every execution-financeable project names, before disbursement, the actor(s) legally responsible to third parties for physical and safety harm, mapped to a solvent reachable legal person and exposed on the citizen-facing sheet; the assurance profiles extend to proportionate third-party liability coverage where Threshold Policy requires it; versioned documentation states that distributed micro-allocation does not dilute the state's duty of care; the responsibility matrix distinguishes "no role breached its internal obligation" from "no one is liable to the victim"; and the audit trail preserves a court-usable harm-attribution package. Liability apportionment remains external law: the platform records and provisions but does not adjudicate. A named anchor and coverage guarantee a reachable defendant, not a just outcome, and the doctrinal construction of liability in distributed public funding remains untested in any jurisdiction.

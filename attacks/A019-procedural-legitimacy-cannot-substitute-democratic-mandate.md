@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`.
 
 ## Description
 
@@ -80,6 +80,6 @@ A ministry launches distributed allocation across an entire public function, not
 - Is representative-appropriation fallback visible rather than silently displaced?
 - Does the audit trail distinguish "visible and versioned" from "democratically authorized"?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define an `Allocation Mandate` concept that separates democratic authorization to run distributed allocation and choose its formula from the procedural rule-change machinery, without requiring Core v0 to implement full mandate-construction mechanics.
+Resolved in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`: an `Allocation Mandate` record per active Planning Scope, integrated as a minimal record through the existing Planning Scope object rather than a new adjudicating entity. The record names the mandate source (statute, ordinance, referendum, or delegated authority), the legal instrument authorizing budget migration, the migrated share, the allocation-amount formula version with an explicit flag and authority when it departs from equal-per-citizen, and effective dates with version history; non-equal formulas are treated as higher-authorization decisions than ordinary parameter edits. Core v0 records and exposes the mandate but does not create, validate, or adjudicate it — mandate construction remains external constitutional law and country implementation, and the democratic-deficit critique of substituting atomized allocation for representative appropriation remains a recorded open normative debate.

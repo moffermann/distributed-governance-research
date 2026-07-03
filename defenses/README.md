@@ -70,9 +70,9 @@ These defenses are paired with the second-round attack queue `A019`-`A033` in `a
 
 | Defense | Attack | Title | Classification |
 |---|---|---|---|
-| `D019` | `A019` | Procedural Legitimacy Cannot Substitute Democratic Mandate | Founded (system-level authorization gap) |
-| `D020` | `A020` | Agenda-Setting Capture Through Planning Scope Construction | Founded, partially unresolved |
-| `D021` | `A021` | Treasury Dependence and Fiscal Strangulation | Founded |
+| `D019` | `A019` | Procedural Legitimacy Cannot Substitute Democratic Mandate | Founded (system-level authorization gap) — resolved in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md` |
+| `D020` | `A020` | Agenda-Setting Capture Through Planning Scope Construction | Founded, partially unresolved — resolved in `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md` |
+| `D021` | `A021` | Treasury Dependence and Fiscal Strangulation | Founded — resolved in `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md` |
 | `D022` | `A022` | Thin Markets for Fiscalization and Evidence Supply | Partially founded |
 | `D023` | `A023` | Meta-Governance Vacuum in Open Mode | Founded (admitted deferral) |
 | `D024` | `A024` | Underprovision of Non-Salient Public Goods by Atomized Choice | Partially founded |
@@ -84,7 +84,7 @@ These defenses are paired with the second-round attack queue `A019`-`A033` in `a
 | `D030` | `A030` | Clientelism Migration into Distributed Allocation | Founded (adaptation risk) |
 | `D031` | `A031` | Polarization and Symbolic Capture of Allocation | Partially founded |
 | `D032` | `A032` | Intertemporal Myopia and Long-Term Underinvestment | Partially founded |
-| `D033` | `A033` | The Problem of Many Hands: Responsibility Vacuum | Founded |
+| `D033` | `A033` | The Problem of Many Hands: Responsibility Vacuum | Founded — resolved in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md` |
 
 ## Use
 

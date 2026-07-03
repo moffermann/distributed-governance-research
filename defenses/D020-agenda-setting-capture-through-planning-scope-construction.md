@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review draft. No accepted resolution yet; pending Phase 3 review integration.
+Second-round paired review completed. Accepted resolution: `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md`.
 
 ## Attack reference
 

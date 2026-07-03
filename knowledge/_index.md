@@ -426,6 +426,10 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|83 - Disbursement Gaming Tests and A017 Resolution v0]]
 - [[../docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|84 - Collusion Observability and A018 Resolution v0]]
 - [[../docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|85 - Funding Window Expiry and Budget Liquidity Smoothing Resolution v0]]
+- [[../docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|86 - Allocation Mandate and A019 Resolution v0]]
+- [[../docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|87 - Planning Scope Agenda Limitation and A020 Resolution v0]]
+- [[../docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION|88 - Fiscal Commitment Profile and A021 Resolution v0]]
+- [[../docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|89 - Duty-of-Care Anchor and A033 Resolution v0]]
 
 ## Literature
 

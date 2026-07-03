@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md`.
 
 ## Description
 
@@ -81,6 +81,6 @@ An implementing authority opens three public functions in tutored mode and defin
 - Are metrics exposed for scope churn, category concentration, and boundary-rejected demand?
 - Can an observer distinguish "no demand" from "no eligible category for the demand"?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a visible, versioned Planning Scope Construction governance object with attributable authority, published exclusions, and a citizen scope-proposal trace, without requiring Core v0 to implement full distributed roadmap construction.
+Resolved in `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md` as a bounded resolution under P007: the attack is founded and partially unresolved, and Core v0 formalizes the open limitation rather than solving roadmap-construction governance. Interim observability carries the harm — every Planning Scope carries its Allocation Mandate record and versioned scope definition, scope changes and interpretations surface as Governance Resolutions with timeouts (C020), and out-of-scope demand stays visible as Ideas (C001) with volume observability per rejected or out-of-scope category. The open question `knowledge/open-questions/distributed-roadmap-construction-governance.md` remains the acknowledged constitutional gap and a blocker for open-mode scale deployment. Core v0 does not define who constructs the roadmap; agenda-setting power is documented, versioned, and contestable through visibility only, and full distributed roadmap construction remains Extension v1+. This is a declared open limitation of the architecture and a primary item for the paper's limitations section.

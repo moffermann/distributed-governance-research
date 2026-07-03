@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`.
 
 ## Description
 
@@ -81,6 +81,6 @@ A jurisdiction runs the distributed sports function well for a year, then enters
 - Is a mid-cycle reduction of the migrated share recorded as a governance event with beneficiary-impact disclosure?
 - Can citizens and auditors distinguish a lawful capped adjustment from a pattern of quiet strangulation?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a versioned Fiscal Commitment Profile, custodian and amount-provider delivery-reliability indicators, and an indexation and mid-cycle-change disclosure rule that make quiet fiscal strangulation observable and distinguishable from lawful adjustment.
+Resolved in `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`: a public, versioned `Fiscal Commitment Profile` per Planning Scope plus fiscal-reliability observability, integrated through existing objects (Planning Scope, treasury and custody records, signed Financial Orders, AuditEvents). The profile records the migrated percentage, indexation rule, delivery-latency target, and cycle horizon; observability adds expected-versus-actual delivery of signed balances, order-to-execution latency, an aggregate `unexecuted valid order` indicator, and a real-value-preservation warning where amounts are not inflation-adjusted. Profile changes are governance events with reason, magnitude, affected scopes, and beneficiary impact, and missed windows and systematic delay feed the H054 transition metrics and A016 incumbent-resistance indicators. Core v0 records and surfaces fiscal behavior but enforces nothing: no software can compel a sovereign to pay, and multi-year appropriation locks, statutory indexation, and budget floors remain country implementation. The platform converts strangulation from invisible to measurable and attributable; a determined treasury can still defund the system in full public view.
