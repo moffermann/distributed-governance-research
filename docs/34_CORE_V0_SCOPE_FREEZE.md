@@ -92,6 +92,8 @@ A019 adds an Allocation Mandate record on Planning Scope, not mandate-constructi
 
 A020 is bounded as an open limitation, not solved. Whoever constructs Planning Scopes exercises the second face of power, deciding what citizens may fund at all before allocation, support, or fiscalization occurs, and Core v0 adds no scope-construction mechanism. It carries interim observability over existing objects instead: every Planning Scope shows its Allocation Mandate record and versioned definition, scope changes and interpretations surface as Governance Resolutions with timeouts, and out-of-scope demand stays visible as Ideas with per-category volume observability, so agenda-setting power is documented, versioned, and contestable through visibility only. Who constructs the roadmap remains the acknowledged constitutional gap and a blocker for open-mode deployment at scale — deferred, not denied.
 
+A021 adds a Fiscal Commitment Profile on Planning Scope plus fiscal-reliability observability, not a fiscal-enforcement mechanism. The state still controls the fiscal spigot and can strangle the system quietly through late or partial delivery, mid-cycle reduction of the migrated share, zero indexation, or unexecuted valid orders while the platform shows green funding states. Each active Planning Scope carries a public, versioned Fiscal Commitment Profile — migrated percentage, indexation rule, delivery-latency target, and cycle horizon — whose changes are visible governance events with reason, magnitude, affected scopes, and beneficiary impact; delivery and execution reliability surface as public signals attributable to the fiscal authority: expected-versus-actual delivery of signed balances, order-to-execution latency, an unexecuted-valid-order indicator, and a real-value-preservation warning where amounts are not inflation-adjusted, feeding the H054 transition metrics and A016 incumbent-resistance indicators. Core v0 records and surfaces fiscal behavior but enforces nothing — no software can compel a sovereign to pay, so credible commitment stays a matter of law and a determined treasury can still defund the system in full public view.
+
 ### 2a. Idea object
 
 Core v0 includes `Idea` as a separate civic-demand object.
@@ -830,6 +832,7 @@ These should not be part of Core v0 unless later shown necessary:
 - automated collusion-detection engines, network-analysis scoring, and investigative capability beyond the A018 collusion observability surfaces;
 - mandate construction, referendum machinery, and formula adjudication beyond the A019 Allocation Mandate record, which the platform records but does not generate;
 - distributed roadmap-construction governance beyond the A020 interim observability — deferred, not denied: agenda-setting power stays visible and versioned, while who constructs Planning Scopes remains an open question and a prerequisite for open mode at scale;
+- fiscal enforcement — multi-year appropriation locks, statutory indexation, and enforceable budget floors — beyond the A021 Fiscal Commitment Profile and fiscal-reliability observability, which make fiscal strangulation measurable and attributable but cannot compel a sovereign to pay;
 - full multi-sector implementation.
 
 ## Country implementation decisions

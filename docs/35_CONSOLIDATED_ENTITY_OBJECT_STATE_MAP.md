@@ -379,6 +379,10 @@ A020 agenda limitation:
 
 > A020 agenda limitation: Core v0 adds no scope-construction entity; agenda power is observable through Allocation Mandate, versioned scope definitions, Governance Resolutions, timeout records, and Idea volume, and remains centralized — a declared limitation.
 
+A021 fiscal commitment:
+
+> A021 fiscal commitment: Core v0 adds no fiscal-enforcement entity; the Fiscal Commitment Profile is a versioned record on PlanningScope, and reliability indicators read from custody and order records with AuditEvents.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

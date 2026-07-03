@@ -702,6 +702,22 @@ Core v0 does not define who constructs the roadmap or compel any authority to ac
 
 ---
 
+## A021 - Treasury dependence and fiscal strangulation
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A021 is founded. The state still controls the fiscal spigot and can strangle the system without attacking it openly — through late or partial delivery of signed balances, mid-cycle reduction of the migrated share, zero indexation, or valid Financial Orders left unexecuted — while the platform still shows green funding states. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects — the Planning Scope, treasury and custody records, signed Financial Orders, and AuditEvents — rather than adding an enforcement mechanism. It converts fiscal strangulation from invisible to measurable and attributable; enforcement stays external.
+
+The fiscal commitment behind each Planning Scope becomes a public, versioned Fiscal Commitment Profile — migrated percentage, indexation rule, delivery-latency target, and cycle horizon — and changes to it are visible governance events with reason, magnitude, affected scopes, and beneficiary impact, not silent parameter edits. Delivery and execution reliability surface as public signals attributable to the fiscal authority rather than the visible executor: expected-versus-actual delivery of signed balances, order-to-execution latency distribution, an aggregate unexecuted-valid-order indicator, and a real-value-preservation warning where nominal amounts are not inflation-adjusted. Missed windows and systematic delay feed the H054 transition metrics and the A016 incumbent-resistance indicators. In Macul, a mid-year cut from 5% to 2% with two months of late balance files becomes a versioned Profile change with reason and beneficiary impact, alongside reliability alerts showing that funded courts sit unpaid because orders are unexecuted upstream, not because the executor failed.
+
+Core v0 records and surfaces fiscal behavior; it enforces nothing. Limitation statement: no software can compel a sovereign to pay, so credible commitment must come from law and a determined treasury can still defund the system in full public view. Multi-year appropriation locks, statutory indexation, and budget floors remain country implementation.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -827,6 +843,9 @@ Core v0 does not define who constructs the roadmap or compel any authority to ac
 - [ ] Are funding-window extensions objective, capped, visible, and tied to a policy source?
 - [ ] Are republication and cloning histories preserved rather than reset?
 - [ ] If Budget Liquidity Smoothing exists, is it public, capped, stress-tested, audited, and separated from treasury discretion over project priority?
+- [ ] Does every Planning Scope carry a public, versioned Fiscal Commitment Profile (migrated share, indexation, delivery-latency target, horizon)?
+- [ ] Are expected-versus-actual balance delivery, order-to-execution latency, and unexecuted valid orders observable and attributable?
+- [ ] Do profile changes surface as governance events with reason, magnitude, affected scopes, and beneficiary impact, feeding H054 and A016 indicators?
 - [ ] Are delegated and automatic allocations distinguishable?
 - [ ] Are unused funds handled clearly?
 - [ ] Are funders notified of material changes?

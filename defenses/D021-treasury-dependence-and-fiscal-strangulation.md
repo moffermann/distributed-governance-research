@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 

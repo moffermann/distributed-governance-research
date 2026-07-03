@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 

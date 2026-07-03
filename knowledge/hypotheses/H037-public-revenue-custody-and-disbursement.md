@@ -17,6 +17,8 @@ This hypothesis is aligned with:
 
 H037 should be read as a Core v0 infrastructure boundary plus country implementation dependency. The abstract boundary is Core v0: custody and disbursement must be separated from civic decision-making. The specific legal custodian, treasury API, escrow structure, tax integration, and enforceability mechanics depend on the implementing country. ^r508104d0
 
+H037 is aligned with [[../../docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION|A021]]: custody neutrality is now paired with delivery observability, so the same authority that reports signed balances and executes Financial Orders cannot strangle the system silently. Each Planning Scope carries a public, versioned Fiscal Commitment Profile (migrated percentage, indexation rule, delivery-latency target, cycle horizon), and expected-versus-actual delivery of signed balances, order-to-execution latency, and an unexecuted-valid-order indicator make late, non-indexed, or unexecuted delivery measurable and attributable to the fiscal authority rather than the visible executor. Enforcement stays external: no software can compel a sovereign to pay.
+
 ## Rationale
 
 Citizens should not need to use ordinary payment platforms every time they support a project. Their assignable civic budget already comes from taxes or public revenue contributions.
