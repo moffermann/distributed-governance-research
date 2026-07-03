@@ -550,6 +550,8 @@ Principle:
 
 > Simple by default, clickable by signal, deeply auditable by choice.
 
+A012 adds a complexity-budget discipline, not a new Core v0 entity: every required object, field, state, or procedural step should name the material failure mode it controls, low-risk projects keep an explicit minimum viable path, and heavier burdens trigger through ThresholdPolicy rather than being universalized. New v0 entities must pass the cannot-be-safely-derived test and Extension v1+ ideas do not enter Core v0 by default, following the `knowledge/principles/P007-integrate-or-bound-rule.md` integrate-or-bound rule. Core v0 does not require a quantitative complexity metric, object-count ceiling, or implementation-cost model; the budget is a qualitative discipline applied at design and review time.
+
 ### Layer 0 — Home / discovery
 
 Layer 0 is not a project feed. It is a navigation surface.
@@ -1176,6 +1178,7 @@ Out of scope or future extension:
 - full personal AI guides;
 - advanced inferred recommender systems;
 - advanced participation-equity analytics, demographic gap measurement, and inclusion dashboards;
+- quantitative complexity metrics, object-count ceilings, and implementation-cost models;
 - deep predictive scoring as a decision authority.
 
 ## Future extensions

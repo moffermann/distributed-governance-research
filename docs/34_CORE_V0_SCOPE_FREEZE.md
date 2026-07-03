@@ -783,6 +783,8 @@ A008 is handled as a boundary over these existing controls, not as a separate Co
 
 Core v0 includes simple user-facing signals plus a minimal administrative observability baseline. The full universal institutional observability panel remains Extension v1+.
 
+A012 governs what enters this frozen scope, not a new Core v0 object. Under the `knowledge/principles/P007-integrate-or-bound-rule.md` integrate-or-bound rule, a founded attack adds a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects; otherwise it is answered by an explicit boundary, a visible residual risk, and a recorded limitation. Every required object, field, state, or step names the material failure mode it controls, low-risk projects keep an explicit minimum viable path, heavier burdens trigger through ThresholdPolicy, and new v0 entities pass the cannot-be-safely-derived test. Core v0 does not require a quantitative complexity metric, object-count ceiling, or implementation-cost model.
+
 ## Extension v1+ concepts
 
 These should not be part of Core v0 unless later shown necessary:
@@ -804,6 +806,7 @@ These should not be part of Core v0 unless later shown necessary:
 - advanced inferred recommender systems;
 - advanced platform-influence analytics, causal exposure-to-funding metrics, and ranking-bias dashboards;
 - advanced participation-equity analytics, demographic gap measurement, accessibility outreach metrics, and inclusion dashboards;
+- quantitative complexity metric, object-count ceiling, or implementation-cost model;
 - detailed sector-specific KPI libraries beyond pilot needs;
 - full common-good charter governance;
 - full multi-sector implementation.

@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`, now formalized as `knowledge/principles/P007-integrate-or-bound-rule.md` and refined before core propagation.
+Phase 3 paired review completed. Accepted resolution: `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`, now formalized as `knowledge/principles/P007-integrate-or-bound-rule.md` and refined before core propagation. Propagated into the core corpus.
 
 ## Attack reference
 

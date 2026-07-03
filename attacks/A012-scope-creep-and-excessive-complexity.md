@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
@@ -72,6 +72,6 @@ A low-risk cultural workshop cannot publish because it gets stuck satisfying con
 - Are expert layers hidden enough for usability but visible enough for audit?
 - Are Extension v1+ ideas prevented from entering Core v0 by default?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should define a complexity budget or procedural-burden test for new v0 requirements.
+Resolved in `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`: a complexity budget and integrate-or-bound discipline, formalized as `knowledge/principles/P007-integrate-or-bound-rule.md`. Every required object, field, state, or step must name the material failure mode it controls; low-risk projects keep an explicit minimum viable path; heavier burdens trigger through ThresholdPolicy rather than being universalized; new v0 entities pass the cannot-be-safely-derived test; and Extension v1+ ideas do not enter Core v0 by default. Core v0 does not require a quantitative complexity metric, object-count ceiling, or implementation-cost model; the budget is a qualitative discipline applied at design and review time.

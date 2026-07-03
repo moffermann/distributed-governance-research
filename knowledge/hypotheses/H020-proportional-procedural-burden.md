@@ -30,6 +30,8 @@ C020 controls tutored-mode authority review: when an operating mode assigns admi
 
 C008 controls AI: AI may assist classification, requirement discovery, anomaly detection, and explanation, but it does not become the binding authority.
 
+[[../../docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|A012]] and [[../principles/P007-integrate-or-bound-rule|P007]] generalize this proportional-burden discipline into the corpus-wide integrate-or-bound editorial rule. Every required object, field, state, or step should name the material failure mode it controls, low-risk projects keep an explicit minimum viable path, and heavier burdens trigger through the Threshold Policy rather than being universalized; a founded objection adds a new Core v0 mechanism only where a core-thesis claim would otherwise fail and existing objects cannot control the risk.
+
 ## Rationale
 
 If every small project must follow the same architecture as a hospital, highway, data center, or industrial plant, the system becomes a digital bureaucracy.

@@ -574,6 +574,22 @@ Formal moderation-abuse dashboards, automatic possible-abuse findings, cross-act
 
 ---
 
+## A012 - Scope creep and excessive complexity
+
+**Severity:** Medium / High
+**Status:** Resolved
+**Resolution document:** `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A012 is founded, but Core v0 handles it as a complexity-budget and integrate-or-bound editorial discipline rather than a new entity, metric, or procedural layer. The discipline is formalized as `knowledge/principles/P007-integrate-or-bound-rule.md`: a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by an explicit boundary, a visible residual risk, and a recorded limitation statement.
+
+Every new required object, field, state, or procedural step should name the material failure mode it controls. Low-risk projects keep an explicit minimum viable path, higher burdens trigger through ThresholdPolicy rather than being universalized, new v0 entities pass the cannot-be-safely-derived test before entering the formal inventory, and Extension v1+ ideas do not enter Core v0 by default. Citizen-facing screens remain simple and action-oriented while expert and audit detail stays expandable.
+
+Core v0 does not require a quantitative complexity metric, a formal object-count ceiling, or an implementation-cost model; the complexity budget is a qualitative discipline applied at design and review time. Limitation statement: the architecture's procedural burden has not been validated against real users or a working implementation, so the minimum viable low-risk path remains a design commitment rather than a demonstrated property.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -613,6 +629,9 @@ Formal moderation-abuse dashboards, automatic possible-abuse findings, cross-act
 - [ ] If a project is outside the active Planning Scope, is it kept as an Idea, reclassified, reformulated, or routed into future planning-scope governance rather than made execution-financeable by default?
 - [ ] Does closure create a Project Closure Accountability Record?
 - [ ] Is a project prevented from closing as fulfilled when main commitments lack sufficient, reviewed, traceable fulfillment/control evidence?
+- [ ] Does every required object, field, state, or procedural step name the material failure mode it controls?
+- [ ] Do new v0 entities pass the cannot-be-safely-derived test before entering the formal inventory?
+- [ ] Are Extension v1+ ideas kept out of Core v0 by default under the P007 integrate-or-bound rule?
 
 ## 2a. Public guarantee and service provision checklist
 
@@ -799,6 +818,7 @@ Formal moderation-abuse dashboards, automatic possible-abuse findings, cross-act
 - [x] Are urgent/promoted-looking slots rule-based?
 - [x] Is A008 handled through existing discovery, AI-assistance, and rule-change controls rather than a new Core v0 entity?
 - [x] Is A009 handled as a boundary without requiring perfect participation or a new Core v0 indicator layer?
+- [ ] Do low-risk projects keep an explicit minimum viable path, with heavier burdens triggered by ThresholdPolicy rather than universalized?
 - [ ] Do citizen surfaces preserve A006 labels such as `funds first six months`, `maintenance not funded`, `renewal window open`, `continuity idea open`, or `wind-down rule declared` where material?
 - [x] Can users customize Home categories without changing project eligibility?
 - [ ] Are citizen-facing states mapped from technical states?
