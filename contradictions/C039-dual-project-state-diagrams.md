@@ -8,7 +8,7 @@ Open — pending author review.
 
 Side A — `docs/diagrams/v0-project-lifecycle-state.md:18,23-24`: models `FundingOpen`, `ClosureReview`, and `PhaseGateReview` as parent-level Project states ("OpenProject --> FundingOpen … ClosureReview --> PhaseGateReview").
 
-Side B — `docs/diagrams/v0-project-object-state-with-phase-substates.md:28-32,82-84` (which states it "refines the older project lifecycle diagram"): the parent machine is OpenProject → ExecutionReady / RequiresReformulation / Expired / ExpiredUnfunded / Revoked, with funding and phase-gate states existing only inside the ProjectPhase substate machine — consistent with `docs/12:187-193` and `docs/101:458`.
+Side B — `docs/diagrams/v0-project-object-state-with-phase-substates.md:28-32,82-84` (which states it "refines the older project lifecycle diagram"): the parent machine is OpenProject → ExecutionReady / RequiresReformulation / Expired / ExpiredUnfunded / Revoked, with funding and phase-gate states existing only inside the ProjectPhase substate machine — consistent with `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md:187-193` and `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md:458`.
 
 ## Why they cannot both be true
 

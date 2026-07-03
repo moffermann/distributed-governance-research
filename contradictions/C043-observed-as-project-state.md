@@ -8,7 +8,7 @@ Open — pending author review.
 
 Side A — `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md:199`: lists "Observed" as a project-level exceptional state (alongside Paused, Reformulation required, Expired, Revoked).
 
-Side B — `docs/101:458` (exceptional states: paused, reformulated, revoked, expired unfunded — no "Observed") and the state diagrams, where "Observed" and "AdmittedNonBlocking" are evidence/complaint statuses (`v0-contextualized-evidence-item-state.md:47`, `v0-complaint-evidence-and-review-state.md:63`), not project states.
+Side B — `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md:458` (exceptional states: paused, reformulated, revoked, expired unfunded — no "Observed") and the state diagrams, where "Observed" and "AdmittedNonBlocking" are evidence/complaint statuses (`v0-contextualized-evidence-item-state.md:47`, `v0-complaint-evidence-and-review-state.md:63`), not project states.
 
 ## Why they cannot both be true
 

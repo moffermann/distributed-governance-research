@@ -6,7 +6,7 @@ Open — pending author review.
 
 ## Contradiction
 
-Side A — `docs/06_CURRENT_PROJECT_RECAP.md:151`: "The project remains in **Phase 1 — Stabilize the Core Theory**, with parts of Phase 2 beginning naturally through objections." — and `:160`: "Begin literature review only after core concepts stabilize."
+Side A — `docs/06_CURRENT_PROJECT_RECAP.md:152`: "The project remains in **Phase 1 — Stabilize the Core Theory**, with parts of Phase 2 beginning naturally through objections." — and `:160`: "Begin literature review only after core concepts stabilize."
 
 Side B — Phase 3 fully propagated (35/35), literature map and manuscript done (`docs/03_ROADMAP.md:673`, `research/literature-map.md`, `drafts/paper.md`).
 

@@ -161,8 +161,10 @@ for (const path of allMd) {
   // by vault-relative path, or by unique basename anywhere in the corpus.
   // Block references ([[file#^id]]) additionally require the ^id marker to
   // exist inside the resolved file.
-  for (const m of text.matchAll(/\[\[([^\]|#]+)(?:#(\^)?([^\]|]+))?(?:\|[^\]]*)?\]\]/g)) {
-    const target = m[1].trim();
+  for (const m of text.matchAll(/\[\[([^\]|#]+?)(?:#(\^)?([^\]|]+?))?(?:\\?\|[^\]]*)?\]\]/g)) {
+    // Markdown tables require the wikilink pipe to be escaped as \|; strip a
+    // trailing backslash left on the target when the escaped form is used.
+    const target = m[1].trim().replace(/\\$/, "");
     if (!target || target.startsWith("http")) continue;
     const cand = target.endsWith(".md") ? target : `${target}.md`;
     const fromDir = join(path, "..", cand).replace(/\\/g, "/");

@@ -8,7 +8,7 @@ Open — pending author review.
 
 Side A — the accepted rule, `docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md:187-189`: "Citizen-facing language should avoid terms like: - execution-ready; …" (unless the user opens technical detail); the resolution's own aggregate list uses "Ready for execution".
 
-Side B — the citizen-facing status maps: `docs/30:667-671` "Citizen-facing statuses should remain simple: … Execution-ready", with the same label used as citizen-facing in `docs/12:191` and `docs/29:984-995`.
+Side B — the citizen-facing status maps: `docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW.md:667-671` "Citizen-facing statuses should remain simple: … Execution-ready", with the same label used as citizen-facing in `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md:190` and `docs/29:984-995`.
 
 ## Why they cannot both be true
 

@@ -6,9 +6,9 @@ Open — pending author review.
 
 ## Contradiction
 
-Side A — several lifecycle enumerations carry expiry states the resolutions never defined or omit ones they did: both project state diagrams define a plain `Expired` state distinct from `ExpiredUnfunded` (`v0-project-lifecycle-state.md:49`, `v0-project-object-state-with-phase-substates.md:30`, echoed in `docs/12:201`), and `docs/29:1138-1150`'s creator-side state list omits Expired Unfunded entirely.
+Side A — several lifecycle enumerations carry expiry states the resolutions never defined or omit ones they did: both project state diagrams define a plain `Expired` state distinct from `ExpiredUnfunded` (`v0-project-lifecycle-state.md:49`, `v0-project-object-state-with-phase-substates.md:30`, echoed in the exceptional-states list of `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`), and `docs/29:1138-1150`'s creator-side state list omits Expired Unfunded entirely.
 
-Side B — `docs/85` (funding-window expiry resolution) defines only the "Expired Unfunded" outcome; no document specifies what a plain "Expired" project state is or how it differs; `docs/101:458` lists only "expired unfunded" among exceptional states; `docs/30:104` and the refined diagram carry Expired Unfunded as a real state.
+Side B — `docs/85` (funding-window expiry resolution) defines only the "Expired Unfunded" outcome; no document specifies what a plain "Expired" project state is or how it differs; `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md:458` lists only "expired unfunded" among exceptional states; `docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW.md:104` and the refined diagram carry Expired Unfunded as a real state.
 
 ## Why they cannot both be true
 
