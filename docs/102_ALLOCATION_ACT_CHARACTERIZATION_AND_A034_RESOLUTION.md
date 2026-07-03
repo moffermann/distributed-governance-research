@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A034-legal-characterization-of-the-citizen-allocation-act.md`
-- Defense: `defenses/D034-legal-characterization-of-the-citizen-allocation-act.md`
+- Attack: [[A034-legal-characterization-of-the-citizen-allocation-act|attacks/A034-legal-characterization-of-the-citizen-allocation-act.md]]
+- Defense: [[D034-legal-characterization-of-the-citizen-allocation-act|defenses/D034-legal-characterization-of-the-citizen-allocation-act.md]]
 
 ## Resolution decision
 
 A034 is founded as a characterization gap at the legal interface and does not distort the project when read comparatively: the act it interrogates replaces a state official's discretionary allocation — an act whose formal characterization has never delivered practical, per-decision accountability. The accepted resolution is an allocation-act characterization record carried by the existing Allocation Mandate.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this integrates a minimal record through an existing object and bounds the doctrine itself: the platform records the characterization a jurisdiction chooses and discloses it to citizens; constructing that characterization remains external constitutional and administrative law.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this integrates a minimal record through an existing object and bounds the doctrine itself: the platform records the characterization a jurisdiction chooses and discloses it to citizens; constructing that characterization remains external constitutional and administrative law.
 
 ## Rule added to Core v0
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture separates proposer, modeler/designer, executor, fiscalizer, evi
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: collusion among project roles.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`.
-- `knowledge/07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY.md`.
-- `knowledge/hypotheses/H003-distributed-trust.md`.
-- `knowledge/hypotheses/H008-distributed-accountability.md`.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: collusion among project roles.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]].
+- [[07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY|knowledge/07_SESSION_CORE_OBJECTS_FISCALIZATION_AND_SIMPLICITY.md]].
+- [[H003-distributed-trust|knowledge/hypotheses/H003-distributed-trust.md]].
+- [[H008-distributed-accountability|knowledge/hypotheses/H008-distributed-accountability.md]].
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]].
 
 ## Problem
 

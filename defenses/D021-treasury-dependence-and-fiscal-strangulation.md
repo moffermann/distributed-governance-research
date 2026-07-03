@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION|docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A021-treasury-dependence-and-fiscal-strangulation.md`
+- Attack file: [[A021-treasury-dependence-and-fiscal-strangulation|attacks/A021-treasury-dependence-and-fiscal-strangulation.md]]
 - Attack title: `A021 - Treasury Dependence and Fiscal Strangulation`
 - Source: second-round attack queue, treasury dependence and fiscal strangulation.
 

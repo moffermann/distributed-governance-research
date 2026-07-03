@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A020-agenda-setting-capture-through-planning-scope-construction.md`
+- Attack file: [[A020-agenda-setting-capture-through-planning-scope-construction|attacks/A020-agenda-setting-capture-through-planning-scope-construction.md]]
 - Attack title: `A020 - Agenda-Setting Capture Through Planning Scope Construction`
 - Source: second-round attack queue, agenda-setting and scope construction.
 

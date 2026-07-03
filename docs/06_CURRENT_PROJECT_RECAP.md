@@ -77,8 +77,8 @@ Only actors who can observe or verify a dimension should formally evaluate that 
 
 A first matrix exists in:
 
-- `knowledge/functional-matrix-v0.md`
-- `knowledge/functional-matrix-v0-addendum-missing-functions.md`
+- [[functional-matrix-v0|knowledge/functional-matrix-v0.md]]
+- [[functional-matrix-v0-addendum-missing-functions|knowledge/functional-matrix-v0-addendum-missing-functions.md]]
 
 The matrix currently includes force functions, rule functions, executive allocation functions, macro coordination functions, planning, environment, family/care, public finance, and oversight.
 
@@ -86,10 +86,10 @@ The matrix currently includes force functions, rule functions, executive allocat
 
 The planning architecture is stored in:
 
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md`
-- `knowledge/hypotheses/H010-primary-responsibility-principle.md`
-- `knowledge/concepts/distributed-planning-architecture.md`
-- `docs/diagrams/distributed-planning-architecture-v1.md`
+- [[H009-binding-evolutionary-planning|knowledge/hypotheses/H009-binding-evolutionary-planning.md]]
+- [[H010-primary-responsibility-principle|knowledge/hypotheses/H010-primary-responsibility-principle.md]]
+- [[distributed-planning-architecture|knowledge/concepts/distributed-planning-architecture.md]]
+- [[distributed-planning-architecture-v1|docs/diagrams/distributed-planning-architecture-v1.md]]
 
 The planning model includes:
 
@@ -145,7 +145,7 @@ Ricardo acted as an initial external reviewer. His questions helped clarify:
 
 A review log is stored in:
 
-- `knowledge/external-review/ricardo-review-log.md`
+- [[ricardo-review-log|knowledge/external-review/ricardo-review-log.md]]
 
 ## Current phase
 

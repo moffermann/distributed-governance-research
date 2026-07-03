@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[100_LONG_HORIZON_LANES_AND_A032_RESOLUTION|docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A032-intertemporal-myopia-and-long-term-underinvestment.md`
+- Attack file: [[A032-intertemporal-myopia-and-long-term-underinvestment|attacks/A032-intertemporal-myopia-and-long-term-underinvestment.md]]
 - Attack title: `A032 - Intertemporal Myopia and Long-Term Underinvestment`
 - Source: second-round attack queue, intertemporal myopia and long-term underinvestment.
 

@@ -15,13 +15,13 @@ This diagram expands the earlier tutored-mode sketch by separating:
 
 Source baseline:
 
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`
-- `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md`
-- `docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md`
-- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
-- `docs/diagrams/v0-operating-mode-transition-state.md`
-- `docs/diagrams/v0-tutored-mode-governance-resolution.md`
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]]
+- [[59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md]]
+- [[57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md]]
+- [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]]
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]
+- [[v0-operating-mode-transition-state|docs/diagrams/v0-operating-mode-transition-state.md]]
+- [[v0-tutored-mode-governance-resolution|docs/diagrams/v0-tutored-mode-governance-resolution.md]]
 
 Related sources: C007, C019, C020, C021, H009, H017, H058.
 

@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A005-neglected-essential-services.md`
-- Defense: `defenses/D005-neglected-essential-services.md`
+- Attack: [[A005-neglected-essential-services|attacks/A005-neglected-essential-services.md]]
+- Defense: [[D005-neglected-essential-services|defenses/D005-neglected-essential-services.md]]
 
 ## Resolution decision
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION|docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The model separates fulfillment evaluation, technical review, fiscalization conc
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: conflicting reviews.
-- `knowledge/concepts/evaluation-context-taxonomy-v0.md`.
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`.
-- `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md`.
-- `docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST.md` evaluation and fiscalization checklists.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md` object `EvaluationRecord`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: conflicting reviews.
+- [[evaluation-context-taxonomy-v0|knowledge/concepts/evaluation-context-taxonomy-v0.md]].
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]].
+- [[56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md]].
+- [[38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST.md]] evaluation and fiscalization checklists.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] object `EvaluationRecord`.
 
 ## Problem
 

@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A024-underprovision-of-non-salient-public-goods.md`
-- Defense: `defenses/D024-underprovision-of-non-salient-public-goods.md`
+- Attack: [[A024-underprovision-of-non-salient-public-goods|attacks/A024-underprovision-of-non-salient-public-goods.md]]
+- Defense: [[D024-underprovision-of-non-salient-public-goods|defenses/D024-underprovision-of-non-salient-public-goods.md]]
 
 ## Resolution decision
 
 A024 is partially founded. Atomized voluntary allocation inherits the documented biases of charitable giving — identifiable-victim salience, warm glow, and preference for photogenic outputs — so above the protected floor abstract, preventive, statistical-life goods such as drainage, disease prevention, data infrastructure, and routine maintenance can be under-allocated relative to their welfare value even under fully honest participation. The bias is real and currently unmeasured. But the architecture never routes the whole budget through salience-driven choice: the non-assignable pool and the essential floors (A005) exclude precisely the catastrophic-underprovision goods, and system-defined defaults channel inactive citizens' funds by rule rather than salience. The accepted resolution is salience-bias observability above the protected floor plus a disclosed non-salient default weighting.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with observability. It exposes the salience gradient through existing objects — Planning Scope, citizen funding and automatic allocation profiles, the default allocation rule, and administrative observability — rather than correcting citizen preferences or imposing a welfare function. The catastrophic cases are already structurally protected, so what remains is to make the middle-ground gradient visible and to route inactive budget by planning priority.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds with observability. It exposes the salience gradient through existing objects — Planning Scope, citizen funding and automatic allocation profiles, the default allocation rule, and administrative observability — rather than correcting citizen preferences or imposing a welfare function. The catastrophic cases are already structurally protected, so what remains is to make the middle-ground gradient visible and to route inactive budget by planning priority.
 
 ## Rule added to Core v0
 

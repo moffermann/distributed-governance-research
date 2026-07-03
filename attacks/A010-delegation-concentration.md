@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture permits citizen-chosen delegation concentration with visibility
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: delegation concentration.
-- `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md`.
-- `knowledge/hypotheses/H043-transparent-delegation-concentration.md`.
-- `knowledge/hypotheses/H046-delegated-action-reporting.md`.
-- `docs/27_CITIZEN_DELEGATION_FLOW.md`.
-- `docs/diagrams/v0-delegation-state.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: delegation concentration.
+- [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]].
+- [[H043-transparent-delegation-concentration|knowledge/hypotheses/H043-transparent-delegation-concentration.md]].
+- [[H046-delegated-action-reporting|knowledge/hypotheses/H046-delegated-action-reporting.md]].
+- [[27_CITIZEN_DELEGATION_FLOW|docs/27_CITIZEN_DELEGATION_FLOW.md]].
+- [[v0-delegation-state|docs/diagrams/v0-delegation-state.md]].
 
 ## Problem
 

@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A010-delegation-concentration.md`
+- Attack file: [[A010-delegation-concentration|attacks/A010-delegation-concentration.md]]
 - Attack title: `A010 - Delegation Concentration`
 - Roadmap source: Phase 3 priority objection, delegation concentration.
 

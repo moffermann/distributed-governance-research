@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A003-fiscalizer-capture-or-fiscalization-failure.md`
-- Defense: `defenses/D003-fiscalizer-capture-or-fiscalization-failure.md`
+- Attack: [[A003-fiscalizer-capture-or-fiscalization-failure|attacks/A003-fiscalizer-capture-or-fiscalization-failure.md]]
+- Defense: [[D003-fiscalizer-capture-or-fiscalization-failure|defenses/D003-fiscalizer-capture-or-fiscalization-failure.md]]
 
 ## Resolution decision
 

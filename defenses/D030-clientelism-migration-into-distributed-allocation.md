@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION|docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A030-clientelism-migration-into-distributed-allocation.md`
+- Attack file: [[A030-clientelism-migration-into-distributed-allocation|attacks/A030-clientelism-migration-into-distributed-allocation.md]]
 - Attack title: `A030 - Clientelism Migration into Distributed Allocation`
 - Source: second-round attack queue, off-platform clientelist exchange.
 

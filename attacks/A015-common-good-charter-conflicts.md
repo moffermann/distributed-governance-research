@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION|docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Core v0 does not include full common-good charter governance, but projects must 
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: common-good charter conflicts.
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md`.
-- `knowledge/hypotheses/H050-common-good-governance-program.md`.
-- `knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md`.
-- `knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md`.
-- `docs/09_PROJECT_OBJECT_MODEL.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: common-good charter conflicts.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]].
+- [[H050-common-good-governance-program|knowledge/hypotheses/H050-common-good-governance-program.md]].
+- [[H051-composite-programs-as-project-aggregators|knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md]].
+- [[P003-project-responsibility-for-undeclared-antivalue|knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md]].
+- [[09_PROJECT_OBJECT_MODEL|docs/09_PROJECT_OBJECT_MODEL.md]].
 
 ## Problem
 
@@ -75,4 +75,4 @@ A plaza renovation project removes informal sports areas used by teenagers. The 
 
 ## Resolution output
 
-Resolved in `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`: a minimum common-good impact sufficiency test over the existing C022 common-good impact declaration rather than a charter system, registry, or platform adjudication authority. A project that plausibly affects a common good identifies affected assets and affected parties, declares no impact, uncertain impact with explanation, or impact with explanation, provides evidence and fiscalization where impact is plausible, declares an active-charter relationship where a charter exists, avoids unexplained overuse of `uncertain`, and connects material omissions to fiscalization, complaint, mitigation, responsibility, and reputation effects. Full charter registry, charter voting, and platform common-good adjudication remain Extension v1+, and conflicts requiring legal, environmental, cultural, or scientific authority route to external channels.
+Resolved in [[81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION|docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md]]: a minimum common-good impact sufficiency test over the existing C022 common-good impact declaration rather than a charter system, registry, or platform adjudication authority. A project that plausibly affects a common good identifies affected assets and affected parties, declares no impact, uncertain impact with explanation, or impact with explanation, provides evidence and fiscalization where impact is plausible, declares an active-charter relationship where a charter exists, avoids unexplained overuse of `uncertain`, and connects material omissions to fiscalization, complaint, mitigation, responsibility, and reputation effects. Full charter registry, charter voting, and platform common-good adjudication remain Extension v1+, and conflicts requiring legal, environmental, cultural, or scientific authority route to external channels.

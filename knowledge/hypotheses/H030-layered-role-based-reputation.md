@@ -10,11 +10,11 @@ Formal reputation updates should be based on verified value fulfillment, metric 
 
 This hypothesis is aligned with:
 
-- `knowledge/concepts/reputation-input-chain-v0.md`;
-- `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md`;
-- `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md`;
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md`;
-- `docs/34_CORE_V0_SCOPE_FREEZE.md`.
+- [[reputation-input-chain-v0|knowledge/concepts/reputation-input-chain-v0.md]];
+- [[51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md]];
+- [[56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md]];
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]];
+- [[34_CORE_V0_SCOPE_FREEZE|docs/34_CORE_V0_SCOPE_FREEZE.md]].
 
 H030 should be read as the reputation-visibility architecture. H014 defines the signal-input-update-summary chain. C012 defines when responsibility can affect a role. C018 defines how value fulfillment and closure context should affect reputation.
 

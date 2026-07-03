@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A025-rational-ignorance-and-participation-decay.md`
-- Defense: `defenses/D025-rational-ignorance-and-participation-decay.md`
+- Attack: [[A025-rational-ignorance-and-participation-decay|attacks/A025-rational-ignorance-and-participation-decay.md]]
+- Defense: [[D025-rational-ignorance-and-participation-decay|defenses/D025-rational-ignorance-and-participation-decay.md]]
 
 ## Resolution decision
 
 A025 is founded as a behavioral prediction. Each citizen's monthly civic allocation is individually small, so by Downsian logic the rational return on careful evaluation is near zero and most citizens route their allocation through the cheapest channel — the public default, a stored profile, or a trusted delegate. Participatory-budgeting evidence compounds the concern: active evaluation spikes at launch and decays over subsequent cycles, leaving a shrinking, self-selected active core whose choices are then displayed as the aggregated will of the whole. The architecture never assumed universal active judgment — its intermediation channels are designed, visible, revocable, and auditable — but engagement decay and active-core concentration are not currently measured. The accepted resolution is engagement-decay and active-core observability integrated into functional transition maturity.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates metrics through the existing H054 transition-maturity object, which already lists the share handled by default allocation and direct-versus-delegated participation — hooks the resolution extends rather than a new entity. The simulation vindicates the architecture's designed-intermediation position: `research/simulation-results.md` shows allocation quality is carried by the institutional default anchor conditioned on planner knowledge, while quintupling citizen attention moves quality selection by at most ~0.08 and essentially nothing in default-anchored regimes. Decay must therefore be measured and disclosed, not denied.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates metrics through the existing H054 transition-maturity object, which already lists the share handled by default allocation and direct-versus-delegated participation — hooks the resolution extends rather than a new entity. The simulation vindicates the architecture's designed-intermediation position: [[simulation-results|research/simulation-results.md]] shows allocation quality is carried by the institutional default anchor conditioned on planner knowledge, while quintupling citizen attention moves quality selection by at most ~0.08 and essentially nothing in default-anchored regimes. Decay must therefore be measured and disclosed, not denied.
 
 ## Rule added to Core v0
 

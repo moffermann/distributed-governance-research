@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION|docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A029-program-fragmentation-and-lost-complementarities.md`
+- Attack file: [[A029-program-fragmentation-and-lost-complementarities|attacks/A029-program-fragmentation-and-lost-complementarities.md]]
 - Attack title: `A029 - Program Fragmentation and Lost Complementarities`
 - Source: second-round attack queue, program fragmentation and lost complementarities.
 

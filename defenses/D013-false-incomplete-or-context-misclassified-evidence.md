@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`, already propagated into the core corpus; its scope boundary was clarified under `knowledge/principles/P007-integrate-or-bound-rule.md`.
+Phase 3 paired review completed. Accepted resolution: [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]], already propagated into the core corpus; its scope boundary was clarified under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A013-false-incomplete-or-context-misclassified-evidence.md`
+- Attack file: [[A013-false-incomplete-or-context-misclassified-evidence|attacks/A013-false-incomplete-or-context-misclassified-evidence.md]]
 - Attack title: `A013 - False, Incomplete, or Context-Misclassified Evidence`
 - Roadmap source: Phase 3 priority objections, evidence quality and false, incomplete, or context-misclassified evidence.
 
@@ -36,12 +36,12 @@ For Macul, photos may be accepted as contextual material, rejected as insufficie
 
 ## Project-document basis
 
-- `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md` resolves the Core v0 gap by requiring formal evidence producer qualification, method/protocol fit, traceable metadata, report discipline, and effect-specific probative fitness for hard-KPI fulfillment/control evidence.
-- `knowledge/open-questions/evidence-producer-evidence-quality-validation.md` is now resolved for Core v0 and keeps detailed scoring, AI-generation detection, calibration verification, and country-specific legal admissibility as future implementation or country-implementation work.
-- `knowledge/concepts/evidence-context-taxonomy-v0.md` prohibits bare `evidence` for system objects with procedural consequences and distinguishes complaint evidence, fulfillment evidence, control evidence, administrative observability data, and research evidence.
-- `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md` now pairs evidence-producer independence with A013's qualification and method standard for formal hard-KPI evidence.
-- `docs/diagrams/v0-project-evidential-contract-state.md` now routes submitted evidence through qualification, method-fit, quality, and sufficiency review before formal effects.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md` defines `EvidenceProducerQualificationStandard`, `EvidenceQualityReview`, and validation gates that block hard-KPI effects where producer qualification or method fit is missing.
+- [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]] resolves the Core v0 gap by requiring formal evidence producer qualification, method/protocol fit, traceable metadata, report discipline, and effect-specific probative fitness for hard-KPI fulfillment/control evidence.
+- [[evidence-producer-evidence-quality-validation|knowledge/open-questions/evidence-producer-evidence-quality-validation.md]] is now resolved for Core v0 and keeps detailed scoring, AI-generation detection, calibration verification, and country-specific legal admissibility as future implementation or country-implementation work.
+- [[evidence-context-taxonomy-v0|knowledge/concepts/evidence-context-taxonomy-v0.md]] prohibits bare `evidence` for system objects with procedural consequences and distinguishes complaint evidence, fulfillment evidence, control evidence, administrative observability data, and research evidence.
+- [[46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md]] now pairs evidence-producer independence with A013's qualification and method standard for formal hard-KPI evidence.
+- [[v0-project-evidential-contract-state|docs/diagrams/v0-project-evidential-contract-state.md]] now routes submitted evidence through qualification, method-fit, quality, and sufficiency review before formal effects.
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] defines `EvidenceProducerQualificationStandard`, `EvidenceQualityReview`, and validation gates that block hard-KPI effects where producer qualification or method fit is missing.
 - [[P007-integrate-or-bound-rule#^r520eddb3|knowledge/principles/P007-integrate-or-bound-rule.md]] classifies this as a justified mechanism-heavy integration: unfit formal evidence defeats the auditable-evidence core claim, and the standard binds only Threshold Policy-marked formal, paid, or hard-effect evidence needs.
 
 ## Bibliographic basis

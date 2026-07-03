@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION|docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Visible funding progress, active-support counts, and delegate follower numbers t
 
 ## Location in current project
 
-- `docs/15_CITIZEN_HOME_DISCOVERY_LAYER.md`, which surfaces urgent, almost-funded, and signal-count information on the home layer.
-- `knowledge/hypotheses/H031-transparent-project-discovery-layer.md`, which lists "high social support" and "close to funding completion" as discovery signals.
-- `knowledge/hypotheses/H026-support-vs-financing-signals.md`, which displays active support, funding, and follower signals separately but still publicly.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md`, whose "most supported" and "almost ready" ordering modes rank projects by accumulated signal.
-- `docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER.md`, whose compact cards show funding progress and support counts side by side for fast comparison.
-- `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`, which bounds platform-introduced influence but not citizen-on-citizen herding through visible reasons.
+- [[15_CITIZEN_HOME_DISCOVERY_LAYER|docs/15_CITIZEN_HOME_DISCOVERY_LAYER.md]], which surfaces urgent, almost-funded, and signal-count information on the home layer.
+- [[H031-transparent-project-discovery-layer|knowledge/hypotheses/H031-transparent-project-discovery-layer.md]], which lists "high social support" and "close to funding completion" as discovery signals.
+- [[H026-support-vs-financing-signals|knowledge/hypotheses/H026-support-vs-financing-signals.md]], which displays active support, funding, and follower signals separately but still publicly.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]], whose "most supported" and "almost ready" ordering modes rank projects by accumulated signal.
+- [[16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER.md]], whose compact cards show funding progress and support counts side by side for fast comparison.
+- [[74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION|docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md]], which bounds platform-introduced influence but not citizen-on-citizen herding through visible reasons.
 
 ## Problem
 
@@ -84,4 +84,4 @@ At the launch of a national cycle, a set of projects backed by well-organized pr
 
 ## Resolution output
 
-Resolved in `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md` as a founded attack under P007: the resolution integrates herding observability through existing objects and bounds the visibility redesign. Core v0 now surfaces funding-velocity-versus-evidence-maturity indicators, funding-source independence signals including the share of a project's funding arriving after high-visibility exposure, and discovery-slot concentration observability, while distinguishing logistics facts from social-proof cues at the evaluation moment. Funding-target closure (H035) is retained as the structural cascade truncator with its claim stated honestly: per `research/simulation-results.md` E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, which depends on the default anchor, not the cap. Funding progress stays visible and Core v0 does not adjudicate whether citizens imitate; staged-visibility experiments remain Extension v1+. Visible social proof is intrinsic, so herding is measured and bounded, not prevented — a declared limitation for the paper.
+Resolved in [[95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION|docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md]] as a founded attack under P007: the resolution integrates herding observability through existing objects and bounds the visibility redesign. Core v0 now surfaces funding-velocity-versus-evidence-maturity indicators, funding-source independence signals including the share of a project's funding arriving after high-visibility exposure, and discovery-slot concentration observability, while distinguishing logistics facts from social-proof cues at the evaluation moment. Funding-target closure (H035) is retained as the structural cascade truncator with its claim stated honestly: per [[simulation-results|research/simulation-results.md]] E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, which depends on the default anchor, not the cap. Funding progress stays visible and Core v0 does not adjudicate whether citizens imitate; staged-visibility experiments remain Extension v1+. Visible social proof is intrinsic, so herding is measured and bounded, not prevented — a declared limitation for the paper.

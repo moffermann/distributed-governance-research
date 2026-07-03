@@ -12,12 +12,12 @@ Support and justified objection are civic signals. They should be reversible by 
 
 This hypothesis is aligned with:
 
-- `docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION.md`;
-- `docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md`;
-- `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`;
-- `knowledge/hypotheses/H027-proportional-project-thresholds.md`;
-- `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`;
-- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`.
+- [[39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION.md]];
+- [[41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md]];
+- [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]];
+- [[H027-proportional-project-thresholds|knowledge/hypotheses/H027-proportional-project-thresholds.md]];
+- [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]];
+- [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]].
 
 C001 already rejects simple dislike signals for ideas and uses structured objections instead. H026 extends the same logic to projects while adding the project-specific distinction between civic signals and financial commitments.
 

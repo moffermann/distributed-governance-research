@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION|docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A028-spatial-and-group-inequity-of-allocation-outcomes.md`
+- Attack file: [[A028-spatial-and-group-inequity-of-allocation-outcomes|attacks/A028-spatial-and-group-inequity-of-allocation-outcomes.md]]
 - Attack title: `A028 - Spatial and Group Inequity of Allocation Outcomes`
 - Source: second-round attack queue, spatial and group inequity of allocation outcomes.
 

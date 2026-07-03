@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A011-moderation-abuse-in-transition-pilots.md`
+- Attack file: [[A011-moderation-abuse-in-transition-pilots|attacks/A011-moderation-abuse-in-transition-pilots.md]]
 - Attack title: `A011 - Moderation Abuse in Transition Pilots`
 - Roadmap source: Phase 3 priority objection, moderation abuse in transition pilots.
 

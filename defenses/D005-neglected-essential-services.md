@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A005-neglected-essential-services.md`
+- Attack file: [[A005-neglected-essential-services|attacks/A005-neglected-essential-services.md]]
 - Attack title: `A005 - Neglected Essential Services`
 - Roadmap source: Phase 3 priority objection, neglected essential services.
 

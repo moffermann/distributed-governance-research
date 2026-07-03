@@ -8,9 +8,9 @@ This diagram refines the older project lifecycle diagram. It separates the paren
 
 Source baseline:
 
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
-- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
-- `docs/diagrams/v0-formal-entity-relationship.md`
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]
+- [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]]
+- [[v0-formal-entity-relationship|docs/diagrams/v0-formal-entity-relationship.md]]
 
 Related sources: H008, H011, H013, H016, H018, H019, H021, H022, H040, C005, C016, C017, C018, C024, A006, A007, Funding Window Expiry.
 

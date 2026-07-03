@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION|docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Allocation can become an identity battleground rather than a public-value judgme
 
 ## Location in current project
 
-- `docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md` value-icon catalog and support-signal vocabulary that can become identity markers.
-- `knowledge/hypotheses/H012-distributed-value-antivalue-management.md` value floors and antivalue ceilings open to contested value framing.
-- `knowledge/hypotheses/H026-support-vs-financing-signals.md` reversible support and justified-objection signals that can be brigaded.
-- `knowledge/principles/P002-social-sovereignty-over-value.md` social sovereignty over value assignment.
-- `docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW.md` comment and question flow as a deliberation surface exposed to polarization.
-- `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md` common-good impact declarations that can be contested along identity lines.
+- [[13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md]] value-icon catalog and support-signal vocabulary that can become identity markers.
+- [[H012-distributed-value-antivalue-management|knowledge/hypotheses/H012-distributed-value-antivalue-management.md]] value floors and antivalue ceilings open to contested value framing.
+- [[H026-support-vs-financing-signals|knowledge/hypotheses/H026-support-vs-financing-signals.md]] reversible support and justified-objection signals that can be brigaded.
+- [[P002-social-sovereignty-over-value|knowledge/principles/P002-social-sovereignty-over-value.md]] social sovereignty over value assignment.
+- [[25_CITIZEN_COMMENT_AND_QUESTION_FLOW|docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW.md]] comment and question flow as a deliberation surface exposed to polarization.
+- [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]] common-good impact declarations that can be contested along identity lines.
 
 ## Problem
 
@@ -82,4 +82,4 @@ Two paired projects associated with rival social identities enter the same scope
 
 ## Resolution output
 
-Resolved in `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md` as a partially founded attack under P007: a bounded resolution fixing a motive-neutrality boundary. Citizens' reasons for funding are not platform business (P002), and material effects stay gated identically regardless of motive — antivalue declarations route through measurement and fiscalization, affected-party evidence and threshold policies bind, and a contested antivalue supports a complaint only if someone files one. Core v0 adds funding-bloc correlation observability (synchronized timing, shared origin, reciprocal brigading) as research and administrative data only, without discounting either side's signals, and funding-target closure (H035) bounds brigade amplitude on any single project. There is no motive policing, no viewpoint moderation of allocation, and no polarization score with platform effects. Expressive allocation can still shift aggregate spending toward symbolic battlegrounds; the architecture guarantees the fights stay materially accountable, not that they stop being fights — a declared limitation for the paper.
+Resolved in [[99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION|docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md]] as a partially founded attack under P007: a bounded resolution fixing a motive-neutrality boundary. Citizens' reasons for funding are not platform business (P002), and material effects stay gated identically regardless of motive — antivalue declarations route through measurement and fiscalization, affected-party evidence and threshold policies bind, and a contested antivalue supports a complaint only if someone files one. Core v0 adds funding-bloc correlation observability (synchronized timing, shared origin, reciprocal brigading) as research and administrative data only, without discounting either side's signals, and funding-target closure (H035) bounds brigade amplitude on any single project. There is no motive policing, no viewpoint moderation of allocation, and no polarization score with platform effects. Expressive allocation can still shift aggregate spending toward symbolic battlegrounds; the architecture guarantees the fights stay materially accountable, not that they stop being fights — a declared limitation for the paper.

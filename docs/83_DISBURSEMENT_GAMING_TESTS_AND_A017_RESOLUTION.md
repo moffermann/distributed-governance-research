@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A017-disbursement-gaming.md`
-- Defense: `defenses/D017-disbursement-gaming.md`
+- Attack: [[A017-disbursement-gaming|attacks/A017-disbursement-gaming.md]]
+- Defense: [[D017-disbursement-gaming|defenses/D017-disbursement-gaming.md]]
 
 ## Resolution decision
 
 A017 is founded and does not distort the project when it improves milestone and release discipline. The accepted resolution is disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects, not new machinery.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects, not new machinery.
 
 ## Rule added to Core v0
 

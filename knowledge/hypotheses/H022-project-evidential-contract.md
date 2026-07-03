@@ -18,13 +18,13 @@ H022 concerns `Fulfillment Evidence`, not `Complaint Evidence`. Complaint eviden
 
 This hypothesis is aligned with:
 
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`;
-- `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`;
-- `docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md`;
-- `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md`;
-- `knowledge/hypotheses/H023-incentive-architecture-for-reliable-information.md`;
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`;
-- `docs/09_PROJECT_OBJECT_MODEL.md`.
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]];
+- [[46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md]];
+- [[45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md]];
+- [[54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md]];
+- [[H023-incentive-architecture-for-reliable-information|knowledge/hypotheses/H023-incentive-architecture-for-reliable-information.md]];
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]];
+- [[09_PROJECT_OBJECT_MODEL|docs/09_PROJECT_OBJECT_MODEL.md]].
 
 C010 requires value verification packages instead of isolated metrics. C003 separates executor self-report from corroborated fulfillment evidence. C015 keeps evidence publication separate from evidentiary validation. H023 connects material claims, evidence context, contradictions, verified discovery, and responsibility. H022 defines the ex ante contract that makes those later reviews possible.
 
@@ -209,7 +209,7 @@ Field measurement visit, georeferenced photos, public-access observation, and sh
 
 Fulfillment evidence not anticipated by the contract may still be useful. For example, a resident may submit complaint evidence that public-access gates remain locked during declared open hours. That material may become relevant to the public-access commitment if a fiscalizer or reviewer accepts it as fulfillment evidence, even if the original contract expected only scheduled inspections.
 
-The open question is how to evaluate the quality, authenticity, relevance, AI-generation risk, and usefulness of submitted producer fulfillment/control evidence before it can support fulfillment decisions. That issue is tracked separately in `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`.
+The open question is how to evaluate the quality, authenticity, relevance, AI-generation risk, and usefulness of submitted producer fulfillment/control evidence before it can support fulfillment decisions. That issue is tracked separately in [[evidence-producer-evidence-quality-validation|knowledge/open-questions/evidence-producer-evidence-quality-validation.md]].
 
 ## Citizen-facing simplicity
 

@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION|docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A027-information-cascades-and-allocation-herding.md`
+- Attack file: [[A027-information-cascades-and-allocation-herding|attacks/A027-information-cascades-and-allocation-herding.md]]
 - Attack title: `A027 - Information Cascades and Allocation Herding`
 - Source: second-round attack queue, information cascades and allocation herding.
 

@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A010-delegation-concentration.md`
-- Defense: `defenses/D010-delegation-concentration.md`
+- Attack: [[A010-delegation-concentration|attacks/A010-delegation-concentration.md]]
+- Defense: [[D010-delegation-concentration|defenses/D010-delegation-concentration.md]]
 
 ## Resolution decision
 

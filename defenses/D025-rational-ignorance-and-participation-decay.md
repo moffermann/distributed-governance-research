@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION|docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A025-rational-ignorance-and-participation-decay.md`
+- Attack file: [[A025-rational-ignorance-and-participation-decay|attacks/A025-rational-ignorance-and-participation-decay.md]]
 - Attack title: `A025 - Rational Ignorance and Participation Decay`
 - Source: second-round attack queue, rational ignorance and participation decay.
 

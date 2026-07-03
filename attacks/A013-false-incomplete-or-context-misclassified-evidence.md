@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The model distinguishes complaint evidence, fulfillment evidence, control eviden
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objections: evidence quality and false, incomplete, or context-misclassified evidence.
-- `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`.
-- `knowledge/concepts/evidence-context-taxonomy-v0.md`.
-- `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`.
-- `docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md`.
-- `docs/diagrams/v0-project-evidential-contract-state.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objections: evidence quality and false, incomplete, or context-misclassified evidence.
+- [[evidence-producer-evidence-quality-validation|knowledge/open-questions/evidence-producer-evidence-quality-validation.md]].
+- [[evidence-context-taxonomy-v0|knowledge/concepts/evidence-context-taxonomy-v0.md]].
+- [[46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md]].
+- [[45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md]].
+- [[v0-project-evidential-contract-state|docs/diagrams/v0-project-evidential-contract-state.md]].
 
 ## Problem
 
@@ -81,4 +81,4 @@ Construction funds are released after fiscalizer acceptance of photos and a shor
 
 ## Resolution output
 
-Resolved in `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`: hard KPI fulfillment/control evidence requires a declared producer qualification and method standard before the evidence is financed, produced, reviewed, or used for disbursement, closure, responsibility, reputation, or formal fiscalization effects. Detailed scoring, AI-generated-material detection, calibration registries, and country-specific legal admissibility remain implementation details.
+Resolved in [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]]: hard KPI fulfillment/control evidence requires a declared producer qualification and method standard before the evidence is financed, produced, reviewed, or used for disbursement, closure, responsibility, reputation, or formal fiscalization effects. Detailed scoring, AI-generated-material detection, calibration registries, and country-specific legal admissibility remain implementation details.

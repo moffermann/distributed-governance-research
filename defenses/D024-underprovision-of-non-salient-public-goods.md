@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION|docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A024-underprovision-of-non-salient-public-goods.md`
+- Attack file: [[A024-underprovision-of-non-salient-public-goods|attacks/A024-underprovision-of-non-salient-public-goods.md]]
 - Attack title: `A024 - Underprovision of Non-Salient Public Goods by Atomized Choice`
 - Source: second-round attack queue, underprovision of non-salient public goods.
 

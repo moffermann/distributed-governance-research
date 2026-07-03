@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture has grown from project funding into planning scopes, value pack
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: scope creep and excessive complexity.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md`.
-- `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md`.
-- `docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md`.
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: scope creep and excessive complexity.
+- [[34_CORE_V0_SCOPE_FREEZE|docs/34_CORE_V0_SCOPE_FREEZE.md]].
+- [[P006-layered-complexity-and-citizen-simplicity|knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md]].
+- [[49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md]].
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]].
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]].
 
 ## Problem
 
@@ -74,4 +74,4 @@ A low-risk cultural workshop cannot publish because it gets stuck satisfying con
 
 ## Resolution output
 
-Resolved in `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`: a complexity budget and integrate-or-bound discipline, formalized as `knowledge/principles/P007-integrate-or-bound-rule.md`. Every required object, field, state, or step must name the material failure mode it controls; low-risk projects keep an explicit minimum viable path; heavier burdens trigger through ThresholdPolicy rather than being universalized; new v0 entities pass the cannot-be-safely-derived test; and Extension v1+ ideas do not enter Core v0 by default. Core v0 does not require a quantitative complexity metric, object-count ceiling, or implementation-cost model; the budget is a qualitative discipline applied at design and review time.
+Resolved in [[78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md]]: a complexity budget and integrate-or-bound discipline, formalized as [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]]. Every required object, field, state, or step must name the material failure mode it controls; low-risk projects keep an explicit minimum viable path; heavier burdens trigger through ThresholdPolicy rather than being universalized; new v0 entities pass the cannot-be-safely-derived test; and Extension v1+ ideas do not enter Core v0 by default. Core v0 does not require a quantitative complexity metric, object-count ceiling, or implementation-cost model; the budget is a qualitative discipline applied at design and review time.

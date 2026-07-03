@@ -16,13 +16,13 @@ A perfectly preserved falsehood is still false.
 
 This hypothesis is aligned with:
 
-- `knowledge/hypotheses/H003-distributed-trust.md`;
-- `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`;
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`;
-- `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md`;
-- `docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md`;
-- `docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md`;
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`.
+- [[H003-distributed-trust|knowledge/hypotheses/H003-distributed-trust.md]];
+- [[46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md]];
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]];
+- [[51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md]];
+- [[45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md]];
+- [[41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md]];
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]].
 
 H003 defines the broader distributed-trust principle: confidence requires incentive alignment, verifiability, contradiction, review, consequence, and auditability. C003 already separates executor self-report from corroborated evidence. C010 requires value verification packages instead of isolated metrics. C012 requires role-specific Responsibility Events before reputation penalties. C015 separates evidence publication from evidentiary validation. H023 ties these rules together as an incentive architecture for information reliability.
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION|docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Even with strictly equal per-citizen allocation amounts and equal capacity to pa
 
 ## Location in current project
 
-- `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`, which addresses participation as an input and explicitly defers demographic and outcome measurement to Extension v1+.
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md`, whose equal-per-citizen formula equalizes inputs but says nothing about where allocation lands.
-- `knowledge/hypotheses/H033-system-defined-default-allocation-rule.md`, whose default routes toward roadmap, near-completion, and regional projects but not toward under-served territories by equity rule.
-- `docs/21_CITIZEN_FUNDING_FLOW.md`, where a project's ability to attract funding depends on its being proposed, modeled, and made execution-ready in the first place.
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md`, which supports capacity but frames the fix as assistance, not outcome equalization.
-- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`, whose protected-floor and planning-target machinery is the closest existing analogue to an equalization mechanism but is scoped to essential services, not territorial equity.
+- [[75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md]], which addresses participation as an input and explicitly defers demographic and outcome measurement to Extension v1+.
+- [[H025-civic-tax-wallet-and-distributed-allocation|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]], whose equal-per-citizen formula equalizes inputs but says nothing about where allocation lands.
+- [[H033-system-defined-default-allocation-rule|knowledge/hypotheses/H033-system-defined-default-allocation-rule.md]], whose default routes toward roadmap, near-completion, and regional projects but not toward under-served territories by equity rule.
+- [[21_CITIZEN_FUNDING_FLOW|docs/21_CITIZEN_FUNDING_FLOW.md]], where a project's ability to attract funding depends on its being proposed, modeled, and made execution-ready in the first place.
+- [[H041-distributed-participation-capacity|knowledge/hypotheses/H041-distributed-participation-capacity.md]], which supports capacity but frames the fix as assistance, not outcome equalization.
+- [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]], whose protected-floor and planning-target machinery is the closest existing analogue to an equalization mechanism but is scoped to essential services, not territorial equity.
 
 ## Problem
 
@@ -85,4 +85,4 @@ A ministry runs distributed allocation nationwide for a full function with stric
 
 ## Resolution output
 
-Resolved in `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md` as a founded attack under P007: a bounded resolution with core observability. Core v0 now mandates per-territory and per-group allocation outcome observability — funding per capita by comuna, funded-project density against planning-scope need weights, and capture share by organized proposers — plus an explicit input-equity versus outcome-equity distinction, so equal wallets are not presented as evidence of fair outcomes. Equalization capability is documented as available through allocation-amount formulas (H025), planning-scope lanes and the reused A005 floor-and-lane pattern, the H033 default rule's territorial routing, and preferential supply-side support, all as versioned, publicly authorized country-implementation choices. Core v0 mandates outcome observability, not outcome equality; equalization remains a political choice. With equal wallets and no equalization configured, organized territories will out-capture marginalized ones by default — the architecture makes that measurable for the first time but does not prevent it, a declared limitation for the paper.
+Resolved in [[96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION|docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md]] as a founded attack under P007: a bounded resolution with core observability. Core v0 now mandates per-territory and per-group allocation outcome observability — funding per capita by comuna, funded-project density against planning-scope need weights, and capture share by organized proposers — plus an explicit input-equity versus outcome-equity distinction, so equal wallets are not presented as evidence of fair outcomes. Equalization capability is documented as available through allocation-amount formulas (H025), planning-scope lanes and the reused A005 floor-and-lane pattern, the H033 default rule's territorial routing, and preferential supply-side support, all as versioned, publicly authorized country-implementation choices. Core v0 mandates outcome observability, not outcome equality; equalization remains a political choice. With equal wallets and no equalization configured, organized territories will out-capture marginalized ones by default — the architecture makes that measurable for the first time but does not prevent it, a declared limitation for the paper.

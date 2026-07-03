@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,13 +10,13 @@ Whoever constructs Planning Scopes exercises the second face of power: they deci
 
 ## Location in current project
 
-- `knowledge/open-questions/distributed-roadmap-construction-governance.md` explicit deferral of distributed roadmap and planning-area construction to Extension v1+.
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md` Planning Scope Alignment requirement versus unresolved Roadmap Construction Governance.
-- `knowledge/hypotheses/H057-public-function-funding-scope-gating.md` tutored authority defining or interpreting the active scope and eligibility.
-- `docs/03_ROADMAP.md` H009 alignment note preserving roadmap construction as an open question, not solved in Core v0.
-- `docs/07_CORE_V0_SCOPE.md` Core v0 scope boundaries and planning-scope dependence.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md` tutored decisions as public Governance Resolutions.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md` classification of new ideas and scope-freeze rule.
+- [[distributed-roadmap-construction-governance|knowledge/open-questions/distributed-roadmap-construction-governance.md]] explicit deferral of distributed roadmap and planning-area construction to Extension v1+.
+- [[H009-binding-evolutionary-planning|knowledge/hypotheses/H009-binding-evolutionary-planning.md]] Planning Scope Alignment requirement versus unresolved Roadmap Construction Governance.
+- [[H057-public-function-funding-scope-gating|knowledge/hypotheses/H057-public-function-funding-scope-gating.md]] tutored authority defining or interpreting the active scope and eligibility.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] H009 alignment note preserving roadmap construction as an open question, not solved in Core v0.
+- [[07_CORE_V0_SCOPE|docs/07_CORE_V0_SCOPE.md]] Core v0 scope boundaries and planning-scope dependence.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] tutored decisions as public Governance Resolutions.
+- [[34_CORE_V0_SCOPE_FREEZE|docs/34_CORE_V0_SCOPE_FREEZE.md]] classification of new ideas and scope-freeze rule.
 
 ## Problem
 
@@ -83,4 +83,4 @@ An implementing authority opens three public functions in tutored mode and defin
 
 ## Resolution output
 
-Resolved in `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md` as a bounded resolution under P007: the attack is founded and partially unresolved, and Core v0 formalizes the open limitation rather than solving roadmap-construction governance. Interim observability carries the harm — every Planning Scope carries its Allocation Mandate record and versioned scope definition, scope changes and interpretations surface as Governance Resolutions with timeouts (C020), and out-of-scope demand stays visible as Ideas (C001) with volume observability per rejected or out-of-scope category. The open question `knowledge/open-questions/distributed-roadmap-construction-governance.md` remains the acknowledged constitutional gap and a blocker for open-mode scale deployment. Core v0 does not define who constructs the roadmap; agenda-setting power is documented, versioned, and contestable through visibility only, and full distributed roadmap construction remains Extension v1+. This is a declared open limitation of the architecture and a primary item for the paper's limitations section.
+Resolved in [[87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md]] as a bounded resolution under P007: the attack is founded and partially unresolved, and Core v0 formalizes the open limitation rather than solving roadmap-construction governance. Interim observability carries the harm — every Planning Scope carries its Allocation Mandate record and versioned scope definition, scope changes and interpretations surface as Governance Resolutions with timeouts (C020), and out-of-scope demand stays visible as Ideas (C001) with volume observability per rejected or out-of-scope category. The open question [[distributed-roadmap-construction-governance|knowledge/open-questions/distributed-roadmap-construction-governance.md]] remains the acknowledged constitutional gap and a blocker for open-mode scale deployment. Core v0 does not define who constructs the roadmap; agenda-setting power is documented, versioned, and contestable through visibility only, and full distributed roadmap construction remains Extension v1+. This is a declared open limitation of the architecture and a primary item for the paper's limitations section.

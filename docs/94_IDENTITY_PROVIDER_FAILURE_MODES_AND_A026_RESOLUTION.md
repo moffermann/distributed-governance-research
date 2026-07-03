@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A026-identity-infrastructure-failure-and-surveillance.md`
-- Defense: `defenses/D026-identity-infrastructure-failure-and-surveillance.md`
+- Attack: [[A026-identity-infrastructure-failure-and-surveillance|attacks/A026-identity-infrastructure-failure-and-surveillance.md]]
+- Defense: [[D026-identity-infrastructure-failure-and-surveillance|defenses/D026-identity-infrastructure-failure-and-surveillance.md]]
 
 ## Resolution decision
 
 A026 is partially founded. The verified-identity baseline (P004) makes the external identity provider the system's deepest dependency: whoever compromises, coerces, or misconfigures it can mint Sybil identities to capture allocation or silently exclude targeted citizens, so the platform's Sybil resistance collapses to the provider's integrity. The second harm is chilling: binding a real identity to every civic act accumulates a longitudinal record of political behavior, and because the platform and any authority with lawful access can see through contextual protected identity, citizens contemplating complaints against powerful actors self-censor. Contextual protected identity already exists for exactly these sensitive cases, its access is gated and auditable, and the provider is pre-existing state infrastructure, so under P001 the marginal delta is the linking of civic acts, not the creation of the dossier. The accepted resolution is declared provider failure modes plus minimal purpose-bound records.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with minimal records. It adds declared failure modes, compromise-response procedures, and purpose-bound access auditing through the existing verified-identity, protected-identity, complaint, and audit-trail objects rather than adopting anonymity or building a detection engine as a new primary entity. Verified identity is what makes Sybil capture expensive; abandoning it to buy anonymity would reopen the cheaper, scalable identity-forgery path the whole design exists to close, so the anti-Sybil baseline (P004) stands.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds with minimal records. It adds declared failure modes, compromise-response procedures, and purpose-bound access auditing through the existing verified-identity, protected-identity, complaint, and audit-trail objects rather than adopting anonymity or building a detection engine as a new primary entity. Verified identity is what makes Sybil capture expensive; abandoning it to buy anonymity would reopen the cheaper, scalable identity-forgery path the whole design exists to close, so the anti-Sybil baseline (P004) stands.
 
 ## Rule added to Core v0
 

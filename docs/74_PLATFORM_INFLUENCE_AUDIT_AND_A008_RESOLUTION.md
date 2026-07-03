@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A008-platform-or-algorithmic-capture.md`
-- Defense: `defenses/D008-platform-or-algorithmic-capture.md`
+- Attack: [[A008-platform-or-algorithmic-capture|attacks/A008-platform-or-algorithmic-capture.md]]
+- Defense: [[D008-platform-or-algorithmic-capture|defenses/D008-platform-or-algorithmic-capture.md]]
 
 ## Resolution decision
 

@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A016-resistance-by-incumbent-institutions.md`
-- Defense: `defenses/D016-resistance-by-incumbent-institutions.md`
+- Attack: [[A016-resistance-by-incumbent-institutions|attacks/A016-resistance-by-incumbent-institutions.md]]
+- Defense: [[D016-resistance-by-incumbent-institutions|defenses/D016-resistance-by-incumbent-institutions.md]]
 
 ## Resolution decision
 
 A016 is founded and does not distort the project when it is treated as transition realism. The project rejects the distorted conclusion that institutional resistance invalidates the functional architecture. The accepted resolution is incumbent-resistance observability.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution: it adds no mechanism against resistance itself — only indicators over existing OperatingMode, PlanningScope, and timeout objects — and records the political limit openly.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution: it adds no mechanism against resistance itself — only indicators over existing OperatingMode, PlanningScope, and timeout objects — and records the political limit openly.
 
 ## Rule added to Core v0
 
@@ -43,7 +43,7 @@ The platform cannot force institutional transition, but it can prevent symbolic 
 
 ## Scope boundary and limitation
 
-Core v0 does not require, and cannot provide, any mechanism that compels institutional transition, protects the migrated budget share, or overrides legal authority. Those levers belong to country implementation and ordinary politics. The related fiscal channel is attacked separately in `attacks/A021-treasury-dependence-and-fiscal-strangulation.md`.
+Core v0 does not require, and cannot provide, any mechanism that compels institutional transition, protects the migrated budget share, or overrides legal authority. Those levers belong to country implementation and ordinary politics. The related fiscal channel is attacked separately in [[A021-treasury-dependence-and-fiscal-strangulation|attacks/A021-treasury-dependence-and-fiscal-strangulation.md]].
 
 Limitation statement: the architecture makes incumbent resistance measurable and comparable, but a determined incumbent can still strangle a pilot through scope, budget, and legal choke points; this is a declared political limitation of the model, not a solved problem.
 

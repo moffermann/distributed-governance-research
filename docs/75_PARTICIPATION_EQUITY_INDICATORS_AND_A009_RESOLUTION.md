@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A009-inequality-of-participation.md`
-- Defense: `defenses/D009-inequality-of-participation.md`
+- Attack: [[A009-inequality-of-participation|attacks/A009-inequality-of-participation.md]]
+- Defense: [[D009-inequality-of-participation|defenses/D009-inequality-of-participation.md]]
 
 ## Resolution decision
 

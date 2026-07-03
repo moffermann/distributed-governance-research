@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A030-clientelism-migration-into-distributed-allocation.md`
-- Defense: `defenses/D030-clientelism-migration-into-distributed-allocation.md`
+- Attack: [[A030-clientelism-migration-into-distributed-allocation|attacks/A030-clientelism-migration-into-distributed-allocation.md]]
+- Defense: [[D030-clientelism-migration-into-distributed-allocation|defenses/D030-clientelism-migration-into-distributed-allocation.md]]
 
 ## Resolution decision
 
 A030 is founded as an adaptation risk. Clientelist machines adapt to new institutions rather than dying with the old ones: brokers migrate in as delegates, participation-support providers, community organizations, or intermediaries, exchanging allocation behavior for private favors arranged entirely off the platform. The quid pro quo is invisible by construction, so relationship graphs and related-party declarations never capture it. This resolution adds pattern-level clientelism indicators while keeping sanction in external law.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through the A014 related-party relationship graph and the delegation records rather than adding a new entity or a hard anti-broker ban. Off-platform clientelism attacks the anti-capture claim, so it cannot be ignored, but the on-platform half of the exchange — which today is equally invisible — is already traceable, and the fix is to surface repeated patterns as leads. The off-platform act routes to external law (test 4).
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates observability through the A014 related-party relationship graph and the delegation records rather than adding a new entity or a hard anti-broker ban. Off-platform clientelism attacks the anti-capture claim, so it cannot be ignored, but the on-platform half of the exchange — which today is equally invisible — is already traceable, and the fix is to surface repeated patterns as leads. The off-platform act routes to external law (test 4).
 
 ## Rule added to Core v0
 

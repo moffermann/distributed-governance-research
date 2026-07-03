@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A031-polarization-and-symbolic-capture-of-allocation.md`
-- Defense: `defenses/D031-polarization-and-symbolic-capture-of-allocation.md`
+- Attack: [[A031-polarization-and-symbolic-capture-of-allocation|attacks/A031-polarization-and-symbolic-capture-of-allocation.md]]
+- Defense: [[D031-polarization-and-symbolic-capture-of-allocation|defenses/D031-polarization-and-symbolic-capture-of-allocation.md]]
 
 ## Resolution decision
 
 A031 is partially founded. Allocation can become an identity battleground: funding and defunding turn into tribal signaling, coordinated brigade-funding and boycott campaigns mobilize around projects, and value/antivalue declarations become culture-war terrain, while aggregate signals cannot by themselves distinguish a broadly legitimate project from a well-mobilized one. But expressive, identity-driven allocation is legitimate citizen choice, and the platform's job is not to police motive. This resolution fixes a motive-neutrality boundary and adds mobilization-pattern observability.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution. Polarization threatens the social-sovereignty-over-value claim, so it cannot be ignored, but the control fits existing objects — antivalue management, affected-party evidence, threshold policies, funding-target closure, and administrative observability — and the residual is a deliberation-quality problem, not a missing mechanism. A platform that discounted "tribal" support would arrogate to itself exactly the authority over value that P002 denies it, so the fight is kept materially accountable rather than suppressed.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution. Polarization threatens the social-sovereignty-over-value claim, so it cannot be ignored, but the control fits existing objects — antivalue management, affected-party evidence, threshold policies, funding-target closure, and administrative observability — and the residual is a deliberation-quality problem, not a missing mechanism. A platform that discounted "tribal" support would arrogate to itself exactly the authority over value that P002 denies it, so the fight is kept materially accountable rather than suppressed.
 
 ## Rule added to Core v0
 

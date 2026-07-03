@@ -10,11 +10,11 @@ Funding completion gives the project the right to proceed under controlled execu
 
 This hypothesis is aligned with:
 
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md`;
-- `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`;
-- `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md`;
-- `docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md`;
-- `knowledge/hypotheses/H037-public-revenue-custody-and-disbursement.md`.
+- [[31_PROJECT_DISBURSEMENT_FLOW|docs/31_PROJECT_DISBURSEMENT_FLOW.md]];
+- [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]];
+- [[54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md]];
+- [[55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION|docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md]];
+- [[H037-public-revenue-custody-and-disbursement|knowledge/hypotheses/H037-public-revenue-custody-and-disbursement.md]].
 
 H036 should be read as the financing-control rule that connects funding commitment, milestone validation, evidence, fiscalization, guarantees, retentions, and custody execution.
 

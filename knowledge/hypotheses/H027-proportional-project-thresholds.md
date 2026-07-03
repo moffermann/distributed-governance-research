@@ -10,16 +10,16 @@ In Core v0, these thresholds should be represented as a visible `Threshold Polic
 
 This hypothesis is aligned with:
 
-- `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`;
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md`;
-- `docs/34_CORE_V0_SCOPE_FREEZE.md`;
-- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`;
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`;
-- `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`;
-- `knowledge/hypotheses/H035-funding-target-closure-rule.md`;
-- `knowledge/hypotheses/H040-funding-deadline-and-reformulation-rule.md`;
-- `knowledge/hypotheses/H057-public-function-funding-scope-gating.md`;
-- `knowledge/hypotheses/H058-operating-modes-for-transition.md`.
+- [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]];
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]];
+- [[34_CORE_V0_SCOPE_FREEZE|docs/34_CORE_V0_SCOPE_FREEZE.md]];
+- [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]];
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]];
+- [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]];
+- [[H035-funding-target-closure-rule|knowledge/hypotheses/H035-funding-target-closure-rule.md]];
+- [[H040-funding-deadline-and-reformulation-rule|knowledge/hypotheses/H040-funding-deadline-and-reformulation-rule.md]];
+- [[H057-public-function-funding-scope-gating|knowledge/hypotheses/H057-public-function-funding-scope-gating.md]];
+- [[H058-operating-modes-for-transition|knowledge/hypotheses/H058-operating-modes-for-transition.md]].
 
 H027 defines how applicable thresholds are selected and exposed. H035 defines budget-lane closure. C002 and C013 define control-package closure. H040 defines visible reformulation policy. H057 and H058 define operating-mode and tutored-scope effects where a public authority has configured review power.
 

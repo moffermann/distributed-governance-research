@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION|docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture depends on material claims, contextualized evidence, comments, 
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: information capture.
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md` sections on distributed trust, contextualized evidence, assisted deliberation, and discovery.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md`.
-- `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md`.
-- `knowledge/hypotheses/H003-distributed-trust.md`.
-- `knowledge/hypotheses/H023-incentive-architecture-for-reliable-information.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: information capture.
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]] sections on distributed trust, contextualized evidence, assisted deliberation, and discovery.
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]].
+- [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]].
+- [[H003-distributed-trust|knowledge/hypotheses/H003-distributed-trust.md]].
+- [[H023-incentive-architecture-for-reliable-information|knowledge/hypotheses/H023-incentive-architecture-for-reliable-information.md]].
 
 ## Problem
 

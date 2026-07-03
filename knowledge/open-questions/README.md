@@ -18,4 +18,4 @@
 
 ## Resolved or bounded questions
 
-- [[evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]] — resolved for Core v0 by `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`; detailed scoring, authenticity, calibration, AI-detection, and country-specific legal admissibility remain implementation or country-implementation questions.
+- [[evidence-producer-evidence-quality-validation|Evidence Producer Evidence Quality Validation]] — resolved for Core v0 by [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]]; detailed scoring, authenticity, calibration, AI-detection, and country-specific legal admissibility remain implementation or country-implementation questions.

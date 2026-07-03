@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed and propagated. Accepted resolution: `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`.
+Phase 3 paired review completed and propagated. Accepted resolution: [[70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A004-metric-manipulation-and-goodhart-effects.md`
+- Attack file: [[A004-metric-manipulation-and-goodhart-effects|attacks/A004-metric-manipulation-and-goodhart-effects.md]]
 - Attack title: `A004 - Metric Manipulation and Goodhart Effects`
 - Roadmap source: Phase 3 priority objection, manipulation of metrics.
 

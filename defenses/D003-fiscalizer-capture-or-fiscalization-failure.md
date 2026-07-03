@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION|docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A003-fiscalizer-capture-or-fiscalization-failure.md`
+- Attack file: [[A003-fiscalizer-capture-or-fiscalization-failure|attacks/A003-fiscalizer-capture-or-fiscalization-failure.md]]
 - Attack title: `A003 - Fiscalizer Capture or Fiscalization Failure`
 - Roadmap source: Phase 3 priority objections, fiscalization failure and fiscalizer capture.
 

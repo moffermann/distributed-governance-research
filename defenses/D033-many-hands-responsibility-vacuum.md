@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A033-many-hands-responsibility-vacuum.md`
+- Attack file: [[A033-many-hands-responsibility-vacuum|attacks/A033-many-hands-responsibility-vacuum.md]]
 - Attack title: `A033 - The Problem of Many Hands: Responsibility Vacuum`
 - Source: second-round attack queue, many-hands responsibility vacuum.
 

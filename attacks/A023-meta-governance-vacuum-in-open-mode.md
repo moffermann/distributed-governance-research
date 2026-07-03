@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[91_OPEN_MODE_GATING_AND_A023_RESOLUTION|docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Protocol-change governance defines change types, versioning, transition rules, a
 
 ## Location in current project
 
-- `docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md` non-tutored path where "the exact voting mechanics can remain future work."
-- `knowledge/hypotheses/H017-meta-governance-protocol-evolution.md` non-tutored Protocol Change Proposal with approval mechanics left unspecified.
-- `knowledge/hypotheses/H058-operating-modes-for-transition.md` open mode operating under the ordinary distributed protocol without pre-publication moderation.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md` full constitutional meta-governance placed in Extension v1+.
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md` blueprint dependence on protocol evolution.
-- `docs/diagrams/v0-governance-resolution-sequence.md` resolution sequence built around tutored authority decisions, not open-mode voting.
+- [[57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md]] non-tutored path where "the exact voting mechanics can remain future work."
+- [[H017-meta-governance-protocol-evolution|knowledge/hypotheses/H017-meta-governance-protocol-evolution.md]] non-tutored Protocol Change Proposal with approval mechanics left unspecified.
+- [[H058-operating-modes-for-transition|knowledge/hypotheses/H058-operating-modes-for-transition.md]] open mode operating under the ordinary distributed protocol without pre-publication moderation.
+- [[34_CORE_V0_SCOPE_FREEZE|docs/34_CORE_V0_SCOPE_FREEZE.md]] full constitutional meta-governance placed in Extension v1+.
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]] blueprint dependence on protocol evolution.
+- [[v0-governance-resolution-sequence|docs/diagrams/v0-governance-resolution-sequence.md]] resolution sequence built around tutored authority decisions, not open-mode voting.
 
 ## Problem
 
@@ -84,4 +84,4 @@ A public function has operated in open mode for two years with broad trust. Turn
 
 ## Resolution output
 
-Resolved in `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md`: classified founded as an admitted deferral and bounded under P007, which formalizes the gate rather than the mechanics. Core v0 now gates open-mode deployment — no public function may exit into open mode until constitutional-level decision mechanics (who votes on protocol changes, with what weights and quorum, and how constitutional rules differ from operational ones) are resolved and published — while C019's procedural shell remains binding in every mode and tutored and semi-open pilots may run indefinitely under existing Governance Resolution and timeout machinery. The mechanics remain undefined by design; defining them is future constitutional work, not configuration. The architecture's mature state is therefore unspecified at its highest-leverage layer, and any premature open-mode deployment would face rule-level capture with no defense.
+Resolved in [[91_OPEN_MODE_GATING_AND_A023_RESOLUTION|docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md]]: classified founded as an admitted deferral and bounded under P007, which formalizes the gate rather than the mechanics. Core v0 now gates open-mode deployment — no public function may exit into open mode until constitutional-level decision mechanics (who votes on protocol changes, with what weights and quorum, and how constitutional rules differ from operational ones) are resolved and published — while C019's procedural shell remains binding in every mode and tutored and semi-open pilots may run indefinitely under existing Governance Resolution and timeout machinery. The mechanics remain undefined by design; defining them is future constitutional work, not configuration. The architecture's mature state is therefore unspecified at its highest-leverage layer, and any premature open-mode deployment would face rule-level capture with no defense.

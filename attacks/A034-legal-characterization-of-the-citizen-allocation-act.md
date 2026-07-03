@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]].
 
 ## Description
 
@@ -10,11 +10,11 @@ The architecture mechanically specifies the citizen's funding act — a non-with
 
 ## Location in current project
 
-- `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md` fixes the commitment as non-withdrawable until closure but does not characterize the act.
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md` defines the ledger and custody mechanics without a doctrinal frame.
-- `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md` records the authorization to migrate budget, not the nature of the citizen's exercise of it.
-- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md` governs reassignment on expiry without stating any funder review right.
-- `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md` names this gap as an open question.
+- [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]] fixes the commitment as non-withdrawable until closure but does not characterize the act.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]] defines the ledger and custody mechanics without a doctrinal frame.
+- [[86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md]] records the authorization to migrate budget, not the nature of the citizen's exercise of it.
+- [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]] governs reassignment on expiry without stating any funder review right.
+- [[101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL|docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md]] names this gap as an open question.
 
 ## Problem
 

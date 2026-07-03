@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A022-thin-markets-for-fiscalization-and-evidence-supply.md`
+- Attack file: [[A022-thin-markets-for-fiscalization-and-evidence-supply|attacks/A022-thin-markets-for-fiscalization-and-evidence-supply.md]]
 - Attack title: `A022 - Thin Markets for Fiscalization and Evidence Supply`
 - Source: second-round attack queue, thin markets for fiscalization and evidence supply.
 

@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation. Propagated into the core corpus.
+Phase 3 paired review completed. Accepted resolution: [[84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md]], refined under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]] before core propagation. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A018-collusion-among-project-roles.md`
+- Attack file: [[A018-collusion-among-project-roles|attacks/A018-collusion-among-project-roles.md]]
 - Attack title: `A018 - Collusion Among Project Roles`
 - Roadmap source: Phase 3 priority objection, collusion among project roles.
 

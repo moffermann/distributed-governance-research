@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION|docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Atomized voluntary allocation lets millions of citizens direct assignable funds 
 
 ## Location in current project
 
-- `docs/21_CITIZEN_FUNDING_FLOW.md`, funding as a bounded allocation action driven by citizen choice.
-- `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`, floor-and-lane rule and its scope limits.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md`, anti-neglect safeguards and what H002 does not claim.
-- `knowledge/hypotheses/H033-system-defined-default-allocation-rule.md`, default allocation categories.
-- `knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md`, monthly cycle and fallback routing.
-- `docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md`, automatic allocation profile categories.
+- [[21_CITIZEN_FUNDING_FLOW|docs/21_CITIZEN_FUNDING_FLOW.md]], funding as a bounded allocation action driven by citizen choice.
+- [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]], floor-and-lane rule and its scope limits.
+- [[H002-distributed-resource-allocation|knowledge/hypotheses/H002-distributed-resource-allocation.md]], anti-neglect safeguards and what H002 does not claim.
+- [[H033-system-defined-default-allocation-rule|knowledge/hypotheses/H033-system-defined-default-allocation-rule.md]], default allocation categories.
+- [[H038-monthly-use-it-or-allocate-it-cycle|knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md]], monthly cycle and fallback routing.
+- [[28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md]], automatic allocation profile categories.
 
 ## Problem
 
@@ -83,4 +83,4 @@ A commune runs the distributed model for several years with high participation a
 
 ## Resolution output
 
-Resolved in `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`: classified partially founded and bounded with observability under P007. Core v0 gained salience-bias observability above the protected floor — funding per category against declared planning-scope need weights, underfunded-need indicators, and non-salient-category visibility in discovery — while the non-assignable pool and essential floors (A005) remain the structural answer for catastrophic tails and default allocation rules channel inactive budget by planning priority rather than salience; any default weighting toward under-allocated non-salient categories is a disclosed, versioned protocol choice. Core v0 does not correct citizen preferences or impose a welfare function; it exposes the salience gradient. Above the floor that gradient is real, and correcting it beyond defaults and visibility is a political choice for planning-scope governance, not the platform.
+Resolved in [[92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION|docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md]]: classified partially founded and bounded with observability under P007. Core v0 gained salience-bias observability above the protected floor — funding per category against declared planning-scope need weights, underfunded-need indicators, and non-salient-category visibility in discovery — while the non-assignable pool and essential floors (A005) remain the structural answer for catastrophic tails and default allocation rules channel inactive budget by planning priority rather than salience; any default weighting toward under-allocated non-salient categories is a disclosed, versioned protocol choice. Core v0 does not correct citizen preferences or impose a welfare function; it exposes the salience gradient. Above the floor that gradient is real, and correcting it beyond defaults and visibility is a political choice for planning-scope governance, not the platform.

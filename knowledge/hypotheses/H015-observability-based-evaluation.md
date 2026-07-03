@@ -22,7 +22,7 @@ H015 limits who may transform material into formal fulfillment evaluation, KPI c
 
 ## Evaluation-context boundary
 
-H015 also depends on the evaluation-context distinction defined in `knowledge/concepts/evaluation-context-taxonomy-v0.md`.
+H015 also depends on the evaluation-context distinction defined in [[evaluation-context-taxonomy-v0|knowledge/concepts/evaluation-context-taxonomy-v0.md]].
 
 Formal evaluation is both dimension-scoped and effect-scoped.
 
@@ -53,7 +53,7 @@ This is a technical audit rule, not a citizen-form burden.
 
 ## Evidence-context boundary
 
-H015 depends on the evidence-context distinction defined in `knowledge/concepts/evidence-context-taxonomy-v0.md`.
+H015 depends on the evidence-context distinction defined in [[evidence-context-taxonomy-v0|knowledge/concepts/evidence-context-taxonomy-v0.md]].
 
 - `Complaint Evidence` supports, refutes, clarifies, or contextualizes a complaint.
 - `Fulfillment Evidence` verifies value thesis metrics, milestones, phase gates, deliverables, disbursement conditions, closure, or reputation-relevant obligations.

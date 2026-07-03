@@ -19,15 +19,15 @@ A control subproject is project-like, but it is not an ordinary public-value pro
 
 Source baseline:
 
-- `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`
-- `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md`
-- `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`
-- `docs/23_CITIZEN_FISCALIZER_OFFER_FLOW.md`
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`
-- `docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md`
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
-- `docs/diagrams/v0-project-evidential-contract-state.md`
-- `docs/diagrams/v0-funding-commitment-disbursement-state.md`
+- [[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]]
+- [[H016-distributed-fiscalization-ecosystem|knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md]]
+- [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]]
+- [[23_CITIZEN_FISCALIZER_OFFER_FLOW|docs/23_CITIZEN_FISCALIZER_OFFER_FLOW.md]]
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]]
+- [[24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md]]
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]
+- [[v0-project-evidential-contract-state|docs/diagrams/v0-project-evidential-contract-state.md]]
+- [[v0-funding-commitment-disbursement-state|docs/diagrams/v0-funding-commitment-disbursement-state.md]]
 
 Related sources: C002, C003, C013, C016, H008, H013, H015, H016, H018, H019, H022, H023, A003.
 

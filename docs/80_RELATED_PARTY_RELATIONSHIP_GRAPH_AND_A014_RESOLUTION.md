@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A014-related-party-projects-and-hidden-control.md`
-- Defense: `defenses/D014-related-party-projects-and-hidden-control.md`
+- Attack: [[A014-related-party-projects-and-hidden-control|attacks/A014-related-party-projects-and-hidden-control.md]]
+- Defense: [[D014-related-party-projects-and-hidden-control|defenses/D014-related-party-projects-and-hidden-control.md]]
 
 ## Resolution decision
 
 A014 is founded and does not distort the project when it targets hidden control rather than declared proximity. The accepted resolution is a minimum related-party relationship graph and severity model.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through existing objects: the graph is observability over declarations already required by `RelatedPartyConflictReview` and the role model, not a new primary entity. The same relationship-and-control graph serves A018 collusion observability (`docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`); one graph, two consumers.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates through existing objects: the graph is observability over declarations already required by `RelatedPartyConflictReview` and the role model, not a new primary entity. The same relationship-and-control graph serves A018 collusion observability ([[84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md]]); one graph, two consumers.
 
 ## Rule added to Core v0
 

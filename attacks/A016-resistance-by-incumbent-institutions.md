@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The system challenges opaque institutional monopoly power. This attack asks whet
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: resistance by incumbent institutions.
-- `knowledge/hypotheses/H004-institutional-monopolies.md`.
-- `knowledge/hypotheses/H056-existing-institution-as-equal-actor.md`.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`.
-- `knowledge/functional-matrix-v0-addendum-missing-functions.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: resistance by incumbent institutions.
+- [[H004-institutional-monopolies|knowledge/hypotheses/H004-institutional-monopolies.md]].
+- [[H056-existing-institution-as-equal-actor|knowledge/hypotheses/H056-existing-institution-as-equal-actor.md]].
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]].
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]].
+- [[functional-matrix-v0-addendum-missing-functions|knowledge/functional-matrix-v0-addendum-missing-functions.md]].
 
 ## Problem
 
@@ -74,4 +74,4 @@ An incumbent public institution publishes all Governance Resolutions but rejects
 
 ## Resolution output
 
-Resolved in `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`: incumbent-resistance indicators and minimum transition-pilot observability over existing OperatingMode, PlanningScope, GovernanceResolution, and timeout objects rather than any mechanism that compels institutional transition. Transition pilots expose scope share opened to distributed financing; approval, rejection, and timeout rates; rejection-reason comparability; authority-linked operator participation; public-operator privileges, subsidies, guarantees, or data access; independent versus controlled fiscalization rates; and pilot outcomes compared with the incumbent baseline. The platform cannot force institutional transition or protect the migrated budget share; that political limit is recorded openly, and the fiscal channel is attacked separately in `attacks/A021-treasury-dependence-and-fiscal-strangulation.md`. Resistance-pattern analytics and cross-country transition comparisons remain Extension v1+ / country or administrator observability.
+Resolved in [[82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md]]: incumbent-resistance indicators and minimum transition-pilot observability over existing OperatingMode, PlanningScope, GovernanceResolution, and timeout objects rather than any mechanism that compels institutional transition. Transition pilots expose scope share opened to distributed financing; approval, rejection, and timeout rates; rejection-reason comparability; authority-linked operator participation; public-operator privileges, subsidies, guarantees, or data access; independent versus controlled fiscalization rates; and pilot outcomes compared with the incumbent baseline. The platform cannot force institutional transition or protect the migrated budget share; that political limit is recorded openly, and the fiscal channel is attacked separately in [[A021-treasury-dependence-and-fiscal-strangulation|attacks/A021-treasury-dependence-and-fiscal-strangulation.md]]. Resistance-pattern analytics and cross-country transition comparisons remain Extension v1+ / country or administrator observability.

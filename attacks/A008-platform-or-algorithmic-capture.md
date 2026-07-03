@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION|docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture rejects algorithms as sovereign decision-makers, but the platfo
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: platform or algorithmic capture.
-- `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md`.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md`.
-- `knowledge/concepts/algorithm-as-coordinator.md`.
-- `knowledge/hypotheses/H006-assisted-deliberation.md`.
-- `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: platform or algorithmic capture.
+- [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]].
+- [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]].
+- [[algorithm-as-coordinator|knowledge/concepts/algorithm-as-coordinator.md]].
+- [[H006-assisted-deliberation|knowledge/hypotheses/H006-assisted-deliberation.md]].
+- [[20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER|docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md]].
 
 ## Problem
 

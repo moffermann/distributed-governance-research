@@ -64,7 +64,7 @@ This section preserves the original contradiction checklist as a traceable integ
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION.md`
+**Resolution document:** [[39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION|docs/39_IDEA_ENTITY_NAVIGATION_AND_C001_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -78,7 +78,7 @@ Do not model executorless public proposals as project states. Model them as a se
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`
+**Resolution document:** [[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -90,7 +90,7 @@ Fiscalization may be structured as a project-like `Control Subproject` with budg
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`
+**Resolution document:** [[46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -102,7 +102,7 @@ Create and use the `Evidence Producer` role. Executor self-report is useful cont
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md`
+**Resolution document:** [[41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -114,7 +114,7 @@ Create and use the `Evidence Producer` role. Executor self-report is useful cont
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`
+**Resolution document:** [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -128,7 +128,7 @@ Funding-window expiry is a project/protocol outcome, not ordinary withdrawal. A 
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`
+**Resolution document:** [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -142,7 +142,7 @@ Budget Liquidity Smoothing, if implemented later, must be public, capped, stress
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`
+**Resolution document:** [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -156,7 +156,7 @@ State-owned or publicly owned operators are not automatically excluded by owners
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md`
+**Resolution document:** [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -168,7 +168,7 @@ AI may assist with drafting, validation, warnings, classification, comparison, a
 
 **Severity:** Medium
 **Status:** Resolved
-**Related hypothesis:** `knowledge/hypotheses/H006-assisted-deliberation.md`
+**Related hypothesis:** [[H006-assisted-deliberation|knowledge/hypotheses/H006-assisted-deliberation.md]]
 
 ### Accepted v0 rule
 
@@ -188,7 +188,7 @@ Checklist:
 
 **Severity:** Medium
 **Status:** Resolved
-**Related hypothesis:** `knowledge/hypotheses/H005-ai-personal-guides.md`
+**Related hypothesis:** [[H005-ai-personal-guides|knowledge/hypotheses/H005-ai-personal-guides.md]]
 
 ### Accepted v0 rule
 
@@ -210,7 +210,7 @@ Checklist:
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md`
+**Resolution document:** [[49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION|docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -222,7 +222,7 @@ Use a layered translation model: citizens see simple state labels and relevant a
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`
+**Resolution document:** [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -234,7 +234,7 @@ Replace isolated value metrics with a `Value Verification Package`. Activity met
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION.md`
+**Resolution document:** [[50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -246,7 +246,7 @@ Delegation has priority over automatic allocation. In v0, if a citizen has an ac
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md`
+**Resolution document:** [[51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -258,7 +258,7 @@ Reputation updates follow role-specific responsibility events. The system should
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`
+**Resolution document:** [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -270,7 +270,7 @@ Execution funding, fiscalization offers, evidence-producer offers, and control-c
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION.md`
+**Resolution document:** [[53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -282,7 +282,7 @@ Do not build a social-media ranking system in Core v0. Require verified visible 
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md`
+**Resolution document:** [[45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION|docs/45_ASSISTED_EVIDENCE_PUBLICATION_AND_C015_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -294,7 +294,7 @@ Evidence publication should not be trapped behind human pre-approval. The system
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md`
+**Resolution document:** [[54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -306,7 +306,7 @@ Create a structured `Disbursement Milestone` entity and require specialized AI v
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md`
+**Resolution document:** [[55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION|docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -318,7 +318,7 @@ Reformulation may change implementation, but it must not unilaterally rewrite th
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md`
+**Resolution document:** [[56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -330,7 +330,7 @@ Do not calculate reputation directly from closure labels. Use closure category a
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md`
+**Resolution document:** [[57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -342,7 +342,7 @@ Separate project reformulations, administrative configuration changes, system im
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`
+**Resolution document:** [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -354,7 +354,7 @@ The system does not force a country to leave tutored mode. The contradiction is 
 
 **Severity:** Low
 **Status:** Resolved
-**Resolution document:** `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md`
+**Resolution document:** [[59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION|docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -366,7 +366,7 @@ The full H055 universal institutional observability panel remains Extension v1+.
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md`
+**Resolution document:** [[60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION|docs/60_COMMON_GOOD_IMPACT_DECLARATION_AND_C022_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -378,7 +378,7 @@ Core v0 does not include full common-good charter governance. However, projects 
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md`
+**Resolution document:** [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -390,7 +390,7 @@ Core v0 does not impose a universal hard cap on delegation concentration. Citize
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md`
+**Resolution document:** [[62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION|docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -402,7 +402,7 @@ Core v0 keeps the no-anonymous-formal-actor rule, but separates verified identit
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md`
+**Resolution document:** [[63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION|docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -414,7 +414,7 @@ Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Cit
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md`
+**Resolution document:** [[67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION|docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -430,7 +430,7 @@ Affected-party mapping and consultation should be required proportionally. Low-r
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md`
+**Resolution document:** [[68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION|docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -446,7 +446,7 @@ Compact citizen surfaces may use short summaries, AI assistance, project cards, 
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`
+**Resolution document:** [[69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION|docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -462,7 +462,7 @@ Fiscalization reports must expose sufficiency fields: scope, methodology, eviden
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`
+**Resolution document:** [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -476,7 +476,7 @@ This is not an argument for central operation of all essential services. Eligibl
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`
+**Resolution document:** [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -494,7 +494,7 @@ This compares against real current practice: continuity funding can already be r
 
 **Severity:** Medium / High
 **Status:** Resolved
-**Resolution document:** `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`
+**Resolution document:** [[73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION|docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -510,7 +510,7 @@ After closure, ordinary platform complaints do not remain open forever. Executio
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`
+**Resolution document:** [[74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION|docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -528,7 +528,7 @@ Advanced platform-influence analytics, ranking-bias dashboards, causal exposure-
 
 **Severity:** Medium / High
 **Status:** Resolved
-**Resolution document:** `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`
+**Resolution document:** [[75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -546,7 +546,7 @@ Participation-support projects remain ordinary transparent projects. Support pro
 
 **Severity:** Medium / High
 **Status:** Resolved
-**Resolution document:** `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md`
+**Resolution document:** [[76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -562,7 +562,7 @@ Advanced delegation-network analytics, anti-cluster algorithms, and concentratio
 
 **Severity:** Medium / High
 **Status:** Resolved
-**Resolution document:** `docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md`
+**Resolution document:** [[77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -578,11 +578,11 @@ Formal moderation-abuse dashboards, automatic possible-abuse findings, cross-act
 
 **Severity:** Medium / High
 **Status:** Resolved
-**Resolution document:** `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`
+**Resolution document:** [[78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A012 is founded, but Core v0 handles it as a complexity-budget and integrate-or-bound editorial discipline rather than a new entity, metric, or procedural layer. The discipline is formalized as `knowledge/principles/P007-integrate-or-bound-rule.md`: a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by an explicit boundary, a visible residual risk, and a recorded limitation statement.
+A012 is founded, but Core v0 handles it as a complexity-budget and integrate-or-bound editorial discipline rather than a new entity, metric, or procedural layer. The discipline is formalized as [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]]: a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by an explicit boundary, a visible residual risk, and a recorded limitation statement.
 
 Every new required object, field, state, or procedural step should name the material failure mode it controls. Low-risk projects keep an explicit minimum viable path, higher burdens trigger through ThresholdPolicy rather than being universalized, new v0 entities pass the cannot-be-safely-derived test before entering the formal inventory, and Extension v1+ ideas do not enter Core v0 by default. Citizen-facing screens remain simple and action-oriented while expert and audit detail stays expandable.
 
@@ -594,7 +594,7 @@ Core v0 does not require a quantitative complexity metric, a formal object-count
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`
+**Resolution document:** [[80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
@@ -610,11 +610,11 @@ Core v0 does not require beneficial-ownership verification, corporate-registry i
 
 **Severity:** Medium / High
 **Status:** Resolved
-**Resolution document:** `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`
+**Resolution document:** [[81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION|docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A015 is founded but bounded, and does not distort the project when it strengthens project-level common-good disclosure without importing the full Extension v1+ charter system. Core v0 handles it as a minimum common-good impact sufficiency test over the existing C022 common-good impact declaration rather than a charter registry, charter voting, or platform adjudication authority. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this integrates a thin disclosure test through existing declaration, evidence, and fiscalization surfaces and bounds everything else.
+A015 is founded but bounded, and does not distort the project when it strengthens project-level common-good disclosure without importing the full Extension v1+ charter system. Core v0 handles it as a minimum common-good impact sufficiency test over the existing C022 common-good impact declaration rather than a charter registry, charter voting, or platform adjudication authority. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this integrates a thin disclosure test through existing declaration, evidence, and fiscalization surfaces and bounds everything else.
 
 A project that plausibly affects a common good should not proceed with a vague or unexplained impact declaration. The sufficiency test requires identifying affected assets and affected parties; declaring no impact, uncertain impact, or impact with explanation; requiring evidence and fiscalization where impact is plausible; requiring an active-charter relationship if a charter exists; prohibiting unexplained overuse of `uncertain`; and connecting material omissions to fiscalization, complaint, mitigation, responsibility, and reputation effects.
 
@@ -626,15 +626,15 @@ Core v0 does not require a common-good registry, charter voting, or platform adj
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`
+**Resolution document:** [[82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION|docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A016 is founded and does not distort the project when it is treated as transition realism rather than a refutation of the functional architecture. Core v0 handles it as incumbent-resistance observability: transition pilots should expose whether incumbent institutions preserve control through scope, eligibility, delay, operator privilege, data access, treasury integration, fiscalization, or legal choke points. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution: it adds no mechanism against resistance itself, only indicators over existing OperatingMode, PlanningScope, GovernanceResolution, and timeout objects, and it records the political limit openly.
+A016 is founded and does not distort the project when it is treated as transition realism rather than a refutation of the functional architecture. Core v0 handles it as incumbent-resistance observability: transition pilots should expose whether incumbent institutions preserve control through scope, eligibility, delay, operator privilege, data access, treasury integration, fiscalization, or legal choke points. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution: it adds no mechanism against resistance itself, only indicators over existing OperatingMode, PlanningScope, GovernanceResolution, and timeout objects, and it records the political limit openly.
 
 The minimum indicators are the scope share opened to distributed financing; approval, rejection, and timeout rates; rejection-reason comparability; authority-linked operator participation; public-operator privileges, subsidies, guarantees, or data access; independent versus controlled fiscalization rates; and pilot outcomes compared with the incumbent baseline. If a ministry opens a narrow pilot, delays independent projects, approves authority-linked operators, and reports the pilot as participatory, the platform should show those patterns rather than treating publication of individual decisions as sufficient.
 
-Core v0 does not require, and cannot provide, any mechanism that compels institutional transition, protects the migrated budget share, or overrides legal authority. Those levers belong to country implementation and ordinary politics, and the related fiscal channel is attacked separately in `attacks/A021-treasury-dependence-and-fiscal-strangulation.md`. Limitation statement: the architecture makes incumbent resistance measurable and comparable, but a determined incumbent can still strangle a pilot through scope, budget, and legal choke points; this is a declared political limitation of the model, not a solved problem.
+Core v0 does not require, and cannot provide, any mechanism that compels institutional transition, protects the migrated budget share, or overrides legal authority. Those levers belong to country implementation and ordinary politics, and the related fiscal channel is attacked separately in [[A021-treasury-dependence-and-fiscal-strangulation|attacks/A021-treasury-dependence-and-fiscal-strangulation.md]]. Limitation statement: the architecture makes incumbent resistance measurable and comparable, but a determined incumbent can still strangle a pilot through scope, budget, and legal choke points; this is a declared political limitation of the model, not a solved problem.
 
 ---
 
@@ -642,11 +642,11 @@ Core v0 does not require, and cannot provide, any mechanism that compels institu
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`
+**Resolution document:** [[83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A017 is founded and does not distort the project when it improves milestone and release discipline rather than abolishing project disbursement. Core v0 handles it as disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects, not new payment machinery.
+A017 is founded and does not distort the project when it improves milestone and release discipline rather than abolishing project disbursement. Core v0 handles it as disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects, not new payment machinery.
 
 Milestone-based disbursement must be reviewed for gaming risk before it can support release. The minimum tests are: every milestone links to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount; advance payment carries recoverability, retention, direct supplier payment, guarantee, or equivalent protection; weak milestone design can trigger designer/modeler responsibility review where it creates avoidable release risk; the fiscalizer states why the evidence supports release, partial release, retention, or rejection; and citizen-facing summaries separate funding, reservation, release, retained funds, and guarantee status. In Macul, `site preparation and materials purchase` should not justify a large release unless it is tied to value-relevant progress, recoverability, retained funds, and evidence beyond receipts.
 
@@ -658,11 +658,11 @@ Core v0 does not require per-project actuarial guarantee calibration, automated 
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`
+**Resolution document:** [[84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A018 is founded and does not distort the project when it is treated as a systemic stress test rather than a demand for impossible perfect detection. Core v0 handles it as collusion observability across role clusters and response paths for confirmed hidden coordination. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects and bounds detection: the relationship-and-control graph is the same graph defined for A014, timing and outcome patterns are administrative-observability review surfaces rather than an automated detection engine, and the response paths reuse VerifiedDiscovery and ResponsibilityEvent.
+A018 is founded and does not distort the project when it is treated as a systemic stress test rather than a demand for impossible perfect detection. Core v0 handles it as collusion observability across role clusters and response paths for confirmed hidden coordination. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates observability through existing objects and bounds detection: the relationship-and-control graph is the same graph defined for A014, timing and outcome patterns are administrative-observability review surfaces rather than an automated detection engine, and the response paths reuse VerifiedDiscovery and ResponsibilityEvent.
 
 Role separation is necessary but not sufficient. The system should expose relationship, repetition, timing, and outcome patterns across project roles and material suppliers. The minimum observability is: repeated actor-cluster visibility across projects; the A014 relationship-and-control graph reused across roles and suppliers; timing-anomaly review for evidence, fiscalizer reports, disbursement requests, and complaints; outcome-pattern review for unusually favorable or fast approvals; independent corroboration requirements for critical milestones; a verified-discovery route for hidden coordination; and cross-role responsibility event handling where collusion is confirmed. In Macul, if a proposer, designer, executor, evidence producer, and fiscalizer are formally separate but repeatedly coordinate reports and releases, the system should make the cluster visible, reopen affected effects where rules allow, create role-specific responsibility events, correct reputation inputs, and block unreleased funds where justified.
 
@@ -674,11 +674,11 @@ Core v0 does not require an automated collusion-detection engine, network-analys
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`
+**Resolution document:** [[86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A019 is founded as a system-level authorization gap and does not distort the project when it is read as requiring the platform to record the democratic mandate that external law supplies, not to manufacture one. Core v0 handles it as an `Allocation Mandate` record per active Planning Scope. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through an existing object: the mandate is a minimal record attached to the Planning Scope, making the missing authorization inspectable rather than adding a new adjudicating entity.
+A019 is founded as a system-level authorization gap and does not distort the project when it is read as requiring the platform to record the democratic mandate that external law supplies, not to manufacture one. Core v0 handles it as an `Allocation Mandate` record per active Planning Scope. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates through an existing object: the mandate is a minimal record attached to the Planning Scope, making the missing authorization inspectable rather than adding a new adjudicating entity.
 
 Every active Planning Scope records the democratic mandate that authorized its budget migration and its allocation formula, distinct from the procedural Administrative Rule Change machinery. The minimum record names the mandate source (statute, ordinance, referendum, or delegated authority); the legal instrument authorizing budget migration; the migrated share; the allocation-amount formula version, with an explicit flag when it departs from equal-per-citizen and the authority that chose the departure; and effective dates with version history. A non-equal allocation formula is a higher-authorization decision than an ordinary parameter edit. In Macul, the 5% sports migration must name the municipal or ministerial instrument that authorized it, and a contribution-weighted formula cannot be presented as neutral configuration: if no instrument exists, the missing record makes the gap visible instead of laundering it through a clean version history.
 
@@ -690,15 +690,15 @@ Core v0 records and exposes the mandate; it does not create, validate, or adjudi
 
 **Severity:** High
 **Status:** Resolved (bounded as open limitation)
-**Resolution document:** `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md`
+**Resolution document:** [[87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A020 is founded and partially unresolved. Whoever constructs Planning Scopes exercises the second face of power, deciding what citizens may fund at all before any allocation, support, or fiscalization occurs, and the corpus itself classifies roadmap and planning-area construction as an unresolved open question. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution: Core v0 gains no mechanism that governs who constructs the roadmap; it carries interim observability over existing objects and records the political limit openly rather than claiming to solve roadmap-construction governance.
+A020 is founded and partially unresolved. Whoever constructs Planning Scopes exercises the second face of power, deciding what citizens may fund at all before any allocation, support, or fiscalization occurs, and the corpus itself classifies roadmap and planning-area construction as an unresolved open question. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution: Core v0 gains no mechanism that governs who constructs the roadmap; it carries interim observability over existing objects and records the political limit openly rather than claiming to solve roadmap-construction governance.
 
 Agenda-setting power over scope construction is documented, versioned, and contestable through visibility only; it is not distributed by Core v0. The minimum interim observability is: every Planning Scope carries its Allocation Mandate record (A019) and a versioned scope definition; scope changes and interpretations surface as Governance Resolutions with declared review windows and timeout policies (C020); and out-of-scope demand stays visible as Ideas (C001), with volume observability per rejected or out-of-scope category. In Macul, a ministry narrowing the sports scope to exclude skate parks must do it in a versioned, publicly reasoned scope change rather than a silent omission, while skate-park Ideas keep accumulating visibly as unmet demand that a future construction mechanism would consume.
 
-Core v0 does not define who constructs the roadmap or compel any authority to act on unmet demand; full distributed roadmap construction remains Extension v1+, and a first-instance narrow framing produces no removed-category trace because nothing was ever included. Limitation statement: whoever constructs Planning Scopes exercises the second face of power, and Core v0 makes that exercise observable but not distributed — a declared open limitation of the architecture, the acknowledged constitutional gap in `knowledge/open-questions/distributed-roadmap-construction-governance.md`, a blocker for open-mode deployment at scale, and a primary item for the paper's limitations section.
+Core v0 does not define who constructs the roadmap or compel any authority to act on unmet demand; full distributed roadmap construction remains Extension v1+, and a first-instance narrow framing produces no removed-category trace because nothing was ever included. Limitation statement: whoever constructs Planning Scopes exercises the second face of power, and Core v0 makes that exercise observable but not distributed — a declared open limitation of the architecture, the acknowledged constitutional gap in [[distributed-roadmap-construction-governance|knowledge/open-questions/distributed-roadmap-construction-governance.md]], a blocker for open-mode deployment at scale, and a primary item for the paper's limitations section.
 
 ---
 
@@ -706,11 +706,11 @@ Core v0 does not define who constructs the roadmap or compel any authority to ac
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`
+**Resolution document:** [[88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION|docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A021 is founded. The state still controls the fiscal spigot and can strangle the system without attacking it openly — through late or partial delivery of signed balances, mid-cycle reduction of the migrated share, zero indexation, or valid Financial Orders left unexecuted — while the platform still shows green funding states. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects — the Planning Scope, treasury and custody records, signed Financial Orders, and AuditEvents — rather than adding an enforcement mechanism. It converts fiscal strangulation from invisible to measurable and attributable; enforcement stays external.
+A021 is founded. The state still controls the fiscal spigot and can strangle the system without attacking it openly — through late or partial delivery of signed balances, mid-cycle reduction of the migrated share, zero indexation, or valid Financial Orders left unexecuted — while the platform still shows green funding states. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates observability through existing objects — the Planning Scope, treasury and custody records, signed Financial Orders, and AuditEvents — rather than adding an enforcement mechanism. It converts fiscal strangulation from invisible to measurable and attributable; enforcement stays external.
 
 The fiscal commitment behind each Planning Scope becomes a public, versioned Fiscal Commitment Profile — migrated percentage, indexation rule, delivery-latency target, and cycle horizon — and changes to it are visible governance events with reason, magnitude, affected scopes, and beneficiary impact, not silent parameter edits. Delivery and execution reliability surface as public signals attributable to the fiscal authority rather than the visible executor: expected-versus-actual delivery of signed balances, order-to-execution latency distribution, an aggregate unexecuted-valid-order indicator, and a real-value-preservation warning where nominal amounts are not inflation-adjusted. Missed windows and systematic delay feed the H054 transition metrics and the A016 incumbent-resistance indicators. In Macul, a mid-year cut from 5% to 2% with two months of late balance files becomes a versioned Profile change with reason and beneficiary impact, alongside reliability alerts showing that funded courts sit unpaid because orders are unexecuted upstream, not because the executor failed.
 
@@ -722,11 +722,11 @@ Core v0 records and surfaces fiscal behavior; it enforces nothing. Limitation st
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`
+**Resolution document:** [[89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A033 is founded. When harm to a third party results from the interaction of adequately-performed roles, the responsibility matrix can truthfully find that no role breached its internal obligation, C012 forbids blame by association, and P003 assigns responsibility to "the project," which is not a legal person a victim can sue — a responsibility vacuum. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through existing objects — the Financial Assurance Profile, the Post-Closure Coverage Profile, the responsibility matrix, and AuditEvents — rather than adding a liability entity. It names the answerable legal person and provisions coverage; it does not adjudicate liability.
+A033 is founded. When harm to a third party results from the interaction of adequately-performed roles, the responsibility matrix can truthfully find that no role breached its internal obligation, C012 forbids blame by association, and P003 assigns responsibility to "the project," which is not a legal person a victim can sue — a responsibility vacuum. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates through existing objects — the Financial Assurance Profile, the Post-Closure Coverage Profile, the responsibility matrix, and AuditEvents — rather than adding a liability entity. It names the answerable legal person and provisions coverage; it does not adjudicate liability.
 
 Every execution-financeable project names, before disbursement, the solvent, reachable legal person or persons answerable to third parties for physical and safety harm — a Duty-of-Care Anchor mapping to an executor, guarantor, insurer, or designated responsible operator, exposed on the citizen-facing sheet as a plain statement such as `responsible party: [name] — liability coverage active`. The Financial Assurance and Post-Closure Coverage profiles extend to third-party liability coverage proportionate to physical risk where Threshold Policy requires it; versioned documentation states that distributed micro-allocation does not dilute the state's underlying duty of care and records where residual public responsibility remains; the responsibility matrix distinguishes "no role breached its internal obligation" from "no one is liable to the victim"; and the audit trail preserves a harm-attribution evidence package — roles, versions, gates, evidence — usable by a court. In the Macul collapsed-roof scenario, the family's lawyer finds a named defendant with materialized coverage and a documented chain of who did what, instead of "everyone a little, no one enough."
 
@@ -738,13 +738,13 @@ The platform records the duty-bearer and provisions coverage; it does not adjudi
 
 **Severity:** Medium/High
 **Status:** Resolved
-**Resolution document:** `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`
+**Resolution document:** [[90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A022 is partially founded. The architecture already scales control to project size and risk and reserves the heavy producer-qualification standard for paid, hard, formal-effect evidence, so most thin-market projects carry no infrastructure-grade control bill; but none of that manufactures supply where the qualified market is genuinely empty, and in a small commune or narrow technical domain the admissible set of independent, unrelated, affordable fiscalizers can collapse to a single firm or a handful of people all related to the executor. Core v0 handles it as control-supply density observability by territory and domain plus explicit, disclosed thin-market handling routes chosen as country implementation. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with thin integrated observability: supply-density signals attach to the existing Planning Scope, Control Subproject selection, and fiscalization records rather than a new adjudicating entity, and scarcity is made visible before publication rather than discovered at control-package closure.
+A022 is partially founded. The architecture already scales control to project size and risk and reserves the heavy producer-qualification standard for paid, hard, formal-effect evidence, so most thin-market projects carry no infrastructure-grade control bill; but none of that manufactures supply where the qualified market is genuinely empty, and in a small commune or narrow technical domain the admissible set of independent, unrelated, affordable fiscalizers can collapse to a single firm or a handful of people all related to the executor. Core v0 handles it as control-supply density observability by territory and domain plus explicit, disclosed thin-market handling routes chosen as country implementation. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds with thin integrated observability: supply-density signals attach to the existing Planning Scope, Control Subproject selection, and fiscalization records rather than a new adjudicating entity, and scarcity is made visible before publication rather than discovered at control-package closure.
 
-Control-supply density is an observable property of each Planning Scope and territory, and thin-market handling is an explicit, disclosed country-implementation choice rather than a silent lowering of standards. The minimum elements are: control-supply density observability by territory and domain (eligible fiscalizers and evidence producers per scope, offer rates, fee levels, and repeat-assignment concentration); a thin-market indicator surfaced before publication so a structural gap is named as such rather than mislabelled as low demand; explicit thin-market handling routes as country choices (remote and documentary evidence, cross-territory and pooled assignment, and relaxed-but-disclosed selection under stronger safeguards and longer observation windows); priced compensation for weak verification per `research/formal-models.md` Proposition 2, so a package with thin control supply carries a higher guarantee rather than a diluted standard; and an explicit territorial control-cost line funding travel, logistics, and access. In Macul, a rural water committee's chlorination upgrade sits in the light-burden band, and where the only accredited sanitary engineer within reach is the committee president's cousin the thinness indicator names the empty admissible set before publication and the disclosed fallback is chosen openly rather than left to stall silently.
+Control-supply density is an observable property of each Planning Scope and territory, and thin-market handling is an explicit, disclosed country-implementation choice rather than a silent lowering of standards. The minimum elements are: control-supply density observability by territory and domain (eligible fiscalizers and evidence producers per scope, offer rates, fee levels, and repeat-assignment concentration); a thin-market indicator surfaced before publication so a structural gap is named as such rather than mislabelled as low demand; explicit thin-market handling routes as country choices (remote and documentary evidence, cross-territory and pooled assignment, and relaxed-but-disclosed selection under stronger safeguards and longer observation windows); priced compensation for weak verification per [[formal-models|research/formal-models.md]] Proposition 2, so a package with thin control supply carries a higher guarantee rather than a diluted standard; and an explicit territorial control-cost line funding travel, logistics, and access. In Macul, a rural water committee's chlorination upgrade sits in the light-burden band, and where the only accredited sanitary engineer within reach is the committee president's cousin the thinness indicator names the empty admissible set before publication and the disclosed fallback is chosen openly rather than left to stall silently.
 
 Core v0 records and surfaces control-supply density and handles thin markets through disclosed routes; it cannot conjure qualified verifiers. Supply creation — training, accreditation subsidies, and market building — is country implementation, and treating the thinness indicator and shared-control patterns as expanding the supplier base over time is Extension v1+ work. Limitation statement: in a genuinely empty market a monopolist controller is a real unresolved scenario, and conflict-free selection can be impossible where everyone qualified is related, so observability surfaces the gap and pricing compensates for weak verification, but neither creates suppliers where none exist.
 
@@ -754,11 +754,11 @@ Core v0 records and surfaces control-supply density and handles thin markets thr
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md`
+**Resolution document:** [[91_OPEN_MODE_GATING_AND_A023_RESOLUTION|docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A023 is founded as an admitted deferral. C019 and H017 define the procedural envelope of rule change — change types, versioning, non-surprise, effective dates, transition rules, and rollback — but decline to specify how a non-tutored, open-mode protocol change is decided: who votes, with what weights, under what quorum, and how constitutional-level rules are protected differently from operational parameters. Rule-level capture is the highest-leverage attack surface in any governance system, so an open mode shipped with an unspecified amendment rule invites whoever first proposes a concrete mechanism to entrench themselves. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds — it formalizes the gate, not the mechanics: open mode must not deploy until constitutional-level decision mechanics are resolved and published, while C019's procedural shell stays binding in every mode.
+A023 is founded as an admitted deferral. C019 and H017 define the procedural envelope of rule change — change types, versioning, non-surprise, effective dates, transition rules, and rollback — but decline to specify how a non-tutored, open-mode protocol change is decided: who votes, with what weights, under what quorum, and how constitutional-level rules are protected differently from operational parameters. Rule-level capture is the highest-leverage attack surface in any governance system, so an open mode shipped with an unspecified amendment rule invites whoever first proposes a concrete mechanism to entrench themselves. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds — it formalizes the gate, not the mechanics: open mode must not deploy until constitutional-level decision mechanics are resolved and published, while C019's procedural shell stays binding in every mode.
 
 Open-mode deployment is gated: no public function may exit into open mode until constitutional-level decision mechanics — who votes on protocol changes, with what weights and quorum, and how constitutional rules differ from operational ones — are resolved and published. The C019 procedural shell remains binding in every mode; tutored and semi-open pilots may run indefinitely under existing Governance Resolution and Review Timeout machinery, where the implementing authority is the decision authority and its acts and silences become public civic objects; when the mechanics are later designed, no proposal may define the mechanism by which it is itself ratified, and identity, allocation authorization, and the amendment rule are entrenched behind the constitutional tier; and participation and concentration metrics attach to any eventual protocol-change vote, since low turnout is the classic capture vector. In Macul, the sports pilot runs in tutored or semi-open mode and cannot exit into open mode by configuration: a delegate bloc proposing both a threshold-lowering change and the mechanism ratifying its own proposal would be attempting exactly the silent self-ratifying amendment C019's non-surprise principle forbids.
 
@@ -770,11 +770,11 @@ Core v0 fixes the gate and keeps the procedural shell binding; it does not defin
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`
+**Resolution document:** [[92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION|docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A024 is partially founded. Atomized voluntary allocation inherits the documented biases of charitable giving — identifiable-victim salience, warm glow, and preference for photogenic outputs — so above the protected floor abstract, preventive, statistical-life goods such as drainage, disease prevention, data infrastructure, and routine maintenance can be under-allocated relative to their welfare value even under fully honest participation. But the architecture never routes the whole budget through salience-driven choice: the non-assignable pool and the essential floors (A005) exclude precisely the catastrophic-underprovision goods, and system-defined defaults channel inactive citizens' funds by rule rather than salience. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with observability, exposing the salience gradient through existing objects — Planning Scope, citizen funding and automatic allocation profiles, the default allocation rule, and administrative observability — rather than correcting citizen preferences or imposing a welfare function.
+A024 is partially founded. Atomized voluntary allocation inherits the documented biases of charitable giving — identifiable-victim salience, warm glow, and preference for photogenic outputs — so above the protected floor abstract, preventive, statistical-life goods such as drainage, disease prevention, data infrastructure, and routine maintenance can be under-allocated relative to their welfare value even under fully honest participation. But the architecture never routes the whole budget through salience-driven choice: the non-assignable pool and the essential floors (A005) exclude precisely the catastrophic-underprovision goods, and system-defined defaults channel inactive citizens' funds by rule rather than salience. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds with observability, exposing the salience gradient through existing objects — Planning Scope, citizen funding and automatic allocation profiles, the default allocation rule, and administrative observability — rather than correcting citizen preferences or imposing a welfare function.
 
 Above the essential floor, the salience gradient in citizen allocation is an observable property, and any default weighting toward under-allocated non-salient categories is a disclosed, versioned public protocol choice rather than a hidden nudge; default allocation rules route inactive budget by planning priority, not salience. The minimum elements are: salience-bias observability above the protected floor (funding per category against declared planning-scope need weights, across salient-versus-non-salient and preventive-versus-remedial lanes); underfunded-need indicators and non-salient-category visibility in the discovery surface; the non-assignable pool and essential floors (A005) kept distinct as the structural answer for catastrophic tails; default allocation rules routing inactive budget by planning priority; a transparent, versioned default-rule weighting toward under-allocated non-salient categories gated by threshold policy; and optional harm-averted and resilience framing so abstract benefits are more legible. In Macul, citizens fund a riverside plaza enthusiastically while a stormwater drainage upgrade attracts almost no allocation, and the portfolio view shows funding per category against declared need so the neighborhood sees the abstract good under-funded before the flood rather than diagnosing it two winters later.
 
@@ -786,13 +786,13 @@ Core v0 exposes the salience gradient and routes inactive budget by planning pri
 
 **Severity:** Medium/High
 **Status:** Resolved
-**Resolution document:** `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`
+**Resolution document:** [[93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION|docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A025 is founded as a behavioral prediction. Each citizen's monthly civic allocation is individually small, so by Downsian logic the rational return on careful evaluation is near zero and most citizens route their allocation through the cheapest channel — the public default, a stored profile, or a trusted delegate — while participatory-budgeting evidence shows active evaluation spiking at launch and decaying over subsequent cycles, leaving a shrinking, self-selected active core whose choices are then displayed as the aggregated will of the whole. The architecture never assumed universal active judgment — its intermediation channels are designed, visible, revocable, and auditable — but engagement decay and active-core concentration are not currently measured. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates metrics through the existing H054 transition-maturity object, which already lists the share handled by default allocation and direct-versus-delegated participation.
+A025 is founded as a behavioral prediction. Each citizen's monthly civic allocation is individually small, so by Downsian logic the rational return on careful evaluation is near zero and most citizens route their allocation through the cheapest channel — the public default, a stored profile, or a trusted delegate — while participatory-budgeting evidence shows active evaluation spiking at launch and decaying over subsequent cycles, leaving a shrinking, self-selected active core whose choices are then displayed as the aggregated will of the whole. The architecture never assumed universal active judgment — its intermediation channels are designed, visible, revocable, and auditable — but engagement decay and active-core concentration are not currently measured. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates metrics through the existing H054 transition-maturity object, which already lists the share handled by default allocation and direct-versus-delegated participation.
 
-The mix of manual, profile-driven, delegated, and default allocation is a measured, versioned public property of each cycle, and citizen-facing legitimacy language must distinguish considered choice from default and profile carry-over; engagement decay and active-core concentration are tracked across cycles, not only at launch. The minimum elements are per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation as versioned public metrics; active-core concentration indicators tracking whether the same minority persists across cycles; citizen-facing legitimacy language distinguishing deliberate evaluation from carry-over; cadence-fatigue review of the monthly cycle for decay effects; and these signals fed into H054 functional transition maturity rather than an internal-only dashboard. The simulation (`research/simulation-results.md`) vindicates the designed-intermediation position — allocation quality is carried by the institutional default anchor conditioned on planner knowledge, while quintupling citizen attention moves quality selection by at most ~0.08 and essentially nothing in default-anchored regimes — so decay must be measured and disclosed, not denied. In Macul, where perhaps 4% evaluate projects manually after launch novelty fades, the multi-court project's funding is decomposed into deliberate evaluation, stored profiles, delegates, and untouched default, so a journalist asking how many people actually evaluated the winners gets a real answer.
+The mix of manual, profile-driven, delegated, and default allocation is a measured, versioned public property of each cycle, and citizen-facing legitimacy language must distinguish considered choice from default and profile carry-over; engagement decay and active-core concentration are tracked across cycles, not only at launch. The minimum elements are per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation as versioned public metrics; active-core concentration indicators tracking whether the same minority persists across cycles; citizen-facing legitimacy language distinguishing deliberate evaluation from carry-over; cadence-fatigue review of the monthly cycle for decay effects; and these signals fed into H054 functional transition maturity rather than an internal-only dashboard. The simulation ([[simulation-results|research/simulation-results.md]]) vindicates the designed-intermediation position — allocation quality is carried by the institutional default anchor conditioned on planner knowledge, while quintupling citizen attention moves quality selection by at most ~0.08 and essentially nothing in default-anchored regimes — so decay must be measured and disclosed, not denied. In Macul, where perhaps 4% evaluate projects manually after launch novelty fades, the multi-court project's funding is decomposed into deliberate evaluation, stored profiles, delegates, and untouched default, so a journalist asking how many people actually evaluated the winners gets a real answer.
 
 Core v0 measures and discloses the participation mix; it does not mandate participation quotas or engagement targets, and cohort-refresh or sampling mechanisms that periodically renew the active core remain Extension v1+ options subject to visibility and audit. Limitation statement: if the active core shrinks enough, distributed control becomes intermediated control with better bookkeeping, and while better bookkeeping is a real improvement over a zero-observability baseline, measurement does not by itself reverse decay and the system must not present default and profile allocation as considered choice.
 
@@ -802,11 +802,11 @@ Core v0 measures and discloses the participation mix; it does not mandate partic
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`
+**Resolution document:** [[94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION|docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A026 is partially founded. The verified-identity baseline (P004) makes the external identity provider the system's deepest dependency: whoever compromises, coerces, or misconfigures it can mint Sybil identities to capture allocation or silently exclude targeted citizens, so the platform's Sybil resistance collapses to the provider's integrity. The second harm is chilling: binding a real identity to every civic act accumulates a longitudinal record of political behavior, and because the platform and any authority with lawful access can see through contextual protected identity, citizens contemplating complaints against powerful actors self-censor. Contextual protected identity already exists for these cases, its access is gated and auditable, and the provider is pre-existing state infrastructure, so under `knowledge/principles/P001-comparative-critique-rule.md` the marginal delta is the linking of civic acts, not the creation of the dossier. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with minimal records — declared failure modes, compromise-response procedures, and purpose-bound access auditing through the existing verified-identity, protected-identity, complaint, and audit-trail objects rather than adopting anonymity or building a detection engine.
+A026 is partially founded. The verified-identity baseline (P004) makes the external identity provider the system's deepest dependency: whoever compromises, coerces, or misconfigures it can mint Sybil identities to capture allocation or silently exclude targeted citizens, so the platform's Sybil resistance collapses to the provider's integrity. The second harm is chilling: binding a real identity to every civic act accumulates a longitudinal record of political behavior, and because the platform and any authority with lawful access can see through contextual protected identity, citizens contemplating complaints against powerful actors self-censor. Contextual protected identity already exists for these cases, its access is gated and auditable, and the provider is pre-existing state infrastructure, so under [[P001-comparative-critique-rule|knowledge/principles/P001-comparative-critique-rule.md]] the marginal delta is the linking of civic acts, not the creation of the dossier. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds with minimal records — declared failure modes, compromise-response procedures, and purpose-bound access auditing through the existing verified-identity, protected-identity, complaint, and audit-trail objects rather than adopting anonymity or building a detection engine.
 
 The identity provider is a declared critical dependency with enumerated failure modes and compromise-response procedures, and every access to the linkage between a civic act and a verified identity is itself an audited event with a stated purpose; protected-identity contexts remain the chilling-effect answer, and sensitive act-to-identity linkage carries retention limits where country law allows. The minimum elements are: declared provider failure modes — compromise, coercion, outage, and wrongful exclusion — with response procedures including re-verification windows, action freezes, and retroactive audit; purpose-bound access auditing where every access to act-to-identity linkage is an AuditEvent carrying its purpose, auditable by an independent party rather than only the acceding authority; protected-identity contexts (C014/C024) retained with a heightened, adversarial de-anonymization threshold for complaints against executors, authorities, and the operator; retention limits and data-minimization on sensitive linkage where law allows; and verified identity preserved as the anti-Sybil baseline (P004), not replaced by an anonymous formal layer. In Macul, a worker filing an unsafe-construction complaint against a politically connected executor appears as a verified protected complainant, and piercing that protection requires the heightened adversarial threshold and is itself an audited event checkable by an independent party rather than a routine review an allied official could invoke.
 
@@ -818,13 +818,13 @@ The identity provider is pre-existing state infrastructure — the civil registr
 
 **Severity:** Medium/High
 **Status:** Resolved
-**Resolution document:** `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md`
+**Resolution document:** [[95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION|docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A027 is founded. Visible funding progress, active-support counts, and delegate follower numbers turn each citizen's allocation into a public signal that later, weakly-informed citizens rationally imitate, so early and partly arbitrary advantages compound into cascades and Matthew effects only loosely correlated with underlying value, and the pathology needs no manipulating operator — it is structural to displaying cumulative social proof at all. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates herding observability through existing objects — discovery ordering, the support-versus-financing separation, funding-target closure, and administrative observability — and bounds the deeper visibility redesign: cascades attack the discovery-helps-citizens-find-value claim and cannot be ignored, but their control fits existing objects and the residual is a measurement gap, not a missing primary entity.
+A027 is founded. Visible funding progress, active-support counts, and delegate follower numbers turn each citizen's allocation into a public signal that later, weakly-informed citizens rationally imitate, so early and partly arbitrary advantages compound into cascades and Matthew effects only loosely correlated with underlying value, and the pathology needs no manipulating operator — it is structural to displaying cumulative social proof at all. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates herding observability through existing objects — discovery ordering, the support-versus-financing separation, funding-target closure, and administrative observability — and bounds the deeper visibility redesign: cascades attack the discovery-helps-citizens-find-value claim and cannot be ignored, but their control fits existing objects and the residual is a measurement gap, not a missing primary entity.
 
-Herding is measured and made observable, not prevented: funding progress stays visible and the platform surfaces the cumulative-advantage dynamics acting on it. The minimum elements are funding-velocity-versus-evidence-maturity indicators that flag projects whose money outruns their evidence or support breadth; funding-source independence signals including the share of funding arriving after high-visibility exposure; discovery-slot concentration observability so the amplification granted by "most supported" and "almost funded" ordering is itself visible; and funding-target closure (H035) retained as the structural cascade truncator with its claim stated honestly. Per `research/simulation-results.md` experiment E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, because the truncated surplus spills to the next most visible project rather than the next best one, so quality selection depends on the default anchor, not the cap. In Macul, when two comparable sports projects launch the same week and one crosses its target first on early commitments, closure caps how much it can absorb and the new indicators flag that its velocity outran its evidence and that most of its money arrived after it topped the "almost funded" sort, so an observer sees a herded leader named as such rather than reading a full bar as proof of merit.
+Herding is measured and made observable, not prevented: funding progress stays visible and the platform surfaces the cumulative-advantage dynamics acting on it. The minimum elements are funding-velocity-versus-evidence-maturity indicators that flag projects whose money outruns their evidence or support breadth; funding-source independence signals including the share of funding arriving after high-visibility exposure; discovery-slot concentration observability so the amplification granted by "most supported" and "almost funded" ordering is itself visible; and funding-target closure (H035) retained as the structural cascade truncator with its claim stated honestly. Per [[simulation-results|research/simulation-results.md]] experiment E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, because the truncated surplus spills to the next most visible project rather than the next best one, so quality selection depends on the default anchor, not the cap. In Macul, when two comparable sports projects launch the same week and one crosses its target first on early commitments, closure caps how much it can absorb and the new indicators flag that its velocity outran its evidence and that most of its money arrived after it topped the "almost funded" sort, so an observer sees a herded leader named as such rather than reading a full bar as proof of merit.
 
 Core v0 does not hide funding progress, does not rank exclusively by non-accumulative orderings, and does not adjudicate whether an individual citizen imitated the crowd; advanced de-herding mechanisms — blind early windows, staged reveal, exposure equalization — remain Extension v1+. Limitation statement: visible social proof is intrinsic to a transparent funding surface, so herding is measured and bounded, not prevented, and allocation quality depends on the default anchor rather than on the funding cap — a declared limitation for the paper.
 
@@ -834,11 +834,11 @@ Core v0 does not hide funding progress, does not rank exclusively by non-accumul
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md`
+**Resolution document:** [[96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION|docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A028 is founded. Even with strictly equal per-citizen wallets and equal capacity, allocation outcomes concentrate where social capital, organizational density, and proposal-writing capacity already concentrate, so equal inputs produce unequal territorial and group results; horizontal fiscal equity is not guaranteed by equal individual inputs but requires equalization the model does not contain. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution with core observability: outcome inequity attacks the fairness claim of equal wallets and cannot be ignored, but the audit trail already makes per-territory outcomes reconstructable and the equalization machinery is representable through existing objects — the H025 formula layer, the H033 default rule, planning-scope lanes, and the non-assignable pool — so Core v0 integrates the observability minimally and bounds the redistribution as a political choice.
+A028 is founded. Even with strictly equal per-citizen wallets and equal capacity, allocation outcomes concentrate where social capital, organizational density, and proposal-writing capacity already concentrate, so equal inputs produce unequal territorial and group results; horizontal fiscal equity is not guaranteed by equal individual inputs but requires equalization the model does not contain. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution with core observability: outcome inequity attacks the fairness claim of equal wallets and cannot be ignored, but the audit trail already makes per-territory outcomes reconstructable and the equalization machinery is representable through existing objects — the H025 formula layer, the H033 default rule, planning-scope lanes, and the non-assignable pool — so Core v0 integrates the observability minimally and bounds the redistribution as a political choice.
 
 Per-territory and per-group allocation outcomes are observable as core administrative observability: Core v0 mandates that the distribution of outcomes be measured, not that outcomes be equalized. The minimum elements are funding per capita by comuna as a standing, versioned public metric; funded-project density against planning-scope need weights; capture share by organized proposers so concentration among high-capacity actors is visible; and an explicit input-equity versus outcome-equity distinction in the model's own language so equal wallets are not presented as evidence of fair outcomes. Equalization capability is documented as available and unmandated — redistributive and hybrid allocation-amount formulas (H025), planning-scope lanes and the A005 floor-and-lane pattern reused for a distinct territorial or group equity target, the H033 default rule's territorial routing, and preferential supply-side funding of proposal, modeling, and fiscalization support in low-capacity territories — each a versioned, publicly authorized, auditable country-implementation choice rather than a silent administrator setting. In Macul, where an organized comuna captures eight times the per-capita allocation of a marginal one of equal size, the architecture now sees the gap from the audit trail as a standing metric and can route against it through a redistributive formula, a territorial floor, or supply-side support, but only if the implementing country configures it.
 
@@ -850,11 +850,11 @@ Core v0 mandates outcome observability, not outcome equality; equalization mecha
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md`
+**Resolution document:** [[97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION|docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A029 is partially founded. Decomposing public action into independently proposed, funded, and closed projects can strand complementarities — cross-project linkages where one component is worthless without another, multi-year coherence, and procurement economies of scale — and although Composite Programs already aggregate interdependent projects, each component still lives or dies by its own funding attempt, so partial funding can produce stranded half-systems. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through the existing Composite Program object (H051) rather than adding a new primary entity: fragmentation threatens the coordinated-delivery claim and cannot be ignored, but the coordination structure already exists — program aggregation, Planning Scope alignment, parallel closure, and funding-window expiry — and the fix is to make cross-project dependencies declarable and program-level coherence visible, while bundled all-or-nothing funding stays bounded to Extension v1+.
+A029 is partially founded. Decomposing public action into independently proposed, funded, and closed projects can strand complementarities — cross-project linkages where one component is worthless without another, multi-year coherence, and procurement economies of scale — and although Composite Programs already aggregate interdependent projects, each component still lives or dies by its own funding attempt, so partial funding can produce stranded half-systems. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates through the existing Composite Program object (H051) rather than adding a new primary entity: fragmentation threatens the coordinated-delivery claim and cannot be ignored, but the coordination structure already exists — program aggregation, Planning Scope alignment, parallel closure, and funding-window expiry — and the fix is to make cross-project dependencies declarable and program-level coherence visible, while bundled all-or-nothing funding stays bounded to Extension v1+.
 
 A project may declare hard dependencies on other projects inside a Composite Program, and program-level funding coherence is visible before citizens fund; components keep independent funding attempts, and Core v0 does not make funding all-or-nothing across a program. The minimum elements are cross-project dependency declarations inside composite programs, so a component can state that it requires another (X requires Y) visibly before funding; program-level funding-coherence visibility showing which components are funded and unfunded, with stranded-complement warnings when a prerequisite funds and its dependents do not; dependency-aware funding windows, so a dependent component's window can reference its prerequisite's state rather than expiring blindly against it; and open acknowledgement that procurement-scale losses are a real cost of modularity. In Macul, a sports program of four linked projects — multi-court build, night lighting, an access ramp with drainage, and a two-year maintenance plan — where the courts and lighting fund quickly while the drainage expires, now declares and shows the drainage dependency before citizens fund the courts, warns that a funded build is stranding without its complement, and keeps the funded money reserved behind closure rather than paying for a half-system, even though Core v0 still does not make the courts' funding conditional on the drainage.
 
@@ -866,11 +866,11 @@ Components keep independent funding attempts — Core v0 has no all-or-nothing p
 
 **Severity:** High
 **Status:** Resolved
-**Resolution document:** `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md`
+**Resolution document:** [[98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION|docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A030 is founded as an adaptation risk. Clientelist machines adapt to new institutions rather than dying with the old ones: brokers migrate in as delegates, participation-support providers, community organizations, or intermediaries, exchanging allocation behavior for private favors arranged entirely off the platform, and the quid pro quo is invisible by construction, so relationship graphs and related-party declarations never capture it. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through the A014 related-party relationship graph and the delegation records rather than adding a new entity or a hard anti-broker ban: off-platform clientelism attacks the anti-capture claim and cannot be ignored, but the on-platform half of the exchange — equally invisible today — is already traceable, so the fix is to surface repeated patterns as leads while the off-platform act routes to external law (test 4).
+A030 is founded as an adaptation risk. Clientelist machines adapt to new institutions rather than dying with the old ones: brokers migrate in as delegates, participation-support providers, community organizations, or intermediaries, exchanging allocation behavior for private favors arranged entirely off the platform, and the quid pro quo is invisible by construction, so relationship graphs and related-party declarations never capture it. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates observability through the A014 related-party relationship graph and the delegation records rather than adding a new entity or a hard anti-broker ban: off-platform clientelism attacks the anti-capture claim and cannot be ignored, but the on-platform half of the exchange — equally invisible today — is already traceable, so the fix is to surface repeated patterns as leads while the off-platform act routes to external law (test 4).
 
 The platform makes the on-platform half of a clientelist exchange traceable and surfaces pattern-level indicators over time; it does not adjudicate the off-platform favor, which is named as a distinct risk with a documented observability boundary. The minimum elements are repeat broker-beneficiary alignments across cycles; geographic delegation blocs correlated with related-project funding; participation-support providers whose assisted citizens' allocations concentrate on related actors; and indicators that feed review, complaint, and verified-discovery paths as leads, never automatic verdicts, with participation-support projects carrying anti-conditioning declarations and independent beneficiary confirmation. In Macul, a funded participation-support operator offering off-platform paperwork help, food parcels, and job referrals to residents who delegate their sports-scope allocation to it is never seen exchanging the food parcel, but its represented weight across four neighborhoods, its delegated-action pattern, and its funding of allied projects are recorded and comparable over time, so a fiscalizer or electoral-integrity authority has a traceable pattern to act on rather than nothing; a citizen can revoke a delegation privately and immediately for future actions, exiting a coercive relationship without the broker observing the exit at action time.
 
@@ -882,11 +882,11 @@ Off-platform quid pro quo remains invisible by construction; sanction of vote-bu
 
 **Severity:** Medium
 **Status:** Resolved
-**Resolution document:** `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md`
+**Resolution document:** [[99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION|docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A031 is partially founded. Allocation can become an identity battleground: funding and defunding turn into tribal signaling, coordinated brigade-funding and boycott campaigns mobilize around projects, and value/antivalue declarations become culture-war terrain, while aggregate signals cannot by themselves distinguish a broadly legitimate project from a well-mobilized one — yet expressive, identity-driven allocation is legitimate citizen choice, and the platform's job is not to police motive. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution: polarization threatens the social-sovereignty-over-value claim and cannot be ignored, but the control fits existing objects — antivalue management, affected-party evidence, threshold policies, funding-target closure, and administrative observability — and the residual is a deliberation-quality problem, not a missing mechanism, since a platform that discounted "tribal" support would arrogate to itself exactly the authority over value that P002 denies it.
+A031 is partially founded. Allocation can become an identity battleground: funding and defunding turn into tribal signaling, coordinated brigade-funding and boycott campaigns mobilize around projects, and value/antivalue declarations become culture-war terrain, while aggregate signals cannot by themselves distinguish a broadly legitimate project from a well-mobilized one — yet expressive, identity-driven allocation is legitimate citizen choice, and the platform's job is not to police motive. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution: polarization threatens the social-sovereignty-over-value claim and cannot be ignored, but the control fits existing objects — antivalue management, affected-party evidence, threshold policies, funding-target closure, and administrative observability — and the residual is a deliberation-quality problem, not a missing mechanism, since a platform that discounted "tribal" support would arrogate to itself exactly the authority over value that P002 denies it.
 
 Citizens' reasons for funding are not platform business, and material effects stay gated identically regardless of motive; the platform does not police motive, moderate viewpoint, or attach effects to any polarization score. The minimum elements are reasons for funding kept outside the platform's authority (P002), so no motive-policing and no viewpoint moderation of allocation; material effects gated identically regardless of motive, so antivalue declarations route through measurement and fiscalization, affected-party evidence and threshold policies bind, and a contested antivalue supports a complaint only if someone files one; funding-bloc correlation observability — synchronized timing, shared origin, reciprocal brigading across paired projects — as research and administrative data only, without discounting either side's signals; and funding-target closure (H035) bounding brigade amplitude on any single project so a faction cannot pour unbounded funding into a favorite to overwhelm a rival. In Macul, where a migrant-run football school and a rival club's facility become proxies in an identity dispute and each faction brigades the other with contested antivalue declarations and counter-mobilized funding, both projects keep their expressive support and objections, but the antivalue claims still route through measurement and fiscalization, so tribal funding buys feasibility, not a waiver from the noise data or the closure rule.
 
@@ -898,11 +898,11 @@ Core v0 does no motive policing, no viewpoint moderation of allocation, and atta
 
 **Severity:** Medium/High
 **Status:** Resolved
-**Resolution document:** `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md`
+**Resolution document:** [[100_LONG_HORIZON_LANES_AND_A032_RESOLUTION|docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md]]
 
 ### Accepted v0 rule
 
-A032 is partially founded. Monthly allocation cycles reward visible near-term outputs and renewal windows re-expose long-horizon commitments to each cycle's shifting attention, so hyperbolic discounting tilts new funding away from maintenance, prevention, and intergenerational infrastructure, and future citizens are unrepresented in every funding attempt — but the goods most vulnerable to myopia are already shielded structurally, and the sharp edge is new long-horizon value above the floor. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution built on existing structures: formation-stage myopia threatens the aggregate-citizen-valuation claim and cannot be ignored, but the control fits existing objects — Planning Scopes, the non-assignable pool, continuity-risk classification (A006), and administrative observability — and the residual, an unrepresented future, is a declared limitation, not a mechanism Core v0 can supply.
+A032 is partially founded. Monthly allocation cycles reward visible near-term outputs and renewal windows re-expose long-horizon commitments to each cycle's shifting attention, so hyperbolic discounting tilts new funding away from maintenance, prevention, and intergenerational infrastructure, and future citizens are unrepresented in every funding attempt — but the goods most vulnerable to myopia are already shielded structurally, and the sharp edge is new long-horizon value above the floor. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution built on existing structures: formation-stage myopia threatens the aggregate-citizen-valuation claim and cannot be ignored, but the control fits existing objects — Planning Scopes, the non-assignable pool, continuity-risk classification (A006), and administrative observability — and the residual, an unrepresented future, is a declared limitation, not a mechanism Core v0 can supply.
 
 Planning Scopes may define long-horizon lanes whose need-weights flow into the default allocation, and intertemporal allocation is observable; Core v0 does not discount-correct citizen preferences or force intergenerational weights. The minimum elements are planning-scope long-horizon lanes — maintenance, prevention, infrastructure — whose need-weights flow into default allocation as a transparent, versioned public choice; intertemporal allocation observability — funding share by time-to-benefit horizon, and deferred-maintenance indicators — so under-funding of durable value is measurable before failure; continuity-risk classification (A006) plus the non-assignable pool retained as the structural shields for existing obligations, pulling maintenance and continuity needs into protected renewal paths; and renewal windows made visible before expiry so a long-horizon commitment's re-exposure is surfaced rather than silent. In Macul, a fifteen-year stormwater and slope-stabilization need whose benefit is a landslide that never happens, losing month after month to visible plazas and courts, is pulled into a protected renewal path where it is a continuity obligation, or carried into the default by a planning-scope long-horizon lane where it is genuinely new value, and the funding share by time-to-benefit horizon makes the under-investment arguable before the slope fails rather than diagnosed afterward.
 

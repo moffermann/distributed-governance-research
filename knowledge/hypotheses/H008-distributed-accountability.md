@@ -284,7 +284,7 @@ H008 does not fully resolve the quality, authenticity, relevance, manipulation, 
 
 That issue remains tracked separately in:
 
-- `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`
+- [[evidence-producer-evidence-quality-validation|knowledge/open-questions/evidence-producer-evidence-quality-validation.md]]
 
 H008 does require the system to preserve the sufficiency status and review effect of evidence so that weak evidence cannot quietly become proof of value fulfillment.
 

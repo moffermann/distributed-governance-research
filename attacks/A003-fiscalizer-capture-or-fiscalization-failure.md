@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION|docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The model relies on fiscalizers for responsible review. This attack asks whether
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objections: fiscalization failure and fiscalizer capture.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`.
-- `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`.
-- `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`.
-- `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md`.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objections: fiscalization failure and fiscalizer capture.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]].
+- [[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]].
+- [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]].
+- [[H016-distributed-fiscalization-ecosystem|knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md]].
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]].
 
 ## Problem
 

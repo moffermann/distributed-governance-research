@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A015-common-good-charter-conflicts.md`
-- Defense: `defenses/D015-common-good-charter-conflicts.md`
+- Attack: [[A015-common-good-charter-conflicts|attacks/A015-common-good-charter-conflicts.md]]
+- Defense: [[D015-common-good-charter-conflicts|defenses/D015-common-good-charter-conflicts.md]]
 
 ## Resolution decision
 
 A015 is founded and does not distort the project when it strengthens project-level common-good disclosure without importing the full Extension v1+ charter system. The accepted resolution is a minimum common-good impact sufficiency test.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates a disclosure test through existing declaration, evidence, and fiscalization surfaces, and bounds everything else: the charter system itself stays out of Core v0.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates a disclosure test through existing declaration, evidence, and fiscalization surfaces, and bounds everything else: the charter system itself stays out of Core v0.
 
 ## Rule added to Core v0
 

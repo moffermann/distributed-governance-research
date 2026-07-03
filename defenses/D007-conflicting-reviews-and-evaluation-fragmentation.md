@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION|docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A007-conflicting-reviews-and-evaluation-fragmentation.md`
+- Attack file: [[A007-conflicting-reviews-and-evaluation-fragmentation|attacks/A007-conflicting-reviews-and-evaluation-fragmentation.md]]
 - Attack title: `A007 - Conflicting Reviews and Evaluation Fragmentation`
 - Roadmap source: Phase 3 priority objection, conflicting reviews.
 

@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A006-volatile-funding-and-underfunded-continuity.md`
-- Defense: `defenses/D006-volatile-funding-and-underfunded-continuity.md`
+- Attack: [[A006-volatile-funding-and-underfunded-continuity|attacks/A006-volatile-funding-and-underfunded-continuity.md]]
+- Defense: [[D006-volatile-funding-and-underfunded-continuity|defenses/D006-volatile-funding-and-underfunded-continuity.md]]
 
 ## Resolution decision
 

@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION|docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A008-platform-or-algorithmic-capture.md`
+- Attack file: [[A008-platform-or-algorithmic-capture|attacks/A008-platform-or-algorithmic-capture.md]]
 - Attack title: `A008 - Platform or Algorithmic Capture`
 - Roadmap source: Phase 3 priority objection, platform or algorithmic capture.
 

@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation. Propagated into the core corpus.
+Phase 3 paired review completed. Accepted resolution: [[83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md]], refined under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]] before core propagation. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A017-disbursement-gaming.md`
+- Attack file: [[A017-disbursement-gaming|attacks/A017-disbursement-gaming.md]]
 - Attack title: `A017 - Disbursement Gaming`
 - Roadmap source: Phase 3 priority objection, disbursement gaming.
 

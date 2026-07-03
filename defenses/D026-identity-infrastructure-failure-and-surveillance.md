@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION|docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A026-identity-infrastructure-failure-and-surveillance.md`
+- Attack file: [[A026-identity-infrastructure-failure-and-surveillance|attacks/A026-identity-infrastructure-failure-and-surveillance.md]]
 - Attack title: `A026 - Identity Infrastructure as Single Point of Failure and Surveillance`
 - Source: second-round attack queue, identity infrastructure failure and surveillance.
 

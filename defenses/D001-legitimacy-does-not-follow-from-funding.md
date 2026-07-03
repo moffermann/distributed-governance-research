@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION|docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A001-legitimacy-does-not-follow-from-funding.md`
+- Attack file: [[A001-legitimacy-does-not-follow-from-funding|attacks/A001-legitimacy-does-not-follow-from-funding.md]]
 - Attack title: `A001 - Legitimacy Does Not Follow From Funding`
 - Roadmap source: Phase 3 priority objection, legitimacy.
 

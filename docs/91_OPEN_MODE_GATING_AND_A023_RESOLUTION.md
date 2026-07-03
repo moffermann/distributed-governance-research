@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A023-meta-governance-vacuum-in-open-mode.md`
-- Defense: `defenses/D023-meta-governance-vacuum-in-open-mode.md`
+- Attack: [[A023-meta-governance-vacuum-in-open-mode|attacks/A023-meta-governance-vacuum-in-open-mode.md]]
+- Defense: [[D023-meta-governance-vacuum-in-open-mode|defenses/D023-meta-governance-vacuum-in-open-mode.md]]
 
 ## Resolution decision
 
 A023 is founded as an admitted deferral. C019 and H017 define the procedural envelope of rule change — change types, versioning, non-surprise, effective dates, transition rules, and rollback — but explicitly decline to specify how a non-tutored, open-mode protocol change is decided: who votes, with what weights, under what quorum, and how constitutional-level rules are protected differently from operational parameters. Rule-level capture is the highest-leverage attack surface in any governance system, so an open mode shipped with an unspecified amendment rule invites whoever first proposes a concrete mechanism to entrench themselves. The accepted resolution is a gate: open mode must not deploy until constitutional-level decision mechanics are resolved and published.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds — it formalizes the gate, not the mechanics. It records open-mode deployment as gated on future constitutional work while leaving the C019 procedural shell binding in every mode, rather than inventing an amendment rule in one review round, which test 3 forbids. The missing piece is a fixed constitutional tier, not a blank check, and defining it is future constitutional design, not configuration.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds — it formalizes the gate, not the mechanics. It records open-mode deployment as gated on future constitutional work while leaving the C019 procedural shell binding in every mode, rather than inventing an amendment rule in one review round, which test 3 forbids. The missing piece is a fixed constitutional tier, not a blank check, and defining it is future constitutional design, not configuration.
 
 ## Rule added to Core v0
 

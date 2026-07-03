@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A018-collusion-among-project-roles.md`
-- Defense: `defenses/D018-collusion-among-project-roles.md`
+- Attack: [[A018-collusion-among-project-roles|attacks/A018-collusion-among-project-roles.md]]
+- Defense: [[D018-collusion-among-project-roles|defenses/D018-collusion-among-project-roles.md]]
 
 ## Resolution decision
 
 A018 is founded and does not distort the project when it is treated as a systemic stress test rather than a demand for impossible perfect detection. The accepted resolution is collusion observability across role clusters and response paths for confirmed hidden coordination.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects and bounds detection: the relationship-and-control graph is the same graph defined for A014 (`docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`), timing and outcome patterns are administrative-observability review surfaces rather than an automated detection engine, and the response paths reuse VerifiedDiscovery and ResponsibilityEvent.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates observability through existing objects and bounds detection: the relationship-and-control graph is the same graph defined for A014 ([[80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md]]), timing and outcome patterns are administrative-observability review surfaces rather than an automated detection engine, and the response paths reuse VerifiedDiscovery and ResponsibilityEvent.
 
 ## Rule added to Core v0
 

@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A022-thin-markets-for-fiscalization-and-evidence-supply.md`
-- Defense: `defenses/D022-thin-markets-for-fiscalization-and-evidence-supply.md`
+- Attack: [[A022-thin-markets-for-fiscalization-and-evidence-supply|attacks/A022-thin-markets-for-fiscalization-and-evidence-supply.md]]
+- Defense: [[D022-thin-markets-for-fiscalization-and-evidence-supply|defenses/D022-thin-markets-for-fiscalization-and-evidence-supply.md]]
 
 ## Resolution decision
 
 A022 is partially founded. The architecture already scales control to project size and risk and reserves the heavy producer-qualification standard for paid, hard, formal-effect evidence, so most thin-market projects do not carry an infrastructure-grade control bill. But none of that manufactures supply where the qualified market is genuinely empty: in a small commune or a narrow technical domain the admissible set of independent, unrelated, affordable fiscalizers can be a single firm, a single professional, or a handful of people all related to the executor and each other. The accepted resolution is control-supply density observability by territory and domain, plus explicit thin-market handling routes chosen as country implementation.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution bounds with thin integrated observability. It attaches supply-density signals to the existing Planning Scope, Control Subproject selection, and fiscalization records rather than adding a new adjudicating entity, and it makes scarcity visible before publication instead of discovered at control-package closure. Where verification is weak, the financial terms of the package compensate: `research/formal-models.md` Proposition 2 (weak verification must be priced) is the formal basis, since the minimal guarantee that keeps delivery incentive-compatible rises as the probability of effective verification falls.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution bounds with thin integrated observability. It attaches supply-density signals to the existing Planning Scope, Control Subproject selection, and fiscalization records rather than adding a new adjudicating entity, and it makes scarcity visible before publication instead of discovered at control-package closure. Where verification is weak, the financial terms of the package compensate: [[formal-models|research/formal-models.md]] Proposition 2 (weak verification must be priced) is the formal basis, since the minimal guarantee that keeps delivery incentive-compatible rises as the probability of effective verification falls.
 
 ## Rule added to Core v0
 

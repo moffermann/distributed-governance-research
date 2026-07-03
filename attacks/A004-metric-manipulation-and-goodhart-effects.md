@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The system converts public value into value floors, antivalue ceilings, metrics,
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: manipulation of metrics.
-- `docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md`.
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`.
-- `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md`.
-- `knowledge/hypotheses/H018-project-value-thesis-and-measurement.md`.
-- `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md` objects `Metric`, `ValueVerificationPackage`, and `EvaluationRecord`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: manipulation of metrics.
+- [[13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md]].
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]].
+- [[56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md]].
+- [[H018-project-value-thesis-and-measurement|knowledge/hypotheses/H018-project-value-thesis-and-measurement.md]].
+- [[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]] objects `Metric`, `ValueVerificationPackage`, and `EvaluationRecord`.
 
 ## Problem
 
@@ -74,4 +74,4 @@ A sports workshop reports 100 enrolled children but attendance is low, sessions 
 
 ## Resolution output
 
-Resolved in `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`: the metric-gaming test is a required evidence-coverage check inside the `ValueVerificationPackage` and `ProjectEvidentialContract`. Every declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric must identify the fulfillment/control evidence needed to verify it. A004 defines coverage; A013 separately evaluates whether submitted evidence satisfies those needs with sufficient quality, producer qualification, and method fit.
+Resolved in [[70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md]]: the metric-gaming test is a required evidence-coverage check inside the `ValueVerificationPackage` and `ProjectEvidentialContract`. Every declared value floor, formal secondary value, antivalue ceiling, material value claim, and relevant metric must identify the fulfillment/control evidence needed to verify it. A004 defines coverage; A013 separately evaluates whether submitted evidence satisfies those needs with sufficient quality, producer qualification, and method fit.

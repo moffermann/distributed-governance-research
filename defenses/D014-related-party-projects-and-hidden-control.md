@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation. Propagated into the core corpus.
+Phase 3 paired review completed. Accepted resolution: [[80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md]], refined under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]] before core propagation. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A014-related-party-projects-and-hidden-control.md`
+- Attack file: [[A014-related-party-projects-and-hidden-control|attacks/A014-related-party-projects-and-hidden-control.md]]
 - Attack title: `A014 - Related-Party Projects and Hidden Control`
 - Roadmap source: Phase 3 priority objection, related-party projects.
 

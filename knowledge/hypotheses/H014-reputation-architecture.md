@@ -10,11 +10,11 @@ Reputation should not become a generic social score, a popularity vote, a punish
 
 H014 should be read with:
 
-- `knowledge/concepts/reputation-input-chain-v0.md`;
-- `knowledge/concepts/evaluation-context-taxonomy-v0.md`;
-- `knowledge/hypotheses/H030-layered-role-based-reputation.md`;
-- `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md`;
-- `docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md`.
+- [[reputation-input-chain-v0|knowledge/concepts/reputation-input-chain-v0.md]];
+- [[evaluation-context-taxonomy-v0|knowledge/concepts/evaluation-context-taxonomy-v0.md]];
+- [[H030-layered-role-based-reputation|knowledge/hypotheses/H030-layered-role-based-reputation.md]];
+- [[51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md]];
+- [[56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION|docs/56_VALUE_FULFILLMENT_REPUTATION_AND_C018_RESOLUTION.md]].
 
 H015 defines which evaluations can become formal reputation inputs. C012 defines when negative responsibility affects a role. C018 defines why closure labels are context rather than automatic scores. H030 defines the layered visibility model.
 

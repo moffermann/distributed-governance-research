@@ -8,12 +8,12 @@ Operating modes are technical states representing country, authority, protocol, 
 
 Source baseline:
 
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`
-- `knowledge/hypotheses/H058-operating-modes-for-transition.md`
-- `docs/diagrams/v0-tutored-mode-governance-resolution.md`
-- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
-- `docs/37_SCOPE_CLASSIFICATION_MATRIX_V0.md`
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]]
+- [[H058-operating-modes-for-transition|knowledge/hypotheses/H058-operating-modes-for-transition.md]]
+- [[v0-tutored-mode-governance-resolution|docs/diagrams/v0-tutored-mode-governance-resolution.md]]
+- [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]]
+- [[37_SCOPE_CLASSIFICATION_MATRIX_V0|docs/37_SCOPE_CLASSIFICATION_MATRIX_V0.md]]
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]
 
 Related sources: C007, C019, C020, C021, H009, H017, H057, H058.
 

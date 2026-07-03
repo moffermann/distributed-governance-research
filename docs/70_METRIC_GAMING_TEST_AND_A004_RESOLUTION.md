@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A004-metric-manipulation-and-goodhart-effects.md`
-- Defense: `defenses/D004-metric-manipulation-and-goodhart-effects.md`
+- Attack: [[A004-metric-manipulation-and-goodhart-effects|attacks/A004-metric-manipulation-and-goodhart-effects.md]]
+- Defense: [[D004-metric-manipulation-and-goodhart-effects|defenses/D004-metric-manipulation-and-goodhart-effects.md]]
 
 ## Resolution decision
 

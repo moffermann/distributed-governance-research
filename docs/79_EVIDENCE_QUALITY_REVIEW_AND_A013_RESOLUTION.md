@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A013-false-incomplete-or-context-misclassified-evidence.md`
-- Defense: `defenses/D013-false-incomplete-or-context-misclassified-evidence.md`
+- Attack: [[A013-false-incomplete-or-context-misclassified-evidence|attacks/A013-false-incomplete-or-context-misclassified-evidence.md]]
+- Defense: [[D013-false-incomplete-or-context-misclassified-evidence|defenses/D013-false-incomplete-or-context-misclassified-evidence.md]]
 
 ## Resolution decision
 
@@ -15,7 +15,7 @@ A013 is founded in the prior corpus. The attack does not merely require a generi
 
 The accepted Core v0 resolution is a proportional formal evidence producer qualification standard. Detailed scoring, fraud detection, AI-generation detection, instrument calibration registries, and country-specific legal admissibility rules remain future implementation or country-implementation work. Core v0 now requires each formal fulfillment/control evidence need to specify the producer qualification, method, and probative fitness expected for the relevant metric, value floor, antivalue ceiling, milestone, phase gate, or closure condition.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is the most mechanism-heavy accepted resolution, and deliberately so: unqualified or unfit formal evidence defeats the auditable-evidence core claim directly, so the field standard is load-bearing rather than elaboration. Its application is proportional by construction — the standard binds only evidence needs that the active Threshold Policy marks as formal, paid, or hard-effect; ordinary observations and low-risk confirmations are untouched.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is the most mechanism-heavy accepted resolution, and deliberately so: unqualified or unfit formal evidence defeats the auditable-evidence core claim directly, so the field standard is load-bearing rather than elaboration. Its application is proportional by construction — the standard binds only evidence needs that the active Threshold Policy marks as formal, paid, or hard-effect; ordinary observations and low-risk confirmations are untouched.
 
 ## Rule added to Core v0
 

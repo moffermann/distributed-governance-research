@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]].
 
 ## Description
 
@@ -10,11 +10,11 @@ The architecture assigns the tutoring authority concrete, deadline-bound duties 
 
 ## Location in current project
 
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md` creates the resolution and timeout duties without a capacity model.
-- `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md` disciplines project-side burden but not authority-side staffing.
-- `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md` makes fiscal delivery observable but not the administrative capacity that fiscal operation requires.
-- `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md` provides drafting assistance to proposers, only partially to the authority.
-- `docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md` names this gap as a declared open cost.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]] creates the resolution and timeout duties without a capacity model.
+- [[78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md]] disciplines project-side burden but not authority-side staffing.
+- [[88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION|docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md]] makes fiscal delivery observable but not the administrative capacity that fiscal operation requires.
+- [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]] provides drafting assistance to proposers, only partially to the authority.
+- [[101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL|docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md]] names this gap as a declared open cost.
 
 ## Problem
 

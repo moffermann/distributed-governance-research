@@ -2,11 +2,11 @@
 
 ## Integration status
 
-External-review round paired review completed. Accepted resolution: `docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md`.
+External-review round paired review completed. Accepted resolution: [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A034-legal-characterization-of-the-citizen-allocation-act.md`
+- Attack file: [[A034-legal-characterization-of-the-citizen-allocation-act|attacks/A034-legal-characterization-of-the-citizen-allocation-act.md]]
 - Attack title: `A034 - Legal Characterization of the Citizen Allocation Act`
 - Source: external-review round attack queue, public-law reviewer.
 

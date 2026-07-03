@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A007-conflicting-reviews-and-evaluation-fragmentation.md`
-- Defense: `defenses/D007-conflicting-reviews-and-evaluation-fragmentation.md`
+- Attack: [[A007-conflicting-reviews-and-evaluation-fragmentation|attacks/A007-conflicting-reviews-and-evaluation-fragmentation.md]]
+- Defense: [[D007-conflicting-reviews-and-evaluation-fragmentation|defenses/D007-conflicting-reviews-and-evaluation-fragmentation.md]]
 
 ## Resolution decision
 

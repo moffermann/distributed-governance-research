@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture lets citizens, delegates, and allocation profiles fund projects
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: volatile funding.
-- `docs/21_CITIZEN_FUNDING_FLOW.md`.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md`.
-- `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`.
-- `knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md`.
-- `knowledge/functional-matrix-v0-addendum-missing-functions.md` sections on treasury, social security, and emergency management.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: volatile funding.
+- [[21_CITIZEN_FUNDING_FLOW|docs/21_CITIZEN_FUNDING_FLOW.md]].
+- [[31_PROJECT_DISBURSEMENT_FLOW|docs/31_PROJECT_DISBURSEMENT_FLOW.md]].
+- [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]].
+- [[H038-monthly-use-it-or-allocate-it-cycle|knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md]].
+- [[functional-matrix-v0-addendum-missing-functions|knowledge/functional-matrix-v0-addendum-missing-functions.md]] sections on treasury, social security, and emergency management.
 
 ## Problem
 

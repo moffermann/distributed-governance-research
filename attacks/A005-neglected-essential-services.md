@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION|docs/71_ESSENTIAL_SERVICE_PROTECTION_AND_A005_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture distributes bounded public-purpose allocation. This attack asks
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: neglected essential services.
-- `knowledge/functional-matrix-v0.md`.
-- `knowledge/functional-matrix-v0-addendum-missing-functions.md`.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md`.
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`.
-- `knowledge/open-questions/distributed-roadmap-construction-governance.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: neglected essential services.
+- [[functional-matrix-v0|knowledge/functional-matrix-v0.md]].
+- [[functional-matrix-v0-addendum-missing-functions|knowledge/functional-matrix-v0-addendum-missing-functions.md]].
+- [[H002-distributed-resource-allocation|knowledge/hypotheses/H002-distributed-resource-allocation.md]].
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]].
+- [[distributed-roadmap-construction-governance|knowledge/open-questions/distributed-roadmap-construction-governance.md]].
 
 ## Problem
 

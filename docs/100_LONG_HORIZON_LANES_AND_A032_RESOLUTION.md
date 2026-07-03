@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A032-intertemporal-myopia-and-long-term-underinvestment.md`
-- Defense: `defenses/D032-intertemporal-myopia-and-long-term-underinvestment.md`
+- Attack: [[A032-intertemporal-myopia-and-long-term-underinvestment|attacks/A032-intertemporal-myopia-and-long-term-underinvestment.md]]
+- Defense: [[D032-intertemporal-myopia-and-long-term-underinvestment|defenses/D032-intertemporal-myopia-and-long-term-underinvestment.md]]
 
 ## Resolution decision
 
 A032 is partially founded. Monthly allocation cycles reward visible near-term outputs and renewal windows re-expose long-horizon commitments to each cycle's shifting attention, so hyperbolic discounting tilts new funding away from maintenance, prevention, and intergenerational infrastructure, and future citizens are unrepresented in every funding attempt. But the goods most vulnerable to myopia are already shielded structurally, and the sharp edge is new long-horizon value above the floor. This resolution adds long-horizon lanes and intertemporal observability while keeping the existing shields.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution built on existing structures. Formation-stage myopia threatens the aggregate-citizen-valuation claim, so it cannot be ignored, but the control fits existing objects — Planning Scopes, the non-assignable pool, continuity-risk classification (A006), and administrative observability — and the residual, an unrepresented future, is a declared limitation, not a mechanism Core v0 can supply. Endowment-style insulation from per-cycle attention remains an improvement still to be built.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution built on existing structures. Formation-stage myopia threatens the aggregate-citizen-valuation claim, so it cannot be ignored, but the control fits existing objects — Planning Scopes, the non-assignable pool, continuity-risk classification (A006), and administrative observability — and the residual, an unrepresented future, is a declared limitation, not a mechanism Core v0 can supply. Endowment-style insulation from per-cycle attention remains an improvement still to be built.
 
 ## Rule added to Core v0
 

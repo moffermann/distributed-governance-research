@@ -2,11 +2,11 @@
 
 ## Integration status
 
-External-review round paired review completed. Accepted resolution: `docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md`.
+External-review round paired review completed. Accepted resolution: [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A035-administrative-capacity-cost-of-tutored-operation.md`
+- Attack file: [[A035-administrative-capacity-cost-of-tutored-operation|attacks/A035-administrative-capacity-cost-of-tutored-operation.md]]
 - Attack title: `A035 - Administrative Capacity Cost of Tutored Operation`
 - Source: external-review round attack queue, public-sector practitioner reviewer.
 

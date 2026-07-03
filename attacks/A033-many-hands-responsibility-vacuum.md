@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ When a project funded by thousands of micro-allocations, scoped by an authority,
 
 ## Location in current project
 
-- `knowledge/hypotheses/H010-primary-responsibility-principle.md`, whose Primary Responsibility Anchor fixes a project's accountability center but is defined for value delivery, not for third-party harm.
-- `knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md`, which attaches responsibility for undeclared antivalue to "the project" without naming who bears it toward a victim.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md`, which partitions authority and reputation by role but disclaims being a legal-liability code.
-- `docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md`, which keeps reputation role-specific and rejects collective penalty, so harm need not land on anyone.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`, which places the public authority external to the internal actor model for scopes it controls, distancing the state from execution.
-- `docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md`, whose complaint machinery produces platform effects and referrals but not a determination of who is liable to a harmed party.
+- [[H010-primary-responsibility-principle|knowledge/hypotheses/H010-primary-responsibility-principle.md]], whose Primary Responsibility Anchor fixes a project's accountability center but is defined for value delivery, not for third-party harm.
+- [[P003-project-responsibility-for-undeclared-antivalue|knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md]], which attaches responsibility for undeclared antivalue to "the project" without naming who bears it toward a victim.
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]], which partitions authority and reputation by role but disclaims being a legal-liability code.
+- [[51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION|docs/51_ROLE_REPUTATION_RESPONSIBILITY_AND_C012_RESOLUTION.md]], which keeps reputation role-specific and rejects collective penalty, so harm need not land on anyone.
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]], which places the public authority external to the internal actor model for scopes it controls, distancing the state from execution.
+- [[41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md]], whose complaint machinery produces platform effects and referrals but not a determination of who is liable to a harmed party.
 
 ## Problem
 
@@ -85,4 +85,4 @@ A distributed pilot funds a sports facility whose roof later fails, injuring a c
 
 ## Resolution output
 
-Resolved in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`: a `Duty-of-Care Anchor` distinct from the value-focused Primary Responsibility Anchor (H010), plus third-party-harm coverage in the assurance profiles, integrated through existing objects (Financial Assurance Profile, Post-Closure Coverage Profile, responsibility matrix). Every execution-financeable project names, before disbursement, the actor(s) legally responsible to third parties for physical and safety harm, mapped to a solvent reachable legal person and exposed on the citizen-facing sheet; the assurance profiles extend to proportionate third-party liability coverage where Threshold Policy requires it; versioned documentation states that distributed micro-allocation does not dilute the state's duty of care; the responsibility matrix distinguishes "no role breached its internal obligation" from "no one is liable to the victim"; and the audit trail preserves a court-usable harm-attribution package. Liability apportionment remains external law: the platform records and provisions but does not adjudicate. A named anchor and coverage guarantee a reachable defendant, not a just outcome, and the doctrinal construction of liability in distributed public funding remains untested in any jurisdiction.
+Resolved in [[89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md]]: a `Duty-of-Care Anchor` distinct from the value-focused Primary Responsibility Anchor (H010), plus third-party-harm coverage in the assurance profiles, integrated through existing objects (Financial Assurance Profile, Post-Closure Coverage Profile, responsibility matrix). Every execution-financeable project names, before disbursement, the actor(s) legally responsible to third parties for physical and safety harm, mapped to a solvent reachable legal person and exposed on the citizen-facing sheet; the assurance profiles extend to proportionate third-party liability coverage where Threshold Policy requires it; versioned documentation states that distributed micro-allocation does not dilute the state's duty of care; the responsibility matrix distinguishes "no role breached its internal obligation" from "no one is liable to the victim"; and the audit trail preserves a court-usable harm-attribution package. Liability apportionment remains external law: the platform records and provisions but does not adjudicate. A named anchor and coverage guarantee a reachable defendant, not a just outcome, and the doctrinal construction of liability in distributed public funding remains untested in any jurisdiction.

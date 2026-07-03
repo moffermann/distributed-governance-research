@@ -227,7 +227,7 @@ H018 is aligned with:
 
 The quality, authenticity, relevance, AI-generation risk, and usefulness of fulfillment evidence produced by funded or approved evidence producers remains a separate open question:
 
-- `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`
+- [[evidence-producer-evidence-quality-validation|knowledge/open-questions/evidence-producer-evidence-quality-validation.md]]
 
 That risk should not be hidden inside H018. H018 defines the value-to-fulfillment-evidence chain; the later evidence-quality resolution should define how submitted fulfillment evidence is evaluated before it supports disbursement, closure, value fulfillment, or reputation.
 
@@ -237,4 +237,4 @@ That risk should not be hidden inside H018. H018 defines the value-to-fulfillmen
 
 ## Status
 
-Aligned Core v0 hypothesis for project value theses, measurable commitments, fulfillment evidence needs, independent evidence-producer offers, and proportional value verification. Read with `knowledge/concepts/evidence-context-taxonomy-v0.md`.
+Aligned Core v0 hypothesis for project value theses, measurable commitments, fulfillment evidence needs, independent evidence-producer offers, and proportional value verification. Read with [[evidence-context-taxonomy-v0|knowledge/concepts/evidence-context-taxonomy-v0.md]].

@@ -6,9 +6,9 @@ Show the primary entity relationships that should guide Phase 2 formal modeling.
 
 This diagram is a conceptual ERD baseline, not a database schema. It focuses on the relationships needed to preserve accountability: actor, contextual role, idea/project boundary, value promise, metrics, evidence context, fiscalization, funding lanes, complaint handling, scoped pause, closure, reputation, governance, and audit traceability.
 
-Source baseline: `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`.
+Source baseline: [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]].
 
-Related sources: `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`, H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002, A003, A004, A005, A006.
+Related sources: [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]], H001-H003, H008, H012-H019, H022-H024, C001-C025, A001, A002, A003, A004, A005, A006.
 
 ```mermaid
 erDiagram

@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION|docs/68_MATERIAL_VISIBILITY_AND_A002_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A002-information-capture-and-visibility-control.md`
+- Attack file: [[A002-information-capture-and-visibility-control|attacks/A002-information-capture-and-visibility-control.md]]
 - Attack title: `A002 - Information Capture and Visibility Control`
 - Roadmap source: Phase 3 priority objection, information capture.
 

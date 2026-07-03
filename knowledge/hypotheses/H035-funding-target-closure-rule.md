@@ -10,11 +10,11 @@ The system should distinguish execution funding, minimum control funding, and li
 
 This hypothesis is qualified by:
 
-- `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`;
-- `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`;
-- `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`;
-- `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`;
-- `knowledge/hypotheses/H036-milestone-based-disbursement-and-guarantees.md`.
+- [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]];
+- [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]];
+- [[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]];
+- [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]];
+- [[H036-milestone-based-disbursement-and-guarantees|knowledge/hypotheses/H036-milestone-based-disbursement-and-guarantees.md]].
 
 Where older wording suggested exceptional funder withdrawal, C005 is the controlling rule:
 

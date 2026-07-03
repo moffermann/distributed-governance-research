@@ -4,7 +4,7 @@
 
 This document is the shortest professional entry point into the Distributed Governance System v0.
 
-It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is `drafts/paper.md`; this document is its accessible companion.
+It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is [[paper|drafts/paper.md]]; this document is its accessible companion.
 
 The goal is to answer one question clearly:
 
@@ -169,7 +169,7 @@ The system therefore shifts the center of gravity from institutional trust to tr
 
 ## Minimal object model
 
-The full repository contains many objects. For publication, the minimal model can be explained through seven core objects. Implementers should treat these seven as the didactic surface of a larger specified system: the implementable schema draft (`docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md`), the formal entity inventory (`docs/64_FORMAL_ENTITY_INVENTORY_V0.md`), and the consolidated state map (`docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`) carry the full object relations and state machines this document compresses.
+The full repository contains many objects. For publication, the minimal model can be explained through seven core objects. Implementers should treat these seven as the didactic surface of a larger specified system: the implementable schema draft ([[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]]), the formal entity inventory ([[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]), and the consolidated state map ([[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]]) carry the full object relations and state machines this document compresses.
 
 How the seven didactic objects map to the real schema (`docs/66`):
 
@@ -194,7 +194,7 @@ Two objects cut across all seven and deserve naming even in the minimal model. *
 
 A Planning Scope defines what kinds of projects are currently eligible for distributed financing.
 
-It is created by a public authority in a tutored pilot (a supervised mode in which the authority keeps admissibility review — see below) or by an approved roadmap. Every active scope must carry an **Allocation Mandate** record naming the statute, ordinance, referendum, or delegated authority that authorized migrating budget into distributed allocation, the legal instrument behind it, and the allocation formula — with an explicit flag, naming the responsible authority, whenever the formula departs from equal-per-citizen (`docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`). The platform records that external authorization; it does not manufacture it. Distributed construction of the scopes themselves is a declared open problem, not a solved one (`docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md`).
+It is created by a public authority in a tutored pilot (a supervised mode in which the authority keeps admissibility review — see below) or by an approved roadmap. Every active scope must carry an **Allocation Mandate** record naming the statute, ordinance, referendum, or delegated authority that authorized migrating budget into distributed allocation, the legal instrument behind it, and the allocation formula — with an explicit flag, naming the responsible authority, whenever the formula departs from equal-per-citizen ([[86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md]]). The platform records that external authorization; it does not manufacture it. Distributed construction of the scopes themselves is a declared open problem, not a solved one ([[87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md]]).
 
 It answers:
 
@@ -338,11 +338,11 @@ what happens if funding fails
 
 A Funding Commitment is a citizen or actor commitment to fund the project under the stated conditions.
 
-Two clarifications matter here. First, the citizen is not spending personal cash: each citizen periodically receives non-withdrawable allocation capacity over a legally mandated share of the existing public budget — public money whose destination the citizen directs, held by an external custodian, never a personal wallet (`docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`). Second, funding is not immediate payment to the executor. It is conditional: funds are released (paid out) only after the project satisfies the relevant milestone, evidence, fiscalization, and disbursement rules.
+Two clarifications matter here. First, the citizen is not spending personal cash: each citizen periodically receives non-withdrawable allocation capacity over a legally mandated share of the existing public budget — public money whose destination the citizen directs, held by an external custodian, never a personal wallet ([[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]]). Second, funding is not immediate payment to the executor. It is conditional: funds are released (paid out) only after the project satisfies the relevant milestone, evidence, fiscalization, and disbursement rules.
 
 This separates public support from uncontrolled transfer of resources.
 
-One reality the model does not hide: the state still controls the money's arrival. Each scope therefore carries a public, versioned **Fiscal Commitment Profile** — migrated share, indexation, delivery-latency targets — and the system tracks expected-versus-actual delivery and unexecuted valid orders, so late or partial treasury delivery becomes visible, attributable upstream fiscal delay instead of a green funding screen quietly masking unpaid executors (`docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md`). The platform makes fiscal strangulation measurable; only law can make it impossible.
+One reality the model does not hide: the state still controls the money's arrival. Each scope therefore carries a public, versioned **Fiscal Commitment Profile** — migrated share, indexation, delivery-latency targets — and the system tracks expected-versus-actual delivery and unexecuted valid orders, so late or partial treasury delivery becomes visible, attributable upstream fiscal delay instead of a green funding screen quietly masking unpaid executors ([[88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION|docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md]]). The platform makes fiscal strangulation measurable; only law can make it impossible.
 
 ## 6. Control Package / Fiscalization
 
@@ -375,9 +375,9 @@ Citizens observe, comment, object, and denounce.
 
 The executor should not privately appoint or control the actor responsible for validating its own performance.
 
-Control burden follows an explicit proportionality ladder rather than one-size rules: light for small reversible projects, standard, reinforced, and critical for large, technical, remote, irreversible, or vulnerable-beneficiary projects — the applicable band is set by the project's threshold policy, and proposers cannot self-select a lighter band (`knowledge/hypotheses/H020-proportional-procedural-burden.md`).
+Control burden follows an explicit proportionality ladder rather than one-size rules: light for small reversible projects, standard, reinforced, and critical for large, technical, remote, irreversible, or vulnerable-beneficiary projects — the applicable band is set by the project's threshold policy, and proposers cannot self-select a lighter band ([[H020-proportional-procedural-burden|knowledge/hypotheses/H020-proportional-procedural-burden.md]]).
 
-Two honest constraints come with this. In small territories the pool of independent qualified fiscalizers can be thin — sometimes one person, sometimes related to the executor — so the system exposes control-supply density per territory and domain, and thin-market fallbacks (remote review, cross-territory assignment, relaxed-but-disclosed selection) are explicit country-implementation choices, not silent workarounds (`docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`). And before any money moves, every execution-financeable project must name its **Duty-of-Care Anchor**: the solvent, reachable legal person answerable to third parties if the project physically harms someone, backed by coverage proportionate to physical risk — a grassroots training program needs modest coverage, a construction project needs real insurance — so the requirement protects victims without pricing out exactly the small executors a pilot targets (`docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`).
+Two honest constraints come with this. In small territories the pool of independent qualified fiscalizers can be thin — sometimes one person, sometimes related to the executor — so the system exposes control-supply density per territory and domain, and thin-market fallbacks (remote review, cross-territory assignment, relaxed-but-disclosed selection) are explicit country-implementation choices, not silent workarounds ([[90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md]]). And before any money moves, every execution-financeable project must name its **Duty-of-Care Anchor**: the solvent, reachable legal person answerable to third parties if the project physically harms someone, backed by coverage proportionate to physical risk — a grassroots training program needs modest coverage, a construction project needs real insurance — so the requirement protects victims without pricing out exactly the small executors a pilot targets ([[89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md]]).
 
 ## 7. Project Closure Accountability Record / Reputation Update
 
@@ -402,7 +402,7 @@ citizen-facing explanation
 
 The closure category is descriptive. The reputational core is the verified fulfillment of the value thesis.
 
-Closure is also not the end of accountability: execution-financeable projects carry a post-closure coverage window — an executor warranty or equivalent insurance/bond — during which covered defects, contradictory evidence, or hidden harms can still be reviewed inside the platform (`docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md`).
+Closure is also not the end of accountability: execution-financeable projects carry a post-closure coverage window — an executor warranty or equivalent insurance/bond — during which covered defects, contradictory evidence, or hidden harms can still be reviewed inside the platform ([[73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION|docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md]]).
 
 Example:
 
@@ -453,7 +453,7 @@ Planning Scope
 → Reputation Update
 ```
 
-One clarification: the arrows show logical dependency, not a waiting line. A published project gathers its funding, its fiscalizer, its evidence commitments, and its beneficiary confirmations **in parallel**, and becomes executable only when all conditions its threshold policy requires have closed — whichever order they close in. The project's actual lifecycle states are Draft → Open → Execution-ready → In execution → Closed, with defined exceptional states (paused, reformulated, revoked, expired unfunded) rather than improvised ones (`docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`).
+One clarification: the arrows show logical dependency, not a waiting line. A published project gathers its funding, its fiscalizer, its evidence commitments, and its beneficiary confirmations **in parallel**, and becomes executable only when all conditions its threshold policy requires have closed — whichever order they close in. The project's actual lifecycle states are Draft → Open → Execution-ready → In execution → Closed, with defined exceptional states (paused, reformulated, revoked, expired unfunded) rather than improvised ones ([[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]]).
 
 ## Step 1 — A scope is opened
 
@@ -505,7 +505,7 @@ Citizens, beneficiaries, funders, and affected parties may comment, object, prov
 
 A complaint is a formal review trigger, not a mere opinion.
 
-Founded complaints may correct metrics, alter disbursement, change closure, activate guarantees, or generate responsibility events. Because a founded complaint has real consequences for a named executor, its review is procedural, not summary: complaints follow an admissibility-and-review path with a traceable record, sensitive complainants and beneficiaries can act under protected identity with every identity access itself audited, and the adjudication and appeal rules that country law requires are an explicit country-implementation layer, not something the platform improvises (`docs/26_CITIZEN_COMPLAINT_FLOW.md`, `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`).
+Founded complaints may correct metrics, alter disbursement, change closure, activate guarantees, or generate responsibility events. Because a founded complaint has real consequences for a named executor, its review is procedural, not summary: complaints follow an admissibility-and-review path with a traceable record, sensitive complainants and beneficiaries can act under protected identity with every identity access itself audited, and the adjudication and appeal rules that country law requires are an explicit country-implementation layer, not something the platform improvises ([[26_CITIZEN_COMPLAINT_FLOW|docs/26_CITIZEN_COMPLAINT_FLOW.md]], [[94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION|docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md]]).
 
 ## Step 7 — The project closes
 
@@ -631,7 +631,7 @@ The executor's reputation updates from this verified score, adjusted by any foun
 
 ## And year two?
 
-A sports school is not only built — it must survive its second year, and second years are where such projects most often fail. The model treats continuity as a first-class dimension: projects declare whether they are one-time, recurring, or maintenance-dependent; a project that funds six months of training shows citizens `funds first six months` and `maintenance not funded` labels rather than implying permanence; and before a funded period ends, a visible **Continuity Renewal Window** opens so the follow-on need becomes a public Idea competing for funding on its merits — no silent expiry, and no automatic incumbent renewal either (`docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`).
+A sports school is not only built — it must survive its second year, and second years are where such projects most often fail. The model treats continuity as a first-class dimension: projects declare whether they are one-time, recurring, or maintenance-dependent; a project that funds six months of training shows citizens `funds first six months` and `maintenance not funded` labels rather than implying permanence; and before a funded period ends, a visible **Continuity Renewal Window** opens so the follow-on need becomes a public Idea competing for funding on its merits — no silent expiry, and no automatic incumbent renewal either ([[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]]).
 
 ## What prevents abuse
 
@@ -651,7 +651,7 @@ Funding does not automatically transfer to the executor.
 
 Funds are released by milestone, evidence, fiscalization, and disbursement rules.
 
-This protection is not just asserted — it is derived. The formal companion note proves the condition under which delivering is more profitable than diverting: the executor's cost of honest delivery must not exceed the detection probability times everything at stake (the unreleased remainder, the recoverable advance, the posted guarantee, and the reputational value of future eligibility). Every disbursement rule in this model — small advances, recoverability, externally held guarantees, retention — is one term of that inequality, and where independent verification is weak the financial terms must tighten to compensate (`research/formal-models.md`, Propositions 1–2).
+This protection is not just asserted — it is derived. The formal companion note proves the condition under which delivering is more profitable than diverting: the executor's cost of honest delivery must not exceed the detection probability times everything at stake (the unreleased remainder, the recoverable advance, the posted guarantee, and the reputational value of future eligibility). Every disbursement rule in this model — small advances, recoverability, externally held guarantees, retention — is one term of that inequality, and where independent verification is weak the financial terms must tighten to compensate ([[formal-models|research/formal-models.md]], Propositions 1–2).
 
 ## 3. Evidence is contextualized
 
@@ -665,13 +665,13 @@ fiscalization evidence
 closure evidence
 ```
 
-This prevents the system from treating all uploaded documents or photos as equally probative. The context is a mandatory gate, not a label: evidence used for hard formal effects — KPI verification, milestone payment, closure — must additionally come from a producer whose qualifications and methods fit the evidence need, so a citizen's photo can trigger review but cannot, by itself, certify a construction milestone (`docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`).
+This prevents the system from treating all uploaded documents or photos as equally probative. The context is a mandatory gate, not a label: evidence used for hard formal effects — KPI verification, milestone payment, closure — must additionally come from a producer whose qualifications and methods fit the evidence need, so a citizen's photo can trigger review but cannot, by itself, certify a construction milestone ([[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]]).
 
 ## 4. Fiscalization is separated from execution
 
 The executor should not control the actor responsible for validating its performance.
 
-Separation alone is not enough — separate actors can still be bribed. The formal note derives the collusion-proofness condition: buying a fraudulent approval must cost more than the fraud gains, which the model achieves by protocol assignment (strangers cannot form durable corrupt relationships, and a bribe offer to a stranger risks being reported), visible repeat-pairing (so relationships cannot quietly re-form), reputational stakes that are forfeited if approved fraud is later discovered, and — for critical milestones — requiring several independent approvals, which multiplies the price of collusion while the fraud's gain stays fixed (`research/formal-models.md`, Proposition 4).
+Separation alone is not enough — separate actors can still be bribed. The formal note derives the collusion-proofness condition: buying a fraudulent approval must cost more than the fraud gains, which the model achieves by protocol assignment (strangers cannot form durable corrupt relationships, and a bribe offer to a stranger risks being reported), visible repeat-pairing (so relationships cannot quietly re-form), reputational stakes that are forfeited if approved fraud is later discovered, and — for critical milestones — requiring several independent approvals, which multiplies the price of collusion while the fraud's gain stays fixed ([[formal-models|research/formal-models.md]], Proposition 4).
 
 ## 5. Complaints are formal review triggers
 
@@ -693,7 +693,7 @@ Administrative or protocol rule changes must be public, versioned, justified, an
 
 In tutored mode, an administrator may configure rules within its mandate, but cannot change the rules silently, overnight, or retroactively against actors who planned under a previous rule.
 
-Rule changes are not one undifferentiated category: the corpus distinguishes administrative rule changes (parameters and thresholds), system implementation changes (software, algorithms, schemas), and protocol change proposals (the rules of the game themselves), each with its own visibility, versioning, and adaptation requirements (`docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md`).
+Rule changes are not one undifferentiated category: the corpus distinguishes administrative rule changes (parameters and thresholds), system implementation changes (software, algorithms, schemas), and protocol change proposals (the rules of the game themselves), each with its own visibility, versioning, and adaptation requirements ([[57_PROTOCOL_CHANGE_AND_C019_RESOLUTION|docs/57_PROTOCOL_CHANGE_AND_C019_RESOLUTION.md]]).
 
 ## What you, a citizen, actually do
 
@@ -732,12 +732,12 @@ designed-for condition, not a failure mode.
 is financed from a separated control budget attached to the project — a
 distinct line citizens fund alongside execution — and inspectors are
 assigned by protocol rule, so the money that pays verification never
-passes through the hands being verified (`docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`, `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`).
+passes through the hands being verified ([[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]], [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]]).
 
 The interface follows the same principle in layers: a simple card with
 plain status labels for everyone, expandable detail for the curious, and
-the full audit trail for experts (`docs/11_CITIZEN_PROJECT_CARD.md`,
-`docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md`).
+the full audit trail for experts ([[11_CITIZEN_PROJECT_CARD|docs/11_CITIZEN_PROJECT_CARD.md]],
+[[14_LAYERED_CITIZEN_INTERFACE_MODEL|docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md]]).
 
 ## How this model has been tested so far
 
@@ -753,17 +753,17 @@ was validated three ways before publication:
   resolutions `docs/67`–`docs/100`, rule `knowledge/principles/P007`).
 - **Formally.** The disbursement and anti-collusion mechanisms are proven
   as incentive-compatibility and collusion-proofness conditions, with the
-  design levers appearing as explicit terms (`research/formal-models.md`).
+  design levers appearing as explicit terms ([[formal-models|research/formal-models.md]]).
 - **Computationally.** A 10,000-agent simulation of realistic citizen
   attention found that funding caps curb concentration but not quality,
   that allocation quality is carried by the planning-anchored default
   rule, and that participation decay is survivable exactly where that
   anchor is strong — results that discipline this document's claims
-  rather than decorate them (`research/simulation-results.md`).
+  rather than decorate them ([[simulation-results|research/simulation-results.md]]).
 
 Every critique of the model is evaluated against how the current
 institutional system solves the same problem — not against an ideal
-(`knowledge/principles/P001-comparative-critique-rule.md`). What no
+([[P001-comparative-critique-rule|knowledge/principles/P001-comparative-critique-rule.md]]). What no
 internal process can supply — independent expert review, calibration to
 real participatory-budgeting data, and a live pilot — is the declared
 next phase.
@@ -772,9 +772,9 @@ next phase.
 
 This model does not eliminate the need for public authority.
 
-In a tutored pilot the public authority's control surface is concrete, not rhetorical: it defines the Planning Scope, reviews admissibility, duplication, and eligibility, and can approve, reject, or reclassify projects — but every material decision must be issued as a public **Governance Resolution** with reasons and a declared review window, and silence past the deadline automatically produces a public **Review Timeout Resolution** under a pre-configured timeout policy (`docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`). The authority keeps its veto; it loses only the ability to exercise it invisibly. What silence produces is not left to doctrine: the consequence of a lapsed deadline — from visibility-only through escalation to community override or automatic approval — is configured publicly at the operating-mode level before any project is submitted, so neither applicants nor the authority discover the direction of administrative silence after the fact.
+In a tutored pilot the public authority's control surface is concrete, not rhetorical: it defines the Planning Scope, reviews admissibility, duplication, and eligibility, and can approve, reject, or reclassify projects — but every material decision must be issued as a public **Governance Resolution** with reasons and a declared review window, and silence past the deadline automatically produces a public **Review Timeout Resolution** under a pre-configured timeout policy ([[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]]). The authority keeps its veto; it loses only the ability to exercise it invisibly. What silence produces is not left to doctrine: the consequence of a lapsed deadline — from visibility-only through escalation to community override or automatic approval — is configured publicly at the operating-mode level before any project is submitted, so neither applicants nor the authority discover the direction of administrative silence after the fact.
 
-Two honest costs are declared rather than hidden. Operating a tutored scope consumes real administrative capacity — issuing reasoned resolutions within review windows, running admissibility review, coordinating control — and the corpus does not yet quantify that staffing cost; it is recorded as an open attack on the model (`attacks/A035-administrative-capacity-cost-of-tutored-operation.md`). And the legal characterization of the citizen's allocation act itself — what kind of act it is in administrative law, and what review rights a funder has when committed funds are reassigned — is mechanically specified but doctrinally open, likewise recorded (`attacks/A034-legal-characterization-of-the-citizen-allocation-act.md`). One boundary is absolute: an authority may not be judge and party — it cannot compete as an operator inside a scope it controls (`docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`).
+Two honest costs are declared rather than hidden. Operating a tutored scope consumes real administrative capacity — issuing reasoned resolutions within review windows, running admissibility review, coordinating control — and the corpus does not yet quantify that staffing cost; it is recorded as an open attack on the model ([[A035-administrative-capacity-cost-of-tutored-operation|attacks/A035-administrative-capacity-cost-of-tutored-operation.md]]). And the legal characterization of the citizen's allocation act itself — what kind of act it is in administrative law, and what review rights a funder has when committed funds are reassigned — is mechanically specified but doctrinally open, likewise recorded ([[A034-legal-characterization-of-the-citizen-allocation-act|attacks/A034-legal-characterization-of-the-citizen-allocation-act.md]]). One boundary is absolute: an authority may not be judge and party — it cannot compete as an operator inside a scope it controls ([[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]]).
 
 Several elements may remain centralized, tutored, or country-specific:
 
@@ -798,7 +798,7 @@ It preserves centralized or legally recognized authority where coercion, rights 
 
 ## Limitations, stated as limitations
 
-Under the project's own editorial rule (`knowledge/principles/P007-integrate-or-bound-rule.md`), what the model does not solve is declared with its residual risk attached, not hidden in scope language. The principal declared limitations:
+Under the project's own editorial rule ([[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]]), what the model does not solve is declared with its residual risk attached, not hidden in scope language. The principal declared limitations:
 
 - **Agenda-setting stays centralized, and it matters most.** Whoever constructs Planning Scopes shapes everything downstream; the simulation shows planner knowledge dominates allocation quality. Distributing scope construction is the architecture's declared open problem (`docs/87`).
 - **Fiscal dependence is measurable, not enforceable.** A determined treasury can still defund the system in full public view; only country law can bind it (`docs/88`).
@@ -813,7 +813,7 @@ Its claim is more modest:
 
 ## Where this sits in the literature
 
-The model builds on known ground and says so. Ostrom's design principles for self-governed commons — bounded scope, accountable monitoring, graduated sanctions — reappear here as software-enforced objects. Participatory budgeting (Wampler's Brazilian evidence and its successors) established citizen allocation but documented engagement decay and a weak link between allocation and verified delivery — precisely the two margins this model redesigns. The DAO literature demonstrated rule-encoded collective funding and its plutocratic failure modes, which this model avoids by rejecting token voting and anonymous actors. And the field-experimental audit literature (Olken's Indonesian road projects) cautions that professional verification outperforms crowd monitoring for procurement fraud — a caution this architecture absorbs by making professional fiscalization, not crowd observation, the payment-gating layer. Full citations and positioning are in the companion manuscript (`drafts/paper.md`, Section 2).
+The model builds on known ground and says so. Ostrom's design principles for self-governed commons — bounded scope, accountable monitoring, graduated sanctions — reappear here as software-enforced objects. Participatory budgeting (Wampler's Brazilian evidence and its successors) established citizen allocation but documented engagement decay and a weak link between allocation and verified delivery — precisely the two margins this model redesigns. The DAO literature demonstrated rule-encoded collective funding and its plutocratic failure modes, which this model avoids by rejecting token voting and anonymous actors. And the field-experimental audit literature (Olken's Indonesian road projects) cautions that professional verification outperforms crowd monitoring for procurement fraud — a caution this architecture absorbs by making professional fiscalization, not crowd observation, the payment-gating layer. Full citations and positioning are in the companion manuscript ([[paper|drafts/paper.md]], Section 2).
 
 ## Why this is not just participatory budgeting
 
@@ -872,7 +872,7 @@ and the layer can be bounded so its failure does not cascade into
 the non-distributable layers.
 ```
 
-The principle is made concrete in a complete architecture and validated formally, computationally, and adversarially (the full manuscript is `drafts/paper.md`, Section 3). The minimum contribution can be stated as follows:
+The principle is made concrete in a complete architecture and validated formally, computationally, and adversarially (the full manuscript is [[paper|drafts/paper.md]], Section 3). The minimum contribution can be stated as follows:
 
 ```text
 This paper proposes a functional architecture for distributed public project governance. It decomposes public-resource allocation into a project lifecycle governed by Planning Scopes, Value Theses, Evidential Contracts, Conditional Funding, Control Packages, Milestone Disbursement, Closure Accountability, and Reputation Updates. The model shows how bounded public projects can be opened to distributed participation without relying on popularity alone, executor self-reporting, or uncontrolled transfer of funds.
@@ -884,11 +884,11 @@ Honesty requires separating what the corpus has already answered from what remai
 
 Already answered inside the corpus (with pointers, so reviewers do not re-litigate them blind):
 
-- *Which public function first?* Local sports and recreation — argued below and in `knowledge/hypotheses/H053-sports-as-transition-pilot.md`.
+- *Which public function first?* Local sports and recreation — argued below and in [[H053-sports-as-transition-pilot|knowledge/hypotheses/H053-sports-as-transition-pilot.md]].
 - *How much burden for small projects?* The proportional burden ladder, set by threshold policy, never self-selected (`knowledge/hypotheses/H020`, `docs/78`).
-- *How are fiscalizers selected in high-risk cases?* Protocol assignment plus independent corroboration for critical milestones, with the collusion-proofness condition derived formally (`docs/84`, `research/formal-models.md`).
+- *How are fiscalizers selected in high-risk cases?* Protocol assignment plus independent corroboration for critical milestones, with the collusion-proofness condition derived formally (`docs/84`, [[formal-models|research/formal-models.md]]).
 - *How do tutored modes transition?* Through published operating modes with maturity metrics, and open mode is gated on resolving constitutional mechanics (`knowledge/hypotheses/H058`, `docs/91`).
-- *Does the model depend on high citizen attention?* No — the simulation shows the default anchor carries allocation quality and decay is buffered where the anchor is strong (`research/simulation-results.md`).
+- *Does the model depend on high citizen attention?* No — the simulation shows the default anchor carries allocation quality and decay is buffered where the anchor is strong ([[simulation-results|research/simulation-results.md]]).
 
 Genuinely open:
 
@@ -922,7 +922,7 @@ Reasons:
 - citizens understand the value;
 - failure modes are real but manageable.
 
-Technically, a pilot's preconditions are already specified rather than improvised: the schema draft defines the minimal validation gates any implementation must enforce (no publication without a coherent evidential contract, no disbursement without review basis and financial-order path, no state transition without an audit event), and it names the integrations that remain external by design — identity provider, treasury custody, and legal registries (`docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md`).
+Technically, a pilot's preconditions are already specified rather than improvised: the schema draft defines the minimal validation gates any implementation must enforce (no publication without a coherent evidential contract, no disbursement without review basis and financial-order path, no state transition without an audit event), and it names the integrations that remain external by design — identity provider, treasury custody, and legal registries ([[66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0|docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md]]).
 
 ## Final summary
 

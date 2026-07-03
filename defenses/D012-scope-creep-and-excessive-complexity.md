@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`, now formalized as `knowledge/principles/P007-integrate-or-bound-rule.md` and refined before core propagation. Propagated into the core corpus.
+Phase 3 paired review completed. Accepted resolution: [[78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md]], now formalized as [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]] and refined before core propagation. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A012-scope-creep-and-excessive-complexity.md`
+- Attack file: [[A012-scope-creep-and-excessive-complexity|attacks/A012-scope-creep-and-excessive-complexity.md]]
 - Attack title: `A012 - Scope Creep and Excessive Complexity`
 - Roadmap source: Phase 3 priority objection, scope creep and excessive complexity.
 

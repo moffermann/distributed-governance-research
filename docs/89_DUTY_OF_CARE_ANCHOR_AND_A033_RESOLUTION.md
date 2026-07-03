@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A033-many-hands-responsibility-vacuum.md`
-- Defense: `defenses/D033-many-hands-responsibility-vacuum.md`
+- Attack: [[A033-many-hands-responsibility-vacuum|attacks/A033-many-hands-responsibility-vacuum.md]]
+- Defense: [[D033-many-hands-responsibility-vacuum|defenses/D033-many-hands-responsibility-vacuum.md]]
 
 ## Resolution decision
 
 A033 is founded. When harm results from the interaction of adequately-performed roles, the responsibility matrix can truthfully find that no role breached its internal obligation, C012 forbids blame by association, and P003 assigns responsibility to "the project," which is not a legal person a victim can sue. The accepted resolution is a `Duty-of-Care Anchor` distinct from the value-focused Primary Responsibility Anchor (H010), plus third-party-harm coverage in the assurance profiles.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through existing objects — the Financial Assurance Profile, the Post-Closure Coverage Profile, and the responsibility matrix. It names the liable party and provisions coverage; it does not adjudicate liability.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates through existing objects — the Financial Assurance Profile, the Post-Closure Coverage Profile, and the responsibility matrix. It names the liable party and provisions coverage; it does not adjudicate liability.
 
 ## Rule added to Core v0
 

@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A028-spatial-and-group-inequity-of-allocation-outcomes.md`
-- Defense: `defenses/D028-spatial-and-group-inequity-of-allocation-outcomes.md`
+- Attack: [[A028-spatial-and-group-inequity-of-allocation-outcomes|attacks/A028-spatial-and-group-inequity-of-allocation-outcomes.md]]
+- Defense: [[D028-spatial-and-group-inequity-of-allocation-outcomes|defenses/D028-spatial-and-group-inequity-of-allocation-outcomes.md]]
 
 ## Resolution decision
 
 A028 is founded. Even with strictly equal per-citizen wallets and equal capacity, allocation outcomes concentrate where social capital, organizational density, and proposal-writing capacity already concentrate, so equal inputs produce unequal territorial and group results. Horizontal fiscal equity is not guaranteed by equal individual inputs; it requires equalization the model does not contain. This resolution mandates outcome observability and documents equalization as an available, unmandated capability.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution with core observability. Outcome inequity attacks the fairness claim of equal wallets, so it cannot be ignored, but the audit trail already makes per-territory outcomes reconstructable and the equalization machinery is representable through existing objects — the H025 formula layer, the H033 default rule, planning-scope lanes, and the non-assignable pool. Core v0 therefore integrates the observability minimally and bounds the redistribution as a political choice.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution with core observability. Outcome inequity attacks the fairness claim of equal wallets, so it cannot be ignored, but the audit trail already makes per-territory outcomes reconstructable and the equalization machinery is representable through existing objects — the H025 formula layer, the H033 default rule, planning-scope lanes, and the non-assignable pool. Core v0 therefore integrates the observability minimally and bounds the redistribution as a political choice.
 
 ## Rule added to Core v0
 

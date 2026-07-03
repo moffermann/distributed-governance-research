@@ -22,7 +22,7 @@ A decider algorithm chooses outcomes. A coordinator algorithm records, structure
 
 ### Resulting concept
 
-- `knowledge/concepts/algorithm-as-coordinator.md`
+- [[algorithm-as-coordinator|knowledge/concepts/algorithm-as-coordinator.md]]
 
 ---
 
@@ -40,8 +40,8 @@ The system should not rely on a central authority or algorithm to define value. 
 
 ### Resulting files
 
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md`
-- `knowledge/principles/P002-social-sovereignty-over-value.md`
+- [[H002-distributed-resource-allocation|knowledge/hypotheses/H002-distributed-resource-allocation.md]]
+- [[P002-social-sovereignty-over-value|knowledge/principles/P002-social-sovereignty-over-value.md]]
 
 ---
 
@@ -57,7 +57,7 @@ The current system also represents children through parents, guardians, courts, 
 
 ### Resulting concept
 
-- Representation in `knowledge/concepts/core-glossary-v0.md`
+- Representation in [[core-glossary-v0|knowledge/concepts/core-glossary-v0.md]]
 
 ---
 
@@ -73,8 +73,8 @@ The answer is not a new central information authority. The answer is distributed
 
 ### Resulting files
 
-- `knowledge/hypotheses/H003-distributed-trust.md`
-- `knowledge/concepts/distributed-trust.md`
+- [[H003-distributed-trust|knowledge/hypotheses/H003-distributed-trust.md]]
+- [[distributed-trust|knowledge/concepts/distributed-trust.md]]
 
 ---
 
@@ -92,8 +92,8 @@ The model becomes a form of augmented democracy: more direct, more informed, mor
 
 ### Resulting files
 
-- `knowledge/hypotheses/H006-assisted-deliberation.md`
-- `knowledge/hypotheses/H007-continuous-performance-evaluation.md`
+- [[H006-assisted-deliberation|knowledge/hypotheses/H006-assisted-deliberation.md]]
+- [[H007-continuous-performance-evaluation|knowledge/hypotheses/H007-continuous-performance-evaluation.md]]
 
 ---
 
@@ -109,7 +109,7 @@ Accountability cannot depend only on self-reporting. It must include beneficiari
 
 ### Resulting file
 
-- `knowledge/hypotheses/H008-distributed-accountability.md`
+- [[H008-distributed-accountability|knowledge/hypotheses/H008-distributed-accountability.md]]
 
 ---
 
@@ -125,8 +125,8 @@ The theory distinguishes institutions from institutional monopolies. It does not
 
 ### Resulting files
 
-- `knowledge/hypotheses/H004-institutional-monopolies.md`
-- `knowledge/concepts/institutional-taxonomy.md`
+- [[H004-institutional-monopolies|knowledge/hypotheses/H004-institutional-monopolies.md]]
+- [[institutional-taxonomy|knowledge/concepts/institutional-taxonomy.md]]
 
 ---
 
@@ -142,7 +142,7 @@ Every critique of the distributed model must be compared against how the current
 
 ### Resulting file
 
-- `knowledge/principles/P001-comparative-critique-rule.md`
+- [[P001-comparative-critique-rule|knowledge/principles/P001-comparative-critique-rule.md]]
 
 ---
 

@@ -8,18 +8,18 @@ Delegation is scoped authorization. It is not a transfer of citizenship, identit
 
 Source baseline:
 
-- `docs/27_CITIZEN_DELEGATION_FLOW.md`
-- `docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md`
-- `docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION.md`
-- `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md`
-- `knowledge/hypotheses/H042-layered-delegation-architecture.md`
-- `knowledge/hypotheses/H043-transparent-delegation-concentration.md`
-- `knowledge/hypotheses/H045-delegated-action-weight.md`
-- `knowledge/hypotheses/H046-delegated-action-reporting.md`
-- `knowledge/hypotheses/H047-immediate-delegation-revocation.md`
-- `knowledge/hypotheses/H048-delegation-request-and-acceptance.md`
-- `knowledge/hypotheses/H049-delegate-resignation-and-notification.md`
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
+- [[27_CITIZEN_DELEGATION_FLOW|docs/27_CITIZEN_DELEGATION_FLOW.md]]
+- [[28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md]]
+- [[50_DELEGATION_PRIORITY_AND_C011_RESOLUTION|docs/50_DELEGATION_PRIORITY_AND_C011_RESOLUTION.md]]
+- [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]]
+- [[H042-layered-delegation-architecture|knowledge/hypotheses/H042-layered-delegation-architecture.md]]
+- [[H043-transparent-delegation-concentration|knowledge/hypotheses/H043-transparent-delegation-concentration.md]]
+- [[H045-delegated-action-weight|knowledge/hypotheses/H045-delegated-action-weight.md]]
+- [[H046-delegated-action-reporting|knowledge/hypotheses/H046-delegated-action-reporting.md]]
+- [[H047-immediate-delegation-revocation|knowledge/hypotheses/H047-immediate-delegation-revocation.md]]
+- [[H048-delegation-request-and-acceptance|knowledge/hypotheses/H048-delegation-request-and-acceptance.md]]
+- [[H049-delegate-resignation-and-notification|knowledge/hypotheses/H049-delegate-resignation-and-notification.md]]
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]
 
 Related sources: C005, C007, C008, C011, C023, H033, H034, H038, H042-H049.
 

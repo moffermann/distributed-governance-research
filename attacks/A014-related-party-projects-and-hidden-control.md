@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture allows related-party projects when declared and proportionally 
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: related-party projects.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md`.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`.
-- `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md`.
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` object `Related-Party Conflict Review`.
-- `docs/09_PROJECT_OBJECT_MODEL.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: related-party projects.
+- [[H028-related-party-conflict-of-interest|knowledge/hypotheses/H028-related-party-conflict-of-interest.md]].
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]].
+- [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]].
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]] object `Related-Party Conflict Review`.
+- [[09_PROJECT_OBJECT_MODEL|docs/09_PROJECT_OBJECT_MODEL.md]].
 
 ## Problem
 
@@ -75,4 +75,4 @@ A fiscalizer approves design deliverables for a company later found to share dir
 
 ## Resolution output
 
-Resolved in `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`: a minimum related-party relationship graph and severity model, integrated as observability over declarations already required by `RelatedPartyConflictReview` and the role model rather than a new primary entity. The graph covers ownership and control chains, board or management control, material supplier and subcontractor relationships, repeated fiscalizer/evidence-producer relationships, delegate or funder relationships to project actors, and authority-linked operator status; declared proximity is handled proportionally, while hidden or control-relevant relationships escalate to correction, blocking, exclusion, complaint, responsibility, or reputation effects. The same graph serves A018 collusion observability. Core v0 does not require beneficial-ownership verification or corporate-registry integration; verification depth is a country-implementation decision and graph analytics remain Extension v1+.
+Resolved in [[80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md]]: a minimum related-party relationship graph and severity model, integrated as observability over declarations already required by `RelatedPartyConflictReview` and the role model rather than a new primary entity. The graph covers ownership and control chains, board or management control, material supplier and subcontractor relationships, repeated fiscalizer/evidence-producer relationships, delegate or funder relationships to project actors, and authority-linked operator status; declared proximity is handled proportionally, while hidden or control-relevant relationships escalate to correction, blocking, exclusion, complaint, responsibility, or reputation effects. The same graph serves A018 collusion observability. Core v0 does not require beneficial-ownership verification or corporate-registry integration; verification depth is a country-implementation decision and graph analytics remain Extension v1+.

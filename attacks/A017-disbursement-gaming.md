@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The system releases funds through milestones, evidence, review, blockers, assura
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: disbursement gaming.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md`.
-- `docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md`.
-- `knowledge/hypotheses/H036-milestone-based-disbursement-and-guarantees.md`.
-- `knowledge/hypotheses/H011-financial-assurance-and-revocability.md`.
-- `docs/diagrams/v0-funding-commitment-disbursement-state.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: disbursement gaming.
+- [[31_PROJECT_DISBURSEMENT_FLOW|docs/31_PROJECT_DISBURSEMENT_FLOW.md]].
+- [[54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|docs/54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION.md]].
+- [[H036-milestone-based-disbursement-and-guarantees|knowledge/hypotheses/H036-milestone-based-disbursement-and-guarantees.md]].
+- [[H011-financial-assurance-and-revocability|knowledge/hypotheses/H011-financial-assurance-and-revocability.md]].
+- [[v0-funding-commitment-disbursement-state|docs/diagrams/v0-funding-commitment-disbursement-state.md]].
 
 ## Problem
 

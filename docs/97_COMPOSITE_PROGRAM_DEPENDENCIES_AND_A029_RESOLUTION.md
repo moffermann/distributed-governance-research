@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A029-program-fragmentation-and-lost-complementarities.md`
-- Defense: `defenses/D029-program-fragmentation-and-lost-complementarities.md`
+- Attack: [[A029-program-fragmentation-and-lost-complementarities|attacks/A029-program-fragmentation-and-lost-complementarities.md]]
+- Defense: [[D029-program-fragmentation-and-lost-complementarities|defenses/D029-program-fragmentation-and-lost-complementarities.md]]
 
 ## Resolution decision
 
 A029 is partially founded. Decomposing public action into independently proposed, funded, and closed projects can strand complementarities: cross-project linkages where one component is worthless without another, multi-year coherence, and procurement economies of scale. Composite Programs already aggregate interdependent projects, but each component still lives or dies by its own funding attempt, so partial funding can produce stranded half-systems. This resolution strengthens dependency coordination without abandoning per-project accountability.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through the existing Composite Program object (H051) rather than adding a new primary entity. Fragmentation threatens the coordinated-delivery claim, so it cannot be ignored, but the coordination structure already exists — program aggregation, Planning Scope alignment, parallel closure, and funding-window expiry — and the fix is to make cross-project dependencies declarable and program-level coherence visible. Bundled all-or-nothing funding remains bounded to Extension v1+.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates through the existing Composite Program object (H051) rather than adding a new primary entity. Fragmentation threatens the coordinated-delivery claim, so it cannot be ignored, but the coordination structure already exists — program aggregation, Planning Scope alignment, parallel closure, and funding-window expiry — and the fix is to make cross-project dependencies declarable and program-level coherence visible. Bundled all-or-nothing funding remains bounded to Extension v1+.
 
 ## Rule added to Core v0
 

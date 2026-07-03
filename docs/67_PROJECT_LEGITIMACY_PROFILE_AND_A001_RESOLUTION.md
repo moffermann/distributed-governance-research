@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A001-legitimacy-does-not-follow-from-funding.md`
-- Defense: `defenses/D001-legitimacy-does-not-follow-from-funding.md`
+- Attack: [[A001-legitimacy-does-not-follow-from-funding|attacks/A001-legitimacy-does-not-follow-from-funding.md]]
+- Defense: [[D001-legitimacy-does-not-follow-from-funding|defenses/D001-legitimacy-does-not-follow-from-funding.md]]
 
 ## Resolution decision
 

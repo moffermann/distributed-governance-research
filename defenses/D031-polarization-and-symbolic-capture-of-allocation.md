@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION|docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A031-polarization-and-symbolic-capture-of-allocation.md`
+- Attack file: [[A031-polarization-and-symbolic-capture-of-allocation|attacks/A031-polarization-and-symbolic-capture-of-allocation.md]]
 - Attack title: `A031 - Polarization and Symbolic Capture of Allocation`
 - Source: second-round attack queue, affective polarization and symbolic capture.
 

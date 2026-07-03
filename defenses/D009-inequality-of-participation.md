@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A009-inequality-of-participation.md`
+- Attack file: [[A009-inequality-of-participation|attacks/A009-inequality-of-participation.md]]
 - Attack title: `A009 - Inequality of Participation`
 - Roadmap source: Phase 3 priority objection, inequality of participation.
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture relies on citizen funding, support, objection, complaint, evide
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: inequality of participation.
-- `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md`.
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md`.
-- `docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md`.
-- `docs/21_CITIZEN_FUNDING_FLOW.md`.
-- `docs/27_CITIZEN_DELEGATION_FLOW.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: inequality of participation.
+- [[P006-layered-complexity-and-citizen-simplicity|knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md]].
+- [[H041-distributed-participation-capacity|knowledge/hypotheses/H041-distributed-participation-capacity.md]].
+- [[14_LAYERED_CITIZEN_INTERFACE_MODEL|docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md]].
+- [[21_CITIZEN_FUNDING_FLOW|docs/21_CITIZEN_FUNDING_FLOW.md]].
+- [[27_CITIZEN_DELEGATION_FLOW|docs/27_CITIZEN_DELEGATION_FLOW.md]].
 
 ## Problem
 

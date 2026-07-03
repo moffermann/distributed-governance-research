@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION|docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture allows citizens to commit public-purpose resources to projects.
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: legitimacy.
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md` sections on distributed allocation, planning scope, value thesis, complaints, and operating modes.
-- `docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST.md` project, funding, public guarantee, complaint, and transition checklists.
-- `knowledge/hypotheses/H002-distributed-resource-allocation.md`.
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md`.
-- `knowledge/open-questions/distributed-roadmap-construction-governance.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: legitimacy.
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]] sections on distributed allocation, planning scope, value thesis, complaints, and operating modes.
+- [[38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST|docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST.md]] project, funding, public guarantee, complaint, and transition checklists.
+- [[H002-distributed-resource-allocation|knowledge/hypotheses/H002-distributed-resource-allocation.md]].
+- [[H009-binding-evolutionary-planning|knowledge/hypotheses/H009-binding-evolutionary-planning.md]].
+- [[distributed-roadmap-construction-governance|knowledge/open-questions/distributed-roadmap-construction-governance.md]].
 
 ## Problem
 

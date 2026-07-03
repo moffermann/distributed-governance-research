@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A035-administrative-capacity-cost-of-tutored-operation.md`
-- Defense: `defenses/D035-administrative-capacity-cost-of-tutored-operation.md`
+- Attack: [[A035-administrative-capacity-cost-of-tutored-operation|attacks/A035-administrative-capacity-cost-of-tutored-operation.md]]
+- Defense: [[D035-administrative-capacity-cost-of-tutored-operation|defenses/D035-administrative-capacity-cost-of-tutored-operation.md]]
 
 ## Resolution decision
 
 A035 is founded as a deployment precondition and does not distort the project when read comparatively: the review labor it prices already exists — an official approves budgets and projects today, unmeasured — and the model re-platforms that work under declared windows and public attribution rather than creating it. The accepted resolution is an Administrative Capacity Declaration per tutored scope, with capacity-calibrated timeouts and bounded authority-side assistance.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this integrates through existing objects — the Planning Scope carries the declaration exactly as it carries the Allocation Mandate and Fiscal Commitment Profile, timeout policies are already configurable per operating mode, the AI-assistance boundary already exists — and bounds quantification: no staffing number is empirical until the first pilot measures one, and deployment economics remain a country-implementation matter, not an argument this corpus makes.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this integrates through existing objects — the Planning Scope carries the declaration exactly as it carries the Allocation Mandate and Fiscal Commitment Profile, timeout policies are already configurable per operating mode, the AI-assistance boundary already exists — and bounds quantification: no staffing number is empirical until the first pilot measures one, and deployment economics remain a country-implementation matter, not an argument this corpus makes.
 
 ## Rule added to Core v0
 

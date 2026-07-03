@@ -24,14 +24,14 @@ Accepted as the Phase 2 responsibility matrix baseline.
 
 Source baseline:
 
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md`
-- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
-- `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md`
-- `docs/diagrams/v0-formal-entity-relationship.md`
-- `docs/diagrams/v0-audit-event-schema.md`
-- `knowledge/concepts/evidence-context-taxonomy-v0.md`
-- `knowledge/concepts/evaluation-context-taxonomy-v0.md`
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]]
+- [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]]
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]
+- [[20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER|docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md]]
+- [[v0-formal-entity-relationship|docs/diagrams/v0-formal-entity-relationship.md]]
+- [[v0-audit-event-schema|docs/diagrams/v0-audit-event-schema.md]]
+- [[evidence-context-taxonomy-v0|knowledge/concepts/evidence-context-taxonomy-v0.md]]
+- [[evaluation-context-taxonomy-v0|knowledge/concepts/evaluation-context-taxonomy-v0.md]]
 
 ## Core principle
 

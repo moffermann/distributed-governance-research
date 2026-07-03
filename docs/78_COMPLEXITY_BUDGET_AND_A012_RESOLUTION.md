@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A012-scope-creep-and-excessive-complexity.md`
-- Defense: `defenses/D012-scope-creep-and-excessive-complexity.md`
+- Attack: [[A012-scope-creep-and-excessive-complexity|attacks/A012-scope-creep-and-excessive-complexity.md]]
+- Defense: [[D012-scope-creep-and-excessive-complexity|defenses/D012-scope-creep-and-excessive-complexity.md]]
 
 ## Resolution decision
 
 A012 is founded and does not distort the project when it improves proportionality rather than eliminating safeguards. The accepted resolution is a complexity budget and low-risk fast-path discipline.
 
-This discipline is formalized as `knowledge/principles/P007-integrate-or-bound-rule.md`: once the core thesis is fully presented, a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by an explicit boundary, visible residual risk, and a recorded limitation statement. Accepted resolutions pending propagation should be reviewed against P007 before they are integrated into the core corpus.
+This discipline is formalized as [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]]: once the core thesis is fully presented, a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by an explicit boundary, visible residual risk, and a recorded limitation statement. Accepted resolutions pending propagation should be reviewed against P007 before they are integrated into the core corpus.
 
 ## Rule added to Core v0
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION|docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The verified-identity baseline (P004) makes the external identity provider the s
 
 ## Location in current project
 
-- `knowledge/principles/P004-verified-identity-no-anonymous-actors.md`, the constitutional no-anonymous-actors rule and its dependence on a trusted identity mechanism.
-- `knowledge/hypotheses/H029-verified-identity-contextual-privacy.md`, which separates verified from public identity but keeps verified identity always known to the system.
-- `docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION.md`, which makes verified authorship the primary protection and notes it may chill legitimate criticism.
-- `docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md`, the protected-identity mechanism and its restricted-review and legal-gate carve-outs.
-- `docs/26_CITIZEN_COMPLAINT_FLOW.md`, where complaints against powerful actors are filed under verified identity with authorized-reviewer access.
-- `docs/08_ENTITY_AND_ROLE_MAP.md`, which treats identity verification as a baseline and names ClaveUnica-style providers as external infrastructure.
+- [[P004-verified-identity-no-anonymous-actors|knowledge/principles/P004-verified-identity-no-anonymous-actors.md]], the constitutional no-anonymous-actors rule and its dependence on a trusted identity mechanism.
+- [[H029-verified-identity-contextual-privacy|knowledge/hypotheses/H029-verified-identity-contextual-privacy.md]], which separates verified from public identity but keeps verified identity always known to the system.
+- [[53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION|docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION.md]], which makes verified authorship the primary protection and notes it may chill legitimate criticism.
+- [[62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION|docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md]], the protected-identity mechanism and its restricted-review and legal-gate carve-outs.
+- [[26_CITIZEN_COMPLAINT_FLOW|docs/26_CITIZEN_COMPLAINT_FLOW.md]], where complaints against powerful actors are filed under verified identity with authorized-reviewer access.
+- [[08_ENTITY_AND_ROLE_MAP|docs/08_ENTITY_AND_ROLE_MAP.md]], which treats identity verification as a baseline and names ClaveUnica-style providers as external infrastructure.
 
 ## Problem
 
@@ -85,4 +85,4 @@ A national deployment relies on a single state-operated identity provider. Durin
 
 ## Resolution output
 
-Resolved in `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`: classified partially founded and bounded with minimal records under P007. Core v0 gained declared identity-provider failure modes (compromise, coercion, outage, wrongful exclusion) with compromise-response procedures — re-verification windows, action freezes, retroactive audit — and purpose-bound access auditing of identity-linked civic records, where every access to act-to-identity linkage is itself an AuditEvent with a stated purpose, independently auditable and, for complaints against executors, authorities, and the operator, gated behind a heightened adversarial de-anonymization threshold; protected-identity contexts (C014/C024) remain the chilling-effect answer and sensitive linkage carries retention limits where country law allows. The identity provider is pre-existing state infrastructure that Core v0 neither replaces nor supplants with anonymity — the anti-Sybil baseline (P004) stands. Platform-side visibility of protected identities plus lawful state access means chilling effects on complaints against powerful actors are reduced, not eliminated, and provider compromise remains a single point of failure whose ultimate mitigation is jurisdictional.
+Resolved in [[94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION|docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md]]: classified partially founded and bounded with minimal records under P007. Core v0 gained declared identity-provider failure modes (compromise, coercion, outage, wrongful exclusion) with compromise-response procedures — re-verification windows, action freezes, retroactive audit — and purpose-bound access auditing of identity-linked civic records, where every access to act-to-identity linkage is itself an AuditEvent with a stated purpose, independently auditable and, for complaints against executors, authorities, and the operator, gated behind a heightened adversarial de-anonymization threshold; protected-identity contexts (C014/C024) remain the chilling-effect answer and sensitive linkage carries retention limits where country law allows. The identity provider is pre-existing state infrastructure that Core v0 neither replaces nor supplants with anonymity — the anti-Sybil baseline (P004) stands. Platform-side visibility of protected identities plus lawful state access means chilling effects on complaints against powerful actors are reduced, not eliminated, and provider compromise remains a single point of failure whose ultimate mitigation is jurisdictional.

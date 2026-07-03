@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A002-information-capture-and-visibility-control.md`
-- Defense: `defenses/D002-information-capture-and-visibility-control.md`
+- Attack: [[A002-information-capture-and-visibility-control|attacks/A002-information-capture-and-visibility-control.md]]
+- Defense: [[D002-information-capture-and-visibility-control|defenses/D002-information-capture-and-visibility-control.md]]
 
 ## Resolution decision
 

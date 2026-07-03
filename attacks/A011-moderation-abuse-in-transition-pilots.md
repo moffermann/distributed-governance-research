@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in [[77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|docs/77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION.md]].
 
 ## Description
 
@@ -10,12 +10,12 @@ Tutored and semi-open operating modes allow external authorities or administrato
 
 ## Location in current project
 
-- `docs/03_ROADMAP.md` Phase 3 priority objection: moderation abuse in transition pilots.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md`.
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`.
-- `knowledge/hypotheses/H058-operating-modes-for-transition.md`.
-- `docs/diagrams/v0-operating-mode-transition-state.md`.
-- `docs/diagrams/v0-governance-resolution-sequence.md`.
+- [[03_ROADMAP|docs/03_ROADMAP.md]] Phase 3 priority objection: moderation abuse in transition pilots.
+- [[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]].
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]].
+- [[H058-operating-modes-for-transition|knowledge/hypotheses/H058-operating-modes-for-transition.md]].
+- [[v0-operating-mode-transition-state|docs/diagrams/v0-operating-mode-transition-state.md]].
+- [[v0-governance-resolution-sequence|docs/diagrams/v0-governance-resolution-sequence.md]].
 
 ## Problem
 

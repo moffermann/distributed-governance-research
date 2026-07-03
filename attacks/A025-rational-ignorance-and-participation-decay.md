@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION|docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,13 +10,13 @@ Each citizen's monthly civic allocation is individually small, so the rational r
 
 ## Location in current project
 
-- `knowledge/hypotheses/H041-distributed-participation-capacity.md`, which assumes participation can be distributed and assisted but treats capacity, not incentive to attend, as the binding constraint.
-- `knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md`, the monthly use-it-or-allocate-it rule that pushes inactive balances into default and profile allocation.
-- `docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md`, the automatic profile that lets a citizen participate without ever evaluating a project.
-- `docs/27_CITIZEN_DELEGATION_FLOW.md`, delegation as a low-friction substitute for direct judgment.
-- `docs/15_CITIZEN_HOME_DISCOVERY_LAYER.md`, the discovery surface that concedes most citizens will not evaluate many projects each month.
-- `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md`, the "simple to participate, deep to audit" principle that reduces friction but not the underlying stakes.
-- `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`, which frames participation gaps as a capacity and observability problem rather than a rational-ignorance problem.
+- [[H041-distributed-participation-capacity|knowledge/hypotheses/H041-distributed-participation-capacity.md]], which assumes participation can be distributed and assisted but treats capacity, not incentive to attend, as the binding constraint.
+- [[H038-monthly-use-it-or-allocate-it-cycle|knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md]], the monthly use-it-or-allocate-it rule that pushes inactive balances into default and profile allocation.
+- [[28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md]], the automatic profile that lets a citizen participate without ever evaluating a project.
+- [[27_CITIZEN_DELEGATION_FLOW|docs/27_CITIZEN_DELEGATION_FLOW.md]], delegation as a low-friction substitute for direct judgment.
+- [[15_CITIZEN_HOME_DISCOVERY_LAYER|docs/15_CITIZEN_HOME_DISCOVERY_LAYER.md]], the discovery surface that concedes most citizens will not evaluate many projects each month.
+- [[P006-layered-complexity-and-citizen-simplicity|knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md]], the "simple to participate, deep to audit" principle that reduces friction but not the underlying stakes.
+- [[75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION|docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md]], which frames participation gaps as a capacity and observability problem rather than a rational-ignorance problem.
 
 ## Problem
 
@@ -85,4 +85,4 @@ A national program runs distributed allocation across a full public function for
 
 ## Resolution output
 
-Resolved in `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`: classified founded as a behavioral prediction and integrated through H054 functional transition maturity under P007. Core v0 gained per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation as versioned public metrics, active-core concentration indicators tracking whether the same minority persists across cycles, citizen-facing legitimacy language distinguishing deliberate evaluation from default and profile carry-over, and cadence-fatigue review of the monthly cycle. The simulation (`research/simulation-results.md`) vindicates the designed-intermediation position quantitatively: allocation quality is carried by the institutional default anchor conditioned on planner knowledge, and citizen attention adds little, so decay must be measured and disclosed rather than denied. Core v0 does not mandate participation quotas or engagement targets; if the active core shrinks enough, distributed control becomes intermediated control with better bookkeeping, and the system must not present default and profile allocation as considered choice.
+Resolved in [[93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION|docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md]]: classified founded as a behavioral prediction and integrated through H054 functional transition maturity under P007. Core v0 gained per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation as versioned public metrics, active-core concentration indicators tracking whether the same minority persists across cycles, citizen-facing legitimacy language distinguishing deliberate evaluation from default and profile carry-over, and cadence-fatigue review of the monthly cycle. The simulation ([[simulation-results|research/simulation-results.md]]) vindicates the designed-intermediation position quantitatively: allocation quality is carried by the institutional default anchor conditioned on planner knowledge, and citizen attention adds little, so decay must be measured and disclosed rather than denied. Core v0 does not mandate participation quotas or engagement targets; if the active core shrinks enough, distributed control becomes intermediated control with better bookkeeping, and the system must not present default and profile allocation as considered choice.

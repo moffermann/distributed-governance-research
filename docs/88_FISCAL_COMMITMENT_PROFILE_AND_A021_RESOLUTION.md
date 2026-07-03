@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A021-treasury-dependence-and-fiscal-strangulation.md`
-- Defense: `defenses/D021-treasury-dependence-and-fiscal-strangulation.md`
+- Attack: [[A021-treasury-dependence-and-fiscal-strangulation|attacks/A021-treasury-dependence-and-fiscal-strangulation.md]]
+- Defense: [[D021-treasury-dependence-and-fiscal-strangulation|defenses/D021-treasury-dependence-and-fiscal-strangulation.md]]
 
 ## Resolution decision
 
 A021 is founded. The state controls the fiscal spigot and can strangle the system without attacking it openly — through late or partial delivery, mid-cycle reduction of the migrated share, zero indexation, or unexecuted valid orders — while the platform still displays green funding states. The accepted resolution is a public, versioned `Fiscal Commitment Profile` per Planning Scope plus fiscal-reliability observability.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects — the Planning Scope, treasury and custody records, signed Financial Orders, and AuditEvents. It converts fiscal strangulation from invisible to measurable and attributable; enforcement stays external.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates observability through existing objects — the Planning Scope, treasury and custody records, signed Financial Orders, and AuditEvents. It converts fiscal strangulation from invisible to measurable and attributable; enforcement stays external.
 
 ## Rule added to Core v0
 

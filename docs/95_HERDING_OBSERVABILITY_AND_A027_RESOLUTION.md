@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A027-information-cascades-and-allocation-herding.md`
-- Defense: `defenses/D027-information-cascades-and-allocation-herding.md`
+- Attack: [[A027-information-cascades-and-allocation-herding|attacks/A027-information-cascades-and-allocation-herding.md]]
+- Defense: [[D027-information-cascades-and-allocation-herding|defenses/D027-information-cascades-and-allocation-herding.md]]
 
 ## Resolution decision
 
 A027 is founded. Visible funding progress, active-support counts, and delegate follower numbers turn each citizen's allocation into a public signal that later, weakly-informed citizens rationally imitate, so early and partly arbitrary advantages compound into cascades and Matthew effects only loosely correlated with underlying value. The pathology needs no manipulating operator: it is structural to displaying cumulative social proof at all. This resolution adds herding observability and keeps the deeper visibility redesign bounded.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects — discovery ordering, the support-versus-financing separation, funding-target closure, and administrative observability — and bounds the visibility redesign. Cascades attack the discovery-helps-citizens-find-value claim, so they cannot be ignored, but their control fits existing objects and the residual is a measurement gap, not a missing primary entity. Staged-visibility experiments such as blind early windows remain Extension v1+.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this resolution integrates observability through existing objects — discovery ordering, the support-versus-financing separation, funding-target closure, and administrative observability — and bounds the visibility redesign. Cascades attack the discovery-helps-citizens-find-value claim, so they cannot be ignored, but their control fits existing objects and the residual is a measurement gap, not a missing primary entity. Staged-visibility experiments such as blind early windows remain Extension v1+.
 
 ## Rule added to Core v0
 
@@ -26,7 +26,7 @@ Minimum herding observability:
 - discovery-slot concentration observability, so the amplification granted by "most supported" and "almost funded" ordering is itself visible;
 - funding-target closure (H035) retained as the structural cascade truncator, with its claim stated honestly.
 
-Per `research/simulation-results.md` experiment E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, because the truncated surplus spills to the next most visible project, not the next best one. Quality selection depends on the default anchor, not the cap.
+Per [[simulation-results|research/simulation-results.md]] experiment E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, because the truncated surplus spills to the next most visible project, not the next best one. Quality selection depends on the default anchor, not the cap.
 
 ## Macul example
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The control model assumes that independent fiscalizers and qualified evidence pr
 
 ## Location in current project
 
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`, four-layer model, producer qualification, and anti-capture premise.
-- `docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md`, admissible control package and offer economics.
-- `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`, evidence producer qualification standard.
-- `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md`, distributed but protocol-selected fiscalization and remaining risks.
-- `docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md`, Control Subproject selection rules.
-- `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`, qualification scoring without a closed cartel.
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]], four-layer model, producer qualification, and anti-capture premise.
+- [[52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION|docs/52_FISCALIZATION_OFFER_COST_AND_C013_RESOLUTION.md]], admissible control package and offer economics.
+- [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]], evidence producer qualification standard.
+- [[H016-distributed-fiscalization-ecosystem|knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md]], distributed but protocol-selected fiscalization and remaining risks.
+- [[40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION|docs/40_CONTROL_SUBPROJECTS_AND_C002_RESOLUTION.md]], Control Subproject selection rules.
+- [[evidence-producer-evidence-quality-validation|knowledge/open-questions/evidence-producer-evidence-quality-validation.md]], qualification scoring without a closed cartel.
 
 ## Problem
 
@@ -83,4 +83,4 @@ A specialized domain, such as seismic verification of a small municipal structur
 
 ## Resolution output
 
-Resolved in `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`: classified partially founded and bounded with thin integrated observability under P007. Core v0 gained control-supply density observability by territory and domain — eligible fiscalizers and evidence producers per scope, offer rates, fee levels, and repeat-assignment concentration — surfaced before publication rather than at control closure, plus explicit thin-market handling routes (remote and documentary evidence, cross-territory and pooled assignment, relaxed-but-disclosed selection under stronger safeguards) as country-implementation choices, and priced compensation for weak verification per `research/formal-models.md` Proposition 2. Core v0 cannot conjure qualified verifiers; supply creation through training and accreditation subsidies is country implementation. In a genuinely empty market a monopolist controller remains a real unresolved scenario, and conflict-free selection can be impossible where everyone qualified is related.
+Resolved in [[90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md]]: classified partially founded and bounded with thin integrated observability under P007. Core v0 gained control-supply density observability by territory and domain — eligible fiscalizers and evidence producers per scope, offer rates, fee levels, and repeat-assignment concentration — surfaced before publication rather than at control closure, plus explicit thin-market handling routes (remote and documentary evidence, cross-territory and pooled assignment, relaxed-but-disclosed selection under stronger safeguards) as country-implementation choices, and priced compensation for weak verification per [[formal-models|research/formal-models.md]] Proposition 2. Core v0 cannot conjure qualified verifiers; supply creation through training and accreditation subsidies is country implementation. In a genuinely empty market a monopolist controller remains a real unresolved scenario, and conflict-free selection can be impossible where everyone qualified is related.

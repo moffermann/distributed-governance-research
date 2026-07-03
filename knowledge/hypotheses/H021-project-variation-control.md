@@ -8,9 +8,9 @@ An executor may introduce project variations only through a transparent and prop
 
 This hypothesis is now aligned with:
 
-- `docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md`;
-- `knowledge/hypotheses/H040-funding-deadline-and-reformulation-rule.md`;
-- `docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW.md`.
+- [[55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION|docs/55_VALUE_THESIS_REFORMULATION_AND_C017_RESOLUTION.md]];
+- [[H040-funding-deadline-and-reformulation-rule|knowledge/hypotheses/H040-funding-deadline-and-reformulation-rule.md]];
+- [[32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW|docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW.md]].
 
 H021 does not create a parallel reformulation regime.
 

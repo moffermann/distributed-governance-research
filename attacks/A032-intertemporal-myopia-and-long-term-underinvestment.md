@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[100_LONG_HORIZON_LANES_AND_A032_RESOLUTION|docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Monthly allocation cycles reward visible near-term outputs, and renewal windows 
 
 ## Location in current project
 
-- `knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md`, monthly cycle, fallback routing, and near-completion preferences.
-- `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`, continuity classification of existing obligations.
-- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md`, funding windows and renewal exposure.
-- `docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW.md`, project lifecycle and closure horizon.
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md`, Planning Scope Alignment and the unresolved roadmap horizon.
-- `knowledge/hypotheses/H054-functional-transition-maturity-metrics.md`, transition metrics and value-and-results horizon.
+- [[H038-monthly-use-it-or-allocate-it-cycle|knowledge/hypotheses/H038-monthly-use-it-or-allocate-it-cycle.md]], monthly cycle, fallback routing, and near-completion preferences.
+- [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]], continuity classification of existing obligations.
+- [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]], funding windows and renewal exposure.
+- [[30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW|docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW.md]], project lifecycle and closure horizon.
+- [[H009-binding-evolutionary-planning|knowledge/hypotheses/H009-binding-evolutionary-planning.md]], Planning Scope Alignment and the unresolved roadmap horizon.
+- [[H054-functional-transition-maturity-metrics|knowledge/hypotheses/H054-functional-transition-maturity-metrics.md]], transition metrics and value-and-results horizon.
 
 ## Problem
 
@@ -83,4 +83,4 @@ A commune runs the distributed model with strong participation for a decade. Eve
 
 ## Resolution output
 
-Resolved in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md` as a partially founded attack under P007: a bounded resolution built on existing structures. Planning Scopes may now define long-horizon lanes (maintenance, prevention, infrastructure) whose need-weights flow into default allocation, and Core v0 adds intertemporal allocation observability — funding share by time-to-benefit horizon and deferred-maintenance indicators — while continuity-risk classification (A006) plus the non-assignable pool remain the structural shields for existing obligations and renewal windows are made visible before expiry. Core v0 does not discount-correct citizen preferences or force intergenerational weights; future citizens remain unrepresented in funding attempts. Formation bias against new long-horizon value above the floor is real and mitigated only insofar as planning-scope lanes and defaults carry it — which the simulation shows is exactly where allocation quality lives, tying this limitation to the A020 agenda constraint over who sets planning-scope weights, a declared limitation for the paper.
+Resolved in [[100_LONG_HORIZON_LANES_AND_A032_RESOLUTION|docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md]] as a partially founded attack under P007: a bounded resolution built on existing structures. Planning Scopes may now define long-horizon lanes (maintenance, prevention, infrastructure) whose need-weights flow into default allocation, and Core v0 adds intertemporal allocation observability — funding share by time-to-benefit horizon and deferred-maintenance indicators — while continuity-risk classification (A006) plus the non-assignable pool remain the structural shields for existing obligations and renewal windows are made visible before expiry. Core v0 does not discount-correct citizen preferences or force intergenerational weights; future citizens remain unrepresented in funding attempts. Formation bias against new long-horizon value above the floor is real and mitigated only insofar as planning-scope lanes and defaults carry it — which the simulation shows is exactly where allocation quality lives, tying this limitation to the A020 agenda constraint over who sets planning-scope weights, a declared limitation for the paper.

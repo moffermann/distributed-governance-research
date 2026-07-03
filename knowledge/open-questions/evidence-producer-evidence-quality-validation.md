@@ -2,7 +2,7 @@
 
 ## Status
 
-Resolved for Core v0 by `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`.
+Resolved for Core v0 by [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]].
 
 Detailed authenticity scoring, AI-generation detection, instrument calibration verification, metadata integrity, fraud detection, and country-specific legal admissibility rules remain future implementation or country-implementation work.
 

@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A019-procedural-legitimacy-cannot-substitute-democratic-mandate.md`
+- Attack file: [[A019-procedural-legitimacy-cannot-substitute-democratic-mandate|attacks/A019-procedural-legitimacy-cannot-substitute-democratic-mandate.md]]
 - Attack title: `A019 - Procedural Legitimacy Cannot Substitute Democratic Mandate`
 - Source: second-round attack queue, system-level democratic authorization.
 

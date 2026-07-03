@@ -3225,7 +3225,7 @@ Expired unfunded → Closed
 
 ## 5. Responsibility matrix summary
 
-The dedicated responsibility matrix baseline lives at `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md`.
+The dedicated responsibility matrix baseline lives at [[65_RESPONSIBILITY_MATRIX_BY_ROLE_V0|docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md]].
 
 ```text
 Project design:

@@ -10,10 +10,10 @@ The custodian executes financial infrastructure. It does not decide civic value,
 
 This hypothesis is aligned with:
 
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md`;
-- `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md`;
-- `docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md`;
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md`.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]];
+- [[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]];
+- [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]];
+- [[31_PROJECT_DISBURSEMENT_FLOW|docs/31_PROJECT_DISBURSEMENT_FLOW.md]].
 
 H037 should be read as a Core v0 infrastructure boundary plus country implementation dependency. The abstract boundary is Core v0: custody and disbursement must be separated from civic decision-making. The specific legal custodian, treasury API, escrow structure, tax integration, and enforceability mechanics depend on the implementing country. ^r508104d0
 

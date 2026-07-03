@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION|docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ Clientelist machines adapt to new institutions rather than dying with the old on
 
 ## Location in current project
 
-- `docs/27_CITIZEN_DELEGATION_FLOW.md` delegation request, acceptance, and base-rule flow that a broker can aggregate.
-- `docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md` represented-weight and related-delegate observability that stops at the platform boundary.
-- `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md` related-party graph covering on-platform ownership, control, and supplier links.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md` declaration and classification of related-party conflicts.
-- `knowledge/hypotheses/H043-transparent-delegation-concentration.md` concentration visibility, reports, and revocation signals.
-- `knowledge/principles/P005-separation-public-support-private-benefit.md` separation of public support from private benefit.
+- [[27_CITIZEN_DELEGATION_FLOW|docs/27_CITIZEN_DELEGATION_FLOW.md]] delegation request, acceptance, and base-rule flow that a broker can aggregate.
+- [[76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION|docs/76_DELEGATION_CONCENTRATION_STRESS_THRESHOLDS_AND_A010_RESOLUTION.md]] represented-weight and related-delegate observability that stops at the platform boundary.
+- [[80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md]] related-party graph covering on-platform ownership, control, and supplier links.
+- [[H028-related-party-conflict-of-interest|knowledge/hypotheses/H028-related-party-conflict-of-interest.md]] declaration and classification of related-party conflicts.
+- [[H043-transparent-delegation-concentration|knowledge/hypotheses/H043-transparent-delegation-concentration.md]] concentration visibility, reports, and revocation signals.
+- [[P005-separation-public-support-private-benefit|knowledge/principles/P005-separation-public-support-private-benefit.md]] separation of public support from private benefit.
 
 ## Problem
 
@@ -82,4 +82,4 @@ A commune shows healthy participation metrics: many residents delegate, several 
 
 ## Resolution output
 
-Resolved in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md` as founded as an adaptation risk under P007: the resolution integrates observability through the A014 related-party relationship graph and the delegation records. Core v0 now surfaces pattern-level clientelism indicators — repeat broker-beneficiary alignments, geographic delegation blocs correlated with related-project funding, and participation-support providers whose assisted citizens' allocations concentrate on related actors — feeding review, complaint, and verified-discovery paths as leads, never automatic verdicts, with anti-conditioning declarations for participation-support projects. Off-platform quid pro quo remains invisible by construction; sanction is external law, and community organization and brokerage are not treated as clientelism per se. The platform makes machine-style allocation patterns statistically visible over time — a structural improvement over street-level clientelism's full invisibility — but a careful machine trading entirely off-platform favors remains undetectable from within, a declared limitation for the paper.
+Resolved in [[98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION|docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md]] as founded as an adaptation risk under P007: the resolution integrates observability through the A014 related-party relationship graph and the delegation records. Core v0 now surfaces pattern-level clientelism indicators — repeat broker-beneficiary alignments, geographic delegation blocs correlated with related-project funding, and participation-support providers whose assisted citizens' allocations concentrate on related actors — feeding review, complaint, and verified-discovery paths as leads, never automatic verdicts, with anti-conditioning declarations for participation-support projects. Off-platform quid pro quo remains invisible by construction; sanction is external law, and community organization and brokerage are not treated as clientelism per se. The platform makes machine-style allocation patterns statistically visible over time — a structural improvement over street-level clientelism's full invisibility — but a careful machine trading entirely off-platform favors remains undetectable from within, a declared limitation for the paper.

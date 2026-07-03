@@ -36,4 +36,4 @@ Collusion attacks the role-separation claim, so it cannot be ignored (test 1). B
 
 ## Status
 
-Editorial principle governing accepted Phase 3 resolutions and their propagation. Formalizes the complexity-budget discipline of `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`.
+Editorial principle governing accepted Phase 3 resolutions and their propagation. Formalizes the complexity-budget discipline of [[78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION|docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md]].

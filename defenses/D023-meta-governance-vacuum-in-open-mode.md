@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md`. Propagated into the core corpus.
+Second-round paired review completed. Accepted resolution: [[91_OPEN_MODE_GATING_AND_A023_RESOLUTION|docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
-- Attack file: `attacks/A023-meta-governance-vacuum-in-open-mode.md`
+- Attack file: [[A023-meta-governance-vacuum-in-open-mode|attacks/A023-meta-governance-vacuum-in-open-mode.md]]
 - Attack title: `A023 - Meta-Governance Vacuum in Open Mode`
 - Source: second-round attack queue, open-mode constitutional capture.
 

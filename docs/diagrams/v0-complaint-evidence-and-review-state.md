@@ -8,12 +8,12 @@ This diagram refines the older complaint-review flow. It uses `ContextualizedEvi
 
 Source baseline:
 
-- `docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md`
-- `knowledge/hypotheses/H024-complaint-as-fiscalization-trigger.md`
-- `knowledge/hypotheses/H013-pause-mitigation-revocation-governance.md`
-- `knowledge/concepts/systemic-pause-material-suspension-v0.md`
-- `docs/26_CITIZEN_COMPLAINT_FLOW.md`
-- `docs/diagrams/v0-contextualized-evidence-item-state.md`
+- [[41_COMPLAINT_ENTITY_AND_C004_RESOLUTION|docs/41_COMPLAINT_ENTITY_AND_C004_RESOLUTION.md]]
+- [[H024-complaint-as-fiscalization-trigger|knowledge/hypotheses/H024-complaint-as-fiscalization-trigger.md]]
+- [[H013-pause-mitigation-revocation-governance|knowledge/hypotheses/H013-pause-mitigation-revocation-governance.md]]
+- [[systemic-pause-material-suspension-v0|knowledge/concepts/systemic-pause-material-suspension-v0.md]]
+- [[26_CITIZEN_COMPLAINT_FLOW|docs/26_CITIZEN_COMPLAINT_FLOW.md]]
+- [[v0-contextualized-evidence-item-state|docs/diagrams/v0-contextualized-evidence-item-state.md]]
 
 Related sources: H013, H014, H015, H016, H024, C004, C005, C014, C024, A007.
 

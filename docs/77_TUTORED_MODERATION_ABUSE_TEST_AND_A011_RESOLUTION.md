@@ -6,8 +6,8 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A011-moderation-abuse-in-transition-pilots.md`
-- Defense: `defenses/D011-moderation-abuse-in-transition-pilots.md`
+- Attack: [[A011-moderation-abuse-in-transition-pilots|attacks/A011-moderation-abuse-in-transition-pilots.md]]
+- Defense: [[D011-moderation-abuse-in-transition-pilots|defenses/D011-moderation-abuse-in-transition-pilots.md]]
 
 ## Resolution decision
 

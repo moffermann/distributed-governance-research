@@ -54,32 +54,32 @@ The diagrams should remain simple enough to reason about but precise enough to e
 
 Primary Mermaid sources:
 
-1. `docs/diagrams/v0-citizen-navigation-layers.md`
-2. `docs/diagrams/v0-project-creation-publication.md`
-3. `docs/diagrams/v0-project-lifecycle-state.md`
-4. `docs/diagrams/v0-open-project-parallel-closure.md`
-5. `docs/diagrams/v0-funding-disbursement.md`
-6. `docs/diagrams/v0-evidence-fiscalization.md`
-7. `docs/diagrams/v0-complaint-review.md`
-8. `docs/diagrams/v0-delegation-automatic-allocation.md`
-9. `docs/diagrams/v0-reformulation-pause-revocation.md`
-10. `docs/diagrams/v0-tutored-mode-governance-resolution.md`
-11. `docs/diagrams/v0-audit-trail-pattern.md`
-12. `docs/diagrams/v0-formal-entity-relationship.md`
-13. `docs/diagrams/v0-project-object-state-with-phase-substates.md`
-14. `docs/diagrams/v0-contextualized-evidence-item-state.md`
-15. `docs/diagrams/v0-complaint-evidence-and-review-state.md`
-16. `docs/diagrams/v0-funding-commitment-disbursement-state.md`
-17. `docs/diagrams/v0-project-evidential-contract-state.md`
-18. `docs/diagrams/v0-control-subproject-fiscalization-assignment-state.md`
-19. `docs/diagrams/v0-delegation-state.md`
-20. `docs/diagrams/v0-operating-mode-transition-state.md`
-21. `docs/diagrams/v0-governance-resolution-sequence.md`
-22. `docs/diagrams/v0-audit-event-schema.md`
+1. [[v0-citizen-navigation-layers|docs/diagrams/v0-citizen-navigation-layers.md]]
+2. [[v0-project-creation-publication|docs/diagrams/v0-project-creation-publication.md]]
+3. [[v0-project-lifecycle-state|docs/diagrams/v0-project-lifecycle-state.md]]
+4. [[v0-open-project-parallel-closure|docs/diagrams/v0-open-project-parallel-closure.md]]
+5. [[v0-funding-disbursement|docs/diagrams/v0-funding-disbursement.md]]
+6. [[v0-evidence-fiscalization|docs/diagrams/v0-evidence-fiscalization.md]]
+7. [[v0-complaint-review|docs/diagrams/v0-complaint-review.md]]
+8. [[v0-delegation-automatic-allocation|docs/diagrams/v0-delegation-automatic-allocation.md]]
+9. [[v0-reformulation-pause-revocation|docs/diagrams/v0-reformulation-pause-revocation.md]]
+10. [[v0-tutored-mode-governance-resolution|docs/diagrams/v0-tutored-mode-governance-resolution.md]]
+11. [[v0-audit-trail-pattern|docs/diagrams/v0-audit-trail-pattern.md]]
+12. [[v0-formal-entity-relationship|docs/diagrams/v0-formal-entity-relationship.md]]
+13. [[v0-project-object-state-with-phase-substates|docs/diagrams/v0-project-object-state-with-phase-substates.md]]
+14. [[v0-contextualized-evidence-item-state|docs/diagrams/v0-contextualized-evidence-item-state.md]]
+15. [[v0-complaint-evidence-and-review-state|docs/diagrams/v0-complaint-evidence-and-review-state.md]]
+16. [[v0-funding-commitment-disbursement-state|docs/diagrams/v0-funding-commitment-disbursement-state.md]]
+17. [[v0-project-evidential-contract-state|docs/diagrams/v0-project-evidential-contract-state.md]]
+18. [[v0-control-subproject-fiscalization-assignment-state|docs/diagrams/v0-control-subproject-fiscalization-assignment-state.md]]
+19. [[v0-delegation-state|docs/diagrams/v0-delegation-state.md]]
+20. [[v0-operating-mode-transition-state|docs/diagrams/v0-operating-mode-transition-state.md]]
+21. [[v0-governance-resolution-sequence|docs/diagrams/v0-governance-resolution-sequence.md]]
+22. [[v0-audit-event-schema|docs/diagrams/v0-audit-event-schema.md]]
 
 Conceptual planning diagram:
 
-- `docs/diagrams/distributed-planning-architecture-v1.md`
+- [[distributed-planning-architecture-v1|docs/diagrams/distributed-planning-architecture-v1.md]]
 
 Generated SVG outputs:
 
@@ -138,28 +138,28 @@ Future diagram refinements should be opened from newly discovered responsibility
 
 > Diagrams are not decorative. They are tools for detecting missing states, hidden authority, uncontrolled money movement, and weak accountability.
 
-Phase 2 diagrams should use `docs/64_FORMAL_ENTITY_INVENTORY_V0.md` as the formal entity baseline and `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md` as the detailed narrative source.
+Phase 2 diagrams should use [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]] as the formal entity baseline and [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]] as the detailed narrative source.
 
-The first Phase 2 ERD now lives at `docs/diagrams/v0-formal-entity-relationship.md`. It is a primary relationship baseline, not a database schema.
+The first Phase 2 ERD now lives at [[v0-formal-entity-relationship|docs/diagrams/v0-formal-entity-relationship.md]]. It is a primary relationship baseline, not a database schema.
 
 The first ERD relationship audit has been completed. The ERD now preserves the `Idea` to `Project` boundary, uses scoped role assignments, connects metrics to value and evidence requirements, distinguishes funding targets by lane, includes fiscalizer offers and reformulation objects, treats systemic pause as a scoped platform effect rather than an automatic whole-project or material/legal suspension, and represents Project Legitimacy Profile as a threshold-driven profile rather than a vote, veto, or proof created by funding.
 
-The Project object state diagram with phase substates now lives at `docs/diagrams/v0-project-object-state-with-phase-substates.md`. It separates parent `Project` states from operational `ProjectPhase` substates and preserves the rule that phase blockers escalate to project-level state only when a formal scoped record declares a broader affected scope.
+The Project object state diagram with phase substates now lives at [[v0-project-object-state-with-phase-substates|docs/diagrams/v0-project-object-state-with-phase-substates.md]]. It separates parent `Project` states from operational `ProjectPhase` substates and preserves the rule that phase blockers escalate to project-level state only when a formal scoped record declares a broader affected scope.
 
-The Contextualized Evidence Item state diagram now lives at `docs/diagrams/v0-contextualized-evidence-item-state.md`. It separates evidence intake, context classification, privacy/safety review, qualification/method/sufficiency review where required, corroboration, contradiction, report linkage, evaluation use, verified discovery, and archived no-effect states. It preserves the rule that contextualized evidence does not directly create complaint, disbursement, closure, responsibility, reputation, or legal effects.
+The Contextualized Evidence Item state diagram now lives at [[v0-contextualized-evidence-item-state|docs/diagrams/v0-contextualized-evidence-item-state.md]]. It separates evidence intake, context classification, privacy/safety review, qualification/method/sufficiency review where required, corroboration, contradiction, report linkage, evaluation use, verified discovery, and archived no-effect states. It preserves the rule that contextualized evidence does not directly create complaint, disbursement, closure, responsibility, reputation, or legal effects.
 
-The Complaint Evidence and Review state diagram now lives at `docs/diagrams/v0-complaint-evidence-and-review-state.md`. It separates submitted complaints, minimum-structure review, quote, support window, review funding, admissibility, non-blocking admission, scoped systemic pause, competent-authority referral, external suspension, final resolution, and role-specific consequence paths.
+The Complaint Evidence and Review state diagram now lives at [[v0-complaint-evidence-and-review-state|docs/diagrams/v0-complaint-evidence-and-review-state.md]]. It separates submitted complaints, minimum-structure review, quote, support window, review funding, admissibility, non-blocking admission, scoped systemic pause, competent-authority referral, external suspension, final resolution, and role-specific consequence paths.
 
-The Funding Commitment and Disbursement state diagram now lives at `docs/diagrams/v0-funding-commitment-disbursement-state.md`. It separates committed, reserved, paused, blocked, retained, approved-for-release, financial-order-issued, custodian-execution-blocked, released, returned, reassigned, recovered, closure, assurance, and guarantee states.
+The Funding Commitment and Disbursement state diagram now lives at [[v0-funding-commitment-disbursement-state|docs/diagrams/v0-funding-commitment-disbursement-state.md]]. It separates committed, reserved, paused, blocked, retained, approved-for-release, financial-order-issued, custodian-execution-blocked, released, returned, reassigned, recovered, closure, assurance, and guarantee states.
 
-The Project Evidential Contract state diagram now lives at `docs/diagrams/v0-project-evidential-contract-state.md`. It separates contract baseline states, A004 evidence coverage, fulfillment evidence need states, required producer/method standards where hard KPIs need formal proof, contract-matched producer offers, lower-priority out-of-contract offers, qualification/quality/sufficiency review, and effect routing into fiscalization, evaluation, disbursement, closure, responsibility, reputation, correction, or reformulation.
+The Project Evidential Contract state diagram now lives at [[v0-project-evidential-contract-state|docs/diagrams/v0-project-evidential-contract-state.md]]. It separates contract baseline states, A004 evidence coverage, fulfillment evidence need states, required producer/method standards where hard KPIs need formal proof, contract-matched producer offers, lower-priority out-of-contract offers, qualification/quality/sufficiency review, and effect routing into fiscalization, evaluation, disbursement, closure, responsibility, reputation, correction, or reformulation.
 
-The Control Subproject and Fiscalization Assignment state diagram now lives at `docs/diagrams/v0-control-subproject-fiscalization-assignment-state.md`. It separates control requirements, offer windows, eligibility and conflict review, package funding, assignment acceptance, active control work, evidence collection, fiscalization reports, secondary audit, replacement, formal-path effects, and role-specific reputation review.
+The Control Subproject and Fiscalization Assignment state diagram now lives at [[v0-control-subproject-fiscalization-assignment-state|docs/diagrams/v0-control-subproject-fiscalization-assignment-state.md]]. It separates control requirements, offer windows, eligibility and conflict review, package funding, assignment acceptance, active control work, evidence collection, fiscalization reports, secondary audit, replacement, formal-path effects, and role-specific reputation review.
 
-The Delegation state diagram now lives at `docs/diagrams/v0-delegation-state.md`. It separates base-rule selection, delegation scope, concentration disclosure, request, acceptance, active delegated authority, delegated action records, represented weight, configured cap effects, reports, revocation, resignation, expiry, and fallback activation.
+The Delegation state diagram now lives at [[v0-delegation-state|docs/diagrams/v0-delegation-state.md]]. It separates base-rule selection, delegation scope, concentration disclosure, request, acceptance, active delegated authority, delegated action records, represented weight, configured cap effects, reports, revocation, resignation, expiry, and fallback activation.
 
-The Operating Mode transition state diagram now lives at `docs/diagrams/v0-operating-mode-transition-state.md`. It separates Closed, Tutored, Semi-open, Open, Suspended, mode-change review, transition rules, tutored review windows, Governance Resolutions, Review Timeout Resolutions, timeout policy effects, and platform versus external-authority boundaries.
+The Operating Mode transition state diagram now lives at [[v0-operating-mode-transition-state|docs/diagrams/v0-operating-mode-transition-state.md]]. It separates Closed, Tutored, Semi-open, Open, Suspended, mode-change review, transition rules, tutored review windows, Governance Resolutions, Review Timeout Resolutions, timeout policy effects, and platform versus external-authority boundaries.
 
-The Governance Resolution sequence diagram now lives at `docs/diagrams/v0-governance-resolution-sequence.md`. It separates authority decision, required public fields, timeout creation, citizen audit actions, configured clarification/correction/appeal paths, audit events, and aggregate observability effects.
+The Governance Resolution sequence diagram now lives at [[v0-governance-resolution-sequence|docs/diagrams/v0-governance-resolution-sequence.md]]. It separates authority decision, required public fields, timeout creation, citizen audit actions, configured clarification/correction/appeal paths, audit events, and aggregate observability effects.
 
-The Audit Event schema diagram now lives at `docs/diagrams/v0-audit-event-schema.md`. It separates actor/role context, object reference, state or material-value transition, rule/version context, source records, effects, visibility/privacy treatment, append-only lifecycle, correction events, Layer 5 access, and observability projections.
+The Audit Event schema diagram now lives at [[v0-audit-event-schema|docs/diagrams/v0-audit-event-schema.md]]. It separates actor/role context, object reference, state or material-value transition, rule/version context, source records, effects, visibility/privacy treatment, append-only lifecycle, correction events, Layer 5 access, and observability projections.

@@ -6,7 +6,7 @@ This document freezes the flow for a citizen or organization offering to produce
 
 Fulfillment evidence production is different from fiscalization. Evidence producers collect or submit verifiable material. They do not by themselves validate project fulfillment.
 
-This flow is not the complaint filing flow. Evidence attached to a complaint is `Complaint Evidence` and follows `docs/26_CITIZEN_COMPLAINT_FLOW.md`. Material produced through this flow is primarily `Fulfillment Evidence` or `Control Evidence`.
+This flow is not the complaint filing flow. Evidence attached to a complaint is `Complaint Evidence` and follows [[26_CITIZEN_COMPLAINT_FLOW|docs/26_CITIZEN_COMPLAINT_FLOW.md]]. Material produced through this flow is primarily `Fulfillment Evidence` or `Control Evidence`.
 
 ## Core principle
 

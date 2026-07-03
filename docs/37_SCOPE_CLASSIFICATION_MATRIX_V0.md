@@ -94,64 +94,64 @@ Examples:
 |---|---|---|
 | `README.md` | Core v0 support | Entry point for the project. |
 | `OPERATIONS.md` | Core v0 support | Operational support for working with the repository. |
-| `docs/00_RESEARCH_PHILOSOPHY.md` | Core v0 support | Defines research posture and reasoning discipline. |
-| `docs/01_RESEARCH_METHOD.md` | Core v0 support | Defines method for developing the model. |
-| `docs/02_PROJECT_SCOPE.md` | Core v0 support | Frames project boundaries. |
-| `docs/03_ROADMAP.md` | Core v0 support | Guides current work sequence. |
-| `docs/04_AGENT_ROLES.md` | Core v0 support | Supports repository workflow. |
-| `docs/05_OBSIDIAN_TOOLING_SETUP.md` | Support / tooling | Useful for workflow, not part of model. |
-| `docs/06_CURRENT_PROJECT_RECAP.md` | Core v0 support | Helps continuity and orientation. |
+| [[00_RESEARCH_PHILOSOPHY|docs/00_RESEARCH_PHILOSOPHY.md]] | Core v0 support | Defines research posture and reasoning discipline. |
+| [[01_RESEARCH_METHOD|docs/01_RESEARCH_METHOD.md]] | Core v0 support | Defines method for developing the model. |
+| [[02_PROJECT_SCOPE|docs/02_PROJECT_SCOPE.md]] | Core v0 support | Frames project boundaries. |
+| [[03_ROADMAP|docs/03_ROADMAP.md]] | Core v0 support | Guides current work sequence. |
+| [[04_AGENT_ROLES|docs/04_AGENT_ROLES.md]] | Core v0 support | Supports repository workflow. |
+| [[05_OBSIDIAN_TOOLING_SETUP|docs/05_OBSIDIAN_TOOLING_SETUP.md]] | Support / tooling | Useful for workflow, not part of model. |
+| [[06_CURRENT_PROJECT_RECAP|docs/06_CURRENT_PROJECT_RECAP.md]] | Core v0 support | Helps continuity and orientation. |
 
 ## Core architecture documents
 
 | Document | Classification | Reason |
 |---|---|---|
-| `docs/07_CORE_V0_SCOPE.md` | Core v0 | Early v0 boundary. |
-| `docs/08_ENTITY_AND_ROLE_MAP.md` | Core v0 | Defines actors and roles. |
-| `docs/09_PROJECT_OBJECT_MODEL.md` | Core v0 | Defines central financeable object. |
-| `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md` | Core v0 | Defines evidence, control, and fiscalization. |
-| `docs/11_CITIZEN_PROJECT_CARD.md` | Core v0 | Defines first citizen-facing project unit. |
-| `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md` | Core v0 | Defines open project and closure conditions. |
-| `docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md` | Core v0 | Defines value icon and metric validation logic. |
-| `docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md` | Core v0 | Defines layered citizen complexity. |
-| `docs/15_CITIZEN_HOME_DISCOVERY_LAYER.md` | Core v0 | Defines citizen entry point. |
-| `docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER.md` | Core v0 | Defines project comparison layer. |
-| `docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER.md` | Core v0 | Defines main project dashboard. |
-| `docs/18_CITIZEN_SIGNAL_DETAIL_LAYER.md` | Core v0 | Defines explainability by signal. |
-| `docs/19_CITIZEN_FULL_PROJECT_SHEET_LAYER.md` | Core v0 | Defines complete citizen-readable project sheet. |
-| `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md` | Core v0 | Defines auditability layer. |
+| [[07_CORE_V0_SCOPE|docs/07_CORE_V0_SCOPE.md]] | Core v0 | Early v0 boundary. |
+| [[08_ENTITY_AND_ROLE_MAP|docs/08_ENTITY_AND_ROLE_MAP.md]] | Core v0 | Defines actors and roles. |
+| [[09_PROJECT_OBJECT_MODEL|docs/09_PROJECT_OBJECT_MODEL.md]] | Core v0 | Defines central financeable object. |
+| [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]] | Core v0 | Defines evidence, control, and fiscalization. |
+| [[11_CITIZEN_PROJECT_CARD|docs/11_CITIZEN_PROJECT_CARD.md]] | Core v0 | Defines first citizen-facing project unit. |
+| [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]] | Core v0 | Defines open project and closure conditions. |
+| [[13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR|docs/13_VALUE_ICON_CATALOG_AND_METRIC_VALIDATOR.md]] | Core v0 | Defines value icon and metric validation logic. |
+| [[14_LAYERED_CITIZEN_INTERFACE_MODEL|docs/14_LAYERED_CITIZEN_INTERFACE_MODEL.md]] | Core v0 | Defines layered citizen complexity. |
+| [[15_CITIZEN_HOME_DISCOVERY_LAYER|docs/15_CITIZEN_HOME_DISCOVERY_LAYER.md]] | Core v0 | Defines citizen entry point. |
+| [[16_CITIZEN_COMPACT_PROJECT_LIST_LAYER|docs/16_CITIZEN_COMPACT_PROJECT_LIST_LAYER.md]] | Core v0 | Defines project comparison layer. |
+| [[17_CITIZEN_PROJECT_DASHBOARD_LAYER|docs/17_CITIZEN_PROJECT_DASHBOARD_LAYER.md]] | Core v0 | Defines main project dashboard. |
+| [[18_CITIZEN_SIGNAL_DETAIL_LAYER|docs/18_CITIZEN_SIGNAL_DETAIL_LAYER.md]] | Core v0 | Defines explainability by signal. |
+| [[19_CITIZEN_FULL_PROJECT_SHEET_LAYER|docs/19_CITIZEN_FULL_PROJECT_SHEET_LAYER.md]] | Core v0 | Defines complete citizen-readable project sheet. |
+| [[20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER|docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md]] | Core v0 | Defines auditability layer. |
 
 ## Citizen action flows
 
 | Document | Classification | Reason |
 |---|---|---|
-| `docs/21_CITIZEN_FUNDING_FLOW.md` | Core v0 | Funding is central to allocation. |
-| `docs/22_CITIZEN_PROJECT_FOLLOWING_FLOW.md` | Core v0 | Observation and notification are required for transparency. |
-| `docs/23_CITIZEN_FISCALIZER_OFFER_FLOW.md` | Core v0 | Fiscalizer selection/offer is part of accountable control. |
-| `docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md` | Core v0 | Fulfillment/control evidence production is central to verification. |
-| `docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW.md` | Core v0 | Basic observation and clarification are required. |
-| `docs/26_CITIZEN_COMPLAINT_FLOW.md` | Core v0 | Complaints are formal review triggers. |
-| `docs/27_CITIZEN_DELEGATION_FLOW.md` | Core v0, simple version only | Basic delegation is core; advanced delegation is extension. |
-| `docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md` | Core v0 | Automatic allocation is needed for low-friction participation. |
+| [[21_CITIZEN_FUNDING_FLOW|docs/21_CITIZEN_FUNDING_FLOW.md]] | Core v0 | Funding is central to allocation. |
+| [[22_CITIZEN_PROJECT_FOLLOWING_FLOW|docs/22_CITIZEN_PROJECT_FOLLOWING_FLOW.md]] | Core v0 | Observation and notification are required for transparency. |
+| [[23_CITIZEN_FISCALIZER_OFFER_FLOW|docs/23_CITIZEN_FISCALIZER_OFFER_FLOW.md]] | Core v0 | Fiscalizer selection/offer is part of accountable control. |
+| [[24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md]] | Core v0 | Fulfillment/control evidence production is central to verification. |
+| [[25_CITIZEN_COMMENT_AND_QUESTION_FLOW|docs/25_CITIZEN_COMMENT_AND_QUESTION_FLOW.md]] | Core v0 | Basic observation and clarification are required. |
+| [[26_CITIZEN_COMPLAINT_FLOW|docs/26_CITIZEN_COMPLAINT_FLOW.md]] | Core v0 | Complaints are formal review triggers. |
+| [[27_CITIZEN_DELEGATION_FLOW|docs/27_CITIZEN_DELEGATION_FLOW.md]] | Core v0, simple version only | Basic delegation is core; advanced delegation is extension. |
+| [[28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW|docs/28_CITIZEN_AUTOMATIC_ALLOCATION_PROFILE_FLOW.md]] | Core v0 | Automatic allocation is needed for low-friction participation. |
 
 ## Project lifecycle and controls
 
 | Document | Classification | Reason |
 |---|---|---|
-| `docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW.md` | Core v0 | Defines how ideas become public projects. |
-| `docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW.md` | Core v0 | Defines lifecycle from open project to closure. |
-| `docs/31_PROJECT_DISBURSEMENT_FLOW.md` | Core v0 | Defines controlled release of funds. |
-| `docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW.md` | Core v0 | Defines failure handling and project change control. |
-| `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md` | Core v0 | Integrated system blueprint. |
-| `docs/34_CORE_V0_SCOPE_FREEZE.md` | Core v0 | Formal v0 freeze. |
-| `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md` | Core v0 | Formal entity/object/state map. |
-| `docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0.md` | Core v0 | First diagram set for formalization. |
+| [[29_PROJECT_CREATION_AND_PUBLICATION_FLOW|docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW.md]] | Core v0 | Defines how ideas become public projects. |
+| [[30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW|docs/30_PROJECT_LIFECYCLE_AFTER_PUBLICATION_FLOW.md]] | Core v0 | Defines lifecycle from open project to closure. |
+| [[31_PROJECT_DISBURSEMENT_FLOW|docs/31_PROJECT_DISBURSEMENT_FLOW.md]] | Core v0 | Defines controlled release of funds. |
+| [[32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW|docs/32_PROJECT_REFORMULATION_PAUSE_REVOCATION_FLOW.md]] | Core v0 | Defines failure handling and project change control. |
+| [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]] | Core v0 | Integrated system blueprint. |
+| [[34_CORE_V0_SCOPE_FREEZE|docs/34_CORE_V0_SCOPE_FREEZE.md]] | Core v0 | Formal v0 freeze. |
+| [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]] | Core v0 | Formal entity/object/state map. |
+| [[36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0.md]] | Core v0 | First diagram set for formalization. |
 
 ## Knowledge and hypothesis documents
 
 | Document group | Classification | Reason |
 |---|---|---|
-| `knowledge/_index.md` | Core v0 support | Repository navigation. |
+| [[_index|knowledge/_index.md]] | Core v0 support | Repository navigation. |
 | `knowledge/principles/P001-P006` | Core v0 principles | Foundational reasoning rules. |
 | `knowledge/concepts/*` | Core v0 support | Conceptual vocabulary for model. |
 | `knowledge/open-questions/*` | Core v0 support | Tracks unresolved issues. |
@@ -228,7 +228,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Salience-bias observability above the protected floor `A024` | Core v0 boundary with Extension v1+ / planning-scope governance | Needed to prevent voluntary allocation's salience, warm-glow, and photogenic-output biases from starving abstract, preventive, statistical-life goods above the essential floor, without correcting citizen preferences or imposing a welfare function. Core v0 adds no preference-correction entity; the salience gradient reads from PlanningScope need weights, citizen funding and automatic allocation profiles, the default allocation rule, and the discovery surface — funding per category against declared need across salient-versus-non-salient and preventive-versus-remedial lanes, with underfunded-need indicators — and default allocation rules route inactive budget by planning priority, with any default weighting toward under-allocated non-salient categories a disclosed, versioned protocol choice gated by threshold policy. The non-assignable pool and essential floors (A005) remain the structural answer for catastrophic tails; portfolio rebalancing beyond defaults is a planning-scope political choice, not a platform mandate. |
 | Engagement-decay and active-core observability `A025` | Core v0 boundary with Extension v1+ / country implementation | Needed to prevent a shrinking, self-selected active core from being displayed as the aggregated will of the whole where rational ignorance routes most citizens through defaults, profiles, and delegates, without mandating participation. Core v0 adds no participation entity; per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation become versioned public metrics, active-core concentration is tracked across cycles, citizen-facing legitimacy language distinguishes deliberate evaluation from carry-over, and these signals feed the existing H054 functional transition maturity object. The simulation vindicates the designed-intermediation position — allocation quality is carried by the institutional default anchor conditioned on planner knowledge, with citizen attention moving quality selection marginally — so measurement discloses decay but does not reverse it; participation quotas, cohort-refresh, and sampling remain Extension v1+. |
 | Identity-provider failure modes and purpose-bound access auditing `A026` | Core v0 boundary with Extension v1+ / jurisdictional | Needed to prevent the external identity provider — the anti-Sybil baseline's deepest dependency — from being an assumed-away single point of failure, and to bound the chilling effect of binding a real identity to every civic act, without abandoning verified identity for anonymity. Core v0 adds no identity entity and no detection engine; the provider is a declared critical dependency with enumerated failure modes (compromise, coercion, outage, wrongful exclusion) and compromise-response procedures, every access to act-to-identity linkage is an AuditEvent carrying its purpose and checkable by an independent party, protected-identity contexts (C014/C024) are retained with a heightened adversarial de-anonymization threshold for complaints against powerful actors, and verified identity is preserved as the anti-Sybil baseline (P004). Provider-independent anomaly detection, federation, and substitution remain Extension v1+, and provider compromise's ultimate mitigation is jurisdictional rather than platform-side. |
-| Herding observability and funding-target closure `A027` | Core v0 boundary with Extension v1+ | Needed to prevent visible funding progress, active-support counts, and delegate follower numbers from compounding early, partly arbitrary advantages into cascades and Matthew effects only loosely correlated with value, without hiding funding progress. Core v0 adds no herding entity; funding-velocity-versus-evidence-maturity indicators, funding-source independence signals, and discovery-slot concentration observability read from citizen discovery and project-list ordering (C025), the support-versus-financing separation (H026), and administrative observability, with funding-target closure (H035) retained as the structural cascade truncator. Per `research/simulation-results.md` experiment E1, closure lowers concentration and lifts completion breadth but does not by itself improve quality selection, which lives in the default anchor; blind early windows, staged reveal, and exposure equalization remain Extension v1+, and visible social proof is intrinsic to a transparent funding surface. |
+| Herding observability and funding-target closure `A027` | Core v0 boundary with Extension v1+ | Needed to prevent visible funding progress, active-support counts, and delegate follower numbers from compounding early, partly arbitrary advantages into cascades and Matthew effects only loosely correlated with value, without hiding funding progress. Core v0 adds no herding entity; funding-velocity-versus-evidence-maturity indicators, funding-source independence signals, and discovery-slot concentration observability read from citizen discovery and project-list ordering (C025), the support-versus-financing separation (H026), and administrative observability, with funding-target closure (H035) retained as the structural cascade truncator. Per [[simulation-results|research/simulation-results.md]] experiment E1, closure lowers concentration and lifts completion breadth but does not by itself improve quality selection, which lives in the default anchor; blind early windows, staged reveal, and exposure equalization remain Extension v1+, and visible social proof is intrinsic to a transparent funding surface. |
 | Territorial and group outcome observability `A028` | Core v0 boundary with Extension v1+ / country implementation | Needed to prevent equal per-citizen wallets from being read as fair outcomes where social capital, organizational density, and proposal-writing capacity concentrate allocation results, without the platform mandating equalization. Core v0 adds no equity entity; funding per capita by comuna as a standing versioned metric, funded-project density against need weights, capture share by organized proposers, and an explicit input-equity versus outcome-equity distinction read from the audit trail, PlanningScope, the allocation formula (H025), and the default rule (H033). Equalization — redistributive and hybrid formulas, planning-scope lanes and the A005 floor-and-lane pattern reused for a territorial or group equity target, territorial routing, and supply-side support — is a versioned, publicly authorized, auditable country-implementation choice; how much to equalize is political, not architectural. |
 | Composite-program dependency coordination `A029` | Core v0 boundary with Extension v1+ | Needed to prevent independently funded projects from stranding complementarities where one component is worthless without another, without making funding all-or-nothing across a program. Core v0 adds no dependency entity; hard cross-project dependency declarations, program-level funding-coherence visibility, stranded-complement warnings, and dependency-aware funding windows read from the existing Composite Program object (H051), project and phase funding attempts, and Planning Scope alignment (H009). Components keep independent funding attempts; conditional or escrowed bundle funding, shared procurement, and shared control packages remain Extension v1+, and complementarities can still strand when prerequisites fund and dependents do not. |
 | Clientelism pattern indicators `A030` | Core v0 boundary with Extension v1+ / external law | Needed to prevent clientelist machines from migrating into distributed allocation as delegates, participation-support providers, or intermediaries trading allocation behavior for off-platform favors, without a hard anti-broker ban or automatic verdicts. Core v0 adds no clientelism entity; repeat broker-beneficiary alignments across cycles, geographic delegation blocs correlated with related-project funding, and support-provider concentration read from delegation and the Delegate role (C019), participation-support projects, the related-party relationship graph (A014), and delegated-action reports, feeding review, complaint, and referral paths as leads. The off-platform quid pro quo remains invisible and sanction routes to external law; a careful machine trading entirely off-platform, splitting influence across entities, remains undetectable from within. |

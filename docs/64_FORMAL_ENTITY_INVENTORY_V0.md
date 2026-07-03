@@ -14,12 +14,12 @@ Accepted as the Phase 2 formal entity inventory baseline.
 
 Source documents:
 
-- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md`
-- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
-- `docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0.md`
-- `docs/37_SCOPE_CLASSIFICATION_MATRIX_V0.md`
-- `knowledge/concepts/evidence-context-taxonomy-v0.md`
-- `knowledge/concepts/evaluation-context-taxonomy-v0.md`
+- [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]]
+- [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]]
+- [[36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0|docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0.md]]
+- [[37_SCOPE_CLASSIFICATION_MATRIX_V0|docs/37_SCOPE_CLASSIFICATION_MATRIX_V0.md]]
+- [[evidence-context-taxonomy-v0|knowledge/concepts/evidence-context-taxonomy-v0.md]]
+- [[evaluation-context-taxonomy-v0|knowledge/concepts/evaluation-context-taxonomy-v0.md]]
 
 ## Modeling rules
 
@@ -83,7 +83,7 @@ Scope classification
 Open risks
 ```
 
-The tables below use compact columns so the inventory remains readable. Detailed attributes remain in `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`.
+The tables below use compact columns so the inventory remains readable. Detailed attributes remain in [[35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP|docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md]].
 
 ## 1. Actors and external actors
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,13 +10,13 @@ At the macro level, the architecture supplies abundant procedural legitimacy —
 
 ## Location in current project
 
-- `knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md` civic tax wallet, assignable/non-assignable pool split, and per-citizen amount formulas.
-- `knowledge/hypotheses/H033-system-defined-default-allocation-rule.md` system-defined default allocation rule applied to inactive citizens.
-- `knowledge/principles/P002-social-sovereignty-over-value.md` claim that society is sovereign over value assignment.
-- `docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md` Citizen Funding Account as authorized civic funding capacity.
-- `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md` project-level legitimacy profile that this attack deliberately steps above.
-- `docs/00_RESEARCH_PHILOSOPHY.md` comparative-critique and functional-distribution framing.
-- `docs/02_PROJECT_SCOPE.md` scope of the distributed governance model.
+- [[H025-civic-tax-wallet-and-distributed-allocation|knowledge/hypotheses/H025-civic-tax-wallet-and-distributed-allocation.md]] civic tax wallet, assignable/non-assignable pool split, and per-citizen amount formulas.
+- [[H033-system-defined-default-allocation-rule|knowledge/hypotheses/H033-system-defined-default-allocation-rule.md]] system-defined default allocation rule applied to inactive citizens.
+- [[P002-social-sovereignty-over-value|knowledge/principles/P002-social-sovereignty-over-value.md]] claim that society is sovereign over value assignment.
+- [[47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION|docs/47_TREASURY_CITIZEN_BALANCE_AND_C006_RESOLUTION.md]] Citizen Funding Account as authorized civic funding capacity.
+- [[67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION|docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md]] project-level legitimacy profile that this attack deliberately steps above.
+- [[00_RESEARCH_PHILOSOPHY|docs/00_RESEARCH_PHILOSOPHY.md]] comparative-critique and functional-distribution framing.
+- [[02_PROJECT_SCOPE|docs/02_PROJECT_SCOPE.md]] scope of the distributed governance model.
 
 ## Problem
 
@@ -82,4 +82,4 @@ A ministry launches distributed allocation across an entire public function, not
 
 ## Resolution output
 
-Resolved in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md`: an `Allocation Mandate` record per active Planning Scope, integrated as a minimal record through the existing Planning Scope object rather than a new adjudicating entity. The record names the mandate source (statute, ordinance, referendum, or delegated authority), the legal instrument authorizing budget migration, the migrated share, the allocation-amount formula version with an explicit flag and authority when it departs from equal-per-citizen, and effective dates with version history; non-equal formulas are treated as higher-authorization decisions than ordinary parameter edits. Core v0 records and exposes the mandate but does not create, validate, or adjudicate it — mandate construction remains external constitutional law and country implementation, and the democratic-deficit critique of substituting atomized allocation for representative appropriation remains a recorded open normative debate.
+Resolved in [[86_ALLOCATION_MANDATE_AND_A019_RESOLUTION|docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md]]: an `Allocation Mandate` record per active Planning Scope, integrated as a minimal record through the existing Planning Scope object rather than a new adjudicating entity. The record names the mandate source (statute, ordinance, referendum, or delegated authority), the legal instrument authorizing budget migration, the migrated share, the allocation-amount formula version with an explicit flag and authority when it departs from equal-per-citizen, and effective dates with version history; non-equal formulas are treated as higher-authorization decisions than ordinary parameter edits. Core v0 records and exposes the mandate but does not create, validate, or adjudicate it — mandate construction remains external constitutional law and country implementation, and the democratic-deficit critique of substituting atomized allocation for representative appropriation remains a recorded open normative debate.

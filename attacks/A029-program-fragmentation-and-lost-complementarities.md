@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md` and propagated into the core corpus.
+Reviewed in paired Phase 3 review. Improvements integrated in [[97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION|docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md]] and propagated into the core corpus.
 
 ## Description
 
@@ -10,12 +10,12 @@ The architecture decomposes public action into independently proposed, independe
 
 ## Location in current project
 
-- `knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md`, composite program as coordination container and its dependency logic.
-- `docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md`, per-project parallel closure conditions.
-- `knowledge/hypotheses/H009-binding-evolutionary-planning.md`, Planning Scope Alignment without full roadmap construction.
-- `docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md`, per-lane funding windows and Expired Unfunded outcome.
-- `docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW.md`, project as the unit of creation and publication.
-- `knowledge/hypotheses/H021-project-variation-control.md`, change control bounded to a single accepted base design.
+- [[H051-composite-programs-as-project-aggregators|knowledge/hypotheses/H051-composite-programs-as-project-aggregators.md]], composite program as coordination container and its dependency logic.
+- [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]], per-project parallel closure conditions.
+- [[H009-binding-evolutionary-planning|knowledge/hypotheses/H009-binding-evolutionary-planning.md]], Planning Scope Alignment without full roadmap construction.
+- [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]], per-lane funding windows and Expired Unfunded outcome.
+- [[29_PROJECT_CREATION_AND_PUBLICATION_FLOW|docs/29_PROJECT_CREATION_AND_PUBLICATION_FLOW.md]], project as the unit of creation and publication.
+- [[H021-project-variation-control|knowledge/hypotheses/H021-project-variation-control.md]], change control bounded to a single accepted base design.
 
 ## Problem
 
@@ -83,4 +83,4 @@ A rural potable-water program requires a source-protection project, a treatment 
 
 ## Resolution output
 
-Resolved in `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md` as a partially founded attack under P007: the resolution integrates through the existing Composite Program object (H051). Core v0 now supports cross-project dependency declarations inside composite programs (component X requires component Y, visible before funding), program-level funding-coherence visibility with stranded-complement warnings, and dependency-aware funding windows that can reference a prerequisite's state, while acknowledging procurement-scale losses as a cost of modularity. Components keep independent funding attempts — there is no all-or-nothing program funding in Core v0, and conditional or bundled program-level funding remains Extension v1+. Complementarities can still strand at the program level when prerequisites fund and dependents do not; modularity's benefits — smaller blast radius, comparability, exit options — are bought at scale-economy costs the corpus does not hide, a declared limitation for the paper.
+Resolved in [[97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION|docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md]] as a partially founded attack under P007: the resolution integrates through the existing Composite Program object (H051). Core v0 now supports cross-project dependency declarations inside composite programs (component X requires component Y, visible before funding), program-level funding-coherence visibility with stranded-complement warnings, and dependency-aware funding windows that can reference a prerequisite's state, while acknowledging procurement-scale losses as a cost of modularity. Components keep independent funding attempts — there is no all-or-nothing program funding in Core v0, and conditional or bundled program-level funding remains Extension v1+. Complementarities can still strand at the program level when prerequisites fund and dependents do not; modularity's benefits — smaller blast radius, comparability, exit options — are bought at scale-economy costs the corpus does not hide, a declared limitation for the paper.

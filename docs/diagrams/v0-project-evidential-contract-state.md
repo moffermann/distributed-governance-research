@@ -21,17 +21,17 @@ The contract defines evidence needs and source-role expectations. It does not pr
 
 Source baseline:
 
-- `knowledge/hypotheses/H018-project-value-thesis-and-measurement.md`
-- `knowledge/hypotheses/H022-project-evidential-contract.md`
-- `docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md`
-- `docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md`
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`
-- `docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md`
-- `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md`
-- `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`
-- `knowledge/open-questions/evidence-producer-evidence-quality-validation.md`
-- `docs/64_FORMAL_ENTITY_INVENTORY_V0.md`
-- `docs/diagrams/v0-contextualized-evidence-item-state.md`
+- [[H018-project-value-thesis-and-measurement|knowledge/hypotheses/H018-project-value-thesis-and-measurement.md]]
+- [[H022-project-evidential-contract|knowledge/hypotheses/H022-project-evidential-contract.md]]
+- [[44_VALUE_VERIFICATION_AND_C010_RESOLUTION|docs/44_VALUE_VERIFICATION_AND_C010_RESOLUTION.md]]
+- [[70_METRIC_GAMING_TEST_AND_A004_RESOLUTION|docs/70_METRIC_GAMING_TEST_AND_A004_RESOLUTION.md]]
+- [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]]
+- [[24_CITIZEN_EVIDENCE_PRODUCTION_FLOW|docs/24_CITIZEN_EVIDENCE_PRODUCTION_FLOW.md]]
+- [[46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION|docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md]]
+- [[79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION|docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md]]
+- [[evidence-producer-evidence-quality-validation|knowledge/open-questions/evidence-producer-evidence-quality-validation.md]]
+- [[64_FORMAL_ENTITY_INVENTORY_V0|docs/64_FORMAL_ENTITY_INVENTORY_V0.md]]
+- [[v0-contextualized-evidence-item-state|docs/diagrams/v0-contextualized-evidence-item-state.md]]
 
 Related sources: H012, H015, H016, H018, H022, H023, C003, C010, C015, C016, C018.
 

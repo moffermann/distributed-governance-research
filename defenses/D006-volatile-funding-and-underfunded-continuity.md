@@ -2,11 +2,11 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: [[72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION|docs/72_CONTINUITY_RISK_CLASSIFICATION_AND_A006_RESOLUTION.md]].
 
 ## Attack reference
 
-- Attack file: `attacks/A006-volatile-funding-and-underfunded-continuity.md`
+- Attack file: [[A006-volatile-funding-and-underfunded-continuity|attacks/A006-volatile-funding-and-underfunded-continuity.md]]
 - Attack title: `A006 - Volatile Funding and Underfunded Continuity`
 - Roadmap source: Phase 3 priority objection, volatile funding.
 

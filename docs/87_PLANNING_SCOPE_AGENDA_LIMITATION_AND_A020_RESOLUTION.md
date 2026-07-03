@@ -6,14 +6,14 @@ Accepted Phase 3 resolution.
 
 Paired review:
 
-- Attack: `attacks/A020-agenda-setting-capture-through-planning-scope-construction.md`
-- Defense: `defenses/D020-agenda-setting-capture-through-planning-scope-construction.md`
+- Attack: [[A020-agenda-setting-capture-through-planning-scope-construction|attacks/A020-agenda-setting-capture-through-planning-scope-construction.md]]
+- Defense: [[D020-agenda-setting-capture-through-planning-scope-construction|defenses/D020-agenda-setting-capture-through-planning-scope-construction.md]]
 
 ## Resolution decision
 
 A020 is founded and partially unresolved. Whoever constructs Planning Scopes exercises the second face of power, and the corpus itself classifies roadmap and planning-area construction as an unresolved open question. This resolution formalizes that open limitation rather than claiming to solve roadmap-construction governance.
 
-Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is a bounded resolution. Core v0 does not gain a mechanism that governs who constructs the roadmap; it carries interim observability over existing objects and records the political limit openly. The open question `knowledge/open-questions/distributed-roadmap-construction-governance.md` remains the acknowledged constitutional gap.
+Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this is a bounded resolution. Core v0 does not gain a mechanism that governs who constructs the roadmap; it carries interim observability over existing objects and records the political limit openly. The open question [[distributed-roadmap-construction-governance|knowledge/open-questions/distributed-roadmap-construction-governance.md]] remains the acknowledged constitutional gap.
 
 ## Rule added to Core v0
 
@@ -24,7 +24,7 @@ Minimum interim observability:
 - every Planning Scope carries its Allocation Mandate record (A019) and a versioned scope definition;
 - scope changes and interpretations surface as Governance Resolutions with declared review windows and timeout policies (C020);
 - out-of-scope demand stays visible as Ideas (C001), with volume observability per rejected or out-of-scope category;
-- the open question `knowledge/open-questions/distributed-roadmap-construction-governance.md` remains a declared constitutional gap and a blocker for open-mode scale deployment.
+- the open question [[distributed-roadmap-construction-governance|knowledge/open-questions/distributed-roadmap-construction-governance.md]] remains a declared constitutional gap and a blocker for open-mode scale deployment.
 
 ## Macul example
 
