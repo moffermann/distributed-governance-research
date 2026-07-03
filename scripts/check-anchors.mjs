@@ -125,7 +125,7 @@ for (const dir of dirs) {
 
 import { statSync } from "node:fs";
 
-const CORPUS_DIRS = ["docs", "knowledge", "attacks", "defenses", "drafts", "research"];
+const CORPUS_DIRS = ["docs", "knowledge", "attacks", "defenses", "drafts", "research", "external-review"];
 let refBroken = 0;
 let linkBroken = 0;
 
