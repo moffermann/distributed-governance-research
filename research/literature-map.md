@@ -96,6 +96,32 @@ The Phase 3 attack queue uses the following literature families as initial theor
 - Christian Blum and Christina Isabel Zuber, "Liquid Democracy: Potentials, Problems, and Perspectives" (2016).
 - Anson Kahng, Simon Mackenzie, and Ariel Procaccia, "Liquid Democracy: An Algorithmic Perspective" (2018).
 
+## Market-liberal and public-reason additions (manuscript v1.2)
+
+Evaluated on the working rule that a citation must position the
+contribution, acknowledge a real debt, or anticipate a serious objection.
+Added to the manuscript:
+
+- Ronald Coase, "The Nature of the Firm" (1937): the transaction-cost lineage behind the Williamson framing already in use.
+- Ludwig von Mises, "Economic Calculation in the Socialist Commonwealth" (1920): the calculation-debate ancestor of Hayek (1945).
+- Thomas Sowell, `Knowledge and Decisions` (1980): institutional development of dispersed knowledge and feedback.
+- Milton Friedman, `Capitalism and Freedom` (1962): the voucher mechanism as the civic wallet's ancestor.
+- Gary Becker, "Crime and Punishment: An Economic Approach" (1968): the deterrence structure of the formal models.
+- Richard Epstein, `Simple Rules for a Complex World` (1995): the simple-rules tradition behind the complexity budget and P007.
+- Gerald Gaus, `The Order of Public Reason` (2011): legitimacy under deep evaluative disagreement, grounding motive neutrality and mandate records.
+- Jason Brennan, `Against Democracy` (2016): the citizen-competence objection, answered by design rather than epistocracy.
+- Robert Nozick, `Anarchy, State, and Utopia` (1974): the out-of-scope libertarian challenge to the tax base, acknowledged in limitations.
+
+Evaluated and held at map level (real but weaker hooks for this manuscript):
+Vernon Smith (institutions tested experimentally before deployment — a
+possible pilot-section anchor); Hernando de Soto, `The Mystery of Capital`
+(2000) (record systems making social facts legally legible — a future
+anchor for the allocation-act characterization work); Israel Kirzner,
+`Competition and Entrepreneurship` (1973) (entrepreneurial discovery and
+the Idea pipeline). Evaluated and declined for the manuscript: McCloskey
+(no content hook), Cowen (no citable academic hook), Barnett (the corpus
+deliberately does not engage private production of force).
+
 ## Phase 3 research caution
 
 These references should be used to strengthen attacks, not to decorate the theory. Each source may also weaken the project by showing limits of participation, audit, delegation, metric governance, and institutional transition.

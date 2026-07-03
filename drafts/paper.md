@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.1 (July 2026). Revised after an adversarial referee pass whose report and fixes are part of the public record.**
+**Working paper — v1.2 (July 2026). Revised after an adversarial referee pass whose report and fixes are part of the public record.**
 
 ## Abstract
 
@@ -65,7 +65,11 @@ tractable question is architectural, not volumetric: *which functional layers
 of state activity still require central monopoly, and which can now be
 distributed — with better accountability than the status quo — given that
 digital coordination has collapsed the transaction costs that once justified
-hierarchy?* (Hayek 1945; Williamson 1985). Rights guarantees, legitimate
+hierarchy?* (Coase 1937; Hayek 1945; Williamson 1985) — a knowledge-and-
+coordination lineage that runs from the calculation debate (Mises 1920)
+through Hayek's dispersed knowledge to its institutional treatment in
+Sowell (1980): decisions should sit where the knowledge is, disciplined by
+feedback rather than articulated authority. Rights guarantees, legitimate
 force, macro-fiscal stability, and enforceable adjudication plausibly remain
 central. Information processing, project-level resource allocation, service
 execution, evidence production, and auditing plausibly do not.
@@ -139,6 +143,10 @@ exactly those margins: allocation is continuous and individual rather than
 assembly-based; delivery is bound to allocation through evidential contracts
 and conditional disbursement; and the architecture treats low participation
 as a design input (Section 6) rather than a failure to be exhorted away.
+The civic wallet itself generalizes the voucher mechanism (Friedman 1962) —
+citizen-directed public money — from choosing among service providers to
+allocating among verifiable projects, adding the verification lifecycle
+that vouchers never carried.
 
 **Liquid democracy.** Transitive or scoped delegation promises flexibility
 between direct and representative participation, at the cost of concentration
@@ -218,7 +226,8 @@ a founded objection produces a new mechanism only if the failure mode would
 defeat a core claim and cannot be controlled through existing objects;
 otherwise it produces an explicit boundary, a visible residual risk, and a
 limitation statement. The first rule disciplines critics; the second
-disciplines the designers.
+disciplines the designers — a bias toward few, simple, general rules over
+proliferating specific machinery in the spirit of Epstein (1995).
 
 ## 4. The Core v0 architecture
 
@@ -267,7 +276,10 @@ follow planning-scope priorities, by configurable automatic profiles, and by
 scoped, revocable delegation with concentration visibility. The architecture
 does not assume attentive citizens; it assumes mostly inattentive ones and
 routes their weight through inspectable intermediation (Lupia and McCubbins
-1998).
+1998). This is a design answer to the citizen-competence objection in its
+sharpest contemporary form (Brennan 2016): rather than restricting anyone's
+standing, the architecture makes the intermediation that inattention
+produces visible, revocable, and auditable.
 
 **Transition.** Deployment proceeds through operating modes — closed,
 tutored, semi-open, open — in which a public authority may retain
@@ -281,7 +293,11 @@ from real transfer.
 
 We state the three models and their results; proofs are one-step algebra
 and appear in the companion note ([[formal-models|research/formal-models.md]]). All agents
-are risk-neutral; budgets are normalized to 1.
+are risk-neutral; budgets are normalized to 1. The deterrence structure
+throughout is Becker's (1968): a violation is deterred when the detection
+probability times the stake at risk exceeds its gain — our contribution is
+mapping each term of that inequality onto a named, configurable
+architectural object.
 
 ### 5.1 Milestone-gated disbursement
 
@@ -488,6 +504,14 @@ the external authorization for budget migration and allocation formulas
 (the Allocation Mandate); it cannot manufacture authorization the law never
 granted, and the normative debate over substituting atomized allocation for
 representative appropriation (Rosanvallon 2008; Urbinati 2014) remains open.
+Under deep evaluative disagreement, the architecture's posture is
+procedural in Gaus's (2011) sense: its rules aim to be justifiable from
+diverse moral standpoints — which is what mandate records, motive
+neutrality, and the comparative-critique discipline provide — without
+presupposing a shared comprehensive doctrine. One further objection is
+deliberately out of scope: the model takes the coercively raised budget as
+given and improves its administration; the libertarian challenge to the
+taking itself (Nozick 1974) is neither answered nor begged here.
 Contribution-weighted allocation formulas, in particular, are flagged by
 the architecture as plutocratic departures requiring explicit higher
 authorization.
@@ -569,19 +593,25 @@ ideological one.
 - Arnstein, S. (1969). "A Ladder of Citizen Participation." *Journal of the American Institute of Planners* 35(4).
 - Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
 - Baiocchi, G., and E. Ganuza (2017). *Popular Democracy: The Paradox of Participation*. Stanford University Press.
+- Becker, G. (1968). "Crime and Punishment: An Economic Approach." *Journal of Political Economy* 76(2).
 - Bikhchandani, S., D. Hirshleifer, and I. Welch (1992). "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." *Journal of Political Economy* 100(5).
+- Brennan, J. (2016). *Against Democracy*. Princeton University Press.
 - Blum, C., and C. I. Zuber (2016). "Liquid Democracy: Potentials, Problems, and Perspectives." *Journal of Political Philosophy* 24(2).
 - Bovens, M. (2007). "Analysing and Assessing Accountability: A Conceptual Framework." *European Law Journal* 13(4).
 - Buchanan, J., and G. Tullock (1962). *The Calculus of Consent*. University of Michigan Press.
 - Buterin, V., Z. Hitzig, and E. G. Weyl (2019). "A Flexible Design for Funding Public Goods." *Management Science* 65(11).
 - Campbell, D. (1976). "Assessing the Impact of Planned Social Change." Occasional Paper 8, Dartmouth College.
+- Coase, R. (1937). "The Nature of the Firm." *Economica* 4(16).
 - Dahl, R. (1961). *Who Governs? Democracy and Power in an American City*. Yale University Press.
 - Dahl, R. (1971). *Polyarchy: Participation and Opposition*. Yale University Press.
 - De Filippi, P., and A. Wright (2018). *Blockchain and the Law: The Rule of Code*. Harvard University Press.
 - Downs, A. (1957). *An Economic Theory of Democracy*. Harper.
 - Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
+- Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
 - Fishkin, J. (2009). *When the People Speak*. Oxford University Press.
+- Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
 - Fung, A. (2006). "Varieties of Participation in Complex Governance." *Public Administration Review* 66.
+- Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
 - Habermas, J. (1996). *Between Facts and Norms*. MIT Press.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
@@ -595,7 +625,9 @@ ideological one.
 - Levi, M. (1988). *Of Rule and Revenue*. University of California Press.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
+- Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - North, D. (1990). *Institutions, Institutional Change and Economic Performance*. Cambridge University Press.
+- Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
 - Olson, M. (1965). *The Logic of Collective Action*. Harvard University Press.
@@ -606,6 +638,7 @@ ideological one.
 - Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
 - Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
 - Schattschneider, E. E. (1960). *The Semisovereign People*. Holt, Rinehart and Winston.
+- Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
 - Urbinati, N. (2014). *Democracy Disfigured: Opinion, Truth, and the People*. Harvard University Press.
