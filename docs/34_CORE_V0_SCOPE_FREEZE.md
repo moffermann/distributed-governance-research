@@ -771,6 +771,8 @@ Core v0 includes transparent discovery controls:
 - material approval labels should expose approving role or authority, criterion source, scope, date or version, and unresolved conditions where material;
 - paid promotion and opaque manual boosting are excluded.
 
+A008 is handled as a boundary over these existing controls, not as a separate Core v0 object. Core v0 does not require a `PlatformInfluenceRecord`, universal per-impression ranking logs, causal exposure-to-funding attribution, or a dedicated citizen-facing algorithmic audit panel.
+
 ### 25. Basic observability baseline
 
 Core v0 includes simple user-facing signals plus a minimal administrative observability baseline. The full universal institutional observability panel remains Extension v1+.
@@ -794,6 +796,7 @@ These should not be part of Core v0 unless later shown necessary:
 - distributed national roadmap construction or votable planning-area governance;
 - advanced capture-prediction scoring;
 - advanced inferred recommender systems;
+- advanced platform-influence analytics, causal exposure-to-funding metrics, and ranking-bias dashboards;
 - detailed sector-specific KPI libraries beyond pilot needs;
 - full common-good charter governance;
 - full multi-sector implementation.

@@ -209,6 +209,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Operating modes `H058` | Core v0 / transition | Needed to move from closed to open functions safely. |
 | Transparent project discovery `H031` | Core v0 | Discovery must be explainable, non-commercial, and auditable. |
 | Simple Home customization and visible list ordering `C025` | Core v0 | Needed to prevent discovery from becoming a hidden allocator. |
+| Platform-influence boundary `A008` | Core v0 boundary with Extension v1+ analytics | Needed to prevent AI summaries, urgency labels, recommendations, and defaults from becoming hidden authority without adding a new Core v0 entity. Core v0 uses visible reasons, user controls, source-linked warnings, AI-assistance traces, and rule-change auditability; per-impression logs, causal exposure-to-funding metrics, and ranking-bias dashboards remain Extension v1+ or implementation-level observability. |
 | Required Evidence Package, Readiness Evidence, and Project Legitimacy Profile `A001` | Core v0 | Needed to prevent funding, support, delegation, or discovery visibility from being treated as legitimacy. The profile remains proportional and evidence-based: low-risk projects may only need visible publication and nearby observation, while higher-impact projects may require affected-party mapping, consultation Readiness Evidence, independent corroboration, and review routes before execution-ready status. |
 | Common-good impact declaration `C022` | Core v0 | Projects must declare relevant common-good impacts without importing full charter governance. |
 | Administrative observability baseline `C021` | Core v0 | Required to operate and audit the first coherent system. |
@@ -229,6 +230,7 @@ This v0 matrix classifies the hypothesis clusters already used in the architectu
 | Advanced capture detection / pattern scoring | Extension v1+ | Useful later; v0 uses transparency and auditability first. |
 | Universal observability panel `H055` | Extension v1+ with Core baseline | Basic audit metrics are core; full universal panel can follow. |
 | Advanced inferred recommender systems `H032` | Extension v1+ with Core constraints | Simple explainable ordering is core; advanced inference needs literature review, configurability, and auditability. |
+| Advanced platform-influence analytics `A008` | Extension v1+ / implementation observability | Useful for later ranking-bias dashboards, causal exposure-to-funding analysis, and detailed ranking audits, but not required for the first coherent model. |
 | Distributed roadmap construction through votable planning areas | Extension v1+ / open question | Potential future planning architecture, but Core v0 only needs active planning-scope alignment. |
 
 ## Country implementation hypothesis clusters

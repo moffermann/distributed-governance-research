@@ -36,7 +36,7 @@ For Macul, an AI assistant may summarize objections about noise, bathrooms, and 
 - `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:7` states that AI may assist, detect, summarize, suggest, transform, and warn, but is not an actor and does not make final civic, financial, reputational, or legal decisions.
 - `docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md:207` states that AI cannot be final authority over projects, funds, evidence truth, complaints, sanctions, reputation, fiscalizers, citizen choices, or closure.
 - `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:17` states that discovery may organize attention but must not become a hidden allocator.
-- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:428` requires visible and switchable ordering, explained recommendations, no paid promotion, no opaque manual boosting, and discovery-influence observability.
+- `docs/63_PROJECT_DISCOVERY_VISIBILITY_USER_CUSTOMIZATION_AND_C025_RESOLUTION.md:428` requires visible and switchable ordering, explained recommendations, no paid promotion, no opaque manual boosting, and bounded discovery observability.
 - `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md:824` requires material discovery and visibility traces where they may affect funding or legitimacy.
 - `docs/20_PROJECT_TECHNICAL_AUDIT_TRAIL_LAYER.md:836` requires reviewers to reconstruct whether discovery acted as a hidden allocator.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:206` defines AssistedDeliberationContext as a read model that helps citizens review actions but does not decide, rank, certify truth, allocate funds, or suppress dissent.
@@ -51,14 +51,14 @@ For Macul, an AI assistant may summarize objections about noise, bathrooms, and 
 
 ## Proposed improvements
 
-Add a platform-influence audit layer:
+Apply a platform-influence boundary through existing mechanisms:
 
 - record material AI assistance for validation, publication, funding, evidence, complaints, disbursement, discovery, and rule changes;
-- measure exposure-to-funding influence;
 - record recommendation and urgent-slot reasons;
 - show when AI or platform summaries were corrected;
 - separate technical implementation changes from substantive governance changes;
-- preserve user-controlled ordering and search alternatives.
+- preserve user-controlled ordering and search alternatives;
+- keep advanced exposure-to-funding analytics, per-impression logs, and ranking-bias dashboards as Extension v1+ or implementation-level observability rather than Core v0 gates.
 
 ## Applies to
 
@@ -74,8 +74,8 @@ Add a platform-influence audit layer:
 
 Defense strength: strong as a principle, moderate as an empirical safeguard.
 
-Residual risk: visual emphasis, language tone, default ordering, and summary framing can bias attention even if formally auditable. The model needs metrics for actual platform influence, not just rule transparency.
+Residual risk: visual emphasis, language tone, default ordering, and summary framing can bias attention even if formally auditable. Later implementations may need metrics for actual platform influence, but Core v0 should not add a new citizen-facing audit burden for this alone.
 
 ## Decision
 
-The attack is founded but directly anticipated by C008 and C025. Phase 3 should add a platform-influence audit specification.
+The attack is founded but directly anticipated by C008 and C025. Phase 3 resolves it as a platform-influence boundary: visible reasons, user controls, source-linked AI assistance, correction paths, and rule-change auditability, without adding a separate Core v0 platform-influence entity.

@@ -59,7 +59,7 @@ Accepted v0 rules:
 9. No paid promotion is allowed in Core v0.
 10. No opaque manual boosting is allowed in Core v0.
 11. Funding still requires explicit citizen action.
-12. Discovery influence must be measured through observability metrics.
+12. Material discovery reasons must be visible and auditable, while advanced influence metrics remain optional Extension v1+ or implementation-level observability.
 ```
 
 ## Distinction: Home categories vs project ranking
@@ -293,23 +293,20 @@ Decision layer:
 
 ## Observability rule
 
-Because discovery influences attention, the system should measure its influence.
+Because discovery influences attention, the system should preserve enough visibility for review without turning Core v0 into a ranking-surveillance system.
 
-Core observability should include at least:
+Core v0 observability should include the material reasons and settings that explain discovery surfaces:
 
-- funding from direct search;
-- funding from category navigation;
-- funding from urgent highlights;
-- funding from recommendations;
-- funding from automatic profiles;
-- funding from delegation;
-- urgent-slot impressions and actions;
-- recommendation impressions and actions;
 - list-ordering mode used before funding;
+- filters used where material;
+- urgent-slot reason;
+- recommendation reason;
+- nearby or followed-scope reason;
+- protocol version or rule source;
 - share of users customizing Home categories;
 - share of users hiding or pinning categories.
 
-These metrics should be used to detect whether discovery is quietly concentrating attention or resource allocation.
+Privacy-preserving aggregate metrics such as funding paths from search, category navigation, urgent highlights, recommendations, delegation, or automatic profiles may be added where implementation capacity exists. Causal exposure-to-funding attribution, per-impression ranking logs, and ranking-bias dashboards are Extension v1+ or implementation-level observability, not Core v0 gates.
 
 ## Technical audit rule
 
@@ -327,6 +324,8 @@ The audit trail does not need to expose every low-level ranking calculation to o
 - user action after exposure in aggregate or privacy-preserving form.
 
 This supports auditability without turning the ordinary citizen interface into a technical dashboard.
+
+A008 later narrows this rule: platform influence must remain bounded by visible reasons, user controls, source-linked warnings, AI-assistance traces, and rule-change auditability, but Core v0 should not add a separate platform-influence entity or dedicated citizen-facing algorithmic audit panel.
 
 ## Example: customized Home
 
@@ -425,7 +424,7 @@ Advanced inferred recommender systems remain Extension v1+ unless their behavior
 C025 is resolved as follows:
 
 ```text
-Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Citizens may reorder, pin, collapse, or hide Home categories as a personal navigation preference, while hidden categories remain available through Explore and search. Project lists must show their ordering mode and allow citizens to switch ordering modes. Urgent highlights are limited, rule-based, and explained. Recommendations must show why a project appears. Paid promotion and opaque manual boosting are excluded from Core v0. Discovery influence must be measured through observability and audit mechanisms because visibility can affect funding even when funding remains an explicit citizen action.
+Core v0 keeps Layer 0 as a navigation surface, not a hidden allocation feed. Citizens may reorder, pin, collapse, or hide Home categories as a personal navigation preference, while hidden categories remain available through Explore and search. Project lists must show their ordering mode and allow citizens to switch ordering modes. Urgent highlights are limited, rule-based, and explained. Recommendations must show why a project appears. Paid promotion and opaque manual boosting are excluded from Core v0. Discovery influence must be bounded through visible reasons, user controls, source-linked warnings, AI-assistance traces, and audit mechanisms because visibility can affect funding even when funding remains an explicit citizen action.
 ```
 
 Final rule:
@@ -470,7 +469,7 @@ This resolution should inform the integration pass for:
 - exclude opaque manual boosting from Core v0;
 - limit urgent highlights to one or two projects;
 - use rule-based rotation for urgent slots;
-- measure discovery-to-funding influence;
+- preserve material discovery reasons and optional aggregate discovery observability;
 - preserve audit traces for material discovery decisions;
 - defer advanced recommender systems to Extension v1+ unless explainability and auditability are strong enough.
 

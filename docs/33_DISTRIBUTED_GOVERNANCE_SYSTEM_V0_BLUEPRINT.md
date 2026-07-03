@@ -568,6 +568,8 @@ Home categories may be reordered, pinned, collapsed, followed, or hidden by the 
 
 Layer 0 may keep the interface short, but it should not let urgency, recommendation, popularity, proximity, or funding progress suppress material warnings. If a highlighted project has a pending design gate, an unresolved required evidence need, a material complaint status, a conditional approval, or a legitimacy-profile issue, the citizen-facing entry point should show a compact warning and a route to the source.
 
+A008 does not add a separate platform-influence entity to Core v0. Platform influence is bounded through the existing discovery controls, AI-assistance traces, source-linked warnings, and rule-change audit paths. Detailed per-impression ranking logs, causal exposure-to-funding metrics, or algorithmic-bias dashboards are Extension v1+ or implementation-level observability, not a Core v0 citizen burden.
+
 ### Layer 1 — Compact project list
 
 Layer 1 lets citizens compare projects quickly.
@@ -1111,6 +1113,8 @@ In tutored mode, an administrator or implementing ministry may configure rules w
 In non-tutored mode, major protocol changes require a visible Protocol Change Proposal with public reason, scope, impact analysis, review, sandbox or simulation where required, approval, implementation date, versioned update, and rollback path where applicable.
 
 Citizen-facing layers should summarize what changed, why, when it takes effect, what it affects, and whether existing projects are protected, transitioned, or reviewed. Layer 5 preserves the full rule-change object and implementation trace.
+
+Material changes to ordering rules, urgent-slot rules, recommendation logic, default Home behavior, AI-summary generation, validation logic, warning suppression, or citizen-facing labels should not be shipped as invisible product tuning when they may affect funding, legitimacy, evidence use, disbursement, reputation, closure, or complaint paths. They belong in the applicable SystemImplementationChange, AdministrativeRuleChange, GovernanceResolution, ProtocolChangeProposal, and AuditEvent trail.
 
 Example:
 

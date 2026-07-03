@@ -272,6 +272,8 @@ No protected identity without verified actor and protected identity request reco
 No AI assistance treated as actor, evaluator, fiscalizer, or truth-decider by default.
 
 No approval, almost-funded, recommended, urgent, execution-ready, or AI-summary label without source-linked material claims and unresolved-condition visibility where material.
+
+No separate PlatformInfluenceRecord required in Core v0. Platform-influence boundaries are represented through existing discovery fields, AssistedDeliberationContext traces, source-linked AI-assistance records, AuditEvents, and the applicable SystemImplementationChange, AdministrativeRuleChange, GovernanceResolution, or ProtocolChangeProposal path.
 ```
 
 ## Macul Multi-Court Schema Trace
@@ -323,6 +325,7 @@ AuditEvents connect each role action, object transition, rule version, source re
 4. Country-specific legal integrations for identity, treasury, permits, registries, courts, and sanctions.
 5. Access-control mapping from the responsibility matrix to actual permissions.
 6. Data retention, export, redaction, and public snapshot rules.
+7. Whether later implementations should add advanced platform-influence analytics, causal exposure-to-funding metrics, ranking-bias dashboards, or per-impression logs without making them Core v0 requirements.
 7. Performance implications of reconstructing read models from audit/event history.
 
 ## Boundary With Phase 3

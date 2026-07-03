@@ -506,6 +506,24 @@ After closure, ordinary platform complaints do not remain open forever. Executio
 
 ---
 
+## A008 — Platform or algorithmic capture
+
+**Severity:** Medium
+**Status:** Resolved
+**Resolution document:** `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A008 is founded as a boundary problem, but Core v0 does not add a separate platform-influence entity, universal per-impression ranking logs, causal exposure-to-funding attribution, or a citizen-facing algorithmic audit panel.
+
+The risk is handled through existing C008 and C025 controls: AI remains labeled, source-linked, traceable, correctable assistance; Home and discovery remain user-configurable navigation; project lists show switchable ordering modes; urgent, recommended, nearby, followed-scope, almost-funded, or similar labels expose reasons where material; compact surfaces do not hide unresolved material warnings; paid promotion and opaque manual boosting are excluded.
+
+Material changes to ordering rules, urgent-slot rules, recommendation logic, default Home behavior, AI-summary generation, validation logic, warning suppression, or citizen-facing labels should use the existing SystemImplementationChange, AdministrativeRuleChange, GovernanceResolution, ProtocolChangeProposal, and AuditEvent paths where applicable.
+
+Advanced platform-influence analytics, ranking-bias dashboards, causal exposure-to-funding metrics, and detailed ranking audits remain Extension v1+ or implementation-level observability.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -723,6 +741,7 @@ After closure, ordinary platform complaints do not remain open forever. Executio
 - [x] Do compact cards surface unresolved material warnings?
 - [x] Is project discovery explainable?
 - [x] Are urgent/promoted-looking slots rule-based?
+- [x] Is A008 handled through existing discovery, AI-assistance, and rule-change controls rather than a new Core v0 entity?
 - [ ] Do citizen surfaces preserve A006 labels such as `funds first six months`, `maintenance not funded`, `renewal window open`, `continuity idea open`, or `wind-down rule declared` where material?
 - [x] Can users customize Home categories without changing project eligibility?
 - [ ] Are citizen-facing states mapped from technical states?

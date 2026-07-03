@@ -34,7 +34,8 @@ No formal rule is broken, but citizen attention is steered.
 - Require source-visible summaries and correction channels.
 - Keep ordering and recommendation reasons visible and switchable.
 - Distinguish validation assistance from formal acceptance.
-- Add observability metrics for AI or platform influence over project attention and outcomes.
+- Preserve material discovery and AI-assistance traces through existing audit and rule-change mechanisms.
+- Treat advanced influence analytics, per-impression ranking logs, and causal exposure-to-funding metrics as Extension v1+ or implementation-level observability rather than Core v0 requirements.
 
 ## Theoretical base and citations
 
@@ -75,4 +76,4 @@ Two projects are equally eligible. One is repeatedly shown as "recommended" beca
 
 ## Expected resolution output
 
-A Phase 3 resolution should define a platform-influence audit layer for discovery, assisted deliberation, validation assistance, and AI-generated summaries.
+A Phase 3 resolution should define a platform-influence boundary for discovery, assisted deliberation, validation assistance, and AI-generated summaries, using existing C008/C025 controls instead of adding a new Core v0 entity.

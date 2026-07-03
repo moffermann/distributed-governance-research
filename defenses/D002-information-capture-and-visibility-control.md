@@ -77,8 +77,8 @@ Define minimum material-visibility rules:
 
 Defense strength: strong as a transparency principle, moderate as a UI implementation guard.
 
-Residual risk: visual design and default ordering can bias attention even when rules are visible. This requires platform-influence metrics, periodic audit, and citizen-switchable views.
+Residual risk: visual design and default ordering can bias attention even when rules are visible. Core v0 handles this through citizen-switchable views, visible reasons, material-warning visibility, and auditability; platform-influence metrics and periodic ranking audits remain Extension v1+ or implementation-level observability.
 
 ## Decision
 
-The attack is founded but already anticipated by C008, C025, H006, material-claim traceability, and Layer 5 auditability. Phase 3 should strengthen the connection between material claims, compact visibility, verified discovery, and platform-influence audit.
+The attack is founded but already anticipated by C008, C025, H006, material-claim traceability, and Layer 5 auditability. Phase 3 should strengthen the connection between material claims, compact visibility, verified discovery, and the A008 platform-influence boundary.

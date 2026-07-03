@@ -36,6 +36,7 @@ The Phase 3 attack queue has been created under `attacks/`: eighteen attack brie
 The Phase 3 defense queue has been created under `defenses/`: eighteen defense briefs D001-D018 are paired with A001-A018 and classify each attack as founded, partially founded, unresolved, a difference of judgment, or an editorial-distortion risk while citing project documents and literature anchors.
 The Phase 3 attack-defense review has been integrated into accepted resolution documents `docs/67` through `docs/84`: each founded or partially founded attack now has a proportional accepted improvement that preserves the project's functional editorial line and is cross-referenced from its A00N and D00N files.
 A001 propagation is integrated: Project Legitimacy Profile is now represented as a threshold-driven, evidence-fed profile using Required Evidence Package needs, Readiness Evidence for affected-party mapping and consultation, nearby-project asynchronous participation, independent evidence-producer or reviewer corroboration where required, and citizen-facing labels that prevent funding completion from being treated as legitimacy. The correction distinguishes pre-execution readiness evidence from fulfillment evidence.
+A008 propagation is integrated as a platform-influence boundary, not a new model layer: Core v0 relies on C008 and C025 controls, visible discovery reasons, user-controlled ordering and Home customization, source-linked AI assistance, material-warning visibility, and rule-change auditability, while per-impression logs, causal exposure-to-funding metrics, ranking-bias dashboards, and a separate `PlatformInfluenceRecord` remain outside Core v0.
 Accepted C### resolution documents supersede conflicting older hypotheses and secondary notes unless deliberately reopened.
 C007/C020 clarification: public authorities remain excluded from internal project participation in scopes they control, but may perform external tutored-scope moderation for eligibility, duplication, scope, or compatibility where a tutored operating mode grants that authority. Public ownership alone does not exclude a state-owned or publicly owned operator; eligibility depends on operating mode, control relationships, privilege, disclosure, independent fiscalization, and equal accountability rules.
 H022 is aligned: every execution-financeable project must define a proportional Project Evidential Contract before execution funding; the contract connects value promises, metrics, milestones, material claims, fulfillment/control evidence source roles, corroboration, fiscalization, disbursement, complaints, closure, privacy, and audit history without creating one universal centralized evidence code.
@@ -247,7 +248,7 @@ The eighty-second residual cleanup created the Phase 3 attack queue in `attacks/
 
 The eighty-third residual cleanup created the Phase 3 defense queue in `defenses/`. Each defense D001-D018 is paired with attack A001-A018 and includes attack summary, attack reference, objective evaluation, response, project-document basis, bibliographic basis, proposed improvements, application location, defense strength, and residual risk.
 
-The eighty-fourth residual cleanup reviewed all Phase 3 attack-defense pairs and created accepted resolution documents `docs/67` through `docs/84`: Project Legitimacy Profile, Material Visibility, Fiscalizer Quality and Capture Indicators, Metric Gaming Test, Essential Service Protection, Continuity Risk Classification, Conflict-of-Review Handling, Platform Influence Audit, Participation Equity Indicators, Delegation Concentration Stress Thresholds, Tutored Moderation Abuse Test, Complexity Budget, Evidence Quality Review, Related-Party Relationship Graph, Common-Good Impact Sufficiency Test, Incumbent Resistance Indicators, Disbursement Gaming Tests, and Collusion Observability. Each attack and defense file now references its integrated resolution.
+The eighty-fourth residual cleanup reviewed all Phase 3 attack-defense pairs and created accepted resolution documents `docs/67` through `docs/84`: Project Legitimacy Profile, Material Visibility, Fiscalizer Quality and Capture Indicators, Metric Gaming Test, Essential Service Protection, Continuity Risk Classification, Conflict-of-Review Handling, Platform Influence Boundary, Participation Equity Indicators, Delegation Concentration Stress Thresholds, Tutored Moderation Abuse Test, Complexity Budget, Evidence Quality Review, Related-Party Relationship Graph, Common-Good Impact Sufficiency Test, Incumbent Resistance Indicators, Disbursement Gaming Tests, and Collusion Observability. Each attack and defense file now references its integrated resolution.
 
 The eighty-fifth residual cleanup propagated A001 / `docs/67_PROJECT_LEGITIMACY_PROFILE_AND_A001_RESOLUTION.md` into the core architecture, scope freeze, entity map, formal inventory, scope matrix, contradiction checklist, implementable schema draft, citizen home/following/dashboard/full-sheet/funding flows, creation/publication and lifecycle flows, Layer 5 audit trail, and affected diagrams. The integration clarifies that affected-party mapping and community consultation are proportional Readiness Evidence conditions represented through Required Evidence Package needs, not votes, vetoes, or fulfillment evidence by default, and that nearby-project discovery enables asynchronous participation with lower participation cost, broader reach, greater visibility, and more traceable feedback.
 
@@ -269,7 +270,9 @@ The ninety-third residual cleanup accepted and propagated `docs/85_FUNDING_WINDO
 
 The ninety-fourth residual cleanup propagated A007 / `docs/73_CONFLICT_OF_REVIEW_HANDLING_AND_A007_RESOLUTION.md` across the core corpus, fiscalization, complaint flow, funding, disbursement, lifecycle, entity maps, formal inventory, schema draft, responsibility matrix, glossary, checklist, citizen surfaces, Layer 5 audit trail, and affected diagrams. The accepted implementation keeps pre-closure conflicts inside ordinary complaint, fiscalization, pause, correction, retention, mitigation, disbursement-blocking, and review paths, but adds a Core v0 `Post-Closure Coverage Profile` for execution-financeable projects where post-closure accountability is required. Covered post-closure complaints, contradictory evidence, hidden antivalues, or defect claims can proceed inside the platform only during the declared window and within covered scope, through either `Executor Direct Warranty` or `Equivalent Insurance / Bond / Coverage`. After expiry or outside scope, ordinary platform complaints route externally, while final competent external decisions may later be recorded where the active rule allows responsibility, reputation, or historical correction effects.
 
-Next review candidate: continue Phase 3 propagation with A008 / `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`.
+The ninety-fifth residual cleanup propagated A008 / `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md` as a proportional platform-influence boundary rather than a new Core v0 entity. The cleanup aligns C008 AI assistance, C025 discovery controls, the blueprint, scope freeze, Layer 5 audit trail, schema draft, classification matrix, checklist, knowledge index, and A008/D008 briefs around visible reasons, user-controlled ordering and Home customization, source-linked/correctable AI summaries, material-warning visibility, no paid promotion, no opaque manual boosting, and rule-change auditability. Advanced platform-influence analytics, per-impression ranking logs, causal exposure-to-funding metrics, ranking-bias dashboards, and a separate `PlatformInfluenceRecord` remain Extension v1+ or implementation-level observability.
+
+Next review candidate: continue Phase 3 propagation with A009 / `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`.
 
 Approximate current maturity:
 
@@ -426,7 +429,7 @@ Exit criteria:
 
 ## Phase 3 — Attack the Architecture
 
-**Status:** attack and defense queues prepared; paired review integrated into accepted resolutions; core propagation active. A001-A007, A013, and the accepted Funding Window Expiry / Budget Liquidity Smoothing interstitial resolution have been propagated into the core corpus.
+**Status:** attack and defense queues prepared; paired review integrated into accepted resolutions; core propagation active. A001-A008, A013, and the accepted Funding Window Expiry / Budget Liquidity Smoothing interstitial resolution have been propagated into the core corpus.
 
 Goal: identify where the architecture breaks, becomes unsafe, becomes unfair, or creates new power concentration.
 
@@ -624,14 +627,15 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Review and propagate A008 / `docs/74_PLATFORM_INFLUENCE_AUDIT_AND_A008_RESOLUTION.md`.
-2. Preserve the A007 boundary during later propagation: pre-closure conflicts use ordinary complaint/fiscalization paths; post-closure platform review requires an active covered Post-Closure Coverage Profile; expired or out-of-scope claims route externally.
-3. Preserve the A005/A006 boundary during later propagation: essential-service protection is a Planning Scope floor-and-lane test, while continuity-risk classification governs projects that carry ongoing obligations and may generate continuity-need Ideas before funded periods expire.
-4. Preserve the Funding Window Expiry boundary: FundingAttempt and Expired Unfunded are Core v0, while Budget Liquidity Smoothing remains Extension v1+ / country implementation.
-5. Preserve the A004/A013 boundary during later propagation: evidence coverage and submitted-evidence quality are separate checks.
-6. Continue propagating accepted Phase 3 resolutions in order unless a dependency requires reordering.
-7. Keep detailed scoring, calibration registries, AI-generated-material detection, country-specific legal admissibility, post-closure insurance/warranty enforcement mechanics, and Budget Liquidity Smoothing implementation details as future implementation or legal-mapping work unless reopened explicitly.
-8. Then resume formal system modeling, literature mapping, and paper architecture.
+1. Review and propagate A009 / `docs/75_PARTICIPATION_EQUITY_INDICATORS_AND_A009_RESOLUTION.md`.
+2. Preserve the A008 boundary during later propagation: platform influence is controlled through visible reasons, user customization, source-linked AI assistance, material-warning visibility, and rule-change auditability; per-impression logs, causal exposure-to-funding metrics, ranking-bias dashboards, and a separate `PlatformInfluenceRecord` remain outside Core v0.
+3. Preserve the A007 boundary during later propagation: pre-closure conflicts use ordinary complaint/fiscalization paths; post-closure platform review requires an active covered Post-Closure Coverage Profile; expired or out-of-scope claims route externally.
+4. Preserve the A005/A006 boundary during later propagation: essential-service protection is a Planning Scope floor-and-lane test, while continuity-risk classification governs projects that carry ongoing obligations and may generate continuity-need Ideas before funded periods expire.
+5. Preserve the Funding Window Expiry boundary: FundingAttempt and Expired Unfunded are Core v0, while Budget Liquidity Smoothing remains Extension v1+ / country implementation.
+6. Preserve the A004/A013 boundary during later propagation: evidence coverage and submitted-evidence quality are separate checks.
+7. Continue propagating accepted Phase 3 resolutions in order unless a dependency requires reordering.
+8. Keep detailed scoring, calibration registries, AI-generated-material detection, country-specific legal admissibility, post-closure insurance/warranty enforcement mechanics, Budget Liquidity Smoothing implementation details, and advanced platform-influence analytics as future implementation or legal-mapping work unless reopened explicitly.
+9. Then resume formal system modeling, literature mapping, and paper architecture.
 ```
 
 ## Operating rule

@@ -953,9 +953,11 @@ Examples:
 - filters applied;
 - protocol rule for rotation;
 - whether the user customized Home categories;
-- aggregate funding from search, category navigation, urgent highlights, recommendations, delegation, and automatic profiles.
+- privacy-preserving aggregate discovery observability where implemented, such as funding paths from search, category navigation, urgent highlights, recommendations, delegation, or automatic profiles.
 
-The ordinary citizen does not need to see every technical ranking detail, approval file, tender base, permit, or appendix, but reviewers should be able to reconstruct whether discovery acted as a hidden allocator or whether a favorable citizen-facing label hid a material condition.
+The ordinary citizen does not need to see every technical ranking detail, approval file, tender base, permit, or appendix, but reviewers should be able to reconstruct whether a material discovery rule, urgent slot, recommendation label, or AI-generated summary hid a material condition.
+
+Core v0 does not require universal per-impression user-level ranking logs, causal exposure-to-funding attribution, or a separate public platform-influence dashboard. Those tools may be useful as Extension v1+ or country/administrator observability where the implementation can support them without turning ordinary participation into a technical audit exercise.
 
 ## 18. Data export and verification tools
 
