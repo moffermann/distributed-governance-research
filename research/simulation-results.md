@@ -162,6 +162,87 @@ alignment still declines in later cycles under all conditions
 (≈ 0.48 → 0.27–0.34), so decay is not free — but re-routing the leavers
 is not the lever, the anchor is.
 
+## E4 — Institutional knowledge aggregation under a common world
+
+Pre-registered in `research/e4-institutional-knowledge-design.md` before any
+run; raw output in `research/e4-raw-output.txt`. E4 corrects a framing
+limitation of E2 identified in author review: E2's "planner" was an
+exogenous oracle-correlated weight vector while citizens carried social
+proof but no knowledge, so E2 could not compare knowledge-aggregation
+institutions. In E4, knowledge is modeled symmetrically — a
+bandwidth-constrained planner (30 deep inspections, noise 0.10, prior 0.5
+elsewhere; its corr(θ, w) is now measured output, not a dial) and dispersed
+citizen signals (30% of citizens hold 4 noisy local signals each,
+σ = 0.35, coverage salience-biased) — and five regimes differ only in the
+aggregation institution, over N_p ∈ {40, 200, 1000} projects with scarcity
+held at 3×.
+
+| scale | R1 pure central | R2 tutored mix | R3 uncoordinated | R4 open construction | R5 open + social proof |
+|---|---|---|---|---|---|
+| N=40, sel(θ) | 0.624±0.100 | 0.605±0.093 | 0.456±0.074 | **0.762±0.064** | 0.741±0.075 |
+| N=200, sel(θ) | 0.138±0.071 | 0.165±0.066 | 0.239±0.020 | **0.764±0.023** | 0.762±0.023 |
+| N=1000, sel(θ) | 0.036±0.036 | 0.036±0.030 | 0.106±0.012 | **0.727±0.017** | 0.730±0.016 |
+| planner corr(θ,w) | 0.805±0.059 | → | 0.371±0.030 | → | 0.166±0.012 |
+| open corr(θ,w) | 0.997±0.001 | → | 0.988±0.002 | → | 0.938±0.004 |
+
+(The corr rows read across scales: planner correlation collapses
+0.81 → 0.37 → 0.17 as the world outgrows fixed bandwidth; the open vector's
+correlation stays 0.94–0.997, degrading only as √(signals per project).)
+
+**Findings against the pre-registered predictions:**
+
+1. **Prediction 1 (scale crossover) FAILED in the informative direction:
+   there is no crossover — open construction wins at every tested scale,
+   including N=40 where the planner inspects 75% of the world.** Twelve
+   thousand individually poor signals (σ = 0.35) average into a
+   near-perfect weight vector; thirty good inspections cannot compete even
+   locally. The scale effect appears as degree, not as a crossing: fixed
+   central bandwidth decays toward randomness (sel(θ) 0.04 at N=1000) while
+   aggregation is nearly scale-invariant.
+2. **Prediction 4 HELD strongly: dispersed knowledge without an aggregation
+   institution is wasted.** R3 — the same signals, no aggregation — funds
+   0.6–15% of projects (uncoordinated contributions spread too thin to
+   close targets) with sel(θ) 0.11–0.46. The Hayekian result is precisely
+   institutional: it vindicates aggregation mechanisms, not the absence of
+   mechanism. Core v0's default-plus-caps layer is such a mechanism; E4
+   says what to feed it.
+3. **Prediction 2 (independence binding) held only weakly.** Social-proof
+   contamination at mixing 0.5 (R5) degrades the open vector's correlation
+   (0.997→0.911 at N=40; 0.938→0.871 at N=1000) but barely moves sel(θ),
+   because the herd term — visible funding progress — is itself
+   quality-correlated in a system whose weights are already good: the
+   cascade partially transmits information, echoing E2s. The honest caveat
+   is that only *endogenous* contamination was tested; a common-mode bias
+   uncorrelated with quality (misinformation, identity-driven allocation
+   per A031) would not average out, and is untested.
+4. **Prediction 3 (institution-independent neglected tail) FAILED:** under
+   the tested mild coverage bias (∝ 1+s), citizen signals cover ~100% of
+   the bottom-salience quartile at all scales while planner tail coverage
+   collapses (0.70 → 0.02). Tail neglect is institution-dependent, and
+   favors aggregation. A stronger participation clustering could reverse
+   this; the sensitivity run (uniform vs salience-biased coverage at
+   N=200) showed no measurable difference at this bias strength.
+
+**Reading.** The binding variable is not who holds the pen but how much
+dispersed information the scope-construction institution ingests. R2 versus
+R1 confirms E2's attention finding in the corrected frame: a 20% active
+layer cannot compensate weak weights. R4 versus R2 — identical institutions
+except the origin of the weight vector — is the experiment's core
+comparison, and it favors open construction wherever unbiased dispersed
+signals exist and an aggregation mechanism collects them.
+
+**Result-determining assumptions, declared.** Citizen signals are unbiased
+(θ plus noise): aggregation defeats noise by averaging, but would not
+defeat systematic bias, and real citizen beliefs can be biased, not merely
+noisy. Signal elicitation is non-strategic: nobody misreports to steer
+funds — in a deployed system the A004/A030 gaming and clientelism surfaces
+apply to signal reporting, and elicitation mechanics in open mode remain
+gated by A023. The informed share (30%) and signal noise are plausible, not
+calibrated. These assumptions bound the claim: E4 shows open scope
+construction is viable and scale-robust *given honest, unbiased, collected
+signals* — designing the collection mechanism that keeps them honest is
+the open problem the corpus already names.
+
 ## Implications for the architecture
 
 1. The funding-target closure rule earns its place as an
@@ -177,6 +258,14 @@ is not the lever, the anchor is.
    the quality of the whole allocation in their hands. The simulation puts a
    number on the A020 agenda-setting limitation: it is worth more than any
    feasible increase in citizen attention.
+4. E4 sharpens point 3 into a constructive direction: the quality of the
+   weight vector is the binding constraint *whatever institution constructs
+   it*, fixed-bandwidth central construction does not scale, and aggregated
+   dispersed signals do — provided an aggregation institution exists (R3)
+   and signals are honest and unbiased (declared assumption). Open scope
+   construction moves from assumed impossibility to measured viability
+   with named preconditions; its elicitation mechanics remain gated by
+   A023.
 
 ## Limitations
 

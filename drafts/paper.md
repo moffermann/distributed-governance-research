@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.2 (July 2026). Revised after an adversarial referee pass whose report and fixes are part of the public record.**
+**Working paper — v1.3 (July 2026). Revised after an adversarial referee pass and an author methodological review of the simulation, both part of the public record.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff.*
 
@@ -26,10 +26,14 @@ must be priced in financial terms — results that convert the architecture's
 design intuitions into checkable propositions. Second, computational
 evidence: a 10,000-agent simulation of attention-constrained allocation shows
 that funding-target closure works as an anti-concentration device but not a
-quality device, that allocation quality is carried by institutional default
-rules and planner knowledge rather than citizen attention, and that
-participation decay is survivable exactly where the default layer is strong —
-quantifying which design margins matter. Third, method: the architecture was
+quality device, that allocation quality is carried by the informational
+quality of the weight vector the default layer follows rather than by
+citizen attention, and that participation decay is survivable exactly where
+the default layer is strong; a pre-registered fourth experiment that models
+knowledge symmetrically finds that aggregating dispersed citizen signals
+into that vector outperforms fixed-bandwidth central construction at every
+tested scale — provided an aggregation institution exists and signals are
+honest, unbiased, and collected. Third, method: the architecture was
 developed under systematic adversarial review — thirty-five attack briefs,
 each with a paired defense and an accepted resolution under an explicit
 integrate-or-bound rule that either adds a mechanism through existing
@@ -421,11 +425,18 @@ regime ordering is robust except under very strong social proof, where the
 regimes converge within noise because strong amplification also propagates
 the evaluators' quality signal; magnitudes are parameter-dependent and
 uncalibrated. What survives all variations is the ordering and the
-dominance of planner knowledge — which quantifies the architecture's
-central vulnerability: because defaults are powerful, whoever constructs
-planning scopes and their weights holds the allocation's quality in their
-hands. The agenda-setting limitation (Section 8) is not one limitation
-among many; by these numbers it is the binding constraint.
+dominance of the weight vector's informational quality — which quantifies
+the architecture's central vulnerability: because defaults are powerful,
+whoever constructs planning scopes and their weights holds the
+allocation's quality in their hands. The agenda-setting limitation
+(Section 8) is not one limitation among many; by these numbers it is the
+binding constraint. Two things E1–E3 cannot say, and an earlier draft
+over-read them to say: the weight vector's origin is unspecified (r is a
+property of the vector, not of a state office), and the modeled crowd
+carries social proof but no knowledge — so these experiments compare
+attention against weight quality, not central against distributed
+knowledge. Finding 4 was designed, after author review, to make that
+comparison properly.
 
 **Finding 3: what buffers participation decay is the anchor's level, not
 where the leavers' weight flows — our own prediction failed here.** We
@@ -445,11 +456,52 @@ buffered risk here, but the buffer is the institutional layer's size, and
 within-cycle quality alignment still erodes in later cycles under all
 conditions, so decay is bought, not free.
 
-The simulation also disciplines rhetoric: nothing in these results supports
-describing Core v0 allocation as "the wisdom of crowds." Its honest
-description is *inspectable intermediation with a citizen-correctable
-default*, which the results show is both realistic and better than the
-salience-driven alternative that unstructured platforms converge to.
+**Finding 4: aggregated dispersed signals outperform fixed-bandwidth
+central construction of the weight vector at every tested scale — but only
+through an aggregation institution.** A fourth, pre-registered experiment
+(design and predictions committed before any run;
+`research/e4-institutional-knowledge-design.md`) models knowledge
+symmetrically instead of endowing it: a planner with fixed bandwidth
+(thirty deep inspections; its correlation with latent quality is now
+measured output, collapsing 0.81 → 0.37 → 0.17 as the project pool grows
+40 → 200 → 1000) against thirty percent of citizens holding four
+individually poor local signals each (noise 0.35). Five regimes share the
+identical world and signals and differ only in the aggregation
+institution. The pre-registered scale-crossover prediction failed in the
+informative direction: open construction of the weight vector — a plain
+average of citizen signals per project — beats pure central construction
+at *every* scale, including the smallest, where the planner inspects
+three-quarters of the world (sel(θ) 0.76 vs 0.62 at N = 40; 0.73 vs 0.04
+at N = 1000). Twelve thousand noisy signals average into a near-perfect
+vector; thirty good inspections cannot compete, and fixed central
+bandwidth decays toward randomness as the world grows. Three
+qualifications carry the finding's honest weight. First, the same
+dispersed knowledge *without* an aggregation institution is wasted: the
+uncoordinated regime funds 0.6–15% of projects and selects poorly — the
+result vindicates aggregation mechanisms, not the absence of mechanism,
+and Core v0's default-plus-closure layer is exactly such a mechanism.
+Second, aggregation defeats noise, not bias: signals are unbiased by
+construction, and a common-mode bias uncorrelated with quality
+(misinformation, expressive allocation) would not average out — only
+endogenous social-proof contamination was tested, and proved largely
+benign because visible funding progress is itself quality-correlated in a
+well-anchored system. Third, elicitation is non-strategic by assumption;
+in deployment, signal reporting becomes a gaming and clientelism surface,
+and the mechanics of open scope construction remain a gated design
+problem. Within those bounds, the finding reverses the reading an earlier
+draft invited: the binding variable is not who holds the pen but how much
+dispersed information the scope-construction institution ingests.
+
+The simulation also disciplines rhetoric — in both directions. Nothing in
+E1–E3 supports describing Core v0 allocation as "the wisdom of crowds":
+the honest description is *inspectable intermediation with a
+citizen-correctable default*, which the results show is both realistic and
+better than the salience-driven alternative that unstructured platforms
+converge to. And nothing in E1–E3 licenses the opposite reading — that
+central planning knowledge beats distributed knowledge — because they
+never modeled distributed knowledge; when E4 does, aggregation wins
+wherever its named preconditions hold. Both discourses lose their slogan;
+the design keeps its numbers.
 
 ## 7. Adversarial validation as method
 
@@ -502,10 +554,18 @@ residual risk.
 **Agenda-setting remains centralized, and it matters most.** Core v0 makes
 planning scopes public, versioned, mandate-bearing, and contestable through
 visibility, but does not distribute their construction. Our own simulation
-shows planner knowledge dominates every other quality margin. Whoever
-constructs the scope exercises the second face of power (Bachrach and
-Baratz 1962; Schattschneider 1960) over everything downstream. This is the
-architecture's principal open problem, not an implementation detail.
+shows the weight vector's informational quality dominates every other
+quality margin, and whoever constructs the scope exercises the second face
+of power (Bachrach and Baratz 1962; Schattschneider 1960) over everything
+downstream. E4 changes the character of this limitation without removing
+it: open construction of the weights from aggregated citizen signals is
+measurably viable and scale-robust in the model, so the constraint is no
+longer whether distributed construction can work in principle but whether
+an elicitation mechanism can keep dispersed signals honest, unbiased, and
+representative under gaming, clientelism, and expressive-allocation
+pressure — a design problem the corpus gates rather than assumes away.
+This remains the architecture's principal open problem, now with a
+measured prize attached to solving it.
 
 **Procedural legitimacy is not democratic mandate.** The platform records
 the external authorization for budget migration and allocation formulas

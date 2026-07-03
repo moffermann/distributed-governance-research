@@ -267,6 +267,323 @@ const header = () => {
 
 console.log(`runs per condition: ${RUNS}, base seed: ${BASE_SEED}, N=${CONFIG.N}, cycles=${CONFIG.CYCLES}, scarcity=${CONFIG.SCARCITY}x`);
 
+// --- E4: institutional knowledge aggregation under a common world -----------
+// Pre-registered in research/e4-institutional-knowledge-design.md. Knowledge is
+// modeled symmetrically (dispersed citizen signals + a bandwidth-constrained
+// planner) and generated ONCE per run; the five regimes R1-R5 share that same
+// world and endowment and differ only in how they aggregate it. Everything
+// flows from the seeded RNG — no Date.now()/Math.random(), fully deterministic.
+if (args.exp === "e4") {
+  const PI_INFORMED = 0.3; // share of citizens carrying private signals
+  const KC = 4;            // projects an informed citizen knows
+  const SIGMA_C = 0.35;    // citizen signal noise (individually poor)
+  const K_PLAN = 30;       // projects the planner inspects (fixed bandwidth)
+  const SIGMA_P = 0.10;    // planner inspection noise (deep but narrow)
+  const SLOTS = 6;         // discovery-surface size for uninformed citizens
+  const { N, CYCLES, ETA, SCARCITY } = CONFIG;
+
+  // Seeded Box-Muller normal drawing from a supplied uniform stream.
+  const makeNormal = (rng) => (mu, sigma) => {
+    let u1 = rng();
+    if (u1 < 1e-12) u1 = 1e-12;
+    const u2 = rng();
+    return mu + sigma * Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+  };
+
+  // Prefix-sum + binary-search sampler for weighted draws over indices.
+  const buildSampler = (weights) => {
+    const cum = new Float64Array(weights.length);
+    let acc = 0;
+    for (let i = 0; i < weights.length; i++) { acc += weights[i]; cum[i] = acc; }
+    return (rng) => {
+      const roll = rng() * acc;
+      let lo = 0, hi = cum.length - 1;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (cum[mid] < roll) lo = mid + 1; else hi = mid; }
+      return lo;
+    };
+  };
+
+  // k distinct indices via weighted draws, rejecting repeats.
+  const sampleDistinct = (pick, rng, k, seen) => {
+    seen.clear();
+    const out = [];
+    let guard = 0;
+    while (out.length < k && guard < k * 100) {
+      const j = pick(rng);
+      if (!seen.has(j)) { seen.add(j); out.push(j); }
+      guard++;
+    }
+    return out;
+  };
+
+  // Build the shared world + knowledge endowments for one run at one scale.
+  // uniformCoverage varies only the citizen neighborhood sampler (sensitivity).
+  const makeWorld = (seed, Np, uniformCoverage) => {
+    const rng = mulberry32(seed);
+    const theta = new Float64Array(Np);
+    const s = new Float64Array(Np);
+    const target = new Float64Array(Np);
+    // Aggregate target = SCARCITY x total budget (N citizens x CYCLES units),
+    // held at 3x for every scale to isolate the knowledge effect.
+    const targetScale = (SCARCITY * N * CYCLES) / Np;
+    for (let j = 0; j < Np; j++) {
+      theta[j] = rng();
+      s[j] = Math.max(0.01, 0.2 * theta[j] + 0.8 * rng());
+      target[j] = (0.5 + rng()) * targetScale;
+    }
+    const normal = makeNormal(rng);
+    const salienceW = new Float64Array(Np);
+    for (let j = 0; j < Np; j++) salienceW[j] = 1 + s[j];
+    const covW = uniformCoverage ? new Float64Array(Np).fill(1) : salienceW;
+    const pickCov = buildSampler(covW);
+    // Dispersed citizen signals: informed citizens draw KC salience-biased
+    // (or uniform) projects and report noisy estimates of theta.
+    const sigSum = new Float64Array(Np);
+    const sigCount = new Int32Array(Np);
+    const informedProjs = [];
+    const informedSigs = [];
+    const seen = new Set();
+    for (let i = 0; i < N; i++) {
+      if (rng() < PI_INFORMED) {
+        const projs = sampleDistinct(pickCov, rng, KC, seen);
+        const sigs = new Float64Array(projs.length);
+        for (let m = 0; m < projs.length; m++) {
+          const j = projs[m];
+          const sig = theta[j] + normal(0, SIGMA_C);
+          sigs[m] = sig;
+          sigSum[j] += sig;
+          sigCount[j]++;
+        }
+        informedProjs.push(projs);
+        informedSigs.push(sigs);
+      }
+    }
+    // Planner: K salience-triaged deep inspections; prior 0.5 elsewhere.
+    const pickPlan = buildSampler(salienceW);
+    const inspected = sampleDistinct(pickPlan, rng, K_PLAN, seen);
+    const inspectedSet = new Set(inspected);
+    const wPlanner = new Float64Array(Np).fill(0.5);
+    for (const j of inspected) wPlanner[j] = theta[j] + normal(0, SIGMA_P);
+    // Static open weights (R4): plain mean of signals (equal precision), prior
+    // 0.5 where no signal exists.
+    const wOpenRaw = new Float64Array(Np);
+    for (let j = 0; j < Np; j++) wOpenRaw[j] = sigCount[j] > 0 ? sigSum[j] / sigCount[j] : 0.5;
+    // Tail coverage: bottom salience quartile.
+    const order = Array.from({ length: Np }, (_, j) => j).sort((a, b) => s[a] - s[b]);
+    const q = Math.max(1, Math.round(Np * 0.25));
+    let tailSig = 0, tailPlan = 0;
+    for (let t = 0; t < q; t++) {
+      const j = order[t];
+      if (sigCount[j] >= 3) tailSig++;
+      if (inspectedSet.has(j)) tailPlan++;
+    }
+    const thetaArr = Array.from(theta);
+    return {
+      Np, theta, s, target, informedProjs, informedSigs, sigSum, sigCount,
+      wPlanner, wOpenRaw,
+      corrWplanner: pearson(thetaArr, Array.from(wPlanner)),
+      tailSignal: tailSig / q,
+      tailPlanner: tailPlan / q,
+    };
+  };
+
+  const REGIMES = [
+    { name: "R1", d: 1.0, wSource: "planner", contaminated: false },
+    { name: "R2", d: 0.8, wSource: "planner", contaminated: false },
+    { name: "R3", d: 0.0, wSource: "none", contaminated: false },
+    { name: "R4", d: 0.8, wSource: "openStatic", contaminated: false },
+    { name: "R5", d: 0.8, wSource: "openDynamic", contaminated: true },
+  ];
+
+  // Run one regime over the shared world. Allocation RNG is forked
+  // deterministically per regime so every regime sees the identical world but
+  // its own stochastic-choice stream.
+  const allocate = (world, regime, ri, seed) => {
+    const rng = mulberry32((seed ^ ((ri + 1) * 0x9e3779b9)) >>> 0);
+    const { Np, theta, s, target, informedProjs, informedSigs, sigSum, sigCount, wPlanner, wOpenRaw } = world;
+    const funded = new Float64Array(Np);
+    const nInformed = informedProjs.length;
+    const defaultCount = Math.round(N * regime.d);
+    const activeCount = N - defaultCount;
+    const activeInformed = Math.round(activeCount * PI_INFORMED);
+    const activeUninformed = activeCount - activeInformed;
+
+    // Static default priority order (planner / static open weights).
+    const staticW = regime.wSource === "planner" ? wPlanner : regime.wSource === "openStatic" ? wOpenRaw : null;
+    let staticOrder = null;
+    if (staticW && defaultCount > 0) {
+      staticOrder = Array.from({ length: Np }, (_, j) => j).sort((a, b) => staticW[b] - staticW[a]);
+    }
+    const dynOrder = regime.wSource === "openDynamic" ? Array.from({ length: Np }, (_, j) => j) : null;
+    const dynW = regime.wSource === "openDynamic" ? new Float64Array(Np) : null;
+
+    for (let t = 0; t < CYCLES; t++) {
+      let order = staticOrder;
+      // R5: rebuild contaminated open weights from this cycle's funding
+      // progress (herd term), so w_open is dynamic; R4's is static from cycle 1.
+      if (regime.wSource === "openDynamic") {
+        for (let j = 0; j < Np; j++) {
+          const herd = target[j] > 0 ? Math.min(1, funded[j] / target[j]) : 0;
+          dynW[j] = sigCount[j] > 0 ? 0.5 * (sigSum[j] / sigCount[j]) + 0.5 * herd : 0.5;
+        }
+        dynOrder.sort((a, b) => dynW[b] - dynW[a]);
+        order = dynOrder;
+      }
+
+      // Active informed: fund the best private-signal project with room.
+      if (nInformed > 0) {
+        for (let c = 0; c < activeInformed; c++) {
+          const ci = Math.floor(rng() * nInformed);
+          const projs = informedProjs[ci], sigs = informedSigs[ci];
+          let bestIdx = -1, bestVal = -Infinity;
+          for (let m = 0; m < projs.length; m++) {
+            const j = projs[m];
+            if (funded[j] >= target[j]) continue;
+            let val = sigs[m];
+            if (regime.contaminated) {
+              const herd = target[j] > 0 ? Math.min(1, funded[j] / target[j]) : 0;
+              val = 0.5 * sigs[m] + 0.5 * herd;
+            }
+            if (val > bestVal) { bestVal = val; bestIdx = j; }
+          }
+          if (bestIdx >= 0) funded[bestIdx] += Math.min(1, target[bestIdx] - funded[bestIdx]);
+        }
+      }
+
+      // Active uninformed: 6-slot salience + social-proof discovery surface,
+      // built once per cycle (visibility = salience amplified by funding
+      // progress), with cap-driven spill to the next visible slot.
+      if (activeUninformed > 0) {
+        let maxFunded = 1;
+        for (let j = 0; j < Np; j++) if (funded[j] > maxFunded) maxFunded = funded[j];
+        const topIdx = [], topVis = [];
+        for (let j = 0; j < Np; j++) {
+          const vis = s[j] * (1 + ETA * (funded[j] / maxFunded));
+          if (topIdx.length < SLOTS) {
+            topIdx.push(j);
+            topVis.push(vis);
+          } else {
+            let mn = 0;
+            for (let a = 1; a < topIdx.length; a++) if (topVis[a] < topVis[mn]) mn = a;
+            if (vis > topVis[mn]) { topIdx[mn] = j; topVis[mn] = vis; }
+          }
+        }
+        let visTotal = 0;
+        for (let a = 0; a < topVis.length; a++) visTotal += topVis[a];
+        for (let c = 0; c < activeUninformed; c++) {
+          let amount = 1;
+          for (let att = 0; att < 4 && amount > 0; att++) {
+            let roll = rng() * visTotal, pick = topIdx[topIdx.length - 1];
+            for (let a = 0; a < topIdx.length; a++) { roll -= topVis[a]; if (roll <= 0) { pick = topIdx[a]; break; } }
+            const room = target[pick] - funded[pick];
+            if (room <= 0) continue;
+            const paid = Math.min(amount, room);
+            funded[pick] += paid;
+            amount -= paid;
+          }
+        }
+      }
+
+      // Defaults: priority-fill on w, never overfunding (fill remaining room).
+      if (defaultCount > 0 && order) {
+        let budget = defaultCount;
+        for (let oi = 0; oi < order.length; oi++) {
+          if (budget <= 0) break;
+          const j = order[oi];
+          const room = target[j] - funded[j];
+          if (room <= 0) continue;
+          const paid = Math.min(budget, room);
+          funded[j] += paid;
+          budget -= paid;
+        }
+      }
+    }
+
+    // Metrics.
+    const thetaArr = Array.from(theta);
+    const fundedArr = Array.from(funded);
+    const flag = new Array(Np);
+    let metCount = 0, sumMet = 0, sumUnmet = 0, nMet = 0, nUnmet = 0;
+    for (let j = 0; j < Np; j++) {
+      const met = funded[j] >= target[j] ? 1 : 0;
+      flag[j] = met;
+      if (met) { metCount++; sumMet += theta[j]; nMet++; } else { sumUnmet += theta[j]; nUnmet++; }
+    }
+    let corrWopen = null;
+    if (regime.wSource === "openStatic") {
+      corrWopen = pearson(thetaArr, Array.from(wOpenRaw));
+    } else if (regime.wSource === "openDynamic") {
+      // Report the emergent weight vector at end-state contamination.
+      const finalW = new Float64Array(Np);
+      for (let j = 0; j < Np; j++) {
+        const herd = target[j] > 0 ? Math.min(1, funded[j] / target[j]) : 0;
+        finalW[j] = sigCount[j] > 0 ? 0.5 * (sigSum[j] / sigCount[j]) + 0.5 * herd : 0.5;
+      }
+      corrWopen = pearson(thetaArr, Array.from(finalW));
+    }
+    return {
+      selTheta: pearson(flag, thetaArr),
+      qualityGap: (nMet ? sumMet / nMet : 0) - (nUnmet ? sumUnmet / nUnmet : 0),
+      fundedRate: metCount / Np,
+      gini: gini(fundedArr),
+      corrWplanner: world.corrWplanner,
+      corrWopen,
+      tailSignal: world.tailSignal,
+      tailPlanner: world.tailPlanner,
+    };
+  };
+
+  const META = [
+    ["selTheta", "sel(theta)"], ["qualityGap", "quality gap"], ["fundedRate", "funded rate"],
+    ["gini", "Gini"], ["corrWplanner", "corr(theta,w_planner)"], ["corrWopen", "corr(theta,w_open)"],
+    ["tailSignal", "tail signal cov"], ["tailPlanner", "tail planner cov"],
+  ];
+  const cell = (vals) => {
+    const nn = vals.filter((v) => v !== null && v !== undefined && !Number.isNaN(v));
+    if (nn.length === 0) return "—";
+    return `${mean(nn).toFixed(3)}±${sd(nn).toFixed(3)}`;
+  };
+  const printTable = (title, rows) => {
+    console.log(`\n## ${title}\n`);
+    console.log(`| regime | ${META.map((m) => m[1]).join(" | ")} |`);
+    console.log(`|${"---|".repeat(META.length + 1)}`);
+    for (const rowObj of rows) {
+      console.log(`| ${rowObj.name} | ${META.map((m) => cell(rowObj.metrics[m[0]])).join(" | ")} |`);
+    }
+  };
+
+  console.log(`\n# E4 - institutional knowledge aggregation (runs=${RUNS}, seeds ${BASE_SEED}..${BASE_SEED + RUNS - 1}, N=${N}, cycles=${CYCLES}, scarcity=${SCARCITY}x)`);
+
+  for (const Np of [40, 200, 1000]) {
+    const rows = REGIMES.map((rg) => ({ name: rg.name, metrics: Object.fromEntries(META.map((m) => [m[0], []])) }));
+    for (let r = 0; r < RUNS; r++) {
+      const seed = BASE_SEED + r;
+      const world = makeWorld(seed, Np, false);
+      for (let ri = 0; ri < REGIMES.length; ri++) {
+        const out = allocate(world, REGIMES[ri], ri, seed);
+        for (const m of META) rows[ri].metrics[m[0]].push(out[m[0]]);
+      }
+    }
+    printTable(`E4 N_p=${Np}`, rows);
+  }
+
+  // Sensitivity: uniform citizen coverage vs salience-biased, R4 at N_p=200.
+  {
+    const Np = 200, r4 = REGIMES[3];
+    const bias = { name: "R4 salience-biased coverage", metrics: Object.fromEntries(META.map((m) => [m[0], []])) };
+    const unif = { name: "R4 uniform coverage       ", metrics: Object.fromEntries(META.map((m) => [m[0], []])) };
+    for (let r = 0; r < RUNS; r++) {
+      const seed = BASE_SEED + r;
+      const oB = allocate(makeWorld(seed, Np, false), r4, 3, seed);
+      const oU = allocate(makeWorld(seed, Np, true), r4, 3, seed);
+      for (const m of META) { bias.metrics[m[0]].push(oB[m[0]]); unif.metrics[m[0]].push(oU[m[0]]); }
+    }
+    printTable("E4 N_p=200 sensitivity - citizen coverage (R4)", [bias, unif]);
+  }
+
+  process.exit(0);
+}
+
 // lambda is a mixing weight (w = lambda*theta + (1-lambda)*u), not a Pearson
 // correlation. Report the measured correlation so results are labeled
 // honestly (referee issue M2).
