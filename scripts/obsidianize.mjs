@@ -34,7 +34,7 @@ if (dirs.length === 0) dirs.push("defenses");
 if (PATHS_MODE) {
   const { readdirSync: rd, readFileSync: rf, writeFileSync: wf, existsSync: ex } = await import("node:fs");
   const { join: j } = await import("node:path");
-  const ALL_DIRS = ["docs", "knowledge", "attacks", "defenses", "drafts", "research", "external-review"];
+  const ALL_DIRS = ["docs", "knowledge", "attacks", "defenses", "drafts", "research", "external-review", "contradictions"];
   const files = [];
   const walk = (d) => {
     for (const e of rd(d, { withFileTypes: true })) {
