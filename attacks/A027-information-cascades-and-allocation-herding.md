@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md`.
 
 ## Description
 
@@ -82,6 +82,6 @@ At the launch of a national cycle, a set of projects backed by well-organized pr
 - Are projects whose funding velocity outruns their support breadth or evidence flagged for review?
 - Is neither support count nor funding progress presented, in any surface, as evidence of project quality?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a herding-resistance and cumulative-advantage observability standard covering non-accumulative default orderings, separation of logistics from social-proof cues at the evaluation moment, and published measures that flag funding concentration and velocity detached from value and evidence.
+Resolved in `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md` as a founded attack under P007: the resolution integrates herding observability through existing objects and bounds the visibility redesign. Core v0 now surfaces funding-velocity-versus-evidence-maturity indicators, funding-source independence signals including the share of a project's funding arriving after high-visibility exposure, and discovery-slot concentration observability, while distinguishing logistics facts from social-proof cues at the evaluation moment. Funding-target closure (H035) is retained as the structural cascade truncator with its claim stated honestly: per `research/simulation-results.md` E1, closure is an anti-concentration and completion-breadth device — Gini and top-salience absorption fall and roughly 15% more projects complete — but it does not by itself improve quality selection, which depends on the default anchor, not the cap. Funding progress stays visible and Core v0 does not adjudicate whether citizens imitate; staged-visibility experiments remain Extension v1+. Visible social proof is intrinsic, so herding is measured and bounded, not prevented — a declared limitation for the paper.

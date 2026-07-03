@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review draft. No accepted resolution yet; pending Phase 3 review integration.
+Second-round paired review completed. Accepted resolution: `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`.
 
 ## Attack reference
 

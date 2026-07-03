@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`.
 
 ## Description
 
@@ -83,6 +83,6 @@ A national program runs distributed allocation across a full public function for
 - Is there any mechanism to refresh or sample the active cohort so a persistent minority does not stand in for the whole?
 - Does the monthly cadence get evaluated for fatigue effects, not only for preventing dormant balances?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a participation-decay observability standard that separately measures and discloses manual, profile, delegated, and default allocation per cycle, bounds citizen-facing legitimacy language accordingly, and considers optional cohort-refresh mechanisms, without mandating universal direct participation.
+Resolved in `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`: classified founded as a behavioral prediction and integrated through H054 functional transition maturity under P007. Core v0 gained per-cycle shares of manual, profile-driven, delegated, and untouched-default allocation as versioned public metrics, active-core concentration indicators tracking whether the same minority persists across cycles, citizen-facing legitimacy language distinguishing deliberate evaluation from default and profile carry-over, and cadence-fatigue review of the monthly cycle. The simulation (`research/simulation-results.md`) vindicates the designed-intermediation position quantitatively: allocation quality is carried by the institutional default anchor conditioned on planner knowledge, and citizen attention adds little, so decay must be measured and disclosed rather than denied. Core v0 does not mandate participation quotas or engagement targets; if the active core shrinks enough, distributed control becomes intermediated control with better bookkeeping, and the system must not present default and profile allocation as considered choice.

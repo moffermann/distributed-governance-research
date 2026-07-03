@@ -73,17 +73,17 @@ These defenses are paired with the second-round attack queue `A019`-`A033` in `a
 | `D019` | `A019` | Procedural Legitimacy Cannot Substitute Democratic Mandate | Founded (system-level authorization gap) — resolved in `docs/86_ALLOCATION_MANDATE_AND_A019_RESOLUTION.md` |
 | `D020` | `A020` | Agenda-Setting Capture Through Planning Scope Construction | Founded, partially unresolved — resolved in `docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION.md` |
 | `D021` | `A021` | Treasury Dependence and Fiscal Strangulation | Founded — resolved in `docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION.md` |
-| `D022` | `A022` | Thin Markets for Fiscalization and Evidence Supply | Partially founded |
-| `D023` | `A023` | Meta-Governance Vacuum in Open Mode | Founded (admitted deferral) |
-| `D024` | `A024` | Underprovision of Non-Salient Public Goods by Atomized Choice | Partially founded |
-| `D025` | `A025` | Rational Ignorance and Participation Decay | Founded (behavioral prediction) |
-| `D026` | `A026` | Identity Infrastructure as Single Point of Failure and Surveillance | Partially founded |
-| `D027` | `A027` | Information Cascades and Allocation Herding | Founded |
-| `D028` | `A028` | Spatial and Group Inequity of Allocation Outcomes | Founded |
-| `D029` | `A029` | Program Fragmentation and Lost Complementarities | Partially founded |
-| `D030` | `A030` | Clientelism Migration into Distributed Allocation | Founded (adaptation risk) |
-| `D031` | `A031` | Polarization and Symbolic Capture of Allocation | Partially founded |
-| `D032` | `A032` | Intertemporal Myopia and Long-Term Underinvestment | Partially founded |
+| `D022` | `A022` | Thin Markets for Fiscalization and Evidence Supply | Partially founded — resolved in `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md` |
+| `D023` | `A023` | Meta-Governance Vacuum in Open Mode | Founded (admitted deferral) — resolved in `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md` |
+| `D024` | `A024` | Underprovision of Non-Salient Public Goods by Atomized Choice | Partially founded — resolved in `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md` |
+| `D025` | `A025` | Rational Ignorance and Participation Decay | Founded (behavioral prediction) — resolved in `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md` |
+| `D026` | `A026` | Identity Infrastructure as Single Point of Failure and Surveillance | Partially founded — resolved in `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md` |
+| `D027` | `A027` | Information Cascades and Allocation Herding | Founded — resolved in `docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION.md` |
+| `D028` | `A028` | Spatial and Group Inequity of Allocation Outcomes | Founded — resolved in `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md` |
+| `D029` | `A029` | Program Fragmentation and Lost Complementarities | Partially founded — resolved in `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md` |
+| `D030` | `A030` | Clientelism Migration into Distributed Allocation | Founded (adaptation risk) — resolved in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md` |
+| `D031` | `A031` | Polarization and Symbolic Capture of Allocation | Partially founded — resolved in `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md` |
+| `D032` | `A032` | Intertemporal Myopia and Long-Term Underinvestment | Partially founded — resolved in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md` |
 | `D033` | `A033` | The Problem of Many Hands: Responsibility Vacuum | Founded — resolved in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md` |
 
 ## Use

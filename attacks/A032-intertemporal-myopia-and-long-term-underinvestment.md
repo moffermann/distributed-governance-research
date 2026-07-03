@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md`.
 
 ## Description
 
@@ -81,6 +81,6 @@ A commune runs the distributed model with strong participation for a decade. Eve
 - Are future beneficiaries represented at least as observable information, given they cannot allocate?
 - Is the formation-stage horizon bias addressed distinctly from the A006 protection of existing obligations?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a project time-horizon classification, multi-cycle or endowment funding lanes insulated from per-cycle attention, and horizon-weighted default rules plus future-interest observability that counter the systematic formation bias against long-term value.
+Resolved in `docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION.md` as a partially founded attack under P007: a bounded resolution built on existing structures. Planning Scopes may now define long-horizon lanes (maintenance, prevention, infrastructure) whose need-weights flow into default allocation, and Core v0 adds intertemporal allocation observability — funding share by time-to-benefit horizon and deferred-maintenance indicators — while continuity-risk classification (A006) plus the non-assignable pool remain the structural shields for existing obligations and renewal windows are made visible before expiry. Core v0 does not discount-correct citizen preferences or force intergenerational weights; future citizens remain unrepresented in funding attempts. Formation bias against new long-horizon value above the floor is real and mitigated only insofar as planning-scope lanes and defaults carry it — which the simulation shows is exactly where allocation quality lives, tying this limitation to the A020 agenda constraint over who sets planning-scope weights, a declared limitation for the paper.

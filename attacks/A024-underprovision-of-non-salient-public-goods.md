@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`.
 
 ## Description
 
@@ -81,6 +81,6 @@ A commune runs the distributed model for several years with high participation a
 - Is the non-salient middle ground covered by any mechanism distinct from the A005 essential floor?
 - Can citizens and auditors see which valuable categories are being systematically under-funded before a shock reveals it?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a public-good salience classification, an aggregate allocation-portfolio observability view, and a transparent default-rule weighting that surfaces and mitigates the systematic underprovision of non-salient public goods above the essential floor.
+Resolved in `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`: classified partially founded and bounded with observability under P007. Core v0 gained salience-bias observability above the protected floor — funding per category against declared planning-scope need weights, underfunded-need indicators, and non-salient-category visibility in discovery — while the non-assignable pool and essential floors (A005) remain the structural answer for catastrophic tails and default allocation rules channel inactive budget by planning priority rather than salience; any default weighting toward under-allocated non-salient categories is a disclosed, versioned protocol choice. Core v0 does not correct citizen preferences or impose a welfare function; it exposes the salience gradient. Above the floor that gradient is real, and correcting it beyond defaults and visibility is a political choice for planning-scope governance, not the platform.

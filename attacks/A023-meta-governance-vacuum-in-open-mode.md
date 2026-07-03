@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md`.
 
 ## Description
 
@@ -82,6 +82,6 @@ A public function has operated in open mode for two years with broad trust. Turn
 - Are participation and concentration metrics exposed on protocol-change votes?
 - Can the system distinguish a constitutional-level change from an operational parameter edit?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define tiered protocol-rule levels with a minimal default amendment rule and entrenched constitutional rules for open mode, without requiring Core v0 to implement full constitutional meta-governance.
+Resolved in `docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION.md`: classified founded as an admitted deferral and bounded under P007, which formalizes the gate rather than the mechanics. Core v0 now gates open-mode deployment — no public function may exit into open mode until constitutional-level decision mechanics (who votes on protocol changes, with what weights and quorum, and how constitutional rules differ from operational ones) are resolved and published — while C019's procedural shell remains binding in every mode and tutored and semi-open pilots may run indefinitely under existing Governance Resolution and timeout machinery. The mechanics remain undefined by design; defining them is future constitutional work, not configuration. The architecture's mature state is therefore unspecified at its highest-leverage layer, and any premature open-mode deployment would face rule-level capture with no defense.

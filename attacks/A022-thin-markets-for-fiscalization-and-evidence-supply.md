@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`.
 
 ## Description
 
@@ -81,6 +81,6 @@ A specialized domain, such as seismic verification of a small municipal structur
 - Are travel, logistics, and capacity-building costs treated as an explicit territorial control-cost line?
 - Are monopoly pricing, refusals, and dependency concentration by scarce local experts observable?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a control-supply thinness indicator, proportionate remote and pooled-control mechanisms, and a disclosed graduated fallback for territories and domains where no fully independent qualified control supplier exists at a bearable cost.
+Resolved in `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`: classified partially founded and bounded with thin integrated observability under P007. Core v0 gained control-supply density observability by territory and domain — eligible fiscalizers and evidence producers per scope, offer rates, fee levels, and repeat-assignment concentration — surfaced before publication rather than at control closure, plus explicit thin-market handling routes (remote and documentary evidence, cross-territory and pooled assignment, relaxed-but-disclosed selection under stronger safeguards) as country-implementation choices, and priced compensation for weak verification per `research/formal-models.md` Proposition 2. Core v0 cannot conjure qualified verifiers; supply creation through training and accreditation subsidies is country implementation. In a genuinely empty market a monopolist controller remains a real unresolved scenario, and conflict-free selection can be impossible where everyone qualified is related.

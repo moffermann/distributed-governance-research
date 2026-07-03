@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review draft. No accepted resolution yet; pending Phase 3 review integration.
+Second-round paired review completed. Accepted resolution: `docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION.md`.
 
 ## Attack reference
 

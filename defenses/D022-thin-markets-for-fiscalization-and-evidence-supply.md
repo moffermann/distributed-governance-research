@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review draft. No accepted resolution yet; pending Phase 3 review integration.
+Second-round paired review completed. Accepted resolution: `docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION.md`.
 
 ## Attack reference
 

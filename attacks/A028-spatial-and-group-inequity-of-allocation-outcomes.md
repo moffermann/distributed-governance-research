@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md`.
 
 ## Description
 
@@ -83,6 +83,6 @@ A ministry runs distributed allocation nationwide for a full function with stric
 - Can an observer detect spatial or group concentration of outcomes without assembling external data?
 - Is any equalization mechanism versioned, publicly authorized, and auditable rather than a silent administrator setting?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a spatial and group outcome-equity standard covering published allocation-by-territory metrics, an explicit input-versus-outcome-equity distinction, and proportionate, publicly authorized equalization or supply-side mechanisms modeled on but distinct from the A005 essential-service floors.
+Resolved in `docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION.md` as a founded attack under P007: a bounded resolution with core observability. Core v0 now mandates per-territory and per-group allocation outcome observability — funding per capita by comuna, funded-project density against planning-scope need weights, and capture share by organized proposers — plus an explicit input-equity versus outcome-equity distinction, so equal wallets are not presented as evidence of fair outcomes. Equalization capability is documented as available through allocation-amount formulas (H025), planning-scope lanes and the reused A005 floor-and-lane pattern, the H033 default rule's territorial routing, and preferential supply-side support, all as versioned, publicly authorized country-implementation choices. Core v0 mandates outcome observability, not outcome equality; equalization remains a political choice. With equal wallets and no equalization configured, organized territories will out-capture marginalized ones by default — the architecture makes that measurable for the first time but does not prevent it, a declared limitation for the paper.

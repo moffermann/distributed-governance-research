@@ -430,6 +430,17 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/87_PLANNING_SCOPE_AGENDA_LIMITATION_AND_A020_RESOLUTION|87 - Planning Scope Agenda Limitation and A020 Resolution v0]]
 - [[../docs/88_FISCAL_COMMITMENT_PROFILE_AND_A021_RESOLUTION|88 - Fiscal Commitment Profile and A021 Resolution v0]]
 - [[../docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|89 - Duty-of-Care Anchor and A033 Resolution v0]]
+- [[../docs/90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|90 - Control Supply Observability and A022 Resolution v0]]
+- [[../docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION|91 - Open Mode Gating and A023 Resolution v0]]
+- [[../docs/92_SALIENCE_BIAS_OBSERVABILITY_AND_A024_RESOLUTION|92 - Salience Bias Observability and A024 Resolution v0]]
+- [[../docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION|93 - Engagement Decay Metrics and A025 Resolution v0]]
+- [[../docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION|94 - Identity Provider Failure Modes and A026 Resolution v0]]
+- [[../docs/95_HERDING_OBSERVABILITY_AND_A027_RESOLUTION|95 - Herding Observability and A027 Resolution v0]]
+- [[../docs/96_TERRITORIAL_OUTCOME_OBSERVABILITY_AND_A028_RESOLUTION|96 - Territorial Outcome Observability and A028 Resolution v0]]
+- [[../docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION|97 - Composite Program Dependencies and A029 Resolution v0]]
+- [[../docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION|98 - Clientelism Pattern Indicators and A030 Resolution v0]]
+- [[../docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION|99 - Motive Neutrality Boundary and A031 Resolution v0]]
+- [[../docs/100_LONG_HORIZON_LANES_AND_A032_RESOLUTION|100 - Long Horizon Lanes and A032 Resolution v0]]
 
 ## Literature
 

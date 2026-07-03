@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review draft. No accepted resolution yet; pending Phase 3 review integration.
+Second-round paired review completed. Accepted resolution: `docs/93_ENGAGEMENT_DECAY_METRICS_AND_A025_RESOLUTION.md`.
 
 ## Attack reference
 

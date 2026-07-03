@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review draft. No accepted resolution yet; pending Phase 3 review integration.
+Second-round paired review completed. Accepted resolution: `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md`.
 
 ## Attack reference
 

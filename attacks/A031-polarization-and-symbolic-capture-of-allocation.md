@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md`.
 
 ## Description
 
@@ -80,6 +80,6 @@ Two paired projects associated with rival social identities enter the same scope
 - Is contextual protected identity available to targeted proposers and beneficiaries?
 - Do value icons read as evidence-linked promises rather than tribal badges?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define mobilization-pattern observability, evidence-routing for contested antivalue declarations, and deliberation-surface protections against affective polarization, without suppressing legitimate expressive participation.
+Resolved in `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md` as a partially founded attack under P007: a bounded resolution fixing a motive-neutrality boundary. Citizens' reasons for funding are not platform business (P002), and material effects stay gated identically regardless of motive — antivalue declarations route through measurement and fiscalization, affected-party evidence and threshold policies bind, and a contested antivalue supports a complaint only if someone files one. Core v0 adds funding-bloc correlation observability (synchronized timing, shared origin, reciprocal brigading) as research and administrative data only, without discounting either side's signals, and funding-target closure (H035) bounds brigade amplitude on any single project. There is no motive policing, no viewpoint moderation of allocation, and no polarization score with platform effects. Expressive allocation can still shift aggregate spending toward symbolic battlegrounds; the architecture guarantees the fights stay materially accountable, not that they stop being fights — a declared limitation for the paper.

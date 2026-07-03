@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md`.
 
 ## Description
 
@@ -81,6 +81,6 @@ A rural potable-water program requires a source-protection project, a treatment 
 - Is portfolio-level risk pooling possible, or does every project bear its risk in isolation?
 - Is the cross-sectional coordination mechanism distinct from the A006 continuity-over-time mechanism?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define a Core v0 project-dependency declaration, a conditional or escrowed funding mechanism for interdependent bundles, and an aggregate stranded-value view so complementary projects can be financed and delivered together rather than as isolated atoms.
+Resolved in `docs/97_COMPOSITE_PROGRAM_DEPENDENCIES_AND_A029_RESOLUTION.md` as a partially founded attack under P007: the resolution integrates through the existing Composite Program object (H051). Core v0 now supports cross-project dependency declarations inside composite programs (component X requires component Y, visible before funding), program-level funding-coherence visibility with stranded-complement warnings, and dependency-aware funding windows that can reference a prerequisite's state, while acknowledging procurement-scale losses as a cost of modularity. Components keep independent funding attempts — there is no all-or-nothing program funding in Core v0, and conditional or bundled program-level funding remains Extension v1+. Complementarities can still strand at the program level when prerequisites fund and dependents do not; modularity's benefits — smaller blast radius, comparability, exit options — are bought at scale-economy costs the corpus does not hide, a declared limitation for the paper.

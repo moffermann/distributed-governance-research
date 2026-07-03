@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review draft. No accepted resolution yet; pending Phase 3 review integration.
+Second-round paired review completed. Accepted resolution: `docs/99_MOTIVE_NEUTRALITY_BOUNDARY_AND_A031_RESOLUTION.md`.
 
 ## Attack reference
 

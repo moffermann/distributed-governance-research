@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md`.
 
 ## Description
 
@@ -80,6 +80,6 @@ A commune shows healthy participation metrics: many residents delegate, several 
 - Is there a routing path to complaint or competent authority for credible exchange reports?
 - Can an observer distinguish a genuine participation helper from a broker without relying only on on-platform data?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define off-platform clientelism as a distinct risk class with anti-conditioning safeguards for participation-support projects, behavioral anomaly indicators, and a legal-referral path, without pretending the on-platform relationship graph makes the exchange visible.
+Resolved in `docs/98_CLIENTELISM_PATTERN_INDICATORS_AND_A030_RESOLUTION.md` as founded as an adaptation risk under P007: the resolution integrates observability through the A014 related-party relationship graph and the delegation records. Core v0 now surfaces pattern-level clientelism indicators — repeat broker-beneficiary alignments, geographic delegation blocs correlated with related-project funding, and participation-support providers whose assisted citizens' allocations concentrate on related actors — feeding review, complaint, and verified-discovery paths as leads, never automatic verdicts, with anti-conditioning declarations for participation-support projects. Off-platform quid pro quo remains invisible by construction; sanction is external law, and community organization and brokerage are not treated as clientelism per se. The platform makes machine-style allocation patterns statistically visible over time — a structural improvement over street-level clientelism's full invisibility — but a careful machine trading entirely off-platform favors remains undetectable from within, a declared limitation for the paper.

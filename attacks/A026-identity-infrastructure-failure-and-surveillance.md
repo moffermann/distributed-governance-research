@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in second-round architecture attack. Pending paired Phase 3 review; no defense brief or resolution yet.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`.
 
 ## Description
 
@@ -83,6 +83,6 @@ A national deployment relies on a single state-operated identity provider. Durin
 - Are retention limits and data-minimization applied to the linkage between identity and sensitive civic acts?
 - Is there a substitution or federation path so that no single provider is an irreplaceable point of failure?
 
-## Expected resolution output
+## Resolution output
 
-A future Phase 3 review round should define an identity-infrastructure resilience and anti-chilling standard covering a published provider threat model, platform-side Sybil and exclusion detection, independently auditable protected-identity piercing, a heightened de-anonymization threshold for complaints against powerful actors, and data-minimization limits on the political-behavior record.
+Resolved in `docs/94_IDENTITY_PROVIDER_FAILURE_MODES_AND_A026_RESOLUTION.md`: classified partially founded and bounded with minimal records under P007. Core v0 gained declared identity-provider failure modes (compromise, coercion, outage, wrongful exclusion) with compromise-response procedures — re-verification windows, action freezes, retroactive audit — and purpose-bound access auditing of identity-linked civic records, where every access to act-to-identity linkage is itself an AuditEvent with a stated purpose, independently auditable and, for complaints against executors, authorities, and the operator, gated behind a heightened adversarial de-anonymization threshold; protected-identity contexts (C014/C024) remain the chilling-effect answer and sensitive linkage carries retention limits where country law allows. The identity provider is pre-existing state infrastructure that Core v0 neither replaces nor supplants with anonymity — the anti-Sybil baseline (P004) stands. Platform-side visibility of protected identities plus lawful state access means chilling effects on complaints against powerful actors are reduced, not eliminated, and provider compromise remains a single point of failure whose ultimate mitigation is jurisdictional.
