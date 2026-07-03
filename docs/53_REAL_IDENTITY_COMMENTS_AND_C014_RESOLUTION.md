@@ -339,7 +339,7 @@ This resolution should inform future updates to:
 
 - Real identity may reduce abuse but not eliminate it.
 - Some actors may still perform outrage under their real names.
-- Visible identity may discourage legitimate criticism in sensitive contexts.
+- Visible identity may discourage legitimate criticism in sensitive contexts. ^r6e98111a
 - Institutions or powerful actors may pressure critics socially.
 - Moderation can still be abused if rules are vague.
 - High-volume projects may eventually need better grouping or summarization.

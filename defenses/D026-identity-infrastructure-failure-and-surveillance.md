@@ -36,13 +36,13 @@ The concession is therefore twofold. First, provider compromise, coercion, or ta
 
 ## Project-document basis
 
-- `knowledge/principles/P004-verified-identity-no-anonymous-actors.md:11` establishes that alerts and complaints are not anonymous but may use protected identity where exposure creates retaliation or safety risk.
-- `knowledge/principles/P004-verified-identity-no-anonymous-actors.md:43` names a pre-existing state identity mechanism such as ClaveUnica as the conceptual reference, confirming the provider is external infrastructure rather than a new platform dossier.
-- `knowledge/hypotheses/H029-verified-identity-contextual-privacy.md:127` states that a person should not carry a single public alias across sensitive actions because a stable alias can be correlated over time.
-- `docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md:150` limits restricted-record access to authorized fiscalizers or auditors, subject to access logs and privacy rules.
-- `docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md:395` concedes that powerful actors may retaliate against critics even when identity is protected if context reveals them.
-- `docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION.md:342` records that visible identity may discourage legitimate criticism in sensitive contexts, acknowledging the chilling risk.
-- `docs/26_CITIZEN_COMPLAINT_FLOW.md:15` states that protected identity for complaints is not anonymity: restricted accountability is retained and authorized reviewers may verify identity under access-log rules.
+- [[P004-verified-identity-no-anonymous-actors#^r84f588a2|knowledge/principles/P004-verified-identity-no-anonymous-actors.md]] establishes that alerts and complaints are not anonymous but may use protected identity where exposure creates retaliation or safety risk.
+- [[P004-verified-identity-no-anonymous-actors#^r1f6776b9|knowledge/principles/P004-verified-identity-no-anonymous-actors.md]] names a pre-existing state identity mechanism such as ClaveUnica as the conceptual reference, confirming the provider is external infrastructure rather than a new platform dossier.
+- [[H029-verified-identity-contextual-privacy#^r15fbfc76|knowledge/hypotheses/H029-verified-identity-contextual-privacy.md]] states that a person should not carry a single public alias across sensitive actions because a stable alias can be correlated over time.
+- [[62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION#^ref0cf684|docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md]] limits restricted-record access to authorized fiscalizers or auditors, subject to access logs and privacy rules.
+- [[62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION#^rc9ff97fd|docs/62_BENEFICIARY_PRIVACY_PROTECTED_IDENTITY_AND_C024_RESOLUTION.md]] concedes that powerful actors may retaliate against critics even when identity is protected if context reveals them.
+- [[53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION#^r6e98111a|docs/53_REAL_IDENTITY_COMMENTS_AND_C014_RESOLUTION.md]] records that visible identity may discourage legitimate criticism in sensitive contexts, acknowledging the chilling risk.
+- [[26_CITIZEN_COMPLAINT_FLOW#^r48b61e1f|docs/26_CITIZEN_COMPLAINT_FLOW.md]] states that protected identity for complaints is not anonymity: restricted accountability is retained and authorized reviewers may verify identity under access-log rules.
 
 ## Bibliographic basis
 

@@ -32,14 +32,14 @@ For Macul, a high-concentration sports delegate can remain legitimate if citizen
 
 ## Project-document basis
 
-- `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md:11` states that delegated concentration must be visible, auditable, revocable, and configurable where stricter limits are chosen.
-- `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md:19` states that the system must expose concentration, not override citizen choice with a universal anti-concentration rule.
-- `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md:162` requires represented weight to be visible when a delegate acts.
-- `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md:185` allows configurable caps but does not impose them globally.
-- `docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md:326` summarizes the v0 rule: visible before delegation, during delegated action, in reports, and in administrative observability.
-- `docs/27_CITIZEN_DELEGATION_FLOW.md:7` defines delegation as simple, explicit, accepted, and immediately revocable for future actions.
-- `docs/27_CITIZEN_DELEGATION_FLOW.md:270` requires baseline reports to be generated primarily from the delegated-action audit trail.
-- `knowledge/hypotheses/H043-transparent-delegation-concentration.md:165` states that delegation concentration is not forbidden, but must never be hidden, automatically monetized, or reported as personal-only action.
+- [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION#^r1f8ac005|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]] states that delegated concentration must be visible, auditable, revocable, and configurable where stricter limits are chosen.
+- [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION#^r8694832f|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]] states that the system must expose concentration, not override citizen choice with a universal anti-concentration rule.
+- [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION#^rb1bb17d7|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]] requires represented weight to be visible when a delegate acts.
+- [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION#^r81c2f1b6|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]] allows configurable caps but does not impose them globally.
+- [[61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION#C023 final resolution|docs/61_DELEGATION_CONCENTRATION_VISIBILITY_AND_C023_RESOLUTION.md]] summarizes the v0 rule: visible before delegation, during delegated action, in reports, and in administrative observability.
+- [[27_CITIZEN_DELEGATION_FLOW#^r6d31cfd2|docs/27_CITIZEN_DELEGATION_FLOW.md]] defines delegation as simple, explicit, accepted, and immediately revocable for future actions.
+- [[27_CITIZEN_DELEGATION_FLOW#^r5a8628a2|docs/27_CITIZEN_DELEGATION_FLOW.md]] requires baseline reports to be generated primarily from the delegated-action audit trail.
+- [[H043-transparent-delegation-concentration#^r300d71bb|knowledge/hypotheses/H043-transparent-delegation-concentration.md]] states that delegation concentration is not forbidden, but must never be hidden, automatically monetized, or reported as personal-only action.
 
 ## Bibliographic basis
 

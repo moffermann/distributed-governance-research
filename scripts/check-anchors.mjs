@@ -159,20 +159,32 @@ for (const path of allMd) {
 
   // Obsidian wikilinks: resolve by relative path from the file's directory,
   // by vault-relative path, or by unique basename anywhere in the corpus.
-  for (const m of text.matchAll(/\[\[([^\]|#^]+)(?:[#^][^\]|]*)?(?:\|[^\]]*)?\]\]/g)) {
+  // Block references ([[file#^id]]) additionally require the ^id marker to
+  // exist inside the resolved file.
+  for (const m of text.matchAll(/\[\[([^\]|#^]+)(#\^([A-Za-z0-9-]+))?(?:#[^\]|^]*)?(?:\|[^\]]*)?\]\]/g)) {
     const target = m[1].trim();
     if (!target || target.startsWith("http")) continue;
     const cand = target.endsWith(".md") ? target : `${target}.md`;
     const fromDir = join(path, "..", cand).replace(/\\/g, "/");
     const base = cand.split("/").pop().replace(/\.md$/, "");
-    const ok =
-      existsSync(cand) ||
-      existsSync(fromDir) ||
-      existsSync(join("knowledge", cand)) ||
-      basenames.has(base);
-    if (!ok) {
+    const resolved = existsSync(cand)
+      ? cand
+      : existsSync(fromDir)
+        ? fromDir
+        : existsSync(join("knowledge", cand))
+          ? join("knowledge", cand)
+          : basenames.get(base)?.[0];
+    if (!resolved) {
       console.log(`DEAD WIKILINK ${path}: [[${target}]]`);
       linkBroken++;
+      continue;
+    }
+    if (m[3]) {
+      const blockId = m[3];
+      if (!readFileSync(resolved, "utf8").includes(`^${blockId}`)) {
+        console.log(`DEAD BLOCKREF ${path}: [[${target}#^${blockId}]] (no ^${blockId} in ${resolved})`);
+        linkBroken++;
+      }
     }
   }
 }

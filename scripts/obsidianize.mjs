@@ -55,9 +55,14 @@ let converted = 0;
 
 const defenseEdits = new Map(); // defense path -> text
 
-for (const dir of dirs) {
-  for (const name of readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
-    const path = join(dir, name);
+const targets = [];
+for (const d of dirs) {
+  if (d.endsWith(".md")) targets.push(d);
+  else for (const name of readdirSync(d).filter((f) => f.endsWith(".md")).sort()) targets.push(join(d, name));
+}
+
+{
+  for (const path of targets) {
     let text = readFileSync(path, "utf8");
     const bulletLines = text.split(/\r?\n/).filter((l) => /`(docs|knowledge)\/[^`]+:\d+`/.test(l));
 

@@ -124,7 +124,7 @@ Evidence item B: Verified protected evidence contributor #E77C
 Beneficiary review C: Verified beneficiary #K27B
 ```
 
-The same person should not necessarily have a single public alias across all sensitive actions, because a stable alias can be correlated over time.
+The same person should not necessarily have a single public alias across all sensitive actions, because a stable alias can be correlated over time. ^r15fbfc76
 
 Example:
 
