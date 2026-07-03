@@ -2,7 +2,7 @@
 
 ## Integration status
 
-External-review round paired review completed. Accepted resolution: [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]].
+External-review round paired review completed. Accepted resolution: [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 

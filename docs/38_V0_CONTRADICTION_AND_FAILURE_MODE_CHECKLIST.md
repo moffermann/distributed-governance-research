@@ -910,6 +910,38 @@ Core v0 does not discount-correct citizen preferences or force intergenerational
 
 ---
 
+## A034 - Legal characterization of the citizen allocation act
+
+**Severity:** Medium/High
+**Status:** Resolved
+**Resolution document:** [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]]
+
+### Accepted v0 rule
+
+A034 is founded as a characterization gap at the legal interface. The citizen allocation act has no settled legal nature — administrative act, sui generis participation act, or mere preference input — and each characterization implies different review rights, liability, and contestability, so an unstated one imports litigation risk the architecture never designed for; read comparatively, though, the act replaces a state official's discretionary allocation, whose formal characterization has never delivered practical per-decision accountability. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this integrates a minimal record through the existing Allocation Mandate and bounds the doctrine itself: the platform records the characterization a jurisdiction chooses and discloses it to citizens, while constructing that characterization remains external constitutional and administrative law.
+
+Every active Planning Scope's Allocation Mandate additionally records how the citizen allocation act is legally characterized in that jurisdiction. The minimum elements are a bounded characterization menu — administrative act, sui generis participation act, or preference input, chosen per country implementation; a pilot default of sui generis participation act with vote-like citizen immunity and no individual review right over rule-based reassignments, while the complaint path stays unchanged for rule violations; plain-language disclosure of the characterization on the citizen surface before first allocation; a comparator note documenting how the replaced official allocation act is characterized and reviewed in the pilot jurisdiction; and versioning and audit events on any characterization change, treated as a higher-authorization decision like a formula departure. In Macul, a citizen sees one plain sentence before her first allocation — her act directs public money under the scope's rules, carries no personal liability, and rule-based reassignments are not individually contestable while rule violations always are — and the same screen records which municipal instrument chose that regime.
+
+Core v0 does not construct, adjudicate, or harmonize administrative-law doctrine and does not grant or deny standing: it records the jurisdiction's choice and makes it visible, and characterization menus and their consequences for review rights are country-implementation decisions. Limitation statement: the platform records the characterization law supplies and cannot supply one; no characterization of a citizen allocation act has been tested before any court in any jurisdiction, so the doctrinal construction is untested by definition until a pilot produces a dispute.
+
+---
+
+## A035 - Administrative capacity cost of tutored operation
+
+**Severity:** Medium/High
+**Status:** Resolved
+**Resolution document:** [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]]
+
+### Accepted v0 rule
+
+A035 is founded as a deployment precondition. Tutored operation requires human reviewers to decide admissibility, resolutions, and timeouts within declared windows, and an under-resourced authority produces lapse cascades that read as model failure rather than as an unfunded post; read comparatively, though, the review labor already exists — an official approves budgets and projects today, unmeasured — and the model re-platforms that work under declared windows and public attribution rather than creating it. Under [[P007-integrate-or-bound-rule|knowledge/principles/P007-integrate-or-bound-rule.md]], this integrates through existing objects — the Planning Scope carries the declaration as it carries the Allocation Mandate and Fiscal Commitment Profile, timeout policies are already configurable per operating mode, and the C008 AI-assistance boundary already exists — and bounds quantification: no staffing number is empirical until the first pilot measures one, and deployment economics remain country implementation, not an argument this corpus makes.
+
+Every tutored Planning Scope publishes an Administrative Capacity Declaration alongside its mandate and fiscal profile. The minimum elements are expected review volume, staffing assignment, and per-resolution effort assumptions, published and versioned with the scope; timeout policies calibrated to the declared capacity and never copied between scopes with different declarations; authority-side AI assistance for resolution drafting, admissibility checklists, and window tracking inside the existing boundary, where AI assists, the responsible authority decides, and every decision is attributable; review-window performance — decisions in window, lapses, timeout outcomes — joined to the functional transition maturity metrics; and hours-per-resolution measurement by resolution type committed as an explicit first-pilot deliverable, the corpus's first empirical staffing data. In Macul, a commune publishing one assigned reviewer, forty expected reviews per quarter, and visibility-only timeouts, whose reviews then lapse in month two, shows the lapses against a declared one-reviewer capacity, so the corrective discussion is about the staffing line, not the model.
+
+Core v0 does not model staffing economics, prescribe headcounts, or argue implementation costs: operating capacity is absorbed and budgeted by the installing authority as country implementation, and a lapsed deadline never produces an anonymous system action — it produces a public Review Timeout Resolution naming the responsible authority, dates, decision result, and applicable policy, so the software is never the responsible party. Limitation statement: until a pilot measures hours per resolution type, every capacity declaration is an assumption and the corpus contains no empirical basis for sizing one; the declaration's function is to make that assumption public and falsifiable, not to replace the measurement.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -1026,6 +1058,8 @@ Core v0 does not discount-correct citizen preferences or force intergenerational
 - [ ] Is distributed allocation bounded to the configured assignable public-purpose share rather than the whole public budget?
 - [ ] Does every active Planning Scope carry an Allocation Mandate record naming its mandate source and authorizing instrument?
 - [ ] Are departures from equal-per-citizen allocation flagged as higher-authorization decisions naming the authority that chose them?
+- [ ] Does the Allocation Mandate record how the citizen allocation act is legally characterized in the jurisdiction, disclosed in plain language on the citizen surface before first allocation?
+- [ ] Is a comparator note documenting how the replaced official allocation act is characterized and reviewed in the pilot jurisdiction recorded with the mandate?
 - [ ] Are non-assignable common-pool functions protected from popularity, discovery visibility, delegation concentration, and monthly attention effects?
 - [ ] Where essential services are involved, does the Planning Scope distinguish protected floor, distributed service lane, planning-continuity target, and funding-lane treatment?
 - [ ] Are underfunded protected scopes visible without creating hidden algorithmic allocation?
@@ -1199,6 +1233,8 @@ Core v0 does not discount-correct citizen preferences or force intergenerational
 - [ ] Is out-of-scope demand preserved as visible Ideas with per-category volume observability rather than silently discarded?
 - [x] Does A011 preserve minimum data for later moderation-pattern audit without creating a Core v0 abuse tribunal or dashboard?
 - [ ] Do tutored decisions record reason category where practical, rule/version, responsible authority/process, review time, timeout status, and known authority-linked operator context?
+- [ ] Does every tutored Planning Scope publish an Administrative Capacity Declaration (expected review volume, staffing assignment, per-resolution effort assumptions) with timeout policies calibrated to it and never copied between scopes with different declarations?
+- [ ] Is hours-per-resolution measurement by resolution type committed as an explicit first-pilot deliverable, with review-window performance joined to the functional transition maturity metrics?
 - [x] Are public authorities external to internal project competition in scopes they control under Core v0?
 - [ ] Are authority-controlled operators blocked by default in tutored scopes where their controlling authority defines scope or admissibility?
 - [ ] Do transition pilots expose scope share opened, approval/rejection/timeout rates, and rejection-reason comparability?

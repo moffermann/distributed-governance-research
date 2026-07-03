@@ -311,7 +311,9 @@ The one-hundred-twelfth residual cleanup propagated the first batch of second-ro
 
 The one-hundred-thirteenth residual cleanup propagated the second batch of second-round resolutions, A027-A032 / `docs/95` through `docs/100`, into the core corpus per P007: herding observability with the funding-target closure rule's claim bounded by the simulation evidence (A027); territorial and group outcome observability with equalization as country implementation (A028); cross-project dependency declarations and stranded-complement warnings in composite programs (A029); pattern-level clientelism indicators feeding review paths, never automatic verdicts (A030); the motive-neutrality boundary — motives free, material effects gated (A031); and long-horizon lanes in Planning Scopes with intertemporal allocation observability (A032). Each aligned the blueprint, scope freeze, entity/state map, scope matrix, formal inventory, schema draft, checklist, topical hypotheses, and its briefs; none added a primary entity.
 
-Next review candidate: core propagation of docs/102-103, or the post-manuscript validation program.
+The one-hundred-fourteenth residual cleanup propagated the external-review round resolutions, A034-A035 / [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102]] and [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103]], into the core corpus: the allocation-act characterization menu with its vote-like pilot default recorded in the Allocation Mandate and disclosed on the citizen surface (A034), and the Administrative Capacity Declaration per tutored scope with capacity-calibrated timeouts, bounded authority-side assistance, and hours-per-resolution as a first-pilot deliverable (A035). This closes core propagation of all thirty-five accepted Phase 3 resolutions: nothing accepted remains unintegrated, and no attack remains without a resolution.
+
+Next review candidate: the post-manuscript validation program — external expert review using the prepared packets, calibration of the simulation to participatory-budgeting data, and a bounded tutored pilot with the instrumentation the resolutions already require.
 
 Approximate current maturity:
 
@@ -666,7 +668,7 @@ Exit criteria:
 The next working sequence should be:
 
 ```text
-1. Propagate the remaining accepted second-round resolutions (docs/90-100) into the core corpus, following the resolution texts and the P007 boundaries.
+1. Phase 3 is fully propagated (35/35). Begin the post-manuscript validation program: external expert review, simulation calibration, bounded tutored pilot.
 2. Preserve the docs/86-89 records during later propagation: Allocation Mandate and Fiscal Commitment Profile are versioned records on Planning Scope; the A020 agenda limitation stays a declared open problem gating open mode at scale; the Duty-of-Care Anchor is named before disbursement and never adjudicates liability.
 3. Preserve the A018 boundary during later work: collusion observability reuses the A014 relationship graph and existing corroboration, verified-discovery, and responsibility objects; automated collusion detection and network-analysis scoring remain Extension v1+, and off-platform coordination is a recorded limitation.
 4. Preserve the A017 boundary during later propagation: disbursement-gaming tests are linkage and justification checks over existing DisbursementMilestonePlan, FinancialAssuranceProfile, and release objects; per-project actuarial guarantee calibration and automated milestone-design scoring remain Extension v1+ / country implementation.

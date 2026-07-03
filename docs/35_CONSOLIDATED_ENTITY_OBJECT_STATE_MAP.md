@@ -431,6 +431,14 @@ A032 long-horizon lanes:
 
 > A032 long-horizon lanes: Core v0 adds no intertemporal entity; long-horizon lane need-weights and funding-share-by-time-to-benefit observability read from Planning Scope (H009), the monthly allocation cycle (H038), continuity-risk classification (A006), citizen funding and automatic allocation profiles, and administrative observability, with the non-assignable pool retained as the structural shield.
 
+A034 allocation-act characterization:
+
+> A034 allocation-act characterization: Core v0 adds no characterization or standing entity; the characterization is a field set on the Allocation Mandate record on PlanningScope — menu choice, pilot default, comparator note, and citizen-surface disclosure — versioned with AuditEvents on every change as a higher-authorization decision, while doctrine construction remains external law.
+
+A035 administrative capacity declaration:
+
+> A035 administrative capacity declaration: Core v0 adds no staffing entity; the Administrative Capacity Declaration is the third versioned per-scope record on PlanningScope beside the Allocation Mandate and Fiscal Commitment Profile — expected review volume, staffing assignment, and per-resolution effort assumptions — with timeout policies calibrated to it, authority-side AI assistance inside the C008 boundary, review-window performance joined to the H054 transition metrics, and AuditEvents on every change.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

@@ -8,6 +8,8 @@ Operating modes are technical states that represent country implementation choic
 
 A011 clarifies that Core v0 should preserve the data needed to audit moderation patterns later, but full moderation-abuse dashboards, automatic possible-abuse findings, and advanced operator-concentration analytics remain Extension v1+ or country/administrator observability.
 
+H058 is aligned with [[../../docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|A035]]: every tutored operating mode presupposes reviewers who can decide within its declared review window, so each tutored Planning Scope publishes an Administrative Capacity Declaration — expected review volume, staffing assignment, and per-resolution effort — with timeout policies calibrated to it, so a lapsed window reads as a declared under-capacity rather than model failure, and hours-per-resolution measurement is committed as an explicit first-pilot deliverable.
+
 ## Hypothesis
 
 The platform should support distinct operating modes for public functions during transition. These modes are not policy decisions made by the platform; they are technical states that allow the implementing country to configure how open or tutored a public function is at a given moment.

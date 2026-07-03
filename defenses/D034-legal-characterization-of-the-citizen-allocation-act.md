@@ -2,7 +2,7 @@
 
 ## Integration status
 
-External-review round paired review completed. Accepted resolution: [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]].
+External-review round paired review completed. Accepted resolution: [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]]. Propagated into the core corpus.
 
 ## Attack reference
 
