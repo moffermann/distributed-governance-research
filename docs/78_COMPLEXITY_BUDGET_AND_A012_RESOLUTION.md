@@ -13,6 +13,8 @@ Paired review:
 
 A012 is founded and does not distort the project when it improves proportionality rather than eliminating safeguards. The accepted resolution is a complexity budget and low-risk fast-path discipline.
 
+This discipline is formalized as `knowledge/principles/P007-integrate-or-bound-rule.md`: once the core thesis is fully presented, a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects. Every other founded attack is answered by an explicit boundary, visible residual risk, and a recorded limitation statement. Accepted resolutions pending propagation should be reviewed against P007 before they are integrated into the core corpus.
+
 ## Rule added to Core v0
 
 Every new required object, field, state, or procedural step should identify the material failure mode it controls. If the failure mode is low-risk or can be derived safely from existing records, the requirement should not become a universal Core v0 burden.
@@ -37,6 +39,12 @@ The ordinary citizen should see what is missing and what action is available. Ex
 ## Transparency and accountability effect
 
 This prevents accountability safeguards from becoming expert capture or administrative gatekeeping.
+
+## Scope boundary and limitation
+
+Core v0 does not require a quantitative complexity metric, a formal object-count ceiling, or an implementation-cost model. The complexity budget is a qualitative editorial discipline applied at design and review time.
+
+Limitation statement: the architecture's procedural burden has not been validated against real users or a working implementation; the minimum viable low-risk path remains a design commitment, not a demonstrated property.
 
 ## Residual risks
 

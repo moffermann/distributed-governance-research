@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: `docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation.
 
 ## Attack reference
 
@@ -32,9 +32,9 @@ For Macul, if all formal records exist but later discovery shows the evidence pr
 
 ## Project-document basis
 
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:535` states that the system should assume hidden collusion is possible.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:539` states that the architecture should not depend on perfect conflict detection.
-- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:547` through `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:558` list safeguards: executor does not choose or directly pay, related-party status is declared, false evidence penalties exist, repeated relationships are visible, and supplemental control is capped.
+- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:570` states that the system should assume hidden collusion is possible.
+- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:574` states that the architecture should not depend on perfect conflict detection.
+- `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:582` through `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md:598` list safeguards: executor does not choose or directly pay, related-party status is declared, false evidence penalties exist, repeated relationships are visible, and supplemental control is capped.
 - `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md:190` states that hidden collusion is possible.
 - `knowledge/hypotheses/H016-distributed-fiscalization-ecosystem.md:192` notes that the system cannot perfectly detect every friendship, off-platform payment, repeated relationship, holding-linked dependency, or informal pressure.
 - `docs/65_RESPONSIBILITY_MATRIX_BY_ROLE_V0.md:40` states that one actor may hold multiple roles only with separate authority, duties, conflicts, records, effects, reputation treatment, and audit references.
@@ -42,6 +42,7 @@ For Macul, if all formal records exist but later discovery shows the evidence pr
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:43` requires objects carrying state, authority, responsibility, funding, review, evidence, reputation, or formal effect to reference AuditEvent records.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:163` defines `VerifiedDiscovery` as able to create reward, reputation input, correction, complaint, responsibility, or disbursement effects after review.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:220` defines `ResponsibilityEvent` as reviewed and role-specific, with possible effects on reputation, eligibility, disbursement, correction, revocation, or legal referral.
+- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as integration of observability through existing objects — the A014 relationship graph, VerifiedDiscovery, and ResponsibilityEvent — with detection machinery bounded out of Core v0.
 
 ## Bibliographic basis
 
@@ -83,4 +84,4 @@ Residual risk: collusion can remain undetected, especially in small markets, loc
 
 ## Decision
 
-The attack is founded and central. It does not defeat the architecture, but Phase 3 should define collusion observability across role clusters and response paths for confirmed hidden coordination.
+The attack is founded and central. The integrated answer is collusion observability across role clusters — reusing the A014 relationship graph, corroboration requirements, VerifiedDiscovery, and ResponsibilityEvent — with pattern surfaces feeding human review rather than an automated detection engine. The declared limitation is comparative honesty: purely off-platform coordination among formally compliant actors can remain invisible; the claim is that collusion becomes harder, riskier, and more discoverable than under opaque institutional monopoly, not that it is eliminated.

@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: `docs/79_EVIDENCE_QUALITY_REVIEW_AND_A013_RESOLUTION.md`, already propagated into the core corpus; its scope boundary was clarified under `knowledge/principles/P007-integrate-or-bound-rule.md`.
 
 ## Attack reference
 
@@ -42,6 +42,7 @@ For Macul, photos may be accepted as contextual material, rejected as insufficie
 - `docs/46_EVIDENCE_PRODUCERS_AND_C003_RESOLUTION.md` now pairs evidence-producer independence with A013's qualification and method standard for formal hard-KPI evidence.
 - `docs/diagrams/v0-project-evidential-contract-state.md` now routes submitted evidence through qualification, method-fit, quality, and sufficiency review before formal effects.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md` defines `EvidenceProducerQualificationStandard`, `EvidenceQualityReview`, and validation gates that block hard-KPI effects where producer qualification or method fit is missing.
+- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as a justified mechanism-heavy integration: unfit formal evidence defeats the auditable-evidence core claim, and the standard binds only Threshold Policy-marked formal, paid, or hard-effect evidence needs.
 
 ## Bibliographic basis
 
@@ -89,4 +90,4 @@ Residual risk: bad evidence can still trigger fund release, closure, or reputati
 
 ## Decision
 
-The attack is founded. The accepted Core v0 response is that paid or critical fulfillment/control evidence requires producer qualification, adequate method, traceable metadata, report discipline, and effect-specific quality review before it can support formal effects.
+The attack is founded. The accepted Core v0 response is that paid or critical fulfillment/control evidence requires producer qualification, adequate method, traceable metadata, report discipline, and effect-specific quality review before it can support formal effects. The declared limitation is that the standard verifies the right actor and method, not the truth of the specific measurement: a qualified producer can still submit false or negligent evidence, and discovery may come after effects occurred.

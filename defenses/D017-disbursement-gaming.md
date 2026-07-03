@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: `docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation.
 
 ## Attack reference
 
@@ -34,14 +34,15 @@ For Macul, buying materials may justify a limited protected release only if the 
 
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:11` states that disbursement is conditional release of retained resources based on milestones, fulfillment evidence, fiscalization, and absence of blocking issues.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:13` states that later-phase funds may be collected in advance but cannot be released until prerequisite phase deliverables are accepted.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:85` requires disbursement milestone plans and phase-gate funding treatment to be coherent before execution funding commitments.
+- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:89` requires disbursement milestone plans and phase-gate funding treatment to be coherent before execution funding commitments.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:91` blocks construction release while design is pending, rejected, or materially reformulated.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:239` treats executor material as self-report unless corroborated for critical milestones, disbursements, and closure.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:339` prohibits full release orders where required fulfillment/control evidence is inconclusive, insufficient, contradicted, or only contextual.
-- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:412` allows partial release only with separable components, accepted evidence, explicit retained amount, clear release condition, fiscalizer explanation, and citizen-facing summary.
+- `docs/31_PROJECT_DISBURSEMENT_FLOW.md:449` allows partial release only with separable components, accepted evidence, explicit retained amount, clear release condition, fiscalizer explanation, and citizen-facing summary.
 - `docs/31_PROJECT_DISBURSEMENT_FLOW.md:427` requires guarantee materialization to be confirmed by an external lawful custodian, guarantor, insurer, treasury, bank, escrow provider, or equivalent.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:174` defines `Disbursement` as leading to financial order only after review and blockers clear.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:247` sets a schema gate: no disbursement without funding source, budget line, milestone/phase gate, review basis, and financial order path.
+- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as an integration: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects.
 
 ## Bibliographic basis
 
@@ -81,4 +82,4 @@ Residual risk: actors may still design milestones that are formally reviewable b
 
 ## Decision
 
-The attack is founded. It does not defeat milestone-based disbursement, but Phase 3 should add disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release.
+The attack is founded and integrated: disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release, as linkage checks over existing objects. The bounded remainder is declared: no per-project actuarial guarantee calibration or automated milestone-design scoring in Core v0, so milestone quality ultimately rests on human review backed by designer responsibility and retention, not on detection.

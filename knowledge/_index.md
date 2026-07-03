@@ -352,6 +352,7 @@ Recently aligned residual-audit hypotheses:
 - [[principles/P004-verified-identity-no-anonymous-actors|P004 — Verified Identity and No Anonymous Actors]]
 - [[principles/P005-separation-public-support-private-benefit|P005 — Separation of Public Support and Private Benefit]]
 - [[principles/P006-layered-complexity-and-citizen-simplicity|P006 — Layered Complexity and Citizen Simplicity]]
+- [[principles/P007-integrate-or-bound-rule|P007 — Integrate or Bound Rule]]
 
 ## Open questions and objections
 

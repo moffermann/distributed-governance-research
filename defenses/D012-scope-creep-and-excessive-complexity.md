@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: `docs/78_COMPLEXITY_BUDGET_AND_A012_RESOLUTION.md`, now formalized as `knowledge/principles/P007-integrate-or-bound-rule.md` and refined before core propagation.
 
 ## Attack reference
 
@@ -34,14 +34,15 @@ For a small school-supplies project, the model should support a low-risk fast pa
 
 - `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:5` states that architecture may be complex but ordinary citizen participation must remain simple.
 - `knowledge/principles/P006-layered-complexity-and-citizen-simplicity.md:13` states the rule: simple to participate, deep to audit.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:140` requires each project to expose the applicable Threshold Policy.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:144` ties procedural burden profiles to Threshold Policy and competent review.
-- `docs/34_CORE_V0_SCOPE_FREEZE.md:148` prohibits proposers, designers, or executors from self-selecting lower burden when obligations decrease.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:143` requires each project to expose the applicable Threshold Policy.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:163` ties procedural burden profiles to Threshold Policy and competent review.
+- `docs/34_CORE_V0_SCOPE_FREEZE.md:167` prohibits proposers, designers, or executors from self-selecting lower burden when obligations decrease.
 - `knowledge/hypotheses/H020-proportional-procedural-burden.md:5` states that all projects share conceptual structure, but not the same procedural burden.
 - `knowledge/hypotheses/H020-proportional-procedural-burden.md:7` makes burden proportional to size, risk, complexity, irreversibility, vulnerable beneficiaries, territory, public-function sensitivity, common-good impact, technical requirements, and potential antivalue.
 - `docs/49_LAYERED_CITIZEN_STATE_TRANSLATION_AND_C009_RESOLUTION.md:237` requires every technical state to have a simple, actionable citizen-facing translation while deeper layers preserve full audit detail.
 - `docs/64_FORMAL_ENTITY_INVENTORY_V0.md:604` states that a formal entity exists only if it carries responsibility, state, traceability, rule application, formal effect, or necessary citizen-facing explanation that cannot be safely derived from another record.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:17` states that the schema draft is not yet a final database schema, API specification, class model, smart contract, legal implementation, or country-specific data model.
+- `knowledge/principles/P007-integrate-or-bound-rule.md:5` states that a founded attack produces a new Core v0 mechanism only when the failure mode would defeat a core-thesis claim and cannot be controlled through existing objects; otherwise it is bounded with a recorded limitation.
 
 ## Bibliographic basis
 
@@ -80,4 +81,4 @@ Residual risk: professional actors may benefit from complexity and convert the s
 
 ## Decision
 
-The attack is founded. It does not defeat the architecture, but it should produce a complexity-budget rule and a low-risk fast-path specification.
+The attack is founded, and its resolution is the corpus's own editorial constitution: the complexity budget of `docs/78` is generalized as the P007 integrate-or-bound rule, under which later resolutions default to explicit boundaries and recorded limitations instead of new mechanisms. The declared limitation is that procedural burden remains unvalidated against real users or a working implementation.

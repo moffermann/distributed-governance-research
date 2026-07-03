@@ -13,6 +13,8 @@ Paired review:
 
 A015 is founded and does not distort the project when it strengthens project-level common-good disclosure without importing the full Extension v1+ charter system. The accepted resolution is a minimum common-good impact sufficiency test.
 
+Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates a disclosure test through existing declaration, evidence, and fiscalization surfaces, and bounds everything else: the charter system itself stays out of Core v0.
+
 ## Rule added to Core v0
 
 A project that plausibly affects a common good should not proceed with a vague or unexplained impact declaration.
@@ -37,6 +39,12 @@ Citizens should see simple common-good labels and material risks, not the full f
 ## Transparency and accountability effect
 
 The rule avoids two failures: hiding common-good impact because no charter exists, and overloading Core v0 with full common-good governance.
+
+## Scope boundary and limitation
+
+Core v0 does not require a common-good registry, charter voting, or platform adjudication of common-good compatibility. Full registry and charter mechanics remain Extension v1+; conflicts requiring legal, environmental, cultural, or scientific authority route to external channels.
+
+Limitation statement: without a charter system, the sufficiency test relies on declaration honesty plus affected-party and fiscalizer contestation; systematically underdeclared impacts in communities with weak contestation capacity remain an open exposure.
 
 ## Residual risks
 

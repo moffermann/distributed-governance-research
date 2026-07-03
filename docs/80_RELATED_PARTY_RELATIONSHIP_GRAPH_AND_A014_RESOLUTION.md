@@ -13,6 +13,8 @@ Paired review:
 
 A014 is founded and does not distort the project when it targets hidden control rather than declared proximity. The accepted resolution is a minimum related-party relationship graph and severity model.
 
+Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through existing objects: the graph is observability over declarations already required by `RelatedPartyConflictReview` and the role model, not a new primary entity. The same relationship-and-control graph serves A018 collusion observability (`docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`); one graph, two consumers.
+
 ## Rule added to Core v0
 
 Related-party status is not automatic invalidity. Hidden, severe, or control-relevant relationships require stronger safeguards, correction, blocking, exclusion, complaint review, responsibility review, or reputation effects.
@@ -38,6 +40,12 @@ Citizens should see simple warnings such as `declared related supplier`, `indepe
 ## Transparency and accountability effect
 
 The system distinguishes legitimate proximity from hidden capture and makes relationship-based self-dealing harder to hide.
+
+## Scope boundary and limitation
+
+Core v0 does not require beneficial-ownership verification, corporate-registry integration, or investigative discovery of undeclared relationships. Verification depth against external registries is a country implementation decision; graph analytics beyond declared and observed platform relationships remain Extension v1+.
+
+Limitation statement: the relationship graph sees declared relationships and on-platform patterns; deliberately concealed off-platform control can defeat it, and the architecture's answer is to make concealment costly and reviewable, not impossible.
 
 ## Residual risks
 

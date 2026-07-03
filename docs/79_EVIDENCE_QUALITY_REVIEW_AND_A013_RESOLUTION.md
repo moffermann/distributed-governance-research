@@ -15,6 +15,8 @@ A013 is founded in the prior corpus. The attack does not merely require a generi
 
 The accepted Core v0 resolution is a proportional formal evidence producer qualification standard. Detailed scoring, fraud detection, AI-generation detection, instrument calibration registries, and country-specific legal admissibility rules remain future implementation or country-implementation work. Core v0 now requires each formal fulfillment/control evidence need to specify the producer qualification, method, and probative fitness expected for the relevant metric, value floor, antivalue ceiling, milestone, phase gate, or closure condition.
 
+Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this is the most mechanism-heavy accepted resolution, and deliberately so: unqualified or unfit formal evidence defeats the auditable-evidence core claim directly, so the field standard is load-bearing rather than elaboration. Its application is proportional by construction — the standard binds only evidence needs that the active Threshold Policy marks as formal, paid, or hard-effect; ordinary observations and low-risk confirmations are untouched.
+
 ## Rule added to Core v0
 
 Independence from the executor does not make fulfillment/control evidence technically reliable, legally useful, or sufficient. Paid or critical fulfillment/control evidence must be produced by an actor whose qualifications, method, instruments, independence, and report discipline are adequate for the evidence need.
@@ -70,6 +72,12 @@ The higher qualification standard applies when evidence is paid or used for hard
 ## Transparency and accountability effect
 
 This resolves the core evidence-quality gap by connecting money, proof, and responsibility. Fulfillment/control evidence has a budget because it is not casual upload work; it is formal measurement or documentation performed by qualified actors who accept responsibility for the evidence they produce. The audit trail should show why a producer was eligible, what standard applied, how the measurement was performed, and what formal effects the evidence was allowed to support.
+
+## Scope boundary and limitation
+
+Core v0 does not require authenticity scoring, AI-generation detection, calibration registries, credential-registry integration, or legal admissibility guarantees; those remain Extension v1+ or country implementation, and Core v0 does not claim platform evidence is automatically court-admissible.
+
+Limitation statement: the qualification standard verifies that the right kind of actor used the right kind of method; it does not verify that the specific measurement is true, so a qualified producer can still submit false or negligent evidence, and discovery may come only after formal effects occurred.
 
 ## Residual risks
 

@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: `docs/82_INCUMBENT_RESISTANCE_INDICATORS_AND_A016_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation.
 
 ## Attack reference
 
@@ -33,12 +33,13 @@ For a tutored sports pilot, the system should show scope opened, budget share, a
 ## Project-document basis
 
 - `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:40` states that the platform should not pretend to decide when a country must move from tutored to open mode.
-- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:400` requires every material tutored decision and silence to become public through Governance Resolutions or Review Timeout Resolutions.
+- `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:407` requires every material tutored decision and silence to become public through Governance Resolutions or Review Timeout Resolutions.
 - `docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md:446` states that the platform cannot force distributed governance onto a country, but can prevent tutored governance from hiding behind the platform.
 - `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:26` states that a public authority may not be judge and party inside the same scope.
 - `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:314` states that public/private status is not the primary boundary; authority, control, privilege, contestability, accountability, and operating mode are.
 - `docs/59_CORE_ADMINISTRATIVE_OBSERVABILITY_BASELINE_AND_C021_RESOLUTION.md:413` requires a minimal administrative observability baseline across lifecycle, funding, disbursement, evidence, fiscalization, complaints, operating-mode decisions, governance resolutions, timeouts, rule changes, and concentration indicators.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:195` defines complaint admissibility/referral records that may route to scoped platform effects or external authority references.
+- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as a bounded resolution: indicators over existing objects, with the political limit recorded openly rather than mechanized away.
 
 ## Bibliographic basis
 
@@ -78,4 +79,4 @@ Residual risk: incumbent institutions may comply formally while preserving contr
 
 ## Decision
 
-The attack is founded. It does not invalidate the theory, but Phase 3 should add transition-pilot observability and incumbent-resistance indicators.
+The attack is founded and bounded. The integrated answer is transition-pilot observability and incumbent-resistance indicators over existing OperatingMode, PlanningScope, and timeout objects. The declared limitation is political: a determined incumbent can still strangle a pilot through scope, budget, and legal choke points — the fiscal channel is attacked separately in A021 — and the architecture's claim is only that such strangulation becomes measurable and comparable instead of invisible.

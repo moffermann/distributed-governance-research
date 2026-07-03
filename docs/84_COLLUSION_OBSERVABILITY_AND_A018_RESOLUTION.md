@@ -13,6 +13,8 @@ Paired review:
 
 A018 is founded and does not distort the project when it is treated as a systemic stress test rather than a demand for impossible perfect detection. The accepted resolution is collusion observability across role clusters and response paths for confirmed hidden coordination.
 
+Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates observability through existing objects and bounds detection: the relationship-and-control graph is the same graph defined for A014 (`docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`), timing and outcome patterns are administrative-observability review surfaces rather than an automated detection engine, and the response paths reuse VerifiedDiscovery and ResponsibilityEvent.
+
 ## Rule added to Core v0
 
 Role separation is necessary but not sufficient. The system should expose relationship, repetition, timing, and outcome patterns across project roles and material suppliers.
@@ -38,6 +40,12 @@ Citizens should see compact signals such as `related actor cluster visible`, `re
 ## Transparency and accountability effect
 
 The system does not promise to eliminate collusion. It makes collusion harder, riskier, less sufficient, more discoverable, and more reviewable than in opaque institutional monopoly.
+
+## Scope boundary and limitation
+
+Core v0 does not require an automated collusion-detection engine, network-analysis scoring, or investigative capability. Pattern surfaces feed human review, complaint, and verified-discovery paths; automated anomaly scoring remains Extension v1+, and prosecution of confirmed collusion remains external law.
+
+Limitation statement: purely off-platform coordination among formally compliant actors can remain invisible to the system; the architecture's claim is comparative — collusion becomes harder, riskier, and more discoverable than under opaque institutional monopoly — not that collusion is eliminated.
 
 ## Residual risks
 

@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: `docs/81_COMMON_GOOD_IMPACT_SUFFICIENCY_TEST_AND_A015_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation.
 
 ## Attack reference
 
@@ -40,6 +40,7 @@ For Macul, the project should disclose whether it reduces green area, changes pu
 - `knowledge/principles/P003-project-responsibility-for-undeclared-antivalue.md:5` states that a project is responsible for undeclared antivalue discovered during execution.
 - `docs/09_PROJECT_OBJECT_MODEL.md:658` requires relevant common-good impacts through affected assets, affected parties, risks, antivalues, evidence, and fiscalization.
 - `docs/34_CORE_V0_SCOPE_FREEZE.md:459` includes lightweight common-good impact declaration in project creation while leaving full charter governance to Extension v1+.
+- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies this as a bounded resolution with a thin integrated test: disclosure through existing surfaces, with the charter system itself kept out of Core v0.
 
 ## Bibliographic basis
 
@@ -78,4 +79,4 @@ Residual risk: some common-good harms require legal or technical expertise outsi
 
 ## Decision
 
-The attack is founded but bounded. Phase 3 should define a common-good impact sufficiency test without importing full charter governance into Core v0.
+The attack is founded but bounded. The integrated answer is the minimum sufficiency test over existing declaration, evidence, and fiscalization surfaces. The declared limitation is that without a charter system the test relies on declaration honesty plus affected-party and fiscalizer contestation, so underdeclared impacts in communities with weak contestation capacity remain an open exposure.

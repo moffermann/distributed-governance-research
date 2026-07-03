@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Phase 3 paired review completed. Accepted resolution: `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`.
+Phase 3 paired review completed. Accepted resolution: `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`, refined under `knowledge/principles/P007-integrate-or-bound-rule.md` before core propagation.
 
 ## Attack reference
 
@@ -33,13 +33,14 @@ For Macul, one holding designing and constructing the facility can be legitimate
 ## Project-document basis
 
 - `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:7` states that related-party links do not automatically make a project illegitimate, but must be declared, classified, exposed, and handled with proportional safeguards.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:49` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:63` define proportional conflict categories from declared low conflict to hidden or misrepresented conflict.
-- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:104` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:108` gives the design-and-build holding example and requires phase planning and independent design-gate verification where policy requires it.
+- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:51` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:63` define proportional conflict categories from declared low conflict to hidden or misrepresented conflict.
+- `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:106` through `knowledge/hypotheses/H028-related-party-conflict-of-interest.md:108` gives the design-and-build holding example and requires phase planning and independent design-gate verification where policy requires it.
 - `docs/09_PROJECT_OBJECT_MODEL.md:83` allows the same actor to design and execute only with traceability and without self-acceptance where independent review is required.
 - `docs/09_PROJECT_OBJECT_MODEL.md:282` requires related-party and conflict declarations among proposers, modelers, executors, fiscalizers, evidence producers, operators, owners, revenue recipients, funders, and beneficiaries.
 - `docs/09_PROJECT_OBJECT_MODEL.md:303` states that a Macul multi-court project may be legitimate even when a local club uses the facility, if public access and independent control are declared.
 - `docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md:169` states that hidden or misrepresented control relationships may trigger reformulation, exclusion, disbursement blocking, rejection, complaint review, responsibility review, or reputation effects.
 - `docs/66_IMPLEMENTABLE_OBJECT_SCHEMA_DRAFT_V0.md:147` defines `RelatedPartyConflictReview` with severity classification, disclosure status, review status, and effect references.
+- `knowledge/principles/P007-integrate-or-bound-rule.md:5` classifies the relationship graph as integration through existing objects — observability over declarations already required by the role model — with verification depth bounded to country implementation.
 
 ## Bibliographic basis
 
@@ -78,4 +79,4 @@ Residual risk: hidden beneficial ownership, informal dependency, future-work arr
 
 ## Decision
 
-The attack is founded. It supports the current proportional model but requires a stronger relationship graph and severity model for role clusters and material suppliers.
+The attack is founded. The integrated answer is the relationship graph and severity model over existing declarations — one graph shared with A018 collusion observability. The bounded remainder is declared openly: Core v0 does not verify beneficial ownership or integrate corporate registries; concealed off-platform control is made costly and reviewable, not impossible, and verification depth is a country-implementation decision.

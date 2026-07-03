@@ -13,6 +13,8 @@ Paired review:
 
 A017 is founded and does not distort the project when it improves milestone and release discipline. The accepted resolution is disbursement-gaming tests for milestone design, partial release, advance payment, and phase-gate release.
 
+Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates: disbursement gaming attacks the conditional-disbursement core claim directly, and the tests are linkage and justification checks over existing disbursement objects, not new machinery.
+
 ## Rule added to Core v0
 
 Milestone-based disbursement must be reviewed for gaming risk before it can support release.
@@ -36,6 +38,12 @@ Citizens should see `funding reserved`, `release blocked`, `partial release`, `r
 ## Transparency and accountability effect
 
 The rule prevents project actors from turning milestone formalities into early unrecoverable payment.
+
+## Scope boundary and limitation
+
+Core v0 does not require per-project actuarial guarantee calibration, automated milestone-design scoring, or cost-verification machinery. The global v0 guarantee percentage plus configurable ThresholdPolicy retention remains the Core v0 answer; risk-priced guarantees and milestone-design analytics remain Extension v1+ or country implementation.
+
+Limitation statement: milestone quality ultimately depends on human review of milestone design; a formally valid but substantively weak milestone plan approved by a weak reviewer can still release funds early, and the architecture's answer is designer responsibility and retention, not detection.
 
 ## Residual risks
 
