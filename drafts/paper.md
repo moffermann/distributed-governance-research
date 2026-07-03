@@ -280,7 +280,7 @@ from real transfer.
 ## 5. Formal analysis
 
 We state the three models and their results; proofs are one-step algebra
-and appear in the companion note (`research/formal-models.md`). All agents
+and appear in the companion note ([[formal-models|research/formal-models.md]]). All agents
 are risk-neutral; budgets are normalized to 1.
 
 ### 5.1 Milestone-gated disbursement
@@ -372,7 +372,7 @@ funding progress; default followers' budget fills projects in planning-
 priority order. The funding-target closure rule is toggleable. Twenty
 seeded runs per condition; the code is dependency-free and deterministic
 (`scripts/simulation/allocation-sim.mjs`; full tables in
-`research/simulation-results.md`).
+[[simulation-results|research/simulation-results.md]]).
 
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
@@ -614,10 +614,10 @@ ideological one.
 
 ---
 
-*Companion materials: formal proofs (`research/formal-models.md`),
+*Companion materials: formal proofs ([[formal-models|research/formal-models.md]]),
 simulation code and full result tables
 (`scripts/simulation/allocation-sim.mjs`,
-`research/simulation-results.md`), the architecture corpus (`docs/`,
+[[simulation-results|research/simulation-results.md]]), the architecture corpus (`docs/`,
 `knowledge/`), and the complete adversarial record (`attacks/`,
 `defenses/`, accepted resolutions to date `docs/67`–`docs/89`; eleven
 second-round pairs remain under open review).*

@@ -7,7 +7,7 @@ mechanisms that carry the architecture's core claims: milestone-gated
 disbursement (Model 1), protocolized fiscalization against collusion
 (Model 2), and attention-constrained citizen allocation (Model 3, the
 analytical skeleton behind the agent-based simulation in
-`research/simulation-results.md`).
+[[simulation-results|research/simulation-results.md]]).
 
 The models are deliberately minimal. Each is small enough to be checked by
 hand, states its result as a proposition with an explicit proof, and maps its
@@ -21,9 +21,9 @@ Notation is self-contained per model. All agents are risk-neutral.
 
 ## Model 1 — Milestone-gated disbursement as a principal-agent problem
 
-Formalizes: `docs/31_PROJECT_DISBURSEMENT_FLOW.md`,
-`docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md`,
-`knowledge/hypotheses/H036-milestone-based-disbursement-and-guarantees.md`.
+Formalizes: [[31_PROJECT_DISBURSEMENT_FLOW|docs/31_PROJECT_DISBURSEMENT_FLOW.md]],
+[[83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION|docs/83_DISBURSEMENT_GAMING_TESTS_AND_A017_RESOLUTION.md]],
+[[H036-milestone-based-disbursement-and-guarantees|knowledge/hypotheses/H036-milestone-based-disbursement-and-guarantees.md]].
 
 ### Setup
 
@@ -127,10 +127,10 @@ mechanism should spend γ only where `p` is high enough for γ to bite.
 
 ## Model 2 — Collusion-proof fiscalization with protocol assignment and corroboration
 
-Formalizes: `docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md`
+Formalizes: [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL.md]]
 (anti-capture premise and protections),
-`docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md`,
-`docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md`.
+[[84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION|docs/84_COLLUSION_OBSERVABILITY_AND_A018_RESOLUTION.md]],
+[[69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION|docs/69_FISCALIZER_QUALITY_CAPTURE_INDICATORS_AND_A003_RESOLUTION.md]].
 
 ### Setup
 
@@ -198,9 +198,9 @@ executor's expected gain from attempting collusion is at most
 
 ## Model 3 — Attention-constrained allocation (analytical skeleton)
 
-Formalizes: `knowledge/hypotheses/H002-distributed-resource-allocation.md`,
+Formalizes: [[H002-distributed-resource-allocation|knowledge/hypotheses/H002-distributed-resource-allocation.md]],
 `H025`, `H033`, `H035`, and the behavioral attacks A024/A025/A027. Tested
-computationally in `research/simulation-results.md`.
+computationally in [[simulation-results|research/simulation-results.md]].
 
 ### Setup
 

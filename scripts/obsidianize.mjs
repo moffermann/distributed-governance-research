@@ -20,8 +20,86 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const APPLY = process.argv.includes("--apply");
-const dirs = process.argv.slice(2).filter((a) => a !== "--apply");
+const PATHS_MODE = process.argv.includes("--paths");
+const dirs = process.argv.slice(2).filter((a) => a !== "--apply" && a !== "--paths");
 if (dirs.length === 0) dirs.push("defenses");
+
+// ---------------------------------------------------------------------------
+// --paths mode: convert bare backtick .md path references into Obsidian
+// wikilinks ([[basename|original-text]]), preserving the visible text.
+// Skips fenced code blocks, non-unique basenames (e.g. the various README
+// files), and paths that do not exist. Idempotent: already-converted links
+// contain no backtick path and are untouched.
+// ---------------------------------------------------------------------------
+if (PATHS_MODE) {
+  const { readdirSync: rd, readFileSync: rf, writeFileSync: wf, existsSync: ex } = await import("node:fs");
+  const { join: j } = await import("node:path");
+  const ALL_DIRS = ["docs", "knowledge", "attacks", "defenses", "drafts", "research", "external-review"];
+  const files = [];
+  const walk = (d) => {
+    for (const e of rd(d, { withFileTypes: true })) {
+      if (e.name === "node_modules" || e.name.startsWith(".")) continue;
+      const p = j(d, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (e.name.endsWith(".md")) files.push(p.replace(/\\/g, "/"));
+    }
+  };
+  for (const d of ALL_DIRS) if (ex(d)) walk(d);
+  const baseCount = new Map();
+  for (const p of files) {
+    const b = p.split("/").pop().replace(/\.md$/, "");
+    baseCount.set(b, (baseCount.get(b) || 0) + 1);
+  }
+
+  let converted = 0;
+  let skippedNonUnique = 0;
+  const targets = dirs.filter((d) => ex(d));
+  const workFiles = [];
+  for (const d of targets) {
+    if (d.endsWith(".md")) workFiles.push(d);
+    else {
+      const acc = [];
+      const w2 = (dd) => {
+        for (const e of rd(dd, { withFileTypes: true })) {
+          if (e.name === "node_modules" || e.name.startsWith(".")) continue;
+          const p = j(dd, e.name);
+          if (e.isDirectory()) w2(p);
+          else if (e.name.endsWith(".md")) acc.push(p.replace(/\\/g, "/"));
+        }
+      };
+      w2(d);
+      workFiles.push(...acc);
+    }
+  }
+
+  for (const path of workFiles) {
+    const lines = rf(path, "utf8").split(/\r?\n/);
+    let fence = false;
+    let changed = false;
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].trim().startsWith("```")) {
+        fence = !fence;
+        continue;
+      }
+      if (fence) continue;
+      lines[i] = lines[i].replace(/`((?:docs|knowledge|attacks|defenses|drafts|research|external-review)\/[^`:*\n]+\.md)`/g, (m, target) => {
+        if (!ex(target)) return m;
+        const base = target.split("/").pop().replace(/\.md$/, "");
+        if ((baseCount.get(base) || 0) !== 1) {
+          skippedNonUnique++;
+          return m;
+        }
+        changed = true;
+        converted++;
+        return `[[${base}|${target}]]`;
+      });
+    }
+    if (changed && APPLY) wf(path, lines.join("\n"));
+  }
+  console.log(`paths mode: ${converted} backtick path refs ${APPLY ? "converted" : "convertible"} across ${workFiles.length} files; ${skippedNonUnique} skipped (non-unique basename)`);
+  if (!APPLY) console.log("(dry run — pass --apply to write)");
+  process.exit(0);
+}
 
 const hash = (s) => {
   let h = 5381;

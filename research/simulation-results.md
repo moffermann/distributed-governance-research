@@ -2,7 +2,7 @@
 
 ## Status
 
-Computational companion to Model 3 of `research/formal-models.md`. Code:
+Computational companion to Model 3 of [[formal-models|research/formal-models.md]]. Code:
 `scripts/simulation/allocation-sim.mjs` (dependency-free Node, deterministic
 under seed). Reproduce with:
 
