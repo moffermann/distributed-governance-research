@@ -20,6 +20,8 @@ This hypothesis is aligned with:
 
 H028 defines the anti-self-benefit boundary. C002 and C013 define how independent control is selected and funded. C012 defines when hidden or misrepresented conflicts can become role-specific responsibility.
 
+Under [[../../docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION|A014]], this boundary is reinforced by a minimum related-party relationship graph and severity model expressed through existing declarations and `RelatedPartyConflictReview` rather than a new primary entity. The graph makes ownership and control chains, board or management control, material supplier and subcontractor relationships, repeated fiscalizer/evidence-producer relationships, delegate or funder relationships to project actors, and authority-linked operator status visible where material, escalating hidden or control-relevant relationships to correction, blocking, exclusion, complaint, responsibility, or reputation effects while declared proximity stays proportional. The same graph serves A018 collusion observability, and beneficial-ownership verification remains a country-implementation decision.
+
 ## Rationale
 
 If citizens can assign part of their taxes to projects, a wealthy actor could attempt to create a project, fund it with assignable taxes, execute it through a related company, operate the resulting asset, and capture the benefits.

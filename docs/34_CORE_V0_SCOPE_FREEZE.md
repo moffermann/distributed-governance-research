@@ -84,6 +84,8 @@ Examples:
 
 Related-party relationships do not automatically invalidate a project, but they must be declared and classified. Low or indirect conflicts may proceed with visible warnings; relevant conflicts may require independent control and public-benefit safeguards; severe or hidden conflicts may require reformulation, actor exclusion, disbursement blocking, rejection, or a role-specific responsibility review.
 
+A014 reinforces this as a minimum related-party relationship graph and severity model, not a new Core v0 entity. The graph is observability over declarations already required by `RelatedPartyConflictReview` and the role model, covering ownership and control chains, board or management control, material supplier and subcontractor relationships, repeated fiscalizer/evidence-producer relationships, delegate or funder relationships to project actors, and authority-linked operator status where material; declared proximity stays proportional while hidden or control-relevant relationships escalate to correction, blocking, exclusion, complaint, responsibility, or reputation effects. The same graph serves A018 collusion observability. Core v0 does not require beneficial-ownership verification or corporate-registry integration; verification depth is a country implementation decision and graph analytics remain Extension v1+.
+
 ### 2a. Idea object
 
 Core v0 includes `Idea` as a separate civic-demand object.
@@ -807,6 +809,7 @@ These should not be part of Core v0 unless later shown necessary:
 - advanced platform-influence analytics, causal exposure-to-funding metrics, and ranking-bias dashboards;
 - advanced participation-equity analytics, demographic gap measurement, accessibility outreach metrics, and inclusion dashboards;
 - quantitative complexity metric, object-count ceiling, or implementation-cost model;
+- beneficial-ownership registry verification and relationship-graph analytics;
 - detailed sector-specific KPI libraries beyond pilot needs;
 - full common-good charter governance;
 - full multi-sector implementation.

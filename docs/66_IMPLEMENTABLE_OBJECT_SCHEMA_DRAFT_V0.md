@@ -278,6 +278,7 @@ No separate ParticipationEquityIndicator required in Core v0. Participation-equi
 No separate DelegationConcentrationStressThreshold object required in Core v0. A010 stress thresholds are represented through Delegation and DelegatedActionRecord fields, represented-weight warnings, configured cap references, delegated-action report sufficiency, related-party and participation-support disclosures, AuditEvents, and administrative observability. Advanced delegation-network analysis or anti-cluster algorithms remain Extension v1+ or implementation-level observability.
 No separate TutoredModerationAbuseTest object required in Core v0. A011 is represented through GovernanceResolution, ReviewTimeoutResolution, OperatingMode, PlanningScope, authority/operator relationship disclosures, AuditEvents, and basic administrative observability. Full moderation-abuse dashboards, automatic possible-abuse findings, cross-actor rejection-rate comparisons, duplicate/outside-scope comparability analytics, and operator-concentration analytics remain Extension v1+ or country/administrator observability.
 No separate ComplexityBudget object required in Core v0. A012/P007 is a design-time discipline enforced through the formal entity inventory test, ThresholdPolicy-triggered burden, and this schema's minimalism. Quantitative complexity metrics, object-count ceilings, and implementation-cost models remain Extension v1+ or future implementation.
+No separate RelationshipGraph object required in Core v0. A014 relationship graphs are represented through existing `RelatedPartyConflictReview` severity and disclosure fields, `StateOwnedOperatorDisclosure`, role and supplier declarations, ProjectPhase gates, FiscalizationAssignment, disbursement blockers, and AuditEvents, with the same graph serving A018 collusion observability. Beneficial-ownership verification, corporate-registry integration, and relationship-graph analytics remain Extension v1+ or country implementation.
 ```
 
 ## Macul Multi-Court Schema Trace
@@ -331,6 +332,7 @@ AuditEvents connect each role action, object transition, rule version, source re
 6. Data retention, export, redaction, and public snapshot rules.
 7. Whether later implementations should add advanced platform-influence analytics, causal exposure-to-funding metrics, ranking-bias dashboards, or per-impression logs without making them Core v0 requirements.
 8. Whether later implementations should add privacy-aware participation-equity analytics, demographic participation-gap measurement, accessibility outreach metrics, or authority-facing inclusion dashboards without making perfect participation a Core v0 requirement.
+9. Whether later implementations should add beneficial-ownership verification, corporate-registry integration, or relationship-graph analytics against the A014 related-party graph without making them Core v0 requirements.
 7. Performance implications of reconstructing read models from audit/event history.
 
 ## Boundary With Phase 3

@@ -590,6 +590,22 @@ Core v0 does not require a quantitative complexity metric, a formal object-count
 
 ---
 
+## A014 - Related-party projects and hidden control
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A014 is founded and does not distort the project when it targets hidden control rather than declared proximity. Core v0 handles it as a minimum related-party relationship graph and severity model, integrated as observability over declarations already required by `RelatedPartyConflictReview` and the role model rather than as a new primary entity. The same relationship-and-control graph serves A018 collusion observability; one graph, two consumers.
+
+Related-party status is not automatic invalidity. The minimum relationship graph makes ownership and control chains, board or management control, material supplier and subcontractor relationships, repeated fiscalizer/evidence-producer relationships, delegate or funder relationships to project actors, and authority-linked operator status visible where material. Declared proximity is handled proportionally with visible warnings, while hidden, severe, or control-relevant relationships escalate to stronger safeguards, correction, blocking, exclusion, complaint review, responsibility review, or reputation effects.
+
+Core v0 does not require beneficial-ownership verification, corporate-registry integration, or investigative discovery of undeclared relationships. Verification depth against external registries is a country implementation decision, and graph analytics beyond declared and observed platform relationships remain Extension v1+. Limitation statement: the relationship graph sees declared relationships and on-platform patterns; deliberately concealed off-platform control can defeat it, and the architecture's answer is to make concealment costly and reviewable, not impossible.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -601,6 +617,8 @@ Core v0 does not require a quantitative complexity metric, a formal object-count
 - [x] Are public authorities kept external to internal project participation in scopes they control under Core v0?
 - [x] Are state-owned operators distinguished from public authorities and checked for control, privilege, and operating-mode conflicts?
 - [x] Are material tutored decisions represented as public governance-resolution objects?
+- [ ] Is the minimum related-party relationship graph (ownership/control, board control, material suppliers, repeated control relationships, delegate/funder ties, authority-linked operators) visible where material?
+- [ ] Is the A014 relationship graph reused for A018 collusion observability rather than duplicated?
 - [ ] Does role-based reputation match actual responsibility?
 
 ## 2. Project object checklist
@@ -722,6 +740,8 @@ Core v0 does not require a quantitative complexity metric, a formal object-count
 - [ ] Does every disbursement have fiscalizer review?
 - [ ] Are blocking issues checked before release?
 - [ ] Does a complaint-based disbursement block identify affected scope and distinguish systemic pause from material/legal suspension?
+- [ ] Do hidden or control-relevant relationships escalate to correction, blocking, exclusion, complaint, responsibility, or reputation effects while declared proximity stays proportional?
+- [ ] Is beneficial-ownership verification treated as country implementation rather than a Core v0 promise?
 - [ ] Are partial releases governed by pre-defined rules?
 - [ ] Are retained funds visible?
 - [ ] Does release check the Financial Assurance Profile and Guarantee Materialization Record where applicable?

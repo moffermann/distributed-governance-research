@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
@@ -73,6 +73,6 @@ A fiscalizer approves design deliverables for a company later found to share dir
 - Are safeguards proportional to role and risk?
 - Are hidden conflicts punished more strongly than disclosed conflicts?
 
-## Expected resolution output
+## Resolution output
 
-A Phase 3 resolution should define a related-party severity model and minimum relationship graph for project roles and material suppliers.
+Resolved in `docs/80_RELATED_PARTY_RELATIONSHIP_GRAPH_AND_A014_RESOLUTION.md`: a minimum related-party relationship graph and severity model, integrated as observability over declarations already required by `RelatedPartyConflictReview` and the role model rather than a new primary entity. The graph covers ownership and control chains, board or management control, material supplier and subcontractor relationships, repeated fiscalizer/evidence-producer relationships, delegate or funder relationships to project actors, and authority-linked operator status; declared proximity is handled proportionally, while hidden or control-relevant relationships escalate to correction, blocking, exclusion, complaint, responsibility, or reputation effects. The same graph serves A018 collusion observability. Core v0 does not require beneficial-ownership verification or corporate-registry integration; verification depth is a country-implementation decision and graph analytics remain Extension v1+.

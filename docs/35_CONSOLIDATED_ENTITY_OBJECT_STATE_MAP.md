@@ -783,6 +783,10 @@ Rule:
 
 > Related-party status does not automatically invalidate a project. The system exposes the relationship, classifies severity, and applies proportional safeguards or blocking consequences.
 
+A014 related-party observability:
+
+> A014 related-party observability: Core v0 does not add a separate relationship-graph entity; the minimum graph is expressed through RelatedPartyConflictReview, role and supplier declarations, and AuditEvents, with severity-based escalation effects. The same graph serves A018 collusion observability, and beneficial-ownership verification or corporate-registry integration remains country implementation.
+
 Example:
 
 ```text
