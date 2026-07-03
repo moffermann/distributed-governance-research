@@ -4,15 +4,51 @@
 
 This document is the shortest professional entry point into the Distributed Governance System v0.
 
-It does not replace the full repository.
-
-It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first.
+It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first.
 
 The goal is to answer one question clearly:
 
 ```text
 What is the minimum coherent version of this model that can be explained, criticized, compared, and piloted?
 ```
+
+## Motivation and guiding question
+
+This project begins from a practical political question, not merely from a technical architecture question.
+
+The motivating question is:
+
+> Can modern technology realign institutional incentives enough to improve citizen participation, reduce corruption, increase accountability, and perform part of the work now monopolized by state institutions, without destroying the existing institutional order?
+
+The project is not motivated by the belief that software alone can replace public authority.
+
+It is motivated by a narrower observation: many public functions are not single indivisible acts of sovereignty. They contain separable layers:
+
+```text
+problem discovery
+project design
+resource allocation
+evidence production
+execution
+fiscalization
+disbursement
+complaint handling
+closure evaluation
+reputation
+rule-change traceability
+```
+
+Some layers may still require legally recognized public authority. Others may be made more distributed, verifiable, contestable, and incentive-aligned using technology.
+
+The political intuition behind the model is that the state should not be analyzed as one block. Some functions require central authority. Some require hybrid governance. Some may benefit from distributed project-based execution and verification.
+
+The project therefore asks whether a bounded governance layer can be built where citizens do not merely vote, complain, or delegate trust upward, but participate inside a structured system of measurable promises, conditional funding, evidence, independent control, and reputational feedback.
+
+The reason this must be framed carefully is that the idea becomes overwhelming when stated as a proposal to redesign the state. A more useful starting point is smaller:
+
+> Can a bounded public project system use technology to make value promises measurable, funding conditional, evidence inspectable, fiscalization independent, failure consequential, and future trust reputation-based?
+
+That is the first publishable claim.
 
 ## One-sentence thesis
 
@@ -36,7 +72,7 @@ The model is narrower:
 
 > It proposes a functional architecture for a bounded layer of public project governance: proposal, funding, execution, evidence, fiscalization, disbursement, closure, and reputation.
 
-The state or public authority may still define legal guarantees, eligibility frameworks, planning scopes, budget boundaries, protected service floors, identity rules, treasury custody, sanctions, and country-specific implementation rules.
+The state or public authority may still define legal guarantees, eligibility frameworks, planning scopes, budget boundaries, protected service floors, identity rules, treasury custody, sanctions, appeals, and country-specific implementation rules.
 
 The innovation is not the disappearance of public authority.
 
@@ -62,6 +98,7 @@ This creates familiar failure modes:
 - weak performance can remain hidden inside administrative categories;
 - reformulations can obscure failure;
 - rule changes can be invisible or surprising;
+- corruption and related-party conflicts can remain difficult to discover;
 - institutional monopolies can preserve control while claiming public accountability.
 
 At the same time, purely open participation models create their own problems:
@@ -76,11 +113,11 @@ At the same time, purely open participation models create their own problems:
 
 The central problem is therefore not simply centralization versus decentralization.
 
-The central problem is how to design a governance layer that uses distributed knowledge and participation without losing planning boundaries, evidence quality, fiscal control, privacy, and accountability.
+The central problem is how to design a governance layer that uses distributed knowledge and participation without losing planning boundaries, evidence quality, fiscal control, privacy, continuity protection, and accountability.
 
 ## Core design claim
 
-The project proposes that many bounded public functions can be governed through a project-based architecture.
+The model proposes that many bounded public functions can be governed through a project-based architecture.
 
 In this architecture, a public project is not merely a description or funding request.
 
@@ -109,9 +146,7 @@ The system therefore shifts the center of gravity from institutional trust to tr
 
 ## Minimal object model
 
-The full repository contains many objects.
-
-For publication, the minimal model can be explained through seven core objects.
+The full repository contains many objects. For publication, the minimal model can be explained through seven core objects.
 
 ## 1. Planning Scope
 
@@ -125,19 +160,7 @@ It answers:
 What public function, territory, pilot, budget lane, or policy area is open to project-based distributed governance?
 ```
 
-A Planning Scope prevents the system from becoming an unconstrained popularity market.
-
-It can define:
-
-- eligible project types;
-- excluded project types;
-- territorial boundaries;
-- essential service protections;
-- protected public floors;
-- funding lanes;
-- threshold policies;
-- review dates;
-- operating mode.
+A Planning Scope prevents the system from becoming an unconstrained popularity market. It can define eligible project types, excluded project types, territorial boundaries, essential service protections, protected public floors, funding lanes, threshold policies, review dates, and operating mode.
 
 Example:
 
@@ -152,9 +175,7 @@ Excluded:
 professional club subsidies, private exclusive facilities, projects without public access, projects requiring unresolved national permits.
 ```
 
-The Planning Scope is the first boundary of the model.
-
-It says: not everything is financeable just because someone wants it.
+The Planning Scope is the first boundary of the model. It says: not everything is financeable just because someone wants it.
 
 ## 2. Project
 
@@ -162,11 +183,7 @@ A Project is the basic financeable and executable unit.
 
 A project must have an identified responsible executor before it can receive execution funding.
 
-It is not enough to publish an idea.
-
-Ideas capture civic demand.
-
-Projects execute responsibility.
+It is not enough to publish an idea. Ideas capture civic demand. Projects execute responsibility.
 
 A minimal project includes:
 
@@ -243,9 +260,7 @@ closure evaluation
 reputation effects
 ```
 
-It is not a pile of documents.
-
-It is the verification contract of the project.
+It is not a pile of documents. It is the verification contract of the project.
 
 Example:
 
@@ -262,11 +277,7 @@ evidence-producer observations where required
 fiscalizer review
 ```
 
-The evidential contract does not preselect independent evidence producers.
-
-It defines what kind of evidence is needed and what qualifications or methods are required.
-
-Evidence producers may later offer to produce evidence that satisfies the accepted contract.
+The evidential contract does not preselect independent evidence producers. It defines what kind of evidence is needed and what qualifications or methods are required. Evidence producers may later offer to produce evidence that satisfies the accepted contract.
 
 ## 5. Funding Attempt / Funding Commitment
 
@@ -285,9 +296,7 @@ what happens if funding fails
 
 A Funding Commitment is a citizen or actor commitment to fund the project under the stated conditions.
 
-Funding is not immediate payment to the executor.
-
-It is conditional.
+Funding is not immediate payment to the executor. It is conditional.
 
 Funds are released only after the project satisfies the relevant milestone, evidence, fiscalization, and disbursement rules.
 
@@ -322,15 +331,11 @@ Citizens observe, comment, object, and denounce.
 
 The executor should not privately appoint or control the actor responsible for validating its own performance.
 
-For low-risk projects, fiscalization can be light.
-
-For larger, technical, remote, irreversible, vulnerable-beneficiary, or high-risk projects, fiscalization must be reinforced.
+For low-risk projects, fiscalization can be light. For larger, technical, remote, irreversible, vulnerable-beneficiary, or high-risk projects, fiscalization must be reinforced.
 
 ## 7. Project Closure Accountability Record / Reputation Update
 
-A project does not simply end.
-
-It closes through an accountability record.
+A project does not simply end. It closes through an accountability record.
 
 The Project Closure Accountability Record should show:
 
@@ -349,9 +354,7 @@ reputation updates
 citizen-facing explanation
 ```
 
-The closure category is descriptive.
-
-The reputational core is the verified fulfillment of the value thesis.
+The closure category is descriptive. The reputational core is the verified fulfillment of the value thesis.
 
 Example:
 
@@ -384,9 +387,7 @@ Negative adjustment plus responsibility event.
 
 The executor's reputation should be numeric, visible, role-specific, and updated over time using a weighted moving average, exponential moving average, or equivalent decay mechanism.
 
-A bad evaluation should matter in future projects.
-
-But it should not be eternal if later performance is consistently strong.
+A bad evaluation should matter in future projects, but it should not be eternal if later performance is consistently strong.
 
 ## Minimal flow
 
@@ -428,9 +429,7 @@ Before execution funding opens, the project must pass minimum validation, includ
 
 Citizens or configured allocation profiles commit funds to the project.
 
-Funding commitments are not uncontrolled transfers.
-
-They are conditional commitments tied to the project's rules.
+Funding commitments are not uncontrolled transfers. They are conditional commitments tied to the project's rules.
 
 ## Step 4 — Control is configured
 
@@ -438,9 +437,7 @@ Fiscalizers and evidence producers may offer to participate.
 
 The project requires a control package proportional to its risk and evidential needs.
 
-Execution cannot begin merely because funding exists.
-
-Execution requires the relevant funding, evidence, fiscalization, and readiness conditions to be closed.
+Execution cannot begin merely because funding exists. Execution requires the relevant funding, evidence, fiscalization, and readiness conditions to be closed.
 
 ## Step 5 — Funds are released by milestones
 
@@ -488,13 +485,9 @@ modeler reputation
 complainant reputation where relevant
 ```
 
-Reputation is not collective blame.
-
-It is role-specific and evidence-linked.
+Reputation is not collective blame. It is role-specific and evidence-linked.
 
 ## Example: six-month neighborhood sports school
-
-## Project summary
 
 ```text
 Planning Scope:
@@ -540,9 +533,7 @@ Evidence: beneficiary or parent confirmation, survey, closure review.
 
 The project must define how each metric will be evidenced.
 
-Executor self-report may not be enough for all metrics.
-
-The contract may require beneficiary confirmation, independent evidence production, and fiscalizer review.
+Executor self-report may not be enough for all metrics. The contract may require beneficiary confirmation, independent evidence production, and fiscalizer review.
 
 ## Funding
 
@@ -694,9 +685,7 @@ Its claim is more modest:
 
 Participatory budgeting usually focuses on citizen selection or prioritization of projects.
 
-This model goes further.
-
-It asks:
+This model goes further. It asks:
 
 ```text
 What exactly was promised?
@@ -709,9 +698,7 @@ How do complaints affect payment and closure?
 How does performance affect future trust?
 ```
 
-The model is therefore not merely participatory allocation.
-
-It is participatory allocation plus evidential contract, fiscalization, conditional disbursement, closure accountability, and role-specific reputation.
+The model is therefore not merely participatory allocation. It is participatory allocation plus evidential contract, fiscalization, conditional disbursement, closure accountability, and role-specific reputation.
 
 ## Why this is not just procurement
 
@@ -735,18 +722,7 @@ Was the promised public value verified?
 
 The model does not assume that token voting, smart contracts, or decentralized consensus are sufficient for public governance.
 
-It requires:
-
-- verified actors;
-- public scopes;
-- evidence obligations;
-- fiscalization;
-- privacy rules;
-- complaint paths;
-- legal and country-specific boundaries;
-- protected floors for essential services;
-- non-retroactive protocol changes;
-- role-based reputation.
+It requires verified actors, public scopes, evidence obligations, fiscalization, privacy rules, complaint paths, legal and country-specific boundaries, protected floors for essential services, non-retroactive protocol changes, and role-based reputation.
 
 The architecture may use digital infrastructure, but it is not reducible to on-chain voting or automatic execution.
 
@@ -802,6 +778,8 @@ This model proposes a bounded, project-based governance layer for public resourc
 It does not ask citizens to blindly trust a ministry, a contractor, a platform, an AI model, or a crowd.
 
 It asks each project to make a measurable value promise, define how that promise will be evidenced, receive conditional funding, submit to independent control, release funds by verified milestones, preserve a full audit trail, and update role-specific reputation according to verified fulfillment.
+
+The deeper motivation is political: to test whether technology can help realign incentives, expand meaningful citizen participation, reduce corruption opportunities, and distribute parts of public governance without requiring the destruction of existing institutions.
 
 In one sentence:
 
