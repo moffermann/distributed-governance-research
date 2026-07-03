@@ -215,3 +215,5 @@ The v0 rule should therefore be applied through proportional validation and revi
 ## Status
 
 Aligned Core v0 accountability hypothesis. H010 defines the Primary Responsibility Anchor as the project-level accountability center that connects roadmap attachment, value thesis, Project Evidential Contract, phase structure, disbursement, closure, and role-specific reputation. ^rabc21f1b
+
+Under [[../../docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|A033]], the Primary Responsibility Anchor is paired with a distinct Duty-of-Care Anchor: the value-focused anchor answers what the project is primarily responsible for delivering, while the Duty-of-Care Anchor names, before disbursement, the solvent legal person answerable to third parties for physical and safety harm. The two are separate because a project can deliver its value thesis adequately and still cause third-party harm, and a victim needs a named, reachable defendant rather than "the project"; liability apportionment stays external law.

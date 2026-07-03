@@ -383,6 +383,10 @@ A021 fiscal commitment:
 
 > A021 fiscal commitment: Core v0 adds no fiscal-enforcement entity; the Fiscal Commitment Profile is a versioned record on PlanningScope, and reliability indicators read from custody and order records with AuditEvents.
 
+A033 duty of care:
+
+> A033 duty of care: Core v0 adds no liability entity; the Duty-of-Care Anchor is a pre-disbursement record naming the answerable legal person, tied to FinancialAssuranceProfile, Post-Closure Coverage, and AuditEvents.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

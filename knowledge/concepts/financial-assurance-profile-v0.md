@@ -95,6 +95,8 @@ Construction funds remain reserved until design gate, control package, guarantee
 
 Financial assurance reduces loss and preserves leverage. It does not promise zero risk, full recovery of spent funds, or replacement of courts, regulators, lawful custodians, insurers, or competent authorities. ^r94bd9c38
 
+Under [[../../docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION|A033]], the Financial Assurance Profile extends beyond delivery-failure protection to third-party liability coverage proportionate to physical risk where Threshold Policy requires it, so a project that names a Duty-of-Care Anchor also provisions materialized coverage sized against physical and safety harm to third parties. The profile records and provisions this coverage; it does not adjudicate who is liable or in what proportion, which remains external law.
+
 ## Status
 
 Core v0 concept aligned with H011.

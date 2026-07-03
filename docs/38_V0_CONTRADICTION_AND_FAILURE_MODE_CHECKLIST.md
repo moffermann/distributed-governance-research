@@ -718,6 +718,22 @@ Core v0 records and surfaces fiscal behavior; it enforces nothing. Limitation st
 
 ---
 
+## A033 - The problem of many hands: responsibility vacuum
+
+**Severity:** High
+**Status:** Resolved
+**Resolution document:** `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`
+
+### Accepted v0 rule
+
+A033 is founded. When harm to a third party results from the interaction of adequately-performed roles, the responsibility matrix can truthfully find that no role breached its internal obligation, C012 forbids blame by association, and P003 assigns responsibility to "the project," which is not a legal person a victim can sue — a responsibility vacuum. Under `knowledge/principles/P007-integrate-or-bound-rule.md`, this resolution integrates through existing objects — the Financial Assurance Profile, the Post-Closure Coverage Profile, the responsibility matrix, and AuditEvents — rather than adding a liability entity. It names the answerable legal person and provisions coverage; it does not adjudicate liability.
+
+Every execution-financeable project names, before disbursement, the solvent, reachable legal person or persons answerable to third parties for physical and safety harm — a Duty-of-Care Anchor mapping to an executor, guarantor, insurer, or designated responsible operator, exposed on the citizen-facing sheet as a plain statement such as `responsible party: [name] — liability coverage active`. The Financial Assurance and Post-Closure Coverage profiles extend to third-party liability coverage proportionate to physical risk where Threshold Policy requires it; versioned documentation states that distributed micro-allocation does not dilute the state's underlying duty of care and records where residual public responsibility remains; the responsibility matrix distinguishes "no role breached its internal obligation" from "no one is liable to the victim"; and the audit trail preserves a harm-attribution evidence package — roles, versions, gates, evidence — usable by a court. In the Macul collapsed-roof scenario, the family's lawyer finds a named defendant with materialized coverage and a documented chain of who did what, instead of "everyone a little, no one enough."
+
+The platform records the duty-bearer and provisions coverage; it does not adjudicate who is at fault or in what proportion — liability apportionment remains external law. Limitation statement: a named anchor and coverage guarantee a reachable defendant, not a just outcome, and the doctrinal construction of liability in distributed public funding remains untested in any jurisdiction.
+
+---
+
 # B. Checklist by system area
 
 ## 1. Actor and role checklist
@@ -867,6 +883,9 @@ Core v0 records and surfaces fiscal behavior; it enforces nothing. Limitation st
 - [ ] Does every milestone link to budget line, phase, value relevance, evidence need, review basis, blocker check, retention, and release amount?
 - [ ] Can avoidably weak milestone design trigger designer/modeler responsibility review, and does the fiscalizer state why evidence supports release, partial release, retention, or rejection?
 - [ ] Do citizen-facing summaries separate funding, reservation, release, retained funds, and guarantee status?
+- [ ] Does every execution-financeable project name a solvent Duty-of-Care Anchor for third-party physical harm before disbursement, exposed on the citizen sheet?
+- [ ] Do assurance and post-closure profiles include third-party liability coverage proportionate to physical risk where Threshold Policy requires?
+- [ ] Does the responsibility matrix distinguish no-internal-breach from no-one-liable-to-the-victim, and does the audit trail preserve a court-usable harm-attribution package?
 - [ ] Are partial releases governed by pre-defined rules?
 - [ ] Are retained funds visible?
 - [ ] Does release check the Financial Assurance Profile and Guarantee Materialization Record where applicable?

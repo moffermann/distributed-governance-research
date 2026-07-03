@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Second-round paired review completed. Accepted resolution: `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`.
+Second-round paired review completed. Accepted resolution: `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`. Propagated into the core corpus.
 
 ## Attack reference
 

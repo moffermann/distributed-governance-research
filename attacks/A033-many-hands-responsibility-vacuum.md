@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired Phase 3 review. Improvements integrated in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md`.
+Reviewed in paired Phase 3 review. Improvements integrated in `docs/89_DUTY_OF_CARE_ANCHOR_AND_A033_RESOLUTION.md` and propagated into the core corpus.
 
 ## Description
 
