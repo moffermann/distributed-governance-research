@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.5 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y revisiones metodológicas del autor sobre la simulación, su encuadre y el criterio de éxito de las conclusiones, todas parte del registro público.**
+**Working paper — v1.6 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y revisiones metodológicas del autor sobre la simulación, su encuadre, el criterio de éxito de las conclusiones y el canal de incentivos de la entrega, todas parte del registro público.**
 
-*Traducción al español del working paper v1.5 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.6 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff.*
 
@@ -45,7 +45,12 @@ hallando que la entrega verificada añade un +43% sobre carteras idénticas, que
 las ganancias de selección y de entrega se multiplican, que la arquitectura
 completa entrega 2.19× la línea base opaca del statu quo, y que la finalización
 oficialmente reportada del statu quo sobreestima la entrega real en veintinueve
-puntos porcentuales. Tercero,
+puntos porcentuales; un sexto experimento aísla el canal de incentivos —los
+estándares visibles sostienen la calidad de la ejecución allí donde la opacidad
+la deja decaer hacia la minimización de costos— y halla que la asignación
+ingenua ponderada por reputación concentra el trabajo más rápido de lo que
+descubre capacidad, evidencia de la maquinaria de observabilidad de la
+concentración de la arquitectura. Tercero,
 método: la arquitectura se desarrolló bajo revisión adversarial sistemática
 —treinta y cinco resúmenes de ataque (attack briefs), cada uno con una defensa
 emparejada y una resolución aceptada bajo una regla explícita de integrar-o-acotar
@@ -642,6 +647,33 @@ porta una firma distributiva amplia y medible —"cerca de mí" concentra el 71%
 presupuesto en el quintil más denso, "rural" lo invierte— de modo que el valor
 por defecto es una palanca de política distributiva visible y configurable, no un
 sesgo inherente del planificador.
+
+**Hallazgo 6: la visibilidad sostiene el estándar; los mercados reputacionales
+ingenuos concentran más rápido de lo que seleccionan.** Un sexto experimento
+preregistrado (`research/e6-reputational-competition-design.md`) aísla el canal
+de incentivos de la disuasión por completo: un conjunto de ejecutores enteramente
+honestos con esfuerzo costoso y ajustable y sin posibilidad de desvío. En el
+régimen opaco, el esfuerzo se desploma hacia la minimización de costos
+(0.49 → 0.24 a lo largo de veinticuatro ciclos) —no por malicia, sino porque el
+esfuerzo no tiene retorno y no existe un estándar visible que imitar. Hacer
+visible la calidad verificada sostiene el esfuerzo cerca de su nivel inicial, y
+el régimen visible-competitivo entrega un +11% sobre la línea base opaca —una
+ganancia de incentivo pura con cero desvío en el modelo. Dos predicciones
+preregistradas fallaron de manera informativa. La visibilidad por sí sola porta
+la mayor parte del efecto: el espejo precede al mercado (la regla conductual liga
+la imitación a la visibilidad, de modo que parte de esto es por construcción
+—pero la construcción codifica la afirmación de que la opacidad erosiona las
+normas profesionales al eliminar el estándar mismo). Y la asignación ingenua
+ponderada por reputación concentra el trabajo de manera dramática (Gini de
+asignaciones 0.84 frente a 0.34) mientras rastrea la capacidad verdadera solo
+débilmente —bloqueo por suerte temprana, la dinámica de ventaja acumulativa de
+las cascadas de información reapareciendo en el mercado de ejecutores. La lección
+de diseño corre en ambas direcciones: la visibilidad verificada es donde vive el
+incentivo de calidad, y toda ponderación fuerte por reputación —humana o
+algorítmica— necesita la observabilidad de la concentración, los pisos para
+entrantes y la reputación normalizada por oportunidades que el corpus prescribe.
+En Core v0, la reputación informa las elecciones de los financiadores antes que
+la asignación automática, con la concentración visible por construcción.
 
 ## 7. La validación adversarial como método
 
