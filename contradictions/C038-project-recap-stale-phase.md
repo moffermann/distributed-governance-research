@@ -2,7 +2,7 @@
 
 ## Status
 
-Open — pending author review.
+Accepted (mark historical) — corrected in the one-hundred-sixteenth residual cleanup: retitled as a preserved snapshot pointing to the roadmap for current status.
 
 ## Contradiction
 

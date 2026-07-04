@@ -1,6 +1,6 @@
-# Current Project Recap
+# Project Recap as of 2026-06-26 (Historical Snapshot)
 
-Last updated: 2026-06-26
+Last updated: 2026-06-26. **This document is a preserved historical snapshot**: it describes the project as it stood at that date (Phase 1) and is not maintained. For current phase, status, and priorities, see [[03_ROADMAP|docs/03_ROADMAP.md]].
 
 ## Project identity
 

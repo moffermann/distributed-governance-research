@@ -30,7 +30,7 @@ Each `C0NN-slug.md` contains: Status / Contradiction (side A and side B, quoted 
 | [[C035-algorithm-as-coordinator-framing\|C035]] | Algorithm-as-coordinator card vs the qualified allocation framing | Low | Accepted (116th) |
 | [[C036-repo-readme-stale-landing\|C036]] | Repository README describes an early-stage project with a partial map | High | Accepted (116th) |
 | [[C037-agents-md-stale-phase\|C037]] | OPERATIONS.md declares Phase 1 and pre-manuscript priorities | Medium | Accepted (116th) |
-| [[C038-project-recap-stale-phase\|C038]] | Current Project Recap declares Phase 1 despite its title | Low-Medium | Open |
+| [[C038-project-recap-stale-phase\|C038]] | Current Project Recap declares Phase 1 despite its title | Low-Medium | Accepted (116th) |
 | [[C039-dual-project-state-diagrams\|C039]] | Two project state diagrams define incompatible parent machines, both listed as current | Medium | Accepted (116th) |
 | [[C040-expiry-state-drift\|C040]] | Expiry-state drift: undefined "Expired" vs "Expired Unfunded" across enumerations | Low | Open |
 | [[C041-citizen-language-rule-violated\|C041]] | C009's citizen-language rule violated by the citizen-facing status maps | Medium | Accepted (116th) |
