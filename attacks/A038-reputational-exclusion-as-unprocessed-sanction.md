@@ -2,7 +2,7 @@
 
 ## Status
 
-Manuscript-review round brief. Pending paired review; no accepted resolution yet.
+Reviewed in paired review. Reclassified by author review as partially founded and resolved in [[107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION.md]]: the design contains no reputational exclusion power to sanction with.
 
 ## Description
 
@@ -86,4 +86,4 @@ The first executor excluded in a pilot is a politically connected mid-size firm.
 
 ## Resolution output
 
-None yet. Pending paired defense and review.
+The accepted resolution reclassified the attack: no corpus document grants the platform exclusion power over executors or proponents — eligibility before funders is the funder's sovereign choice, and reputation informs without ever excluding. The resolution adopted the informs-never-excludes principle as an explicit Core v0 boundary, mandated the manuscript's exclusion-wording correction for v1.7 with the model-to-design mapping (in-model pool exit operationalizes funders ceasing to choose actors with visible confirmed-diversion records), and confirmed the existing reviewed-finding and contestation guarantees at the control-role admission boundary, where the attack's due-process concern has its only real purchase. D038's full sanctionatory procedure was not adopted.

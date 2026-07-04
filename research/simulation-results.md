@@ -382,8 +382,9 @@ Paired contrasts on final V: B3−B1 = +0.059 [0.051, 0.067]; B2−B1 =
 
 **Scope boundary, declared.** B3's automatic reputation-weighted
 assignment is a stylization: in Core v0, executors are not
-protocol-assigned — reputation informs funders' choices and eligibility,
-with concentration visible. The lock-in warning therefore reads as design
+protocol-assigned — reputation informs funders' choices and never
+excludes an actor from being chosen (docs/107), with concentration
+visible. The lock-in warning therefore reads as design
 guidance for any strong reputation weighting, human or algorithmic, and as
 evidence for the corpus's existing concentration-observability machinery
 rather than as a description of the architecture's mechanism.
