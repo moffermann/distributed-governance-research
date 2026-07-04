@@ -133,6 +133,10 @@ Those decisions remain with the country, jurisdiction, or authorized governance 
 
 > A first transition pilot should be socially visible, low enough risk to experiment, and concrete enough to measure. Sports is a strong candidate in many contexts, but pilot-sector choice, budget share, operating mode, and expansion pace are country implementation decisions.
 
+## Adoption configuration
+
+Under [[../../docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109]], the pilot's sponsor question is answered by design rather than assumed: the plausible adopter archetypes are the post-scandal challenger, the mandating higher government, and the conditioned external funder; the pilot default is prospective baseline framing (instrumentation-onset measurement, impersonal pre-adoption context), with credit-attribution surfaces on verified delivery, first-cycle institutional attribution under a good-faith safe harbor, and the symmetry clause — no scope exempts its operator's own projects. The thesis boundary stands: the architecture's feasibility and delivered-value results do not depend on any authority's willingness to adopt.
+
 ## Research note
 
 Transition-pilot hypothesis. Needs later empirical validation and country-specific design. It should be read as a pilot example and evaluation strategy, not as a universal architecture requirement.

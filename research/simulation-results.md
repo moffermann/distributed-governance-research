@@ -253,9 +253,10 @@ high-θ projects) and stopped where the thesis begins. States redistribute
 to improve social welfare, and the question that matters is how much value
 arrives — Okun's leaky bucket. E5 adds the execution stage: executors with
 hidden types whose diversion decision follows Model 1's IC condition,
-under two delivery regimes — opaque (status-quo layer: p = 0.10, large
-unprotected advances, no recovery, no reputational memory; leakage priors
-anchored in Reinikka and Svensson 2004 and Olken 2007) and verified (the
+under two delivery regimes — opaque (a zero-control lower bound, per the
+docs/105 relabeling: p = 0.10, large unprotected advances, no recovery,
+no reputational memory; leakage priors anchored in Reinikka and Svensson
+2004 and Olken 2007) and verified (the
 architecture layer from the corpus's own Models 1-2: milestone gating,
 retention, recovery, p = 0.75, reputational stake with exclusion) —
 crossed with the two E4 selection regimes in a 2×2 whose main effects are
@@ -264,7 +265,7 @@ seed: S and A1 fund the identical project set. N_p = 200, 20 seeded runs.
 
 | arm | V/budget | leak | visibility gap | sel(θ) |
 |---|---|---|---|---|
-| S — central / opaque (status quo) | 0.393±0.053 | 0.316±0.079 | 0.286±0.072 | 0.138±0.071 |
+| S — central / opaque (zero-control lower bound) | 0.393±0.053 | 0.316±0.079 | 0.286±0.072 | 0.138±0.071 |
 | A1 — central / verified (same portfolio as S) | 0.561±0.036 | 0.000±0.000 | 0.000±0.000 | 0.138±0.071 |
 | A3 — distributed / opaque | 0.606±0.053 | 0.294±0.057 | 0.266±0.048 | 0.764±0.023 |
 | A2 — distributed / verified (full architecture) | 0.859±0.023 | 0.000±0.000 | 0.000±0.000 | 0.764±0.023 |
@@ -286,8 +287,8 @@ selection effect V(A3)−V(S) = 0.213 [0.179, 0.248] and V(A2)−V(A1) = 0.299
 2. **Prediction 2 HELD: the layers multiply.** The interaction is positive
    and its CI excludes zero — verified delivery amplifies selection gains,
    because a well-chosen project that leaks loses its advantage. The full
-   architecture delivers 2.19× the status quo per unit budget (0.859 vs
-   0.393); the author's thought experiment 1 (identical projects,
+   architecture delivers 2.19× the zero-control lower bound per unit
+   budget (0.859 vs 0.393); the author's thought experiment 1 (identical projects,
    different control layer) is worth +43% by itself.
 3. **Prediction 3 FAILED in the informative direction: deterrence
    pre-empts exclusion.** Under the specified verified parameters the IC
@@ -415,7 +416,8 @@ rather than as a description of the architecture's mechanism.
 5. E5 re-centers the whole evidence stack on the thesis: what the
    architecture ultimately buys is delivered social value per unit of
    budget. Selection and delivery compound multiplicatively, the full
-   system delivers 2.19× the opaque baseline, the verification layer's
+   system delivers 2.19× the zero-control opaque baseline (a lower
+   bound, per docs/105), the verification layer's
    value arrives ex ante as deterrence (with reputational cleansing as the
    measured second line), and the status quo's accountability deficit is
    quantified as a 29-point visibility gap between reported and real
@@ -430,3 +432,11 @@ apart from social proof; parameter choices (pool size, slots, η, scarcity)
 are plausible rather than calibrated to a specific PB dataset — directions
 and orderings, not point values, are the findings. Replication across
 seeds is deterministic.
+
+Reporting of these results is governed by the docs/105 rule: in-model
+qualifiers and named baselines on every headline figure, with the E5
+opaque arm labeled a zero-control lower bound. The pre-registered E7
+(`research/e7-calibrated-baseline-design.md`) re-runs the headline
+against an audit-anchored institutional baseline, at municipal scale,
+with scaled planner bandwidth and adversarial signal bias, and carries a
+committed headline-withdrawal condition.

@@ -62,15 +62,15 @@ Y algo más: aunque nunca entres a la plataforma, igual ganas. Porque cada peso 
 
 ## ¿Funciona? Lo que encontramos al ponerlo a prueba
 
-Seamos honestos desde el principio: **esto todavía no se ha probado en la calle.** Es un diseño de investigación. Pero no es una servilleta con sueños: fue atacado sistemáticamente 35 veces por escrito — como hace un buen ingeniero con un puente antes de construirlo — y se puso a prueba en simulaciones computacionales con 10.000 ciudadanos virtuales, comparándolo contra un sistema como el actual. Tres resultados se pueden contar en pesos:
+Seamos honestos desde el principio: **esto todavía no se ha probado en la calle.** Es un diseño de investigación. Pero no es una servilleta con sueños: fue atacado sistemáticamente 40 veces por escrito — como hace un buen ingeniero con un puente antes de construirlo — y se puso a prueba en simulaciones computacionales con 10.000 ciudadanos virtuales, comparándolo contra el peor caso del sistema actual: uno sin controles que funcionen. Tres resultados se pueden contar en pesos:
 
-**Primero: con los mismos proyectos, vigilar bien casi duplica lo que llega.** Simulamos exactamente los mismos proyectos dos veces: una con el sistema actual (pagos por adelantado, poca revisión, sin consecuencias) y otra con las cinco reglas. Solo por cambiar la forma de pagar y vigilar, el valor que realmente llegó a la gente aumentó un 43%.
+**Primero: con los mismos proyectos, vigilar bien casi duplica lo que llega.** Simulamos exactamente los mismos proyectos dos veces: una imitando el peor caso del sistema actual (pagos por adelantado, poca revisión, sin consecuencias) y otra con las cinco reglas. Solo por cambiar la forma de pagar y vigilar, el valor que realmente llegó a la gente aumentó un 43%.
 
 **Segundo: el sistema actual no solo pierde plata — además no se entera.** En la simulación del sistema opaco, de cada 100 pesos que los registros oficiales daban por "ejecutados correctamente", cerca de 29 no se habían convertido en valor real para nadie. Y lo grave no es solo la pérdida: es que el sistema oficial *la reporta como éxito*. Sin medición independiente, el balde gotea y el informe dice que llegó completo.
 
 **Tercero — y este es el hallazgo más esperanzador: cuando todos saben que se mide, casi nadie intenta robar.** En las simulaciones con las reglas completas, los desvíos prácticamente desaparecieron — no porque atrapáramos a los tramposos, sino porque **dejó de convenir hacer trampa**. Cuando el pago llega solo contra pruebas, y fallar te cuesta la reputación y los contratos futuros, la trampa deja de ser negocio. El mejor guardia es el que nunca tuvo que actuar. Y hay un efecto más, medido por separado: cuando el buen trabajo se ve y cuenta para conseguir el siguiente proyecto, los que cumplen se esfuerzan más — en el sistema opaco, en cambio, el esfuerzo se va apagando, porque nadie lo nota y no cambia nada.
 
-Sumando todo — elegir mejor los proyectos y entregar de verdad — el sistema completo entregó **más del doble de valor por el mismo presupuesto** que la línea base opaca. En simulación, insistimos. Pero con cada supuesto publicado, para que cualquiera lo revise o lo refute.
+Sumando todo — elegir mejor los proyectos y entregar de verdad — el sistema completo entregó **más del doble de valor por el mismo presupuesto** que ese peor caso sin controles. En simulación, insistimos, y contra el peor caso: el siguiente experimento, ya comprometido por escrito, repite la comparación contra lo que las contralorías de varios países han medido de verdad. Pero con cada supuesto publicado, para que cualquiera lo revise o lo refute.
 
 ## Lo que este proyecto NO es
 

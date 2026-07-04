@@ -387,6 +387,8 @@ Final rule:
 
 > Treasury informs how much each citizen may finance and executes protocol-valid financial orders. The system records citizen balances, commitments, project ledgers, disbursements, returns, and recoveries. Treasury or any custodian moves money and validates technical/legal execution, but does not decide civic value, project priority, fiscalization, evidence, complaints, or discretionary disbursement.
 
+Visibility layering of these records is governed by [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]]: project ledgers, totals, disbursements, and role acts are public; the citizen-to-allocation link is secret by default, with individual ledgers reconciling cryptographically against public per-scope totals, re-linking limited to reviewed fraud investigation, and no receipt or exportable statement of any citizen's allocations — the citizen surface shows remaining balance and the followed-projects feed, not an allocation ledger view.
+
 ## Documents that should eventually reflect this resolution
 
 This resolution should inform future updates to:

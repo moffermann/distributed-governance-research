@@ -445,6 +445,11 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|102 - Allocation Act Characterization and A034 Resolution v0]]
 - [[../docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|103 - Administrative Capacity Declaration and A035 Resolution v0]]
 - [[../docs/104_CLOSURE_DEADLINE_EXPIRY_AND_C040_RESOLUTION|104 - Closure Deadline Expiry and C040 Resolution v0]]
+- [[../docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|105 - Simulation Reporting Rule, Audit-Anchored Baseline Evidence, and A036 Resolution v0]]
+- [[../docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|106 - Enabling-Norm Record, Binding-Mode Gate, and A037 Resolution v0]]
+- [[../docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|107 - Reputation Informs, Never Excludes, and A038 Resolution v0]]
+- [[../docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|108 - Citizen Allocation Secrecy, the Followed-Projects Feed, and A039 Resolution v0]]
+- [[../docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION|109 - The Adoption Layer, the Thesis Boundary, and A040 Resolution v0]]
 
 ## Literature
 

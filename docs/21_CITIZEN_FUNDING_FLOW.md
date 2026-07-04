@@ -168,6 +168,7 @@ The system should enforce simple rules:
 - the citizen can cancel before confirming;
 - the system should show the remaining citizen balance after the selected amount.
 - where phases exist, the system should show which phase or funding lane the contribution affects.
+- confirmation is in-app information for the citizen alone: per [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]], no receipt, certificate, or exportable proof of the allocation exists, and the funded project simply joins the citizen's followed-projects feed.
 
 Controlled overfunding should not increase the executor's execution budget by default.
 

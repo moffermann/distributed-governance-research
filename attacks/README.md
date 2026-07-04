@@ -8,7 +8,7 @@ The files in this folder are not accepted resolutions. They are attack briefs. E
 
 The paired defense briefs are in `defenses/`. Each `D00N` file corresponds to the `A00N` attack file with the same number.
 
-The accepted Phase 3 resolutions are in `docs/67` through `docs/103` (first round `docs/67`-`docs/84`; later rounds `docs/86`-`docs/103`). Each attack file now references the resolution that integrated its accepted improvement.
+The accepted Phase 3 resolutions are in `docs/67` through `docs/109` (first round `docs/67`-`docs/84`; later rounds `docs/86`-`docs/103`; manuscript-review round `docs/105`-`docs/109`). Each attack file now references the resolution that integrated its accepted improvement.
 
 ## Review basis
 

@@ -439,6 +439,22 @@ A035 administrative capacity declaration:
 
 > A035 administrative capacity declaration: Core v0 adds no staffing entity; the Administrative Capacity Declaration is the third versioned per-scope record on PlanningScope beside the Allocation Mandate and Fiscal Commitment Profile — expected review volume, staffing assignment, and per-resolution effort assumptions — with timeout policies calibrated to it, authority-side AI assistance inside the C008 boundary, review-window performance joined to the H054 transition metrics, and AuditEvents on every change.
 
+A037 enabling-norm record:
+
+> A037 enabling-norm record: Core v0 adds no legal entity; the enabling norm is a field set on the Allocation Mandate record on PlanningScope — instrument, rank, conferred competence, organ of imputation, review path — with a binding-mode gate (no norm of sufficient rank recorded, no binding mode; consultative or tutored operation is the disclosed default), legal defection surfaced as a recorded governance event parallel to the Fiscal Commitment Profile's indicators, and AuditEvents on every change; the reference legal proposal and doctrine remain external legislative work.
+
+A038 reputation boundary:
+
+> A038 reputation boundary: Core v0 adds no sanction entity and holds no exclusion power; reputation informs funders' choices and never excludes an actor from being chosen (docs/107). The model-level "exclusion after confirmed diversion" operationalizes funders ceasing to choose actors whose confirmed-diversion records are visible. Control-role admission (responsible fiscalizers, formal evidence producers) remains the separate protocolized boundary under H016, where disqualification requires a reviewed finding (C012, A013) contestable through the A011 surface.
+
+A039 citizen allocation secrecy:
+
+> A039 citizen allocation secrecy: Core v0 adds no new entity; visibility layering over the existing citizen balance, Funding Commitment, and project ledgers — public projects, totals, flows, and role acts; pseudonymous allocators reconciling cryptographically against per-scope totals; no receipt or exportable proof of any individual allocation; re-linking limited to reviewed, logged fraud investigation under the A026 access-auditing machinery; the citizen surface organized as the followed-projects feed with remaining balance, no allocation-ledger view.
+
+A040 adoption layer:
+
+> A040 adoption layer: Core v0 adds no political entity; adoption-time configuration defaults on Planning Scope and timeout policy — prospective baseline framing (instrumentation-onset measurement, impersonal pre-adoption context), credit-attribution surfaces on verified delivery, first-cycle institutional attribution with a good-faith safe harbor under the A035 capacity calibration, and the symmetry clause barring any scope from exempting its operator's own projects — with the thesis boundary recorded: feasibility and delivered value do not depend on any authority's willingness to adopt.
+
 ## Primary Responsibility Anchor
 
 A project attribute defining the main Planning Scope, roadmap goal, public function, or public-value outcome against which the project is primarily classified, compared, funded, evaluated, fiscalized, and held accountable.

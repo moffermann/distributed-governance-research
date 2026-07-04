@@ -769,7 +769,10 @@ was validated three ways before publication:
   added the execution stage and found that project selection and verified
   delivery compound multiplicatively: on matched portfolios the
   verified-delivery layer alone is worth +43%, the full architecture
-  delivers 2.19× the opaque status quo per unit of budget in-model, and
+  delivers 2.19× the zero-control opaque lower bound per unit of budget
+  in-model — a bound whose recalibration against published
+  audit-institution findings is pre-registered as the seventh
+  experiment — and
   the opaque regime officially reports about 29 percentage points more
   delivery than reality — a visibility gap the verified regime closes by
   construction. The sixth (E6) isolated the incentive channel with an
@@ -824,6 +827,7 @@ Under the project's own editorial rule ([[P007-integrate-or-bound-rule|knowledge
 - **Fiscal dependence is measurable, not enforceable.** A determined treasury can still defund the system in full public view; only country law can bind it (`docs/88`).
 - **Open-mode constitutional mechanics are deferred by design.** Who votes on protocol changes in a mature open deployment is unresolved, and open-mode deployment is gated on resolving it (`docs/91`).
 - **Verification cannot be conjured.** In thin markets the model prices weak verification through financial terms and disclosure; it cannot create qualified verifiers (`docs/90`).
+- **Adoption selects.** The model answers whether the architecture can be built and whether it delivers more value — not whether any authority wants it. Deployment configuration for an authority that has decided exists (prospective baselines, credit attribution, official protection, a symmetry clause: `docs/109`), but the architecture will plausibly be adopted first by relatively clean or newly arrived sponsors, in the places that need it least.
 - **Off-platform misconduct is made harder and more discoverable, never impossible.** Collusion, clientelism, and expressive polarization conducted entirely outside the system remain the comparative claim's boundary (`docs/98`, `docs/99`, resolutions of A018/A030/A031).
 - Beyond these, the minimal model does not attempt: full constitutional replacement, full national budgeting, coercive security, criminal justice, monetary policy, full administrative law, universal moral ranking, perfect participation equity, perfect evidence verification, or the elimination of all fraud.
 

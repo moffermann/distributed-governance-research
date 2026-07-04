@@ -270,4 +270,4 @@ The platform should avoid a single maturity score because that would hide politi
 
 ## Research note
 
-Transition-evaluation hypothesis. Responds to Ricardo's question about whether the model is an end state or a transition and how institutional change should be measured without making the platform responsible for political adoption, budget migration, or institutional displacement.
+Transition-evaluation hypothesis. Responds to Ricardo's question about whether the model is an end state or a transition and how institutional change should be measured without making the platform responsible for political adoption, budget migration, or institutional displacement. The adoption-time configuration that makes these metrics survivable for their first sponsor — prospective baseline framing, institutional attribution with a good-faith safe harbor in the first cycle, credit attribution on verified delivery, and the operator symmetry clause — is defined in [[../../docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109]].

@@ -125,6 +125,8 @@ Eligibility depends on project risk, domain, territory, required competence, con
 
 Each responsible fiscalizer assignment should expose a project-specific fiscalizer eligibility and reputation profile. This profile is not a generic CV, universal score, or automatic selector. It explains which eligibility criteria apply to this project or phase, whether the fiscalizer satisfies them, what comparable-project performance history is relevant, and what capture or relationship warnings apply.
 
+Role admission under these rules is distinct from funder-facing reputation: per [[../../docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|docs/107]], reputation never excludes an executor or proponent from being chosen by funders. Protocolized eligibility exists only here, at the control-role boundary, because these roles gate public payments — and disqualification requires a reviewed finding (C012, A013) and remains contestable through the A011 surface.
+
 ## Selection rule
 
 Distributed fiscalization is not ordinary popularity selection.

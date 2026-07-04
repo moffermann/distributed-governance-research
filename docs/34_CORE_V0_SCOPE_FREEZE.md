@@ -858,7 +858,7 @@ These should not be part of Core v0 unless later shown necessary:
 - transition enforcement, migrated-budget protection, resistance-pattern analytics, and cross-country transition comparisons beyond the A016 incumbent-resistance indicators;
 - per-project actuarial guarantee calibration and automated milestone-design scoring beyond the A017 disbursement-gaming tests;
 - automated collusion-detection engines, network-analysis scoring, and investigative capability beyond the A018 collusion observability surfaces;
-- mandate construction, referendum machinery, and formula adjudication beyond the A019 Allocation Mandate record, which the platform records but does not generate;
+- mandate construction, referendum machinery, and formula adjudication beyond the A019 Allocation Mandate record — which, per A037, also carries the enabling-norm record and binding-mode gate — with the platform recording legal authorization but never generating it;
 - distributed roadmap-construction governance beyond the A020 interim observability — deferred, not denied: agenda-setting power stays visible and versioned, while who constructs Planning Scopes remains an open question and a prerequisite for open mode at scale;
 - fiscal enforcement — multi-year appropriation locks, statutory indexation, and enforceable budget floors — beyond the A021 Fiscal Commitment Profile and fiscal-reliability observability, which make fiscal strangulation measurable and attributable but cannot compel a sovereign to pay;
 - liability adjudication and doctrinal construction of who is at fault for third-party harm beyond the A033 Duty-of-Care Anchor and third-party coverage, which name the answerable legal person and provision coverage before disbursement but leave apportionment to external law;
