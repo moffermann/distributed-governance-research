@@ -1,5 +1,5 @@
 {
-  "title": "Distributed Governance Research: A Functional Architecture for Selective Institutional Distribution (Working Paper v1.4)",
+  "title": "Distributed Governance Research: A Functional Architecture for Selective Institutional Distribution (Working Paper v1.5)",
   "upload_type": "publication",
   "publication_type": "workingpaper",
   "description": "Complete research corpus and working paper proposing a functional architecture for distributed public project governance: citizens allocate a legally mandated share of an existing public budget across verifiable projects under strict role separation, milestone-gated conditional disbursement, evidential contracts, and role-based reputation. Includes formal mechanism-design propositions (incentive compatibility of milestone disbursement; collusion-proofness of protocolized fiscalization), a reproducible 10,000-agent simulation of attention-constrained allocation, and a documented adversarial validation record of thirty-five attack briefs with paired defenses and accepted resolutions, all propagated through the architecture corpus. The manuscript is drafts/paper.md; the accessible companion is docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md.",
@@ -9,7 +9,7 @@
     }
   ],
   "license": "cc-by-4.0",
-  "version": "v1.4",
+  "version": "v1.5",
   "keywords": [
     "distributed governance",
     "participatory budgeting",

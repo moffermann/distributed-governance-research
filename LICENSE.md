@@ -48,4 +48,4 @@ SOFTWARE.
 
 If you use this work, please cite it. See `CITATION.cff` for the machine-readable citation, or:
 
-> Offermann, M. (2026). *A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution.* Working paper v1.4. https://github.com/moffermann/distributed-governance-research
+> Offermann, M. (2026). *A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution.* Working paper v1.5. https://github.com/moffermann/distributed-governance-research
