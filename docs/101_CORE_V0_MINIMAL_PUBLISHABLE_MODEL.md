@@ -6,7 +6,7 @@
 
 This document is the shortest professional entry point into the Distributed Governance System v0.
 
-It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is [[paper|drafts/paper.md]]; this document is its accessible companion.
+It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is [[paper|drafts/paper.md]] (published as v1.6, DOI 10.5281/zenodo.21193847); this document is its accessible companion.
 
 The goal is to answer one question clearly:
 
@@ -764,9 +764,22 @@ was validated three ways before publication:
   experiment then modeled knowledge symmetrically and found that building
   the weight vector from aggregated dispersed citizen signals beats
   fixed-bandwidth central construction at every tested scale — provided an
-  aggregation institution exists and signals are honest — results that
-  discipline this document's claims rather than decorate them
-  ([[simulation-results|research/simulation-results.md]]).
+  aggregation institution exists and signals are honest. Two further
+  pre-registered experiments measured the thesis itself. The fifth (E5)
+  added the execution stage and found that project selection and verified
+  delivery compound multiplicatively: on matched portfolios the
+  verified-delivery layer alone is worth +43%, the full architecture
+  delivers 2.19× the opaque status quo per unit of budget in-model, and
+  the opaque regime officially reports about 29 percentage points more
+  delivery than reality — a visibility gap the verified regime closes by
+  construction. The sixth (E6) isolated the incentive channel with an
+  all-honest executor pool and found that visible reputational
+  competition sustains executor effort and quality where opacity lets
+  them collapse, while warning that naive reputation-weighted assignment
+  concentrates work faster than it finds ability — evidence for the
+  concentration-observability machinery this model already prescribes.
+  These results discipline this document's claims rather than decorate
+  them ([[simulation-results|research/simulation-results.md]]).
 
 Every critique of the model is evaluated against how the current
 institutional system solves the same problem — not against an ideal

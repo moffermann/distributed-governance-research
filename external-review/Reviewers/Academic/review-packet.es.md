@@ -43,6 +43,8 @@ Por favor empieza por:
 docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
+El working paper publicado es parte de lo que te pido revisar: `drafts/paper.es.md` (traducción; la versión autoritativa en inglés es `drafts/paper.md`, v1.6, DOI 10.5281/zenodo.21193847) contiene las proposiciones formales, una simulación de seis experimentos — cuatro pre-registrados, con predicciones fallidas reportadas en vez de ocultadas — y el aparato bibliográfico completo.
+
 No necesitas leer todo el repositorio.
 
 Documentos opcionales para profundizar:

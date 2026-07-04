@@ -42,6 +42,8 @@ external-review/core-v0-review-packet.md
 external-review/reviewer-briefs-v0.md
 ```
 
+The published manuscript every packet now points to is `drafts/paper.md` (v1.6, Spanish translation `drafts/paper.es.md`), archived as DOI 10.5281/zenodo.21193847.
+
 ## Use rule
 
 Send only the packet that matches the reviewer.

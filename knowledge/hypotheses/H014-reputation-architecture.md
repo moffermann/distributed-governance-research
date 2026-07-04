@@ -211,6 +211,10 @@ H014 does not define a single universal formula for all reputation. Formula para
 
 H014 does not create a generic social score. General summaries are navigation layers over role-specific records.
 
+## Simulation evidence
+
+The pre-registered E6 experiment ([[e6-reputational-competition-design|research/e6-reputational-competition-design.md]], results in [[simulation-results|research/simulation-results.md]]) isolates the incentive channel of this architecture with an all-honest executor pool, where diversion does not exist and any gain is incentive rather than enforcement. Visible reputational competition sustains executor effort and quality where opacity lets them decay toward cost-minimization, delivering +11% more social value in-model. Visibility alone carries most of the effect: in an opaque system there is no visible standard to imitate, and professional norms erode — visibility creates a commons of standards before it creates a market. The same experiment supplies the design warning this hypothesis's rules anticipate: naive reputation-weighted assignment concentrates work faster than it finds ability, because early assignments build reputation, reputation wins assignments, and early luck locks in. That is why in Core v0 reputation informs funders' choices and eligibility rather than automatically assigning work, and why concentration must remain visible, entrants protected, and reputation read against the opportunities an actor actually had.
+
 ## Principle
 
 > Reputation should be simple on the surface, deep under inspection, traceable across people and institutions, weighted over time, and proportional to reviewed responsibility, verified performance, and severity.

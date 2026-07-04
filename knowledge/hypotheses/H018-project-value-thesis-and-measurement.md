@@ -231,6 +231,10 @@ The quality, authenticity, relevance, AI-generation risk, and usefulness of fulf
 
 That risk should not be hidden inside H018. H018 defines the value-to-fulfillment-evidence chain; the later evidence-quality resolution should define how submitted fulfillment evidence is evaluated before it supports disbursement, closure, value fulfillment, or reputation.
 
+## Simulation evidence
+
+The pre-registered E5 experiment ([[e5-value-delivery-design|research/e5-value-delivery-design.md]], results in [[simulation-results|research/simulation-results.md]]) measures what this hypothesis's verification chain buys. On matched project portfolios, the verified-delivery layer — milestone gating, retention, recovery, and reputational stake, the operational form of the value-thesis-to-evidence chain — delivers +43% more social value per unit of budget than the opaque status-quo layer, and combined with distributed selection the full architecture delivers 2.19× the opaque baseline in-model. The opaque regime officially reports about 29 percentage points more delivery than reality; the verified chain closes that visibility gap by construction. The protection arrives ex ante: under the specified verified parameters no executor ever diverts, because the incentive condition makes diversion unprofitable before enforcement is needed, with endogenous cleansing of the executor pool measured as the second line of defense when verification weakens. The declared bounds apply: parameters are plausible rather than calibrated, and delivered value assumes the funded promise had its declared latent value — directions and orderings, not point values, are the findings.
+
 ## Principle
 
 > The system should not force every human experience into hard metrics. It should connect each core value promise to a proportional verification package and fulfillment evidence needs, while preserving independent fulfillment evidence production and distributed social signals of perceived value.
