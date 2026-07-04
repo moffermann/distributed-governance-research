@@ -2,7 +2,7 @@
 
 ## Status
 
-Manuscript-review round brief. Pending paired review; no accepted resolution yet.
+Reviewed in paired review. Improvements accepted in [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]], bounded by the author's thesis clarification: the manuscript answers feasibility and efficiency, not political willingness.
 
 ## Description
 
@@ -86,4 +86,4 @@ The reviewer packets go out; a sympathetic former budget director replies that t
 
 ## Resolution output
 
-None yet. Pending paired defense and review.
+The accepted resolution first drew the thesis boundary the attack had crossed — the manuscript's question is whether today's technology permits an architecture change that improves on the two-hundred-year-old design, not whether any authority wants one — and then integrated the adoption layer as conditional deployment design for the authority that has already decided: prospective baseline framing as the pilot default ("measure me from here onward", the A021 pattern generalized), the three-archetype adoption-theory note, a credit-attribution surface with early-win sequencing priced honestly by verification, official-protection defaults (institutional attribution, good-faith safe harbor, capacity-calibrated deadlines), and the symmetry clause barring any scope from exempting its operator's own projects. Every accountability instrument was preserved; the declared limitation is selection — the architecture will be adopted first where it is least needed.

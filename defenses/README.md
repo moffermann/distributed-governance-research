@@ -105,7 +105,7 @@ Paired with the manuscript-review round attacks in `attacks/` (five-profile revi
 | `D037` | `A037` | Reserve of Law and the Non-Delegable Allocation Competence | Founded (threshold gap) — resolved in [[106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION.md]] |
 | `D038` | `A038` | Reputational Exclusion as a Sanction Without Due Process | Reclassified partially founded by author review — resolved in [[107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION.md]]; the proposed sanction procedure was not adopted (no exclusion power exists to regulate) |
 | `D039` | `A039` | Traceable Allocation Reveals Political Preference | Founded (specification gap) — resolved in [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]] (secrecy-by-default, receipt-free, followed-projects feed) |
-| `D040` | `A040` | The Adoption Paradox | Founded (missing design layer) — adoption theory, prospective baseline default, credit surface, official protection, symmetry clause proposed |
+| `D040` | `A040` | The Adoption Paradox | Founded (missing deployment layer, thesis-bounded) — resolved in [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]] |
 
 ## Use
 
