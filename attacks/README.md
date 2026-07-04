@@ -91,7 +91,7 @@ These briefs originate from the five-profile external-review simulation of the p
 
 | Attack | Title | Origin | Status |
 |---|---|---|---|
-| `A036` | The Opaque Baseline Is a Strawman: The Status Quo Already Contains a Control Regime | academic + systems-architect + practitioner reviewers, manuscript round | pending paired review; E7 pre-registered |
+| `A036` | The Opaque Baseline Is a Strawman: The Status Quo Already Contains a Control Regime | academic + systems-architect + practitioner reviewers, manuscript round | resolved in [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]; E7 remains the headline's arbiter |
 | `A037` | Reserve of Law and the Non-Delegable Allocation Competence | public-law + practitioner reviewers, manuscript round | pending paired review |
 | `A038` | Reputational Exclusion as a Sanction Without Due Process | public-law reviewer, manuscript round | pending paired review |
 | `A039` | Traceable Allocation Reveals Political Preference: Vote Immunity Without Vote Secrecy | public-law reviewer, manuscript round | pending paired review |

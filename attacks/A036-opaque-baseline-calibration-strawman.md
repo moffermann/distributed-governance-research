@@ -2,7 +2,7 @@
 
 ## Status
 
-Manuscript-review round brief. Pending paired review; no accepted resolution yet.
+Reviewed in paired review. Improvements accepted in [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]; the pre-registered E7 experiment remains the headline's arbiter.
 
 ## Description
 
@@ -85,4 +85,4 @@ The manuscript reaches a hostile referee and a finance-ministry analyst in the s
 
 ## Resolution output
 
-None yet. Pending paired defense and review; the pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]) is this attack's empirical test.
+The accepted resolution adopted a binding simulation-reporting rule (in-model qualifiers, named baselines, the zero-control arm relabeled as a lower bound, paired confidence intervals), an audit-anchored baseline evidence program grounding the status-quo arm in published audit-institution findings across several countries and political orientations, and the pre-registered E7 experiment as the headline's arbiter with its withdrawal condition unchanged.

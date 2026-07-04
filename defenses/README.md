@@ -101,7 +101,7 @@ Paired with the manuscript-review round attacks in `attacks/` (five-profile revi
 
 | Defense | Attack | Title | Classification |
 |---|---|---|---|
-| `D036` | `A036` | The Opaque Baseline Is a Strawman | Founded in presentation and calibration; partially founded in substance — E7 pre-registered as the test, with a committed headline-withdrawal condition |
+| `D036` | `A036` | The Opaque Baseline Is a Strawman | Founded in presentation and calibration; partially founded in substance — resolved in [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]; E7 remains the arbiter |
 | `D037` | `A037` | Reserve of Law and the Non-Delegable Allocation Competence | Founded (threshold gap) — enabling-norm record and binding-mode gate proposed; doctrine external |
 | `D038` | `A038` | Reputational Exclusion as a Sanction Without Due Process | Founded (procedural gap) — tiered Reputational Consequence Procedure proposed; statutory grounds external |
 | `D039` | `A039` | Traceable Allocation Reveals Political Preference | Founded (specification gap) — citizen-side secrecy-by-default with receipt-freeness proposed |

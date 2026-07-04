@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Manuscript-review round paired draft. No accepted resolution yet; pending review integration. The pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]) is this pair's empirical arbiter.
+Manuscript-review round paired review completed. Accepted resolution: [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]. The pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]) remains this pair's empirical arbiter; corpus propagation pending.
 
 ## Attack reference
 

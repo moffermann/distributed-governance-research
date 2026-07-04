@@ -41,6 +41,10 @@ If any prediction fails, the failure is reported as a finding.
 
 S′'s control parameters are documented-practice-informed but still uncalibrated to a specific administration — E7 reduces the baseline gap from caricature to plausible, not from plausible to measured; calibration against a real participatory-budgeting or procurement dataset remains the declared next phase and is not claimed here. θ remains an oracle. The coordinated-bias model is one bias geometry among several (common-mode inflation of a favored set); dispersed idiosyncratic bias and strategic counter-signaling are not modeled. Honest-executor capacity failure remains unmodeled, so leaks remain lower bounds in all arms.
 
+## Pre-run amendment (2026-07-04, author-directed; predictions unchanged)
+
+Adopted with the A036 resolution ([[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]) before any implementation or run: the S′ arm's parameters must be justified from a documented evidence base of published audit-institution and program-evaluation findings (supreme audit institutions and ex-post evaluation bodies) spanning several countries and different political orientations, with per-item citations, a declared band, category matching (construction findings calibrate construction arms), and the chosen operating point stated. This amendment governs parameter *sourcing* only; the arms, metrics, and the five committed predictions above are unchanged.
+
 ## What E7 changes in the paper
 
 Whatever survives becomes the paper's recalibrated headline, stated against S′ with paired CIs and in-model qualifiers; the 2.19× figure is retitled as the zero-control bound and removed from the abstract unless S′ sustains a multiplier of comparable rhetorical weight. Finding 4's open-construction claim gains its bias-conditional statement (β-dependence and crossover). Section 9's pilot expectations are restated at municipal scale. The limitations section replaces "parameters plausible, not calibrated" with the two-tier statement E7 makes true: caricature-robust, calibration-pending.
