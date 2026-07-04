@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.6 (julio de 2026). Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.7 (julio de 2026). Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
-*Traducción al español del working paper v1.6 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.7 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI: 10.5281/zenodo.21193847.*
 
@@ -38,28 +38,38 @@ defecto es fuerte; un cuarto experimento preregistrado que modela el conocimient
 de manera simétrica halla que agregar señales ciudadanas dispersas en ese vector
 supera a la construcción central de ancho de banda fijo en cada escala probada
 —siempre que exista una institución de agregación y que las señales sean
-honestas, no sesgadas y efectivamente recogidas; y un quinto experimento
+honestas, no sesgadas y efectivamente recogidas; un quinto experimento
 preregistrado lleva la comparación hasta aquello para lo que existe la
 redistribución —el valor social entregado por unidad de presupuesto—,
-hallando que la entrega verificada añade un +43% sobre carteras idénticas, que
-las ganancias de selección y de entrega se multiplican, que la arquitectura
-completa entrega 2.19× la línea base opaca del statu quo, y que la finalización
-oficialmente reportada del statu quo sobreestima la entrega real en veintinueve
-puntos porcentuales; un sexto experimento aísla el canal de incentivos —los
-estándares visibles sostienen la calidad de la ejecución allí donde la opacidad
-la deja decaer hacia la minimización de costos— y halla que la asignación
+hallando, en el modelo, que la entrega verificada añade un +43% sobre carteras
+idénticas, que las ganancias de selección y de entrega se multiplican, y que la
+finalización oficialmente reportada de un régimen de cero-control sobreestima la
+entrega real en veintinueve puntos porcentuales; un sexto experimento aísla el
+canal de incentivos —los estándares visibles sostienen la calidad de la
+ejecución allí donde la opacidad la deja decaer— y halla que la asignación
 ingenua ponderada por reputación concentra el trabajo más rápido de lo que
 descubre capacidad, evidencia de la maquinaria de observabilidad de la
-concentración de la arquitectura. Tercero,
+concentración de la arquitectura; y un séptimo experimento preregistrado vuelve a
+correr el resultado principal contra una línea base del statu quo calibrada a
+partir de los hallazgos publicados de instituciones de auditoría de nueve
+jurisdicciones y la Unión Europea, hallando, en el modelo, que la arquitectura
+completa entrega 2.22× esa línea base calibrada por unidad de presupuesto a
+escala y 1.4–1.6× a escala de piloto municipal —y que la auditoría a su
+intensidad empíricamente documentada, sin memoria reputacional, no disuade
+desvío alguno: encoge la brecha reportada (de veintinueve a diecinueve puntos),
+nunca la real. Tercero,
 método: la arquitectura se desarrolló bajo revisión adversarial sistemática
-—treinta y cinco resúmenes de ataque (attack briefs), cada uno con una defensa
-emparejada y una resolución aceptada bajo una regla explícita de integrar-o-acotar
-que o bien añade un mecanismo a través de objetos existentes o bien registra una
-frontera con un riesgo residual nombrado, todo propagado al corpus de la
-arquitectura; los dos últimos ataques fueron generados por una revisión externa
-simulada de cinco perfiles del documento acompañante de este artículo. El
-resultado es una arquitectura cuyas limitaciones forman parte de su
-especificación y cuyo registro de revisión es en sí mismo público. Enunciamos
+—una autocrítica estructurada de cuarenta resúmenes de ataque (attack briefs),
+cada uno con una defensa emparejada y una resolución aceptada bajo una regla
+explícita de integrar-o-acotar que o bien añade un mecanismo a través de objetos
+existentes o bien registra una frontera con un riesgo residual nombrado, todo
+propagado al corpus de la arquitectura; las rondas finales fueron generadas por
+el método vuelto sobre sí mismo —revisiones externas simuladas de cinco perfiles
+del documento acompañante y de este manuscrito, cuyas preguntas irresolubles se
+convirtieron en ataques formales, incluido el ataque de calibración de la línea
+base que el séptimo experimento responde. El resultado es una arquitectura cuyas
+limitaciones forman parte de su especificación y cuyo registro de revisión es en
+sí mismo público. Enunciamos
 esas limitaciones con franqueza: en los modos de operación cerrado y tutelado
 que la arquitectura especifica para los pilotos, las agendas de planificación
 las construye la autoridad implementadora, y la calidad informativa de esa
@@ -113,7 +123,7 @@ arquitectura de referencia completa para distribuir una capa acotada —la
 asignación, ejecución y verificación de una cuota legalmente mandatada de un
 presupuesto público existente— desarrollada hasta el nivel de objetos nombrados,
 máquinas de estado y reglas de decisión (un corpus de más de cien documentos de
-arquitectura, cincuenta y nueve hipótesis diseñadas y treinta y cinco revisiones
+arquitectura, cincuenta y nueve hipótesis diseñadas y cuarenta revisiones
 adversariales, todo público). La ciudadanía recibe capacidad de asignación
 periódica y no retirable en una billetera cívica (civic wallet); los proyectos
 atraviesan un ciclo de vida de cierre paralelo en el que financiamiento,
@@ -151,19 +161,22 @@ se le hizo. Nuestras contribuciones son:
    una construcción abierta viable de ella, y llevan la comparación de extremo a
    extremo —desde la asignación hasta el valor social entregado por unidad de
    presupuesto, el criterio que la redistribución existe para satisfacer. El
-   resultado principal: la entrega verificada y la priorización social se
-   multiplican en lugar de sumarse, la arquitectura completa entrega 2.19×
-   la línea base opaca del statu quo, y la completitud oficial del statu quo
-   sobreestima su entrega real en veintinueve puntos porcentuales.
+   resultado principal, en el modelo: la entrega verificada y la priorización
+   social se multiplican en lugar de sumarse, y la arquitectura completa entrega
+   2.22× una línea base del statu quo calibrada a partir de los hallazgos
+   publicados de instituciones de auditoría (1.4–1.6× a escala de piloto
+   municipal), mientras que incluso ese statu quo calibrado sobreestima su
+   entrega real en diecinueve puntos porcentuales.
 
-4. **Validación adversarial como método** (Sección 7). La arquitectura fue
-   atacada sistemáticamente —treinta y cinco resúmenes de ataque anclados en las
+4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
+   atacada sistemáticamente —cuarenta resúmenes de ataque anclados en las
    literaturas de ciencia política, economía y derecho, cada uno respondido por
    una defensa emparejada y resuelto bajo una regla explícita de
    integrar-o-acotar, con cada resolución propagada a través del corpus y el
-   registro completo de revisión público por construcción. Proponemos este bucle,
-   y su regla de terminación, como un método reutilizable para la investigación
-   en diseño institucional.
+   registro completo de revisión público por construcción. El bucle es una
+   autocrítica estructurada, no validación externa, y así lo decimos; lo
+   proponemos, junto con su regla de terminación, como un método reutilizable
+   para la investigación en diseño institucional.
 
 La Sección 8 enuncia las limitaciones con el mismo cuidado que los resultados,
 porque bajo nuestro método ellas son resultados: cada una es un riesgo residual
@@ -196,6 +209,25 @@ cívica misma generaliza el mecanismo de vouchers (Friedman 1962) —dinero púb
 dirigido por la ciudadanía— desde la elección entre proveedores de servicios
 hasta la asignación entre proyectos verificables, añadiendo el ciclo de vida de
 verificación que los vouchers nunca portaron.
+
+**Federalismo fiscal y democracia epistémica.** Los ancestros formales del
+principio de distribución funcional son la literatura de la descentralización
+—el teorema de Oates (1972) sobre cuándo la provisión descentralizada domina,
+Tiebout (1956) sobre la revelación de preferencias mediante la elección de
+jurisdicción, y Besley and Coate (2003) sobre la provisión centralizada versus
+descentralizada bajo economía política— con una diferencia deliberada: nuestras
+capas son funcionales antes que territoriales, de modo que lo que se distribuye
+es una etapa del proceso de gasto (asignación, ejecución, verificación) antes
+que un nivel de gobierno. Del lado epistémico, los resultados de agregación de la
+Sección 6 pertenecen al linaje del teorema del jurado de Condorcet (1785) y sus
+condiciones modernas de falla (Austen-Smith and Banks 1996) —una deuda que
+hacemos explícita, porque el régimen de falla del teorema (señales
+correlacionadas, estratégicas o sesgadas) es exactamente lo que el séptimo
+experimento pone a prueba— y la conversación de diseño con la democracia abierta
+de Landemore (2020) y la gobernanza participativa empoderada de Fung and Wright
+(2003) es directa: esos programas distribuyen la deliberación y el
+empoderamiento; este distribuye la asignación, la ejecución y la verificación con
+un núcleo de diseño de mecanismos y de rastro de auditoría que ellos no intentan.
 
 **Democracia líquida.** La delegación transitiva o acotada promete flexibilidad
 entre la participación directa y la representativa, al costo de la concentración
@@ -231,8 +263,12 @@ Proposiciones 1–2 toman como parámetros —y su hallazgo de que la auditoría
 arriba hacia abajo superó al monitoreo de base para el fraude en compras es una
 advertencia que esta arquitectura absorbe al hacer de la fiscalización
 profesional, no de la observación de la multitud, la capa que condiciona la
-liberación. La contribución aquí no es la profundidad técnica sino la
-especificidad: los parámetros de los modelos mapean uno a uno con objetos
+liberación. La literatura brasileña de loterías de auditoría (Ferraz and Finan
+2008) aporta la evidencia complementaria de mecanismo —la divulgación de los
+hallazgos de auditoría cambia los resultados políticos, y la exposición a
+auditoría reduce la corrupción subsiguiente— y sus datos subyacentes de la CGU
+entran directamente en la línea base calibrada del séptimo experimento. La
+contribución aquí no es la profundidad técnica sino la especificidad: los parámetros de los modelos mapean uno a uno con objetos
 arquitectónicos nombrados, de modo que cada proposición es un dial
 implementable.
 
@@ -252,7 +288,11 @@ redistribución existe para satisfacer —valor social entregado por unidad de
 presupuesto—, descomponiendo la selección de la entrega sobre carteras
 apareadas, mostrando que ambas capas se multiplican, e introduciendo la brecha
 de visibilidad (entrega oficialmente reportada menos entrega real) como un
-déficit de rendición de cuentas medible del statu quo. Las evaluaciones de
+déficit de rendición de cuentas medible del statu quo —una comparación luego
+(vii) recalibrada contra una línea base parametrizada exclusivamente a partir de
+los hallazgos publicados de instituciones supremas de auditoría de nueve
+jurisdicciones y la Unión Europea, bajo una condición preregistrada de retiro del
+resultado principal. Las evaluaciones de
 presupuestos participativos miden participación y asignación; los estudios de
 auditoría miden fugas después del hecho; no conocemos ninguno que mida, dentro
 de un mismo marco, cuánto valor entregado produce una institución de asignación
@@ -310,8 +350,19 @@ mandatada de un presupuesto existente hacia billeteras cívicas individuales:
 capacidad de asignación periódica, no retirable, de propósito público, igual por
 ciudadano por defecto. Todo ámbito de planificación activo porta un registro de
 *Allocation Mandate* (mandato de asignación) que nombra el estatuto o instrumento
-que autorizó la migración y la fórmula de asignación —la plataforma registra la
-autorización externa; no la fabrica. Un *Fiscal Commitment Profile* (perfil de
+que autorizó la migración, su rango legal, el órgano al que se imputan las
+asignaciones y la fórmula de asignación —la plataforma registra la autorización
+externa; no la fabrica, y la operación en modo vinculante está supeditada a que
+se haya registrado una norma habilitante de rango suficiente, con la operación
+consultiva o tutelada como el defecto lícito revelado en caso contrario. El acto
+de asignación del ciudadano porta el pacto electoral completo: inmunidad como la
+del voto y secreto como el del voto. Las asignaciones individuales son seudónimas
+en la capa pública y se reconcilian criptográficamente contra los totales
+públicos por ámbito —cada peso trazable como dinero, ningún ciudadano trazable
+como asignador, y no existe recibo ni prueba exportable de ninguna asignación
+individual, ni siquiera voluntariamente, de modo que un patrón que exija prueba
+nunca pueda obtenerla (la defensa propia del voto secreto, aplicada a la
+billetera). Un *Fiscal Commitment Profile* (perfil de
 compromiso fiscal) por ámbito hace públicos y versionados el porcentaje migrado,
 la indexación y la latencia de entrega, de modo que el estrangulamiento fiscal
 por parte de la tesorería establecida sea medible y atribuible antes que
@@ -577,7 +628,10 @@ donde el planificador inspecciona tres cuartas partes del mundo (sel(θ) 0.76 vs
 0.62 con N = 40; 0.73 vs 0.04 con N = 1000). Doce mil señales ruidosas promedian
 en un vector casi perfecto; treinta buenas inspecciones no pueden competir, y el
 ancho de banda central fijo decae hacia la aleatoriedad a medida que el mundo
-crece. Tres salvedades cargan el peso honesto del hallazgo. Primero, el mismo
+crece —una lógica de agregación de Condorcet (1785), y la tratamos como tal: las
+condiciones de falla conocidas del teorema del jurado (Austen-Smith and Banks
+1996) definen exactamente la frontera que el séptimo experimento pone a prueba.
+Tres salvedades cargan el peso honesto del hallazgo. Primero, el mismo
 conocimiento disperso *sin* una institución de agregación se desperdicia: el
 régimen no coordinado financia el 0.6–15% de los proyectos y selecciona mal —el
 resultado reivindica los mecanismos de agregación, no la ausencia de mecanismo, y
@@ -611,25 +665,28 @@ justifica su valía —y la selección y la entrega se multiplican.** Un quinto
 experimento preregistrado (`research/e5-value-delivery-design.md`) añade la
 etapa de ejecución que los primeros cuatro omitieron: ejecutores con tipos
 ocultos cuya decisión de desvío sigue la condición de incentivos de la
-Proposición 1, bajo un régimen de entrega opaco (baja detección, adelantos no
-protegidos, sin recuperación, sin memoria reputacional —parámetros dentro de la
-banda de fuga documentada empíricamente: 87% en las subvenciones por capitación
-de Uganda (Reinikka and Svensson 2004), 24% en los caminos indonesios (Olken
-2007)) frente al régimen verificado construido a partir de las Proposiciones 1-4
-(condicionamiento por hitos, retención, recuperación, detección en la capa de
-evidencia, capital reputacional en juego con exclusión). Cruzar la entrega con
+Proposición 1, bajo un régimen de entrega opaco —una cota inferior de
+cero-control (baja detección, adelantos no protegidos, sin recuperación, sin
+memoria reputacional), con parámetros dentro de la banda de fuga documentada
+empíricamente: 87% en las subvenciones por capitación de Uganda (Reinikka and
+Svensson 2004), 24% en los caminos indonesios (Olken 2007)— frente al régimen
+verificado construido a partir de las Proposiciones 1-4 (condicionamiento por
+hitos, retención, recuperación, detección en la capa de evidencia, y un capital
+reputacional en juego: un registro visible de desvío confirmado que cuesta
+selección futura por parte de los financiadores). Cruzar la entrega con
 los dos regímenes de selección de E4 arroja un 2×2 cuyos efectos principales son
 dos preguntas sencillas. Los mismos proyectos, distinta capa de control: el
-régimen verificado entrega un +43% sobre carteras idénticas [0.143, 0.193], y la
-finalización oficial del régimen opaco sobreestima su entrega real en veintinueve
-puntos porcentuales —la brecha de rendición de cuentas del statu quo,
-cuantificada. La misma capa de control, distintos proyectos: la priorización
-social entrega un +53-54% bajo cualquiera de los dos regímenes. La interacción es
-positiva y significativa (+0.085 [0.053, 0.117]): las capas se multiplican, y la
-arquitectura completa entrega 2.19× la línea base del statu quo por unidad de
+régimen verificado entrega un +43% sobre carteras idénticas (ΔV emparejado =
+0.168 [0.143, 0.193]), y la finalización oficial del régimen de cero-control
+sobreestima su entrega real en veintinueve puntos porcentuales. La misma capa de
+control, distintos proyectos: la priorización social entrega un +53-54% bajo
+cualquiera de los dos regímenes. La interacción es positiva y significativa
+(+0.085 [0.053, 0.117]): las capas se multiplican, y la arquitectura completa
+entrega, en el modelo, 2.19× la cota inferior de cero-control por unidad de
 presupuesto (0.859 vs 0.393), de manera robusta a lo largo de las tasas de
 participación directa desde el 3% (el piso del presupuesto participativo) hasta
-el 40% (escala de votación). Dos predicciones preregistradas fallaron
+el 40% (escala de votación) —una cota recalibrada contra el statu quo anclado en
+auditoría en el Hallazgo 7. Dos predicciones preregistradas fallaron
 honestamente. El predominio esperado de la entrega sobre la selección no se
 sostuvo a esta escala —la selección central con doscientos proyectos es casi
 aleatoria (E4), inflando el margen de selección—, de modo que la afirmación
@@ -640,8 +697,11 @@ modo que nadie se desvía y no hay a quién excluir —la disuasión se anticipa
 castigo, la aplicación de Becker operando ex ante. Un análisis de sensibilidad
 post-hoc etiquetado con verificación debilitada muestra la segunda línea de
 defensa: disuasión parcial, detección activa, y un conjunto de ejecutores que
-mejora de manera medible a medida que la reputación excluye a quienes se desvían
-(cuota de oportunistas 0.28 → 0.21 a lo largo de veinticuatro ciclos). Un barrido
+mejora de manera medible a medida que los financiadores dejan de seleccionar a
+los desviadores confirmados, cuyos registros son visibles (cuota de oportunistas
+0.28 → 0.21 a lo largo de veinticuatro ciclos) —salida del conjunto por
+preferencia perdida, no por poder alguno de exclusión de la plataforma; la
+reputación informa las elecciones, nunca excluye. Un barrido
 acompañante de las categorías de descubrimiento por defecto muestra que cada una
 porta una firma distributiva amplia y medible —"cerca de mí" concentra el 71% del
 presupuesto en el quintil más denso, "rural" lo invierte— de modo que el valor
@@ -651,9 +711,13 @@ sesgo inherente del planificador.
 **Hallazgo 6: la visibilidad sostiene el estándar; los mercados reputacionales
 ingenuos concentran más rápido de lo que seleccionan.** Un sexto experimento
 preregistrado (`research/e6-reputational-competition-design.md`) aísla el canal
-de incentivos de la disuasión por completo: un conjunto de ejecutores enteramente
-honestos con esfuerzo costoso y ajustable y sin posibilidad de desvío. En el
-régimen opaco, el esfuerzo se desploma hacia la minimización de costos
+de incentivos de la disuasión por completo —un escenario de preocupaciones de
+carrera (career concerns) en el sentido de Holmström (1999): un conjunto de
+ejecutores enteramente honestos con esfuerzo ajustable y sin posibilidad de
+desvío (el modelo no tasa costo de esfuerzo explícito alguno; la minimización de
+costos está codificada conductualmente como la regla de decaimiento del régimen
+opaco). En el régimen opaco, el esfuerzo se desploma hacia la minimización de
+costos
 (0.49 → 0.24 a lo largo de veinticuatro ciclos) —no por malicia, sino porque el
 esfuerzo no tiene retorno y no existe un estándar visible que imitar. Hacer
 visible la calidad verificada sostiene el esfuerzo cerca de su nivel inicial, y
@@ -673,9 +737,48 @@ incentivo de calidad, y toda ponderación fuerte por reputación —humana o
 algorítmica— necesita la observabilidad de la concentración, los pisos para
 entrantes y la reputación normalizada por oportunidades que el corpus prescribe.
 En Core v0, la reputación informa las elecciones de los financiadores antes que
-la asignación automática, con la concentración visible por construcción.
+la asignación automática, con la concentración visible por construcción —y nunca
+excluye: ninguna regla de protocolo impide a un financiador elegir a cualquier
+actor admisible por motivos reputacionales.
 
-## 7. La validación adversarial como método
+**Hallazgo 7: el resultado principal sobrevive a los propios auditores del
+establecido.** El ataque más agudo de la ronda de revisión del manuscrito
+sostuvo que la línea base de cero-control es una caricatura —las administraciones
+reales operan instituciones de auditoría, retenciones, fianzas e inspección— y la
+respuesta fue un séptimo experimento preregistrado
+(`research/e7-calibrated-baseline-design.md`) con una condición de retiro
+comprometida: si el resultado principal colapsaba contra una línea base justa,
+sería retirado, no requalificado. El brazo del statu quo calibrado está
+parametrizado exclusivamente a partir de los hallazgos publicados de
+instituciones de auditoría —detección a partir de los estudios de obras de la
+contraloría de Chile, retención a partir de la práctica documentada de estados de
+pago, recuperación a partir de la serie de la ASF de México, anclas de fuga
+emparejadas por categoría con la construcción (Olken 2007; la base de evidencia
+multipaís abarca la GAO, la NAO, el Tribunal de Cuentas Europeo, el TCU y la CGU
+de Brasil, y las contralorías de Chile, Perú y Colombia; Ferraz and Finan 2008)—
+con el ancho de banda de inspección del planificador escalado al ámbito y el
+sesgo coordinado de señales barrido como el régimen de falla de Condorcet. La
+condición de retiro no se activó: en el modelo, la arquitectura completa entrega
+2.22× [2.10, 2.35] el statu quo calibrado por unidad de presupuesto a escala, y
+1.4–1.6× a escala de piloto municipal (10-40 proyectos), donde la selección
+central con cobertura plena es competitiva y el caso descansa en la entrega y la
+medición. El hallazgo central del experimento fortalece la tesis más que el
+multiplicador sobreviviente: la auditoría a su intensidad empíricamente
+documentada, sin memoria reputacional, no disuade desvío alguno —el umbral de
+incentivos del régimen calibrado queda por debajo del costo de todo oportunista,
+de modo que su fuga iguala la del régimen de cero-control, y lo que compra la
+detección del mundo real es una mentira más pequeña (la brecha de visibilidad cae
+de veintinueve a diecinueve puntos), nunca más entrega. La fuga del brazo
+calibrado aterriza dentro de la banda documentada por la auditoría (24-48% en
+obras), de modo que la mecánica de fuga del modelo, alimentada con parámetros de
+auditoría, reproduce la realidad empíricamente observada. Y el barrido de sesgo
+acota el reclamo de construcción abierta con honestidad: la selección distribuida
+se degrada de manera casi lineal con la captura coordinada de señales y cae por
+debajo de un planificador municipal competente de cobertura plena solo con una
+cuota coordinada de aproximadamente el treinta por ciento —se degrada, nunca
+colapsa, y sigue siendo superior en todas partes por debajo del diez por ciento.
+
+## 7. La revisión adversarial como método
 
 La arquitectura se desarrolló bajo un bucle adversarial documentado: **ataque**
 (un resumen que enuncia un modo de falla, su ubicación en el corpus, un escenario
@@ -684,7 +787,7 @@ objetiva que clasifica el ataque como fundado, parcialmente fundado o diferencia
 de criterio, con citas ancladas a líneas dentro del corpus) → **resolución** (un
 documento aceptado que o bien integra un mecanismo o bien acota el riesgo) →
 **propagación** (las restricciones de la resolución enhebradas a través de cada
-documento de arquitectura afectado). El bucle corrió tres rondas, todas ahora
+documento de arquitectura afectado). El bucle corrió cuatro rondas, todas ahora
 plenamente resueltas y propagadas. La primera ronda: dieciocho ataques a los
 mecanismos de la arquitectura (manipulación de métricas, captura del
 fiscalizador, manipulación de desembolsos, colusión, control de partes
@@ -699,7 +802,20 @@ generó preguntas de revisor que el corpus no podía responder con los anclajes
 existentes, y la regla permanente convirtió las dos serias en ataques formales
 —la caracterización legal del acto de asignación ciudadana, y el costo de
 capacidad administrativa de la operación tutelada— ambos desde entonces resueltos
-y propagados. El requisito de honestidad del método se aplica a sí mismo: varias
+y propagados. La cuarta ronda volvió el mismo instrumento sobre este manuscrito
+mismo: cinco perfiles de revisor simulados (académico, derecho público,
+arquitectura de sistemas, práctica del sector público, lector general instruido)
+atacaron la v1.6 publicada, y sus cinco objeciones irresolubles se convirtieron
+en ataques formales, cada uno ahora resuelto —la línea base de cero-control como
+un hombre de paja de calibración (respondida por el séptimo experimento y una
+regla de reporte vinculante), la reserva de ley sobre la competencia de
+asignación (un registro de norma habilitante que supedita el modo vinculante), la
+exclusión reputacional como una sanción no procesada (reclasificada: el diseño no
+posee poder de exclusión con el cual sancionar), la trazabilidad de la asignación
+frente al secreto de la preferencia (resuelta como secreto de la asignación
+ciudadana con dinero público), y la paradoja de la adopción (una capa de adopción
+bajo una frontera de tesis explícita). El requisito de honestidad del método se
+aplica a sí mismo: varias
 resoluciones responden a sus ataques con un explícito "acotado, no resuelto", y
 el registro completo de revisión es público.
 
@@ -709,14 +825,18 @@ acotado debe dejar tres artefactos —una oración de frontera explícita ("Core
 no requiere X"), un riesgo residual visible y un enunciado de limitación de una
 oración. La sección de limitaciones que sigue no es, por tanto, un gesto de
 humildad; es la salida acumulada y adversarialmente generada del método. De los
-treinta y cinco ataques, ninguno fue desestimado; nueve de los quince de la
+cuarenta ataques, ninguno fue desestimado; nueve de los quince de la
 segunda ronda fueron clasificados como fundados de plano y los otros seis como
-parcialmente fundados, y la respuesta del corpus a varios es un honesto "acotado,
-no resuelto".
+parcialmente fundados, los cinco de la ronda del manuscrito fueron clasificados
+como fundados al menos en parte, y la respuesta del corpus a varios es un honesto
+"acotado, no resuelto".
 
-Usamos el bucle con un único equipo de diseño más asistencia de IA; su siguiente
-aplicación obvia es con atacantes genuinamente independientes, que identificamos
-más abajo como el primer punto del trabajo futuro.
+Usamos el bucle con un único equipo de diseño más asistencia de IA —razón por la
+cual lo llamamos autocrítica estructurada antes que validación; un adversario
+autoadministrado, por disciplinado que sea, no puede sustituir el ataque
+independiente. Su siguiente aplicación obvia es con revisores genuinamente
+independientes, que identificamos más abajo como el primer punto del trabajo
+futuro.
 
 ## 8. Limitaciones
 
@@ -735,7 +855,7 @@ siguen distribuidas incluso en modo tutelado, de modo que el poder de agenda es
 el poder de decidir qué puede financiarse, nunca qué se financia. Nuestra propia simulación muestra que la calidad informativa del
 vector de pesos predomina sobre todo otro margen de calidad, y quien construye el
 ámbito ejerce la segunda cara del poder (Bachrach and Baratz 1962;
-Schattschneider 1960) sobre todo lo que está aguas abajo. Tres cosas acotan la
+Schattschneider 1960; Lukes 1974) sobre todo lo que está aguas abajo. Tres cosas acotan la
 limitación con honestidad. Es una propiedad de los modos de transición, no de la
 arquitectura: los modos de operación son estados configurados por país, y la
 trayectoria diseñada es una fijación de agenda abierta y socialmente construida.
@@ -757,12 +877,22 @@ manera visible y revocable; el modo abierto está diseñado para terminarla. Est
 sigue siendo el principal problema abierto de la arquitectura, ahora con un premio
 medido asociado a resolverlo.
 
-**La legitimidad procedimental no es mandato democrático.** La plataforma
-registra la autorización externa para la migración presupuestaria y las fórmulas
-de asignación (el Allocation Mandate); no puede fabricar una autorización que la
-ley nunca otorgó, y el debate normativo sobre sustituir la asignación atomizada
-por la apropiación representativa (Rosanvallon 2008; Urbinati 2014) permanece
-abierto. Bajo desacuerdo evaluativo profundo, la postura de la arquitectura es
+**La legitimidad procedimental no es mandato democrático —y la norma habilitante
+aún no existe.** La plataforma registra la autorización externa para la migración
+presupuestaria y las fórmulas de asignación (el Allocation Mandate); no puede
+fabricar una autorización que la ley nunca otorgó. En la tradición continental de
+las jurisdicciones de referencia, la asignación ciudadana vinculante requiere un
+instrumento habilitante de rango suficiente que ningún estatuto actual provee
+—los precedentes regionales (el estatuto de presupuesto participativo del Perú,
+el marco del estatuto de la ciudad de Brasil) prueban que el instrumento es
+alcanzable, no que exista— de modo que los despliegues lícitos de la arquitectura
+hoy son consultivos y tutelados, en los que toda decisión de asignación material
+permanece imputada a la autoridad competente como una resolución pública
+razonada; los resultados de entrega, medición y memoria reputacional operan sin
+cambios bajo ese estatus, y solo el modo abierto maduro requiere asignación
+vinculante. El debate normativo sobre sustituir la asignación atomizada por la
+apropiación representativa (Rosanvallon 2008; Urbinati 2014) permanece abierto.
+Bajo desacuerdo evaluativo profundo, la postura de la arquitectura es
 procedimental en el sentido de Gaus (2011): sus reglas apuntan a ser
 justificables desde puntos de vista morales diversos —que es lo que proveen los
 registros de mandato, la neutralidad de motivos y la disciplina de crítica
@@ -805,22 +935,47 @@ especificados; la mecánica constitucional —reglas para hacer reglas (Buchanan
 protocolo en un despliegue maduro en modo abierto deliberadamente no lo está. El
 despliegue en modo abierto está supeditado a resolverlos.
 
-**Epistémicamente, este es el diseño validado de un solo equipo.** El corpus
+**La adopción selecciona, y la tesis no depende de ello.** Este artículo responde
+si la arquitectura puede construirse y si entrega más valor —no si alguna
+autoridad la quiere. El corpus provee la capa de despliegue para una autoridad
+que ya ha decidido (líneas base prospectivas medidas desde el inicio de la
+instrumentación, atribución de crédito sobre la entrega verificada, atribución
+institucional antes que personal de los vencimientos de plazo en el primer ciclo,
+y una cláusula de simetría que impide a cualquier operador eximir sus propios
+proyectos), y nombra los arquetipos de adoptante plausibles —el retador
+pos-escándalo, el gobierno superior que lo mandata, el financiador externo que lo
+condiciona. El efecto de selección honesto se mantiene: la arquitectura será
+plausiblemente adoptada primero por patrocinadores relativamente limpios o recién
+llegados, en los lugares que menos la necesitan.
+
+**Epistémicamente, este es el diseño autocriticado de un solo equipo.** El corpus
 adversarial fue producido por el mismo esfuerzo de investigación que ataca, con
-asistencia de IA; los parámetros de la simulación son plausibles antes que
-calibrados a un conjunto de datos de PP específico; y no se ha realizado ningún
-piloto. Las tres validaciones faltantes —ataque experto independiente,
+asistencia de IA; la línea base del statu quo de la simulación ahora está anclada
+en auditoría (sus parámetros justificados ítem por ítem a partir de los hallazgos
+publicados de instituciones de auditoría) pero no calibrada a un conjunto de
+datos de PP específico, y los parámetros restantes son plausibles antes que
+medidos; y no se ha realizado ningún piloto. Las tres validaciones faltantes —ataque experto independiente,
 calibración a datos empíricos de PP, y un piloto tutelado acotado (sector
 deportivo, un municipio)— son la siguiente fase del programa de investigación, en
 ese orden.
 
 ## 9. Ruta de implementación
 
-La arquitectura está construida para una adopción gradual y revocable: un país
-abre una función pública (el piloto de referencia es la infraestructura deportiva
-municipal), migra una pequeña cuota presupuestaria bajo un modo de operación
-tutelado, y retiene la revisión de admisibilidad —con toda decisión y demora
-tutelada pública por construcción. Las métricas de madurez funcional (mezcla de
+La arquitectura está construida para una adopción gradual y revocable, y esta
+sección es explícita sobre lo que afirma y lo que no: la pregunta de
+investigación de este artículo —si la arquitectura de asignación bicentenaria
+puede mejorarse con la tecnología de hoy, y en cuánto— se responde con
+independencia de si alguna autoridad elige desplegarla; lo que sigue es la ruta
+para una que ya lo ha decidido. Un país abre una función pública (el piloto de
+referencia es la infraestructura deportiva municipal), migra una pequeña cuota
+presupuestaria bajo un modo de operación tutelado, y retiene la revisión de
+admisibilidad —con toda decisión y demora tutelada pública por construcción. El
+encuadre por defecto del piloto es prospectivo: la instrumentación comienza en la
+adopción, la brecha de visibilidad se publica como la línea de partida declarada
+del adoptante ("mídanme desde aquí"), y las cifras previas a la adopción se
+reportan por separado, de manera impersonal y como contexto —la configuración
+bajo la cual históricamente se han adoptado instrumentos que exponen. Las
+métricas de madurez funcional (mezcla de
 participación, cuota de flujo por defecto, tasas de independencia de la
 fiscalización, indicadores de resistencia del establecido, confiabilidad fiscal)
 determinan si el despliegue gana un ámbito más amplio, y sus trayectorias, no la
@@ -842,21 +997,29 @@ aplica ese criterio de extremo a extremo, y su estructura puede enunciarse como
 dos preguntas que cualquiera puede hacerse. Primero: tómense los mismos
 proyectos, diseñados de manera idéntica, y cámbiese únicamente quién ejecuta y
 cómo se lo vigila —¿acaso el régimen visiblemente auditado con consecuencias
-reputacionales entrega más que el opaco sin ellas? Lo hace: un +43% de valor
-entregado sobre carteras idénticas, porque bajo la verificación supeditada a
-hitos la condición de incentivos se cumple y el desvío se disuade antes de que
-ocurra, mientras que el régimen opaco no solo tiene fugas sino que reporta mal
-—su finalización oficial sobreestima la entrega real en veintinueve puntos
-porcentuales, cuantificando una rendición de cuentas formalmente rica y
-prácticamente exigua. Segundo: manténgase fija la capa de control y cámbiese
+reputacionales entrega más que el opaco sin ellas? Lo hace, en el modelo: un +43%
+de valor entregado sobre carteras idénticas, porque bajo la verificación
+supeditada a hitos la condición de incentivos se cumple y el desvío se disuade
+antes de que ocurra. Segundo: manténgase fija la capa de control y cámbiese
 únicamente qué proyectos se financian, ¿planificados centralmente o priorizados
 socialmente? La priorización social entrega más bajo cualquiera de los dos
 regímenes de control (+53-54%). Y los dos efectos se multiplican en lugar de
 sumarse: la entrega verificada amplifica la buena selección, porque un proyecto
-bien elegido que tiene fugas pierde su ventaja. La arquitectura completa entrega
-2.19 veces el valor entregado de la línea base del statu quo por unidad de
-presupuesto, de manera robusta a lo largo de las tasas de participación desde el
-piso del presupuesto participativo hasta el involucramiento a escala de votación.
+bien elegido que tiene fugas pierde su ventaja. Y la comparación ya no descansa
+en una caricatura: recalibrada contra una línea base del statu quo construida
+exclusivamente a partir de los hallazgos publicados de instituciones supremas de
+auditoría —nueve jurisdicciones y la Unión Europea, administraciones de todo
+color político— la arquitectura completa entrega, en el modelo, 2.22 veces el
+statu quo calibrado por unidad de presupuesto a escala, 1.4-1.6 veces a escala de
+piloto municipal, de manera robusta a lo largo de las tasas de participación
+desde el piso del presupuesto participativo hasta el involucramiento a escala de
+votación. La recalibración produjo la oración más aguda del artículo: la
+auditoría a su intensidad real y documentada —detección sin consecuencias
+persistentes— no disuade desvío alguno en el modelo; encoge la brecha reportada,
+de veintinueve puntos a diecinueve, nunca la real. El instrumento que mueve el
+valor entregado es el que el statu quo carece a cualquier intensidad de
+auditoría: consecuencias que persisten. La rendición de cuentas sin memoria es
+contabilidad.
 
 El punto más profundo es el de Friedman: una administración central gasta el
 dinero de otras personas en otras personas, la categoría de gasto con el menor
@@ -872,7 +1035,8 @@ monopolio de información e incentivos pueden rearquitecturarse para fallar meno
 —y para mostrar sus fallas cuando las tienen. Para una de esas capas hemos
 especificado una arquitectura completa, demostrado las condiciones de incentivos
 de las que dependen sus mecanismos, medido la selección, la agregación y la
-entrega en simulación, y sometido el conjunto a tres rondas de revisión
+entrega en simulación contra una línea base que los propios auditores del sistema
+establecido suministraron, y sometido el conjunto a cuatro rondas de revisión
 adversarial documentada con una disciplina explícita de integrar-o-acotar. El
 resultado es deliberadamente modesto en sus afirmaciones e inusualmente explícito
 sobre sus bordes: la calidad de la asignación cabalga sobre la calidad
@@ -888,7 +1052,9 @@ disciplina de ingeniería antes que como una ideológica.
 ## Referencias
 
 - Akerlof, G. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." *Quarterly Journal of Economics* 84(3).
+- Austen-Smith, D., and J. Banks (1996). "Information Aggregation, Rationality, and the Condorcet Jury Theorem." *American Political Science Review* 90(1).
 - Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
+- Besley, T., and S. Coate (2003). "Centralized versus Decentralized Provision of Local Public Goods: A Political Economy Approach." *Journal of Public Economics* 87(12).
 - Baiocchi, G., and E. Ganuza (2017). *Popular Democracy: The Paradox of Participation*. Stanford University Press.
 - Becker, G. (1968). "Crime and Punishment: An Economic Approach." *Journal of Political Economy* 76(2).
 - Bikhchandani, S., D. Hirshleifer, and I. Welch (1992). "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." *Journal of Political Economy* 100(5).
@@ -899,26 +1065,33 @@ disciplina de ingeniería antes que como una ideológica.
 - Buterin, V., Z. Hitzig, and E. G. Weyl (2019). "A Flexible Design for Funding Public Goods." *Management Science* 65(11).
 - Campbell, D. (1976). "Assessing the Impact of Planned Social Change." Occasional Paper 8, Dartmouth College.
 - Coase, R. (1937). "The Nature of the Firm." *Economica* 4(16).
+- Condorcet, M. de (1785). *Essai sur l'application de l'analyse à la probabilité des décisions rendues à la pluralité des voix*. Imprimerie Royale.
 - De Filippi, P., and A. Wright (2018). *Blockchain and the Law: The Rule of Code*. Harvard University Press.
 - Downs, A. (1957). *An Economic Theory of Democracy*. Harper.
 - Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
 - Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
+- Ferraz, C., and F. Finan (2008). "Exposing Corrupt Politicians: The Effects of Brazil's Publicly Released Audits on Electoral Outcomes." *Quarterly Journal of Economics* 123(2).
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
 - Friedman, M., and R. Friedman (1980). *Free to Choose*. Harcourt.
+- Fung, A., and E. O. Wright (2003). *Deepening Democracy: Institutional Innovations in Empowered Participatory Governance*. Verso.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
 - Hirschman, A. (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
 - Holmström, B. (1979). "Moral Hazard and Observability." *Bell Journal of Economics* 10(1).
+- Holmström, B. (1999). "Managerial Incentive Problems: A Dynamic Perspective." *Review of Economic Studies* 66(1).
 - Jensen, M., and W. Meckling (1976). "Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure." *Journal of Financial Economics* 3(4).
 - Kahng, A., S. Mackenzie, and A. Procaccia (2018). "Liquid Democracy: An Algorithmic Perspective." *AAAI*.
 - Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
+- Landemore, H. (2020). *Open Democracy: Reinventing Popular Rule for the Twenty-First Century*. Princeton University Press.
+- Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Musgrave, R. (1959). *The Theory of Public Finance*. McGraw-Hill.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
+- Oates, W. (1972). *Fiscal Federalism*. Harcourt Brace Jovanovich.
 - Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
@@ -934,6 +1107,7 @@ disciplina de ingeniería antes que como una ideológica.
 - Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
+- Tiebout, C. (1956). "A Pure Theory of Local Expenditures." *Journal of Political Economy* 64(5).
 - Urbinati, N. (2014). *Democracy Disfigured: Opinion, Truth, and the People*. Harvard University Press.
 - Wampler, B. (2007). *Participatory Budgeting in Brazil: Contestation, Cooperation, and Accountability*. Penn State University Press.
 - Williamson, O. (1985). *The Economic Institutions of Capitalism*. Free Press.
@@ -943,7 +1117,8 @@ disciplina de ingeniería antes que como una ideológica.
 *Materiales acompañantes: demostraciones formales (`research/formal-models.md`),
 código de simulación y tablas completas de resultados
 (`scripts/simulation/allocation-sim.mjs`,
-`research/simulation-results.md`), el corpus de la arquitectura (`docs/`,
-`knowledge/`), y el registro adversarial completo (`attacks/`,
-`defenses/`, resoluciones aceptadas `docs/67`–`docs/103`; los treinta y cinco
+`research/simulation-results.md`), la base de evidencia de instituciones de
+auditoría (`research/audit-evidence-base.md`), el corpus de la arquitectura
+(`docs/`, `knowledge/`), y el registro adversarial completo (`attacks/`,
+`defenses/`, resoluciones aceptadas `docs/67`–`docs/109`; los cuarenta
 ataques resueltos y propagados).*

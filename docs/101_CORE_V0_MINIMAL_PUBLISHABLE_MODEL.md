@@ -770,9 +770,14 @@ was validated three ways before publication:
   delivery compound multiplicatively: on matched portfolios the
   verified-delivery layer alone is worth +43%, the full architecture
   delivers 2.19× the zero-control opaque lower bound per unit of budget
-  in-model — a bound whose recalibration against published
-  audit-institution findings is pre-registered as the seventh
-  experiment — and
+  in-model — a bound the seventh pre-registered experiment then
+  recalibrated against a status quo parameterized from published
+  audit-institution findings across nine jurisdictions: the multiplier
+  survives at 2.22× at scale and 1.4-1.6× at municipal pilot scale, and
+  the recalibration's own finding is that audit at its documented
+  intensity, without reputational memory, deters no diversion — it
+  shrinks the reported gap (twenty-nine to nineteen points), never the
+  real one — and
   the opaque regime officially reports about 29 percentage points more
   delivery than reality — a visibility gap the verified regime closes by
   construction. The sixth (E6) isolated the incentive channel with an

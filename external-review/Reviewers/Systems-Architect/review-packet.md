@@ -58,7 +58,7 @@ Please start here:
 docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
-The published academic manuscript behind this model — formal propositions and a six-experiment simulation, four experiments pre-registered — is `drafts/paper.md` (v1.6), archived as DOI 10.5281/zenodo.21193847.
+The published academic manuscript behind this model — formal propositions and a seven-experiment simulation, five experiments pre-registered — is `drafts/paper.md` (v1.7; the v1.6 edition is archived as DOI 10.5281/zenodo.21193847).
 
 You do not need to read the full repository.
 
