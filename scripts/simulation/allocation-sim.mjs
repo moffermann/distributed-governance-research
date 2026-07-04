@@ -985,6 +985,310 @@ if (args.exp === "e5") {
   process.exit(0);
 }
 
+// --- E6: endogenous execution quality under reputational competition --------
+// Pre-registered in research/e6-reputational-competition-design.md. E5's
+// executors have fixed types; E6 removes diversion entirely (all honest) and
+// tests the career-concerns channel: does visible, measured reputation with
+// reputation-weighted assignment make executors invest EFFORT (endogenous
+// quality) beyond anything deterrence explains? Selection is held fixed (the
+// E4 open-vector portfolio, d=0.8). Three arms differ only in the institution:
+// B1 opaque (quality invisible, random work), B2 mirror-without-market
+// (reputation visible, random work), B3 architecture (reputation-weighted
+// assignment). Fully deterministic: seeded RNG only.
+if (args.exp === "e6") {
+  const { N, CYCLES, ETA, SCARCITY } = CONFIG;
+  const NP = 200, PI_BASE = 0.3, KC = 4, SIGMA_C = 0.35, K_PLAN = 30, SIGMA_P = 0.10, SLOTS = 6;
+  const POOL = 120, L = 6;
+  // E6 execution parameters.
+  const ABIL_LO = 0.3, ABIL_HI = 0.9;      // fixed ability a_i ~ U(0.3,0.9)
+  const E0 = 0.5;                          // initial effort
+  const IMITATE_PROB = 0.3, IMITATE_STEP = 0.2, DECAY_STEP = 0.1, NOISE = 0.05;
+  const TOP_DECILE = Math.max(1, Math.round(POOL * 0.1)); // reference pool size
+  const WINDOW = 6;                        // cycles of assignment history (B3)
+  const REP_FLOOR = 0.1;                   // assignment-weight floor for newcomers
+  const REPORT = [1, 6, 12, 24];
+
+  // --- world + selection machinery reused verbatim from E5 --------------------
+  const makeNormal = (rng) => (mu, sigma) => {
+    let u1 = rng();
+    if (u1 < 1e-12) u1 = 1e-12;
+    const u2 = rng();
+    return mu + sigma * Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+  };
+  const buildSampler = (weights) => {
+    const cum = new Float64Array(weights.length);
+    let acc = 0;
+    for (let i = 0; i < weights.length; i++) { acc += weights[i]; cum[i] = acc; }
+    return (rng) => {
+      const roll = rng() * acc;
+      let lo = 0, hi = cum.length - 1;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (cum[mid] < roll) lo = mid + 1; else hi = mid; }
+      return lo;
+    };
+  };
+  const sampleDistinct = (pick, rng, k, seen) => {
+    seen.clear();
+    const out = [];
+    let guard = 0;
+    while (out.length < k && guard < k * 100) {
+      const j = pick(rng);
+      if (!seen.has(j)) { seen.add(j); out.push(j); }
+      guard++;
+    }
+    return out;
+  };
+  const makeWorld = (seed, piInformed) => {
+    const rng = mulberry32(seed);
+    const theta = new Float64Array(NP), s = new Float64Array(NP), target = new Float64Array(NP);
+    const targetScale = (SCARCITY * N * CYCLES) / NP;
+    for (let j = 0; j < NP; j++) {
+      theta[j] = rng();
+      s[j] = Math.max(0.01, 0.2 * theta[j] + 0.8 * rng());
+      target[j] = (0.5 + rng()) * targetScale;
+    }
+    const normal = makeNormal(rng);
+    const salienceW = new Float64Array(NP);
+    for (let j = 0; j < NP; j++) salienceW[j] = 1 + s[j];
+    const pickCov = buildSampler(salienceW);
+    const sigSum = new Float64Array(NP), sigCount = new Int32Array(NP);
+    const informedProjs = [], informedSigs = [];
+    const seen = new Set();
+    for (let i = 0; i < N; i++) {
+      if (rng() < piInformed) {
+        const projs = sampleDistinct(pickCov, rng, KC, seen);
+        const sigs = new Float64Array(projs.length);
+        for (let m = 0; m < projs.length; m++) {
+          const j = projs[m];
+          const sig = theta[j] + normal(0, SIGMA_C);
+          sigs[m] = sig; sigSum[j] += sig; sigCount[j]++;
+        }
+        informedProjs.push(projs); informedSigs.push(sigs);
+      }
+    }
+    const pickPlan = buildSampler(salienceW);
+    const inspected = sampleDistinct(pickPlan, rng, K_PLAN, seen);
+    const wPlanner = new Float64Array(NP).fill(0.5);
+    for (const j of inspected) wPlanner[j] = theta[j] + normal(0, SIGMA_P);
+    const wOpenRaw = new Float64Array(NP);
+    for (let j = 0; j < NP; j++) wOpenRaw[j] = sigCount[j] > 0 ? sigSum[j] / sigCount[j] : 0.5;
+    const density = new Float64Array(NP);
+    const ranks = Array.from({ length: NP }, (_, j) => j);
+    for (let i = NP - 1; i > 0; i--) { const k = Math.floor(rng() * (i + 1)); const tmp = ranks[i]; ranks[i] = ranks[k]; ranks[k] = tmp; }
+    for (let j = 0; j < NP; j++) density[j] = 1 / (ranks[j] + 1);
+    return { theta, s, target, informedProjs, informedSigs, sigSum, sigCount, wPlanner, wOpenRaw, density };
+  };
+  const allocateSelection = (world, cfg, seed, salt) => {
+    const rng = mulberry32((seed ^ ((salt + 1) * 0x9e3779b9)) >>> 0);
+    const { theta, s, target, informedProjs, informedSigs, wOpenRaw, wPlanner, density } = world;
+    const { d, pi, constructor } = cfg;
+    const funded = new Float64Array(NP);
+    const closeCycle = new Int32Array(NP).fill(-1);
+    const nInformed = informedProjs.length;
+    const defaultCount = Math.round(N * d);
+    const activeCount = N - defaultCount;
+    const activeInformed = Math.round(activeCount * pi);
+    const activeUninformed = activeCount - activeInformed;
+    let staticW = null;
+    if (constructor === "planner") staticW = wPlanner;
+    else if (constructor === "openStatic" || constructor === "near-me" || constructor === "rural" || constructor === "uniform") {
+      if (constructor === "openStatic") staticW = wOpenRaw;
+      else {
+        staticW = new Float64Array(NP);
+        if (constructor === "near-me") for (let j = 0; j < NP; j++) staticW[j] = density[j];
+        else if (constructor === "rural") for (let j = 0; j < NP; j++) staticW[j] = 1 / density[j];
+        else for (let j = 0; j < NP; j++) staticW[j] = rng();
+      }
+    }
+    const isDynamic = constructor === "closure";
+    let staticOrder = null;
+    if (staticW && defaultCount > 0) staticOrder = Array.from({ length: NP }, (_, j) => j).sort((a, b) => staticW[b] - staticW[a]);
+    const dynOrder = isDynamic ? Array.from({ length: NP }, (_, j) => j) : null;
+    const dynW = isDynamic ? new Float64Array(NP) : null;
+    for (let t = 0; t < CYCLES; t++) {
+      let order = staticOrder;
+      if (isDynamic) {
+        for (let j = 0; j < NP; j++) dynW[j] = target[j] > 0 ? Math.min(1, funded[j] / target[j]) : 0;
+        dynOrder.sort((a, b) => dynW[b] - dynW[a]);
+        order = dynOrder;
+      }
+      for (let c = 0; c < activeInformed && nInformed > 0; c++) {
+        const ci = Math.floor(rng() * nInformed);
+        const projs = informedProjs[ci], sigs = informedSigs[ci];
+        let bestIdx = -1, bestVal = -Infinity;
+        for (let m = 0; m < projs.length; m++) {
+          const j = projs[m];
+          if (funded[j] >= target[j]) continue;
+          if (sigs[m] > bestVal) { bestVal = sigs[m]; bestIdx = j; }
+        }
+        if (bestIdx >= 0) funded[bestIdx] += Math.min(1, target[bestIdx] - funded[bestIdx]);
+      }
+      if (activeUninformed > 0) {
+        let maxFunded = 1;
+        for (let j = 0; j < NP; j++) if (funded[j] > maxFunded) maxFunded = funded[j];
+        const topIdx = [], topVis = [];
+        for (let j = 0; j < NP; j++) {
+          const vis = s[j] * (1 + ETA * (funded[j] / maxFunded));
+          if (topIdx.length < SLOTS) { topIdx.push(j); topVis.push(vis); }
+          else {
+            let mn = 0;
+            for (let a = 1; a < topIdx.length; a++) if (topVis[a] < topVis[mn]) mn = a;
+            if (vis > topVis[mn]) { topIdx[mn] = j; topVis[mn] = vis; }
+          }
+        }
+        let visTotal = 0;
+        for (let a = 0; a < topVis.length; a++) visTotal += topVis[a];
+        for (let c = 0; c < activeUninformed; c++) {
+          let amount = 1;
+          for (let att = 0; att < 4 && amount > 0; att++) {
+            let roll = rng() * visTotal, pick = topIdx[topIdx.length - 1];
+            for (let a = 0; a < topIdx.length; a++) { roll -= topVis[a]; if (roll <= 0) { pick = topIdx[a]; break; } }
+            const room = target[pick] - funded[pick];
+            if (room <= 0) continue;
+            const paid = Math.min(amount, room);
+            funded[pick] += paid; amount -= paid;
+          }
+        }
+      }
+      if (defaultCount > 0 && order) {
+        let budget = defaultCount;
+        for (let oi = 0; oi < order.length; oi++) {
+          if (budget <= 0) break;
+          const j = order[oi];
+          const room = target[j] - funded[j];
+          if (room <= 0) continue;
+          const paid = Math.min(budget, room);
+          funded[j] += paid; budget -= paid;
+        }
+      }
+      for (let j = 0; j < NP; j++) if (closeCycle[j] < 0 && funded[j] >= target[j]) closeCycle[j] = t;
+    }
+    const jobs = [];
+    for (let j = 0; j < NP; j++) if (funded[j] >= target[j]) jobs.push({ j, cycle: closeCycle[j], budget: target[j] });
+    jobs.sort((a, b) => (a.cycle - b.cycle) || (a.j - b.j));
+    return { jobs };
+  };
+
+  // --- reputational-competition execution -------------------------------------
+  // One arm over a fixed portfolio and a fixed pool of abilities. Each cycle:
+  // (1) every executor updates effort (imitation of a visible top performer in
+  // B2/B3, or cost-minimizing decay in B1, each w.p. 0.3; then +-0.05 noise);
+  // (2) that cycle's due milestones (project close-cycle + monthly index) are
+  // assigned to executors and delivered at quality q = 0.25+0.45a+0.30e;
+  // reputation (running mean quality) is recorded in B2/B3. Milestone quality
+  // uses the effort in force that cycle, so effort dynamics feed delivered value.
+  const SALT = { B1: 0x111, B2: 0x222, B3: 0x333 };
+  const runArm = (world, jobs, ability, arm, seed) => {
+    const rng = mulberry32((seed ^ SALT[arm]) >>> 0);
+    const effort = new Float64Array(POOL).fill(E0);
+    const repSum = new Float64Array(POOL), repCount = new Int32Array(POOL);
+    const totalAssign = new Int32Array(POOL);
+    const assignByCycle = new Array(CYCLES);
+    // Schedule L monthly milestones per funded project from its close cycle;
+    // milestones due past the horizon are dropped (identical across arms).
+    const due = Array.from({ length: CYCLES }, () => []);
+    for (const job of jobs) {
+      const mBudget = job.budget / L, th = world.theta[job.j];
+      for (let m = 0; m < L; m++) { const dc = job.cycle + m; if (dc < CYCLES) due[dc].push({ th, mBudget }); }
+    }
+    const effTraj = {}, qTraj = {};
+    let vNum = 0, vDen = 0;
+    for (let t = 0; t < CYCLES; t++) {
+      // reference pool for imitation (B2 by reputation, B3 by recent assignments)
+      let topDecile = null;
+      if (arm !== "B1") {
+        const metric = new Float64Array(POOL);
+        if (arm === "B3") {
+          for (let tt = Math.max(0, t - WINDOW); tt < t; tt++) {
+            const ac = assignByCycle[tt];
+            if (ac) for (let i = 0; i < POOL; i++) metric[i] += ac[i];
+          }
+        } else {
+          for (let i = 0; i < POOL; i++) metric[i] = repCount[i] > 0 ? repSum[i] / repCount[i] : 0;
+        }
+        const idx = Array.from({ length: POOL }, (_, i) => i).sort((a, b) => metric[b] - metric[a]);
+        topDecile = idx.slice(0, TOP_DECILE);
+      }
+      // (1) effort update
+      for (let i = 0; i < POOL; i++) {
+        if (rng() < IMITATE_PROB) {
+          if (arm === "B1") effort[i] += DECAY_STEP * (0 - effort[i]);
+          else { const ref = topDecile[Math.floor(rng() * topDecile.length)]; effort[i] += IMITATE_STEP * (effort[ref] - effort[i]); }
+        }
+        effort[i] += rng() * 2 * NOISE - NOISE;
+        if (effort[i] < 0) effort[i] = 0; else if (effort[i] > 1) effort[i] = 1;
+      }
+      // (2) assign + deliver this cycle's milestones
+      const cyc = new Int32Array(POOL);
+      let qSum = 0, qCnt = 0;
+      for (const ms of due[t]) {
+        let ei;
+        if (arm === "B3") {
+          let acc = 0; const w = new Float64Array(POOL);
+          for (let i = 0; i < POOL; i++) { const R = repCount[i] > 0 ? repSum[i] / repCount[i] : 0; const wi = (REP_FLOOR + R) * (REP_FLOOR + R); w[i] = wi; acc += wi; }
+          let roll = rng() * acc; ei = POOL - 1;
+          for (let i = 0; i < POOL; i++) { roll -= w[i]; if (roll <= 0) { ei = i; break; } }
+        } else ei = Math.floor(rng() * POOL);
+        let q = 0.25 + 0.45 * ability[ei] + 0.30 * effort[ei];
+        if (q < 0) q = 0; else if (q > 1) q = 1;
+        cyc[ei]++; totalAssign[ei]++;
+        if (arm !== "B1") { repSum[ei] += q; repCount[ei]++; }
+        vNum += ms.th * q * ms.mBudget; vDen += ms.mBudget;
+        qSum += q; qCnt++;
+      }
+      assignByCycle[t] = cyc;
+      const cnum = t + 1;
+      if (REPORT.includes(cnum)) {
+        let es = 0; for (let i = 0; i < POOL; i++) es += effort[i];
+        effTraj[cnum] = es / POOL;
+        qTraj[cnum] = qCnt > 0 ? qSum / qCnt : NaN;
+      }
+    }
+    return {
+      effTraj, qTraj,
+      V: vDen > 0 ? vNum / vDen : 0,
+      corrAssign: pearson(Array.from(ability), Array.from(totalAssign)),
+      gAssign: gini(Array.from(totalAssign)),
+    };
+  };
+
+  const ARMS = ["B1", "B2", "B3"];
+  const acc = Object.fromEntries(ARMS.map((n) => [n, {
+    e1: [], e6: [], e12: [], e24: [], q1: [], q6: [], q12: [], q24: [], V: [], corr: [], gini: [],
+  }]));
+  for (let r = 0; r < RUNS; r++) {
+    const seed = BASE_SEED + r;
+    const world = makeWorld(seed, PI_BASE);
+    const { jobs } = allocateSelection(world, { d: 0.8, pi: PI_BASE, constructor: "openStatic" }, seed, 3);
+    const abilRng = mulberry32((seed ^ 0xab11) >>> 0);
+    const ability = new Float64Array(POOL);
+    for (let i = 0; i < POOL; i++) ability[i] = ABIL_LO + (ABIL_HI - ABIL_LO) * abilRng();
+    for (const arm of ARMS) {
+      const o = runArm(world, jobs, ability, arm, seed);
+      const a = acc[arm];
+      a.e1.push(o.effTraj[1]); a.e6.push(o.effTraj[6]); a.e12.push(o.effTraj[12]); a.e24.push(o.effTraj[24]);
+      a.q1.push(o.qTraj[1]); a.q6.push(o.qTraj[6]); a.q12.push(o.qTraj[12]); a.q24.push(o.qTraj[24]);
+      a.V.push(o.V); a.corr.push(o.corrAssign); a.gini.push(o.gAssign);
+    }
+  }
+  const aggMS = (arr) => { const v = arr.filter((x) => !Number.isNaN(x)); return v.length ? `${mean(v).toFixed(3)}±${sd(v).toFixed(3)}` : "—"; };
+
+  console.log(`\n# E6 - endogenous quality under reputational competition (runs=${RUNS}, seeds ${BASE_SEED}..${BASE_SEED + RUNS - 1}, N_p=${NP}, pool=${POOL}, cycles=${CYCLES}, scarcity=${SCARCITY}x, all-honest)`);
+  console.log(`q = clamp01(0.25 + 0.45*a + 0.30*e), a~U(${ABIL_LO},${ABIL_HI}); imitate p=${IMITATE_PROB} step=${IMITATE_STEP}, decay=${DECAY_STEP}, noise=±${NOISE}; B3 assign weight (${REP_FLOOR}+R)^2`);
+  const LABEL = { B1: "B1 opaque (invisible/random)", B2: "B2 mirror (visible/random)", B3: "B3 architecture (visible/rep-weighted)" };
+  console.log("\n| arm | effort c1 | c6 | c12 | c24 | quality c1 | c6 | c12 | c24 | V/budget | corr(ability,assign) | assign Gini |");
+  console.log("|---|---|---|---|---|---|---|---|---|---|---|---|");
+  for (const n of ARMS) {
+    const a = acc[n];
+    console.log(`| ${LABEL[n]} | ${aggMS(a.e1)} | ${aggMS(a.e6)} | ${aggMS(a.e12)} | ${aggMS(a.e24)} | ${aggMS(a.q1)} | ${aggMS(a.q6)} | ${aggMS(a.q12)} | ${aggMS(a.q24)} | ${aggMS(a.V)} | ${aggMS(a.corr)} | ${aggMS(a.gini)} |`);
+  }
+  console.log("\nPaired contrasts on final V (same seeds, mean [95% CI], n=" + RUNS + "):");
+  console.log(`  B3 - B1 = ${pairedDiff(acc.B3.V, acc.B1.V)}`);
+  console.log(`  B3 - B2 = ${pairedDiff(acc.B3.V, acc.B2.V)}`);
+  console.log(`  B2 - B1 = ${pairedDiff(acc.B2.V, acc.B1.V)}`);
+
+  process.exit(0);
+}
+
 // lambda is a mixing weight (w = lambda*theta + (1-lambda)*u), not a Pearson
 // correlation. Report the measured correlation so results are labeled
 // honestly (referee issue M2).
