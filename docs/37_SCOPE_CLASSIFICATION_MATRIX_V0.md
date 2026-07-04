@@ -98,7 +98,6 @@ Examples:
 | [[01_RESEARCH_METHOD|docs/01_RESEARCH_METHOD.md]] | Core v0 support | Defines method for developing the model. |
 | [[02_PROJECT_SCOPE|docs/02_PROJECT_SCOPE.md]] | Core v0 support | Frames project boundaries. |
 | [[03_ROADMAP|docs/03_ROADMAP.md]] | Core v0 support | Guides current work sequence. |
-| [[04_AGENT_ROLES|docs/04_AGENT_ROLES.md]] | Core v0 support | Supports repository workflow. |
 | [[06_CURRENT_PROJECT_RECAP|docs/06_CURRENT_PROJECT_RECAP.md]] | Core v0 support | Helps continuity and orientation. |
 
 ## Core architecture documents
