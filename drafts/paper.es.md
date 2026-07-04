@@ -145,7 +145,11 @@ se le hizo. Nuestras contribuciones son:
    el apalancamiento concentrado en la capa de construcción de ámbitos, miden
    una construcción abierta viable de ella, y llevan la comparación de extremo a
    extremo —desde la asignación hasta el valor social entregado por unidad de
-   presupuesto, el criterio que la redistribución existe para satisfacer.
+   presupuesto, el criterio que la redistribución existe para satisfacer. El
+   resultado principal: la entrega verificada y la priorización social se
+   multiplican en lugar de sumarse, la arquitectura completa entrega 2.19×
+   la línea base opaca del statu quo, y la completitud oficial del statu quo
+   sobreestima su entrega real en veintinueve puntos porcentuales.
 
 4. **Validación adversarial como método** (Sección 7). La arquitectura fue
    atacada sistemáticamente —treinta y cinco resúmenes de ataque anclados en las
@@ -233,7 +237,17 @@ distribuibles, (ii) una arquitectura completa a nivel de objetos para la capa de
 asignación, (iii) un análisis formal de incentivos de los mecanismos específicos
 de esa arquitectura, (iv) simulación conductual de sus supuestos de cara a la
 ciudadanía, y (v) un método documentado de revisión adversarial con una regla de
-detención explícita.
+detención explícita. Y el resultado sustantivo es en sí mismo nuevo: (vi) una
+comparación institucional de extremo a extremo sobre el criterio que la
+redistribución existe para satisfacer —valor social entregado por unidad de
+presupuesto—, descomponiendo la selección de la entrega sobre carteras
+apareadas, mostrando que ambas capas se multiplican, e introduciendo la brecha
+de visibilidad (entrega oficialmente reportada menos entrega real) como un
+déficit de rendición de cuentas medible del statu quo. Las evaluaciones de
+presupuestos participativos miden participación y asignación; los estudios de
+auditoría miden fugas después del hecho; no conocemos ninguno que mida, dentro
+de un mismo marco, cuánto valor entregado produce una institución de asignación
+a partir de los mismos recursos.
 
 ## 3. El principio de distribución funcional
 

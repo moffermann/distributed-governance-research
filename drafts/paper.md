@@ -133,7 +133,11 @@ to it. Our contributions are:
    concentrated in the scope-construction layer, measure a viable open
    construction of it, and carry the comparison end to end — from
    allocation to delivered social value per unit of budget, the criterion
-   redistribution exists to satisfy.
+   redistribution exists to satisfy. The headline result: verified
+   delivery and social prioritization multiply rather than add, the full
+   architecture delivers 2.19× the opaque status-quo baseline, and the
+   status quo's official completion overstates its real delivery by
+   twenty-nine percentage points.
 
 4. **Adversarial validation as method** (Section 7). The architecture was
    attacked systematically — thirty-five attack briefs grounded in the
@@ -214,7 +218,17 @@ decomposition of state activity into distributable and non-distributable
 layers, (ii) a complete object-level architecture for the allocation layer,
 (iii) formal incentive analysis of that architecture's specific mechanisms,
 (iv) behavioral simulation of its citizen-facing assumptions, and (v) a
-documented adversarial-review method with an explicit stopping rule.
+documented adversarial-review method with an explicit stopping rule. And
+the substantive result is itself new: (vi) an end-to-end institutional
+comparison on the criterion redistribution exists to satisfy — delivered
+social value per unit of budget — decomposing selection from delivery on
+matched portfolios, showing the two layers multiply, and introducing the
+visibility gap (officially reported minus real delivery) as a measurable
+accountability deficit of the status quo. Participatory-budgeting
+evaluations measure participation and allocation; audit studies measure
+leakage after the fact; we know of none that measures, within one
+framework, how much delivered value an allocation institution produces
+from the same resources.
 
 ## 3. The functional distribution principle
 
