@@ -32,4 +32,6 @@ Working paper v1.6 with formal mechanism-design propositions and a reproducible 
 
 ## License and citation
 
+Archived and citable: DOI [10.5281/zenodo.21193847](https://doi.org/10.5281/zenodo.21193847) (this version) · [10.5281/zenodo.21193846](https://doi.org/10.5281/zenodo.21193846) (all versions).
+
 Dual-licensed: research corpus CC BY 4.0; manuscript, publishable model, and reviewer packets CC BY-NC-ND 4.0 (pending venue selection); code MIT. See `LICENSE.md`. To cite this work, see `CITATION.cff`.

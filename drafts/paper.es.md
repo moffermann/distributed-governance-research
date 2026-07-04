@@ -4,7 +4,7 @@
 
 *Traducción al español del working paper v1.6 (drafts/paper.md, versión autoritativa en inglés).*
 
-*© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff.*
+*© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI: 10.5281/zenodo.21193847.*
 
 ## Resumen
 

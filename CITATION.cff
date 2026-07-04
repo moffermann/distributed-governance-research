@@ -7,6 +7,7 @@ authors:
 version: "v1.6"
 date-released: "2026-07-03"
 url: "https://github.com/moffermann/distributed-governance-research"
+doi: 10.5281/zenodo.21193846
 license: CC-BY-4.0
 notes: "Dual-licensed: research corpus CC BY 4.0; manuscript and reviewer packets CC BY-NC-ND 4.0; code MIT. See LICENSE.md."
 preferred-citation:
@@ -17,3 +18,4 @@ preferred-citation:
       given-names: "Mauricio"
   year: 2026
   notes: "Working paper v1.6, drafts/paper.md"
+  doi: 10.5281/zenodo.21193847
