@@ -95,6 +95,18 @@ Paired with the external-review round attacks in `attacks/`; both defenses apply
 | `D034` | `A034` | Legal Characterization of the Citizen Allocation Act | Founded (characterization gap) — resolved in [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]] |
 | `D035` | `A035` | Administrative Capacity Cost of Tutored Operation | Founded (deployment precondition, comparatively bounded) — resolved in [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]] |
 
+## Manuscript-review round defense queue (D036-D040)
+
+Paired with the manuscript-review round attacks in `attacks/` (five-profile review of the published v1.6 manuscript; raw reviews in `external-review/manuscript-v1.6-round/`). No accepted resolutions yet; each pair awaits author review. D036's empirical arbiter is the pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]).
+
+| Defense | Attack | Title | Classification |
+|---|---|---|---|
+| `D036` | `A036` | The Opaque Baseline Is a Strawman | Founded in presentation and calibration; partially founded in substance — E7 pre-registered as the test, with a committed headline-withdrawal condition |
+| `D037` | `A037` | Reserve of Law and the Non-Delegable Allocation Competence | Founded (threshold gap) — enabling-norm record and binding-mode gate proposed; doctrine external |
+| `D038` | `A038` | Reputational Exclusion as a Sanction Without Due Process | Founded (procedural gap) — tiered Reputational Consequence Procedure proposed; statutory grounds external |
+| `D039` | `A039` | Traceable Allocation Reveals Political Preference | Founded (specification gap) — citizen-side secrecy-by-default with receipt-freeness proposed |
+| `D040` | `A040` | The Adoption Paradox | Founded (missing design layer) — adoption theory, prospective baseline default, credit surface, official protection, symmetry clause proposed |
+
 ## Use
 
 The next Phase 3 work should review each attack-defense pair. Where a defense marks the risk as unresolved or materially founded, the project should either create a formal resolution document, update core documents, or preserve the objection as an explicit unresolved limitation.
