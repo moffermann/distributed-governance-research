@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.5 (July 2026). Revised after an adversarial referee pass and author methodological reviews of the simulation, its framing, and the conclusions' criterion of success, all part of the public record.**
+**Working paper — v1.6 (July 2026). Revised after an adversarial referee pass and author methodological reviews of the simulation, its framing, the conclusions' criterion of success, and the incentive channel of delivery, all part of the public record.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff.*
 
@@ -39,7 +39,12 @@ value per unit of budget — finding that verified delivery adds +43% on
 identical portfolios, that selection and delivery gains multiply, that the
 full architecture delivers 2.19× the opaque status-quo baseline, and that
 the status quo's officially reported completion overstates real delivery
-by twenty-nine percentage points. Third, method: the architecture was
+by twenty-nine percentage points; a sixth experiment isolates the
+incentive channel — visible standards sustain execution quality where
+opacity lets it decay toward cost-minimization — and finds that naive
+reputation-weighted assignment concentrates work faster than it finds
+ability, evidence for the architecture's concentration-observability
+machinery. Third, method: the architecture was
 developed under systematic adversarial review — thirty-five attack briefs,
 each with a paired defense and an accepted resolution under an explicit
 integrate-or-bound rule that either adds a mechanism through existing
@@ -597,6 +602,32 @@ shows each carries a large, measurable distributional signature —
 near-me concentrates 71% of budget in the densest quintile, rural
 inverts it — so the default is a visible, configurable distributional
 policy lever, not an inherent planner bias.
+
+**Finding 6: visibility sustains the standard; naive reputation markets
+concentrate faster than they select.** A sixth pre-registered experiment
+(`research/e6-reputational-competition-design.md`) isolates the incentive
+channel from deterrence entirely: an all-honest executor pool with costly,
+adjustable effort and no possibility of diversion. In the opaque regime,
+effort collapses toward cost-minimization (0.49 → 0.24 over twenty-four
+cycles) — not through malice, but because effort has no return and no
+visible standard exists to imitate. Making verified quality visible
+sustains effort near its starting level, and the visible-competitive
+regime delivers +11% over the opaque baseline — a pure incentive gain
+with zero diversion in the model. Two pre-registered predictions failed
+informatively. Visibility alone carries most of the effect: the mirror
+precedes the market (the behavioral rule ties imitation to visibility, so
+part of this is by construction — but the construction encodes the claim
+that opacity erodes professional norms by removing the standard itself).
+And naive reputation-weighted assignment concentrates work dramatically
+(assignment Gini 0.84 versus 0.34) while tracking true ability only
+weakly — early-luck lock-in, the cumulative-advantage dynamic of
+information cascades reappearing in the executor market. The design
+lesson runs in both directions: verified visibility is where the quality
+incentive lives, and any strong reputation weighting — human or
+algorithmic — needs the concentration observability, entrant floors, and
+opportunity-normalized reputation the corpus prescribes. In Core v0,
+reputation informs funders' choices rather than automatic assignment,
+with concentration visible by construction.
 
 ## 7. Adversarial validation as method
 

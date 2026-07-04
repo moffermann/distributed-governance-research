@@ -328,6 +328,66 @@ never fail for capacity reasons — delivery failure is modeled as
 opportunism only, so E5's leak is a lower bound on real-world loss under
 both regimes.
 
+## E6 — Endogenous execution quality under visibility and reputational competition
+
+Pre-registered in `research/e6-reputational-competition-design.md`; raw
+output in `research/e6-raw-output.txt`. E6 isolates the author's incentive
+hypothesis — "if you know you can be excluded, you improve your quality to
+stay competitive in a high-visibility environment" — from E5's deterrence:
+the pool is all-honest and diversion does not exist, so any gain is
+incentive, not enforcement. Executors have fixed ability and choose costly
+effort each cycle under bounded rationality (imitation of visible success;
+cost-minimizing decay in the dark). Three arms: B1 opaque (quality
+unmeasured, random assignment), B2 mirror (reputation visible, assignment
+still random), B3 architecture (visible reputation weighting assignment).
+
+| arm | effort c1→c24 | quality c24 | V/budget | corr(ability, assign) | assign Gini |
+|---|---|---|---|---|---|
+| B1 opaque | 0.485 → 0.238 | 0.594±0.024 | 0.541±0.015 | −0.009 | 0.336 |
+| B2 mirror | 0.500 → 0.524 | 0.683±0.027 | 0.585±0.017 | −0.006 | 0.354 |
+| B3 architecture | 0.501 → 0.517 | 0.692±0.027 | 0.600±0.025 | +0.084±0.103 | 0.836 |
+
+Paired contrasts on final V: B3−B1 = +0.059 [0.051, 0.067]; B2−B1 =
++0.045 [0.041, 0.049]; B3−B2 = +0.014 [0.006, 0.022].
+
+**Findings against the pre-registered predictions:**
+
+1. **Prediction 1 (the author's hypothesis) PARTIALLY HELD.** The
+   visible-competitive regime delivers +11% over the opaque baseline with
+   zero diversion in the model — a pure incentive gain, not explainable by
+   deterrence — and effort/quality rise monotonically where they collapse
+   in the dark. The magnitude of the *effort rise* is modest; the
+   dominant effect is preventing the opaque regime's effort collapse.
+2. **Prediction 2 FAILED informatively: the mirror carries most of the
+   effect.** Visibility alone (B2) sustains effort near its starting level
+   while opacity lets it decay toward cost-minimization; the competitive
+   market adds only +0.014 on top. Mechanism honesty: the pre-registered
+   behavioral rule ties imitation to visibility, so part of this is by
+   construction — but the construction encodes a real claim: in an opaque
+   system there is no visible standard to imitate, and professional norms
+   erode; visibility creates a commons of standards before it creates a
+   market.
+3. **Prediction 3 WEAK/FAILED, and this is the design finding: naive
+   reputation-weighted assignment concentrates work faster than it finds
+   ability.** B3's assignment Gini explodes (0.836 vs ~0.34) while the
+   ability-assignment correlation stays weak (+0.084, CI overlapping
+   zero): early assignments build reputation, reputation wins assignments,
+   and cumulative advantage locks in early luck — the A027 rich-get-richer
+   dynamic reappearing in the executor market. A reputation-weighted
+   market needs the same anti-lock-in machinery the corpus prescribes
+   elsewhere: concentration visibility, floors for entrants, and
+   reputation normalized by opportunities.
+4. **Prediction 4 HELD strongly:** the meritocratic-concentration
+   trade-off is real and larger than expected.
+
+**Scope boundary, declared.** B3's automatic reputation-weighted
+assignment is a stylization: in Core v0, executors are not
+protocol-assigned — reputation informs funders' choices and eligibility,
+with concentration visible. The lock-in warning therefore reads as design
+guidance for any strong reputation weighting, human or algorithmic, and as
+evidence for the corpus's existing concentration-observability machinery
+rather than as a description of the architecture's mechanism.
+
 ## Implications for the architecture
 
 1. The funding-target closure rule earns its place as an
