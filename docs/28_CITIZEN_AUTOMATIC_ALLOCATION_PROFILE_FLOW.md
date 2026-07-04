@@ -314,7 +314,7 @@ Reports should explain why allocations happened.
 
 Reports should also state whether any automatic rule was skipped because active delegation had priority.
 
-The citizen may configure report channel and frequency, but each profile run should remain available in-app. App-only or silent notification mode must not hide allocation history, skipped-rule explanations, fallback activation, or the profile that resumed after delegation ended. ^r3ee67de6
+The citizen may configure report channel and frequency, but each profile run should remain available in-app. App-only or silent notification mode must not hide run reports, skipped-rule explanations, fallback activation, or the profile that resumed after delegation ended. Run reports are in-app information for the citizen alone, surfaced through the followed-projects feed: they produce no exportable or third-party-verifiable statement of the citizen's allocations ([[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]]). ^r3ee67de6
 
 ## 10. Edit, pause, or deactivate
 

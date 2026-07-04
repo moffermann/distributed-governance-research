@@ -2,7 +2,7 @@
 
 ## Status
 
-Manuscript-review round brief. Pending paired review; no accepted resolution yet.
+Reviewed in paired review. Improvements accepted in [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]].
 
 ## Description
 
@@ -89,4 +89,4 @@ A jurisdiction's data-protection authority reviews the pilot and finds a populat
 
 ## Resolution output
 
-None yet. Pending paired defense and review.
+The accepted resolution adopted citizen allocation secrecy with public money: pseudonymous allocators with cryptographic reconciliation of individual ledgers against public per-scope totals; no receipt, export, or screen state provable to third parties, even voluntarily; the citizen surface organized as a followed-projects feed with a remaining balance and no "my allocations" ledger view; automatic-profile reports retained in-app and non-transferable; per-citizen allocation data classified as inferred political opinion with country-implementation preconditions; re-linking limited to reviewed, logged fraud investigation; the A030 indicators certified aggregate-only; and a one-sentence secrecy disclosure before first allocation.

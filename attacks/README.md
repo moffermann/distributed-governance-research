@@ -94,7 +94,7 @@ These briefs originate from the five-profile external-review simulation of the p
 | `A036` | The Opaque Baseline Is a Strawman: The Status Quo Already Contains a Control Regime | academic + systems-architect + practitioner reviewers, manuscript round | resolved in [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]; E7 remains the headline's arbiter |
 | `A037` | Reserve of Law and the Non-Delegable Allocation Competence | public-law + practitioner reviewers, manuscript round | resolved in [[106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION.md]] |
 | `A038` | Reputational Exclusion as a Sanction Without Due Process | public-law reviewer, manuscript round | reclassified partially founded; resolved in [[107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION.md]] |
-| `A039` | Traceable Allocation Reveals Political Preference: Vote Immunity Without Vote Secrecy | public-law reviewer, manuscript round | pending paired review |
+| `A039` | Traceable Allocation Reveals Political Preference: Vote Immunity Without Vote Secrecy | public-law reviewer, manuscript round | resolved in [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]] |
 | `A040` | The Adoption Paradox: The Visibility Gap Punishes Its Natural Adopter | public-sector practitioner reviewer, manuscript round | pending paired review |
 
 ## Standard review routine
