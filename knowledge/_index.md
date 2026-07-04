@@ -125,7 +125,7 @@ Start here when navigating the project in Obsidian or GitHub.
 - [[../docs/03_ROADMAP|Roadmap]]
 - [[../docs/04_AGENT_ROLES|Agent Roles]]
 - [[../docs/05_OBSIDIAN_TOOLING_SETUP|Obsidian and tooling Setup]]
-- [[../docs/06_CURRENT_PROJECT_RECAP|Current Project Recap]]
+- [[../docs/06_CURRENT_PROJECT_RECAP|Project Recap as of 2026-06-26 (Historical Snapshot)]]
 - [[../docs/07_CORE_V0_SCOPE|Core v0 Scope]]
 - [[../docs/08_ENTITY_AND_ROLE_MAP|Entity and Role Map v0]]
 - [[../docs/09_PROJECT_OBJECT_MODEL|Project Object Model v0]]
