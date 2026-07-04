@@ -22,7 +22,8 @@ Minimum rule:
 - the transition is automatic and recorded, like every lifecycle transition — it is a project/protocol outcome, not a withdrawal, and creates no ordinary voluntary-withdrawal right (consistent with C005, [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]]);
 - no funds have been disbursed in this state by construction (disbursement requires execution readiness), so all committed, unreleased funds follow the same configured treatment menu as `Expired Unfunded` (docs/85): return to citizen available balance, reassignment under the citizen's automatic allocation profile, reassignment under active delegation where valid, or the protocol fallback;
 - the expired project remains historically visible with its reason, and republication or cloning follows the docs/85 republication rules;
-- deadline configuration and any extension are visible Threshold Policy / Governance Resolution matters, never silent edits.
+- deadline configuration and any extension are visible Threshold Policy / Governance Resolution matters, never silent edits;
+- projects already in execution never expire: once disbursement has begun, deadline and delivery failures follow the execution machinery — milestone retention and recovery (A017), reformulation (C017), pause and material suspension, revocation, and closure evaluation (C018) — because expiry without accounting would be an escape from live obligations.
 
 ## Distinction from Expired Unfunded
 
