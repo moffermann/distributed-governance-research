@@ -1,0 +1,52 @@
+# Manuscript v1.6 review — Systems-architect profile (raw, verbatim, 2026-07-04)
+
+# Revisión externa — Arquitecto de sistemas (paper v1.6)
+
+Confirmo primero lo esencial: corrí `allocation-sim.mjs` (`--seed 1 --runs 20`) para E4, E5 y E6, y **cada cifra del paper reproduce al tercer decimal** (2,19× = 0,859/0,393; +43% = 0,168/0,393; interacción +0,085 [0,053, 0,117]; Gini asignación B3 = 0,836; corr planner 0,371 vs open 0,988 a N=200).
+
+**Perfil del revisor.** Ingeniero senior que ha construido plataformas govtech y sistemas distribuidos de verificación e identidad; escéptico de métricas que emergen de parámetros elegidos a mano.
+
+**Comprensión del paper.** Propone descomponer el Estado en capas funcionales y distribuir (f)–(i) —asignación, ejecución, evidencia, auditoría— de un presupuesto acotado, manteniendo central lo indelegable. Aporta tres cosas: (1) tres modelos de diseño de mecanismos (desembolso por hitos, fiscalización colusion-proof con k-corroboración, trade-off garantía/detección); (2) evidencia computacional con seis experimentos ABM de 10.000 agentes, culminando en E5 (2×2 selección×entrega → 2,19× sobre el statu quo opaco, brecha de visibilidad de 29 puntos) y E6 (competencia reputacional); (3) un método adversarial de 35 ataques con regla integrate-or-bound. La v1.6 recentra la tesis en "valor entregado por unidad de presupuesto".
+
+**Auditoría código vs paper — ¿coinciden?** Sí, con fidelidad notable. El código implementa lo que el paper afirma: runs sembrados deterministas, los cuatro brazos del 2×2 con portafolios pareados por semilla (`allocation-sim.mjs:870-887`), la condición de diversión de la Proposición 1 (`:793`, `:826-831`), y las reglas conductuales de E6. La reproducibilidad es real y es lo más fuerte del trabajo. Discrepancias concretas, todas menores/de presentación:
+- **`:896-897`** "+43% ... [0.143, 0.193]": el IC es del *diferencial absoluto* de V, no del porcentaje. Yuxtaponer headline porcentual con IC en unidades absolutas es engañoso.
+- El "2,19×" no lleva IC en ninguna parte (abstract, §6, conclusión), a diferencia de todos los contrastes pareados vecinos.
+- **`:1231`/`:1235`** El paper llama al esfuerzo de E6 "costly, adjustable", pero el costo del esfuerzo **nunca entra** en ninguna función de valor (`q = 0.25 + 0.45*a + 0.30*e`; `vNum += th*q*mBudget`). "Cost-minimization" en B1 es glosa narrativa sobre un decaimiento impuesto (`:1214`), no una minimización con micro-fundamento.
+
+**Objeciones principales (ingeniería primero):**
+
+1. **La capa de evidencia —el corazón operativo de "entrega verificada"— no está modelada; es un escalar exógeno `p`.** Todo el brazo verificado descansa en `p = 0.75` (`:792`), que aparece de la nada. En un sistema real `p` es el *output* de ingestión de evidencia, identidad de sensores, cadena de custodia y anti-fraude en el fiscalizador. El paper vende "verified delivery" pero el modelo asume que la detección simplemente funciona. Garbage-in en el sensor (evidencia fabricada, colusión en la capa de evidencia, sobornar al productor de evidencia) —donde estos sistemas mueren— está fuera del modelo. §8 dice "assumed, then priced", pero la simulación *elige* p=0,75 para el titular sin ancla empírica para el lado verificado (solo el opaco cita Uganda/Indonesia). Calibración asimétrica.
+
+2. **El contraste de entrega es cero-por-construcción, no medido.** Umbral verificado = 0,75·((1−0,2·0,5)+0,15+0,3) = **1,0125** (`:793`), y el máximo `c_eff` de un oportunista es **0,9** (`:826`). Por tanto ningún oportunista diverge jamás bajo "verified": leak ≡ 0,000 y visGap ≡ 0,000 son identidades algebraicas, no hallazgos. El tamaño de la brecha opaco↔verificado está fijado por parámetros no calibrados; su propio "verified-weak" (p=0,45, `:960`) cambia el cuadro. El +43% y el 2,19× son funciones directas de esas elecciones.
+
+3. **El 2,19× apila las dos patas más favorables y una está mutilada por una constante.** El brazo central usa `K_PLAN = 30` inspecciones fijas sobre `N_p = 200` proyectos (`:600`), forzando sel(θ)=0,138 (casi aleatorio). Una autoridad real escala su capacidad analítica con el alcance; fijar la banda en 30 mientras el mundo crece a 200 fabrica la mitad de la ventaja. El paper lo admite ("inflating the selection margin") pero igual titula 2,19×. El número honesto y robusto es el **+43% de solo-entrega** (A1/S), que no depende de la selección mutilada.
+
+4. **"Las capas multiplican" es aritmética del outcome, no sinergia descubierta.** El valor se define como producto V = Σ θ·fracción_entregada·budget (`:835`), con entrega independiente de θ (asignación aleatoria sobre el pool, `:821`). Mejorar selección (↑E[θ]) y entrega (↑E[entregado]) produce interacción positiva *casi mecánicamente*: 1,43× sobre un portafolio de mayor θ da un incremento absoluto mayor. La interacción +0,085 es consecuencia de elegir un outcome multiplicativo, no una interacción conductual emergente.
+
+5. **E6 es en su mayor parte tautológico; la admisión del paper lo subestima.** B1 tiene el esfuerzo *cableado* a decaer hacia 0 (`:1214`); B2/B3 cableados a imitar hacia arriba (`:1215`). "El esfuerzo colapsa en la oscuridad / la visibilidad lo sostiene" *son* las reglas de actualización, no resultados. El paper dice "part of this is by construction"; lo honesto es que **la dirección y existencia del +11% son enteramente por construcción**; lo único emergente es la concentración (Gini 0,836 desde el peso `(0.1+R)²`, `:1227`). La admisión no es suficiente: llama "parcial" a lo que es total.
+
+6. **El ataque realista al agregador de señales (pata de selección de E4/E5) está declarado como no-testeado, y es el que rompe todo.** Las señales son insesgadas por construcción (`:664`, `sig = θ + N(0,σ)`), así que 12.000 promedian a corr 0,99. Pero el ataque real no es ruido —es sesgo de modo común: Sybil, astroturfing, clientelismo coordinado, asignación expresiva. El paper reconoce "aggregation defeats noise, not bias ... untested". Correcto, pero eso vacía la pata de selección para cualquier despliegue adversarial: la correlación 0,99 es un número sin-adversario, y en civic-tech "sin adversario" no es un régimen que exista.
+
+**El supuesto técnico más frágil.** La probabilidad de detección exógena `p` (y su corolario: umbral verificado > ganancia máxima ⇒ fuga cero). Es la única variable que sostiene todo el brazo verificado, no tiene ancla empírica, y en la realidad es el output de la capa de evidencia/identidad/sensores que el modelo no representa. Mueva `p` de 0,75 a 0,45 y el 2,19× se desinfla; explique de dónde sale 0,75 y descubrirá que ese "de dónde" es todo el proyecto de ingeniería real que el paper no ha construido.
+
+**Qué exigiría antes de creer el 2,19× fuera del modelo:**
+1. Una capa de evidencia modelada (o piloto) que *produzca* `p` endógenamente: costo de fiscalización, falsos negativos del productor de evidencia, y un canal de colusión en la evidencia misma. Que `p` sea resultado, no dial.
+2. Selección central con banda que escale con el alcance (K_PLAN ∝ presupuesto/N_p), para que la pata de selección no dependa de una constante que mutila al comparador.
+3. E4/E5 re-corridos con sesgo de modo común inyectado (Sybil/astroturf a tasa realista) sobre la agregación de señales —el caso adversarial, no el de ruido i.i.d.
+4. Calibración simétrica: ancla empírica para fuga bajo régimen "verificado tipo hitos", o presentar el resultado como sensibilidad sobre `p_verificado` con IC, no como punto.
+5. Reportar 2,19× con IC pareado propagado, y degradarlo a "+43% solo-entrega" como la afirmación defendible.
+
+**Secuencia realista de MVP:**
+- **Fase 0 — Registro y mandato.** Wallet cívico + Allocation Mandate + Fiscal Commitment Profile versionado; identidad verificada 1-ciudadano-1-wallet (el supuesto anti-Sybil de todo lo demás vive o muere aquí). Solo ledger público y grafo de partes relacionadas.
+- **Fase 1 — Desembolso condicional con evidencia manual.** Cierre paralelo + release por hito contra evidencia de fiscalizadores *humanos* asignados por protocolo, presupuesto de control separado. Aquí se descubre el verdadero `p` empíricamente, en un sector (deporte municipal, un municipio).
+- **Fase 2 — Superficie de atención + default plugueable.** Discovery de 6 slots, perfiles automáticos, delegación revocable con visibilidad de concentración; default sobre un Planning Scope tutored, publicado y versionado.
+- **Fase 3 — Reputación como *información*, no asignación automática.** Reputación normalizada por oportunidades, pisos de entrante, observabilidad de concentración (E6 es la advertencia: cualquier ponderación fuerte concentra antes de seleccionar). Nunca asignación automática rep-weighted en producción.
+- **Fase 4 — Elicitación de señales / construcción abierta de scope.** Solo tras resolver el problema anti-gaming/anti-Sybil de la elicitación (que el propio corpus deja "gated"). Sin esto, E4/E5 no aplican al mundo real.
+
+**Puntajes:**
+- **Coherencia técnica: 4/5.** El código implementa fielmente lo afirmado y es consistente; pierde un punto porque varios "hallazgos" son identidades de sus parámetros (fuga cero, capas que multiplican).
+- **Reproducibilidad: 5/5.** Determinista, sin dependencias, sembrado; reproduje cada cifra del titular. Ejemplar para el género.
+- **Implementabilidad: 2/5.** La capa que hace todo el trabajo (evidencia/detección/identidad) es exactamente la que no está diseñada ni simulada; el MVP real es un proyecto de ingeniería de verificación y anti-fraude que el paper trata como un escalar.
+- **Honestidad sobre supuestos: 4/5.** Inusualmente explícita —oráculo θ, señales insesgadas, sesgo de modo común no testeado, deterrence-por-construcción todos declarados. Pierde un punto por seguir titulando 2,19× y "las capas multiplican" *después* de documentar por qué ambos están inflados/son mecánicos.
+
+**Veredicto final.** Ejercicio de diseño honesto, reproducible y bien argumentado; como pieza de mechanism design documentado adversarialmente merece publicarse. Pero como evidencia de que la arquitectura "entrega 2,19×", el número es un artefacto de tres elecciones de modelado favorables —selección central mutilada por una constante, disuasión total por construcción, y agregación de señales sin adversario— y debe rebajarse al defendible "+43% de solo-entrega, condicional a una capa de verificación que aún no existe". El trabajo real empieza donde el paper pone un escalar: la capa de evidencia e identidad.

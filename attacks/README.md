@@ -85,6 +85,18 @@ These briefs originate from the five-profile external-review simulation of [[101
 | `A034` | Legal Characterization of the Citizen Allocation Act | public-law reviewer, round 2 | resolved in [[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]] |
 | `A035` | Administrative Capacity Cost of Tutored Operation | public-sector practitioner reviewer, round 2 | resolved in [[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]] |
 
+## Manuscript-review round attack queue (A036-A040)
+
+These briefs originate from the five-profile external-review simulation of the published manuscript itself ([[paper|drafts/paper.md]] v1.6, DOI 10.5281/zenodo.21193847) — the first round the manuscript faced as a manuscript; the earlier rounds reviewed the companion publishable model. The raw reviews and the round record are preserved in `external-review/manuscript-v1.6-round/`. Reviewer objections that the corpus could not answer with existing anchors were converted into attacks per the standing rule that only serious unresolved objections become formal attack files. The pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]) is A036's empirical test.
+
+| Attack | Title | Origin | Status |
+|---|---|---|---|
+| `A036` | The Opaque Baseline Is a Strawman: The Status Quo Already Contains a Control Regime | academic + systems-architect + practitioner reviewers, manuscript round | pending paired review; E7 pre-registered |
+| `A037` | Reserve of Law and the Non-Delegable Allocation Competence | public-law + practitioner reviewers, manuscript round | pending paired review |
+| `A038` | Reputational Exclusion as a Sanction Without Due Process | public-law reviewer, manuscript round | pending paired review |
+| `A039` | Traceable Allocation Reveals Political Preference: Vote Immunity Without Vote Secrecy | public-law reviewer, manuscript round | pending paired review |
+| `A040` | The Adoption Paradox: The Visibility Gap Punishes Its Natural Adopter | public-sector practitioner reviewer, manuscript round | pending paired review |
+
 ## Standard review routine
 
 For each attack:
