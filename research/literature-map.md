@@ -131,6 +131,10 @@ Added with the E5 re-centering of the conclusions on delivered social value:
 - Milton Friedman and Rose Friedman, `Free to Choose` (1980): the four ways of spending money — central administration spends other people's money on other people.
 - Ritva Reinikka and Jakob Svensson, "Local Capture" (QJE 2004): 87% measured leakage in Uganda's capitation grants — the empirical anchor for the opaque regime's parameter band, alongside Olken (2007).
 
+## Audit-institution evidence base (docs/105, for E7)
+
+Under the A036 resolution, the E7 calibrated baseline is parameterized from published findings of supreme audit institutions and ex-post evaluation bodies rather than from the research effort's judgment. The assembled base — GAO, TIGTA/CMS, NAO/DWP, ECA, TCU, CGU, ASF, AGN/SIGEN, CGR Chile/CEA, DIPRES, CGR Perú, CGR Colombia, with per-item citations, category matching, declared bands, and a verification queue — lives in [[audit-evidence-base|research/audit-evidence-base.md]]. Its headline pattern: leakage and non-delivery follow verifiability and control design, not geography or political color.
+
 ## Phase 3 research caution
 
 These references should be used to strengthen attacks, not to decorate the theory. Each source may also weaken the project by showing limits of participation, audit, delegation, metric governance, and institutional transition.
