@@ -122,6 +122,15 @@ the Idea pipeline). Evaluated and declined for the manuscript: McCloskey
 (no content hook), Cowen (no citable academic hook), Barnett (the corpus
 deliberately does not engage private production of force).
 
+## Public-finance and delivered-value anchors (manuscript v1.5)
+
+Added with the E5 re-centering of the conclusions on delivered social value:
+
+- Richard Musgrave, `The Theory of Public Finance` (1959): the allocation branch — why states collect in order to allocate.
+- Arthur Okun, `Equality and Efficiency: The Big Tradeoff` (1975): the leaky bucket — redistribution judged by how much value arrives.
+- Milton Friedman and Rose Friedman, `Free to Choose` (1980): the four ways of spending money — central administration spends other people's money on other people.
+- Ritva Reinikka and Jakob Svensson, "Local Capture" (QJE 2004): 87% measured leakage in Uganda's capitation grants — the empirical anchor for the opaque regime's parameter band, alongside Olken (2007).
+
 ## Phase 3 research caution
 
 These references should be used to strengthen attacks, not to decorate the theory. Each source may also weaken the project by showing limits of participation, audit, delegation, metric governance, and institutional transition.

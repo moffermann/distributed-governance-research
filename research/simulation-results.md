@@ -244,6 +244,90 @@ construction is viable and scale-robust *given honest, unbiased, collected
 signals* — designing the collection mechanism that keeps them honest is
 the open problem the corpus already names.
 
+## E5 — Delivered social value: selection × delivery
+
+Pre-registered in `research/e5-value-delivery-design.md` before any run; raw
+output in `research/e5-raw-output.txt`. E5 answers the author's central
+critique of E1-E4: they measured *selection* (whether funding reached
+high-θ projects) and stopped where the thesis begins. States redistribute
+to improve social welfare, and the question that matters is how much value
+arrives — Okun's leaky bucket. E5 adds the execution stage: executors with
+hidden types whose diversion decision follows Model 1's IC condition,
+under two delivery regimes — opaque (status-quo layer: p = 0.10, large
+unprotected advances, no recovery, no reputational memory; leakage priors
+anchored in Reinikka and Svensson 2004 and Olken 2007) and verified (the
+architecture layer from the corpus's own Models 1-2: milestone gating,
+retention, recovery, p = 0.75, reputational stake with exclusion) —
+crossed with the two E4 selection regimes in a 2×2 whose main effects are
+the author's two thought experiments verbatim. Portfolios are matched per
+seed: S and A1 fund the identical project set. N_p = 200, 20 seeded runs.
+
+| arm | V/budget | leak | visibility gap | sel(θ) |
+|---|---|---|---|---|
+| S — central / opaque (status quo) | 0.393±0.053 | 0.316±0.079 | 0.286±0.072 | 0.138±0.071 |
+| A1 — central / verified (same portfolio as S) | 0.561±0.036 | 0.000±0.000 | 0.000±0.000 | 0.138±0.071 |
+| A3 — distributed / opaque | 0.606±0.053 | 0.294±0.057 | 0.266±0.048 | 0.764±0.023 |
+| A2 — distributed / verified (full architecture) | 0.859±0.023 | 0.000±0.000 | 0.000±0.000 | 0.764±0.023 |
+
+Paired contrasts on V (same seeds, mean [95% CI], n = 20): delivery effect
+V(A1)−V(S) = 0.168 [0.143, 0.193] and V(A2)−V(A3) = 0.253 [0.231, 0.276];
+selection effect V(A3)−V(S) = 0.213 [0.179, 0.248] and V(A2)−V(A1) = 0.299
+[0.283, 0.314]; interaction +0.085 [0.053, 0.117].
+
+**Findings against the pre-registered predictions:**
+
+1. **Prediction 1 (delivery dominates selection) FAILED, with a declared
+   scale caveat.** At N_p = 200 the selection effect exceeds the delivery
+   effect at both margins. The caveat: E4 showed central selection at this
+   scale is near-random (sel(θ) = 0.14), which inflates the selection
+   margin; at small scales where central planning is competitive, the
+   ordering plausibly reverses. The robust conclusion is not the ranking
+   but the compound.
+2. **Prediction 2 HELD: the layers multiply.** The interaction is positive
+   and its CI excludes zero — verified delivery amplifies selection gains,
+   because a well-chosen project that leaks loses its advantage. The full
+   architecture delivers 2.19× the status quo per unit budget (0.859 vs
+   0.393); the author's thought experiment 1 (identical projects,
+   different control layer) is worth +43% by itself.
+3. **Prediction 3 FAILED in the informative direction: deterrence
+   pre-empts exclusion.** Under the specified verified parameters the IC
+   threshold (1.01) exceeds every opportunist's diversion gain (≤ 0.9), so
+   no one ever diverts and the exclusion machinery never fires — Becker's
+   ex-ante enforcement: the bucket does not leak because everyone knows it
+   is metered. A labeled post-hoc sensitivity (verified-weak: p = 0.45,
+   threshold 0.43) activates the second line of defense: diversion occurs,
+   detection fires, and the executor pool improves endogenously
+   (opportunist share 0.28 → 0.21 over 24 cycles) while V still beats the
+   opaque regime and the visibility gap halves. Strong verification
+   deters; weak verification cleanses; both lines are now measured.
+4. **Prediction 4 HELD strongly: the visibility gap is the status quo's
+   signature.** The opaque regime officially reports ~29 percentage points
+   more delivery than reality (0.286); the verified regimes' gap is zero
+   by construction. "Formally rich, practically thin" is now a number.
+5. **Prediction 5 HELD: robustness to pessimistic participation.** V(A2)
+   ranges 0.837 (α = 3%, participatory-budgeting floor) to 0.883
+   (α = 40%, voting-anchored) — the architecture's value does not depend
+   on optimistic engagement assumptions.
+
+**E5b — default discovery categories as distributional policy levers.**
+Under verified delivery, replacing the default constructor changes the
+distributional signature dramatically while the scope planner touches
+nothing: near-funding-closure V = 0.784 with sel(θ) = 0.63 (herding
+transmits the active layer's quality signal, echoing E2s and E4-R5);
+near-me concentrates 71% of budget in the top-density quintile; rural
+inverts it (0.5%); uniform-random V = 0.501. The category default is a
+configurable, visible distributional policy choice — not an inherent
+planner bias.
+
+**Result-determining assumptions, declared.** Executor type shares and
+cost distributions are plausible, not calibrated; the opaque regime's
+parameters sit inside the empirically documented leakage band (24-87%)
+rather than at a measured point; θ remains an oracle (delivered value
+assumes the funded promise had its latent value); and honest executors
+never fail for capacity reasons — delivery failure is modeled as
+opportunism only, so E5's leak is a lower bound on real-world loss under
+both regimes.
+
 ## Implications for the architecture
 
 1. The funding-target closure rule earns its place as an
@@ -267,6 +351,15 @@ the open problem the corpus already names.
    construction moves from assumed impossibility to measured viability
    with named preconditions; its elicitation mechanics remain gated by
    A023.
+5. E5 re-centers the whole evidence stack on the thesis: what the
+   architecture ultimately buys is delivered social value per unit of
+   budget. Selection and delivery compound multiplicatively, the full
+   system delivers 2.19× the opaque baseline, the verification layer's
+   value arrives ex ante as deterrence (with reputational cleansing as the
+   measured second line), and the status quo's accountability deficit is
+   quantified as a 29-point visibility gap between reported and real
+   delivery. E1-E4 are the supporting layer of that conclusion, not the
+   headline.
 
 ## Limitations
 

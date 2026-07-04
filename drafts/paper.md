@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.4 (July 2026). Revised after an adversarial referee pass and author methodological reviews of the simulation and its framing, all part of the public record.**
+**Working paper — v1.5 (July 2026). Revised after an adversarial referee pass and author methodological reviews of the simulation, its framing, and the conclusions' criterion of success, all part of the public record.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff.*
 
@@ -33,7 +33,13 @@ the default layer is strong; a pre-registered fourth experiment that models
 knowledge symmetrically finds that aggregating dispersed citizen signals
 into that vector outperforms fixed-bandwidth central construction at every
 tested scale — provided an aggregation institution exists and signals are
-honest, unbiased, and collected. Third, method: the architecture was
+honest, unbiased, and collected; and a pre-registered fifth experiment
+carries the comparison to what redistribution is for — delivered social
+value per unit of budget — finding that verified delivery adds +43% on
+identical portfolios, that selection and delivery gains multiply, that the
+full architecture delivers 2.19× the opaque status-quo baseline, and that
+the status quo's officially reported completion overstates real delivery
+by twenty-nine percentage points. Third, method: the architecture was
 developed under systematic adversarial review — thirty-five attack briefs,
 each with a paired defense and an accepted resolution under an explicit
 integrate-or-bound rule that either adds a mechanism through existing
@@ -124,8 +130,10 @@ to it. Our contributions are:
    behavioral assumptions under rational ignorance, limited discovery
    attention, and social-proof cascades. The results discipline the design:
    they support some claims, sharpen others, quantify the leverage
-   concentrated in the scope-construction layer, and measure a viable open
-   construction of it.
+   concentrated in the scope-construction layer, measure a viable open
+   construction of it, and carry the comparison end to end — from
+   allocation to delivered social value per unit of budget, the criterion
+   redistribution exists to satisfy.
 
 4. **Adversarial validation as method** (Section 7). The architecture was
    attacked systematically — thirty-five attack briefs grounded in the
@@ -532,6 +540,46 @@ never modeled distributed knowledge; when E4 does, aggregation wins
 wherever its named preconditions hold. Both discourses lose their slogan;
 the design keeps its numbers.
 
+**Finding 5: delivered value, not allocation, is where the architecture
+earns its keep — and selection and delivery multiply.** A fifth,
+pre-registered experiment (`research/e5-value-delivery-design.md`) adds
+the execution stage the first four omitted: executors with hidden types
+whose diversion decision follows Proposition 1's incentive condition,
+under an opaque delivery regime (low detection, unprotected advances, no
+recovery, no reputational memory — parameters inside the empirically
+documented leakage band: 87% in Uganda's capitation grants (Reinikka and
+Svensson 2004), 24% in Indonesian roads (Olken 2007)) versus the verified
+regime built from Propositions 1-4 (milestone gating, retention,
+recovery, evidence-layer detection, reputational stake with exclusion).
+Crossing delivery with the two E4 selection regimes yields a 2×2 whose
+main effects are two plain questions. Same projects, different control
+layer: the verified regime delivers +43% on identical portfolios
+[0.143, 0.193], and the opaque regime's official completion overstates
+its real delivery by twenty-nine percentage points — the accountability
+gap of the status quo, quantified. Same control layer, different
+projects: social prioritization delivers +53-54% under either regime.
+The interaction is positive and significant (+0.085 [0.053, 0.117]):
+the layers multiply, and the full architecture delivers 2.19× the
+status-quo baseline per unit of budget (0.859 vs 0.393), robustly across
+direct-participation rates from 3% (the participatory-budgeting floor)
+to 40% (voting-scale). Two pre-registered predictions failed honestly.
+The expected dominance of delivery over selection did not hold at this
+scale — central selection at two hundred projects is near-random (E4),
+inflating the selection margin — so the robust claim is the compound,
+not the ranking. And the expected reputational cleansing never fired
+under the strong verification parameters, for the best possible reason:
+the incentive condition holds for every executor, so no one diverts and
+there is no one to exclude — deterrence pre-empts punishment, Becker's
+enforcement working ex ante. A labeled post-hoc sensitivity with weakened
+verification shows the second line of defense: partial deterrence,
+active detection, and an executor pool that measurably improves as
+reputation excludes diverters (opportunist share 0.28 → 0.21 over
+twenty-four cycles). A companion sweep of default discovery categories
+shows each carries a large, measurable distributional signature —
+near-me concentrates 71% of budget in the densest quintile, rural
+inverts it — so the default is a visible, configurable distributional
+policy lever, not an inherent planner bias.
+
 ## 7. Adversarial validation as method
 
 The architecture was developed under a documented adversarial loop:
@@ -682,22 +730,59 @@ current system never yields.
 
 ## 10. Conclusion
 
-The question this paper answers is not whether states should be bigger or
-smaller, but whether the layers of state activity that fail through
-information and incentive monopoly can be re-architected to fail less. For
-one such layer — bounded public resource allocation with verification — we
-have specified a complete architecture, proved the incentive conditions its
-mechanisms depend on, measured its behavioral assumptions in simulation, and
-subjected the whole to three rounds of documented adversarial review with an
-explicit integrate-or-bound discipline. The result is deliberately modest in
-its claims and unusually explicit about their edges: allocation quality
-rides on institutional defaults whose construction remains the open problem;
-accountability rides on verification whose market conditions must be priced;
-legitimacy rides on mandates the platform can record but not create. What
-distinguishes the proposal is that these edges are specified, monitored,
-and attached to named objects — which is, we argue, what it looks like when
-institutional design is treated as an engineering discipline rather than an
-ideological one.
+States do not collect taxes in order to allocate budgets; they allocate
+budgets in order to improve the lives of the society that funded them
+(Musgrave 1959). If, after a redistribution, society is no better off, the
+redistribution accomplished nothing — Okun's (1975) leaky bucket carried
+water that never arrived. The right criterion for any allocation
+institution is therefore not how faithfully it executes a plan but how
+much delivered, verified value it produces per unit of public resource.
+This paper's final experiment applies that criterion end to end, and its
+structure can be stated as two questions anyone can ask. First: take the
+same projects, designed identically, and change only who executes and how
+they are watched — does the visibly audited regime with reputational
+consequences deliver more than the opaque one without them? It does: +43%
+delivered value on identical portfolios, because under milestone-gated
+verification the incentive condition holds and diversion is deterred
+before it happens, while the opaque regime not only leaks but misreports —
+its official completion overstates real delivery by twenty-nine
+percentage points, quantifying an accountability that is formally rich and
+practically thin. Second: hold the control layer fixed and change only
+which projects get funded, centrally planned or socially prioritized?
+Social prioritization delivers more under either control regime (+53-54%).
+And the two effects multiply rather than add: verified delivery amplifies
+good selection, because a well-chosen project that leaks loses its
+advantage. The full architecture delivers 2.19 times the delivered value
+of the status-quo baseline per unit of budget, robustly across
+participation rates from the participatory-budgeting floor to
+voting-scale engagement.
+
+The deeper point is Friedman's: a central administration spends other
+people's money on other people, the spending category with the least care
+for both cost and value (Friedman and Friedman 1980). This architecture
+does not answer that problem with exhortation; it re-plumbs the bucket.
+Planning remains — as the guiding thread that sets scopes, floors, and
+mandates — but the engine of value is the conversion layer: measurable
+promises, conditional release, independent verification, consequences that
+compound into reputation, and a meter on every leak. The question this
+paper answers is therefore not whether states should be bigger or smaller,
+but whether the layers of state activity that fail through information and
+incentive monopoly can be re-architected to fail less — and to show their
+failures when they do. For one such layer we have specified a complete
+architecture, proved the incentive conditions its mechanisms depend on,
+measured selection, aggregation, and delivery in simulation, and subjected
+the whole to three rounds of documented adversarial review with an
+explicit integrate-or-bound discipline. The result is deliberately modest
+in its claims and unusually explicit about their edges: allocation quality
+rides on the informational quality of whatever constructs the weight
+vector, whose open construction is measured viable but whose honest
+elicitation remains the open problem; delivered value rides on
+verification whose market conditions must be priced; legitimacy rides on
+mandates the platform can record but not create. What distinguishes the
+proposal is that these edges are specified, monitored, and attached to
+named objects — which is, we argue, what it looks like when institutional
+design is treated as an engineering discipline rather than an ideological
+one.
 
 ## References
 
@@ -718,6 +803,7 @@ ideological one.
 - Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
 - Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
+- Friedman, M., and R. Friedman (1980). *Free to Choose*. Harcourt.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
@@ -728,9 +814,11 @@ ideological one.
 - Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
+- Musgrave, R. (1959). *The Theory of Public Finance*. McGraw-Hill.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
+- Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
 - Olson, M. (1965). *The Logic of Collective Action*. Harvard University Press.
