@@ -27,7 +27,7 @@ Each `C0NN-slug.md` contains: Status / Contradiction (side A and side B, quoted 
 | [[C032-knowledge-index-missing-entries\|C032]] | Knowledge index missing H031, H032, H050, and docs/101 | Medium | Accepted (116th) |
 | [[C033-h054-missing-a025-a035-joins\|C033]] | H054 never updated though A025 and A035 join its metric set | Medium | Accepted (116th) |
 | [[C034-h058-open-mode-lacks-a023-gate\|C034]] | H058 presents open mode without the A023 deployment gate | High | Accepted (116th) |
-| [[C035-algorithm-as-coordinator-framing\|C035]] | Algorithm-as-coordinator card vs the qualified allocation framing | Low | Open |
+| [[C035-algorithm-as-coordinator-framing\|C035]] | Algorithm-as-coordinator card vs the qualified allocation framing | Low | Accepted (116th) |
 | [[C036-repo-readme-stale-landing\|C036]] | Repository README describes an early-stage project with a partial map | High | Accepted (116th) |
 | [[C037-agents-md-stale-phase\|C037]] | OPERATIONS.md declares Phase 1 and pre-manuscript priorities | Medium | Accepted (116th) |
 | [[C038-project-recap-stale-phase\|C038]] | Current Project Recap declares Phase 1 despite its title | Low-Medium | Open |

@@ -2,7 +2,7 @@
 
 ## Status
 
-Open — pending author review. Lower confidence than the other entries: this is a framing tension, not a hard factual conflict.
+Accepted (qualify) — corrected in the one-hundred-sixteenth residual cleanup: the card now distinguishes direct per-citizen choice from aggregated signal construction, with the E4 evidence and its preconditions.
 
 ## Contradiction
 
