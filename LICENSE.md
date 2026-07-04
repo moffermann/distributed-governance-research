@@ -12,7 +12,7 @@ You are free to share and adapt this material for any purpose, provided you give
 
 ## Manuscript and publishable model — CC BY-NC-ND 4.0
 
-The working paper (`drafts/paper.md` and its Spanish translation), the minimal publishable model (`docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md`), the plain-language explainer (`drafts/explicacion-para-todos.md`), the critical evaluation report (`drafts/informe-evaluacion-critica.md`), and the reviewer packets (`external-review/`) are licensed under **CC BY-NC-ND 4.0** pending publication venue selection.
+The working paper (`drafts/paper.md` and its Spanish translation), the minimal publishable model (`docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md`), the essay edition (`drafts/ensayo-divulgacion.md`), the plain-language explainer (`drafts/explicacion-para-todos.md`), the critical evaluation report (`drafts/informe-evaluacion-critica.md`), and the reviewer packets (`external-review/`) are licensed under **CC BY-NC-ND 4.0** pending publication venue selection.
 
 You may share these verbatim with attribution; you may not modify them or use them commercially. Full license: <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
