@@ -668,7 +668,7 @@ Citizen-facing statuses should remain simple:
 
 ```text
 Open project
-Execution-ready
+Ready for execution
 In execution
 Design under review
 Construction reserved

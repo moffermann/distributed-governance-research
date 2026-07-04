@@ -65,7 +65,7 @@ together: the authority to decide what public money is spent on, the
 operational capacity to execute that spending, and the epistemic authority to
 certify that the spending achieved anything. Where all three sit inside a
 single institutional hierarchy, accountability depends on the hierarchy
-auditing itself. The predictable consequences — discretionary allocation,
+auditing itself (Bovens 2007). The predictable consequences — discretionary allocation,
 self-reported compliance, capture by concentrated interests, and citizen
 distrust — are documented across every tradition of political economy, from
 regulatory capture (Stigler 1971; Laffont and Tirole 1991) to the audit
@@ -97,7 +97,8 @@ public). Citizens receive periodic, non-withdrawable allocation capacity in a
 civic wallet; projects pass through a parallel-closure lifecycle in which
 funding, independent fiscalization, evidence commitments, and beneficiary
 confirmation must all close before execution; the executor never selects or
-pays its own auditors; money moves only on reviewed milestones with retention
+pays its own auditors — removing the agency cost of self-monitored
+compliance (Jensen and Meckling 1976); money moves only on reviewed milestones with retention
 and externally materialized guarantees; and every consequential state
 transition is recorded in a citizen-legible, expert-auditable trail.
 
@@ -157,7 +158,8 @@ allocation and verified delivery (Peixoto and Fox 2016). Core v0 differs on
 exactly those margins: allocation is continuous and individual rather than
 assembly-based; delivery is bound to allocation through evidential contracts
 and conditional disbursement; and the architecture treats low participation
-as a design input (Section 6) rather than a failure to be exhorted away.
+as a design input (Section 6) rather than a failure to be exhorted away —
+collective action does not sustain itself at scale (Olson 1965).
 The civic wallet itself generalizes the voucher mechanism (Friedman 1962) —
 citizen-directed public money — from choosing among service providers to
 allocating among verifiable projects, adding the verification lifecycle
@@ -477,7 +479,8 @@ salience destination preserves late-cycle alignment slightly better —
 plausibly because amplified social proof also propagates evaluator
 seeding). What governs robustness to decay is the structural share of the
 default layer itself, Finding 2's variable. Engagement decay — the
-documented fate of civic-tech participation (Peixoto and Fox 2016) — is a
+documented fate of civic-tech participation (Hirschman 1970; Peixoto and
+Fox 2016) — is a
 buffered risk here, but the buffer is the institutional layer's size, and
 within-cycle quality alignment still erodes in later cycles under all
 conditions, so decay is bought, not free.
@@ -546,7 +549,8 @@ incumbent resistance, among others). The second: fifteen deliberately
 deeper attacks on the political and behavioral foundations (democratic
 mandate, agenda-setting, fiscal dependence, thin markets, meta-governance
 vacuum, rational ignorance, cascades, clientelism, polarization,
-intertemporal myopia, the problem of many hands). The third round emerged
+intertemporal myopia, the problem of many hands (Thompson 1980)). The
+third round emerged
 from the method turned outward: a simulated five-profile external review
 of this paper's companion document generated reviewer questions the corpus
 could not answer with existing anchors, and the standing rule converted
@@ -627,12 +631,14 @@ authorization.
 the budget spigot. The Fiscal Commitment Profile converts strangulation
 from invisible to attributable — delivery latency, unexecuted valid orders,
 mid-cycle share cuts all become public data — but no software compels a
-sovereign to pay (North and Weingast 1989). Credible commitment must come
+sovereign to pay (Kydland and Prescott 1977; North and Weingast 1989). Credible commitment must come
 from country-level law.
 
 **Verification quality is assumed, then priced.** Propositions 1–4 take
 detection and discovery probabilities as parameters. In thin control
-markets both collapse simultaneously, and the only compensating margins are
+markets — credence-good markets where quality is unobservable to the buyer
+(Akerlof 1970; Dulleck and Kerschbamer 2006) — both collapse
+simultaneously, and the only compensating margins are
 financial terms and imported (remote or cross-territory) verification. The
 architecture prices weak verification; it cannot conjure verifiers.
 
@@ -646,7 +652,8 @@ discoverable, never impossible; the architecture's claims are comparative
 
 **Meta-governance in open mode is deferred by design.** Rule-change
 procedure, versioning, and non-surprise constraints are specified; the
-constitutional mechanics of who votes on protocol changes in a mature
+constitutional mechanics — rules for making rules (Buchanan and Tullock
+1962) — of who votes on protocol changes in a mature
 open-mode deployment are deliberately not. Open-mode deployment is gated on
 resolving them.
 
@@ -681,7 +688,7 @@ information and incentive monopoly can be re-architected to fail less. For
 one such layer — bounded public resource allocation with verification — we
 have specified a complete architecture, proved the incentive conditions its
 mechanisms depend on, measured its behavioral assumptions in simulation, and
-subjected the whole to two rounds of documented adversarial review with an
+subjected the whole to three rounds of documented adversarial review with an
 explicit integrate-or-bound discipline. The result is deliberately modest in
 its claims and unusually explicit about their edges: allocation quality
 rides on institutional defaults whose construction remains the open problem;
@@ -694,10 +701,7 @@ ideological one.
 
 ## References
 
-- Abbott, A. (1988). *The System of Professions*. University of Chicago Press.
 - Akerlof, G. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." *Quarterly Journal of Economics* 84(3).
-- Andreoni, J. (1990). "Impure Altruism and Donations to Public Goods: A Theory of Warm-Glow Giving." *Economic Journal* 100(401).
-- Arnstein, S. (1969). "A Ladder of Citizen Participation." *Journal of the American Institute of Planners* 35(4).
 - Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
 - Baiocchi, G., and E. Ganuza (2017). *Popular Democracy: The Paradox of Participation*. Stanford University Press.
 - Becker, G. (1968). "Crime and Punishment: An Economic Approach." *Journal of Political Economy* 76(2).
@@ -709,31 +713,23 @@ ideological one.
 - Buterin, V., Z. Hitzig, and E. G. Weyl (2019). "A Flexible Design for Funding Public Goods." *Management Science* 65(11).
 - Campbell, D. (1976). "Assessing the Impact of Planned Social Change." Occasional Paper 8, Dartmouth College.
 - Coase, R. (1937). "The Nature of the Firm." *Economica* 4(16).
-- Dahl, R. (1961). *Who Governs? Democracy and Power in an American City*. Yale University Press.
-- Dahl, R. (1971). *Polyarchy: Participation and Opposition*. Yale University Press.
 - De Filippi, P., and A. Wright (2018). *Blockchain and the Law: The Rule of Code*. Harvard University Press.
 - Downs, A. (1957). *An Economic Theory of Democracy*. Harper.
 - Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
 - Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
-- Fishkin, J. (2009). *When the People Speak*. Oxford University Press.
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
-- Fung, A. (2006). "Varieties of Participation in Complex Governance." *Public Administration Review* 66.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
-- Habermas, J. (1996). *Between Facts and Norms*. MIT Press.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
 - Hirschman, A. (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
 - Holmström, B. (1979). "Moral Hazard and Observability." *Bell Journal of Economics* 10(1).
-- Holmström, B., and P. Milgrom (1991). "Multitask Principal-Agent Analyses." *Journal of Law, Economics, & Organization* 7.
 - Jensen, M., and W. Meckling (1976). "Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure." *Journal of Financial Economics* 3(4).
 - Kahng, A., S. Mackenzie, and A. Procaccia (2018). "Liquid Democracy: An Algorithmic Perspective." *AAAI*.
 - Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
-- Levi, M. (1988). *Of Rule and Revenue*. University of California Press.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
-- North, D. (1990). *Institutions, Institutional Change and Economic Performance*. Cambridge University Press.
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).

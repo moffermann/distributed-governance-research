@@ -1141,7 +1141,7 @@ In validation
 Requires adjustments
 Ready to publish
 Open project
-Execution-ready
+Ready for execution
 In execution
 Closed
 Requires reformulation

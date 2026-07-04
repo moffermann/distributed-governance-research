@@ -4,6 +4,8 @@
 
 Show the project lifecycle after publication, including validation, execution readiness, reformulation, review, revocation, and closure.
 
+> **Superseded for parent-state authority:** this diagram models funding and phase-gate stages as parent Project states. The authoritative parent machine is [[v0-project-object-state-with-phase-substates|docs/diagrams/v0-project-object-state-with-phase-substates.md]], which refines this diagram and moves those stages into the ProjectPhase substate machine, consistent with the consolidated entity/state map. Keep this diagram for stage-flow intuition only.
+
 Related resolutions: C005, C016, C017, C018, H008, H011, H019, H040, A001, A002, A003, A006, A007, Funding Window Expiry.
 
 ```mermaid

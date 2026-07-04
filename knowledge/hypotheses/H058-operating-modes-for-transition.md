@@ -116,6 +116,8 @@ Projects operate under the ordinary distributed protocol without institutional p
 
 Control happens through transparency, fiscalization, reputation, complaints, guarantees, and observability. ^r57196499
 
+Open mode is the architecture's designed trajectory, and its deployment is gated: under [[../../docs/91_OPEN_MODE_GATING_AND_A023_RESOLUTION|A023]], no public function may enter open mode until its constitutional-level decision mechanics — who decides protocol changes, scope construction, and threshold policies, and how — are resolved and published. The gate is a maturity requirement, not a judgment against the mode: the pre-registered E4 experiment measured open construction of scope weights from aggregated citizen signals as viable and scale-robust in-model, so what remains open is the honest-elicitation mechanism, not the feasibility of distributed operation.
+
 ### 5. Suspended mode
 
 The public function is temporarily frozen because of serious issues such as fraud, lack of fiscalization capacity, operational overload, implementation failure, legal problems, or a decision of the implementing authority.
@@ -244,4 +246,4 @@ Potential metrics:
 
 ## Remaining design questions
 
-Transition-operation hypothesis aligned with C020, C007, and A011. Extends H054, H055, and H057. Needs further design around mode-change authority, timeout-policy configuration, citizen audit actions on governance resolutions, community override thresholds, automatic-approval safeguards, suspension criteria, observability for permanent or indefinite tutored modes, and Extension v1+ moderation-pattern analytics.
+Transition-operation hypothesis aligned with C020, C007, and A011. Extends H054, H055, and H057. Needs further design around mode-change authority, timeout-policy configuration, citizen audit actions on governance resolutions, community override thresholds, automatic-approval safeguards, suspension criteria, observability for permanent or indefinite tutored modes, Extension v1+ moderation-pattern analytics, and — as the gate for open-mode deployment — the constitutional decision mechanics and honest-elicitation design required by A023.

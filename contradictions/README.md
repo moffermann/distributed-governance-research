@@ -18,26 +18,26 @@ Each `C0NN-slug.md` contains: Status / Contradiction (side A and side B, quoted 
 
 | ID | Title | Severity | Status |
 |---|---|---|---|
-| [[C026-citation-metadata-frozen-at-v12\|C026]] | Citation metadata frozen at v1.2 while the manuscript is v1.4 | High | Open |
-| [[C027-readme-resolution-range-ends-at-84\|C027]] | Both queue READMEs assert resolutions end at docs/84 | Medium | Open |
-| [[C028-queue-intros-assert-pending-review\|C028]] | Second-round queue intros and rows assert present-tense pending review | Medium | Open |
-| [[C029-publishable-model-adversarial-record-stale\|C029]] | Publishable model carries a stale adversarial record (33 briefs, docs/67-100, A034/A035 open) | High | Open |
-| [[C030-manuscript-two-vs-three-rounds\|C030]] | Manuscript conclusion says two review rounds; its method section says three (EN+ES) | High | Open |
-| [[C031-orphan-references\|C031]] | Twenty reference entries are never cited in the manuscript body (EN+ES) | Medium | Open |
-| [[C032-knowledge-index-missing-entries\|C032]] | Knowledge index missing H031, H032, H050, and docs/101 | Medium | Open |
-| [[C033-h054-missing-a025-a035-joins\|C033]] | H054 never updated though A025 and A035 join its metric set | Medium | Open |
-| [[C034-h058-open-mode-lacks-a023-gate\|C034]] | H058 presents open mode without the A023 deployment gate | High | Open |
+| [[C026-citation-metadata-frozen-at-v12\|C026]] | Citation metadata frozen at v1.2 while the manuscript is v1.4 | High | Accepted (116th) |
+| [[C027-readme-resolution-range-ends-at-84\|C027]] | Both queue READMEs assert resolutions end at docs/84 | Medium | Accepted (116th) |
+| [[C028-queue-intros-assert-pending-review\|C028]] | Second-round queue intros and rows assert present-tense pending review | Medium | Accepted (116th) |
+| [[C029-publishable-model-adversarial-record-stale\|C029]] | Publishable model carries a stale adversarial record (33 briefs, docs/67-100, A034/A035 open) | High | Accepted (116th) |
+| [[C030-manuscript-two-vs-three-rounds\|C030]] | Manuscript conclusion says two review rounds; its method section says three (EN+ES) | High | Accepted (116th) |
+| [[C031-orphan-references\|C031]] | Twenty reference entries are never cited in the manuscript body (EN+ES) | Medium | Accepted (116th) |
+| [[C032-knowledge-index-missing-entries\|C032]] | Knowledge index missing H031, H032, H050, and docs/101 | Medium | Accepted (116th) |
+| [[C033-h054-missing-a025-a035-joins\|C033]] | H054 never updated though A025 and A035 join its metric set | Medium | Accepted (116th) |
+| [[C034-h058-open-mode-lacks-a023-gate\|C034]] | H058 presents open mode without the A023 deployment gate | High | Accepted (116th) |
 | [[C035-algorithm-as-coordinator-framing\|C035]] | Algorithm-as-coordinator card vs the qualified allocation framing | Low | Open |
-| [[C036-repo-readme-stale-landing\|C036]] | Repository README describes an early-stage project with a partial map | High | Open |
-| [[C037-agents-md-stale-phase\|C037]] | OPERATIONS.md declares Phase 1 and pre-manuscript priorities | Medium | Open |
+| [[C036-repo-readme-stale-landing\|C036]] | Repository README describes an early-stage project with a partial map | High | Accepted (116th) |
+| [[C037-agents-md-stale-phase\|C037]] | OPERATIONS.md declares Phase 1 and pre-manuscript priorities | Medium | Accepted (116th) |
 | [[C038-project-recap-stale-phase\|C038]] | Current Project Recap declares Phase 1 despite its title | Low-Medium | Open |
-| [[C039-dual-project-state-diagrams\|C039]] | Two project state diagrams define incompatible parent machines, both listed as current | Medium | Open |
+| [[C039-dual-project-state-diagrams\|C039]] | Two project state diagrams define incompatible parent machines, both listed as current | Medium | Accepted (116th) |
 | [[C040-expiry-state-drift\|C040]] | Expiry-state drift: undefined "Expired" vs "Expired Unfunded" across enumerations | Low | Open |
-| [[C041-citizen-language-rule-violated\|C041]] | C009's citizen-language rule violated by the citizen-facing status maps | Medium | Open |
-| [[C042-voter-role-in-early-entity-map\|C042]] | Early entity map carries a "voter" role the consolidated map dropped | Low | Open |
-| [[C043-observed-as-project-state\|C043]] | docs/12 promotes "Observed" to a project-level exceptional state | Low | Open |
+| [[C041-citizen-language-rule-violated\|C041]] | C009's citizen-language rule violated by the citizen-facing status maps | Medium | Accepted (116th) |
+| [[C042-voter-role-in-early-entity-map\|C042]] | Early entity map carries a "voter" role the consolidated map dropped | Low | Accepted (116th) |
+| [[C043-observed-as-project-state\|C043]] | docs/12 promotes "Observed" to a project-level exceptional state | Low | Accepted (116th) |
 | [[C044-ai-red-gate-vs-c008-boundary\|C044]] | C016's AI Red gate vs C008's assist-not-decide boundary | Medium | Open |
-| [[C045-a030-delegation-citation-slip\|C045]] | A030 resolution misattributes the Delegate role to C019 | Low | Open |
+| [[C045-a030-delegation-citation-slip\|C045]] | A030 resolution misattributes the Delegate role to C019 | Low | Accepted (116th) |
 
 ## Audit completion
 

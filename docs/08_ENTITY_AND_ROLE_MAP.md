@@ -25,7 +25,6 @@ Citizens are not anonymous. Identity verification is a baseline requirement of t
 Possible citizen roles include:
 
 - funder;
-- voter;
 - delegator;
 - delegate;
 - commenter;
@@ -132,7 +131,6 @@ The following are roles, not actor types:
 - executor;
 - fiscalizer;
 - funder;
-- voter;
 - delegator;
 - delegate;
 - moderator;

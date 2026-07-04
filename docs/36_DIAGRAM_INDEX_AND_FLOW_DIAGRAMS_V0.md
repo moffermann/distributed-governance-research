@@ -56,7 +56,7 @@ Primary Mermaid sources:
 
 1. [[v0-citizen-navigation-layers|docs/diagrams/v0-citizen-navigation-layers.md]]
 2. [[v0-project-creation-publication|docs/diagrams/v0-project-creation-publication.md]]
-3. [[v0-project-lifecycle-state|docs/diagrams/v0-project-lifecycle-state.md]]
+3. [[v0-project-lifecycle-state|docs/diagrams/v0-project-lifecycle-state.md]] (stage-flow intuition; parent-state authority superseded by #13)
 4. [[v0-open-project-parallel-closure|docs/diagrams/v0-open-project-parallel-closure.md]]
 5. [[v0-funding-disbursement|docs/diagrams/v0-funding-disbursement.md]]
 6. [[v0-evidence-fiscalization|docs/diagrams/v0-evidence-fiscalization.md]]

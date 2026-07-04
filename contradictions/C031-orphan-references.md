@@ -2,7 +2,7 @@
 
 ## Status
 
-Open — pending author review.
+Accepted — corrected in the one-hundred-sixteenth residual cleanup.
 
 ## Contradiction
 

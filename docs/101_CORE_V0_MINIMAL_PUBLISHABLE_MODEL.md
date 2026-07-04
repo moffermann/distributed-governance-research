@@ -746,13 +746,13 @@ the full audit trail for experts ([[11_CITIZEN_PROJECT_CARD|docs/11_CITIZEN_PROJ
 This document's claims do not rest on enthusiasm. The underlying corpus
 was validated three ways before publication:
 
-- **Adversarially.** Thirty-three attack briefs grounded in the political
+- **Adversarially.** Thirty-five attack briefs grounded in the political
   science and economics literature — from metric gaming and fiscalizer
   capture to clientelism, polarization, and fiscal strangulation — each
   answered by a paired defense and an accepted resolution under an
   explicit integrate-or-bound rule; none was dismissed, several are
   honestly answered "bounded, not solved" (`attacks/`, `defenses/`,
-  resolutions `docs/67`–`docs/100`, rule `knowledge/principles/P007`).
+  resolutions `docs/67`–`docs/103`, rule `knowledge/principles/P007`).
 - **Formally.** The disbursement and anti-collusion mechanisms are proven
   as incentive-compatibility and collusion-proofness conditions, with the
   design levers appearing as explicit terms (the formal companion note).
@@ -781,7 +781,7 @@ This model does not eliminate the need for public authority.
 
 In a tutored pilot the public authority's control surface is concrete, not rhetorical: it defines the Planning Scope, reviews admissibility, duplication, and eligibility, and can approve, reject, or reclassify projects — but every material decision must be issued as a public **Governance Resolution** with reasons and a declared review window, and silence past the deadline automatically produces a public **Review Timeout Resolution** under a pre-configured timeout policy ([[58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION|docs/58_TUTORED_MODE_GOVERNANCE_RESOLUTIONS_AND_C020_RESOLUTION.md]]). The authority keeps its veto; it loses only the ability to exercise it invisibly. What silence produces is not left to doctrine: the consequence of a lapsed deadline — from visibility-only through escalation to community override or automatic approval — is configured publicly at the operating-mode level before any project is submitted, so neither applicants nor the authority discover the direction of administrative silence after the fact.
 
-Two honest costs are declared rather than hidden. Operating a tutored scope consumes real administrative capacity — issuing reasoned resolutions within review windows, running admissibility review, coordinating control — and the corpus does not yet quantify that staffing cost; it is recorded as an open attack on the model ([[A035-administrative-capacity-cost-of-tutored-operation|attacks/A035-administrative-capacity-cost-of-tutored-operation.md]]). And the legal characterization of the citizen's allocation act itself — what kind of act it is in administrative law, and what review rights a funder has when committed funds are reassigned — is mechanically specified but doctrinally open, likewise recorded ([[A034-legal-characterization-of-the-citizen-allocation-act|attacks/A034-legal-characterization-of-the-citizen-allocation-act.md]]). One boundary is absolute: an authority may not be judge and party — it cannot compete as an operator inside a scope it controls ([[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]]).
+Two honest costs are declared rather than hidden, and both now carry accepted resolutions. Operating a tutored scope consumes real administrative capacity — issuing reasoned resolutions within review windows, running admissibility review, coordinating control — governed by a published Administrative Capacity Declaration per scope, with capacity-calibrated timeouts and hours-per-resolution as an explicit first-pilot deliverable ([[103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION.md]]); the staffing number itself remains empirical until a pilot measures it. And the legal characterization of the citizen's allocation act is recorded per jurisdiction through a bounded menu on the Allocation Mandate, with a vote-like pilot default disclosed to citizens before first use ([[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]]); the doctrine itself remains external law, untested in any jurisdiction. One boundary is absolute: an authority may not be judge and party — it cannot compete as an operator inside a scope it controls ([[43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION|docs/43_PUBLIC_INSTITUTION_EXCLUSION_AND_C007_RESOLUTION.md]]).
 
 Several elements may remain centralized, tutored, or country-specific:
 

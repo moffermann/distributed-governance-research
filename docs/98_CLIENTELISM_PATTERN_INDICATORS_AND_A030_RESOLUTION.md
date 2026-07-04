@@ -52,4 +52,4 @@ Limitation statement: the platform makes machine-style allocation patterns stati
 
 ## Integration target
 
-This resolution should inform delegation and the Delegate role (C019), participation-support projects, the related-party relationship graph (A014), delegated-action reports and administrative observability, and the complaint and competent-authority referral paths.
+This resolution should inform delegation and the Delegate role (C011, C023), participation-support projects, the related-party relationship graph (A014), delegated-action reports and administrative observability, and the complaint and competent-authority referral paths.

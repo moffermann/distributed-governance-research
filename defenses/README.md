@@ -15,7 +15,7 @@ attacks/A018-[slug].md -> defenses/D018-[slug].md
 
 These files are not promotional rebuttals. They are structured defense briefs. A valid defense may conclude that an attack is founded, partially unresolved, or strong enough to require a future resolution before the model is treated as mature.
 
-The accepted Phase 3 resolutions are in `docs/67` through `docs/84`. Each defense file now references the resolution that integrated its accepted improvement.
+The accepted Phase 3 resolutions are in `docs/67` through `docs/103` (first round `docs/67`-`docs/84`; later rounds `docs/86`-`docs/103`). Each defense file now references the resolution that integrated its accepted improvement.
 
 ## Required defense structure
 
@@ -66,7 +66,7 @@ The defense files use these evaluation dimensions:
 
 ## Second-round defense queue (D019-D033)
 
-These defenses are paired with the second-round attack queue `A019`-`A033` in `attacks/`. They follow the same structure but are **paired review drafts**: no accepted resolution documents exist yet, and each brief records its own classification honestly, including where the attack is founded and the architecture has no answer beyond observability or explicit deferral.
+These defenses are paired with the second-round attack queue `A019`-`A033` in `attacks/`. They followed the same structure, completed paired review, and every accepted resolution (`docs/86` through `docs/103`) is propagated into the core corpus, and each brief records its own classification honestly, including where the attack is founded and the architecture has no answer beyond observability or explicit deferral.
 
 | Defense | Attack | Title | Classification |
 |---|---|---|---|

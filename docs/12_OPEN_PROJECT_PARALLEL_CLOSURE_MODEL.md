@@ -187,7 +187,7 @@ Suggested simplified citizen-facing states:
 ```text
 Draft
 → Open
-→ Execution-ready
+→ Ready for execution
 → In execution
 → Closed
 ```
@@ -196,7 +196,6 @@ Exceptional states:
 
 ```text
 Paused
-Observed
 Reformulation required
 Expired
 Expired unfunded
