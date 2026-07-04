@@ -2,50 +2,48 @@
 
 ## Purpose
 
-Define the plain `Expired` project state that the project state diagrams and [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]] carried without a defining rule — the consistency-audit finding [[C040-expiry-state-drift|contradictions/C040-expiry-state-drift.md]].
+Resolve the undefined plain `Expired` project state that the project state diagrams and [[12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL|docs/12_OPEN_PROJECT_PARALLEL_CLOSURE_MODEL.md]] carried — the consistency-audit finding [[C040-expiry-state-drift|contradictions/C040-expiry-state-drift.md]] — by the author's design decision: there is no second expiry state.
 
 ## Status
 
-Accepted resolution for C040. This document formalizes an outcome the diagrams already drew ("deadline expires without valid closure"); it adds no new entity and reuses the fund-treatment machinery of [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]].
+Accepted resolution for C040. This document removes a phantom state rather than adding one; it reuses the expiry machinery of [[85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION|docs/85_FUNDING_WINDOW_EXPIRY_AND_BUDGET_LIQUIDITY_SMOOTHING_RESOLUTION.md]] unchanged.
 
-## Problem
+## Resolution decision
 
-The corpus defined one expiry outcome precisely — `Expired Unfunded`, when the funding window closes without financing closure (docs/85) — but the lifecycle surfaces also showed a second, undefined expiry: a project that *did* close its funding yet never satisfied its remaining closure conditions (fiscalization assignment, evidence commitments, beneficiary confirmation, guarantees) within its declared deadline, and obtained no approved reformulation. Without a rule, committed funds in that limbo had no defined treatment and the state had no defined trigger.
+The control package is part of the project. Under the parallel-closure model, a project is operatively funded only when its whole closure package assembles — financing, independent fiscalization assignment, evidence commitments, beneficiary confirmation, and required guarantees. Financing closure alone does not make a project funded: committed money that can never convert into an executable project was never operative funding.
 
-## Core v0 resolution
+Therefore the corpus defines exactly one expiry outcome:
 
-`Expired` is the project outcome for closure-deadline expiry after funding closure.
+- **`Expired Unfunded`** is the project outcome whenever the closure window ends with *any* closure condition unsatisfied and no approved reformulation or extension active — whether the unmet condition was the financing itself or any other part of the package.
+- The former plain `Expired` state is removed from both project state diagrams, docs/12's exceptional-state list, and every lifecycle enumeration.
+- All committed, unreleased funds follow the docs/85 treatment menu unchanged: return to citizen available balance, reassignment under the citizen's automatic allocation profile, reassignment under active delegation where valid, or the protocol fallback. No funds have been disbursed by construction, since disbursement requires execution readiness.
+- The `Expired Unfunded` record carries a recorded **expiry reason** distinguishing which closure condition failed (financing shortfall; fiscalization assignment never completed; evidence commitments unmet; beneficiary confirmation missing; guarantees not materialized). One state, visible reasons.
 
-Minimum rule:
+## Why the reason field matters
 
-- trigger: the project's declared closure deadline passes with funding closed but at least one other closure condition unsatisfied, and no approved reformulation or extension is active;
-- the transition is automatic and recorded, like every lifecycle transition — it is a project/protocol outcome, not a withdrawal, and creates no ordinary voluntary-withdrawal right (consistent with C005, [[42_FUNDING_COMMITMENT_AND_C005_RESOLUTION|docs/42_FUNDING_COMMITMENT_AND_C005_RESOLUTION.md]]);
-- no funds have been disbursed in this state by construction (disbursement requires execution readiness), so all committed, unreleased funds follow the same configured treatment menu as `Expired Unfunded` (docs/85): return to citizen available balance, reassignment under the citizen's automatic allocation profile, reassignment under active delegation where valid, or the protocol fallback;
-- the expired project remains historically visible with its reason, and republication or cloning follows the docs/85 republication rules;
-- deadline configuration and any extension are visible Threshold Policy / Governance Resolution matters, never silent edits;
-- projects already in execution never expire: once disbursement has begun, deadline and delivery failures follow the execution machinery — milestone retention and recovery (A017), reformulation (C017), pause and material suspension, revocation, and closure evaluation (C018) — because expiry without accounting would be an escape from live obligations.
+The two failure paths are diagnostically different even though the outcome is one: financing shortfall means the funding market declined the project; a control-package shortfall with financing closed means the market accepted it but the scope's control preconditions never assembled. Repeated cases of the second reason feed the control-supply density indicators of [[90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|A022]] — they signal thin verification supply or unrealistic closure conditions, not weak demand.
 
-## Distinction from Expired Unfunded
+## Boundary: projects in execution never expire
 
-`Expired Unfunded` ends a project the funding market declined; `Expired` ends a project the funding market accepted but whose control preconditions never assembled. The second is rarer and more informative: repeated `Expired` outcomes in a scope signal thin control supply ([[90_CONTROL_SUPPLY_OBSERVABILITY_AND_A022_RESOLUTION|A022]]) or unrealistic closure conditions, not weak demand.
+Once disbursement has begun, deadline and delivery failures follow the execution machinery — milestone retention and recovery (A017), reformulation (C017), pause and material suspension, revocation, and closure evaluation (C018) — never expiry, because expiry without accounting would be an escape from live obligations.
 
 ## Macul example
 
-The sports school closes its funding in week three, but no eligible fiscalizer accepts assignment within the 90-day closure deadline and no reformulation is approved. The project moves to `Expired`; every funder's committed share follows their configured treatment; the project page shows "Expired: fiscalization assignment never completed," and the scope's control-supply indicators record the case.
+The sports school closes its financing in week three, but no eligible fiscalizer accepts assignment within the closure window and no reformulation is approved. The project moves to `Expired Unfunded` with reason "fiscalization assignment never completed"; every funder's committed share follows their configured treatment; the scope's control-supply indicators record the case.
 
 ## Citizen simplicity
 
-The citizen sees one sentence: "This project's funding was complete, but its independent-control setup did not finish in time; your contribution followed your configured rule." No new concept is introduced on the citizen surface.
+The citizen sees one sentence: "This project did not complete all its conditions in time; your contribution followed your configured rule." The reason is visible on the expanded record, not on the default surface.
 
 ## Scope boundary and limitation
 
-Core v0 defines the trigger, the fund treatment, and the visibility; deadline lengths and extension policies are Threshold Policy and country-implementation configuration. Limitation statement: the boundary between a justified extension and a strategic one is procedural (a visible Governance Resolution), not substantive — a captured authority can extend indefinitely in full public view, which is the A016 observability territory, not a solved problem.
+Core v0 defines the single outcome, the reason field, and the fund treatment; window lengths and extension policies remain Threshold Policy and country-implementation configuration. Limitation statement: the boundary between a justified extension and a strategic one is procedural (a visible Governance Resolution), not substantive — a captured authority can extend indefinitely in full public view, which is A016 observability territory, not a solved problem.
 
 ## Residual risks
 
-- Aggressive deadlines convert thin control markets into expiry cascades (mitigated by A022 observability and capacity-calibrated configuration).
+- Aggressive windows convert thin control markets into expiry cascades (mitigated by A022 observability and capacity-calibrated configuration).
 - Serial extensions can keep zombie projects alive visibly; the record makes the pattern auditable but does not prevent it.
 
 ## Integration target
 
-This resolution should inform the project state diagrams (both carry `Expired` already), docs/12's exceptional-state list, docs/29/30's state enumerations, the entity/state map, and the schema draft's project lifecycle states.
+This resolution should inform both project state diagrams (plain `Expired` removed; the `Expired Unfunded` transition label covers any unsatisfied closure condition), docs/12's exceptional-state list, docs/29/30/35's state enumerations, and the expiry-reason field on the Funding Attempt / project expiry record in the schema draft.

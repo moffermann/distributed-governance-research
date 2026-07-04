@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted (define it) — corrected in the one-hundred-sixteenth residual cleanup: docs/104 defines the closure-deadline Expired outcome with the docs/85 fund-treatment menu, and docs/29 now lists both expiry states.
+Accepted (single outcome, author final verdict) — corrected in the one-hundred-sixteenth residual cleanup: the control package is part of the project, so any unsatisfied closure condition at window end yields the one expiry outcome, Expired Unfunded, with a recorded expiry reason; the phantom plain Expired state was removed from both diagrams and every lifecycle enumeration (docs/104).
 
 ## Contradiction
 

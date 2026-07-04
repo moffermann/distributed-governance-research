@@ -27,8 +27,7 @@ stateDiagram-v2
 
     OpenProject --> ExecutionReady: all applicable project or first-phase gates complete
     OpenProject --> RequiresReformulation: material issue before execution
-    OpenProject --> Expired: deadline expires without valid closure
-    OpenProject --> ExpiredUnfunded: funding attempt expires unfunded
+    OpenProject --> ExpiredUnfunded: closure window expires with any closure condition unsatisfied
     OpenProject --> Revoked: severe pre-execution failure
 
     ExecutionReady --> InExecution: controlled execution starts
@@ -59,7 +58,6 @@ stateDiagram-v2
 
     InExecution --> ClosureAccountability: execution complete or final outcome reached
     Revoked --> ClosureAccountability: final accountability required
-    Expired --> ClosureAccountability: final accountability required
     ExpiredUnfunded --> ClosureAccountability: funding attempt and fund treatment recorded
     ClosureAccountability --> PostClosureCoverageActive: coverage window active
     ClosureAccountability --> Closed: no platform coverage window

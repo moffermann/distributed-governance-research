@@ -197,7 +197,7 @@ Exceptional states:
 ```text
 Paused
 Reformulation required
-Expired
+Expired unfunded
 Expired unfunded
 Revoked
 ```

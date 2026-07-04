@@ -48,12 +48,10 @@ stateDiagram-v2
     ContinuityRenewalWindow --> InExecution: current period continues while window open
     ContinuityRenewalWindow --> ClosureAccountability: period ends, wind-down, replacement, or no renewal
 
-    FundingOpen --> Expired
     OpenProject --> Revoked
     Paused --> Revoked
     InExecution --> ClosureAccountability
     Revoked --> ClosureAccountability
-    Expired --> ClosureAccountability
     ExpiredUnfunded --> ClosureAccountability
     ClosureAccountability --> PostClosureCoverageActive: coverage window active
     ClosureAccountability --> Closed: no platform coverage window

@@ -1147,7 +1147,6 @@ Closed
 Requires reformulation
 Paused
 Revoked
-Expired
 Expired Unfunded
 ```
 

@@ -3196,7 +3196,6 @@ Requires reformulation
 Under extraordinary review
 Revoked
 Closed
-Expired
 Expired unfunded
 ```
 
