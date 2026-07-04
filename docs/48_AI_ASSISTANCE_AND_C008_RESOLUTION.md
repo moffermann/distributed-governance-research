@@ -82,6 +82,10 @@ AI may not be the final authority for:
 - overriding citizen funding choices;
 - overriding protocol rules.
 
+## The sanctioned structural-coherence case
+
+One AI check does gate a consequential outcome, and it is named here so the boundary stays honest: the disbursement milestone validator of [[54_DISBURSEMENT_MILESTONE_AI_VALIDATION_AND_C016_RESOLUTION|C016]], whose critical (Red) findings block financeable publication until corrected. This does not breach the principle, because the decision belongs to the protocol: the protocol rule defines which milestone configurations are incoherent, non-fiscalizable, or risk-unprotected, and the validator only detects them — it never judges whether the project is valuable, and Red blockers stay limited to critical non-fiscalizable configurations. Two safeguards keep the case bounded: any widening of what counts as Red is a protocol rule change under C019, not a model update; and a proposer who believes a Red is wrong may contest it through the moderation-review surface of [[77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|A011]], where a human or authorized process — never another model — resolves the dispute.
+
 ## Decision authority
 
 Relevant decisions must be grounded in:

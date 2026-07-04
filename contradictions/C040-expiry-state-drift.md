@@ -2,7 +2,7 @@
 
 ## Status
 
-Open — pending author review.
+Accepted (define it) — corrected in the one-hundred-sixteenth residual cleanup: docs/104 defines the closure-deadline Expired outcome with the docs/85 fund-treatment menu, and docs/29 now lists both expiry states.
 
 ## Contradiction
 

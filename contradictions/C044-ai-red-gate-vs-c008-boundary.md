@@ -2,7 +2,7 @@
 
 ## Status
 
-Open — pending author review. Surfaced as a sub-threshold note by the cross-resolution audit (both sides are C-generation rules, a seam no earlier review examined).
+Accepted (option a) — corrected in the one-hundred-sixteenth residual cleanup: C008 names the C016 validator as the sanctioned structural-coherence case with a C019 rule-change requirement for widening Red and an A011 contest path; C016 carries the mirror cross-reference.
 
 ## Contradiction
 

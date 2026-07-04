@@ -488,6 +488,8 @@ This resolution should inform future updates to:
 - treat high-risk early payments as protected advances, not ordinary progress;
 - update validator rules from real failure cases over time.
 
+Boundary with C008: the validator is the sanctioned structural-coherence case of the assist-not-decide principle — the protocol rule defines what is incoherent, the validator only detects it (see [[48_AI_ASSISTANCE_AND_C008_RESOLUTION|docs/48_AI_ASSISTANCE_AND_C008_RESOLUTION.md]]). Widening the Red criteria is a protocol rule change under C019, and a disputed Red is contestable through the [[77_TUTORED_MODERATION_ABUSE_TEST_AND_A011_RESOLUTION|A011]] moderation-review surface, where a human or authorized process resolves it.
+
 ## Design rule
 
 > Funding should not begin until the system can explain what will be paid, when it will be paid, what evidence proves it, and what happens if it is only partially fulfilled.

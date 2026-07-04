@@ -32,11 +32,11 @@ Each `C0NN-slug.md` contains: Status / Contradiction (side A and side B, quoted 
 | [[C037-agents-md-stale-phase\|C037]] | OPERATIONS.md declares Phase 1 and pre-manuscript priorities | Medium | Accepted (116th) |
 | [[C038-project-recap-stale-phase\|C038]] | Current Project Recap declares Phase 1 despite its title | Low-Medium | Accepted (116th) |
 | [[C039-dual-project-state-diagrams\|C039]] | Two project state diagrams define incompatible parent machines, both listed as current | Medium | Accepted (116th) |
-| [[C040-expiry-state-drift\|C040]] | Expiry-state drift: undefined "Expired" vs "Expired Unfunded" across enumerations | Low | Open |
+| [[C040-expiry-state-drift\|C040]] | Expiry-state drift: undefined "Expired" vs "Expired Unfunded" across enumerations | Low | Accepted (116th) |
 | [[C041-citizen-language-rule-violated\|C041]] | C009's citizen-language rule violated by the citizen-facing status maps | Medium | Accepted (116th) |
 | [[C042-voter-role-in-early-entity-map\|C042]] | Early entity map carries a "voter" role the consolidated map dropped | Low | Accepted (116th) |
 | [[C043-observed-as-project-state\|C043]] | docs/12 promotes "Observed" to a project-level exceptional state | Low | Accepted (116th) |
-| [[C044-ai-red-gate-vs-c008-boundary\|C044]] | C016's AI Red gate vs C008's assist-not-decide boundary | Medium | Open |
+| [[C044-ai-red-gate-vs-c008-boundary\|C044]] | C016's AI Red gate vs C008's assist-not-decide boundary | Medium | Accepted (116th) |
 | [[C045-a030-delegation-citation-slip\|C045]] | A030 resolution misattributes the Delegate role to C019 | Low | Accepted (116th) |
 
 ## Audit completion

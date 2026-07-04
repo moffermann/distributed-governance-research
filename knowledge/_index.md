@@ -447,6 +447,7 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL|101 - Core v0 Minimal Publishable Model]]
 - [[../docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|102 - Allocation Act Characterization and A034 Resolution v0]]
 - [[../docs/103_ADMINISTRATIVE_CAPACITY_DECLARATION_AND_A035_RESOLUTION|103 - Administrative Capacity Declaration and A035 Resolution v0]]
+- [[../docs/104_CLOSURE_DEADLINE_EXPIRY_AND_C040_RESOLUTION|104 - Closure Deadline Expiry and C040 Resolution v0]]
 
 ## Literature
 
