@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.4 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y revisiones metodológicas del autor sobre la simulación y su encuadre, todas parte del registro público.**
+**Working paper — v1.5 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y revisiones metodológicas del autor sobre la simulación, su encuadre y el criterio de éxito de las conclusiones, todas parte del registro público.**
 
-*Traducción al español del working paper v1.4 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.5 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff.*
 
@@ -38,7 +38,14 @@ defecto es fuerte; un cuarto experimento preregistrado que modela el conocimient
 de manera simétrica halla que agregar señales ciudadanas dispersas en ese vector
 supera a la construcción central de ancho de banda fijo en cada escala probada
 —siempre que exista una institución de agregación y que las señales sean
-honestas, no sesgadas y efectivamente recogidas. Tercero,
+honestas, no sesgadas y efectivamente recogidas; y un quinto experimento
+preregistrado lleva la comparación hasta aquello para lo que existe la
+redistribución —el valor social entregado por unidad de presupuesto—,
+hallando que la entrega verificada añade un +43% sobre carteras idénticas, que
+las ganancias de selección y de entrega se multiplican, que la arquitectura
+completa entrega 2.19× la línea base opaca del statu quo, y que la finalización
+oficialmente reportada del statu quo sobreestima la entrega real en veintinueve
+puntos porcentuales. Tercero,
 método: la arquitectura se desarrolló bajo revisión adversarial sistemática
 —treinta y cinco resúmenes de ataque (attack briefs), cada uno con una defensa
 emparejada y una resolución aceptada bajo una regla explícita de integrar-o-acotar
@@ -135,8 +142,10 @@ se le hizo. Nuestras contribuciones son:
    supuestos conductuales de la arquitectura bajo ignorancia racional, atención
    de descubrimiento limitada y cascadas de prueba social. Los resultados
    disciplinan el diseño: apoyan algunas afirmaciones, afilan otras, cuantifican
-   el apalancamiento concentrado en la capa de construcción de ámbitos, y miden
-   una construcción abierta viable de ella.
+   el apalancamiento concentrado en la capa de construcción de ámbitos, miden
+   una construcción abierta viable de ella, y llevan la comparación de extremo a
+   extremo —desde la asignación hasta el valor social entregado por unidad de
+   presupuesto, el criterio que la redistribución existe para satisfacer.
 
 4. **Validación adversarial como método** (Sección 7). La arquitectura fue
    atacada sistemáticamente —treinta y cinco resúmenes de ataque anclados en las
@@ -574,6 +583,48 @@ conocimiento distribuido— porque nunca modelaron el conocimiento distribuido;
 cuando E4 lo hace, la agregación gana allí donde se cumplen sus precondiciones
 nombradas. Ambos discursos pierden su eslogan; el diseño conserva sus números.
 
+**Hallazgo 5: el valor entregado, no la asignación, es donde la arquitectura
+justifica su valía —y la selección y la entrega se multiplican.** Un quinto
+experimento preregistrado (`research/e5-value-delivery-design.md`) añade la
+etapa de ejecución que los primeros cuatro omitieron: ejecutores con tipos
+ocultos cuya decisión de desvío sigue la condición de incentivos de la
+Proposición 1, bajo un régimen de entrega opaco (baja detección, adelantos no
+protegidos, sin recuperación, sin memoria reputacional —parámetros dentro de la
+banda de fuga documentada empíricamente: 87% en las subvenciones por capitación
+de Uganda (Reinikka and Svensson 2004), 24% en los caminos indonesios (Olken
+2007)) frente al régimen verificado construido a partir de las Proposiciones 1-4
+(condicionamiento por hitos, retención, recuperación, detección en la capa de
+evidencia, capital reputacional en juego con exclusión). Cruzar la entrega con
+los dos regímenes de selección de E4 arroja un 2×2 cuyos efectos principales son
+dos preguntas sencillas. Los mismos proyectos, distinta capa de control: el
+régimen verificado entrega un +43% sobre carteras idénticas [0.143, 0.193], y la
+finalización oficial del régimen opaco sobreestima su entrega real en veintinueve
+puntos porcentuales —la brecha de rendición de cuentas del statu quo,
+cuantificada. La misma capa de control, distintos proyectos: la priorización
+social entrega un +53-54% bajo cualquiera de los dos regímenes. La interacción es
+positiva y significativa (+0.085 [0.053, 0.117]): las capas se multiplican, y la
+arquitectura completa entrega 2.19× la línea base del statu quo por unidad de
+presupuesto (0.859 vs 0.393), de manera robusta a lo largo de las tasas de
+participación directa desde el 3% (el piso del presupuesto participativo) hasta
+el 40% (escala de votación). Dos predicciones preregistradas fallaron
+honestamente. El predominio esperado de la entrega sobre la selección no se
+sostuvo a esta escala —la selección central con doscientos proyectos es casi
+aleatoria (E4), inflando el margen de selección—, de modo que la afirmación
+robusta es el compuesto, no el ordenamiento. Y la esperada depuración
+reputacional nunca se activó bajo los parámetros de verificación fuerte, por la
+mejor razón posible: la condición de incentivos se cumple para todo ejecutor, de
+modo que nadie se desvía y no hay a quién excluir —la disuasión se anticipa al
+castigo, la aplicación de Becker operando ex ante. Un análisis de sensibilidad
+post-hoc etiquetado con verificación debilitada muestra la segunda línea de
+defensa: disuasión parcial, detección activa, y un conjunto de ejecutores que
+mejora de manera medible a medida que la reputación excluye a quienes se desvían
+(cuota de oportunistas 0.28 → 0.21 a lo largo de veinticuatro ciclos). Un barrido
+acompañante de las categorías de descubrimiento por defecto muestra que cada una
+porta una firma distributiva amplia y medible —"cerca de mí" concentra el 71% del
+presupuesto en el quintil más denso, "rural" lo invierte— de modo que el valor
+por defecto es una palanca de política distributiva visible y configurable, no un
+sesgo inherente del planificador.
+
 ## 7. La validación adversarial como método
 
 La arquitectura se desarrolló bajo un bucle adversarial documentado: **ataque**
@@ -726,23 +777,59 @@ cual es en sí mismo información que el sistema actual nunca produce.
 
 ## 10. Conclusión
 
-La pregunta que este artículo responde no es si los Estados deberían ser más
-grandes o más pequeños, sino si las capas de la actividad estatal que fallan a
-través del monopolio de información e incentivos pueden rearquitecturarse para
-fallar menos. Para una de esas capas —la asignación acotada de recursos públicos
-con verificación— hemos especificado una arquitectura completa, demostrado las
-condiciones de incentivos de las que dependen sus mecanismos, medido sus
-supuestos conductuales en simulación, y sometido el conjunto a tres rondas de
-revisión adversarial documentada con una disciplina explícita de
-integrar-o-acotar. El resultado es deliberadamente modesto en sus afirmaciones e
-inusualmente explícito sobre sus bordes: la calidad de la asignación cabalga
-sobre valores por defecto institucionales cuya construcción sigue siendo el
-problema abierto; la rendición de cuentas cabalga sobre una verificación cuyas
-condiciones de mercado deben tasarse; la legitimidad cabalga sobre mandatos que
-la plataforma puede registrar pero no crear. Lo que distingue a la propuesta es
-que estos bordes están especificados, monitoreados y adjuntos a objetos
-nombrados —que es, sostenemos, cómo se ve cuando el diseño institucional se trata
-como una disciplina de ingeniería antes que como una ideológica.
+Los Estados no recaudan impuestos para asignar presupuestos; asignan
+presupuestos para mejorar las vidas de la sociedad que los financió (Musgrave
+1959). Si, tras una redistribución, la sociedad no está mejor, la redistribución
+no logró nada —el balde agujereado de Okun (1975) transportó agua que nunca
+llegó. El criterio correcto para cualquier institución de asignación no es, por
+tanto, cuán fielmente ejecuta un plan sino cuánto valor entregado y verificado
+produce por unidad de recurso público. El experimento final de este artículo
+aplica ese criterio de extremo a extremo, y su estructura puede enunciarse como
+dos preguntas que cualquiera puede hacerse. Primero: tómense los mismos
+proyectos, diseñados de manera idéntica, y cámbiese únicamente quién ejecuta y
+cómo se lo vigila —¿acaso el régimen visiblemente auditado con consecuencias
+reputacionales entrega más que el opaco sin ellas? Lo hace: un +43% de valor
+entregado sobre carteras idénticas, porque bajo la verificación supeditada a
+hitos la condición de incentivos se cumple y el desvío se disuade antes de que
+ocurra, mientras que el régimen opaco no solo tiene fugas sino que reporta mal
+—su finalización oficial sobreestima la entrega real en veintinueve puntos
+porcentuales, cuantificando una rendición de cuentas formalmente rica y
+prácticamente exigua. Segundo: manténgase fija la capa de control y cámbiese
+únicamente qué proyectos se financian, ¿planificados centralmente o priorizados
+socialmente? La priorización social entrega más bajo cualquiera de los dos
+regímenes de control (+53-54%). Y los dos efectos se multiplican en lugar de
+sumarse: la entrega verificada amplifica la buena selección, porque un proyecto
+bien elegido que tiene fugas pierde su ventaja. La arquitectura completa entrega
+2.19 veces el valor entregado de la línea base del statu quo por unidad de
+presupuesto, de manera robusta a lo largo de las tasas de participación desde el
+piso del presupuesto participativo hasta el involucramiento a escala de votación.
+
+El punto más profundo es el de Friedman: una administración central gasta el
+dinero de otras personas en otras personas, la categoría de gasto con el menor
+cuidado tanto por el costo como por el valor (Friedman and Friedman 1980). Esta
+arquitectura no responde a ese problema con exhortación; reconecta las cañerías
+del balde. La planificación permanece —como el hilo conductor que fija ámbitos,
+pisos y mandatos— pero el motor del valor es la capa de conversión: promesas
+medibles, liberación condicional, verificación independiente, consecuencias que
+se acumulan en reputación, y un medidor en cada fuga. La pregunta que este
+artículo responde no es, por tanto, si los Estados deberían ser más grandes o más
+pequeños, sino si las capas de la actividad estatal que fallan a través del
+monopolio de información e incentivos pueden rearquitecturarse para fallar menos
+—y para mostrar sus fallas cuando las tienen. Para una de esas capas hemos
+especificado una arquitectura completa, demostrado las condiciones de incentivos
+de las que dependen sus mecanismos, medido la selección, la agregación y la
+entrega en simulación, y sometido el conjunto a tres rondas de revisión
+adversarial documentada con una disciplina explícita de integrar-o-acotar. El
+resultado es deliberadamente modesto en sus afirmaciones e inusualmente explícito
+sobre sus bordes: la calidad de la asignación cabalga sobre la calidad
+informativa de aquello que construya el vector de pesos, cuya construcción
+abierta se mide viable pero cuya elicitación honesta sigue siendo el problema
+abierto; el valor entregado cabalga sobre una verificación cuyas condiciones de
+mercado deben tasarse; la legitimidad cabalga sobre mandatos que la plataforma
+puede registrar pero no crear. Lo que distingue a la propuesta es que estos
+bordes están especificados, monitoreados y adjuntos a objetos nombrados —que es,
+sostenemos, cómo se ve cuando el diseño institucional se trata como una
+disciplina de ingeniería antes que como una ideológica.
 
 ## Referencias
 
@@ -763,6 +850,7 @@ como una disciplina de ingeniería antes que como una ideológica.
 - Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
 - Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
+- Friedman, M., and R. Friedman (1980). *Free to Choose*. Harcourt.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
@@ -773,9 +861,11 @@ como una disciplina de ingeniería antes que como una ideológica.
 - Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
+- Musgrave, R. (1959). *The Theory of Public Finance*. McGraw-Hill.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
+- Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
 - Olson, M. (1965). *The Logic of Collective Action*. Harvard University Press.
@@ -783,6 +873,7 @@ como una disciplina de ingeniería antes que como una ideológica.
 - Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.
 - Peixoto, T., and J. Fox (2016). "When Does ICT-Enabled Citizen Voice Lead to Government Responsiveness?" *IDS Bulletin* 47(1).
 - Power, M. (1997). *The Audit Society: Rituals of Verification*. Oxford University Press.
+- Reinikka, R., and J. Svensson (2004). "Local Capture: Evidence from a Central Government Transfer Program in Uganda." *Quarterly Journal of Economics* 119(2).
 - Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
 - Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
 - Schattschneider, E. E. (1960). *The Semisovereign People*. Holt, Rinehart and Winston.
