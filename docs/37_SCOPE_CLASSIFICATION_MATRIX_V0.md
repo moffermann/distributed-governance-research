@@ -99,7 +99,6 @@ Examples:
 | [[02_PROJECT_SCOPE|docs/02_PROJECT_SCOPE.md]] | Core v0 support | Frames project boundaries. |
 | [[03_ROADMAP|docs/03_ROADMAP.md]] | Core v0 support | Guides current work sequence. |
 | [[04_AGENT_ROLES|docs/04_AGENT_ROLES.md]] | Core v0 support | Supports repository workflow. |
-| [[05_OBSIDIAN_TOOLING_SETUP|docs/05_OBSIDIAN_TOOLING_SETUP.md]] | Support / tooling | Useful for workflow, not part of model. |
 | [[06_CURRENT_PROJECT_RECAP|docs/06_CURRENT_PROJECT_RECAP.md]] | Core v0 support | Helps continuity and orientation. |
 
 ## Core architecture documents

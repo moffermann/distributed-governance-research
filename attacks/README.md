@@ -14,7 +14,6 @@ The accepted Phase 3 resolutions are in `docs/67` through `docs/103` (first roun
 
 The attack set was derived from a repository-wide review of:
 
-- `OPERATIONS.md`;
 - [[03_ROADMAP|docs/03_ROADMAP.md]];
 - [[33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT|docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md]];
 - [[34_CORE_V0_SCOPE_FREEZE|docs/34_CORE_V0_SCOPE_FREEZE.md]];

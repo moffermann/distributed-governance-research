@@ -118,13 +118,10 @@ Start here when navigating the project in Obsidian or GitHub.
 ## Core orientation
 
 - [[../README|README]]
-- [[../AGENTS|AGENTS]]
 - [[../docs/00_RESEARCH_PHILOSOPHY|Research Philosophy]]
 - [[../docs/01_RESEARCH_METHOD|Research Method]]
 - [[../docs/02_PROJECT_SCOPE|Project Scope]]
 - [[../docs/03_ROADMAP|Roadmap]]
-- [[../docs/04_AGENT_ROLES|Agent Roles]]
-- [[../docs/05_OBSIDIAN_TOOLING_SETUP|Obsidian and tooling Setup]]
 - [[../docs/06_CURRENT_PROJECT_RECAP|Project Recap as of 2026-06-26 (Historical Snapshot)]]
 - [[../docs/07_CORE_V0_SCOPE|Core v0 Scope]]
 - [[../docs/08_ENTITY_AND_ROLE_MAP|Entity and Role Map v0]]
@@ -457,10 +454,4 @@ Recently aligned residual-audit hypotheses:
 
 - [[../drafts/paper-outline|Candidate Paper Outline]]
 
-## Skills
 
-- [[../tools/skills/recursive-hypothesis-refinement/SKILL|Recursive Hypothesis Refinement]]
-- [[../tools/skills/session-distillation/SKILL|Session Distillation]]
-- [[../tools/skills/literature-scout/SKILL|Literature Scout]]
-- [[../tools/skills/paper-drafting/SKILL|Paper Drafting]]
-- [[../tools/skills/collaborative-resolution-workflow/SKILL|Collaborative Resolution Workflow]]

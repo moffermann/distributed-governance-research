@@ -19,17 +19,16 @@ attacks/              Adversarial attack briefs A001-A035 (all resolved)
 defenses/             Paired defense briefs D001-D035
 contradictions/       Consistency-audit queue (C026+), pending author review
 drafts/               The working paper (drafts/paper.md, English authoritative;
-                      Spanish translation paper.es.md) and evaluation reports
+                      Spanish translation paper.es.md), the essay edition, and the plain-language explainer
 research/             Formal models, simulation results and design, literature map
 external-review/      Reviewer packets by profile, English and Spanish
 scripts/              Reference checker, Obsidian converter, PDF renderer, and the
                       reproducible allocation simulation
-tools/skills/        Reusable project-local tooling workflows
 ```
 
 ## Current status
 
-Working paper v1.4 with formal mechanism-design propositions, a reproducible 10,000-agent simulation (four experiments, one pre-registered), and a complete adversarial record: thirty-five attack briefs, each with a paired defense and an accepted resolution propagated through the corpus. Current phase: post-manuscript validation — external expert review, simulation calibration against participatory-budgeting data, and a bounded tutored pilot. The project's origin distillation is preserved in `knowledge/00_SESSION_2026-06-25_DISTILLATION.md`.
+Working paper v1.6 with formal mechanism-design propositions and a reproducible 10,000-agent simulation (six experiments, four pre-registered), and a complete adversarial record: thirty-five attack briefs, each with a paired defense and an accepted resolution propagated through the corpus. Current phase: post-manuscript validation — external expert review, simulation calibration against participatory-budgeting data, and a bounded tutored pilot. The project's origin distillation is preserved in `knowledge/00_SESSION_2026-06-25_DISTILLATION.md`.
 
 ## License and citation
 

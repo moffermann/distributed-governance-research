@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.6 (July 2026). Revised after an adversarial referee pass and author methodological reviews of the simulation, its framing, the conclusions' criterion of success, and the incentive channel of delivery, all part of the public record.**
+**Working paper — v1.6 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff.*
 

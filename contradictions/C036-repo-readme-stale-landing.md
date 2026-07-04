@@ -6,7 +6,7 @@ Accepted — corrected in the one-hundred-sixteenth residual cleanup.
 
 ## Contradiction
 
-Side A — `README.md:23`: "Early-stage theory building. The first consolidated distillation of the initial  research session is in…" — and `README.md:13-19`, whose repository map lists only `docs/ knowledge/ tools/skills/ drafts/ research/`.
+Side A — `README.md:23`: "Early-stage theory building. The first consolidated distillation of the initial research sessions is in…" — and `README.md:13-19`, whose repository map lists only `docs/ knowledge/ drafts/ research/`.
 
 Side B — the repository's actual state: a v1.4 manuscript, 35/35 resolved and propagated adversarial reviews, a four-experiment reproducible simulation, bilingual reviewer packets, dual licensing, and a public release — with the folders `attacks/`, `defenses/`, `external-review/`, `scripts/`, and `contradictions/` absent from the map.
 

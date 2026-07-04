@@ -1,6 +1,6 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.6 (julio de 2026). Revisado tras una ronda adversarial de arbitraje y revisiones metodológicas del autor sobre la simulación, su encuadre, el criterio de éxito de las conclusiones y el canal de incentivos de la entrega, todas parte del registro público.**
+**Working paper — v1.6 (julio de 2026). Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
 *Traducción al español del working paper v1.6 (drafts/paper.md, versión autoritativa en inglés).*
 

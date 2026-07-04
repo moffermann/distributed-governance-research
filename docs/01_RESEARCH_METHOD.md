@@ -34,7 +34,7 @@ At the end of each important discussion, produce a distillation containing:
 
 - **Conversation / Chat:** laboratory for discovery, critique, and refinement.
 - **Repository:** persistent brain of the project.
-- **tooling / tooling:** implementation layer for files, structure, automation, and publication workflows.
+- **Tooling:** implementation layer for files, structure, automation, and publication workflows.
 
 ## Rule of persistence
 
