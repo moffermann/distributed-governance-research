@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Manuscript-review round paired draft. No accepted resolution yet; pending review integration.
+Manuscript-review round paired review completed. Accepted resolution: [[106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION.md]]. Corpus propagation pending.
 
 ## Attack reference
 

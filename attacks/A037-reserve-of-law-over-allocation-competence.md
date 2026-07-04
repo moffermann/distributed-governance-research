@@ -2,7 +2,7 @@
 
 ## Status
 
-Manuscript-review round brief. Pending paired review; no accepted resolution yet.
+Reviewed in paired review. Improvements accepted in [[106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION.md]].
 
 ## Description
 
@@ -85,4 +85,4 @@ The manuscript circulates among public-law scholars ahead of a pilot. The first 
 
 ## Resolution output
 
-None yet. Pending paired defense and review.
+The accepted resolution added an enabling-norm record and binding-mode gate to the Allocation Mandate, restated tutored-mode imputation as the doctrinal answer during pilots, adopted the two-readings clause across the manuscript surfaces, required a reference legal proposal (built on the Peruvian and Brazilian statutory precedents) before any binding deployment, and made legal defection a recorded governance event parallel to fiscal defection. Doctrine remains external legislative work.
