@@ -1289,6 +1289,392 @@ if (args.exp === "e6") {
   process.exit(0);
 }
 
+// --- E7: headline sensitivity under a calibrated status quo -------------------
+// Pre-registered in research/e7-calibrated-baseline-design.md (predictions
+// committed before this implementation; pre-run amendment of 2026-07-04 governs
+// parameter sourcing). Four interventions vs E5: (1) a calibrated institutional
+// baseline S' whose parameters are audit-anchored per docs/105 and
+// research/audit-evidence-base.md — p=0.35 (Chile CEA-CGR 34% MOP observation
+// floor, mid of the 0.30-0.50 design band), a=0.5 (payment-state retention
+// practice), r=0.3 (ASF Mexico recovery band, sensitivity-checked), R=0 (no
+// reputational memory: the instrument the status quo genuinely lacks),
+// official completion still credited on paper certification for undetected
+// diversion; (2) scaled planner bandwidth K=max(3, round(0.15*Np)), coinciding
+// with E4's fixed 30 at Np=200; (3) municipal scales Np in {10,20,40} plus 200;
+// (4) adversarial common-mode signal bias: a beta share of informed citizens is
+// coordinated on a favored project set (10% of projects), reporting near-max
+// signals — the bias geometry E4 declared untested. Fully deterministic.
+if (args.exp === "e7") {
+  const { N, CYCLES, ETA, SCARCITY } = CONFIG;
+  const PI_BASE = 0.3, KC = 4, SIGMA_C = 0.35, SIGMA_P = 0.10, SLOTS = 6;
+  const K_FIXED = 30;          // E4/E5 continuity bandwidth (adversarial, labeled)
+  const K_RATIO = 0.15;        // scaled planner bandwidth ratio
+  const POOL = 120, L = 6;     // executor pool held constant across scales
+  const SCALES = [10, 20, 40, 200];
+  const BETAS = [0, 0.05, 0.10, 0.20, 0.30, 0.40];
+  const FAV_SHARE = 0.10;      // favored-set size for coordinated signalers
+
+  const kScaled = (Np) => Math.max(3, Math.round(K_RATIO * Np));
+
+  const makeNormal = (rng) => (mu, sigma) => {
+    let u1 = rng();
+    if (u1 < 1e-12) u1 = 1e-12;
+    const u2 = rng();
+    return mu + sigma * Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+  };
+  const buildSampler = (weights) => {
+    const cum = new Float64Array(weights.length);
+    let acc = 0;
+    for (let i = 0; i < weights.length; i++) { acc += weights[i]; cum[i] = acc; }
+    return (rng) => {
+      const roll = rng() * acc;
+      let lo = 0, hi = cum.length - 1;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (cum[mid] < roll) lo = mid + 1; else hi = mid; }
+      return lo;
+    };
+  };
+  const sampleDistinct = (pick, rng, k, seen) => {
+    seen.clear();
+    const out = [];
+    let guard = 0;
+    while (out.length < k && guard < k * 200) {
+      const j = pick(rng);
+      if (!seen.has(j)) { seen.add(j); out.push(j); }
+      guard++;
+    }
+    return out;
+  };
+
+  // Base world is built identically for every beta at a given (seed, Np); the
+  // coordinated bias is applied afterwards from its own RNG stream so that
+  // beta sweeps compare the same world under different signal corruption.
+  const makeWorld = (seed, Np, piInformed) => {
+    const rng = mulberry32(seed);
+    const theta = new Float64Array(Np), s = new Float64Array(Np), target = new Float64Array(Np);
+    const targetScale = (SCARCITY * N * CYCLES) / Np;
+    for (let j = 0; j < Np; j++) {
+      theta[j] = rng();
+      s[j] = Math.max(0.01, 0.2 * theta[j] + 0.8 * rng());
+      target[j] = (0.5 + rng()) * targetScale;
+    }
+    const normal = makeNormal(rng);
+    const salienceW = new Float64Array(Np);
+    for (let j = 0; j < Np; j++) salienceW[j] = 1 + s[j];
+    const pickCov = buildSampler(salienceW);
+    const sigSum = new Float64Array(Np), sigCount = new Int32Array(Np);
+    const informedProjs = [], informedSigs = [];
+    const seen = new Set();
+    const kc = Math.min(KC, Np);
+    for (let i = 0; i < N; i++) {
+      if (rng() < piInformed) {
+        const projs = sampleDistinct(pickCov, rng, kc, seen);
+        const sigs = new Float64Array(projs.length);
+        for (let m = 0; m < projs.length; m++) {
+          const j = projs[m];
+          const sig = theta[j] + normal(0, SIGMA_C);
+          sigs[m] = sig; sigSum[j] += sig; sigCount[j]++;
+        }
+        informedProjs.push(projs); informedSigs.push(sigs);
+      }
+    }
+    const pickPlan = buildSampler(salienceW);
+    const inspectedFixed = sampleDistinct(pickPlan, rng, Math.min(K_FIXED, Np), seen);
+    const wPlannerFixed = new Float64Array(Np).fill(0.5);
+    for (const j of inspectedFixed) wPlannerFixed[j] = theta[j] + normal(0, SIGMA_P);
+    const inspectedScaled = sampleDistinct(pickPlan, rng, Math.min(kScaled(Np), Np), seen);
+    const wPlannerScaled = new Float64Array(Np).fill(0.5);
+    for (const j of inspectedScaled) wPlannerScaled[j] = theta[j] + normal(0, SIGMA_P);
+    const wOpenRaw = new Float64Array(Np);
+    for (let j = 0; j < Np; j++) wOpenRaw[j] = sigCount[j] > 0 ? sigSum[j] / sigCount[j] : 0.5;
+    return { Np, theta, s, target, informedProjs, informedSigs, sigSum, sigCount, wPlannerFixed, wPlannerScaled, wOpenRaw };
+  };
+
+  // Coordinated common-mode bias: the first beta share of informed citizens is
+  // redirected to a favored project set with near-max reported signals; the
+  // open vector and their active behavior both inherit the corruption.
+  const applyBias = (world, beta, seed) => {
+    if (beta === 0) return { ...world, favSet: null };
+    const rng = mulberry32((seed ^ 0xb1a5) >>> 0);
+    const { Np } = world;
+    const favCount = Math.max(1, Math.round(FAV_SHARE * Np));
+    const fav = []; const seenF = new Set();
+    while (fav.length < favCount) {
+      const j = Math.floor(rng() * Np);
+      if (!seenF.has(j)) { seenF.add(j); fav.push(j); }
+    }
+    const nInf = world.informedProjs.length;
+    const nCoord = Math.round(beta * nInf);
+    const informedProjs = world.informedProjs.slice();
+    const informedSigs = world.informedSigs.slice();
+    const kc = Math.min(Math.min(KC, Np), favCount);
+    for (let c = 0; c < nCoord; c++) {
+      const projs = []; const s2 = new Set();
+      let guard = 0;
+      while (projs.length < kc && guard < kc * 200) {
+        const j = fav[Math.floor(rng() * favCount)];
+        if (!s2.has(j)) { s2.add(j); projs.push(j); }
+        guard++;
+      }
+      const sigs = new Float64Array(projs.length);
+      for (let m = 0; m < projs.length; m++) sigs[m] = 0.9 + 0.1 * rng();
+      informedProjs[c] = projs; informedSigs[c] = sigs;
+    }
+    const sigSum = new Float64Array(Np), sigCount = new Int32Array(Np);
+    for (let c = 0; c < informedProjs.length; c++) {
+      const projs = informedProjs[c], sigs = informedSigs[c];
+      for (let m = 0; m < projs.length; m++) { sigSum[projs[m]] += sigs[m]; sigCount[projs[m]]++; }
+    }
+    const wOpenRaw = new Float64Array(Np);
+    for (let j = 0; j < Np; j++) wOpenRaw[j] = sigCount[j] > 0 ? sigSum[j] / sigCount[j] : 0.5;
+    return { ...world, informedProjs, informedSigs, sigSum, sigCount, wOpenRaw, favSet: new Set(fav) };
+  };
+
+  // Selection stage (E5 machinery, parameterized by scale and planner vector).
+  const allocateSelection = (world, cfg, seed, salt) => {
+    const rng = mulberry32((seed ^ ((salt + 1) * 0x9e3779b9)) >>> 0);
+    const { Np, theta, s, target, informedProjs, informedSigs, wOpenRaw, wPlannerFixed, wPlannerScaled } = world;
+    const { d, pi, constructor } = cfg;
+    const funded = new Float64Array(Np);
+    const closeCycle = new Int32Array(Np).fill(-1);
+    const nInformed = informedProjs.length;
+    const defaultCount = Math.round(N * d);
+    const activeCount = N - defaultCount;
+    const activeInformed = Math.round(activeCount * pi);
+    const activeUninformed = activeCount - activeInformed;
+    const staticW = constructor === "plannerFixed" ? wPlannerFixed
+      : constructor === "plannerScaled" ? wPlannerScaled : wOpenRaw;
+    let staticOrder = null;
+    if (defaultCount > 0) staticOrder = Array.from({ length: Np }, (_, j) => j).sort((a, b) => staticW[b] - staticW[a]);
+    for (let t = 0; t < CYCLES; t++) {
+      for (let c = 0; c < activeInformed && nInformed > 0; c++) {
+        const ci = Math.floor(rng() * nInformed);
+        const projs = informedProjs[ci], sigs = informedSigs[ci];
+        let bestIdx = -1, bestVal = -Infinity;
+        for (let m = 0; m < projs.length; m++) {
+          const j = projs[m];
+          if (funded[j] >= target[j]) continue;
+          if (sigs[m] > bestVal) { bestVal = sigs[m]; bestIdx = j; }
+        }
+        if (bestIdx >= 0) funded[bestIdx] += Math.min(1, target[bestIdx] - funded[bestIdx]);
+      }
+      if (activeUninformed > 0) {
+        let maxFunded = 1;
+        for (let j = 0; j < Np; j++) if (funded[j] > maxFunded) maxFunded = funded[j];
+        const topIdx = [], topVis = [];
+        for (let j = 0; j < Np; j++) {
+          const vis = s[j] * (1 + ETA * (funded[j] / maxFunded));
+          if (topIdx.length < SLOTS) { topIdx.push(j); topVis.push(vis); }
+          else {
+            let mn = 0;
+            for (let a = 1; a < topIdx.length; a++) if (topVis[a] < topVis[mn]) mn = a;
+            if (vis > topVis[mn]) { topIdx[mn] = j; topVis[mn] = vis; }
+          }
+        }
+        let visTotal = 0;
+        for (let a = 0; a < topVis.length; a++) visTotal += topVis[a];
+        for (let c = 0; c < activeUninformed; c++) {
+          let amount = 1;
+          for (let att = 0; att < 4 && amount > 0; att++) {
+            let roll = rng() * visTotal, pick = topIdx[topIdx.length - 1];
+            for (let a = 0; a < topIdx.length; a++) { roll -= topVis[a]; if (roll <= 0) { pick = topIdx[a]; break; } }
+            const room = target[pick] - funded[pick];
+            if (room <= 0) continue;
+            const paid = Math.min(amount, room);
+            funded[pick] += paid; amount -= paid;
+          }
+        }
+      }
+      if (defaultCount > 0 && staticOrder) {
+        let budget = defaultCount;
+        for (let oi = 0; oi < staticOrder.length; oi++) {
+          if (budget <= 0) break;
+          const j = staticOrder[oi];
+          const room = target[j] - funded[j];
+          if (room <= 0) continue;
+          const paid = Math.min(budget, room);
+          funded[j] += paid; budget -= paid;
+        }
+      }
+      for (let j = 0; j < Np; j++) if (closeCycle[j] < 0 && funded[j] >= target[j]) closeCycle[j] = t;
+    }
+    const flag = new Array(Np);
+    for (let j = 0; j < Np; j++) flag[j] = funded[j] >= target[j] ? 1 : 0;
+    const jobs = [];
+    for (let j = 0; j < Np; j++) if (flag[j]) jobs.push({ j, cycle: closeCycle[j], budget: target[j] });
+    jobs.sort((a, b) => (a.cycle - b.cycle) || (a.j - b.j));
+    let favBudget = 0, totBudget = 0;
+    if (world.favSet) for (const job of jobs) { totBudget += job.budget; if (world.favSet.has(job.j)) favBudget += job.budget; }
+    return { funded, flag, jobs, selTheta: pearson(flag, Array.from(theta)), favShare: world.favSet && totBudget ? favBudget / totBudget : null };
+  };
+
+  // Delivery regimes. OPAQUE and VERIFIED are E5's; CALIBRATED is the
+  // audit-anchored institutional status quo (docs/105 evidence base).
+  const OPAQUE = { name: "opaque", p: 0.10, a: 0.85, r: 0.0, gamma: 0.0, R: 0.0, exclude: false };
+  const CALIBRATED = { name: "calibrated", p: 0.35, a: 0.5, r: 0.3, gamma: 0.0, R: 0.0, exclude: false };
+  const VERIFIED = { name: "verified", p: 0.75, a: 0.2, r: 0.5, gamma: 0.15, R: 0.3, exclude: true };
+  const threshold = (reg) => reg.p * ((1 - reg.a * (1 - reg.r)) + reg.gamma + reg.R);
+
+  const execute = (world, port, reg, execSeed) => {
+    const { theta } = world;
+    const poolRng = mulberry32((execSeed ^ 0xa1) >>> 0);
+    const assignRng = mulberry32((execSeed ^ 0xb2) >>> 0);
+    const costRng = mulberry32((execSeed ^ 0xc3) >>> 0);
+    const detectRng = mulberry32((execSeed ^ 0xd4) >>> 0);
+    const replaceRng = mulberry32((execSeed ^ 0xe5) >>> 0);
+    const thr = threshold(reg);
+    const pool = new Array(POOL);
+    for (let i = 0; i < POOL; i++) pool[i] = poolRng() < 0.7 ? 0 : 1;
+    const jobs = port.jobs;
+    let totalBudget = 0, deliveredBudget = 0, officialBudget = 0, value = 0;
+    let ptr = 0;
+    for (let cyc = 0; cyc < CYCLES; cyc++) {
+      while (ptr < jobs.length && jobs[ptr].cycle === cyc) {
+        const job = jobs[ptr++];
+        const th = theta[job.j], budget = job.budget;
+        const ei = Math.floor(assignRng() * POOL);
+        const type = pool[ei];
+        let delivered = 0, official = 0, caught = false;
+        for (let m = 0; m < L; m++) {
+          if (type === 0) { delivered++; official++; continue; }
+          const ceff = 0.3 + 0.6 * costRng();
+          if (ceff > thr) {
+            const detected = detectRng() < reg.p;
+            if (detected) caught = true;
+            else official++;
+          } else { delivered++; official++; }
+        }
+        deliveredBudget += (delivered / L) * budget;
+        officialBudget += (official / L) * budget;
+        value += th * (delivered / L) * budget;
+        totalBudget += budget;
+        if (reg.exclude && caught) pool[ei] = replaceRng() < 0.7 ? 0 : 1;
+      }
+    }
+    return {
+      V: totalBudget ? value / totalBudget : 0,
+      leak: totalBudget ? 1 - deliveredBudget / totalBudget : 0,
+      visGap: totalBudget ? (officialBudget - deliveredBudget) / totalBudget : 0,
+      selTheta: port.selTheta,
+    };
+  };
+
+  const fmtMS = (arr) => `${mean(arr).toFixed(3)}±${sd(arr).toFixed(3)}`;
+  const meanCI = (arr) => {
+    const m = mean(arr);
+    const se = sd(arr) / Math.sqrt(arr.length);
+    const t = 2.093;
+    return `${m.toFixed(3)} [${(m - t * se).toFixed(3)}, ${(m + t * se).toFixed(3)}]`;
+  };
+
+  console.log(`\n# E7 - headline sensitivity under a calibrated status quo (runs=${RUNS}, seeds ${BASE_SEED}..${BASE_SEED + RUNS - 1}, N=${N}, cycles=${CYCLES}, scarcity=${SCARCITY}x)`);
+  console.log(`regimes: opaque thr=${threshold(OPAQUE).toFixed(4)}, calibrated thr=${threshold(CALIBRATED).toFixed(4)} (p=0.35,a=0.5,r=0.3,R=0), verified thr=${threshold(VERIFIED).toFixed(4)}; opportunist c_eff~U(0.3,0.9); scaled planner K=max(3, round(0.15*Np))`);
+
+  // --- main: arms across scales, beta=0 ---------------------------------------
+  const ARMS = ["S", "Sp", "A1p", "A3p", "A2"];
+  const LABEL = {
+    S: "S   central-fixedK / zero-control (E5 continuity)",
+    Sp: "S'  central-scaledK / calibrated (status quo)",
+    A1p: "A1' central-scaledK / verified",
+    A3p: "A3' distributed / calibrated",
+    A2: "A2  distributed / verified (full architecture)",
+  };
+  for (const Np of SCALES) {
+    const acc = Object.fromEntries(ARMS.map((n) => [n, { V: [], leak: [], visGap: [], sel: [] }]));
+    const ratios = [], ratiosS = [];
+    for (let r = 0; r < RUNS; r++) {
+      const seed = BASE_SEED + r;
+      const world = makeWorld(seed, Np, PI_BASE);
+      const portS = allocateSelection(world, { d: 1.0, pi: PI_BASE, constructor: "plannerFixed" }, seed, 0);
+      const portSp = allocateSelection(world, { d: 1.0, pi: PI_BASE, constructor: "plannerScaled" }, seed, 1);
+      const portD = allocateSelection(world, { d: 0.8, pi: PI_BASE, constructor: "openStatic" }, seed, 3);
+      const execS = (seed * 4 + 1) >>> 0, execSp = (seed * 4 + 2) >>> 0, execD = (seed * 4 + 3) >>> 0;
+      const out = {
+        S: execute(world, portS, OPAQUE, execS),
+        Sp: execute(world, portSp, CALIBRATED, execSp),
+        A1p: execute(world, portSp, VERIFIED, execSp),
+        A3p: execute(world, portD, CALIBRATED, execD),
+        A2: execute(world, portD, VERIFIED, execD),
+      };
+      for (const n of ARMS) {
+        acc[n].V.push(out[n].V); acc[n].leak.push(out[n].leak); acc[n].visGap.push(out[n].visGap); acc[n].sel.push(out[n].selTheta);
+      }
+      if (out.Sp.V > 1e-9) ratios.push(out.A2.V / out.Sp.V);
+      if (out.S.V > 1e-9) ratiosS.push(out.A2.V / out.S.V);
+    }
+    console.log(`\n## E7 main arms, Np=${Np} (matched portfolios and execution streams per seed, beta=0)\n`);
+    console.log("| arm | V/budget | leak | visibility gap | sel(theta) |");
+    console.log("|---|---|---|---|---|");
+    for (const n of ARMS) {
+      const a = acc[n];
+      console.log(`| ${LABEL[n]} | ${fmtMS(a.V)} | ${fmtMS(a.leak)} | ${fmtMS(a.visGap)} | ${fmtMS(a.sel)} |`);
+    }
+    const ratioNote = ratios.length < RUNS ? ` (${RUNS - ratios.length} seed(s) with V(S')=0 excluded)` : "";
+    console.log(`\nheadline ratio V(A2)/V(S') per-seed = ${meanCI(ratios)}${ratioNote}   ratio of means = ${(mean(acc.A2.V) / mean(acc.Sp.V)).toFixed(3)}   (vs zero-control per-seed: ${meanCI(ratiosS)})`);
+    console.log(`delivery effect vs calibrated  V(A1')-V(S') = ${pairedDiff(acc.A1p.V, acc.Sp.V)}`);
+    console.log(`selection effect vs calibrated V(A3')-V(S') = ${pairedDiff(acc.A3p.V, acc.Sp.V)}`);
+    console.log(`residual visibility gap of the calibrated status quo: visGap(S') = ${fmtMS(acc.Sp.visGap)}`);
+    console.log(`selection at this scale: sel(central-scaledK) = ${fmtMS(acc.Sp.sel)}, sel(distributed) = ${fmtMS(acc.A2.sel)}, paired diff = ${pairedDiff(acc.A2.sel, acc.Sp.sel)}`);
+  }
+
+  // --- E7s POST-HOC sensitivity: municipal full-coverage planner --------------
+  // NOT pre-registered. The committed 15%-bandwidth scaling turned out to make
+  // central selection near-random at EVERY scale (a planner inspecting 15% of
+  // candidates is blind to the rest). The realistic municipal comparator
+  // inspects essentially all of its 10-40 candidates — which is the fixed-K
+  // planner (K=min(30,Np) covers the whole pool at these scales). This block
+  // reports the calibrated status quo under that full-coverage planner (S'fc)
+  // so the headline at municipal scale is measured against the strongest
+  // honest comparator, per A036's own logic.
+  console.log(`\n## E7s POST-HOC - municipal full-coverage planner (S'fc = central fixed-K + calibrated delivery)\n`);
+  console.log("| Np | V(S'fc) | leak(S'fc) | visGap(S'fc) | sel(S'fc) | V(A2) | ratio V(A2)/V(S'fc) per-seed | ratio of means |");
+  console.log("|---|---|---|---|---|---|---|---|");
+  for (const Np of [10, 20, 40]) {
+    const fc = { V: [], leak: [], visGap: [], sel: [] }, a2 = { V: [] };
+    const ratios = [];
+    for (let r = 0; r < RUNS; r++) {
+      const seed = BASE_SEED + r;
+      const world = makeWorld(seed, Np, PI_BASE);
+      const portS = allocateSelection(world, { d: 1.0, pi: PI_BASE, constructor: "plannerFixed" }, seed, 0);
+      const portD = allocateSelection(world, { d: 0.8, pi: PI_BASE, constructor: "openStatic" }, seed, 3);
+      const execS = (seed * 4 + 1) >>> 0, execD = (seed * 4 + 3) >>> 0;
+      const oFC = execute(world, portS, CALIBRATED, execS);
+      const oA2 = execute(world, portD, VERIFIED, execD);
+      fc.V.push(oFC.V); fc.leak.push(oFC.leak); fc.visGap.push(oFC.visGap); fc.sel.push(oFC.selTheta);
+      a2.V.push(oA2.V);
+      if (oFC.V > 1e-9) ratios.push(oA2.V / oFC.V);
+    }
+    const note = ratios.length < RUNS ? ` (${RUNS - ratios.length} excl.)` : "";
+    console.log(`| ${Np} | ${fmtMS(fc.V)} | ${fmtMS(fc.leak)} | ${fmtMS(fc.visGap)} | ${fmtMS(fc.sel)} | ${fmtMS(a2.V)} | ${meanCI(ratios)}${note} | ${(mean(a2.V) / mean(fc.V)).toFixed(3)} |`);
+  }
+
+  // --- E7b: adversarial signal bias sweep --------------------------------------
+  for (const Np of [40, 200]) {
+    console.log(`\n## E7b coordinated signal bias sweep, Np=${Np} (distributed arms; favored set=10% of projects)\n`);
+    console.log("| beta | sel(distributed) | sel(central-scaledK ref) | favored-set budget share | V(A3' calibrated) | V(A2 verified) |");
+    console.log("|---|---|---|---|---|---|");
+    for (const beta of BETAS) {
+      const selD = [], selC = [], fav = [], vA3 = [], vA2 = [];
+      for (let r = 0; r < RUNS; r++) {
+        const seed = BASE_SEED + r;
+        const world = makeWorld(seed, Np, PI_BASE);
+        const biased = applyBias(world, beta, seed);
+        const portSp = allocateSelection(world, { d: 1.0, pi: PI_BASE, constructor: "plannerScaled" }, seed, 1);
+        const portD = allocateSelection(biased, { d: 0.8, pi: PI_BASE, constructor: "openStatic" }, seed, 3);
+        const execD = (seed * 4 + 3) >>> 0;
+        const oA3 = execute(world, portD, CALIBRATED, execD);
+        const oA2 = execute(world, portD, VERIFIED, execD);
+        selD.push(portD.selTheta); selC.push(portSp.selTheta);
+        fav.push(portD.favShare === null ? NaN : portD.favShare);
+        vA3.push(oA3.V); vA2.push(oA2.V);
+      }
+      const favStr = fav.some((x) => Number.isNaN(x)) ? "—" : fmtMS(fav);
+      console.log(`| ${(beta * 100).toFixed(0)}% | ${fmtMS(selD)} | ${fmtMS(selC)} | ${favStr} | ${fmtMS(vA3)} | ${fmtMS(vA2)} |`);
+    }
+  }
+
+  process.exit(0);
+}
+
 // lambda is a mixing weight (w = lambda*theta + (1-lambda)*u), not a Pearson
 // correlation. Report the measured correlation so results are labeled
 // honestly (referee issue M2).

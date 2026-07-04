@@ -390,6 +390,103 @@ guidance for any strong reputation weighting, human or algorithmic, and as
 evidence for the corpus's existing concentration-observability machinery
 rather than as a description of the architecture's mechanism.
 
+## E7 — Headline sensitivity under a calibrated status quo
+
+Pre-registered in `research/e7-calibrated-baseline-design.md` before
+implementation, with a dated pre-run amendment governing parameter
+sourcing; raw output in `research/e7-raw-output.txt`. E7 answers A036 by
+running it: the E5 zero-control lower bound is joined by a **calibrated
+institutional arm S′** whose parameters come from the audit-institution
+evidence base (`research/audit-evidence-base.md`) per docs/105 — p = 0.35
+(the Chile CEA-CGR works-observation floor, mid of the 0.30-0.50 design
+band), a = 0.5 (payment-state retention practice), r = 0.3 (the ASF
+Mexico recovery band, denominator caveat declared), R = 0 (reputational
+memory is the instrument the status quo genuinely lacks), official
+completion still credited on paper certification for undetected
+diversion. The central planner's bandwidth scales as K = max(3,
+round(0.15·N_p)); scales N_p ∈ {10, 20, 40, 200}; coordinated
+common-mode signal bias β ∈ {0…0.40} on a favored set of 10% of
+projects. 20 seeded runs, matched portfolios and execution streams.
+
+| arm (N_p = 200, β = 0) | V/budget | leak | visibility gap | sel(θ) |
+|---|---|---|---|---|
+| S — central fixed-K / zero-control | 0.374±0.061 | 0.324±0.072 | 0.293±0.066 | 0.138±0.071 |
+| S′ — central scaled-K / calibrated | 0.391±0.045 | 0.293±0.056 | 0.190±0.035 | 0.130±0.072 |
+| A1′ — central scaled-K / verified | 0.558±0.032 | 0.000±0.000 | 0.000±0.000 | 0.130±0.072 |
+| A3′ — distributed / calibrated | 0.608±0.068 | 0.293±0.079 | 0.190±0.051 | 0.764±0.023 |
+| A2 — distributed / verified | 0.859±0.023 | 0.000±0.000 | 0.000±0.000 | 0.764±0.023 |
+
+Headline ratio at scale: **V(A2)/V(S′) = 2.224 [2.103, 2.346]** per-seed
+(ratio of means 2.197). At municipal scales under the post-hoc
+full-coverage planner (E7s below): ratio of means **1.387 (N_p = 10),
+1.510 (N_p = 20), 1.627 (N_p = 40)**.
+
+**Findings against the pre-registered predictions:**
+
+1. **Prediction 1 (multiplier falls below 1.5×) FAILED at scale, in the
+   informative direction.** The multiplier survives recalibration nearly
+   intact: 2.22 against the audit-calibrated baseline at N_p = 200. The
+   committed withdrawal condition (ratio near 1) is not triggered. At
+   municipal pilot scale, against the realistic full-coverage planner,
+   the ratio compresses to 1.39-1.63 — the prediction's spirit holds
+   there: at pilot scale the case rests on delivery and metering, not
+   selection.
+2. **Prediction 2 FAILED informatively — and this is the experiment's
+   central finding: audit without memory deters nobody.** The calibrated
+   regime's IC threshold (0.2275) lies below every opportunist's cost
+   draw (c_eff ≥ 0.3), so no diversion is ever deterred: S′'s leak
+   (0.293) is statistically indistinguishable from zero-control on
+   matched portfolios, and the delivery effect measured against the
+   calibrated baseline (+0.167 [0.149, 0.186]) equals E5's against
+   zero-control (+0.168). What real-parameter detection buys is a
+   smaller lie, not more delivery: the visibility gap drops from 0.293
+   to 0.190. Sharpening rather than weakening the manuscript's claim:
+   the calibrated arm's leak lands inside the audit-anchored works band
+   (24-48%) — the model's leak mechanics, fed audit-anchored parameters,
+   reproduce the empirically documented band.
+3. **Prediction 3 (municipal selection wash) MIXED.** Under the
+   committed 15%-bandwidth scaling the wash never occurs, because a
+   planner inspecting 15% of candidates is near-random at every scale
+   (sel(θ) 0.12-0.28) — a finding about that formalization, not about
+   municipal planners. Under the post-hoc full-coverage planner (the
+   realistic municipal comparator: K ≥ N_p) the wash holds exactly at
+   N_p ≤ 20 (sel 0.729 vs 0.725; 0.748 vs 0.749) and distributed pulls
+   ahead by N_p = 40 (0.624 vs 0.762).
+4. **Prediction 4 (bias degrades linearly; crossover β\* in 0.25-0.35)
+   HELD against the competent comparator.** Distributed sel(θ) declines
+   near-linearly in β (0.764 → 0.558 at β = 40%); the favored set's
+   budget share rises monotonically (12% → 34% for 10% of projects).
+   Against the full-coverage municipal planner (sel 0.624 at N_p = 40),
+   the crossover sits at β\* ≈ 0.30 — inside the predicted band; below
+   β = 0.10 distributed selection remains superior everywhere. Against
+   the 15%-bandwidth planner no crossover exists at any tested β.
+5. **Prediction 5 (visibility gap survives at 8-15 points) HELD in
+   direction, exceeded in size.** The calibrated status quo still
+   overstates real delivery by ~19 points: with p = 0.35, two-thirds of
+   diverted milestones remain officially recorded as complete. "Formally
+   controlled, still misreported" is now a number too.
+
+**E7s — post-hoc sensitivity, declared as such.** The full-coverage
+municipal planner (S′fc: central fixed-K, which covers the whole pool at
+N_p ≤ 40, with calibrated delivery) was added after seeing the committed
+scaling's weakness; it is labeled post-hoc exactly as E5s was. Its
+delivered value is identical to the zero-control arm's on matched
+portfolios — because under both, every opportunist diverts — differing
+only in the visibility gap (0.194-0.219 vs 0.259-0.292): the calibrated
+controls change what is *reported*, not what is *delivered*.
+
+**Result-determining assumptions, declared.** The calibrated arm
+inherits E5's execution model: recovery r prices deterrence in the IC
+threshold but detected-diversion funds are not restored in the
+accounting (conservative for the status quo); the opportunist share
+(0.3) and cost support U(0.3, 0.9) are unchanged from E5, so the
+finding that p = 0.35 deters nobody is conditional on that support; the
+executor pool is held at 120 across scales (thin municipal markets are
+the A022 boundary, not modeled); and E7's zero-control arm is a
+continuity arm — its world consumes additional RNG draws for the second
+planner vector, so its values differ slightly from E5's table (0.374 vs
+0.393) without changing any ordering.
+
 ## Implications for the architecture
 
 1. The funding-target closure rule earns its place as an
@@ -423,6 +520,18 @@ rather than as a description of the architecture's mechanism.
    quantified as a 29-point visibility gap between reported and real
    delivery. E1-E4 are the supporting layer of that conclusion, not the
    headline.
+6. E7 recalibrates the headline against the audit-anchored status quo
+   and it survives: 2.22× at scale, 1.4-1.6× at municipal pilot scale
+   where the case rests on delivery and metering. The recalibration's
+   own finding strengthens the thesis: detection at the empirically
+   documented level, without reputational memory, deters no diversion in
+   the model — it shrinks the reported gap (29 → 19 points), not the
+   real one. The instrument that moves delivered value is the one the
+   status quo lacks at any audit intensity: consequences that persist.
+   And the bias sweep bounds the open-construction claim honestly:
+   distributed selection survives coordinated capture up to roughly a
+   30% coordinated share against a competent municipal planner, and
+   degrades, not collapses, beyond it.
 
 ## Limitations
 
@@ -436,7 +545,6 @@ seeds is deterministic.
 Reporting of these results is governed by the docs/105 rule: in-model
 qualifiers and named baselines on every headline figure, with the E5
 opaque arm labeled a zero-control lower bound. The pre-registered E7
-(`research/e7-calibrated-baseline-design.md`) re-runs the headline
-against an audit-anchored institutional baseline, at municipal scale,
-with scaled planner bandwidth and adversarial signal bias, and carries a
-committed headline-withdrawal condition.
+ran that test — audit-anchored institutional baseline, municipal scale,
+scaled planner bandwidth, adversarial signal bias — and its committed
+headline-withdrawal condition was not triggered (see the E7 section).
