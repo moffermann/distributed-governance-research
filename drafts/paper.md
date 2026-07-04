@@ -217,7 +217,11 @@ dial.
 decomposition of state activity into distributable and non-distributable
 layers, (ii) a complete object-level architecture for the allocation layer,
 (iii) formal incentive analysis of that architecture's specific mechanisms,
-(iv) behavioral simulation of its citizen-facing assumptions, and (v) a
+(iv) behavioral simulation of its citizen-facing assumptions — including,
+to our knowledge, the first symmetric-knowledge comparison in which open
+construction of allocation priorities from aggregated citizen signals is
+measured against bandwidth-constrained central construction, and wins at
+every tested scale — and (v) a
 documented adversarial-review method with an explicit stopping rule. And
 the substantive result is itself new: (vi) an end-to-end institutional
 comparison on the criterion redistribution exists to satisfy — delivered
@@ -409,8 +413,8 @@ Citizens allocate small individual budgets; the pivotal return to evaluating
 projects is negligible, so rational ignorance is the equilibrium (Downs
 1957), and the design question is where the *inattentive* majority's weight
 flows: to salience amplified by social proof (Bikhchandani, Hirshleifer and
-Welch 1992; Salganik, Dodds and Watts 2006), or to institutional default
-rules following planning priorities. The model yields three testable
+Welch 1992; Salganik, Dodds and Watts 2006), or to the architecture's own
+default-rule layer following the declared planning priorities. The model yields three testable
 predictions — caps tame cascades (P1), defaults anchor quality (P2), decay
 degrades gracefully only with defaults (P3) — evaluated next.
 
@@ -648,7 +652,11 @@ most.** In the closed and tutored operating modes Core v0 specifies for
 pilots, the implementing authority constructs planning scopes; the
 architecture makes that construction public, versioned, mandate-bearing,
 and contestable through visibility, but in those modes it does not
-distribute it. Our own simulation shows the weight vector's informational
+distribute it. Constructing the scope means defining the frame — which
+purposes, which budget share, which protected floors, which admissibility
+rules — not designing or ranking projects: project creation and
+prioritization remain distributed even in tutored mode, so agenda power
+is the power to decide what may be funded, never what is funded. Our own simulation shows the weight vector's informational
 quality dominates every other quality margin, and whoever constructs the
 scope exercises the second face of power (Bachrach and Baratz 1962;
 Schattschneider 1960) over everything downstream. Three things scope the

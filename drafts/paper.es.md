@@ -236,7 +236,11 @@ descomposición funcional de la actividad estatal en capas distribuibles y no
 distribuibles, (ii) una arquitectura completa a nivel de objetos para la capa de
 asignación, (iii) un análisis formal de incentivos de los mecanismos específicos
 de esa arquitectura, (iv) simulación conductual de sus supuestos de cara a la
-ciudadanía, y (v) un método documentado de revisión adversarial con una regla de
+ciudadanía —incluida, hasta donde sabemos, la primera comparación de
+conocimiento simétrico en la que la construcción abierta de las prioridades
+de asignación a partir de señales ciudadanas agregadas se mide contra la
+construcción central de ancho de banda finito, y gana en toda escala
+probada—, y (v) un método documentado de revisión adversarial con una regla de
 detención explícita. Y el resultado sustantivo es en sí mismo nuevo: (vi) una
 comparación institucional de extremo a extremo sobre el criterio que la
 redistribución existe para satisfacer —valor social entregado por unidad de
@@ -443,8 +447,8 @@ evaluar proyectos es insignificante, de modo que la ignorancia racional es el
 equilibrio (Downs 1957), y la pregunta de diseño es hacia dónde fluye el peso de
 la mayoría *desatenta*: hacia la saliencia amplificada por la prueba social
 (Bikhchandani, Hirshleifer and Welch 1992; Salganik, Dodds and Watts 2006), o
-hacia reglas institucionales por defecto que siguen las prioridades de
-planificación. El modelo arroja tres predicciones verificables —los topes doman
+hacia la capa de reglas por defecto de la propia arquitectura, que sigue
+las prioridades de planificación declaradas. El modelo arroja tres predicciones verificables —los topes doman
 las cascadas (P1), los valores por defecto anclan la calidad (P2), el decaimiento
 se degrada gráciles solo con valores por defecto (P3)— evaluadas a continuación.
 
@@ -692,7 +696,11 @@ más importa.** En los modos de operación cerrado y tutelado que Core v0 especi
 para los pilotos, la autoridad implementadora construye los ámbitos de
 planificación; la arquitectura hace esa construcción pública, versionada,
 portadora de mandato y disputable mediante la visibilidad, pero en esos modos no
-la distribuye. Nuestra propia simulación muestra que la calidad informativa del
+la distribuye. Construir el ámbito significa definir el marco —qué propósitos,
+qué porción del presupuesto, qué pisos protegidos, qué reglas de admisibilidad—,
+no diseñar ni jerarquizar proyectos: la creación y la priorización de proyectos
+siguen distribuidas incluso en modo tutelado, de modo que el poder de agenda es
+el poder de decidir qué puede financiarse, nunca qué se financia. Nuestra propia simulación muestra que la calidad informativa del
 vector de pesos predomina sobre todo otro margen de calidad, y quien construye el
 ámbito ejerce la segunda cara del poder (Bachrach and Baratz 1962;
 Schattschneider 1960) sobre todo lo que está aguas abajo. Tres cosas acotan la
