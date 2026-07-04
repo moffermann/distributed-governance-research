@@ -584,6 +584,407 @@ if (args.exp === "e4") {
   process.exit(0);
 }
 
+// --- E5: delivered social value under a common world (selection x delivery) --
+// Pre-registered in research/e5-value-delivery-design.md. E1-E4 measured
+// selection quality (did funding reach high-theta projects); E5 adds an
+// EXECUTION stage and measures delivered value V = sum theta_j * delivered_j *
+// budget_j, the leak, and the visibility gap. A 2x2 factorial crosses selection
+// regime (central planner / distributed open vector, reusing E4 machinery) with
+// delivery regime (opaque status-quo / verified architecture, parameterizing
+// Model 1's incentive-compatibility terms). Fully deterministic: seeded RNG
+// only, no Date.now()/Math.random().
+if (args.exp === "e5") {
+  const { N, CYCLES, ETA, SCARCITY } = CONFIG;
+  const NP = 200;          // single scale (E4 established scale effects)
+  const PI_BASE = 0.3;     // baseline informed share (E4's PI_INFORMED)
+  const KC = 4;            // projects an informed citizen knows
+  const SIGMA_C = 0.35;    // citizen signal noise
+  const K_PLAN = 30;       // planner bandwidth (fixed inspections)
+  const SIGMA_P = 0.10;    // planner inspection noise
+  const SLOTS = 6;         // uninformed discovery-surface size
+  const POOL = 120;        // standing executor pool
+  const L = 6;             // monthly milestones per funded project
+
+  // Seeded Box-Muller normal (as in E4).
+  const makeNormal = (rng) => (mu, sigma) => {
+    let u1 = rng();
+    if (u1 < 1e-12) u1 = 1e-12;
+    const u2 = rng();
+    return mu + sigma * Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+  };
+  const buildSampler = (weights) => {
+    const cum = new Float64Array(weights.length);
+    let acc = 0;
+    for (let i = 0; i < weights.length; i++) { acc += weights[i]; cum[i] = acc; }
+    return (rng) => {
+      const roll = rng() * acc;
+      let lo = 0, hi = cum.length - 1;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (cum[mid] < roll) lo = mid + 1; else hi = mid; }
+      return lo;
+    };
+  };
+  const sampleDistinct = (pick, rng, k, seen) => {
+    seen.clear();
+    const out = [];
+    let guard = 0;
+    while (out.length < k && guard < k * 100) {
+      const j = pick(rng);
+      if (!seen.has(j)) { seen.add(j); out.push(j); }
+      guard++;
+    }
+    return out;
+  };
+
+  // Shared world + knowledge endowment for one run. piInformed governs both the
+  // fraction of citizens holding signals and (in allocate) the active-informed
+  // share, matching E4's PI_INFORMED coupling. Population-density zones (Zipf)
+  // are appended for the E5b constructors and the urban-share metric.
+  const makeWorld = (seed, piInformed) => {
+    const rng = mulberry32(seed);
+    const theta = new Float64Array(NP), s = new Float64Array(NP), target = new Float64Array(NP);
+    const targetScale = (SCARCITY * N * CYCLES) / NP;
+    for (let j = 0; j < NP; j++) {
+      theta[j] = rng();
+      s[j] = Math.max(0.01, 0.2 * theta[j] + 0.8 * rng());
+      target[j] = (0.5 + rng()) * targetScale;
+    }
+    const normal = makeNormal(rng);
+    const salienceW = new Float64Array(NP);
+    for (let j = 0; j < NP; j++) salienceW[j] = 1 + s[j];
+    const pickCov = buildSampler(salienceW);
+    const sigSum = new Float64Array(NP), sigCount = new Int32Array(NP);
+    const informedProjs = [], informedSigs = [];
+    const seen = new Set();
+    for (let i = 0; i < N; i++) {
+      if (rng() < piInformed) {
+        const projs = sampleDistinct(pickCov, rng, KC, seen);
+        const sigs = new Float64Array(projs.length);
+        for (let m = 0; m < projs.length; m++) {
+          const j = projs[m];
+          const sig = theta[j] + normal(0, SIGMA_C);
+          sigs[m] = sig; sigSum[j] += sig; sigCount[j]++;
+        }
+        informedProjs.push(projs); informedSigs.push(sigs);
+      }
+    }
+    const pickPlan = buildSampler(salienceW);
+    const inspected = sampleDistinct(pickPlan, rng, K_PLAN, seen);
+    const wPlanner = new Float64Array(NP).fill(0.5);
+    for (const j of inspected) wPlanner[j] = theta[j] + normal(0, SIGMA_P);
+    const wOpenRaw = new Float64Array(NP);
+    for (let j = 0; j < NP; j++) wOpenRaw[j] = sigCount[j] > 0 ? sigSum[j] / sigCount[j] : 0.5;
+    // Population density: Zipf 1/rank over a random assignment of ranks.
+    const density = new Float64Array(NP);
+    const ranks = Array.from({ length: NP }, (_, j) => j);
+    for (let i = NP - 1; i > 0; i--) { const k = Math.floor(rng() * (i + 1)); const tmp = ranks[i]; ranks[i] = ranks[k]; ranks[k] = tmp; }
+    for (let j = 0; j < NP; j++) density[j] = 1 / (ranks[j] + 1);
+    return { theta, s, target, informedProjs, informedSigs, sigSum, sigCount, wPlanner, wOpenRaw, density };
+  };
+
+  // Selection stage. Returns the funded set (portfolio) with the cycle each
+  // project closed, plus sel(theta). Central = E4-R1 (planner weights, d=1.0);
+  // distributed = E4-R4 (open vector, d, active layer). `constructor` swaps the
+  // default weight vector for E5b. Allocation RNG is forked per (seed, salt).
+  const allocateSelection = (world, cfg, seed, salt) => {
+    const rng = mulberry32((seed ^ ((salt + 1) * 0x9e3779b9)) >>> 0);
+    const { theta, s, target, informedProjs, informedSigs, wOpenRaw, wPlanner, density } = world;
+    const { d, pi, constructor } = cfg;
+    const funded = new Float64Array(NP);
+    const closeCycle = new Int32Array(NP).fill(-1);
+    const nInformed = informedProjs.length;
+    const defaultCount = Math.round(N * d);
+    const activeCount = N - defaultCount;
+    const activeInformed = Math.round(activeCount * pi);
+    const activeUninformed = activeCount - activeInformed;
+
+    let staticW = null;
+    if (constructor === "planner") staticW = wPlanner;
+    else if (constructor === "openStatic" || constructor === "near-me" || constructor === "rural" || constructor === "uniform") {
+      if (constructor === "openStatic") staticW = wOpenRaw;
+      else {
+        staticW = new Float64Array(NP);
+        if (constructor === "near-me") for (let j = 0; j < NP; j++) staticW[j] = density[j];
+        else if (constructor === "rural") for (let j = 0; j < NP; j++) staticW[j] = 1 / density[j];
+        else for (let j = 0; j < NP; j++) staticW[j] = rng();
+      }
+    }
+    const isDynamic = constructor === "closure";
+    let staticOrder = null;
+    if (staticW && defaultCount > 0) staticOrder = Array.from({ length: NP }, (_, j) => j).sort((a, b) => staticW[b] - staticW[a]);
+    const dynOrder = isDynamic ? Array.from({ length: NP }, (_, j) => j) : null;
+    const dynW = isDynamic ? new Float64Array(NP) : null;
+
+    for (let t = 0; t < CYCLES; t++) {
+      let order = staticOrder;
+      if (isDynamic) {
+        for (let j = 0; j < NP; j++) dynW[j] = target[j] > 0 ? Math.min(1, funded[j] / target[j]) : 0;
+        dynOrder.sort((a, b) => dynW[b] - dynW[a]);
+        order = dynOrder;
+      }
+      // Active informed: fund the best private-signal project with room.
+      for (let c = 0; c < activeInformed && nInformed > 0; c++) {
+        const ci = Math.floor(rng() * nInformed);
+        const projs = informedProjs[ci], sigs = informedSigs[ci];
+        let bestIdx = -1, bestVal = -Infinity;
+        for (let m = 0; m < projs.length; m++) {
+          const j = projs[m];
+          if (funded[j] >= target[j]) continue;
+          if (sigs[m] > bestVal) { bestVal = sigs[m]; bestIdx = j; }
+        }
+        if (bestIdx >= 0) funded[bestIdx] += Math.min(1, target[bestIdx] - funded[bestIdx]);
+      }
+      // Active uninformed: 6-slot salience + social-proof discovery surface.
+      if (activeUninformed > 0) {
+        let maxFunded = 1;
+        for (let j = 0; j < NP; j++) if (funded[j] > maxFunded) maxFunded = funded[j];
+        const topIdx = [], topVis = [];
+        for (let j = 0; j < NP; j++) {
+          const vis = s[j] * (1 + ETA * (funded[j] / maxFunded));
+          if (topIdx.length < SLOTS) { topIdx.push(j); topVis.push(vis); }
+          else {
+            let mn = 0;
+            for (let a = 1; a < topIdx.length; a++) if (topVis[a] < topVis[mn]) mn = a;
+            if (vis > topVis[mn]) { topIdx[mn] = j; topVis[mn] = vis; }
+          }
+        }
+        let visTotal = 0;
+        for (let a = 0; a < topVis.length; a++) visTotal += topVis[a];
+        for (let c = 0; c < activeUninformed; c++) {
+          let amount = 1;
+          for (let att = 0; att < 4 && amount > 0; att++) {
+            let roll = rng() * visTotal, pick = topIdx[topIdx.length - 1];
+            for (let a = 0; a < topIdx.length; a++) { roll -= topVis[a]; if (roll <= 0) { pick = topIdx[a]; break; } }
+            const room = target[pick] - funded[pick];
+            if (room <= 0) continue;
+            const paid = Math.min(amount, room);
+            funded[pick] += paid; amount -= paid;
+          }
+        }
+      }
+      // Defaults: priority-fill on the constructor's weights, never overfunding.
+      if (defaultCount > 0 && order) {
+        let budget = defaultCount;
+        for (let oi = 0; oi < order.length; oi++) {
+          if (budget <= 0) break;
+          const j = order[oi];
+          const room = target[j] - funded[j];
+          if (room <= 0) continue;
+          const paid = Math.min(budget, room);
+          funded[j] += paid; budget -= paid;
+        }
+      }
+      for (let j = 0; j < NP; j++) if (closeCycle[j] < 0 && funded[j] >= target[j]) closeCycle[j] = t;
+    }
+
+    const flag = new Array(NP);
+    for (let j = 0; j < NP; j++) flag[j] = funded[j] >= target[j] ? 1 : 0;
+    const jobs = [];
+    for (let j = 0; j < NP; j++) if (flag[j]) jobs.push({ j, cycle: closeCycle[j], budget: target[j] });
+    jobs.sort((a, b) => (a.cycle - b.cycle) || (a.j - b.j));
+    return { funded, flag, jobs, selTheta: pearson(flag, Array.from(theta)) };
+  };
+
+  // Delivery regimes parameterize Model 1's IC condition. Opportunists divert a
+  // milestone when c_eff > p*((1-a*(1-r)) + gamma + R). Opaque: no exclusion,
+  // undetected diversion recorded as delivered (the visibility gap). Verified:
+  // milestone-gated, detected diversion excludes the executor for the run.
+  const OPAQUE = { name: "opaque", p: 0.10, a: 0.85, r: 0.0, gamma: 0.0, R: 0.0, exclude: false };
+  const VERIFIED = { name: "verified", p: 0.75, a: 0.2, r: 0.5, gamma: 0.15, R: 0.3, exclude: true };
+  const threshold = (reg) => reg.p * ((1 - reg.a * (1 - reg.r)) + reg.gamma + reg.R);
+
+  // Execution stage. Separate RNG streams (pool build, executor assignment,
+  // opportunist cost draws) are shared across delivery regimes on the same
+  // portfolio, so S vs A1 (and A3 vs A2) differ ONLY by the delivery regime,
+  // isolating the delivery effect. Detection/exclusion draws are their own
+  // streams and do not desync assignment.
+  const execute = (world, port, reg, execSeed) => {
+    const { theta } = world;
+    const poolRng = mulberry32((execSeed ^ 0xa1) >>> 0);
+    const assignRng = mulberry32((execSeed ^ 0xb2) >>> 0);
+    const costRng = mulberry32((execSeed ^ 0xc3) >>> 0);
+    const detectRng = mulberry32((execSeed ^ 0xd4) >>> 0);
+    const replaceRng = mulberry32((execSeed ^ 0xe5) >>> 0);
+    const thr = threshold(reg);
+    // pool: 0 honest (share 0.7), 1 opportunistic (share 0.3)
+    const pool = new Array(POOL);
+    for (let i = 0; i < POOL; i++) pool[i] = poolRng() < 0.7 ? 0 : 1;
+    const oppShare = () => { let c = 0; for (let i = 0; i < POOL; i++) if (pool[i] === 1) c++; return c / POOL; };
+
+    const jobs = port.jobs;
+    let totalBudget = 0, deliveredBudget = 0, officialBudget = 0, value = 0;
+    let ptr = 0;
+    let snap6 = null, snap12 = null, snap24 = null;
+    for (let cyc = 0; cyc < CYCLES; cyc++) {
+      while (ptr < jobs.length && jobs[ptr].cycle === cyc) {
+        const job = jobs[ptr++];
+        const th = theta[job.j], budget = job.budget;
+        const ei = Math.floor(assignRng() * POOL);
+        const type = pool[ei];
+        let delivered = 0, official = 0, caught = false;
+        for (let m = 0; m < L; m++) {
+          if (type === 0) { delivered++; official++; continue; } // honest always delivers
+          const ceff = 0.3 + 0.6 * costRng();
+          if (ceff > thr) { // divert
+            const detected = detectRng() < reg.p;
+            if (detected) caught = true;            // milestone failed (lost)
+            else official++;                        // undetected: recorded delivered, funds lost
+          } else { delivered++; official++; }       // deterred: delivers
+        }
+        deliveredBudget += (delivered / L) * budget;
+        officialBudget += (official / L) * budget;
+        value += th * (delivered / L) * budget;
+        totalBudget += budget;
+        if (reg.exclude && caught) pool[ei] = replaceRng() < 0.7 ? 0 : 1; // exclude + fresh draw
+      }
+      if (cyc + 1 === 6) snap6 = oppShare();
+      if (cyc + 1 === 12) snap12 = oppShare();
+      if (cyc + 1 === 24) snap24 = oppShare();
+    }
+    return {
+      V: totalBudget ? value / totalBudget : 0,
+      leak: totalBudget ? 1 - deliveredBudget / totalBudget : 0,
+      visGap: totalBudget ? (officialBudget - deliveredBudget) / totalBudget : 0,
+      poolOpp6: snap6, poolOpp12: snap12, poolOpp24: snap24,
+      selTheta: port.selTheta,
+    };
+  };
+
+  const urbanShare = (world, port) => {
+    // Share of spent budget flowing to the top-density quintile of projects.
+    const { density } = world;
+    const order = Array.from({ length: NP }, (_, j) => j).sort((a, b) => density[b] - density[a]);
+    const topSet = new Set(order.slice(0, Math.max(1, Math.round(NP * 0.2))));
+    let top = 0, tot = 0;
+    for (const job of port.jobs) { tot += job.budget; if (topSet.has(job.j)) top += job.budget; }
+    return tot ? top / tot : 0;
+  };
+
+  const fmtMS = (arr) => `${mean(arr).toFixed(3)}±${sd(arr).toFixed(3)}`;
+
+  console.log(`\n# E5 - delivered social value (selection x delivery) (runs=${RUNS}, seeds ${BASE_SEED}..${BASE_SEED + RUNS - 1}, N=${N}, N_p=${NP}, cycles=${CYCLES}, scarcity=${SCARCITY}x, caps ON)`);
+  console.log(`opaque threshold p*((1-a(1-r))+g+R)=${threshold(OPAQUE).toFixed(4)}, verified threshold=${threshold(VERIFIED).toFixed(4)}, opportunist c_eff~U(0.3,0.9)`);
+
+  // --- main 2x2 (requirement 5): matched portfolios per seed ------------------
+  const ARMS = ["S", "A1", "A3", "A2"];
+  const acc = Object.fromEntries(ARMS.map((n) => [n, { V: [], leak: [], visGap: [], p6: [], p12: [], p24: [], sel: [] }]));
+  for (let r = 0; r < RUNS; r++) {
+    const seed = BASE_SEED + r;
+    const world = makeWorld(seed, PI_BASE);
+    const portCentral = allocateSelection(world, { d: 1.0, pi: PI_BASE, constructor: "planner" }, seed, 0);
+    const portDist = allocateSelection(world, { d: 0.8, pi: PI_BASE, constructor: "openStatic" }, seed, 3);
+    const execC = (seed * 2 + 1) >>> 0, execD = (seed * 2 + 2) >>> 0;
+    const out = {
+      S: execute(world, portCentral, OPAQUE, execC),
+      A1: execute(world, portCentral, VERIFIED, execC),
+      A3: execute(world, portDist, OPAQUE, execD),
+      A2: execute(world, portDist, VERIFIED, execD),
+    };
+    for (const n of ARMS) {
+      acc[n].V.push(out[n].V); acc[n].leak.push(out[n].leak); acc[n].visGap.push(out[n].visGap);
+      acc[n].p6.push(out[n].poolOpp6); acc[n].p12.push(out[n].poolOpp12); acc[n].p24.push(out[n].poolOpp24);
+      acc[n].sel.push(out[n].selTheta);
+    }
+  }
+  const ARMLABEL = { S: "S  central/opaque (status quo)", A1: "A1 central/verified", A3: "A3 distributed/opaque", A2: "A2 distributed/verified (full arch)" };
+  console.log("\n## E5 main 2x2 (matched portfolios per seed)\n");
+  console.log("| arm | V/budget | leak | visibility gap | pool-opp@6 | @12 | @24 | sel(theta) |");
+  console.log("|---|---|---|---|---|---|---|---|");
+  for (const n of ARMS) {
+    const a = acc[n];
+    console.log(`| ${ARMLABEL[n]} | ${fmtMS(a.V)} | ${fmtMS(a.leak)} | ${fmtMS(a.visGap)} | ${fmtMS(a.p6)} | ${fmtMS(a.p12)} | ${fmtMS(a.p24)} | ${fmtMS(a.sel)} |`);
+  }
+  console.log("\nPaired contrasts on V (same seeds, mean [95% CI], n=" + RUNS + "):");
+  console.log(`  delivery effect  V(A1)-V(S)  = ${pairedDiff(acc.A1.V, acc.S.V)}`);
+  console.log(`  delivery effect  V(A2)-V(A3) = ${pairedDiff(acc.A2.V, acc.A3.V)}`);
+  console.log(`  selection effect V(A3)-V(S)  = ${pairedDiff(acc.A3.V, acc.S.V)}`);
+  console.log(`  selection effect V(A2)-V(A1) = ${pairedDiff(acc.A2.V, acc.A1.V)}`);
+  console.log(`  interaction (dlv|dist)-(dlv|cent) = ${pairedDiff(acc.A2.V.map((x, i) => x - acc.A3.V[i]), acc.A1.V.map((x, i) => x - acc.S.V[i]))}`);
+
+  // --- participation sweep (requirement 6) ------------------------------------
+  // alpha = direct-participation (active) share => distributed d = 1-alpha;
+  // informed share pi = min(0.9, alpha*6). Central arms (S,A1) are alpha-
+  // invariant. A2 reported across the band; full 2x2 anchored at alpha=5%.
+  console.log("\n## E5 participation sweep (distributed arms; pi=min(0.9, alpha*6))\n");
+  console.log("| alpha | pi | d | V(A3 opaque) | V(A2 verified) | leak(A2) | visGap(A2) | sel(theta) |");
+  console.log("|---|---|---|---|---|---|---|---|");
+  const sweepAlphas = [0.03, 0.05, 0.10, 0.20, 0.40];
+  for (const alpha of sweepAlphas) {
+    const pi = Math.min(0.9, alpha * 6);
+    const d = 1 - alpha;
+    const a3 = { V: [], sel: [] }, a2 = { V: [], leak: [], visGap: [], sel: [] };
+    for (let r = 0; r < RUNS; r++) {
+      const seed = BASE_SEED + r;
+      const world = makeWorld(seed, pi);
+      const port = allocateSelection(world, { d, pi, constructor: "openStatic" }, seed, 3);
+      const execD = (seed * 2 + 2) >>> 0;
+      const oA3 = execute(world, port, OPAQUE, execD);
+      const oA2 = execute(world, port, VERIFIED, execD);
+      a3.V.push(oA3.V); a2.V.push(oA2.V); a2.leak.push(oA2.leak); a2.visGap.push(oA2.visGap); a2.sel.push(oA2.selTheta);
+    }
+    console.log(`| ${(alpha * 100).toFixed(0)}% | ${pi.toFixed(2)} | ${d.toFixed(2)} | ${fmtMS(a3.V)} | ${fmtMS(a2.V)} | ${fmtMS(a2.leak)} | ${fmtMS(a2.visGap)} | ${fmtMS(a2.sel)} |`);
+  }
+  console.log(`(central baseline, alpha-invariant: V(S)=${fmtMS(acc.S.V)}, V(A1)=${fmtMS(acc.A1.V)})`);
+
+  // --- E5b: default constructors under verified delivery (requirement 7) ------
+  console.log("\n## E5b default constructors (distributed d=0.8, verified delivery)\n");
+  console.log("| constructor | V/budget | Gini | urban-share (top-density quintile) | sel(theta) |");
+  console.log("|---|---|---|---|---|");
+  const constructors = [
+    ["near-funding-closure", "closure"],
+    ["near-me (density)", "near-me"],
+    ["rural (inverse density)", "rural"],
+    ["uniform-random", "uniform"],
+  ];
+  for (const [label, ctor] of constructors) {
+    const b = { V: [], gini: [], urban: [], sel: [] };
+    for (let r = 0; r < RUNS; r++) {
+      const seed = BASE_SEED + r;
+      const world = makeWorld(seed, PI_BASE);
+      const port = allocateSelection(world, { d: 0.8, pi: PI_BASE, constructor: ctor }, seed, 3);
+      const execD = (seed * 2 + 2) >>> 0;
+      const o = execute(world, port, VERIFIED, execD);
+      b.V.push(o.V); b.gini.push(gini(Array.from(port.funded))); b.urban.push(urbanShare(world, port)); b.sel.push(o.selTheta);
+    }
+    console.log(`| ${label} | ${fmtMS(b.V)} | ${fmtMS(b.gini)} | ${fmtMS(b.urban)} | ${fmtMS(b.sel)} |`);
+  }
+
+  // --- E5s POST-HOC sensitivity: verified-weak (exclusion channel active) -----
+  // NOT pre-registered. The main verified regime (threshold 1.0125 > max c_eff
+  // 0.9) fully deters diversion, so the exclusion/pool machinery never fires.
+  // This block relaxes the Model 1 terms so the IC leaves slack for opportunist
+  // c_eff in (~0.43, 0.9]: some divert, detection fires at p=0.45, and confirmed
+  // diverters are excluded and replaced -> the executor pool should evolve. Arms
+  // mirror the main table's verified arms exactly (identical portfolios, seeds
+  // and execution streams), swapping only delivery to verified-weak: A1w on S's
+  // central portfolio (d=1.0), A2w on the distributed portfolio (d=0.8, pi=0.3).
+  const VERIFIED_WEAK = { name: "verified-weak", p: 0.45, a: 0.35, r: 0.3, gamma: 0.05, R: 0.15, exclude: true };
+  const accW = { A1w: { V: [], leak: [], visGap: [], p6: [], p12: [], p24: [], sel: [] }, A2w: { V: [], leak: [], visGap: [], p6: [], p12: [], p24: [], sel: [] } };
+  for (let r = 0; r < RUNS; r++) {
+    const seed = BASE_SEED + r;
+    const world = makeWorld(seed, PI_BASE);
+    const portCentral = allocateSelection(world, { d: 1.0, pi: PI_BASE, constructor: "planner" }, seed, 0);
+    const portDist = allocateSelection(world, { d: 0.8, pi: PI_BASE, constructor: "openStatic" }, seed, 3);
+    const execC = (seed * 2 + 1) >>> 0, execD = (seed * 2 + 2) >>> 0;
+    const oA1w = execute(world, portCentral, VERIFIED_WEAK, execC);
+    const oA2w = execute(world, portDist, VERIFIED_WEAK, execD);
+    for (const [k, o] of [["A1w", oA1w], ["A2w", oA2w]]) {
+      accW[k].V.push(o.V); accW[k].leak.push(o.leak); accW[k].visGap.push(o.visGap);
+      accW[k].p6.push(o.poolOpp6); accW[k].p12.push(o.poolOpp12); accW[k].p24.push(o.poolOpp24); accW[k].sel.push(o.selTheta);
+    }
+  }
+  console.log(`\n## E5s POST-HOC sensitivity - verified-weak (exclusion channel active)\n`);
+  console.log(`verified-weak threshold p*((1-a(1-r))+g+R)=${threshold(VERIFIED_WEAK).toFixed(4)} (IC slack for c_eff>${threshold(VERIFIED_WEAK).toFixed(2)}); p_detect=0.45, exclusion ON`);
+  console.log("| arm | V/budget | leak | visibility gap | pool-opp@6 | @12 | @24 | sel(theta) |");
+  console.log("|---|---|---|---|---|---|---|---|");
+  const WLABEL = { A1w: "A1w central/verified-weak", A2w: "A2w distributed/verified-weak" };
+  for (const k of ["A1w", "A2w"]) {
+    const a = accW[k];
+    console.log(`| ${WLABEL[k]} | ${fmtMS(a.V)} | ${fmtMS(a.leak)} | ${fmtMS(a.visGap)} | ${fmtMS(a.p6)} | ${fmtMS(a.p12)} | ${fmtMS(a.p24)} | ${fmtMS(a.sel)} |`);
+  }
+
+  process.exit(0);
+}
+
 // lambda is a mixing weight (w = lambda*theta + (1-lambda)*u), not a Pearson
 // correlation. Report the measured correlation so results are labeled
 // honestly (referee issue M2).
