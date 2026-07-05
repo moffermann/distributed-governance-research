@@ -14,8 +14,10 @@ una alternativa funcional: descomponer la actividad estatal en capas
 funcionales, distribuir las capas donde la tecnología moderna de coordinación
 supera al monopolio institucional, y mantener central las capas donde no lo
 hace. Presentamos una arquitectura de referencia completa (Core v0) para la
-capa más disputable, la asignación acotada de recursos públicos: la ciudadanía
-asigna una cuota legalmente mandatada de un presupuesto público existente entre
+capa más disputable —la asignación distribuida dentro de ámbitos de
+planificación acotados por mandato, visibles, versionados y disputables: la
+ciudadanía asigna una cuota registrada en un mandato de un presupuesto público
+existente entre
 proyectos verificables, bajo estricta separación de los roles de proponer,
 modelar, ejecutar, producir evidencia y auditar; los fondos se mueven
 únicamente mediante liberación condicional supeditada a hitos (milestones) y
@@ -141,7 +143,7 @@ se le hizo. Nuestras contribuciones son:
 1. **Un principio de distribución funcional con una disciplina comparativa
    explícita.** Las críticas a la arquitectura deben evaluarse contra cómo el
    modelo institucional actual resuelve el mismo problema, no contra un ideal
-   (Sección 3). Esto bloquea la falacia del nirvana en ambas direcciones.
+   (Sección 2). Esto bloquea la falacia del nirvana en ambas direcciones.
 
 2. **Formalización de los mecanismos centrales** (Sección 5). Modelamos el
    desembolso supeditado a hitos como un juego principal-agente y derivamos su
@@ -182,7 +184,52 @@ La Sección 8 enuncia las limitaciones con el mismo cuidado que los resultados,
 porque bajo nuestro método ellas son resultados: cada una es un riesgo residual
 nombrado y acotado.
 
-## 2. Trabajo relacionado
+## 2. El principio de distribución funcional
+
+Analizamos el Estado como una pila de capas funcionales antes que como una única
+institución: (a) garantías de derechos y fuerza legítima; (b) adjudicación
+vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e) planificación y
+priorización; (f) asignación de recursos a emprendimientos concretos; (g)
+ejecución y prestación de servicios; (h) producción de evidencia sobre la
+entrega; e (i) evaluación y rendición de cuentas. El principio de distribución
+es:
+
+> Una capa es candidata a la distribución cuando se cumplen tres condiciones:
+> sus fallas bajo monopolio son fallas de información e incentivos antes que
+> fallas de coordinación-de-la-fuerza; la provisión distribuida puede hacerse
+> *más* observable que la provisión monopólica; y la capa puede acotarse de modo
+> que su falla no cascadee hacia las capas no distribuibles.
+
+Las capas (a), (b) y (d) fallan la primera o la tercera condición y permanecen
+centrales en nuestro diseño. Las capas (f) a (i) pasan las tres, y Core v0 las
+distribuye conjuntamente —conjuntamente, porque distribuir la asignación sin
+distribuir la verificación reproduce la brecha de entrega del PP, y distribuir
+la verificación sin la asignación reproduce la sociedad de la auditoría.
+
+La capa (e), la planificación, es el caso deliberadamente sin resolver: Core v0
+requiere que los ámbitos de planificación (Planning Scopes) sean públicos,
+versionados y portadores de mandato, pero no distribuye su construcción —razón
+por la cual la promesa de la arquitectura se enuncia con su calificador
+incorporado: lo que distribuye es la asignación *dentro de ámbitos de
+planificación acotados por mandato, visibles, versionados y disputables*, nunca
+la asignación sobre una agenda sin enmarcar. La Sección 6 muestra que el
+calificador no es un detalle: es la restricción vinculante de todo el diseño, y
+la Sección 8 eleva su remoción al siguiente objeto del programa de investigación.
+
+Dos reglas metodológicas gobiernan todo lo que sigue. La **regla de crítica
+comparativa** (P001): toda objeción se evalúa contra la línea base
+institucional actual, no contra un ideal —una dificultad compartida por ambos
+sistemas es un problema general de la gobernanza, no una refutación de la
+propuesta. La **regla de integrar-o-acotar** (P007): una vez que la arquitectura
+central está completa, una objeción fundada produce un nuevo mecanismo solo si el
+modo de falla derrotaría una afirmación central y no puede controlarse mediante
+objetos existentes; de lo contrario produce una frontera explícita, un riesgo
+residual visible y un enunciado de limitación. La primera regla disciplina a los
+críticos; la segunda disciplina a los diseñadores —un sesgo hacia reglas pocas,
+simples y generales por sobre la proliferación de maquinaria específica, en el
+espíritu de Epstein (1995).
+
+## 3. Trabajo relacionado
 
 **Gobernanza policéntrica.** La demostración de Ostrom de que los recursos de
 uso común pueden gobernarse mediante regímenes anidados y autoorganizados sin
@@ -297,47 +344,6 @@ presupuestos participativos miden participación y asignación; los estudios de
 auditoría miden fugas después del hecho; no conocemos ninguno que mida, dentro
 de un mismo marco, cuánto valor entregado produce una institución de asignación
 a partir de los mismos recursos.
-
-## 3. El principio de distribución funcional
-
-Analizamos el Estado como una pila de capas funcionales antes que como una única
-institución: (a) garantías de derechos y fuerza legítima; (b) adjudicación
-vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e) planificación y
-priorización; (f) asignación de recursos a emprendimientos concretos; (g)
-ejecución y prestación de servicios; (h) producción de evidencia sobre la
-entrega; e (i) evaluación y rendición de cuentas. El principio de distribución
-es:
-
-> Una capa es candidata a la distribución cuando se cumplen tres condiciones:
-> sus fallas bajo monopolio son fallas de información e incentivos antes que
-> fallas de coordinación-de-la-fuerza; la provisión distribuida puede hacerse
-> *más* observable que la provisión monopólica; y la capa puede acotarse de modo
-> que su falla no cascadee hacia las capas no distribuibles.
-
-Las capas (a), (b) y (d) fallan la primera o la tercera condición y permanecen
-centrales en nuestro diseño. Las capas (f) a (i) pasan las tres, y Core v0 las
-distribuye conjuntamente —conjuntamente, porque distribuir la asignación sin
-distribuir la verificación reproduce la brecha de entrega del PP, y distribuir
-la verificación sin la asignación reproduce la sociedad de la auditoría.
-
-La capa (e), la planificación, es el caso deliberadamente sin resolver: Core v0
-requiere que los ámbitos de planificación (Planning Scopes) sean públicos,
-versionados y portadores de mandato, pero no distribuye su construcción. La
-Sección 6 muestra que esto no es un detalle: es la restricción vinculante de
-todo el diseño.
-
-Dos reglas metodológicas gobiernan todo lo que sigue. La **regla de crítica
-comparativa** (P001): toda objeción se evalúa contra la línea base
-institucional actual, no contra un ideal —una dificultad compartida por ambos
-sistemas es un problema general de la gobernanza, no una refutación de la
-propuesta. La **regla de integrar-o-acotar** (P007): una vez que la arquitectura
-central está completa, una objeción fundada produce un nuevo mecanismo solo si el
-modo de falla derrotaría una afirmación central y no puede controlarse mediante
-objetos existentes; de lo contrario produce una frontera explícita, un riesgo
-residual visible y un enunciado de limitación. La primera regla disciplina a los
-críticos; la segunda disciplina a los diseñadores —un sesgo hacia reglas pocas,
-simples y generales por sobre la proliferación de maquinaria específica, en el
-espíritu de Epstein (1995).
 
 ## 4. La arquitectura Core v0
 
@@ -875,7 +881,12 @@ centralmente que no es ni publicado, ni versionado, ni sustituible, ni anulable
 por ciudadano alguno. Los modos de transición reproducen esa centralización de
 manera visible y revocable; el modo abierto está diseñado para terminarla. Este
 sigue siendo el principal problema abierto de la arquitectura, ahora con un premio
-medido asociado a resolverlo.
+medido asociado a resolverlo —y por esa razón lo tratamos no como una limitación
+entre muchas sino como el siguiente objeto del programa de investigación: el
+diseño de la fijación de agenda abierta, incluida la arquitectura candidata en la
+que una agenda distribuida se construye en paralelo a la de la propia autoridad y
+el rol tutelado se estrecha a la revisión de admisibilidad de los conflictos entre
+ambas, es el tema natural de un estudio de seguimiento y un piloto dedicados.
 
 **La legitimidad procedimental no es mandato democrático —y la norma habilitante
 aún no existe.** La plataforma registra la autorización externa para la migración

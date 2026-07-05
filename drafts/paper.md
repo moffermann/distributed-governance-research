@@ -12,8 +12,9 @@ functional alternative: decompose state activity into functional layers,
 distribute the layers where modern coordination technology outperforms
 institutional monopoly, and keep central the layers where it does not. We
 present a complete reference architecture (Core v0) for the most contestable
-layer, bounded public resource allocation: citizens allocate a legally
-mandated share of an existing public budget across verifiable projects, under
+layer — distributed allocation within mandate-bound, visible, versioned,
+and contestable planning scopes: citizens allocate a mandate-recorded
+share of an existing public budget across verifiable projects, under
 strict separation of proposing, modeling, executing, evidence-producing, and
 auditing roles; funds move only through milestone-gated conditional release
 backed by externally materialized guarantees; and every consequential act
@@ -128,7 +129,7 @@ to it. Our contributions are:
 1. **A functional distribution principle with an explicit comparative
    discipline.** Critiques of the architecture must be evaluated against how
    the current institutional model solves the same problem, not against an
-   ideal (Section 3). This blocks the nirvana fallacy in both directions.
+   ideal (Section 2). This blocks the nirvana fallacy in both directions.
 
 2. **Formalization of the core mechanisms** (Section 5). We model
    milestone-gated disbursement as a principal-agent game and derive its
@@ -167,7 +168,50 @@ to it. Our contributions are:
 Section 8 states limitations with the same care as results, because under
 our method they are results: each is a named, bounded residual risk.
 
-## 2. Related work
+## 2. The functional distribution principle
+
+We analyze the state as a stack of functional layers rather than a single
+institution: (a) rights guarantees and legitimate force; (b) binding
+adjudication; (c) rule-making; (d) macro-fiscal management; (e) planning and
+prioritization; (f) resource allocation to concrete undertakings; (g)
+execution and service delivery; (h) evidence production about delivery; and
+(i) evaluation and accountability. The distribution principle is:
+
+> A layer is a candidate for distribution when three conditions hold:
+> its failures under monopoly are information and incentive failures rather
+> than coordination-of-force failures; distributed provision can be made
+> *more* observable than monopoly provision; and the layer can be bounded so
+> that its failure does not cascade into the non-distributable layers.
+
+Layers (a), (b), and (d) fail the first or third condition and remain
+central in our design. Layers (f) through (i) pass all three, and Core v0
+distributes them jointly — jointly, because distributing allocation without
+distributing verification reproduces PB's delivery gap, and distributing
+verification without allocation reproduces the audit society.
+
+Layer (e), planning, is the deliberately unresolved case: Core v0 requires
+planning scopes to be public, versioned, and mandate-bearing, but does not
+distribute their construction — which is why the architecture's promise is
+stated with its qualifier built in: what it distributes is allocation
+*within mandate-bound, visible, versioned, and contestable planning
+scopes*, never allocation over an unframed agenda. Section 6 shows the
+qualifier is not a detail: it is the binding constraint of the whole
+design, and Section 8 elevates its removal to the research program's next
+object.
+
+Two methodological rules govern everything that follows. The **comparative
+critique rule** (P001): every objection is evaluated against the current
+institutional baseline, not an ideal — a difficulty shared by both systems
+is a general problem of governance, not a refutation of the proposal. The
+**integrate-or-bound rule** (P007): once the core architecture is complete,
+a founded objection produces a new mechanism only if the failure mode would
+defeat a core claim and cannot be controlled through existing objects;
+otherwise it produces an explicit boundary, a visible residual risk, and a
+limitation statement. The first rule disciplines critics; the second
+disciplines the designers — a bias toward few, simple, general rules over
+proliferating specific machinery in the spirit of Epstein (1995).
+
+## 3. Related work
 
 **Polycentric governance.** Ostrom's demonstration that common-pool
 resources can be governed by nested, self-organized regimes without central
@@ -276,44 +320,6 @@ evaluations measure participation and allocation; audit studies measure
 leakage after the fact; we know of none that measures, within one
 framework, how much delivered value an allocation institution produces
 from the same resources.
-
-## 3. The functional distribution principle
-
-We analyze the state as a stack of functional layers rather than a single
-institution: (a) rights guarantees and legitimate force; (b) binding
-adjudication; (c) rule-making; (d) macro-fiscal management; (e) planning and
-prioritization; (f) resource allocation to concrete undertakings; (g)
-execution and service delivery; (h) evidence production about delivery; and
-(i) evaluation and accountability. The distribution principle is:
-
-> A layer is a candidate for distribution when three conditions hold:
-> its failures under monopoly are information and incentive failures rather
-> than coordination-of-force failures; distributed provision can be made
-> *more* observable than monopoly provision; and the layer can be bounded so
-> that its failure does not cascade into the non-distributable layers.
-
-Layers (a), (b), and (d) fail the first or third condition and remain
-central in our design. Layers (f) through (i) pass all three, and Core v0
-distributes them jointly — jointly, because distributing allocation without
-distributing verification reproduces PB's delivery gap, and distributing
-verification without allocation reproduces the audit society.
-
-Layer (e), planning, is the deliberately unresolved case: Core v0 requires
-planning scopes to be public, versioned, and mandate-bearing, but does not
-distribute their construction. Section 6 shows this is not a detail: it is
-the binding constraint of the whole design.
-
-Two methodological rules govern everything that follows. The **comparative
-critique rule** (P001): every objection is evaluated against the current
-institutional baseline, not an ideal — a difficulty shared by both systems
-is a general problem of governance, not a refutation of the proposal. The
-**integrate-or-bound rule** (P007): once the core architecture is complete,
-a founded objection produces a new mechanism only if the failure mode would
-defeat a core claim and cannot be controlled through existing objects;
-otherwise it produces an explicit boundary, a visible residual risk, and a
-limitation statement. The first rule disciplines critics; the second
-disciplines the designers — a bias toward few, simple, general rules over
-proliferating specific machinery in the spirit of Epstein (1995).
 
 ## 4. The Core v0 architecture
 
@@ -822,7 +828,12 @@ vector that is neither published, versioned, pluggable, nor overridable by
 any citizen. The transition modes reproduce that centralization visibly
 and revocably; the open mode is designed to end it. This remains the
 architecture's principal open problem, now with a measured prize attached
-to solving it.
+to solving it — and for that reason we treat it not as one limitation
+among many but as the research program's next object: the design of open
+agenda-setting, including the candidate architecture in which a
+distributed agenda is constructed in parallel to the authority's own and
+the tutored role narrows to admissibility review of conflicts between the
+two, is the natural subject of a dedicated follow-up study and pilot.
 
 **Procedural legitimacy is not democratic mandate — and the enabling norm
 does not yet exist.** The platform records the external authorization for
