@@ -155,10 +155,13 @@ const docTitle = (lines.find((l) => l.startsWith("# ")) || "# Documento").slice(
 const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><title>${esc(docTitle)}</title><style>
   @page { size: A4; margin: 24mm 21mm 22mm 21mm; }
   * { box-sizing: border-box; }
-  html { -webkit-print-color-adjust: exact; }
+  /* Paint an explicit white page background: without it the PDF pages are
+     transparent and dark-mode viewers (iOS, some readers) render black text
+     on their own black canvas. print-color-adjust forces Edge to emit it. */
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #ffffff; }
   body { font-family: 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
          font-size: 10.8pt; line-height: 1.5; color: #1b1b1b; margin: 0;
-         hyphens: auto; -webkit-hyphens: auto; }
+         background: #ffffff; hyphens: auto; -webkit-hyphens: auto; }
   .running { position: fixed; top: -16mm; left: 0; right: 0; font-size: 7.5pt;
              color: #8a8a8a; letter-spacing: 0.04em; text-transform: uppercase;
              border-bottom: 0.4pt solid #d8d8d8; padding-bottom: 2pt;
