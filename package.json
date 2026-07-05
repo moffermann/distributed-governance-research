@@ -8,6 +8,7 @@
     "fix-anchors": "node scripts/check-anchors.mjs --fix"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "11.16.0"
+    "@mermaid-js/mermaid-cli": "11.16.0",
+    "pdf-lib": "^1.17.1"
   }
 }

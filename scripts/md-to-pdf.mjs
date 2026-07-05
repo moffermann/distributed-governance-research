@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync, mkdtempSync, rmSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join, resolve } from "node:path";
 import { tmpdir } from "node:os";
+import { PDFDocument, PDFName, PDFArray, PDFRef } from "pdf-lib";
 
 const args = process.argv.slice(2);
 const flags = new Set(args.filter((a) => a.startsWith("--")));
@@ -162,10 +163,10 @@ const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><t
   body { font-family: 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
          font-size: 10.8pt; line-height: 1.5; color: #1b1b1b; margin: 0;
          background: #ffffff; hyphens: auto; -webkit-hyphens: auto; }
-  .running { position: fixed; top: -16mm; left: 0; right: 0; font-size: 7.5pt;
-             color: #8a8a8a; letter-spacing: 0.04em; text-transform: uppercase;
-             border-bottom: 0.4pt solid #d8d8d8; padding-bottom: 2pt;
-             font-family: Georgia, serif; }
+  /* Lock the light scheme: on dark-themed systems Edge otherwise paints the
+     page canvas with the system dark background, producing black-on-black
+     PDFs. Belt and braces with --default-background-color below. */
+  :root { color-scheme: only light; }
   h1.doc-title { font-size: 19pt; line-height: 1.25; margin: 0 0 6pt; font-weight: 700;
                  letter-spacing: -0.01em; }
   h1.doc-title + p em, .subtitle { color: #444; }
@@ -210,7 +211,6 @@ const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><t
   h1, h2, h3, h4 { page-break-after: avoid; hyphens: none; -webkit-hyphens: none; }
   blockquote, .toc { page-break-inside: avoid; }
 </style></head><body>
-<div class="running">${esc(docTitle.length > 90 ? docTitle.slice(0, 90) + "…" : docTitle)}</div>
 ${body}</body></html>`;
 
 const tmp = mkdtempSync(join(tmpdir(), "mdpdf-"));
@@ -218,11 +218,60 @@ const htmlPath = join(tmp, "doc.html");
 writeFileSync(htmlPath, html);
 const edge = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
 execFileSync(edge, [
-  "--headless",
+  "--headless=new",
   "--disable-gpu",
+  "--default-background-color=FFFFFFFF",
+  "--force-color-profile=srgb",
   `--print-to-pdf=${output}`,
   "--no-pdf-header-footer",
   htmlPath,
 ], { stdio: "inherit" });
 rmSync(tmp, { recursive: true, force: true });
+
+// On dark-themed systems Edge paints every page's canvas with the system
+// dark color as the FIRST fill of the content stream (a full-sheet black
+// rectangle), producing black-on-black PDFs; and Chrome never paints the
+// @page margin area at all. Post-process each page: (a) rewrite the first
+// full-sheet canvas fill's color to white, and (b) prepend an opaque white
+// underlay rectangle, so every viewer renders true white pages edge to edge.
+const zlib = await import("node:zlib");
+const printed = await PDFDocument.load(readFileSync(output));
+for (const page of printed.getPages()) {
+  const { width, height } = page.getSize();
+  const contentsKey = PDFName.of("Contents");
+  const existing = page.node.get(contentsKey);
+  const resolved = existing instanceof PDFRef ? printed.context.lookup(existing) : existing;
+  const refs = [];
+  if (resolved instanceof PDFArray) {
+    for (let i = 0; i < resolved.size(); i++) refs.push(resolved.get(i));
+  } else {
+    refs.push(existing);
+  }
+  const rewritten = refs.map((ref) => {
+    const s = printed.context.lookup(ref);
+    const filter = s?.dict?.get(PDFName.of("Filter"));
+    if (String(filter) !== "/FlateDecode") return ref;
+    const text = zlib.inflateSync(Buffer.from(s.contents)).toString("latin1");
+    // The canvas paint is the first `X Y W H re\nf` fill; neutralize its color
+    // only when the rectangle spans (at least) the whole sheet.
+    const rect = text.match(/([\d.]+) ([\d.]+) ([\d.]+) ([\d.]+) re\nf/);
+    if (!rect) return ref;
+    const head = text.slice(0, rect.index);
+    const colorRe = /([\d.]+ [\d.]+ [\d.]+) RG ([\d.]+ [\d.]+ [\d.]+) rg(?![\s\S]*[\d.]+ [\d.]+ [\d.]+ RG)/;
+    const scale = head.match(/([\d.]+) 0 0 [\d.-]+ 0 [\d.]+ cm/);
+    const unit = scale ? parseFloat(scale[1]) : 1;
+    const innerScale = head.match(/([\d.]+) 0 0 [\d.]+ 0 0 cm/);
+    const k = unit * (innerScale ? parseFloat(innerScale[1]) : 1);
+    const coversSheet = parseFloat(rect[3]) * k >= width - 2 && parseFloat(rect[4]) * k >= height - 2;
+    if (!coversSheet || !colorRe.test(head)) return ref;
+    const newText = head.replace(colorRe, "1 1 1 RG 1 1 1 rg") + text.slice(rect.index);
+    const newStream = printed.context.flateStream(newText);
+    return printed.context.register(newStream);
+  });
+  const bg = printed.context.stream(`q 1 1 1 rg 0 0 ${width.toFixed(2)} ${height.toFixed(2)} re f Q`);
+  const wrapper = printed.context.obj([printed.context.register(bg)]);
+  for (const r of rewritten) wrapper.push(r);
+  page.node.set(contentsKey, wrapper);
+}
+writeFileSync(output, await printed.save());
 console.log(`wrote ${output}`);
