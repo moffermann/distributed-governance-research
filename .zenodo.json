@@ -1,15 +1,15 @@
 {
-  "title": "Distributed Governance Research: A Functional Architecture for Selective Institutional Distribution (Working Paper v1.6)",
+  "title": "Distributed Governance Research: A Functional Architecture for Selective Institutional Distribution (Working Paper v1.7)",
   "upload_type": "publication",
   "publication_type": "workingpaper",
-  "description": "Complete research corpus and working paper proposing a functional architecture for distributed public project governance: citizens allocate a legally mandated share of an existing public budget across verifiable projects under strict role separation, milestone-gated conditional disbursement, evidential contracts, and role-based reputation. Includes formal mechanism-design propositions (incentive compatibility of milestone disbursement; collusion-proofness of protocolized fiscalization), a reproducible 10,000-agent simulation of attention-constrained allocation, and a documented adversarial validation record of thirty-five attack briefs with paired defenses and accepted resolutions, all propagated through the architecture corpus. The manuscript is drafts/paper.md; the accessible companion is docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md.",
+  "description": "Complete research corpus and working paper proposing a functional architecture for distributed public project governance: citizens allocate a mandate-recorded share of an existing public budget across verifiable projects under strict role separation, milestone-gated conditional disbursement, evidential contracts, and role-based reputation — distributed allocation within mandate-bound, visible, versioned, and contestable planning scopes. Includes formal mechanism-design propositions (incentive compatibility of milestone disbursement; collusion-proofness of protocolized fiscalization), a reproducible 10,000-agent simulation of seven experiments (five pre-registered), the seventh recalibrating the delivered-value headline against a status-quo baseline parameterized from published audit-institution findings across nine jurisdictions and the European Union, and a documented adversarial review record of forty attack briefs across four rounds with paired defenses and accepted resolutions, all propagated through the architecture corpus. The manuscript is drafts/paper.md (Spanish translation drafts/paper.es.md); the accessible companion is docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md.",
   "creators": [
     {
       "name": "Offermann, Mauricio"
     }
   ],
   "license": "cc-by-4.0",
-  "version": "v1.6",
+  "version": "v1.7",
   "keywords": [
     "distributed governance",
     "participatory budgeting",

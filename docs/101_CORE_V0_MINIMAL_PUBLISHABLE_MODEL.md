@@ -6,7 +6,7 @@
 
 This document is the shortest professional entry point into the Distributed Governance System v0.
 
-It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is [[paper|drafts/paper.md]] (published as v1.6, DOI 10.5281/zenodo.21193847); this document is its accessible companion.
+It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is [[paper|drafts/paper.md]] (published as v1.7, DOI 10.5281/zenodo.21199738); this document is its accessible companion.
 
 The goal is to answer one question clearly:
 
