@@ -4,7 +4,11 @@
 // fenced code blocks, blockquotes, ordered/unordered lists, TABLES,
 // horizontal rules, and Obsidian wikilinks (rendered as their display text).
 //
-// Usage: node scripts/md-to-pdf.mjs <input.md> <output.pdf> [--lang es|en] [--toc]
+// Usage: node scripts/md-to-pdf.mjs <input.md> <output.pdf|.html> [--lang es|en] [--toc] [--html]
+//
+// --html writes the print-ready styled HTML instead of printing it: open it
+// in any browser and print with Ctrl+P (paper background is always white
+// there), or read it directly — HTML is the screen-reader-friendly edition.
 
 import { readFileSync, writeFileSync, mkdtempSync, rmSync } from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -212,6 +216,12 @@ const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><t
   blockquote, .toc { page-break-inside: avoid; }
 </style></head><body>
 ${body}</body></html>`;
+
+if (flags.has("--html")) {
+  writeFileSync(output, html);
+  console.log(`wrote ${output}`);
+  process.exit(0);
+}
 
 const tmp = mkdtempSync(join(tmpdir(), "mdpdf-"));
 const htmlPath = join(tmp, "doc.html");
