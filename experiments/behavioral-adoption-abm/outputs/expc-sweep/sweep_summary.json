@@ -1,0 +1,1068 @@
+{
+  "scenarios": [
+    {
+      "metrics": {
+        "abandonment_share": {
+          "max": 0.18233082706766918,
+          "mean": 0.11575042523078997,
+          "min": 0.07155635062611806
+        },
+        "active_delegate_count": {
+          "max": 94.0,
+          "mean": 74.7,
+          "min": 63.0
+        },
+        "active_user_share": {
+          "max": 0.41,
+          "mean": 0.3433,
+          "min": 0.272
+        },
+        "attentive_share": {
+          "max": 0.086,
+          "mean": 0.073,
+          "min": 0.053
+        },
+        "attentive_share_mean": {
+          "max": 0.04411538461538462,
+          "mean": 0.040876923076923075,
+          "min": 0.037038461538461534
+        },
+        "aware_non_user_share": {
+          "max": 0.17,
+          "mean": 0.1411,
+          "min": 0.119
+        },
+        "central_planning_correlation": {
+          "max": 0.9146387575101662,
+          "mean": 0.6668987581291334,
+          "min": 0.3915707350764828
+        },
+        "default_rule_share": {
+          "max": 0.728,
+          "mean": 0.6567000000000001,
+          "min": 0.5900000000000001
+        },
+        "delegate_planning_coverage": {
+          "max": 0.5908275957051105,
+          "mean": 0.5682290349992162,
+          "min": 0.5504301944836687
+        },
+        "delegate_platform_use_rate": {
+          "max": 0.916030534351145,
+          "mean": 0.8367017150059191,
+          "min": 0.7706422018348624
+        },
+        "delegate_switching_rate": {
+          "max": 0.04318143027820447,
+          "mean": 0.029234171361913246,
+          "min": 0.024108192865542926
+        },
+        "delegation_concentration_hhi": {
+          "max": 0.021773965500989725,
+          "mean": 0.01825164325900526,
+          "min": 0.014100304438391283
+        },
+        "delegation_revocation_rate": {
+          "max": 0.1240826079535757,
+          "mean": 0.09439916128455265,
+          "min": 0.08521253242865695
+        },
+        "delegator_share": {
+          "max": 0.153,
+          "mean": 0.1217,
+          "min": 0.1
+        },
+        "direct_participation_share": {
+          "max": 0.30118110236220474,
+          "mean": 0.2558011392204713,
+          "min": 0.18421052631578946
+        },
+        "distributed_planning_correlation": {
+          "max": 0.991751355372354,
+          "mean": 0.9770383857740017,
+          "min": 0.9633031639372917
+        },
+        "evidence_coverage_rate": {
+          "max": 0.75,
+          "mean": 0.6160714285714286,
+          "min": 0.375
+        },
+        "evidence_supply_per_project": {
+          "max": 0.35,
+          "mean": 0.2875,
+          "min": 0.175
+        },
+        "executor_participation_rate": {
+          "max": 0.65,
+          "mean": 0.5466666666666666,
+          "min": 0.43333333333333335
+        },
+        "fiscalizer_supply_per_project": {
+          "max": 0.3,
+          "mean": 0.24625,
+          "min": 0.1875
+        },
+        "followed_planning_correlation": {
+          "max": 0.991751355372354,
+          "mean": 0.9770383857740017,
+          "min": 0.9633031639372917
+        },
+        "full_delegation_share": {
+          "max": 0.22058823529411764,
+          "mean": 0.18113190811386917,
+          "min": 0.12969924812030076
+        },
+        "honest_executor_share": {
+          "max": 0.9615384615384616,
+          "mean": 0.7507527031347359,
+          "min": 0.5714285714285714
+        },
+        "institutional_delegation_weight_share": {
+          "max": 0.4482758620689655,
+          "mean": 0.33783005008937395,
+          "min": 0.28971962616822433
+        },
+        "mean_awareness_to_registration_delay_ticks": {
+          "max": 25.57066189624329,
+          "mean": 22.47859208055459,
+          "min": 21.19921875
+        },
+        "mean_platform_trust": {
+          "max": 0.7771826962728554,
+          "mean": 0.6719253627075488,
+          "min": 0.5538424179467202
+        },
+        "mean_trust_registered": {
+          "max": 0.842766356818901,
+          "mean": 0.7463784566091772,
+          "min": 0.6223959538438282
+        },
+        "micro_delegation_weight_share": {
+          "max": 0.7102803738317757,
+          "mean": 0.662169949910626,
+          "min": 0.5517241379310345
+        },
+        "negative_word_of_mouth_rate": {
+          "max": 0.18233082706766918,
+          "mean": 0.11575042523078997,
+          "min": 0.07155635062611806
+        },
+        "opportunistic_executor_share": {
+          "max": 0.42857142857142855,
+          "mean": 0.2492472968652642,
+          "min": 0.038461538461538464
+        },
+        "partial_delegation_share": {
+          "max": 0.07099391480730223,
+          "mean": 0.05179663698629546,
+          "min": 0.02982107355864811
+        },
+        "passive_delegated_share": {
+          "max": 0.22058823529411764,
+          "mean": 0.18113190811386917,
+          "min": 0.12969924812030076
+        },
+        "permanent_rejection_share": {
+          "max": 0.341,
+          "mean": 0.3048,
+          "min": 0.273
+        },
+        "planning_representation_share": {
+          "max": 0.216,
+          "mean": 0.1796,
+          "min": 0.14
+        },
+        "planning_signal_coverage": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0
+        },
+        "profile_driven_share": {
+          "max": 0.2146690518783542,
+          "mean": 0.16938213971067548,
+          "min": 0.13533834586466165
+        },
+        "reactivation_rate": {
+          "max": 0.8918918918918919,
+          "mean": 0.8471282189695764,
+          "min": 0.7679425837320574
+        },
+        "recommendation_rate": {
+          "max": 0.9097560975609756,
+          "mean": 0.7914925150886069,
+          "min": 0.6066176470588235
+        },
+        "registered_inactive_share": {
+          "max": 0.30639097744360905,
+          "mean": 0.2261377507378986,
+          "min": 0.1903807615230461
+        },
+        "registered_user_share": {
+          "max": 0.559,
+          "mean": 0.5214000000000001,
+          "min": 0.493
+        },
+        "sustained_active_user_share": {
+          "max": 0.267,
+          "mean": 0.2163,
+          "min": 0.147
+        },
+        "thin_market_failure_rate": {
+          "max": 0.625,
+          "mean": 0.3869047619047619,
+          "min": 0.25
+        },
+        "top_10_delegate_share": {
+          "max": 0.34951456310679613,
+          "mean": 0.29366063094766826,
+          "min": 0.24050632911392406
+        },
+        "top_delegate_share": {
+          "max": 0.056074766355140186,
+          "mean": 0.04208006846625514,
+          "min": 0.027522935779816515
+        },
+        "trust_p10": {
+          "max": 0.5024411663300019,
+          "mean": 0.40375719011763245,
+          "min": 0.29041716504264237
+        },
+        "trust_p50": {
+          "max": 0.8066570214044653,
+          "mean": 0.6770166839543661,
+          "min": 0.5520108339164396
+        },
+        "trust_p90": {
+          "max": 1.0,
+          "mean": 0.9524540768436074,
+          "min": 0.8393464390639417
+        },
+        "value_delivered_share": {
+          "max": 0.5062447450925608,
+          "mean": 0.4205520073860128,
+          "min": 0.3508779897099363
+        },
+        "verification_coverage_rate": {
+          "max": 1.0,
+          "mean": 0.8208333333333334,
+          "min": 0.625
+        },
+        "verification_market_depth": {
+          "max": 0.75,
+          "mean": 0.6130952380952381,
+          "min": 0.375
+        }
+      },
+      "scenario_id": "baseline",
+      "seeds": 10,
+      "viability_flag_frequency": {
+        "abandonment_high": 0.0,
+        "active_signal_low": 0.0,
+        "delegation_overconcentrated": 0.0,
+        "distributed_planning_weak": 0.0,
+        "evidence_undersupplied": 1.0,
+        "executor_supply_low": 0.0,
+        "trust_declining": 0.0,
+        "verification_undersupplied": 0.5
+      }
+    },
+    {
+      "metrics": {
+        "abandonment_share": {
+          "max": 0.20462046204620463,
+          "mean": 0.13986092470720846,
+          "min": 0.0679886685552408
+        },
+        "active_delegate_count": {
+          "max": 190.0,
+          "mean": 142.0,
+          "min": 103.0
+        },
+        "active_user_share": {
+          "max": 0.601,
+          "mean": 0.4638,
+          "min": 0.341
+        },
+        "attentive_share": {
+          "max": 0.108,
+          "mean": 0.0872,
+          "min": 0.069
+        },
+        "attentive_share_mean": {
+          "max": 0.05753846153846154,
+          "mean": 0.04981923076923077,
+          "min": 0.04380769230769231
+        },
+        "aware_non_user_share": {
+          "max": 0.31,
+          "mean": 0.21680000000000002,
+          "min": 0.11
+        },
+        "central_planning_correlation": {
+          "max": 0.9084293840336222,
+          "mean": 0.6362733321178292,
+          "min": 0.3665325120230965
+        },
+        "default_rule_share": {
+          "max": 0.659,
+          "mean": 0.5362,
+          "min": 0.399
+        },
+        "delegate_planning_coverage": {
+          "max": 0.5554307350665256,
+          "mean": 0.5410299295995309,
+          "min": 0.5278473877097479
+        },
+        "delegate_platform_use_rate": {
+          "max": 0.9383561643835616,
+          "mean": 0.85427432035123,
+          "min": 0.785234899328859
+        },
+        "delegate_switching_rate": {
+          "max": 0.055844373637430826,
+          "mean": 0.041567654163473175,
+          "min": 0.035648205254718145
+        },
+        "delegation_concentration_hhi": {
+          "max": 0.012476915454258818,
+          "mean": 0.00994805486953215,
+          "min": 0.007013510977669356
+        },
+        "delegation_revocation_rate": {
+          "max": 0.13324775353016688,
+          "mean": 0.09892945437467009,
+          "min": 0.07445537273646474
+        },
+        "delegator_share": {
+          "max": 0.301,
+          "mean": 0.21459999999999999,
+          "min": 0.147
+        },
+        "direct_participation_share": {
+          "max": 0.25097024579560157,
+          "mean": 0.2318466477616063,
+          "min": 0.19392917369308602
+        },
+        "distributed_planning_correlation": {
+          "max": 0.9886023276442063,
+          "mean": 0.9813920774929615,
+          "min": 0.9712099059689966
+        },
+        "evidence_coverage_rate": {
+          "max": 0.6964285714285714,
+          "mean": 0.6160714285714286,
+          "min": 0.5089285714285714
+        },
+        "evidence_supply_per_project": {
+          "max": 0.325,
+          "mean": 0.2875,
+          "min": 0.2375
+        },
+        "executor_participation_rate": {
+          "max": 0.5833333333333334,
+          "mean": 0.4833333333333334,
+          "min": 0.35
+        },
+        "fiscalizer_supply_per_project": {
+          "max": 0.325,
+          "mean": 0.2525,
+          "min": 0.1875
+        },
+        "followed_planning_correlation": {
+          "max": 0.9886023276442063,
+          "mean": 0.9813920774929615,
+          "min": 0.9712099059689966
+        },
+        "full_delegation_share": {
+          "max": 0.3356940509915014,
+          "mean": 0.2536765664136639,
+          "min": 0.18556701030927836
+        },
+        "honest_executor_share": {
+          "max": 0.8846153846153846,
+          "mean": 0.7105439062571415,
+          "min": 0.5833333333333334
+        },
+        "institutional_delegation_weight_share": {
+          "max": 0.26086956521739135,
+          "mean": 0.23614330429018668,
+          "min": 0.20890410958904104
+        },
+        "mean_awareness_to_registration_delay_ticks": {
+          "max": 29.698576972833116,
+          "mean": 26.54348451189287,
+          "min": 23.468802698145026
+        },
+        "mean_platform_trust": {
+          "max": 0.8607894154221052,
+          "mean": 0.6438595286847066,
+          "min": 0.4538043769371932
+        },
+        "mean_trust_registered": {
+          "max": 0.8932852727887455,
+          "mean": 0.6996922642946792,
+          "min": 0.5234735410492753
+        },
+        "micro_delegation_weight_share": {
+          "max": 0.791095890410959,
+          "mean": 0.7638566957098133,
+          "min": 0.7391304347826086
+        },
+        "negative_word_of_mouth_rate": {
+          "max": 0.20462046204620463,
+          "mean": 0.13986092470720846,
+          "min": 0.0679886685552408
+        },
+        "opportunistic_executor_share": {
+          "max": 0.4166666666666667,
+          "mean": 0.2894560937428584,
+          "min": 0.11538461538461539
+        },
+        "partial_delegation_share": {
+          "max": 0.07790368271954674,
+          "mean": 0.06462029169881803,
+          "min": 0.04785478547854786
+        },
+        "passive_delegated_share": {
+          "max": 0.3356940509915014,
+          "mean": 0.2536765664136639,
+          "min": 0.18556701030927836
+        },
+        "permanent_rejection_share": {
+          "max": 0.113,
+          "mean": 0.09240000000000001,
+          "min": 0.076
+        },
+        "planning_representation_share": {
+          "max": 0.373,
+          "mean": 0.27749999999999997,
+          "min": 0.192
+        },
+        "planning_signal_coverage": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0
+        },
+        "profile_driven_share": {
+          "max": 0.1588785046728972,
+          "mean": 0.14096871486948248,
+          "min": 0.09965635738831616
+        },
+        "reactivation_rate": {
+          "max": 0.8778625954198473,
+          "mean": 0.8148660192891096,
+          "min": 0.769825918762089
+        },
+        "recommendation_rate": {
+          "max": 0.9500831946755408,
+          "mean": 0.678597813787276,
+          "min": 0.3782991202346041
+        },
+        "registered_inactive_share": {
+          "max": 0.22772277227722773,
+          "mean": 0.16902685454922087,
+          "min": 0.11331444759206799
+        },
+        "registered_user_share": {
+          "max": 0.773,
+          "mean": 0.6649,
+          "min": 0.582
+        },
+        "sustained_active_user_share": {
+          "max": 0.438,
+          "mean": 0.31270000000000003,
+          "min": 0.205
+        },
+        "thin_market_failure_rate": {
+          "max": 0.4910714285714286,
+          "mean": 0.38392857142857145,
+          "min": 0.3035714285714286
+        },
+        "top_10_delegate_share": {
+          "max": 0.2214765100671141,
+          "mean": 0.18775185133692504,
+          "min": 0.14383561643835616
+        },
+        "top_delegate_share": {
+          "max": 0.04081632653061224,
+          "mean": 0.030832356410582094,
+          "min": 0.02054794520547945
+        },
+        "trust_p10": {
+          "max": 0.6033230882132886,
+          "mean": 0.37122125596088795,
+          "min": 0.17522030560620536
+        },
+        "trust_p50": {
+          "max": 0.9289214623409295,
+          "mean": 0.6549077903465296,
+          "min": 0.4510920879652476
+        },
+        "trust_p90": {
+          "max": 1.0,
+          "mean": 0.910141684464344,
+          "min": 0.7491668951086055
+        },
+        "value_delivered_share": {
+          "max": 0.46371836338836336,
+          "mean": 0.394025762866934,
+          "min": 0.30698888092415033
+        },
+        "verification_coverage_rate": {
+          "max": 1.0,
+          "mean": 0.8333333333333334,
+          "min": 0.625
+        },
+        "verification_market_depth": {
+          "max": 0.6964285714285714,
+          "mean": 0.6160714285714286,
+          "min": 0.5089285714285714
+        }
+      },
+      "scenario_id": "llm_calibrated",
+      "seeds": 10,
+      "viability_flag_frequency": {
+        "abandonment_high": 0.0,
+        "active_signal_low": 0.0,
+        "delegation_overconcentrated": 0.0,
+        "distributed_planning_weak": 0.0,
+        "evidence_undersupplied": 1.0,
+        "executor_supply_low": 0.0,
+        "trust_declining": 0.0,
+        "verification_undersupplied": 0.3
+      }
+    },
+    {
+      "metrics": {
+        "abandonment_share": {
+          "max": 0.17567567567567569,
+          "mean": 0.12433175137786145,
+          "min": 0.07451923076923077
+        },
+        "active_delegate_count": {
+          "max": 66.0,
+          "mean": 52.4,
+          "min": 35.0
+        },
+        "active_user_share": {
+          "max": 0.285,
+          "mean": 0.20470000000000002,
+          "min": 0.127
+        },
+        "attentive_share": {
+          "max": 0.062,
+          "mean": 0.0444,
+          "min": 0.028
+        },
+        "attentive_share_mean": {
+          "max": 0.031538461538461536,
+          "mean": 0.024892307692307693,
+          "min": 0.019692307692307693
+        },
+        "aware_non_user_share": {
+          "max": 0.336,
+          "mean": 0.2536,
+          "min": 0.196
+        },
+        "central_planning_correlation": {
+          "max": 0.8170458086786396,
+          "mean": 0.644223855144853,
+          "min": 0.40979365324098715
+        },
+        "default_rule_share": {
+          "max": 0.873,
+          "mean": 0.7953,
+          "min": 0.7150000000000001
+        },
+        "delegate_planning_coverage": {
+          "max": 0.6354152713234186,
+          "mean": 0.5941694002309204,
+          "min": 0.556671170297627
+        },
+        "delegate_platform_use_rate": {
+          "max": 0.8876404494382022,
+          "mean": 0.7711412107012298,
+          "min": 0.64
+        },
+        "delegate_switching_rate": {
+          "max": 0.04390832328106152,
+          "mean": 0.03249267599268775,
+          "min": 0.02697708795269771
+        },
+        "delegation_concentration_hhi": {
+          "max": 0.034074074074074076,
+          "mean": 0.025309158781258185,
+          "min": 0.02099173553719008
+        },
+        "delegation_revocation_rate": {
+          "max": 0.1252364737041241,
+          "mean": 0.10337673088543935,
+          "min": 0.07964601769911504
+        },
+        "delegator_share": {
+          "max": 0.109,
+          "mean": 0.0735,
+          "min": 0.042
+        },
+        "direct_participation_share": {
+          "max": 0.29085872576177285,
+          "mean": 0.23838953677153926,
+          "min": 0.18857142857142858
+        },
+        "distributed_planning_correlation": {
+          "max": 0.9877817476974726,
+          "mean": 0.9745640884081668,
+          "min": 0.9566425438969213
+        },
+        "evidence_coverage_rate": {
+          "max": 0.7767857142857143,
+          "mean": 0.5678571428571428,
+          "min": 0.3482142857142857
+        },
+        "evidence_supply_per_project": {
+          "max": 0.3625,
+          "mean": 0.265,
+          "min": 0.1625
+        },
+        "executor_participation_rate": {
+          "max": 0.5833333333333334,
+          "mean": 0.5,
+          "min": 0.4
+        },
+        "fiscalizer_supply_per_project": {
+          "max": 0.3,
+          "mean": 0.23875000000000002,
+          "min": 0.1875
+        },
+        "followed_planning_correlation": {
+          "max": 0.9877817476974726,
+          "mean": 0.9745640884081668,
+          "min": 0.9566425438969213
+        },
+        "full_delegation_share": {
+          "max": 0.20673076923076922,
+          "mean": 0.15100300208020095,
+          "min": 0.09428571428571429
+        },
+        "honest_executor_share": {
+          "max": 0.875,
+          "mean": 0.7210564176276079,
+          "min": 0.5
+        },
+        "institutional_delegation_weight_share": {
+          "max": 0.49557522123893805,
+          "mean": 0.4043405775074015,
+          "min": 0.28358208955223885
+        },
+        "mean_awareness_to_registration_delay_ticks": {
+          "max": 28.71566265060241,
+          "mean": 25.536315550086236,
+          "min": 20.361486486486488
+        },
+        "mean_platform_trust": {
+          "max": 0.8020830735716412,
+          "mean": 0.6390988942206877,
+          "min": 0.4479337302850266
+        },
+        "mean_trust_registered": {
+          "max": 0.8828449441146458,
+          "mean": 0.7253461427771097,
+          "min": 0.5344803371915966
+        },
+        "micro_delegation_weight_share": {
+          "max": 0.7164179104477612,
+          "mean": 0.5956594224925985,
+          "min": 0.504424778761062
+        },
+        "negative_word_of_mouth_rate": {
+          "max": 0.17567567567567569,
+          "mean": 0.12433175137786145,
+          "min": 0.07451923076923077
+        },
+        "opportunistic_executor_share": {
+          "max": 0.5,
+          "mean": 0.27894358237239214,
+          "min": 0.125
+        },
+        "partial_delegation_share": {
+          "max": 0.06585365853658537,
+          "mean": 0.04474347843440109,
+          "min": 0.02364864864864865
+        },
+        "passive_delegated_share": {
+          "max": 0.20673076923076922,
+          "mean": 0.15100300208020095,
+          "min": 0.09428571428571429
+        },
+        "permanent_rejection_share": {
+          "max": 0.37,
+          "mean": 0.3438,
+          "min": 0.319
+        },
+        "planning_representation_share": {
+          "max": 0.16,
+          "mean": 0.1062,
+          "min": 0.065
+        },
+        "planning_signal_coverage": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0
+        },
+        "profile_driven_share": {
+          "max": 0.14903846153846154,
+          "mean": 0.11527621818665468,
+          "min": 0.054285714285714284
+        },
+        "reactivation_rate": {
+          "max": 0.8840579710144928,
+          "mean": 0.8532969268665097,
+          "min": 0.8269230769230769
+        },
+        "recommendation_rate": {
+          "max": 0.9614035087719298,
+          "mean": 0.7408035311041086,
+          "min": 0.3841059602649007
+        },
+        "registered_inactive_share": {
+          "max": 0.4828571428571429,
+          "mean": 0.32625601314934255,
+          "min": 0.2403846153846154
+        },
+        "registered_user_share": {
+          "max": 0.416,
+          "mean": 0.3694,
+          "min": 0.296
+        },
+        "sustained_active_user_share": {
+          "max": 0.178,
+          "mean": 0.1163,
+          "min": 0.061
+        },
+        "thin_market_failure_rate": {
+          "max": 0.6517857142857143,
+          "mean": 0.44375,
+          "min": 0.2232142857142857
+        },
+        "top_10_delegate_share": {
+          "max": 0.4444444444444444,
+          "mean": 0.37249776944562135,
+          "min": 0.3283582089552239
+        },
+        "top_delegate_share": {
+          "max": 0.06666666666666667,
+          "mean": 0.05374532678647902,
+          "min": 0.04
+        },
+        "trust_p10": {
+          "max": 0.540866465809226,
+          "mean": 0.38382608181274314,
+          "min": 0.17670901359544944
+        },
+        "trust_p50": {
+          "max": 0.8375672338565064,
+          "mean": 0.6439814303191518,
+          "min": 0.4468204139313279
+        },
+        "trust_p90": {
+          "max": 1.0,
+          "mean": 0.8913927528945343,
+          "min": 0.7033947088647091
+        },
+        "value_delivered_share": {
+          "max": 0.47869011403866274,
+          "mean": 0.39425146913220555,
+          "min": 0.32807709051679396
+        },
+        "verification_coverage_rate": {
+          "max": 1.0,
+          "mean": 0.7958333333333333,
+          "min": 0.625
+        },
+        "verification_market_depth": {
+          "max": 0.7767857142857143,
+          "mean": 0.55625,
+          "min": 0.3482142857142857
+        }
+      },
+      "scenario_id": "high_friction_launch",
+      "seeds": 10,
+      "viability_flag_frequency": {
+        "abandonment_high": 0.0,
+        "active_signal_low": 0.0,
+        "delegation_overconcentrated": 0.0,
+        "distributed_planning_weak": 0.0,
+        "evidence_undersupplied": 1.0,
+        "executor_supply_low": 0.0,
+        "trust_declining": 0.0,
+        "verification_undersupplied": 0.5
+      }
+    },
+    {
+      "metrics": {
+        "abandonment_share": {
+          "max": 0.20080321285140562,
+          "mean": 0.13907930531557197,
+          "min": 0.06228373702422145
+        },
+        "active_delegate_count": {
+          "max": 42.0,
+          "mean": 31.6,
+          "min": 25.0
+        },
+        "active_user_share": {
+          "max": 0.46,
+          "mean": 0.3819,
+          "min": 0.295
+        },
+        "attentive_share": {
+          "max": 0.115,
+          "mean": 0.0837,
+          "min": 0.06
+        },
+        "attentive_share_mean": {
+          "max": 0.0555,
+          "mean": 0.05010384615384615,
+          "min": 0.044384615384615383
+        },
+        "aware_non_user_share": {
+          "max": 0.175,
+          "mean": 0.128,
+          "min": 0.087
+        },
+        "central_planning_correlation": {
+          "max": 0.9129121155723856,
+          "mean": 0.6510218544261044,
+          "min": 0.3864790602069577
+        },
+        "default_rule_share": {
+          "max": 0.7050000000000001,
+          "mean": 0.6181,
+          "min": 0.54
+        },
+        "delegate_planning_coverage": {
+          "max": 0.6678596555562449,
+          "mean": 0.6485947156252541,
+          "min": 0.6216860966337987
+        },
+        "delegate_platform_use_rate": {
+          "max": 1.0,
+          "mean": 0.9596770650642302,
+          "min": 0.8811881188118812
+        },
+        "delegate_switching_rate": {
+          "max": 0.039798570500324884,
+          "mean": 0.029799698452915913,
+          "min": 0.02467369926694082
+        },
+        "delegation_concentration_hhi": {
+          "max": 0.09458655562165377,
+          "mean": 0.07239585635885352,
+          "min": 0.05822257488593533
+        },
+        "delegation_revocation_rate": {
+          "max": 0.1453866146848603,
+          "mean": 0.10624555020752027,
+          "min": 0.09226147904448577
+        },
+        "delegator_share": {
+          "max": 0.154,
+          "mean": 0.11439999999999999,
+          "min": 0.081
+        },
+        "direct_participation_share": {
+          "max": 0.3174872665534805,
+          "mean": 0.2762728689854018,
+          "min": 0.24096385542168675
+        },
+        "distributed_planning_correlation": {
+          "max": 0.9914625813255065,
+          "mean": 0.9715977540691295,
+          "min": 0.9353741289340554
+        },
+        "evidence_coverage_rate": {
+          "max": 0.7232142857142857,
+          "mean": 0.5089285714285714,
+          "min": 0.375
+        },
+        "evidence_supply_per_project": {
+          "max": 0.3375,
+          "mean": 0.2375,
+          "min": 0.175
+        },
+        "executor_participation_rate": {
+          "max": 0.5666666666666667,
+          "mean": 0.4866666666666667,
+          "min": 0.36666666666666664
+        },
+        "fiscalizer_supply_per_project": {
+          "max": 0.325,
+          "mean": 0.25375000000000003,
+          "min": 0.1875
+        },
+        "followed_planning_correlation": {
+          "max": 0.9914625813255065,
+          "mean": 0.9715977540691295,
+          "min": 0.9353741289340554
+        },
+        "full_delegation_share": {
+          "max": 0.21107266435986158,
+          "mean": 0.1609652371581835,
+          "min": 0.12126537785588752
+        },
+        "honest_executor_share": {
+          "max": 0.8235294117647058,
+          "mean": 0.6937629382983699,
+          "min": 0.5862068965517241
+        },
+        "institutional_delegation_weight_share": {
+          "max": 0.8205128205128205,
+          "mean": 0.7477526958550131,
+          "min": 0.647887323943662
+        },
+        "mean_awareness_to_registration_delay_ticks": {
+          "max": 24.442906574394463,
+          "mean": 21.633293290655132,
+          "min": 19.342105263157894
+        },
+        "mean_platform_trust": {
+          "max": 0.8467671340458419,
+          "mean": 0.6356514361005885,
+          "min": 0.4759595124445204
+        },
+        "mean_trust_registered": {
+          "max": 0.893351690350923,
+          "mean": 0.7094305213768501,
+          "min": 0.5611231273193228
+        },
+        "micro_delegation_weight_share": {
+          "max": 0.352112676056338,
+          "mean": 0.2522473041449869,
+          "min": 0.1794871794871795
+        },
+        "negative_word_of_mouth_rate": {
+          "max": 0.20080321285140562,
+          "mean": 0.13907930531557197,
+          "min": 0.06228373702422145
+        },
+        "opportunistic_executor_share": {
+          "max": 0.41379310344827586,
+          "mean": 0.3062370617016302,
+          "min": 0.17647058823529413
+        },
+        "partial_delegation_share": {
+          "max": 0.0583804143126177,
+          "mean": 0.046097260438509265,
+          "min": 0.029876977152899824
+        },
+        "passive_delegated_share": {
+          "max": 0.21107266435986158,
+          "mean": 0.1609652371581835,
+          "min": 0.12126537785588752
+        },
+        "permanent_rejection_share": {
+          "max": 0.322,
+          "mean": 0.3099,
+          "min": 0.295
+        },
+        "planning_representation_share": {
+          "max": 0.261,
+          "mean": 0.1998,
+          "min": 0.141
+        },
+        "planning_signal_coverage": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0
+        },
+        "profile_driven_share": {
+          "max": 0.24394463667820068,
+          "mean": 0.2088423188285422,
+          "min": 0.14762741652021089
+        },
+        "reactivation_rate": {
+          "max": 0.905511811023622,
+          "mean": 0.8428187193034044,
+          "min": 0.7673469387755102
+        },
+        "recommendation_rate": {
+          "max": 0.9541484716157205,
+          "mean": 0.7009512248887633,
+          "min": 0.42033898305084744
+        },
+        "registered_inactive_share": {
+          "max": 0.23725834797891038,
+          "mean": 0.1687430092737912,
+          "min": 0.12802768166089964
+        },
+        "registered_user_share": {
+          "max": 0.589,
+          "mean": 0.5495,
+          "min": 0.494
+        },
+        "sustained_active_user_share": {
+          "max": 0.343,
+          "mean": 0.25329999999999997,
+          "min": 0.152
+        },
+        "thin_market_failure_rate": {
+          "max": 0.625,
+          "mean": 0.49107142857142855,
+          "min": 0.2767857142857143
+        },
+        "top_10_delegate_share": {
+          "max": 0.8048780487804879,
+          "mean": 0.7182126773065225,
+          "min": 0.6126760563380281
+        },
+        "top_delegate_share": {
+          "max": 0.2073170731707317,
+          "mean": 0.15991126566358302,
+          "min": 0.12121212121212122
+        },
+        "trust_p10": {
+          "max": 0.619222326502648,
+          "mean": 0.3661468289182561,
+          "min": 0.19876773755146726
+        },
+        "trust_p50": {
+          "max": 0.8879342884560948,
+          "mean": 0.6407163772133551,
+          "min": 0.4751630593893261
+        },
+        "trust_p90": {
+          "max": 1.0,
+          "mean": 0.9055927722321193,
+          "min": 0.7578576472489817
+        },
+        "value_delivered_share": {
+          "max": 0.45982979938641844,
+          "mean": 0.3949295265171684,
+          "min": 0.2679113358918536
+        },
+        "verification_coverage_rate": {
+          "max": 1.0,
+          "mean": 0.8333333333333334,
+          "min": 0.625
+        },
+        "verification_market_depth": {
+          "max": 0.7232142857142857,
+          "mean": 0.5089285714285714,
+          "min": 0.375
+        }
+      },
+      "scenario_id": "delegation_first",
+      "seeds": 10,
+      "viability_flag_frequency": {
+        "abandonment_high": 0.0,
+        "active_signal_low": 0.0,
+        "delegation_overconcentrated": 0.1,
+        "distributed_planning_weak": 0.0,
+        "evidence_undersupplied": 1.0,
+        "executor_supply_low": 0.0,
+        "trust_declining": 0.0,
+        "verification_undersupplied": 0.4
+      }
+    }
+  ]
+}

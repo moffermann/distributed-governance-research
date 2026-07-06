@@ -496,7 +496,8 @@ including the delegation→informed fold). E7's distributed arms assumed
 participation: d = 0.8 of the population on the default rule and an
 informed share of 0.3, constant over time. E8 replaces those constants
 with participation *generated* by the Core v0-conformant behavioral
-adoption experiment (`experiments/behavioral-adoption-abm`) — adoption
+adoption experiment (behavioral-adoption-abm in the satellite repository
+github.com/moffermann/distributed-governance-experiments) — adoption
 trajectories over a 104-week launch, resampled to the 24 allocation
 cycles, per behavioral seed — for three populations: LLM-calibrated
 priors (primary), synthetic priors, and a high-friction launch. The

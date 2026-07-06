@@ -1,7 +1,7 @@
 {
  "generated": "2026-07-06",
  "mapping": "research/e8-behavioral-participation-design.md",
- "behavioral_experiment": "experiments/behavioral-adoption-abm",
+ "behavioral_experiment": "github.com/moffermann/distributed-governance-experiments (behavioral-adoption-abm)",
  "paper_cycles": 24,
  "note": "d/pi per cycle from 104-week trajectories; delegation folded into informed (author-approved); llm-elicited priors, not empirical data.",
  "populations": {
