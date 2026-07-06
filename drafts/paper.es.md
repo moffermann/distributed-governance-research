@@ -1,10 +1,10 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.7 (julio de 2026). Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.8 (julio de 2026). Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
-*Traducción al español del working paper v1.7 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.8 (drafts/paper.md, versión autoritativa en inglés).*
 
-*© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI: 10.5281/zenodo.21199738.*
+*© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI: 10.5281/zenodo.21228492.*
 
 ## Resumen
 
@@ -59,7 +59,11 @@ completa entrega 2.22× esa línea base calibrada por unidad de presupuesto a
 escala y 1.4–1.6× a escala de piloto municipal —y que la auditoría a su
 intensidad empíricamente documentada, sin memoria reputacional, no disuade
 desvío alguno: encoge la brecha reportada (de veintinueve a diecinueve puntos),
-nunca la real. Tercero,
+nunca la real; y un octavo experimento preregistrado reemplaza el lado de
+participación impuesto de esos brazos con trayectorias de adopción generadas por
+un estudio conductual compañero, hallando el resultado principal sin cambios en
+2.26× y robusto desde la dinámica de lanzamiento hasta poblaciones hostiles a la
+adopción. Tercero,
 método: la arquitectura se desarrolló bajo revisión adversarial sistemática
 —una autocrítica estructurada de cuarenta resúmenes de ataque (attack briefs),
 cada uno con una defensa emparejada y una resolución aceptada bajo una regla
@@ -783,6 +787,22 @@ se degrada de manera casi lineal con la captura coordinada de señales y cae por
 debajo de un planificador municipal competente de cobertura plena solo con una
 cuota coordinada de aproximadamente el treinta por ciento —se degrada, nunca
 colapsa, y sigue siendo superior en todas partes por debajo del diez por ciento.
+
+Un octavo experimento preregistrado (E8,
+`research/e8-behavioral-participation-design.md`) reemplazó luego el lado de
+participación de estos brazos —la cuota de default y la cuota informada que los
+brazos de arquitectura habían impuesto— con trayectorias de adopción generadas
+por un estudio conductual compañero: un modelo basado en agentes conforme a Core
+v0 de conciencia, registro, modos de participación y microdelegación confiada,
+calibrado con priors sintéticos elicitados mediante LLM (paquete de replicación:
+el repositorio distributed-governance-experiments). El resultado principal
+sobrevive: 2.26 [2.23, 2.30] a escala bajo la población calibrada y 2.15–2.9× a
+través de tres poblaciones y todas las escalas, incluida una trayectoria de
+lanzamiento que comienza con participación cercana a cero —que cuesta el 1.7%
+del cociente, porque la capa de default ancla por construcción los ciclos
+tempranos delgados. El estudio conductual también reproduce de forma
+independiente el supuesto de cuota informada que estos experimentos habían
+impuesto: 0.309 emergente contra el 0.30 asumido.
 
 ## 7. La revisión adversarial como método
 

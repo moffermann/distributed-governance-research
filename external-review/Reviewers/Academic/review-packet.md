@@ -43,7 +43,7 @@ Please start here:
 docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
-The published working paper is part of what I am asking you to review: `drafts/paper.md` (v1.7; the v1.6 edition is archived as DOI 10.5281/zenodo.21193847) contains the formal propositions, a seven-experiment simulation — five experiments pre-registered, with failed predictions reported rather than hidden — and the full reference apparatus.
+The published working paper is part of what I am asking you to review: `drafts/paper.md` (v1.8; the v1.7 edition is archived as DOI 10.5281/zenodo.21199738) contains the formal propositions, a seven-experiment simulation — five experiments pre-registered, with failed predictions reported rather than hidden — and the full reference apparatus.
 
 You do not need to read the full repository.
 

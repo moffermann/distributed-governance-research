@@ -58,7 +58,7 @@ Por favor empieza por:
 docs/101_CORE_V0_MINIMAL_PUBLISHABLE_MODEL.md
 ```
 
-El manuscrito académico publicado detrás de este modelo — proposiciones formales y una simulación de siete experimentos, cinco pre-registrados — es `drafts/paper.es.md` (traducción; la versión autoritativa en inglés es `drafts/paper.md`, v1.7; la edición v1.6 está archivada como DOI 10.5281/zenodo.21193847).
+El manuscrito académico publicado detrás de este modelo — proposiciones formales y una simulación de ocho experimentos, seis pre-registrados — es `drafts/paper.es.md` (traducción; la versión autoritativa en inglés es `drafts/paper.md`, v1.8; la edición v1.7 está archivada como DOI 10.5281/zenodo.21199738).
 
 No necesitas leer todo el repositorio.
 

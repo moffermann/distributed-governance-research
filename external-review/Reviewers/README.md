@@ -42,7 +42,7 @@ external-review/core-v0-review-packet.md
 external-review/reviewer-briefs-v0.md
 ```
 
-The published manuscript every packet now points to is `drafts/paper.md` (v1.7, Spanish translation `drafts/paper.es.md`; the v1.6 edition is archived as DOI 10.5281/zenodo.21193847).
+The published manuscript every packet now points to is `drafts/paper.md` (v1.8, Spanish translation `drafts/paper.es.md`; the v1.6 edition is archived as DOI 10.5281/zenodo.21193847).
 
 ## Use rule
 
