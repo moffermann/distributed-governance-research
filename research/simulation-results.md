@@ -487,6 +487,62 @@ continuity arm — its world consumes additional RNG draws for the second
 planner vector, so its values differ slightly from E5's table (0.374 vs
 0.393) without changing any ordering.
 
+## E8 — The headline under behaviorally generated participation
+
+Pre-registered in
+[[e8-behavioral-participation-design|research/e8-behavioral-participation-design.md]]
+(predictions committed before implementation; author-approved mapping,
+including the delegation→informed fold). E7's distributed arms assumed
+participation: d = 0.8 of the population on the default rule and an
+informed share of 0.3, constant over time. E8 replaces those constants
+with participation *generated* by the Core v0-conformant behavioral
+adoption experiment (`experiments/behavioral-adoption-abm`) — adoption
+trajectories over a 104-week launch, resampled to the 24 allocation
+cycles, per behavioral seed — for three populations: LLM-calibrated
+priors (primary), synthetic priors, and a high-friction launch. The
+executor side stays audit-anchored (docs/105) and untouched; a control
+cell running E8 with E7's constants reproduces E7's Np=200 table
+exactly, so the bridge provably touches only what it declares.
+
+The behavioral populations bracket E7's operating point from the active
+side: plateau default shares 0.54–0.80 (E7 assumed 0.8) with informed
+shares among actives of 0.74–0.80 under the fold (E7 assumed 0.3) —
+and, independently, the plateau informed-population share of the
+LLM-calibrated population lands at 0.309, on top of the 0.30 E4/E5/E7
+had imposed.
+
+Headline, per-pair V(A2)/V(S′) over 10 behavioral × 20 paper seeds:
+
+| population / variant | Np=20 | Np=40 | Np=200 |
+|---|---|---|---|
+| LLM-calibrated, steady | 2.851 [2.530, 3.171] | 2.450 [2.359, 2.540] | **2.264 [2.227, 2.301]** |
+| LLM-calibrated, launch trajectory | 2.796 [2.480, 3.112] | 2.416 [2.326, 2.506] | 2.226 [2.190, 2.262] |
+| synthetic baseline, steady | 2.915 [2.567, 3.262] | 2.429 [2.334, 2.525] | 2.234 [2.201, 2.268] |
+| high-friction launch, trajectory | 2.863 [2.436, 3.290] | 2.370 [2.283, 2.457] | 2.177 [2.144, 2.209] |
+
+**Prediction accounting.** P1 held: the scale headline lands at 2.264
+[2.227, 2.301], inside the declared [1.9, 2.8] band and marginally above
+E7's imposed-participation 2.224 — richer informed participation
+improves distributed selection while the calibrated status quo gains
+nothing. P2 held strongly: running the actual launch trajectory (adoption
+starting near zero) costs 1.7% of the steady-state ratio at scale
+(predicted tolerance: 25%) — the default layer anchors the early thin
+cycles by construction, which is docs/101's design claim expressed as a
+number. P3 held: the most passive population (high friction, 80%
+default) keeps the ratio above 2.1 at every scale. P4 (audit) exact.
+
+**Reading.** The manuscript's headline is not an artifact of assumed
+participation: under three behaviorally generated populations — including
+launch dynamics and an adoption-hostile regime — the full architecture
+delivers 2.15–2.9× the calibrated status quo's verified value per unit
+of budget, and the E7 value sits inside every behavioral band. Municipal
+scales inherit E7's caveat unchanged: the per-pair ratios against the
+scaled-K planner are inflated by its small-scale blindness, and the
+honest municipal comparator remains E7s's full-coverage planner.
+Participation quantities carry llm-elicited synthetic priors, not human
+data; signal honesty remains assumed on both sides of the bridge
+(docs/87).
+
 ## Implications for the architecture
 
 1. The funding-target closure rule earns its place as an
