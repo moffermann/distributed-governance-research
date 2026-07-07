@@ -453,6 +453,8 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION|109 - The Adoption Layer, the Thesis Boundary, and A040 Resolution v0]]
 - [[../docs/110_OPERATING_REGIME_LADDER_AND_SEMI_OPEN_MODE|110 - Operating Regime Ladder and Semi-Open Mode v0]]
 - [[../docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|111 - Deterrence-Stack Integrity Check and A041 Resolution v0]]
+- [[../docs/112_BUDGET_RELEASE_RULE_AND_A042_RESOLUTION|112 - Budget-Release Rule (Pull Against a WIP Ceiling) and A042 Resolution v0]]
+- [[../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION|113 - Machine-Assisted Verification, the Human Second Instance, and A043 Resolution v0]]
 
 ## Literature
 

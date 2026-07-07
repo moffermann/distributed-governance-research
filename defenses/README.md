@@ -112,6 +112,8 @@ Paired with the manuscript-review round attacks in `attacks/` (five-profile revi
 | Defense | Attack | Title | Classification |
 |---|---|---|---|
 | `D041` | `A041` | Partial Deployment of the Deterrence Stack | Founded (missing deployment-configuration guardrail; the architecture itself is confirmed) — resolved in [[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]] |
+| `D042` | `A042` | The Unregulated Release Valve | Founded (unregulated operational variable; P007 bounded integration) — resolved in [[112_BUDGET_RELEASE_RULE_AND_A042_RESOLUTION|docs/112_BUDGET_RELEASE_RULE_AND_A042_RESOLUTION.md]] |
+| `D043` | `A043` | The Verification Layer Under Machines and Rings | Founded; collusion partially reframes (verified-value advantage holds, leakage is the frontier) — resolved in [[113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION|docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md]] |
 
 ## Use
 
