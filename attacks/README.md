@@ -97,6 +97,14 @@ These briefs originate from the five-profile external-review simulation of the p
 | `A039` | Traceable Allocation Reveals Political Preference: Vote Immunity Without Vote Secrecy | public-law reviewer, manuscript round | resolved in [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]] |
 | `A040` | The Adoption Paradox: The Visibility Gap Punishes Its Natural Adopter | public-sector practitioner reviewer, manuscript round | resolved in [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]] |
 
+## Ablation round (A041)
+
+This brief originates from the satellite ablation program (pre-registered design, `distributed-governance-experiments`, 2026-07-06), which stress-tested the architecture's own mechanisms rather than a reviewer's objection: the deterrence stack proved individually redundant and jointly indispensable, and the corpus supplied no deployment guardrail against defensible cut-by-cut dismantling.
+
+| Attack | Title | Origin | Status |
+|---|---|---|---|
+| `A041` | Partial Deployment of the Deterrence Stack: Individually Dispensable, Jointly Indispensable | satellite ablation program, engine v0.5 | pending author verdict; paired defense `D041` recommends a deployment-configuration resolution (candidate docs/111) |
+
 ## Standard review routine
 
 For each attack:

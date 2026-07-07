@@ -107,6 +107,12 @@ Paired with the manuscript-review round attacks in `attacks/` (five-profile revi
 | `D039` | `A039` | Traceable Allocation Reveals Political Preference | Founded (specification gap) — resolved in [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]] (secrecy-by-default, receipt-free, followed-projects feed) |
 | `D040` | `A040` | The Adoption Paradox | Founded (missing deployment layer, thesis-bounded) — resolved in [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]] |
 
+## Ablation round defense (D041)
+
+| Defense | Attack | Title | Classification |
+|---|---|---|---|
+| `D041` | `A041` | Partial Deployment of the Deterrence Stack | Founded (missing deployment-configuration guardrail; the architecture itself is confirmed) — pending author verdict; recommends the deterrence-stack integrity check as a bounded integration (candidate docs/111) |
+
 ## Use
 
 The next Phase 3 work should review each attack-defense pair. Where a defense marks the risk as unresolved or materially founded, the project should either create a formal resolution document, update core documents, or preserve the objection as an explicit unresolved limitation.
