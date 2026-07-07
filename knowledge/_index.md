@@ -450,6 +450,7 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|107 - Reputation Informs, Never Excludes, and A038 Resolution v0]]
 - [[../docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|108 - Citizen Allocation Secrecy, the Followed-Projects Feed, and A039 Resolution v0]]
 - [[../docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION|109 - The Adoption Layer, the Thesis Boundary, and A040 Resolution v0]]
+- [[../docs/110_OPERATING_REGIME_LADDER_AND_SEMI_OPEN_MODE|110 - Operating Regime Ladder and Semi-Open Mode v0]]
 
 ## Literature
 
