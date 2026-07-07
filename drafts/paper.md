@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.9 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap. This version consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance.**
+**Working paper — v1.10 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap. This version consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
@@ -444,9 +444,10 @@ margin in its operating configuration, recomputed on every term change, with
 term reductions classified as material rule changes (docs/111). The same
 slack, kept intact, buys an unexpected dividend: it absorbs verification-
 instrument error — in the companion panel of five real model families, even
-the worst measured machine verifier (21.7% false-pass on judgment-requiring
-fraud) produced leakage indistinguishable from pure-human verification,
-because the cascade removes the attempts upstream.
+a machine verifier passing ~20% of judgment-requiring fraud produced
+leakage indistinguishable from pure-human verification, because the cascade
+removes the attempts upstream — provided the adversary is not colluding
+across the verification layers (Offermann 2026b, docs/113).
 
 **Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes
 incentive compatibility at rate *p* but lowers honest executors' payoff at
@@ -1009,17 +1010,26 @@ sampled re-verification with a published floor, seeded known-answer
 controls as the calibration and drift-detection instrument, auditing the
 verifier rather than competing with it — so that the machine's error rate
 remains measured and the human control profession remains funded from the
-control budget it relieves. Measured on a five-family panel of real models,
-the binding design problem is specificity, not fraud detection — operating
-points are steerable by instruction and, most cheaply, by evidence
-richness: evidence contracts that include objective comparison references
-(market benchmarks, duration bands, thresholds) turn strict verifiers'
-paranoia into judgment. And the strongest single control instrument
-measured is *contraposed citizen evidence* — independent evidence
-producers with interests opposed to the executor, validated at ingestion,
-whose mere anticipated existence collapses diversion attempts — keeping
-the watching distributed in the citizenry even as routine verification
-labor shrinks by more than half (Offermann 2026b).
+control budget it relieves. Measured on a five-family panel of real models
+(Offermann 2026b), frontier models converge on good specificity and fraud
+detection on document-legible evidence while small local models are weaker,
+and evidence contracts that include objective comparison references (market
+benchmarks, duration bands, thresholds) let a strict verifier judge rather
+than guess. The machine layer reaches only document-legible, delivery-phase
+fraud — physical quality-below-spec and pre-contract theft remain fully
+human, so provenance attestation is tamper-evidence at capture, not
+court-grade proof, and admissibility still needs custody, contradiction,
+and expert testimony. Contraposed citizen evidence — independent producers
+with interests opposed to the executor, whose anticipated existence deters
+diversion — keeps the watching distributed even as routine
+document-verification labor shrinks; but its strength equals the
+*independence* of the contributor layer, and a colluding ring that captures
+or silences it erases the effect. Cross-layer collusion is in fact the one
+adversary that bypasses the per-milestone deterrence and moves leakage by an
+order of magnitude (while the delivered-value advantage survives), so
+collusion resistance — verified beneficial ownership, contributor
+Sybil-resistance, and decentralization of the assigner and the audit-budget
+floor — is a first-class requirement ([[113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION|docs/113]]), not a residual caution.
 
 ## 10. Conclusion
 

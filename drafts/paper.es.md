@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.9 (julio de 2026). Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.10 (julio de 2026). Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
-*Traducción al español del working paper v1.9 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.10 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI (de concepto, siempre resuelve a la última versión): 10.5281/zenodo.21193846.*
 
@@ -476,10 +476,11 @@ operativa, recomputado ante cada cambio de término, con las reducciones de
 términos clasificadas como cambios de regla materiales (docs/111). La misma
 holgura, mantenida intacta, compra un dividendo inesperado: absorbe el error del
 instrumento de verificación — en el panel complementario de cinco familias
-reales de modelos, incluso el peor verificador máquina medido (21.7% de
-falsos-pases sobre fraude que exige juicio) produjo una fuga indistinguible de
-la verificación humana pura, porque la cascada elimina los intentos aguas
-arriba.
+reales de modelos, incluso un verificador máquina que deja pasar ~20% del
+fraude que exige juicio produjo una fuga indistinguible de la verificación
+humana pura, porque la cascada elimina los intentos aguas arriba — siempre que
+el adversario no coluda a través de las capas de verificación (Offermann 2026b,
+docs/113).
 
 **Proposición 3 (compromiso entre participación y disuasión).** Elevar *γ*
 relaja la compatibilidad de incentivos a tasa *p* pero reduce el pago de los
@@ -1066,18 +1067,27 @@ respuesta conocida como instrumento de calibración y detección de deriva,
 auditando al verificador en vez de competir con él— de modo que la tasa de
 error de la máquina permanece medida y la profesión humana de control sigue
 financiada desde el presupuesto de control que ella alivia. Medido sobre un
-panel de cinco familias reales de modelos, el problema de diseño vinculante es
-la especificidad, no la detección de fraude —los puntos de operación son
-dirigibles por instrucción y, más barato aún, por riqueza de la evidencia: los
-contratos de evidencia que incluyen referencias objetivas de comparación
-(precios de mercado, bandas de duración, umbrales) convierten la paranoia de
-los verificadores estrictos en juicio. Y el instrumento de control individual
-más potente medido es la *evidencia ciudadana contrapuesta* —productores de
-evidencia independientes con intereses opuestos al ejecutor, validados al
-ingreso, cuya mera existencia anticipada colapsa los intentos de desvío—
-manteniendo la vigilancia distribuida en la ciudadanía incluso cuando el
-trabajo rutinario de verificación se reduce a más de la mitad (Offermann
-2026b).
+panel de cinco familias reales de modelos (Offermann 2026b), los modelos
+frontera convergen en buena especificidad y detección de fraude sobre
+evidencia document-legible, mientras los modelos locales pequeños son más
+débiles, y los contratos de evidencia que incluyen referencias objetivas de
+comparación (precios de mercado, bandas de duración, umbrales) permiten al
+verificador estricto juzgar en vez de adivinar. La capa máquina alcanza solo
+el fraude document-legible de la fase de entrega —la calidad-bajo-especificación
+física y el robo pre-contrato quedan enteramente en manos humanas, de modo que
+la atestación de procedencia es evidencia-de-manipulación en la captura, no
+prueba court-grade, y la admisibilidad aún requiere custodia, contradicción y
+peritaje. La evidencia ciudadana contrapuesta —productores independientes con
+intereses opuestos al ejecutor, cuya existencia anticipada disuade el desvío—
+mantiene la vigilancia distribuida incluso cuando el trabajo rutinario de
+verificación documental se reduce; pero su fuerza equivale a la *independencia*
+de la capa de contribuyentes, y un anillo colusivo que la capture o silencie
+borra el efecto. La colusión cross-layer es, de hecho, el único adversario que
+sortea la disuasión por-hito y mueve la fuga un orden de magnitud (mientras la
+ventaja de valor entregado sobrevive), así que la resistencia a la colusión
+—propiedad efectiva verificada, resistencia Sybil de los contribuyentes y
+descentralización del asignador y del piso de presupuesto de auditoría— es un
+requisito de primera clase ([[113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION|docs/113]]), no una salvedad residual.
 
 ## 10. Conclusión
 
