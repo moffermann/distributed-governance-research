@@ -292,3 +292,7 @@ These risks do not defeat distributed fiscalization. They require proportional s
 ## Status
 
 Aligned Core v0 oversight hypothesis for distributed but protocol-selected fiscalization, Control Subprojects, evidence production, responsible fiscalization, secondary fiscalization caps, anti-capture safeguards, citizen-facing simplicity, and role-based fiscalizer accountability.
+
+## Evidence note (2026-07-07): the ecosystem migrates rather than survives as-is
+
+The satellite F program (doi:10.5281/zenodo.21246089) measured machine verification directly and forced this hypothesis''s honest revision, recorded in [[verification-throughput-design|knowledge/open-questions/verification-throughput-design.md]] ("Minimal human fiscalization and the H016 revision"): the paid routine-verification market this hypothesis imagined does not survive near-zero-cost machine verification, but the distributed-fiscalization vision migrates — many citizens watching through contraposed evidence (the strongest control instrument measured), plus a small, anti-capture-designed professional audit corps operating seeded controls and second-instance review. The ecosystem''s distribution of power survives; its labor composition changes.

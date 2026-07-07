@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.8 (julio de 2026). Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.9 (julio de 2026). Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
-*Traducción al español del working paper v1.8 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.9 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI: 10.5281/zenodo.21228492.*
 
@@ -462,6 +462,24 @@ pobre— el mecanismo debe compensar con adelantos más pequeños, mayor
 recuperabilidad, garantías más grandes o ejecutores de mayor reputación. Un único
 porcentaje de garantía global no puede ser óptimo a lo largo de entornos de
 verificación heterogéneos.
+
+Los términos de disuasión de esta condición son complementos, no sustitutos. Un
+programa de ablation pre-registrado sobre los experimentos complementarios
+(Offermann 2026b) midió la consecuencia: en el punto de operación diseñado la
+desigualdad se sostiene con holgura, de modo que quitar cualquier término
+individual cuesta casi nada — y un despliegue negociado concesión defendible por
+concesión puede cruzar el umbral de forma invisible, terminando por debajo del
+status quo que reemplazó (0.87× de valor verificado con la calidad de selección
+intacta) mientras luce plenamente instrumentado. El corpus exige por ello que
+cada scope publique su margen de la desigualdad de disuasión en su configuración
+operativa, recomputado ante cada cambio de término, con las reducciones de
+términos clasificadas como cambios de regla materiales (docs/111). La misma
+holgura, mantenida intacta, compra un dividendo inesperado: absorbe el error del
+instrumento de verificación — en el panel complementario de cinco familias
+reales de modelos, incluso el peor verificador máquina medido (21.7% de
+falsos-pases sobre fraude que exige juicio) produjo una fuga indistinguible de
+la verificación humana pura, porque la cascada elimina los intentos aguas
+arriba.
 
 **Proposición 3 (compromiso entre participación y disuasión).** Elevar *γ*
 relaja la compatibilidad de incentivos a tasa *p* pero reduce el pago de los
@@ -1015,6 +1033,52 @@ de salida es honesta en ambas direcciones: un piloto cuyos indicadores se
 estancan bajo el ahogamiento del establecido documenta ese hecho públicamente, lo
 cual es en sí mismo información que el sistema actual nunca produce.
 
+La transición entre regímenes está ella misma medida. Los experimentos
+complementarios (Offermann 2026b) cuantifican el régimen semi-abierto de la
+escalera de regímenes operativos (docs/110) —un envelope acotado mandatado que
+corre en piloto automático de protocolo junto al presupuesto tradicional de la
+autoridad— como una mezcla fiscal: sobre un piso de granularidad de cartera de
+aproximadamente diez por ciento, el valor verificado mezclado sube de forma
+monótona y casi lineal con la cuota del envelope, desde el punto de equilibrio
+cerca del ocho a diez por ciento, pasando por 1.5× a la mitad del presupuesto,
+hasta el 2.2× de la arquitectura completa al cien por ciento. La transición
+desde el status quo hacia el régimen abierto es una perilla, no un salto: la
+adopción puede proceder por incrementos, y cada incremento paga.
+
+Los mismos experimentos midieron una variable que este corpus había dejado sin
+regular: *cuándo* libera la autoridad el presupuesto hacia la maquinaria de
+asignación. La regla de despliegue resultante: medir la liberación contra un
+techo de obra-en-proceso calibrado al throughput y tiempo de ciclo de la
+tubería de entrega-y-verificación —nunca contra el calendario. La liberación
+por calendario congela meses de presupuesto en escrow y satura la verificación;
+y cuando la capacidad de verificación es escasa, ninguna política de liberación
+compensa —la capacidad de verificación es el techo de la tubería antes que su
+instrumento anti-fraude. La regla es condicional a un instrumento de arrastre
+plurianual (el envelope semi-abierto es precisamente tal vehículo); bajo
+anualidad presupuestaria estricta degenera a medición intra-anual.
+
+Finalmente, la premisa tecnológica que reduce los costos de participación del
+lado ciudadano (el tutor de IA) aplica simétricamente al lado del control. La
+verificación por máquina de las clases de evidencia protocolizables multiplica
+la capacidad de fiscalización, con humanos como segunda instancia permanente
+—re-verificación muestreada con un piso publicado, controles sembrados de
+respuesta conocida como instrumento de calibración y detección de deriva,
+auditando al verificador en vez de competir con él— de modo que la tasa de
+error de la máquina permanece medida y la profesión humana de control sigue
+financiada desde el presupuesto de control que ella alivia. Medido sobre un
+panel de cinco familias reales de modelos, el problema de diseño vinculante es
+la especificidad, no la detección de fraude —los puntos de operación son
+dirigibles por instrucción y, más barato aún, por riqueza de la evidencia: los
+contratos de evidencia que incluyen referencias objetivas de comparación
+(precios de mercado, bandas de duración, umbrales) convierten la paranoia de
+los verificadores estrictos en juicio. Y el instrumento de control individual
+más potente medido es la *evidencia ciudadana contrapuesta* —productores de
+evidencia independientes con intereses opuestos al ejecutor, validados al
+ingreso, cuya mera existencia anticipada colapsa los intentos de desvío—
+manteniendo la vigilancia distribuida en la ciudadanía incluso cuando el
+trabajo rutinario de verificación se reduce a más de la mitad (Offermann
+2026b).
+
 ## 10. Conclusión
 
 Los Estados no recaudan impuestos para asignar presupuestos; asignan
@@ -1123,6 +1187,7 @@ disciplina de ingeniería antes que como una ideológica.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Oates, W. (1972). *Fiscal Federalism*. Harcourt Brace Jovanovich.
+- Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, doi:10.5281/zenodo.21246089.
 - Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).

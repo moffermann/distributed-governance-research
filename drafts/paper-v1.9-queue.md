@@ -1,6 +1,8 @@
-# Paper v1.9 Change Queue
+# Paper v1.9 Change Queue — APPLIED
 
-## Purpose and standing author decision (2026-07-06)
+**Status (2026-07-07): applied in v1.9 by author decision** ("registremos todo en el paper maestro… vamos consolidando"). Q1 (extended with the F-3 cascade-coverage dividend), Q2, Q5, and Q6 (extended with the measured panel, evidence-richness, and contraposition) landed in both language versions citing the satellite DOI (10.5281/zenodo.21246089); Q3 satisfied via the docs/110 vocabulary used in the new §9 text; Q4 (title rename) remains venue-gated by its own terms. The former zero-growth constraint was replaced by the consolidation strategy; net growth ≈ 2 pages.
+
+## Original purpose and standing author decision (2026-07-06, superseded)
 
 This file holds manuscript changes that are **drafted and ready but deliberately not applied**. The author's standing decision: the paper must not keep growing — the queued items add robustness, not thesis value, and the strategy under evaluation is to produce further satellite papers that *absorb* content so the master can *cite* instead of contain, shrinking rather than lengthening.
 

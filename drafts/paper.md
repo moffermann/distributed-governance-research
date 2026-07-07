@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.8 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap.**
+**Working paper — v1.9 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap. This version consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI: 10.5281/zenodo.21228492.*
 
@@ -431,6 +431,22 @@ must compensate with smaller advances, more recoverability, larger
 guarantees, or higher-reputation executors. A single global guarantee
 percentage cannot be optimal across heterogeneous verification
 environments.
+
+The deterrence terms of this condition are complements, not substitutes. A
+pre-registered ablation on the companion experiments (Offermann 2026b)
+measured the consequence: at the designed operating point the inequality
+holds with slack, so removing any single term costs almost nothing — and a
+deployment negotiated one defensible concession at a time can cross the
+threshold invisibly, ending below the status quo it replaced (0.87× verified
+value with selection quality intact) while looking fully instrumented. The
+corpus therefore requires every scope to publish its deterrence-inequality
+margin in its operating configuration, recomputed on every term change, with
+term reductions classified as material rule changes (docs/111). The same
+slack, kept intact, buys an unexpected dividend: it absorbs verification-
+instrument error — in the companion panel of five real model families, even
+the worst measured machine verifier (21.7% false-pass on judgment-requiring
+fraud) produced leakage indistinguishable from pure-human verification,
+because the cascade removes the attempts upstream.
 
 **Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes
 incentive compatibility at rate *p* but lowers honest executors' payoff at
@@ -962,6 +978,49 @@ in both directions: a pilot whose indicators stagnate under incumbent
 throttling documents that fact publicly, which is itself information the
 current system never yields.
 
+The transition between regimes is itself measured. The companion
+experiments (Offermann 2026b) quantify the semi-open regime of the
+operating-regime ladder (docs/110) — a bounded mandated envelope running on
+protocol autopilot beside the authority's traditional budget — as a fiscal
+blend: above a portfolio-granularity floor of roughly ten percent, blended
+verified value rises monotonically and near-linearly with the envelope
+share, from break-even near eight to ten percent through 1.5× at half the
+budget to the full architecture's 2.2× at one hundred percent. The
+transition from the status quo toward the open regime is a dial, not a
+leap: adoption can proceed in increments, and every increment pays.
+
+The same experiments measured a variable this corpus had left unregulated:
+*when* the authority releases budget into the allocation machinery. The
+resulting deployment rule: meter release against a work-in-progress ceiling
+calibrated to the delivery-and-verification pipeline's throughput and cycle
+time — never against the calendar. Calendar release freezes months of
+budget in escrow and saturates verification; and when verification capacity
+is scarce, no release policy compensates — verification capacity is the
+pipeline's ceiling before it is the anti-fraud instrument. The rule is
+conditional on a carryforward instrument (the semi-open envelope is
+precisely such a vehicle); under strict budget annuality it degenerates to
+within-year metering.
+
+Finally, the technological premise that lowers participation costs on the
+citizen side (the AI tutor) applies symmetrically to the control side.
+Machine verification of protocolizable evidence classes multiplies
+fiscalization capacity, with humans as the permanent second instance —
+sampled re-verification with a published floor, seeded known-answer
+controls as the calibration and drift-detection instrument, auditing the
+verifier rather than competing with it — so that the machine's error rate
+remains measured and the human control profession remains funded from the
+control budget it relieves. Measured on a five-family panel of real models,
+the binding design problem is specificity, not fraud detection — operating
+points are steerable by instruction and, most cheaply, by evidence
+richness: evidence contracts that include objective comparison references
+(market benchmarks, duration bands, thresholds) turn strict verifiers'
+paranoia into judgment. And the strongest single control instrument
+measured is *contraposed citizen evidence* — independent evidence
+producers with interests opposed to the executor, validated at ingestion,
+whose mere anticipated existence collapses diversion attempts — keeping
+the watching distributed in the citizenry even as routine verification
+labor shrinks by more than half (Offermann 2026b).
+
 ## 10. Conclusion
 
 States do not collect taxes in order to allocate budgets; they allocate
@@ -1070,6 +1129,7 @@ one.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Oates, W. (1972). *Fiscal Federalism*. Harcourt Brace Jovanovich.
+- Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, doi:10.5281/zenodo.21246089.
 - Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
