@@ -40,6 +40,26 @@ When applied: every item lands in `drafts/paper.md` AND its Spanish mirror, then
 
 **Change:** align mode mentions to the docs/110 canonical vocabulary (tutored regime with mandated agenda / tutored regime with distributed agenda / semi-open regime / open regime) where the current prose says only "closed, tutored, open". Verified 2026-07-06: the paper's *framing* is already correct (centralization attributed to transition modes, not the architecture); this is nomenclature polish only, near-zero growth.
 
+### Q5 — The budget-release rule and the verification ceiling (Experiment E)
+
+**Anchor:** Section 9 (implementation pathway), near the deployment-configuration discussion; pairs with Q1's docs/111 warning.
+
+**Ready text (EN):**
+
+> The companion experiments also measured a variable the corpus had left unregulated: when the authority releases budget into the allocation machinery. The result is a deployment rule: meter release against a work-in-progress ceiling calibrated to the delivery-and-verification pipeline's throughput and cycle time — never against the calendar. Calendar release freezes months of budget in escrow and saturates verification; and when verification capacity is scarce, no release policy compensates — verification capacity is the pipeline's ceiling before it is the anti-fraud instrument.
+
+**Notes:** ~5 lines; compresses to one sentence + citation once the satellite is citable.
+
+### Q6 — AI-assisted verification and the second-instance human layer
+
+**Anchor:** wherever the AI tutor is presented (the citizen-side cost reduction), as its control-side counterpart; alternatively Section 8 future work.
+
+**Ready text (EN):**
+
+> The same technological premise that lowers participation costs on the citizen side applies to the control side: machine verification of protocolizable evidence classes multiplies fiscalization capacity, with humans as the mandatory second instance — sampled re-verification with a published floor, auditing the verifier rather than competing with it — so that the machine's error rate remains measured and the human control profession remains funded from the control budget it relieves.
+
+**Notes:** ~4 lines. The underlying corpus design (verifier-displacement problem, second-instance frontier) lives in the master's verification-throughput note and travels through the pipeline separately; the paper mention stays one breath.
+
 ### Q4 — Standing item: title rename at venue submission
 
 "Adversarial Validation" → "Adversarial Review" in the title, flagged since the v1.7 revision (the body already says "adversarial review as method"). Venue-submission decision.
