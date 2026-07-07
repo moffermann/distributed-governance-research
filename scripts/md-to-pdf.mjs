@@ -40,6 +40,7 @@ const inline = (s) =>
     .replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
 
 const lines = readFileSync(input, "utf8").split(/\r?\n/);
+const inputDir = resolve(input, "..");
 const out = [];
 const headings = []; // {level, text, id} for optional TOC
 let fence = false;
@@ -126,6 +127,15 @@ for (let idx = 0; idx < lines.length; idx++) {
     continue;
   }
   if (/^---+\s*$/.test(raw)) { flushPara(); closeList(); flushTable(); out.push("<hr>"); continue; }
+  // Images: ![alt](relative/or/abs.png) on their own line -> figure with caption.
+  const img = raw.match(/^!\[([^\]]*)\]\(([^)]+)\)\s*$/);
+  if (img) {
+    flushPara(); closeList(); flushTable();
+    const src = img[2].match(/^[a-z]+:\/\//i) ? img[2]
+      : "file:///" + resolve(join(inputDir, img[2])).replace(/\\/g, "/");
+    out.push(`<figure><img src="${src}" alt="${esc(img[1])}"><figcaption>${inline(img[1])}</figcaption></figure>`);
+    continue;
+  }
   const bq = raw.match(/^>\s?(.*)$/);
   if (bq) { flushPara(); closeList(); out.push(`<blockquote><p>${inline(bq[1])}</p></blockquote>`); continue; }
   const ul = raw.match(/^[-*]\s+(.*)$/);
@@ -204,6 +214,9 @@ const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><t
              vertical-align: top; }
   tbody tr:last-child td { border-bottom: 1.1pt solid #222; }
   .xref { font-family: Consolas, monospace; font-size: 0.86em; color: #4a4a4a; }
+  figure { margin: 10pt 0; page-break-inside: avoid; text-align: center; }
+  figure img { max-width: 100%; max-height: 165mm; }
+  figcaption { font-size: 8.6pt; color: #444; margin-top: 3pt; text-align: center; }
   .toc { margin: 10pt 0 4pt; padding: 8pt 12pt; background: #f8f8f6;
          border: 0.5pt solid #ddd; page-break-inside: avoid; }
   .toc-title { font-weight: 700; font-size: 10pt; margin-bottom: 4pt;
