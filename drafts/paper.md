@@ -2,7 +2,7 @@
 
 **Working paper — v1.9 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap. This version consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance.**
 
-*© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI: 10.5281/zenodo.21246169.*
+*© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
 ## Abstract
 

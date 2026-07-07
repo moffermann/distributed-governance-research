@@ -1,0 +1,18 @@
+# Release flow (papers → GitHub release → Zenodo)
+
+Codified 2026-07-07 after the v1.9 cycle, to keep DOIs from going stale inside deposited PDFs.
+
+## The DOI rule
+
+- **Paper headers cite the concept DOI** (10.5281/zenodo.21193846 for the working paper): it never changes and always resolves to the latest deposited version, so a PDF header can never be stale again.
+- **Version DOIs** live where they are knowable: CITATION.cff, the GitHub release notes, and the Zenodo record itself.
+- If an exact version DOI inside the PDF is ever wanted, use **pre-reservation**: create the Zenodo new-version *draft first*, read its pre-reserved DOI (`metadata.prereserve_doi`), render the PDFs citing it, upload, then publish. Order: draft → render → upload → publish.
+
+## The cycle
+
+1. Edit `drafts/paper.md` and mirror in `drafts/paper.es.md` (English is authoritative).
+2. `npm run check-anchors` clean.
+3. Render four outputs with `scripts/md-to-pdf.mjs` (`--lang en|es`, `--toc`, `--html` for the screen-reader edition); rasterize a few pages (PyMuPDF) and inspect them before shipping.
+4. Commit, tag `vX.Y`, `gh release create` with the four renders attached.
+5. Zenodo new version on the deposition in `_backups/zenodo-depid.txt` (token in `_backups/zenodo-token.txt`, never displayed): new-version draft → replace files → bump `version`/`publication_date` → publish → update the depid file.
+6. Sweep the *version* DOI across CITATION.cff/README notes (headers stay on the concept DOI).
