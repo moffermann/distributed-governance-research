@@ -761,8 +761,9 @@ was validated three ways before publication:
 - **Computationally.** A 10,000-agent simulation of realistic citizen
   attention found that funding caps curb concentration but not quality,
   that allocation quality is carried by the informational quality of the
-  weight vector the default layer follows, and that participation decay is
-  survivable exactly where that anchor is strong. A pre-registered fourth
+  project prioritization the passive share follows (the aggregated
+  allocation profiles), and that participation decay is survivable exactly
+  where that prioritization layer is strong. A pre-registered fourth
   experiment then modeled knowledge symmetrically and found that building
   the weight vector from aggregated dispersed citizen signals beats
   fixed-bandwidth central construction at every tested scale — provided an

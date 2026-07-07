@@ -28,9 +28,10 @@ design intuitions into checkable propositions. Second, computational
 evidence: a 10,000-agent simulation of attention-constrained allocation shows
 that funding-target closure works as an anti-concentration device but not a
 quality device, that allocation quality is carried by the informational
-quality of the weight vector the default layer follows rather than by
-citizen attention, and that participation decay is survivable exactly where
-the default layer is strong; a pre-registered fourth experiment that models
+quality of the project prioritization the passive share follows — the
+aggregated allocation profiles — rather than by citizen attention, and
+that participation decay is survivable exactly where that prioritization
+layer is strong; a pre-registered fourth experiment that models
 knowledge symmetrically finds that aggregating dispersed citizen signals
 into that vector outperforms fixed-bandwidth central construction at every
 tested scale — provided an aggregation institution exists and signals are
@@ -176,8 +177,9 @@ our method they are results: each is a named, bounded residual risk.
 
 We analyze the state as a stack of functional layers rather than a single
 institution: (a) rights guarantees and legitimate force; (b) binding
-adjudication; (c) rule-making; (d) macro-fiscal management; (e) planning and
-prioritization; (f) resource allocation to concrete undertakings; (g)
+adjudication; (c) rule-making; (d) macro-fiscal management; (e) macro
+planning and agenda framing; (f) project prioritization and resource
+allocation to concrete undertakings; (g)
 execution and service delivery; (h) evidence production about delivery; and
 (i) evaluation and accountability. The distribution principle is:
 
@@ -377,8 +379,8 @@ legal person answerable to third parties for physical harm.
 **Attention infrastructure.** Citizens act through a layered interface:
 discovery with user-controlled, reason-visible ordering; compact project
 cards; and progressively deeper audit surfaces down to the full trail.
-Non-attending citizens are served by system default allocation rules that
-follow planning-scope priorities, by configurable automatic profiles, and by
+Non-attending citizens are served by configurable automatic allocation
+profiles — or a sensible default profile when none is set — and by
 scoped, revocable delegation with concentration visibility. The architecture
 does not assume attentive citizens; it assumes mostly inattentive ones and
 routes their weight through inspectable intermediation (Lupia and McCubbins
@@ -494,7 +496,8 @@ projects is negligible, so rational ignorance is the equilibrium (Downs
 1957), and the design question is where the *inattentive* majority's weight
 flows: to salience amplified by social proof (Bikhchandani, Hirshleifer and
 Welch 1992; Salganik, Dodds and Watts 2006), or to the architecture's own
-default-rule layer following the declared planning priorities. The model yields three testable
+default layer, whose routing follows the distributed project prioritization
+— the aggregated allocation profiles — not a central plan. The model yields three testable
 predictions — caps tame cascades (P1), defaults anchor quality (P2), decay
 degrades gracefully only with defaults (P3) — evaluated next.
 
@@ -502,7 +505,7 @@ degrades gracefully only with defaults (P3) — evaluated next.
 
 We simulate 10,000 citizens over 24 monthly cycles allocating across a
 standing pool of 40 projects with quality *θ*, salience *s* (measured
-corr(*θ*, *s*) ≈ 0.24), planner need-weights *w* = λ*θ* + (1 − λ)*u* with
+corr(*θ*, *s*) ≈ 0.24), prioritization need-weights *w* = λ*θ* + (1 − λ)*u* with
 mixing weight λ ∈ {0.4, 0.8} — measured corr(*θ*, *w*) ≈ 0.55 and ≈ 0.97
 respectively — and 3× scarcity (only a minority of projects can
 complete). Evaluators (2–10%) fund the best quality they sample; salience
@@ -540,9 +543,9 @@ regime ordering is robust except under very strong social proof, where the
 regimes converge within noise because strong amplification also propagates
 the evaluators' quality signal; magnitudes are parameter-dependent and
 uncalibrated. What survives all variations is the ordering and the
-dominance of the weight vector's informational quality — which quantifies
-the leverage concentrated in whatever constructs the vector governing the
-passively allocated share. Two architectural facts scope that statement
+dominance of the prioritization's informational quality — which quantifies
+the leverage concentrated in whatever constructs the project prioritization
+the passive share follows. Two architectural facts scope that statement
 correctly, and an earlier draft's phrasing ("the architecture's central
 vulnerability... whoever constructs planning scopes holds the allocation's
 quality in their hands") lacked both. First, the default layer is
@@ -557,15 +560,20 @@ transition modes, not of the architecture: operating modes are
 country-configured states, and the designed trajectory is toward open
 construction (Finding 4 measures its in-model viability). What the numbers
 establish is therefore a conditional: the informational quality of the
-vectors governing the passive share is the binding constraint on
-allocation quality, whoever or whatever supplies them — a captured or
-ignorant supplier is the failure mode, a well-informed or well-aggregated
-one is the asset, and randomizing the vector to escape capture would buy
-neutrality at the price of near-random quality for the passive share. The
-agenda-setting discussion (Section 8) is not one limitation among many; by
-these numbers it is the binding constraint — and, unlike in the status
-quo, it is a visible, versioned, pluggable one. Two things E1–E3 cannot say, and an earlier draft
-over-read them to say: the weight vector's origin is unspecified (r is a
+**project prioritization the passive share follows** — the aggregated
+allocation profiles, not a macro planning vector — is the binding
+constraint on allocation quality, whoever or whatever supplies it; a
+captured or ignorant supplier is the failure mode, a well-informed or
+well-aggregated one is the asset, and randomizing that prioritization to
+escape capture would buy neutrality at the price of near-random quality
+for the passive share. The binding constraint is thus the quality of that
+prioritization — and because the architecture's designed trajectory
+distributes its construction (open mode) and keeps it visible, versioned,
+and pluggable, the constraint is met by distribution, not by a central
+agenda. This is distinct from, and should not be conflated with, the
+narrower agenda-setting point of Section 8, which concerns only who frames
+eligibility. Two things E1–E3 cannot say, and an earlier draft
+over-read them to say: the prioritization's origin is unspecified (r is a
 property of the vector, not of a state office), and the modeled crowd
 carries social proof but no knowledge — so these experiments compare
 attention against weight quality, not central against distributed
@@ -834,19 +842,28 @@ future work.
 Stated per the method's own rule — each is a recorded boundary with a named
 residual risk.
 
-**Agenda-setting is centralized in the transition modes, and it matters
-most.** In the closed and tutored operating modes Core v0 specifies for
+**Constructing the eligibility frame is centralized in the transition
+modes.** In the closed and tutored operating modes Core v0 specifies for
 pilots, the implementing authority constructs planning scopes; the
 architecture makes that construction public, versioned, mandate-bearing,
 and contestable through visibility, but in those modes it does not
 distribute it. Constructing the scope means defining the frame — which
 purposes, which budget share, which protected floors, which admissibility
 rules — not designing or ranking projects: project creation and
-prioritization remain distributed even in tutored mode, so agenda power
-is the power to decide what may be funded, never what is funded. Our own simulation shows the weight vector's informational
-quality dominates every other quality margin, and whoever constructs the
-scope exercises the second face of power (Bachrach and Baratz 1962;
-Schattschneider 1960; Lukes 1974) over everything downstream. Three things scope the
+prioritization remain distributed even in tutored mode, so this residual
+agenda power is the power to decide what *may* be funded, never what *is*
+funded. It is important not to misread our own simulation here. What that
+simulation shows dominating every other quality margin is the
+informational quality of the **project prioritization** — the aggregated
+allocation profiles the funded share follows — and that prioritization is
+distributed by design, even in tutored mode; the result is therefore an
+argument *for* distributing construction, not evidence that a central
+agenda governs delivery. The residual centralized power is the narrower
+one: constructing the eligibility frame is itself the second face of power
+(Bachrach and Baratz 1962; Schattschneider 1960; Lukes 1974) — the power
+to keep something off the menu — which the architecture answers, in these
+modes, by making the frame public, versioned, mandate-bearing, and
+contestable rather than by distributing it. Three things scope the
 limitation honestly. It is a property of the transition modes, not of the
 architecture: operating modes are country-configured states, and the
 designed trajectory is open, socially constructed agenda-setting. It is
