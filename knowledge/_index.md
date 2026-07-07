@@ -360,6 +360,7 @@ Recently aligned residual-audit hypotheses:
 - [[open-questions/evidence-producer-evidence-quality-validation|Fulfillment/Control Evidence Quality Validation]]
 - [[open-questions/distributed-roadmap-construction-governance|Distributed Roadmap Construction Governance]]
 - [[open-questions/verification-throughput-design|Verification Throughput Design]]
+- [[open-questions/agenda-setting-study-design|Agenda-Setting Study Design (candidate second manuscript)]]
 - [[objections/README|Objections]]
 
 ## Phase 3 attack queue
