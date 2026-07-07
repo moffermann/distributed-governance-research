@@ -451,6 +451,7 @@ Recently aligned residual-audit hypotheses:
 - [[../docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|108 - Citizen Allocation Secrecy, the Followed-Projects Feed, and A039 Resolution v0]]
 - [[../docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION|109 - The Adoption Layer, the Thesis Boundary, and A040 Resolution v0]]
 - [[../docs/110_OPERATING_REGIME_LADDER_AND_SEMI_OPEN_MODE|110 - Operating Regime Ladder and Semi-Open Mode v0]]
+- [[../docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|111 - Deterrence-Stack Integrity Check and A041 Resolution v0]]
 
 ## Literature
 

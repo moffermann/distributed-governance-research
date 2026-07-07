@@ -111,7 +111,7 @@ Paired with the manuscript-review round attacks in `attacks/` (five-profile revi
 
 | Defense | Attack | Title | Classification |
 |---|---|---|---|
-| `D041` | `A041` | Partial Deployment of the Deterrence Stack | Founded (missing deployment-configuration guardrail; the architecture itself is confirmed) — pending author verdict; recommends the deterrence-stack integrity check as a bounded integration (candidate docs/111) |
+| `D041` | `A041` | Partial Deployment of the Deterrence Stack | Founded (missing deployment-configuration guardrail; the architecture itself is confirmed) — resolved in [[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]] |
 
 ## Use
 

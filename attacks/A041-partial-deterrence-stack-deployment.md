@@ -2,7 +2,7 @@
 
 ## Status
 
-Registered from the satellite ablation program (pre-registered design, engine v0.5, `distributed-governance-experiments`, ablation results of 2026-07-06). Pending paired review and author verdict. Paired defense: [[D041-partial-deterrence-stack-deployment|defenses/D041-partial-deterrence-stack-deployment.md]].
+Reviewed in paired review. Resolved in [[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]] (author verdict 2026-07-06, accepting D041's recommendation). Originated from the satellite ablation program (pre-registered design, engine v0.5, `distributed-governance-experiments`) — the first attack sourced from the program's own stress-testing rather than a reviewer. Paired defense: [[D041-partial-deterrence-stack-deployment|defenses/D041-partial-deterrence-stack-deployment.md]].
 
 ## Description
 
@@ -80,4 +80,4 @@ A national program adopts the architecture as a transfer condition (the A040 man
 
 ## Resolution output
 
-Pending author verdict.
+The accepted resolution ([[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]]) adopted the deterrence-stack integrity check as a P007 bounded integration on existing objects: every scope publishes its deterrence-inequality margin (computed from the configuration's recorded terms against the docs/105 opportunist cost support) at launch and on every term change; deterrence-term reductions are administrative rule changes of the material class under docs/57; a positive margin is a precondition of any semi-open automatic-approval envelope (docs/110); program evaluations stratify by margin compliance; and the complements-not-substitutes warning was propagated to docs/101 with the manuscript's version queued.

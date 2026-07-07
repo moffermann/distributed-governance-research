@@ -655,6 +655,8 @@ Funds are released by milestone, evidence, fiscalization, and disbursement rules
 
 This protection is not just asserted — it is derived. The formal companion note proves the condition under which delivering is more profitable than diverting: the executor's cost of honest delivery must not exceed the detection probability times everything at stake (the unreleased remainder, the recoverable advance, the posted guarantee, and the reputational value of future eligibility). Every disbursement rule in this model — small advances, recoverability, externally held guarantees, retention — is one term of that inequality, and where independent verification is weak the financial terms must tighten to compensate ([[formal-models|research/formal-models.md]], Propositions 1–2).
 
+One warning belongs here rather than in a footnote: these terms are **complements, not substitutes**. At the designed operating point each term looks individually dispensable — the others carry the inequality — but a deployment that concedes them one defensible cut at a time can cross the threshold invisibly and end delivering *less* than the opaque system it replaced. Every scope therefore publishes its deterrence-inequality margin in its operating configuration, recomputed on every term change, and term reductions are material rule changes ([[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]]).
+
 ## 3. Evidence is contextualized
 
 Evidence is linked to a procedural purpose:

@@ -149,7 +149,12 @@ open regime
 Automatic approval that binds public spending is a binding-mode feature: it
 inherits the enabling-norm gate of
 [[106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION.md]]
-(consultative deployments do not need it; binding ones do). The open regime
+(consultative deployments do not need it; binding ones do). A semi-open
+envelope additionally requires a **positive published deterrence-inequality
+margin** in its operating configuration
+([[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]]):
+where approval is automatic, the configuration itself must prove the incentive
+floor holds. The open regime
 additionally remains gated on the open-mode constitutional mechanics (docs/91,
 H058). The allocation act's legal characterization per jurisdiction
 ([[102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION|docs/102_ALLOCATION_ACT_CHARACTERIZATION_AND_A034_RESOLUTION.md]])

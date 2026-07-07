@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Paired review draft. No accepted resolution yet; pending author verdict.
+Paired review completed. Accepted resolution: [[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]] (author verdict 2026-07-06), adopting this defense's package in full: the integrity margin on the scope configuration, docs/57 material classification of term reductions, the docs/101 complementarity warning, the docs/110 semi-open precondition, and margin-stratified program evaluation. Manuscript warning queued for the next version.
 
 ## Attack reference
 

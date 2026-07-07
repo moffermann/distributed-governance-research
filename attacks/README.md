@@ -103,7 +103,7 @@ This brief originates from the satellite ablation program (pre-registered design
 
 | Attack | Title | Origin | Status |
 |---|---|---|---|
-| `A041` | Partial Deployment of the Deterrence Stack: Individually Dispensable, Jointly Indispensable | satellite ablation program, engine v0.5 | pending author verdict; paired defense `D041` recommends a deployment-configuration resolution (candidate docs/111) |
+| `A041` | Partial Deployment of the Deterrence Stack: Individually Dispensable, Jointly Indispensable | satellite ablation program, engine v0.5 | resolved in [[111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION|docs/111_DETERRENCE_STACK_INTEGRITY_AND_A041_RESOLUTION.md]] |
 
 ## Standard review routine
 
