@@ -9,13 +9,10 @@
 ## Resumen
 
 Los Estados no recaudan impuestos para redistribuir, sino para mejorar la
-calidad de vida de las personas. Quitarle al rico no mejora al más vulnerable;
-lo mejora el valor efectivo que recibe. Si la obra no se construye, o se
-construye mal, la redistribución no ayudó a nadie: el **balde agujereado de
-Okun (1975)** cargó agua que nunca llegó. De ahí la pregunta de este paper:
-**¿puede la tecnología de hoy rediseñar la arquitectura del Estado para
-aumentar el valor efectivo que llega a la gente por cada peso público
-gastado?**
+calidad de vida de las personas: lo que importa es el valor efectivo que llega
+por cada peso público gastado. De ahí la pregunta de este paper: **¿puede la
+tecnología de hoy rediseñar la arquitectura del Estado para aumentar ese valor
+entregado?**
 
 La respuesta no pasa por *más, o menos Estado*, sino por su **arquitectura**:
 descomponer la actividad estatal centralizada en capas, distribuir algunas
@@ -32,7 +29,7 @@ están separados; el dinero se libera directamente desde tesorería al ejecutor,
 por tramos, contra hitos verificados y garantías exigibles; y cada acto
 relevante deja un rastro público y auditable.
 
-El modelo identifica tres efectos.
+El modelo identifica dos efectos que se multiplican.
 
 **(1) Elegir distribuidamente entrega más valor real.** La asignación
 distribuida —elección directa, microdelegación o reglas personalizadas—
@@ -47,15 +44,12 @@ pueden chequear —cuándo entregar domina a desviar, cuándo la fiscalización
 resiste la colusión, y por qué una verificación débil debe pagarse en dinero—.
 A igualdad de proyectos, esta capa añade **~43% (1.4×)** de valor.
 
-**(3) Separar las dos capas da robustez frente a una mala planificación
-central.** Distinguir qué *tipos* de proyecto son elegibles (planificación
-macro) de a qué *proyectos concretos* va la plata (reglas de asignación)
-protege el valor cuando la autoridad se equivoca: lo distribuido reorienta el
-gasto hacia el valor mientras lo central queda atrapado.
-
-**Combinados:** los dos primeros efectos fijan el **piso** —**~2.2×** el valor
-por peso de un status quo calibrado con datos de contralorías de nueve
-países—; sumar la robustez lleva la ventaja hasta el **techo, ~5×**.
+**Combinados,** los dos efectos se multiplican: la arquitectura completa
+entrega **~2.2×** el valor por peso de un status quo calibrado con datos de
+contralorías de nueve países. La arquitectura además separa la planificación
+macro de la asignación concreta; un estudio complementario mide el efecto de
+esa separación: robustez frente a una mala planificación central, con una
+ventaja que crece hasta **~5×**.
 
 La arquitectura fue sometida a **crítica adversarial sistemática**: cuarenta
 ataques, cada uno con su defensa y una resolución que *o* agrega un mecanismo
@@ -67,98 +61,119 @@ límites se declaran a lo largo del texto.
 
 ## 1. Introducción
 
-Los Estados modernos concentran tres cosas que no necesitan estar concentradas
-juntas: la autoridad para decidir en qué se gasta el dinero público, la
-capacidad operativa para ejecutar ese gasto, y la autoridad epistémica para
-certificar que el gasto logró algo. Allí donde las tres residen dentro de una
-única jerarquía institucional, la rendición de cuentas depende de que la
-jerarquía se audite a sí misma (Bovens 2007). Las consecuencias predecibles —asignación
-discrecional, cumplimiento autorreportado, captura por intereses concentrados y
-desconfianza ciudadana— están documentadas en toda tradición de la economía
-política, desde la captura regulatoria (Stigler 1971; Laffont and Tirole 1991)
-hasta el cumplimiento ritualizado de la sociedad de la auditoría (Power 1997) y
-las coaliciones distributivas que se atrincheran en polities estables (Olson
-1982).
+Los Estados modernos concentran tres cosas que no necesitan estar juntas: la
+autoridad para decidir en qué se gasta el dinero público, la capacidad para
+ejecutar ese gasto, y el poder de certificar que sirvió de algo. Cuando las
+tres viven dentro de una misma jerarquía, la rendición de cuentas se reduce a
+que ella misma se audite (Bovens 2007). Las consecuencias son predecibles y
+están documentadas en toda la economía política —asignación discrecional,
+cumplimiento autorreportado, captura por intereses concentrados y desconfianza
+ciudadana—: desde la captura regulatoria (Stigler 1971; Laffont y Tirole 1991)
+hasta la auditoría vuelta ritual (Power 1997) y las coaliciones distributivas
+que se atrincheran en los sistemas políticos estables (Olson 1982).
+
+Estas fallas no son abstractas: son la razón por la que el valor no llega a
+las personas para quienes se recaudó. Los Estados no cobran impuestos para
+redistribuir, sino para mejorar la vida de la gente —y quitarle al rico no
+mejora al más vulnerable; lo mejora el valor efectivo que recibe—. Si la obra
+no se construye, o se construye mal, la redistribución no ayudó a nadie: el
+balde agujereado de Okun (1975) cargó agua que nunca llegó. El objetivo,
+entonces, no es cuánto se gasta, sino cuánto valor efectivo llega por cada
+peso público gastado.
 
 El debate estándar responde con cantidad: encoger el Estado o hacerlo crecer.
-Ambas posturas tratan al Estado como un objeto único. Este artículo sostiene que
-la pregunta tratable es arquitectónica, no volumétrica: *¿qué capas funcionales
-de la actividad estatal aún requieren monopolio central, y cuáles pueden ahora
-distribuirse —con mejor rendición de cuentas que el statu quo— dado que la
-coordinación digital ha colapsado los costos de transacción que antaño
-justificaban la jerarquía?* (Coase 1937; Hayek 1945; Williamson 1985) —un linaje
-de conocimiento-y-coordinación que corre desde el debate del cálculo (Mises 1920)
-pasando por el conocimiento disperso de Hayek hasta su tratamiento institucional
-en Sowell (1980): las decisiones deben residir donde está el conocimiento,
-disciplinadas por la retroalimentación antes que por la autoridad articulada.
-Las garantías de derechos, la fuerza legítima, la estabilidad macrofiscal y la
-adjudicación exigible plausiblemente permanecen centrales. El procesamiento de
-información, la asignación de recursos a nivel de proyecto, la ejecución de
-servicios, la producción de evidencia y la auditoría plausiblemente no.
+Ambas posturas lo tratan como un objeto único. Este artículo sostiene que la
+pregunta tratable es arquitectónica, no de tamaño: *¿qué capas de la actividad
+estatal aún requieren monopolio central, y cuáles pueden hoy distribuirse —con
+mejor rendición de cuentas que el statu quo— ahora que la coordinación digital
+ha desplomado los costos de transacción que antes justificaban la jerarquía?*
+(Coase 1937; Hayek 1945; Williamson 1985). Es una pregunta con linaje —dónde
+deben residir las decisiones cuando el conocimiento está disperso—, del debate
+del cálculo económico (Mises 1920) al conocimiento disperso de Hayek y su
+tratamiento institucional en Sowell (1980): las decisiones deben vivir donde
+está el conocimiento, disciplinadas por la retroalimentación más que por la
+orden jerárquica. Las garantías de derechos, la fuerza legítima, la
+estabilidad macrofiscal y la adjudicación exigible plausiblemente siguen
+siendo centrales; el procesamiento de información, la asignación de recursos a
+nivel de proyecto, la ejecución de servicios, la producción de evidencia y la
+auditoría, plausiblemente no.
 
-Hacemos el argumento concreto antes que programático. Core v0 es una
-arquitectura de referencia completa para distribuir una capa acotada —la
-asignación, ejecución y verificación de una cuota legalmente mandatada de un
-presupuesto público existente— desarrollada hasta el nivel de objetos nombrados,
-máquinas de estado y reglas de decisión (un corpus de más de cien documentos de
-arquitectura, cincuenta y nueve hipótesis diseñadas y cuarenta revisiones
-adversariales, todo público). La ciudadanía recibe capacidad de asignación
-periódica y no retirable en una billetera cívica (civic wallet); los proyectos
-atraviesan un ciclo de vida de cierre paralelo en el que financiamiento,
-fiscalización independiente, compromisos de evidencia y confirmación de
-beneficiarios deben cerrar todos antes de la ejecución; el ejecutor nunca
-selecciona ni paga a sus propios auditores —eliminando el costo de agencia
-del cumplimiento auto-supervisado (Jensen and Meckling 1976)—; el dinero se mueve solo sobre hitos
-revisados con retención y garantías materializadas externamente; y toda
-transición de estado de consecuencia queda registrada en un rastro legible por
-la ciudadanía y auditable por expertos.
+Hacemos el argumento como un diseño concreto, no como un manifiesto. Core v0
+es una arquitectura de referencia completa para distribuir una capa acotada
+—la asignación, ejecución y verificación de una cuota, con mandato legal, de
+un presupuesto público existente—, desarrollada hasta el nivel de objetos
+nombrados, máquinas de estado y reglas de decisión (un corpus de más de cien
+documentos de arquitectura, cincuenta y nueve hipótesis diseñadas y cuarenta
+revisiones adversariales, todo público). La ciudadanía recibe una capacidad de
+asignación periódica y no retirable en una billetera cívica (civic wallet);
+los proyectos atraviesan un ciclo de vida de cierre paralelo, en el que
+financiamiento, fiscalización independiente, compromisos de evidencia y
+confirmación de beneficiarios deben cerrar todos antes de la ejecución; el
+ejecutor nunca elige ni paga a sus propios auditores —lo que elimina el costo
+de agencia del cumplimiento auto-supervisado (Jensen y Meckling 1976)—; el
+dinero solo se mueve sobre hitos revisados, con retención y garantías
+materializadas externamente; y toda transición de estado relevante queda
+registrada en un rastro legible por la ciudadanía y auditable por expertos.
 
-La razón para tomar en serio un ejercicio de diseño como investigación es lo que
-se le hizo. Nuestras contribuciones son:
+Lo que vuelve investigación a un ejercicio de diseño es el rigor al que se lo
+somete, bajo una disciplina transversal: cada afirmación se evalúa contra cómo
+la institución actual resuelve el mismo problema, no contra un ideal,
+bloqueando la falacia del nirvana en ambas direcciones (Sección 2). Nuestras
+contribuciones son:
 
-1. **Un principio de distribución funcional con una disciplina comparativa
-   explícita.** Las críticas a la arquitectura deben evaluarse contra cómo el
-   modelo institucional actual resuelve el mismo problema, no contra un ideal
-   (Sección 2). Esto bloquea la falacia del nirvana en ambas direcciones.
+1. **La distribución de la capa de asignación.** El aporte central de diseño:
+   aplicar el principio de distribución funcional a la asignación de recursos
+   —los ciudadanos dirigen su cuota directamente, la delegan, o la gobiernan
+   con reglas personales—, instanciado como una arquitectura de referencia
+   completa (Core v0).
 
-2. **Formalización de los mecanismos centrales** (Sección 5). Modelamos el
+2. **Formalización de los mecanismos de incentivos** (Sección 5). Modelamos el
    desembolso supeditado a hitos como un juego principal-agente y derivamos su
    condición de compatibilidad de incentivos; modelamos el soborno de
-   fiscalizadores asignados por protocolo y derivamos una condición de a prueba
+   fiscalizadores asignados por protocolo y derivamos una condición a prueba
    de colusión bajo k-corroboración; y demostramos dos estáticas comparativas
    relevantes para el diseño: la verificación débil debe compensarse con
-   términos financieros, y las garantías son contraproducentes cuando la calidad
-   de detección cae por debajo del costo del capital.
+   términos financieros, y las garantías son contraproducentes cuando la
+   calidad de detección cae por debajo del costo del capital. Hitos,
+   retención, garantías y memoria reputacional forman la pila de disuasión del
+   diseño.
 
 3. **Evidencia computacional** (Sección 6). Una simulación basada en agentes,
    sin dependencias y con semilla fija, de 10.000 ciudadanos pone a prueba los
-   supuestos conductuales de la arquitectura bajo ignorancia racional, atención
-   de descubrimiento limitada y cascadas de prueba social. Los resultados
-   disciplinan el diseño: apoyan algunas afirmaciones, afilan otras, cuantifican
-   el apalancamiento concentrado en la capa de construcción de ámbitos, miden
-   una construcción abierta viable de ella, y llevan la comparación de extremo a
-   extremo —desde la asignación hasta el valor social entregado por unidad de
-   presupuesto, el criterio que la redistribución existe para satisfacer. El
-   resultado principal, en el modelo: la entrega verificada y la priorización
-   social se multiplican en lugar de sumarse, y la arquitectura completa entrega
-   2.22× una línea base del statu quo calibrada a partir de los hallazgos
-   publicados de instituciones de auditoría (1.4–1.6× a escala de piloto
-   municipal), mientras que incluso ese statu quo calibrado sobreestima su
-   entrega real en diecinueve puntos porcentuales.
+   supuestos conductuales de la arquitectura bajo ignorancia racional,
+   atención limitada al descubrimiento y cascadas de prueba social. Los
+   resultados disciplinan el diseño: apoyan algunas afirmaciones, afilan
+   otras, cuantifican el apalancamiento concentrado en la capa de construcción
+   de ámbitos, miden una construcción abierta viable de ella, y llevan la
+   comparación de extremo a extremo: desde la asignación hasta el valor social
+   entregado por unidad de presupuesto —el criterio que la redistribución
+   existe para satisfacer. El resultado principal, en el modelo: la entrega
+   verificada y la priorización social se multiplican en lugar de sumarse, y
+   la arquitectura completa entrega 2.22× una línea base del statu quo
+   calibrada a partir de los hallazgos publicados de instituciones de
+   auditoría (1.4–1.6× a escala de piloto municipal), mientras que incluso ese
+   statu quo calibrado sobreestima su entrega real en diecinueve puntos
+   porcentuales.
 
 4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
-   atacada sistemáticamente —cuarenta resúmenes de ataque anclados en las
-   literaturas de ciencia política, economía y derecho, cada uno respondido por
-   una defensa emparejada y resuelto bajo una regla explícita de
+   atacada sistemáticamente: cuarenta resúmenes de ataque anclados en las
+   literaturas de ciencia política, economía y derecho, cada uno respondido
+   por una defensa emparejada y resuelto bajo una regla explícita de
    integrar-o-acotar, con cada resolución propagada a través del corpus y el
    registro completo de revisión público por construcción. El bucle es una
    autocrítica estructurada, no validación externa, y así lo decimos; lo
    proponemos, junto con su regla de terminación, como un método reutilizable
    para la investigación en diseño institucional.
 
+El estudio complementario mide tres efectos que amplían esta arquitectura: la
+ablación de la pila de disuasión (sus términos son individualmente redundantes
+pero conjuntamente indispensables), la factibilidad de la fiscalización por
+IA, y el efecto de separar la planificación macro de la asignación (robustez
+frente a una mala planificación central, hasta ~5×).
+
 La Sección 8 enuncia las limitaciones con el mismo cuidado que los resultados,
-porque bajo nuestro método ellas son resultados: cada una es un riesgo residual
-nombrado y acotado.
+porque bajo nuestro método ellas son resultados: cada una es un riesgo
+residual nombrado y acotado.
 
 ## 2. El principio de distribución funcional
 
@@ -221,7 +236,7 @@ reglas son ellos mismos objetos versionados y auditables.
 de un presupuesto municipal a asambleas ciudadanas (Wampler 2007; Baiocchi and
 Ganuza 2017). Empíricamente, el PP mejora algunos resultados fiscales pero
 sufre de decaimiento del involucramiento, captura por minorías organizadas y
-vínculos débiles entre asignación y entrega verificada (Peixoto and Fox 2016).
+vínculos débiles entre asignación y entrega verificada (Peixoto y Fox 2016).
 Core v0 difiere en exactamente esos márgenes: la asignación es continua e
 individual antes que asamblearia; la entrega está ligada a la asignación
 mediante contratos probatorios (evidential contracts) y desembolso condicional;
@@ -237,24 +252,24 @@ verificación que los vouchers nunca portaron.
 principio de distribución funcional son la literatura de la descentralización
 —el teorema de Oates (1972) sobre cuándo la provisión descentralizada domina,
 Tiebout (1956) sobre la revelación de preferencias mediante la elección de
-jurisdicción, y Besley and Coate (2003) sobre la provisión centralizada versus
+jurisdicción, y Besley y Coate (2003) sobre la provisión centralizada versus
 descentralizada bajo economía política— con una diferencia deliberada: nuestras
 capas son funcionales antes que territoriales, de modo que lo que se distribuye
 es una etapa del proceso de gasto (asignación, ejecución, verificación) antes
 que un nivel de gobierno. Del lado epistémico, los resultados de agregación de la
 Sección 6 pertenecen al linaje del teorema del jurado de Condorcet (1785) y sus
-condiciones modernas de falla (Austen-Smith and Banks 1996) —una deuda que
+condiciones modernas de falla (Austen-Smith y Banks 1996) —una deuda que
 hacemos explícita, porque el régimen de falla del teorema (señales
 correlacionadas, estratégicas o sesgadas) es exactamente lo que el séptimo
 experimento pone a prueba— y la conversación de diseño con la democracia abierta
-de Landemore (2020) y la gobernanza participativa empoderada de Fung and Wright
+de Landemore (2020) y la gobernanza participativa empoderada de Fung y Wright
 (2003) es directa: esos programas distribuyen la deliberación y el
 empoderamiento; este distribuye la asignación, la ejecución y la verificación con
 un núcleo de diseño de mecanismos y de rastro de auditoría que ellos no intentan.
 
 **Democracia líquida.** La delegación transitiva o acotada promete flexibilidad
 entre la participación directa y la representativa, al costo de la concentración
-(Blum and Zuber 2016; Kahng, Mackenzie and Procaccia 2018). Core v0 adopta
+(Blum y Zuber 2016; Kahng, Mackenzie y Procaccia 2018). Core v0 adopta
 delegación acotada, revocable y no compensada con visibilidad obligatoria de la
 concentración, y —siguiendo la advertencia de Michels (1911) antes que
 desestimarla— trata la concentración de delegados como un riesgo monitoreado con
@@ -263,7 +278,7 @@ umbrales de estrés, no como un problema resuelto.
 **Gobernanza digital y de blockchain.** La literatura sobre DAOs demostró tanto
 la viabilidad de la asignación colectiva de recursos codificada por reglas como
 su falla característica: la votación plutocrática por tokens y la captura de la
-gobernanza (De Filippi and Wright 2018). Core v0 deliberadamente no es un diseño
+gobernanza (De Filippi y Wright 2018). Core v0 deliberadamente no es un diseño
 de blockchain —la identidad es verificada antes que seudónima, y el Estado
 soberano permanece como fuente de fondos y de ley— pero importa la lección de
 que la meta-gobernanza es la superficie de ataque de mayor apalancamiento
@@ -271,11 +286,11 @@ que la meta-gobernanza es la superficie de ataque de mayor apalancamiento
 
 **Diseño de mecanismos y auditoría.** Nuestros modelos formales son aplicaciones
 elementales del riesgo moral bajo observación imperfecta (Holmström 1979) y de
-la colusión en jerarquías de supervisión (Laffont and Tirole 1991), con la ley
+la colusión en jerarquías de supervisión (Laffont y Tirole 1991), con la ley
 de Goodhart (Goodhart 1975; Campbell 1976) como advertencia permanente contra la
 manipulación de métricas. El diseño de mecanismos existente más cercano para la
 asignación ciudadana de fondos públicos es el financiamiento cuadrático (plural)
-(Buterin, Hitzig and Weyl 2019), que tasa la concentración mediante la curvatura
+(Buterin, Hitzig y Weyl 2019), que tasa la concentración mediante la curvatura
 de los fondos de contrapartida; la regla de cierre por meta de financiamiento de
 Core v0 persigue la misma meta anticoncentración por truncamiento antes que por
 tasación, y nuestros resultados de simulación (Sección 6, Hallazgo 1) delimitan
@@ -286,7 +301,7 @@ Proposiciones 1–2 toman como parámetros —y su hallazgo de que la auditoría
 arriba hacia abajo superó al monitoreo de base para el fraude en compras es una
 advertencia que esta arquitectura absorbe al hacer de la fiscalización
 profesional, no de la observación de la multitud, la capa que condiciona la
-liberación. La literatura brasileña de loterías de auditoría (Ferraz and Finan
+liberación. La literatura brasileña de loterías de auditoría (Ferraz y Finan
 2008) aporta la evidencia complementaria de mecanismo —la divulgación de los
 hallazgos de auditoría cambia los resultados políticos, y la exposición a
 auditoría reduce la corrupción subsiguiente— y sus datos subyacentes de la CGU
@@ -384,7 +399,7 @@ que siguen las prioridades del ámbito de planificación, por perfiles automáti
 configurables, y por delegación acotada y revocable con visibilidad de la
 concentración. La arquitectura no supone ciudadanos atentos; supone que en su
 mayoría son desatentos y enruta su peso a través de una intermediación
-inspeccionable (Lupia and McCubbins 1998). Esta es una respuesta de diseño a la
+inspeccionable (Lupia y McCubbins 1998). Esta es una respuesta de diseño a la
 objeción de competencia ciudadana en su forma contemporánea más aguda (Brennan
 2016): antes que restringir la legitimación de nadie, la arquitectura hace que la
 intermediación que la desatención produce sea visible, revocable y auditable.
@@ -503,7 +518,7 @@ Los ciudadanos asignan pequeños presupuestos individuales; el retorno pivotal d
 evaluar proyectos es insignificante, de modo que la ignorancia racional es el
 equilibrio (Downs 1957), y la pregunta de diseño es hacia dónde fluye el peso de
 la mayoría *desatenta*: hacia la saliencia amplificada por la prueba social
-(Bikhchandani, Hirshleifer and Welch 1992; Salganik, Dodds and Watts 2006), o
+(Bikhchandani, Hirshleifer y Welch 1992; Salganik, Dodds y Watts 2006), o
 hacia la capa de reglas por defecto de la propia arquitectura, que sigue
 las prioridades de planificación declaradas. El modelo arroja tres predicciones verificables —los topes doman
 las cascadas (P1), los valores por defecto anclan la calidad (P2), el decaimiento
@@ -616,7 +631,7 @@ amplificada también propaga la siembra de los evaluadores). Lo que gobierna la
 robustez frente al decaimiento es la cuota estructural de la propia capa por
 defecto, la variable del Hallazgo 2. El decaimiento del involucramiento —el
 destino documentado de la participación en tecnología cívica (Hirschman 1970;
-Peixoto and Fox
+Peixoto y Fox
 2016)— es un riesgo amortiguado aquí, pero el amortiguador es el tamaño de la
 capa institucional, y la alineación de calidad dentro del ciclo aún se erosiona
 en los ciclos más tardíos bajo todas las condiciones, de modo que el decaimiento
@@ -642,7 +657,7 @@ donde el planificador inspecciona tres cuartas partes del mundo (sel(θ) 0.76 vs
 en un vector casi perfecto; treinta buenas inspecciones no pueden competir, y el
 ancho de banda central fijo decae hacia la aleatoriedad a medida que el mundo
 crece —una lógica de agregación de Condorcet (1785), y la tratamos como tal: las
-condiciones de falla conocidas del teorema del jurado (Austen-Smith and Banks
+condiciones de falla conocidas del teorema del jurado (Austen-Smith y Banks
 1996) definen exactamente la frontera que el séptimo experimento pone a prueba.
 Tres salvedades cargan el peso honesto del hallazgo. Primero, el mismo
 conocimiento disperso *sin* una institución de agregación se desperdicia: el
@@ -768,7 +783,7 @@ contraloría de Chile, retención a partir de la práctica documentada de estado
 pago, recuperación a partir de la serie de la ASF de México, anclas de fuga
 emparejadas por categoría con la construcción (Olken 2007; la base de evidencia
 multipaís abarca la GAO, la NAO, el Tribunal de Cuentas Europeo, el TCU y la CGU
-de Brasil, y las contralorías de Chile, Perú y Colombia; Ferraz and Finan 2008)—
+de Brasil, y las contralorías de Chile, Perú y Colombia; Ferraz y Finan 2008)—
 con el ancho de banda de inspección del planificador escalado al ámbito y el
 sesgo coordinado de señales barrido como el régimen de falla de Condorcet. La
 condición de retiro no se activó: en el modelo, la arquitectura completa entrega
@@ -889,7 +904,7 @@ agregados que sigue la porción financiada—, y esa priorización es distribuid
 diseño, incluso en modo tutelado; el resultado es por tanto un argumento *a favor*
 de distribuir la construcción, no evidencia de que una agenda central gobierne la
 entrega. El poder centralizado residual es el más estrecho: construir el marco de
-elegibilidad es en sí mismo la segunda cara del poder (Bachrach and Baratz 1962;
+elegibilidad es en sí mismo la segunda cara del poder (Bachrach y Baratz 1962;
 Schattschneider 1960; Lukes 1974) —el poder de dejar algo fuera del menú—, que la
 arquitectura responde, en estos modos, haciendo el marco público, versionado,
 portador de mandato y disputable en vez de distribuyéndolo. Tres cosas acotan la
@@ -950,13 +965,13 @@ requieren autorización superior explícita.
 del presupuesto. El Fiscal Commitment Profile convierte el estrangulamiento de
 invisible a atribuible —la latencia de entrega, las órdenes válidas no
 ejecutadas, los recortes de cuota a mitad de ciclo, todos se vuelven datos
-públicos— pero ningún software obliga a un soberano a pagar (Kydland and Prescott 1977; North and Weingast
+públicos— pero ningún software obliga a un soberano a pagar (Kydland y Prescott 1977; North y Weingast
 1989). El compromiso creíble debe provenir de la ley a nivel de país.
 
 **La calidad de verificación se supone, luego se tasa.** Las Proposiciones 1–4
 toman las probabilidades de detección y descubrimiento como parámetros. En
 mercados de control delgados —mercados de bienes de confianza donde la calidad
-es inobservable para el comprador (Akerlof 1970; Dulleck and Kerschbamer
+es inobservable para el comprador (Akerlof 1970; Dulleck y Kerschbamer
 2006)— ambas colapsan simultáneamente, y los únicos
 márgenes compensatorios son los términos financieros y la verificación importada
 (remota o transterritorial). La arquitectura tasa la verificación débil; no puede
@@ -972,7 +987,7 @@ arquitectura son comparativas (contra el monopolio opaco), no absolutas.
 
 **La meta-gobernanza en modo abierto se difiere por diseño.** El procedimiento de
 cambio de reglas, el versionado y las restricciones de no-sorpresa están
-especificados; la mecánica constitucional —reglas para hacer reglas (Buchanan and Tullock
+especificados; la mecánica constitucional —reglas para hacer reglas (Buchanan y Tullock
 1962)— de quién vota sobre los cambios de
 protocolo en un despliegue maduro en modo abierto deliberadamente no lo está. El
 despliegue en modo abierto está supeditado a resolverlos.
@@ -1120,7 +1135,7 @@ contabilidad.
 
 El punto más profundo es el de Friedman: una administración central gasta el
 dinero de otras personas en otras personas, la categoría de gasto con el menor
-cuidado tanto por el costo como por el valor (Friedman and Friedman 1980). Esta
+cuidado tanto por el costo como por el valor (Friedman y Friedman 1980). Esta
 arquitectura no responde a ese problema con exhortación; reconecta las cañerías
 del balde. La planificación permanece —como el hilo conductor que fija ámbitos,
 pisos y mandatos— pero el motor del valor es la capa de conversión: promesas

@@ -7,13 +7,10 @@
 ## Abstract
 
 States do not levy taxes in order to redistribute, but to improve people's
-quality of life. Taking from the rich does not make the most vulnerable person
-better off; what makes them better off is the effective value they receive. If
-the project is never built, or is built badly, the redistribution helped no
-one — Okun's (1975) leaky bucket carried water that never arrived. Hence this
-paper's question: **can today's technology redesign the architecture of the
-state to raise the effective value that reaches people, per unit of public
-money spent?**
+quality of life: what matters is the effective value that reaches people per
+unit of public money spent. Hence this paper's question: **can today's
+technology redesign the architecture of the state to raise that delivered
+value?**
 
 The answer is not *more state or less*, but its **architecture**: decompose
 centralized state activity into layers, distribute those where today's
@@ -29,7 +26,7 @@ treasury to the executor, in tranches, against verified milestones and
 enforceable guarantees; and every consequential act leaves a public, auditable
 trail.
 
-The model identifies three effects.
+The model identifies two effects that multiply.
 
 **(1) Distributed choice delivers more real value.** Distributed allocation —
 direct choice, microdelegation, or personalized rules — correlates far more
@@ -45,16 +42,12 @@ fiscalization resists collusion, and why weak verification must be priced
 financially. On identical portfolios, this layer adds **~43% (1.4×)** of
 value.
 
-**(3) Separating the two layers gives robustness to poor central planning.**
-Distinguishing which *types* of project are eligible (macro planning) from
-which *concrete projects* the money reaches (allocation rules) protects value
-when the authority errs: the distributed side re-orients spending toward value
-while the central side stays stuck.
-
-**Combined:** the first two effects set the **floor** — **~2.2×** the value
-per unit of budget of a status quo calibrated from audit-institution data
-across nine countries — and adding the robustness raises the advantage to a
-**ceiling of ~5×**.
+**Combined,** the two effects multiply: the full architecture delivers
+**~2.2×** the value per unit of budget of a status quo calibrated from
+audit-institution data across nine countries. The architecture also separates
+macro planning from concrete allocation; a companion study measures the effect
+of that separation: robustness to poor central planning, with an advantage
+rising to **~5×**.
 
 The architecture was developed under **systematic adversarial critique**:
 forty attacks, each with a paired defense and a resolution that either adds a
@@ -66,64 +59,78 @@ declared throughout.
 
 ## 1. Introduction
 
-Modern states concentrate three things that do not need to be concentrated
-together: the authority to decide what public money is spent on, the
-operational capacity to execute that spending, and the epistemic authority to
-certify that the spending achieved anything. Where all three sit inside a
-single institutional hierarchy, accountability depends on the hierarchy
-auditing itself (Bovens 2007). The predictable consequences — discretionary allocation,
-self-reported compliance, capture by concentrated interests, and citizen
-distrust — are documented across every tradition of political economy, from
-regulatory capture (Stigler 1971; Laffont and Tirole 1991) to the audit
-society's ritualized compliance (Power 1997) to the distributional coalitions
-that entrench themselves in stable polities (Olson 1982).
+Modern states concentrate three things that need not sit together: the
+authority to decide what public money is spent on, the capacity to execute
+that spending, and the power to certify that it achieved anything. When all
+three live inside one hierarchy, accountability comes down to it auditing
+itself (Bovens 2007). The consequences are predictable and documented across
+political economy — discretionary allocation, self-reported compliance,
+capture by concentrated interests, and citizen distrust — from regulatory
+capture (Stigler 1971; Laffont and Tirole 1991) to audit turned ritual (Power
+1997) to the distributional coalitions that entrench themselves in stable
+political systems (Olson 1982).
 
-The standard debate responds with quantity: shrink the state or grow it.
-Both positions treat the state as a single object. This paper argues the
-tractable question is architectural, not volumetric: *which functional layers
-of state activity still require central monopoly, and which can now be
-distributed — with better accountability than the status quo — given that
-digital coordination has collapsed the transaction costs that once justified
-hierarchy?* (Coase 1937; Hayek 1945; Williamson 1985) — a knowledge-and-
-coordination lineage that runs from the calculation debate (Mises 1920)
-through Hayek's dispersed knowledge to its institutional treatment in
-Sowell (1980): decisions should sit where the knowledge is, disciplined by
-feedback rather than articulated authority. Rights guarantees, legitimate
-force, macro-fiscal stability, and enforceable adjudication plausibly remain
-central. Information processing, project-level resource allocation, service
-execution, evidence production, and auditing plausibly do not.
+These failures are not abstract: they are why the value never reaches the
+people it was raised for. States do not tax to redistribute, but to improve
+people's lives — and taking from the rich does not make the most vulnerable
+person better off; the effective value they receive does. If the project is
+never built, or is built badly, the redistribution helped no one: Okun's
+(1975) leaky bucket carried water that never arrived. The goal, then, is not
+how much is spent, but how much effective value reaches people per unit of
+public money spent.
 
-We make the argument concrete rather than programmatic. Core v0 is a
+The standard debate responds with quantity: shrink the state or grow it. Both
+positions treat it as a single object. This paper argues the tractable
+question is architectural, not one of size: *which layers of state activity
+still require central monopoly, and which can now be distributed — with better
+accountability than the status quo — now that digital coordination has
+collapsed the transaction costs that once justified hierarchy?* (Coase 1937;
+Hayek 1945; Williamson 1985). It is a question with a lineage — where
+decisions should sit when knowledge is dispersed — from the economic
+calculation debate (Mises 1920) to Hayek's dispersed knowledge and its
+institutional treatment in Sowell (1980): decisions should live where the
+knowledge is, disciplined by feedback rather than top-down command. Rights
+guarantees, legitimate force, macro-fiscal stability, and enforceable
+adjudication plausibly remain central; information processing, project-level
+resource allocation, service execution, evidence production, and auditing
+plausibly do not.
+
+We make the argument as a concrete design, not a manifesto. Core v0 is a
 complete reference architecture for distributing one bounded layer — the
 allocation, execution, and verification of a legally mandated share of an
 existing public budget — developed to the level of named objects, state
-machines, and decision rules (a corpus of more than one hundred architecture documents,
-fifty-nine designed hypotheses, and forty adversarial reviews, all
+machines, and decision rules (a corpus of more than one hundred architecture
+documents, fifty-nine designed hypotheses, and forty adversarial reviews, all
 public). Citizens receive periodic, non-withdrawable allocation capacity in a
 civic wallet; projects pass through a parallel-closure lifecycle in which
 funding, independent fiscalization, evidence commitments, and beneficiary
 confirmation must all close before execution; the executor never selects or
-pays its own auditors — removing the agency cost of self-monitored
-compliance (Jensen and Meckling 1976); money moves only on reviewed milestones with retention
-and externally materialized guarantees; and every consequential state
-transition is recorded in a citizen-legible, expert-auditable trail.
+pays its own auditors — which removes the agency cost of self-monitored
+compliance (Jensen and Meckling 1976); money moves only on reviewed
+milestones, with retention and externally materialized guarantees; and every
+consequential state transition is recorded in a citizen-legible,
+expert-auditable trail.
 
-The reason to take a design exercise seriously as research is what was done
-to it. Our contributions are:
+What makes a design exercise count as research is the rigor it is put through,
+under one transversal discipline: every claim is evaluated against how the
+current institution solves the same problem, not against an ideal — blocking
+the nirvana fallacy in both directions (Section 2). Our contributions are:
 
-1. **A functional distribution principle with an explicit comparative
-   discipline.** Critiques of the architecture must be evaluated against how
-   the current institutional model solves the same problem, not against an
-   ideal (Section 2). This blocks the nirvana fallacy in both directions.
+1. **Distributing the allocation layer.** The core design contribution:
+   applying the functional-distribution principle to resource allocation —
+   citizens direct their share directly, delegate it, or govern it with
+   personal rules — instantiated as a complete reference architecture (Core
+   v0).
 
-2. **Formalization of the core mechanisms** (Section 5). We model
+2. **Formalization of the incentive mechanisms** (Section 5). We model
    milestone-gated disbursement as a principal-agent game and derive its
    incentive-compatibility condition; we model bribery of protocol-assigned
    fiscalizers and derive a collusion-proofness condition under
-   k-corroboration; and we prove two design-relevant comparative statics:
-   weak verification must be compensated with financial terms, and
-   guarantees are counterproductive when detection quality falls below the
-   cost of capital.
+   k-corroboration; and we prove two design-relevant comparative statics: weak
+   verification must be compensated with financial terms, and guarantees are
+   counterproductive when detection quality falls below the cost of capital.
+   Milestones, retention, guarantees, and reputational memory form the
+   design's deterrence stack.
 
 3. **Computational evidence** (Section 6). A dependency-free, seeded
    agent-based simulation of 10,000 citizens tests the architecture's
@@ -131,27 +138,32 @@ to it. Our contributions are:
    attention, and social-proof cascades. The results discipline the design:
    they support some claims, sharpen others, quantify the leverage
    concentrated in the scope-construction layer, measure a viable open
-   construction of it, and carry the comparison end to end — from
-   allocation to delivered social value per unit of budget, the criterion
-   redistribution exists to satisfy. The headline result, in the model:
-   verified delivery and social prioritization multiply rather than add,
-   and the full architecture delivers 2.22× a status-quo baseline
-   calibrated from published audit-institution findings (1.4–1.6× at
-   municipal pilot scale), while even that calibrated status quo
-   overstates its real delivery by nineteen percentage points.
+   construction of it, and carry the comparison end to end: from allocation to
+   delivered social value per unit of budget — the criterion redistribution
+   exists to satisfy. The headline result, in the model: verified delivery and
+   social prioritization multiply rather than add, and the full architecture
+   delivers 2.22× a status-quo baseline calibrated from published
+   audit-institution findings (1.4–1.6× at municipal pilot scale), while even
+   that calibrated status quo overstates its real delivery by nineteen
+   percentage points.
 
-4. **Adversarial review as method** (Section 7). The architecture was
-   attacked systematically — forty attack briefs grounded in the
-   political-science, economics, and law literatures, each answered by a
-   paired defense and resolved under an explicit integrate-or-bound rule,
-   with every resolution propagated through the corpus and the full review
-   record public by construction. The loop is a structured self-critique,
-   not external validation, and we say so; we propose it, and its
-   terminating rule, as a reusable method for institutional design
-   research.
+4. **Adversarial review as method** (Section 7). The architecture was attacked
+   systematically: forty attack briefs grounded in the political-science,
+   economics, and law literatures, each answered by a paired defense and
+   resolved under an explicit integrate-or-bound rule, with every resolution
+   propagated through the corpus and the full review record public by
+   construction. The loop is a structured self-critique, not external
+   validation, and we say so; we propose it, and its terminating rule, as a
+   reusable method for institutional design research.
 
-Section 8 states limitations with the same care as results, because under
-our method they are results: each is a named, bounded residual risk.
+A companion study measures three effects that extend this architecture:
+ablation of the deterrence stack (its terms are individually redundant but
+jointly indispensable), the feasibility of AI-based fiscalization, and the
+effect of separating macro planning from allocation (robustness to poor
+central planning, up to ~5×).
+
+Section 8 states limitations with the same care as results, because under our
+method they are results: each is a named, bounded residual risk.
 
 ## 2. The functional distribution principle
 
