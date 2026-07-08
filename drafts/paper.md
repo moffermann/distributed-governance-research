@@ -275,7 +275,7 @@ applications of moral hazard under imperfect observation (Holmström 1979)
 and collusion in supervision hierarchies (Laffont and Tirole 1991), with
 Goodhart's law (Goodhart 1975; Campbell 1976) as the standing warning
 against metric gaming. The closest existing mechanism design for citizen
-allocation of public funds is quadratic (plural) funding (Buterin, Hitzig
+allocation of public funds is quadratic (or 'plural') funding (Buterin, Hitzig
 and Weyl 2019), which prices concentration through matching-fund curvature;
 Core v0's funding-target closure rule pursues the same anti-concentration
 goal by truncation rather than pricing, and our simulation results
@@ -325,27 +325,27 @@ We summarize the reference architecture at the level needed for the analysis;
 the full object model, state machines, and citizen-interface layers are
 specified in the public corpus.
 
-**Funding.** An implementing authority migrates a mandated share of
-an existing budget into individual civic wallets: periodic, non-withdrawable,
-public-purpose allocation capacity, equal per citizen by default. Every
-active planning scope carries an *Allocation Mandate* record naming the
-statute or instrument that authorized the migration, its legal rank, the
-organ to which allocations are imputed, and the allocation formula — the
-platform records external authorization; it does not manufacture it, and
-binding-mode operation is gated on an enabling norm of sufficient rank
-being recorded, with consultative or tutored operation as the disclosed
-lawful default otherwise. The citizen's allocation act carries the full
-electoral bargain: vote-like immunity and vote-like secrecy. Individual
-allocations are pseudonymous at the public layer and reconcile
-cryptographically against public per-scope totals — every peso traceable
-as money, no citizen traceable as an allocator, and no receipt or
-exportable proof of any individual allocation exists, even voluntarily,
-so that a patron who demands proof can never get one (the secret ballot's
-own defense, applied to the wallet). A *Fiscal Commitment Profile* per scope makes the migrated
-percentage, indexation, and delivery latency public and versioned, so fiscal
-strangulation by the incumbent treasury is measurable and attributable
-rather than silent. Essential services with continuity obligations are
-protected by non-assignable floors outside citizen-by-citizen popularity.
+**Funding.** An implementing authority migrates a mandated share of an
+existing budget into individual civic wallets: periodic, non-withdrawable,
+public-purpose allocation capacity, equal per citizen by default. Every active
+planning scope carries an *Allocation Mandate* record naming the statute or
+instrument that authorized the migration, its legal rank, the organ to which
+allocations are imputed, and the allocation formula. The platform records that
+external authorization; it does not manufacture it. Binding-mode operation is
+gated on an enabling norm of sufficient rank being recorded; otherwise, the
+disclosed lawful default is consultative or tutored operation. The citizen's
+allocation act carries the full electoral bargain: vote-like immunity and
+vote-like secrecy. Individual allocations are pseudonymous at the public layer
+and reconcile cryptographically against public per-scope totals — every peso
+traceable as money, no citizen traceable as an allocator, and no receipt or
+exportable proof of any individual allocation exists, even voluntarily, so
+that a patron who demands proof can never get one (the secret ballot's own
+defense, applied to the wallet). A *Fiscal Commitment Profile* per scope makes
+the migrated percentage, indexation, and delivery latency public and
+versioned, so fiscal strangulation by the incumbent treasury is measurable and
+attributable rather than silent. Essential services with continuity
+obligations are protected by non-assignable floors outside citizen-by-citizen
+popularity.
 
 **Projects and roles.** Financeable projects declare a value thesis with
 verifiable claims, affected parties, risks and anti-values, a phase and
@@ -377,8 +377,7 @@ scoped, revocable delegation with concentration visibility. The architecture
 does not assume attentive citizens; it assumes mostly inattentive ones and
 routes their weight through inspectable intermediation (Lupia and McCubbins
 1998). This is a design answer to the citizen-competence objection in its
-sharpest contemporary form (Brennan 2016): rather than restricting anyone's
-standing, the architecture makes the intermediation that inattention
+sharpest contemporary form (Brennan 2016): rather than restricting anyone's right to participate, the architecture makes the intermediation that inattention
 produces visible, revocable, and auditable.
 
 **Transition.** Deployment proceeds through operating modes — closed,

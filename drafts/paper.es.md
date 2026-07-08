@@ -290,7 +290,7 @@ elementales del riesgo moral bajo observación imperfecta (Holmström 1979) y de
 la colusión en jerarquías de supervisión (Laffont y Tirole 1991), con la ley
 de Goodhart (Goodhart 1975; Campbell 1976) como advertencia permanente contra la
 manipulación de métricas. El diseño de mecanismos existente más cercano para la
-asignación ciudadana de fondos públicos es el financiamiento cuadrático (plural)
+asignación ciudadana de fondos públicos es el financiamiento cuadrático (o «plural»)
 (Buterin, Hitzig y Weyl 2019), que tasa la concentración mediante la curvatura
 de los fondos de contrapartida; la regla de cierre por meta de financiamiento de
 Core v0 persigue la misma meta anticoncentración por truncamiento antes que por
@@ -343,30 +343,30 @@ Resumimos la arquitectura de referencia al nivel necesario para el análisis; el
 modelo completo de objetos, las máquinas de estado y las capas de interfaz
 ciudadana están especificados en el corpus público.
 
-**Financiamiento.** Una autoridad implementadora migra una cuota legalmente
-mandatada de un presupuesto existente hacia billeteras cívicas individuales:
-capacidad de asignación periódica, no retirable, de propósito público, igual por
-ciudadano por defecto. Todo ámbito de planificación activo porta un registro de
-*Allocation Mandate* (mandato de asignación) que nombra el estatuto o instrumento
-que autorizó la migración, su rango legal, el órgano al que se imputan las
-asignaciones y la fórmula de asignación —la plataforma registra la autorización
-externa; no la fabrica, y la operación en modo vinculante está supeditada a que
-se haya registrado una norma habilitante de rango suficiente, con la operación
-consultiva o tutelada como el defecto lícito revelado en caso contrario. El acto
-de asignación del ciudadano porta el pacto electoral completo: inmunidad como la
-del voto y secreto como el del voto. Las asignaciones individuales son seudónimas
-en la capa pública y se reconcilian criptográficamente contra los totales
-públicos por ámbito —cada peso trazable como dinero, ningún ciudadano trazable
-como asignador, y no existe recibo ni prueba exportable de ninguna asignación
-individual, ni siquiera voluntariamente, de modo que un patrón que exija prueba
-nunca pueda obtenerla (la defensa propia del voto secreto, aplicada a la
-billetera). Un *Fiscal Commitment Profile* (perfil de
-compromiso fiscal) por ámbito hace públicos y versionados el porcentaje migrado,
-la indexación y la latencia de entrega, de modo que el estrangulamiento fiscal
-por parte de la tesorería establecida sea medible y atribuible antes que
-silencioso. Los servicios esenciales con obligaciones de continuidad quedan
-protegidos por pisos no asignables, fuera de la popularidad ciudadano-por-
-ciudadano.
+**Financiamiento.** Una autoridad implementadora migra una cuota, con mandato
+legal, de un presupuesto existente hacia billeteras cívicas individuales:
+capacidad de asignación periódica, no retirable, de propósito público, igual
+por ciudadano por defecto. Todo ámbito de planificación activo porta un
+registro de *Allocation Mandate* (mandato de asignación) que nombra el
+estatuto o instrumento que autorizó la migración, su rango legal, el órgano al
+que se imputan las asignaciones y la fórmula de asignación. La plataforma
+registra esa autorización externa; no la fabrica. La operación en modo
+vinculante está supeditada a que se haya registrado una norma habilitante de
+rango suficiente; en caso contrario, el defecto lícito es la operación
+consultiva o tutelada. El acto de asignación del ciudadano porta el pacto
+electoral completo: inmunidad como la del voto y secreto como el del voto. Las
+asignaciones individuales son seudónimas en la capa pública y se reconcilian
+criptográficamente contra los totales públicos por ámbito —cada peso trazable
+como dinero, ningún ciudadano trazable como asignador, y no existe recibo ni
+prueba exportable de ninguna asignación individual, ni siquiera
+voluntariamente, de modo que un patrón que exija prueba nunca pueda obtenerla
+(la defensa propia del voto secreto, aplicada a la billetera). Un *Fiscal
+Commitment Profile* (perfil de compromiso fiscal) por ámbito hace públicos y
+versionados el porcentaje migrado, la indexación y la latencia de entrega, de
+modo que el estrangulamiento fiscal por parte de la tesorería establecida sea
+medible y atribuible antes que silencioso. Los servicios esenciales con
+obligaciones de continuidad quedan protegidos por pisos no asignables, fuera
+de la popularidad ciudadano-por-ciudadano.
 
 **Proyectos y roles.** Los proyectos financiables declaran una tesis de valor
 con afirmaciones verificables, partes afectadas, riesgos y antivalores, un plan
@@ -396,22 +396,24 @@ estratificada: descubrimiento con ordenamiento controlado por el usuario y con
 razón visible; tarjetas de proyecto compactas; y superficies de auditoría
 progresivamente más profundas hasta el rastro completo. Los ciudadanos que no
 prestan atención son servidos por reglas de asignación por defecto del sistema
-que siguen las prioridades del ámbito de planificación, por perfiles automáticos
-configurables, y por delegación acotada y revocable con visibilidad de la
-concentración. La arquitectura no supone ciudadanos atentos; supone que en su
-mayoría son desatentos y enruta su peso a través de una intermediación
-inspeccionable (Lupia y McCubbins 1998). Esta es una respuesta de diseño a la
-objeción de competencia ciudadana en su forma contemporánea más aguda (Brennan
-2016): antes que restringir la legitimación de nadie, la arquitectura hace que la
-intermediación que la desatención produce sea visible, revocable y auditable.
+que siguen las prioridades del ámbito de planificación, por perfiles
+automáticos configurables, y por delegación acotada y revocable con
+visibilidad de la concentración. La arquitectura no supone ciudadanos atentos;
+supone que en su mayoría son desatentos y enruta su peso a través de una
+intermediación inspeccionable (Lupia y McCubbins 1998). Esta es una respuesta
+de diseño a la objeción de competencia ciudadana en su forma contemporánea más
+aguda (Brennan 2016): antes que restringir el derecho de nadie a participar,
+la arquitectura hace que la intermediación que la desatención produce sea
+visible, revocable y auditable.
 
 **Transición.** El despliegue procede a través de modos de operación —cerrado,
-tutelado, semiabierto, abierto— en los que una autoridad pública puede retener la
-revisión de admisibilidad, pero toda decisión tutelada material, y todo silencio
-tutelado más allá de su plazo, se convierte en un objeto público de resolución
-de gobernanza. Los indicadores de resistencia del establecido (cuota de ámbito
-abierta, tasas de rechazo y de vencimiento de plazos, privilegio del operador)
-hacen distinguible la adopción simbólica de la transferencia real.
+tutelado, semiabierto, abierto— en los que una autoridad pública puede retener
+la revisión de admisibilidad, pero toda decisión tutelada material, y todo
+silencio tutelado más allá de su plazo, se convierte en un objeto público de
+resolución de gobernanza. Los indicadores de resistencia del sistema
+establecido (cuota de ámbito abierta, tasas de rechazo y de vencimiento de
+plazos, privilegio del operador) hacen distinguible la adopción simbólica de
+la transferencia real.
 
 ## 5. Análisis formal
 
@@ -452,14 +454,14 @@ porcentaje de garantía global no puede ser óptimo a lo largo de entornos de
 verificación heterogéneos.
 
 Los términos de disuasión de esta condición son complementos, no sustitutos. Un
-programa de ablation pre-registrado sobre los experimentos complementarios
+programa de ablación pre-registrado sobre los experimentos complementarios
 (Offermann 2026b) midió la consecuencia: en el punto de operación diseñado la
 desigualdad se sostiene con holgura, de modo que quitar cualquier término
 individual cuesta casi nada — y un despliegue negociado concesión defendible por
 concesión puede cruzar el umbral de forma invisible, terminando por debajo del
 status quo que reemplazó (0.87× de valor verificado con la calidad de selección
 intacta) mientras luce plenamente instrumentado. El corpus exige por ello que
-cada scope publique su margen de la desigualdad de disuasión en su configuración
+cada ámbito publique su margen de la desigualdad de disuasión en su configuración
 operativa, recomputado ante cada cambio de término, con las reducciones de
 términos clasificadas como cambios de regla materiales (docs/111). La misma
 holgura, mantenida intacta, compra un dividendo inesperado: absorbe el error del
@@ -523,7 +525,7 @@ la mayoría *desatenta*: hacia la saliencia amplificada por la prueba social
 hacia la capa de reglas por defecto de la propia arquitectura, que sigue
 las prioridades de planificación declaradas. El modelo arroja tres predicciones verificables —los topes doman
 las cascadas (P1), los valores por defecto anclan la calidad (P2), el decaimiento
-se degrada gráciles solo con valores por defecto (P3)— evaluadas a continuación.
+se degrada con gracia solo con valores por defecto (P3)— evaluadas a continuación.
 
 ## 6. Evidencia computacional
 
@@ -808,7 +810,7 @@ colapsa, y sigue siendo superior en todas partes por debajo del diez por ciento.
 
 Un octavo experimento preregistrado (E8,
 `research/e8-behavioral-participation-design.md`) reemplazó luego el lado de
-participación de estos brazos —la cuota de default y la cuota informada que los
+participación de estos brazos —la cuota por defecto y la cuota informada que los
 brazos de arquitectura habían impuesto— con trayectorias de adopción generadas
 por un estudio conductual compañero: un modelo basado en agentes conforme a Core
 v0 de conciencia, registro, modos de participación y microdelegación confiada,
@@ -817,7 +819,7 @@ el repositorio distributed-governance-experiments). El resultado principal
 sobrevive: 2.26 [2.23, 2.30] a escala bajo la población calibrada y 2.15–2.9× a
 través de tres poblaciones y todas las escalas, incluida una trayectoria de
 lanzamiento que comienza con participación cercana a cero —que cuesta el 1.7%
-del cociente, porque la capa de default ancla por construcción los ciclos
+del cociente, porque la capa por defecto ancla por construcción los ciclos
 tempranos delgados. El estudio conductual también reproduce de forma
 independiente el supuesto de cuota informada que estos experimentos habían
 impuesto: 0.309 emergente contra el 0.30 asumido.
@@ -1034,20 +1036,20 @@ reportan por separado, de manera impersonal y como contexto —la configuración
 bajo la cual históricamente se han adoptado instrumentos que exponen. Las
 métricas de madurez funcional (mezcla de
 participación, cuota de flujo por defecto, tasas de independencia de la
-fiscalización, indicadores de resistencia del establecido, confiabilidad fiscal)
+fiscalización, indicadores de resistencia del sistema establecido, confiabilidad fiscal)
 determinan si el despliegue gana un ámbito más amplio, y sus trayectorias, no la
 retórica, responden si la distribución supera a la línea base local. La condición
 de salida es honesta en ambas direcciones: un piloto cuyos indicadores se
-estancan bajo el ahogamiento del establecido documenta ese hecho públicamente, lo
+estancan bajo el ahogamiento del sistema establecido documenta ese hecho públicamente, lo
 cual es en sí mismo información que el sistema actual nunca produce.
 
 La transición entre regímenes está ella misma medida. Los experimentos
 complementarios (Offermann 2026b) cuantifican el régimen semi-abierto de la
-escalera de regímenes operativos (docs/110) —un envelope acotado mandatado que
+escalera de regímenes operativos (docs/110) —un sobre presupuestario acotado y mandatado (envelope) que
 corre en piloto automático de protocolo junto al presupuesto tradicional de la
 autoridad— como una mezcla fiscal: sobre un piso de granularidad de cartera de
 aproximadamente diez por ciento, el valor verificado mezclado sube de forma
-monótona y casi lineal con la cuota del envelope, desde el punto de equilibrio
+monótona y casi lineal con la cuota del sobre, desde el punto de equilibrio
 cerca del ocho a diez por ciento, pasando por 1.5× a la mitad del presupuesto,
 hasta el 2.2× de la arquitectura completa al cien por ciento. La transición
 desde el status quo hacia el régimen abierto es una perilla, no un salto: la
@@ -1056,13 +1058,13 @@ adopción puede proceder por incrementos, y cada incremento paga.
 Los mismos experimentos midieron una variable que este corpus había dejado sin
 regular: *cuándo* libera la autoridad el presupuesto hacia la maquinaria de
 asignación. La regla de despliegue resultante: medir la liberación contra un
-techo de obra-en-proceso calibrado al throughput y tiempo de ciclo de la
+techo de obra-en-proceso calibrado al caudal (throughput) y tiempo de ciclo de la
 tubería de entrega-y-verificación —nunca contra el calendario. La liberación
-por calendario congela meses de presupuesto en escrow y satura la verificación;
+por calendario congela meses de presupuesto en custodia y satura la verificación;
 y cuando la capacidad de verificación es escasa, ninguna política de liberación
 compensa —la capacidad de verificación es el techo de la tubería antes que su
 instrumento anti-fraude. La regla es condicional a un instrumento de arrastre
-plurianual (el envelope semi-abierto es precisamente tal vehículo); bajo
+plurianual (el sobre semi-abierto es precisamente tal vehículo); bajo
 anualidad presupuestaria estricta degenera a medición intra-anual.
 
 Finalmente, la premisa tecnológica que reduce los costos de participación del
@@ -1076,21 +1078,20 @@ error de la máquina permanece medida y la profesión humana de control sigue
 financiada desde el presupuesto de control que ella alivia. Medido sobre un
 panel de cinco familias reales de modelos (Offermann 2026b), los modelos
 frontera convergen en buena especificidad y detección de fraude sobre
-evidencia document-legible, mientras los modelos locales pequeños son más
+evidencia legible en documentos, mientras los modelos locales pequeños son más
 débiles, y los contratos de evidencia que incluyen referencias objetivas de
 comparación (precios de mercado, bandas de duración, umbrales) permiten al
 verificador estricto juzgar en vez de adivinar. La capa máquina alcanza solo
-el fraude document-legible de la fase de entrega —la calidad-bajo-especificación
-física y el robo pre-contrato quedan enteramente en manos humanas, de modo que
-la atestación de procedencia es evidencia-de-manipulación en la captura, no
-prueba court-grade, y la admisibilidad aún requiere custodia, contradicción y
+el fraude legible en documentos de la fase de entrega —la calidad por debajo de la especificación física y el robo previo al contrato quedan enteramente en manos humanas, de modo que
+la atestación de procedencia es evidencia de manipulación en la captura, no
+prueba de grado judicial, y la admisibilidad aún requiere custodia, contradicción y
 peritaje. La evidencia ciudadana contrapuesta —productores independientes con
 intereses opuestos al ejecutor, cuya existencia anticipada disuade el desvío—
 mantiene la vigilancia distribuida incluso cuando el trabajo rutinario de
 verificación documental se reduce; pero su fuerza equivale a la *independencia*
 de la capa de contribuyentes, y un anillo colusivo que la capture o silencie
-borra el efecto. La colusión cross-layer es, de hecho, el único adversario que
-sortea la disuasión por-hito y mueve la fuga un orden de magnitud (mientras la
+borra el efecto. La colusión entre capas es, de hecho, el único adversario que
+sortea la disuasión por hito y mueve la fuga un orden de magnitud (mientras la
 ventaja de valor entregado sobrevive), así que la resistencia a la colusión
 —propiedad efectiva verificada, resistencia Sybil de los contribuyentes y
 descentralización del asignador y del piso de presupuesto de auditoría— es un
