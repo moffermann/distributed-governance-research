@@ -33,10 +33,10 @@ intuiciones de diseño de la arquitectura en proposiciones verificables. Segundo
 evidencia computacional: una simulación de 10.000 agentes de asignación bajo
 restricción de atención muestra que el cierre por meta de financiamiento
 funciona como dispositivo anticoncentración pero no como dispositivo de calidad,
-que la calidad de la asignación la sostiene la calidad informativa del vector de
-pesos que sigue la capa por defecto antes que la atención ciudadana, y que la
-caída de la participación es sobrevivible exactamente allí donde la capa por
-defecto es fuerte; un cuarto experimento preregistrado que modela el conocimiento
+que la calidad de la asignación la sostiene la calidad informativa de la
+priorización de proyectos que sigue el tramo pasivo —los perfiles de asignación
+agregados— antes que la atención ciudadana, y que la caída de la participación
+es sobrevivible exactamente allí donde esa capa de priorización es fuerte; un cuarto experimento preregistrado que modela el conocimiento
 de manera simétrica halla que agregar señales ciudadanas dispersas en ese vector
 supera a la construcción central de ancho de banda fijo en cada escala probada
 —siempre que exista una institución de agregación y que las señales sean
@@ -609,17 +609,21 @@ propiedad de los modos de transición cerrado y tutelado, no de la arquitectura:
 los modos de operación son estados configurados por país, y la trayectoria
 diseñada apunta hacia la construcción abierta (el Hallazgo 4 mide su viabilidad
 dentro del modelo). Lo que los números establecen es, por tanto, un condicional:
-la calidad informativa de los vectores que gobiernan la porción pasiva es la
-restricción vinculante sobre la calidad de la asignación, quienquiera o lo que sea
-que los provea —un proveedor capturado o ignorante es el modo de falla, uno bien
-informado o bien agregado es el activo, y aleatorizar el vector para escapar de la
-captura compraría neutralidad al precio de una calidad casi aleatoria para la
-porción pasiva. La discusión sobre la fijación de agenda (Sección 8) no es una
-limitación entre muchas; por estos números es la restricción vinculante —y, a
-diferencia del statu quo, es una visible, versionada y sustituible. Dos cosas que
-E1–E3 no pueden afirmar, y que un borrador anterior sobreinterpretó al afirmarlas: el
-origen del vector de pesos queda sin especificar (r es una propiedad del vector,
-no de una oficina estatal), y la multitud modelada porta prueba social pero
+la calidad informativa de la **priorización de proyectos que sigue la porción
+pasiva** —los perfiles de asignación agregados, no un vector de planificación
+macro— es la restricción vinculante sobre la calidad de la asignación,
+quienquiera o lo que sea que la provea; un proveedor capturado o ignorante es el
+modo de falla, uno bien informado o bien agregado es el activo, y aleatorizar esa
+priorización para escapar de la captura compraría neutralidad al precio de una
+calidad casi aleatoria para la porción pasiva. La restricción vinculante es, así,
+la calidad de esa priorización —y como la trayectoria diseñada de la arquitectura
+distribuye su construcción (modo abierto) y la mantiene visible, versionada y
+sustituible, la restricción se satisface por distribución, no por una agenda
+central. Esto es distinto, y no debe confundirse, con el punto más estrecho de
+fijación de agenda de la Sección 8, que concierne solo a quién enmarca la
+elegibilidad. Dos cosas que E1–E3 no pueden afirmar, y que un borrador anterior
+sobreinterpretó al afirmarlas: el origen de la priorización queda sin especificar
+(r es una propiedad del vector, no de una oficina estatal), y la multitud modelada porta prueba social pero
 ningún conocimiento —de modo que estos experimentos comparan atención frente a
 calidad de los pesos, no conocimiento central frente a conocimiento distribuido.
 El Hallazgo 4 se diseñó, tras la revisión del autor, para hacer esa comparación
@@ -896,19 +900,27 @@ futuro.
 Enunciadas según la propia regla del método —cada una es una frontera registrada
 con un riesgo residual nombrado.
 
-**La fijación de agenda está centralizada en los modos de transición, y es lo que
-más importa.** En los modos de operación cerrado y tutelado que Core v0 especifica
+**Construir el marco de elegibilidad está centralizado en los modos de
+transición.** En los modos de operación cerrado y tutelado que Core v0 especifica
 para los pilotos, la autoridad implementadora construye los ámbitos de
 planificación; la arquitectura hace esa construcción pública, versionada,
 portadora de mandato y disputable mediante la visibilidad, pero en esos modos no
 la distribuye. Construir el ámbito significa definir el marco —qué propósitos,
 qué porción del presupuesto, qué pisos protegidos, qué reglas de admisibilidad—,
 no diseñar ni jerarquizar proyectos: la creación y la priorización de proyectos
-siguen distribuidas incluso en modo tutelado, de modo que el poder de agenda es
-el poder de decidir qué puede financiarse, nunca qué se financia. Nuestra propia simulación muestra que la calidad informativa del
-vector de pesos predomina sobre todo otro margen de calidad, y quien construye el
-ámbito ejerce la segunda cara del poder (Bachrach and Baratz 1962;
-Schattschneider 1960; Lukes 1974) sobre todo lo que está aguas abajo. Tres cosas acotan la
+siguen distribuidas incluso en modo tutelado, de modo que este poder de agenda
+residual es el poder de decidir qué *puede* financiarse, nunca qué *se* financia.
+Es importante no malinterpretar aquí nuestra propia simulación. Lo que esa
+simulación muestra dominando todo otro margen de calidad es la calidad
+informativa de la **priorización de proyectos** —los perfiles de asignación
+agregados que sigue la porción financiada—, y esa priorización es distribuida por
+diseño, incluso en modo tutelado; el resultado es por tanto un argumento *a favor*
+de distribuir la construcción, no evidencia de que una agenda central gobierne la
+entrega. El poder centralizado residual es el más estrecho: construir el marco de
+elegibilidad es en sí mismo la segunda cara del poder (Bachrach and Baratz 1962;
+Schattschneider 1960; Lukes 1974) —el poder de dejar algo fuera del menú—, que la
+arquitectura responde, en estos modos, haciendo el marco público, versionado,
+portador de mandato y disputable en vez de distribuyéndolo. Tres cosas acotan la
 limitación con honestidad. Es una propiedad de los modos de transición, no de la
 arquitectura: los modos de operación son estados configurados por país, y la
 trayectoria diseñada es una fijación de agenda abierta y socialmente construida.
