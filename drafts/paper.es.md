@@ -1,8 +1,8 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.10 (julio de 2026). Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.11 (julio de 2026). Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
-*Traducción al español del working paper v1.10 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.11 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI (de concepto, siempre resuelve a la última versión): 10.5281/zenodo.21193846.*
 
@@ -584,8 +584,14 @@ prueba social muy fuerte, donde los regímenes convergen dentro del ruido porque
 la amplificación fuerte también propaga la señal de calidad de los evaluadores;
 las magnitudes dependen de los parámetros y no están calibradas. Lo que sobrevive
 a todas las variaciones es el ordenamiento y el predominio de la calidad
-informativa del vector de pesos —lo que cuantifica el apalancamiento concentrado
-en aquello que construye el vector que gobierna la porción asignada pasivamente.
+informativa de la priorización —lo que cuantifica el apalancamiento concentrado
+en aquello que construye la priorización de proyectos que sigue el tramo pasivo.
+Esa priorización tiene dos capas que el motor del complemento al principio fundió
+y desde entonces separó (Offermann 2026b): la categorización macro —el Ámbito de
+Planificación de este corpus, que enmarca la elegibilidad y no porta pesos de
+presupuesto— y los perfiles de asignación agregados que rutean el presupuesto
+dentro de ella; distribuir la categorización importa más justo donde la mayoría
+desatendida rutea por reglas ortogonales al valor.
 Dos hechos arquitectónicos acotan correctamente ese enunciado, y la formulación
 de un borrador anterior ("la vulnerabilidad central de la arquitectura... quien
 construye los ámbitos de planificación tiene la calidad de la asignación en sus
