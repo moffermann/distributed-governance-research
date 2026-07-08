@@ -169,11 +169,11 @@ method they are results: each is a named, bounded residual risk.
 
 We analyze the state as a stack of functional layers rather than a single
 institution: (a) rights guarantees and legitimate force; (b) binding
-adjudication; (c) rule-making; (d) macro-fiscal management; (e) macro
-planning and agenda framing; (f) project prioritization and resource
-allocation to concrete undertakings; (g)
-execution and service delivery; (h) evidence production about delivery; and
-(i) evaluation and accountability. The distribution principle is:
+adjudication; (c) rule-making; (d) macro-fiscal management; (e) macro planning
+and agenda framing; (f) project prioritization and resource allocation to
+concrete projects; (g) execution and service delivery; (h) evidence production
+about delivery; and (i) evaluation and accountability. The distribution
+principle is:
 
 > A layer is a candidate for distribution when three conditions hold:
 > its failures under monopoly are information and incentive failures rather
@@ -181,11 +181,11 @@ execution and service delivery; (h) evidence production about delivery; and
 > *more* observable than monopoly provision; and the layer can be bounded so
 > that its failure does not cascade into the non-distributable layers.
 
-Layers (a), (b), and (d) fail the first or third condition and remain
-central in our design. Layers (f) through (i) pass all three, and Core v0
-distributes them jointly — jointly, because distributing allocation without
-distributing verification reproduces PB's delivery gap, and distributing
-verification without allocation reproduces the audit society.
+Layers (a), (b), and (d) fail the first or third condition and remain central
+in our design. Layers (f) through (i) pass all three, and Core v0 distributes
+them jointly — jointly, because distributing allocation without distributing
+verification reproduces the delivery gap of participatory budgeting (PB), and
+distributing verification without allocation reproduces the audit society.
 
 Layer (e), planning, is the deliberately unresolved case: Core v0 requires
 planning scopes to be public, versioned, and mandate-bearing, but does not

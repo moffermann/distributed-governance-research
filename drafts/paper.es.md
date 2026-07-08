@@ -177,25 +177,27 @@ residual nombrado y acotado.
 
 ## 2. El principio de distribución funcional
 
-Analizamos el Estado como una pila de capas funcionales antes que como una única
-institución: (a) garantías de derechos y fuerza legítima; (b) adjudicación
-vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e) planificación y
-priorización; (f) asignación de recursos a emprendimientos concretos; (g)
-ejecución y prestación de servicios; (h) producción de evidencia sobre la
-entrega; e (i) evaluación y rendición de cuentas. El principio de distribución
-es:
+Analizamos el Estado como una pila de capas funcionales antes que como una
+única institución: (a) garantías de derechos y fuerza legítima; (b)
+adjudicación vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e)
+planificación macro y enmarcado de agenda; (f) priorización de proyectos y
+asignación de recursos a proyectos concretos; (g) ejecución y prestación de
+servicios; (h) producción de evidencia sobre la entrega; e (i) evaluación y
+rendición de cuentas. El principio de distribución es:
 
 > Una capa es candidata a la distribución cuando se cumplen tres condiciones:
 > sus fallas bajo monopolio son fallas de información e incentivos antes que
-> fallas de coordinación-de-la-fuerza; la provisión distribuida puede hacerse
-> *más* observable que la provisión monopólica; y la capa puede acotarse de modo
-> que su falla no cascadee hacia las capas no distribuibles.
+> fallas de coordinación de la fuerza; la provisión distribuida puede hacerse
+> *más* observable que la provisión monopólica; y la capa puede acotarse de
+> modo que su falla no se propague en cascada hacia las capas no
+> distribuibles.
 
 Las capas (a), (b) y (d) fallan la primera o la tercera condición y permanecen
 centrales en nuestro diseño. Las capas (f) a (i) pasan las tres, y Core v0 las
 distribuye conjuntamente —conjuntamente, porque distribuir la asignación sin
-distribuir la verificación reproduce la brecha de entrega del PP, y distribuir
-la verificación sin la asignación reproduce la sociedad de la auditoría.
+distribuir la verificación reproduce la brecha de entrega del presupuesto
+participativo (PP), y distribuir la verificación sin la asignación reproduce
+la sociedad de la auditoría.
 
 La capa (e), la planificación, es el caso deliberadamente sin resolver: Core v0
 requiere que los ámbitos de planificación (Planning Scopes) sean públicos,
@@ -211,14 +213,14 @@ Dos reglas metodológicas gobiernan todo lo que sigue. La **regla de crítica
 comparativa** (P001): toda objeción se evalúa contra la línea base
 institucional actual, no contra un ideal —una dificultad compartida por ambos
 sistemas es un problema general de la gobernanza, no una refutación de la
-propuesta. La **regla de integrar-o-acotar** (P007): una vez que la arquitectura
-central está completa, una objeción fundada produce un nuevo mecanismo solo si el
-modo de falla derrotaría una afirmación central y no puede controlarse mediante
-objetos existentes; de lo contrario produce una frontera explícita, un riesgo
-residual visible y un enunciado de limitación. La primera regla disciplina a los
-críticos; la segunda disciplina a los diseñadores —un sesgo hacia reglas pocas,
-simples y generales por sobre la proliferación de maquinaria específica, en el
-espíritu de Epstein (1995).
+propuesta. La **regla de integrar-o-acotar** (P007): una vez que la
+arquitectura central está completa, una objeción fundada produce un nuevo
+mecanismo solo si el modo de falla derrotaría una afirmación central y no
+puede controlarse mediante objetos existentes; de lo contrario produce una
+frontera explícita, un riesgo residual visible y un enunciado de limitación.
+La primera regla disciplina a los críticos; la segunda disciplina a los
+diseñadores —un sesgo hacia pocas reglas simples y generales por sobre la
+proliferación de maquinaria específica, en el espíritu de Epstein (1995).
 
 ## 3. Trabajo relacionado
 
@@ -233,8 +235,7 @@ recursos naturales, y codificamos el régimen en una plataforma cuyos cambios de
 reglas son ellos mismos objetos versionados y auditables.
 
 **Presupuesto participativo.** El PP al estilo de Porto Alegre delega una cuota
-de un presupuesto municipal a asambleas ciudadanas (Wampler 2007; Baiocchi and
-Ganuza 2017). Empíricamente, el PP mejora algunos resultados fiscales pero
+de un presupuesto municipal a asambleas ciudadanas (Wampler 2007; Baiocchi y Ganuza 2017). Empíricamente, el PP mejora algunos resultados fiscales pero
 sufre de decaimiento del involucramiento, captura por minorías organizadas y
 vínculos débiles entre asignación y entrega verificada (Peixoto y Fox 2016).
 Core v0 difiere en exactamente esos márgenes: la asignación es continua e
@@ -696,8 +697,7 @@ ocultos cuya decisión de desvío sigue la condición de incentivos de la
 Proposición 1, bajo un régimen de entrega opaco —una cota inferior de
 cero-control (baja detección, adelantos no protegidos, sin recuperación, sin
 memoria reputacional), con parámetros dentro de la banda de fuga documentada
-empíricamente: 87% en las subvenciones por capitación de Uganda (Reinikka and
-Svensson 2004), 24% en los caminos indonesios (Olken 2007)— frente al régimen
+empíricamente: 87% en las subvenciones por capitación de Uganda (Reinikka y Svensson 2004), 24% en los caminos indonesios (Olken 2007)— frente al régimen
 verificado construido a partir de las Proposiciones 1-4 (condicionamiento por
 hitos, retención, recuperación, detección en la capa de evidencia, y un capital
 reputacional en juego: un registro visible de desvío confirmado que cuesta
