@@ -113,8 +113,7 @@ expert-auditable trail.
 
 What makes a design exercise count as research is the rigor it is put through,
 under one transversal discipline: every claim is evaluated against how the
-current institution solves the same problem, not against an ideal — blocking
-the nirvana fallacy in both directions (Section 2). Our contributions are:
+current institution solves the same problem, not against an ideal — blocking the nirvana fallacy —comparing the real institution against an unattainable ideal rather than the available alternative— in both directions (Section 2). Our contributions are:
 
 1. **Distributing the allocation layer.** The core design contribution:
    applying the functional-distribution principle to resource allocation —
@@ -182,10 +181,7 @@ principle is:
 > that its failure does not cascade into the non-distributable layers.
 
 Layers (a), (b), and (d) fail the first or third condition and remain central
-in our design. Layers (f) through (i) pass all three, and Core v0 distributes
-them jointly — jointly, because distributing allocation without distributing
-verification reproduces the delivery gap of participatory budgeting (PB), and
-distributing verification without allocation reproduces the audit society.
+in our design. Layers (f) through (i) pass all three, and Core v0 distributes them as a block, and must: distributing allocation without verification reproduces the delivery gap of participatory budgeting (PB), and distributing verification without allocation reproduces the audit society.
 
 Layer (e), planning, is the deliberately unresolved case: Core v0 requires
 planning scopes to be public, versioned, and mandate-bearing, but does not
@@ -294,30 +290,43 @@ technical depth but specificity: the models' parameters map one-to-one
 onto named architectural objects, so every proposition is an implementable
 dial.
 
-**What is new.** To our knowledge, no prior work combines (i) a functional
-decomposition of state activity into distributable and non-distributable
-layers, (ii) a complete object-level architecture for the allocation layer,
-(iii) formal incentive analysis of that architecture's specific mechanisms,
-(iv) behavioral simulation of its citizen-facing assumptions — including,
-to our knowledge, the first symmetric-knowledge comparison in which open
-construction of allocation priorities from aggregated citizen signals is
-measured against bandwidth-constrained central construction, and wins at
-every tested scale — and (v) a
-documented adversarial-review method with an explicit stopping rule. And
-the substantive result is itself new: (vi) an end-to-end institutional
-comparison on the criterion redistribution exists to satisfy — delivered
-social value per unit of budget — decomposing selection from delivery on
-matched portfolios, showing the two layers multiply, and introducing the
-visibility gap (officially reported minus real delivery) as a measurable
-accountability deficit of the status quo — a comparison then (vii)
-recalibrated against a baseline parameterized exclusively from the
-published findings of supreme audit institutions across nine
-jurisdictions and the European Union, under a pre-registered
-headline-withdrawal condition. Participatory-budgeting
-evaluations measure participation and allocation; audit studies measure
-leakage after the fact; we know of none that measures, within one
-framework, how much delivered value an allocation institution produces
-from the same resources.
+**What is new.** To our knowledge, no prior work combines:
+
+- **(i)** a functional decomposition of state activity into distributable and
+  non-distributable layers;
+
+- **(ii)** a complete object-level architecture for the allocation layer;
+
+- **(iii)** formal incentive analysis of that architecture's specific
+  mechanisms;
+
+- **(iv)** behavioral simulation of its citizen-facing assumptions —including,
+  to our knowledge, the first symmetric-knowledge comparison in which open
+  construction of allocation priorities from aggregated citizen signals is
+  measured against bandwidth-constrained central construction, and wins at
+  every tested scale—;
+
+- **(v)** a documented adversarial-review method with an explicit stopping
+  rule.
+
+And the substantive result is itself new:
+
+- **(vi)** an end-to-end institutional comparison on the criterion
+  redistribution exists to satisfy —delivered social value per unit of
+  budget—, decomposing selection from delivery on matched portfolios, showing
+  the two layers multiply, and introducing the visibility gap (officially
+  reported minus real delivery) as a measurable accountability deficit of the
+  status quo;
+
+- **(vii)** that comparison recalibrated against a baseline parameterized
+  exclusively from the published findings of supreme audit institutions across
+  nine jurisdictions and the European Union, under a pre-registered
+  headline-withdrawal condition.
+
+Participatory-budgeting evaluations measure participation and allocation;
+audit studies measure leakage after the fact; we know of none that measures,
+within one framework, how much delivered value an allocation institution
+produces from the same resources.
 
 ## 4. The Core v0 architecture
 
@@ -333,9 +342,7 @@ instrument that authorized the migration, its legal rank, the organ to which
 allocations are imputed, and the allocation formula. The platform records that
 external authorization; it does not manufacture it. Binding-mode operation is
 gated on an enabling norm of sufficient rank being recorded; otherwise, the
-disclosed lawful default is consultative or tutored operation. The citizen's
-allocation act carries the full electoral bargain: vote-like immunity and
-vote-like secrecy. Individual allocations are pseudonymous at the public layer
+disclosed lawful default is consultative or tutored operation. The allocation act is designed to replicate two guarantees of the vote: secrecy of the preference and coercion-resistance (receipt-freeness). To the extent an enabling norm recognizes it, it can be shielded with protections equivalent to the vote's; until then, these are technical platform guarantees, not a legal status. Individual allocations are pseudonymous at the public layer
 and reconcile cryptographically against public per-scope totals — every peso
 traceable as money, no citizen traceable as an allocator, and no receipt or
 exportable proof of any individual allocation exists, even voluntarily, so
@@ -365,8 +372,7 @@ when all conditions required by its proportional *threshold policy* close.
 Committed funds are custodied, not transferred: release happens per
 milestone, against reviewed fulfillment evidence, with retention, blocker
 checks, and guarantees materialized by external custodians before any
-release. A *Duty-of-Care Anchor* names, before disbursement, the solvent
-legal person answerable to third parties for physical harm.
+release. A *Duty-of-Care Anchor* names, before disbursement, the solvent legal person civilly answerable to third parties for damages arising from execution, in particular damage to physical integrity.
 
 **Attention infrastructure.** Citizens act through a layered interface:
 discovery with user-controlled, reason-visible ordering; compact project
@@ -382,7 +388,7 @@ produces visible, revocable, and auditable.
 
 **Transition.** Deployment proceeds through operating modes — closed,
 tutored, semi-open, open — in which a public authority may retain
-admissibility review, but every material tutored decision, and every
+eligibility review (project admissibility), but every material tutored decision, and every
 tutored silence past its deadline, becomes a public governance-resolution
 object. Incumbent-resistance indicators (scope share opened, rejection and
 timeout rates, operator privilege) make symbolic adoption distinguishable
@@ -390,13 +396,15 @@ from real transfer.
 
 ## 5. Formal analysis
 
-We state the three models and their results; proofs are one-step algebra
-and appear in the companion note ([[formal-models|research/formal-models.md]]). All agents
-are risk-neutral; budgets are normalized to 1. The deterrence structure
-throughout is Becker's (1968): a violation is deterred when the detection
-probability times the stake at risk exceeds its gain — our contribution is
-mapping each term of that inequality onto a named, configurable
-architectural object.
+We state the three models and their results; proofs are one-step algebra and
+appear in the companion note ([[formal-models|research/formal-models.md]]).
+All agents are risk-neutral; budgets are normalized to 1. The deterrence
+structure throughout is Becker's (1968): a violation is deterred when the
+detection probability times the stake at risk exceeds its gain — our
+contribution is mapping each term of that inequality onto a named,
+configurable architectural object. To avoid notation collisions, *Proposition
+N* denotes the formal results of this section; *P001/P007*, the methodological
+rules (§2); and *prediction N*, the behavioral predictions of §5.3.
 
 ### 5.1 Milestone-gated disbursement
 
@@ -466,19 +474,23 @@ fiscalizer are strangers: a bribe offer is itself reported with probability
 
 > *k* · *q* · *W* ≥ *G* − (*δ* / (1 − *δ*)) · *P_e*,
 
-and in particular whenever *kqW* ≥ *G*. Three corollaries carry design
-weight. *Corroboration substitutes for reputation capital*: the required
-stake per fiscalizer falls linearly in *k*, so redundant review is exactly
-what makes shallow-reputation fiscalizer pools workable, at linear control
-cost — which is what proportional threshold policies are for. *Repeat
-relationships are the attack surface*: the friction term exists only while
-relational contracting is prevented, which is why repeat-pairing visibility
-is load-bearing (we hold the report probability *δ* exogenous to *k*;
-endogenizing it — more approached reviewers, more chances of a report —
-only strengthens the condition). *Thin markets attack both models at once*: a monopolist
-fiscalizer that cannot credibly be excluded loses its forfeitable stake
-(*W* → 0) while also degrading *p* in Proposition 1 — the two conditions
-identify the same environments as fragile, for the same reason.
+and in particular whenever *kqW* ≥ *G*. Three corollaries carry design weight:
+
+- ***Corroboration substitutes for reputation capital.*** The required stake
+  per fiscalizer falls linearly in *k*, so redundant review is exactly what
+  makes shallow-reputation fiscalizer pools workable, at linear control cost
+  —which is what proportional threshold policies are for.
+
+- ***Repeat relationships are the attack surface.*** The friction term exists
+  only while relational contracting is prevented, which is why repeat-pairing
+  visibility is load-bearing (we hold the report probability *δ* exogenous to
+  *k*; endogenizing it —more approached reviewers, more chances of a report—
+  only strengthens the condition).
+
+- ***Thin markets attack both models at once.*** A monopolist fiscalizer that
+  cannot credibly be excluded loses its forfeitable stake (*W* → 0) while also
+  degrading *p* in Proposition 1: the two conditions identify the same
+  environments as fragile, for the same reason.
 
 ### 5.3 Attention-constrained allocation
 
@@ -489,10 +501,25 @@ flows: to salience amplified by social proof (Bikhchandani, Hirshleifer and
 Welch 1992; Salganik, Dodds and Watts 2006), or to the architecture's own
 default layer, whose routing follows the distributed project prioritization
 — the aggregated allocation profiles — not a central plan. The model yields three testable
-predictions — caps tame cascades (P1), defaults anchor quality (P2), decay
-degrades gracefully only with defaults (P3) — evaluated next.
+predictions — caps tame cascades (prediction 1), defaults anchor quality (prediction 2), decay
+degrades gracefully only with defaults (prediction 3) — evaluated next.
 
 ## 6. Computational evidence
+
+We test the three predictions of §5.3 —and, in successive experiments, the
+assumptions of Propositions 1–4— in an agent-based simulation. Each experiment
+(E1–E8) corresponds to a finding:
+
+| Exp | What it tests | |
+|---|---|---|
+| E1 | do funding caps raise quality? | Finding 1 |
+| E2 | what carries allocation quality? | Finding 2 |
+| E3 | what buffers participation decay? | Finding 3 |
+| E4 | distributed aggregation vs. central construction | Finding 4 |
+| E5 | where the architecture gains value (selection × delivery) | Finding 5 |
+| E6 | reputational competition and execution standard | Finding 6 |
+| E7 | comparison against an audit-calibrated baseline | Finding 7 |
+| E8 | robustness under endogenous behavioral participation | close of §6 |
 
 We simulate 10,000 citizens over 24 monthly cycles allocating across a
 standing pool of 40 projects with quality *θ*, salience *s* (measured
@@ -507,6 +534,12 @@ seeded runs per condition; the code is dependency-free and deterministic
 (`scripts/simulation/allocation-sim.mjs`; full tables in
 [[simulation-results|research/simulation-results.md]]).
 
+**On the headline ratio.** We report three baselines of the same
+value-per-budget ratio: **2.19×** against zero-control (E5), **2.22×** against
+the audit-calibrated status quo (E7, the reference figure), and **2.26×**
+under behavioral adoption (E8). The abstract rounds to **~2.2×**; the ~5×
+robustness to poor central planning is measured by the companion study.
+
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
 0.759), the most salient 5% of projects absorb less (16.8% vs 19.6% of all
@@ -517,66 +550,71 @@ architecture's claim for the closure rule should be — and in the corpus now
 is — bounded accordingly.
 
 **Finding 2: the default anchor, not citizen attention, carries allocation
-quality.** A default-anchored mix with a near-perfectly informed planner
-(r ≈ 0.97) reaches sel(θ) ≈ 0.71 — roughly 1.6–2× the salience-driven
-configurations (≈ 0.35–0.43) — while quintupling citizen attention (α from 2% to 10%)
-moves quality selection by at most ≈ 0.08 in salience-driven regimes and
-essentially nothing in default-anchored ones. Degrading the vector's informational quality
-from near-perfect to moderate (r ≈ 0.97 → 0.55) costs ≈ 0.29 of quality
-selection — far more than any feasible attention gain recovers. Two
-qualifications keep this finding honest. The dominance of defaults is
-partly by construction — the default rule is a deterministic θ-correlated
-allocator holding most of the budget — so the informative content is the
-*conditioning*: how much the vector's informational quality determines the anchor's value,
-and how little citizen attention substitutes for it. And a sensitivity
-panel (varying evaluator sample size and social-proof strength) shows the
-regime ordering is robust except under very strong social proof, where the
-regimes converge within noise because strong amplification also propagates
-the evaluators' quality signal; magnitudes are parameter-dependent and
-uncalibrated. What survives all variations is the ordering and the
-dominance of the prioritization's informational quality — which quantifies
-the leverage concentrated in whatever constructs the project prioritization
-the passive share follows. That prioritization has two layers the companion's
-engine at first fused and has since separated (Offermann 2026b): the macro
-categorization — this corpus's Planning Scope, which frames eligibility and
-carries no budget weights — and the aggregated allocation profiles that route
-budget within it. The distributed arm is robust to the quality of that
-categorization while a central arm is fragile to it, so the advantage over a
-central status quo is not fixed but grows as central planning worsens (the
-companion measures it rising from roughly twofold to more than fivefold). Two architectural facts scope that statement
-correctly, and an earlier draft's phrasing ("the architecture's central
-vulnerability... whoever constructs planning scopes holds the allocation's
-quality in their hands") lacked both. First, the default layer is
-pluggable, not mandatorily central: the corpus's civic autopilot gives
-each citizen manual allocation, delegation, published allocation profiles,
-a personal automatic rule, or the system default — an onboarding citizen
-must explicitly select or acknowledge a base profile, and only the share
-of citizens who never engage necessarily follows the system default, which
-itself operates under a recorded Allocation Mandate. Second, centralized
-construction of scope weights is a property of the closed and tutored
-transition modes, not of the architecture: operating modes are
+quality.** A default-anchored mix, with a near-perfectly informed planner (r ≈
+0.97), reaches sel(θ) ≈ 0.71: between 1.6× and 2× the salience-driven
+configurations (≈ 0.35–0.43). Quintupling citizen attention (α from 2% to
+10%), by contrast, barely moves the needle —at most ≈ 0.08 in salience-driven
+regimes, and essentially nothing in default-anchored ones—, while degrading
+the vector's informational quality from near-perfect to moderate (r ≈ 0.97 →
+0.55) costs ≈ 0.29 of selection. The anchor rules, not attention.
+
+Two qualifications keep the finding honest:
+
+- **By construction.** The default rule is a deterministic θ-correlated
+  allocator already holding most of the budget; what is measured is the
+  *conditioning* —how much the vector's informational quality determines the
+  anchor's value, and how little attention substitutes for it—, not the wisdom
+  of the crowd.
+
+- **Robustness.** A sensitivity panel (varying evaluator sample size and
+  social-proof strength) shows the regime ordering is robust, except under
+  very strong social proof, where the regimes converge within noise because
+  strong amplification also propagates the evaluators' quality signal.
+  Magnitudes are parameter-dependent and uncalibrated; what survives all
+  variations is the ordering and the dominance of the prioritization's
+  informational quality.
+
+This finding quantifies the leverage concentrated in whatever constructs the
+project prioritization the passive share follows. That prioritization has two
+layers —which a companion study (Offermann 2026b) separated for the first
+time—: the macro categorization (this corpus's Planning Scope, which frames
+eligibility and carries no budget weights) and the aggregated allocation
+profiles that route budget within it. The distributed arm is robust to the
+quality of that categorization and a central arm is fragile to it, so the
+advantage over a central status quo is not fixed: it grows as central planning
+worsens (that study measures it rising from roughly twofold to more than
+fivefold).
+
+Two architectural facts scope the statement and forestall a tempting
+over-reading. First, the default layer is pluggable, not mandatorily central:
+the civic autopilot gives each citizen manual allocation, delegation,
+published allocation profiles, a personal automatic rule, or the system
+default; an onboarding citizen must explicitly select or acknowledge a base
+profile, and only the share who never engage necessarily follows the system
+default —which itself operates under a recorded allocation mandate. Second,
+centralized construction of scope weights is a property of the closed and
+tutored transition modes, not of the architecture: operating modes are
 country-configured states, and the designed trajectory is toward open
-construction (Finding 4 measures its in-model viability). What the numbers
-establish is therefore a conditional: the informational quality of the
-**project prioritization the passive share follows** — the aggregated
-allocation profiles, not a macro planning vector — is the binding
-constraint on allocation quality, whoever or whatever supplies it; a
-captured or ignorant supplier is the failure mode, a well-informed or
-well-aggregated one is the asset, and randomizing that prioritization to
-escape capture would buy neutrality at the price of near-random quality
-for the passive share. The binding constraint is thus the quality of that
-prioritization — and because the architecture's designed trajectory
-distributes its construction (open mode) and keeps it visible, versioned,
-and pluggable, the constraint is met by distribution, not by a central
-agenda. This is distinct from, and should not be conflated with, the
-narrower agenda-setting point of Section 8, which concerns only who frames
-eligibility. Two things E1–E3 cannot say, and an earlier draft
-over-read them to say: the prioritization's origin is unspecified (r is a
-property of the vector, not of a state office), and the modeled crowd
-carries social proof but no knowledge — so these experiments compare
-attention against weight quality, not central against distributed
-knowledge. Finding 4 was designed, after author review, to make that
-comparison properly.
+construction (Finding 4 measures its in-model viability).
+
+The numbers therefore establish a conditional. The binding constraint on
+allocation quality is the informational quality of the **project
+prioritization the passive share follows** —the aggregated allocation
+profiles, not a macro planning vector—, whoever or whatever supplies it. A
+captured or ignorant supplier is the failure mode; a well-informed or
+well-aggregated one, the asset. Randomizing that prioritization to escape
+capture does not help: it buys neutrality at the price of near-random quality
+for the passive share. And because the architecture's designed trajectory
+distributes its construction (open mode) and keeps it visible, versioned, and
+pluggable, the constraint is met by distribution, not by a central agenda.
+This is distinct from the narrower agenda-setting point of Section 8, which
+concerns only who frames eligibility.
+
+E1–E3 do not authorize two readings: the prioritization's origin is
+unspecified (r is a property of the vector, not of a state office), and the
+modeled crowd carries social proof but no knowledge —so these experiments
+compare attention against weight quality, not central against distributed
+knowledge. Finding 4 makes that comparison properly.
 
 **Finding 3: what buffers participation decay is the anchor's level, not
 where the leavers' weight flows — our own prediction failed here.** We
@@ -632,8 +670,7 @@ benign because visible funding progress is itself quality-correlated in a
 well-anchored system. Third, elicitation is non-strategic by assumption;
 in deployment, signal reporting becomes a gaming and clientelism surface,
 and the mechanics of open scope construction remain a gated design
-problem. Within those bounds, the finding reverses the reading an earlier
-draft invited: the binding variable is not who holds the pen but how much
+problem. Within those bounds, the finding points in a clear direction: the binding variable is not who holds the pen but how much
 dispersed information the scope-construction institution ingests.
 
 The simulation also disciplines rhetoric — in both directions. Nothing in
@@ -734,7 +771,7 @@ status-quo arm is parameterized exclusively from published
 audit-institution findings — detection from Chile's comptroller works
 studies, retention from documented payment-state practice, recovery from
 Mexico's ASF series, leakage anchors category-matched to construction
-(Olken 2007; the multi-country evidence base spans GAO, NAO, the
+(Olken 2007; the multi-country evidence base spans the U.S. GAO, the U.K. NAO, the
 European Court of Auditors, Brazil's TCU and CGU, and the comptrollers
 of Chile, Peru and Colombia; Ferraz and Finan 2008) — with the planner's
 inspection bandwidth scaled to scope and coordinated signal bias swept
@@ -1033,7 +1070,7 @@ benchmarks, duration bands, thresholds) let a strict verifier judge rather
 than guess. The machine layer reaches only document-legible, delivery-phase
 fraud — physical quality-below-spec and pre-contract theft remain fully
 human, so provenance attestation is tamper-evidence at capture, not
-court-grade proof, and admissibility still needs custody, contradiction,
+court-grade proof, and evidentiary admissibility still needs custody, contradiction,
 and expert testimony. Contraposed citizen evidence — independent producers
 with interests opposed to the executor, whose anticipated existence deters
 diversion — keeps the watching distributed even as routine

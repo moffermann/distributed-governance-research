@@ -118,8 +118,9 @@ registrada en un rastro legible por la ciudadanía y auditable por expertos.
 Lo que vuelve investigación a un ejercicio de diseño es el rigor al que se lo
 somete, bajo una disciplina transversal: cada afirmación se evalúa contra cómo
 la institución actual resuelve el mismo problema, no contra un ideal,
-bloqueando la falacia del nirvana en ambas direcciones (Sección 2). Nuestras
-contribuciones son:
+bloqueando la falacia del nirvana —comparar la institución real contra un
+ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
+(Sección 2). Nuestras contribuciones son:
 
 1. **La distribución de la capa de asignación.** El aporte central de diseño:
    aplicar el principio de distribución funcional a la asignación de recursos
@@ -194,10 +195,10 @@ rendición de cuentas. El principio de distribución es:
 
 Las capas (a), (b) y (d) fallan la primera o la tercera condición y permanecen
 centrales en nuestro diseño. Las capas (f) a (i) pasan las tres, y Core v0 las
-distribuye conjuntamente —conjuntamente, porque distribuir la asignación sin
-distribuir la verificación reproduce la brecha de entrega del presupuesto
-participativo (PP), y distribuir la verificación sin la asignación reproduce
-la sociedad de la auditoría.
+distribuye como un bloque, y debe hacerlo: distribuir la asignación sin la
+verificación reproduce la brecha de entrega del presupuesto participativo
+(PP), y distribuir la verificación sin la asignación reproduce la sociedad de
+la auditoría.
 
 La capa (e), la planificación, es el caso deliberadamente sin resolver: Core v0
 requiere que los ámbitos de planificación (Planning Scopes) sean públicos,
@@ -311,31 +312,45 @@ contribución aquí no es la profundidad técnica sino la especificidad: los par
 arquitectónicos nombrados, de modo que cada proposición es un dial
 implementable.
 
-**Qué es nuevo.** Hasta donde sabemos, ningún trabajo previo combina (i) una
-descomposición funcional de la actividad estatal en capas distribuibles y no
-distribuibles, (ii) una arquitectura completa a nivel de objetos para la capa de
-asignación, (iii) un análisis formal de incentivos de los mecanismos específicos
-de esa arquitectura, (iv) simulación conductual de sus supuestos de cara a la
-ciudadanía —incluida, hasta donde sabemos, la primera comparación de
-conocimiento simétrico en la que la construcción abierta de las prioridades
-de asignación a partir de señales ciudadanas agregadas se mide contra la
-construcción central de ancho de banda finito, y gana en toda escala
-probada—, y (v) un método documentado de revisión adversarial con una regla de
-detención explícita. Y el resultado sustantivo es en sí mismo nuevo: (vi) una
-comparación institucional de extremo a extremo sobre el criterio que la
-redistribución existe para satisfacer —valor social entregado por unidad de
-presupuesto—, descomponiendo la selección de la entrega sobre carteras
-apareadas, mostrando que ambas capas se multiplican, e introduciendo la brecha
-de visibilidad (entrega oficialmente reportada menos entrega real) como un
-déficit de rendición de cuentas medible del statu quo —una comparación luego
-(vii) recalibrada contra una línea base parametrizada exclusivamente a partir de
-los hallazgos publicados de instituciones supremas de auditoría de nueve
-jurisdicciones y la Unión Europea, bajo una condición preregistrada de retiro del
-resultado principal. Las evaluaciones de
-presupuestos participativos miden participación y asignación; los estudios de
-auditoría miden fugas después del hecho; no conocemos ninguno que mida, dentro
-de un mismo marco, cuánto valor entregado produce una institución de asignación
-a partir de los mismos recursos.
+**Qué es nuevo.** Hasta donde sabemos, ningún trabajo previo combina:
+
+- **(i)** una descomposición funcional de la actividad estatal en capas
+  distribuibles y no distribuibles;
+
+- **(ii)** una arquitectura completa a nivel de objetos para la capa de
+  asignación;
+
+- **(iii)** un análisis formal de incentivos de los mecanismos específicos de
+  esa arquitectura;
+
+- **(iv)** simulación conductual de sus supuestos de cara a la ciudadanía
+  —incluida, hasta donde sabemos, la primera comparación de conocimiento
+  simétrico en la que la construcción abierta de las prioridades de asignación
+  a partir de señales ciudadanas agregadas se mide contra la construcción
+  central de ancho de banda finito, y gana en toda escala probada—;
+
+- **(v)** un método documentado de revisión adversarial con una regla de
+  detención explícita.
+
+Y el resultado sustantivo es en sí mismo nuevo:
+
+- **(vi)** una comparación institucional de extremo a extremo sobre el
+  criterio que la redistribución existe para satisfacer —valor social
+  entregado por unidad de presupuesto—, descomponiendo la selección de la
+  entrega sobre carteras apareadas, mostrando que ambas capas se multiplican,
+  e introduciendo la brecha de visibilidad (entrega oficialmente reportada
+  menos entrega real) como un déficit de rendición de cuentas medible del
+  statu quo;
+
+- **(vii)** esa comparación recalibrada contra una línea base parametrizada
+  exclusivamente a partir de los hallazgos publicados de instituciones
+  supremas de auditoría de nueve jurisdicciones y la Unión Europea, bajo una
+  condición preregistrada de retiro del resultado principal.
+
+Las evaluaciones de presupuestos participativos miden participación y
+asignación; los estudios de auditoría miden fugas después del hecho; no
+conocemos ninguno que mida, dentro de un mismo marco, cuánto valor entregado
+produce una institución de asignación a partir de los mismos recursos.
 
 ## 4. La arquitectura Core v0
 
@@ -352,21 +367,24 @@ estatuto o instrumento que autorizó la migración, su rango legal, el órgano a
 que se imputan las asignaciones y la fórmula de asignación. La plataforma
 registra esa autorización externa; no la fabrica. La operación en modo
 vinculante está supeditada a que se haya registrado una norma habilitante de
-rango suficiente; en caso contrario, el defecto lícito es la operación
-consultiva o tutelada. El acto de asignación del ciudadano porta el pacto
-electoral completo: inmunidad como la del voto y secreto como el del voto. Las
-asignaciones individuales son seudónimas en la capa pública y se reconcilian
-criptográficamente contra los totales públicos por ámbito —cada peso trazable
-como dinero, ningún ciudadano trazable como asignador, y no existe recibo ni
-prueba exportable de ninguna asignación individual, ni siquiera
-voluntariamente, de modo que un patrón que exija prueba nunca pueda obtenerla
-(la defensa propia del voto secreto, aplicada a la billetera). Un *Fiscal
-Commitment Profile* (perfil de compromiso fiscal) por ámbito hace públicos y
-versionados el porcentaje migrado, la indexación y la latencia de entrega, de
-modo que el estrangulamiento fiscal por parte de la tesorería establecida sea
-medible y atribuible antes que silencioso. Los servicios esenciales con
-obligaciones de continuidad quedan protegidos por pisos no asignables, fuera
-de la popularidad ciudadano-por-ciudadano.
+rango suficiente; en caso contrario, el modo predeterminado admisible es la
+operación consultiva o tutelada. El acto de asignación se diseña para replicar
+dos garantías propias del sufragio: el secreto de la preferencia y la
+resistencia a la coacción (receipt-freeness). En la medida en que una norma
+habilitante lo reconozca, podrá ampararse con protecciones equivalentes a las
+del voto; hasta entonces, son garantías técnicas de la plataforma, no un
+estatuto legal. Las asignaciones individuales son seudónimas en la capa
+pública y se reconcilian criptográficamente contra los totales públicos por
+ámbito —cada peso trazable como dinero, ningún ciudadano trazable como
+asignador, y no existe recibo ni prueba exportable de ninguna asignación
+individual, ni siquiera voluntariamente, de modo que un patrón que exija
+prueba nunca pueda obtenerla (la defensa propia del voto secreto, aplicada a
+la billetera). Un *Fiscal Commitment Profile* (perfil de compromiso fiscal)
+por ámbito hace públicos y versionados el porcentaje migrado, la indexación y
+la latencia de entrega, de modo que el estrangulamiento fiscal por parte de la
+tesorería establecida sea medible y atribuible antes que silencioso. Los
+servicios esenciales con obligaciones de continuidad quedan protegidos por
+pisos no asignables, fuera de la popularidad ciudadano-por-ciudadano.
 
 **Proyectos y roles.** Los proyectos financiables declaran una tesis de valor
 con afirmaciones verificables, partes afectadas, riesgos y antivalores, un plan
@@ -387,9 +405,7 @@ de umbrales* (threshold policy) proporcional cierran. Los fondos comprometidos
 quedan en custodia, no transferidos: la liberación ocurre por hito, contra
 evidencia de cumplimiento revisada, con retención, verificaciones de bloqueadores
 y garantías materializadas por custodios externos antes de cualquier liberación.
-Un *Duty-of-Care Anchor* (ancla del deber de cuidado) nombra, antes del
-desembolso, a la persona jurídica solvente responsable ante terceros por daño
-físico.
+Un *Duty-of-Care Anchor* (ancla de deber de diligencia) nombra, antes del desembolso, a la persona jurídica solvente que responde civilmente frente a terceros por los daños derivados de la ejecución, en particular los daños a la integridad física.
 
 **Infraestructura de atención.** La ciudadanía actúa a través de una interfaz
 estratificada: descubrimiento con ordenamiento controlado por el usuario y con
@@ -407,8 +423,7 @@ la arquitectura hace que la intermediación que la desatención produce sea
 visible, revocable y auditable.
 
 **Transición.** El despliegue procede a través de modos de operación —cerrado,
-tutelado, semiabierto, abierto— en los que una autoridad pública puede retener
-la revisión de admisibilidad, pero toda decisión tutelada material, y todo
+tutelado, semiabierto, abierto— en los que una autoridad pública puede retener la revisión de elegibilidad (admisibilidad de proyectos), pero toda decisión tutelada material, y todo
 silencio tutelado más allá de su plazo, se convierte en un objeto público de
 resolución de gobernanza. Los indicadores de resistencia del sistema
 establecido (cuota de ámbito abierta, tasas de rechazo y de vencimiento de
@@ -417,13 +432,16 @@ la transferencia real.
 
 ## 5. Análisis formal
 
-Enunciamos los tres modelos y sus resultados; las demostraciones son álgebra de
-un paso y aparecen en la nota acompañante (`research/formal-models.md`). Todos
-los agentes son neutrales al riesgo; los presupuestos están normalizados a 1. La
-estructura de disuasión a lo largo del texto es la de Becker (1968): una
-violación se disuade cuando la probabilidad de detección por lo que está en juego
-excede su ganancia —nuestra contribución es mapear cada término de esa
-desigualdad sobre un objeto arquitectónico nombrado y configurable.
+Enunciamos los tres modelos y sus resultados; las demostraciones son álgebra
+de un paso y aparecen en la nota acompañante (`research/formal-models.md`).
+Todos los agentes son neutrales al riesgo; los presupuestos están normalizados
+a 1. La estructura de disuasión a lo largo del texto es la de Becker (1968):
+una violación se disuade cuando la probabilidad de detección por lo que está
+en juego excede su ganancia —nuestra contribución es mapear cada término de
+esa desigualdad sobre un objeto arquitectónico nombrado y configurable. Para
+evitar colisiones de notación, *Proposición N* designa los resultados formales
+de esta sección; *P001/P007*, las reglas metodológicas (§2); y *predicción N*,
+las predicciones conductuales de §5.3.
 
 ### 5.1 Desembolso supeditado a hitos
 
@@ -499,21 +517,26 @@ si
 
 > *k* · *q* · *W* ≥ *G* − (*δ* / (1 − *δ*)) · *P_e*,
 
-y en particular siempre que *kqW* ≥ *G*. Tres corolarios cargan peso de diseño.
-*La corroboración sustituye al capital reputacional*: el capital en juego
-requerido por fiscalizador cae linealmente en *k*, de modo que la revisión
-redundante es exactamente lo que hace viables los conjuntos de fiscalizadores de
-reputación superficial, a costo de control lineal —que es para lo que sirven las
-políticas de umbrales proporcionales. *Las relaciones repetidas son la superficie
-de ataque*: el término de fricción existe solo mientras se impida la contratación
-relacional, razón por la cual la visibilidad de los emparejamientos repetidos
-soporta la carga (mantenemos la probabilidad de reporte *δ* exógena a *k*;
-endogenizarla —más revisores abordados, más chances de un reporte— solo fortalece
-la condición). *Los mercados delgados atacan ambos modelos a la vez*: un
-fiscalizador monopolista que no puede excluirse de manera creíble pierde su
-capital confiscable (*W* → 0) al tiempo que degrada *p* en la Proposición 1 —las
-dos condiciones identifican los mismos entornos como frágiles, por la misma
-razón.
+y en particular siempre que *kqW* ≥ *G*. Tres corolarios cargan peso de diseño:
+
+- ***La corroboración sustituye al capital reputacional.*** El capital en
+  juego requerido por fiscalizador cae linealmente en *k*, de modo que la
+  revisión redundante es exactamente lo que hace viables los conjuntos de
+  fiscalizadores de reputación superficial, a costo de control lineal —que es
+  para lo que sirven las políticas de umbrales proporcionales.
+
+- ***Las relaciones repetidas son la superficie de ataque.*** El término de
+  fricción existe solo mientras se impida la contratación relacional, razón
+  por la cual la visibilidad de los emparejamientos repetidos soporta la carga
+  (mantenemos la probabilidad de reporte *δ* exógena a *k*; endogenizarla —más
+  revisores abordados, más chances de un reporte— solo fortalece la
+  condición).
+
+- ***Los mercados delgados atacan ambos modelos a la vez.*** Un fiscalizador
+  monopolista que no puede excluirse de manera creíble pierde su capital
+  confiscable (*W* → 0) al tiempo que degrada *p* en la Proposición 1: las dos
+  condiciones identifican los mismos entornos como frágiles, por la misma
+  razón.
 
 ### 5.3 Asignación bajo restricción de atención
 
@@ -524,10 +547,25 @@ la mayoría *desatenta*: hacia la saliencia amplificada por la prueba social
 (Bikhchandani, Hirshleifer y Welch 1992; Salganik, Dodds y Watts 2006), o
 hacia la capa de reglas por defecto de la propia arquitectura, que sigue
 las prioridades de planificación declaradas. El modelo arroja tres predicciones verificables —los topes doman
-las cascadas (P1), los valores por defecto anclan la calidad (P2), el decaimiento
-se degrada con gracia solo con valores por defecto (P3)— evaluadas a continuación.
+las cascadas (predicción 1), los valores por defecto anclan la calidad (predicción 2), el decaimiento
+se degrada con gracia solo con valores por defecto (predicción 3)— evaluadas a continuación.
 
 ## 6. Evidencia computacional
+
+Ponemos a prueba las tres predicciones de §5.3 —y, en experimentos sucesivos,
+los supuestos de las Proposiciones 1–4— en una simulación basada en agentes.
+Cada experimento (E1–E8) corresponde a un hallazgo:
+
+| Exp | Qué pone a prueba | |
+|---|---|---|
+| E1 | ¿los topes de financiamiento suben la calidad? | Hallazgo 1 |
+| E2 | ¿qué sostiene la calidad de la asignación? | Hallazgo 2 |
+| E3 | ¿qué amortigua el decaimiento de la participación? | Hallazgo 3 |
+| E4 | agregación distribuida vs. construcción central | Hallazgo 4 |
+| E5 | dónde gana valor la arquitectura (selección × entrega) | Hallazgo 5 |
+| E6 | competencia reputacional y estándar de ejecución | Hallazgo 6 |
+| E7 | comparación contra una línea base calibrada en auditoría | Hallazgo 7 |
+| E8 | robustez bajo participación conductual endógena | cierre de §6 |
 
 Simulamos 10.000 ciudadanos a lo largo de 24 ciclos mensuales asignando sobre un
 conjunto permanente de 40 proyectos con calidad *θ*, saliencia *s* (medida
@@ -543,6 +581,13 @@ conmutable. Veinte corridas con semilla por condición; el código es sin
 dependencias y determinista (`scripts/simulation/allocation-sim.mjs`; tablas
 completas en `research/simulation-results.md`).
 
+**Sobre el cociente principal.** Reportamos tres líneas base del mismo
+cociente de valor por unidad de presupuesto: **2.19×** frente al cero-control
+(E5), **2.22×** frente al statu quo calibrado en auditoría (E7, la cifra de
+referencia) y **2.26×** bajo adopción conductual (E8). El resumen redondea a
+**~2.2×**; el ~5× de robustez frente a una mala planificación central lo mide
+el estudio complementario.
+
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
 (Gini de financiamiento 0.732 vs 0.759), el 5% de proyectos más saliente absorbe
@@ -554,69 +599,74 @@ arquitectura respecto de la regla de cierre debería estar —y en el corpus aho
 está— acotada en consecuencia.
 
 **Hallazgo 2: el ancla por defecto, no la atención ciudadana, sostiene la
-calidad de la asignación.** Una mezcla anclada en valores por defecto con un
-planificador casi perfectamente informado (r ≈ 0.97) alcanza sel(θ) ≈ 0.71
-—aproximadamente 1.6–2× las configuraciones impulsadas por saliencia
-(≈ 0.35–0.43)— mientras que quintuplicar la atención ciudadana (α de 2% a 10%)
-mueve la selección de calidad a lo sumo en ≈ 0.08 en los regímenes impulsados por
-saliencia y esencialmente nada en los anclados en valores por defecto. Degradar
-la calidad informativa del vector de casi perfecta a moderada (r ≈ 0.97 → 0.55)
-cuesta ≈ 0.29 de selección de calidad —mucho más de lo que cualquier ganancia de
-atención factible recupera. Dos salvedades mantienen honesto este hallazgo. El
-predominio de los valores por defecto es en parte por construcción —la regla por
-defecto es un asignador determinista correlacionado con θ que retiene la mayor
-parte del presupuesto— de modo que el contenido informativo es el
-*condicionamiento*: cuánto determina la calidad informativa del vector el valor
-del ancla, y cuán poco lo sustituye la atención ciudadana. Y un panel de
-sensibilidad (variando el tamaño de muestra del evaluador y la fuerza de la
-prueba social) muestra que el ordenamiento de regímenes es robusto salvo bajo
-prueba social muy fuerte, donde los regímenes convergen dentro del ruido porque
-la amplificación fuerte también propaga la señal de calidad de los evaluadores;
-las magnitudes dependen de los parámetros y no están calibradas. Lo que sobrevive
-a todas las variaciones es el ordenamiento y el predominio de la calidad
-informativa de la priorización —lo que cuantifica el apalancamiento concentrado
-en aquello que construye la priorización de proyectos que sigue el tramo pasivo.
-Esa priorización tiene dos capas que el motor del complemento al principio fundió
-y desde entonces separó (Offermann 2026b): la categorización macro —el Ámbito de
-Planificación de este corpus, que enmarca la elegibilidad y no porta pesos de
-presupuesto— y los perfiles de asignación agregados que rutean el presupuesto
-dentro de ella. El arreglo distribuido es robusto a la calidad de esa
-categorización mientras el central es frágil a ella, así que la ventaja sobre un
-status quo central no es fija sino que crece a medida que empeora la
-planificación central (el complemento la mide subiendo de ~2× a más de 5×).
-Dos hechos arquitectónicos acotan correctamente ese enunciado, y la formulación
-de un borrador anterior ("la vulnerabilidad central de la arquitectura... quien
-construye los ámbitos de planificación tiene la calidad de la asignación en sus
-manos") carecía de ambos. Primero, la capa por defecto es sustituible, no
-obligatoriamente central: el autopiloto cívico del corpus ofrece a cada ciudadano
-asignación manual, delegación, perfiles de asignación publicados, una regla
-automática personal, o el valor por defecto del sistema —un ciudadano en proceso
-de incorporación debe seleccionar o reconocer explícitamente un perfil base, y
-solo la porción de ciudadanos que nunca se involucra sigue necesariamente el
-valor por defecto del sistema, el cual a su vez opera bajo un Allocation Mandate
-registrado. Segundo, la construcción centralizada de los pesos de ámbito es una
-propiedad de los modos de transición cerrado y tutelado, no de la arquitectura:
-los modos de operación son estados configurados por país, y la trayectoria
-diseñada apunta hacia la construcción abierta (el Hallazgo 4 mide su viabilidad
-dentro del modelo). Lo que los números establecen es, por tanto, un condicional:
-la calidad informativa de la **priorización de proyectos que sigue la porción
-pasiva** —los perfiles de asignación agregados, no un vector de planificación
-macro— es la restricción vinculante sobre la calidad de la asignación,
-quienquiera o lo que sea que la provea; un proveedor capturado o ignorante es el
-modo de falla, uno bien informado o bien agregado es el activo, y aleatorizar esa
-priorización para escapar de la captura compraría neutralidad al precio de una
-calidad casi aleatoria para la porción pasiva. La restricción vinculante es, así,
-la calidad de esa priorización —y como la trayectoria diseñada de la arquitectura
-distribuye su construcción (modo abierto) y la mantiene visible, versionada y
-sustituible, la restricción se satisface por distribución, no por una agenda
-central. Esto es distinto, y no debe confundirse, con el punto más estrecho de
-fijación de agenda de la Sección 8, que concierne solo a quién enmarca la
-elegibilidad. Dos cosas que E1–E3 no pueden afirmar, y que un borrador anterior
-sobreinterpretó al afirmarlas: el origen de la priorización queda sin especificar
-(r es una propiedad del vector, no de una oficina estatal), y la multitud modelada porta prueba social pero
-ningún conocimiento —de modo que estos experimentos comparan atención frente a
-calidad de los pesos, no conocimiento central frente a conocimiento distribuido.
-El Hallazgo 4 se diseñó, tras la revisión del autor, para hacer esa comparación
+calidad de la asignación.** Una mezcla anclada en valores por defecto, con un
+planificador casi perfectamente informado (r ≈ 0.97), alcanza sel(θ) ≈ 0.71:
+entre 1.6× y 2× las configuraciones impulsadas por saliencia (≈ 0.35–0.43). En
+cambio, quintuplicar la atención ciudadana (α de 2% a 10%) casi no mueve la
+aguja —a lo sumo ≈ 0.08 en los regímenes de saliencia, y prácticamente nada en
+los anclados en valores por defecto—, mientras que degradar la calidad
+informativa del vector de casi perfecta a moderada (r ≈ 0.97 → 0.55) cuesta ≈
+0.29 de selección. Manda el ancla, no la atención.
+
+Dos salvedades mantienen honesto el hallazgo:
+
+- **Por construcción.** La regla por defecto es un asignador determinista ya
+  correlacionado con θ que retiene la mayor parte del presupuesto; lo que se
+  mide es el *condicionamiento* —cuánto determina la calidad informativa del
+  vector el valor del ancla, y cuán poco lo sustituye la atención—, no la
+  sabiduría de la multitud.
+
+- **Robustez.** Un panel de sensibilidad (variando el tamaño de muestra del
+  evaluador y la fuerza de la prueba social) muestra que el ordenamiento de
+  regímenes es robusto, salvo bajo prueba social muy fuerte, donde los
+  regímenes convergen dentro del ruido porque la amplificación fuerte también
+  propaga la señal de calidad de los evaluadores. Las magnitudes dependen de
+  los parámetros y no están calibradas; lo que sobrevive a todas las
+  variaciones es el ordenamiento y el predominio de la calidad informativa de
+  la priorización.
+
+Este hallazgo cuantifica el apalancamiento concentrado en aquello que
+construye la priorización de proyectos que sigue el tramo pasivo. Esa
+priorización tiene dos capas —que un estudio complementario (Offermann 2026b)
+separó por primera vez—: la categorización macro (el Ámbito de Planificación
+de este corpus, que enmarca la elegibilidad y no porta pesos de presupuesto) y
+los perfiles de asignación agregados que rutean el presupuesto dentro de ella.
+El arreglo distribuido es robusto a la calidad de esa categorización y el
+central es frágil a ella, así que la ventaja sobre un status quo central no es
+fija: crece a medida que empeora la planificación central (ese estudio la mide
+subiendo de ~2× a más de 5×).
+
+Dos hechos arquitectónicos acotan el enunciado y evitan una
+sobreinterpretación tentadora. Primero, la capa por defecto es sustituible, no
+obligatoriamente central: el autopiloto cívico ofrece a cada ciudadano
+asignación manual, delegación, perfiles publicados, una regla automática
+personal, o el valor por defecto del sistema; un ciudadano en incorporación
+debe seleccionar o reconocer explícitamente un perfil base, y solo la porción
+que nunca se involucra sigue necesariamente el valor por defecto del sistema
+—que a su vez opera bajo un mandato de asignación registrado. Segundo, la
+construcción centralizada de los pesos de ámbito es propiedad de los modos de
+transición cerrado y tutelado, no de la arquitectura: los modos de operación
+son estados configurados por país, y la trayectoria diseñada apunta hacia la
+construcción abierta (el Hallazgo 4 mide su viabilidad dentro del modelo).
+
+Los números establecen, por tanto, un condicional. La restricción vinculante
+sobre la calidad de la asignación es la calidad informativa de la
+**priorización que sigue la porción pasiva** —los perfiles de asignación
+agregados, no un vector de planificación macro—, sea quien sea que la provea.
+Un proveedor capturado o ignorante es el modo de falla; uno bien informado o
+bien agregado, el activo. Aleatorizar esa priorización para escapar de la
+captura no ayuda: compra neutralidad al precio de una calidad casi aleatoria
+para la porción pasiva. Y como la trayectoria diseñada distribuye su
+construcción (modo abierto) y la mantiene visible, versionada y sustituible,
+la restricción se satisface por distribución, no por una agenda central. Esto
+es distinto del punto más estrecho de fijación de agenda de la Sección 8, que
+concierne solo a quién enmarca la elegibilidad.
+
+E1–E3 no autorizan dos lecturas: el origen de la priorización queda sin
+especificar (r es una propiedad del vector, no de una oficina estatal), y la
+multitud modelada porta prueba social pero ningún conocimiento —de modo que
+estos experimentos comparan atención frente a calidad de los pesos, no
+conocimiento central frente a distribuido. El Hallazgo 4 hace esa comparación
 de manera adecuada.
 
 **Hallazgo 3: lo que amortigua el decaimiento de la participación es el nivel del
@@ -676,8 +726,7 @@ con la calidad en un sistema bien anclado. Tercero, la elicitación es no
 estratégica por supuesto; en el despliegue, el reporte de señales se convierte en
 una superficie de manipulación y clientelismo, y la mecánica de la construcción
 abierta de ámbitos sigue siendo un problema de diseño supeditado a condiciones.
-Dentro de esos límites, el hallazgo invierte la lectura que un borrador anterior
-invitaba: la variable vinculante no es quién sostiene la pluma sino cuánta
+Dentro de esos límites, el hallazgo apunta en una dirección clara: la variable vinculante no es quién sostiene la pluma sino cuánta
 información dispersa ingiere la institución de construcción de ámbitos.
 
 La simulación también disciplina la retórica —en ambas direcciones. Nada en
@@ -784,7 +833,7 @@ instituciones de auditoría —detección a partir de los estudios de obras de l
 contraloría de Chile, retención a partir de la práctica documentada de estados de
 pago, recuperación a partir de la serie de la ASF de México, anclas de fuga
 emparejadas por categoría con la construcción (Olken 2007; la base de evidencia
-multipaís abarca la GAO, la NAO, el Tribunal de Cuentas Europeo, el TCU y la CGU
+multipaís abarca la GAO estadounidense, la NAO británica, el Tribunal de Cuentas Europeo, el TCU y la CGU
 de Brasil, y las contralorías de Chile, Perú y Colombia; Ferraz y Finan 2008)—
 con el ancho de banda de inspección del planificador escalado al ámbito y el
 sesgo coordinado de señales barrido como el régimen de falla de Condorcet. La
@@ -941,12 +990,12 @@ aún no existe.** La plataforma registra la autorización externa para la migrac
 presupuestaria y las fórmulas de asignación (el Allocation Mandate); no puede
 fabricar una autorización que la ley nunca otorgó. En la tradición continental de
 las jurisdicciones de referencia, la asignación ciudadana vinculante requiere un
-instrumento habilitante de rango suficiente que ningún estatuto actual provee
+norma habilitante de rango suficiente que ningún estatuto actual provee
 —los precedentes regionales (el estatuto de presupuesto participativo del Perú,
 el marco del estatuto de la ciudad de Brasil) prueban que el instrumento es
 alcanzable, no que exista— de modo que los despliegues lícitos de la arquitectura
 hoy son consultivos y tutelados, en los que toda decisión de asignación material
-permanece imputada a la autoridad competente como una resolución pública
+permanece atribuida a la autoridad competente como una resolución pública
 razonada; los resultados de entrega, medición y memoria reputacional operan sin
 cambios bajo ese estatus, y solo el modo abierto maduro requiere asignación
 vinculante. El debate normativo sobre sustituir la asignación atomizada por la
@@ -1084,7 +1133,7 @@ comparación (precios de mercado, bandas de duración, umbrales) permiten al
 verificador estricto juzgar en vez de adivinar. La capa máquina alcanza solo
 el fraude legible en documentos de la fase de entrega —la calidad por debajo de la especificación física y el robo previo al contrato quedan enteramente en manos humanas, de modo que
 la atestación de procedencia es evidencia de manipulación en la captura, no
-prueba de grado judicial, y la admisibilidad aún requiere custodia, contradicción y
+prueba de grado judicial, y la admisibilidad probatoria aún requiere custodia, contradicción y
 peritaje. La evidencia ciudadana contrapuesta —productores independientes con
 intereses opuestos al ejecutor, cuya existencia anticipada disuade el desvío—
 mantiene la vigilancia distribuida incluso cuando el trabajo rutinario de
@@ -1095,7 +1144,7 @@ sortea la disuasión por hito y mueve la fuga un orden de magnitud (mientras la
 ventaja de valor entregado sobrevive), así que la resistencia a la colusión
 —propiedad efectiva verificada, resistencia Sybil de los contribuyentes y
 descentralización del asignador y del piso de presupuesto de auditoría— es un
-requisito de primera clase ([[113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION|docs/113]]), no una salvedad residual.
+requisito de primera clase (docs/113), no una salvedad residual.
 
 ## 10. Conclusión
 
