@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
 
-**Working paper — v1.11 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap. This version consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles.**
+**Working paper — v1.12 (July 2026). Revised through successive adversarial and author review cycles, documented in the repository's roadmap. This version consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
@@ -549,8 +549,10 @@ the passive share follows. That prioritization has two layers the companion's
 engine at first fused and has since separated (Offermann 2026b): the macro
 categorization — this corpus's Planning Scope, which frames eligibility and
 carries no budget weights — and the aggregated allocation profiles that route
-budget within it; distributing the categorization matters most precisely where
-the inattentive majority routes by value-orthogonal rules. Two architectural facts scope that statement
+budget within it. The distributed arm is robust to the quality of that
+categorization while a central arm is fragile to it, so the advantage over a
+central status quo is not fixed but grows as central planning worsens (the
+companion measures it rising from roughly twofold to more than fivefold). Two architectural facts scope that statement
 correctly, and an earlier draft's phrasing ("the architecture's central
 vulnerability... whoever constructs planning scopes holds the allocation's
 quality in their hands") lacked both. First, the default layer is
