@@ -8,90 +8,62 @@
 
 ## Resumen
 
-Los debates sobre el Estado suelen conducirse en torno a su tamaño —más Estado
-o menos Estado— antes que a su arquitectura. Este artículo propone y defiende
-una alternativa funcional: descomponer la actividad estatal en capas
-funcionales, distribuir las capas donde la tecnología moderna de coordinación
-supera al monopolio institucional, y mantener central las capas donde no lo
-hace. Presentamos una arquitectura de referencia completa (Core v0) para la
-capa más disputable —la asignación distribuida dentro de ámbitos de
-planificación acotados por mandato, visibles, versionados y disputables: la
-ciudadanía asigna una cuota registrada en un mandato de un presupuesto público
-existente entre
-proyectos verificables, bajo estricta separación de los roles de proponer,
-modelar, ejecutar, producir evidencia y auditar; los fondos se mueven
-únicamente mediante liberación condicional supeditada a hitos (milestones) y
-respaldada por garantías materializadas externamente; y todo acto de
-consecuencia deja un rastro de auditoría público y estratificado. Tres
-contribuciones distinguen esto de la literatura sobre gobernanza participativa
-sobre la que se construye. Primero, diseño de mecanismos: derivamos la
-condición de compatibilidad de incentivos para el desembolso supeditado a hitos,
-una condición de a prueba de colusión para la fiscalización protocolizada con
-k-corroboración, y mostramos formalmente que los entornos de verificación
-débiles deben tasarse en términos financieros —resultados que convierten las
-intuiciones de diseño de la arquitectura en proposiciones verificables. Segundo,
-evidencia computacional: una simulación de 10.000 agentes de asignación bajo
-restricción de atención muestra que el cierre por meta de financiamiento
-funciona como dispositivo anticoncentración pero no como dispositivo de calidad,
-que la calidad de la asignación la sostiene la calidad informativa de la
-priorización de proyectos que sigue el tramo pasivo —los perfiles de asignación
-agregados— antes que la atención ciudadana, y que la caída de la participación
-es sobrevivible exactamente allí donde esa capa de priorización es fuerte; un cuarto experimento preregistrado que modela el conocimiento
-de manera simétrica halla que agregar señales ciudadanas dispersas en ese vector
-supera a la construcción central de ancho de banda fijo en cada escala probada
-—siempre que exista una institución de agregación y que las señales sean
-honestas, no sesgadas y efectivamente recogidas; un quinto experimento
-preregistrado lleva la comparación hasta aquello para lo que existe la
-redistribución —el valor social entregado por unidad de presupuesto—,
-hallando, en el modelo, que la entrega verificada añade un +43% sobre carteras
-idénticas, que las ganancias de selección y de entrega se multiplican, y que la
-finalización oficialmente reportada de un régimen de cero-control sobreestima la
-entrega real en veintinueve puntos porcentuales; un sexto experimento aísla el
-canal de incentivos —los estándares visibles sostienen la calidad de la
-ejecución allí donde la opacidad la deja decaer— y halla que la asignación
-ingenua ponderada por reputación concentra el trabajo más rápido de lo que
-descubre capacidad, evidencia de la maquinaria de observabilidad de la
-concentración de la arquitectura; y un séptimo experimento preregistrado vuelve a
-correr el resultado principal contra una línea base del statu quo calibrada a
-partir de los hallazgos publicados de instituciones de auditoría de nueve
-jurisdicciones y la Unión Europea, hallando, en el modelo, que la arquitectura
-completa entrega 2.22× esa línea base calibrada por unidad de presupuesto a
-escala y 1.4–1.6× a escala de piloto municipal —y que la auditoría a su
-intensidad empíricamente documentada, sin memoria reputacional, no disuade
-desvío alguno: encoge la brecha reportada (de veintinueve a diecinueve puntos),
-nunca la real; y un octavo experimento preregistrado reemplaza el lado de
-participación impuesto de esos brazos con trayectorias de adopción generadas por
-un estudio conductual compañero, hallando el resultado principal sin cambios en
-2.26× y robusto desde la dinámica de lanzamiento hasta poblaciones hostiles a la
-adopción. Tercero,
-método: la arquitectura se desarrolló bajo revisión adversarial sistemática
-—una autocrítica estructurada de cuarenta resúmenes de ataque (attack briefs),
-cada uno con una defensa emparejada y una resolución aceptada bajo una regla
-explícita de integrar-o-acotar que o bien añade un mecanismo a través de objetos
-existentes o bien registra una frontera con un riesgo residual nombrado, todo
-propagado al corpus de la arquitectura; las rondas finales fueron generadas por
-el método vuelto sobre sí mismo —revisiones externas simuladas de cinco perfiles
-del documento acompañante y de este manuscrito, cuyas preguntas irresolubles se
-convirtieron en ataques formales, incluido el ataque de calibración de la línea
-base que el séptimo experimento responde. El resultado es una arquitectura cuyas
-limitaciones forman parte de su especificación y cuyo registro de revisión es en
-sí mismo público. Enunciamos
-esas limitaciones con franqueza: en los modos de operación cerrado y tutelado
-que la arquitectura especifica para los pilotos, las agendas de planificación
-las construye la autoridad implementadora, y la calidad informativa de esa
-construcción es, según nuestra propia simulación, la restricción vinculante
-sobre la calidad de la asignación —la trayectoria diseñada es una fijación de
-agenda abierta y socialmente construida, cuya viabilidad dentro del modelo mide
-el cuarto experimento y cuya mecánica de elicitación sigue siendo un problema de
-diseño supeditado a condiciones; la dependencia fiscal respecto del Estado
-establecido es medible pero no exigible; y aún no se ha realizado ningún piloto
-empírico.
+Los Estados no recaudan impuestos para redistribuir, sino para mejorar la
+calidad de vida de las personas. Quitarle al rico no mejora al más vulnerable;
+lo mejora el valor efectivo que recibe. Si la obra no se construye, o se
+construye mal, la redistribución no ayudó a nadie: el **balde agujereado de
+Okun (1975)** cargó agua que nunca llegó. De ahí la pregunta de este paper:
+**¿puede la tecnología de hoy rediseñar la arquitectura del Estado para
+aumentar el valor efectivo que llega a la gente por cada peso público
+gastado?**
 
-**Palabras clave:** gobernanza distribuida, presupuesto participativo, diseño de
-mecanismos, gobernanza policéntrica, rendición de cuentas pública, simulación
-basada en agentes, democracia líquida, diseño institucional.
+La respuesta no pasa por *más, o menos Estado*, sino por su **arquitectura**:
+descomponer la actividad estatal centralizada en capas, distribuir algunas
+donde la tecnología de coordinación de hoy supera al monopolio institucional,
+y alinear los incentivos correctamente para que lo asignado efectivamente se
+entregue.
 
----
+Presentamos **Core v0**, una arquitectura de software orientada a optimizar
+cómo el presupuesto público se asigna y se convierte en valor efectivo para
+las personas: los ciudadanos dirigen una parte de los impuestos de un
+presupuesto previamente aprobado por la autoridad hacia proyectos
+verificables; los roles de proponer, ejecutar, producir evidencia y auditar
+están separados; el dinero se libera directamente desde tesorería al ejecutor,
+por tramos, contra hitos verificados y garantías exigibles; y cada acto
+relevante deja un rastro público y auditable.
+
+El modelo identifica tres efectos.
+
+**(1) Elegir distribuidamente entrega más valor real.** La asignación
+distribuida —elección directa, microdelegación o reglas personalizadas—
+correlaciona mucho más con el valor efectivo que reciben los beneficiarios que
+la asignación central: mejora el valor entregado en más de **1.5× (+53%)**.
+
+**(2) Alinear los incentivos hace que el valor llegue.** El ejecutor entrega,
+y no desvía, cuando arriesga más de lo que podría robar: pagos por tramos
+contra hitos verificados, retenciones, garantías exigibles, reputación y
+fiscalización cruzada. Formalizamos esa alineación en condiciones que se
+pueden chequear —cuándo entregar domina a desviar, cuándo la fiscalización
+resiste la colusión, y por qué una verificación débil debe pagarse en dinero—.
+A igualdad de proyectos, esta capa añade **~43% (1.4×)** de valor.
+
+**(3) Separar las dos capas da robustez frente a una mala planificación
+central.** Distinguir qué *tipos* de proyecto son elegibles (planificación
+macro) de a qué *proyectos concretos* va la plata (reglas de asignación)
+protege el valor cuando la autoridad se equivoca: lo distribuido reorienta el
+gasto hacia el valor mientras lo central queda atrapado.
+
+**Combinados:** los dos primeros efectos fijan el **piso** —**~2.2×** el valor
+por peso de un status quo calibrado con datos de contralorías de nueve
+países—; sumar la robustez lleva la ventaja hasta el **techo, ~5×**.
+
+La arquitectura fue sometida a **crítica adversarial sistemática**: cuarenta
+ataques, cada uno con su defensa y una resolución que *o* agrega un mecanismo
+*o* declara un límite con su riesgo; las rondas finales fueron el método
+aplicado a sí mismo, con revisiones externas simuladas cuyas preguntas sin
+respuesta se volvieron nuevos ataques. La evidencia es simulada sobre un
+*modelo* de la arquitectura —no prueba institucional ni piloto real; los
+límites se declaran a lo largo del texto.
 
 ## 1. Introducción
 
