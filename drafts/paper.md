@@ -111,6 +111,23 @@ milestones, with retention and externally materialized guarantees; and every
 consequential state transition is recorded in a citizen-legible,
 expert-auditable trail.
 
+The *executor* —whoever carries out the project, be it a public work, a
+personal-care service, or an educational program— can be a public agency, a
+municipality, a foundation, a cooperative, or a firm, as the implementing
+authority's rules define, under one condition: non-monopolistic, honest
+competition, with bankruptcies and consequences for whoever fails to deliver.
+And the share each citizen directs is set by a public, versioned formula the
+authority chooses; its simple option is *equal for all eligible citizens*,
+under which no one buys more influence with more money.
+
+A concrete example. Suppose a municipality funds care programs for vulnerable
+elderly people. Today, between the peso allocated and the help that actually
+arrives lies a gap where value is lost. Under this architecture, each resident
+can direct part of their taxes to the program they prefer; the foundation,
+cooperative, or service that carries it out is paid in tranches, and only once
+a verifier it did not choose confirms the help arrived; and every step is
+public and auditable.
+
 What makes a design exercise count as research is the rigor it is put through,
 under one transversal discipline: every claim is evaluated against how the
 current institution solves the same problem, not against an ideal — blocking the nirvana fallacy —comparing the real institution against an unattainable ideal rather than the available alternative— in both directions (Section 2). Our contributions are:

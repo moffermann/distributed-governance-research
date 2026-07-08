@@ -115,6 +115,23 @@ dinero solo se mueve sobre hitos revisados, con retención y garantías
 materializadas externamente; y toda transición de estado relevante queda
 registrada en un rastro legible por la ciudadanía y auditable por expertos.
 
+El *ejecutor* —quien realiza el proyecto, sea una obra, un servicio de cuidado
+de personas o un programa educativo— puede ser un servicio público, un
+municipio, una fundación, una cooperativa o una empresa, según lo defina la
+normativa de la autoridad implementadora, bajo una condición: competencia no
+monopólica y honesta, con quiebras y consecuencias para quien incumple. Y la
+cuota que cada ciudadano dirige la fija una fórmula pública y versionada que
+elige la autoridad; su opción simple es *igual para todos los ciudadanos
+elegibles*, bajo la cual nadie compra más influencia con más dinero.
+
+Un ejemplo concreto. Supongamos que un municipio destina recursos a programas
+de cuidado para adultos mayores en situación de vulnerabilidad. Hoy, entre el
+peso que se asigna y la ayuda que efectivamente llega hay una brecha donde se
+pierde valor. Bajo esta arquitectura, cada vecino puede dirigir parte de sus
+impuestos al programa que prefiere; la fundación, cooperativa o servicio que
+lo ejecuta cobra por tramos, y solo cuando un verificador que ella no eligió
+confirma que la ayuda llegó; y cada paso queda público y auditable.
+
 Lo que vuelve investigación a un ejercicio de diseño es el rigor al que se lo
 somete, bajo una disciplina transversal: cada afirmación se evalúa contra cómo
 la institución actual resuelve el mismo problema, no contra un ideal,
