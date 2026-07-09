@@ -41,7 +41,7 @@ con el valor que efectivamente reciben los beneficiarios que la asignación
 central. Pero *mapeamos* esa ventaja en vez de afirmar un solo número: obedece
 a una ley simple —el distribuido domina exactamente cuando la desigualdad de
 voz de la plataforma es menor que la ceguera del planificador central al daño
-difuso (β < 1 − γ)—, y va en el modelo desde la paridad hasta cerca de **1.8×**,
+difuso (β < 1 − η)—, y va en el modelo desde la paridad hasta cerca de **1.8×**,
 máxima donde el daño es difuso e invisible y cayendo a la paridad solo donde un
 planificador plenamente responsable enfrenta una plataforma que silencia a los
 perjudicados. La ventaja es una propiedad de *incluir a los perjudicados*, no de
@@ -808,22 +808,32 @@ comparación a favor del brazo distribuido—. Un modelo reconstruido
 (`research/e4-v4-symmetric-frontier.md`, `research/e4-v5-capture-design.md`) le
 da a *ambas* instituciones una fricción simétrica para percibir el valor
 verdadero, incluido el daño: el central atenúa el daño percibido por un
-coeficiente γ (0 = ciego al daño difuso, 1 = un planificador plenamente
+coeficiente η (0 = ciego al daño difuso, 1 = un planificador plenamente
 responsable), mientras el distribuido lee valoraciones verdaderas pero los
 perjudicados difusos sub-participan a una tasa β (desigualdad de voz). El
 resultado no es un multiplicador sino una frontera con un lugar de paridad en
 forma cerrada (`research/e4-analytical-backbone.md`): ambas instituciones son
 estimadores sesgados del mismo valor de Samuelson T = S⁺ − S⁻, que rankean
-proyectos por S⁺ − θ·S⁻ con θ_C = γ y θ_D = 1 − β, de modo que el distribuido
+proyectos por S⁺ − θ·S⁻ con θ_C = η y θ_D = 1 − β, de modo que el distribuido
 domina exactamente cuando su coeficiente está más cerca del peso verdadero del
-daño, que es uno —es decir, **β < 1 − γ**—. La simulación confirma la ley
-(paridad en la anti-diagonal γ + β = 1) y cuantifica la degradación del valor
+daño, que es uno —es decir, **β < 1 − η**—. La simulación confirma la ley
+(paridad en la anti-diagonal η + β = 1) y cuantifica la degradación del valor
 entregado fuera de ella (desde la paridad hasta ~1.8× de un oráculo de
 información completa a lo largo de la caja plausible). La ventaja es así una
 propiedad de *incluir a los perjudicados*, no de la agregación en sí, y se
 silencia en el rincón donde un planificador responsable enfrenta una plataforma
 que silencia a los perjudicados —lo que absorbe la objeción del sesgo de
 participación dentro del propio eje β del modelo en vez de dejarla externa.
+Ningún extremo se asume: η se *barre*, no se fija, y un η bajo pero no nulo es un
+régimen defendido, no una premisa. La literatura del daño difuso (los costos no
+vistos de Bastiat; la organización asimétrica de Olson en temas disputados; el
+cuadrante de política clientelar de Wilson; la legibilidad de Scott) describe
+*cuándo* los costos difusos quedan sin representar —cada una leída en su alcance
+propio, no como un reclamo de ceguera global—, mientras la tesis opuesta de que
+la competencia política disciplina al centro hacia la eficiencia (Wittman 1989)
+es más débil justo en ese cuadrante clientelar. Empíricamente, la mayor parte de
+la pérdida *medida* en compras públicas es pasiva —incompetencia, no robo
+(Bandiera, Prat y Valletti 2009)—, consistente con un η bajo pero no nulo.
 
 *La resistencia a la captura protege la ventaja (E4-v5).* Modelando la captura
 organizada de forma simétrica —la objeción más dura de la revisión, aplicada en
@@ -847,6 +857,36 @@ multiplicadores independientes. Toda magnitud aquí es interna al modelo; la
 literatura (Olson, Wilson, Scott, Bastiat; Becker, Becker y Stigler, Stokes,
 Dyck-Morse-Zingales; el monitoreo por los propios usuarios de Ostrom) defiende
 la dirección, el mecanismo y el signo de la asimetría —no los números.
+
+*Backbone analítico.* Tres formas cerradas cargan el peso, cada una verificada
+contra la simulación (`research/e4-analytical-backbone.md`); las corridas solo la
+confirman y cuantifican la degradación fuera de los casos limpios. **(i) La ley
+de paridad.** Escribiendo cada institución como un estimador sesgado que rankea
+proyectos por S⁺ − θ·S⁻, el central conserva θ_C = η del daño percibido y el
+distribuido revela θ_D = 1 − β (la tasa de participación se cancela del ranking);
+como el peso verdadero del daño es uno, el brazo distribuido entrega más valor
+verdadero **si y solo si β < 1 − η**, con paridad en la anti-diagonal. Una
+lectura sesgo-varianza fija el único caso fuera de la diagonal: sobre la línea de
+paridad el sesgo se cancela y gana el estimador de menor varianza —el ruido de
+revelación del distribuido es cero (cada quien conoce su propio valor), el ruido
+de proxy del central no—, así que la paridad medida queda apenas del lado del
+distribuido (η = 1, β = 0 → 0.89×). **(ii) El umbral de captura.** De renta >
+adquisición + P(detección)·pena, el umbral del central λ\*_C = (k_c + p_c·f)/C
+tiende a cero al reducirse su detección, mientras el del distribuido λ\*_D = k_d +
+p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la razón
+de resistencia ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×, creciente en el
+costo del proyecto. **(iii) El piso de detección.** Con detección de bola de
+nieve P = 1 − (1 − q)^m, superar una tasa central p_c solo requiere un valor
+esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes —la inversión de la carga de la
+prueba hecha rigurosa. Tres invariancias acotan la inquietud de las magnitudes
+arbitrarias: la ventaja es invariante a las unidades de valor (escala) y al
+*nivel* de participación (solo importa el sesgo β, no la concurrencia), y por el
+teorema central del límite solo entran los primeros momentos S⁺, S⁻, así que el
+sorteo gaussiano de valoraciones es una conveniencia, no un supuesto. Un límite
+honesto que marcan las corridas: la ley de paridad es el límite de conjuntos
+grandes; cuando el conjunto interesado de un proyecto es muy pequeño —un puñado
+de personas— la varianza de muestreo del distribuido domina y un central de censo
+completo recupera la ventaja.
 
 **Hallazgo 5: el valor entregado, no la asignación, es donde la arquitectura
 justifica su valía —y la selección y la entrega se multiplican.** Un quinto

@@ -10,6 +10,11 @@ degradation the algebra cannot." Verified in `e4-analytical-backbone.mjs`
 (results: `e4-analytical-backbone-results.txt`). The simulation is demoted to
 illustration + degradation-quantification.
 
+**Symbol note.** This note and the simulation code write the central's harm-perception
+coefficient as **γ** (`gamma`). The *paper* renames it **η** to avoid a collision with
+the posted-guarantee γ of Propositions 1–3 (the delivery/incentive model). Read γ here
+as η in the paper; the parity law is β* = 1 − γ ≡ β* = 1 − η.
+
 ## Proposition 1 — the parity law β\* = 1 − γ (with a bias–variance reading)
 
 **Setup.** For a project, let `S⁺` = sum of the positive true valuations and `S⁻` =

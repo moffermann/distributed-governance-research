@@ -36,7 +36,7 @@ allocation — direct choice, microdelegation, or personalized rules — tracks 
 value beneficiaries actually receive more closely than central allocation. We
 *map* this advantage rather than assert a single number: it obeys a simple law
 — distributed dominates exactly when the platform's voice inequality is smaller
-than the central planner's blindness to diffuse harm (β < 1 − γ) — ranging in
+than the central planner's blindness to diffuse harm (β < 1 − η) — ranging in
 the model from rough parity to about **1.8×**, largest where harm is diffuse and
 unseen and falling to parity only where a fully accountable planner faces a
 platform that silences the harmed. The edge is a property of *including the
@@ -746,21 +746,31 @@ idealizations that, an adversarial review showed, tilt the comparison in the
 distributed arm's favor. A rebuilt model
 (`research/e4-v4-symmetric-frontier.md`, `research/e4-v5-capture-design.md`)
 gives *both* institutions a symmetric friction in perceiving true value,
-including harm: the central attenuates perceived harm by a coefficient γ (0 =
+including harm: the central attenuates perceived harm by a coefficient η (0 =
 blind to diffuse harm, 1 = a fully accountable planner), while the distributed
 reads true valuations but the diffusely harmed under-participate at a rate β
 (voice inequality). The result is not a multiplier but a frontier with a
 closed-form parity locus (`research/e4-analytical-backbone.md`): both
 institutions are biased estimators of the same Samuelson value T = S⁺ − S⁻,
-ranking projects by S⁺ − θ·S⁻ with θ_C = γ and θ_D = 1 − β, so the distributed
+ranking projects by S⁺ − θ·S⁻ with θ_C = η and θ_D = 1 − β, so the distributed
 dominates exactly when its coefficient is closer to the true harm-weight of one
-— i.e. **β < 1 − γ**. The simulation confirms the law (parity on the
-anti-diagonal γ + β = 1) and quantifies the delivered-value degradation off it
+— i.e. **β < 1 − η**. The simulation confirms the law (parity on the
+anti-diagonal η + β = 1) and quantifies the delivered-value degradation off it
 (rough parity to ~1.8× of a full-information oracle across the plausible box).
 The advantage is thus a property of *including the harmed*, not of aggregation
 per se, and it is silent in the corner where an accountable planner faces a
 platform that silences the harmed — which absorbs the participation-bias
-objection into the model's own β axis rather than leaving it external.
+objection into the model's own β axis rather than leaving it external. Neither
+extreme is assumed: η is *swept*, not fixed, and a low but non-zero η is a
+defended regime, not a premise. The diffuse-harm literature (Bastiat's unseen
+costs; Olson's asymmetric organization on contested issues; Wilson's
+client-politics quadrant; Scott's legibility) describes *when* diffuse costs go
+unrepresented — each read at its proper scope, not as a claim of global
+blindness — while the opposing thesis that political competition disciplines the
+centre toward efficiency (Wittman 1989) holds weakest in exactly that
+client-politics quadrant. Empirically, most *measured* procurement loss is
+passive — incompetence, not theft (Bandiera, Prat and Valletti 2009) —
+consistent with a low but non-zero η.
 
 *Capture-resistance guards the advantage (E4-v5).* Modelling organized capture
 symmetrically — the review's hardest objection, applied in fairness to the
@@ -782,6 +792,34 @@ independent multipliers. Every magnitude here is model-internal; the literature
 (Olson, Wilson, Scott, Bastiat; Becker, Becker and Stigler, Stokes,
 Dyck-Morse-Zingales; Ostrom's self-monitoring commons) defends the direction,
 the mechanism, and the sign of the asymmetry — not the numbers.
+
+*Analytical backbone.* Three closed forms carry the weight, each verified against
+the simulation (`research/e4-analytical-backbone.md`); the runs then only confirm
+them and quantify the degradation off the clean cases. **(i) The parity law.**
+Writing each institution as a biased estimator that ranks projects by S⁺ − θ·S⁻,
+the central keeps θ_C = η of perceived harm and the distributed reveals
+θ_D = 1 − β (the participation rate cancels from the ranking); since the true
+harm-weight is one, the distributed arm delivers more true value **iff
+β < 1 − η**, parity on the anti-diagonal. A bias–variance reading fixes the one
+off-diagonal case: on the parity line the bias cancels and the lower-variance
+estimator wins — the distributed's revelation noise is zero (a funder knows her
+own value), the central's proxy noise is not — so measured parity sits just
+inside the distributed's side (η = 1, β = 0 → 0.89×). **(ii) The capture
+threshold.** From rent > acquisition + P(detect)·penalty, the central's threshold
+λ\*_C = (k_c + p_c·f)/C falls toward zero as its detection shrinks, while the
+distributed's λ\*_D = k_d + p_d·f/C is *floored* by the equal-wallet acquisition
+term k_d; the resistance ratio ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×,
+rising in project cost. **(iii) The detection floor.** With snowball detection
+P = 1 − (1 − q)^m, beating a central rate p_c needs only an expected
+m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters — the burden-of-proof inversion made rigorous.
+Three invariances bound the arbitrary-magnitudes worry: the advantage is
+invariant to the units of value (scale) and to the participation *level* (only
+the bias β matters, not turnout), and by the central-limit theorem only the first
+moments S⁺, S⁻ enter, so the Gaussian valuation draw is a convenience, not an
+assumption. One honest boundary the runs mark: the parity law is the large-set
+limit; when a project's interested set is very small — a handful of people — the
+distributed's sampling variance dominates and a full-census central regains the
+edge.
 
 **Finding 5: delivered value, not allocation, is where the architecture
 earns its keep — and selection and delivery multiply.** A fifth,
