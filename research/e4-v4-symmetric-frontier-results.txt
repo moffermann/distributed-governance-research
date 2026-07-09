@@ -1,0 +1,28 @@
+E4-v4 SYMMETRIC-FRICTIONS FRONTIER (deterministic, 6 seeds; median advantage distributed/central over the box)
+
+rows = gamma (central harm-perception: 0 blind ... 1 accountable planner)
+cols = beta (platform participation bias: 0 representative ... 1 harmed absent)
+
+  gamma\beta |  b=0.00  b=0.25  b=0.50  b=0.75  b=1.00
+  ----------+----------------------------------------
+   g=0.00   |   1.82   1.54   1.16   1.07   1.01
+   g=0.25   |   1.73   1.46   1.11   1.02  0.95
+   g=0.50   |   1.56   1.25   1.01  0.94  0.86
+   g=0.75   |   1.32   1.02  0.83  0.77  0.73
+   g=1.00   |  0.89  0.69  0.56  0.53  0.50
+
+Reading: advantage>1 = distributed delivers more true value; ~1 = parity; <1 = central wins.
+The distributed edge exists only where the platform's voice bias (beta) is milder than
+the central's harm-blindness (low gamma). It is NOT a property of aggregation per se.
+
+Parity crossover (beta where distributed advantage falls to ~1.0), per gamma:
+   gamma=0.00: never (>1 across all beta)
+   gamma=0.25: beta ~ 1.00 (adv 0.95x)
+   gamma=0.50: beta ~ 0.75 (adv 0.94x)
+   gamma=0.75: beta ~ 0.50 (adv 0.83x)
+   gamma=1.00: already <=1 at beta=0
+
+Capture robustness (gamma=0, beta=0.25) — coordinated inflation of organized projects:
+   capture=0.0: advantage 1.54x
+   capture=0.2: advantage 1.46x
+   capture=0.5: advantage 1.43x
