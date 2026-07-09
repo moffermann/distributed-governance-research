@@ -730,9 +730,10 @@ A2. [DONE 2026-07-09] Keystone citations woven into Finding 4 (EN+ES) via a 'Pos
     proofness (Gibbard-Satterthwaite); equal wallet in the intensity-voting family with
     the k_d anti-plutocracy bound; Condorcet-independence bridge; Sen/Samuelson caveat.
     Minor reinforcement deferred (optional): Caplan / Achen-Bartels / Gilens-Page.
-A3. Calibration clause + a "calibration targets" appendix table: central %oracle (46-68%)
-    as a checkable prediction vs World Bank IEG / Flyvbjerg-Oxford; Goncalves 2014 field
-    evidence for Finding 1; reframe the model-internal gap as a roadmap, not an apology.
+A3. [DONE 2026-07-09] Calibration clause in Finding 4 + 'Appendix: E4 calibration targets'
+    table (EN+ES): central %oracle (46-68%) as a checkable prediction vs World Bank IEG /
+    Flyvbjerg 2003; Goncalves 2014 field evidence for Finding 1; model-internal gap reframed
+    as a roadmap. Bib: Flyvbjerg 2003 + Goncalves 2014 added.
 A4. Honest-boundary sentence: interested-set size is load-bearing (advantage holds for
     sets >= ~5-30, collapses to parity at 3-12; the variance term shifts the parity line).
 A5. Figures into paper/companion: frontier heatmap with the beta=1-gamma line; capture
@@ -780,12 +781,12 @@ C7. "Scored on the quantity it observes": add a note that the distributed's scor
 ```
 
 ### Recommended next point
-**DONE 2026-07-09: A1, C1, A2, C6, C7.** C4 is **N/A for the paper** (the "confirmatory on
-held-out seeds" claim lives only in the research note, not in `paper.md`). Next: **A3** —
-the calibration clause + a "calibration targets" appendix table (central %oracle 46–68% as
-a checkable prediction vs World Bank IEG / Flyvbjerg; Goncalves 2014 field evidence for
-Finding 1; reframe the model-internal gap as a roadmap). Then **C5** (add Fishkin / Fraser
-as a deliberative rival institution and drop/earn the "ideological balance" claim).
+**DONE 2026-07-09: A1, C1, A2, A3, C6, C7.** C4 is **N/A for the paper** (the "confirmatory
+on held-out seeds" claim lives only in the research note, not in `paper.md`). Next: **C5**
+— add Fishkin (deliberative polling) / Fraser (participatory parity) as a *constructive*
+rival institution to the equal-wallet mechanism, and either drop or earn the "ideologically
+balanced" claim (Ostrom is already in; a deliberative counter-model is the gap). Small,
+mostly-prose edit. After C5 the A-bucket paper insertions are complete.
 **Deferred to a joint pass (author's plan):** **B1** (Finding 7's 2.22× keep-or-drop)
 together with the **+43% / 1.43× incentive-alignment axis** — coupled by the "effects are a
 layer and its safeguard, not independent multipliers" reframe. Heavier model-extending work
