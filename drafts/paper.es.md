@@ -886,7 +886,36 @@ sorteo gaussiano de valoraciones es una conveniencia, no un supuesto. Un límite
 honesto que marcan las corridas: la ley de paridad es el límite de conjuntos
 grandes; cuando el conjunto interesado de un proyecto es muy pequeño —un puñado
 de personas— la varianza de muestreo del distribuido domina y un central de censo
-completo recupera la ventaja.
+completo recupera la ventaja. Otros dos límites conviene declarar. La comparación
+es *estática* —una sola ronda de asignación—, mientras que los daños reales
+emergen a lo largo de ciclos iterados y retroalimentan por elecciones y auditoría,
+de modo que un centro persistentemente ciego es el caso de estrés, no una
+inevitabilidad. Y el brazo distribuido se *puntúa sobre el valor verdadero que
+revela*, lo que sería circular si no fuera porque el sesgo de voz β y las
+fricciones de captura hacen de su señal revelada una estimación sesgada y
+disputable de ese valor, no una definicional.
+
+*Posicionamiento.* El mecanismo de agregación de preferencias de primer óptimo
+—Vickrey–Clarke–Groves— es inviable para presupuestos públicos (no es
+presupuestariamente balanceado; Green y Laffont 1979), de modo que tanto el
+planificador central como Core v0 son instituciones de *segundo óptimo* (Lipsey y
+Lancaster 1956); la comparación pregunta qué segundo óptimo entrega más, no si
+alguno es óptimo. Core v0 en consecuencia no reclama strategy-proofness —imposible
+para cualquier mecanismo no dictatorial (Gibbard 1973; Satterthwaite 1975)— sino
+*resistencia a la captura bajo coordinación organizada acotada*. El wallet
+igual-por-ciudadano lo ubica en la familia de votación que expresa intensidad
+(Casella 2012; Lalley y Weyl 2018) con una propiedad anti-plutocrática más nítida:
+acota la influencia por *dotación igual* y no por precio convexo, así que el dinero
+puede persuadir a los tenedores de wallet pero no comprar wallets —exactamente el
+piso de costo de adquisición k_d del umbral de captura—. Por último, la ventaja de
+agregación es la lógica del jurado de Condorcet (1785) y muere bajo su condición de
+independencia (Austen-Smith y Banks 1996): la captura organizada es la violación
+por error correlacionado de esa independencia, de modo que la capa de integridad
+existe precisamente para defender el supuesto sobre el que descansa la agregación
+distribuida. El primitivo de valor sigue las capacidades de Sen para *qué* se
+agrega —libertades, no utilidad-dinero— mientras la *suma* descansa en Samuelson
+(1954), una agregación que el propio Sen resiste; invocamos cada una solo donde
+aplica.
 
 **Hallazgo 5: el valor entregado, no la asignación, es donde la arquitectura
 justifica su valía —y la selección y la entrega se multiplican.** Un quinto
@@ -1366,7 +1395,10 @@ disciplina de ingeniería antes que como una ideológica.
 - Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
 - Besley, T., and S. Coate (2003). "Centralized versus Decentralized Provision of Local Public Goods: A Political Economy Approach." *Journal of Public Economics* 87(12).
 - Baiocchi, G., and E. Ganuza (2017). *Popular Democracy: The Paradox of Participation*. Stanford University Press.
+- Bandiera, O., A. Prat, and T. Valletti (2009). "Active and Passive Waste in Government Spending: Evidence from a Policy Experiment." *American Economic Review* 99(4).
+- Bastiat, F. (1850). *Ce qu'on voit et ce qu'on ne voit pas* [What Is Seen and What Is Not Seen]. Paris.
 - Becker, G. (1968). "Crime and Punishment: An Economic Approach." *Journal of Political Economy* 76(2).
+- Becker, G., and G. Stigler (1974). "Law Enforcement, Malfeasance, and Compensation of Enforcers." *Journal of Legal Studies* 3(1).
 - Bikhchandani, S., D. Hirshleifer, and I. Welch (1992). "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." *Journal of Political Economy* 100(5).
 - Brennan, J. (2016). *Against Democracy*. Princeton University Press.
 - Blum, C., and C. I. Zuber (2016). "Liquid Democracy: Potentials, Problems, and Perspectives." *Journal of Political Philosophy* 24(2).
@@ -1374,18 +1406,22 @@ disciplina de ingeniería antes que como una ideológica.
 - Buchanan, J., and G. Tullock (1962). *The Calculus of Consent*. University of Michigan Press.
 - Buterin, V., Z. Hitzig, and E. G. Weyl (2019). "A Flexible Design for Funding Public Goods." *Management Science* 65(11).
 - Campbell, D. (1976). "Assessing the Impact of Planned Social Change." Occasional Paper 8, Dartmouth College.
+- Casella, A. (2012). *Storable Votes: Protecting the Minority Voice*. Oxford University Press.
 - Coase, R. (1937). "The Nature of the Firm." *Economica* 4(16).
 - Condorcet, M. de (1785). *Essai sur l'application de l'analyse à la probabilité des décisions rendues à la pluralité des voix*. Imprimerie Royale.
 - De Filippi, P., and A. Wright (2018). *Blockchain and the Law: The Rule of Code*. Harvard University Press.
 - Downs, A. (1957). *An Economic Theory of Democracy*. Harper.
 - Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
+- Dyck, A., A. Morse, and L. Zingales (2010). "Who Blows the Whistle on Corporate Fraud?" *Journal of Finance* 65(6).
 - Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
 - Ferraz, C., and F. Finan (2008). "Exposing Corrupt Politicians: The Effects of Brazil's Publicly Released Audits on Electoral Outcomes." *Quarterly Journal of Economics* 123(2).
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
 - Friedman, M., and R. Friedman (1980). *Free to Choose*. Harcourt.
 - Fung, A., and E. O. Wright (2003). *Deepening Democracy: Institutional Innovations in Empowered Participatory Governance*. Verso.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
+- Gibbard, A. (1973). "Manipulation of Voting Schemes: A General Result." *Econometrica* 41(4).
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
+- Green, J., and J.-J. Laffont (1979). *Incentives in Public Decision-Making*. North-Holland.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
 - Hirschman, A. (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
 - Holmström, B. (1979). "Moral Hazard and Observability." *Bell Journal of Economics* 10(1).
@@ -1394,7 +1430,9 @@ disciplina de ingeniería antes que como una ideológica.
 - Kahng, A., S. Mackenzie, and A. Procaccia (2018). "Liquid Democracy: An Algorithmic Perspective." *AAAI*.
 - Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
+- Lalley, S., and E. G. Weyl (2018). "Quadratic Voting: How Mechanism Design Can Radicalize Democracy." *AEA Papers and Proceedings* 108.
 - Landemore, H. (2020). *Open Democracy: Reinventing Popular Rule for the Twenty-First Century*. Princeton University Press.
+- Lipsey, R., and K. Lancaster (1956). "The General Theory of Second Best." *Review of Economic Studies* 24(1).
 - Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Musgrave, R. (1959). *The Theory of Public Finance*. McGraw-Hill.
@@ -1414,14 +1452,22 @@ disciplina de ingeniería antes que como una ideológica.
 - Reinikka, R., and J. Svensson (2004). "Local Capture: Evidence from a Central Government Transfer Program in Uganda." *Quarterly Journal of Economics* 119(2).
 - Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
 - Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
+- Samuelson, P. (1954). "The Pure Theory of Public Expenditure." *Review of Economics and Statistics* 36(4).
+- Satterthwaite, M. (1975). "Strategy-Proofness and Arrow's Conditions: Existence and Correspondence Theorems for Voting Procedures and Social Welfare Functions." *Journal of Economic Theory* 10(2).
 - Schattschneider, E. E. (1960). *The Semisovereign People*. Holt, Rinehart and Winston.
+- Scott, J. (1998). *Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed*. Yale University Press.
+- Sen, A. (1999). *Development as Freedom*. Oxford University Press.
 - Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
+- Stokes, S. (2005). "Perverse Accountability: A Formal Model of Machine Politics with Evidence from Argentina." *American Political Science Review* 99(3).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
 - Tiebout, C. (1956). "A Pure Theory of Local Expenditures." *Journal of Political Economy* 64(5).
 - Urbinati, N. (2014). *Democracy Disfigured: Opinion, Truth, and the People*. Harvard University Press.
+- Vickrey, W. (1961). "Counterspeculation, Auctions, and Competitive Sealed Tenders." *Journal of Finance* 16(1).
 - Wampler, B. (2007). *Participatory Budgeting in Brazil: Contestation, Cooperation, and Accountability*. Penn State University Press.
 - Williamson, O. (1985). *The Economic Institutions of Capitalism*. Free Press.
+- Wilson, J. Q. (1973). *Political Organizations*. Basic Books.
+- Wittman, D. (1989). "Why Democracies Produce Efficient Results." *Journal of Political Economy* 97(6).
 
 ---
 
