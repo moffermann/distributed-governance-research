@@ -1,0 +1,15 @@
+E4-v3 HEADLINE RANGE over a declared defensible box (162 parameter combos, 6 seeds each)
+
+Distributed delivered value (% of oracle-achievable):  min 45%  median 69%  max 83%
+Status-quo central   (% of oracle-achievable):         min 6%  median 46%  max 71%
+
+Status quo delivers NET-NEGATIVE value (active harm) in 0/162 of the box (0%).
+(No ratio is defined there — the distributed advantage is effectively unbounded.)
+
+Where the status quo delivers meaningfully positive value (162/162 combos),
+the distributed-over-status-quo advantage distributed/central:
+   min +-2%   p25 +25%   median +63%   p75 +330%   max +997%
+   (i.e. 0.98x to 10.97x; median 1.63x)
+
+Representative point (mean 0.01, sigma 2.0, noise 1.5, gamma 0.25, p 0.35):
+   distributed 65% of oracle vs status quo 33%  ->  1.98x (+98%)
