@@ -1,0 +1,33 @@
+E4-v5 DETECTION FLOOR — detection as a snowball p = 1 - (1-q)^m
+
+(1) p_detect = 1 - (1-q)^m  (q = individual report prob, m = affected who can see):
+      m ->      5        20        50       200      1000
+  q=0.001 | 0.005    0.020    0.049    0.181    0.632    
+  q=0.005 | 0.025    0.095    0.222    0.633    0.993    
+  q=0.010 | 0.049    0.182    0.395    0.866    1.000    
+  q=0.020 | 0.096    0.332    0.636    0.982    1.000    
+  q=0.050 | 0.226    0.642    0.923    1.000    1.000    
+
+(2) The floor in one number — expected reporters m*q needed (independent of how split):
+   parity with central (p=0.10)  : expected reporters m*q ~ 0.11
+   p=0.50                        : expected reporters m*q ~ 0.69
+   p=0.90 (strong)               : expected reporters m*q ~ 2.30
+   p=0.99 (near-viral)           : expected reporters m*q ~ 4.61
+   => the distributed BEATS the central once ~0.1 reporters are expected per captured project;
+      it reaches strong resistance (p=0.9) at ~2.3 expected reporters, near-viral at ~4.6.
+
+(3) Endogenous detection in the capture model (lambda=0.5; central sits at -23% of oracle here).
+    Conservative: only HARMED citizens (v<0) are detectors, and only a FRACTION of them:
+  detectorFrac | q     | avg m*q (exp. reporters) | avg p_detect | dist captured | distributed %oracle
+     1.00     | 0.010 |          5.98           |    0.97     |      0.0     |     37%
+     0.50     | 0.010 |          2.99           |    0.89     |      0.6     |     37%
+     0.20     | 0.010 |          1.20           |    0.65     |     10.0     |     34%
+     0.10     | 0.010 |          0.60           |    0.43     |     29.5     |     17%
+     0.10     | 0.005 |          0.30           |    0.25     |     50.8     |     -4%
+     0.05     | 0.005 |          0.15           |    0.14     |     65.4     |     -13%
+     0.02     | 0.005 |          0.06           |    0.06     |     73.4     |     -17%
+     0.01     | 0.005 |          0.03           |    0.03     |     74.4     |     -17%
+
+Reading: the distributed keeps its advantage (positive %oracle, few captures) down to a very
+LOW floor — it only degrades toward the central when expected reporters m*q falls below ~1,
+i.e. when effectively NObody reports even at low cost with a stake (near-total apathy/opacity).
