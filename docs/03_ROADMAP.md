@@ -724,17 +724,28 @@ TIER 1 — FORMALIZE THE THEORY [IN PROGRESS, start here]. Turn the findings + p
   - CITATION FIX in the paper: lead the multiplication with Kremer O-ring 1993, not Farrell
     1957 (Farrell = one-unit decomposition, not a serial chain).
   - DONE (2026-07-09): research/e4e5-analytical-propositions.md (Sign-Flip A, Compound Parity
-    B validated 2.09=1.19x1.22x1.43 & beta*_pipe(1.0)~=0.30, Non-circularity C, law-of-1/n
-    regrounding, Common-Cause, impossibilities box, scope conditions). PAPER PROPAGATION
-    DEFERRED to the 2.2x joint pass (Finding 4/5 'Analytical propositions' box + reverse the
-    paper.md:65 hedge + lead multiplication with Kremer) — entangled with the 2.2x/+43x
-    decision the author reserved for last. Paper currently cites neither Farrell nor Kremer,
-    so nothing to hot-fix now.
+    B, Non-circularity C, law-of-1/n regrounding, Common-Cause, impossibilities box, scope
+    conditions). Compound Parity validated on a FRESH git-stamped 1M run: realistic 3-layer
+    = 1.83x = macro(1.05) x alloc(1.22) x delivery(1.43); primary Delta3=+0.23 [MC 0.21,0.25];
+    beta*_pipe(1.0)~=0.2. NOTE: the old 2.09x results file was STALE (pre emergent-sector
+    refinement); macro adds only ~5% not ~19% (sector aggregation averages out project-level
+    sign-flips -> reinforces Prop A). Robust objects: 2-layer 1.74x + delivery floor 1.43x;
+    macro stage is a parsimony candidate. PAPER PROPAGATION DEFERRED to the 2.2x joint pass
+    (propositions box + reverse paper.md:65 hedge + lead multiplication with Kremer + revisit
+    2.2x against 1.83x) — entangled with the 2.2x/+43x decision the author reserved for last.
 TIER 2 — METRIC + UNCERTAINTY + BUG FIXES. Primary metric = oracle-normalized Delta=(d-c)/o
   (kills the zero-denominator explosion); gated Fieller ratio as secondary. '1M is false
   precision' -> n=40 worlds; report MC CI (narrow) AND parametric band (wide) separately;
   headline = conditional interval + floor. Fix worker-override footgun + pre-reg/code macro
   mismatch (top-k vs proportional); named flags, JSON sidecar, assertions.
+  - DONE (2026-07-09): e4e5-pipeline.mjs now reports Δ=(d−c)/oracle as PRIMARY (bounded;
+    degeneracy-guarded in harm-dominated corners where the oracle collapses), gated Fieller
+    ratio as secondary (self-flags 'unstable' when central not sig.>0), two-uncertainty
+    framing (MC CI over n=40 worlds vs the parametric η-frontier), full-PARAMS worker override
+    (footgun killed), named --key=val flags (+ positional back-compat), assertions (oracle≥0),
+    JSON sidecar (research/e4e5-pipeline-run.json, params+git SHA). Pre-reg prose realigned to
+    the top-k gate + Δ-primary/two-uncertainty metrics. Verified behavior-neutral vs HEAD
+    (identical ratio); refreshed the stale 1M results file (2.09x→1.83x, see Tier 1).
 TIER 3 — CALIBRATE + SOBOL. Calibrate projSpread to net-negative share ~27% (World Bank IEG),
   validate central %oracle ~55%; PRE-REGISTER the honest deflation (calibrated realistic
   compound ~1.5-1.8x). Global Sobol/tornado proving eta,beta dominate + null knobs S_T~=0.

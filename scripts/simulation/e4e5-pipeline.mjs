@@ -15,6 +15,8 @@
 import { Worker, isMainThread, parentPort, workerData } from 'node:worker_threads';
 import os from 'node:os';
 import { fileURLToPath } from 'node:url';
+import { writeFileSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 
 function seedFor(a,b){ let h=(a>>>0); h=Math.imul(h^0x9e3779b9,0x85ebca6b); h^=(b>>>0); h=Math.imul(h^(h>>>13),0xc2b2ae35); return (h^(h>>>16))>>>0; }
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};}
@@ -135,46 +137,99 @@ if(!isMainThread){
   const out=seeds.map(s=>({seed:s, points:evalSeed(s,N)}));
   parentPort.postMessage(out);
 } else {
-  const N=+(process.argv[2]||100000), SEEDS=+(process.argv[3]||40), Kc=+(process.argv[4]||PARAMS.K), NW=+(process.argv[5]||Math.max(1,Math.min(os.cpus().length-2, SEEDS)));
+  const positional=process.argv.slice(2).filter(a=>!a.startsWith("--"));   // strip --flags so they never occupy a positional slot
+  const N=+(positional[0]||100000), SEEDS=+(positional[1]||40), Kc=+(positional[2]||PARAMS.K), NW=+(positional[3]||Math.max(1,Math.min(os.cpus().length-2, SEEDS)));
   PARAMS.K=Kc;
-  if(process.argv[6]!==undefined) PARAMS.deltaPartisan=+process.argv[6];   // sweep partisan tilt (0 isolates the harm-blindness macro effect)
-  if(process.argv[7]!==undefined) PARAMS.polar=+process.argv[7];           // sweep citizen preference polarization (0 = Normal valuations)
-  if(process.argv[8]!==undefined) PARAMS.harmMult=+process.argv[8];        // out-group harm multiplier (>1 = asymmetric net harm)
+  if(positional[4]!==undefined) PARAMS.deltaPartisan=+positional[4];       // argv[6] positional (back-compat): sweep partisan tilt (0 isolates the harm-blindness macro effect)
+  if(positional[5]!==undefined) PARAMS.polar=+positional[5];               // argv[7]: sweep citizen preference polarization (0 = Normal valuations)
+  if(positional[6]!==undefined) PARAMS.harmMult=+positional[6];            // argv[8]: out-group harm multiplier (>1 = asymmetric net harm)
+  for(const a of process.argv.slice(2)) if(a.startsWith("--")){            // named flags --key=value override ANY param (safer than positional); take precedence
+    const [k,v]=a.slice(2).split("="); if(k in PARAMS && v!==undefined) PARAMS[k]=isNaN(+v)?v:+v;
+  }
   const t0=Date.now();
   const seedList=Array.from({length:SEEDS},(_,i)=>1000+i);
   const chunks=Array.from({length:NW},()=>[]); seedList.forEach((s,i)=>chunks[i%NW].push(s));
   const __file=fileURLToPath(import.meta.url);
   const all=[];
   await Promise.all(chunks.filter(c=>c.length).map(seeds=>new Promise((res,rej)=>{
-    const w=new Worker(__file,{workerData:{seeds,N,overrides:{K:PARAMS.K, deltaPartisan:PARAMS.deltaPartisan, polar:PARAMS.polar, harmMult:PARAMS.harmMult}}});
+    const w=new Worker(__file,{workerData:{seeds,N,overrides:{...PARAMS}}});   // FIX: pass the FULL param set (no curated subset) so every main-thread override reaches workers — the earlier subset silently dropped sweeps
     w.on('message',m=>{all.push(...m); res();}); w.on('error',rej);
   })));
-  // aggregate per (eta,beta). Compound = ratio-of-MEANS (stable), 95% bootstrap CI over seeds.
+  // aggregate per (eta,beta).
   const key=p=>p.eta+","+p.beta; const groups={};
   for(const r of all) for(const p of r.points){ (groups[key(p)]??=[]).push(p); }
   const sum=a=>a.reduce((p,c)=>p+c,0);
-  function boot(num, den, lo, hi, B=4000){
-    const n=num.length, rng=mulberry32(987654), rs=new Array(B);
-    for(let b=0;b<B;b++){ let sn=0,sd=0; for(let i=0;i<n;i++){const k=(rng()*n)|0; sn+=num[k]; sd+=den[k];} rs[b]=sn/sd; }
+  // ---- assertion (true invariant): the oracle funds only T>0 projects, so its delivered value
+  // can never be NEGATIVE. It CAN legitimately be ~0 in a fully net-harmful world (harmMult≫1),
+  // which is a degenerate scope-condition corner, not a bug — those cells are guarded, not asserted.
+  for(const g of Object.values(groups)) for(const p of g){
+    if(p.o2<-1e-9 || p.o3<-1e-9) throw new Error("assertion failed: oracle delivered value must be ≥ 0 (o2="+p.o2+", o3="+p.o3+")");
+  }
+  // Degeneracy: the oracle-normalized frame is valid only when the oracle is a proper positive
+  // scale AND neither arm is harm-dominated. In a (near-)fully net-harmful world (harmMult≫1) the
+  // oracle collapses to a sliver and both arms deliver net harm — then Δ=(d−c)/o inflates without
+  // bound and NO oracle-normalized number is meaningful. This is the named scope-condition corner,
+  // flagged not reported. (Main regime harmMult=1: both arms are positive fractions of oracle.)
+  const degen=(d,c,o)=>{ const So=sum(o); if(So<=1e-9*(Math.abs(sum(d))+Math.abs(sum(c))+1e-12)) return true; return sum(c)/So<-0.05 || sum(d)/So<-0.05; };
+  // PRIMARY metric: oracle-normalized additive contrast Δ = (Σd − Σc)/Σo — bounded and finite in
+  // every corner (unlike the ratio d/c, which explodes when Σc → 0 in harm-dominated cells).
+  // MC CI = paired bootstrap over the SEEDS (worlds): this is Monte-Carlo error over n=40 worlds,
+  // NOT a 1M-citizen precision. The wide *parametric* band is the η-frontier below, reported apart.
+  function bootDelta(d,c,o,lo,hi,B=4000){
+    const n=d.length, rng=mulberry32(135791), rs=new Array(B);
+    for(let b=0;b<B;b++){ let sd=0,sc=0,so=0; for(let i=0;i<n;i++){const k=(rng()*n)|0; sd+=d[k];sc+=c[k];so+=o[k];} rs[b]=(sd-sc)/so; }
     rs.sort((a,b)=>a-b); const pk=x=>rs[Math.max(0,Math.min(B-1,Math.round(x*(B-1))))];
     return {lo:pk(lo), hi:pk(hi)};
   }
-  console.log("E4/E5 UNIFIED PIPELINE — N="+N.toLocaleString()+", K="+PARAMS.K+", A="+PARAMS.A+" sectors (top "+PARAMS.kSectors+"), projSpread="+PARAMS.projSpread+", polar(citizen)="+PARAMS.polar+", partisan="+PARAMS.deltaPartisan+", seeds="+SEEDS+", workers="+NW+"  ("+((Date.now()-t0)/1000).toFixed(1)+"s)");
-  console.log("delivery f_weak="+PARAMS.fWeak+" f_ver="+PARAMS.fVer+" (ratio "+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x); compound = distributed/central (ratio of means, 95% bootstrap CI)\n");
-  console.log("  eta  beta | cen %orac | 2-layer compound [95% CI]     | 3-layer compound [95% CI]     | 3L vs 2L");
+  // SECONDARY metric: the compound ratio d/c, but reported ONLY through a Fieller interval that
+  // self-gates — when the central-delivered mean is not significantly > 0 (a≤0), the ratio is
+  // unbounded/uninterpretable and we say so instead of printing a spurious "0.03x".
+  const stats=a=>{ const n=a.length; let m=0; for(const x of a) m+=x; m/=n; let v=0; for(const x of a) v+=(x-m)*(x-m); return {n,m,v:v/(n-1)}; };
+  const cov=(a,b)=>{ const n=a.length; let ma=0,mb=0; for(let i=0;i<n;i++){ma+=a[i];mb+=b[i];} ma/=n;mb/=n; let c=0; for(let i=0;i<n;i++) c+=(a[i]-ma)*(b[i]-mb); return c/(n-1); };
+  function fieller(x,y,t=1.96){                                    // CI for E[x]/E[y] from paired samples
+    const n=x.length, sx=stats(x), sy=stats(y), Sxy=cov(x,y), xb=sx.m, yb=sy.m, Sxx=sx.v, Syy=sy.v;
+    const a=yb*yb - t*t*Syy/n, b=-2*(xb*yb - t*t*Sxy/n), c=xb*xb - t*t*Sxx/n, R=xb/yb;   // a>0 ⇔ denom significantly>0 = validity gate
+    if(a<=0) return {R, stable:false};
+    const disc=b*b-4*a*c; if(disc<0) return {R, stable:false};
+    const r1=(-b-Math.sqrt(disc))/(2*a), r2=(-b+Math.sqrt(disc))/(2*a);
+    return {R, lo:Math.min(r1,r2), hi:Math.max(r1,r2), stable:true};
+  }
+  const f=x=>x.toFixed(2);
+  const gitSha=(()=>{ try{ return execSync("git rev-parse --short HEAD",{cwd:fileURLToPath(new URL('.',import.meta.url))}).toString().trim(); }catch{ return "unknown"; } })();
+  console.log("E4/E5 UNIFIED PIPELINE — N="+N.toLocaleString()+", K="+PARAMS.K+", A="+PARAMS.A+" sectors (top "+PARAMS.kSectors+"), projSpread="+PARAMS.projSpread+", polar(citizen)="+PARAMS.polar+", partisan="+PARAMS.deltaPartisan+", seeds="+SEEDS+", workers="+NW+", git="+gitSha+"  ("+((Date.now()-t0)/1000).toFixed(1)+"s)");
+  console.log("delivery f_weak="+PARAMS.fWeak+" f_ver="+PARAMS.fVer+" (ratio "+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x)");
+  console.log("PRIMARY: Δ3=(d−c)/oracle [95% MC CI over "+SEEDS+" worlds].  SECONDARY (gated): compound d/c via Fieller — 'unstable' = central not sig.>0.\n");
+  console.log("  eta  beta | cen %orac |  Δ2   |  Δ3=(d−c)/o [95% MC CI]  | ratio d/c 3L (gated Fieller)");
+  const frontier=[];
   for(const eta of PARAMS.ETAS) for(const beta of PARAMS.BETAS){
     const g=groups[eta+","+beta]; if(!g) continue;
-    const c2=g.map(p=>p.c2),d2=g.map(p=>p.d2),o2=g.map(p=>p.o2),c3=g.map(p=>p.c3),d3=g.map(p=>p.d3);
-    const m2=sum(d2)/sum(c2), m3=sum(d3)/sum(c3), cor=100*sum(c2)/sum(o2);
-    const b2=boot(d2,c2,0.025,0.975), b3=boot(d3,c3,0.025,0.975); const f=x=>x.toFixed(2);
-    console.log("  "+eta.toFixed(2)+" "+beta.toFixed(2)+" |   "+cor.toFixed(0).padStart(3)+"%   |  "+(f(m2)+"x ["+f(b2.lo)+","+f(b2.hi)+"]").padEnd(24)+" |  "+(f(m3)+"x ["+f(b3.lo)+","+f(b3.hi)+"]").padEnd(24)+" |  "+(m3>=m2?"+":"")+((m3/m2-1)*100).toFixed(0)+"%");
+    const c2=g.map(p=>p.c2),d2=g.map(p=>p.d2),o2=g.map(p=>p.o2),c3=g.map(p=>p.c3),d3=g.map(p=>p.d3),o3=g.map(p=>p.o3);
+    const So2=sum(o2), So3=sum(o3);
+    if(degen(d3,c3,o3)){ console.log("  "+eta.toFixed(2)+" "+beta.toFixed(2)+" |    —     |  degenerate: harm-dominated world (oracle collapses; Δ,ratio undefined)"); frontier.push({eta,beta,degenerate:true}); continue; }
+    const D2=(sum(d2)-sum(c2))/So2, D3=(sum(d3)-sum(c3))/So3, cor=100*sum(c2)/So2;
+    const bD3=bootDelta(d3,c3,o3,0.025,0.975), fi=fieller(d3,c3);
+    const ratio = fi.stable ? (f(fi.R)+"x ["+f(fi.lo)+","+f(fi.hi)+"]") : ("unstable (R≈"+f(fi.R)+", denom~0)");
+    console.log("  "+eta.toFixed(2)+" "+beta.toFixed(2)+" |   "+cor.toFixed(0).padStart(3)+"%   | "+(D2>=0?"+":"")+f(D2)+" | "+((D3>=0?"+":"")+f(D3)+" ["+f(bD3.lo)+","+f(bD3.hi)+"]").padEnd(24)+" | "+ratio);
+    frontier.push({eta,beta,cenPctOracle:+cor.toFixed(1),D2:+D2.toFixed(4),D3:+D3.toFixed(4),D3ci:[+bD3.lo.toFixed(4),+bD3.hi.toFixed(4)],ratio3:fi.stable?+fi.R.toFixed(3):null,ratio3ci:fi.stable?[+fi.lo.toFixed(3),+fi.hi.toFixed(3)]:null,ratio3stable:fi.stable});
   }
+  let realistic=null;
   const gr=groups["0.1,0.3"];
-  if(gr){ const c2=gr.map(p=>p.c2),d2=gr.map(p=>p.d2),c3=gr.map(p=>p.c3),d3=gr.map(p=>p.d3); const f=x=>x.toFixed(2);
-    const a=boot(d2,c2,0.025,0.975),b=boot(d2,c2,0.005,0.995),c=boot(d3,c3,0.025,0.975),d=boot(d3,c3,0.005,0.995);
-    console.log("\nREALISTIC REGIME (eta=0.10, beta=0.30):");
-    console.log("  2-layer compound: "+f(sum(d2)/sum(c2))+"x   95% ["+f(a.lo)+","+f(a.hi)+"]   99% ["+f(b.lo)+","+f(b.hi)+"]");
-    console.log("  3-layer compound: "+f(sum(d3)/sum(c3))+"x   95% ["+f(c.lo)+","+f(c.hi)+"]   99% ["+f(d.lo)+","+f(d.hi)+"]");
-    console.log("  delivery-only floor: "+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x");
+  const degR=gr?degen(gr.map(p=>p.d3),gr.map(p=>p.c3),gr.map(p=>p.o3)):true;
+  if(gr && degR){ console.log("\nREALISTIC REGIME (eta=0.10, beta=0.30): degenerate — harm-dominated world at these params; Δ/ratio undefined."); }
+  else if(gr){ const c2=gr.map(p=>p.c2),d2=gr.map(p=>p.d2),o2=gr.map(p=>p.o2),c3=gr.map(p=>p.c3),d3=gr.map(p=>p.d3),o3=gr.map(p=>p.o3);
+    const D3=(sum(d3)-sum(c3))/sum(o3), Dt=sum(d3)/sum(o3), Ct=sum(c3)/sum(o3);
+    const ci95=bootDelta(d3,c3,o3,0.025,0.975), ci99=bootDelta(d3,c3,o3,0.005,0.995), fi=fieller(d3,c3);
+    console.log("\nREALISTIC REGIME (eta=0.10, beta=0.30) — n="+SEEDS+" worlds:");
+    console.log("  PRIMARY  Δ3=(d−c)/oracle: "+(D3>=0?"+":"")+f(D3)+"   MC 95% ["+f(ci95.lo)+","+f(ci95.hi)+"]   99% ["+f(ci99.lo)+","+f(ci99.hi)+"]   (D̃="+f(Dt)+", C̃="+f(Ct)+" of oracle)");
+    console.log("  SECONDARY compound d/c: "+(fi.stable?f(fi.R)+"x  Fieller 95% ["+f(fi.lo)+","+f(fi.hi)+"]":"unstable")+"   delivery-only floor "+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x");
+    console.log("  NOTE: the CI above is Monte-Carlo error over "+SEEDS+" worlds (not 1M-citizen precision). The wide parametric band is the η-frontier above.");
+    realistic={D3:+D3.toFixed(4),D3_mc95:[+ci95.lo.toFixed(4),+ci95.hi.toFixed(4)],D3_mc99:[+ci99.lo.toFixed(4),+ci99.hi.toFixed(4)],Dtilde:+Dt.toFixed(4),Ctilde:+Ct.toFixed(4),ratio:fi.stable?+fi.R.toFixed(3):null,ratioFieller95:fi.stable?[+fi.lo.toFixed(3),+fi.hi.toFixed(3)]:null,deliveryFloor:+(PARAMS.fVer/PARAMS.fWeak).toFixed(3)};
   }
+  // ---- JSON sidecar: params + git SHA + results, for provenance / downstream analysis ----
+  try{
+    const sidecar={ generatedBySeconds:+((Date.now()-t0)/1000).toFixed(1), git:gitSha, N, seeds:SEEDS, workers:NW, params:{...PARAMS}, realistic, frontier };
+    const out=fileURLToPath(new URL('../../research/e4e5-pipeline-run.json', import.meta.url));
+    writeFileSync(out, JSON.stringify(sidecar,null,2));
+    console.log("\nsidecar: research/e4e5-pipeline-run.json (params + git "+gitSha+" + results)");
+  }catch(e){ console.log("\n(sidecar write skipped: "+e.message+")"); }
 }

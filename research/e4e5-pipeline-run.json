@@ -1,0 +1,263 @@
+{
+  "generatedBySeconds": 7.6,
+  "git": "42257cf",
+  "N": 100000,
+  "seeds": 40,
+  "workers": 28,
+  "params": {
+    "K": 1000,
+    "A": 20,
+    "mean": 0.01,
+    "sd": 1.5,
+    "noise": 1.5,
+    "p": 0.35,
+    "costHi": 10,
+    "projSpread": 0.02,
+    "sectorTilt": 0.01,
+    "kSectors": 10,
+    "deltaPartisan": 0.3,
+    "betaA": 0.5,
+    "betaB": 0.5,
+    "polar": 1,
+    "harmMult": 1,
+    "fWeak": 0.6,
+    "fVer": 0.86,
+    "ETAS": [
+      0,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "BETAS": [
+      0,
+      0.3
+    ]
+  },
+  "realistic": {
+    "D3": 0.2205,
+    "D3_mc95": [
+      0.202,
+      0.2396
+    ],
+    "D3_mc99": [
+      0.1956,
+      0.2457
+    ],
+    "Dtilde": 0.4866,
+    "Ctilde": 0.2661,
+    "ratio": 1.828,
+    "ratioFieller95": [
+      1.748,
+      1.915
+    ],
+    "deliveryFloor": 1.433
+  },
+  "frontier": [
+    {
+      "eta": 0,
+      "beta": 0,
+      "cenPctOracle": 26.7,
+      "D2": 0.5929,
+      "D3": 0.6013,
+      "D3ci": [
+        0.5827,
+        0.6209
+      ],
+      "ratio3": 3.324,
+      "ratio3ci": [
+        3.096,
+        3.596
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0,
+      "beta": 0.3,
+      "cenPctOracle": 26.7,
+      "D2": 0.203,
+      "D3": 0.2279,
+      "D3ci": [
+        0.2087,
+        0.2481
+      ],
+      "ratio3": 1.881,
+      "ratio3ci": [
+        1.793,
+        1.976
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.1,
+      "beta": 0,
+      "cenPctOracle": 27,
+      "D2": 0.5899,
+      "D3": 0.5939,
+      "D3ci": [
+        0.5751,
+        0.6124
+      ],
+      "ratio3": 3.231,
+      "ratio3ci": [
+        3.018,
+        3.486
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.1,
+      "beta": 0.3,
+      "cenPctOracle": 27,
+      "D2": 0.1999,
+      "D3": 0.2205,
+      "D3ci": [
+        0.202,
+        0.2396
+      ],
+      "ratio3": 1.828,
+      "ratio3ci": [
+        1.748,
+        1.915
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.25,
+      "beta": 0,
+      "cenPctOracle": 27.5,
+      "D2": 0.5852,
+      "D3": 0.5879,
+      "D3ci": [
+        0.5668,
+        0.6075
+      ],
+      "ratio3": 3.16,
+      "ratio3ci": [
+        2.94,
+        3.425
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.25,
+      "beta": 0.3,
+      "cenPctOracle": 27.5,
+      "D2": 0.1952,
+      "D3": 0.2145,
+      "D3ci": [
+        0.1969,
+        0.2325
+      ],
+      "ratio3": 1.788,
+      "ratio3ci": [
+        1.709,
+        1.875
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.5,
+      "beta": 0,
+      "cenPctOracle": 28.7,
+      "D2": 0.5732,
+      "D3": 0.5703,
+      "D3ci": [
+        0.5505,
+        0.5897
+      ],
+      "ratio3": 2.969,
+      "ratio3ci": [
+        2.778,
+        3.194
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.5,
+      "beta": 0.3,
+      "cenPctOracle": 28.7,
+      "D2": 0.1833,
+      "D3": 0.1969,
+      "D3ci": [
+        0.1798,
+        0.2147
+      ],
+      "ratio3": 1.68,
+      "ratio3ci": [
+        1.614,
+        1.75
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.75,
+      "beta": 0,
+      "cenPctOracle": 32.5,
+      "D2": 0.5346,
+      "D3": 0.4988,
+      "D3ci": [
+        0.4809,
+        0.5176
+      ],
+      "ratio3": 2.381,
+      "ratio3ci": [
+        2.267,
+        2.513
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 0.75,
+      "beta": 0.3,
+      "cenPctOracle": 32.5,
+      "D2": 0.1447,
+      "D3": 0.1254,
+      "D3ci": [
+        0.1041,
+        0.1472
+      ],
+      "ratio3": 1.347,
+      "ratio3ci": [
+        1.287,
+        1.409
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 1,
+      "beta": 0,
+      "cenPctOracle": 58.3,
+      "D2": 0.277,
+      "D3": 0.2738,
+      "D3ci": [
+        0.2719,
+        0.2759
+      ],
+      "ratio3": 1.467,
+      "ratio3ci": [
+        1.462,
+        1.472
+      ],
+      "ratio3stable": true
+    },
+    {
+      "eta": 1,
+      "beta": 0.3,
+      "cenPctOracle": 58.3,
+      "D2": -0.1129,
+      "D3": -0.0996,
+      "D3ci": [
+        -0.1293,
+        -0.0702
+      ],
+      "ratio3": 0.83,
+      "ratio3ci": [
+        0.779,
+        0.88
+      ],
+      "ratio3stable": true
+    }
+  ]
+}

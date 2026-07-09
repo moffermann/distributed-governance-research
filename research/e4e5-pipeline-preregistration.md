@@ -35,10 +35,16 @@ falls toward the delivery floor.
 - Costs C_j ~ U(1, 10); total budget P = (1/3)·ΣC.
 
 ## The three stages
-1. **Macro planning — budget across areas.** Central perceives area value through a
-   noisy, harm-blind proxy (η attenuates perceived harm), and splits P across areas
-   ∝ perceived positive area value. Distributed perceives area value through a
-   β-biased participation sample of TRUE value. Oracle splits by true area value.
+1. **Macro planning — which sectors get funded.** Each institution scores every sector
+   by the total value it *sees* (sector value = the sum of its projects' values, per the
+   emergent-sector construction), then **gates to the top k sectors** (k = kSectors,
+   default 10 of A = 20) and discards the rest; the whole budget is then allocated within
+   the surviving sectors by stage 2. Central sees a noisy, harm-blind proxy (η attenuates
+   perceived harm) plus a modest partisan tilt; distributed sees a β-biased participation
+   sample of TRUE sector value; oracle sees true sector value. Both arms use the *same* k
+   (a level field). *(Code note: the gate is a hard top-k selection — `threeLayer()` in
+   e4e5-pipeline.mjs — not a proportional ∝-perceived-value split; the algebra of the O-ring
+   product treats the gate's value-preservation fraction as q_macro(θ).)*
 2. **Allocation — projects within each area's budget** (this is E4). Central: greedy
    by η-blind perceived value/cost. Distributed: greedy by β-sampled true value/cost.
    Oracle: by true value/cost.
@@ -49,14 +55,27 @@ falls toward the delivery floor.
    The f_ver/f_weak ≈ 1.43 is calibrated to the E5 delivery effect (+43%).
 
 ## Metrics
-- **Two-layer (Part 1):** allocation × delivery only (single-area). Compound =
-  distributed delivered / central delivered.
-- **Three-layer (Part 2):** full pipeline. Compound = distributed / central.
-- Oracle-normalized fractions reported alongside. Regime axes: η (central
-  harm-perception 0–1), β (voice bias 0–1). Scale axis: N.
-- **Confidence:** many seeds (≥ 40), parallelized across cores; report mean and
-  **95% and 99%** CIs (percentile bootstrap over seeds). Compound reported as the
-  ratio-of-means with log-scale CI, corroborated by the product-of-margins.
+- **PRIMARY — oracle-normalized additive contrast Δ = (Σd − Σc)/Σo** (distributed minus
+  central delivered value, as a fraction of the oracle's attainable value). Bounded and
+  finite wherever the oracle is a proper positive scale, so it survives the harm-blind
+  corners where the ratio explodes. Reported for both the two-layer (Δ₂) and three-layer
+  (Δ₃) pipelines, with D̃ = Σd/Σo and C̃ = Σc/Σo alongside (Δ = D̃ − C̃).
+- **SECONDARY — the compound ratio d/c**, reported *only through a Fieller interval that
+  self-gates*: when the central-delivered mean is not significantly > 0 (Fieller a ≤ 0)
+  the ratio is unbounded and is flagged "unstable" rather than printed. Retained because
+  the "≈2×" headline is a ratio; the Fieller gate is its honesty check.
+- **Degeneracy guard.** In a (near-)fully net-harmful world (harmMult ≫ 1) the oracle
+  collapses to a sliver and both arms deliver net harm; no oracle-normalized number is
+  meaningful there. Such cells are **flagged degenerate**, not reported — the named
+  scope-condition corner (Lipsey-Lancaster second-best), not a result.
+- Regime axes: η (central harm-perception 0–1), β (voice bias 0–1). Scale axis: N.
+- **Two uncertainties, reported apart.** (i) A **narrow Monte-Carlo CI** = paired
+  percentile bootstrap over the **n ≈ 40 world seeds** (the distributed arm uses its
+  analytic large-sample mean and the central is near-deterministic, so within-arm
+  sampling ≈ 0 → the effective n is *worlds*, not the 1M citizens; "1M" is not a
+  precision claim). (ii) The **wide parametric band** = the η×β frontier itself. The
+  headline is a **conditional interval + floor, never a bare multiplier.** Every run
+  writes a JSON sidecar (params + git SHA + results) for provenance.
 
 ## Pre-registered predictions (committed before first run)
 1. **Two-layer reproduces the compound.** Allocation × delivery in the realistic

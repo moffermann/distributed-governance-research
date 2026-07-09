@@ -1,21 +1,24 @@
-E4/E5 UNIFIED PIPELINE — N=1.000.000, K=1000, A=20 sectors (pick top 10), projSpread=0.02, partisan delta=0.3 (Beta(0.5,0.5), scaled to true-sector-spread), seeds=40, workers=28  (50.3s)
-delivery f_weak=0.6 f_ver=0.86 (ratio 1.43x); compound = distributed/central (ratio of means, 95% bootstrap CI)
+E4/E5 UNIFIED PIPELINE — N=1.000.000, K=1000, A=20 sectors (top 10), projSpread=0.02, polar(citizen)=1, partisan=0.3, seeds=40, workers=28, git=42257cf  (76.8s)
+delivery f_weak=0.6 f_ver=0.86 (ratio 1.43x)
+PRIMARY: Δ3=(d−c)/oracle [95% MC CI over 40 worlds].  SECONDARY (gated): compound d/c via Fieller — 'unstable' = central not sig.>0.
 
-  eta  beta | cen %orac | 2-layer compound [95% CI]     | 3-layer compound [95% CI]     | 3L vs 2L
-  0.00 0.00 |    28%   |  3.10x [2.94,3.30]        |  3.12x [2.93,3.35]        |  +1%
-  0.00 0.30 |    28%   |  1.77x [1.73,1.81]        |  2.13x [2.02,2.26]        |  +21%
-  0.10 0.00 |    28%   |  3.07x [2.92,3.27]        |  3.06x [2.87,3.29]        |  -0%
-  0.10 0.30 |    28%   |  1.75x [1.72,1.79]        |  2.09x [1.98,2.21]        |  +19%
-  0.25 0.00 |    28%   |  3.03x [2.89,3.22]        |  2.95x [2.75,3.19]        |  -3%
-  0.25 0.30 |    28%   |  1.73x [1.70,1.76]        |  2.01x [1.91,2.13]        |  +17%
-  0.50 0.00 |    30%   |  2.90x [2.77,3.07]        |  2.62x [2.46,2.80]        |  -10%
-  0.50 0.30 |    30%   |  1.65x [1.63,1.68]        |  1.79x [1.70,1.88]        |  +8%
-  0.75 0.00 |    33%   |  2.59x [2.48,2.71]        |  2.20x [2.11,2.29]        |  -15%
-  0.75 0.30 |    33%   |  1.47x [1.47,1.48]        |  1.50x [1.47,1.53]        |  +2%
-  1.00 0.00 |    60%   |  1.44x [1.44,1.44]        |  1.44x [1.44,1.45]        |  +0%
-  1.00 0.30 |    60%   |  0.82x [0.78,0.85]        |  0.99x [0.95,1.02]        |  +20%
+  eta  beta | cen %orac |  Δ2   |  Δ3=(d−c)/o [95% MC CI]  | ratio d/c 3L (gated Fieller)
+  0.00 0.00 |    28%   | +0.58 | +0.60 [0.58,0.62]        | 3.26x [3.04,3.52]
+  0.00 0.30 |    28%   | +0.20 | +0.24 [0.21,0.26]        | 1.89x [1.80,1.99]
+  0.10 0.00 |    28%   | +0.58 | +0.59 [0.57,0.61]        | 3.15x [2.95,3.39]
+  0.10 0.30 |    28%   | +0.20 | +0.23 [0.21,0.25]        | 1.83x [1.75,1.93]
+  0.25 0.00 |    28%   | +0.58 | +0.58 [0.56,0.60]        | 3.07x [2.87,3.31]
+  0.25 0.30 |    28%   | +0.20 | +0.22 [0.20,0.24]        | 1.79x [1.70,1.88]
+  0.50 0.00 |    29%   | +0.57 | +0.56 [0.54,0.58]        | 2.84x [2.66,3.05]
+  0.50 0.30 |    29%   | +0.18 | +0.20 [0.18,0.21]        | 1.65x [1.59,1.71]
+  0.75 0.00 |    33%   | +0.53 | +0.50 [0.48,0.51]        | 2.36x [2.26,2.49]
+  0.75 0.30 |    33%   | +0.15 | +0.14 [0.12,0.15]        | 1.37x [1.32,1.43]
+  1.00 0.00 |    60%   | +0.26 | +0.26 [0.26,0.27]        | 1.44x [1.44,1.45]
+  1.00 0.30 |    60%   | -0.12 | -0.10 [-0.13,-0.07]      | 0.84x [0.79,0.89]
 
-REALISTIC REGIME (eta=0.10, beta=0.30):
-  2-layer compound: 1.75x   95% [1.72,1.79]   99% [1.71,1.80]
-  3-layer compound: 2.09x   95% [1.98,2.21]   99% [1.95,2.25]
-  delivery-only floor: 1.43x
+REALISTIC REGIME (eta=0.10, beta=0.30) — n=40 worlds:
+  PRIMARY  Δ3=(d−c)/oracle: +0.23   MC 95% [0.21,0.25]   99% [0.20,0.25]   (D̃=0.50, C̃=0.27 of oracle)
+  SECONDARY compound d/c: 1.83x  Fieller 95% [1.75,1.93]   delivery-only floor 1.43x
+  NOTE: the CI above is Monte-Carlo error over 40 worlds (not 1M-citizen precision). The wide parametric band is the η-frontier above.
+
+sidecar: research/e4e5-pipeline-run.json (params + git 42257cf + results)

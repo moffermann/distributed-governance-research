@@ -92,18 +92,32 @@ of what it funds — Reinikka-Svensson, Olken).
    δ before the central arm wins** — superior delivery buys the distributed arm a strip
    of the frontier beyond the planning anti-diagonal.
 
-**Validation (already in the 1M table — no new run).** The realistic compound
-decomposes as a clean product of three stage-factors each > 1:
+**Validation (fresh 1M run, git-stamped, `e4e5-pipeline-results-1M.txt`).** The realistic
+compound (η = 0.10, β = 0.30) decomposes as a product of three stage-factors:
 
-> **2.09 ≈ macro (1.19) × alloc (1.22) × delivery (1.43)**
+> **1.83 ≈ macro (1.05) × alloc (1.22) × delivery (1.43)**
 
 read directly off the nested compounds — delivery = f_ver/f_weak = 0.86/0.60 = 1.43;
-alloc = (2-layer 1.75)/1.43 = 1.22; macro = (3-layer 2.09)/(2-layer 1.75) = 1.19. That
-the measured compound equals the product of the marginal stage-gains (with only a small
-+0.085 interaction, Finding 5) is the empirical content of the O-ring form: **the stages
-multiply because they are serial and complementary — no stage is redundant, none
-dominates.** And β\*_pipe(η=1) ≈ 0.30 > 0 in the table: even a *fully accountable*
-central (η = 1) is beaten up to a 30-point voice bias, the width of the delivery wedge δ.
+alloc = (2-layer 1.74)/1.43 = 1.22; macro = (3-layer 1.83)/(2-layer 1.74) = 1.05. The
+measured compound equals the product of the marginal stage-gains — the empirical content
+of the O-ring form: **the stages multiply because they are serial and complementary.**
+Primary metric (oracle-normalized): **Δ₃ = +0.23 [MC 95% 0.21, 0.25]** — the distributed
+arm delivers 23 points more of the oracle's attainable value than the central
+(D̃ = 0.50 vs C̃ = 0.27). And β\*_pipe(η = 1) ≈ 0.2 > 0: at η = 1 the pipeline runs 1.44×
+(β = 0) → 0.84× (β = 0.3), crossing parity near β ≈ 0.2 — even a *fully accountable*
+central is beaten by a ~20-point delivery wedge δ.
+
+> **Correction (2026-07-09).** An earlier results file reported the realistic 3-layer as
+> **2.09×** (macro ≈ 1.19). That file was **stale** — generated before the emergent-sector
+> world-model refinement and never regenerated; HEAD's own committed engine produces 1.83×.
+> The honest current number is **1.83×**, with the **macro sector-gate adding only ~5%**,
+> not ~19%. This is theoretically expected and *reinforces* Proposition A: the sign-flip
+> mechanism lives at the **project** level, so summing projects into sectors averages out
+> most sign-flips — only a sliver of harm-blindness survives the macro aggregation. The
+> robust, scale-stable objects are therefore the **allocation × delivery 2-layer (1.74×)**
+> and the delivery floor (1.43×); the macro stage is nearly inert and is a parsimony
+> candidate (Tier 4). The 2.09× (and the abstract's "~2.2×") should be revisited against
+> 1.83× in the deferred headline pass.
 
 **Citation note.** Lead this with **Kremer (1993) O-ring** (serial complementary
 production, losses multiply). **Farrell (1957)** is a *one-unit efficiency
