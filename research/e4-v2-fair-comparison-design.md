@@ -22,36 +22,61 @@ the answer depend on **scale (N)** and on **citizen capture (β)**?
 ## World (common to all regimes)
 - Projects: N_p ∈ {40, 200, 1000} (scale sweep). Scarcity fixed at 3× (budget
   funds ~1/3), as in E4, to isolate the knowledge/steering effect.
-- People and value: a population of citizens, each with a **type** (e.g., which
-  project kinds they use). For each project j and person i, a **subjective
-  valuation N_ij** drawn from the project's context: most people ≈ 0 (not
-  affected), a set of **beneficiaries** with N_ij > 0 whose size/intensity
-  depends on local fit, and some **dis-valuers** with N_ij < 0 (the chess-kid
-  case). **True project value N_j = Σ_i N_ij.** This replaces the single θ.
-- Salience s_j (visibility), corr(s, N) modest and *imperfect* — visibility is
-  correlated with value but not equal to it (so proxies are useful but fallible).
+- **Value has NO objective component.** A physically perfect pitch (lighting,
+  bathrooms, K people around, many kids) is worth **zero** if the only nearby
+  kids play chess. Physical facts and head-counts are **attributes** the
+  politician observes and mistakes for value; they are not value. Value is
+  entirely subjective: **N_j = Σ_i N_ij** over all people.
+- **Value decomposition (the core primitive).** For each project j and person i:
+  > **N_ij = μ(a_ij) + ε_ij**
+  where `a_ij` are i's **observable attributes** w.r.t. j (proximity,
+  demographics, physical facts), `μ(·)` is the **true attribute-conditional
+  mean valuation** — the best any outside observer could infer from attributes —
+  and `ε_ij` is the **idiosyncratic private component** (mean 0 given attributes,
+  variance σ²_idio): the part that lives only in i and is unobservable from
+  outside. The chess kid is a large **negative** ε; the football-crazy
+  neighborhood is a large **positive** aggregate ε; the distant citizen who
+  values a rural pitch he'll never use is an ε on a project where his attributes
+  say "unaffected." μ carries what attributes can predict; ε carries what they
+  structurally cannot.
+- Salience s_j (visibility), corr(s, N) modest and *imperfect*.
 
-## The central planner (fair — scalable, costly, proxy-bound, Hayek-capped)
-1. **Scalable capacity at a budget cost.** Inspects m projects deeply (low-noise
-   estimate of N_j on those), where **m is bought from the same budget**
-   (each inspection has cost κ_ins → money spent evaluating is money not
-   delivered). m is a decision variable (or set per condition), not fixed at 30.
-2. **Triage.** Cheap proxy pre-screen on **all N** — `g(head-count,
-   demographics, existing supply)` — to shortlist, then deep-inspect the top-m.
-   The planner is never blind on the un-inspected tail; it has a coarse estimate
-   there. (Kills the artificial collapse.)
-3. **Proxy vision, not valuation.** Even a deep inspection observes aggregate
-   proxies of `Σ N_ij` (how many, who), **never the individual N_ij** — so the
-   planner is structurally blind to *intensity*, *local fit*, and *sign* (it
-   counts the chess kid as a beneficiary).
-4. **Hayekian ceiling (agency/transmission loss).** As capacity m scales (bigger
-   evaluating bureaucracy), per-evaluator fidelity degrades — noise σ_p rises
-   with m, or a fixed transmission loss per hierarchical layer (Hayek 1945: local
-   knowledge does not aggregate up without loss). This is *why* the planner
-   cannot simply buy its way to omniscience; it is the theoretical ceiling, and
-   its **rate is a pre-registered parameter, swept** (not chosen to win).
-5. **Lobby/salience bias (Olson 1965).** Organized-interest projects get an
-   inflated planner estimate: `+ λ_lobby · organized(j)`.
+## The central planner (MAXIMALLY advantaged — its only blindness is structural)
+We deliberately stack the deck **for** the central planner (the honest inverse of
+E4's sin): give it every capacity advantage, and let it lose only on the one
+thing that, by the value theory, no outside observer can ever have — the
+subjective valuation itself.
+
+- **Infinite, free capacity and perfect attribute observation.** The planner
+  sees *all* attributes of *all* people perfectly and for free: proximity,
+  demographics, physical facts, head-counts, existing supply. **No bandwidth
+  limit, no scale ceiling, no Hayekian agency loss** — those are dropped; they
+  were contestable parameter fights. The planner is as good as an outside
+  observer can possibly be.
+- **But it can only estimate value from attributes.** Its estimate assigns each
+  person an assumed per-capita valuation and sums over an attribute-defined
+  beneficiary set: **N̂_j = Σ_{i∈B̂_j} v̂(a_ij).** By the value theory it can
+  **never** observe N_ij — subjective value is not a physical fact to inspect
+  harder. Its error has three structural sources, none of which shrinks with
+  capacity:
+  - **(set)** B̂_j ≠ the true valuers — it misses distant valuers and includes
+    nominal non-valuers.
+  - **(bias)** v̂(a) ≠ μ(a) — its assumed per-capita differs from the true
+    attribute-conditional mean (e.g., a flat per-capita, or an optimistic one).
+  - **(variance)** it uses v̂(a), **never the person-level ε_ij**, so it is blind
+    to the idiosyncratic dispersion — the sign-flips (the chess kid) and the
+    intensity.
+- **Maximally-fair corner.** Set B̂ = affected population and **v̂ = μ** (give the
+  planner the *true* attribute-conditional mean, its best possible estimate), so
+  set-error and bias → 0 and its ONLY error is the idiosyncratic variance
+  **Σ ε_j**. Even here, distributed (which reveals N_ij directly) beats it by
+  exactly the aggregate idiosyncratic component per project — the private,
+  structurally-unobservable share of value. This corner is the headline stress
+  test: *we gave the planner everything an outside observer could have, and it
+  still misses Σ ε.*
+- **Lobby/salience bias (Olson 1965)** enters only as an *optional* de-idealizing
+  axis (`v̂ += λ_lobby · organized(j)`), to move from the maximally-fair corner
+  toward a realistic central — never needed to make distributed win.
 
 ## The distributed institution (fair — reveals N, but partial and capturable)
 1. **Revelation.** Each citizen reveals their own N_ij for projects they
@@ -76,9 +101,16 @@ infrastructure cost are **both deducted from delivered value**. The metric is
 "knows more" but spends more to know it is not credited for free.
 
 ## Sweeps (report the map, not a point)
-- **Scale:** N_p ∈ {40, 200, 1000}.
+- **Idiosyncratic share σ²_idio** — how much of value is private/unobservable
+  from attributes (the *decisive* axis; the central's only structural error at
+  the maximally-fair corner). Sweep from ~0 (attributes predict everything →
+  central ≈ distributed) to high (value is mostly idiosyncratic → distributed
+  dominates).
+- **Scale:** N_p ∈ {40, 200, 1000} (kept, but scale is no longer the planner's
+  handicap — its blindness is now σ²_idio, present at every scale).
 - **Citizen capture:** β ∈ {0, 0.1, 0.3, 0.5}.
-- **Central Hayek-loss rate** and **inspection cost κ_ins**: {low, mid, high}.
+- **Central de-idealization (optional):** bias `v̂ ≠ μ` and lobby `λ_lobby` — to
+  move from the maximally-fair corner toward a realistic central.
 Output = a **frontier map** of *true N delivered per peso* for each institution
 across the grid — where each wins, and the crossover surface.
 
@@ -125,10 +157,13 @@ weakness, (c) normalized by cost, and (d) reported as a swept frontier, not a
 headline.
 
 ## Open parameters to confirm before implementation
-- The **Hayek-loss functional form and rate** (the single most result-determining
-  knob — must be justified/swept, never hand-picked).
-- The **inspection cost κ_ins** relative to project size (sets how much
-  "knowing more" costs the central planner).
+- The **distribution of the idiosyncratic component ε** — mean 0 by construction,
+  but its **variance σ²_idio** and shape (how fat the negative tail / how often
+  a chess-kid or a football-crazy neighborhood occurs) is now the single most
+  result-determining knob. Sweep it; never hand-pick.
+- Whether to give the planner the **true attribute-mean μ** (maximally-fair
+  corner, only-variance error) or a crude/biased v̂ (adds set + bias error).
 - The **capture model** for β (who organizes, on which projects, how visibly).
-- Whether the **central planner also reveals nothing** vs. a weak own-preference
-  (kept blind to its own N by design, since it spends others' money).
+- Note: the μ itself (the true attribute-conditional mean) should be **positive
+  and informative** where attributes genuinely predict preference — NOT forced to
+  zero, which would over-stack *against* the central (the inverse of E4's sin).
