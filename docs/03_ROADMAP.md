@@ -699,6 +699,92 @@ Exit criteria:
 
 - at least one testable prototype or case study is defined.
 
+## E4 allocation rework — queued follow-ups (2026-07-09)
+
+Context: E4 (central-vs-distributed allocation, the source of the paper's +53%/1.5×
+effect) was rebuilt after a four-reviewer **adversarial** round into a
+symmetric-frictions frontier (E4-v4, the law **β < 1 − γ**) plus a symmetric two-layer
+**capture** game (E4-v5, Becker); a six-reviewer **constructive** round then produced
+an analytical backbone and a Tier 1–3 improvement pass. What is already committed
+(EN+ES): the abstract restructured to three pillars under a "conditional frontier"
+signature, Finding 4's symmetric re-examination, the experiment-map note, the metric
+fix, and the corpus research notes. The following remain queued. Sources:
+`research/e4-analytical-backbone.md`, `-theoretical-positioning.md`,
+`-calibration-targets.md`, `-propagation-and-decisions.md`,
+`-constructive-review-synthesis.md`.
+
+### A — Paper-body insertions (constructive round; notes ready, edits pending)
+
+```text
+A1. Analytical-results subsection: Propositions 1-3 (parity law beta*=1-gamma with the
+    bias-variance reading; capture threshold rho(C); detection-floor theorem m*q=-ln(1-p))
+    plus the scale/turnout/CLT-shape invariance propositions. HIGHEST value, lowest risk:
+    converts the paper from "sim table" to "theorem confirmed by simulation".
+A2. Keystone citations into sec.5/6 + bibliography: VCG infeasible first-best -> both
+    second-best (Green-Laffont; Lipsey-Lancaster); Ostrom 1990 Principle 4 = the m*q
+    detection floor; Wittman 1989 steelman + Caplan / Achen-Bartels / Gilens-Page +
+    Bandiera-Prat-Valletti 2009 (83% waste passive); Condorcet Jury Theorem independence
+    = the v4<->v5 bridge; quadratic-voting family (Casella; Lalley-Weyl 2018);
+    Gibbard-Satterthwaite (claim capture-resistance, not strategy-proofness); Hirschman
+    1970 for beta; Sen aggregation caveat (Sen for the numerator, Samuelson for the sum).
+A3. Calibration clause + a "calibration targets" appendix table: central %oracle (46-68%)
+    as a checkable prediction vs World Bank IEG / Flyvbjerg-Oxford; Goncalves 2014 field
+    evidence for Finding 1; reframe the model-internal gap as a roadmap, not an apology.
+A4. Honest-boundary sentence: interested-set size is load-bearing (advantage holds for
+    sets >= ~5-30, collapses to parity at 3-12; the variance term shifts the parity line).
+A5. Figures into paper/companion: frontier heatmap with the beta=1-gamma line; capture
+    threshold curves; detection-floor surface; Morris tornado (artifact preview exists).
+```
+
+### B — Open editorial decisions (author's call)
+
+```text
+B1. Finding 7's audit-calibrated 2.22x: keep it as the surviving compound (a SEPARATE
+    10k-citizen ABM apparatus, under its withdrawal condition) vs drop the compound
+    multiplier entirely and lead only with the frontier + capture threshold. BIGGEST call.
+B2. Fuller Finding 5/7 reconciliation with the E4-v4/v5 frontier -- needs re-running E5/E7.
+B3. Master/companion split: capture CLAIM + analytical backbone in the master; measurement
+    MACHINERY (frontier sweeps, capture/detection runs, Morris) in the experiments repo.
+```
+
+### C — Adversarial-reviewer observations still to address (E4 four-reviewer round)
+
+```text
+C1. gamma relabel in the paper: withdraw "gamma~0 is the modal case"; relabel gamma as
+    accountability / harm-perception; re-scope the citations the politologist flagged as
+    over-read -- Wilson (client politics is one quadrant of his 2x2; the entrepreneurial-
+    politics quadrant cuts the other way), Olson (contested-issue asymmetry, not global
+    blindness), Scott (a high-modernist megaproject argument, mis-applied to routine
+    municipal allocation). Positioning note ready; paper edit pending.
+C2. Welfarist-metric / legitimacy: state plainly the metric is welfarist allocative
+    efficiency, NOT democratic legitimacy (process/consent/rights); consider a
+    distribution-sensitive metric (value to the bottom quantile / prioritarian weights) --
+    would require adding resource heterogeneity to the model. NOT yet modeled.
+C3. Exogenous agenda-setting: disclose the model takes the project menu as given; tie
+    agenda-power to the shared persuasion-capture channel and to A020 (agenda-setting
+    capture, already a declared open problem). Reconcile A020 with the E4 capture block.
+C4. "Confirmatory on held-out seeds" relabel: present as internal-consistency /
+    implementation checks, not empirical confirmation -- the six predictions are analytic
+    consequences of the construction (the analytical backbone now proves this).
+C5. Deliberative counter-model: Ostrom is added (positioning note); add Fishkin
+    (deliberative polling) / Fraser (participatory parity) as a constructive rival
+    institution, and either drop or earn the "ideologically balanced" claim.
+C6. Static one-shot boundary: disclose that harms surface over iterated cycles
+    (retrospective voting), and that the model is single-shot.
+C7. "Scored on the quantity it observes": add a note that the distributed's scoring uses
+    the true value it reveals, and that the symmetric beta + capture frictions are what
+    keep this from being circular.
+```
+
+### Recommended next point
+**A1 — insert the analytical-results subsection (the β\* = 1 − γ proposition + the two
+other closed forms).** It is the highest value at the lowest risk: the algebra is already
+verified against our own tables, it makes every downstream claim inherit the credibility
+of a proven law, and it forces a clean resolution of decision **B1** (Finding 7's 2.22×)
+as a natural consequence. Pair it with **C1** (the γ relabel), since both touch the same
+Finding 4 / §5–§6 material. Defer C2 (distribution-sensitive metric) and B2 (re-running
+E5/E7) as the heavier, model-extending work.
+
 ## Immediate next steps
 
 The next working sequence should be:
