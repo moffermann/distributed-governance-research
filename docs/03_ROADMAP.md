@@ -722,13 +722,14 @@ A1. [DONE 2026-07-09] Analytical-results 'backbone' block inserted into Finding 
     small-set boundary (subsumes A4). SYMBOL FIX applied: harm-perception coefficient
     renamed gamma->eta to avoid collision with the posted-guarantee gamma of Propositions
     1-3; gamma now appears only as the guarantee in sec.5.
-A2. Keystone citations into sec.5/6 + bibliography: VCG infeasible first-best -> both
-    second-best (Green-Laffont; Lipsey-Lancaster); Ostrom 1990 Principle 4 = the m*q
-    detection floor; Wittman 1989 steelman + Caplan / Achen-Bartels / Gilens-Page +
-    Bandiera-Prat-Valletti 2009 (83% waste passive); Condorcet Jury Theorem independence
-    = the v4<->v5 bridge; quadratic-voting family (Casella; Lalley-Weyl 2018);
-    Gibbard-Satterthwaite (claim capture-resistance, not strategy-proofness); Hirschman
-    1970 for beta; Sen aggregation caveat (Sen for the numerator, Samuelson for the sum).
+A2. [DONE 2026-07-09] Keystone citations woven into Finding 4 (EN+ES) via a 'Positioning'
+    paragraph, and 17 missing bib entries added (Bandiera-Prat-Valletti, Bastiat, Becker-
+    Stigler, Casella, Dyck-Morse-Zingales, Gibbard, Green-Laffont, Lalley-Weyl, Lipsey-
+    Lancaster, Samuelson, Satterthwaite, Scott, Sen, Stokes, Vickrey, Wilson, Wittman):
+    VCG->both second-best (lowers burden of proof); capture-resistance not strategy-
+    proofness (Gibbard-Satterthwaite); equal wallet in the intensity-voting family with
+    the k_d anti-plutocracy bound; Condorcet-independence bridge; Sen/Samuelson caveat.
+    Minor reinforcement deferred (optional): Caplan / Achen-Bartels / Gilens-Page.
 A3. Calibration clause + a "calibration targets" appendix table: central %oracle (46-68%)
     as a checkable prediction vs World Bank IEG / Flyvbjerg-Oxford; Goncalves 2014 field
     evidence for Finding 1; reframe the model-internal gap as a roadmap, not an apology.
@@ -779,17 +780,17 @@ C7. "Scored on the quantity it observes": add a note that the distributed's scor
 ```
 
 ### Recommended next point
-**A1 + C1 DONE (2026-07-09).** Next: **A2** — weave the keystone citations into §5/§6 and
-the bibliography (VCG second-best, Ostrom P4, Condorcet-independence bridge, QV family,
-Gibbard-Satterthwaite, Hirschman, Sen caveat; Wittman/Bandiera-Prat-Valletti are already
-in via C1). A fast honest-disclosure pass can bundle **C4** (relabel "confirmatory" as
-internal-consistency checks), **C6** (state the static one-shot boundary), and **C7** (the
-scored-on-observed note) in the same edit. Then **A3** (calibration clause + appendix).
+**DONE 2026-07-09: A1, C1, A2, C6, C7.** C4 is **N/A for the paper** (the "confirmatory on
+held-out seeds" claim lives only in the research note, not in `paper.md`). Next: **A3** —
+the calibration clause + a "calibration targets" appendix table (central %oracle 46–68% as
+a checkable prediction vs World Bank IEG / Flyvbjerg; Goncalves 2014 field evidence for
+Finding 1; reframe the model-internal gap as a roadmap). Then **C5** (add Fishkin / Fraser
+as a deliberative rival institution and drop/earn the "ideological balance" claim).
 **Deferred to a joint pass (author's plan):** **B1** (Finding 7's 2.22× keep-or-drop)
-together with the **+43% / 1.43× incentive-alignment axis** — they are coupled by the
-"effects are a layer and its safeguard, not independent multipliers" reframe. Heavier
-model-extending work (**C2** distribution-sensitive metric via resource heterogeneity;
-**B2** re-running E5/E7) stays later.
+together with the **+43% / 1.43× incentive-alignment axis** — coupled by the "effects are a
+layer and its safeguard, not independent multipliers" reframe. Heavier model-extending work
+(**C2** distribution-sensitive metric via resource heterogeneity; **B2** re-running E5/E7;
+**C3** agenda-setting + A020 reconciliation) stays later.
 
 ## Immediate next steps
 
