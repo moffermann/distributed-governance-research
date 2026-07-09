@@ -33,8 +33,7 @@ El modelo identifica dos efectos que se multiplican.
 
 **(1) Elegir distribuidamente entrega más valor real.** La asignación
 distribuida —elección directa, microdelegación o reglas personalizadas—
-correlaciona mucho más con el valor efectivo que reciben los beneficiarios que
-la asignación central: mejora el valor entregado en más de **1.5× (+53%)**.
+correlaciona mucho más con el valor efectivo que reciben los beneficiarios que la asignación central: en el modelo, mejora el valor entregado en más de **1.5× (+53%)**.
 
 **(2) Alinear los incentivos hace que el valor llegue.** El ejecutor entrega,
 y no desvía, cuando arriesga más de lo que podría robar: pagos por tramos
@@ -42,11 +41,9 @@ contra hitos verificados, retenciones, garantías exigibles, reputación y
 fiscalización cruzada. Formalizamos esa alineación en condiciones que se
 pueden chequear —cuándo entregar domina a desviar, cuándo la fiscalización
 resiste la colusión, y por qué una verificación débil debe pagarse en dinero—.
-A igualdad de proyectos, esta capa añade **~43% (1.4×)** de valor.
+A igualdad de proyectos, en el modelo esta capa añade **~43% (1.4×)** de valor.
 
-**Combinados,** los dos efectos se multiplican: la arquitectura completa
-entrega **~2.2×** el valor por peso de un status quo calibrado con datos de
-contralorías de nueve países. La arquitectura además separa la planificación
+**Combinados, en el modelo** los dos efectos se multiplican: la arquitectura completa entrega **~2.2×** el valor por peso de una línea base parametrizada a partir de hallazgos publicados de contralorías de nueve países (no calibrada a un conjunto de datos). La arquitectura además separa la planificación
 macro de la asignación concreta; un estudio complementario mide el efecto de
 esa separación: robustez frente a una mala planificación central, con una
 ventaja que crece hasta **~5×**.
@@ -179,9 +176,7 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    por una defensa emparejada y resuelto bajo una regla explícita de
    integrar-o-acotar, con cada resolución propagada a través del corpus y el
    registro completo de revisión público por construcción. El bucle es una
-   autocrítica estructurada, no validación externa, y así lo decimos; lo
-   proponemos, junto con su regla de terminación, como un método reutilizable
-   para la investigación en diseño institucional.
+   autocrítica estructurada, no validación externa, y así lo decimos; lo proponemos, junto con su regla de terminación y a la espera de validación externa independiente, como una propuesta metodológica preliminar para la investigación en diseño institucional.
 
 El estudio complementario mide tres efectos que amplían esta arquitectura: la
 ablación de la pila de disuasión (sus términos son individualmente redundantes
@@ -341,8 +336,7 @@ implementable.
   esa arquitectura;
 
 - **(iv)** simulación conductual de sus supuestos de cara a la ciudadanía
-  —incluida, hasta donde sabemos, la primera comparación de conocimiento
-  simétrico en la que la construcción abierta de las prioridades de asignación
+  —incluida, hasta donde sabemos, la primera comparación de conocimiento simétrico, en simulación, en la que la construcción abierta de las prioridades de asignación
   a partir de señales ciudadanas agregadas se mide contra la construcción
   central de ancho de banda finito, y gana en toda escala probada—;
 

@@ -31,7 +31,7 @@ The model identifies two effects that multiply.
 **(1) Distributed choice delivers more real value.** Distributed allocation —
 direct choice, microdelegation, or personalized rules — correlates far more
 strongly with the effective value beneficiaries receive than central
-allocation: it improves delivered value by more than **1.5× (+53%)**.
+allocation: in the model, it improves delivered value by more than **1.5× (+53%)**.
 
 **(2) Aligned incentives make the value arrive.** The executor delivers,
 rather than diverts, when more is at stake than could be stolen:
@@ -39,12 +39,9 @@ milestone-gated tranche release, retention, enforceable guarantees,
 reputation, and cross-corroborated fiscalization. We formalize this alignment
 as checkable conditions — when delivering dominates diverting, when
 fiscalization resists collusion, and why weak verification must be priced
-financially. On identical portfolios, this layer adds **~43% (1.4×)** of
-value.
+financially. On identical portfolios, in the model this layer adds **~43% (1.4×)** of value.
 
-**Combined,** the two effects multiply: the full architecture delivers
-**~2.2×** the value per unit of budget of a status quo calibrated from
-audit-institution data across nine countries. The architecture also separates
+**Combined, in the model** the two effects multiply: the full architecture delivers **~2.2×** the value per unit of budget of a baseline parameterized from published audit-institution findings across nine countries (not calibrated to a dataset). The architecture also separates
 macro planning from concrete allocation; a companion study measures the effect
 of that separation: robustness to poor central planning, with an advantage
 rising to **~5×**.
@@ -169,8 +166,7 @@ current institution solves the same problem, not against an ideal — blocking t
    resolved under an explicit integrate-or-bound rule, with every resolution
    propagated through the corpus and the full review record public by
    construction. The loop is a structured self-critique, not external
-   validation, and we say so; we propose it, and its terminating rule, as a
-   reusable method for institutional design research.
+   validation, and we say so; we propose it, and its terminating rule—pending independent external validation—as a preliminary methodological proposal for institutional design research.
 
 A companion study measures three effects that extend this architecture:
 ablation of the deterrence stack (its terms are individually redundant but
@@ -318,7 +314,7 @@ dial.
   mechanisms;
 
 - **(iv)** behavioral simulation of its citizen-facing assumptions —including,
-  to our knowledge, the first symmetric-knowledge comparison in which open
+  to our knowledge, the first symmetric-knowledge comparison, in simulation, in which open
   construction of allocation priorities from aggregated citizen signals is
   measured against bandwidth-constrained central construction, and wins at
   every tested scale—;
