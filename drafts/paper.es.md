@@ -29,24 +29,60 @@ están separados; el dinero se libera directamente desde tesorería al ejecutor,
 por tramos, contra hitos verificados y garantías exigibles; y cada acto
 relevante deja un rastro público y auditable.
 
-El modelo identifica dos efectos que se multiplican.
+El modelo identifica tres hallazgos —una ventaja de asignación, una
+resistencia a la captura que la protege, y una capa de entrega que hace llegar
+el valor—, cada uno enunciado como una frontera condicional, no como una
+constante.
 
-**(1) Elegir distribuidamente entrega más valor real.** La asignación
-distribuida —elección directa, microdelegación o reglas personalizadas—
-correlaciona mucho más con el valor efectivo que reciben los beneficiarios que la asignación central: en el modelo, mejora el valor entregado en más de **1.5× (+53%)**.
+**(1) Elegir distribuidamente asigna mejor —donde le da al perjudicado difuso
+más voz de la que el status quo reconoce a su daño.** La asignación distribuida
+—elección directa, microdelegación o reglas personalizadas— correlaciona más
+con el valor que efectivamente reciben los beneficiarios que la asignación
+central. Pero *mapeamos* esa ventaja en vez de afirmar un solo número: obedece
+a una ley simple —el distribuido domina exactamente cuando la desigualdad de
+voz de la plataforma es menor que la ceguera del planificador central al daño
+difuso (β < 1 − γ)—, y va en el modelo desde la paridad hasta cerca de **1.8×**,
+máxima donde el daño es difuso e invisible y cayendo a la paridad solo donde un
+planificador plenamente responsable enfrenta una plataforma que silencia a los
+perjudicados. La ventaja es una propiedad de *incluir a los perjudicados*, no de
+la agregación en sí.
 
-**(2) Alinear los incentivos hace que el valor llegue.** El ejecutor entrega,
-y no desvía, cuando arriesga más de lo que podría robar: pagos por tramos
-contra hitos verificados, retenciones, garantías exigibles, reputación y
-fiscalización cruzada. Formalizamos esa alineación en condiciones que se
-pueden chequear —cuándo entregar domina a desviar, cuándo la fiscalización
-resiste la colusión, y por qué una verificación débil debe pagarse en dinero—.
-A igualdad de proyectos, en el modelo esta capa añade **~43% (1.4×)** de valor.
+**(2) Esa ventaja de asignación resiste la captura organizada —la objeción que
+más presionó una revisión adversarial.** La revisión exigió modelar la captura
+en el lado distribuido; en aras de la justicia la modelamos también en el lado
+central, simétricamente —y la asimetría entonces se *ensancha* en vez de
+cerrarse—. En el modelo el status quo se vuelve net-dañino cuando las rentas
+privadas de un proyecto capturado alcanzan cerca del **10% de su costo**,
+mientras el brazo distribuido resiste rentas cerca de **10× mayores**: su costo
+de captura tiene piso en el wallet igual-por-ciudadano (el dinero no compra
+wallets, solo persuade a quienes los tienen) y su fraude queda expuesto por una
+detección que solo necesita un puñado de denunciantes de un público afectado y
+transparente. Esto invierte la carga de la prueba —para derrotar al brazo
+distribuido, un crítico debe suponer una apatía cívica casi total entre personas
+estafadas de un beneficio que les correspondía.
 
-**Combinados, en el modelo** los dos efectos se multiplican: la arquitectura completa entrega **~2.2×** el valor por peso de una línea base parametrizada a partir de hallazgos publicados de contralorías de nueve países (no calibrada a un conjunto de datos). La arquitectura además separa la planificación
-macro de la asignación concreta; un estudio complementario mide el efecto de
-esa separación: robustez frente a una mala planificación central, con una
-ventaja que crece hasta **~5×**.
+**(3) Alinear los incentivos hace que el valor llegue —y es la precondición, no
+un segundo multiplicador.** El ejecutor entrega, y no desvía, cuando arriesga
+más de lo que podría robar: pagos por tramos contra hitos verificados,
+retenciones, garantías exigibles, reputación y fiscalización cruzada,
+formalizados como condiciones que se pueden chequear. A igualdad de proyectos,
+en el modelo esta capa añade **~43% (1.4×)** de valor —y es la misma maquinaria
+de integridad la que hace resistente a captura a la ventaja de asignación, de
+modo que asignación y entrega son una capa y su salvaguarda, no dos efectos
+independientes que se multiplican.
+
+**Combinados, en el modelo,** en un punto operativo representativo —un status
+quo ciego al daño frente a una plataforma que le da a los perjudicados una voz
+real aunque imperfecta— la arquitectura entrega cerca de **2×** el valor por
+peso de una línea base parametrizada a partir de hallazgos publicados de
+contralorías de nueve países (no calibrada a un conjunto de datos); contra esa
+línea base calibrada a auditorías el compuesto sobrevive en **~2.2×** a escala
+bajo una condición de retiro comprometida de antemano (Hallazgo 7). Los
+resultados que cargan el peso, sin embargo, son la frontera condicional y el
+umbral de captura, no el estimador puntual. La arquitectura además separa la
+planificación macro de la asignación concreta; un estudio complementario mide la
+robustez frente a una mala planificación central, con una ventaja que crece
+hasta **~5×**.
 
 La arquitectura fue sometida a **crítica adversarial sistemática**: cuarenta
 ataques, cada uno con su defensa y una resolución que *o* agrega un mecanismo
@@ -585,7 +621,7 @@ Cada experimento (E1–E8) corresponde a un hallazgo:
 | E1 | ¿los topes de financiamiento suben la calidad? | Hallazgo 1 |
 | E2 | ¿qué sostiene la calidad de la asignación? | Hallazgo 2 |
 | E3 | ¿qué amortigua el decaimiento de la participación? | Hallazgo 3 |
-| E4 | agregación distribuida vs. construcción central | Hallazgo 4 |
+| E4 | agregación distribuida vs. construcción central (refinada por una frontera de fricciones simétricas + captura, E4-v4/v5) | Hallazgo 4 |
 | E5 | dónde gana valor la arquitectura (selección × entrega) | Hallazgo 5 |
 | E6 | competencia reputacional y estándar de ejecución | Hallazgo 6 |
 | E7 | comparación contra una línea base calibrada en auditoría | Hallazgo 7 |
@@ -715,8 +751,9 @@ en los ciclos más tardíos bajo todas las condiciones, de modo que el decaimien
 se compra, no es gratis.
 
 **Hallazgo 4: las señales dispersas agregadas superan a la construcción central
-de ancho de banda fijo del vector de pesos en cada escala probada —pero solo a
-través de una institución de agregación.** Un cuarto experimento preregistrado
+de ancho de banda fijo del vector de pesos —pero una reexaminación justa y
+simétrica resuelve la ventaja en una frontera condicional y añade una
+resistencia a la captura que la protege.** Un cuarto experimento preregistrado
 (diseño y predicciones comprometidos antes de cualquier corrida;
 `research/e4-institutional-knowledge-design.md`) modela el conocimiento de manera
 simétrica en lugar de dotarlo: un planificador con ancho de banda fijo (treinta
@@ -763,6 +800,53 @@ lectura opuesta —que el conocimiento de la planificación central vence al
 conocimiento distribuido— porque nunca modelaron el conocimiento distribuido;
 cuando E4 lo hace, la agregación gana allí donde se cumplen sus precondiciones
 nombradas. Ambos discursos pierden su eslogan; el diseño conserva sus números.
+
+*Una reexaminación justa y simétrica (E4-v4/v5).* Este primer E4 le dio al
+central un ancho de banda de inspección fijo y dejó las señales ciudadanas sin
+sesgo —dos idealizaciones que, como mostró una revisión adversarial, inclinan la
+comparación a favor del brazo distribuido—. Un modelo reconstruido
+(`research/e4-v4-symmetric-frontier.md`, `research/e4-v5-capture-design.md`) le
+da a *ambas* instituciones una fricción simétrica para percibir el valor
+verdadero, incluido el daño: el central atenúa el daño percibido por un
+coeficiente γ (0 = ciego al daño difuso, 1 = un planificador plenamente
+responsable), mientras el distribuido lee valoraciones verdaderas pero los
+perjudicados difusos sub-participan a una tasa β (desigualdad de voz). El
+resultado no es un multiplicador sino una frontera con un lugar de paridad en
+forma cerrada (`research/e4-analytical-backbone.md`): ambas instituciones son
+estimadores sesgados del mismo valor de Samuelson T = S⁺ − S⁻, que rankean
+proyectos por S⁺ − θ·S⁻ con θ_C = γ y θ_D = 1 − β, de modo que el distribuido
+domina exactamente cuando su coeficiente está más cerca del peso verdadero del
+daño, que es uno —es decir, **β < 1 − γ**—. La simulación confirma la ley
+(paridad en la anti-diagonal γ + β = 1) y cuantifica la degradación del valor
+entregado fuera de ella (desde la paridad hasta ~1.8× de un oráculo de
+información completa a lo largo de la caja plausible). La ventaja es así una
+propiedad de *incluir a los perjudicados*, no de la agregación en sí, y se
+silencia en el rincón donde un planificador responsable enfrenta una plataforma
+que silencia a los perjudicados —lo que absorbe la objeción del sesgo de
+participación dentro del propio eje β del modelo en vez de dejarla externa.
+
+*La resistencia a la captura protege la ventaja (E4-v5).* Modelando la captura
+organizada de forma simétrica —la objeción más dura de la revisión, aplicada en
+justicia también al planificador central—, la asimetría se ensancha en vez de
+cerrarse. Un grupo captura un proyecto de bajo valor solo cuando su renta
+privada supera el costo de adquisición más la sanción esperada (Becker 1968);
+con la asimetría de disuasión cargada enteramente por la probabilidad de
+detección y el escalamiento de la adquisición (la pena mantenida igual, de forma
+conservadora), el status quo se vuelve net-dañino con rentas cercanas al 10% del
+costo del proyecto mientras el umbral distribuido —con piso en el wallet
+igual-por-ciudadano, que el dinero puede persuadir pero no comprar— queda cerca
+de diez veces más alto (forma cerrada ρ(C) en la nota del backbone). La
+detección es una bola de nieve p = 1 − (1 − q)^m, así que su piso es un valor
+esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes del público afectado y
+transparente —una barra tan baja que derrotar al brazo distribuido exige suponer
+una apatía cívica casi total entre los estafados—. Esto ata el Hallazgo 4 a la
+capa de integridad del Hallazgo 5: la misma fiscalización que hace llegar el
+valor es la que impide que las rentas organizadas recompren la ventaja de
+asignación, de modo que ambos son una capa y su salvaguarda antes que
+multiplicadores independientes. Toda magnitud aquí es interna al modelo; la
+literatura (Olson, Wilson, Scott, Bastiat; Becker, Becker y Stigler, Stokes,
+Dyck-Morse-Zingales; el monitoreo por los propios usuarios de Ostrom) defiende
+la dirección, el mecanismo y el signo de la asimetría —no los números.
 
 **Hallazgo 5: el valor entregado, no la asignación, es donde la arquitectura
 justifica su valía —y la selección y la entrega se multiplican.** Un quinto

@@ -26,25 +26,54 @@ treasury to the executor, in tranches, against verified milestones and
 enforceable guarantees; and every consequential act leaves a public, auditable
 trail.
 
-The model identifies two effects that multiply.
+The model identifies three findings — an allocation advantage, a
+capture-resistance that guards it, and a delivery layer that makes value
+arrive — each stated as a conditional frontier, not a constant.
 
-**(1) Distributed choice delivers more real value.** Distributed allocation —
-direct choice, microdelegation, or personalized rules — correlates far more
-strongly with the effective value beneficiaries receive than central
-allocation: in the model, it improves delivered value by more than **1.5× (+53%)**.
+**(1) Distributed choice allocates better — where it gives the diffusely
+harmed a stronger voice than the status quo grants their harm.** Distributed
+allocation — direct choice, microdelegation, or personalized rules — tracks the
+value beneficiaries actually receive more closely than central allocation. We
+*map* this advantage rather than assert a single number: it obeys a simple law
+— distributed dominates exactly when the platform's voice inequality is smaller
+than the central planner's blindness to diffuse harm (β < 1 − γ) — ranging in
+the model from rough parity to about **1.8×**, largest where harm is diffuse and
+unseen and falling to parity only where a fully accountable planner faces a
+platform that silences the harmed. The edge is a property of *including the
+harmed*, not of aggregation itself.
 
-**(2) Aligned incentives make the value arrive.** The executor delivers,
-rather than diverts, when more is at stake than could be stolen:
-milestone-gated tranche release, retention, enforceable guarantees,
-reputation, and cross-corroborated fiscalization. We formalize this alignment
-as checkable conditions — when delivering dominates diverting, when
-fiscalization resists collusion, and why weak verification must be priced
-financially. On identical portfolios, in the model this layer adds **~43% (1.4×)** of value.
+**(2) That allocation edge resists organized capture — the objection an
+adversarial review pressed hardest.** The review demanded capture be modelled on
+the distributed side; in fairness we modelled it on the central side too,
+symmetrically — and the asymmetry then *widens* rather than closes. In the model
+the status quo turns net-harmful once a captured project's private rents reach
+about **10% of its cost**, while the distributed arm resists rents about **10×
+higher**: its capture cost is floored by the equal-per-citizen wallet (money
+cannot buy wallets, only persuade their holders) and its fraud is exposed by
+detection that needs only a handful of reporters from a transparent affected
+public. This inverts the burden of proof — to defeat the distributed arm a
+critic must assume near-total civic apathy among people cheated of a benefit
+they were owed.
 
-**Combined, in the model** the two effects multiply: the full architecture delivers **~2.2×** the value per unit of budget of a baseline parameterized from published audit-institution findings across nine countries (not calibrated to a dataset). The architecture also separates
-macro planning from concrete allocation; a companion study measures the effect
-of that separation: robustness to poor central planning, with an advantage
-rising to **~5×**.
+**(3) Aligned incentives make the value arrive — and are the precondition, not
+a second multiplier.** The executor delivers rather than diverts when more is at
+stake than could be stolen: milestone-gated tranche release, retention,
+enforceable guarantees, reputation, and cross-corroborated fiscalization,
+formalized as checkable conditions. On identical portfolios this layer adds
+**~43% (1.4×)** of value in the model — and it is the same integrity machinery
+that makes the allocation edge capture-resistant, so allocation and delivery are
+a layer and its safeguard, not two independent effects to be multiplied.
+
+**Combined, in the model,** at a representative operating point — a harm-blind
+status quo facing a platform that gives the harmed real if imperfect voice — the
+architecture delivers roughly **2×** the value per unit of budget of a baseline
+parameterized from published audit-institution findings across nine countries
+(not calibrated to a dataset); against that audit-calibrated baseline the
+compound survives at **~2.2×** at scale under a pre-committed withdrawal
+condition (Finding 7). The load-bearing results, though, are the conditional
+frontier and the capture threshold, not the point estimate. The architecture
+also separates macro planning from concrete allocation; a companion study
+measures robustness to poor central planning, an advantage rising to **~5×**.
 
 The architecture was developed under **systematic adversarial critique**:
 forty attacks, each with a paired defense and a resolution that either adds a
@@ -541,7 +570,7 @@ assumptions of Propositions 1–4— in an agent-based simulation. Each experime
 | E1 | do funding caps raise quality? | Finding 1 |
 | E2 | what carries allocation quality? | Finding 2 |
 | E3 | what buffers participation decay? | Finding 3 |
-| E4 | distributed aggregation vs. central construction | Finding 4 |
+| E4 | distributed aggregation vs. central construction (refined by a symmetric-frictions frontier + capture, E4-v4/v5) | Finding 4 |
 | E5 | where the architecture gains value (selection × delivery) | Finding 5 |
 | E6 | reputational competition and execution standard | Finding 6 |
 | E7 | comparison against an audit-calibrated baseline | Finding 7 |
@@ -662,8 +691,9 @@ within-cycle quality alignment still erodes in later cycles under all
 conditions, so decay is bought, not free.
 
 **Finding 4: aggregated dispersed signals outperform fixed-bandwidth
-central construction of the weight vector at every tested scale — but only
-through an aggregation institution.** A fourth, pre-registered experiment
+central construction of the weight vector — but a fair, symmetric
+re-examination resolves the advantage into a conditional frontier and adds a
+capture-resistance that guards it.** A fourth, pre-registered experiment
 (design and predictions committed before any run;
 `research/e4-institutional-knowledge-design.md`) models knowledge
 symmetrically instead of endowing it: a planner with fixed bandwidth
@@ -709,6 +739,49 @@ central planning knowledge beats distributed knowledge — because they
 never modeled distributed knowledge; when E4 does, aggregation wins
 wherever its named preconditions hold. Both discourses lose their slogan;
 the design keeps its numbers.
+
+*A fair, symmetric re-examination (E4-v4/v5).* This first-pass E4 gave the
+central a fixed inspection bandwidth and left citizen signals unbiased — two
+idealizations that, an adversarial review showed, tilt the comparison in the
+distributed arm's favor. A rebuilt model
+(`research/e4-v4-symmetric-frontier.md`, `research/e4-v5-capture-design.md`)
+gives *both* institutions a symmetric friction in perceiving true value,
+including harm: the central attenuates perceived harm by a coefficient γ (0 =
+blind to diffuse harm, 1 = a fully accountable planner), while the distributed
+reads true valuations but the diffusely harmed under-participate at a rate β
+(voice inequality). The result is not a multiplier but a frontier with a
+closed-form parity locus (`research/e4-analytical-backbone.md`): both
+institutions are biased estimators of the same Samuelson value T = S⁺ − S⁻,
+ranking projects by S⁺ − θ·S⁻ with θ_C = γ and θ_D = 1 − β, so the distributed
+dominates exactly when its coefficient is closer to the true harm-weight of one
+— i.e. **β < 1 − γ**. The simulation confirms the law (parity on the
+anti-diagonal γ + β = 1) and quantifies the delivered-value degradation off it
+(rough parity to ~1.8× of a full-information oracle across the plausible box).
+The advantage is thus a property of *including the harmed*, not of aggregation
+per se, and it is silent in the corner where an accountable planner faces a
+platform that silences the harmed — which absorbs the participation-bias
+objection into the model's own β axis rather than leaving it external.
+
+*Capture-resistance guards the advantage (E4-v5).* Modelling organized capture
+symmetrically — the review's hardest objection, applied in fairness to the
+central planner too — the asymmetry widens rather than closes. A group captures
+a low-value project only when its private rent exceeds acquisition cost plus the
+expected sanction (Becker 1968); with the deterrence asymmetry carried entirely
+by detection probability and acquisition scaling (the penalty held equal,
+conservatively), the status quo turns net-harmful at rents near 10% of project
+cost while the distributed threshold — floored by the equal-per-citizen wallet,
+which money can persuade but cannot buy — sits roughly ten times higher (closed
+form ρ(C) in the backbone note). Detection is a snowball p = 1 − (1 − q)^m, so
+its floor is an expected m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters drawn from the
+transparent affected public — a bar so low that defeating the distributed arm
+requires assuming near-total civic apathy among the defrauded. This ties Finding
+4 to the integrity layer of Finding 5: the same fiscalization that makes value
+arrive is what keeps the allocation advantage from being bought back by
+organized rents, so the two are a layer and its safeguard rather than
+independent multipliers. Every magnitude here is model-internal; the literature
+(Olson, Wilson, Scott, Bastiat; Becker, Becker and Stigler, Stokes,
+Dyck-Morse-Zingales; Ostrom's self-monitoring commons) defends the direction,
+the mechanism, and the sign of the asymmetry — not the numbers.
 
 **Finding 5: delivered value, not allocation, is where the architecture
 earns its keep — and selection and delivery multiply.** A fifth,

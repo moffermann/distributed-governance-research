@@ -72,6 +72,18 @@ for(const g of G){ process.stdout.write("   g="+g.toFixed(2)+"   |");
 console.log("\nReading: advantage>1 = distributed delivers more true value; ~1 = parity; <1 = central wins.");
 console.log("The distributed edge exists only where the platform's voice bias (beta) is milder than");
 console.log("the central's harm-blindness (low gamma). It is NOT a property of aggregation per se.");
+console.log("Closed form (see e4-analytical-backbone): the parity locus is exactly beta* = 1 - gamma.");
+
+// Metric fix (constructive review): the D/C ratio explodes as central %oracle -> 0, so also report
+// %OF ORACLE for each institution and the FRACTION of the 54-point box favoring the distributed.
+console.log("\nRobustness view (metric-honest): median % of oracle delivered, and box points favoring distributed:");
+console.log("  gamma beta | central %oracle | distributed %oracle | frac of box favoring distributed");
+for(const g of G) for(const b of B){
+  const cf=[],df=[]; let n=0,fav=0;
+  for(const mean of [0,0.01,0.02]) for(const sd of [1,2]) for(const noise of [1,1.5,2]) for(const p of [0.2,0.35,0.5]){
+    const r=cell({N,K,mean,sd,noise,gamma:g,p,beta:b,capture:0,seeds}); n++; if(r.d>r.c) fav++; cf.push(r.c/r.o); df.push(r.d/r.o); }
+  console.log("   "+g.toFixed(2)+" "+b.toFixed(2)+" |      "+(100*q(cf,0.5)).toFixed(0).padStart(4)+"%      |       "+(100*q(df,0.5)).toFixed(0).padStart(4)+"%        |        "+fav+"/"+n);
+}
 
 // crossover: for each gamma, the beta at which advantage hits parity (interpolated on the grid)
 console.log("\nParity crossover (beta where distributed advantage falls to ~1.0), per gamma:");
