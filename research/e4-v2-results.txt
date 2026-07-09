@@ -1,0 +1,31 @@
+E4-v2 — fair central-vs-distributed (deterministic, 8 seeds, M=6000)
+
+(A) Approval as the correlated local-taste share grows (N=200, p=1.0, beta=0):
+  sigmaLocal | central-ideal | distributed | distrib advantage
+   0.0       |   88.1%      |   87.9%    |  +-0.2 pts
+   0.3       |   87.0%      |   87.2%    |  +0.2 pts
+   0.6       |   84.1%      |   87.3%    |  +3.2 pts
+   1.0       |   78.0%      |   87.3%    |  +9.4 pts
+   1.5       |   70.9%      |   87.4%    |  +16.5 pts
+
+(B) Distributed under partial participation p and capture beta (N=200, sigmaLocal=1.0):
+  p    beta | distributed approval  (vs central-ideal 78.0%)
+  1.0  0.0  |   87.3%
+  0.6  0.0  |   87.5%
+  0.3  0.0  |   87.7%
+  0.6  0.3  |   87.1%
+  0.3  0.5  |   85.2%
+
+(C) Across scale (sigmaLocal=1.0, p=0.6, beta=0.3):
+   N    | central-ideal | distributed
+    40  |   76.0%      |   87.2%
+   200  |   78.0%      |   87.1%
+  1000  |   81.2%      |   88.4%
+
+(D) Realistic status quo (ideal central + dysfunction) vs distributed (N=200, sigmaLocal=1.0, p=0.6, beta=0.3):
+  dysfunction | status-quo approval | distributed approval
+     0.0      |    78.0%        |    87.1%
+     0.5      |    75.8%        |    87.1%
+     1.0      |    75.4%        |    87.1%
+     1.5      |    75.6%        |    87.1%
+     2.0      |    75.7%        |    87.1%
