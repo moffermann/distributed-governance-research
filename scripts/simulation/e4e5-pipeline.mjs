@@ -146,6 +146,27 @@ if(!isMainThread){
   for(const a of process.argv.slice(2)) if(a.startsWith("--")){            // named flags --key=value override ANY param (safer than positional); take precedence
     const [k,v]=a.slice(2).split("="); if(k in PARAMS && v!==undefined) PARAMS[k]=isNaN(+v)?v:+v;
   }
+  if(process.argv.includes("--diag")){                                    // diagnostic: is the macro stage inert because sector value is mis-computed, or because the world has ~no net-negative mass?
+    const A=PARAMS.A, per=Math.ceil(PARAMS.K/A), K=PARAMS.K;
+    const agg={negProj:0, secNeg:0, seeds:0, ovCen:0, ovDis:0}; const eta=0.1, beta=0.3, p=PARAMS.p;
+    for(let s=1000;s<1000+Math.min(SEEDS,20);s++){
+      const W=buildSeed(s,N,K,PARAMS.mean,PARAMS.sd,PARAMS.noise); const {Sp,Sm,cPos,cNeg}=W;
+      const secT=new Float64Array(A), secCen=new Float64Array(A), secDis=new Float64Array(A);
+      for(let j=0;j<K;j++){ const t=Sp[j]-Sm[j]; if(t<0) agg.negProj++; const a=(j/per)|0;
+        secT[a]+=t; secCen[a]+=cPos[j]+eta*cNeg[j]; secDis[a]+=p*(Sp[j]-(1-beta)*Sm[j]); }
+      for(let a=0;a<A;a++) if(secT[a]<0) agg.secNeg++;
+      const top=v=>new Set(Array.from({length:A},(_,a)=>a).sort((x,y)=>v[y]-v[x]).slice(0,PARAMS.kSectors));
+      const oT=top(secT), cT=top(secCen), dT=top(secDis);
+      let oc=0,od=0; for(const a of oT){ if(cT.has(a)) oc++; if(dT.has(a)) od++; }
+      agg.ovCen+=oc; agg.ovDis+=od; agg.seeds++;
+    }
+    const n=agg.seeds;
+    console.log("DIAG (η=0.1, β=0.3, "+n+" seeds, N="+N.toLocaleString()+"):");
+    console.log("  net-negative PROJECTS: "+(100*agg.negProj/(n*K)).toFixed(1)+"%   net-negative SECTORS: "+(agg.secNeg/n).toFixed(1)+"/"+A);
+    console.log("  top-"+PARAMS.kSectors+" sector overlap with ORACLE — central(blind): "+(agg.ovCen/n).toFixed(1)+"/"+PARAMS.kSectors+"   distributed: "+(agg.ovDis/n).toFixed(1)+"/"+PARAMS.kSectors);
+    console.log("  → if central-vs-oracle overlap ≈ k, the macro gate can't differentiate (no net-negative sectors to avoid).");
+    process.exit(0);
+  }
   const t0=Date.now();
   const seedList=Array.from({length:SEEDS},(_,i)=>1000+i);
   const chunks=Array.from({length:NW},()=>[]); seedList.forEach((s,i)=>chunks[i%NW].push(s));

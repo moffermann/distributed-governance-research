@@ -728,9 +728,13 @@ TIER 1 — FORMALIZE THE THEORY [IN PROGRESS, start here]. Turn the findings + p
     conditions). Compound Parity validated on a FRESH git-stamped 1M run: realistic 3-layer
     = 1.83x = macro(1.05) x alloc(1.22) x delivery(1.43); primary Delta3=+0.23 [MC 0.21,0.25];
     beta*_pipe(1.0)~=0.2. NOTE: the old 2.09x results file was STALE (pre emergent-sector
-    refinement); macro adds only ~5% not ~19% (sector aggregation averages out project-level
-    sign-flips -> reinforces Prop A). Robust objects: 2-layer 1.74x + delivery floor 1.43x;
-    macro stage is a parsimony candidate. PAPER PROPAGATION DEFERRED to the 2.2x joint pass
+    refinement); macro adds only ~5% not ~19% (marginal sig; MC CIs overlap). MEASURED cause
+    (--diag): sector value computed correctly (central mis-selects, 5.3/10 oracle overlap vs
+    distributed 6.1/10; 34.6% net-neg projects), but default sectorTilt makes sectors barely
+    differ in SYSTEMATIC net value so the coarse macro gate recovers little — the net-harm is
+    project-level-dispersed & captured by allocation (1.22x). NOT an averaging law: raising
+    sectorTilt/projSpread grows the macro edge (Tier-3 calibration q). Robust objects: 2-layer
+    1.74x + delivery floor 1.43x; macro stage is a parsimony candidate. PAPER PROPAGATION DEFERRED to the 2.2x joint pass
     (propositions box + reverse paper.md:65 hedge + lead multiplication with Kremer + revisit
     2.2x against 1.83x) — entangled with the 2.2x/+43x decision the author reserved for last.
 TIER 2 — METRIC + UNCERTAINTY + BUG FIXES. Primary metric = oracle-normalized Delta=(d-c)/o

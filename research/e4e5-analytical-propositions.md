@@ -110,14 +110,23 @@ central is beaten by a ~20-point delivery wedge δ.
 > **Correction (2026-07-09).** An earlier results file reported the realistic 3-layer as
 > **2.09×** (macro ≈ 1.19). That file was **stale** — generated before the emergent-sector
 > world-model refinement and never regenerated; HEAD's own committed engine produces 1.83×.
-> The honest current number is **1.83×**, with the **macro sector-gate adding only ~5%**,
-> not ~19%. This is theoretically expected and *reinforces* Proposition A: the sign-flip
-> mechanism lives at the **project** level, so summing projects into sectors averages out
-> most sign-flips — only a sliver of harm-blindness survives the macro aggregation. The
-> robust, scale-stable objects are therefore the **allocation × delivery 2-layer (1.74×)**
-> and the delivery floor (1.43×); the macro stage is nearly inert and is a parsimony
-> candidate (Tier 4). The 2.09× (and the abstract's "~2.2×") should be revisited against
-> 1.83× in the deferred headline pass.
+> The honest current number is **1.83×**, with the **macro sector-gate adding only ~5%**
+> (and of marginal significance — the 2-layer [1.71,1.78] and 3-layer [1.75,1.91] MC CIs
+> overlap). The reason is *measured*, not assumed (`--diag`): the sector value is computed
+> correctly — the central sums the **blinded** matrix and genuinely mis-selects sectors
+> (top-10 overlap with the oracle only **5.3/10** vs the distributed's **6.1/10**), so the
+> negative weight *does* influence the harm-sighted arms. But at the default `sectorTilt`
+> the sectors barely differ in *systematic* net value (the ~4/20 net-negative sectors are
+> marginal/noise-driven), so avoiding them recovers little; the real net-harm mass (**34.6%
+> of projects**) is **dispersed at the project level** and is already captured by the
+> project-level **allocation** stage (the 1.22× factor). The coarse 10-of-20 macro gate adds
+> only a sliver on top. *(This is a calibration property, not an averaging law: raising
+> `sectorTilt`/`projSpread` so sectors differ structurally in net-harm propensity — the
+> Robinson-Torvik "white elephant" sectors — grows the distributed's sector-selection edge
+> from 0.8 to ~1.5 sectors. Whether real sectors differ that way is a Tier-3 question.)*
+> The robust, scale-stable objects are the **allocation × delivery 2-layer (1.74×)** and the
+> delivery floor (1.43×); the macro stage is a parsimony candidate (Tier 4). The 2.09× (and
+> the abstract's "~2.2×") should be revisited against 1.83× in the deferred headline pass.
 
 **Citation note.** Lead this with **Kremer (1993) O-ring** (serial complementary
 production, losses multiply). **Farrell (1957)** is a *one-unit efficiency
