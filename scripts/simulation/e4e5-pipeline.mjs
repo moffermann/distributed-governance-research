@@ -22,35 +22,40 @@ function mkGauss(rng){ let s=null; return ()=>{ if(s!==null){const t=s;s=null;re
 
 const PARAMS = {
   K: 1000, A: 20, mean: 0.01, sd: 1.5, noise: 1.5, p: 0.35, costHi: 10,
-  areaSpread: 0.015,                             // cross-sector heterogeneity (tuned so the status quo stays net-positive but sub-optimal; the macro layer only bites when sectors genuinely differ)
+  projSpread: 0.02,                              // PER-PROJECT harm heterogeneity: each project has its own mean (some net-harmful) -> a project is its own thing, not a slave to its sector
+  sectorTilt: 0.01,                              // mild per-category tilt so grouping projects by category yields genuinely different sector net-values (value EMERGES from the projects)
+  kSectors: 10,                                  // fixed number of sectors both institutions select (level field), discarding the rest
+  lambdaIdeo: 0.30,                              // central-only ideological/political bias on sector selection (Olson lobby at the macro level), as a fraction of typical sector value
   fWeak: 0.60, fVer: 0.86,                       // delivery fractions (f_ver/f_weak≈1.43 = +43%, in the leak band)
   ETAS: [0.0, 0.1, 0.25, 0.5, 0.75, 1.0],
   BETAS: [0.0, 0.3],
 };
 
 // ---- stream one seed's world -> per-project accumulators ----
-// areas are heterogeneous: each area a has its own mean (some sectors net-harmful),
-// so a harm-blind macro planner mis-ranks sectors while the distributed sees true sector value.
+// Projects have their OWN value (project mean = base + a mild sector tilt + project idiosyncrasy);
+// the SECTOR is only a category, whose value is inferred by summing its projects (below).
 function buildSeed(seed, N, K, mean, sd, noise){
-  const {A, areaSpread}=PARAMS; const per=Math.ceil(K/A);
-  const arng=mulberry32(seedFor(seed, 777777)); const AG=mkGauss(arng);
-  const areaMean=new Float64Array(A); for(let a=0;a<A;a++) areaMean[a]=mean+areaSpread*AG();
+  const {A, projSpread, sectorTilt}=PARAMS; const per=Math.ceil(K/A);
+  const srng=mulberry32(seedFor(seed, 777777)); const SG=mkGauss(srng);
+  const sTilt=new Float64Array(A), ideo=new Float64Array(A);
+  for(let a=0;a<A;a++){ sTilt[a]=sectorTilt*SG(); ideo[a]=SG(); }        // sector tilt + per-sector ideological preference
   const Sp=new Float64Array(K), Sm=new Float64Array(K), cPos=new Float64Array(K), cNeg=new Float64Array(K), cost=new Float64Array(K);
   for(let j=0;j<K;j++){
-    const m=areaMean[(j/per)|0];
+    const a=(j/per)|0;
     const rng=mulberry32(seedFor(seed, j+1)); const G=mkGauss(rng);
     cost[j]=1+(PARAMS.costHi-1)*rng();
+    const projMean = mean + sTilt[a] + projSpread*G();                  // the project's own mean (its own harm content)
     const frac=0.1+0.6*rng(); const n=Math.round(frac*N);
     let sp=0,sm=0,cp=0,cn=0;
     for(let k=0;k<n;k++){
-      const v=G()*sd+m;
+      const v=G()*sd+projMean;
       if(v>0) sp+=v; else sm+=-v;
       let pe=v+noise*G();
       if(pe>=0) cp+=pe; else cn+=pe;                 // central perceived split at 0
     }
     Sp[j]=sp; Sm[j]=sm; cPos[j]=cp; cNeg[j]=cn;
   }
-  return {Sp,Sm,cPos,cNeg,cost};
+  return {Sp,Sm,cPos,cNeg,cost,ideo};
 }
 
 // greedy fund by perceived value/cost, skip perc<=0, until budget
@@ -67,28 +72,27 @@ function twoLayer(perc, T, cost, K, budget, f){
   const idx=Array.from({length:K},(_,j)=>j);
   return deliver(alloc(perc,cost,idx,budget), T, f);
 }
-// three-layer: HARD macro (fund the top-perceived sectors, zero the rest — mis-ranking
-// a harmful sector into the funded set is now consequential) x allocation x delivery
-function threeLayer(perc, T, cost, K, A, budget, f){
+// three-layer MACRO: sector VALUE is inferred by summing the projects in each category
+// (perc = the matrix that institution sees: true for distributed/oracle, harm-blind for
+// central). Both pick the top-k sectors by the value they see; the central additionally
+// carries an ideological/political bias (Olson lobby at the macro level). Then the whole
+// budget is allocated within the chosen k sectors (E4), and delivered.
+function threeLayer(perc, T, cost, K, A, budget, f, ideo, lambdaIdeo){
   const per=Math.ceil(K/A);
-  const areaPerc=new Float64Array(A), areaCost=new Float64Array(A);
-  for(let j=0;j<K;j++){ const a=(j/per)|0; areaPerc[a]+=perc[j]; areaCost[a]+=cost[j]; }
-  const order=Array.from({length:A},(_,a)=>a).filter(a=>areaPerc[a]>0)
-    .sort((x,y)=>(areaPerc[y]/areaCost[y])-(areaPerc[x]/areaCost[x]));   // top sectors by perceived value density
-  let remaining=budget, delivered=0;
-  for(const a of order){
-    if(remaining<=0) break;
-    const aBudget=Math.min(remaining, areaCost[a]); remaining-=aBudget;
-    const idx=[]; for(let j=a*per;j<Math.min((a+1)*per,K);j++) idx.push(j);
-    delivered+=deliver(alloc(perc,cost,idx,aBudget), T, f);
-  }
-  return delivered;
+  const sScore=new Float64Array(A);
+  for(let j=0;j<K;j++) sScore[(j/per)|0]+=perc[j];                        // sector value = sum of its projects (as seen)
+  if(lambdaIdeo>0){ let avg=0; for(let a=0;a<A;a++) avg+=Math.abs(sScore[a]); avg/=A;
+    for(let a=0;a<A;a++) sScore[a]+=lambdaIdeo*avg*ideo[a]; }             // central-only ideological distortion of sector ranking
+  const order=Array.from({length:A},(_,a)=>a).sort((x,y)=>sScore[y]-sScore[x]);
+  const chosen=new Set(order.slice(0,PARAMS.kSectors));                   // top-k sectors, discard the rest (same k both sides)
+  const idx=[]; for(let j=0;j<K;j++) if(chosen.has((j/per)|0)) idx.push(j);
+  return deliver(alloc(perc,cost,idx,budget), T, f);
 }
 
 function evalSeed(seed, N){
-  const {K,A,mean,sd,noise,p,fWeak,fVer,ETAS,BETAS}=PARAMS;
+  const {K,A,mean,sd,noise,p,fWeak,fVer,lambdaIdeo,ETAS,BETAS}=PARAMS;
   const W=buildSeed(seed,N,K,mean,sd,noise);
-  const {Sp,Sm,cPos,cNeg,cost}=W;
+  const {Sp,Sm,cPos,cNeg,cost,ideo}=W;
   const T=new Float64Array(K); for(let j=0;j<K;j++) T[j]=Sp[j]-Sm[j];
   const budget=cost.reduce((a,b)=>a+b,0)/3;
   const points=[];
@@ -96,7 +100,8 @@ function evalSeed(seed, N){
     const cen=new Float64Array(K), dis=new Float64Array(K);
     for(let j=0;j<K;j++){ cen[j]=cPos[j]+eta*cNeg[j]; dis[j]=p*(Sp[j]-(1-beta)*Sm[j]); }
     const c2=twoLayer(cen,T,cost,K,budget,fWeak), d2=twoLayer(dis,T,cost,K,budget,fVer), o2=twoLayer(T,T,cost,K,budget,1.0);
-    const c3=threeLayer(cen,T,cost,K,A,budget,fWeak), d3=threeLayer(dis,T,cost,K,A,budget,fVer), o3=threeLayer(T,T,cost,K,A,budget,1.0);
+    // central: harm-blind view + ideological bias; distributed/oracle: no ideological bias
+    const c3=threeLayer(cen,T,cost,K,A,budget,fWeak,ideo,lambdaIdeo), d3=threeLayer(dis,T,cost,K,A,budget,fVer,ideo,0), o3=threeLayer(T,T,cost,K,A,budget,1.0,ideo,0);
     points.push({eta,beta,c2,d2,o2,c3,d3,o3});
   }
   return points;
@@ -109,6 +114,7 @@ if(!isMainThread){
 } else {
   const N=+(process.argv[2]||100000), SEEDS=+(process.argv[3]||40), Kc=+(process.argv[4]||PARAMS.K), NW=+(process.argv[5]||Math.max(1,Math.min(os.cpus().length-2, SEEDS)));
   PARAMS.K=Kc;
+  if(process.argv[6]!==undefined) PARAMS.lambdaIdeo=+process.argv[6];   // sweep ideological bias (0 isolates the harm-blindness macro effect)
   const t0=Date.now();
   const seedList=Array.from({length:SEEDS},(_,i)=>1000+i);
   const chunks=Array.from({length:NW},()=>[]); seedList.forEach((s,i)=>chunks[i%NW].push(s));
@@ -128,7 +134,7 @@ if(!isMainThread){
     rs.sort((a,b)=>a-b); const pk=x=>rs[Math.max(0,Math.min(B-1,Math.round(x*(B-1))))];
     return {lo:pk(lo), hi:pk(hi)};
   }
-  console.log("E4/E5 UNIFIED PIPELINE — N="+N.toLocaleString()+", K="+PARAMS.K+", A="+PARAMS.A+", areaSpread="+PARAMS.areaSpread+", seeds="+SEEDS+", workers="+NW+"  ("+((Date.now()-t0)/1000).toFixed(1)+"s)");
+  console.log("E4/E5 UNIFIED PIPELINE — N="+N.toLocaleString()+", K="+PARAMS.K+", A="+PARAMS.A+" sectors (pick top "+PARAMS.kSectors+"), projSpread="+PARAMS.projSpread+", sectorTilt="+PARAMS.sectorTilt+", ideoBias="+PARAMS.lambdaIdeo+", seeds="+SEEDS+", workers="+NW+"  ("+((Date.now()-t0)/1000).toFixed(1)+"s)");
   console.log("delivery f_weak="+PARAMS.fWeak+" f_ver="+PARAMS.fVer+" (ratio "+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x); compound = distributed/central (ratio of means, 95% bootstrap CI)\n");
   console.log("  eta  beta | cen %orac | 2-layer compound [95% CI]     | 3-layer compound [95% CI]     | 3L vs 2L");
   for(const eta of PARAMS.ETAS) for(const beta of PARAMS.BETAS){
