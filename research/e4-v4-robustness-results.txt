@@ -1,0 +1,28 @@
+E4-v4 ROBUSTNESS to silent constants (representative point gamma=0.25, beta=0.30 unless noted)
+
+(i) INTERESTED-SET SIZE (CLT washout does NOT hold for small sets):
+  set size        | central %oracle | distributed %oracle | favoring dist
+  default 10-70% (~1200) |       38%      |        51%        |    8/8
+  small 20-60      |       39%      |        55%        |    8/8
+  tiny 5-30        |       43%      |        55%        |    7/8
+  very tiny 3-12   |       54%      |        53%        |    2/8
+
+(ii) BUDGET SCARCITY (fraction of total cost funded):
+  budget frac | central %oracle | distributed %oracle | favoring dist
+     1/5     |       34%      |        50%        |    8/8
+     1/3     |       38%      |        51%        |    8/8
+     1/2     |       40%      |        53%        |    8/8
+
+(iii) COST DISTRIBUTION (greedy value/cost is sensitive to the cost tail):
+  cost dist   | central %oracle | distributed %oracle | favoring dist
+  uniform    |       38%      |        51%        |    8/8
+  lognormal  |       39%      |        51%        |    8/8
+
+(iv) PARITY LAW beta*=1-gamma under TINY sets (5-30) — must still cross near the anti-diagonal:
+  gamma beta | distributed %oracle - central %oracle (sign: + dist wins)
+   0.25  0.50 |   +8 pts   (g+b=0.75)
+   0.25  0.75 |   +4 pts   (g+b=1.00 = parity line)
+   0.50  0.25 |   -4 pts   (g+b=0.75)
+   0.50  0.50 |   -9 pts   (g+b=1.00 = parity line)
+   0.50  0.75 |   -14 pts   (g+b=1.25)
+   0.75  0.25 |   -12 pts   (g+b=1.00 = parity line)
