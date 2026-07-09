@@ -1,0 +1,9 @@
+E4-v3 SCENARIOS — distributed vs status quo by gamma regime (deterministic, 6 seeds)
+
+Scenario                                            | status quo | distributed | advantage (dist/central)
+A  Normal politics (diffuse harm / client goods)|  46% oracle |   69% oracle | +68% median (1.68x); IQR 1.28-6.21x
+B  Contested projects (salient externalities)   |  48% oracle |   69% oracle | +60% median (1.60x); IQR 1.23-3.86x
+C  Evident harm (institutional crisis / revolt) |  68% oracle |   69% oracle | +5% median (1.05x); IQR 0.87-1.30x
+
+Note: the box conservatively spans world mean 0..+0.02 (neutral to mildly-positive projects),
+heterogeneity sigma 1-2, proxy noise 1-2, participation 0.2-0.5. Magnitudes are model-internal.
