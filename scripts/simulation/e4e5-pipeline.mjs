@@ -244,6 +244,14 @@ if(!isMainThread){
     console.log("  PRIMARY  Δ3=(d−c)/oracle: "+(D3>=0?"+":"")+f(D3)+"   MC 95% ["+f(ci95.lo)+","+f(ci95.hi)+"]   99% ["+f(ci99.lo)+","+f(ci99.hi)+"]   (D̃="+f(Dt)+", C̃="+f(Ct)+" of oracle)");
     console.log("  SECONDARY compound d/c: "+(fi.stable?f(fi.R)+"x  Fieller 95% ["+f(fi.lo)+","+f(fi.hi)+"]":"unstable")+"   delivery-only floor "+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x");
     console.log("  NOTE: the CI above is Monte-Carlo error over "+SEEDS+" worlds (not 1M-citizen precision). The wide parametric band is the η-frontier above.");
+    // Auditable per-layer decomposition at eta=0.1 (delivery is a FIXED f-ratio; allocation = 2-layer/delivery; macro = 3-layer/2-layer).
+    // Shown for beta=0.3 (realistic, voice-bias applied) AND beta=0 (no voice bias) so the E4↔pipeline allocation factor is transparent.
+    console.log("  LAYER DECOMPOSITION (eta=0.1):  3-layer = macro × allocation × delivery");
+    for(const bb of [0.3,0.0]){ const gg=groups["0.1,"+bb]; if(!gg) continue;
+      const r2=fieller(gg.map(p=>p.d2),gg.map(p=>p.c2)).R, r3=fieller(gg.map(p=>p.d3),gg.map(p=>p.c3)).R;
+      const deliv=PARAMS.fVer/PARAMS.fWeak, alloc=r2/deliv, macro=r3/r2;
+      console.log("    β="+bb.toFixed(1)+":  macro "+f(macro)+"x × allocation "+f(alloc)+"x × delivery "+f(deliv)+"x = "+f(r3)+"x   (2-layer alloc×deliv = "+f(r2)+"x)");
+    }
     realistic={D3:+D3.toFixed(4),D3_mc95:[+ci95.lo.toFixed(4),+ci95.hi.toFixed(4)],D3_mc99:[+ci99.lo.toFixed(4),+ci99.hi.toFixed(4)],Dtilde:+Dt.toFixed(4),Ctilde:+Ct.toFixed(4),ratio:fi.stable?+fi.R.toFixed(3):null,ratioFieller95:fi.stable?[+fi.lo.toFixed(3),+fi.hi.toFixed(3)]:null,deliveryFloor:+(PARAMS.fVer/PARAMS.fWeak).toFixed(3)};
   }
   // ---- JSON sidecar: params + git SHA + results, for provenance / downstream analysis ----
