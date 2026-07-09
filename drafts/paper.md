@@ -847,6 +847,21 @@ The value primitive follows Sen's capabilities for *what* is aggregated —
 freedoms, not money-utility — while the *summation* rests on Samuelson (1954), an
 aggregation Sen himself resists; we invoke each only where it applies.
 
+*Calibration.* The magnitudes are model-internal, but the gap to data is a
+roadmap, not an apology. The decisive quantity — the central's 46–68% of
+oracle-achievable value — is a *checkable prediction*: it can be held against the
+observed ratio of realized to appraised value in the ex-post project-evaluation
+record (the World Bank's Independent Evaluation Group ratings; Flyvbjerg,
+Bruzelius and Rothengatter 2003), where comparable realized-value gaps are
+documented; the voice bias β can likewise be anchored to measured
+participatory-budgeting demographics rather than assumed. And independent field
+evidence points the direction the model does: participatory budgeting in Brazil
+shifted spending toward sanitation and health and lowered infant mortality at
+constant per-capita budget (Gonçalves 2014) — a real-world instance of
+citizen-directed allocation delivering more real value, cleanly separable from
+any magnitude the model reports. The calibration-targets appendix makes the
+model-internal / data boundary a visible line.
+
 **Finding 5: delivered value, not allocation, is where the architecture
 earns its keep — and selection and delivery multiply.** A fifth,
 pre-registered experiment (`research/e5-value-delivery-design.md`) adds
@@ -1311,6 +1326,25 @@ named objects — which is, we argue, what it looks like when institutional
 design is treated as an engineering discipline rather than an ideological
 one.
 
+## Appendix: E4 calibration targets
+
+The E4-v4/v5 magnitudes are model-internal; the table names, for each decisive
+parameter, the real dataset that could calibrate it — making the boundary between
+model-internal and empirically-anchored a visible line rather than a caveat buried
+in prose (details in `research/e4-calibration-targets.md`). The highest-return move
+is the first row: the central %-oracle is an *output* the model already computes,
+so a first pass is an overlay against observed realized-to-appraised ratios, not a
+re-simulation.
+
+| Model quantity | Model value | Real-world proxy | Candidate dataset(s) | Status |
+|---|---|---|---|---|
+| central %-oracle | 46–68% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | checkable now (an output) |
+| η (harm-blindness) | 0–0.5 | passive vs active waste share | Bandiera-Prat-Valletti 2009 (83% passive) | anchored-direction |
+| β (voice inequality) | 0.2–0.5 | PB participation bias | NYC / Paris / Porto Alegre; Decidim / Consul | calibratable |
+| q, m (detection) | q ≈ 0.5–1%, m in hundreds | complaint / whistleblowing rates | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibratable |
+| λ threshold | central ≈ 0.10 | procurement rents / bribe depth | Olken 2007; WB Enterprise Surveys | calibratable |
+| penalty f | equal both sides | legal sanction scale | held equal (conservative) | scope choice |
+
 ## References
 
 - Akerlof, G. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." *Quarterly Journal of Economics* 84(3).
@@ -1338,11 +1372,13 @@ one.
 - Dyck, A., A. Morse, and L. Zingales (2010). "Who Blows the Whistle on Corporate Fraud?" *Journal of Finance* 65(6).
 - Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
 - Ferraz, C., and F. Finan (2008). "Exposing Corrupt Politicians: The Effects of Brazil's Publicly Released Audits on Electoral Outcomes." *Quarterly Journal of Economics* 123(2).
+- Flyvbjerg, B., N. Bruzelius, and W. Rothengatter (2003). *Megaprojects and Risk: An Anatomy of Ambition*. Cambridge University Press.
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
 - Friedman, M., and R. Friedman (1980). *Free to Choose*. Harcourt.
 - Fung, A., and E. O. Wright (2003). *Deepening Democracy: Institutional Innovations in Empowered Participatory Governance*. Verso.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Gibbard, A. (1973). "Manipulation of Voting Schemes: A General Result." *Econometrica* 41(4).
+- Gonçalves, S. (2014). "The Effects of Participatory Budgeting on Municipal Expenditures and Infant Mortality in Brazil." *World Development* 53.
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
 - Green, J., and J.-J. Laffont (1979). *Incentives in Public Decision-Making*. North-Holland.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).

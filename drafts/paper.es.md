@@ -917,6 +917,21 @@ agrega —libertades, no utilidad-dinero— mientras la *suma* descansa en Samue
 (1954), una agregación que el propio Sen resiste; invocamos cada una solo donde
 aplica.
 
+*Calibración.* Las magnitudes son internas al modelo, pero la brecha con los datos
+es una hoja de ruta, no una disculpa. La cantidad decisiva —el 46–68% del valor
+alcanzable por el central— es una *predicción verificable*: puede contrastarse con
+la razón observada entre valor realizado y valor tasado en el registro de
+evaluación ex-post de proyectos (las calificaciones del Grupo de Evaluación
+Independiente del Banco Mundial; Flyvbjerg, Bruzelius y Rothengatter 2003), donde se
+documentan brechas de valor comparables; el sesgo de voz β puede anclarse igualmente
+a demografías medidas de presupuestos participativos en vez de asumirse. Y evidencia
+de campo independiente apunta en la dirección que apunta el modelo: el presupuesto
+participativo en Brasil desplazó el gasto hacia saneamiento y salud y redujo la
+mortalidad infantil a presupuesto per cápita constante (Gonçalves 2014) —una
+instancia real de asignación dirigida por ciudadanos entregando más valor real,
+separable de cualquier magnitud que el modelo reporte. El apéndice de objetivos de
+calibración vuelve visible la línea entre lo interno al modelo y lo anclado en datos.
+
 **Hallazgo 5: el valor entregado, no la asignación, es donde la arquitectura
 justifica su valía —y la selección y la entrega se multiplican.** Un quinto
 experimento preregistrado (`research/e5-value-delivery-design.md`) añade la
@@ -1388,6 +1403,25 @@ bordes están especificados, monitoreados y adjuntos a objetos nombrados —que 
 sostenemos, cómo se ve cuando el diseño institucional se trata como una
 disciplina de ingeniería antes que como una ideológica.
 
+## Apéndice: objetivos de calibración de E4
+
+Las magnitudes de E4-v4/v5 son internas al modelo; la tabla nombra, para cada
+parámetro decisivo, el dato real que podría calibrarlo —volviendo la frontera entre
+lo interno al modelo y lo anclado empíricamente una línea visible y no un caveat
+enterrado en prosa (detalles en `research/e4-calibration-targets.md`). El movimiento
+de mayor retorno es la primera fila: el %-óptimo del central es un *output* que el
+modelo ya computa, así que una primera pasada es una superposición contra razones
+observadas realizado/tasado, no una re-simulación.
+
+| Cantidad del modelo | Valor modelo | Proxy real | Dataset(s) candidato | Estado |
+|---|---|---|---|---|
+| %-óptimo del central | 46–68% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | verificable ya (es un output) |
+| η (ceguera al daño) | 0–0.5 | desperdicio pasivo vs activo | Bandiera-Prat-Valletti 2009 (83% pasivo) | dirección anclada |
+| β (desigualdad de voz) | 0.2–0.5 | sesgo de participación en PP | NYC / París / Porto Alegre; Decidim / Consul | calibrable |
+| q, m (detección) | q ≈ 0.5–1%, m en cientos | tasas de queja / denuncia | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |
+| umbral λ | central ≈ 0.10 | rentas de compras / profundidad de soborno | Olken 2007; WB Enterprise Surveys | calibrable |
+| pena f | igual en ambos lados | escala de sanción legal | mantenida igual (conservador) | elección de alcance |
+
 ## Referencias
 
 - Akerlof, G. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." *Quarterly Journal of Economics* 84(3).
@@ -1415,11 +1449,13 @@ disciplina de ingeniería antes que como una ideológica.
 - Dyck, A., A. Morse, and L. Zingales (2010). "Who Blows the Whistle on Corporate Fraud?" *Journal of Finance* 65(6).
 - Epstein, R. (1995). *Simple Rules for a Complex World*. Harvard University Press.
 - Ferraz, C., and F. Finan (2008). "Exposing Corrupt Politicians: The Effects of Brazil's Publicly Released Audits on Electoral Outcomes." *Quarterly Journal of Economics* 123(2).
+- Flyvbjerg, B., N. Bruzelius, and W. Rothengatter (2003). *Megaprojects and Risk: An Anatomy of Ambition*. Cambridge University Press.
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
 - Friedman, M., and R. Friedman (1980). *Free to Choose*. Harcourt.
 - Fung, A., and E. O. Wright (2003). *Deepening Democracy: Institutional Innovations in Empowered Participatory Governance*. Verso.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Gibbard, A. (1973). "Manipulation of Voting Schemes: A General Result." *Econometrica* 41(4).
+- Gonçalves, S. (2014). "The Effects of Participatory Budgeting on Municipal Expenditures and Infant Mortality in Brazil." *World Development* 53.
 - Goodhart, C. (1975). "Problems of Monetary Management: The UK Experience." *Papers in Monetary Economics*, Reserve Bank of Australia.
 - Green, J., and J.-J. Laffont (1979). *Incentives in Public Decision-Making*. North-Holland.
 - Hayek, F. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4).
