@@ -1,0 +1,8 @@
+VERIFY Reviewer-2: distributed-vs-central median advantage over Scenario-A box (central UNCHANGED)
+
+  selfSd | harmed participation | median advantage
+   0.0    |        1.00          |   1.68x    (published baseline)
+   1.5    |        1.00          |   1.60x    (+ self-knowledge noise 1.5)
+   0.0    |        0.50          |   1.18x    (+ harmed participate 0.5x)
+   0.0    |        0.25          |   1.07x    (+ harmed participate 0.25x)
+   1.0    |        0.50          |   1.18x    (+ both (selfSd 1.0, harmed 0.5x))
