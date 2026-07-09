@@ -699,6 +699,51 @@ Exit criteria:
 
 - at least one testable prototype or case study is defined.
 
+## E4/E5 unified pipeline — consolidation (2026-07-09, TOP OF STACK)
+
+The unified three-stage O-ring pipeline (macro sector-planning × allocation × delivery,
+`scripts/simulation/e4e5-pipeline.mjs`, runs at 1M) went through a 5-reviewer *propositive*
+round. Full plan + citations: `research/e4e5-propositive-review-synthesis.md`. Execute in
+order; each tier feeds new research notes and later the paper.
+
+```text
+TIER 1 — FORMALIZE THE THEORY [IN PROGRESS, start here]. Turn the findings + pipeline into
+  proven law (demote sim to confirmation; much already validated in the 1M data):
+  - Sign-Flip Proposition: the advantage = the mass of net-harmful-but-perceived-beneficial
+    projects (eta*S- < S+ < S-), i.e. the benefit/harm ASYMMETRY, not the variance -> proves
+    WHY polarization & partisan came back null. Bastiat 1850 / Olson 1965 / Wilson 1980.
+  - Compound Parity Proposition: O-ring product; per-stage beta<1-eta; planning parity
+    beta*=1-eta; full-pipeline parity beta*_pipe=1-eta+delta(eta) (delivery wedge). Validated:
+    2.09 ~= macro(1.19) x alloc(1.22) x delivery(1.43).
+  - Non-circularity lemma: scored on true T, decides on biased T_hat^D -> empirical, not
+    definitional (mis-funds when beta>1-S+/S-). Pre-empts "scored on its own ruler".
+  - Reground macro eta via the LAW OF 1/n (Weingast-Shepsle-Johnsen 1981) + Primo-Snyder 2008;
+    fiscal illusion (Buchanan-Wagner 1977) + Niskanen 1971. Common-Cause: eta & beta are two
+    faces of one Olson asymmetry. Impossibilities-we-own box (Green-Laffont, Gibbard-
+    Satterthwaite, Hurwicz-as-beta, Arrow-escaped-via-cardinal, Myerson-Satterthwaite).
+  - CITATION FIX in the paper: lead the multiplication with Kremer O-ring 1993, not Farrell
+    1957 (Farrell = one-unit decomposition, not a serial chain).
+  - DONE (2026-07-09): research/e4e5-analytical-propositions.md (Sign-Flip A, Compound Parity
+    B validated 2.09=1.19x1.22x1.43 & beta*_pipe(1.0)~=0.30, Non-circularity C, law-of-1/n
+    regrounding, Common-Cause, impossibilities box, scope conditions). PAPER PROPAGATION
+    DEFERRED to the 2.2x joint pass (Finding 4/5 'Analytical propositions' box + reverse the
+    paper.md:65 hedge + lead multiplication with Kremer) — entangled with the 2.2x/+43x
+    decision the author reserved for last. Paper currently cites neither Farrell nor Kremer,
+    so nothing to hot-fix now.
+TIER 2 — METRIC + UNCERTAINTY + BUG FIXES. Primary metric = oracle-normalized Delta=(d-c)/o
+  (kills the zero-denominator explosion); gated Fieller ratio as secondary. '1M is false
+  precision' -> n=40 worlds; report MC CI (narrow) AND parametric band (wide) separately;
+  headline = conditional interval + floor. Fix worker-override footgun + pre-reg/code macro
+  mismatch (top-k vs proportional); named flags, JSON sidecar, assertions.
+TIER 3 — CALIBRATE + SOBOL. Calibrate projSpread to net-negative share ~27% (World Bank IEG),
+  validate central %oracle ~55%; PRE-REGISTER the honest deflation (calibrated realistic
+  compound ~1.5-1.8x). Global Sobol/tornado proving eta,beta dominate + null knobs S_T~=0.
+TIER 4 — PARSIMONY CONSOLIDATION. Main model strips the nulls (polar=0, harmMult=1, delta=0);
+  ablation experiments (partisan, polarization) with TOST equivalence + modest empirical
+  ranges; asymmetric harm as a NAMED scope condition (not a null); state scope conditions
+  (exogenous agenda = lower bound; additive separability). Decide if it supersedes old E5.
+```
+
 ## E4 allocation rework — queued follow-ups (2026-07-09)
 
 Context: E4 (central-vs-distributed allocation, the source of the paper's +53%/1.5×
