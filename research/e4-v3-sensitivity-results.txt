@@ -1,0 +1,33 @@
+E4-v3 SENSITIVITY to the value distribution (deterministic, 8 seeds, N=3000, K=300)
+central: proxy noise=1.5, gamma=0 (demand-blind) | distributed: p=0.3
+
+(1) SHAPE of individual value at cell-mean 0 (symmetric world). Does the shape matter?
+  shape                 | %proj net-positive | central | distributed  (% of oracle)
+  Normal (symmetric)    |        50%          |     6%  |   53%
+  Beta(2,5) right-skew  |        49%          |     6%  |   58%
+  Beta(2,10) strong RS  |        48%          |     0%  |   57%
+  Beta(5,2) LEFT-skew   |        51%          |    -2%  |   53%
+
+(2) NEGATIVE LOADING via cell mean (Normal shape). ABSOLUTE true value delivered (neg = active harm):
+  cellMean | %proj net-positive |  oracle | central | distributed
+    0.02  |        75%          |   6651  |    4418 |   4974
+    0.01  |        63%          |   5088  |    2316 |   3358
+    0.00  |        50%          |   3689  |     215 |   1970
+   -0.01  |        38%          |   2439  |   -1887 |    735
+   -0.02  |        26%          |   1431  |   -3988 |   -391
+   -0.04  |        10%          |    405  |   -8191 |  -1624
+
+(3) Same sweep with Beta(2,5) right-skew shape (confirms shape-invariance):
+  cellMean | %proj net-positive |  oracle | central | distributed
+    0.02  |        74%          |   6894  |    4522 |   5194
+    0.01  |        62%          |   5306  |    2378 |   3620
+    0.00  |        49%          |   3856  |     234 |   2229
+   -0.01  |        36%          |   2561  |   -1909 |    895
+   -0.02  |        25%          |   1521  |   -4053 |   -236
+   -0.04  |        10%          |    483  |   -8340 |  -1452
+
+(4) gamma sensitivity in a mildly negative world (Beta(2,5), cellMean -0.02): does perceiving harm save the central?
+  gamma |  oracle | central | distributed
+   0.0  |   1521  |   -4053 |   -236
+   0.5  |   1521  |   -3679 |   -236
+   1.0  |   1521  |    -134 |   -236
