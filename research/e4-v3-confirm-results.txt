@@ -1,0 +1,8 @@
+E4-v3 CONFIRMATORY validation on HELD-OUT seeds (world 5000, central 6000, dist 7000; 6 seeds)
+
+P1 PASS  distributed>=central in 162/162; central(gamma0)<central(gamma.5): true; central worse at sigma2 than sigma1 (gamma0): true
+P2 PASS  central active harm (c<0): -0.02=-3882 -0.04=-8144; distributed far less harm: -0.02=-135 -0.04=-1298
+P3 PASS  |dist_normal-dist_beta|=1.4pts, |cen_normal-cen_beta|=7.0pts (both <8)
+P4 PASS  central %oracle x1000 across k: [660,660,660,660]; distributed: [756,756,756,756]
+P5 PASS  median advantage A=1.67x > B=1.62x > C=1.06x (C near parity)
+P6 PASS  distributed %oracle by p [.05,.1,.3,.6,1]: [41,47,64,82,100] monotone & ->oracle
