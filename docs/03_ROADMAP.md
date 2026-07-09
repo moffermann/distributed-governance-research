@@ -716,10 +716,12 @@ fix, and the corpus research notes. The following remain queued. Sources:
 ### A — Paper-body insertions (constructive round; notes ready, edits pending)
 
 ```text
-A1. Analytical-results subsection: Propositions 1-3 (parity law beta*=1-gamma with the
-    bias-variance reading; capture threshold rho(C); detection-floor theorem m*q=-ln(1-p))
-    plus the scale/turnout/CLT-shape invariance propositions. HIGHEST value, lowest risk:
-    converts the paper from "sim table" to "theorem confirmed by simulation".
+A1. [DONE 2026-07-09] Analytical-results 'backbone' block inserted into Finding 4 (EN+ES):
+    the parity law beta<1-eta with the bias-variance reading, the capture threshold rho(C),
+    the detection floor m*q=-ln(1-p_c), the scale/turnout/CLT invariances, and the honest
+    small-set boundary (subsumes A4). SYMBOL FIX applied: harm-perception coefficient
+    renamed gamma->eta to avoid collision with the posted-guarantee gamma of Propositions
+    1-3; gamma now appears only as the guarantee in sec.5.
 A2. Keystone citations into sec.5/6 + bibliography: VCG infeasible first-best -> both
     second-best (Green-Laffont; Lipsey-Lancaster); Ostrom 1990 Principle 4 = the m*q
     detection floor; Wittman 1989 steelman + Caplan / Achen-Bartels / Gilens-Page +
@@ -750,12 +752,12 @@ B3. Master/companion split: capture CLAIM + analytical backbone in the master; m
 ### C — Adversarial-reviewer observations still to address (E4 four-reviewer round)
 
 ```text
-C1. gamma relabel in the paper: withdraw "gamma~0 is the modal case"; relabel gamma as
-    accountability / harm-perception; re-scope the citations the politologist flagged as
-    over-read -- Wilson (client politics is one quadrant of his 2x2; the entrepreneurial-
-    politics quadrant cuts the other way), Olson (contested-issue asymmetry, not global
-    blindness), Scott (a high-modernist megaproject argument, mis-applied to routine
-    municipal allocation). Positioning note ready; paper edit pending.
+C1. [DONE 2026-07-09] eta (ex-gamma) relabel in the paper (EN+ES): eta is SWEPT not fixed,
+    a low-but-non-zero eta is a defended regime not a premise; citations re-scoped to their
+    proper reach (Wilson's client-politics quadrant, Olson's contested-issue asymmetry,
+    Scott's legibility -- not global blindness); Wittman 1989 steelman added (correction
+    weakest exactly in the client-politics quadrant) + Bandiera-Prat-Valletti 2009 (83%
+    passive waste = incompetence not theft).
 C2. Welfarist-metric / legitimacy: state plainly the metric is welfarist allocative
     efficiency, NOT democratic legitimacy (process/consent/rights); consider a
     distribution-sensitive metric (value to the bottom quantile / prioritarian weights) --
@@ -777,13 +779,17 @@ C7. "Scored on the quantity it observes": add a note that the distributed's scor
 ```
 
 ### Recommended next point
-**A1 — insert the analytical-results subsection (the β\* = 1 − γ proposition + the two
-other closed forms).** It is the highest value at the lowest risk: the algebra is already
-verified against our own tables, it makes every downstream claim inherit the credibility
-of a proven law, and it forces a clean resolution of decision **B1** (Finding 7's 2.22×)
-as a natural consequence. Pair it with **C1** (the γ relabel), since both touch the same
-Finding 4 / §5–§6 material. Defer C2 (distribution-sensitive metric) and B2 (re-running
-E5/E7) as the heavier, model-extending work.
+**A1 + C1 DONE (2026-07-09).** Next: **A2** — weave the keystone citations into §5/§6 and
+the bibliography (VCG second-best, Ostrom P4, Condorcet-independence bridge, QV family,
+Gibbard-Satterthwaite, Hirschman, Sen caveat; Wittman/Bandiera-Prat-Valletti are already
+in via C1). A fast honest-disclosure pass can bundle **C4** (relabel "confirmatory" as
+internal-consistency checks), **C6** (state the static one-shot boundary), and **C7** (the
+scored-on-observed note) in the same edit. Then **A3** (calibration clause + appendix).
+**Deferred to a joint pass (author's plan):** **B1** (Finding 7's 2.22× keep-or-drop)
+together with the **+43% / 1.43× incentive-alignment axis** — they are coupled by the
+"effects are a layer and its safeguard, not independent multipliers" reframe. Heavier
+model-extending work (**C2** distribution-sensitive metric via resource heterogeneity;
+**B2** re-running E5/E7) stays later.
 
 ## Immediate next steps
 
