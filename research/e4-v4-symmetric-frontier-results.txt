@@ -14,6 +14,35 @@ cols = beta (platform participation bias: 0 representative ... 1 harmed absent)
 Reading: advantage>1 = distributed delivers more true value; ~1 = parity; <1 = central wins.
 The distributed edge exists only where the platform's voice bias (beta) is milder than
 the central's harm-blindness (low gamma). It is NOT a property of aggregation per se.
+Closed form (see e4-analytical-backbone): the parity locus is exactly beta* = 1 - gamma.
+
+Robustness view (metric-honest): median % of oracle delivered, and box points favoring distributed:
+  gamma beta | central %oracle | distributed %oracle | frac of box favoring distributed
+   0.00 0.00 |        46%      |         71%        |        54/54
+   0.00 0.25 |        46%      |         60%        |        54/54
+   0.00 0.50 |        46%      |         51%        |        54/54
+   0.00 0.75 |        46%      |         49%        |        54/54
+   0.00 1.00 |        46%      |         46%        |        31/54
+   0.25 0.00 |        48%      |         71%        |        54/54
+   0.25 0.25 |        48%      |         60%        |        54/54
+   0.25 0.50 |        48%      |         51%        |        54/54
+   0.25 0.75 |        48%      |         49%        |        45/54
+   0.25 1.00 |        48%      |         46%        |        0/54
+   0.50 0.00 |        49%      |         71%        |        54/54
+   0.50 0.25 |        49%      |         60%        |        54/54
+   0.50 0.50 |        49%      |         51%        |        35/54
+   0.50 0.75 |        49%      |         49%        |        11/54
+   0.50 1.00 |        49%      |         46%        |        0/54
+   0.75 0.00 |        55%      |         71%        |        50/54
+   0.75 0.25 |        55%      |         60%        |        36/54
+   0.75 0.50 |        55%      |         51%        |        0/54
+   0.75 0.75 |        55%      |         49%        |        0/54
+   0.75 1.00 |        55%      |         46%        |        0/54
+   1.00 0.00 |        80%      |         71%        |        15/54
+   1.00 0.25 |        80%      |         60%        |        4/54
+   1.00 0.50 |        80%      |         51%        |        3/54
+   1.00 0.75 |        80%      |         49%        |        0/54
+   1.00 1.00 |        80%      |         46%        |        0/54
 
 Parity crossover (beta where distributed advantage falls to ~1.0), per gamma:
    gamma=0.00: never (>1 across all beta)

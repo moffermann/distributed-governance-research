@@ -53,13 +53,23 @@ function cell({N,K,mean,sd,noise,gamma,p,beta,capture,seeds}){
 }
 const q=(a,x)=>{const s=[...a].sort((u,v)=>u-v); return s[Math.min(s.length-1,Math.floor(x*s.length))];};
 const N=3000,K=300,seeds=6;
-// median advantage over the non-decisive box, for a (gamma,beta,capture) point
-function medAdv(gamma,beta,capture=0){ const rat=[];
+const G=[0,0.25,0.5,0.75,1.0], B=[0,0.25,0.5,0.75,1.0];
+// compute each (gamma,beta) cell's box summary ONCE and cache it (fast + reproducible)
+const cache={};
+function summary(gamma,beta){ const key=gamma+","+beta; if(cache[key]) return cache[key];
+  const rat=[],cf=[],df=[]; let n=0,fav=0;
+  for(const mean of [0,0.01,0.02]) for(const sd of [1,2]) for(const noise of [1,1.5,2]) for(const p of [0.2,0.35,0.5]){
+    const r=cell({N,K,mean,sd,noise,gamma,p,beta,capture:0,seeds}); n++;
+    if(r.d>r.c) fav++; cf.push(r.c/r.o); df.push(r.d/r.o); if(r.c>0.05*r.o) rat.push(r.d/r.c); }
+  return cache[key]={med:rat.length?q(rat,0.5):NaN, fav, n, cf:q(cf,0.5), df:q(df,0.5)};
+}
+const medAdv=(g,b)=>summary(g,b).med;
+// capture variant (capture>0; used only for the small robustness block, not cached)
+function medAdvCap(gamma,beta,capture){ const rat=[];
   for(const mean of [0,0.01,0.02]) for(const sd of [1,2]) for(const noise of [1,1.5,2]) for(const p of [0.2,0.35,0.5]){
     const r=cell({N,K,mean,sd,noise,gamma,p,beta,capture,seeds}); if(r.c>0.05*r.o) rat.push(r.d/r.c); }
   return rat.length?q(rat,0.5):NaN;
 }
-const G=[0,0.25,0.5,0.75,1.0], B=[0,0.25,0.5,0.75,1.0];
 console.log("E4-v4 SYMMETRIC-FRICTIONS FRONTIER (deterministic, "+seeds+" seeds; median advantage distributed/central over the box)\n");
 console.log("rows = gamma (central harm-perception: 0 blind ... 1 accountable planner)");
 console.log("cols = beta (platform participation bias: 0 representative ... 1 harmed absent)\n");
@@ -78,11 +88,8 @@ console.log("Closed form (see e4-analytical-backbone): the parity locus is exact
 // %OF ORACLE for each institution and the FRACTION of the 54-point box favoring the distributed.
 console.log("\nRobustness view (metric-honest): median % of oracle delivered, and box points favoring distributed:");
 console.log("  gamma beta | central %oracle | distributed %oracle | frac of box favoring distributed");
-for(const g of G) for(const b of B){
-  const cf=[],df=[]; let n=0,fav=0;
-  for(const mean of [0,0.01,0.02]) for(const sd of [1,2]) for(const noise of [1,1.5,2]) for(const p of [0.2,0.35,0.5]){
-    const r=cell({N,K,mean,sd,noise,gamma:g,p,beta:b,capture:0,seeds}); n++; if(r.d>r.c) fav++; cf.push(r.c/r.o); df.push(r.d/r.o); }
-  console.log("   "+g.toFixed(2)+" "+b.toFixed(2)+" |      "+(100*q(cf,0.5)).toFixed(0).padStart(4)+"%      |       "+(100*q(df,0.5)).toFixed(0).padStart(4)+"%        |        "+fav+"/"+n);
+for(const g of G) for(const b of B){ const s=summary(g,b);
+  console.log("   "+g.toFixed(2)+" "+b.toFixed(2)+" |      "+(100*s.cf).toFixed(0).padStart(4)+"%      |       "+(100*s.df).toFixed(0).padStart(4)+"%        |        "+s.fav+"/"+s.n);
 }
 
 // crossover: for each gamma, the beta at which advantage hits parity (interpolated on the grid)
@@ -94,4 +101,4 @@ for(const g of G){ let cross="never (>1 across all beta)"; let prev=medAdv(g,0);
 
 // capture robustness at a representative low-friction corner
 console.log("\nCapture robustness (gamma=0, beta=0.25) — coordinated inflation of organized projects:");
-for(const cap of [0,0.2,0.5]) console.log("   capture="+cap.toFixed(1)+": advantage "+medAdv(0,0.25,cap).toFixed(2)+"x");
+for(const cap of [0,0.2,0.5]) console.log("   capture="+cap.toFixed(1)+": advantage "+(cap===0?medAdv(0,0.25):medAdvCap(0,0.25,cap)).toFixed(2)+"x");
