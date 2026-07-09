@@ -1,0 +1,39 @@
+E4-v5 SYMMETRIC CAPTURE (deterministic, 8 seeds; representative point gamma=0.25, beta=0.30)
+
+Organized group targets ~25% (~75) low-value 'convenience' projects; captures if rent > cost (Becker).
+Central: acquisition fixed 0.3 + detection p=0.10. Distributed: acquisition 0.3*C + detection p~1 (viral). penalty f=3 both.
+lambda = private rent as a fraction of project cost. %oracle can be NEGATIVE = active harm delivered.
+
+  lambda | central %oracle | distributed %oracle | (adv if both +) | central captured | dist captured
+   0.00  |       11%       |        37%        |     3.28x      |       0.0        |     0.0
+   0.05  |       11%       |        37%        |     3.28x      |       0.0        |     0.0
+   0.10  |      -13%       |        37%        |       n/a      |      32.5        |     0.0
+   0.20  |      -21%       |        37%        |       n/a      |      57.0        |     0.0
+   0.30  |      -22%       |        37%        |       n/a      |      65.4        |     0.0
+   0.50  |      -23%       |        37%        |       n/a      |      73.1        |     0.0
+   0.80  |      -23%       |         7%        |       n/a      |      74.4        |     32.5
+   1.20  |      -23%       |       -10%        |       n/a      |      74.4        |     54.8
+   2.00  |      -23%       |       -16%        |       n/a      |      74.4        |     67.3
+
+Key object = the CAPTURE THRESHOLD: the rent level lambda at which each institution is
+cheap enough to capture that it turns NET-NEGATIVE (delivers active harm).
+
+Isolation — from a near-parity frontier point (gamma=0.5, beta=0.5): capture is the sole driver:
+  lambda | central %oracle | distributed %oracle
+   0.00  |       18%       |        25%
+   0.30  |      -21%       |        25%
+   0.80  |      -22%       |        -4%
+
+Sensitivity — distributed detection probability (the strong assumption), lambda=0.5:
+  detection model         | dist captured | distributed %oracle
+  viral ~1 (baseline)     |       0.0     |       37%
+  moderate ~0.6           |       8.6     |       31%
+  weak ~0.3               |      46.3     |       -4%
+  as weak as central 0.1  |      69.6     |       -16%
+
+Sensitivity — distributed acquisition cost multiplier kd (equal-wallet scaling), lambda=0.5:
+  kd  | dist captured | distributed %oracle
+  0.1 |      21.5     |       19%
+  0.2 |       0.0     |       37%
+  0.3 |       0.0     |       37%
+  0.5 |       0.0     |       37%
