@@ -1,0 +1,22 @@
+E4-v3 — value-matrix comparison (deterministic, 8 seeds, N=3000, K=300)
+value = fraction of oracle-achievable TRUE value delivered
+
+(A) Central (status quo) vs distributed, by proxy noise and demand-blindness gamma (p=0.3):
+  proxyNoise | gamma | central | distributed
+     0.5     |  0.0  |  7.5%  |   53.4%
+     0.5     |  0.5  |  17.4%  |   53.4%
+     0.5     |  1.0  |  88.8%  |   53.4%
+     1.5     |  0.0  |  5.8%  |   53.4%
+     1.5     |  0.5  |  11.6%  |   53.4%
+     1.5     |  1.0  |  56.5%  |   53.4%
+     3.0     |  0.0  |  4.5%  |   53.4%
+     3.0     |  0.5  |  8.6%  |   53.4%
+     3.0     |  1.0  |  33.9%  |   53.4%
+
+(B) Distributed by participation p (central: noise=1.5, gamma=0 -> 5.8%):
+   p    | distributed
+  0.05  |   22.4%
+  0.10  |   34.8%
+  0.30  |   53.4%
+  0.60  |   74.6%
+  1.00  |   100.1%
