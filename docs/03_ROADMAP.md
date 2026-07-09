@@ -770,9 +770,14 @@ C3. Exogenous agenda-setting: disclose the model takes the project menu as given
 C4. "Confirmatory on held-out seeds" relabel: present as internal-consistency /
     implementation checks, not empirical confirmation -- the six predictions are analytic
     consequences of the construction (the analytical backbone now proves this).
-C5. Deliberative counter-model: Ostrom is added (positioning note); add Fishkin
-    (deliberative polling) / Fraser (participatory parity) as a constructive rival
-    institution, and either drop or earn the "ideologically balanced" claim.
+C5. [DROPPED 2026-07-09 — author's call, evidence-based] The paper makes NO "ideologically
+    balanced" claim (verified: only "budget-balanced" (VCG) and "Chicago" = a publisher
+    appear). There is nothing to remove and no concrete defect identified, so the
+    "smells like Chicago" critique earns no paper change (a critique with no stated
+    why/where is not actionable). The only substantive residue of that cluster is the
+    welfarist-metric point (see C2), and the paper ALREADY discloses its value-per-peso
+    criterion openly in the abstract's first line — so at most a one-line acknowledgment,
+    optional. No deliberative-democracy citation padding.
 C6. Static one-shot boundary: disclose that harms surface over iterated cycles
     (retrospective voting), and that the model is single-shot.
 C7. "Scored on the quantity it observes": add a note that the distributed's scoring uses
@@ -781,12 +786,21 @@ C7. "Scored on the quantity it observes": add a note that the distributed's scor
 ```
 
 ### Recommended next point
-**DONE 2026-07-09: A1, C1, A2, A3, C6, C7.** C4 is **N/A for the paper** (the "confirmatory
-on held-out seeds" claim lives only in the research note, not in `paper.md`). Next: **C5**
-— add Fishkin (deliberative polling) / Fraser (participatory parity) as a *constructive*
-rival institution to the equal-wallet mechanism, and either drop or earn the "ideologically
-balanced" claim (Ostrom is already in; a deliberative counter-model is the gap). Small,
-mostly-prose edit. After C5 the A-bucket paper insertions are complete.
+**DONE 2026-07-09: A1, C1, A2, A3, C6, C7.** C4 **N/A for the paper**; C5 **DROPPED** (no
+"ideologically balanced" claim exists in the paper; a critique with no stated why/where is
+not actionable — author's call). **The A-bucket paper insertions are therefore complete,**
+and the paper carries the analytical backbone, the re-scoped citations, the positioning,
+the honest boundaries, and the calibration clause + appendix (EN+ES).
+
+The remaining work is NOT reviewer-appeasement — it is two substantive things, on the
+author's schedule: (1) **the headline decision** — keep or drop the abstract's "~2.2×"
+compound, taken together with the **+43% incentive-alignment axis** they are coupled to
+(the "layer and its safeguard, not independent multipliers" reframe); and (2) optional
+heavier work only if the author wants it — a distribution-sensitive metric (needs resource
+heterogeneity in the model), agenda-setting reconciliation with A020, and re-running E5/E7.
+The welfarist-metric critique is the only substantive residue of the left-review cluster
+and is already disclosed openly in the abstract's first line (value per unit of money), so
+it needs at most a one-line acknowledgment, optional.
 **Deferred to a joint pass (author's plan):** **B1** (Finding 7's 2.22× keep-or-drop)
 together with the **+43% / 1.43× incentive-alignment axis** — coupled by the "effects are a
 layer and its safeguard, not independent multipliers" reframe. Heavier model-extending work
