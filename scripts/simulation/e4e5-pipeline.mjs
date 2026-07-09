@@ -33,6 +33,12 @@ const PARAMS = {
   // sectors independent of value. deltaPartisan = tilt as a fraction of the TRUE sector-value spread
   // (calibrated to the signal, not the level); modest per Potrafke 2011 (real but small, weakened post-1990).
   deltaPartisan: 0.3, betaA: 0.5, betaB: 0.5,
+  // CITIZEN preference polarization: a citizen's valuation = consensual base + polar*camp*sector_position
+  // + idiosyncratic noise. polar=0 -> Normal (old model); polar>0 -> ideological sectors get BIMODAL
+  // valuations (in-group values, out-group is harmed). Sector-specific + swept: literature says the mass
+  // public is mostly centrist/unimodal (Fiorina 2005; DiMaggio et al. 1996) but polarization is real and
+  // rising on some issues via partisan sorting (Abramowitz & Saunders 2008).
+  polar: 1.0, harmMult: 1.0,                     // harmMult>1: the out-group is harmed MORE than the in-group benefits (asymmetric: Olson's diffuse costs at the ideological scale) -> divisive projects go net-negative
   fWeak: 0.60, fVer: 0.86,                       // delivery fractions (f_ver/f_weak≈1.43 = +43%, in the leak band)
   ETAS: [0.0, 0.1, 0.25, 0.5, 0.75, 1.0],
   BETAS: [0.0, 0.3],
@@ -42,24 +48,26 @@ const PARAMS = {
 // Projects have their OWN value (project mean = base + a mild sector tilt + project idiosyncrasy);
 // the SECTOR is only a category, whose value is inferred by summing its projects (below).
 function buildSeed(seed, N, K, mean, sd, noise){
-  const {A, projSpread, sectorTilt, betaA, betaB}=PARAMS; const per=Math.ceil(K/A);
+  const {A, projSpread, sectorTilt, betaA, betaB, polar, harmMult}=PARAMS; const per=Math.ceil(K/A);
   const srng=mulberry32(seedFor(seed, 777777));
   const sTilt=new Float64Array(A), pos=new Float64Array(A);
   for(let a=0;a<A;a++){ sTilt[a]=sectorTilt*gauss1(srng); pos[a]=2*betaS(srng,betaA,betaB)-1; }  // sector value-tilt + polarized ideological position in [-1,1]
   const gov = gauss1(srng) > 0 ? 1 : -1;                                 // governing party ideology this period (+/-1)
   const Sp=new Float64Array(K), Sm=new Float64Array(K), cPos=new Float64Array(K), cNeg=new Float64Array(K), cost=new Float64Array(K);
   for(let j=0;j<K;j++){
-    const a=(j/per)|0;
+    const a=(j/per)|0; const pa=pos[a];
     const rng=mulberry32(seedFor(seed, j+1)); const G=mkGauss(rng);
     cost[j]=1+(PARAMS.costHi-1)*rng();
-    const projMean = mean + sTilt[a] + projSpread*G();                  // the project's own mean (its own harm content)
+    const projMean = mean + sTilt[a] + projSpread*G();                  // the project's own consensual mean
     const frac=0.1+0.6*rng(); const n=Math.round(frac*N);
     let sp=0,sm=0,cp=0,cn=0;
     for(let k=0;k<n;k++){
-      const v=G()*sd+projMean;
+      const camp = G()>0 ? 1 : -1;                   // citizen's ideological camp (balanced population)
+      const align = camp*pa;                         // >0 aligned (in-group), <0 opposed (out-group)
+      const v = projMean + (align>0 ? polar*align : polar*align*harmMult) + G()*sd;  // in-group benefit vs (possibly larger) out-group harm + idiosyncratic
       if(v>0) sp+=v; else sm+=-v;
       let pe=v+noise*G();
-      if(pe>=0) cp+=pe; else cn+=pe;                 // central perceived split at 0
+      if(pe>=0) cp+=pe; else cn+=pe;                 // central perceived split at 0 (blind to harm)
     }
     Sp[j]=sp; Sm[j]=sm; cPos[j]=cp; cNeg[j]=cn;
   }
@@ -130,13 +138,15 @@ if(!isMainThread){
   const N=+(process.argv[2]||100000), SEEDS=+(process.argv[3]||40), Kc=+(process.argv[4]||PARAMS.K), NW=+(process.argv[5]||Math.max(1,Math.min(os.cpus().length-2, SEEDS)));
   PARAMS.K=Kc;
   if(process.argv[6]!==undefined) PARAMS.deltaPartisan=+process.argv[6];   // sweep partisan tilt (0 isolates the harm-blindness macro effect)
+  if(process.argv[7]!==undefined) PARAMS.polar=+process.argv[7];           // sweep citizen preference polarization (0 = Normal valuations)
+  if(process.argv[8]!==undefined) PARAMS.harmMult=+process.argv[8];        // out-group harm multiplier (>1 = asymmetric net harm)
   const t0=Date.now();
   const seedList=Array.from({length:SEEDS},(_,i)=>1000+i);
   const chunks=Array.from({length:NW},()=>[]); seedList.forEach((s,i)=>chunks[i%NW].push(s));
   const __file=fileURLToPath(import.meta.url);
   const all=[];
   await Promise.all(chunks.filter(c=>c.length).map(seeds=>new Promise((res,rej)=>{
-    const w=new Worker(__file,{workerData:{seeds,N,overrides:{K:PARAMS.K, deltaPartisan:PARAMS.deltaPartisan}}});
+    const w=new Worker(__file,{workerData:{seeds,N,overrides:{K:PARAMS.K, deltaPartisan:PARAMS.deltaPartisan, polar:PARAMS.polar, harmMult:PARAMS.harmMult}}});
     w.on('message',m=>{all.push(...m); res();}); w.on('error',rej);
   })));
   // aggregate per (eta,beta). Compound = ratio-of-MEANS (stable), 95% bootstrap CI over seeds.
@@ -149,7 +159,7 @@ if(!isMainThread){
     rs.sort((a,b)=>a-b); const pk=x=>rs[Math.max(0,Math.min(B-1,Math.round(x*(B-1))))];
     return {lo:pk(lo), hi:pk(hi)};
   }
-  console.log("E4/E5 UNIFIED PIPELINE — N="+N.toLocaleString()+", K="+PARAMS.K+", A="+PARAMS.A+" sectors (pick top "+PARAMS.kSectors+"), projSpread="+PARAMS.projSpread+", partisan delta="+PARAMS.deltaPartisan+" (Beta("+PARAMS.betaA+","+PARAMS.betaB+"), scaled to true-sector-spread), seeds="+SEEDS+", workers="+NW+"  ("+((Date.now()-t0)/1000).toFixed(1)+"s)");
+  console.log("E4/E5 UNIFIED PIPELINE — N="+N.toLocaleString()+", K="+PARAMS.K+", A="+PARAMS.A+" sectors (top "+PARAMS.kSectors+"), projSpread="+PARAMS.projSpread+", polar(citizen)="+PARAMS.polar+", partisan="+PARAMS.deltaPartisan+", seeds="+SEEDS+", workers="+NW+"  ("+((Date.now()-t0)/1000).toFixed(1)+"s)");
   console.log("delivery f_weak="+PARAMS.fWeak+" f_ver="+PARAMS.fVer+" (ratio "+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x); compound = distributed/central (ratio of means, 95% bootstrap CI)\n");
   console.log("  eta  beta | cen %orac | 2-layer compound [95% CI]     | 3-layer compound [95% CI]     | 3L vs 2L");
   for(const eta of PARAMS.ETAS) for(const beta of PARAMS.BETAS){
