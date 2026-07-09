@@ -433,6 +433,19 @@ aguda (Brennan 2016): antes que restringir el derecho de nadie a participar,
 la arquitectura hace que la intermediación que la desatención produce sea
 visible, revocable y auditable.
 
+Un aparente reproche —que participar por aplicación, billetera y tutor de IA
+excluya a la población no digitalizada— se disuelve bajo la disciplina
+comparativa: el ciudadano no digital ya delega hoy, entregando su decisión,
+vía el voto, a un representante lejano que asigna el presupuesto por él. Core
+v0 no agrega una barrera: quita un nivel de indirección. Quien nunca participa
+cae en el valor por defecto del sistema —igual por ciudadano, acotado por
+mandato—, no en la preferencia de la minoría atenta; y quien participa aunque
+sea mínimamente, incluso por vías no digitales o delegación asistida, acerca
+la decisión a sus intereses directos mediante la microdelegación y reglas como
+«cerca de mí», que financian lo que puede tocar. Lo que aparenta excluir,
+incluye más —con la construcción del ámbito de planificación como la única
+indirección restante (Sección 8).
+
 **Transición.** El despliegue procede a través de modos de operación —cerrado,
 tutelado, semiabierto, abierto— en los que una autoridad pública puede retener la revisión de elegibilidad (admisibilidad de proyectos), pero toda decisión tutelada material, y todo
 silencio tutelado más allá de su plazo, se convierte en un objeto público de

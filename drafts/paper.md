@@ -399,6 +399,19 @@ routes their weight through inspectable intermediation (Lupia and McCubbins
 sharpest contemporary form (Brennan 2016): rather than restricting anyone's right to participate, the architecture makes the intermediation that inattention
 produces visible, revocable, and auditable.
 
+An apparent objection —that participating via app, wallet, and AI tutor
+excludes the non-digital population— dissolves under the comparative
+discipline: the non-digital citizen already delegates today, handing their
+decision, through the vote, to a distant representative who allocates the
+budget for them. Core v0 does not add a barrier: it removes a level of
+indirection. Whoever never participates falls to the system default —equal per
+citizen, mandate-bound—, not to the attentive minority's preference; and
+whoever participates even minimally, including through non-digital channels or
+assisted delegation, brings the decision closer to their direct interests
+through microdelegation and rules such as "near me" that fund what they can
+touch. What appears to exclude, includes more —with the construction of the
+planning scope as the only remaining indirection (Section 8).
+
 **Transition.** Deployment proceeds through operating modes — closed,
 tutored, semi-open, open — in which a public authority may retain
 eligibility review (project admissibility), but every material tutored decision, and every
