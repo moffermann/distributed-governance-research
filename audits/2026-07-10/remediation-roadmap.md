@@ -1,14 +1,77 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
-> **✅ STATUS 2026-07-10: PUBLICATION-READY. Both author decisions resolved.** After the NO-GO decision,
-> Tiers 0–7 were worked end-to-end and validated with Codex at each step; Codex's final holistic review
-> confirmed the paper + reviewer-visible surface are publication-ready. The two blocking author items are now
-> resolved: **T3.2** — verified (Zenodo API) that **v1.12 / 21252911 is the live latest deposit**; working
-> draft bumped to **v1.13**; all local metadata aligned. **T3.1** — author chose **Option B (dual license,
-> separate records)**: corpus/code CC BY 4.0 / MIT, manuscript CC BY-NC-ND 4.0 as a separate Zenodo record
-> from v1.13; local metadata + deposit procedure prepared. **The only remaining step is the author's Zenodo
-> DEPOSIT of the two v1.13 records** (a mechanical action, Zenodo-paused/author-gated) — not a blocker on the
-> repo's publication-readiness. All other open items below are non-blocking polish or Tier-8 enlargements.
+> **⚠️ STATUS 2026-07-10 (updated after ROUND-2 audit): publication RE-BLOCKED; remediation in progress.**
+> Tiers 0–7 (below) are done. Decisions resolved: **T3.2** — v1.12 / 21252911 is the live latest deposit,
+> working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0 for all text/content + MIT for code,
+> single record** (the earlier Option-B/dual/NC-ND plan was dropped). BUT a **round-2 independent audit**
+> (`audits/2026-07-10-round2/`) found the corpus does NOT yet tell one honest story — chiefly `docs/101` (the
+> public "accessible companion" that `.zenodo.json` promotes) still presents the RETIRED multiplier as
+> "validated", plus E4 sign/denominator errors in the paper and several stale status surfaces. The Round-2
+> remediation stack below tracks every finding (fix-now vs deferred). **Do NOT deposit v1.13 until the
+> Round-2 CRITICAL + MAJOR items are cleared.**
+
+## ROUND-2 REMEDIATION (from `audits/2026-07-10-round2/`: consistency + errors; evaluation/improvements pending)
+
+**Legend:** [ ] open · [x] done · [DEFER] deliberately deferred (reason given).
+
+### Critical
+- [ ] **R2-1 — `docs/101` still publishes the retired multiplier as "validated/surviving"** (2.19/2.22/2.26,
+  "validated three ways", cites v1.7 DOI, "35 attacks/docs 103"), and `.zenodo.json` promotes it as the
+  "accessible companion". **Publication-blocking.** Fix: strong top supersession banner + reframe its
+  computational claims to the contract + fix the v1.7 DOI and 35→43 counts. *(consistency #1)*
+
+### Major
+- [ ] **R2-2 — E4 sign error in the paper (EN+ES):** "parity where a fully accountable planner faces a
+  silenced platform" is η=1,β=1 but the law is β=1−η; (η=1,β=0)→0.89× is a CENTRAL win misread as a
+  distributed win. Fix the prose; the "distributed variance lower" claim is falsified. *(errors M1)*
+- [ ] **R2-3 — "~1.8× of a full-information oracle" wrong denominator (EN+ES):** 1.82 is the distributed/central
+  ratio, not benchmark-normalized (~71% max). Say "distributed/central ratio ~1.8×"; finish oracle→benchmark. *(errors M2; consistency #11)*
+- [ ] **R2-4 — Median vs ratio-of-sums conflation (EN+ES + contract):** distinguish pre-registered
+  median Δ_w = **0.025** from the post-hoc ratio-of-sums Δ_R = **0.026** [0.023,0.029]; the paper attaches the
+  post-hoc CI to the pre-registered gate. *(errors M3)*
+- [ ] **R2-5 — Path B incomplete in conclusion/limitations (EN+ES):** +53-54% foregrounded without the
+  conditional disclaimer; "delivers more value" / "audit-anchored baseline" wrongly attributed to the gate. *(consistency #4; errors M4)*
+- [ ] **R2-8 — README + `.zenodo.json` omit the "conditional stylized-model output, not validated Core v0"
+  caveat** where they summarize the gate. *(consistency #5)*
+- [ ] **R2-9 — Roadmap status contradictions:** this file's own top banner (now fixed above) + `docs/03`
+  still say license/deposit pending and call the manuscript v1.12. Fix docs/03. *(consistency #6; errors M5)*
+- [ ] **R2-11 — Companion citation DOI wrong (EN+ES):** paper cites `21246089` (= v0.4, verified), not the
+  concept DOI. Cite concept `21246088` or ≥ v0.5 `21249060`. *(errors M6)*
+- [ ] **R2-13 — Unbannered stale multiplier notes:** `research/simulation-results.md` (paper links it for
+  tables), `e7-calibrated-baseline-design.md`, `e8-behavioral-participation-design.md`. Banner them. *(consistency #8)*
+- [ ] **R2-14 — A036 bundle names E7 (not the gate) as "headline arbiter":** attack/defense/resolution +
+  both READMEs. Add controlling-update banners; correct the README rows. *(consistency #9)*
+- [ ] **R2-15 — "Five rounds" narrated as four (EN+ES):** add the A041–A043 ablation round to Section 7. *(consistency #7; errors m3)*
+- [DEFER] **R2-6 — Mechanism-hierarchy contradiction:** the abstract foregrounds harm-blindness(1.8×)/capture(10×)
+  as primary while the contract/correction make the gate's credit/coverage mechanism load-bearing. Deferred:
+  needs an author editorial decision on how far to restructure the abstract/Section-6 hierarchy (bigger than a fix). *(consistency #2)*
+- [DEFER] **R2-7 — Redistribution / "purpose of the state" rhetoric exceeds the contract's bounded domain.**
+  Deferred: this is the author's framing/philosophy; softening it is an authorial call, not a mechanical fix. *(consistency #3)*
+- [DEFER] **R2-10 — Reviewer packets stale** (v1.8/v1.10/v1.7 refs; EN 7 exp/5 prereg vs ES 8/6). Deferred:
+  the external-review packets are a separate deliverable from the paper; refresh at the next review cycle. *(errors M5)*
+- [DEFER] **R2-12 — `.zenodo.json` machine-license only CC-BY (not MIT for code).** Deferred to deposit time:
+  the multi-license declaration is set in the Zenodo UI/API when depositing v1.13 (author action). *(errors M7)*
+
+### Minor / Nits
+- [ ] **R2-16 — Absent files referenced:** LICENSE.md + README name `drafts/ensayo-divulgacion.md` and
+  `drafts/explicacion-para-todos.md` (both absent); a knowledge doc cites `drafts/REVIEW_ROUND_2.md` (sibling repo). *(errors m4)*
+- [ ] **R2-17 — README "requires a redeposit" for the stale title is false:** Zenodo lets you edit metadata
+  (title) anytime without a new DOI. Fix the wording. *(errors m5)*
+- [ ] **R2-18 — Gate `corr(S,P)` uses 8 of 100 worlds** (`e5-sp-symmetry-gate.mjs`). Compute over all worlds
+  or label it an 8-world diagnostic. (Verdict unaffected.) *(errors n1)*
+- [ ] **R2-19 — Retired engine runtime** still prints "%oracle / max S" columns while it computes net, and
+  asserts a `<100` invariant. Relabel "% benchmark / max net"; drop the invariant. *(errors m2)*
+- [ ] **R2-20 — "attribution required for everything" overstates MIT** (notice-retention, not generic
+  attribution). Reword in LICENSE.md/README/.zenodo. *(errors n3)*
+- [ ] **R2-21 — Small ES prose/link defects:** novelty bullet punctuation, "incluida lo que creemos"→"incluido",
+  missing "frente a" before the E7 baseline, ES docs/113 unlinked. *(errors n2)*
+- [DEFER] **R2-22 — D036–D040 "propagation pending" status lines vs the paper's "fully propagated" claim;**
+  attack/defense README workflow language obsolete. Deferred: verifying/finishing the semantic propagation
+  trace is a larger pass. *(consistency #13, #14)*
+- [DEFER] **R2-23 — "same total appraisal budget" is only approximately true** (per-project rounding; ±~1.8%).
+  Deferred: the paper's "matched *expected*" wording is already accurate; only the contract/runtime need a
+  one-word softening. *(errors m1)*
+- [DEFER] **R2-24 — Extend `check-anchors.mjs`** to all repo-relative paths (= existing T3.5). *(errors m4)*
 
 **Date:** 2026-07-10 · **Owner:** author (Mauricio Offermann) · **Status of this file:** the working
 control document for getting to a clean publication. Supersedes the stale live roadmap until `docs/03`
