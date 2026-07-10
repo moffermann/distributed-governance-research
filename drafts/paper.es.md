@@ -30,13 +30,15 @@ hasta la auditoría vuelta ritual (Power 1997) y las coaliciones distributivas
 que se atrincheran en los sistemas políticos estables (Olson 1982).
 
 Estas fallas no son abstractas: son la razón por la que el valor no llega a
-las personas para quienes se recaudó. Los Estados no cobran impuestos para
-redistribuir, sino para mejorar la vida de la gente —y quitarle al rico no
-mejora al más vulnerable; lo mejora el valor efectivo que recibe—. Si la obra
-no se construye, o se construye mal, la redistribución no ayudó a nadie: el
-balde agujereado de Okun (1975) cargó agua que nunca llegó. El objetivo,
-entonces, no es cuánto se gasta, sino cuánto valor efectivo llega por cada
-peso público gastado.
+las personas para quienes se recaudó. Para el dinero público que financia obras
+concretas —infraestructura, obras, programas locales— lo que en último término
+importa no es cuánto se apropia sino cuánto valor efectivo llega a la gente por
+peso gastado: una obra que no se construye, o se construye mal, no ayuda a nadie,
+por bien intencionada que sea la asignación (el balde agujereado de Okun (1975)
+cargó agua que nunca llegó). Este es un criterio acotado para la inversión pública
+tipo proyecto, no una teoría de todo el presupuesto ni de por qué los Estados
+recaudan: la redistribución y la equidad son propósitos distintos de las finanzas
+públicas que este artículo no evalúa (§8).
 
 El debate estándar responde con cantidad: encoger el Estado o hacerlo crecer.
 Ambas posturas lo tratan como un objeto único. Este artículo sostiene que la
@@ -315,19 +317,22 @@ previo combina:
 
 Y dos contribuciones adicionales conciernen a la medición y al método:
 
-- **(vi)** una comparación institucional de extremo a extremo sobre el
-  criterio que los presupuestos públicos existen para servir —valor social
-  entregado por unidad de presupuesto—, descomponiendo la selección de la
-  entrega sobre carteras apareadas (ambas capas interactúan dentro del aparato
-  exploratorio —una dirección que un gate simétrico pre-registrado posterior
-  encuentra positiva pero pequeña, Sección 6)—, e introduciendo la brecha de
+- **(vi)** una comparación institucional de extremo a extremo, dentro de una
+  porción acotada de inversión pública, sobre el valor social entregado por unidad
+  de presupuesto, descomponiendo la selección de la entrega sobre carteras
+  apareadas (ambas capas interactúan dentro del aparato exploratorio). Por
+  separado, un gate simétrico pre-registrado posterior —una prueba **solo-de-
+  selección** con la entrega mantenida en paridad— encuentra la ventaja de
+  *selección* positiva pero pequeña (Sección 6); no pone a prueba la interacción de
+  entrega. Este trabajo también introduce la brecha de
   visibilidad (entrega oficialmente reportada menos entrega real) como un déficit
   de rendición de cuentas medible del statu quo;
 
 - **(vii)** esa comparación contra una línea base parametrizada por auditorías,
-  construida exclusivamente a partir de los hallazgos publicados de instituciones
-  supremas de auditoría de nueve jurisdicciones y la Unión Europea, bajo una
-  condición preregistrada de retiro del resultado principal.
+  construida a partir de los hallazgos publicados de instituciones
+  supremas de auditoría de nueve jurisdicciones y la Unión Europea (un escenario
+  informado por prácticas documentadas cuya verificación de fuentes primarias aún
+  se está completando), bajo una condición preregistrada de retiro del resultado principal.
 
 Las evaluaciones de presupuestos participativos miden participación y
 asignación; los estudios de auditoría miden fugas después del hecho; no
@@ -1000,9 +1005,10 @@ reales operan instituciones de auditoría, retenciones, fianzas e inspección—
 respuesta fue un séptimo experimento preregistrado
 (`research/e7-calibrated-baseline-design.md`) con una condición de retiro
 comprometida: si el resultado principal colapsaba contra una línea base justa,
-sería retirado, no requalificado. El brazo del statu quo calibrado está
-parametrizado exclusivamente a partir de los hallazgos publicados de
-instituciones de auditoría —detección a partir de los estudios de obras de la
+sería retirado, no requalificado. El brazo del statu quo parametrizado por
+auditorías toma sus parámetros de los hallazgos publicados de
+instituciones de auditoría (un escenario informado por prácticas documentadas; la
+verificación de algunas fuentes primarias está en curso) —detección a partir de los estudios de obras de la
 contraloría de Chile, retención a partir de la práctica documentada de estados de
 pago, recuperación a partir de la serie de la ASF de México, anclas de fuga
 emparejadas por categoría con la construcción (Olken 2007; la base de evidencia
@@ -1245,11 +1251,24 @@ condiciona. El efecto de selección honesto se mantiene: la arquitectura será
 plausiblemente adoptada primero por patrocinadores relativamente limpios o recién
 llegados, en los lugares que menos la necesitan.
 
+**La medida de resultado es un agregado acotado y no distribucional.** El valor
+que el modelo puntúa es una suma cardinal de estilo utilitarista sobre las partes
+afectadas en una porción acotada de inversión pública tipo infraestructura; no
+está ponderada distribucionalmente y no dice nada sobre redistribución, equidad, o
+quién soporta beneficios y daños. Una cartera puede puntuar bien en esta medida y
+distribuir mal. Aplicar el criterio entre grupos, o a todo el presupuesto o al
+propósito de la tributación, requeriría una especificación separada de
+bienestar social e incidencia que este artículo no provee. El modelo es además de
+equilibrio parcial: el reporte estratégico, la oferta endógena de propuestas, las
+complementariedades entre proyectos, la incidencia tributaria y los efectos de
+equilibrio general quedan fuera (§ contrato de estimando).
+
 **Epistémicamente, este es el diseño autocriticado de un solo equipo.** El corpus
 adversarial fue producido por el mismo esfuerzo de investigación que ataca, con
 asistencia de IA; la línea base del statu quo del aparato anterior estaba
-parametrizada por auditorías (sus parámetros justificados ítem por ítem a partir de
-los hallazgos publicados de instituciones de auditoría), mientras que el gate de
+parametrizada por auditorías (sus parámetros tomados ítem por ítem a partir de
+los hallazgos publicados de instituciones de auditoría, con la verificación de
+fuentes primarias aún en curso), mientras que el gate de
 simetría actual es una prueba de selección estilizada no calibrada —ninguna está
 calibrada a un conjunto de datos de PP específico, y los parámetros restantes son
 plausibles antes que medidos; y no se ha realizado ningún piloto. Las tres validaciones faltantes —ataque experto independiente,
@@ -1260,11 +1279,14 @@ ese orden.
 ## 9. Ruta de implementación
 
 La arquitectura está construida para una adopción gradual y revocable, y esta
-sección es explícita sobre lo que afirma y lo que no: la pregunta de
-investigación de este artículo —si la arquitectura de asignación bicentenaria
-puede mejorarse con la tecnología de hoy, y en cuánto— se responde con
-independencia de si alguna autoridad elige desplegarla; lo que sigue es la ruta
-para una que ya lo ha decidido. Un país abre una función pública (el piloto de
+sección es explícita sobre lo que afirma y lo que no: la pregunta del artículo
+—si la arquitectura de asignación bicentenaria puede re-arquitecturarse con la
+tecnología de hoy— se responde al nivel de un diseño construible y de una
+*dirección* condicional del mecanismo de selección, con independencia de si alguna
+autoridad elige desplegarla. **No** responde *en cuánto* mejoraría el valor
+entregado en el mundo real: ese es un estimando identificado por separado, dejado
+a revisión independiente, calibración empírica y un piloto acotado (§8). Lo que
+sigue es la ruta para una autoridad que elige desplegarla. Un país abre una función pública (el piloto de
 referencia es la infraestructura deportiva municipal), migra una pequeña cuota
 presupuestaria bajo un modo de operación tutelado, y retiene la revisión de
 admisibilidad —con toda decisión y demora tutelada pública por construcción. El
@@ -1339,9 +1361,11 @@ requisito de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043
 
 ## 10. Conclusión
 
-El criterio correcto para cualquier institución de asignación no es cuán
-fielmente ejecuta un plan sino cuánto valor entregado y verificado produce por
-unidad de recurso público (Musgrave 1959; Okun 1975). La contribución de este
+Para el problema acotado de asignación de inversión pública que se estudia aquí,
+un criterio relevante no es cuán fielmente una institución ejecuta un plan sino
+cuánto valor entregado y verificado produce por unidad de recurso público
+(Musgrave 1959; Okun 1975) —un criterio junto a las restricciones distributivas y
+de derechos que este modelo no representa. La contribución de este
 artículo es una arquitectura que vuelve operativo ese criterio —y un relato
 disciplinado de exactamente hasta dónde llega su evidencia. La columna vertebral
 de la arquitectura son dos preguntas separables que cualquiera puede hacerse.

@@ -28,13 +28,14 @@ capture (Stigler 1971; Laffont and Tirole 1991) to audit turned ritual (Power
 political systems (Olson 1982).
 
 These failures are not abstract: they are why the value never reaches the
-people it was raised for. States do not tax to redistribute, but to improve
-people's lives — and taking from the rich does not make the most vulnerable
-person better off; the effective value they receive does. If the project is
-never built, or is built badly, the redistribution helped no one: Okun's
-(1975) leaky bucket carried water that never arrived. The goal, then, is not
-how much is spent, but how much effective value reaches people per unit of
-public money spent.
+people it was raised for. For the public money that funds concrete projects —
+infrastructure, works, local programs — what ultimately matters is not how much
+is appropriated but how much effective value reaches people per unit spent: a
+project that is never built, or built badly, helps no one, however
+well-intentioned the allocation (Okun's (1975) leaky bucket carried water that
+never arrived). This is a bounded criterion for project-type public investment,
+not a theory of the whole budget or of why states tax: redistribution and equity
+are distinct purposes of public finance that this paper does not evaluate (§8).
 
 The standard debate responds with quantity: shrink the state or grow it. Both
 positions treat it as a single object. This paper argues the tractable
@@ -290,17 +291,20 @@ literature map is still preliminary) — no prior work combines:
 
 And two further contributions concern measurement and method:
 
-- **(vi)** an end-to-end institutional comparison on the criterion public
-  budgets exist to serve —delivered social value per unit of budget—,
+- **(vi)** an end-to-end institutional comparison, within a bounded
+  public-investment slice, on delivered social value per unit of budget,
   decomposing selection from delivery on matched portfolios (the two layers
-  interact within the exploratory apparatus — a direction a later
-  pre-registered symmetric gate finds positive but small, Section 6), and
-  introducing the visibility gap (officially reported minus real delivery) as a
+  interact within the exploratory apparatus). Separately, a later
+  pre-registered symmetric gate — a **selection-only** test with delivery held
+  at parity — finds the *selection* advantage positive but small (Section 6);
+  it does not test the delivery interaction. This work also introduces the
+  visibility gap (officially reported minus real delivery) as a
   measurable accountability deficit of the status quo;
 
 - **(vii)** that comparison against an audit-parameterized baseline built
-  exclusively from the published findings of supreme audit institutions across
-  nine jurisdictions and the European Union, under a pre-registered
+  from the published findings of supreme audit institutions across
+  nine jurisdictions and the European Union (a documented-practice-informed
+  scenario whose primary-source verification is still being completed), under a pre-registered
   headline-withdrawal condition.
 
 Participatory-budgeting evaluations measure participation and allocation;
@@ -926,9 +930,10 @@ baseline is a caricature — real administrations run audit institutions,
 retentions, bonds, and inspection — and the answer was a seventh
 pre-registered experiment (`research/e7-calibrated-baseline-design.md`)
 with a committed withdrawal condition: if the headline collapsed against
-a fair baseline, it would be withdrawn, not requalified. The calibrated
-status-quo arm is parameterized exclusively from published
-audit-institution findings — detection from Chile's comptroller works
+a fair baseline, it would be withdrawn, not requalified. The
+audit-parameterized status-quo arm draws its parameters from published
+audit-institution findings (a documented-practice-informed scenario;
+verification of some primary sources is ongoing) — detection from Chile's comptroller works
 studies, retention from documented payment-state practice, recovery from
 Mexico's ASF series, leakage anchors category-matched to construction
 (Olken 2007; the multi-country evidence base spans the U.S. GAO, the U.K. NAO, the
@@ -1170,11 +1175,22 @@ conditioned external funder. The honest selection effect stands: the
 architecture will plausibly be adopted first by relatively clean or newly
 arrived sponsors, in the places that need it least.
 
+**The outcome measure is a bounded, non-distributional aggregate.** The value
+the model scores is a cardinal utilitarian-style sum over affected parties on a
+bounded, infrastructure-like public-investment slice; it is not distributionally
+weighted and says nothing about redistribution, equity, or who bears benefits and
+harms. A portfolio can score well on this measure while distributing badly.
+Applying the criterion across groups, or to the whole budget or the purpose of
+taxation, would require a separate social-welfare and incidence specification this
+paper does not provide. The model is also partial-equilibrium: strategic
+reporting, endogenous proposal supply, project complementarities, tax incidence,
+and general-equilibrium effects are outside it (§ estimand contract).
+
 **Epistemically, this is one team's self-critiqued design.** The
 adversarial corpus was produced by the same research effort it attacks,
 with AI assistance; the earlier apparatus's status-quo baseline was
-audit-parameterized (its parameters justified item-by-item from published
-audit-institution findings), while the current symmetry gate is an uncalibrated
+audit-parameterized (its parameters drawn item-by-item from published
+audit-institution findings, with primary-source verification still in progress), while the current symmetry gate is an uncalibrated
 stylized selection test — neither is calibrated to a specific PB dataset,
 and the remaining parameters are plausible rather than measured; and no
 pilot has been run. The three missing validations — independent expert
@@ -1185,11 +1201,15 @@ phase, in that order.
 ## 9. Implementation pathway
 
 The architecture is built for gradual, revocable adoption, and this
-section is explicit about what it does and does not claim: the research
-question of this paper — can the two-hundred-year-old allocation
-architecture be improved with today's technology, and by how much — is
-answered independently of whether any authority chooses to deploy; what
-follows is the pathway for one that has. A country opens
+section is explicit about what it does and does not claim: the paper's
+question — can the two-hundred-year-old allocation architecture be
+re-architected with today's technology — is answered at the level of a
+buildable design and a conditional selection-mechanism *direction*,
+independently of whether any authority chooses to deploy. It does **not**
+answer *by how much* real-world delivered value would improve: that is a
+separately identified estimand left to independent review, empirical
+calibration, and a bounded pilot (§8). What follows is the pathway for an
+authority that chooses to deploy. A country opens
 one public function (the reference pilot is municipal sports
 infrastructure), migrates a small budget share under a tutored operating
 mode, and retains admissibility review — with every tutored decision and
@@ -1262,11 +1282,14 @@ floor — is a first-class requirement ([docs/113](../docs/113_VERIFICATION_PACK
 
 ## 10. Conclusion
 
-The right criterion for any allocation institution is not how faithfully
-it executes a plan but how much delivered, verified value it produces per
-unit of public resource (Musgrave 1959; Okun 1975). This paper's
-contribution is an architecture that makes that criterion operational —
-and a disciplined account of exactly how far its evidence reaches. The
+For the bounded public-investment allocation problem studied here, a
+relevant criterion is not how faithfully an institution executes a plan
+but how much delivered, verified value it produces per unit of public
+resource (Musgrave 1959; Okun 1975) — one criterion alongside the
+distributional and rights constraints this model does not represent. This
+paper's contribution is an architecture that makes that criterion
+operational — and a disciplined account of exactly how far its evidence
+reaches. The
 architecture's spine is two separable questions anyone can ask. First:
 take the same projects, designed identically, and change only who
 executes and how they are watched — does the visibly audited regime with
