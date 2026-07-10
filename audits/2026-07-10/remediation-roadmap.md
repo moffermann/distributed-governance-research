@@ -43,9 +43,11 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   *(Codex gate interpretation)*
 
 ## TIER 1 — Truth of the claim (do FIRST; the credibility core; ~2–3 days)
-- [ ] **T1.1 — Estimand contract (1 page).** Primary estimand, symmetry conditions, permitted
-  interpretation; explicitly retires the calibrated multiplier. Governs every downstream claim.
-  *(brainstorm; headline C1–C2; evaluation risk)*
+- [x] **T1.1 — Estimand contract** DONE: `research/claim-and-estimand-contract.md` (validated with Codex;
+  its 5 edits applied — selection-only estimand vs future Δ_total, benchmark not an upper bound, median vs
+  cluster-CI separated, "credit-pressured" not "credit-maximizing", uncalibrated units stated). Governs
+  every downstream claim; §7 retires the multiplier / Gilens-Page calibration / delivery product /
+  "pre-registered 7/7". *(brainstorm; headline C1–C2; evaluation risk)*
 - [ ] **T1.2 — Retire the multiplier as a calibrated result** everywhere it reads as current: `drafts/paper.md`
   + `paper.es.md` (~2.2×/+53-54× headline framing), `research/*`, `docs/03`. Replace with the qualitative
   mechanism + the honest one-line gate result ("median advantage ≈0.025 of the full-information benchmark,
