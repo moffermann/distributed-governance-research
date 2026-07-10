@@ -699,7 +699,43 @@ Exit criteria:
 
 - at least one testable prototype or case study is defined.
 
-## E4/E5 unified pipeline — consolidation (2026-07-09, TOP OF STACK)
+## Value model v2 — S/P agenda-capture rebuild (2026-07-09, TOP OF STACK)
+
+Converged with the author via a Socratic dialogue (full spec: `research/e4e5-value-model-v2.md`).
+A targeted mechanism fix, NOT a from-scratch rebuild. Core: we modeled the politician's value-
+distortion as RANDOM NOISE, which averages out and never moved the needle (measured; same in E4);
+the real distortion is SYSTEMATIC. Projects carry two values — social value S (what citizens/the
+distributed maximize; lopsided-positive, magnitude = reach×intensity×permanence) and intrinsic
+credit-claimability P = visibility×traceability×concentration (what the central maximizes). corr(S,P)
+< 1 is STRUCTURAL (Mayhew 1974 credit-claiming, Arnold 1990 traceability, Weingast-Shepsle-Johnsen
+1981, Olson, Bastiat; magnitude from Gilens-Page/Achen-Bartels). P is INTRINSIC (transversal, not
+coalition-dependent) — the least-attackable framing. Harm-blindness KEPT as secondary; the random-
+noise term RETIRED (also kills reviewer A2 finite-N artifact); deltaPartisan demoted to a minor
+coalition slice of P; delivery 1.43x survives. Honest cabos: tail-must-clear-threshold, distributed
+also funds self-benefit (comparative not pure), must show citizens fund the invisible-good, corr(S,P)
+measured not posited, quantify vs a status quo that still delivers.
+
+```text
+TODO (v2):
+  - Implement the S/P world + central-maximizes-P in a FRESH experiment; keep the current
+    harm-blindness pipeline as the v1 reference until v2 validates. Central max P, distributed
+    max S (union-of-coverage, Hayek), harm-blindness secondary on S.
+  - CORRECT E4 THE SAME WAY (author's explicit instruction, 2026-07-09): the standalone
+    allocation experiment (e4-v3-value-matrix / e4-v4-symmetric-frontier) also models the
+    distortion as harm-blindness + random noise; it needs the same S/P credit-claiming fix.
+    The analytical backbone (β*=1−η) then becomes the rare divisive/harm-bearing special case,
+    not the headline.
+  - Calibrate: reach/size distribution (heavy-tailed), coverage breadth (PB ballots), corr(S,P)
+    (Gilens-Page), self-vs-invisible-good split (PB microdata). NOTE the old 27% net-negative
+    (IEG) conflated execution failure with value sign; pure-value net-negatives are <1%.
+  - FROZEN v1 items pending this: projSpread=0.010 calibration, the A2 noise-asymmetry decision
+    (v2 retires noise, so A2 dissolves).
+```
+
+## E4/E5 unified pipeline — consolidation (2026-07-09, now UNDER Value model v2)
+
+Note: Tiers 3–4 below are partly reframed by Value model v2 (above). Tier 1 (theory) and Tier 2
+(metric/engineering fixes) stand; the calibration/parsimony tiers wait on the S/P decision.
 
 The unified three-stage O-ring pipeline (macro sector-planning × allocation × delivery,
 `scripts/simulation/e4e5-pipeline.mjs`, runs at 1M) went through a 5-reviewer *propositive*
