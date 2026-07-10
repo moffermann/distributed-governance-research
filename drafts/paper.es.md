@@ -292,9 +292,11 @@ contribución aquí no es la profundidad técnica sino la especificidad: los par
 arquitectónicos nombrados, de modo que cada proposición es un dial
 implementable.
 
-**Qué es nuevo.** Hasta donde sabemos —a la espera de una revisión sistemática de
-literatura previa (nuestro mapa de literatura es aún preliminar)— ningún trabajo
-previo combina:
+**Qué es nuevo.** No hemos realizado la revisión sistemática de literatura previa
+que establecería prioridad a nivel de campo (nuestro mapa de literatura es
+preliminar), así que reclamamos una **síntesis integradora a nivel de objetos** más
+que novedad frente a todo trabajo adyacente. Con esa salvedad, no tenemos
+conocimiento de trabajo previo que combine:
 
 - **(i)** una descomposición funcional de la actividad estatal en capas
   distribuibles y no distribuibles;
@@ -612,6 +614,50 @@ su pre-registro congelado, resultados y diagnósticos están en
 `scripts/simulation/e5-sp-symmetry-gate.mjs` y `audits/2026-07-10/symmetry-gate-*`.
 Las contribuciones que cargan el peso son la arquitectura y la *dirección* del
 mecanismo, no un multiplicador puntual.
+
+**El gate simétrico de crédito-versus-cobertura (métodos y resultado).** Como esta
+es la única computación confirmatoria del artículo, su diseño se enuncia aquí por
+completo y no solo por referencia. Ambos brazos extraen los mismos mundos (N = 5000
+proyectos candidatos, K = 500 financiados bajo un presupuesto fijo de un tercio de
+la demanda), los mismos costos, la misma verdad net[j] = S[j] − h·cost[j], la
+entrega en **paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada
+brazo actúa sobre **su propia estimación ruidosa** y solo es elegible para financiar
+un proyecto donde *su propio* net estimado es positivo (sin gate de oráculo).
+Difieren en exactamente una cosa —el mecanismo de cobertura. *Distribuido
+(cobertura endógena):* cada ciudadano interesado reporta de forma independiente con
+probabilidad p si su valor v ≥ 0 y p·(1 − β) si v < 0 (sesgo de voz adverso), dando
+ĥS_D = Σreportes / p, ordenado por net estimado por costo. *Central (lector de valor
+competente):* un presupuesto de tasación igual al total *esperado* de reportes del
+brazo distribuido en ese mundo, repartido **de manera uniforme** entre proyectos
+(ancho de banda fijo); muestrea ciudadanos interesados, observa v + Normal(0, τ), y
+ordena por score = (1 − λ)·z(net/cost) + λ·z(P/cost), donde P es el crédito político
+reclamable —la lógica electoral de reclamo de crédito y trazabilidad por la cual se
+favorecen los beneficios visibles y atribuibles sobre los difusos (Mayhew 1974;
+Arnold 1990)— y λ es la presión de crédito acotada (una presión *postulada* cuya
+magnitud en el mundo real debe medirse, no suponerse). El crédito mueve el *orden*,
+nunca la elegibilidad (sin planificador que destruya valor a sabiendas). El valor
+entregado se puntúa sobre el net verdadero del conjunto financiado de cada brazo; el
+estimando es **Δ = (D − C)/O** por mundo, donde O es un benchmark voraz de
+información completa (un nivel de referencia, no un óptimo). La grilla congelada
+barre λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 un control negativo), corr(S, P) realizada
+∈ {0, 0.5, 1}, y h ∈ {1.5, 2.5, 4} sobre 100 mundos sembrados, en un régimen de
+observación base (p = .35, β = .30, τ = .5) y un régimen de estrés de baja
+información con presupuesto igualado (p = .15, β = .60, τ = 1.0). La **regla de
+decisión pre-registrada** —congelada antes de correr y diseñada por el auditor
+independiente para ser adversarial— exigía, para un GO en reconstruir el motor
+cuantitativo, al menos 15 de las 18 celdas primarias con Δ medio > 0, una **mediana
+agrupada Δ ≥ 0.05**, un límite inferior de bootstrap > 0, y mediana Δ ≥ 0 bajo el
+régimen de estrés. El resultado fue **NO-GO**: la ventaja fue positiva en las 18
+celdas primarias, pero la **mediana agrupada Δ = 0.025** pre-registrada quedó por
+debajo del umbral de rebuild de 0.05; el control negativo (λ = 0) se ubicó en
+≈ 0.016, indicando que no hay asimetría oculta que favorezca al brazo distribuido.
+Una estimación **post-hoc** de ratio-of-sums por conglomerado-de-mundos fue
+Δ = 0.026 [0.023, 0.029] (incertidumbre Monte-Carlo sobre el proceso generador
+simulado, reportada por separado de la mediana). La ventaja crece con la presión de
+crédito λ y cae a medida que el crédito se alinea con el valor —el mecanismo de
+crédito-versus-cobertura— pero es pequeña, razón por la cual el multiplicador
+calibrado se retira y el artículo se apoya en la arquitectura y la dirección del
+mecanismo.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
@@ -1070,6 +1116,17 @@ tempranos delgados. El estudio conductual también reproduce de forma
 independiente el supuesto de cuota informada que estos experimentos habían
 impuesto: 0.309 emergente contra el 0.30 asumido.
 
+**Qué sobrevive.** Reducido a lo que la prueba rectora sostiene: (1) bajo el gate
+simétrico pre-registrado la ventaja de selección distribuida es *positiva pero
+pequeña* (mediana Δ = 0.025, por debajo del umbral de rebuild de 0.05; NO-GO); (2)
+las contribuciones que cargan el peso son la arquitectura y el mecanismo
+cualitativo de crédito-versus-cobertura —el ordenamiento central presionado por
+crédito subpondera el valor difuso que la selección distribuida basada en cobertura
+sí visibiliza; (3) todo cociente compuesto anterior (2.19×/2.22×/2.26×, +43%,
++53–54%, ~2×–5×) es una salida condicional interna al modelo, no un efecto
+calibrado; y (4) cualquier efecto calibrado de valor total entregado —selección *y*
+entrega, sobre datos reales— queda como trabajo futuro.
+
 ## 7. La revisión adversarial como método
 
 La arquitectura se desarrolló bajo un bucle adversarial documentado: **ataque**
@@ -1453,6 +1510,7 @@ requiere un puente de constructo explícito**, no una calibración en un paso.
 ## Referencias
 
 - Akerlof, G. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." *Quarterly Journal of Economics* 84(3).
+- Arnold, R. D. (1990). *The Logic of Congressional Action*. Yale University Press.
 - Austen-Smith, D., and J. Banks (1996). "Information Aggregation, Rationality, and the Condorcet Jury Theorem." *American Political Science Review* 90(1).
 - Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
 - Besley, T., and S. Coate (2003). "Centralized versus Decentralized Provision of Local Public Goods: A Political Economy Approach." *Journal of Public Economics* 87(12).
@@ -1496,6 +1554,7 @@ requiere un puente de constructo explícito**, no una calibración en un paso.
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
 - Lalley, S., and E. G. Weyl (2018). "Quadratic Voting: How Mechanism Design Can Radicalize Democracy." *AEA Papers and Proceedings* 108.
 - Landemore, H. (2020). *Open Democracy: Reinventing Popular Rule for the Twenty-First Century*. Princeton University Press.
+- Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale University Press.
 - Lipsey, R., and K. Lancaster (1956). "The General Theory of Second Best." *Review of Economic Studies* 24(1).
 - Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.

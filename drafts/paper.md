@@ -269,8 +269,10 @@ technical depth but specificity: the models' parameters map one-to-one
 onto named architectural objects, so every proposition is an implementable
 dial.
 
-**What is new.** To our knowledge — pending a systematic prior-art review (our
-literature map is still preliminary) — no prior work combines:
+**What is new.** We have not run the systematic prior-art review that would
+establish field-level priority (our literature map is preliminary), so we claim an
+**integrative, object-level synthesis** rather than novelty against all adjacent
+work. With that qualification, we are not aware of prior work combining:
 
 - **(i)** a functional decomposition of state activity into distributable and
   non-distributable layers;
@@ -560,6 +562,47 @@ its frozen pre-registration, results, and diagnostics are
 `scripts/simulation/e5-sp-symmetry-gate.mjs` and `audits/2026-07-10/symmetry-gate-*`.
 The load-bearing contributions are the architecture and the mechanism *direction*,
 not a point multiplier.
+
+**The symmetric credit-versus-coverage gate (methods and result).** Because this
+is the paper's one confirmatory computation, its design is stated in full here
+rather than only by reference. Both arms draw the same worlds (N = 5000 candidate
+projects, K = 500 funded under a fixed budget of one-third of demand), the same
+costs, the same truth net[j] = S[j] − h·cost[j], delivery held at **parity**, and
+the same report noise report = v + Normal(0, τ); each arm acts on its **own noisy
+estimate** and is eligible to fund a project only where *its own* estimated net is
+positive (no oracle gate). They differ in exactly one way — the coverage
+mechanism. *Distributed (endogenous coverage):* each interested citizen reports
+independently with probability p if her value v ≥ 0 and p·(1 − β) if v < 0 (adverse
+voice bias), giving ĥS_D = Σreports / p, ranked by estimated net per cost.
+*Central (competent value-reader):* an appraisal budget equal to the distributed
+arm's *expected* total reports in that world, spread **evenly** across projects
+(fixed bandwidth); it samples interested citizens, observes v + Normal(0, τ), and
+ranks by score = (1 − λ)·z(net/cost) + λ·z(P/cost), where P is claimable political
+credit — the electoral credit-claiming and traceability logic by which visible,
+attributable benefits are favoured over diffuse ones (Mayhew 1974; Arnold 1990) —
+and λ is bounded credit pressure (a *posited* pressure whose real-world magnitude
+must be measured, not assumed). Credit moves *ranking*, never eligibility (no
+knowingly value-destroying planner). Delivered value is scored on
+true net over each arm's funded set; the estimand is **Δ = (D − C)/O** per world,
+where O is a full-information greedy benchmark (a reference level, not an optimum).
+The frozen grid sweeps λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 a negative control), realized
+corr(S, P) ∈ {0, 0.5, 1}, and h ∈ {1.5, 2.5, 4} over 100 seeded worlds, in a
+baseline observation regime (p = .35, β = .30, τ = .5) and a matched-budget
+low-information stress regime (p = .15, β = .60, τ = 1.0). The **pre-registered
+decision rule** — frozen before running and designed by the independent auditor to
+be adversarial — required, for a GO on rebuilding the quantitative engine, at least
+15 of the 18 primary cells with mean Δ > 0, a pooled **median Δ ≥ 0.05**, a
+bootstrap lower bound > 0, and median Δ ≥ 0 under the stress regime. The result was
+**NO-GO**: the advantage was positive in all 18 primary cells, but the
+pre-registered pooled **median Δ = 0.025**, below the 0.05 rebuild gate; the
+negative control (λ = 0) sat at ≈ 0.016, indicating no hidden asymmetry favouring
+the distributed arm. A **post-hoc** world-cluster ratio-of-sums estimate was
+Δ = 0.026 [0.023, 0.029] (Monte-Carlo uncertainty on the simulated
+data-generating process, reported separately from the median). The advantage rises
+with credit pressure λ and falls as credit aligns with value — the
+credit-versus-coverage mechanism — but it is small, which is why the calibrated
+multiplier is retired and the paper rests on the architecture and the mechanism
+direction.
 
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
@@ -991,6 +1034,16 @@ anchors the thin early cycles by construction. The behavioral study also
 independently reproduces the informed-share assumption these experiments
 had imposed: 0.309 emergent against the 0.30 assumed.
 
+**What survives.** Stripped to what the governing test supports: (1) under the
+pre-registered symmetric gate the distributed selection advantage is *positive but
+small* (median Δ = 0.025, below the 0.05 rebuild gate; NO-GO); (2) the load-bearing
+contributions are the architecture and the qualitative credit-versus-coverage
+mechanism — credit-pressured central ranking underweights diffuse value that
+coverage-based distributed selection surfaces; (3) every compound ratio above
+(2.19×/2.22×/2.26×, +43%, +53–54%, ~2×–5×) is a conditional, model-internal
+apparatus output, not a calibrated effect; and (4) any calibrated total delivered-
+value effect — selection *and* delivery, on real data — remains future work.
+
 ## 7. Adversarial review as method
 
 The architecture was developed under a documented adversarial loop:
@@ -1372,6 +1425,7 @@ calibration.
 ## References
 
 - Akerlof, G. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." *Quarterly Journal of Economics* 84(3).
+- Arnold, R. D. (1990). *The Logic of Congressional Action*. Yale University Press.
 - Austen-Smith, D., and J. Banks (1996). "Information Aggregation, Rationality, and the Condorcet Jury Theorem." *American Political Science Review* 90(1).
 - Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
 - Besley, T., and S. Coate (2003). "Centralized versus Decentralized Provision of Local Public Goods: A Political Economy Approach." *Journal of Public Economics* 87(12).
@@ -1415,6 +1469,7 @@ calibration.
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
 - Lalley, S., and E. G. Weyl (2018). "Quadratic Voting: How Mechanism Design Can Radicalize Democracy." *AEA Papers and Proceedings* 108.
 - Landemore, H. (2020). *Open Democracy: Reinventing Popular Rule for the Twenty-First Century*. Princeton University Press.
+- Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale University Press.
 - Lipsey, R., and K. Lancaster (1956). "The General Theory of Second Best." *Review of Economic Studies* 24(1).
 - Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
