@@ -15,8 +15,8 @@ docs/                 Architecture corpus: method, blueprint, citizen flows, dia
                       and the accepted resolution documents (docs/39-109)
 knowledge/            Hypotheses (H001-H059), principles (P001-P007), concepts,
                       open questions, and the canonical index (_index.md)
-attacks/              Adversarial attack briefs A001-A040 (all resolved)
-defenses/             Paired defense briefs D001-D040
+attacks/              Adversarial attack briefs A001-A043 (all resolved)
+defenses/             Paired defense briefs D001-D043
 contradictions/       Consistency-audit record (C026-C045, all resolved)
 drafts/               The working paper (drafts/paper.md, English authoritative;
                       Spanish translation paper.es.md), the essay edition, and the plain-language explainer
@@ -28,7 +28,7 @@ scripts/              Reference checker, Obsidian converter, PDF renderer, and t
 
 ## Current status
 
-Working paper v1.12 (draft; latest deposited version v1.8, DOIs below — new-version deposit paused) with formal mechanism-design propositions and a reproducible 10,000-agent simulation — eight experiments, six pre-registered, the seventh recalibrating the headline against a status-quo baseline built from published audit-institution findings across nine jurisdictions and the eighth confirming it under behaviorally generated participation — and a complete adversarial record: forty attack briefs across four rounds, the last five from a five-profile review of the published manuscript itself, each with a paired defense and an accepted resolution propagated through the corpus. Current phase: post-manuscript validation — external expert review using the prepared packets, simulation calibration against participatory-budgeting data, and a bounded tutored pilot. The project's origin distillation is preserved in `knowledge/00_SESSION_2026-06-25_DISTILLATION.md`.
+Working paper v1.12 (draft) with formal mechanism-design propositions and a reproducible 10,000-agent simulation of eight experiments (six pre-registered). NOTE (2026-07-10): a later pre-registered symmetric, selection-only stress test returned NO-GO and **retires the earlier compound value-per-budget multiplier as a calibrated effect** — the distributed selection advantage is real but small (pooled ~0.026 of a full-information benchmark, below its 0.05 materiality gate); the earlier agent-based figures are kept only as conditional apparatus outputs. The controlling specification is `research/claim-and-estimand-contract.md`. A complete adversarial record: forty-three attack briefs across five rounds (including a five-profile review of the manuscript itself and a final ablation round), each with a paired defense and an accepted resolution propagated through the corpus. Current phase: post-manuscript consolidation (publication-readiness remediation; see `audits/2026-07-10/remediation-roadmap.md`). The project's origin distillation is preserved in `knowledge/00_SESSION_2026-06-25_DISTILLATION.md`.
 
 The satellite computational-experiments program (adversarial architecture ABM, behavioral adoption ABM, planning-vector construction, LLM behavioral calibration — conceived as a second paper) lives in its own repository with full history: [moffermann/distributed-governance-experiments](https://github.com/moffermann/distributed-governance-experiments). It was extracted from this repository's `experiments/` workspace on 2026-07-06; the E8 bridge inputs it generates are committed here as `research/e8-behavioral-inputs.json`.
 

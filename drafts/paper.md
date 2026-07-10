@@ -81,7 +81,7 @@ mechanism — credit-pressured central selection mis-allocates relative to
 coverage-based distributed selection — not a point multiplier.
 
 The architecture was developed under **systematic adversarial critique**:
-forty attacks, each with a paired defense and a resolution that either adds a
+forty-three attacks, each with a paired defense and a resolution that either adds a
 mechanism or records a bounded residual risk; the final rounds were the method
 turned on itself, with simulated external reviews whose unanswerable questions
 became new attacks. The evidence is simulated over a *model* of the
@@ -131,7 +131,7 @@ complete reference architecture for distributing one bounded layer — the
 allocation, execution, and verification of a legally mandated share of an
 existing public budget — developed to the level of named objects, state
 machines, and decision rules (a corpus of more than one hundred architecture
-documents, fifty-nine designed hypotheses, and forty adversarial reviews, all
+documents, fifty-nine designed hypotheses, and forty-three adversarial reviews, all
 public). Citizens receive periodic, non-withdrawable allocation capacity in a
 civic wallet; projects pass through a parallel-closure lifecycle in which
 funding, independent fiscalization, evidence commitments, and beneficiary
@@ -198,7 +198,7 @@ current institution solves the same problem, not against an ideal — blocking t
    mechanism *direction*, not the multiplier.
 
 4. **Adversarial review as method** (Section 7). The architecture was attacked
-   systematically: forty attack briefs grounded in the political-science,
+   systematically: forty-three attack briefs grounded in the political-science,
    economics, and law literatures, each answered by a paired defense and
    resolved under an explicit integrate-or-bound rule, with every resolution
    propagated through the corpus and the full review record public by
@@ -772,7 +772,8 @@ the design keeps its numbers.
 central a fixed inspection bandwidth and left citizen signals unbiased — two
 idealizations that, an adversarial review showed, tilt the comparison in the
 distributed arm's favor. A rebuilt model
-(`research/e4-v4-symmetric-frontier.md`, `research/e4-v5-capture-design.md`)
+(`scripts/simulation/e4-v4-symmetric-frontier.mjs`,
+`research/e4-v4-symmetric-frontier-results.txt`, `research/e4-v5-capture-design.md`)
 gives *both* institutions a symmetric friction in perceiving true value,
 including harm: the central attenuates perceived harm by a coefficient η (0 =
 blind to diffuse harm, 1 = a fully accountable planner), while the distributed
@@ -1038,7 +1039,7 @@ evaluation classifying the attack as founded, partially founded, or a
 difference of judgment, with line-anchored citations into the corpus) →
 **resolution** (an accepted document that either integrates a mechanism or
 bounds the risk) → **propagation** (the resolution's constraints threaded
-through every affected architecture document). The loop ran four rounds,
+through every affected architecture document). The loop ran five rounds,
 all now fully resolved and propagated. The first round: eighteen attacks on
 the architecture's mechanisms (metric gaming, fiscalizer capture,
 disbursement gaming, collusion, related-party control, complexity,
@@ -1076,7 +1077,7 @@ bounded attack must leave three artifacts — an explicit boundary sentence
 ("Core v0 does not require X"), a visible residual risk, and a one-sentence
 limitation statement. The limitations section below is therefore not a
 gesture of humility; it is the accumulated, adversarially generated output
-of the method. Of the forty attacks, none was dismissed; nine of
+of the method. Of the forty-three attacks, none was dismissed; nine of
 the second round's fifteen were classified founded outright and the other
 six partially founded, all five of the manuscript round were classified
 founded at least in part, and the corpus's answer to several is an honest
@@ -1351,7 +1352,7 @@ failures when they do. For one such layer we have specified a complete
 architecture, proved the incentive conditions its mechanisms depend on,
 measured selection, aggregation, and delivery in simulation against a
 baseline the incumbent system's own auditors supplied, and subjected
-the whole to four rounds of documented adversarial review with an
+the whole to five rounds of documented adversarial review with an
 explicit integrate-or-bound discipline. The result is deliberately modest
 in its claims and unusually explicit about their edges: allocation quality
 rides on the informational quality of whatever constructs the weight
@@ -1474,5 +1475,5 @@ simulation code and full result tables
 [[simulation-results|research/simulation-results.md]]), the audit-institution evidence base
 ([[audit-evidence-base|research/audit-evidence-base.md]]), the architecture corpus (`docs/`,
 `knowledge/`), and the complete adversarial record (`attacks/`,
-`defenses/`, accepted resolutions `docs/67`–`docs/109`; all forty
+`defenses/`, accepted resolutions `docs/67`–`docs/113`; all forty-three
 attacks resolved and propagated).*

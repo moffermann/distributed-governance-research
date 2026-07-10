@@ -89,7 +89,7 @@ arquitectura. Las contribuciones que cargan el peso son la **arquitectura** y la
 **dirección** del mecanismo —la selección central presionada por el crédito asigna
 peor que la selección distribuida basada en cobertura—, no un multiplicador puntual.
 
-La arquitectura fue sometida a **crítica adversarial sistemática**: cuarenta
+La arquitectura fue sometida a **crítica adversarial sistemática**: cuarenta y tres
 ataques, cada uno con su defensa y una resolución que *o* agrega un mecanismo
 *o* declara un límite con su riesgo; las rondas finales fueron el método
 aplicado a sí mismo, con revisiones externas simuladas cuyas preguntas sin
@@ -141,7 +141,7 @@ es una arquitectura de referencia completa para distribuir una capa acotada
 —la asignación, ejecución y verificación de una cuota, con mandato legal, de
 un presupuesto público existente—, desarrollada hasta el nivel de objetos
 nombrados, máquinas de estado y reglas de decisión (un corpus de más de cien
-documentos de arquitectura, cincuenta y nueve hipótesis diseñadas y cuarenta
+documentos de arquitectura, cincuenta y nueve hipótesis diseñadas y cuarenta y tres
 revisiones adversariales, todo público). La ciudadanía recibe una capacidad de
 asignación periódica y no retirable en una billetera cívica (civic wallet);
 los proyectos atraviesan un ciclo de vida de cierre paralelo, en el que
@@ -215,7 +215,7 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    peso es la arquitectura y la *dirección* del mecanismo, no el multiplicador.
 
 4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
-   atacada sistemáticamente: cuarenta resúmenes de ataque anclados en las
+   atacada sistemáticamente: cuarenta y tres resúmenes de ataque anclados en las
    literaturas de ciencia política, economía y derecho, cada uno respondido
    por una defensa emparejada y resuelto bajo una regla explícita de
    integrar-o-acotar, con cada resolución propagada a través del corpus y el
@@ -839,8 +839,9 @@ nombradas. Ambos discursos pierden su eslogan; el diseño conserva sus números.
 central un ancho de banda de inspección fijo y dejó las señales ciudadanas sin
 sesgo —dos idealizaciones que, como mostró una revisión adversarial, inclinan la
 comparación a favor del brazo distribuido—. Un modelo reconstruido
-(`research/e4-v4-symmetric-frontier.md`, `research/e4-v5-capture-design.md`) le
-da a *ambas* instituciones una fricción simétrica para percibir el valor
+(`scripts/simulation/e4-v4-symmetric-frontier.mjs`,
+`research/e4-v4-symmetric-frontier-results.txt`, `research/e4-v5-capture-design.md`)
+le da a *ambas* instituciones una fricción simétrica para percibir el valor
 verdadero, incluido el daño: el central atenúa el daño percibido por un
 coeficiente η (0 = ciego al daño difuso, 1 = un planificador plenamente
 responsable), mientras el distribuido lee valoraciones verdaderas pero los
@@ -1121,7 +1122,7 @@ objetiva que clasifica el ataque como fundado, parcialmente fundado o diferencia
 de criterio, con citas ancladas a líneas dentro del corpus) → **resolución** (un
 documento aceptado que o bien integra un mecanismo o bien acota el riesgo) →
 **propagación** (las restricciones de la resolución enhebradas a través de cada
-documento de arquitectura afectado). El bucle corrió cuatro rondas, todas ahora
+documento de arquitectura afectado). El bucle corrió cinco rondas, todas ahora
 plenamente resueltas y propagadas. La primera ronda: dieciocho ataques a los
 mecanismos de la arquitectura (manipulación de métricas, captura del
 fiscalizador, manipulación de desembolsos, colusión, control de partes
@@ -1159,7 +1160,7 @@ acotado debe dejar tres artefactos —una oración de frontera explícita ("Core
 no requiere X"), un riesgo residual visible y un enunciado de limitación de una
 oración. La sección de limitaciones que sigue no es, por tanto, un gesto de
 humildad; es la salida acumulada y adversarialmente generada del método. De los
-cuarenta ataques, ninguno fue desestimado; nueve de los quince de la
+cuarenta y tres ataques, ninguno fue desestimado; nueve de los quince de la
 segunda ronda fueron clasificados como fundados de plano y los otros seis como
 parcialmente fundados, los cinco de la ronda del manuscrito fueron clasificados
 como fundados al menos en parte, y la respuesta del corpus a varios es un honesto
@@ -1436,7 +1437,7 @@ monopolio de información e incentivos pueden rearquitecturarse para fallar meno
 especificado una arquitectura completa, demostrado las condiciones de incentivos
 de las que dependen sus mecanismos, medido la selección, la agregación y la
 entrega en simulación contra una línea base que los propios auditores del sistema
-establecido suministraron, y sometido el conjunto a cuatro rondas de revisión
+establecido suministraron, y sometido el conjunto a cinco rondas de revisión
 adversarial documentada con una disciplina explícita de integrar-o-acotar. El
 resultado es deliberadamente modesto en sus afirmaciones e inusualmente explícito
 sobre sus bordes: la calidad de la asignación cabalga sobre la calidad
@@ -1559,5 +1560,5 @@ código de simulación y tablas completas de resultados
 `research/simulation-results.md`), la base de evidencia de instituciones de
 auditoría (`research/audit-evidence-base.md`), el corpus de la arquitectura
 (`docs/`, `knowledge/`), y el registro adversarial completo (`attacks/`,
-`defenses/`, resoluciones aceptadas `docs/67`–`docs/109`; los cuarenta
+`defenses/`, resoluciones aceptadas `docs/67`–`docs/113`; los cuarenta y tres
 ataques resueltos y propagados).*

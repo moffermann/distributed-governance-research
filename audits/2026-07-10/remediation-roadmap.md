@@ -102,23 +102,27 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   ensure each is either correct-current or clearly bannered historical. *(consistency number-drift)*
 
 ## TIER 3 — External-facing correctness (must fix before any deposit; ~½ day)
-- [ ] **T3.1 — License conflict:** paper CC BY-NC-ND 4.0 vs `CITATION.cff`/`.zenodo.json`/**live deposit**
-  CC-BY-4.0. Decide and make all agree (author call). *(consistency C2)*
-- [ ] **T3.2 — Version/deposit reconciliation:** README says v1.8 latest but record **21252911 is live as
-  v1.12** (title still "v1.8"). Confirm the true deposit state (revisits the "Zenodo paused" assumption)
-  and align README/CITATION/.zenodo/LICENSE/docs-101/dates. *(consistency M9, m3; cleanliness m2)*
-- [ ] **T3.3 — Stale attack count** in public metadata: README + `.zenodo.json` say 40/4 rounds; truth is
-  43 (A001–A043), docs 67–113, 5 rounds. (Paper body 7 EN + 7 ES spots — do in the same pass.)
+- [ ] **T3.1 — License conflict (⚠️ AUTHOR DECISION):** paper CC BY-NC-ND 4.0 vs `CITATION.cff`/`.zenodo.json`/
+  **live deposit** CC-BY-4.0. Needs the author to pick the intended license, then make all agree. *(consistency C2)*
+- [ ] **T3.2 — Version/deposit reconciliation (⚠️ AUTHOR DECISION):** README said "v1.8 latest deposit" but
+  audit found record **21252911 live as v1.12** (deposit title still "v1.8"). Removed the stale "latest
+  deposited v1.8 / paused" clause from the README description; the true deposit state + "Zenodo paused"
+  assumption need author confirmation before aligning CITATION/.zenodo/LICENSE/docs-101/dates. *(consistency M9, m3)*
+- [x] **T3.3 — Stale attack count** DONE: README + `.zenodo.json` + paper (7 EN + 7 ES spots) updated to
+  **43 attacks (A001–A043), docs 67–113, 5 rounds**; README/.zenodo descriptions also **retired the
+  ~2× headline framing** ("recalibrating the delivered-value headline" → the NO-GO/contract statement).
   *(consistency M10; cleanliness M2)*
-- [ ] **T3.4 — Dead reference:** paper cites `research/e4-v4-symmetric-frontier.md` (nonexistent; it's a
-  `.mjs` + a results `.txt`). Fix the citation. *(consistency m4; cleanliness M8)*
-- [ ] **T3.5 — Extend `check-anchors.mjs`** to validate `research/` and `drafts/` code-span paths (it
-  currently passes because it only checks docs|knowledge|attacks|defenses). *(cleanliness M8)*
+- [x] **T3.4 — Dead reference** DONE: paper (EN+ES) now cites the real
+  `scripts/simulation/e4-v4-symmetric-frontier.mjs` + `research/e4-v4-symmetric-frontier-results.txt`.
+  *(consistency m4; cleanliness M8)*
+- [ ] **T3.5 — Extend `check-anchors.mjs`** to validate `research/`/`drafts/` code-span paths (deferred;
+  the specific dead ref it would catch is already fixed). *(cleanliness M8)*
 
 ## TIER 4 — Completeness (missing pieces; ~1 day)
-- [ ] **T4.1 — Bibliography:** add the real, verified entries the reframed paper relies on
-  (Gilens-Page 2014, Mayhew 1974, Arnold 1990, Hayek 1945, Pohl-Mihaljek 1992, IMF PIE-X 2015, Rajaram
-  et al. 2014) to EN + ES. *(errors m6; propagation note)*
+- [x] **T4.1 — Bibliography: MOSTLY MOOT.** The paper (Path B, harm-blindness framing) does **not** cite
+  Gilens-Page/Mayhew/Arnold/Pohl-Mihaljek/IMF PIE-X — those were for the v2 agenda-capture framing we did
+  NOT propagate. Verified via grep: none appear in `drafts/paper.md`. Only Hayek (already present) is used.
+  No missing-bib gap remains for the current paper. *(errors m6; propagation note)*
 - [ ] **T4.2 — Citation precision:** tighten overgeneralized support (Bandiera 83% is setting-specific;
   Olken is audit coverage not detection prob; Reinikka-Svensson is context leakage; Hayek supports
   dispersed knowledge not the aggregation rule). *(errors M10, citation table)*
