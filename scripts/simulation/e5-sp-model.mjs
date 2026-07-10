@@ -192,7 +192,7 @@ if(process.argv.includes("--tornado")){
     PARAMS[k]=lo; const rl=run(); PARAMS[k]=hi; const rh=run(); PARAMS[k]=orig[k];
     console.log("  "+label.padEnd(20)+"| "+lo.toString().padStart(4)+" -> "+f(rl)+"x  | "+hi.toString().padStart(4)+" -> "+f(rh)+"x  | "+note);
   }
-  console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  The headline is DOMINATED by corr(S,P) (the frontier axis, Gilens-Page). At fixed rho, the other knobs move it modestly -> robust.");
+  console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  At fixed latent rho the other knobs move the (exploratory, retired) ratio within their bands. This is NOT the honest contrast — see the symmetry gate.");
   process.exit(0);
 }
 
@@ -234,9 +234,19 @@ if(process.argv.includes("--cats")){
   process.exit(0);
 }
 
-console.log("E5 v2 / corrected-E4 — central max P (credit), distributed max S via participation coverage (beta="+PARAMS.beta+"), oracle max S.");
+console.log("========================================================================================");
+console.log("⚠️  RETIRED / EXPLORATORY ENGINE. The multiplier printed below is NOT a calibrated effect.");
+console.log("   An independent audit + a pre-registered SYMMETRY GATE (e5-sp-symmetry-gate.mjs, NO-GO) showed");
+console.log("   this engine's headline is inflated by asymmetries (a benchmark-gated distributed arm, a pure-");
+console.log("   credit central, a stipulated delivery ratio). The honest selection contrast is the symmetry");
+console.log("   gate; the controlling spec is research/claim-and-estimand-contract.md. NOTE: 'rho' below is a");
+console.log("   LATENT Gaussian correlation, NOT Pearson corr(S,P); 'corr(S,P)' is a diagnostic over 4 worlds;");
+console.log("   the [0.1,0.3] window is NOT calibrated from Gilens-Page; 'oracle' is a full-information greedy");
+console.log("   benchmark, not an optimum. Kept for provenance only.");
+console.log("========================================================================================\n");
+console.log("E5 v2 / corrected-E4 (EXPLORATORY) — central max P (credit), distributed max S via participation coverage (beta="+PARAMS.beta+"), full-information greedy benchmark max S.");
 console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PARAMS.mean+", sd="+PARAMS.sd+", projSpread="+PARAMS.projSpread+", w(value weight)="+PARAMS.w+", delivery "+PARAMS.fWeak+"/"+PARAMS.fVer+" ("+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x)");
-console.log("  rho=corr(S,P) agenda<->value misalignment. w=0 -> agenda-capture (primary); w=1 -> E4 (harm-blind central). At ~35% net-neg the frontier COMPRESSES toward the delivery floor as rho->1 (not exact parity).\n");
+console.log("  rho = LATENT correlation (not Pearson corr(S,P)); the credit<->value misalignment axis. w=0 -> credit-driven central; w=1 -> E4 (harm-blind). Magnitudes are exploratory, not calibrated.\n");
 console.log("  hurdle h="+PARAMS.hurdle+" -> NET value = S - h*cost (h>0: below-hurdle projects are agenda-capture bait for the central)\n");
 console.log("  rho  | corr(S,P) | harm% | belowH% | cen netNeg% | cen %oracle | dis %oracle |  Delta=(d-c)/o [95% CI]  | ratio d/c");
 for(const rho of PARAMS.RHOS){

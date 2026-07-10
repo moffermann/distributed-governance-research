@@ -366,7 +366,7 @@ liberación. La literatura brasileña de loterías de auditoría (Ferraz y Finan
 2008) aporta la evidencia complementaria de mecanismo —la divulgación de los
 hallazgos de auditoría cambia los resultados políticos, y la exposición a
 auditoría reduce la corrupción subsiguiente— y sus datos subyacentes de la CGU
-entran directamente en la línea base calibrada del séptimo experimento. La
+entran directamente en la línea base parametrizada por auditorías del séptimo experimento. La
 contribución aquí no es la profundidad técnica sino la especificidad: los parámetros de los modelos mapean uno a uno con objetos
 arquitectónicos nombrados, de modo que cada proposición es un dial
 implementable.
@@ -1418,7 +1418,7 @@ simétrica y solo-de-selección
 encuentra la ventaja de selección distribuido-menos-central positiva pero pequeña
 (un efecto agrupado de ~0.026 de un benchmark de información completa, por debajo de
 su umbral de materialidad de 0.05). Sobre lo que se sostiene el artículo es la
-arquitectura y la *dirección* del mecanismo, no el estimador puntual. La recalibración produjo la oración más aguda del artículo: la
+arquitectura y la *dirección* del mecanismo, no el estimador puntual. La línea base parametrizada por auditorías produjo la oración más aguda del artículo: la
 auditoría a su intensidad real y documentada —detección sin consecuencias
 persistentes— no disuade desvío alguno en el modelo; encoge la brecha reportada,
 de veintinueve puntos a diecinueve, nunca la real. El instrumento que mueve el
@@ -1457,12 +1457,13 @@ disciplina de ingeniería antes que como una ideológica.
 ## Apéndice: objetivos de calibración de E4
 
 Las magnitudes de E4-v4/v5 son internas al modelo; la tabla nombra, para cada
-parámetro decisivo, el dato real que podría calibrarlo —volviendo la frontera entre
-lo interno al modelo y lo anclado empíricamente una línea visible y no un caveat
-enterrado en prosa (detalles en `research/e4-calibration-targets.md`). El movimiento
-de mayor retorno es la primera fila: el %-óptimo del central es un *output* que el
-modelo ya computa, así que una primera pasada es una superposición contra razones
-observadas realizado/tasado, no una re-simulación.
+parámetro, el dato real que *podría* informarlo —volviendo la frontera entre lo
+interno al modelo y lo anclado empíricamente una línea visible y no un caveat
+enterrado en prosa (detalles en `research/e4-calibration-targets.md`). El
+%-benchmark del central es un *output* que el modelo computa, pero mapearlo a las
+razones observadas realizado/tasado **no es una superposición directa**: son
+constructos distintos (§6), así que es un **objetivo de validación candidato que
+requiere un puente de constructo explícito**, no una calibración en un paso.
 
 | Cantidad del modelo | Valor modelo | Proxy real | Dataset(s) candidato | Estado |
 |---|---|---|---|---|

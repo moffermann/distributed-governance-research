@@ -337,7 +337,7 @@ observation, the release-gating layer. The Brazilian audit-lottery
 literature (Ferraz and Finan 2008) supplies the complementary mechanism
 evidence — disclosure of audit findings changes political outcomes, and
 audit exposure reduces subsequent corruption — and its underlying CGU data
-enter the seventh experiment's calibrated baseline directly. The contribution here is not
+enter the seventh experiment's audit-parameterized baseline directly. The contribution here is not
 technical depth but specificity: the models' parameters map one-to-one
 onto named architectural objects, so every proposition is an implementable
 dial.
@@ -1333,7 +1333,7 @@ selection-only test finds the distributed-minus-central
 selection advantage positive but small (a pooled ~0.026 of a full-information
 benchmark, below its 0.05 materiality gate). What the paper stands on is the
 architecture and the *direction* of the mechanism, not the point estimate. The
-recalibration produced the sharpest sentence in the paper: audit at its
+audit-parameterized baseline produced the sharpest sentence in the paper: audit at its
 real, documented intensity — detection without persistent consequences —
 deters no diversion in the model; it shrinks the reported gap, from
 twenty-nine points to nineteen, never the real one. The instrument that
@@ -1371,13 +1371,14 @@ one.
 
 ## Appendix: E4 calibration targets
 
-The E4-v4/v5 magnitudes are model-internal; the table names, for each decisive
-parameter, the real dataset that could calibrate it — making the boundary between
-model-internal and empirically-anchored a visible line rather than a caveat buried
-in prose (details in `research/e4-calibration-targets.md`). The highest-return move
-is the first row: the central %-oracle is an *output* the model already computes,
-so a first pass is an overlay against observed realized-to-appraised ratios, not a
-re-simulation.
+The E4-v4/v5 magnitudes are model-internal; the table names, for each parameter, the
+real dataset that *could* inform it — making the boundary between model-internal and
+empirically-anchored a visible line rather than a caveat buried in prose (details in
+`research/e4-calibration-targets.md`). The central %-benchmark is an *output* the
+model computes, but mapping it to observed realized-to-appraised ratios is **not a
+direct overlay**: the two are different constructs (§6), so it is a **candidate
+validation target requiring an explicit construct bridge**, not a one-step
+calibration.
 
 | Model quantity | Model value | Real-world proxy | Candidate dataset(s) | Status |
 |---|---|---|---|---|

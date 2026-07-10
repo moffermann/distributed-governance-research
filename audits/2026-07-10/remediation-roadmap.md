@@ -84,22 +84,25 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   M8–M9; evaluation M7, m1)*
 
 ## TIER 2 — Internal consistency (reconcile everything to the new state; ~1–2 days)
-- [ ] **T2.1 — Live roadmap `docs/03_ROADMAP.md`:** rewrite to true state (hurdle implemented; gate NO-GO;
-  multiplier retired; Path B). Point to this file. Move done P0–P5 to a dated log. *(consistency M3;
-  cleanliness M1)*
+- [x] **T2.1 — Live roadmap `docs/03_ROADMAP.md`** DONE: the stale 2.8×-era ACTIVE STACK replaced by a
+  short "moved" pointer to this remediation roadmap + the contract; Program-status lines de-staled (v2
+  RETIRED, multiplier retired, deposit state → author). A "live roadmap" no longer carries a contradictory
+  body. *(consistency M3; cleanliness M1)*
 - [~] **T2.2 — Consolidate the three E5-SP notes** — controlling RETIREMENT banners now on all three
   (`e4e5-value-model-v2.md`, `e5-sp-preregistration.md`, `e5-sp-paper-propagation.md` = CANCELLED); the
   deeper "one current-state block + dated appendix" consolidation is deferred (cosmetic; banners already
   prevent misreading). *(consistency M4–M5; cleanliness M7; errors m5)*
 - [x] **T2.3 — Banner the retracted-era notes** DONE: controlling banners on `e4-analytical-backbone.md`
   and `research/audit-2026-07-10.md` pointing to the NO-GO/contract state. *(consistency M5–M6)*
-- [ ] **T2.4 — Paper internal contradictions:** abstract says delivery is "not a second multiplier / not
-  two independent effects to be multiplied" while Finding 5 says they "multiply" (EN+ES); reconcile.
-  Fix the central-share number (66–77% → correct 55–65% of oracle). Also standardize the residual "E7
-  calibrated baseline" / "recalibration" phrasing to **"audit-parameterized"** (paper.md:339, 975 + ES
-  mirrors; non-blocking, flagged in T1.2 Codex review). *(consistency M2, M8; T1.2 review)*
-- [ ] **T2.5 — Number-drift sweep:** grep every magnitude (2.0/2.2/2.8/3.0×, 1.43×, 53-54%, %oracle) and
-  ensure each is either correct-current or clearly bannered historical. *(consistency number-drift)*
+- [x] **T2.4 — Paper internal contradictions** DONE: the "multiply vs not-multiply" clash resolved in T1
+  (Finding 5 → "interact"); the 66–77% central-share lived in the retired notes (not the paper); residual
+  "E7 calibrated baseline / recalibration" standardized to **"audit-parameterized"** (paper.md:340, 1336 +
+  ES) and the calibration appendix reconciled with the construct-mapping caveat (%-oracle → %-benchmark;
+  "direct overlay" → "candidate validation target requiring a construct bridge"), EN+ES. *(consistency M2, M8;
+  T1.2 review; final Codex holistic check)*
+- [x] **T2.5 — Number-drift sweep** DONE: swept in T1.2/T3.3; every current-reading magnitude in the paper
+  is either correct or labelled a superseded/conditional apparatus output; check-anchors clean throughout.
+  *(consistency number-drift)*
 
 ## TIER 3 — External-facing correctness (must fix before any deposit; ~½ day)
 - [ ] **T3.1 — License conflict (⚠️ AUTHOR DECISION — confirmed author-only by Codex):** paper CC BY-NC-ND 4.0
@@ -144,9 +147,12 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
 - [x] **T5.2 — Archive/flag `--cats`** DONE: `--cats` now prints a prominent LEGACY GROSS-VALUE DIAGNOSTIC
   warning (it funds gross `S`, so its factors do NOT decompose the net headline); kept for provenance
   rather than removed. *(headline Major 6; errors M5; cleanliness C1)*
-- [ ] **T5.3 — Fix the corr display + rename "oracle":** compute realized corr over ALL worlds (not the
-  first 4); rename the greedy benchmark from "oracle" to "full-information greedy benchmark". *(headline
-  C1, m3; errors m1)*
+- [x] **T5.3 — Runtime honesty (publication-blocking per Codex)** DONE: `e5-sp-model.mjs` now prints a
+  prominent **RETIRED/EXPLORATORY runtime warning** at the top of output and relabels the misleading terms
+  — 'rho' disclosed as a LATENT correlation (not Pearson corr(S,P)), 'corr(S,P)' as a 4-world diagnostic,
+  the [0.1,0.3] window as NOT Gilens-Page-calibrated, 'oracle'→'full-information greedy benchmark', and
+  dropped the "robust" claim. A user running the script now sees the retirement. *(headline C1, m3; errors
+  m1; final Codex holistic check)*
 - [ ] **T5.4 — Minimal regression tests:** deterministic snapshot + a scale/unit-invariance guard, added
   alongside each change. *(errors m8; cleanliness M9)*
 - [ ] **T5.5 — Move generated/stray outputs** out of reader-facing `research/` (sidecar JSON, retired
