@@ -25,9 +25,12 @@ function mkGauss(rng){ let s=null; return ()=>{ if(s!==null){const t=s;s=null;re
 
 const PARAMS = {
   N: 5000, K: 500, seeds: 20, seedBase: 1000,   // seedBase: exploration used 1000; set e.g. 5000 for a HELD-OUT confirmation run
-  mean: 0.40,          // consensual base quality per interested citizen (high -> net-neg share <1%)
+  mean: 0.06,          // LITERATURE-CALIBRATED: gives ~35% net-NEGATIVE net social value share (S interpreted NET of the
+                       //   opportunity cost of capital), matching Pohl-Mihaljek p_U+~=0.65 (drafts/positive-net-social-value-
+                       //   calibration.md). (The old 0.40 -> <1% net-neg was a GROSS ERROR: it used pure existence value,
+                       //   ignoring the opportunity cost of capital.) Sensitivity band p_U+ in [0.50,0.75] -> mean ~[0.0,0.15].
   sd: 1.0,             // idiosyncratic spread of individual valuations around the project quality
-  projSpread: 0.15,    // per-unit quality heterogeneity (small; kept modest so net-neg stays <1%)
+  projSpread: 0.15,    // per-unit quality heterogeneity
   muF: -1.5, sigF: 1.2, // REACH: interested fraction = exp(muF + sigF*a), heavy-tailed -> value heterogeneity lives in REACH (stadium >> rural school), NOT in net-neg share
   sigP: 1.0,           // credit spread: P = exp(sigP * creditLatent), where creditLatent corr rho with the REACH latent (decoupled at rho<1 -> a high-reach project CAN be low-P: the invisible sewer)
   costHi: 10, budgetFrac: 1/3,
@@ -37,7 +40,11 @@ const PARAMS = {
   concentrate: 0,      // lumpiness gate regime: 0 = SPREAD (pessimistic); 1 = CONCENTRATE (Core v0 earmarked vouchers + 90-day recycle)
   byValue: 0,          // distributed funding order: 0 = value/cost (efficient); 1 = pure VALUE (atomized voucher-holders fund what they value, ignore cost)
   A: 20, kCat: 10,     // --cats 3-layer decomposition: number of categories and the top-k macro gate
-  fWeak: 0.60, fVer: 0.86,
+  // PRODUCTION efficiency (delivery), LITERATURE-CALIBRATED (drafts/public-investment-efficiency-loss-calibration.md):
+  // central production loss = lambda_PI ~= 0.25 (IMF PIE-X, band 0.20-0.30) -> fWeak = 0.75. The distributed is ~10x more
+  // capture-resistant (E4-v5 capture block: central captured at rent 0.10, distributed at ~1.0-1.2) -> loss ~2.5% -> fVer ~= 0.975.
+  // Delivery ratio ~1.30x (band 1.23-1.39x). (The old 0.60/0.86 = 1.43x used harsher corruption-specific leakage studies.)
+  fWeak: 0.75, fVer: 0.975,
   RHOS: [1.0, 0.8, 0.6, 0.4, 0.2, 0.0],   // agenda alignment corr(S,P) sweep
 };
 

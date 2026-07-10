@@ -1,5 +1,17 @@
 # E5 v2 (S/P agenda-capture) — pre-registration
 
+> **POST-HOC CORRECTION (2026-07-10) — supersedes predictions P3, P5, P6 below.** Two author-supplied
+> literature calibrations corrected two inputs: the net-negative share is **~35%** (Pohl-Mihaljek
+> p_U+≈0.65, net of the opportunity cost of capital), NOT <1% (the pre-reg's calibration was a gross
+> error using pure existence value); and the production efficiency loss is **λ_PI≈0.25** (IMF), grounding
+> the delivery layer to ~1.30× (central 0.75, distributed 0.975 via the E4-v5 10× capture resistance),
+> DOWN from 1.43×. **Corrected headline: ~3.0× (band ~2.6–3.6×)**, not ~2.0×. P5 ("bounded / value-blind
+> central ~49%") and P6 ("harm-blindness inert") are RETRACTED: at 35% net-negative the central funds
+> value-destroying projects and harm-blindness revives as a co-mechanism. P1/P2/P4/P7 (parity structure,
+> monotone frontier, macro≤1×, Core-v0 threshold non-issue) stand. See `e4e5-value-model-v2.md`
+> "MAJOR CORRECTION" for the full re-consolidation. This block is the honest amendment; the original
+> pre-registered text is preserved below for the record.
+
 ## Status and honesty disclosure
 This locks the v2 model design, the estimand, the calibration, and the predictions **before a
 held-out confirmation run**. It is **honestly post-exploratory**: the model was built through a

@@ -1,5 +1,15 @@
 # v2 → paper: propagation plan (staged for author review; live master NOT edited)
 
+> **UPDATED 2026-07-10 (MAJOR CORRECTION).** Headline is now **~3.0× (band ~2.6–3.6×)**, not ~2.0×,
+> after two author literature calibrations: net-negative share **~35%** (Pohl-Mihaljek p_U+≈0.65, net of
+> the opportunity cost of capital — the old <1% was a gross error) and production efficiency loss
+> **λ_PI≈0.25** (IMF; delivery ~1.30× with the distributed 10× more capture-resistant, E4-v5). Decompose
+> as **selection ~2.5× × delivery ~1.30×**. NOTE: the "bounded / best-vs-mediocre" claim is retracted, and
+> harm-blindness revives as a co-mechanism (both operate; agenda-capture stays the more defensible frame).
+> ADD `drafts/positive-net-social-value-calibration.md` and `drafts/public-investment-efficiency-loss-
+> calibration.md` as the calibration anchors. Update every ~2.0× / "bounded" mention below to the ~3.0×
+> corrected framing before applying.
+
 ## Why this is staged, not applied
 v2 (`e4e5-value-model-v2.md`, `e5-sp-model.mjs`, pre-registered 7/7) **reframes the mechanism** of the
 paper's Finding 4 — from *harm-blindness* to *agenda-capture*. That is a core-argument change to the

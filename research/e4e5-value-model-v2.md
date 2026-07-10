@@ -121,6 +121,31 @@ ignores. Hayek (1945): dispersed knowledge, aggregated by budgeting. The distrib
   elite-vs-mass congruence; share of the agenda on class-internal matters); the **self vs
   social-invisible allocation split** (PB microdata).
 
+## MAJOR CORRECTION (2026-07-10, author) — headline ~2.0× → ~3.0×; harm-blindness revives
+Two literature-grounded calibrations from the author (`drafts/positive-net-social-value-calibration.md`,
+`drafts/public-investment-efficiency-loss-calibration.md`) correct two numbers below:
+- **GROSS ERROR (net-negative share).** The earlier "<1% net-negative / lopsided-positive world" was
+  wrong — it used *pure existence value*, ignoring the **opportunity cost of capital**. Net of the
+  social hurdle rate, only **p_U+ ≈ 0.65** of implemented public projects have positive net social
+  value (**~35% net-negative**; Pohl-Mihaljek 1992, 1,015 World Bank projects, ~75% EIRR ≥ 10% adjusted
+  to 0.65; band 0.50–0.75).
+- **MISSING VARIABLE (production efficiency).** Public-investment **efficiency loss λ_PI ≈ 0.25** (IMF
+  PIE-X, 134 countries, band 0.20–0.30) — a *production* dimension distinct from selection (must NOT be
+  multiplied naively with p_U+; model them separately, which v2 does). This grounds the delivery layer:
+  central f_weak = 1−0.25 = **0.75**; the distributed is **~10× more capture-resistant** (E4-v5 capture
+  block), so its loss ≈ 2.5% → f_ver ≈ **0.975** → **delivery ratio ~1.30× (band 1.23–1.39×)**, DOWN from
+  the old 1.43× (which used harsher corruption-specific leakage studies, not the IMF cross-country gap).
+
+**Corrected headline: ~3.0× (band ~2.6–3.6× across p_U+, λ_PI, and corr(S,P)).**
+**= selection ~2.5× (net-neg avoidance + agenda-capture) × delivery ~1.30× (production, IMF + E4-v5 10×).**
+Consequences: **(1) "bounded / best-vs-mediocre" is RETRACTED** — with 35% net-negative the central funds
+value-destroying projects (delivers 33–41% of oracle), so it is good-vs-value-destroying. **(2) The
+"agenda-capture is the SOLE driver" pivot over-corrected** — harm-blindness was declared inert on the wrong
+<1%; at 35% net-negative it **revives as a co-mechanism** (a harm-blind central funds harm it can't see).
+Both mechanisms now operate; agenda-capture remains the more defensible/transversal framing but is no longer
+the only motor. Open refinement: model the opportunity-cost hurdle explicitly so the ~8% true-harm (EIRR≤0)
+and ~27% below-opportunity-cost split is faithful (magnitude ~3× is robust to it).
+
 ## Build results & calibration (2026-07-10, `scripts/simulation/e5-sp-model.mjs`)
 The v2 core is built ON E4-v4's coverage (interested sets + participation sample + β), changing
 ONLY the central's objective to P = credit-claiming. It NESTS E4: `central = (1−w)·credit·P +

@@ -721,10 +721,15 @@ v2 STATUS (updated 2026-07-10) — BUILT, VALIDATED, PRE-REGISTERED, PROPAGATION
   - Built the S/P model (scripts/simulation/e5-sp-model.mjs) ON E4's coverage; NESTS E4 (w=1
     reproduces the harm-blind central; w=0 = pure agenda-capture). Modes: --cats (3-layer),
     --sweepL (lumpiness), --concentrate (Core v0), --byValue, --seedBase.
-  - HEADLINE: ~2.0x (band 1.8-2.4x) = selection 1.37x x delivery 1.43x, TWO layers (macro <=1x:
-    the category gate rescues the credit-driven central; confirmed with --cats). Bounded (best-
-    vs-mediocre): a value-blind central still delivers ~49% of oracle (lopsided-positive world).
-    Harm-blindness inert when harm rare (w=1 -> 99% oracle). Calibrated corr(S,P) to Gilens-Page.
+  - HEADLINE (CORRECTED 2026-07-10): ~3.0x (band ~2.6-3.6x) = selection ~2.5x x delivery ~1.30x,
+    TWO layers (macro <=1x). Two author literature calibrations corrected it up from ~2.0x:
+    net-negative share ~35% (Pohl-Mihaljek p_U+~=0.65, net of opportunity cost of capital -- the old
+    <1% was a GROSS ERROR using pure existence value); production loss lambda_PI~=0.25 (IMF), delivery
+    ~1.30x (central 0.75, distributed 0.975 via the E4-v5 10x capture resistance), DOWN from 1.43x.
+    RETRACTED: 'bounded / best-vs-mediocre' and 'harm-blindness inert' -- at 35% net-neg the central
+    funds value-destroyers and harm-blindness REVIVES as a co-mechanism (both operate; agenda-capture
+    stays the more defensible frame). Anchors: drafts/positive-net-social-value-calibration.md +
+    drafts/public-investment-efficiency-loss-calibration.md. corr(S,P) still calibrated to Gilens-Page.
   - THRESHOLD is a NON-ISSUE in Core v0 (earmarked vouchers + 90-day recycle = built-in assurance;
     holds full value to L~4, 1.77x even at L=16). The earlier 'fragile coordination' framing was
     retracted.
