@@ -2,11 +2,20 @@
 
 *© 2026 Mauricio Offermann. Licensed CC BY 4.0 — see LICENSE.md. Companion to the working paper (see CITATION.cff for citation).*
 
+> **⚠️ CORRECTION (2026-07-10).** An earlier version of this companion presented a calibrated
+> value-per-budget **multiplier (~2×/2.19×/2.22×/2.26×) as "validated"**. That multiplier is **RETIRED**:
+> an independent audit + a pre-registered **symmetry gate (NO-GO)** showed the distributed selection
+> advantage is real but **small** (a pooled ~0.026 of a full-information benchmark, below its 0.05
+> materiality gate) — a *conditional, stylized-model output, not a calibrated real-world effect, and not a
+> validated Core v0 implementation*. The project now rests on the **architecture + the qualitative mechanism
+> direction**, not a multiplier. Controlling spec: `research/claim-and-estimand-contract.md`. The
+> "How this model has been tested so far" section below has been corrected accordingly.
+
 ## Purpose
 
 This document is the shortest professional entry point into the Distributed Governance System v0.
 
-It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is [[paper|drafts/paper.md]] (published as v1.7, DOI 10.5281/zenodo.21199738); this document is its accessible companion.
+It does not replace the full repository. It compresses the architecture into a publishable model that can be read by academics, public-sector reformers, civic-tech builders, institutional designers, and potential pilot partners without requiring them to understand every internal object and contradiction resolution first. The full academic manuscript, with formal proofs and simulation results, is [paper](../drafts/paper.md) (working draft v1.13; latest deposited version v1.12; concept DOI 10.5281/zenodo.21193846, which always resolves to the latest deposit); this document is its accessible companion.
 
 The goal is to answer one question clearly:
 
@@ -746,15 +755,18 @@ the full audit trail for experts ([[11_CITIZEN_PROJECT_CARD|docs/11_CITIZEN_PROJ
 ## How this model has been tested so far
 
 This document's claims do not rest on enthusiasm. The underlying corpus
-was validated three ways before publication:
+was stress-tested three ways before publication (adversarially, formally,
+and computationally); the computational part is a **stylized model**, not a
+validated implementation, and its magnitudes are conditional (see the
+correction banner above):
 
-- **Adversarially.** Thirty-five attack briefs grounded in the political
+- **Adversarially.** Forty-three attack briefs grounded in the political
   science and economics literature — from metric gaming and fiscalizer
   capture to clientelism, polarization, and fiscal strangulation — each
   answered by a paired defense and an accepted resolution under an
   explicit integrate-or-bound rule; none was dismissed, several are
   honestly answered "bounded, not solved" (`attacks/`, `defenses/`,
-  resolutions `docs/67`–`docs/103`, rule `knowledge/principles/P007`).
+  resolutions `docs/67`–`docs/113`, rule `knowledge/principles/P007`).
 - **Formally.** The disbursement and anti-collusion mechanisms are proven
   as incentive-compatibility and collusion-proofness conditions, with the
   design levers appearing as explicit terms (the formal companion note).
@@ -764,43 +776,32 @@ was validated three ways before publication:
   project prioritization the passive share follows (the aggregated
   allocation profiles), and that participation decay is survivable exactly
   where that prioritization layer is strong. A pre-registered fourth
-  experiment then modeled knowledge symmetrically and found that building
-  the weight vector from aggregated dispersed citizen signals beats
-  fixed-bandwidth central construction at every tested scale — provided an
-  aggregation institution exists and signals are honest. Two further
-  pre-registered experiments measured the thesis itself. The fifth (E5)
-  added the execution stage and found that project selection and verified
-  delivery compound multiplicatively: on matched portfolios the
-  verified-delivery layer alone is worth +43%, the full architecture
-  delivers 2.19× the zero-control opaque lower bound per unit of budget
-  in-model — a bound the seventh pre-registered experiment then
-  recalibrated against a status quo parameterized from published
-  audit-institution findings across nine jurisdictions: the multiplier
-  survives at 2.22× at scale and 1.4-1.6× at municipal pilot scale, and
-  the recalibration's own finding is that audit at its documented
-  intensity, without reputational memory, deters no diversion — it
-  shrinks the reported gap (twenty-nine to nineteen points), never the
-  real one — and
-  the opaque regime officially reports about 29 percentage points more
-  delivery than reality — a visibility gap the verified regime closes by
-  construction. The sixth (E6) isolated the incentive channel with an
-  all-honest executor pool and found that visible reputational
-  competition sustains executor effort and quality where opacity lets
-  them collapse, while warning that naive reputation-weighted assignment
-  concentrates work faster than it finds ability — evidence for the
-  concentration-observability machinery this model already prescribes.
-  A pre-registered eighth experiment then replaced the participation
-  assumptions themselves — default share, informed share, launch
-  dynamics — with adoption trajectories generated by a companion
-  behavioral study of awareness, registration, participation modes, and
-  trusted microdelegation: the headline survives unchanged (2.26 at
-  scale, 2.15–2.9× across populations and scales), a launch that begins
-  near zero participation costs under two percent of it because the
-  default rule anchors the thin early cycles, and the behavioral study
-  independently reproduces the informed-share assumption the earlier
-  experiments had imposed (0.309 emergent vs 0.30 assumed).
-  These results discipline this document's claims rather than decorate
-  them ([[simulation-results|research/simulation-results.md]]).
+  experiment modeled knowledge symmetrically and found that building the
+  weight vector from aggregated dispersed citizen signals tracks value more
+  closely than fixed-bandwidth central construction — provided an
+  aggregation institution exists and signals are honest. Earlier
+  agent-based experiments (E5/E7/E8) reported a compound value-per-budget
+  **multiplier (~2×); that multiplier is now RETIRED as a calibrated
+  effect.** A later, pre-registered **symmetric, selection-only stress
+  test** — both arms with matched expected appraisal budgets, delivery at
+  parity, each acting on its own noisy estimate rather than ground truth —
+  returned **NO-GO**: the distributed-minus-central selection advantage is
+  **positive in every pre-specified cell but small (a pooled ~0.026 of a
+  full-information benchmark, below its 0.05 materiality gate)**. So the
+  honest computational finding is a **directional** one — credit-pressured
+  central selection mis-allocates relative to coverage-based distributed
+  selection — not a headline multiplier; the earlier figures survive only
+  as conditional outputs of that earlier apparatus. The sixth experiment
+  (E6) isolated the incentive channel with an all-honest executor pool and
+  found that visible reputational competition sustains executor effort
+  where opacity lets it collapse, while warning that naive
+  reputation-weighted assignment concentrates work faster than it finds
+  ability. These results discipline this document's claims rather than
+  decorate them; the controlling specification is
+  [claim-and-estimand-contract](../research/claim-and-estimand-contract.md)
+  and the honest contrast is the symmetry gate
+  ([simulation-results](../research/simulation-results.md);
+  `scripts/simulation/e5-sp-symmetry-gate.mjs`).
 
 Every critique of the model is evaluated against how the current
 institutional system solves the same problem — not against an ideal
@@ -845,7 +846,7 @@ Under the project's own editorial rule ([[P007-integrate-or-bound-rule|knowledge
 - **Fiscal dependence is measurable, not enforceable.** A determined treasury can still defund the system in full public view; only country law can bind it (`docs/88`).
 - **Open-mode constitutional mechanics are deferred by design.** Who votes on protocol changes in a mature open deployment is unresolved, and open-mode deployment is gated on resolving it (`docs/91`).
 - **Verification cannot be conjured.** In thin markets the model prices weak verification through financial terms and disclosure; it cannot create qualified verifiers (`docs/90`).
-- **Adoption selects.** The model answers whether the architecture can be built and whether it delivers more value — not whether any authority wants it. Deployment configuration for an authority that has decided exists (prospective baselines, credit attribution, official protection, a symmetry clause: `docs/109`), but the architecture will plausibly be adopted first by relatively clean or newly arrived sponsors, in the places that need it least.
+- **Adoption selects.** The model addresses whether the architecture can be built and how its *selection* mechanism behaves under a symmetric, delivery-at-parity test — not whether any authority wants it, and not a calibrated real-world delivery multiplier (a total delivered-value effect would need a separately identified delivery model; see the estimand contract). Deployment configuration for an authority that has decided exists (prospective baselines, credit attribution, official protection, a symmetry clause: `docs/109`), but the architecture will plausibly be adopted first by relatively clean or newly arrived sponsors, in the places that need it least.
 - **Off-platform misconduct is made harder and more discoverable, never impossible.** Collusion, clientelism, and expressive polarization conducted entirely outside the system remain the comparative claim's boundary (`docs/98`, `docs/99`, resolutions of A018/A030/A031).
 - Beyond these, the minimal model does not attempt: full constitutional replacement, full national budgeting, coercive security, criminal justice, monetary policy, full administrative law, universal moral ranking, perfect participation equity, perfect evidence verification, or the elimination of all fraud.
 
@@ -914,7 +915,7 @@ and the layer can be bounded so its failure does not cascade into
 the non-distributable layers.
 ```
 
-The principle is made concrete in a complete architecture and validated formally, computationally, and adversarially (manuscript Section 3). The minimum contribution can be stated as follows:
+The principle is made concrete in a complete architecture — formally analyzed, adversarially stress-tested, and computationally explored (the computational magnitudes are retired to a small conditional selection effect, not a calibrated multiplier; manuscript Section 3 and `research/claim-and-estimand-contract.md`). The minimum contribution can be stated as follows:
 
 ```text
 This paper proposes a functional architecture for distributed public project governance. It decomposes public-resource allocation into a project lifecycle governed by Planning Scopes, Value Theses, Evidential Contracts, Conditional Funding, Control Packages, Milestone Disbursement, Closure Accountability, and Reputation Updates. The model shows how bounded public projects can be opened to distributed participation without relying on popularity alone, executor self-reporting, or uncontrolled transfer of funds.

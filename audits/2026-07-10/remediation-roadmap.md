@@ -15,7 +15,7 @@
 **Legend:** [ ] open · [x] done · [DEFER] deliberately deferred (reason given).
 
 ### Critical
-- [ ] **R2-1 — `docs/101` still publishes the retired multiplier as "validated/surviving"** (2.19/2.22/2.26,
+- [x] **R2-1 — `docs/101` still publishes the retired multiplier as "validated/surviving"** (2.19/2.22/2.26,
   "validated three ways", cites v1.7 DOI, "35 attacks/docs 103"), and `.zenodo.json` promotes it as the
   "accessible companion". **Publication-blocking.** Fix: strong top supersession banner + reframe its
   computational claims to the contract + fix the v1.7 DOI and 35→43 counts. *(consistency #1)*
