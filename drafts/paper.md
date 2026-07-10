@@ -6,92 +6,13 @@
 
 ## Abstract
 
-States do not levy taxes in order to redistribute, but to improve people's
-quality of life: what matters is the effective value that reaches people per
-unit of public money spent. Hence this paper's question: **can today's
-technology redesign the architecture of the state to raise that delivered
-value?**
+Public resources are allocated and controlled by institutions that fuse three functions — who selects projects, who executes them, and who judges whether they delivered. That fusion is where waste, capture, and unaccountable failure concentrate. This paper asks whether a bounded share of that machinery can separate those functions — and the information that drives them — while preserving legal authorization and public auditability.
 
-The answer is not *more state or less*, but its **architecture**: decompose
-centralized state activity into layers, distribute those where today's
-coordination technology outperforms institutional monopoly, and align
-incentives so that what is allocated is actually delivered.
+We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
 
-We present **Core v0**, a software architecture aimed at optimizing how a
-public budget is allocated and turned into effective value for people:
-citizens direct a share of the taxes in a previously approved public budget
-toward verifiable projects; the roles of proposing, executing, producing
-evidence, and auditing are kept separate; money is released directly from the
-treasury to the executor, in tranches, against verified milestones and
-enforceable guarantees; and every consequential act leaves a public, auditable
-trail.
+Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
 
-The model identifies three results (distinct from the numbered Findings 1–7 of
-Section 6) — an allocation advantage, a
-capture-resistance that guards it, and a delivery layer that makes value
-arrive — each stated as a conditional frontier, not a constant.
-
-**(1) Distributed choice allocates better — where it gives the diffusely
-harmed a stronger voice than the status quo grants their harm.** Distributed
-allocation — direct choice, microdelegation, or personalized rules — tracks the
-value beneficiaries actually receive more closely than central allocation. We
-*map* this advantage rather than assert a single number: it obeys a simple law
-— distributed dominates exactly when the platform's voice inequality is smaller
-than the central planner's blindness to diffuse harm (β < 1 − η) — ranging in
-the model from rough parity to about **1.8×** (a distributed-to-central ratio),
-largest where harm is diffuse and unseen, and reaching parity along the boundary
-β = 1 − η — e.g. where a fully accountable planner (η→1) is matched by a
-fully-voiced platform (β→0), *not* by one that silences the harmed. The edge is a
-property of *including the harmed*, not of aggregation itself.
-
-**(2) That allocation edge resists organized capture — the objection an
-adversarial review pressed hardest.** The review demanded capture be modelled on
-the distributed side; in fairness we modelled it on the central side too,
-symmetrically — and the asymmetry then *widens* rather than closes. In the model
-the status quo turns net-harmful once a captured project's private rents reach
-about **10% of its cost**, while the distributed arm resists rents about **10×
-higher** — a model-internal contrast that is **conditional on the stipulated
-detection and acquisition-cost assumptions**, not a calibrated robustness estimate:
-its capture cost is floored by the equal-per-citizen wallet (money cannot buy
-wallets, only persuade their holders) and its fraud is exposed by detection that
-needs only a handful of reporters from a transparent affected public. Under those
-assumptions the burden of proof shifts toward the critic; the effect weakens
-sharply if distributed detection is low or persuasion is cheap (a sensitivity the
-companion study maps).
-
-**(3) Aligned incentives make the value arrive — and are the precondition, not
-a second multiplier.** The executor delivers rather than diverts when more is at
-stake than could be stolen: milestone-gated tranche release, retention,
-enforceable guarantees, reputation, and cross-corroborated fiscalization,
-formalized as checkable conditions. On identical portfolios this layer adds
-**~43% (1.4×)** of value in the model *(a model-internal contrast, not a calibrated
-effect)* — and it is the same integrity machinery that makes the allocation edge
-capture-resistant, so allocation and delivery are a layer and its safeguard, not
-two independent effects to be multiplied.
-
-**On magnitude — a correction.** An earlier synthesis combined these layers into a
-single value-per-budget multiplier. A subsequent **pre-registered, symmetric,
-selection-only stress test** — both arms with **matched expected appraisal-report
-budgets**, the same candidate pool, costs and noise, **delivery held at parity**,
-each acting on its own noisy estimate rather than on ground truth — found the
-distributed-minus-central difference **positive in every pre-specified cell but
-small: the pre-registered pooled median Δ = 0.025, below its pre-registered 0.05
-materiality gate** (a post-hoc ratio-of-sums estimate is Δ = 0.026 with a 95%
-world-cluster Monte-Carlo interval [0.023, 0.029]). We
-therefore **retire the compound multiplier as a calibrated effect**; the earlier
-agent-based figures survive only as conditional outputs of that apparatus (reported
-in Section 6), not as an estimate of how much the architecture raises value. The
-load-bearing contributions are the **architecture** and the **direction** of the
-mechanism — credit-pressured central selection mis-allocates relative to
-coverage-based distributed selection — not a point multiplier.
-
-The architecture was developed under **systematic adversarial critique**:
-forty-three attacks, each with a paired defense and a resolution that either adds a
-mechanism or records a bounded residual risk; the final rounds were the method
-turned on itself, with simulated external reviews whose unanswerable questions
-became new attacks. The evidence is simulated over a *model* of the
-architecture — not institutional proof or a real pilot; boundaries are
-declared throughout.
+This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulation's units are uncalibrated and partial-equilibrium and do not identify delivery effects; and claims are scoped to infrastructure-like public investment. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
 
 ## 1. Introduction
 

@@ -8,99 +8,13 @@
 
 ## Resumen
 
-Los Estados no recaudan impuestos para redistribuir, sino para mejorar la
-calidad de vida de las personas: lo que importa es el valor efectivo que llega
-por cada peso público gastado. De ahí la pregunta de este paper: **¿puede la
-tecnología de hoy rediseñar la arquitectura del Estado para aumentar ese valor
-entregado?**
+Los recursos públicos se asignan y controlan en instituciones que fusionan tres funciones: quién selecciona los proyectos, quién los ejecuta y quién juzga si cumplieron. Esa fusión es donde se concentran el despilfarro, la captura y el fracaso sin rendición de cuentas. Este artículo se pregunta si una porción acotada de esa maquinaria puede separar esas funciones —y la información que las impulsa— preservando la autorización legal y la auditabilidad pública.
 
-La respuesta no pasa por *más, o menos Estado*, sino por su **arquitectura**:
-descomponer la actividad estatal centralizada en capas, distribuir algunas
-donde la tecnología de coordinación de hoy supera al monopolio institucional,
-y alinear los incentivos correctamente para que lo asignado efectivamente se
-entregue.
+Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado consecuente es pública.
 
-Presentamos **Core v0**, una arquitectura de software orientada a optimizar
-cómo el presupuesto público se asigna y se convierte en valor efectivo para
-las personas: los ciudadanos dirigen una parte de los impuestos de un
-presupuesto previamente aprobado por la autoridad hacia proyectos
-verificables; los roles de proponer, ejecutar, producir evidencia y auditar
-están separados; el dinero se libera directamente desde tesorería al ejecutor,
-por tramos, contra hitos verificados y garantías exigibles; y cada acto
-relevante deja un rastro público y auditable.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
-El modelo identifica tres resultados (distintos de los Hallazgos 1–7 numerados de
-la Sección 6) —una ventaja de asignación, una
-resistencia a la captura que la protege, y una capa de entrega que hace llegar
-el valor—, cada uno enunciado como una frontera condicional, no como una
-constante.
-
-**(1) Elegir distribuidamente asigna mejor —donde le da al perjudicado difuso
-más voz de la que el status quo reconoce a su daño.** La asignación distribuida
-—elección directa, microdelegación o reglas personalizadas— correlaciona más
-con el valor que efectivamente reciben los beneficiarios que la asignación
-central. Pero *mapeamos* esa ventaja en vez de afirmar un solo número: obedece
-a una ley simple —el distribuido domina exactamente cuando la desigualdad de
-voz de la plataforma es menor que la ceguera del planificador central al daño
-difuso (β < 1 − η)—, y va en el modelo desde la paridad hasta cerca de **1.8×**
-(un cociente distribuido-a-central), máxima donde el daño es difuso e invisible, y
-alcanzando la paridad a lo largo de la frontera β = 1 − η —p. ej. donde un
-planificador plenamente responsable (η→1) es igualado por una plataforma de voz
-plena (β→0), *no* por una que silencia a los perjudicados. La ventaja es una
-propiedad de *incluir a los perjudicados*, no de la agregación en sí.
-
-**(2) Esa ventaja de asignación resiste la captura organizada —la objeción que
-más presionó una revisión adversarial.** La revisión exigió modelar la captura
-en el lado distribuido; en aras de la justicia la modelamos también en el lado
-central, simétricamente —y la asimetría entonces se *ensancha* en vez de
-cerrarse—. En el modelo el status quo se vuelve net-dañino cuando las rentas
-privadas de un proyecto capturado alcanzan cerca del **10% de su costo**,
-mientras el brazo distribuido resiste rentas cerca de **10× mayores** —un contraste
-interno del modelo **condicional a los supuestos estipulados de detección y costo de
-adquisición**, no una estimación de robustez calibrada—: su costo de captura tiene
-piso en el wallet igual-por-ciudadano (el dinero no compra wallets, solo persuade a
-quienes los tienen) y su fraude queda expuesto por una detección que solo necesita
-un puñado de denunciantes de un público afectado y transparente. Bajo esos supuestos
-la carga de la prueba se desplaza hacia el crítico; el efecto se debilita fuertemente
-si la detección distribuida es baja o la persuasión es barata (una sensibilidad que
-el estudio complementario mapea).
-
-**(3) Alinear los incentivos hace que el valor llegue —y es la precondición, no
-un segundo multiplicador.** El ejecutor entrega, y no desvía, cuando arriesga
-más de lo que podría robar: pagos por tramos contra hitos verificados,
-retenciones, garantías exigibles, reputación y fiscalización cruzada,
-formalizados como condiciones que se pueden chequear. A igualdad de proyectos,
-en el modelo esta capa añade **~43% (1.4×)** de valor *(un contraste interno del
-modelo, no un efecto calibrado)* —y es la misma maquinaria de integridad la que
-hace resistente a captura a la ventaja de asignación, de modo que asignación y
-entrega son una capa y su salvaguarda, no dos efectos
-independientes que se multiplican.
-
-**Sobre la magnitud — una corrección.** Una síntesis anterior combinó estas capas
-en un solo multiplicador de valor por peso. Una **prueba de estrés posterior,
-pre-registrada, simétrica y solo-de-selección** —ambos brazos con **presupuestos
-esperados de reportes de tasación igualados**, el mismo pool de proyectos, costos
-y ruido, **entrega mantenida en paridad**, cada uno actuando sobre su propia
-estimación ruidosa y no sobre la verdad— encontró que la diferencia
-distribuido-menos-central es **positiva en todas las celdas pre-especificadas pero
-pequeña: la mediana agrupada pre-registrada Δ = 0.025, por debajo de su umbral de
-materialidad pre-registrado de 0.05** (una estimación post-hoc de ratio-of-sums es
-Δ = 0.026, con un intervalo Monte-Carlo por conglomerado-de-mundos al 95%
-[0.023, 0.029]). Por lo tanto **retiramos el
-multiplicador compuesto como efecto calibrado**; las cifras del modelo basado en
-agentes anterior sobreviven solo como salidas condicionales de ese aparato
-(reportadas en la Sección 6), no como una estimación de cuánto eleva el valor la
-arquitectura. Las contribuciones que cargan el peso son la **arquitectura** y la
-**dirección** del mecanismo —la selección central presionada por el crédito asigna
-peor que la selección distribuida basada en cobertura—, no un multiplicador puntual.
-
-La arquitectura fue sometida a **crítica adversarial sistemática**: cuarenta y tres
-ataques, cada uno con su defensa y una resolución que *o* agrega un mecanismo
-*o* declara un límite con su riesgo; las rondas finales fueron el método
-aplicado a sí mismo, con revisiones externas simuladas cuyas preguntas sin
-respuesta se volvieron nuevos ataques. La evidencia es simulada sobre un
-*modelo* de la arquitectura —no prueba institucional ni piloto real; los
-límites se declaran a lo largo del texto.
+Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las unidades de la simulación no están calibradas, son de equilibrio parcial y no identifican efectos de entrega; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
 ## 1. Introducción
 

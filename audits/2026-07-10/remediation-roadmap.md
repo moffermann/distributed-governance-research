@@ -42,11 +42,12 @@
 - [x] **R2-14 — A036 bundle names E7 (not the gate) as "headline arbiter":** attack/defense/resolution +
   both READMEs. Add controlling-update banners; correct the README rows. *(consistency #9)*
 - [x] **R2-15 — "Five rounds" narrated as four (EN+ES):** add the A041–A043 ablation round to Section 7. *(consistency #7; errors m3)*
-- [DEFER] **R2-6 — Mechanism-hierarchy contradiction:** the abstract foregrounds harm-blindness(1.8×)/capture(10×)
-  as primary while the contract/correction make the gate's credit/coverage mechanism load-bearing. Deferred:
-  needs an author editorial decision on how far to restructure the abstract/Section-6 hierarchy (bigger than a fix). *(consistency #2)*
-- [DEFER] **R2-7 — Redistribution / "purpose of the state" rhetoric exceeds the contract's bounded domain.**
-  Deferred: this is the author's framing/philosophy; softening it is an authorial call, not a mechanical fix. *(consistency #3)*
+- [x] **R2-6 — Mechanism-hierarchy contradiction:** RESOLVED by the abstract rewrite. The new value-first
+  abstract makes the credit-versus-coverage gate mechanism the load-bearing idea and drops the
+  harm-blindness(1.8×)/capture(10×) "three results" hierarchy entirely. *(consistency #2; = R2-31)*
+- [x] **R2-7 — Redistribution / "purpose of the state" rhetoric exceeds the contract's bounded domain.**
+  RESOLVED: the new abstract opens on the fused-functions problem, not "States do not levy taxes in order to
+  redistribute…"; the overreaching purpose-of-the-state framing is gone from the abstract. *(consistency #3)*
 - [DEFER] **R2-10 — Reviewer packets stale** (v1.8/v1.10/v1.7 refs; EN 7 exp/5 prereg vs ES 8/6). Deferred:
   the external-review packets are a separate deliverable from the paper; refresh at the next review cycle. *(errors M5)*
 - [DEFER] **R2-12 — `.zenodo.json` machine-license only CC-BY (not MIT for code).** Deferred to deposit time:
@@ -96,10 +97,11 @@
 - [x] **R2-30 (Nit) — Gate artifacts wording:** `symmetry-gate-results.txt` says "advantage does not survive"
   (18/18 were positive; only the 0.05 gate failed) and still labels the stress case "ADVERSARIAL" (should be
   "matched-budget low-information stress"). *(eval Minor 3, Nit 1)*
-- [DEFER] **R2-31 (Major, = R2-6) — Complete the Path-B abstract/conclusion pivot:** the abstract still leads
-  with 1.8× selection / ~10× capture / +43% delivery as "the three results". The evaluator calls this the #1
-  weakness and a publication blocker. **AUTHOR editorial decision** on how far to restructure — options to be
-  proposed. *(eval Major 1, 6; consistency #2)*
+- [x] **R2-31 (Major, = R2-6) — Complete the Path-B abstract/conclusion pivot:** RESOLVED. The abstract was
+  fully rewritten (EN+ES) into a value-first, problem→architecture→credit/coverage-mechanism→hostile-test
+  structure that states the modest, conditional NO-GO result (median Δ=0.025 < 0.05) plainly and retires the
+  1.8× / ~10× / +43% "three results" framing. Author-approved; converged with the auditor (Codex) and
+  fact-checked. This closed the evaluator's #1 publication blocker. *(eval Major 1, 6; consistency #2)*
 
 **Date:** 2026-07-10 · **Owner:** author (Mauricio Offermann) · **Status of this file:** the working
 control document for getting to a clean publication. Supersedes the stale live roadmap until `docs/03`
