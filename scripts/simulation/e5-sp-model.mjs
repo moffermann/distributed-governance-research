@@ -24,7 +24,7 @@ function seedFor(a,b){ let h=(a>>>0); h=Math.imul(h^0x9e3779b9,0x85ebca6b); h^=(
 function mkGauss(rng){ let s=null; return ()=>{ if(s!==null){const t=s;s=null;return t;} let u=0,v=0;while(u===0)u=rng();while(v===0)v=rng();const r=Math.sqrt(-2*Math.log(u)),a=2*Math.PI*v;s=r*Math.sin(a);return r*Math.cos(a);}; }
 
 const PARAMS = {
-  N: 5000, K: 500, seeds: 20,
+  N: 5000, K: 500, seeds: 20, seedBase: 1000,   // seedBase: exploration used 1000; set e.g. 5000 for a HELD-OUT confirmation run
   mean: 0.40,          // consensual base quality per interested citizen (high -> net-neg share <1%)
   sd: 1.0,             // idiosyncratic spread of individual valuations around the project quality
   projSpread: 0.15,    // per-unit quality heterogeneity (small; kept modest so net-neg stays <1%)
@@ -148,7 +148,7 @@ if(process.argv.includes("--sweepL")){
   console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", rho="+rhoSweep+", beta="+PARAMS.beta+", mean="+PARAMS.mean+"\n");
   console.log("   L   | projects gated | oracle-value gated | dis %oracle |  Delta=(d-c)/o  | ratio d/c");
   for(const L of [0, 0.5, 1, 2, 4, 8, 16]){
-    const R=Array.from({length:PARAMS.seeds},(_,i)=>1000+i).map(s=>evalWorld(s,rhoSweep,L));
+    const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalWorld(s,rhoSweep,L));
     const d=R.map(r=>r.d), c=R.map(r=>r.c), o=R.map(r=>r.o);
     const Delta=(sum(d)-sum(c))/sum(o), ratio=sum(d)/sum(c), dOra=100*(sum(d)/PARAMS.fVer)/sum(o);
     const gN=sum(R.map(r=>r.gatedN))/R.length, gV=100*sum(R.map(r=>r.gatedOracleVal))/sum(o.map((x)=>x));  // gated oracle value as % of delivered oracle
@@ -165,7 +165,7 @@ if(process.argv.includes("--cats")){
   console.log("3-LAYER DECOMPOSITION (A="+A+" categories, top-"+kCat+" gate; byValue="+PARAMS.byValue+", concentrate n/a here)\n");
   console.log("  rho  | corr(S,P) | cen%oracle 2L | cen%oracle 3L |  macro   | allocation | delivery | 3-layer ratio");
   for(const rho of PARAMS.RHOS){
-    const R=Array.from({length:PARAMS.seeds},(_,i)=>1000+i).map(s=>evalCat(s,rho,A,kCat));
+    const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalCat(s,rho,A,kCat));
     const S2=k=>sum(R.map(r=>r[k]));
     const r2=S2('d2')/S2('c2'), r3=S2('d3')/S2('c3'), deliv=PARAMS.fVer/PARAMS.fWeak;
     const macro=r3/r2, alloc=r2/deliv;
@@ -181,7 +181,7 @@ console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PA
 console.log("  rho=corr(S,P) agenda<->value misalignment. rho=1 & w=0 -> P~=S -> parity; w=1 -> E4 (harm-blind central).\n");
 console.log("  rho  | corr(S,P) | net-neg% | cen %oracle | dis %oracle |  Delta=(d-c)/o [95% CI]  | ratio d/c");
 for(const rho of PARAMS.RHOS){
-  const R=Array.from({length:PARAMS.seeds},(_,i)=>1000+i).map(s=>evalWorld(s,rho));
+  const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalWorld(s,rho));
   const d=R.map(r=>r.d), c=R.map(r=>r.c), o=R.map(r=>r.o);
   const Delta=(sum(d)-sum(c))/sum(o), ratio=sum(d)/sum(c);
   const cOra=100*(sum(c)/PARAMS.fWeak)/sum(o), dOra=100*(sum(d)/PARAMS.fVer)/sum(o);
