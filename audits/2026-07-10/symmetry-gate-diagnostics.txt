@@ -1,0 +1,36 @@
+=== (1) WORLD-CLUSTER BOOTSTRAP (primary domain, 18 baseline cells, resample unit = world) ===
+  pooled Delta = 0.0260   world-cluster 95% CI = [0.0233, 0.0288]
+  (frozen-gate naive CI was ~[0.025,0.025]; the cluster CI is the honest, wider interval. Sign unchanged.)
+
+=== (2a) CENTRAL APPRAISAL RMSE (hatS_C - S) by reach decile ===
+  BASE regime — decile(meanReach):  RMSE_even -> RMSE_propreach
+    D1 (reach~  21):      2.5  ->     8.9
+    D2 (reach~  27):      3.3  ->    10.4
+    D3 (reach~  35):      4.2  ->    11.5
+    D4 (reach~  51):      6.2  ->    14.3
+    D5 (reach~  76):      9.2  ->    17.5
+    D6 (reach~ 111):     13.3  ->    21.2
+    D7 (reach~ 165):     20.1  ->    25.7
+    D8 (reach~ 257):     31.9  ->    32.0
+    D9 (reach~ 450):     56.9  ->    43.6
+    D10 (reach~1519):    222.1  ->    79.7
+  ADV regime — decile(meanReach):  RMSE_even -> RMSE_propreach
+    D1 (reach~  21):      5.3  ->    18.6
+    D2 (reach~  27):      6.9  ->    21.6
+    D3 (reach~  35):      8.6  ->    24.4
+    D4 (reach~  51):     13.1  ->    29.8
+    D5 (reach~  76):     19.4  ->    36.1
+    D6 (reach~ 111):     28.1  ->    44.0
+    D7 (reach~ 165):     42.0  ->    53.6
+    D8 (reach~ 257):     66.0  ->    67.4
+    D9 (reach~ 450):    118.1  ->    87.8
+    D10 (reach~1519):    482.2  ->   164.8
+
+=== (2b) One-at-a-time move from BASE -> ADV (pooled median Delta, primary domain) ===
+  baseline (p=.35,beta=.30,tau=.5):        0.0252
+  +p only  (p=.15):                        0.0507
+  +beta only (beta=.60):                   0.0230
+  +tau only (tau=1.0):                     0.0353
+  full adversarial (p=.15,beta=.6,tau=1):  0.0916
+
+(interpretation: if the jump is driven by p/tau via high-reach appraisal noise, prop-reach allocation should shrink RMSE on the top deciles and the adversarial gap.)

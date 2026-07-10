@@ -34,11 +34,12 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
 
 ## TIER 0 — Record the decisions (done / do now; minutes)
 - [x] **T0.1** Symmetry gate run + pre-registration frozen (`symmetry-gate-*`). Verdict NO-GO recorded.
-- [ ] **T0.2** Add the two gate integrity checks (do NOT reopen the frozen gate): (a) **world-cluster
-  bootstrap** for the pooled CI (current pooled interval treats 18 correlated cells as independent →
-  artificially narrow; won't flip the sign); (b) a **post-hoc appraisal-allocation diagnostic**
-  (give the central the same budget allocated ∝ reach; report appraisal RMSE by reach decile; separate
-  p/beta/tau) to confirm the adversarial>baseline pattern is a genuine even-bandwidth effect, not a bug.
+- [x] **T0.2** Gate integrity checks DONE (`e5-sp-symmetry-gate-diagnostics.mjs`; notes in
+  `symmetry-gate-diagnostics-notes.md`; validated with Codex). (a) **World-cluster bootstrap**: honest
+  pooled CI **[0.0233, 0.0288]** — NO-GO robust. (b) **Appraisal-allocation diagnostic**: adversarial>baseline
+  is a genuine even-bandwidth effect (central RMSE explodes on high-reach; driven by p/tau, not beta), not a
+  bug. Caveats to carry into the paper: document the p↔budget coupling; rename "adversarial" →
+  **matched-budget low-information stress regime**; do not claim prop-reach eliminates the advantage (unrun).
   *(Codex gate interpretation)*
 
 ## TIER 1 — Truth of the claim (do FIRST; the credibility core; ~2–3 days)
@@ -158,6 +159,9 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
 - [ ] **E4 — The empirical study:** does ex-ante cross-constituency coverage add incremental predictive
   value for realized project outcomes beyond sponsor preference and cost? On historical project data — the
   only path to a *measured* corr(S,P). *(brainstorm; evaluation next-steps)* — weeks–months.
+- [ ] **E5 — Participation-decay diagnostic:** hold central appraisal capacity FIXED while varying the
+  distributed `p`, to support any resilience-to-disengagement claim (the current gate couples the central's
+  budget to `p`, so it cannot speak to participation decay). *(T0.2 diagnostics; Codex)* — small, post-hoc.
 
 ---
 
