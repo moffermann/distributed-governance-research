@@ -27,7 +27,7 @@ function betaS(rng,a,b){ const x=gammaS(rng,a),y=gammaS(rng,b); return x/(x+y); 
 
 const PARAMS = {
   K: 1000, A: 20, mean: 0.01, sd: 1.5, noise: 1.5, p: 0.35, costHi: 10,
-  projSpread: 0.02,                              // PER-PROJECT harm heterogeneity: each project has its own mean (some net-harmful) -> a project is its own thing, not a slave to its sector
+  projSpread: 0.010,                             // CALIBRATED (2026-07-09): tuned so the ex-post net-negative PROJECT share ≈ 27.7% (World Bank IEG "moderately unsatisfactory+", 25-35% band); VALIDATES on the independent observable — central allocation %oracle = 60% (in the E4/Flyvbjerg realized/appraised band 46-68%). PER-PROJECT harm heterogeneity: each project has its own mean (some net-harmful) -> a project is its own thing, not a slave to its sector
   sectorTilt: 0.01,                              // mild per-category tilt so grouping projects by category yields genuinely different sector net-values (value EMERGES from the projects)
   kSectors: 10,                                  // fixed number of sectors both institutions select (level field), discarding the rest
   // partisan bias (central only): issue ownership (Petrocik 1996) — each sector has an ideological
@@ -165,6 +165,45 @@ if(!isMainThread){
     console.log("  net-negative PROJECTS: "+(100*agg.negProj/(n*K)).toFixed(1)+"%   net-negative SECTORS: "+(agg.secNeg/n).toFixed(1)+"/"+A);
     console.log("  top-"+PARAMS.kSectors+" sector overlap with ORACLE — central(blind): "+(agg.ovCen/n).toFixed(1)+"/"+PARAMS.kSectors+"   distributed: "+(agg.ovDis/n).toFixed(1)+"/"+PARAMS.kSectors);
     console.log("  → if central-vs-oracle overlap ≈ k, the macro gate can't differentiate (no net-negative sectors to avoid).");
+    process.exit(0);
+  }
+  if(process.argv.includes("--corr")){                                    // what does the central actually RANK sectors by? size/activity, gross benefit, or true net value?
+    const A=PARAMS.A, per=Math.ceil(PARAMS.K/A), K=PARAMS.K, eta=0.1, beta=0.3, p=PARAMS.p;
+    const size=[], gben=[], tnet=[], cscore=[];                           // per (sector×seed) observations
+    const pCenVC=[], pDisVC=[], pTrueVC=[], pCenBlindVC=[];                // per (project×seed) VALUE/COST ratios (what alloc ranks on)
+    for(let s=1000;s<1000+Math.min(SEEDS,20);s++){
+      const W=buildSeed(s,N,K,PARAMS.mean,PARAMS.sd,PARAMS.noise); const {Sp,Sm,cPos,cNeg,cost,pos,gov}=W;
+      const zA=()=>new Float64Array(A); const secSize=zA(), secGben=zA(), secT=zA(), secCen=zA();
+      for(let j=0;j<K;j++){ const a=(j/per)|0; secSize[a]+=Sp[j]+Sm[j]; secGben[a]+=Sp[j]; secT[a]+=Sp[j]-Sm[j]; secCen[a]+=cPos[j]+eta*cNeg[j];
+        // project-level value/cost that each arm actually ranks on:
+        pTrueVC.push((Sp[j]-Sm[j])/cost[j]);                              // oracle: true value/cost
+        pCenVC.push((cPos[j]+eta*cNeg[j])/cost[j]);                       // central: harm-blind + NOISY perceived value/cost
+        pCenBlindVC.push((Sp[j]+eta*(-Sm[j]))/cost[j]);                   // central WITHOUT proxy noise (blind only) — isolates the noise vs blindness split
+        pDisVC.push((p*(Sp[j]-(1-beta)*Sm[j]))/cost[j]);                  // distributed: analytic mean, beta-discounted, NOISE-FREE
+      }
+      // apply the SAME partisan tilt threeLayer/evalSeed uses (scaled to the true inter-sector value spread), so the probe reflects the ACTUAL central macro score
+      let m=0; for(let a=0;a<A;a++) m+=secT[a]; m/=A; let vr=0; for(let a=0;a<A;a++) vr+=(secT[a]-m)*(secT[a]-m); const sigTrue=Math.sqrt(vr/A);
+      for(let a=0;a<A;a++) secCen[a]+=PARAMS.deltaPartisan*sigTrue*gov*pos[a];
+      for(let a=0;a<A;a++){ size.push(secSize[a]); gben.push(secGben[a]); tnet.push(secT[a]); cscore.push(secCen[a]); }
+    }
+    const corr=(x,y)=>{ const n=x.length; let mx=0,my=0; for(let i=0;i<n;i++){mx+=x[i];my+=y[i];} mx/=n;my/=n;
+      let sxy=0,sxx=0,syy=0; for(let i=0;i<n;i++){const dx=x[i]-mx,dy=y[i]-my; sxy+=dx*dy;sxx+=dx*dx;syy+=dy*dy;} return sxy/Math.sqrt(sxx*syy); };
+    console.log("SECTOR-SCORE CORRELATIONS (η=0.1, "+(size.length/A)+" seeds × "+A+" sectors, projSpread="+PARAMS.projSpread+", sectorTilt="+PARAMS.sectorTilt+"):");
+    console.log("  what the blind central's sector score tracks:");
+    console.log("    corr(centralScore, size/activity ΣSp+Sm) = "+corr(cscore,size).toFixed(3));
+    console.log("    corr(centralScore, gross benefit ΣSp)     = "+corr(cscore,gben).toFixed(3));
+    console.log("    corr(centralScore, TRUE net value ΣT)     = "+corr(cscore,tnet).toFixed(3));
+    console.log("  and how true net value itself is structured:");
+    console.log("    corr(TRUE net value, size/activity)       = "+corr(tnet,size).toFixed(3));
+    console.log("    corr(TRUE net value, gross benefit)       = "+corr(tnet,gben).toFixed(3));
+    console.log("  → 'big=good' would show as high corr(centralScore,size) AND high corr(trueNet,size). If instead");
+    console.log("     corr(centralScore,trueNet) is high, the central ranks well because good sectors LOOK good (benefit), not because they are big.");
+    console.log("\nPROJECT-LEVEL value/cost correlations vs TRUE value/cost (what allocation RANKS on, η=0.1 β=0.3, "+(pTrueVC.length)+" projects):");
+    console.log("    corr(central NOISY perceived, true) = "+corr(pCenVC,pTrueVC).toFixed(3)+"   ← the central's actual project ranking signal");
+    console.log("    corr(central blind, NO noise, true) = "+corr(pCenBlindVC,pTrueVC).toFixed(3)+"   ← harm-blindness alone (noise removed)");
+    console.log("    corr(distributed analytic, true)    = "+corr(pDisVC,pTrueVC).toFixed(3)+"   ← noise-free, β-discounted (the 'clean' arm)");
+    console.log("  → gap between the first two rows = how much PROXY NOISE degrades the central's project pick;");
+    console.log("     gap of row 2 from 1.0 = how much HARM-BLINDNESS alone degrades it; row 3 shows the distributed sees true value near-perfectly (noise-free).");
     process.exit(0);
   }
   const t0=Date.now();
