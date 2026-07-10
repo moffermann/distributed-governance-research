@@ -8,10 +8,12 @@ Codified 2026-07-07 after the v1.9 cycle, to keep DOIs from going stale inside d
   concept DOI. The **manuscript** record gets its **own** concept DOI, which Zenodo **mints at the first
   publish** of that record (you cannot pre-reserve the *concept* DOI — `metadata.prereserve_doi` is the
   *version* DOI). **Paper headers should cite the MANUSCRIPT concept DOI** (stable, resolves to the latest
-  manuscript version) — but since it does not exist until the first manuscript deposit, either (a) do a
-  throwaway first deposit to learn the concept DOI, then re-render headers and replace the file; or (b) cite
-  the pre-reserved first *version* DOI in the header. Until then the header states the DOI is pending
-  (current state). Do NOT put 21193846 in the paper header as if it were the manuscript's DOI.
+  manuscript version). For the first manuscript deposit both identifiers are knowable **before** publishing,
+  from the draft record: the future concept DOI derives from the draft's `conceptrecid`, and the exact
+  version DOI is `metadata.prereserve_doi`. Render the header with one of those, then publish — Zenodo
+  records are **immutable once published** (files cannot be replaced afterward; a correction requires a new
+  version). Until the first manuscript deposit exists the header states the DOI is pending (current state).
+  Do NOT put 21193846 in the paper header as if it were the manuscript's DOI.
 - **Version DOIs** live where they are knowable: CITATION.cff, the GitHub release notes, and each Zenodo record.
 - If an exact version DOI inside the PDF is ever wanted, use **pre-reservation**: create the Zenodo new-version *draft first*, read its pre-reserved DOI (`metadata.prereserve_doi`), render the PDFs citing it, upload, then publish. Order: draft → render → upload → publish.
 
@@ -50,9 +52,10 @@ the anti-recurrence list above).
       CC BY 4.0): new-version draft → replace files (corpus + code only, **no manuscript**) → bump
       `version`/`publication_date` → publish → update the depid file.
    b. **Manuscript record** (`drafts/paper.zenodo.json` metadata, CC BY-NC-ND 4.0): the first publish MINTS
-      this record's own **concept DOI** (stable thereafter). To cite a DOI in the header on this very first
-      version, either pre-reserve the first **version** DOI (`metadata.prereserve_doi`) and render with it,
-      or do a throwaway first publish to read the concept DOI and then re-render + replace. Upload EN+ES
+      this record's own **concept DOI** (stable thereafter). To cite a DOI in the header on this first
+      version, render with either the future concept DOI (from the draft's `conceptrecid`, known before
+      publish) or the pre-reserved first **version** DOI (`metadata.prereserve_doi`) — records are immutable
+      once published, so pick the DOI before publishing (files cannot be replaced afterward). Upload EN+ES
       manuscript renders (and, if desired, docs/101 + essay/explainer + reviewer packets) → publish. Record
       its depid in a second backup file (e.g. `_backups/zenodo-depid-manuscript.txt`).
 6. Sweep the *version* DOIs: corpus version DOI → CITATION.cff/README/.zenodo notes; **manuscript** concept +
