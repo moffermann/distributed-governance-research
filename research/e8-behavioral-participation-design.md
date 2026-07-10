@@ -2,7 +2,7 @@
 
 > **🛑 MULTIPLIER RETIRED (2026-07-10).** E8's "headline survives (2.26 / 2.15–2.9×)" framing is **retired**:
 > a later pre-registered **symmetry gate (NO-GO)** showed the distributed selection advantage is small
-> (~0.026 of a full-information benchmark, below its 0.05 gate), not a ~2× headline. E8's behavioral
+> (pre-registered pooled median ~0.025 of a full-information benchmark, below its 0.05 rebuild gate; post-hoc ratio-of-sums 0.026), not a ~2× headline. E8's behavioral
 > adoption findings stand as an *earlier apparatus* result only. Controlling spec:
 > `research/claim-and-estimand-contract.md`. Kept as provenance.
 

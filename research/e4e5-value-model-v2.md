@@ -4,7 +4,7 @@
 > and its successors reported (~2.0× → ~2.8× → ~2.1×) is **withdrawn**. The independent audit
 > (`audits/2026-07-10/`) showed the v2 engine's headline was produced partly by asymmetries favoring the
 > distributed arm; a pre-registered **symmetry gate (NO-GO)** found the selection advantage real but small
-> (pooled ~0.026 of a full-information benchmark, below its 0.05 materiality gate). The controlling
+> (pre-registered pooled median ~0.025 of a full-information benchmark (post-hoc ratio-of-sums 0.026), below its 0.05 research-program rebuild gate). The controlling
 > specification is now **`research/claim-and-estimand-contract.md`**; the paper was reframed on Path B
 > (architecture + qualitative mechanism, multiplier retired). This note is retained as **design/mechanism
 > history**: its *direction* (credit-pressured central mis-selects; distributed reads value via coverage)

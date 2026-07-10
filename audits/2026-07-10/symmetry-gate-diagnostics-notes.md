@@ -7,7 +7,7 @@
 ## What was checked and found
 1. **World-cluster bootstrap** (honest CI; resample unit = world, not the 18 correlated cells).
    Pooled primary-domain `Delta = 0.0260`, **95% CI [0.0233, 0.0288]** — wider than the frozen gate's
-   naive CI, sign unchanged, still below the 0.05 materiality bar. **NO-GO stands** under the correct
+   naive CI, sign unchanged, still below the 0.05 research-program rebuild gate. **NO-GO stands** under the correct
    interval.
 2. **Adversarial > baseline is a genuine even-bandwidth effect, not a bug.** Under EVEN central appraisal
    allocation, RMSE(hatS_C − S) explodes on high-reach projects (top decile ~1519 reach: RMSE 222 base /
@@ -41,7 +41,7 @@ modeled mechanism with the coupling caveat documented.
 
 ## Reading the frozen gate output (round-2 clarification)
 - The gate's `symmetry-gate-results.txt` verdict prints **"advantage does not survive"**. Read this as
-  **"does not clear the pre-registered 0.05 materiality gate"** — the advantage is **positive in all 18
+  **"does not clear the pre-registered 0.05 research-program rebuild gate"** — the advantage is **positive in all 18
   primary cells** (median Δ = 0.025, CI excludes zero); it is small, not absent. The paper/contract state
   this correctly ("positive but small").
 - The frozen output still labels the low-information regime **"ADVERSARIAL"**; paper-facing text uses the

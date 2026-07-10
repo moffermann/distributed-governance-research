@@ -1065,8 +1065,11 @@ evaluation classifying the attack as founded, partially founded, or a
 difference of judgment, with line-anchored citations into the corpus) →
 **resolution** (an accepted document that either integrates a mechanism or
 bounds the risk) → **propagation** (the resolution's constraints threaded
-through every affected architecture document). The loop ran five rounds,
-all now fully resolved and propagated. The first round: eighteen attacks on
+through every affected architecture document). The loop ran five rounds, all
+resolved; the first four rounds are fully propagated through the corpus, and the
+manuscript-review round's four paired defenses (D037–D040) carry accepted
+resolutions whose remaining corpus propagation is tracked in the remediation
+roadmap. The first round: eighteen attacks on
 the architecture's mechanisms (metric gaming, fiscalizer capture,
 disbursement gaming, collusion, related-party control, complexity,
 incumbent resistance, among others). The second: fifteen deliberately

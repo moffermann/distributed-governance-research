@@ -64,7 +64,7 @@ Phase 3 Adversarial rounds ........... done — 43/43 attacks resolved (docs/67-
 Phase 4 Literature / framing ......... done for the paper (~80 references); ongoing for the v2/E5-SP material
 Phase 5-6 Manuscript ................. working draft v1.13 (latest deposit v1.12); multiplier RETIRED (Path B) 2026-07-10
 Phase 7 External review .............. v1.10 packets SUPERSEDED/quarantined; v1.13 Path-B packet rewrite pending (R2-10)
-Phase 8 Zenodo ....................... v1.12 live (21252911); v1.13 re-deposit BLOCKED until round-3/4 blockers clear (not merely mechanical)
+Phase 8 Zenodo ....................... v1.12 live (21252911); v1.13 re-deposit BLOCKED until the latest audit's blockers clear + author-gated deposit actions (not merely mechanical)
 Phase 9 Satellite experiments ........ active (github.com/moffermann/distributed-governance-experiments)
 Value model v2 (agenda-capture) ...... RETIRED as calibrated (symmetry gate NO-GO); exploratory apparatus kept for provenance
 ```

@@ -16,8 +16,8 @@ manifest names the **current authoritative set** so a reviewer does not have to 
 
 ## Governing result (one line)
 A pre-registered symmetric, selection-only stress test found the distributed-minus-central selection
-advantage **positive in every pre-specified cell but small** (pooled ~0.026 of a full-information
-benchmark, below its 0.05 materiality gate). The load-bearing contribution is the **architecture + the
+advantage **positive in every pre-specified cell but small** (pre-registered pooled median ~0.025 of a full-information
+benchmark, below its 0.05 research-program rebuild gate — not a policy-materiality threshold; post-hoc ratio-of-sums 0.026). The load-bearing contribution is the **architecture + the
 mechanism direction**, not a calibrated multiplier.
 
 ## Historical / superseded (carry banners; kept for provenance)

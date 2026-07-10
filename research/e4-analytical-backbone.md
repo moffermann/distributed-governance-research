@@ -3,8 +3,8 @@
 > **🛑 MAGNITUDES RETIRED (2026-07-10, LATEST — controlling).** Every multiplier in this note (and the
 > "~99% of oracle at <1% net-negative" / "pre-registered 7/7" framing in the banner below) is **retired**.
 > The independent audit (`audits/2026-07-10/`) and the pre-registered **symmetry gate (NO-GO)** showed the
-> distributed selection advantage is real but small (pooled ~0.026 of a full-information benchmark, below
-> its 0.05 materiality gate). Controlling doc: `research/claim-and-estimand-contract.md`. This note is kept
+> distributed selection advantage is real but small (pre-registered pooled median ~0.025 of a full-information benchmark (post-hoc ratio-of-sums 0.026), below
+> its 0.05 research-program rebuild gate). Controlling doc: `research/claim-and-estimand-contract.md`. This note is kept
 > as analytical/mechanism history; its closed forms illustrate the *direction*, not calibrated sizes.
 >
 > ---

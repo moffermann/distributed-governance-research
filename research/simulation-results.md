@@ -2,8 +2,8 @@
 
 > **🛑 MULTIPLIER RETIRED (2026-07-10).** Any ~2×/2.19×/2.22×/2.26× figure and any "survives recalibration"
 > / "headline" language in this note is **retired**: a pre-registered **symmetry gate (NO-GO)** showed the
-> distributed selection advantage is small (a pooled ~0.026 of a full-information benchmark, below its 0.05
-> materiality gate) — a conditional, stylized-model output, not a calibrated effect. Controlling spec:
+> distributed selection advantage is small (pre-registered pooled median ~0.025 of a full-information benchmark, below its 0.05
+> research-program rebuild gate; post-hoc ratio-of-sums 0.026) — a conditional, stylized-model output, not a calibrated effect. Controlling spec:
 > `research/claim-and-estimand-contract.md`; honest test: `scripts/simulation/e5-sp-symmetry-gate.mjs`.
 > The qualitative findings (funding caps, prioritization quality, decay survivability) stand; the magnitudes
 > and "survives" claims do not. Kept as provenance.

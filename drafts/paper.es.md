@@ -1151,8 +1151,11 @@ objetiva que clasifica el ataque como fundado, parcialmente fundado o diferencia
 de criterio, con citas ancladas a líneas dentro del corpus) → **resolución** (un
 documento aceptado que o bien integra un mecanismo o bien acota el riesgo) →
 **propagación** (las restricciones de la resolución enhebradas a través de cada
-documento de arquitectura afectado). El bucle corrió cinco rondas, todas ahora
-plenamente resueltas y propagadas. La primera ronda: dieciocho ataques a los
+documento de arquitectura afectado). El bucle corrió cinco rondas, todas
+resueltas; las primeras cuatro rondas están plenamente propagadas a través del
+corpus, y las cuatro defensas pareadas de la ronda de revisión del manuscrito
+(D037–D040) portan resoluciones aceptadas cuya propagación restante al corpus está
+rastreada en el roadmap de remediación. La primera ronda: dieciocho ataques a los
 mecanismos de la arquitectura (manipulación de métricas, captura del
 fiscalizador, manipulación de desembolsos, colusión, control de partes
 vinculadas, complejidad, resistencia del establecido, entre otros). La segunda:

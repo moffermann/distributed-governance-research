@@ -2,8 +2,9 @@
 
 > **🛑 CANCELLED / SUPERSEDED (2026-07-10, LATEST).** This propagation plan is **void**: its ~2.1×
 > multiplier was **retired** after the independent audit (`audits/2026-07-10/`) and the pre-registered
-> **symmetry gate (NO-GO)** showed the distributed selection advantage is real but small (pooled ~0.026 of
-> a full-information benchmark, below its 0.05 materiality gate). **Do NOT apply any multiplier from this
+> **symmetry gate (NO-GO)** showed the distributed selection advantage is real but small (pre-registered
+> pooled median ~0.025 of a full-information benchmark, below its 0.05 research-program rebuild gate; post-hoc
+> ratio-of-sums 0.026). **Do NOT apply any multiplier from this
 > note to the paper.** The controlling document is now `research/claim-and-estimand-contract.md`; the paper
 > was reframed on Path B (architecture + qualitative mechanism, multiplier retired). Everything below is
 > retained only as history. See `audits/2026-07-10/remediation-roadmap.md`.

@@ -22,8 +22,9 @@ A **Δ_total** that additionally credits a *delivery* difference is retained onl
 requiring an identified, separately-estimated delivery model** — it is not claimed here.
 
 ## 2. Symmetry conditions (what both arms must share)
-Both arms face: the **same candidate pool, the same true project values and costs, the same total
-appraisal/information budget, the same appraisal-error (report-noise) process, the same eligibility logic
+Both arms face: the **same candidate pool, the same true project values and costs, an
+appraisal/information budget matched in expectation (equal up to per-project rounding of the central arm's
+even bandwidth), the same appraisal-error (report-noise) process, the same eligibility logic
 (each acts on its OWN noisy estimate — no arm sees ground-truth net), the same greedy budget rule, and the
 same delivery resources**. No arm receives oracle access, asymmetric cost knowledge, or different
 eligibility rules. This is the condition the symmetry gate enforced.
