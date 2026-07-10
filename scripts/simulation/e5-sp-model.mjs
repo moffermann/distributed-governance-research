@@ -36,6 +36,7 @@ const PARAMS = {
   eta: 0.1,            // harm-blindness of the value term (only matters if w>0)
   concentrate: 0,      // lumpiness gate regime: 0 = SPREAD (pessimistic); 1 = CONCENTRATE (Core v0 earmarked vouchers + 90-day recycle)
   byValue: 0,          // distributed funding order: 0 = value/cost (efficient); 1 = pure VALUE (atomized voucher-holders fund what they value, ignore cost)
+  A: 20, kCat: 10,     // --cats 3-layer decomposition: number of categories and the top-k macro gate
   fWeak: 0.60, fVer: 0.86,
   RHOS: [1.0, 0.8, 0.6, 0.4, 0.2, 0.0],   // agenda alignment corr(S,P) sweep
 };
@@ -104,6 +105,29 @@ function evalWorld(seed, rho, lumpiness=0){
   return {o,d,c,negShare:neg/K,gatedN,gatedOracleVal,S,P};
 }
 
+// ---- 3-LAYER decomposition: macro (category gate) x allocation (project) x delivery ----
+// Categories carry agenda-capture too: a category's credit catP is misaligned rho with its social
+// value catS (whole self-serving categories -- 'governance reform' -- over valuable ones -- 'elderly
+// care'). The central gates to top-k categories by catP; oracle/distributed by catS. macro factor =
+// (3-layer ratio)/(2-layer ratio) isolates the category-exclusion contribution.
+function evalCat(seed, rho, A, kCat){
+  const W=buildWorld(seed,rho); const {interested,cost,S,P}=W; const K=PARAMS.K, per=Math.ceil(K/A);
+  const cat=new Int32Array(K); for(let j=0;j<K;j++) cat[j]=Math.min(A-1,(j/per)|0);
+  const catS=new Float64Array(A); for(let j=0;j<K;j++) catS[cat[j]]+=S[j];
+  let m=0; for(let a=0;a<A;a++) m+=catS[a]; m/=A; let v=0; for(let a=0;a<A;a++) v+=(catS[a]-m)*(catS[a]-m); const sd=Math.sqrt(v/A)||1;
+  const rg=mulberry32(seedFor(seed,555)); const g=mkGauss(rg); const rc=Math.sqrt(Math.max(0,1-rho*rho));
+  const catP=new Float64Array(A); for(let a=0;a<A;a++) catP[a]=Math.exp(rho*((catS[a]-m)/sd)+rc*g());  // category credit, misaligned rho with category value
+  const rd=mulberry32(seedFor(seed,4242)); const dis=new Float64Array(K);
+  for(let j=0;j<K;j++){ let s=0; for(const vv of interested[j]){ const pp=vv<0?PARAMS.p*(1-PARAMS.beta):PARAMS.p; if(rd()<pp) s+=vv; } dis[j]=s; }
+  const catDis=new Float64Array(A); for(let j=0;j<K;j++) catDis[cat[j]]+=dis[j];
+  let tot=0; for(let j=0;j<K;j++) tot+=cost[j]; const budget=tot*PARAMS.budgetFrac; const bv=PARAMS.byValue;
+  const topk=(score)=>{ const set=new Set(Array.from({length:A},(_,a)=>a).sort((x,y)=>score[y]-score[x]).slice(0,kCat)); const ga=new Array(K).fill(false); for(let j=0;j<K;j++) if(!set.has(cat[j])) ga[j]=true; return ga; };
+  return {
+    o2:deliver(fund(S,cost,K,budget,null,bv),S,1.0),  d2:deliver(fund(dis,cost,K,budget,null,bv),S,PARAMS.fVer),  c2:deliver(fund(P,cost,K,budget,null,bv),S,PARAMS.fWeak),
+    o3:deliver(fund(S,cost,K,budget,topk(catS),bv),S,1.0), d3:deliver(fund(dis,cost,K,budget,topk(catDis),bv),S,PARAMS.fVer), c3:deliver(fund(P,cost,K,budget,topk(catP),bv),S,PARAMS.fWeak)
+  };
+}
+
 function corr(x,y){ const n=x.length; let mx=0,my=0; for(let i=0;i<n;i++){mx+=x[i];my+=y[i];} mx/=n;my/=n;
   let sxy=0,sxx=0,syy=0; for(let i=0;i<n;i++){const dx=x[i]-mx,dy=y[i]-my; sxy+=dx*dy;sxx+=dx*dx;syy+=dy*dy;} return sxy/Math.sqrt(sxx*syy); }
 function bootDelta(d,c,o,lo,hi,B=4000){ const n=d.length, rng=mulberry32(13579), rs=new Array(B);
@@ -132,6 +156,23 @@ if(process.argv.includes("--sweepL")){
   }
   console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  L=0 = no threshold. As L rises, low-reach projects can't pool their cost -> drop from the distributed.");
   console.log("  This is the RAW threshold problem, BEFORE the design's rescue layers (assurance contracts / matching-funds / default routing).");
+  process.exit(0);
+}
+
+// ---- 3-LAYER DECOMPOSITION: macro (category) x allocation (project) x delivery ----
+if(process.argv.includes("--cats")){
+  const A=(PARAMS.A!==undefined?PARAMS.A:20), kCat=(PARAMS.kCat!==undefined?PARAMS.kCat:10);
+  console.log("3-LAYER DECOMPOSITION (A="+A+" categories, top-"+kCat+" gate; byValue="+PARAMS.byValue+", concentrate n/a here)\n");
+  console.log("  rho  | corr(S,P) | cen%oracle 2L | cen%oracle 3L |  macro   | allocation | delivery | 3-layer ratio");
+  for(const rho of PARAMS.RHOS){
+    const R=Array.from({length:PARAMS.seeds},(_,i)=>1000+i).map(s=>evalCat(s,rho,A,kCat));
+    const S2=k=>sum(R.map(r=>r[k]));
+    const r2=S2('d2')/S2('c2'), r3=S2('d3')/S2('c3'), deliv=PARAMS.fVer/PARAMS.fWeak;
+    const macro=r3/r2, alloc=r2/deliv;
+    const c2o=100*(S2('c2')/PARAMS.fWeak)/S2('o2'), c3o=100*(S2('c3')/PARAMS.fWeak)/S2('o3');
+    console.log("  "+rho.toFixed(1)+"  |    "+"?".padStart(4)+"   |     "+c2o.toFixed(0).padStart(3)+"%      |     "+c3o.toFixed(0).padStart(3)+"%      |  "+f(macro)+"x  |   "+f(alloc)+"x   |  "+f(deliv)+"x  |  "+f(r3)+"x");
+  }
+  console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  3-layer ratio = macro x allocation x delivery. macro = (3L ratio)/(2L ratio) = the category-exclusion contribution.");
   process.exit(0);
 }
 
