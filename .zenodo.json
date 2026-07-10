@@ -20,5 +20,5 @@
     "institutional design",
     "civic technology"
   ],
-  "notes": "Single record covering the corpus, the working paper, and code. All text and research content (corpus + manuscript) is CC BY 4.0; code (scripts/) is MIT. Attribution required. See LICENSE.md."
+  "notes": "Single record covering the corpus, the working paper, and code. All text and research content (corpus + manuscript) is CC BY 4.0; code (scripts/) is MIT. CC BY attribution is required for text; the MIT notice must be retained for code. See LICENSE.md."
 }

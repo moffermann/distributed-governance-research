@@ -359,7 +359,7 @@ literature map is still preliminary) — no prior work combines:
   what we believe is an early symmetric-knowledge comparison, in simulation, of
   open construction of allocation priorities from aggregated citizen signals
   against bandwidth-constrained central construction (a later pre-registered
-  symmetric test finds the distributed advantage consistent but small; Section 6)—;
+  symmetric test finds the distributed advantage consistent but small; see Section 6)—;
 
 - **(v)** a documented adversarial-review method with an explicit stopping
   rule.

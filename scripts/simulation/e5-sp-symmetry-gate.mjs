@@ -106,7 +106,7 @@ function cell(rho,lambda,h,p,beta,tau){
   for(let i=0;i<WORLDS;i++){
     const r=evalWorld(SEEDBASE+i, rho, lambda, h, p, beta, tau);
     D.push(r.D); C.push(r.C); O.push(r.O); Delta.push((r.D-r.C)/r.O);
-    if(i<8){ SS=SS.concat(Array.from(r.S)); PP=PP.concat(Array.from(r.P)); }
+    if(i<8){ SS=SS.concat(Array.from(r.S)); PP=PP.concat(Array.from(r.P)); }  // corr(S,P) below is an 8-WORLD DIAGNOSTIC only (kept frozen for reproducibility); it is NOT a decision quantity — cell membership and the gate use latent rho, not this corr, so the NO-GO verdict is unaffected. Full-100-world corr differs by <=0.02.
   }
   const b=bootDelta(D,C,O,0.025,0.975);
   return { rho,lambda,h, corrSP:corr(SS,PP), meanDelta:mean(Delta), medianDelta:median(Delta),
@@ -121,7 +121,7 @@ console.log("Both arms: same pool/costs/budget/noise; own noisy eligibility (no 
 
 function runRegime(name, R){
   console.log("=== "+name.toUpperCase()+" regime (p="+R.p+", beta="+R.beta+", tau="+R.tau+") ===");
-  console.log("  lam | rho | corrSP |  h  | mean D | med D  |  95% CI          | cell");
+  console.log("  lam | rho | corrSP(8w diag) |  h  | mean D | med D  |  95% CI          | cell");
   const cells={};
   for(const lam of LAMBDAS) for(const rho of RHOS) for(const h of HS){
     const c=cell(rho,lam,h,R.p,R.beta,R.tau); cells[[lam,rho,h].join(",")]=c;

@@ -208,7 +208,7 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    entregado por unidad de presupuesto —el criterio que la redistribución
    existe para satisfacer. En el modelo, la entrega verificada y la
    priorización social interactúan en lugar de solo sumarse; el aparato basado
-   en agentes anterior produjo un compuesto de 2.22× una línea base del statu
+   en agentes anterior produjo un compuesto de 2.22× frente a una línea base del statu
    quo parametrizada a partir de los hallazgos publicados de instituciones de
    auditoría (1.4–1.6× a escala de piloto municipal). **Retiramos ese compuesto
    como efecto calibrado**: una prueba de estrés pre-registrada, simétrica y
@@ -387,7 +387,7 @@ previo combina:
   esa arquitectura;
 
 - **(iv)** simulación conductual de sus supuestos de cara a la ciudadanía
-  —incluida lo que creemos es una comparación temprana de conocimiento simétrico,
+  —incluido lo que creemos es una comparación temprana de conocimiento simétrico,
   en simulación, de la construcción abierta de las prioridades de asignación a
   partir de señales ciudadanas agregadas contra la construcción central de ancho
   de banda finito (una prueba simétrica pre-registrada posterior encuentra la
@@ -1404,7 +1404,7 @@ sortea la disuasión por hito y mueve la fuga un orden de magnitud (mientras la
 ventaja de valor entregado sobrevive), así que la resistencia a la colusión
 —propiedad efectiva verificada, resistencia Sybil de los contribuyentes y
 descentralización del asignador y del piso de presupuesto de auditoría— es un
-requisito de primera clase (docs/113), no una salvedad residual.
+requisito de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)), no una salvedad residual.
 
 ## 10. Conclusión
 

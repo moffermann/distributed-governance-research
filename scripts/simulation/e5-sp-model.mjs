@@ -248,11 +248,11 @@ if(process.argv.includes("--cats")){
   process.exit(0);
 }
 
-console.log("E5 v2 / corrected-E4 (EXPLORATORY) — central max P (credit), distributed max S via participation coverage (beta="+PARAMS.beta+"), full-information greedy benchmark max S.");
+console.log("E5 v2 / corrected-E4 (EXPLORATORY) — scored on delivered NET value (net = S - h*cost). Central ranks credit P; distributed a participation-coverage sample (beta="+PARAMS.beta+"); benchmark = full-information greedy on true net.");
 console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PARAMS.mean+", sd="+PARAMS.sd+", projSpread="+PARAMS.projSpread+", w(value weight)="+PARAMS.w+", delivery "+PARAMS.fWeak+"/"+PARAMS.fVer+" ("+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x)");
 console.log("  rho = LATENT correlation (not Pearson corr(S,P)); the credit<->value misalignment axis. w=0 -> credit-driven central; w=1 -> E4 (harm-blind). Magnitudes are exploratory, not calibrated.\n");
 console.log("  hurdle h="+PARAMS.hurdle+" -> NET value = S - h*cost (h>0: below-hurdle projects are agenda-capture bait for the central)\n");
-console.log("  rho  | corr(S,P) | harm% | belowH% | cen netNeg% | cen %oracle | dis %oracle |  Delta=(d-c)/o [95% CI]  | ratio d/c");
+console.log("  rho  | corr(S,P) | harm% | belowH% | cen netNeg% | cen %bench | dis %bench |  Delta=(d-c)/o [95% CI]  | ratio d/c");
 for(const rho of PARAMS.RHOS){
   const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalWorld(s,rho));
   const d=R.map(r=>r.d), c=R.map(r=>r.c), o=R.map(r=>r.o);
@@ -263,4 +263,4 @@ for(const rho of PARAMS.RHOS){
   const cnn=100*sum(R.map(r=>r.cenNetNeg))/R.length, b=bootDelta(d,c,o,0.025,0.975);
   console.log("  "+rho.toFixed(1)+"  |   "+rSP.toFixed(2).padStart(5)+"   | "+neg.toFixed(1).padStart(4)+"% | "+bh.toFixed(1).padStart(5)+"%  |   "+cnn.toFixed(1).padStart(5)+"%   |    "+cOra.toFixed(0).padStart(3)+"%     |    "+dOra.toFixed(0).padStart(3)+"%     |  "+((Delta>=0?"+":"")+f(Delta)+" ["+f(b.lo)+","+f(b.hi)+"]").padEnd(22)+" |  "+f(ratio)+"x");
 }
-console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  dis %oracle<100 now reflects REAL coverage friction (beta="+PARAMS.beta+"): the swarm no longer = oracle.");
+console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  %bench = delivered net as a share of the full-information greedy benchmark (which is NOT an optimum/upper bound); coverage friction (beta="+PARAMS.beta+") keeps the distributed arm below it.");

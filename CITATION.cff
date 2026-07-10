@@ -9,7 +9,7 @@ date-released: "2026-07-10"
 url: "https://github.com/moffermann/distributed-governance-research"
 doi: 10.5281/zenodo.21193846
 license: CC-BY-4.0
-notes: "Licensed CC BY 4.0 for all text and research content (including the working paper); code MIT. Attribution required. See LICENSE.md."
+notes: "Licensed CC BY 4.0 for all text and research content (including the working paper); code MIT. CC BY attribution for text; MIT notice retention for code. See LICENSE.md."
 preferred-citation:
   type: unpublished
   title: "A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution"

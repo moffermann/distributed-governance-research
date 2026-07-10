@@ -19,7 +19,7 @@ attacks/              Adversarial attack briefs A001-A043 (all resolved)
 defenses/             Paired defense briefs D001-D043
 contradictions/       Consistency-audit record (C026-C045, all resolved)
 drafts/               The working paper (drafts/paper.md, English authoritative;
-                      Spanish translation paper.es.md), the essay edition, and the plain-language explainer
+                      Spanish translation drafts/paper.es.md)
 research/             Formal models, simulation results and design, literature map
 external-review/      Reviewer packets by profile, English and Spanish
 scripts/              Reference checker, Obsidian converter, PDF renderer, and the
@@ -34,6 +34,6 @@ The satellite computational-experiments program (adversarial architecture ABM, b
 
 ## License and citation
 
-Archived and citable: DOI [10.5281/zenodo.21252911](https://doi.org/10.5281/zenodo.21252911) (v1.12, latest deposited version, verified live 2026-07-10) · [10.5281/zenodo.21193846](https://doi.org/10.5281/zenodo.21193846) (concept DOI — always resolves to the latest deposited version). Licensed CC BY 4.0 (all text + research content, including the manuscript) / MIT (code); attribution required. (The live v1.12 record's title string still reads "v1.8"; correcting it requires a metadata redeposit — pending author.)
+Archived and citable: DOI [10.5281/zenodo.21252911](https://doi.org/10.5281/zenodo.21252911) (v1.12, latest deposited version, verified live 2026-07-10) · [10.5281/zenodo.21193846](https://doi.org/10.5281/zenodo.21193846) (concept DOI — always resolves to the latest deposited version). Licensed CC BY 4.0 (all text + research content, including the manuscript) / MIT (code); attribution required. (The live v1.12 record's title string still reads "v1.8"; this can be edited directly in the Zenodo record metadata at any time without a new version/DOI — pending author.)
 
-Licensed **CC BY 4.0** for all text and research content (including the working paper, publishable model, and reviewer packets) and **MIT** for code. Attribution required. See `LICENSE.md`. To cite this work, see `CITATION.cff`.
+Licensed **CC BY 4.0** for all text and research content (including the working paper, publishable model, and reviewer packets) and **MIT** for code. CC BY attribution is required for the text; the MIT notice must be retained for the code. See `LICENSE.md`. To cite this work, see `CITATION.cff`.

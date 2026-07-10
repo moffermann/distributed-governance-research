@@ -53,17 +53,17 @@
   the multi-license declaration is set in the Zenodo UI/API when depositing v1.13 (author action). *(errors M7)*
 
 ### Minor / Nits
-- [ ] **R2-16 — Absent files referenced:** LICENSE.md + README name `drafts/ensayo-divulgacion.md` and
+- [x] **R2-16 — Absent files referenced:** LICENSE.md + README name `drafts/ensayo-divulgacion.md` and
   `drafts/explicacion-para-todos.md` (both absent); a knowledge doc cites `drafts/REVIEW_ROUND_2.md` (sibling repo). *(errors m4)*
-- [ ] **R2-17 — README "requires a redeposit" for the stale title is false:** Zenodo lets you edit metadata
+- [x] **R2-17 — README "requires a redeposit" for the stale title is false:** Zenodo lets you edit metadata
   (title) anytime without a new DOI. Fix the wording. *(errors m5)*
-- [ ] **R2-18 — Gate `corr(S,P)` uses 8 of 100 worlds** (`e5-sp-symmetry-gate.mjs`). Compute over all worlds
+- [x] **R2-18 — Gate `corr(S,P)` uses 8 of 100 worlds** (`e5-sp-symmetry-gate.mjs`). Compute over all worlds
   or label it an 8-world diagnostic. (Verdict unaffected.) *(errors n1)*
-- [ ] **R2-19 — Retired engine runtime** still prints "%oracle / max S" columns while it computes net, and
+- [x] **R2-19 — Retired engine runtime** still prints "%oracle / max S" columns while it computes net, and
   asserts a `<100` invariant. Relabel "% benchmark / max net"; drop the invariant. *(errors m2)*
-- [ ] **R2-20 — "attribution required for everything" overstates MIT** (notice-retention, not generic
+- [x] **R2-20 — "attribution required for everything" overstates MIT** (notice-retention, not generic
   attribution). Reword in LICENSE.md/README/.zenodo. *(errors n3)*
-- [ ] **R2-21 — Small ES prose/link defects:** novelty bullet punctuation, "incluida lo que creemos"→"incluido",
+- [x] **R2-21 — Small ES prose/link defects:** novelty bullet punctuation, "incluida lo que creemos"→"incluido",
   missing "frente a" before the E7 baseline, ES docs/113 unlinked. *(errors n2)*
 - [DEFER] **R2-22 — D036–D040 "propagation pending" status lines vs the paper's "fully propagated" claim;**
   attack/defense README workflow language obsolete. Deferred: verifying/finishing the semantic propagation
