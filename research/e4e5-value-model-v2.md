@@ -140,15 +140,22 @@ keeps net-neg <1%), so the world matches the author's (huge value spread, ~all p
   band 1.8–2.4×** for corr(S,P) ∈ [0.1, 0.3]. This RECOVERS the old ~2.2× magnitude on firmer,
   transversal public-choice ground. Report as a **band/frontier, not a point** (the honest caveat is
   the raw-vs-independent reading of Gilens-Page).
-- **SCOPE CONDITION — the lumpiness threshold (load-bearing).** An atomized distributed can only
-  *build* a lumpy niche project if its funder base pools the cost (reach·ω ≥ L·cost; the central's
-  pooled budget has no such threshold). Sweeping L (sparse coverage, ρ=0.2): advantage **2.4× (L=0)
-  → 1.43× (L=1, break-even) → ~parity (L=2)**. At break-even ~57% of oracle value sits in projects
-  whose beneficiaries can't pool their cost — the classic public-goods coordination problem (Olson,
-  Samuelson). **So the ~2× is CONDITIONAL on the design's coordination layers (assurance contracts /
-  matching-funds / default routing) keeping effective lumpiness low.** L is genuinely hard to
-  calibrate → reported as a sensitivity that also *quantifies why those design features are
-  load-bearing*, not decoration.
+- **The lumpiness threshold is a NON-ISSUE in Core v0 (author correction).** The naive worry — a
+  lumpy niche project can't get built if its funders don't pool the cost — assumes *free-riding*
+  (people withhold, hoping others pay). That does NOT apply to Core v0: the funding money is
+  **earmarked multi-use vouchers** (Friedman-style; tax money that *must* go to some project, cannot
+  be withdrawn → **no opportunity cost → no strategic withholding**), and a **90-day return-and-
+  reallocate rule** (if a project doesn't reach funding the money returns to the wallet → funding
+  what you value has **no downside** → the money recycles until it funds something). So beneficiaries
+  fund by genuine value and can **concentrate** their full voucher (budget/N) on what they value.
+  Modeled faithfully (`--sweepL --concentrate=1`): the threshold barely bites — the advantage holds
+  at its full **2.43× up to L≈4** (only ~2% of oracle value gated at break-even L=1, ~12% at L=4);
+  it only erodes at implausible lumpiness (L=8→2.22×, L=16→1.80×). Contrast the wrong *spread /
+  free-riding* model, which collapsed to 1.43× at L=1 — that is not Core v0. **The coordination is
+  built INTO the mechanism (the return rule IS an assurance contract), so the ~2× is robust, not
+  fragile.** Residual: only genuinely tiny-reach lumpy projects (<~30 beneficiaries), handled by
+  matching-funds. (Earlier draft's "conditional on fragile coordination layers" was based on the
+  free-riding model and is retracted.)
 
 ## Next
 1. DONE (first build): S/P world + central-max-P (`e5-sp-model.mjs`), nests E4, decoupled value/net-neg,

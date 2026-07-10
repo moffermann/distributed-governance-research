@@ -34,6 +34,7 @@ const PARAMS = {
   p: 0.35, beta: 0.30, // distributed participation rate and voice bias (harmed under-participate) -- COVERAGE, from E4
   w: 0.0,              // central's weight on (harm-blind) VALUE vs credit P.  w=0 pure agenda-capture; w=1 -> E4
   eta: 0.1,            // harm-blindness of the value term (only matters if w>0)
+  concentrate: 0,      // lumpiness gate regime: 0 = SPREAD (pessimistic); 1 = CONCENTRATE (Core v0 earmarked vouchers + 90-day recycle)
   fWeak: 0.60, fVer: 0.86,
   RHOS: [1.0, 0.8, 0.6, 0.4, 0.2, 0.0],   // agenda alignment corr(S,P) sweep
 };
@@ -80,7 +81,14 @@ function evalWorld(seed, rho, lumpiness=0){
   // Raising capacity ~ reach_j * omega (omega = budget per interested-slot). Gate j if reach*omega < L*cost.
   // The CENTRAL funds from a pooled budget -> NO per-project threshold. So the threshold hurts only the distributed's tail.
   let gate=null, gatedOracleVal=0;
-  if(lumpiness>0){ let totReach=0; for(let j=0;j<K;j++) totReach+=reach[j]; const omega=budget/(totReach||1);
+  if(lumpiness>0){
+    // omega = the funding a project draws PER interested citizen. Two regimes:
+    //  - SPREAD (old, pessimistic): each voucher split across ALL a citizen's covered projects -> omega = budget/totReach.
+    //  - CONCENTRATE (Core v0): earmarked vouchers + the 90-day return-and-reallocate rule let a beneficiary put their
+    //    FULL voucher (budget/N) on a project they value -> omega = budget/N. This is the faithful Core-v0 upper bound:
+    //    a project is unbuildable only if even its full funder base concentrating can't cover the cost.
+    let totReach=0; for(let j=0;j<K;j++) totReach+=reach[j];
+    const omega = PARAMS.concentrate ? budget/PARAMS.N : budget/(totReach||1);
     gate=new Array(K).fill(false);
     for(let j=0;j<K;j++) if(reach[j]*omega < lumpiness*cost[j]){ gate[j]=true; if(S[j]>0) gatedOracleVal+=S[j]; } }
   // CENTRAL: (1-w) credit P + w harm-blind value. creditScale puts P on the value scale (match mean magnitude).
