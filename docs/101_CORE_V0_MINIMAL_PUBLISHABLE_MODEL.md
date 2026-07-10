@@ -738,9 +738,12 @@ protected identity.
 
 **What if I have no time?** Your allocation then follows the public
 default rule (which tracks published planning priorities), or a delegate
-you chose. The simulation evidence below shows the design does not
-depend on citizens becoming full-time evaluators; inattention is a
-designed-for condition, not a failure mode.
+you chose. By design, inattention is a routed-for condition rather than a
+failure mode: the default anchor absorbs the passive share. (In the
+stylized simulation, a strong anchor buffered the *aggregate* loss when
+active evaluation fell; within-cycle alignment still eroded, and the
+symmetry gate does not establish resilience to participation decay — see
+the caveat under "How this model has been tested".)
 
 **Who pays the independent inspectors?** Not the executor. Control work
 is financed from a separated control budget attached to the project — a
@@ -775,8 +778,12 @@ correction banner above):
   attention found that funding caps curb concentration but not quality,
   that allocation quality is carried by the informational quality of the
   project prioritization the passive share follows (the aggregated
-  allocation profiles), and that participation decay is survivable exactly
-  where that prioritization layer is strong. A pre-registered fourth
+  allocation profiles), and that — in the tested 24-cycle grid, as active
+  evaluation fell from 10% to 2% — a strong default anchor buffered the
+  *aggregate* selection loss, though within-cycle alignment still eroded in
+  every condition (a conditional model result, not evidence of deployment
+  resilience; the matched-budget symmetry gate couples both arms' information
+  to participation and cannot establish participation-decay resilience). A pre-registered fourth
   experiment modeled knowledge symmetrically and found that building the
   weight vector from aggregated dispersed citizen signals tracks value more
   closely than fixed-bandwidth central construction — provided an
@@ -934,7 +941,7 @@ Already answered inside the corpus (with pointers, so reviewers do not re-litiga
 - *How much burden for small projects?* The proportional burden ladder, set by threshold policy, never self-selected (`knowledge/hypotheses/H020`, `docs/78`).
 - *How are fiscalizers selected in high-risk cases?* Protocol assignment plus independent corroboration for critical milestones, with the collusion-proofness condition derived formally (the collusion-observability resolution and the formal note).
 - *How do tutored modes transition?* Through published operating modes with maturity metrics, and open mode is gated on resolving constitutional mechanics (`knowledge/hypotheses/H058`, `docs/91`).
-- *Does the model depend on high citizen attention?* No — the simulation shows the default anchor carries allocation quality and decay is buffered where the anchor is strong (the simulation results).
+- *Does the model depend on high citizen attention?* Not in the tested apparatus, conditional on a strong default anchor: the simulation shows the anchor carries allocation quality and buffers the aggregate loss as attention falls (within-cycle alignment still eroded, and a genuine fixed-central-capacity participation-decay test remains future work) — see the simulation results.
 
 Genuinely open:
 

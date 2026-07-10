@@ -12,7 +12,7 @@ license: CC-BY-4.0
 notes: "Licensed CC BY 4.0 for all text and research content (including the working paper); code MIT. CC BY attribution for text; MIT notice retention for code. See LICENSE.md."
 preferred-citation:
   type: unpublished
-  title: "A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution"
+  title: "A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Stress-Testing, and a Symmetric Computational Test of Selective Institutional Distribution"
   authors:
     - family-names: "Offermann"
       given-names: "Mauricio"

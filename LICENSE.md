@@ -42,4 +42,4 @@ SOFTWARE.
 
 If you use this work, please cite it. See `CITATION.cff` for the machine-readable citation, or:
 
-> Offermann, M. (2026). *A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution.* Working paper v1.12 (latest deposited version; working draft v1.13). DOI: 10.5281/zenodo.21252911. https://github.com/moffermann/distributed-governance-research
+> Offermann, M. (2026). *A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Stress-Testing, and a Symmetric Computational Test of Selective Institutional Distribution.* Working paper v1.12 (latest deposited version; working draft v1.13). DOI: 10.5281/zenodo.21252911. https://github.com/moffermann/distributed-governance-research

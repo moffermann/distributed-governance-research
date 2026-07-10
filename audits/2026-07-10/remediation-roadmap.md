@@ -1,14 +1,15 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
-> **⚠️ STATUS 2026-07-10 (updated after ROUND-2 audit): publication RE-BLOCKED; remediation in progress.**
-> Tiers 0–7 (below) are done. Decisions resolved: **T3.2** — v1.12 / 21252911 is the live latest deposit,
-> working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0 for all text/content + MIT for code,
-> single record** (the earlier Option-B/dual/NC-ND plan was dropped). BUT a **round-2 independent audit**
-> (`audits/2026-07-10-round2/`) found the corpus does NOT yet tell one honest story — chiefly `docs/101` (the
-> public "accessible companion" that `.zenodo.json` promotes) still presents the RETIRED multiplier as
-> "validated", plus E4 sign/denominator errors in the paper and several stale status surfaces. The Round-2
-> remediation stack below tracks every finding (fix-now vs deferred). **Do NOT deposit v1.13 until the
-> Round-2 CRITICAL + MAJOR items are cleared.**
+> **⚠️ STATUS 2026-07-10 (single current state): publication-readiness remediation — ROUND-3 audit in
+> progress.** Round-2 critical/major items are cleared; a **round-3 independent audit**
+> (`audits/2026-07-10-round3/`) then ran and returned **NOT READY**, and its blockers are being cleared now
+> (batches logged in the Round-3 section below). Decisions resolved: **T3.2** — v1.12 / 21252911 is the live
+> latest deposit, working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0 for all text/content +
+> MIT for code, single record** (the earlier Option-B/dual/NC-ND plan was dropped).
+> **Do NOT deposit v1.13** until the round-3 manuscript blockers are cleared, the stale outreach PDF is
+> regenerated or removed, and the author-gated external surfaces (live Zenodo record metadata, mixed-license
+> `.zenodo.json`, v1.13 reviewer packets) are corrected at deposit time. The former "RE-BLOCKED after round-2"
+> narrative is superseded by this line; round-2 detail is retained below as history.
 
 ## ROUND-2 REMEDIATION (from `audits/2026-07-10-round2/`: consistency + errors; evaluation/improvements pending)
 
@@ -126,9 +127,10 @@
 - [x] **R2c-5 — Stale reviewer cover + release credential** (improvements Major 5, Major 4): SUPERSEDED banner
   on `SENDING_COVER_v1.10.md` + DOI fix; `RELEASING.md` token-file pattern retired (→ `ZENODO_TOKEN` env var +
   credential-handling note); `_backups/` added to `.gitignore`.
-- [DEFER] **R2c-6 — Stale executive-summary PDF.** `drafts/paper-resumen-ejecutivo.es.pdf` is a Jul-7 render of
-  the pre-Path-B text (still shows "2 a 3 veces"). `pandoc` is not available in this environment to regenerate
-  it. **Must be regenerated from the corrected `.es.md` or removed before any dissemination.** *(improvements Rec 9)*
+- [x] **R2c-6 — Stale executive-summary PDF.** `drafts/paper-resumen-ejecutivo.es.pdf` was a Jul-7 render of
+  the pre-Path-B text (still showed "2 a 3 veces"); `pandoc` is unavailable here to regenerate it, so it was
+  **removed** (round-3, Critical; recoverable from git history). The corrected `.es.md` source remains; a
+  fresh PDF must be rendered from it before any dissemination. *(improvements Rec 9; round-3 external #1)*
 
 **Deferred as larger research phases (improvements Recs 2–8, 10–15; not publication-blocking for a Path-B
 architecture-and-mechanism paper):** the staged empirical program / pilot (Rec 2 = Tier-8 E4), a one-command

@@ -1,5 +1,12 @@
 # Reviewer Send Packets
 
+> **⚠️ SUPERSEDED — DO NOT SEND AS-IS (2026-07-10).** Every profile packet here targets a v1.8-era draft and
+> its pre-Path-B evidence hierarchy (eight experiments / compound multiplier). The project is now on **Path B**:
+> the multiplier is **retired**; the one genuinely pre-registered confirmatory test is the **symmetry gate**
+> (NO-GO — selection advantage positive but small, median Δ = 0.025 < 0.05). Current working draft **v1.13**;
+> controlling spec `research/claim-and-estimand-contract.md`. Regenerating these to v1.13 Path B (with a v1.13
+> cover) is a pending deliverable (roadmap R2-10). Retained for provenance only.
+
 *All packets © 2026 Mauricio Offermann, CC BY 4.0 — see LICENSE.md at the repository root. Reviewers may share packets with attribution.*
 
 This folder contains standalone review packets by reviewer profile.

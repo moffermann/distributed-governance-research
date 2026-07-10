@@ -1,5 +1,12 @@
 # Core v0 External Review Packet
 
+> **⚠️ SUPERSEDED — DO NOT SEND AS-IS (2026-07-10).** Written for an earlier draft (v1.8-era) and its
+> pre-Path-B framing (compound multiplier; F1–F8 hierarchy). The project is now on **Path B**: the multiplier
+> is **retired**; the pre-registered **symmetry gate returned NO-GO** (selection advantage positive but small,
+> median Δ = 0.025 < 0.05). Current working draft **v1.13**; controlling spec
+> `research/claim-and-estimand-contract.md`. A v1.13 Path-B packet + cover is pending (roadmap R2-10).
+> Retained for provenance only.
+
 ## Purpose
 
 This document is a review packet for external readers of the Distributed Governance System v0.

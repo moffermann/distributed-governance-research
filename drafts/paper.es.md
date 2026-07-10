@@ -435,7 +435,7 @@ la transferencia real.
 ## 5. Análisis formal
 
 Enunciamos los tres modelos y sus resultados; las demostraciones son álgebra
-de un paso y aparecen en la nota acompañante (`research/formal-models.md`).
+de un paso y aparecen en la nota acompañante ([formal-models](../research/formal-models.md)).
 Todos los agentes son neutrales al riesgo; los presupuestos están normalizados
 a 1. La estructura de disuasión a lo largo del texto es la de Becker (1968):
 una violación se disuade cuando la probabilidad de detección por lo que está
@@ -582,7 +582,7 @@ presupuesto de los seguidores de valores por defecto llena proyectos en orden de
 prioridad de planificación. La regla de cierre por meta de financiamiento es
 conmutable. Veinte corridas con semilla por condición; el código es sin
 dependencias y determinista (`scripts/simulation/allocation-sim.mjs`; tablas
-completas en `research/simulation-results.md`).
+completas en [simulation-results](../research/simulation-results.md)).
 
 **Estado de los cocientes compuestos anteriores.** Este aparato basado en agentes
 produjo tres líneas base del mismo cociente de valor por unidad de presupuesto:
@@ -1594,11 +1594,11 @@ requiere un puente de constructo explícito**, no una calibración en un paso.
 
 ---
 
-*Materiales acompañantes: demostraciones formales (`research/formal-models.md`),
+*Materiales acompañantes: demostraciones formales ([formal-models](../research/formal-models.md)),
 código de simulación y tablas completas de resultados
 (`scripts/simulation/allocation-sim.mjs`,
-`research/simulation-results.md`), la base de evidencia de instituciones de
-auditoría (`research/audit-evidence-base.md`), el corpus de la arquitectura
+[simulation-results](../research/simulation-results.md)), la base de evidencia de instituciones de
+auditoría ([audit-evidence-base](../research/audit-evidence-base.md)), el corpus de la arquitectura
 (`docs/`, `knowledge/`), y el registro adversarial completo (`attacks/`,
 `defenses/`, resoluciones aceptadas `docs/67`–`docs/113`; los cuarenta y tres
 ataques resueltos y propagados).*

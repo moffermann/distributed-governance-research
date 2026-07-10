@@ -1,5 +1,12 @@
 # Reviewer-Specific Briefs v0
 
+> **⚠️ SUPERSEDED — DO NOT SEND AS-IS (2026-07-10).** These briefs target an earlier draft (v1.8-era) and its
+> pre-Path-B evidence hierarchy (an F1–F8/eight-experiments framing with a compound multiplier). The project is
+> now on **Path B**: the calibrated multiplier is **retired**; the one genuinely pre-registered confirmatory
+> test is the **symmetry gate** (NO-GO — selection advantage positive but small, median Δ = 0.025 < 0.05).
+> Current working draft is **v1.13**; controlling spec `research/claim-and-estimand-contract.md`. A refreshed
+> v1.13 Path-B packet set + cover is a pending deliverable (roadmap R2-10). Retained for provenance only.
+
 ## Purpose
 
 This document is an internal library of reviewer-specific briefs for the Distributed Governance System v0.
