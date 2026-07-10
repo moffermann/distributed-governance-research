@@ -21,12 +21,12 @@
   computational claims to the contract + fix the v1.7 DOI and 35→43 counts. *(consistency #1)*
 
 ### Major
-- [ ] **R2-2 — E4 sign error in the paper (EN+ES):** "parity where a fully accountable planner faces a
+- [x] **R2-2 — E4 sign error in the paper (EN+ES):** "parity where a fully accountable planner faces a
   silenced platform" is η=1,β=1 but the law is β=1−η; (η=1,β=0)→0.89× is a CENTRAL win misread as a
   distributed win. Fix the prose; the "distributed variance lower" claim is falsified. *(errors M1)*
-- [ ] **R2-3 — "~1.8× of a full-information oracle" wrong denominator (EN+ES):** 1.82 is the distributed/central
+- [x] **R2-3 — "~1.8× of a full-information oracle" wrong denominator (EN+ES):** 1.82 is the distributed/central
   ratio, not benchmark-normalized (~71% max). Say "distributed/central ratio ~1.8×"; finish oracle→benchmark. *(errors M2; consistency #11)*
-- [ ] **R2-4 — Median vs ratio-of-sums conflation (EN+ES + contract):** distinguish pre-registered
+- [x] **R2-4 — Median vs ratio-of-sums conflation (EN+ES + contract):** distinguish pre-registered
   median Δ_w = **0.025** from the post-hoc ratio-of-sums Δ_R = **0.026** [0.023,0.029]; the paper attaches the
   post-hoc CI to the pre-registered gate. *(errors M3)*
 - [ ] **R2-5 — Path B incomplete in conclusion/limitations (EN+ES):** +53-54% foregrounded without the

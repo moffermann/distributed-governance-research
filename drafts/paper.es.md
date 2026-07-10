@@ -42,11 +42,12 @@ con el valor que efectivamente reciben los beneficiarios que la asignación
 central. Pero *mapeamos* esa ventaja en vez de afirmar un solo número: obedece
 a una ley simple —el distribuido domina exactamente cuando la desigualdad de
 voz de la plataforma es menor que la ceguera del planificador central al daño
-difuso (β < 1 − η)—, y va en el modelo desde la paridad hasta cerca de **1.8×**,
-máxima donde el daño es difuso e invisible y cayendo a la paridad solo donde un
-planificador plenamente responsable enfrenta una plataforma que silencia a los
-perjudicados. La ventaja es una propiedad de *incluir a los perjudicados*, no de
-la agregación en sí.
+difuso (β < 1 − η)—, y va en el modelo desde la paridad hasta cerca de **1.8×**
+(un cociente distribuido-a-central), máxima donde el daño es difuso e invisible, y
+alcanzando la paridad a lo largo de la frontera β = 1 − η —p. ej. donde un
+planificador plenamente responsable (η→1) es igualado por una plataforma de voz
+plena (β→0), *no* por una que silencia a los perjudicados. La ventaja es una
+propiedad de *incluir a los perjudicados*, no de la agregación en sí.
 
 **(2) Esa ventaja de asignación resiste la captura organizada —la objeción que
 más presionó una revisión adversarial.** La revisión exigió modelar la captura
@@ -80,9 +81,10 @@ esperados de reportes de tasación igualados**, el mismo pool de proyectos, cost
 y ruido, **entrega mantenida en paridad**, cada uno actuando sobre su propia
 estimación ruidosa y no sobre la verdad— encontró que la diferencia
 distribuido-menos-central es **positiva en todas las celdas pre-especificadas pero
-pequeña: un efecto agrupado de 0.026 de un benchmark de información completa
-(intervalo Monte-Carlo por conglomerado-de-mundos al 95% 0.023–0.029), por debajo
-de su umbral de materialidad pre-registrado de 0.05.** Por lo tanto **retiramos el
+pequeña: la mediana agrupada pre-registrada Δ = 0.025, por debajo de su umbral de
+materialidad pre-registrado de 0.05** (una estimación post-hoc de ratio-of-sums es
+Δ = 0.026, con un intervalo Monte-Carlo por conglomerado-de-mundos al 95%
+[0.023, 0.029]). Por lo tanto **retiramos el
 multiplicador compuesto como efecto calibrado**; las cifras del modelo basado en
 agentes anterior sobreviven solo como salidas condicionales de ese aparato
 (reportadas en la Sección 6), no como una estimación de cuánto eleva el valor la
@@ -670,9 +672,11 @@ solo-de-selección —ambos brazos con presupuestos esperados de reportes de tas
 igualados, el mismo pool de proyectos, costos y ruido, entrega en paridad, cada uno
 actuando sobre su propia estimación ruidosa y no sobre la verdad— encontró que la
 ventaja de selección distribuido-menos-central es **positiva en las 18 celdas
-pre-especificadas pero pequeña: un efecto agrupado de 0.026 de un benchmark de
-información completa (intervalo Monte-Carlo por conglomerado-de-mundos al 95%
-0.023–0.029), por debajo de su umbral de materialidad pre-registrado de 0.05.** El
+pre-especificadas pero pequeña.** El estadístico de decisión pre-registrado es la
+**mediana agrupada Δ = 0.025**, por debajo del umbral de materialidad
+pre-registrado de **0.05**; una estimación **post-hoc** de ratio-of-sums es
+**Δ = 0.026, con un intervalo Monte-Carlo por conglomerado-de-mundos al 95%
+[0.023, 0.029]** (reportada por separado, sobre el proceso generador simulado). El
 multiplicador compuesto, por lo tanto, **no** se reclama como efecto calibrado. Esta
 es una prueba estilizada de un *mecanismo de selección*, no una implementación
 validada de Core v0: sus variables de valor y crédito son puntajes abstractos, no
@@ -857,12 +861,13 @@ proyectos por S⁺ − θ·S⁻ con θ_C = η y θ_D = 1 − β, de modo que el 
 domina exactamente cuando su coeficiente está más cerca del peso verdadero del
 daño, que es uno —es decir, **β < 1 − η**—. La simulación confirma la ley
 (paridad en la anti-diagonal η + β = 1) y cuantifica la degradación del valor
-entregado fuera de ella (desde la paridad hasta ~1.8× de un oráculo de
-información completa a lo largo de la caja plausible). La ventaja es así una
-propiedad de *incluir a los perjudicados*, no de la agregación en sí, y se
-silencia en el rincón donde un planificador responsable enfrenta una plataforma
-que silencia a los perjudicados —lo que absorbe la objeción del sesgo de
-participación dentro del propio eje β del modelo en vez de dejarla externa.
+entregado fuera de ella (desde la paridad hasta ~1.8× como **cociente
+distribuido-a-central** a lo largo de la caja plausible —esto es D/C, no una
+fracción del benchmark de información completa). La ventaja es así una propiedad de
+*incluir a los perjudicados*, no de la agregación en sí; alcanza la paridad a lo
+largo de la anti-diagonal β = 1 − η y se convierte en una victoria del central por
+debajo de ella (β > 1 − η) —lo que absorbe la objeción del sesgo de participación
+dentro del propio eje β del modelo en vez de dejarla externa.
 Ningún extremo se asume: η se *barre*, no se fija, y un η bajo pero no nulo es un
 régimen defendido, no una premisa. La literatura del daño difuso (los costos no
 vistos de Bastiat; la organización asimétrica de Olson en temas disputados; el
@@ -904,12 +909,15 @@ de paridad.** Escribiendo cada institución como un estimador sesgado que rankea
 proyectos por S⁺ − θ·S⁻, el central conserva θ_C = η del daño percibido y el
 distribuido revela θ_D = 1 − β (la tasa de participación se cancela del ranking);
 como el peso verdadero del daño es uno, el brazo distribuido entrega más valor
-verdadero **si y solo si β < 1 − η**, con paridad en la anti-diagonal. Una
-lectura sesgo-varianza fija el único caso fuera de la diagonal: sobre la línea de
-paridad el sesgo se cancela y gana el estimador de menor varianza —el ruido de
-revelación del distribuido es cero (cada quien conoce su propio valor), el ruido
-de proxy del central no—, así que la paridad medida queda apenas del lado del
-distribuido (η = 1, β = 0 → 0.89×). **(ii) El umbral de captura.** De renta >
+verdadero **si y solo si β < 1 − η**, con paridad en la anti-diagonal. Una lectura
+sesgo-varianza *predeciría* que sobre la línea de paridad, donde el sesgo se
+cancela, gana el estimador de menor varianza —el ruido de revelación del
+distribuido es cero (cada quien conoce su propio valor), el ruido de proxy del
+central no—. La simulación implementada **no** lo confirma en el rincón
+responsable: en (η = 1, β = 0) el cociente medido es **0.89× —una victoria del
+central (D/C < 1)**—, así que la lectura honesta es la ley de paridad sin ruido
+β = 1 − η, y el ladeo sesgo-varianza hacia el distribuido no se sostiene allí.
+**(ii) El umbral de captura.** De renta >
 adquisición + P(detección)·pena, el umbral del central λ\*_C = (k_c + p_c·f)/C
 tiende a cero al reducirse su detección, mientras el del distribuido λ\*_D = k_d +
 p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la razón

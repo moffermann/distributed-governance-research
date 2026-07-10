@@ -38,10 +38,11 @@ value beneficiaries actually receive more closely than central allocation. We
 *map* this advantage rather than assert a single number: it obeys a simple law
 — distributed dominates exactly when the platform's voice inequality is smaller
 than the central planner's blindness to diffuse harm (β < 1 − η) — ranging in
-the model from rough parity to about **1.8×**, largest where harm is diffuse and
-unseen and falling to parity only where a fully accountable planner faces a
-platform that silences the harmed. The edge is a property of *including the
-harmed*, not of aggregation itself.
+the model from rough parity to about **1.8×** (a distributed-to-central ratio),
+largest where harm is diffuse and unseen, and reaching parity along the boundary
+β = 1 − η — e.g. where a fully accountable planner (η→1) is matched by a
+fully-voiced platform (β→0), *not* by one that silences the harmed. The edge is a
+property of *including the harmed*, not of aggregation itself.
 
 **(2) That allocation edge resists organized capture — the objection an
 adversarial review pressed hardest.** The review demanded capture be modelled on
@@ -72,8 +73,9 @@ selection-only stress test** — both arms with **matched expected appraisal-rep
 budgets**, the same candidate pool, costs and noise, **delivery held at parity**,
 each acting on its own noisy estimate rather than on ground truth — found the
 distributed-minus-central difference **positive in every pre-specified cell but
-small: a pooled 0.026 of a full-information benchmark (95% world-cluster Monte-Carlo
-interval 0.023–0.029), below its pre-registered 0.05 materiality gate.** We
+small: the pre-registered pooled median Δ = 0.025, below its pre-registered 0.05
+materiality gate** (a post-hoc ratio-of-sums estimate is Δ = 0.026 with a 95%
+world-cluster Monte-Carlo interval [0.023, 0.029]). We
 therefore **retire the compound multiplier as a calibrated effect**; the earlier
 agent-based figures survive only as conditional outputs of that apparatus (reported
 in Section 6), not as an estimate of how much the architecture raises value. The
@@ -612,9 +614,11 @@ for magnitude inference** and are no longer offered as the paper's headline.
 stress test — both arms with matched expected appraisal-report budgets, the same
 candidate pool, costs and noise, delivery at parity, each acting on its own noisy
 estimate rather than ground truth — found the distributed-minus-central selection
-advantage **positive in every one of 18 pre-specified cells but small: a pooled
-0.026 of a full-information benchmark (95% world-cluster Monte-Carlo interval
-0.023–0.029), below its pre-registered 0.05 materiality gate.** The compound
+advantage **positive in every one of 18 pre-specified cells but small.** The
+pre-registered decision statistic is the **pooled median Δ = 0.025**, below the
+pre-registered **0.05 materiality gate**; a **post-hoc** ratio-of-sums estimate is
+**Δ = 0.026, with a 95% world-cluster Monte-Carlo interval [0.023, 0.029]**
+(reported separately, on the simulated data-generating process). The compound
 multiplier is therefore **not** claimed as a calibrated effect. This is a stylized
 test of a *selection mechanism*, not a validated implementation of Core v0: its
 value and credit variables are abstract scores, not measured visibility,
@@ -789,11 +793,12 @@ ranking projects by S⁺ − θ·S⁻ with θ_C = η and θ_D = 1 − β, so the
 dominates exactly when its coefficient is closer to the true harm-weight of one
 — i.e. **β < 1 − η**. The simulation confirms the law (parity on the
 anti-diagonal η + β = 1) and quantifies the delivered-value degradation off it
-(rough parity to ~1.8× of a full-information oracle across the plausible box).
-The advantage is thus a property of *including the harmed*, not of aggregation
-per se, and it is silent in the corner where an accountable planner faces a
-platform that silences the harmed — which absorbs the participation-bias
-objection into the model's own β axis rather than leaving it external. Neither
+(rough parity to ~1.8× as a **distributed-to-central ratio** across the plausible
+box — this is D/C, not a fraction of the full-information benchmark). The advantage
+is thus a property of *including the harmed*, not of aggregation per se; it reaches
+parity along the anti-diagonal β = 1 − η and turns into a central win below it
+(β > 1 − η) — which absorbs the participation-bias objection into the model's own
+β axis rather than leaving it external. Neither
 extreme is assumed: η is *swept*, not fixed, and a low but non-zero η is a
 defended regime, not a premise. The diffuse-harm literature (Bastiat's unseen
 costs; Olson's asymmetric organization on contested issues; Wilson's
@@ -833,11 +838,14 @@ Writing each institution as a biased estimator that ranks projects by S⁺ − �
 the central keeps θ_C = η of perceived harm and the distributed reveals
 θ_D = 1 − β (the participation rate cancels from the ranking); since the true
 harm-weight is one, the distributed arm delivers more true value **iff
-β < 1 − η**, parity on the anti-diagonal. A bias–variance reading fixes the one
-off-diagonal case: on the parity line the bias cancels and the lower-variance
-estimator wins — the distributed's revelation noise is zero (a funder knows her
-own value), the central's proxy noise is not — so measured parity sits just
-inside the distributed's side (η = 1, β = 0 → 0.89×). **(ii) The capture
+β < 1 − η**, parity on the anti-diagonal. A bias–variance reading would predict
+that on the parity line, where the bias cancels, the lower-variance estimator wins —
+the distributed's revelation noise is zero (a funder knows her own value), the
+central's proxy noise is not. The implemented simulation does **not** bear this out
+at the accountable corner: at (η = 1, β = 0) the measured ratio is **0.89× — a
+central win (D/C < 1)** — so the honest reading is the noise-free parity law
+β = 1 − η, and the bias–variance tilt toward the distributed is not supported there.
+**(ii) The capture
 threshold.** From rent > acquisition + P(detect)·penalty, the central's threshold
 λ\*_C = (k_c + p_c·f)/C falls toward zero as its detection shrinks, while the
 distributed's λ\*_D = k_d + p_d·f/C is *floored* by the equal-wallet acquisition
