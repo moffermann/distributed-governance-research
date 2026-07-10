@@ -699,7 +699,33 @@ Exit criteria:
 
 - at least one testable prototype or case study is defined.
 
-## Value model v2 — S/P agenda-capture rebuild (2026-07-09, TOP OF STACK)
+## Opportunity-cost hurdle — mechanism-fidelity refinement (2026-07-10, TOP OF STACK)
+
+The v2 headline was corrected to ~3.0× using a net-negative share of ~35% (Pohl-Mihaljek p_U+≈0.65,
+`drafts/positive-net-social-value-calibration.md`). That 35% is **net of the opportunity cost of
+capital** and splits (per Pohl-Mihaljek) into **~8% true harm (EIRR ≤ 0, S<0)** and **~27% below the
+social hurdle rate (S>0 gross, but wastes capital)**. The current model represents the whole 35% by
+lowering `mean` — i.e. as if all 35% were **true harm (S<0)**. That is a *magnitude-robust but
+mechanism-imprecise* shortcut: it lets the ~27% opportunity-cost failures masquerade as harm, which
+artificially over-revives harm-blindness relative to agenda-capture.
+
+```text
+TODO (opportunity-cost hurdle):
+  - Add an explicit opportunity-cost hurdle h to e5-sp-model.mjs: net_j = S_j - h*cost_j.
+    Oracle/distributed select on NET value (avoid below-hurdle); the central selects on credit P
+    (funds below-hurdle projects for credit) -> the below-hurdle failure is AGENDA-CAPTURE, not
+    harm-blindness. Keep TRUE harm (S<0) at ~8% (EIRR<=0), put ~27% as S>0-below-hurdle.
+  - CALIBRATION TARGET (the clean one): tune h + corr(S,P) so the CENTRAL's *funded* portfolio is
+    ~65% net-positive (Doc 1's p_U+ is an IMPLEMENTED-project share = a model OUTPUT, like %oracle),
+    AND its production efficiency ~= 0.75 (Doc 2). Report across p_U+ in [0.50,0.75] and lambda_PI
+    in [0.20,0.30].
+  - EXPECTED: magnitude stays ~3.0x (band ~2.6-3.6x); the MECHANISM story sharpens -- agenda-capture
+    stays the primary driver (funds below-hurdle by credit), harm-blindness a smaller co-mechanism
+    (only the ~8% true harm). Re-run frontier + --cats + --tornado; re-confirm held-out; update
+    e4e5-value-model-v2.md, e5-sp-preregistration.md, e5-sp-paper-propagation.md.
+```
+
+## Value model v2 — S/P agenda-capture rebuild (2026-07-09, now UNDER the hurdle refinement)
 
 Converged with the author via a Socratic dialogue (full spec: `research/e4e5-value-model-v2.md`).
 A targeted mechanism fix, NOT a from-scratch rebuild. Core: we modeled the politician's value-
