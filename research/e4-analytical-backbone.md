@@ -1,5 +1,19 @@
 # E4 — Analytical Backbone: three closed forms the simulations obey
 
+> **CORRECTION / SUPERSEDED AS PRIMARY MECHANISM (2026-07-10).** The parity law **β\* = 1 − η**
+> (Proposition 1) models the distributed advantage as the central being **blind to harm**. Value
+> model v2 (`e4e5-value-model-v2.md`, `e5-sp-model.mjs`, pre-registered 7/7) showed — and confirmed
+> on held-out seeds — that **harm-blindness is nearly inert when net-harm is rare** (a harm-blind
+> central still delivers ~99% of oracle at <1% net-negative projects, which the author establishes is
+> the real world). The **primary** mechanism is instead **agenda-capture**: the central maximizes
+> political credit-claiming **P** (Mayhew 1974 / Arnold 1990 / Gilens-Page 2014), misaligned with
+> social value **S** at corr(S,P) < 1. `e5-sp-model.mjs` is the corrected E4 — it **nests** this
+> backbone (its `w=1` reproduces the harm-blind central) and adds the agenda-capture central (`w=0`).
+> **This backbone remains valid as the RARE DIVISIVE / net-harmful SPECIAL CASE** (where Sp≈Sm and
+> harm actually bites), not the headline. Props 2–3 (capture threshold, detection floor) and the
+> invariances are unaffected. Read this note as "the special-case algebra"; read v2 for the modal
+> mechanism.
+
 ## Status
 The constructive-review round (see `e4-constructive-review-synthesis.md`) found that
 the entire E4 line (v4 frontier + v5 capture) is governed by three closed-form
