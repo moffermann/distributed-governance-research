@@ -4,8 +4,8 @@ title: "Distributed Governance Research: A Functional Architecture for Selective
 authors:
   - family-names: "Offermann"
     given-names: "Mauricio"
-version: "v1.8"
-date-released: "2026-07-04"
+version: "v1.12"
+date-released: "2026-07-10"
 url: "https://github.com/moffermann/distributed-governance-research"
 doi: 10.5281/zenodo.21193846
 license: CC-BY-4.0
