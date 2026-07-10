@@ -5,7 +5,7 @@ authors:
   - family-names: "Offermann"
     given-names: "Mauricio"
 version: "v1.12"
-date-released: "2026-07-10"
+date-released: "2026-07-07"
 url: "https://github.com/moffermann/distributed-governance-research"
 doi: 10.5281/zenodo.21193846
 license: CC-BY-4.0
@@ -17,5 +17,5 @@ preferred-citation:
     - family-names: "Offermann"
       given-names: "Mauricio"
   year: 2026
-  notes: "Working paper v1.12, drafts/paper.md; earlier archived versions carry their own DOIs, and the concept DOI above always resolves to the latest deposited version"
+  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below, published 2026-07-07); current working draft v1.13 (drafts/paper.md, Path B reframe -- multiplier retired, not yet deposited). Earlier archived versions carry their own DOIs; the concept DOI above always resolves to the latest deposited version"
   doi: 10.5281/zenodo.21252911
