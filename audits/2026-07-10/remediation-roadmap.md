@@ -115,14 +115,15 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   *(consistency number-drift)*
 
 ## TIER 3 — External-facing correctness (must fix before any deposit; ~½ day)
-- [x] **T3.1 — License: DECIDED 2026-07-10 (author chose Option B — dual, separate records).** Corpus + code
-  stay CC BY 4.0 / MIT; the **manuscript** (paper.md/.es.md, docs/101, essay/explainer, reviewer packets) is
-  **CC BY-NC-ND 4.0** and, **from v1.13**, is deposited as a **separate Zenodo record**. LICENSE.md already
-  documents this dual scheme (no change needed). Prepared: `.zenodo.json` now scoped to the corpus/code record
-  with an explicit license-map note; new `drafts/paper.zenodo.json` = the manuscript record metadata
-  (cc-by-nc-nd-4.0); RELEASING.md has the dual-record deposit procedure + the irrevocable-grant note (v1.12's
-  manuscript copy stays CC-BY). **Remaining = author action:** actually deposit the two v1.13 records on Zenodo
-  (paused / author-gated). *(consistency C2)*
+- [x] **T3.1 — License: DECIDED 2026-07-10 (final: author chose full openness — CC BY 4.0 everywhere).**
+  (First leaned Option B / dual with a protected NC-ND manuscript, then reversed: the code + corpus are
+  already public MIT/CC-BY, so a protected manuscript would not protect the implementation, and the ideas are
+  public via the paper regardless — so full CC BY is the coherent, honest choice.) **All text + research
+  content (corpus + manuscript + publishable model + essay/explainer + reviewer packets) = CC BY 4.0; code =
+  MIT; attribution required.** Reverted every surface: paper headers EN+ES, LICENSE.md, CITATION.cff,
+  `.zenodo.json` (single record), README, docs/101, external-review READMEs; deleted the separate-record
+  metadata `drafts/paper.zenodo.json`; RELEASING.md back to a single-record deposit. No conflict remains.
+  *(consistency C2)*
 - [x] **T3.2 — Version/deposit: RESOLVED 2026-07-10.** Verified read-only via the Zenodo API: record
   **21252911 is live, v1.12, published 2026-07-07, is_last=true, CC BY 4.0** — falsifying the stale "v1.8
   paused" assumption. Author confirmed the next version is **v1.13** (this Path B reframe). Aligned all local

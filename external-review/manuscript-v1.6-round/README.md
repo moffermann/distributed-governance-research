@@ -1,6 +1,6 @@
 # Manuscript v1.6 Review Round — Record
 
-*Internal round record © 2026 Mauricio Offermann, CC BY-NC-ND 4.0 — see LICENSE.md at the repository root.*
+*Internal round record © 2026 Mauricio Offermann, CC BY 4.0 — see LICENSE.md at the repository root.*
 
 ## What this round was
 

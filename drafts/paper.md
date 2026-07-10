@@ -2,7 +2,7 @@
 
 **Working paper — v1.13 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered symmetric selection-only stress test returned NO-GO (see §6 and the claim & estimand contract) — and rests on the architecture and the qualitative mechanism. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
 
-*© 2026 Mauricio Offermann. Licensed CC BY-NC-ND 4.0 pending venue selection — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI: this manuscript's own concept DOI is assigned on its separate CC BY-NC-ND deposit (v1.13; pending — see RELEASING.md). Note: 10.5281/zenodo.21193846 is the concept DOI of the separate research-corpus record, not of this manuscript.*
+*© 2026 Mauricio Offermann. Licensed CC BY 4.0 — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
 ## Abstract
 

@@ -34,6 +34,6 @@ The satellite computational-experiments program (adversarial architecture ABM, b
 
 ## License and citation
 
-Archived and citable: DOI [10.5281/zenodo.21252911](https://doi.org/10.5281/zenodo.21252911) (v1.12, latest deposited version, verified live 2026-07-10) · [10.5281/zenodo.21193846](https://doi.org/10.5281/zenodo.21193846) (**corpus-record** concept DOI — resolves to the latest corpus deposit). Under the dual-license scheme (from v1.13), the **manuscript** gets its **own** concept DOI on its separate CC BY-NC-ND deposit (pending). (The live v1.12 record's title string still reads "v1.8"; correcting it requires a metadata redeposit — pending author.)
+Archived and citable: DOI [10.5281/zenodo.21252911](https://doi.org/10.5281/zenodo.21252911) (v1.12, latest deposited version, verified live 2026-07-10) · [10.5281/zenodo.21193846](https://doi.org/10.5281/zenodo.21193846) (concept DOI — always resolves to the latest deposited version). Licensed CC BY 4.0 (all text + research content, including the manuscript) / MIT (code); attribution required. (The live v1.12 record's title string still reads "v1.8"; correcting it requires a metadata redeposit — pending author.)
 
-Dual-licensed: research corpus CC BY 4.0; manuscript, publishable model, and reviewer packets CC BY-NC-ND 4.0 (pending venue selection); code MIT. See `LICENSE.md`. To cite this work, see `CITATION.cff`.
+Licensed **CC BY 4.0** for all text and research content (including the working paper, publishable model, and reviewer packets) and **MIT** for code. Attribution required. See `LICENSE.md`. To cite this work, see `CITATION.cff`.

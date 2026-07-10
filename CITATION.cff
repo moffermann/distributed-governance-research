@@ -9,7 +9,7 @@ date-released: "2026-07-10"
 url: "https://github.com/moffermann/distributed-governance-research"
 doi: 10.5281/zenodo.21193846
 license: CC-BY-4.0
-notes: "Dual-licensed: research corpus CC BY 4.0; manuscript and reviewer packets CC BY-NC-ND 4.0; code MIT. See LICENSE.md."
+notes: "Licensed CC BY 4.0 for all text and research content (including the working paper); code MIT. Attribution required. See LICENSE.md."
 preferred-citation:
   type: unpublished
   title: "A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution"
@@ -17,5 +17,5 @@ preferred-citation:
     - family-names: "Offermann"
       given-names: "Mauricio"
   year: 2026
-  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below = the v1.12 corpus record that bundled the manuscript, published 2026-07-07); current working draft v1.13 (drafts/paper.md, Path B reframe -- multiplier retired, not yet deposited). The top-level `doi` (21193846) is the CORPUS-record concept DOI; from v1.13 the manuscript is a SEPARATE CC BY-NC-ND record with its OWN concept DOI (pending) -- update this preferred-citation DOI to that manuscript DOI after its first deposit"
+  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below, 10.5281/zenodo.21252911, published 2026-07-07); current working draft v1.13 (drafts/paper.md, Path B reframe -- multiplier retired, not yet deposited). The concept DOI (10.5281/zenodo.21193846, top-level) always resolves to the latest deposited version. Single record: corpus + manuscript + code, all CC BY 4.0 / MIT."
   doi: 10.5281/zenodo.21252911

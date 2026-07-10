@@ -4,7 +4,7 @@
 
 *Traducción al español del working paper v1.13 (drafts/paper.md, versión autoritativa en inglés).*
 
-*© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI: el concept DOI propio de este manuscrito se asigna en su depósito separado CC BY-NC-ND (v1.13; pendiente — véase RELEASING.md). Nota: 10.5281/zenodo.21193846 es el concept DOI del record separado del corpus de investigación, no de este manuscrito.*
+*© 2026 Mauricio Offermann. Licenciado bajo CC BY 4.0 — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI (de concepto, siempre resuelve a la última versión): 10.5281/zenodo.21193846.*
 
 ## Resumen
 
