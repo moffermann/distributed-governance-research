@@ -42,7 +42,7 @@ function buildWorld(seed, rho){
   const {N,K,mean,sd,projSpread,costHi}=PARAMS;
   const rng=mulberry32(seedFor(seed, 999)); const g=mkGauss(rng);
   const interested=Array.from({length:K},()=>[]); const cost=new Float64Array(K);
-  const S=new Float64Array(K), P=new Float64Array(K), cHarmBlind=new Float64Array(K);
+  const S=new Float64Array(K), P=new Float64Array(K), cHarmBlind=new Float64Array(K), reachA=new Float64Array(K);
   const rc=Math.sqrt(Math.max(0,1-rho*rho)), eta=PARAMS.eta, {muF,sigF,sigP}=PARAMS;
   for(let j=0;j<K;j++){
     cost[j]=1+(costHi-1)*rng();
@@ -55,35 +55,42 @@ function buildWorld(seed, rho){
       hb += (v<0 ? eta*v : v); } }                       // central's harm-blind read of value (attenuate v<0 by eta)
     S[j]=sSum;                                           // true social value = reach x quality (heavy-tailed via reach, lopsided-positive)
     P[j]=Math.exp(sigP*cLat);                            // credit-claiming, DECOUPLED from reach at rho<1
-    cHarmBlind[j]=hb;
+    cHarmBlind[j]=hb; reachA[j]=reach;
   }
-  return {interested,cost,S,P,cHarmBlind};
+  return {interested,cost,S,P,cHarmBlind,reach:reachA};
 }
 
-function fund(score, cost, K, budget){
+function fund(score, cost, K, budget, gate){
   const idx=Array.from({length:K},(_,j)=>j).sort((a,b)=> score[b]/cost[b]-score[a]/cost[a]);
   const chosen=[]; let sp=0;
-  for(const j of idx){ if(score[j]<=0) continue; if(sp+cost[j]<=budget){chosen.push(j); sp+=cost[j];} }
+  for(const j of idx){ if(score[j]<=0) continue; if(gate&&gate[j]) continue; if(sp+cost[j]<=budget){chosen.push(j); sp+=cost[j];} }
   return chosen;
 }
 const deliver=(funded,S,f)=>{ let s=0; for(const j of funded) s+=S[j]; return s*f; };
 
-function evalWorld(seed, rho){
+function evalWorld(seed, rho, lumpiness=0){
   const {K,p,beta,w,fWeak,fVer,budgetFrac}=PARAMS;
-  const W=buildWorld(seed,rho); const {interested,cost,S,P,cHarmBlind}=W;
+  const W=buildWorld(seed,rho); const {interested,cost,S,P,cHarmBlind,reach}=W;
   let tot=0; for(let j=0;j<K;j++) tot+=cost[j]; const budget=tot*budgetFrac;
   const rd=mulberry32(seedFor(seed, 4242));
   // DISTRIBUTED: participation sample of the interested; the harmed (v<0) under-participate (coverage, E4)
   const dis=new Float64Array(K);
   for(let j=0;j<K;j++){ let sum=0; for(const v of interested[j]){ const pp = v<0 ? p*(1-beta) : p; if(rd()<pp) sum+=v; } dis[j]=sum; }
+  // LUMPINESS THRESHOLD: the atomized distributed can only BUILD project j if its funder base can pool its cost.
+  // Raising capacity ~ reach_j * omega (omega = budget per interested-slot). Gate j if reach*omega < L*cost.
+  // The CENTRAL funds from a pooled budget -> NO per-project threshold. So the threshold hurts only the distributed's tail.
+  let gate=null, gatedOracleVal=0;
+  if(lumpiness>0){ let totReach=0; for(let j=0;j<K;j++) totReach+=reach[j]; const omega=budget/(totReach||1);
+    gate=new Array(K).fill(false);
+    for(let j=0;j<K;j++) if(reach[j]*omega < lumpiness*cost[j]){ gate[j]=true; if(S[j]>0) gatedOracleVal+=S[j]; } }
   // CENTRAL: (1-w) credit P + w harm-blind value. creditScale puts P on the value scale (match mean magnitude).
   let mS=0,mP=0; for(let j=0;j<K;j++){ mS+=Math.abs(S[j]); mP+=Math.abs(P[j]); } const creditScale=mS/(mP||1);
   const cen=new Float64Array(K); for(let j=0;j<K;j++) cen[j]=(1-w)*creditScale*P[j] + w*cHarmBlind[j];
   const o=deliver(fund(S,cost,K,budget),S,1.0);
-  const d=deliver(fund(dis,cost,K,budget),S,fVer);
-  const c=deliver(fund(cen,cost,K,budget),S,fWeak);
-  let neg=0; for(let j=0;j<K;j++) if(S[j]<0) neg++;
-  return {o,d,c,negShare:neg/K,S,P};
+  const d=deliver(fund(dis,cost,K,budget,gate),S,fVer);   // distributed gated by the lumpiness threshold
+  const c=deliver(fund(cen,cost,K,budget),S,fWeak);       // central: pooled budget, no threshold
+  let neg=0,gatedN=0; for(let j=0;j<K;j++){ if(S[j]<0) neg++; if(gate&&gate[j]) gatedN++; }
+  return {o,d,c,negShare:neg/K,gatedN,gatedOracleVal,S,P};
 }
 
 function corr(x,y){ const n=x.length; let mx=0,my=0; for(let i=0;i<n;i++){mx+=x[i];my+=y[i];} mx/=n;my/=n;
@@ -97,11 +104,30 @@ if(pos[0]!==undefined) PARAMS.N=+pos[0]; if(pos[1]!==undefined) PARAMS.K=+pos[1]
 for(const a of process.argv.slice(2)) if(a.startsWith("--")){ const [k,v]=a.slice(2).split("="); if(k in PARAMS && v!==undefined) PARAMS[k]=isNaN(+v)?v:+v; }
 
 const t0=Date.now();
+const f=x=>x.toFixed(2); const sum=a=>a.reduce((p,x)=>p+x,0);
+
+// ---- LUMPINESS THRESHOLD SWEEP: does the invisible low-reach tail survive an atomized distributed? ----
+if(process.argv.includes("--sweepL")){
+  const rhoSweep=(PARAMS.rho!==undefined?PARAMS.rho:0.2);   // fix rho at a realistic captured-agenda point
+  console.log("LUMPINESS SWEEP (atomized distributed can only build project j if reach*omega >= L*cost; central pooled, no threshold)");
+  console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", rho="+rhoSweep+", beta="+PARAMS.beta+", mean="+PARAMS.mean+"\n");
+  console.log("   L   | projects gated | oracle-value gated | dis %oracle |  Delta=(d-c)/o  | ratio d/c");
+  for(const L of [0, 0.5, 1, 2, 4, 8, 16]){
+    const R=Array.from({length:PARAMS.seeds},(_,i)=>1000+i).map(s=>evalWorld(s,rhoSweep,L));
+    const d=R.map(r=>r.d), c=R.map(r=>r.c), o=R.map(r=>r.o);
+    const Delta=(sum(d)-sum(c))/sum(o), ratio=sum(d)/sum(c), dOra=100*(sum(d)/PARAMS.fVer)/sum(o);
+    const gN=sum(R.map(r=>r.gatedN))/R.length, gV=100*sum(R.map(r=>r.gatedOracleVal))/sum(o.map((x)=>x));  // gated oracle value as % of delivered oracle
+    console.log("  "+L.toFixed(1).padStart(4)+" |   "+gN.toFixed(0).padStart(4)+"/"+PARAMS.K+"    |     "+gV.toFixed(1).padStart(5)+"%       |    "+dOra.toFixed(0).padStart(3)+"%     |  "+(Delta>=0?"+":"")+f(Delta)+"  |  "+f(ratio)+"x");
+  }
+  console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  L=0 = no threshold. As L rises, low-reach projects can't pool their cost -> drop from the distributed.");
+  console.log("  This is the RAW threshold problem, BEFORE the design's rescue layers (assurance contracts / matching-funds / default routing).");
+  process.exit(0);
+}
+
 console.log("E5 v2 / corrected-E4 — central max P (credit), distributed max S via participation coverage (beta="+PARAMS.beta+"), oracle max S.");
 console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PARAMS.mean+", sd="+PARAMS.sd+", projSpread="+PARAMS.projSpread+", w(value weight)="+PARAMS.w+", delivery "+PARAMS.fWeak+"/"+PARAMS.fVer+" (1.43x)");
 console.log("  rho=corr(S,P) agenda<->value misalignment. rho=1 & w=0 -> P~=S -> parity; w=1 -> E4 (harm-blind central).\n");
 console.log("  rho  | corr(S,P) | net-neg% | cen %oracle | dis %oracle |  Delta=(d-c)/o [95% CI]  | ratio d/c");
-const f=x=>x.toFixed(2); const sum=a=>a.reduce((p,x)=>p+x,0);
 for(const rho of PARAMS.RHOS){
   const R=Array.from({length:PARAMS.seeds},(_,i)=>1000+i).map(s=>evalWorld(s,rho));
   const d=R.map(r=>r.d), c=R.map(r=>r.c), o=R.map(r=>r.o);
