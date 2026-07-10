@@ -17,5 +17,5 @@ preferred-citation:
     - family-names: "Offermann"
       given-names: "Mauricio"
   year: 2026
-  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below, published 2026-07-07); current working draft v1.13 (drafts/paper.md, Path B reframe -- multiplier retired, not yet deposited). Earlier archived versions carry their own DOIs; the concept DOI above always resolves to the latest deposited version"
+  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below = the v1.12 corpus record that bundled the manuscript, published 2026-07-07); current working draft v1.13 (drafts/paper.md, Path B reframe -- multiplier retired, not yet deposited). The top-level `doi` (21193846) is the CORPUS-record concept DOI; from v1.13 the manuscript is a SEPARATE CC BY-NC-ND record with its OWN concept DOI (pending) -- update this preferred-citation DOI to that manuscript DOI after its first deposit"
   doi: 10.5281/zenodo.21252911
