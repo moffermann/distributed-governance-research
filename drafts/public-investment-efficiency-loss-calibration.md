@@ -1,0 +1,326 @@
+# A Literature-Grounded Calibration of Public Investment Efficiency Loss
+
+## Purpose and central conclusion
+
+This note establishes a defensible calibration for the share of the potential output of public investment that is not converted into effective infrastructure coverage and quality because of inefficiencies in the public investment process.
+
+For the Core v0 analytical framework, the recommended calibration is:
+
+\[
+\boxed{\lambda_{PI}^{\mathrm{base}}=0.25}
+\]
+
+with a sensitivity interval of:
+
+\[
+\boxed{\lambda_{PI}\in[0.20,0.30]}.
+\]
+
+The upper bound is anchored directly to the International Monetary Fund's cross-country estimate that approximately 30 percent of the potential gains from public investment are lost through inefficiencies. The 25 percent baseline is a deliberately conservative midpoint calibration rather than a claim that the literature identifies an exact universal mean of 25 percent. The 20 percent lower bound is used to test whether Core v0's conclusions survive a materially more favorable assessment of existing public-sector performance.
+
+The parameter applies to **public investment and the infrastructure outputs produced from it**. It must not be represented as the proportion of the entire government budget that disappears, is stolen, or fails to reach projects.
+
+---
+
+## 1. The quantity being calibrated
+
+Let:
+
+- \(K_j\) denote the accumulated public capital input available in jurisdiction \(j\);
+- \(Y_j\) denote a composite measure of the coverage and quality of public infrastructure produced from that capital;
+- \(Y^*(K_j)\) denote the maximum infrastructure output observed or estimated as feasible at the same level of public capital, represented by an empirical efficiency frontier.
+
+Define public investment efficiency as:
+
+\[
+E_j=\frac{Y_j}{Y^*(K_j)},
+\qquad 0\leq E_j\leq1.
+\]
+
+The corresponding public investment efficiency loss, or efficiency gap, is:
+
+\[
+\lambda_{PI,j}=1-E_j
+=1-\frac{Y_j}{Y^*(K_j)}.
+\]
+
+Thus, if a country achieves 75 units of infrastructure coverage and quality where the estimated frontier indicates that 100 units are feasible with the same public capital input, then:
+
+\[
+E_j=0.75,
+\qquad
+\lambda_{PI,j}=0.25.
+\]
+
+This does not imply that 25 percent of the money was literally diverted. It means that the observed public capital produces approximately 25 percent less measured infrastructure output than the estimated best-practice frontier permits.
+
+---
+
+## 2. The principal empirical anchor: the IMF's PIE-X framework
+
+The principal quantitative basis is the IMF policy paper *Making Public Investment More Efficient* (International Monetary Fund, 2015).
+
+The study constructs a cross-country Public Investment Efficiency Index, PIE-X, for 134 countries. Public investment is measured through general-government gross fixed capital formation and the accumulated public capital stock. Infrastructure output is measured using indicators of both access to and quality across economic and social infrastructure, including roads, electricity, water, education, and health facilities.
+
+The IMF defines public investment efficiency as the relationship between the value of the public capital stock and the measured coverage and quality of infrastructure. A country's efficiency is calculated as its distance from an empirical frontier formed by countries producing the greatest infrastructure coverage and quality for a given public capital stock.
+
+The central finding is explicit:
+
+> Comparing public capital inputs with infrastructure coverage and quality across countries reveals average inefficiencies in public investment processes of around 30 percent.
+
+The report restates the result as approximately 30 percent of the potential gains from public investment being lost because of inefficiencies in public investment processes.
+
+Formally, the IMF result can be represented as:
+
+\[
+\mathbb{E}[\lambda_{PI,j}]\approx0.30
+\]
+
+for the cross-country sample and measurement framework used in that study.
+
+The same report finds that the most efficient public investors receive roughly twice the growth impact from their investment as the least efficient, and that stronger public investment management institutions could close up to two-thirds of the measured efficiency gap.
+
+---
+
+## 3. What the IMF estimate captures
+
+The efficiency gap is broad enough to reflect failures occurring throughout the public investment cycle. These include, among other mechanisms:
+
+1. weak strategic planning and coordination;
+2. selection of lower-value sectors or projects;
+3. inaccurate or strategically distorted project appraisal;
+4. fragmented capital and recurrent budgeting;
+5. unpredictable funding;
+6. procurement weaknesses;
+7. delays and cost overruns;
+8. weak project management and monitoring;
+9. inadequate maintenance of completed assets;
+10. corruption, rent extraction, or diversion insofar as these reduce the infrastructure output generated by the measured capital input.
+
+The metric is therefore outcome-oriented. It does not require every lost unit of potential output to be classified as corruption, fraud, waste, administrative error, poor selection, delay, or technical incapacity. It measures the aggregate shortfall in output relative to the frontier.
+
+This property makes the measure useful for Core v0. The architecture is concerned with how effectively public resources are transformed into delivered social value, regardless of whether a particular failure is deliberate or accidental.
+
+---
+
+## 4. What the estimate does not capture
+
+The 30 percent figure must be interpreted within its empirical domain.
+
+### 4.1 It is not a budgetary disappearance rate
+
+The IMF does not estimate:
+
+\[
+\frac{\text{money stolen or missing}}{\text{total government budget}}.
+\]
+
+It estimates a production-efficiency gap between public capital inputs and infrastructure outputs. A project may consume its full accounting budget and still contribute to the efficiency gap because it was the wrong project, was delivered late, cost too much, produced inadequate quality, or was not maintained.
+
+### 4.2 It is not an estimate for the entire government budget
+
+Public investment is only one component of public expenditure. The measure does not directly cover all pensions, cash transfers, public wages, debt service, subsidies, defense operations, regulation, or routine public consumption.
+
+Consequently, it is invalid to apply \(\lambda_{PI}\) mechanically to total government expenditure unless a separate model explicitly maps each spending category to a comparable output frontier.
+
+### 4.3 It measures distance from a relative frontier
+
+The frontier is based on the best observed relationship between capital and infrastructure output in the comparison sample. It is not a proof of the technically or socially absolute maximum possible output.
+
+The estimated gap may be affected by:
+
+- measurement error in public capital stocks;
+- imperfect quality and access indicators;
+- geography, density, climate, and other structural cost differences;
+- variation in the age and composition of infrastructure;
+- omitted institutional or technological factors;
+- the assumption that frontier countries provide an attainable comparison.
+
+### 4.4 It is not identical to social-value loss
+
+Infrastructure coverage and quality are intermediate or final service outputs, but they are not a complete welfare measure. Two assets producing similar measured coverage may generate different social benefits because of location, distribution, use, externalities, or opportunity costs.
+
+Therefore:
+
+\[
+\lambda_{PI}
+\neq
+\frac{\text{social value destroyed}}{\text{maximum attainable social value}}
+\]
+
+unless an additional welfare model establishes that equivalence.
+
+---
+
+## 5. Supporting literature
+
+The IMF estimate is consistent with a broader literature showing that institutions governing project appraisal, selection, allocation, implementation, and maintenance materially affect the productivity of public capital.
+
+Dabla-Norris et al. (2012) developed the Public Investment Management Index for low- and middle-income countries. Their framework documents substantial variation in the quality and effectiveness of public investment management across the project cycle.
+
+Gupta et al. (2014) construct efficiency-adjusted public capital and find that the quality of public investment management is an important determinant of the contribution of public capital to economic growth.
+
+Grigoli and Mills (2014) find that institutional quality is systematically associated with public investment performance and infrastructure quality.
+
+Rajaram et al. (2014), in the World Bank's unified framework for public investment management, identify rigorous appraisal, independent review, project selection, implementation controls, asset operation, and ex post evaluation as essential links in transforming public resources into productive assets.
+
+Flyvbjerg (2009) documents systematic problems in major infrastructure decision-making, including underestimated costs, overestimated benefits, and selection mechanisms that can favor projects whose forecasts appear attractive rather than projects most likely to perform well.
+
+Warner (2014) examines public investment surges and finds that large spending increases have often failed to produce durable growth benefits where project appraisal, selection, and management institutions were weak or circumvented.
+
+These studies do not all estimate the same aggregate percentage. Their role is not to manufacture an average by combining incomparable statistics. Rather, they support the causal and institutional interpretation of the IMF's cross-country efficiency gap.
+
+---
+
+## 6. Calibration rule for Core v0
+
+The literature provides a direct benchmark near 30 percent but does not establish a timeless universal constant. Core v0 should therefore use a transparent calibration rule rather than report false precision.
+
+Let the principal empirical anchor be:
+
+\[
+\lambda_{IMF}=0.30.
+\]
+
+Define the baseline as the midpoint of a deliberately conservative interval bounded above by the IMF estimate:
+
+\[
+\lambda_{PI}^{\mathrm{base}}
+=\frac{0.20+0.30}{2}
+=0.25.
+\]
+
+The scenario values are:
+
+| Scenario | Efficiency loss | Effective output relative to frontier |
+|---|---:|---:|
+| Conservative / high-efficiency status quo | 20% | 80% |
+| Baseline | **25%** | **75%** |
+| IMF cross-country anchor | 30% | 70% |
+
+The baseline should be described precisely:
+
+> Core v0 calibrates the public-investment efficiency loss at 25 percent, with sensitivity analysis from 20 to 30 percent. The upper bound is anchored to the IMF's estimate that approximately 30 percent of potential public-investment gains are lost through inefficiencies across a 134-country sample. The 25 percent baseline is a conservative midpoint used to avoid treating the cross-country frontier estimate as an exact universal constant.
+
+This procedure does not assert that another study independently estimated exactly 25 percent. The number is a transparent central model setting within a literature-grounded interval.
+
+---
+
+## 7. Correct use in a value-production model
+
+Suppose public investment expenditure produces a potential infrastructure output \(Q_i^*\) under frontier-equivalent management. The status-quo realized output is:
+
+\[
+Q_i^{SQ}=(1-\lambda_{PI})Q_i^*.
+\]
+
+At the baseline:
+
+\[
+Q_i^{SQ}=0.75Q_i^*.
+\]
+
+This means that the same capital input produces 75 percent of the benchmark output. It does not mean that only 75 percent of the appropriated money reaches the project.
+
+If Core v0 changes the efficiency loss from \(\lambda_{SQ}\) to \(\lambda_{Core}\), the proportional output gain at a fixed input is:
+
+\[
+\frac{Q_i^{Core}-Q_i^{SQ}}{Q_i^{SQ}}
+=
+\frac{(1-\lambda_{Core})-(1-\lambda_{SQ})}
+{1-\lambda_{SQ}}
+=
+\frac{\lambda_{SQ}-\lambda_{Core}}
+{1-\lambda_{SQ}}.
+\]
+
+For example, reducing the gap from 25 percent to 15 percent yields:
+
+\[
+\frac{0.25-0.15}{1-0.25}
+=
+\frac{0.10}{0.75}
+\approx13.3\%.
+\]
+
+Thus, a ten-percentage-point reduction in the efficiency gap corresponds to approximately 13.3 percent more infrastructure output relative to the original status-quo output, holding capital input constant.
+
+This distinction prevents the common error of interpreting percentage-point reductions in the efficiency gap as identical percentage increases in output.
+
+---
+
+## 8. Separation from the positive-net-value project parameter
+
+The efficiency-loss parameter and the probability that a project has positive net social value measure different dimensions.
+
+Let:
+
+\[
+p_{U+}=\Pr(U_i>0)
+\]
+
+represent the share of projects whose discounted social benefits exceed their discounted social costs.
+
+Let:
+
+\[
+\lambda_{PI}=1-\frac{Y}{Y^*(K)}
+\]
+
+represent the aggregate infrastructure-output shortfall for a given public capital input.
+
+A project may have positive net social value while still being inefficiently produced. Conversely, an efficiently delivered project may have negative social value if it should not have been selected in the first place.
+
+Therefore, the two parameters must not be multiplied as though they were sequential shares of the same budget:
+
+\[
+(1-\lambda_{PI})p_{U+}
+\]
+
+has no general interpretation as the share of the public budget converted into social value.
+
+Any model combining them must explicitly represent project selection, project-level costs and benefits, implementation efficiency, and aggregation across projects.
+
+---
+
+## 9. Recommended sensitivity and robustness reporting
+
+All headline results materially affected by the parameter should be reported at:
+
+\[
+\lambda_{PI}\in\{0.20,0.25,0.30\}.
+\]
+
+A stronger robustness exercise may extend the interval to:
+
+\[
+\lambda_{PI}\in[0.10,0.40],
+\]
+
+but values outside 20–30 percent should be labeled stress tests rather than the primary literature-grounded calibration.
+
+Country-specific applications should replace the generic parameter whenever a current PIMA assessment, national efficiency-frontier study, infrastructure audit, or comparable country-level estimate is available.
+
+---
+
+## 10. Citation-ready paragraph
+
+> We calibrate the status-quo public-investment efficiency loss at 25 percent, with sensitivity analysis over the interval 20–30 percent. The calibration is anchored to the International Monetary Fund's Public Investment Efficiency Index, estimated across 134 countries, which compares accumulated public capital inputs with measures of infrastructure coverage and quality and identifies average inefficiencies of approximately 30 percent (IMF, 2015). Because the IMF estimate is a cross-country distance-to-frontier measure rather than a directly observed universal loss rate, we adopt 25 percent as a conservative midpoint instead of mechanically imposing the full 30 percent in the baseline. The parameter represents foregone infrastructure output for a given public capital input; it is not interpreted as a share of the total government budget that is stolen, diverted, or unspent.
+
+---
+
+## References
+
+Dabla-Norris, E., Brumby, J., Kyobe, A., Mills, Z., & Papageorgiou, C. (2012). Investing in public investment: An index of public investment efficiency. *Journal of Economic Growth, 17*(3), 235–266. https://doi.org/10.1007/s10887-012-9078-5
+
+Flyvbjerg, B. (2009). Survival of the unfittest: Why the worst infrastructure gets built—and what we can do about it. *Oxford Review of Economic Policy, 25*(3), 344–367. https://doi.org/10.1093/oxrep/grp024
+
+Grigoli, F., & Mills, Z. (2014). Institutions and public investment: An empirical analysis. *Economics of Governance, 15*(2), 131–153. https://doi.org/10.1007/s10101-013-0137-y
+
+Gupta, S., Kangur, A., Papageorgiou, C., & Wane, A. (2014). Efficiency-adjusted public capital and growth. *World Development, 57*, 164–178. https://doi.org/10.1016/j.worlddev.2013.11.012
+
+International Monetary Fund. (2015). *Making Public Investment More Efficient*. IMF Policy Paper. https://www.imf.org/external/np/pp/eng/2015/061115.pdf
+
+Rajaram, A., Le, T. M., Biletska, N., & Brumby, J. (Eds.). (2014). *The Power of Public Investment Management: Transforming Resources into Assets for Growth*. World Bank. https://doi.org/10.1596/978-1-4648-0316-1
+
+Warner, A. M. (2014). Public investment as an engine of growth. IMF Working Paper WP/14/148. International Monetary Fund. https://doi.org/10.5089/9781498378277.001
