@@ -28,5 +28,12 @@ protected manuscript would not have protected the implementation, and the author
 2. `npm run check-anchors` clean.
 3. Render four outputs with `scripts/md-to-pdf.mjs` (`--lang en|es`, `--toc`, `--html` for the screen-reader edition); rasterize a few pages (PyMuPDF) and inspect them before shipping.
 4. Commit, tag `vX.Y`, `gh release create` with the four renders attached.
-5. Zenodo new version on the deposition in `_backups/zenodo-depid.txt` (token in `_backups/zenodo-token.txt`, never displayed): new-version draft → replace files (corpus + manuscript renders + code) → bump `version`/`publication_date` → publish → update the depid file.
+5. Zenodo new version on the deposition id in `_backups/zenodo-depid.txt` (a non-secret id). **Supply the API token through an environment variable at deposit time — `ZENODO_TOKEN`, exported into the shell session only (read it from your OS credential store / password manager) — never a token file left in the repo tree.** New-version draft → replace files (corpus + manuscript renders + code) → bump `version`/`publication_date` → publish → update the depid file.
 6. Sweep the *version* DOI across CITATION.cff/README notes (headers stay on the concept DOI).
+
+## Credential handling (security)
+
+The Zenodo API token is a release-account credential: treat it as a secret.
+- **Never persist it to a file in the working tree** (an earlier version of this flow named `_backups/zenodo-token.txt`; that pattern is retired). Pass it via `ZENODO_TOKEN` in the shell session, or a protected CI secret if the deposit is ever automated.
+- `_backups/` is git-ignored so a stray credential there can never be committed, but git-ignore is not protection: **if a `zenodo-token.txt` was ever created, delete it and rotate the token** in the Zenodo account settings.
+- Scope the token to the minimum needed (`deposit:write`, `deposit:actions`).

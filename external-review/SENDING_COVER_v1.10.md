@@ -1,3 +1,5 @@
+> **⚠️ SUPERSEDED (2026-07-10) — DO NOT SEND AS-IS.** This cover was written for **v1.10**, before the project's Path-B reframe. Its whole framing (an F1–F8 findings hierarchy, a "population-invariant advantage", the compound value-per-budget multiplier) predates the pre-registered **symmetry gate**, which returned **NO-GO**: the distributed selection advantage is real but small (pooled median Δ ≈ 0.025 of a full-information benchmark, below the 0.05 materiality gate), so the calibrated multiplier is **retired**. The current working draft is **v1.13**; the controlling statement is `research/claim-and-estimand-contract.md`, and the paper now leads with the architecture + the credit-versus-coverage mechanism, not a headline number. A refreshed v1.13 reviewer cover is a pending deliverable (roadmap R2-10). Until then, do not circulate this file; the text below is retained only for provenance.
+
 # Reviewer cover note — current version and honest framing (2026-07-07)
 
 This note supersedes the version references in the individual reviewer packets under `external-review/` (which were written against earlier drafts). Send it *with* whichever profile packet fits the reviewer.
@@ -5,7 +7,7 @@ This note supersedes the version references in the individual reviewer packets u
 ## What to review
 
 - **Working paper v1.10** — `renders/paper-v1.10-en.pdf` (EN) / `renders/paper-v1.10-es.pdf` (ES), or the screen-reader HTML editions. Concept DOI (always resolves to the latest version): **10.5281/zenodo.21193846**; this version: 10.5281/zenodo.21249063.
-- **Companion computational paper v0.5** (Offermann 2026b) — the experiment program the master now cites and consolidates: `distributed-governance-experiments/drafts/paper.pdf`, concept DOI **10.5281/zenodo.21246089**, this version 10.5281/zenodo.21249060.
+- **Companion computational paper v0.5** (Offermann 2026b) — the experiment program the master now cites and consolidates: `distributed-governance-experiments/drafts/paper.pdf`, concept DOI **10.5281/zenodo.21246088** (v0.4 = 21246089; v0.5 = 21249060).
 
 ## What we already know is weak (please attack anyway, but calibrate)
 
