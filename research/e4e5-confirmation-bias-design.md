@@ -1,5 +1,10 @@
 # E4/E5 — Confirmation bias as the central's third (and missing) mechanism
 
+> **SUPERSEDED / premise falsified (2026-07-10 audit).** The bug this proposal hypothesized was ruled
+> out by `research/e4e5-code-review-synthesis.md` (NO BUG; the small macro effect is honest), and the
+> ideological-lens idea was folded into value-model-v2's intrinsic credit-claiming P. Historical.
+> Current state: `research/e4e5-value-model-v2.md`.
+
 ## Status
 DESIGN PROPOSAL (2026-07-09), pending (a) the bug-hunt pool's verdict that the small macro
 effect is not a code bug, and (b) author approval. Motivated by the author's observation that

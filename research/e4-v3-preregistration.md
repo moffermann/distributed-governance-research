@@ -1,5 +1,10 @@
 # E4-v3 — Specification and Pre-registered Confirmatory Predictions
 
+> **SUPERSEDED (2026-07-10 audit).** This note predates the value-model-v2 agenda-capture reframe; its
+> harm-blindness (beta*=1-eta) framing and any headline multipliers (2.2x/2.09x/1.83x/2.0x) are
+> HISTORICAL. Current state: `research/e4e5-value-model-v2.md` + `research/e5-sp-preregistration.md`.
+> Kept for the record.
+
 ## Status and honesty disclosure
 This **supersedes E4** (`e4-institutional-knowledge-design.md`) and its first
 correction E4-v2 (`e4-v2-fair-comparison-design.md`); it is the confirmatory

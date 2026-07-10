@@ -1,5 +1,9 @@
 # E4/E5 Unified Pipeline — Pre-registration (three-stage O-ring, at scale)
 
+> **SUPERSEDED (2026-07-10 audit).** Pre-registers the `e4e5-pipeline.mjs` engine that `e5-sp-model.mjs`
+> (value model v2) replaced; its 2.2x / harm-blindness framing is HISTORICAL. Current state:
+> `research/e4e5-value-model-v2.md` + `research/e5-sp-preregistration.md`.
+
 ## Status and honesty frame
 Pre-registered design + committed predictions, written BEFORE running (honesty
 device per corpus discipline). Motivation (author): the current 2.2× is a

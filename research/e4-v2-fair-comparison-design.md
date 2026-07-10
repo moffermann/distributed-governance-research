@@ -1,5 +1,10 @@
 # E4-v2 Design — A Fair Central-vs-Distributed Comparison
 
+> **SUPERSEDED (2026-07-10 audit).** This note predates the value-model-v2 agenda-capture reframe; its
+> harm-blindness (beta*=1-eta) framing and any headline multipliers (2.2x/2.09x/1.83x/2.0x) are
+> HISTORICAL. Current state: `research/e4e5-value-model-v2.md` + `research/e5-sp-preregistration.md`.
+> Kept for the record.
+
 ## Status
 Pre-registered design (written before implementation; predictions committed in
 advance as an honesty device, per the corpus's adversarial discipline). Corrects

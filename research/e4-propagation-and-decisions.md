@@ -1,5 +1,10 @@
 # E4 — Propagation status, packaging, and decisions flagged for the author
 
+> **SUPERSEDED (2026-07-10 audit).** This note predates the value-model-v2 agenda-capture reframe; its
+> harm-blindness (beta*=1-eta) framing and any headline multipliers (2.2x/2.09x/1.83x/2.0x) are
+> HISTORICAL. Current state: `research/e4e5-value-model-v2.md` + `research/e5-sp-preregistration.md`.
+> Kept for the record.
+
 ## Status
 Closes the Tier 1–3 improvement pass from the 6-reviewer constructive round. Records
 (a) what was propagated to the paper, (b) the framing decisions I made autonomously,

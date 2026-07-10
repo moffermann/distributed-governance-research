@@ -2,3 +2,4 @@ node_modules/
 npm-debug.log*
 pdf/
 ./
+research/e4e5-pipeline-run.json

@@ -1,5 +1,10 @@
 # E4-v3 — Literature defense of γ≈0 (the central's blindness to diffuse harm)
 
+> **SUPERSEDED (2026-07-10 audit).** This note predates the value-model-v2 agenda-capture reframe; its
+> harm-blindness (beta*=1-eta) framing and any headline multipliers (2.2x/2.09x/1.83x/2.0x) are
+> HISTORICAL. Current state: `research/e4e5-value-model-v2.md` + `research/e5-sp-preregistration.md`.
+> Kept for the record.
+
 ## Status
 Design/evidence note. Anchors the single decisive parameter of E4-v3 — γ, how
 much of a project's *anti-value* (diffuse harm) the central institution perceives
