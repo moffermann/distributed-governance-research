@@ -716,20 +716,32 @@ also funds self-benefit (comparative not pure), must show citizens fund the invi
 measured not posited, quantify vs a status quo that still delivers.
 
 ```text
-TODO (v2):
-  - Implement the S/P world + central-maximizes-P in a FRESH experiment; keep the current
-    harm-blindness pipeline as the v1 reference until v2 validates. Central max P, distributed
-    max S (union-of-coverage, Hayek), harm-blindness secondary on S.
-  - CORRECT E4 THE SAME WAY (author's explicit instruction, 2026-07-09): the standalone
-    allocation experiment (e4-v3-value-matrix / e4-v4-symmetric-frontier) also models the
-    distortion as harm-blindness + random noise; it needs the same S/P credit-claiming fix.
-    The analytical backbone (β*=1−η) then becomes the rare divisive/harm-bearing special case,
-    not the headline.
-  - Calibrate: reach/size distribution (heavy-tailed), coverage breadth (PB ballots), corr(S,P)
-    (Gilens-Page), self-vs-invisible-good split (PB microdata). NOTE the old 27% net-negative
-    (IEG) conflated execution failure with value sign; pure-value net-negatives are <1%.
-  - FROZEN v1 items pending this: projSpread=0.010 calibration, the A2 noise-asymmetry decision
-    (v2 retires noise, so A2 dissolves).
+v2 STATUS (updated 2026-07-10) — BUILT, VALIDATED, PRE-REGISTERED, PROPAGATION STAGED.
+  DONE:
+  - Built the S/P model (scripts/simulation/e5-sp-model.mjs) ON E4's coverage; NESTS E4 (w=1
+    reproduces the harm-blind central; w=0 = pure agenda-capture). Modes: --cats (3-layer),
+    --sweepL (lumpiness), --concentrate (Core v0), --byValue, --seedBase.
+  - HEADLINE: ~2.0x (band 1.8-2.4x) = selection 1.37x x delivery 1.43x, TWO layers (macro <=1x:
+    the category gate rescues the credit-driven central; confirmed with --cats). Bounded (best-
+    vs-mediocre): a value-blind central still delivers ~49% of oracle (lopsided-positive world).
+    Harm-blindness inert when harm rare (w=1 -> 99% oracle). Calibrated corr(S,P) to Gilens-Page.
+  - THRESHOLD is a NON-ISSUE in Core v0 (earmarked vouchers + 90-day recycle = built-in assurance;
+    holds full value to L~4, 1.77x even at L=16). The earlier 'fragile coordination' framing was
+    retracted.
+  - PRE-REGISTERED (research/e5-sp-preregistration.md) + HELD-OUT CONFIRMATION (seed base 5000):
+    7/7 predictions PASS.
+  - PAPER PROPAGATION STAGED (research/e5-sp-paper-propagation.md): ready-to-apply reframing
+    (harm-blindness -> agenda-capture) for the abstract, Finding 4/5, calibration table, and
+    bibliography, with author decision points -- NOT hot-applied (bilingual master, Zenodo paused).
+  - E4 CORRECTED: e4-analytical-backbone.md marked SUPERSEDED-as-primary; beta*=1-eta demoted to
+    the rare divisive/net-harmful special case; e5-sp-model.mjs is the corrected E4.
+  NEXT (author calls):
+  - APPLY the paper propagation (EN+ES together) at a deliberate version bump; then the Zenodo go.
+  - Optional deepening: calibrate reach/coverage breadth to PB microdata; a global sensitivity
+    (Sobol) over the v2 knobs; the self-benefit motive stays UNMODELED (author: not extrapolable).
+  - FROZEN/DISSOLVED v1 items: projSpread=0.010 calibration and the A2 noise-asymmetry both belong
+    to the v1 harm-blindness pipeline, which is now the reference-only special case; A2 dissolves
+    (v2 retired the noise term).
 ```
 
 ## E4/E5 unified pipeline — consolidation (2026-07-09, now UNDER Value model v2)
