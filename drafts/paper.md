@@ -600,8 +600,9 @@ eligibility and carries no budget weights) and the aggregated allocation
 profiles that route budget within it. The distributed arm is robust to the
 quality of that categorization and a central arm is fragile to it, so the
 advantage over a central status quo is not fixed: it grows as central planning
-worsens (that study measures it rising from roughly twofold to more than
-fivefold).
+worsens — a model-internal direction the companion apparatus illustrates (a
+conditional contrast rising from roughly twofold to more than fivefold, not a
+calibrated multiplier; see the quantitative-status note in this section).
 
 Two architectural facts scope the statement and forestall a tempting
 over-reading. First, the default layer is pluggable, not mandatorily central:

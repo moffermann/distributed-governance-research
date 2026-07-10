@@ -654,8 +654,10 @@ de este corpus, que enmarca la elegibilidad y no porta pesos de presupuesto) y
 los perfiles de asignación agregados que rutean el presupuesto dentro de ella.
 El arreglo distribuido es robusto a la calidad de esa categorización y el
 central es frágil a ella, así que la ventaja sobre un status quo central no es
-fija: crece a medida que empeora la planificación central (ese estudio la mide
-subiendo de ~2× a más de 5×).
+fija: crece a medida que empeora la planificación central —una dirección interna
+al modelo que el aparato complementario ilustra (un contraste condicional que
+sube de ~2× a más de 5×, no un multiplicador calibrado; véase la nota de estado
+cuantitativo en esta sección).
 
 Dos hechos arquitectónicos acotan el enunciado y evitan una
 sobreinterpretación tentadora. Primero, la capa por defecto es sustituible, no

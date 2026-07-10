@@ -4,7 +4,7 @@ Versión de lectura fácil del working paper (`paper.md` / `paper.es.md`). Misma
 
 ## La idea de fondo
 
-Los Estados no recaudan impuestos para *gastar presupuestos*; los recaudan para mejorar la vida de la gente. Pero el sistema presupuestario que usamos —de doscientos años— se mide por cuán fielmente ejecuta un plan, no por cuánto valor efectivamente *llega*. Entre el peso que se asigna y la plaza que se construye hay una brecha donde viven la corrupción, la obra mala y la mala elección de prioridades. Este trabajo propone una arquitectura —*Core v0*— que cambia la vara: mide y optimiza el **valor entregado y verificado por cada peso público**. Bajo esa vara, entrega 2 a 3 veces más que el sistema actual.
+Los Estados no recaudan impuestos para *gastar presupuestos*; los recaudan para mejorar la vida de la gente. Pero el sistema presupuestario que usamos —de doscientos años— se mide por cuán fielmente ejecuta un plan, no por cuánto valor efectivamente *llega*. Entre el peso que se asigna y la plaza que se construye hay una brecha donde viven la corrupción, la obra mala y la mala elección de prioridades. Este trabajo propone una arquitectura —*Core v0*— que cambia la vara: mide y optimiza el **valor entregado y verificado por cada peso público**. El aporte central es la arquitectura misma; y cuando pusimos su mecanismo de selección distribuida a una prueba dura y justa, la ventaja resultó real pero pequeña —y lo decimos con todas sus letras.
 
 ## Cómo funciona, en tres piezas
 
@@ -25,9 +25,9 @@ Por qué importa: si la planificación macro central está mal trazada (casillas
 
 ## Los hallazgos que importan
 
-- **La ventaja es grande y sólida:** 2 a 2.7 veces más valor verificado por peso que el sistema actual (modelado con datos reales de auditoría, no una caricatura), y se mantiene con poblaciones ciudadanas realistas.
+- **El aporte es la arquitectura; la ventaja medida es real pero modesta:** en una prueba pre-registrada y *simétrica* (igualando la información de ambos lados), la ventaja de selección distribuida fue positiva en todas las celdas pero pequeña, por debajo del umbral que fijamos de antemano. Por eso retiramos el multiplicador grande que reportó una versión anterior y nos quedamos con el diseño y la *dirección* del mecanismo, no con un número.
 - **La pieza aburrida es la existencial:** sin una regla por defecto que absorba a quien no participa, el sistema no entrega *nada* (con 3–5% de participación real, ningún proyecto junta fondos). Lo que hace institución a la participación es el default, no el entusiasmo.
-- **Protege el valor aunque el planificador se equivoque:** por la distinción de dos capas, la ventaja no es fija — crece de ~2× (buena planificación central) a más de 5× (mala), porque se suman *la ventaja de elegir* y *evitar que te impongan un mal plan*.
+- **Protege el valor aunque el planificador se equivoque:** por la distinción de dos capas, si la planificación central está mal trazada el brazo distribuido todavía encuentra valor donde el central queda atrapado. En el modelo esa ventaja relativa es mayor cuanto peor es la planificación central —una dirección del mecanismo, no un multiplicador calibrado.
 - **Las protecciones anti-corrupción funcionan juntas o no funcionan:** quitar cualquiera cuesta casi nada; quitarlas todas hunde el sistema por debajo del status quo. Son complementos, no sustitutos.
 - **La adopción es una perilla, no un salto:** se puede migrar el 10% del presupuesto y subir gradualmente; cada incremento paga.
 - **La tecnología abarata el control, con límites:** la IA multiplica la capacidad de fiscalización (con humanos auditando a las máquinas y evidencia ciudadana contrapuesta), pero hay fraudes —colusión previa al contrato, obra mala que "fotografía bien"— que ningún papel ni máquina detecta y siguen necesitando al ojo humano.

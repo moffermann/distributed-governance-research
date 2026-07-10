@@ -2,11 +2,11 @@
 
 ### Una arquitectura para que el gasto público entregue valor real, verificable y difícil de corromper
 
-**Mauricio Offermann — julio de 2026.** Resumen de dos papers de trabajo: la *arquitectura* (doi:10.5281/zenodo.21193846) y la *evidencia* que la somete a prueba (doi:10.5281/zenodo.21246089).
+**Mauricio Offermann — julio de 2026.** Resumen de dos papers de trabajo: la *arquitectura* (doi:10.5281/zenodo.21193846) y la *evidencia* que la somete a prueba (doi:10.5281/zenodo.21246088).
 
 ## La idea en una frase
 
-Los Estados no recaudan impuestos para *gastar presupuestos*; los recaudan para mejorar la vida de la sociedad que los financió (Musgrave, 1959). Sin embargo, la institución presupuestaria que usamos —de doscientos años— se juzga a sí misma por cuán fielmente ejecuta un plan, no por cuánto valor efectivamente *llega* a la gente. Entre el peso que se asigna y la plaza que se construye se abre una brecha silenciosa donde viven la corrupción, la obra de mala calidad y la mala elección de prioridades. Este trabajo propone —y pone a prueba con dureza— una arquitectura que cambia la vara: mide, y optimiza, el **valor entregado y verificado por cada peso público**. Bajo esa vara, entrega entre dos y tres veces más que el sistema actual.
+Los Estados no recaudan impuestos para *gastar presupuestos*; los recaudan para mejorar la vida de la sociedad que los financió (Musgrave, 1959). Sin embargo, la institución presupuestaria que usamos —de doscientos años— se juzga a sí misma por cuán fielmente ejecuta un plan, no por cuánto valor efectivamente *llega* a la gente. Entre el peso que se asigna y la plaza que se construye se abre una brecha silenciosa donde viven la corrupción, la obra de mala calidad y la mala elección de prioridades. Este trabajo propone —y pone a prueba con dureza— una arquitectura que cambia la vara: mide, y optimiza, el **valor entregado y verificado por cada peso público**. El aporte central es la arquitectura misma; y cuando sometimos su mecanismo de selección distribuida a una prueba pre-registrada y simétrica, la ventaja resultó real pero pequeña —un resultado que reportamos con la misma franqueza con que proponemos el diseño.
 
 ## Cómo funciona
 
@@ -22,13 +22,13 @@ Una observación conceptual guía el diseño: quien construye la lista de priori
 
 ## Los hallazgos que importan
 
-- **La ventaja es grande y sólida.** Comparada con el sistema actual —modelado con datos reales de auditoría de nueve países, no con una caricatura—, la arquitectura entrega entre 2 y 2.7 veces más valor verificado por unidad de presupuesto. El resultado se mantiene cuando se simulan poblaciones ciudadanas realistas, que se aburren, desconfían y delegan.
+- **La arquitectura es el aporte; la ventaja medida es real pero modesta.** Cuando sometimos el mecanismo de selección distribuida a una prueba pre-registrada y simétrica —igualando el presupuesto de información de ambos lados, sin ventajas de partida—, la ventaja fue positiva en todas las celdas pero pequeña, por debajo del umbral de materialidad que nos habíamos fijado *de antemano*. Por eso retiramos el multiplicador grande que una versión anterior había reportado y nos apoyamos en el diseño y en la *dirección* del mecanismo, no en un número. La honestidad sobre ese límite es parte del aporte, no una nota al pie.
 
-- **Funciona mejor, no peor, cuando participa poca gente.** Contra la intuición, la arquitectura rinde *más* con baja participación: la asignación pasiva, regida por las reglas que los propios ciudadanos definen y afinada por la información de la minoría atenta, dirige el dinero hacia mejores proyectos que un planificador central de baja información. No exige movilizar a las masas —exige que la vía por omisión sean reglas de asignación distribuidas y personales, no un vector de planificación impuesto desde arriba.
+- **Está diseñada para funcionar aunque participe poca gente.** No exige movilizar a las masas: quien no participa activamente cae en reglas de asignación distribuidas y personales —o una por omisión sensata—, no en manos de un planificador central. Es una propiedad del *diseño*; no afirmamos que el sistema rinda *más* cuando baja la participación —nuestra prueba actual no puede sostener eso (al bajar la participación también cae la información disponible para ambos brazos).
 
-- **Protege el valor aunque el planificador se equivoque.** El sistema separa dos cosas que suelen confundirse: qué *categorías* de proyecto son elegibles (la planificación macro) y a qué *proyectos concretos* va la plata (las reglas de asignación de cada ciudadano). Lo distributivo re-categoriza hacia el valor: si la autoridad traza buenas categorías, da igual quién lo haga; pero si las traza mal, el sistema distribuido no se cae —encuentra el valor igual—, mientras el central queda atrapado en sus malas categorías. Por eso la ventaja no es un número fijo: **crece de ~2× (buena planificación) a más de 5× (mala planificación)**. Dicho en simple: adoptarlo es, en el fondo, un resguardo contra el propio error de planificación.
+- **Es un resguardo contra el error de planificación.** El sistema separa dos cosas que suelen confundirse: qué *categorías* de proyecto son elegibles (la planificación macro) y a qué *proyectos concretos* va la plata (las reglas de asignación de cada ciudadano). Si la autoridad traza buenas categorías, da igual quién lo haga; pero si las traza mal, el brazo distribuido todavía encuentra valor, mientras el central queda atrapado en sus malas categorías. En el modelo, esa ventaja relativa es mayor cuanto peor es la planificación central —una dirección del mecanismo, no un multiplicador calibrado.
 
-- **El control es robusto porque sus piezas se refuerzan.** El conjunto de salvaguardas —verificación, retención, garantías, reputación— disuade el desvío incluso cuando cada pieza individual es modesta, porque actúan juntas. Y su ventaja *crece* a medida que el entorno se ensucia: mientras más oportunistas hay entre los ejecutores, más valioso se vuelve el control. Es una arquitectura pensada para operar en el mundo real, no en uno idealizado.
+- **El control es robusto porque sus piezas se refuerzan.** El conjunto de salvaguardas —verificación, retención, garantías, reputación— disuade el desvío incluso cuando cada pieza individual es modesta, porque actúan juntas. Y en el modelo su valor *crece* a medida que el entorno se ensucia: mientras más oportunistas hay entre los ejecutores, más rinde el control. Es una arquitectura pensada para operar en el mundo real, no en uno idealizado.
 
 - **La adopción es una perilla, no un salto.** Se puede empezar migrando una fracción pequeña del presupuesto y subir gradualmente; cada incremento paga, sin valles ni umbrales. Esto responde la objeción política más común: no pide un salto de fe, sino un piloto que se amplía si —y solo si— sus resultados lo justifican.
 
@@ -36,7 +36,7 @@ Una observación conceptual guía el diseño: quien construye la lista de priori
 
 ## Por qué merece atención
 
-Si aceptamos que el gasto público debe juzgarse por el valor que efectivamente llega, entonces la pregunta —¿puede mejorarse la arquitectura bicentenaria con la tecnología de hoy?— deja de ser retórica. Este trabajo responde que sí, y lo cuantifica: más valor entregado por peso, corrupción disuadida por diseño y no por vigilancia heroica, adopción gradual de bajo riesgo, y ciudadanos con injerencia real sin necesidad de que todos participen. No es una utopía participativa ni una promesa de transparencia; es una arquitectura concreta, medida contra el sistema real, cuyos beneficios y cuyos límites se declaran con la misma franqueza.
+Si aceptamos que el gasto público debe juzgarse por el valor que efectivamente llega, entonces la pregunta —¿puede mejorarse la arquitectura bicentenaria con la tecnología de hoy?— deja de ser retórica. Este trabajo responde con un diseño concreto: corrupción disuadida por diseño y no por vigilancia heroica, adopción gradual de bajo riesgo, ciudadanos con injerencia real sin necesidad de que todos participen, y una ventaja de selección que —puesta a prueba con dureza— resultó real pero pequeña, reportada como tal. No es una utopía participativa ni una promesa de transparencia; es una arquitectura concreta, medida contra el sistema real, cuyos beneficios y cuyos límites se declaran con la misma franqueza.
 
 Los papers largos desarrollan cada afirmación con su evidencia. Este resumen es una invitación a leerlos.
 
@@ -48,4 +48,4 @@ Los papers largos desarrollan cada afirmación con su evidencia. Este resumen es
 - Ostrom, E. (1990). *Governing the Commons*. Cambridge University Press.
 - Wampler, B. (2007). *Participatory Budgeting in Brazil*. Penn State University Press.
 - Offermann, M. (2026a). *Distributed Resource Governance: An Architecture for Transparent Public Resource Allocation with Adversarial Validation*. doi:10.5281/zenodo.21193846.
-- Offermann, M. (2026b). *Stress-Testing a Distributed Public-Resource Governance Architecture*. doi:10.5281/zenodo.21246089.
+- Offermann, M. (2026b). *Stress-Testing a Distributed Public-Resource Governance Architecture*. doi:10.5281/zenodo.21246088.
