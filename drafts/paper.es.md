@@ -1,4 +1,4 @@
-# Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
+# Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Pruebas de Estrés Adversariales y una Prueba Computacional Simétrica de la Distribución Institucional Selectiva
 
 **Working paper — v1.13 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
@@ -121,8 +121,8 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    otras, cuantifican el apalancamiento concentrado en la capa de construcción
    de ámbitos, miden una construcción abierta viable de ella, y llevan la
    comparación de extremo a extremo: desde la asignación hasta el valor social
-   entregado por unidad de presupuesto —el criterio que la redistribución
-   existe para satisfacer. En el modelo, la entrega verificada y la
+   entregado por unidad de presupuesto —el criterio que los presupuestos
+   públicos existen para servir. En el modelo, la entrega verificada y la
    priorización social interactúan en lugar de solo sumarse; el aparato basado
    en agentes anterior produjo un compuesto de 2.22× frente a una línea base del statu
    quo parametrizada a partir de los hallazgos publicados de instituciones de
@@ -312,15 +312,16 @@ previo combina:
 - **(v)** un método documentado de revisión adversarial con una regla de
   detención explícita.
 
-Y el resultado sustantivo es en sí mismo nuevo:
+Y dos contribuciones adicionales conciernen a la medición y al método:
 
 - **(vi)** una comparación institucional de extremo a extremo sobre el
-  criterio que la redistribución existe para satisfacer —valor social
+  criterio que los presupuestos públicos existen para servir —valor social
   entregado por unidad de presupuesto—, descomponiendo la selección de la
-  entrega sobre carteras apareadas, mostrando que ambas capas interactúan dentro
-  del aparato anterior, e introduciendo la brecha de visibilidad (entrega
-  oficialmente reportada menos entrega real) como un déficit de rendición de
-  cuentas medible del statu quo;
+  entrega sobre carteras apareadas (ambas capas interactúan dentro del aparato
+  exploratorio —una dirección que un gate simétrico pre-registrado posterior
+  encuentra positiva pero pequeña, Sección 6)—, e introduciendo la brecha de
+  visibilidad (entrega oficialmente reportada menos entrega real) como un déficit
+  de rendición de cuentas medible del statu quo;
 
 - **(vii)** esa comparación contra una línea base parametrizada por auditorías,
   construida exclusivamente a partir de los hallazgos publicados de instituciones
@@ -810,8 +811,13 @@ igual-por-ciudadano, que el dinero puede persuadir pero no comprar— queda cerc
 de diez veces más alto (forma cerrada ρ(C) en la nota del backbone). La
 detección es una bola de nieve p = 1 − (1 − q)^m, así que su piso es un valor
 esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes del público afectado y
-transparente —una barra tan baja que derrotar al brazo distribuido exige suponer
-una apatía cívica casi total entre los estafados—. Esto ata el Hallazgo 4 a la
+transparente —baja, pero esto es una afirmación interna al modelo cuya fuerza
+depende enteramente de la brecha de detección estipulada (central ~0.10 vs
+distribuido ~1.0), no de una carga de la prueba empírica: el análisis de
+sensibilidad es decisivo aquí —la ventaja distribuida se angosta y puede
+revertirse si la detección distribuida se lleva hacia ~0.3—, de modo que la
+afirmación es que la recompra organizada es más difícil bajo la transparencia del
+brazo distribuido *dados estos parámetros*, no que quede descartada. Esto ata el Hallazgo 4 a la
 capa de integridad del Hallazgo 5: la misma fiscalización que hace llegar el
 valor es la que impide que las rentas organizadas recompren la ventaja de
 asignación, de modo que ambos son una capa y su salvaguarda antes que
@@ -842,8 +848,9 @@ p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la ra
 de resistencia ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×, creciente en el
 costo del proyecto. **(iii) El piso de detección.** Con detección de bola de
 nieve P = 1 − (1 − q)^m, superar una tasa central p_c solo requiere un valor
-esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes —la inversión de la carga de la
-prueba hecha rigurosa. Tres invariancias acotan la inquietud de las magnitudes
+esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes —un piso de detección interno al
+modelo bajo los parámetros estipulados (dependiente de la sensibilidad; véase el
+Hallazgo 4), no una inversión empírica de la carga de la prueba. Tres invariancias acotan la inquietud de las magnitudes
 arbitrarias: la ventaja es invariante a las unidades de valor (escala) y al
 *nivel* de participación (solo importa el sesgo β, no la concurrencia), y por el
 teorema central del límite solo entran los primeros momentos S⁺, S⁻, así que el
@@ -1326,35 +1333,31 @@ requisito de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043
 
 ## 10. Conclusión
 
-Los Estados no recaudan impuestos para asignar presupuestos; asignan
-presupuestos para mejorar las vidas de la sociedad que los financió (Musgrave
-1959). Si, tras una redistribución, la sociedad no está mejor, la redistribución
-no logró nada —el balde agujereado de Okun (1975) transportó agua que nunca
-llegó. El criterio correcto para cualquier institución de asignación no es, por
-tanto, cuán fielmente ejecuta un plan sino cuánto valor entregado y verificado
-produce por unidad de recurso público. El experimento final de este artículo
-aplica ese criterio de extremo a extremo, y su estructura puede enunciarse como
-dos preguntas que cualquiera puede hacerse. Primero: tómense los mismos
-proyectos, diseñados de manera idéntica, y cámbiese únicamente quién ejecuta y
-cómo se lo vigila —¿acaso el régimen visiblemente auditado con consecuencias
-reputacionales entrega más que el opaco sin ellas? Lo hace, en el modelo: un +43%
-de valor entregado sobre carteras idénticas, porque bajo la verificación
-supeditada a hitos la condición de incentivos se cumple y el desvío se disuade
-antes de que ocurra. Segundo: manténgase fija la capa de control y cámbiese
-únicamente qué proyectos se financian, ¿planificados centralmente o priorizados
-socialmente? La priorización social entrega más bajo cualquiera de los dos
-regímenes de control (+53-54%). Y los dos efectos interactúan en lugar de
-solo sumarse: la entrega verificada amplifica la buena selección, porque un
-proyecto bien elegido que tiene fugas pierde su ventaja. **No** adjuntamos un
-multiplicador compuesto calibrado a esta interacción: una prueba pre-registrada,
-simétrica y solo-de-selección
-encuentra la ventaja de selección distribuido-menos-central positiva pero pequeña
-(un efecto agrupado de ~0.026 de un benchmark de información completa, por debajo de
-su umbral de materialidad de 0.05). Sobre lo que se sostiene el artículo es la
-arquitectura y la *dirección* del mecanismo, no el estimador puntual. La línea base parametrizada por auditorías produjo la oración más aguda del artículo: la
-auditoría a su intensidad real y documentada —detección sin consecuencias
-persistentes— no disuade desvío alguno en el modelo; encoge la brecha reportada,
-de veintinueve puntos a diecinueve, nunca la real. El instrumento que mueve el
+El criterio correcto para cualquier institución de asignación no es cuán
+fielmente ejecuta un plan sino cuánto valor entregado y verificado produce por
+unidad de recurso público (Musgrave 1959; Okun 1975). La contribución de este
+artículo es una arquitectura que vuelve operativo ese criterio —y un relato
+disciplinado de exactamente hasta dónde llega su evidencia. La columna vertebral
+de la arquitectura son dos preguntas separables que cualquiera puede hacerse.
+Primero: tómense los mismos proyectos, diseñados de manera idéntica, y cámbiese
+únicamente quién ejecuta y cómo se lo vigila —¿acaso el régimen visiblemente
+auditado con consecuencias reputacionales entrega más que el opaco sin ellas?
+Segundo: manténgase fija la capa de control y cámbiese únicamente qué proyectos
+se financian, ¿planificados centralmente o priorizados socialmente? En el
+aparato exploratorio de simulación la respuesta a ambas es sí —una ganancia de
+entrega verificada y una ganancia de selección que interactúan en lugar de solo
+sumarse—, pero esas magnitudes son contrastes factoriales internos al modelo, no
+efectos calibrados, y no construimos el artículo sobre ellas. La afirmación sobre
+la que el artículo realmente se sostiene es más estrecha y se probó con más
+dureza: un gate pre-registrado, simétrico y solo-de-selección encuentra la
+ventaja distribuido-menos-central positiva en todas las celdas pero pequeña (un
+agrupado de ~0.026 de un benchmark de información completa, por debajo de su
+umbral de materialidad de 0.05), de modo que retiramos el multiplicador compuesto
+que reportó una versión anterior y nos apoyamos en la arquitectura y en la
+*dirección* del mecanismo. Una oración que produjo el aparato sobrevive a esa
+disciplina justamente porque trata de la capa de entrega, no del multiplicador:
+la auditoría a su intensidad real y documentada —detección sin consecuencias
+persistentes— no disuade desvío alguno en el modelo; el instrumento que mueve el
 valor entregado es el que el statu quo carece a cualquier intensidad de
 auditoría: consecuencias que persisten. La rendición de cuentas sin memoria es
 contabilidad.

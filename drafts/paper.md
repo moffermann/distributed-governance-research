@@ -1,4 +1,4 @@
-# A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Validation, and Computational Evidence for Selective Institutional Distribution
+# A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Stress-Testing, and a Symmetric Computational Test of Selective Institutional Distribution
 
 **Working paper — v1.13 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered symmetric selection-only stress test returned NO-GO (see §6 and the claim & estimand contract) — and rests on the architecture and the qualitative mechanism. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
 
@@ -112,8 +112,8 @@ current institution solves the same problem, not against an ideal — blocking t
    they support some claims, sharpen others, quantify the leverage
    concentrated in the scope-construction layer, measure a viable open
    construction of it, and carry the comparison end to end: from allocation to
-   delivered social value per unit of budget — the criterion redistribution
-   exists to satisfy. In the model, verified delivery and social prioritization
+   delivered social value per unit of budget — the criterion public budgets
+   exist to serve. In the model, verified delivery and social prioritization
    interact rather than merely add; the earlier agent-based apparatus produced a
    compound of 2.22× a status-quo baseline parameterized from published
    audit-institution findings (1.4–1.6× at municipal pilot scale). We **retire
@@ -287,14 +287,15 @@ literature map is still preliminary) — no prior work combines:
 - **(v)** a documented adversarial-review method with an explicit stopping
   rule.
 
-And the substantive result is itself new:
+And two further contributions concern measurement and method:
 
-- **(vi)** an end-to-end institutional comparison on the criterion
-  redistribution exists to satisfy —delivered social value per unit of
-  budget—, decomposing selection from delivery on matched portfolios, showing
-  the two layers interact within the earlier apparatus, and introducing the
-  visibility gap (officially reported minus real delivery) as a measurable
-  accountability deficit of the status quo;
+- **(vi)** an end-to-end institutional comparison on the criterion public
+  budgets exist to serve —delivered social value per unit of budget—,
+  decomposing selection from delivery on matched portfolios (the two layers
+  interact within the exploratory apparatus — a direction a later
+  pre-registered symmetric gate finds positive but small, Section 6), and
+  introducing the visibility gap (officially reported minus real delivery) as a
+  measurable accountability deficit of the status quo;
 
 - **(vii)** that comparison against an audit-parameterized baseline built
   exclusively from the published findings of supreme audit institutions across
@@ -747,8 +748,13 @@ cost while the distributed threshold — floored by the equal-per-citizen wallet
 which money can persuade but cannot buy — sits roughly ten times higher (closed
 form ρ(C) in the backbone note). Detection is a snowball p = 1 − (1 − q)^m, so
 its floor is an expected m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters drawn from the
-transparent affected public — a bar so low that defeating the distributed arm
-requires assuming near-total civic apathy among the defrauded. This ties Finding
+transparent affected public — low, but this is a model-internal statement whose
+force depends entirely on the stipulated detection gap (central ~0.10 vs
+distributed ~1.0), not an empirical burden-of-proof: sensitivity analysis is
+decisive here — the distributed advantage narrows and can reverse if distributed
+detection is driven down toward ~0.3, so the claim is that organized recapture is
+harder under the distributed arm's transparency *given these parameters*, not that
+it is ruled out. This ties Finding
 4 to the integrity layer of Finding 5: the same fiscalization that makes value
 arrive is what keeps the allocation advantage from being bought back by
 organized rents, so the two are a layer and its safeguard rather than
@@ -778,7 +784,9 @@ distributed's λ\*_D = k_d + p_d·f/C is *floored* by the equal-wallet acquisiti
 term k_d; the resistance ratio ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×,
 rising in project cost. **(iii) The detection floor.** With snowball detection
 P = 1 − (1 − q)^m, beating a central rate p_c needs only an expected
-m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters — the burden-of-proof inversion made rigorous.
+m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters — a model-internal detection floor under the
+stipulated parameters (sensitivity-dependent; see Finding 4), not an empirical
+burden-of-proof inversion.
 Three invariances bound the arbitrary-magnitudes worry: the advantage is
 invariant to the units of value (scale) and to the participation *level* (only
 the bias β matters, not turnout), and by the central-limit theorem only the first
@@ -1250,38 +1258,33 @@ floor — is a first-class requirement ([docs/113](../docs/113_VERIFICATION_PACK
 
 ## 10. Conclusion
 
-States do not collect taxes in order to allocate budgets; they allocate
-budgets in order to improve the lives of the society that funded them
-(Musgrave 1959). If, after a redistribution, society is no better off, the
-redistribution accomplished nothing — Okun's (1975) leaky bucket carried
-water that never arrived. The right criterion for any allocation
-institution is therefore not how faithfully it executes a plan but how
-much delivered, verified value it produces per unit of public resource.
-This paper's central experiments apply that criterion end to end, and
-their structure can be stated as two questions anyone can ask. First:
+The right criterion for any allocation institution is not how faithfully
+it executes a plan but how much delivered, verified value it produces per
+unit of public resource (Musgrave 1959; Okun 1975). This paper's
+contribution is an architecture that makes that criterion operational —
+and a disciplined account of exactly how far its evidence reaches. The
+architecture's spine is two separable questions anyone can ask. First:
 take the same projects, designed identically, and change only who
 executes and how they are watched — does the visibly audited regime with
-reputational consequences deliver more than the one without them? It
-does, in the model: +43% delivered value on identical portfolios,
-because under milestone-gated verification the incentive condition holds
-and diversion is deterred before it happens. Second: hold the control
-layer fixed and change only which projects get funded, centrally planned
-or socially prioritized? Social prioritization delivers more under
-either control regime (+53-54%). The two effects interact rather than
-merely add: verified delivery amplifies good selection, because a well-chosen
-project that leaks loses its advantage. We do **not** attach a calibrated
-compound multiplier to this interaction: a pre-registered symmetric,
-selection-only test finds the distributed-minus-central
-selection advantage positive but small (a pooled ~0.026 of a full-information
-benchmark, below its 0.05 materiality gate). What the paper stands on is the
-architecture and the *direction* of the mechanism, not the point estimate. The
-audit-parameterized baseline produced the sharpest sentence in the paper: audit at its
-real, documented intensity — detection without persistent consequences —
-deters no diversion in the model; it shrinks the reported gap, from
-twenty-nine points to nineteen, never the real one. The instrument that
-moves delivered value is the one the status quo lacks at any audit
-intensity: consequences that persist. Accountability without memory is
-bookkeeping.
+reputational consequences deliver more than the one without them? Second:
+hold the control layer fixed and change only which projects get funded,
+centrally planned or socially prioritized? In the exploratory simulation
+apparatus the answer to both is yes — a verified-delivery gain and a
+selection gain that interact rather than merely add — but those
+magnitudes are model-internal factorial contrasts, not calibrated
+effects, and we do not build the paper on them. The claim the paper
+actually stands on is narrower and was tested harder: a pre-registered,
+symmetric, selection-only gate finds the distributed-minus-central
+advantage positive in every cell but small (a pooled ~0.026 of a
+full-information benchmark, below its 0.05 materiality gate), so we
+retire the compound multiplier an earlier version reported and rest on
+the architecture and the *direction* of the mechanism. One sentence the
+apparatus produced survives that discipline precisely because it is about
+the delivery layer, not the multiplier: audit at its real, documented
+intensity — detection without persistent consequences — deters no
+diversion in the model; the instrument that moves delivered value is the
+one the status quo lacks at any audit intensity: consequences that
+persist. Accountability without memory is bookkeeping.
 
 The deeper point is Friedman's: a central administration spends other
 people's money on other people, the spending category with the least care
