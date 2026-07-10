@@ -217,6 +217,9 @@ if(process.argv.includes("--sweepL")){
 // ---- 3-LAYER DECOMPOSITION: macro (category) x allocation (project) x delivery ----
 if(process.argv.includes("--cats")){
   const A=(PARAMS.A!==undefined?PARAMS.A:20), kCat=(PARAMS.kCat!==undefined?PARAMS.kCat:10);
+  console.log("\n⚠️  LEGACY GROSS-VALUE DIAGNOSTIC — NOT a decomposition of the (retired) net headline.");
+  console.log("   evalCat funds/delivers GROSS S (no hurdle, no net gate) with a shared byValue rule, so its");
+  console.log("   macro/allocation/delivery factors do NOT decompose the main net-value path. Kept for provenance only.\n");
   console.log("3-LAYER DECOMPOSITION (A="+A+" categories, top-"+kCat+" gate; byValue="+PARAMS.byValue+", concentrate n/a here)\n");
   console.log("  rho  | cen%oracle 2L | cen%oracle 3L |  macro   | allocation | delivery | 3-layer ratio");
   for(const rho of PARAMS.RHOS){

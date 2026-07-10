@@ -115,7 +115,7 @@ ignores. Hayek (1945): dispersed knowledge, aggregated by budgeting. The distrib
   headline. `deltaPartisan` is reinterpreted as the minor coalition slice of P.
 - This is a **targeted mechanism fix**, not a from-scratch rebuild.
 
-## Part 7 — Honest open cabos (show, don't assume)
+## Part 7 — Honest open issues (show, don't assume)
 1. **Tail must clear threshold** — dispersed small wallets must *sum* for niche projects
    (discovery/matching/default layers are load-bearing here).
 2. **Distributed also funds self-benefit** (the stadium slice) — it is a *mix*; the advantage is

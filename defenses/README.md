@@ -107,7 +107,7 @@ Paired with the manuscript-review round attacks in `attacks/` (five-profile revi
 | `D039` | `A039` | Traceable Allocation Reveals Political Preference | Founded (specification gap) — resolved in [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]] (secrecy-by-default, receipt-free, followed-projects feed) |
 | `D040` | `A040` | The Adoption Paradox | Founded (missing deployment layer, thesis-bounded) — resolved in [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]] |
 
-## Ablation round defense (D041)
+## Ablation round defenses (D041–D043)
 
 | Defense | Attack | Title | Classification |
 |---|---|---|---|
