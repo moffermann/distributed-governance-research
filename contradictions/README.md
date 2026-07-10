@@ -29,6 +29,7 @@ Each `C0NN-slug.md` contains: Status / Contradiction (side A and side B, quoted 
 | [[C034-h058-open-mode-lacks-a023-gate\|C034]] | H058 presents open mode without the A023 deployment gate | High | Accepted (116th) |
 | [[C035-algorithm-as-coordinator-framing\|C035]] | Algorithm-as-coordinator card vs the qualified allocation framing | Low | Accepted (116th) |
 | [[C036-repo-readme-stale-landing\|C036]] | Repository README describes an early-stage project with a partial map | High | Accepted (116th) |
+| C037 | **TOMBSTONE** — no surviving C037 record exists. Whether the identifier was never assigned, withdrawn, merged, or deleted is unverified. Reserved solely to preserve the C026–C045 sequence; no file exists. | — | Void |
 | [[C038-project-recap-stale-phase\|C038]] | Current Project Recap declares Phase 1 despite its title | Low-Medium | Accepted (116th) |
 | [[C039-dual-project-state-diagrams\|C039]] | Two project state diagrams define incompatible parent machines, both listed as current | Medium | Accepted (116th) |
 | [[C040-expiry-state-drift\|C040]] | Expiry-state drift: undefined "Expired" vs "Expired Unfunded" across enumerations | Low | Accepted (116th) |
@@ -40,7 +41,7 @@ Each `C0NN-slug.md` contains: Status / Contradiction (side A and side B, quoted 
 
 ## Audit completion
 
-All eight slices delivered and consolidated (2026-07-03). Twenty open contradictions (C026-C045); every finding verified against the cited files before entry; auditor line numbers corrected where they had drifted. The substantive layers — the 35 triads, the core-vs-resolutions normative seams, the C-vs-A rule seams, formal claims, simulation numbers, reviewer packets, and EN/ES meaning equivalence — audited clean; the contradictions concentrate in state-describing documents (indexes, READMEs, the companion's record section, metadata, early flow docs) that lagged recent progress, plus one genuine normative conflict (C041), one boundary tension between accepted rules (C044), and one framing tension (C035).
+All eight slices delivered and consolidated (2026-07-03). Nineteen resolved contradictions across the range C026–C045 (C037 is a void tombstone — no record; see the table row); every finding verified against the cited files before entry; auditor line numbers corrected where they had drifted. The substantive layers — the 35 triads, the core-vs-resolutions normative seams, the C-vs-A rule seams, formal claims, simulation numbers, reviewer packets, and EN/ES meaning equivalence — audited clean; the contradictions concentrate in state-describing documents (indexes, READMEs, the companion's record section, metadata, early flow docs) that lagged recent progress, plus one genuine normative conflict (C041), one boundary tension between accepted rules (C044), and one framing tension (C035).
 
 ## Clean slices and non-contradiction notes
 

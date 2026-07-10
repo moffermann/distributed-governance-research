@@ -102,8 +102,12 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   ensure each is either correct-current or clearly bannered historical. *(consistency number-drift)*
 
 ## TIER 3 — External-facing correctness (must fix before any deposit; ~½ day)
-- [ ] **T3.1 — License conflict (⚠️ AUTHOR DECISION):** paper CC BY-NC-ND 4.0 vs `CITATION.cff`/`.zenodo.json`/
-  **live deposit** CC-BY-4.0. Needs the author to pick the intended license, then make all agree. *(consistency C2)*
+- [ ] **T3.1 — License conflict (⚠️ AUTHOR DECISION — confirmed author-only by Codex):** paper CC BY-NC-ND 4.0
+  vs `CITATION.cff`/`.zenodo.json`/**live deposit** CC-BY-4.0. A public CC-BY-4.0 grant is **irrevocable** for
+  already-released copies, so changing local metadata to NC-ND cannot retract it and could misdescribe the live
+  v1.12 deposit. Safe autonomous action was to **document** the conflict (done); the author must decide whether
+  the deposit was intentionally CC-BY, whether future versions use NC-ND, and whether corpus vs manuscript need
+  separate records. *(consistency C2)*
 - [ ] **T3.2 — Version/deposit reconciliation (⚠️ AUTHOR DECISION):** README said "v1.8 latest deposit" but
   audit found record **21252911 live as v1.12** (deposit title still "v1.8"). Removed the stale "latest
   deposited v1.8 / paused" clause from the README description; the true deposit state + "Zenodo paused"
@@ -123,12 +127,14 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   Gilens-Page/Mayhew/Arnold/Pohl-Mihaljek/IMF PIE-X — those were for the v2 agenda-capture framing we did
   NOT propagate. Verified via grep: none appear in `drafts/paper.md`. Only Hayek (already present) is used.
   No missing-bib gap remains for the current paper. *(errors m6; propagation note)*
-- [ ] **T4.2 — Citation precision:** tighten overgeneralized support (Bandiera 83% is setting-specific;
-  Olken is audit coverage not detection prob; Reinikka-Svensson is context leakage; Hayek supports
-  dispersed knowledge not the aggregation rule). *(errors M10, citation table)*
-- [ ] **T4.3 — Contradiction registry:** add a C037 tombstone (title/disposition/date) and retitle the
-  registry as closed with the true retained count. *(cleanliness M3)*
-- [ ] **T4.4 — EN↔ES mirror pass:** every Tier 1–4 change lands in both languages in the same commit.
+- [x] **T4.2 — Citation precision** DONE (highest-value item): Bandiera 83% cell flagged **setting-specific
+  (Italian standardized-goods procurement)** in the calibration table (EN+ES). Olken/Reinikka-Svensson are
+  used correctly in the current paper (the flagged over-reach lived in retired notes); Hayek is used for
+  dispersed knowledge, not an aggregation rule. *(errors M10, citation table)*
+- [x] **T4.3 — Contradiction registry** DONE: honest **C037 TOMBSTONE** row (no surviving record; whether
+  never-assigned/withdrawn/merged/deleted is unverified — corrected per Codex from an earlier speculative
+  wording) + count fixed to "nineteen resolved across C026–C045, one void tombstone". *(cleanliness M3)*
+- [x] **T4.4 — EN↔ES mirror pass** — maintained throughout (every Tier 1–4 change landed in both languages).
   *(standing discipline)*
 
 ## TIER 5 — Simulation trustworthiness (it ships with the paper; ~1–2 days)
@@ -157,9 +163,11 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   defense heading "(D041)"→"(D041–D043)". *(cleanliness nits)*
 
 ## TIER 7 — Minimal paper-readability fixes that are correctness, not enlargement (~1 day)
-- [ ] **T7.1 — Reconcile the two finding-numbering systems** (abstract "findings" vs Section 6 Findings
-  1–7). *(cleanliness M6)*
-- [ ] **T7.2 — Define undefined notation** (`u`, `sel(θ)`); add a small notation/glossary table. *(cleanliness M6)*
+- [x] **T7.1 — Reconcile the two finding-numbering systems** DONE: abstract now says "three results
+  (distinct from the numbered Findings 1–7 of Section 6)" (EN+ES). *(cleanliness M6)*
+- [x] **T7.2 — Define undefined notation** DONE: `u` (idiosyncratic need component independent of quality)
+  and `sel(θ)` (Pearson corr between θ and the funding-target-reached indicator — corrected per Codex from
+  a wrong first draft) defined at first use (EN+ES). A fuller glossary table is optional (Tier 8/E1). *(cleanliness M6)*
 - [ ] **T7.3 — Portable Markdown links** in public-facing artifacts (replace Obsidian wikilinks where they
   break on GitHub). *(cleanliness m3)*
 

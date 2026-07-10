@@ -26,7 +26,8 @@ treasury to the executor, in tranches, against verified milestones and
 enforceable guarantees; and every consequential act leaves a public, auditable
 trail.
 
-The model identifies three findings — an allocation advantage, a
+The model identifies three results (distinct from the numbered Findings 1–7 of
+Section 6) — an allocation advantage, a
 capture-resistance that guards it, and a delivery layer that makes value
 arrive — each stated as a conditional frontier, not a constant.
 
@@ -588,7 +589,8 @@ assumptions of Propositions 1–4— in an agent-based simulation. Each experime
 
 We simulate 10,000 citizens over 24 monthly cycles allocating across a
 standing pool of 40 projects with quality *θ*, salience *s* (measured
-corr(*θ*, *s*) ≈ 0.24), prioritization need-weights *w* = λ*θ* + (1 − λ)*u* with
+corr(*θ*, *s*) ≈ 0.24), prioritization need-weights *w* = λ*θ* + (1 − λ)*u*
+(where *u* is an idiosyncratic need component independent of quality) with
 mixing weight λ ∈ {0.4, 0.8} — measured corr(*θ*, *w*) ≈ 0.55 and ≈ 0.97
 respectively — and 3× scarcity (only a minority of projects can
 complete). Evaluators (2–10%) fund the best quality they sample; salience
@@ -627,7 +629,9 @@ not a point multiplier.
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
 0.759), the most salient 5% of projects absorb less (16.8% vs 19.6% of all
 funding), and 15% more projects complete (25.3% vs 21.9%). But quality
-selection is unchanged (sel(θ) ≈ 0.39 vs 0.41): the truncated surplus
+selection is unchanged (*sel(θ)*, the Pearson correlation across projects between
+latent quality θ and the binary indicator that a project reaches its funding
+target, ≈ 0.39 vs 0.41): the truncated surplus
 spills to the next most *visible* project, not the next *best* one. The
 architecture's claim for the closure rule should be — and in the corpus now
 is — bounded accordingly.
@@ -1378,7 +1382,7 @@ re-simulation.
 | Model quantity | Model value | Real-world proxy | Candidate dataset(s) | Status |
 |---|---|---|---|---|
 | central %-benchmark | 46–68% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | candidate target; needs an explicit construct mapping |
-| η (harm-blindness) | 0–0.5 | passive vs active waste share | Bandiera-Prat-Valletti 2009 (83% passive) | anchored-direction |
+| η (harm-blindness) | 0–0.5 | passive vs active waste share | Bandiera-Prat-Valletti 2009 (83% passive, setting-specific: Italian standardized-goods procurement) | anchored-direction |
 | β (voice inequality) | 0.2–0.5 | PB participation bias | NYC / Paris / Porto Alegre; Decidim / Consul | calibratable |
 | q, m (detection) | q ≈ 0.5–1%, m in hundreds | complaint / whistleblowing rates | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibratable |
 | λ threshold | central ≈ 0.10 | procurement rents / bribe depth | Olken 2007; WB Enterprise Surveys | calibratable |

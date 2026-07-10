@@ -29,7 +29,8 @@ están separados; el dinero se libera directamente desde tesorería al ejecutor,
 por tramos, contra hitos verificados y garantías exigibles; y cada acto
 relevante deja un rastro público y auditable.
 
-El modelo identifica tres hallazgos —una ventaja de asignación, una
+El modelo identifica tres resultados (distintos de los Hallazgos 1–7 numerados de
+la Sección 6) —una ventaja de asignación, una
 resistencia a la captura que la protege, y una capa de entrega que hace llegar
 el valor—, cada uno enunciado como una frontera condicional, no como una
 constante.
@@ -644,6 +645,7 @@ Cada experimento (E1–E8) corresponde a un hallazgo:
 Simulamos 10.000 ciudadanos a lo largo de 24 ciclos mensuales asignando sobre un
 conjunto permanente de 40 proyectos con calidad *θ*, saliencia *s* (medida
 corr(*θ*, *s*) ≈ 0.24), pesos-necesidad del planificador *w* = λ*θ* + (1 − λ)*u*
+(donde *u* es un componente idiosincrático de necesidad independiente de la calidad)
 con peso de mezcla λ ∈ {0.4, 0.8} —medida corr(*θ*, *w*) ≈ 0.55 y ≈ 0.97
 respectivamente— y escasez de 3× (solo una minoría de proyectos puede
 completarse). Los evaluadores (2–10%) financian la mejor calidad que muestrean;
@@ -687,7 +689,9 @@ no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
 (Gini de financiamiento 0.732 vs 0.759), el 5% de proyectos más saliente absorbe
 menos (16.8% vs 19.6% de todo el financiamiento), y se completan un 15% más de
 proyectos (25.3% vs 21.9%). Pero la selección de calidad no cambia
-(sel(θ) ≈ 0.39 vs 0.41): el excedente truncado se derrama hacia el siguiente
+(*sel(θ)*, la correlación de Pearson entre proyectos entre la calidad latente θ y el
+indicador binario de que un proyecto alcanza su meta de financiamiento, ≈ 0.39 vs
+0.41): el excedente truncado se derrama hacia el siguiente
 proyecto más *visible*, no hacia el siguiente *mejor*. La afirmación de la
 arquitectura respecto de la regla de cierre debería estar —y en el corpus ahora
 está— acotada en consecuencia.
@@ -1463,7 +1467,7 @@ observadas realizado/tasado, no una re-simulación.
 | Cantidad del modelo | Valor modelo | Proxy real | Dataset(s) candidato | Estado |
 |---|---|---|---|---|
 | %-benchmark del central | 46–68% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | objetivo candidato; requiere mapeo de constructo explícito |
-| η (ceguera al daño) | 0–0.5 | desperdicio pasivo vs activo | Bandiera-Prat-Valletti 2009 (83% pasivo) | dirección anclada |
+| η (ceguera al daño) | 0–0.5 | desperdicio pasivo vs activo | Bandiera-Prat-Valletti 2009 (83% pasivo, específico del contexto: compras de bienes estandarizados en Italia) | dirección anclada |
 | β (desigualdad de voz) | 0.2–0.5 | sesgo de participación en PP | NYC / París / Porto Alegre; Decidim / Consul | calibrable |
 | q, m (detección) | q ≈ 0.5–1%, m en cientos | tasas de queja / denuncia | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |
 | umbral λ | central ≈ 0.10 | rentas de compras / profundidad de soborno | Olken 2007; WB Enterprise Surveys | calibrable |
