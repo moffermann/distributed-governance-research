@@ -321,6 +321,6 @@ Gupta, S., Kangur, A., Papageorgiou, C., & Wane, A. (2014). Efficiency-adjusted 
 
 International Monetary Fund. (2015). *Making Public Investment More Efficient*. IMF Policy Paper. https://www.imf.org/external/np/pp/eng/2015/061115.pdf
 
-Rajaram, A., Le, T. M., Biletska, N., & Brumby, J. (Eds.). (2014). *The Power of Public Investment Management: Transforming Resources into Assets for Growth*. World Bank. https://doi.org/10.1596/978-1-4648-0316-1
+Rajaram, A., Le, T. M., Kaiser, K., Kim, J.-H., & Frank, J. (Eds.). (2014). *The Power of Public Investment Management: Transforming Resources into Assets for Growth*. World Bank. https://doi.org/10.1596/978-1-4648-0316-1
 
 Warner, A. M. (2014). Public investment as an engine of growth. IMF Working Paper WP/14/148. International Monetary Fund. https://doi.org/10.5089/9781498378277.001
