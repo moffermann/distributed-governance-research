@@ -1161,7 +1161,11 @@ exclusión reputacional como una sanción no procesada (reclasificada: el diseñ
 posee poder de exclusión con el cual sancionar), la trazabilidad de la asignación
 frente al secreto de la preferencia (resuelta como secreto de la asignación
 ciudadana con dinero público), y la paradoja de la adopción (una capa de adopción
-bajo una frontera de tesis explícita). El requisito de honestidad del método se
+bajo una frontera de tesis explícita). La quinta ronda fue una ronda de ablación
+de tres ataques (A041–A043): el despliegue por partes de la pila de disuasión, la
+válvula no regulada de liberación presupuestaria, y la capa de verificación bajo
+colusión de máquinas y anillos —cada uno resuelto y propagado (`docs/111`–`docs/113`).
+El requisito de honestidad del método se
 aplica a sí mismo: varias
 resoluciones responden a sus ataques con un explícito "acotado, no resuelto", y
 el registro completo de revisión es público.
@@ -1295,9 +1299,11 @@ especificados; la mecánica constitucional —reglas para hacer reglas (Buchanan
 protocolo en un despliegue maduro en modo abierto deliberadamente no lo está. El
 despliegue en modo abierto está supeditado a resolverlos.
 
-**La adopción selecciona, y la tesis no depende de ello.** Este artículo responde
-si la arquitectura puede construirse y si entrega más valor —no si alguna
-autoridad la quiere. El corpus provee la capa de despliegue para una autoridad
+**La adopción selecciona, y la tesis no depende de ello.** Este artículo aborda
+si la arquitectura puede construirse y cómo se comporta su mecanismo de *selección*
+bajo una prueba simétrica con entrega en paridad —no si entrega más valor en el
+mundo (un efecto de valor total entregado es un estimando futuro identificado por
+separado, no reclamado aquí), y no si alguna autoridad la quiere. El corpus provee la capa de despliegue para una autoridad
 que ya ha decidido (líneas base prospectivas medidas desde el inicio de la
 instrumentación, atribución de crédito sobre la entrega verificada, atribución
 institucional antes que personal de los vencimientos de plazo en el primer ciclo,
@@ -1310,11 +1316,12 @@ llegados, en los lugares que menos la necesitan.
 
 **Epistémicamente, este es el diseño autocriticado de un solo equipo.** El corpus
 adversarial fue producido por el mismo esfuerzo de investigación que ataca, con
-asistencia de IA; la línea base del statu quo de la simulación ahora está anclada
-en auditoría (sus parámetros justificados ítem por ítem a partir de los hallazgos
-publicados de instituciones de auditoría) pero no calibrada a un conjunto de
-datos de PP específico, y los parámetros restantes son plausibles antes que
-medidos; y no se ha realizado ningún piloto. Las tres validaciones faltantes —ataque experto independiente,
+asistencia de IA; la línea base del statu quo del aparato anterior estaba
+parametrizada por auditorías (sus parámetros justificados ítem por ítem a partir de
+los hallazgos publicados de instituciones de auditoría), mientras que el gate de
+simetría actual es una prueba de selección estilizada no calibrada —ninguna está
+calibrada a un conjunto de datos de PP específico, y los parámetros restantes son
+plausibles antes que medidos; y no se ha realizado ningún piloto. Las tres validaciones faltantes —ataque experto independiente,
 calibración a datos empíricos de PP, y un piloto tutelado acotado (sector
 deportivo, un municipio)— son la siguiente fase del programa de investigación, en
 ese orden.
@@ -1536,7 +1543,7 @@ requiere un puente de constructo explícito**, no una calibración en un paso.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Oates, W. (1972). *Fiscal Federalism*. Harcourt Brace Jovanovich.
-- Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, doi:10.5281/zenodo.21246089.
+- Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, concept doi:10.5281/zenodo.21246088 (always resolves to the latest version).
 - Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).

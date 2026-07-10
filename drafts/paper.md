@@ -1078,7 +1078,11 @@ gating binding mode), reputational exclusion as an unprocessed sanction
 (reclassified: the design holds no exclusion power to sanction with),
 allocation traceability against preference secrecy (resolved as citizen
 allocation secrecy with public money), and the adoption paradox (an
-adoption layer under an explicit thesis boundary). The method's
+adoption layer under an explicit thesis boundary). The fifth round was an
+ablation round of three attacks (A041–A043): the piecewise deployment of the
+deterrence stack, the unregulated budget-release valve, and the verification
+layer under machine-and-ring collusion — each resolved and propagated
+(`docs/111`–`docs/113`). The method's
 honesty requirement applies to itself: several resolutions answer their
 attacks with an explicit "bounded, not solved," and the full review record
 is public.
@@ -1213,8 +1217,11 @@ open-mode deployment are deliberately not. Open-mode deployment is gated on
 resolving them.
 
 **Adoption selects, and the thesis does not depend on it.** This paper
-answers whether the architecture can be built and whether it delivers
-more value — not whether any authority wants it. The corpus supplies the
+addresses whether the architecture can be built and how its *selection*
+mechanism behaves under a symmetric, delivery-at-parity test — not whether it
+delivers more value in the world (a total delivered-value effect is a separately
+identified future estimand, not claimed here), and not whether any authority
+wants it. The corpus supplies the
 deployment layer for an authority that has decided (prospective
 baselines measured from instrumentation onset, credit attribution on
 verified delivery, institutional rather than personal timeout attribution
@@ -1227,9 +1234,10 @@ arrived sponsors, in the places that need it least.
 
 **Epistemically, this is one team's self-critiqued design.** The
 adversarial corpus was produced by the same research effort it attacks,
-with AI assistance; the simulation's status-quo baseline is now
-audit-anchored (its parameters justified item-by-item from published
-audit-institution findings) but not calibrated to a specific PB dataset,
+with AI assistance; the earlier apparatus's status-quo baseline was
+audit-parameterized (its parameters justified item-by-item from published
+audit-institution findings), while the current symmetry gate is an uncalibrated
+stylized selection test — neither is calibrated to a specific PB dataset,
 and the remaining parameters are plausible rather than measured; and no
 pilot has been run. The three missing validations — independent expert
 attack, calibration to empirical PB data, and a bounded tutored pilot
@@ -1451,7 +1459,7 @@ calibration.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Oates, W. (1972). *Fiscal Federalism*. Harcourt Brace Jovanovich.
-- Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, doi:10.5281/zenodo.21246089.
+- Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, concept doi:10.5281/zenodo.21246088 (always resolves to the latest version).
 - Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
 - North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
