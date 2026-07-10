@@ -15,7 +15,13 @@
 // central[j]  = (1-w)*creditScale*P[j] + w*harmBlindValue[j]        (w=0 pure agenda-capture; w=1 -> E4)
 // distributed[j] = sum of PARTICIPATING interested (harmed at p*(1-beta))   (coverage, from E4)
 // oracle[j]   = true social value S[j] = sum of interested valuations
-// All scored on delivered TRUE S. Delivery: central f_weak, distributed f_ver (1.43x).
+// Scored on delivered NET value (net = S - hurdle*cost). Delivery: central fWeak=0.75, distributed fVer=0.975 (ratio ~1.30x).
+//
+// ⚠️ STATUS (2026-07-10): the multiplier this engine reports is RETIRED as a calibrated effect. An
+// independent audit + a pre-registered SYMMETRY GATE (scripts/simulation/e5-sp-symmetry-gate.mjs, NO-GO)
+// showed the advantage here is inflated by asymmetries (oracle-gated distributed arm, pure-credit central,
+// stipulated delivery). Controlling spec: research/claim-and-estimand-contract.md. This engine is an
+// EXPLORATORY apparatus retained for provenance; use the symmetry gate for the honest selection contrast.
 //
 // Usage: node e5-sp-model.mjs [N] [K] [seeds] [--projSpread=] [--beta=] [--w=] [--eta=] [--mean=] [--sd=]
 
