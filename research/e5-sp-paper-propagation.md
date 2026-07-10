@@ -1,14 +1,17 @@
 # v2 → paper: propagation plan (staged for author review; live master NOT edited)
 
-> **UPDATED 2026-07-10 (MAJOR CORRECTION; body reconciled).** Headline is now **~2.8× (band ~2.4–3.3×)**, not ~2.0×,
-> after two author literature calibrations: net-negative share **~35%** (Pohl-Mihaljek p_U+≈0.65, net of
-> the opportunity cost of capital — the old <1% was a gross error) and production efficiency loss
-> **λ_PI≈0.25** (IMF; delivery ~1.30× with the distributed 10× more capture-resistant, E4-v5). Decompose
-> as **selection ~2.5× × delivery ~1.30×**. NOTE: the "bounded / best-vs-mediocre" claim is retracted, and
-> harm-blindness revives as a co-mechanism (both operate; agenda-capture stays the more defensible frame).
-> ADD `drafts/positive-net-social-value-calibration.md` and `drafts/public-investment-efficiency-loss-
-> calibration.md` as the calibration anchors. (Body ready-text below reconciled to the corrected framing
-> on 2026-07-10 — it is now safe to apply as the single bilingual source.)
+> **UPDATED 2026-07-10 (FAITHFUL-SPLIT CORRECTION; supersedes the ~2.8× intermediate below).** Headline is
+> now **~2.1× (band ~1.9–2.4× over corr(S,P)∈[0.1,0.3])**, = **selection ~1.5–1.8× × delivery 1.30×**. Two
+> author literature calibrations set the inputs: net-negative share **~35%** (Pohl-Mihaljek p_U+≈0.65, net
+> of the opportunity cost of capital) and production efficiency loss **λ_PI≈0.25** (IMF; delivery ~1.30×,
+> distributed 10× more capture-resistant, E4-v5). The **faithful split** models that 35% as **~8% true harm
+> (S<0) + ~28% below opportunity cost** (S>0 but net = S − h·cost < 0), NOT as all-harm — which lands the
+> headline at ~2.1× (the intermediate ~2.8× over-attributed the 35% to harm, inflating it). This **converges
+> on the paper's original ~2.2×** with a better-grounded mechanism. KEY: under the faithful split
+> **harm-blindness is again nearly inert (w=1 → 1.30×); agenda-capture is the SOLE selection driver** — this
+> STRENGTHENS the v2 pivot (no "co-mechanism" hedge needed). ADD `drafts/positive-net-social-value-
+> calibration.md` and `drafts/public-investment-efficiency-loss-calibration.md` as the calibration anchors.
+> Body ready-text below reconciled to ~2.1× — safe to apply as the single bilingual source.
 
 ## Why this is staged, not applied
 v2 (`e4e5-value-model-v2.md`, `e5-sp-model.mjs`, pre-registered 7/7) **reframes the mechanism** of the
@@ -19,43 +22,51 @@ ready-to-apply changes so the author can review and apply them in one pass.
 
 ## The reframing in one paragraph
 The distributed's *selection* advantage was framed as the central being **blind to harm**. v2 showed
-(and pre-registered) that harm-blindness is **nearly inert when net-harm is rare** (a harm-blind
-central still delivers ~99% of oracle at <1% net-neg). The real, load-bearing mechanism is
-**agenda-capture**: the central maximizes **political capital P** (credit-claiming = visibility ×
-traceability × concentration — Mayhew 1974, Arnold 1990, WSJ 1981, Olson, Bastiat), which is
-structurally misaligned with **social value S** at `corr(S,P) < 1` (Gilens-Page 2014 / Achen-Bartels
-2016; refutes Downs). The distributed reads S through **dispersed coverage** (Hayek 1945). This is
-**more defensible** (canonical, transversal public choice — not "politicians are bad" or partisan)
-and **more honest** (it names why the advantage is bounded, not catastrophic).
+(and the faithful-split pre-registration confirmed) that harm-blindness is **nearly inert when true harm
+is rare** (a harm-blind central delivers ~97% of oracle at ~8% true harm → w=1 ratio 1.30×, the pure
+delivery floor). The real, load-bearing mechanism is **agenda-capture**: the central maximizes **political
+capital P** (credit-claiming = visibility × traceability × concentration — Mayhew 1974, Arnold 1990, WSJ
+1981, Olson, Bastiat), which is structurally misaligned with **social value S** at `corr(S,P) < 1`
+(Gilens-Page 2014 / Achen-Bartels 2016; refutes Downs). Concretely, a credit-driven central funds two
+kinds of misallocation the value-reading arms avoid: the ~8% actively harmful (S<0) AND the ~28%
+**below opportunity cost** (S>0 but net = S − h·cost < 0 — a per-dollar social return below the discount
+rate). The distributed reads S through **dispersed coverage** (Hayek 1945) and gates both out. This is
+**more defensible** (canonical, transversal public choice — not "politicians are bad" or partisan) and
+**more honest** (agenda-capture is the sole selection driver; harm-blindness is a named, near-inert special case).
 
 ## What changes, section by section (current → new)
 
 **Abstract / headline.** Current: "social prioritization delivers +53-54%; selection and delivery
 multiply (~2.2×)". New: reground on agenda-capture, correct the magnitude, and honestly state the axes.
-> Ready text: *"At a literature-anchored operating point, the compound is **≈2.8× (band ~2.4–3.3×)**,
-> decomposing as **selection ×2.2–2.5 × delivery ×1.30** — two independent layers. The selection layer
+> Ready text: *"At a literature-anchored operating point, the compound is **≈2.1× (band ~1.9–2.4×)**,
+> decomposing as **selection ×1.5–1.8 × delivery ×1.30** — two independent layers. The selection layer
 > is **agenda-capture**: a central planner maximizing political credit-claiming rather than social value
-> (Gilens-Page 2014; Mayhew 1974), a transversal (not partisan) incentive misalignment; ~35% of
-> implemented projects have negative net social value (Pohl-Mihaljek 1992), so a value-misaligned central
-> funds value-destroying projects. The delivery layer regrounds the public-investment efficiency loss
-> (~25%, IMF PIE-X 2015) against the distributed's ~10× capture resistance. The band's width is the
-> uncertainty in the agenda↔value misalignment (Gilens-Page) and the net-negative share; harm-blindness
-> operates as a secondary co-mechanism."*
+> (Gilens-Page 2014; Mayhew 1974), a transversal (not partisan) incentive misalignment. About 35% of
+> implemented projects fall below positive net social value — modeled faithfully as ~8% actively harmful
+> plus ~28% below the opportunity cost of capital (Pohl-Mihaljek 1992) — so a value-misaligned central
+> funds projects the value-reading arms decline. The delivery layer regrounds the public-investment
+> efficiency loss (~25%, IMF PIE-X 2015) against the distributed's ~10× capture resistance. The band's
+> width is the uncertainty in the agenda↔value misalignment (Gilens-Page); harm-blindness is a named,
+> near-inert special case (a purely harm-blind central sits at the delivery floor), so agenda-capture
+> carries the selection layer alone."*
 
 **Finding 4 (was: "aggregated dispersed signals outperform fixed-bandwidth construction").** The
 TITLE survives (dispersed coverage vs a fixed narrow agenda IS the v2 story). Rewrite the mechanism
 prose: replace the harm-blindness η frontier (β*=1−η) as the *primary* driver with the corr(S,P)
-agenda-capture frontier; **demote harm-blindness to a secondary, named special case** (the rare
-divisive/net-harmful minority — but note it REVIVES as a co-mechanism at ~35% net-neg). Add: the
-two-layer decomposition, the macro-layer-is-inert result (the coarse category gate rescues the
-credit-driven central), and that the advantage is good-vs-value-destroying (not bounded/best-vs-mediocre).
+agenda-capture frontier; **demote harm-blindness to a secondary, named special case** (the ~8% actively
+harmful minority — nearly inert on its own: a purely harm-blind central sits at the delivery floor 1.30×).
+Add: the two-layer decomposition, the macro-layer-is-inert result (the coarse category gate rescues the
+credit-driven central), and the graded advantage reading — value-destroying at the low-corr tail,
+best-vs-mediocre at the realistic corr operating point (central delivers ~66–77% of oracle net value).
 
 **Finding 5 (selection × delivery).** Keep — it is exactly the two-layer decomposition. Reground the
-selection factor in agenda-capture (~2.2–2.5×); reground delivery to **~1.30×** (IMF PIE-X λ_PI≈0.25 +
-E4-v5 10× capture resistance), replacing the old 1.43× leakage calibration.
+selection factor in agenda-capture (**~1.5–1.8×** at the Gilens-Page corr operating point); reground
+delivery to **~1.30×** (IMF PIE-X λ_PI≈0.25 + E4-v5 10× capture resistance), replacing the old 1.43×
+leakage calibration. Compound **~2.1× (band ~1.9–2.4×)**.
 
 **Mechanism / calibration prose + the calibration table (paper.md:1342 lists η).** Replace the η row
-with a **corr(S,P)** row calibrated to Gilens-Page; keep β (voice), delivery, capture rows. Add the
+with a **corr(S,P)** row calibrated to Gilens-Page, and add an **opportunity-cost hurdle** row (the
+~8%-harm + ~28%-below-hurdle split, Doc 1); keep β (voice), delivery, capture rows. Add the
 Core-v0 note: earmarked vouchers + the 90-day return-and-reallocate rule make the lumpiness threshold
 a non-issue (coordination built into the mechanism, not a fragile add-on).
 
@@ -79,11 +90,14 @@ harm-blindness backbone as the *special case*, not the headline.
 
 ## Author decision points (before applying)
 1. **Supersede vs augment:** does agenda-capture *replace* harm-blindness as Finding 4's headline
-   mechanism, or sit *beside* it (modal = agenda-capture; rare-divisive = harm-blindness)? (Recommend:
-   supersede as headline, keep harm-blindness as the named special case — cleaner and more honest.)
-2. **Magnitude:** the honest calibrated number is **≈2.8× (band ~2.4–3.3×)** — above the old ~2.2× (the
-   35% net-neg correction raised selection; the λ_PI regrounding lowered delivery; net raise). Report the
-   band, not a bare multiplier; note the corr=0.3 endpoint is ~2.2–2.4× and the low-corr end ~3.3–4.2×.
+   mechanism, or sit *beside* it? Under the faithful split harm-blindness is nearly inert (w=1 → delivery
+   floor), so **supersede** is now the clearly correct call: agenda-capture is the sole selection driver,
+   harm-blindness is the named ~8% special case. (Author decision 2026-07-10: propagate the faithful split.)
+2. **Magnitude:** the honest calibrated number is **≈2.1× (band ~1.9–2.4×)** over corr(S,P)∈[0.1,0.3]
+   (ρ≈0.2–0.4) — essentially the paper's original ~2.2×, now mechanism-grounded. The intermediate ~2.8×
+   was inflated by modeling all 35% as true harm; the faithful ~8%-harm + ~28%-below-hurdle split corrects
+   it. Report the band, not a bare multiplier; note the low-corr tail reaches ~2.3–2.9× and ρ=1 compresses
+   to ~1.3× (the delivery floor).
 3. **Scope of rewrite:** minimal (reground the mechanism sentence + calibration row + add the two-layer
    decomposition) vs full (rewrite Finding 4's derivation). Recommend minimal first.
 4. **Timing / Zenodo:** apply at the next deliberate version bump; EN + ES together; PDFs/HTML ride

@@ -1,18 +1,33 @@
 # E5 v2 (S/P agenda-capture) — pre-registration
 
-> **POST-HOC CORRECTION (2026-07-10) — supersedes predictions P3, P5, P6 below.** Two author-supplied
+> **FAITHFUL-SPLIT CORRECTION (2026-07-10, LATEST — supersedes both the original pre-reg AND the
+> intermediate ~2.8× post-hoc block below).** The ~35% net-negative share was first modeled (intermediate
+> correction) as ALL true harm (S<0) via a low quality-mean (0.06). That was mechanically wrong: it made
+> the credit-driven central deliver large *negative* value on ~36% of the portfolio, collapsing it to
+> ~46% of oracle and INFLATING the headline to ~2.8×, while spuriously reviving harm-blindness (w=1 →
+> 1.81×). The **faithful split** (audit P0.6) separates the two mechanisms the literature actually names:
+> **~8% TRUE HARM** (S<0, quality-mean=0.27) + **~28% BELOW OPPORTUNITY COST** (S>0 but net = S − h·cost < 0,
+> hurdle h=2.5 — a per-dollar social-return threshold below the discount rate, Doc 1). The delivered
+> metric is **NET** value; the oracle/distributed gate out net≤0, the credit-driven central funds them.
+> **Corrected headline: ~2.1× (band ~1.9–2.4× over corr(S,P)∈[0.1,0.3]), decomposing as selection
+> ~1.5–1.8× × delivery 1.30×** — DOWN from the intermediate ~2.8×, converging back on the paper's
+> original robust ~2.2× but with a properly grounded mechanism. **Under the faithful split, harm-blindness
+> is again NEARLY INERT (w=1 → 1.30×, the pure delivery floor) — the ENTIRE selection advantage is
+> agenda-capture (w=0), which STRENGTHENS the v2 pivot.** So the intermediate block's "harm-blindness
+> revives" is itself re-retracted; P5/P6 partially rehabilitate (see the faithful-split held-out table).
+> The delivery layer stays λ_PI≈0.25 (IMF) → 1.30×. See `e4e5-value-model-v2.md` for the full
+> re-consolidation. Engine commit: the opportunity-cost hurdle (`hurdle` param, `net[]`, `cenNetNeg`
+> diagnostic). The intermediate ~2.8× block and the original pre-reg text are preserved below for the record.
+>
+> ---
+>
+> **POST-HOC CORRECTION (2026-07-10, INTERMEDIATE — itself superseded by the faithful split above).** Two author-supplied
 > literature calibrations corrected two inputs: the net-negative share is **~35%** (Pohl-Mihaljek
 > p_U+≈0.65, net of the opportunity cost of capital), NOT <1% (the pre-reg's calibration was a gross
 > error using pure existence value); and the production efficiency loss is **λ_PI≈0.25** (IMF), grounding
 > the delivery layer to ~1.30× (central 0.75, distributed 0.975 via the E4-v5 10× capture resistance),
-> DOWN from 1.43×. **Corrected headline: ~2.8× (honest band ~2.4–3.3× over corr(S,P)∈[0.1,0.3] and
-> λ_PI∈[0.20,0.30]; ~3.3–4.2× at the low-corr reading)**, not ~2.0×. Confirmed on the corrected config
-> below. P5 ("bounded / value-blind central ~49%") and P6 ("harm-blindness inert") are RETRACTED: at 35%
-> net-negative the central funds value-destroying projects (value-blind → ~27% of oracle) and harm-
-> blindness revives (w=1 → 1.81×). P1 is REWORDED (not exact parity at ρ=1 — the frontier *compresses*
-> toward the delivery floor). P2/P4/P7 stand. See `e4e5-value-model-v2.md`
-> "MAJOR CORRECTION" for the full re-consolidation. This block is the honest amendment; the original
-> pre-registered text is preserved below for the record.
+> DOWN from 1.43×. **Intermediate headline: ~2.8× (band ~2.4–3.3×)** — later found INFLATED by modeling all
+> 35% as true harm; see the faithful-split block above. P5/P6 retraction here is itself reversed by the split.
 
 ## Status and honesty disclosure
 This locks the v2 model design, the estimand, the calibration, and the predictions **before a
@@ -68,45 +83,52 @@ carrying the value heterogeneity), and:
 
 If a held-out run contradicts a prediction, the contradiction is recorded as the finding.
 
-## Held-out confirmation (seed base 5000, disjoint from exploration) — ALL 7 PREDICTIONS PASS
-Run: `node e5-sp-model.mjs --concentrate=1 --byValue=1 --muF=-4 --sigF=1.5 --seedBase=5000` (+ `--cats`,
-`--w=1`, `--tornado`), on the CORRECTED defaults (mean=0.06 → ~37.7% net-neg; fWeak=0.75; fVer=0.975;
-delivery 1.30×). Held-out (5000) matches exploration (1000) within seed noise.
+## Held-out confirmation — FAITHFUL SPLIT (seed base 5000, disjoint from exploration)
+Run: `node e5-sp-model.mjs --concentrate=1 --byValue=1 --seedBase=5000` (+ `--cats`, `--w=1`, `--tornado`),
+on the faithful-split defaults (**mean=0.27 → ~8.1% true harm; hurdle=2.5 → ~35.9% below-hurdle;
+fWeak=0.75; fVer=0.975; delivery 1.30×; muF=-4, sigF=1.5**). Held-out (5000) matches exploration (1000)
+within seed noise. `cen netNeg%` = the net-negative share of the CENTRAL's realized portfolio (Doc-1
+validation target).
 
-| ρ | corr(S,P) | cen %oracle | dis %oracle | ratio | macro | alloc | delivery |
-|---|---|---|---|---|---|---|---|
-| 1.0 | 0.40 | 55% | 85% | 2.04× | 0.69× | 1.60× | 1.30× |
-| 0.6 | 0.19 | 46% | 85% | 2.43× | — | — | 1.30× |
-| 0.4 | 0.12 | 38% | 85% | **2.92×** | 0.72× | 2.40× | 1.30× |
-| 0.2 | 0.06 | 34% | 85% | 3.26× | 0.71× | 3.18× | 1.30× |
-| 0.0 | 0.01 | 27% | 85% | **4.19×** | — | — | 1.30× |
+| ρ | corr(S,P) | cen netNeg% | cen %oracle | dis %oracle | ratio | macro | alloc | delivery |
+|---|---|---|---|---|---|---|---|---|
+| 1.0 | 0.80 | 9.4% | 95% | 97% | 1.34× | 0.97× | 1.04× | 1.30× |
+| 0.8 | 0.60 | 14.0% | 87% | 97% | 1.46× | 0.94× | 1.16× | 1.30× |
+| 0.6 | 0.41 | 18.3% | 77% | 97% | 1.65× | 0.89× | 1.32× | 1.30× |
+| 0.4 | 0.26 | 22.1% | 65% | 97% | **1.93×** | 0.85× | 1.58× | 1.30× |
+| 0.2 | 0.13 | 25.8% | 55% | 97% | **2.29×** | 0.81× | 1.94× | 1.30× |
+| 0.0 | 0.02 | 29.7% | 43% | 97% | 2.93× | 0.76× | 2.53× | 1.30× |
 
-- **P1 — REWORDED:** NOT exact parity at ρ=1. At ~35% net-neg the realized corr(S,P) caps ~0.40 at
-  ρ=1 (the exp(·) transform + net-neg mass), so ρ=1 gives **2.04×**, not the 1.30× floor; the frontier
-  **compresses toward the delivery floor as ρ→1**, it does not reach it. ✓ (monotone-compression form).
-- **P2 monotone frontier:** 2.04→4.19× ✓.
-- **P3 — CORRECTED HEADLINE:** at the Gilens-Page corr(S,P)∈[0.1,0.3] band, ratio **~2.4–2.9×** (corr
-  0.12→2.92×, 0.19→2.43×); at the low-corr independent-influence reading (~0.03–0.1) it reaches
-  **3.3–4.2×**. **Central ~2.8×, honest band ~2.4–3.3×** (the earlier "~3.0× / 2.6–3.6×" floor was
-  optimistic; corr=0.3 ≈ 2.2–2.4×). ✓
-- **P4 two layers / macro ≤1×:** macro 0.69–0.72× ✓ (category gate still rescues the credit central).
-- **P5 — RETRACTED:** the value-blind central delivers **~27%** of oracle (not ~49%); the "bounded /
-  best-vs-mediocre" claim is gone (35% net-neg → good-vs-value-destroying).
-- **P6 — RETRACTED:** harm-blindness is NOT inert. w=1 (E4) delivers **61%** of oracle, ratio **1.81×**
-  (not 99%/parity) — at 35% net-neg harm-blindness revives as a co-mechanism.
+- **P1 — REWORDED (stands):** NOT exact parity at ρ=1. The realized corr(S,P) caps ~0.80 at ρ=1 (the
+  exp(·) transform), so ρ=1 gives **1.34×**, close to but above the 1.30× delivery floor; the frontier
+  **compresses toward the delivery floor as ρ→1**. ✓ (monotone-compression form).
+- **P2 monotone frontier:** 1.34→2.93× ✓.
+- **P3 — CORRECTED HEADLINE (faithful split):** at the Gilens-Page corr(S,P)∈[0.1,0.3] band (ρ≈0.2–0.4),
+  ratio **~1.9–2.3×**; **central ~2.1×, band ~1.9–2.4×**. DOWN from the intermediate ~2.8× (that number
+  over-attributed the 35% to true harm); converges on the paper's original ~2.2×. ✓
+- **P4 two layers / macro ≤1×:** macro 0.76–0.97× ✓ (the top-k category gate still *rescues* the credit
+  central — no positive third layer). Allocation is the selection layer (1.04–2.53×).
+- **P5 — REHABILITATED (faithful form):** the value-blind (ρ≈0) central delivers **~43%** of oracle NET
+  value; the below-hurdle central portfolio is only ~18–26% net-negative at realistic corr (Doc-1's ~35%
+  is the low-corr pessimistic edge). "Best-vs-value-destroying" holds at the *tail*, "best-vs-mediocre"
+  at realistic corr — a graded, honest reading, not a bare retraction.
+- **P6 — REHABILITATED:** harm-blindness IS nearly inert under the faithful split. w=1 (E4, pure
+  harm-blind value) delivers **97%** of oracle, ratio **1.30×** (the delivery floor) — because true harm
+  is only ~8%. The ENTIRE selection advantage is agenda-capture (w=0). This is the intended v2 thesis;
+  the intermediate block's "harm-blindness revives" was an artifact of the all-harm mis-calibration.
 - **P7 lumpiness non-issue in Core v0:** confirmed (concentrate holds full value to L~4).
-- **Verdict: P1/P2/P4/P7 confirmed (some reworded); P3 corrected to ~2.8× (2.4–3.3×); P5/P6 retracted
-  by the net-negative correction.** This is a CONFIRMATORY RE-RUN on the corrected config — not the
-  original pre-registered numbers, which the net-neg/λ_PI calibrations superseded.
+- **Verdict: P1/P2/P4/P7 confirmed (P1 reworded); P3 corrected to ~2.1× (band 1.9–2.4×); P5/P6
+  REHABILITATED by the faithful split (harm-blindness inert, agenda-capture is the mechanism).** This is a
+  CONFIRMATORY RE-RUN on the faithful-split config.
 
-**Robustness (`--tornado`, one knob at a time at ρ=0.3, baseline 3.13×).** Corrected knobs, now
-centered on the calibration. The headline is **robust to β and coverage but genuinely SENSITIVE to the
-capture and net-neg axes — which IS the mechanism**: β 0.3→0.5: 3.13→2.71×; reach spread sigF 1.2→1.8:
-3.23→3.31× (flat); delivery fVer 0.90→0.99: 2.89→3.18× (the 1.20–1.32× band); **net-neg (mean)
-0.03→0.15 (≈45%→21% neg): degenerate-edge→2.19× — net-neg is now a first-order mover, as the
-correction requires** (the old knob range hid this); harm-blindness weight w 0→0.3: 3.13→1.92× (w
-co-parameterizes capture; the clean frame is w=0 with ρ=corr(S,P)). The dominant axes are corr(S,P)
-and the net-negative share.
+**Robustness (`--tornado`, one knob at a time at ρ=0.3 ≈ corr 0.17, mid Gilens-Page, baseline 2.08×).**
+Knobs recentered on the faithful split. The headline is **robust to every calibration band**: β 0.3→0.5:
+2.08→2.08× (flat); true-harm mean 0.24→0.33 (≈11%→4% harm): 2.12→2.02×; **below-hurdle h 1.5→4.0
+(≈27%→46% below opportunity cost): 2.04→2.15×** (the new mechanism axis — modest, robust); delivery
+fVer 0.90→0.99: 1.92→2.11× (the 1.20–1.32× band); reach spread sigF 1.2→1.8: 2.08→2.07× (flat);
+harm-blind weight w 0→0.3: 2.08→1.40× (w co-parameterizes capture; the clean frame is w=0 with
+ρ=corr(S,P)). The dominant axis remains **corr(S,P)** (the Gilens-Page frontier); every other knob moves
+the headline modestly within its literature band → robust.
 
 ## Scope conditions / honest boundaries
 - The distributed is modeled as funding pure S (no self-benefit motive — deliberately not modeled;

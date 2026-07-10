@@ -124,7 +124,37 @@ ignores. Hayek (1945): dispersed knowledge, aggregated by budgeting. The distrib
   elite-vs-mass congruence; share of the agenda on class-internal matters); the **self vs
   social-invisible allocation split** (PB microdata).
 
-## MAJOR CORRECTION (2026-07-10, author) — headline ~2.0× → ~2.8×; harm-blindness revives
+## FAITHFUL-SPLIT CORRECTION (2026-07-10, LATEST) — headline ~2.8× → ~2.1×; harm-blindness inert again
+The MAJOR CORRECTION below modeled the whole ~35% net-negative share as **true harm (S<0)** via a low
+quality-mean (0.06). That was mechanically wrong and it INFLATED the headline: a credit-driven central
+then delivered large *negative* value on ~36% of its portfolio, collapsing it to ~46% of oracle → ~2.8×,
+and spuriously revived harm-blindness (w=1 → 1.81×). The **faithful split** (audit P0.6) separates the two
+mechanisms the literature actually names:
+- **~8% TRUE HARM** (S<0): quality-mean raised to **0.27** → only ~8% of projects are actively net-harmful.
+- **~28% BELOW OPPORTUNITY COST** (S>0 but net<0): a new **hurdle** `net = S − h·cost`, h=2.5 — a
+  per-dollar social-return threshold (below the social discount rate, Doc 1). The delivered metric is now
+  **NET** value. The oracle and distributed gate out net≤0; the credit-driven central funds them (net<0
+  but P>0) = agenda-capture. Total net-negative ≈ 36% still matches Pohl-Mihaljek p_U+≈0.65, as **8% harm
+  + 28% below-hurdle**.
+
+**Corrected headline: ~2.1× (band ~1.9–2.4× over corr(S,P)∈[0.1,0.3], ρ≈0.2–0.4), = selection ~1.5–1.8×
+× delivery 1.30×.** Confirmed on a fresh held-out run (seed base 5000); see `e5-sp-preregistration.md`.
+This is DOWN from the intermediate ~2.8× and converges on the paper's **original robust ~2.2×**, now with
+a properly grounded harm(8%)+hurdle(28%) mechanism. Consequences that REVERSE the MAJOR CORRECTION below:
+- **Harm-blindness is again NEARLY INERT** (w=1 → **1.30×**, the pure delivery floor) — with only ~8%
+  true harm, being harm-blind barely changes the value ranking. So the "harm-blindness revives" claim is
+  **re-retracted**; the ENTIRE selection advantage is **agenda-capture** (w=0). This STRENGTHENS the v2
+  pivot rather than diluting it.
+- **"Best-vs-value-destroying vs best-vs-mediocre" is graded, not binary:** the central's realized
+  portfolio is ~18–26% net-negative at realistic corr (Doc-1's ~35% is the low-corr pessimistic edge, ρ≈0.1),
+  and it delivers 66–77% of oracle NET value there — mediocre-to-poor, value-destroying only at the tail.
+- **Macro layer still ≤1×** (0.76–0.97×): the top-k category gate rescues the credit central; no third layer.
+
+Engine: `scripts/simulation/e5-sp-model.mjs` — the `hurdle` param, `net[]`, the `cenNetNeg` portfolio
+diagnostic, recentered tornado (adds a hurdle knob), and faithful-split canonical defaults
+(mean=0.27, hurdle=2.5, muF=-4, sigF=1.5). Canonical run: `--concentrate=1 --byValue=1` (no calibration flags).
+
+## MAJOR CORRECTION (2026-07-10, author, INTERMEDIATE — superseded by the faithful split above) — headline ~2.0× → ~2.8×; harm-blindness revives
 Two literature-grounded calibrations from the author (`drafts/positive-net-social-value-calibration.md`,
 `drafts/public-investment-efficiency-loss-calibration.md`) correct two numbers below:
 - **GROSS ERROR (net-negative share).** The earlier "<1% net-negative / lopsided-positive world" was
