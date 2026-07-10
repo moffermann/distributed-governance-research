@@ -55,13 +55,15 @@ en el lado distribuido; en aras de la justicia la modelamos también en el lado
 central, simétricamente —y la asimetría entonces se *ensancha* en vez de
 cerrarse—. En el modelo el status quo se vuelve net-dañino cuando las rentas
 privadas de un proyecto capturado alcanzan cerca del **10% de su costo**,
-mientras el brazo distribuido resiste rentas cerca de **10× mayores**: su costo
-de captura tiene piso en el wallet igual-por-ciudadano (el dinero no compra
-wallets, solo persuade a quienes los tienen) y su fraude queda expuesto por una
-detección que solo necesita un puñado de denunciantes de un público afectado y
-transparente. Esto invierte la carga de la prueba —para derrotar al brazo
-distribuido, un crítico debe suponer una apatía cívica casi total entre personas
-estafadas de un beneficio que les correspondía.
+mientras el brazo distribuido resiste rentas cerca de **10× mayores** —un contraste
+interno del modelo **condicional a los supuestos estipulados de detección y costo de
+adquisición**, no una estimación de robustez calibrada—: su costo de captura tiene
+piso en el wallet igual-por-ciudadano (el dinero no compra wallets, solo persuade a
+quienes los tienen) y su fraude queda expuesto por una detección que solo necesita
+un puñado de denunciantes de un público afectado y transparente. Bajo esos supuestos
+la carga de la prueba se desplaza hacia el crítico; el efecto se debilita fuertemente
+si la detección distribuida es baja o la persuasión es barata (una sensibilidad que
+el estudio complementario mapea).
 
 **(3) Alinear los incentivos hace que el valor llegue —y es la precondición, no
 un segundo multiplicador.** El ejecutor entrega, y no desvía, cuando arriesga
@@ -680,8 +682,10 @@ pre-registrado de **0.05**; una estimación **post-hoc** de ratio-of-sums es
 multiplicador compuesto, por lo tanto, **no** se reclama como efecto calibrado. Esta
 es una prueba estilizada de un *mecanismo de selección*, no una implementación
 validada de Core v0: sus variables de valor y crédito son puntajes abstractos, no
-visibilidad, trazabilidad, permanencia o valor público medidos. La especificación
-rectora es
+visibilidad, trazabilidad, permanencia o valor público medidos. El **0.05** es un
+**umbral de rebuild** del programa de investigación sobre esta escala no calibrada
+(una regla go/no-go sobre si perseguir un rebuild cuantitativo), **no** un umbral de
+materialidad de política calibrado. La especificación rectora es
 [claim-and-estimand-contract](../research/claim-and-estimand-contract.md); la prueba,
 su pre-registro congelado, resultados y diagnósticos están en
 `scripts/simulation/e5-sp-symmetry-gate.mjs` y `audits/2026-07-10/symmetry-gate-*`.

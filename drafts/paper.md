@@ -50,12 +50,14 @@ the distributed side; in fairness we modelled it on the central side too,
 symmetrically — and the asymmetry then *widens* rather than closes. In the model
 the status quo turns net-harmful once a captured project's private rents reach
 about **10% of its cost**, while the distributed arm resists rents about **10×
-higher**: its capture cost is floored by the equal-per-citizen wallet (money
-cannot buy wallets, only persuade their holders) and its fraud is exposed by
-detection that needs only a handful of reporters from a transparent affected
-public. This inverts the burden of proof — to defeat the distributed arm a
-critic must assume near-total civic apathy among people cheated of a benefit
-they were owed.
+higher** — a model-internal contrast that is **conditional on the stipulated
+detection and acquisition-cost assumptions**, not a calibrated robustness estimate:
+its capture cost is floored by the equal-per-citizen wallet (money cannot buy
+wallets, only persuade their holders) and its fraud is exposed by detection that
+needs only a handful of reporters from a transparent affected public. Under those
+assumptions the burden of proof shifts toward the critic; the effect weakens
+sharply if distributed detection is low or persuasion is cheap (a sensitivity the
+companion study maps).
 
 **(3) Aligned incentives make the value arrive — and are the precondition, not
 a second multiplier.** The executor delivers rather than diverts when more is at
@@ -622,7 +624,10 @@ pre-registered **0.05 materiality gate**; a **post-hoc** ratio-of-sums estimate 
 multiplier is therefore **not** claimed as a calibrated effect. This is a stylized
 test of a *selection mechanism*, not a validated implementation of Core v0: its
 value and credit variables are abstract scores, not measured visibility,
-traceability, permanence, or public value. The controlling specification is
+traceability, permanence, or public value. The **0.05** figure is a
+research-program **rebuild threshold** on this uncalibrated scale (a go/no-go rule
+for whether to pursue a quantitative rebuild), **not** a calibrated policy-materiality
+threshold. The controlling specification is
 [claim-and-estimand-contract](../research/claim-and-estimand-contract.md); the test,
 its frozen pre-registration, results, and diagnostics are
 `scripts/simulation/e5-sp-symmetry-gate.mjs` and `audits/2026-07-10/symmetry-gate-*`.

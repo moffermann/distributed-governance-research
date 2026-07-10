@@ -73,6 +73,34 @@
   one-word softening. *(errors m1)*
 - [DEFER] **R2-24 — Extend `check-anchors.mjs`** to all repo-relative paths (= existing T3.5). *(errors m4)*
 
+### Round-2b — from the multidimensional-evaluation audit (`multidimensional-evaluation.md`)
+> Overall 5/10 ("major revisions"); recommendation: do not publish yet. Several of its Majors were already
+> fixed by the round-2 pass above (E4 sign/denominator, "delivers more value", roadmap license banner).
+> New items:
+- [x] **R2-25 (Major) — Pre-registration labels vs the contract.** Paper calls E4/E5/E6/E7/E8 "pre-registered"
+  and README/`.zenodo.json` say "eight experiments (six pre-registered)", while the contract retires the
+  "pre-registered 7/7" framing and calls the **symmetry gate the one genuinely pre-registered (confirmatory)
+  test**. Reconcile: keep "pre-registered *design*" where literally true, but stop implying the E-experiments
+  confirmatorily validated the (retired) multiplier. *(eval Major 2)*
+- [~] **R2-26 (Major) — The ~10× capture claim is assumption-driven, not calibrated.** Detection is stipulated
+  (central 0.10 vs distributed ~1.0) and sensitivity is decisive (distributed value goes negative at detection
+  ~0.3); the abstract's "critics must assume near-total civic apathy" burden-of-proof language is unsupported.
+  Soften to a model-internal, assumption-conditional statement. (Ties into R2-6.) *(eval Major 4)*
+- [x] **R2-27 (Minor) — `research/e4-calibration-targets.md`** (linked from the paper appendix) still says the
+  central benchmark is "calibratable now" by a simple overlay — conflicts with the corrected construct-bridge
+  requirement. Banner/fix. *(eval Minor 4)*
+- [x] **R2-28 (Minor) — `research/formal-models.md`** retains "exclusion"-as-penalty language while the paper
+  says reputation "never excludes". Reconcile (continuation-loss without exclusion). *(eval Minor 5)*
+- [x] **R2-29 (Minor) — "materiality" caveat:** the 0.05 gate is a research-program rebuild threshold, not a
+  calibrated policy-materiality threshold (units uncalibrated). Add a one-line caveat where cited. *(eval Minor 1)*
+- [x] **R2-30 (Nit) — Gate artifacts wording:** `symmetry-gate-results.txt` says "advantage does not survive"
+  (18/18 were positive; only the 0.05 gate failed) and still labels the stress case "ADVERSARIAL" (should be
+  "matched-budget low-information stress"). *(eval Minor 3, Nit 1)*
+- [DEFER] **R2-31 (Major, = R2-6) — Complete the Path-B abstract/conclusion pivot:** the abstract still leads
+  with 1.8× selection / ~10× capture / +43% delivery as "the three results". The evaluator calls this the #1
+  weakness and a publication blocker. **AUTHOR editorial decision** on how far to restructure — options to be
+  proposed. *(eval Major 1, 6; consistency #2)*
+
 **Date:** 2026-07-10 · **Owner:** author (Mauricio Offermann) · **Status of this file:** the working
 control document for getting to a clean publication. Supersedes the stale live roadmap until `docs/03`
 is reconciled (task T2.1).

@@ -38,3 +38,12 @@ NO-GO / Path-B publication.
 ## Verdict
 **T0.2 closed.** The gate's NO-GO is robust under the honest CI, and its regime structure is a genuine
 modeled mechanism with the coupling caveat documented.
+
+## Reading the frozen gate output (round-2 clarification)
+- The gate's `symmetry-gate-results.txt` verdict prints **"advantage does not survive"**. Read this as
+  **"does not clear the pre-registered 0.05 materiality gate"** — the advantage is **positive in all 18
+  primary cells** (median Δ = 0.025, CI excludes zero); it is small, not absent. The paper/contract state
+  this correctly ("positive but small").
+- The frozen output still labels the low-information regime **"ADVERSARIAL"**; paper-facing text uses the
+  more precise **"matched-budget low-information stress regime"** (see the caveat above). The frozen artifact
+  is left unmutated for reproducibility; this note is the controlling interpretation.

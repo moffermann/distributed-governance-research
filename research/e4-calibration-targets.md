@@ -1,9 +1,12 @@
 # E4 — Calibration targets: from model-internal to empirically anchored
 
-> **SUPERSEDED (2026-07-10 audit).** This note predates the value-model-v2 agenda-capture reframe; its
-> harm-blindness (beta*=1-eta) framing and any headline multipliers (2.2x/2.09x/1.83x/2.0x) are
-> HISTORICAL. Current state: `research/e4e5-value-model-v2.md` + `research/e5-sp-preregistration.md`.
-> Kept for the record.
+> **🛑 SUPERSEDED (2026-07-10; controlling).** This note predates BOTH the value-model-v2 reframe AND its
+> retirement; its harm-blindness (beta*=1-eta) framing and all headline multipliers (2.2x/2.09x/1.83x/2.0x)
+> are HISTORICAL. **In particular, the "central %-oracle is calibratable now by a simple overlay" claim (rows
+> below) is RETIRED:** the realized/appraised ratio and the model's central-vs-benchmark share are *different
+> constructs*, so linking them needs an explicit construct bridge — a **candidate validation target**, not a
+> one-step overlay (see the paper's calibration appendix and `research/claim-and-estimand-contract.md`).
+> Controlling docs: `research/claim-and-estimand-contract.md` + the symmetry gate. Kept for the record.
 
 ## Status
 From the constructive round's empirical-calibration reviewer. The E4 magnitudes are

@@ -50,6 +50,11 @@ Mechanism parameters, each a named Core v0 object:
   the present value of future protocol eligibility under role-based
   reputation (H014, H030).
 
+> **Terminology note.** Where this note uses "exclusion", it means **continuation loss** — a *reduced future
+> selection probability/value* driven by a visible reputation score — **not** a literal exclusion power. This
+> is consistent with the architecture, which states that reputation informs choice and **never excludes**
+> (drafts/paper.md). The algebra depends only on the continuation loss `R`, not on any exclusion mechanism.
+
 The remainder `1 − a` is released only on acceptance. If the executor
 diverts and review fails (probability `1 − p`), fraudulent evidence is
 accepted and the remainder is released.
