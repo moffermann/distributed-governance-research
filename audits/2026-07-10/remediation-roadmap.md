@@ -1,12 +1,14 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
-> **✅ STATUS 2026-07-10: PUBLICATION-READY conditional only on 2 author decisions.** After the NO-GO
-> decision, Tiers 0–7 were worked end-to-end (17 commits, all pushed) and validated with Codex at each step.
-> Codex's final holistic review: *"the paper and reviewer-visible repository surface are now defensibly
-> publication-ready, conditional only on the author resolving T3.1 and T3.2."* The **only remaining gates**
-> are the two AUTHOR decisions: **T3.1 (license: paper CC BY-NC-ND vs CITATION/.zenodo/live-deposit CC-BY-4.0)**
-> and **T3.2 (deposit-version state: is v1.12 / 21252911 the live record; is a new deposit paused?)**. All
-> other open items below are non-blocking polish or Tier-8 enlargements.
+> **✅ STATUS 2026-07-10: PUBLICATION-READY. Both author decisions resolved.** After the NO-GO decision,
+> Tiers 0–7 were worked end-to-end and validated with Codex at each step; Codex's final holistic review
+> confirmed the paper + reviewer-visible surface are publication-ready. The two blocking author items are now
+> resolved: **T3.2** — verified (Zenodo API) that **v1.12 / 21252911 is the live latest deposit**; working
+> draft bumped to **v1.13**; all local metadata aligned. **T3.1** — author chose **Option B (dual license,
+> separate records)**: corpus/code CC BY 4.0 / MIT, manuscript CC BY-NC-ND 4.0 as a separate Zenodo record
+> from v1.13; local metadata + deposit procedure prepared. **The only remaining step is the author's Zenodo
+> DEPOSIT of the two v1.13 records** (a mechanical action, Zenodo-paused/author-gated) — not a blocker on the
+> repo's publication-readiness. All other open items below are non-blocking polish or Tier-8 enlargements.
 
 **Date:** 2026-07-10 · **Owner:** author (Mauricio Offermann) · **Status of this file:** the working
 control document for getting to a clean publication. Supersedes the stale live roadmap until `docs/03`
@@ -113,16 +115,21 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   *(consistency number-drift)*
 
 ## TIER 3 — External-facing correctness (must fix before any deposit; ~½ day)
-- [ ] **T3.1 — License conflict (⚠️ AUTHOR DECISION — confirmed author-only by Codex):** paper CC BY-NC-ND 4.0
-  vs `CITATION.cff`/`.zenodo.json`/**live deposit** CC-BY-4.0. A public CC-BY-4.0 grant is **irrevocable** for
-  already-released copies, so changing local metadata to NC-ND cannot retract it and could misdescribe the live
-  v1.12 deposit. Safe autonomous action was to **document** the conflict (done); the author must decide whether
-  the deposit was intentionally CC-BY, whether future versions use NC-ND, and whether corpus vs manuscript need
-  separate records. *(consistency C2)*
-- [ ] **T3.2 — Version/deposit reconciliation (⚠️ AUTHOR DECISION):** README said "v1.8 latest deposit" but
-  audit found record **21252911 live as v1.12** (deposit title still "v1.8"). Removed the stale "latest
-  deposited v1.8 / paused" clause from the README description; the true deposit state + "Zenodo paused"
-  assumption need author confirmation before aligning CITATION/.zenodo/LICENSE/docs-101/dates. *(consistency M9, m3)*
+- [x] **T3.1 — License: DECIDED 2026-07-10 (author chose Option B — dual, separate records).** Corpus + code
+  stay CC BY 4.0 / MIT; the **manuscript** (paper.md/.es.md, docs/101, essay/explainer, reviewer packets) is
+  **CC BY-NC-ND 4.0** and, **from v1.13**, is deposited as a **separate Zenodo record**. LICENSE.md already
+  documents this dual scheme (no change needed). Prepared: `.zenodo.json` now scoped to the corpus/code record
+  with an explicit license-map note; new `drafts/paper.zenodo.json` = the manuscript record metadata
+  (cc-by-nc-nd-4.0); RELEASING.md has the dual-record deposit procedure + the irrevocable-grant note (v1.12's
+  manuscript copy stays CC-BY). **Remaining = author action:** actually deposit the two v1.13 records on Zenodo
+  (paused / author-gated). *(consistency C2)*
+- [x] **T3.2 — Version/deposit: RESOLVED 2026-07-10.** Verified read-only via the Zenodo API: record
+  **21252911 is live, v1.12, published 2026-07-07, is_last=true, CC BY 4.0** — falsifying the stale "v1.8
+  paused" assumption. Author confirmed the next version is **v1.13** (this Path B reframe). Aligned all local
+  metadata: README (latest deposited 21252911/v1.12; working draft v1.13), LICENSE.md citation (v1.12/21252911),
+  CITATION.cff (version v1.13 per the draft-sync rule; preferred-citation DOI stays v1.12/21252911),
+  `.zenodo.json` (v1.13), paper headers EN+ES (v1.13). Only the live record's TITLE string still reads "v1.8"
+  — fixing it needs a metadata redeposit (author action). *(consistency M9, m3)*
 - [x] **T3.3 — Stale attack count** DONE: README + `.zenodo.json` + paper (7 EN + 7 ES spots) updated to
   **43 attacks (A001–A043), docs 67–113, 5 rounds**; README/.zenodo descriptions also **retired the
   ~2× headline framing** ("recalibrating the delivered-value headline" → the NO-GO/contract statement).
