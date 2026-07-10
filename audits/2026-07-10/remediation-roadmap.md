@@ -83,10 +83,11 @@
   "pre-registered 7/7" framing and calls the **symmetry gate the one genuinely pre-registered (confirmatory)
   test**. Reconcile: keep "pre-registered *design*" where literally true, but stop implying the E-experiments
   confirmatorily validated the (retired) multiplier. *(eval Major 2)*
-- [~] **R2-26 (Major) — The ~10× capture claim is assumption-driven, not calibrated.** Detection is stipulated
-  (central 0.10 vs distributed ~1.0) and sensitivity is decisive (distributed value goes negative at detection
-  ~0.3); the abstract's "critics must assume near-total civic apathy" burden-of-proof language is unsupported.
-  Soften to a model-internal, assumption-conditional statement. (Ties into R2-6.) *(eval Major 4)*
+- [x] **R2-26 (Major) — The ~10× capture claim is assumption-driven, not calibrated.** DONE (EN+ES):
+  Finding 4's "a bar so low that defeating the distributed arm requires assuming near-total civic apathy"
+  and the backbone's "burden-of-proof inversion made rigorous" are now model-internal, sensitivity-dependent
+  statements naming the stipulated detection gap (central ~0.10 vs distributed ~1.0) and the ~0.3 reversal
+  point. The abstract's burden-of-proof language was already removed by the abstract rewrite. *(eval Major 4)*
 - [x] **R2-27 (Minor) — `research/e4-calibration-targets.md`** (linked from the paper appendix) still says the
   central benchmark is "calibratable now" by a simple overlay — conflicts with the corrected construct-bridge
   requirement. Banner/fix. *(eval Minor 4)*
@@ -102,6 +103,41 @@
   structure that states the modest, conditional NO-GO result (median Δ=0.025 < 0.05) plainly and retires the
   1.8× / ~10× / +43% "three results" framing. Author-approved; converged with the auditor (Codex) and
   fact-checked. This closed the evaluator's #1 publication blocker. *(eval Major 1, 6; consistency #2)*
+
+### Round-2c — post-abstract coherence sweep (from `audits/2026-07-10-round2/high-value-improvements.md`)
+> After the value-first abstract landed, the round-2 improvements audit (Codex) plus a verification pass
+> found the pivot was only half-propagated: the abstract was honest but the title/conclusion/novelty and the
+> outreach surfaces still reasserted the retired multiplier. Cleared 2026-07-10:
+- [x] **R2c-1 — Title overstates the method** (improvements Major 3): "Adversarial **Validation**" → "Adversarial
+  **Stress-Testing**"; "Computational **Evidence for**" → "a Symmetric Computational **Test of**" (EN+ES). The body
+  already calls the loop "structured self-critique, not external validation"; the title now matches.
+- [x] **R2c-2 — Conclusion re-answered with the triad** (improvements Major 2 / Rec 1): the conclusion led with
+  "+43% / +53-54%" as "the answer". Reframed (EN+ES) to present those as exploratory model-internal factorial
+  contrasts and lead with the architecture + the pre-registered gate (positive but small, multiplier retired);
+  the +43/+53-54 numbers now appear only in Section 6's clearly-conditional apparatus context.
+- [x] **R2c-3 — Novelty "substantive result is itself new"** (Rec 1): softened to a measurement/method
+  contribution with the gate caveat; "criterion redistribution exists to satisfy" → "criterion public budgets
+  exist to serve" (residual R2-7) in the conclusion + contribution #3 + novelty (vi), EN+ES.
+- [x] **R2c-4 — Stale ES outreach summaries** (improvements Major 1 / Rec 9): `paper-resumen-ejecutivo.es.md`
+  and `paper-lectura-simple.es.md` dropped "2 a 3 veces"/"2 a 2.7 veces"/"~2× a más de 5×" and the unsupported
+  "rinde más con baja participación" claim; reframed to Path B; companion DOI 21246089 → concept 21246088.
+  Section-6 "twofold to more than fivefold" companion figure relabelled a conditional model-internal contrast
+  (EN+ES).
+- [x] **R2c-5 — Stale reviewer cover + release credential** (improvements Major 5, Major 4): SUPERSEDED banner
+  on `SENDING_COVER_v1.10.md` + DOI fix; `RELEASING.md` token-file pattern retired (→ `ZENODO_TOKEN` env var +
+  credential-handling note); `_backups/` added to `.gitignore`.
+- [DEFER] **R2c-6 — Stale executive-summary PDF.** `drafts/paper-resumen-ejecutivo.es.pdf` is a Jul-7 render of
+  the pre-Path-B text (still shows "2 a 3 veces"). `pandoc` is not available in this environment to regenerate
+  it. **Must be regenerated from the corrected `.es.md` or removed before any dissemination.** *(improvements Rec 9)*
+
+**Deferred as larger research phases (improvements Recs 2–8, 10–15; not publication-blocking for a Path-B
+architecture-and-mechanism paper):** the staged empirical program / pilot (Rec 2 = Tier-8 E4), a one-command
+self-verifying reproduction package + CI (Rec 3), the stronger-central-comparator falsification test (Rec 4 =
+Tier-8 E5-adjacent), a modular symmetric engine (Rec 5 = Tier-8 E3), the construct/calibration dataset (Rec 6),
+a systematic prior-art review (Rec 7), release-pipeline validation automation (Rec 8), the Section-6 evidence-
+hierarchy restructure + diagrams (Rec 10 = Tier-8 E1), reversal-capable adversarial tests (Rec 11), independent
+external expert review (Rec 12), venue selection (Rec 13), a bilingual policy brief (Rec 14), and CI parity
+checks (Rec 15). These enlarge or re-open the work; they are tracked here so nothing is lost.
 
 **Date:** 2026-07-10 · **Owner:** author (Mauricio Offermann) · **Status of this file:** the working
 control document for getting to a clean publication. Supersedes the stale live roadmap until `docs/03`
