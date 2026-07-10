@@ -789,15 +789,21 @@ threshold.** From rent > acquisition + P(detect)·penalty, the central's thresho
 distributed's λ\*_D = k_d + p_d·f/C is *floored* by the equal-wallet acquisition
 term k_d; the resistance ratio ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×,
 rising in project cost. **(iii) The detection floor.** With snowball detection
-P = 1 − (1 − q)^m, beating a central rate p_c needs only an expected
-m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters — a model-internal detection floor under the
-stipulated parameters (sensitivity-dependent; see Finding 4), not an empirical
-burden-of-proof inversion.
-Three invariances bound the arbitrary-magnitudes worry: the advantage is
-invariant to the units of value (scale) and to the participation *level* (only
-the bias β matters, not turnout), and by the central-limit theorem only the first
-moments S⁺, S⁻ enter, so the Gaussian valuation draw is a convenience, not an
-assumption. One honest boundary the runs mark: the parity law is the large-set
+P = 1 − (1 − q)^m, beating a central rate p_c needs, in the small-*q* (Poisson)
+approximation (1 − q)^m ≈ e^{−m·q}, only an expected m·q ≥ −ln(1 − p_c) ≈ 0.1
+reporters — the exact Bernoulli condition is m ≥ ln(1 − p_c)/ln(1 − q), which
+depends on *m* and *q* separately, not only on their product. It is a
+model-internal detection floor under the stipulated parameters
+(sensitivity-dependent; see Finding 4), not an empirical burden-of-proof inversion.
+Three invariances bound the arbitrary-magnitudes worry — as properties of the
+noise-free, large-set *expectation*, not of every finite-sample run: the advantage
+is invariant to the units of value (scale); in expectation it depends on the
+voice-bias β rather than on the participation *level* (though in finite samples
+turnout changes sample size, sampling variance, and hence rankings and
+portfolios); and, because only the first moments S⁺, S⁻ enter the expected
+ranking, the Gaussian valuation draw is a convenience there rather than a
+load-bearing assumption (finite-sample tails and valuation shape can still move
+rankings). One honest boundary the runs mark: the parity law is the large-set
 limit; when a project's interested set is very small — a handful of people — the
 distributed's sampling variance dominates and a full-census central regains the
 edge. Two further boundaries are honest to state. The comparison is *static* — a

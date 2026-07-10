@@ -855,14 +855,22 @@ tiende a cero al reducirse su detección, mientras el del distribuido λ\*_D = k
 p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la razón
 de resistencia ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×, creciente en el
 costo del proyecto. **(iii) El piso de detección.** Con detección de bola de
-nieve P = 1 − (1 − q)^m, superar una tasa central p_c solo requiere un valor
-esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes —un piso de detección interno al
-modelo bajo los parámetros estipulados (dependiente de la sensibilidad; véase el
-Hallazgo 4), no una inversión empírica de la carga de la prueba. Tres invariancias acotan la inquietud de las magnitudes
-arbitrarias: la ventaja es invariante a las unidades de valor (escala) y al
-*nivel* de participación (solo importa el sesgo β, no la concurrencia), y por el
-teorema central del límite solo entran los primeros momentos S⁺, S⁻, así que el
-sorteo gaussiano de valoraciones es una conveniencia, no un supuesto. Un límite
+nieve P = 1 − (1 − q)^m, superar una tasa central p_c requiere, en la aproximación
+de *q* pequeño (Poisson) (1 − q)^m ≈ e^{−m·q}, un valor esperado
+m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes —la condición Bernoulli exacta es
+m ≥ ln(1 − p_c)/ln(1 − q), que depende de *m* y *q* por separado, no solo de su
+producto. Es un piso de detección interno al modelo bajo los parámetros
+estipulados (dependiente de la sensibilidad; véase el Hallazgo 4), no una inversión
+empírica de la carga de la prueba. Tres invariancias acotan la inquietud de las magnitudes
+arbitrarias —como propiedades de la *esperanza* sin ruido y de conjuntos grandes,
+no de cada corrida de muestra finita: la ventaja es invariante a las unidades de
+valor (escala); en esperanza depende del sesgo de voz β y no del *nivel* de
+participación (aunque en muestras finitas la concurrencia cambia el tamaño de
+muestra, la varianza de muestreo y por ende los rankings y las carteras); y, como
+solo entran los primeros momentos S⁺, S⁻ en el ranking esperado, el sorteo
+gaussiano de valoraciones es allí una conveniencia antes que un supuesto que carga
+peso (las colas de muestra finita y la forma de la valoración aún pueden mover
+rankings). Un límite
 honesto que marcan las corridas: la ley de paridad es el límite de conjuntos
 grandes; cuando el conjunto interesado de un proyecto es muy pequeño —un puñado
 de personas— la varianza de muestreo del distribuido domina y un central de censo

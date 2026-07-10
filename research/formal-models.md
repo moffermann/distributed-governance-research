@@ -140,7 +140,9 @@ Formalizes: [[10_FISCALIZATION_EVIDENCE_AND_CONTROL_MODEL|docs/10_FISCALIZATION_
 ### Setup
 
 A milestone is truly non-delivered. Fraudulent approval is worth `G > 0` to
-the executor (in Model 1 terms, `G = 1 − a + γ + R` avoided). Release
+the executor (in Model 1 terms, avoiding confirmed rejection is worth
+`G = 1 − a(1 − r) + γ + R`; the recoverable-advance term `a·r` was previously
+dropped from this mapping). Release
 requires approval by `k ≥ 1` fiscalizers, selected by protocol rule — the
 executor neither chooses nor pays them (`ControlSubproject`,
 `FiscalizationAssignment`).
