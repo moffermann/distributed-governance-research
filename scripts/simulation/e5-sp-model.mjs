@@ -25,18 +25,25 @@ function mkGauss(rng){ let s=null; return ()=>{ if(s!==null){const t=s;s=null;re
 
 const PARAMS = {
   N: 5000, K: 500, seeds: 20, seedBase: 1000,   // seedBase: exploration used 1000; set e.g. 5000 for a HELD-OUT confirmation run
-  mean: 0.06,          // LITERATURE-CALIBRATED: gives ~35% net-NEGATIVE net social value share (S interpreted NET of the
-                       //   opportunity cost of capital), matching Pohl-Mihaljek p_U+~=0.65 (drafts/positive-net-social-value-
-                       //   calibration.md). (The old 0.40 -> <1% net-neg was a GROSS ERROR: it used pure existence value,
-                       //   ignoring the opportunity cost of capital.) Sensitivity band p_U+ in [0.50,0.75] -> mean ~[0.0,0.15].
+  mean: 0.27,          // LITERATURE-CALIBRATED (FAITHFUL SPLIT): mean=0.27 -> ~8% TRUE-HARM share (S<0), matching the
+                       //   ~8% actively net-harmful projects. The remaining ~27% below-opportunity-cost share is produced
+                       //   by the `hurdle` (below), NOT by pushing more projects to S<0. Total net-neg ~36% still matches
+                       //   Pohl-Mihaljek p_U+~=0.65 (drafts/positive-net-social-value-calibration.md), but as 8% harm +
+                       //   28% below-hurdle -- the faithful mechanism split (audit P0.6). (The old mean=0.06 lumped ALL 35%
+                       //   as S<0, over-reviving harm-blindness and INFLATING the headline; see the note file.)
+                       //   True-harm sensitivity band: mean~[0.24,0.33] -> ~11%..4% harm.
   sd: 1.0,             // idiosyncratic spread of individual valuations around the project quality
   projSpread: 0.15,    // per-unit quality heterogeneity
-  muF: -1.5, sigF: 1.2, // REACH: interested fraction = exp(muF + sigF*a), heavy-tailed -> value heterogeneity lives in REACH (stadium >> rural school), NOT in net-neg share
+  muF: -4, sigF: 1.5,  // REACH: interested fraction = exp(muF + sigF*a), heavy-tailed -> value heterogeneity lives in REACH (stadium >> rural school), NOT in net-neg share. Canonical Core-v0 operating point.
   sigP: 1.0,           // credit spread: P = exp(sigP * creditLatent), where creditLatent corr rho with the REACH latent (decoupled at rho<1 -> a high-reach project CAN be low-P: the invisible sewer)
   costHi: 10, budgetFrac: 1/3,
   p: 0.35, beta: 0.30, // distributed participation rate and voice bias (harmed under-participate) -- COVERAGE, from E4
   w: 0.0,              // central's weight on (harm-blind) VALUE vs credit P.  w=0 pure agenda-capture; w=1 -> E4
   eta: 0.1,            // harm-blindness of the value term (only matters if w>0)
+  hurdle: 2.5,         // OPPORTUNITY-COST hurdle h: net social value = S - h*cost (Doc 1: ~35% of projects are below the social
+                       //   discount rate). With ~8% true harm (S<0, from `mean`) + the hurdle, ~35% have net<0. The central funds
+                       //   below-hurdle projects (net<0 but credit P>0) = AGENDA-CAPTURE; the oracle/distributed avoid them.
+                       //   The DELIVERED metric becomes NET value. h=0 recovers the pre-hurdle model (all net-neg = true harm).
   concentrate: 0,      // lumpiness gate regime: 0 = SPREAD (pessimistic); 1 = CONCENTRATE (Core v0 earmarked vouchers + 90-day recycle)
   byValue: 0,          // distributed funding order: 0 = value/cost (efficient); 1 = pure VALUE (atomized voucher-holders fund what they value, ignore cost)
   A: 20, kCat: 10,     // --cats 3-layer decomposition: number of categories and the top-k macro gate
@@ -102,15 +109,24 @@ function evalWorld(seed, rho, lumpiness=0){
     const omega = PARAMS.concentrate ? budget/PARAMS.N : budget/(totReach||1);
     gate=new Array(K).fill(false);
     for(let j=0;j<K;j++) if(reach[j]*omega < lumpiness*cost[j]){ gate[j]=true; if(S[j]>0) gatedOracleVal+=S[j]; } }
+  // OPPORTUNITY-COST hurdle: NET social value = S - h*cost. Delivered metric is NET. Oracle/distributed
+  // avoid below-hurdle projects (net<=0); the central funds them (net<=0 but credit P>0) = agenda-capture.
+  const h=PARAMS.hurdle; const net=new Float64Array(K); for(let j=0;j<K;j++) net[j]=S[j]-h*cost[j];
+  const netGate=new Array(K).fill(false); for(let j=0;j<K;j++) if(net[j]<=0) netGate[j]=true;   // value-maximizers won't fund value-destroyers
+  const distGate=(gate||h>0)?new Array(K).fill(false):null;
+  if(distGate) for(let j=0;j<K;j++) distGate[j]=(gate&&gate[j])||netGate[j];
   // CENTRAL: (1-w) credit P + w harm-blind value. creditScale puts P on the value scale (match mean magnitude).
   let mS=0,mP=0; for(let j=0;j<K;j++){ mS+=Math.abs(S[j]); mP+=Math.abs(P[j]); } const creditScale=mS/(mP||1);
   const cen=new Float64Array(K); for(let j=0;j<K;j++) cen[j]=(1-w)*creditScale*P[j] + w*cHarmBlind[j];
-  const o=deliver(fund(S,cost,K,budget),S,1.0);                        // oracle: optimal (value/cost knapsack)
-  if(!(o>0)) throw new Error("assertion failed: oracle delivered value must be > 0 (o="+o+", seed="+seed+", rho="+rho+") -- mis-calibration (world entirely net-negative?)");
-  const d=deliver(fund(dis,cost,K,budget,gate,PARAMS.byValue),S,fVer); // distributed: gated by threshold; funds by value or value/cost
-  const c=deliver(fund(cen,cost,K,budget),S,fWeak);                    // central: pooled budget, no threshold
-  let neg=0,gatedN=0; for(let j=0;j<K;j++){ if(S[j]<0) neg++; if(gate&&gate[j]) gatedN++; }
-  return {o,d,c,negShare:neg/K,gatedN,gatedOracleVal,S,P};
+  const o=deliver(fund(net,cost,K,budget),net,1.0);                    // oracle: max NET value (ranks net/cost, skips net<=0)
+  if(!(o>0)) throw new Error("assertion failed: oracle NET delivered value must be > 0 (o="+o+", seed="+seed+", rho="+rho+", hurdle="+h+") -- mis-calibration");
+  const cenFunded=fund(cen,cost,K,budget,null,false);                  // central: funds by credit P (funds below-hurdle net<0), delivers NET
+  const d=deliver(fund(dis,cost,K,budget,distGate,PARAMS.byValue),net,fVer); // distributed: funds by value, skips below-hurdle+gated, delivers NET
+  const c=deliver(cenFunded,net,fWeak);
+  // Doc-1 validation: fraction of the CENTRAL's realized portfolio that is net-negative (should be ~35% at rho low, less at rho high).
+  let cnn=0; for(const j of cenFunded) if(net[j]<0) cnn++; const cenNetNeg=cenFunded.length? cnn/cenFunded.length : 0;
+  let neg=0,belowH=0,gatedN=0; for(let j=0;j<K;j++){ if(S[j]<0) neg++; if(net[j]<0) belowH++; if(gate&&gate[j]) gatedN++; }
+  return {o,d,c,negShare:neg/K,belowHurdle:belowH/K,cenNetNeg,gatedN,gatedOracleVal,S,P};
 }
 
 // ---- 3-LAYER decomposition: macro (category gate) x allocation (project) x delivery ----
@@ -157,12 +173,13 @@ if(process.argv.includes("--tornado")){
   console.log("TORNADO — headline ratio d/c robustness at fixed rho="+rho0+" (Core-v0 config), one knob at a time:");
   console.log("  baseline ratio = "+f(base)+"x\n");
   console.log("  knob                | low -> ratio | high -> ratio | grounding");
-  const knobs=[  // ranges centered on the CORRECTED calibration (mean~0.06 -> ~35% net-neg; fWeak=0.75; fVer=0.975)
-    ["beta (voice bias)",       "beta", 0.3, 0.5, "Verba-Schlozman-Brady"],
-    ["mean (net-neg share)",    "mean", 0.03, 0.15, "p_U+ band [~0.55,0.75]: 0.03~45% neg .. 0.15~21% neg (mean->0 = the ~50% degenerate edge)"],
-    ["fVer (delivery, /0.75)",  "fVer", 0.90, 0.99, "central loss 25% (IMF); dist 10x-resistant (E4-v5)"],
-    ["sigF (reach heavy-tail)", "sigF", 1.2, 1.8, "coverage/value spread"],
-    ["w (harm-blind 2ndary)",   "w",    0.0, 0.3, "0=pure agenda .. 0.3=some value-caring"],
+  const knobs=[  // ranges centered on the FAITHFUL-SPLIT calibration (mean=0.27 -> ~8% harm; hurdle=2.5 -> ~28% below-hurdle; fWeak=0.75; fVer=0.975)
+    ["beta (voice bias)",       "beta",   0.3, 0.5, "Verba-Schlozman-Brady"],
+    ["mean (true-harm share)",  "mean",   0.24, 0.33, "harm band: 0.24~11% harm .. 0.33~4% harm (S<0)"],
+    ["hurdle (below-hurdle)",   "hurdle", 1.5, 4.0, "p_U+ band: h=1.5~27% .. h=4.0~46% below opportunity cost (Doc 1)"],
+    ["fVer (delivery, /0.75)",  "fVer",   0.90, 0.99, "central loss 25% (IMF); dist 10x-resistant (E4-v5)"],
+    ["sigF (reach heavy-tail)", "sigF",   1.2, 1.8, "coverage/value spread"],
+    ["w (harm-blind 2ndary)",   "w",      0.0, 0.3, "0=pure agenda .. 0.3=some value-caring"],
   ];
   const orig={}; for(const [,k] of knobs) orig[k]=PARAMS[k];
   for(const [label,k,lo,hi,note] of knobs){
@@ -211,14 +228,16 @@ if(process.argv.includes("--cats")){
 console.log("E5 v2 / corrected-E4 — central max P (credit), distributed max S via participation coverage (beta="+PARAMS.beta+"), oracle max S.");
 console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PARAMS.mean+", sd="+PARAMS.sd+", projSpread="+PARAMS.projSpread+", w(value weight)="+PARAMS.w+", delivery "+PARAMS.fWeak+"/"+PARAMS.fVer+" ("+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x)");
 console.log("  rho=corr(S,P) agenda<->value misalignment. w=0 -> agenda-capture (primary); w=1 -> E4 (harm-blind central). At ~35% net-neg the frontier COMPRESSES toward the delivery floor as rho->1 (not exact parity).\n");
-console.log("  rho  | corr(S,P) | net-neg% | cen %oracle | dis %oracle |  Delta=(d-c)/o [95% CI]  | ratio d/c");
+console.log("  hurdle h="+PARAMS.hurdle+" -> NET value = S - h*cost (h>0: below-hurdle projects are agenda-capture bait for the central)\n");
+console.log("  rho  | corr(S,P) | harm% | belowH% | cen netNeg% | cen %oracle | dis %oracle |  Delta=(d-c)/o [95% CI]  | ratio d/c");
 for(const rho of PARAMS.RHOS){
   const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalWorld(s,rho));
   const d=R.map(r=>r.d), c=R.map(r=>r.c), o=R.map(r=>r.o);
   const Delta=(sum(d)-sum(c))/sum(o), ratio=sum(d)/sum(c);
   const cOra=100*(sum(c)/PARAMS.fWeak)/sum(o), dOra=100*(sum(d)/PARAMS.fVer)/sum(o);
   let SS=[],PP=[]; for(let i=0;i<Math.min(4,R.length);i++){ SS=SS.concat(Array.from(R[i].S)); PP=PP.concat(Array.from(R[i].P)); }
-  const rSP=corr(SS,PP), neg=100*sum(R.map(r=>r.negShare))/R.length, b=bootDelta(d,c,o,0.025,0.975);
-  console.log("  "+rho.toFixed(1)+"  |   "+rSP.toFixed(2).padStart(5)+"   |  "+neg.toFixed(1).padStart(4)+"%  |    "+cOra.toFixed(0).padStart(3)+"%     |    "+dOra.toFixed(0).padStart(3)+"%     |  "+((Delta>=0?"+":"")+f(Delta)+" ["+f(b.lo)+","+f(b.hi)+"]").padEnd(22)+" |  "+f(ratio)+"x");
+  const rSP=corr(SS,PP), neg=100*sum(R.map(r=>r.negShare))/R.length, bh=100*sum(R.map(r=>r.belowHurdle))/R.length;
+  const cnn=100*sum(R.map(r=>r.cenNetNeg))/R.length, b=bootDelta(d,c,o,0.025,0.975);
+  console.log("  "+rho.toFixed(1)+"  |   "+rSP.toFixed(2).padStart(5)+"   | "+neg.toFixed(1).padStart(4)+"% | "+bh.toFixed(1).padStart(5)+"%  |   "+cnn.toFixed(1).padStart(5)+"%   |    "+cOra.toFixed(0).padStart(3)+"%     |    "+dOra.toFixed(0).padStart(3)+"%     |  "+((Delta>=0?"+":"")+f(Delta)+" ["+f(b.lo)+","+f(b.hi)+"]").padEnd(22)+" |  "+f(ratio)+"x");
 }
 console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  dis %oracle<100 now reflects REAL coverage friction (beta="+PARAMS.beta+"): the swarm no longer = oracle.");
