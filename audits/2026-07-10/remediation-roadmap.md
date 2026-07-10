@@ -1,16 +1,15 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
-> **⚠️ STATUS 2026-07-10 (single current state): publication-readiness remediation — clearing ROUND-4
-> findings.** Round-2 and round-3 audits both ran and were remediated; a **round-4 verification audit**
-> (`audits/2026-07-10-round4/`) then confirmed most blockers cleared but returned **NOT READY** on a set of
-> fix-now items (chiefly a faithfulness regression in the new self-contained gate block, now corrected, plus
-> a few provenance/roadmap remnants). Those are being cleared now. Decisions resolved: **T3.2** — v1.12 /
+> **⚠️ STATUS 2026-07-10 (single current state): publication-readiness remediation in progress.** Successive
+> independent audit rounds are logged under `audits/2026-07-10-round2/…-round5/`; **the highest-numbered round
+> is authoritative**, and its remaining fix-now items are being cleared. Decisions resolved: **T3.2** — v1.12 /
 > 21252911 is the live latest deposit, working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0
 > for all text/content + MIT for code, single record.**
-> **Do NOT deposit v1.13** until the remaining manuscript blockers are cleared and the author-gated
-> deposit-time actions are done: edit the live Zenodo v1.12 metadata (title/counts/license/relation/Path-B
-> note), declare mixed CC-BY/MIT in `.zenodo.json`, rewrite the v1.13 reviewer packets + cover, then render,
-> deposit, and verify v1.13. Round-2/3 detail is retained below as history.
+> **Do NOT deposit v1.13** until the remaining manuscript blockers in the latest audit are cleared and the
+> author-gated deposit-time actions are done: edit the live Zenodo v1.12 metadata **directly** (title/counts/
+> license/relation/Path-B note — no new DOI needed), declare mixed CC-BY/MIT in `.zenodo.json` at deposit,
+> rewrite the v1.13 reviewer packets + cover, then render, deposit, and verify v1.13. Earlier-round detail is
+> retained below as history.
 
 ## ROUND-2 REMEDIATION (from `audits/2026-07-10-round2/`: consistency + errors; evaluation/improvements pending)
 
@@ -154,8 +153,9 @@ is reconciled (task T2.1).
 ## Governing decision (locked 2026-07-10)
 The pre-registered **symmetry gate returned NO-GO**: with a symmetric comparator (equal appraisal budget,
 own-noisy eligibility, no oracle gate, bounded-credit central, delivery parity) the distributed selection
-advantage is **real but small — median ≈0.025 of the full-information benchmark, below the pre-registered
-0.05 materiality bar** (18/18 cells positive; rises with credit pressure, falls as credit aligns with
+advantage is **real but small — pre-registered pooled median ≈0.025 of the full-information benchmark, below
+the pre-registered 0.05 research-program rebuild gate** (not a policy-materiality threshold; 18/18 cells
+positive; post-hoc ratio-of-sums 0.026 [0.023, 0.029]; rises with credit pressure, falls as credit aligns with
 value). Therefore: **Path B — publish the architecture + qualitative mechanism; retire the calibrated
 multiplier.** No engine rebuild on the critical path; the simulation is demoted to a directional
 illustration reporting the small conditional number in a methods/appendix section only.
@@ -262,7 +262,9 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   metadata: README (latest deposited 21252911/v1.12; working draft v1.13), LICENSE.md citation (v1.12/21252911),
   CITATION.cff (version v1.13 per the draft-sync rule; preferred-citation DOI stays v1.12/21252911),
   `.zenodo.json` (v1.13), paper headers EN+ES (v1.13). Only the live record's TITLE string still reads "v1.8"
-  — fixing it needs a metadata redeposit (author action). *(consistency M9, m3)*
+  — Zenodo allows **editing published metadata directly (title, description, counts, license, relations)
+  without a new version or DOI**, so this is a direct metadata edit at deposit time, *not* a redeposit
+  (see README:37). *(consistency M9, m3)*
 - [x] **T3.3 — Stale attack count** DONE: README + `.zenodo.json` + paper (7 EN + 7 ES spots) updated to
   **43 attacks (A001–A043), docs 67–113, 5 rounds**; README/.zenodo descriptions also **retired the
   ~2× headline framing** ("recalibrating the delivered-value headline" → the NO-GO/contract statement).

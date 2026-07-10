@@ -619,9 +619,9 @@ mecanismo, no un multiplicador puntual.
 **El gate simétrico de crédito-versus-cobertura (métodos y resultado).** Como esta
 es la única computación confirmatoria del artículo, su diseño se enuncia aquí por
 completo y no solo por referencia. Cada mundo contiene K = 500 proyectos
-candidatos; para cada uno se extraen hasta N = 5000 participantes potenciales y cada
-uno se interesa con una probabilidad específica del proyecto (de modo que el
-alcance es endógeno). Ambos brazos ven entonces el mismo pool de candidatos, los
+candidatos; para cada uno se consideran N = 5000 participantes potenciales, cada
+uno interesado con una probabilidad específica del proyecto, de modo que el alcance
+de interesados es a lo sumo N y endógeno. Ambos brazos ven entonces el mismo pool de candidatos, los
 mismos costos exactos, la misma verdad net[j] = S[j] − h·cost[j], la entrega en
 **paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada uno
 financia un conjunto **voraz** bajo un presupuesto de un tercio del costo total de
@@ -632,9 +632,11 @@ por el mecanismo de cobertura y sus contrapartes igualadas. *Distribuido (cobert
 endógena):* cada ciudadano interesado reporta de forma independiente con
 probabilidad p si su valor v ≥ 0 y p·(1 − β) si v < 0 (sesgo de voz adverso), dando
 ĥS_D = Σreportes / p, ordenado por net estimado por costo. *Central (lector de valor
-competente):* un presupuesto de tasación igual al total *esperado* de reportes del
+competente):* un presupuesto de tasación ajustado al total *esperado* de reportes del
 brazo distribuido en ese mundo, repartido **de manera uniforme** entre proyectos
-(ancho de banda fijo por proyecto m_C); por proyecto muestrea m_C ciudadanos
+como un ancho de banda fijo por proyecto redondeado m_C = round(reportes esperados /
+K) (de modo que los totales de tasación de ambos brazos son iguales en esperanza
+salvo ese redondeo); por proyecto muestrea m_C ciudadanos
 interesados, observa v + Normal(0, τ), y forma su propio ĥNet_C ruidoso =
 alcance·media(observado) − h·cost. Ordena por score = (1 − λ)·z(ĥNet_C/cost) +
 λ·z(P/cost) —su **propia estimación ruidosa**, nunca el net verdadero— donde P es el
@@ -1095,15 +1097,15 @@ benchmark de información completa —así que estas cifras de E7 se conservan c
 salidas condicionales del aparato, no como un resultado principal sobreviviente.
 Dentro de este aparato, y condicional a su distribución estipulada de costos de
 oportunistas y a su línea base sin memoria, un resultado cualitativo es
-instructivo: a la intensidad de detección documentada por auditorías introducida
-en el modelo, sin memoria reputacional, el modelo no disuade desvío alguno —el
+instructivo: a la intensidad de detección reportada por auditorías del modelo
+(verificación de fuentes primarias en curso), sin memoria reputacional, el modelo no disuade desvío alguno —el
 umbral de incentivos del régimen parametrizado por auditorías queda por debajo del
 costo de todo oportunista modelado, de modo que su fuga iguala la del régimen de
 cero-control, y en el modelo la detección añadida reduce la brecha de visibilidad
 (de veintinueve a diecinueve puntos) en lugar de elevar el valor entregado. Estas
 son salidas internas al modelo del aparato estipulado de E7, no un efecto causal
 estimado de la auditoría del mundo real. La fuga del brazo parametrizado por
-auditorías aterriza dentro de la banda documentada por la auditoría (24-48% en
+auditorías aterriza dentro de la banda de fuga reportada por auditorías (24-48% en
 obras); la mecánica de fuga del modelo, alimentada con parámetros de auditoría, es
 *consistente con* el rango documentado —esto parametriza la fuga de la línea base,
 no calibra el efecto de tratamiento institucional. Y el barrido de sesgo

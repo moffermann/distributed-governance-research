@@ -16,11 +16,12 @@ The full pre-restructure history (C/H alignment log, residual-cleanup #1–#122,
 The project has moved from discovery → bounded v0 architecture → a **working draft v1.13** (truth-of-claim
 reframed on Path B; latest deposited version v1.12, verified live at DOI 10.5281/zenodo.21252911) with a
 reproducible simulation and a complete adversarial record (43 attacks, all resolved), and is now in
-**publication-readiness remediation** (a **round-3 audit is in progress**; round-2 critical/major items are
-cleared). **Both author decisions are resolved:** the license is final (**CC BY 4.0** for all text/content +
-MIT for code, single record — the earlier dual/NC-ND plan was dropped), and the deposit state is confirmed
-(v1.12 live). **The v1.13 re-deposit is not yet a mechanical step — it is blocked until the round-3
-publication-readiness blockers clear** (and the stale outreach PDF is regenerated or removed). See
+**publication-readiness remediation** (successive independent audit rounds are logged under `audits/`; the
+latest is the authoritative one). **Both author decisions are resolved:** the license is final (**CC BY 4.0**
+for all text/content + MIT for code, single record — the earlier dual/NC-ND plan was dropped), and the
+deposit state is confirmed (v1.12 live). **The v1.13 re-deposit is not a mechanical step — it is blocked
+until the remaining manuscript blockers in the latest audit are cleared and the author-gated deposit-time
+actions are done.** See
 `audits/2026-07-10/remediation-roadmap.md`.
 
 ---
@@ -36,10 +37,10 @@ number was retired. The controlling claim spec is
 [`research/claim-and-estimand-contract.md`](../research/claim-and-estimand-contract.md); the pre-restructure
 history is in [`docs/03_ROADMAP_HISTORY.md`](03_ROADMAP_HISTORY.md).
 
-**Current phase:** publication-readiness remediation — a **round-3 audit is in progress** (round-2
-critical/major findings are cleared; see the remediation roadmap's round-2 and round-3 sections). Both
-author decisions (license, deposit state) are resolved; the v1.13 Zenodo re-deposit is **deferred until the
-round-3 blockers clear and the stale outreach PDF is regenerated or removed** — it is not merely mechanical.
+**Current phase:** publication-readiness remediation — successive independent audit rounds (see `audits/`,
+latest authoritative). Both author decisions (license, deposit state) are resolved; the v1.13 Zenodo
+re-deposit is **deferred until the remaining manuscript blockers in the latest audit are cleared and the
+author-gated deposit-time actions are done** — it is not merely mechanical.
 
 The **post-manuscript validation program** (external expert review, empirical calibration / D-lite pilot,
 a bounded tutored pilot) remains the standing longer-horizon direction and is carried in the remediation

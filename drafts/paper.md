@@ -567,8 +567,9 @@ not a point multiplier.
 **The symmetric credit-versus-coverage gate (methods and result).** Because this
 is the paper's one confirmatory computation, its design is stated in full here
 rather than only by reference. Each world holds K = 500 candidate projects; for
-each, up to N = 5000 potential participants are drawn and each is interested with
-a project-specific probability (so reach is endogenous). Both arms then see the
+each, N = 5000 potential participants are considered, each interested with a
+project-specific probability, so the interested reach is at most N and endogenous.
+Both arms then see the
 same candidate pool, the same exact costs, the same truth net[j] = S[j] − h·cost[j],
 delivery held at **parity**, and the same report noise report = v + Normal(0, τ);
 each funds a **greedy** set under a budget of one-third of total project cost, is
@@ -578,11 +579,12 @@ The arms are symmetric except for the coverage mechanism and its matched
 counterparts. *Distributed (endogenous coverage):* each interested citizen reports
 independently with probability p if her value v ≥ 0 and p·(1 − β) if v < 0 (adverse
 voice bias), giving ĥS_D = Σreports / p, ranked by estimated net per cost.
-*Central (competent value-reader):* an appraisal budget equal to the distributed
-arm's *expected* total reports in that world, spread **evenly** across projects
-(fixed per-project bandwidth m_C); per project it samples m_C interested citizens,
-observes v + Normal(0, τ), and forms its own noisy ĥNet_C = reach·mean(observed) −
-h·cost. It ranks by score = (1 − λ)·z(ĥNet_C/cost) + λ·z(P/cost) — its **own noisy
+*Central (competent value-reader):* an appraisal budget matched to the distributed
+arm's *expected* total reports in that world, spread **evenly** across projects as a
+rounded fixed per-project bandwidth m_C = round(expected reports / K) (so the two
+arms' appraisal totals are equal in expectation up to that rounding); per project it
+samples m_C interested citizens, observes v + Normal(0, τ), and forms its own noisy
+ĥNet_C = reach·mean(observed) − h·cost. It ranks by score = (1 − λ)·z(ĥNet_C/cost) + λ·z(P/cost) — its **own noisy
 estimate**, never the true net — where P is claimable political credit (the
 electoral credit-claiming and traceability logic by which visible, attributable
 benefits are favoured over diffuse ones; Mayhew 1974; Arnold 1990) and λ is bounded
@@ -1011,15 +1013,15 @@ pre-registered pooled median selection advantage is Δ = 0.025 of a
 full-information benchmark — so these E7 figures are retained as conditional
 apparatus outputs, not a surviving headline. Within this apparatus, and
 conditional on its stipulated opportunist-cost distribution and no-memory
-baseline, one qualitative result is instructive: at the audit-documented
-detection intensity fed into the model, without reputational memory, the model
-deters no diversion — the audit-parameterized regime's incentive threshold lies
+baseline, one qualitative result is instructive: at the model's audit-reported
+detection intensity (primary-source verification ongoing), without reputational
+memory, the model deters no diversion — the audit-parameterized regime's incentive threshold lies
 below every modelled opportunist's cost, so its leak equals the zero-control
 regime's, and in the model the added detection reduces the visibility gap (from
 twenty-nine to nineteen points) rather than raising delivered value. These are
 model-internal outputs of E7's stipulated apparatus, not an estimated causal
 effect of real-world auditing. The audit-parameterized arm's leak lands inside
-the audit-documented band (24-48% in works); the model's leak mechanics, fed
+the audit-reported leakage band (24-48% in works); the model's leak mechanics, fed
 audit parameters, are *consistent with* the documented range — this parameterizes
 the baseline's leak, it does not calibrate the institutional treatment effect. And the bias
 sweep bounds the open-construction claim honestly: distributed

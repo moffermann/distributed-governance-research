@@ -2,9 +2,17 @@
 
 > **🛑 SUPERSEDED / MULTIPLIER RETIRED (2026-07-10).** E7's "the multiplier survives recalibration" /
 > "recalibrated headline" premise is **retired**: a later pre-registered **symmetry gate (NO-GO)** is the
-> current arbiter — the distributed selection advantage is small (~0.026 of a full-information benchmark,
-> below its 0.05 gate), not a ~2× headline. E7's audit-parameterized baseline stands as an *earlier
-> apparatus* contrast only. Controlling spec: `research/claim-and-estimand-contract.md`. Kept as provenance.
+> current arbiter — the distributed selection advantage is small (pre-registered pooled median Δ = 0.025 of a
+> full-information benchmark, below its 0.05 research-program rebuild gate; post-hoc ratio-of-sums 0.026), not
+> a ~2× headline. E7's audit-parameterized baseline stands as an *earlier apparatus* contrast only. Controlling
+> spec: `research/claim-and-estimand-contract.md`. Kept as provenance.
+>
+> **Verification-queue reconciliation (2026-07-10):** the pre-run amendment below made a cleared primary-source
+> verification queue a precondition for *formally citing E7 as a confirmatory result*. Under Path B, E7 is
+> **not** a confirmatory result — its figures are retained only as **conditional apparatus outputs**, and the
+> manuscript labels them as such and flags the primary-source verification as ongoing. The queue in
+> `research/audit-evidence-base.md` is therefore documented as **incomplete** and is **not** on the
+> publication critical path; it must clear only before E7 is ever cited as verified/calibrated.
 
 ## Status
 
