@@ -62,7 +62,7 @@ simulation output, not an estimated real-world multiplier.** The pre-registered 
 selection advantage **positive in every one of the 18 pre-specified primary cells but small within the
 simulation grid**: pre-registered pooled **median Δ ≈ 0.025**, below its pre-registered **0.05 research-program
 rebuild gate** (a go/no-go rule for whether to pursue a quantitative rebuild on this uncalibrated scale — **not
-a calibrated policy-materiality threshold**); the pooled ratio-of-sums was **Δ = 0.026 with a world-cluster interval [0.023, 0.029]** — a
+a calibrated policy-materiality threshold**); the **post-hoc** pooled ratio-of-sums was **Δ = 0.026 with a world-cluster interval [0.023, 0.029]** — a
 **Monte-Carlo interval conditional on the simulated data-generating process, not empirical uncertainty**
 (reported separately from the median). So the **mechanism direction is supported** (distributed selects
 modestly better net value, more so as credit pressure rises and as credit aligns less with value), **but

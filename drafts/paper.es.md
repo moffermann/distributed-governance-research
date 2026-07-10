@@ -123,8 +123,9 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    otras, cuantifican el apalancamiento concentrado en la capa de construcción
    de ámbitos, miden una construcción abierta viable de ella, y llevan la
    comparación de extremo a extremo: desde la asignación hasta el valor social
-   entregado por unidad de presupuesto —el criterio que los presupuestos
-   públicos existen para servir. En el modelo, la entrega verificada y la
+   entregado por unidad de presupuesto —un criterio relevante para esta porción
+   acotada del gasto público (junto a las restricciones distributivas y de derechos
+   que el modelo no representa). En el modelo, la entrega verificada y la
    priorización social interactúan en lugar de solo sumarse; el aparato basado
    en agentes anterior produjo un compuesto de 2.22× frente a una línea base del statu
    quo parametrizada a partir de los hallazgos publicados de instituciones de
@@ -617,40 +618,52 @@ mecanismo, no un multiplicador puntual.
 
 **El gate simétrico de crédito-versus-cobertura (métodos y resultado).** Como esta
 es la única computación confirmatoria del artículo, su diseño se enuncia aquí por
-completo y no solo por referencia. Ambos brazos extraen los mismos mundos (N = 5000
-proyectos candidatos, K = 500 financiados bajo un presupuesto fijo de un tercio de
-la demanda), los mismos costos, la misma verdad net[j] = S[j] − h·cost[j], la
-entrega en **paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada
-brazo actúa sobre **su propia estimación ruidosa** y solo es elegible para financiar
-un proyecto donde *su propio* net estimado es positivo (sin gate de oráculo).
-Difieren en exactamente una cosa —el mecanismo de cobertura. *Distribuido
-(cobertura endógena):* cada ciudadano interesado reporta de forma independiente con
+completo y no solo por referencia. Cada mundo contiene K = 500 proyectos
+candidatos; para cada uno se extraen hasta N = 5000 participantes potenciales y cada
+uno se interesa con una probabilidad específica del proyecto (de modo que el
+alcance es endógeno). Ambos brazos ven entonces el mismo pool de candidatos, los
+mismos costos exactos, la misma verdad net[j] = S[j] − h·cost[j], la entrega en
+**paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada uno
+financia un conjunto **voraz** bajo un presupuesto de un tercio del costo total de
+los proyectos, es elegible para financiar un proyecto solo donde *su propia*
+estimación ruidosa de net es positiva (sin gate de oráculo), y su valor entregado se
+puntúa sobre el net *verdadero* de los proyectos. Los brazos son simétricos salvo
+por el mecanismo de cobertura y sus contrapartes igualadas. *Distribuido (cobertura
+endógena):* cada ciudadano interesado reporta de forma independiente con
 probabilidad p si su valor v ≥ 0 y p·(1 − β) si v < 0 (sesgo de voz adverso), dando
 ĥS_D = Σreportes / p, ordenado por net estimado por costo. *Central (lector de valor
 competente):* un presupuesto de tasación igual al total *esperado* de reportes del
 brazo distribuido en ese mundo, repartido **de manera uniforme** entre proyectos
-(ancho de banda fijo); muestrea ciudadanos interesados, observa v + Normal(0, τ), y
-ordena por score = (1 − λ)·z(net/cost) + λ·z(P/cost), donde P es el crédito político
-reclamable —la lógica electoral de reclamo de crédito y trazabilidad por la cual se
-favorecen los beneficios visibles y atribuibles sobre los difusos (Mayhew 1974;
-Arnold 1990)— y λ es la presión de crédito acotada (una presión *postulada* cuya
-magnitud en el mundo real debe medirse, no suponerse). El crédito mueve el *orden*,
-nunca la elegibilidad (sin planificador que destruya valor a sabiendas). El valor
-entregado se puntúa sobre el net verdadero del conjunto financiado de cada brazo; el
-estimando es **Δ = (D − C)/O** por mundo, donde O es un benchmark voraz de
-información completa (un nivel de referencia, no un óptimo). La grilla congelada
-barre λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 un control negativo), corr(S, P) realizada
-∈ {0, 0.5, 1}, y h ∈ {1.5, 2.5, 4} sobre 100 mundos sembrados, en un régimen de
+(ancho de banda fijo por proyecto m_C); por proyecto muestrea m_C ciudadanos
+interesados, observa v + Normal(0, τ), y forma su propio ĥNet_C ruidoso =
+alcance·media(observado) − h·cost. Ordena por score = (1 − λ)·z(ĥNet_C/cost) +
+λ·z(P/cost) —su **propia estimación ruidosa**, nunca el net verdadero— donde P es el
+crédito político reclamable (la lógica electoral de reclamo de crédito y
+trazabilidad por la cual se favorecen los beneficios visibles y atribuibles sobre
+los difusos; Mayhew 1974; Arnold 1990) y λ es la presión de crédito acotada (una
+presión *postulada* cuya magnitud en el mundo real debe medirse, no suponerse). El
+crédito mueve el *orden*, nunca la elegibilidad (sin planificador que destruya valor
+a sabiendas). Las asimetrías legítimas son por tanto solo estas: los reportes
+distribuidos se auto-enrutan hacia los proyectos que a los ciudadanos les importan
+mientras los interesados negativos participan menos, y la tasación central se
+reparte de manera uniforme mientras su orden carga presión de crédito —todo lo demás
+es compartido. El estimando es **Δ = (D − C)/O** por mundo, donde D, C, O son el net
+verdadero entregado por los brazos distribuido, central y voraz de información
+completa, y O es un nivel de referencia, no un óptimo. La grilla congelada
+barre λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 un control negativo), un parámetro de
+correlación latente ρ ∈ {0, 0.5, 1} (corr(S, P) realizada ≈ 0.00, 0.30, 0.82),
+y h ∈ {1.5, 2.5, 4} sobre 100 mundos sembrados, en un régimen de
 observación base (p = .35, β = .30, τ = .5) y un régimen de estrés de baja
 información con presupuesto igualado (p = .15, β = .60, τ = 1.0). La **regla de
 decisión pre-registrada** —congelada antes de correr y diseñada por el auditor
 independiente para ser adversarial— exigía, para un GO en reconstruir el motor
 cuantitativo, al menos 15 de las 18 celdas primarias con Δ medio > 0, una **mediana
 agrupada Δ ≥ 0.05**, un límite inferior de bootstrap > 0, y mediana Δ ≥ 0 bajo el
-régimen de estrés. El resultado fue **NO-GO**: la ventaja fue positiva en las 18
+régimen de estrés, más un guardia para pausar si el propio control λ = 0 excedía
+0.05. El resultado fue **NO-GO**: la ventaja fue positiva en las 18
 celdas primarias, pero la **mediana agrupada Δ = 0.025** pre-registrada quedó por
-debajo del umbral de rebuild de 0.05; el control negativo (λ = 0) se ubicó en
-≈ 0.016, indicando que no hay asimetría oculta que favorezca al brazo distribuido.
+debajo del umbral de rebuild de 0.05; el control negativo λ = 0 se ubicó en
+≈ 0.016, dentro del guardia de pausa (ninguna asimetría oculta señalada).
 Una estimación **post-hoc** de ratio-of-sums por conglomerado-de-mundos fue
 Δ = 0.026 [0.023, 0.029] (incertidumbre Monte-Carlo sobre el proceso generador
 simulado, reportada por separado de la mediana). La ventaja crece con la presión de
@@ -1326,7 +1339,8 @@ propósito de la tributación, requeriría una especificación separada de
 bienestar social e incidencia que este artículo no provee. El modelo es además de
 equilibrio parcial: el reporte estratégico, la oferta endógena de propuestas, las
 complementariedades entre proyectos, la incidencia tributaria y los efectos de
-equilibrio general quedan fuera (§ contrato de estimando).
+equilibrio general quedan fuera (véase el
+[claim-and-estimand-contract](../research/claim-and-estimand-contract.md)).
 
 **Epistémicamente, este es el diseño autocriticado de un solo equipo.** El corpus
 adversarial fue producido por el mismo esfuerzo de investigación que ataca, con
@@ -1452,7 +1466,8 @@ investigación), de modo que retiramos el multiplicador compuesto
 que reportó una versión anterior y nos apoyamos en la arquitectura y en la
 *dirección* del mecanismo. Un resultado interno al modelo vale la pena conservar
 porque trata de la capa de entrega, no del multiplicador: en el modelo, a la
-intensidad de detección documentada por auditorías, la detección sin consecuencias
+intensidad de detección informada por auditorías de E7 (aún no plenamente
+verificada en sus fuentes), la detección sin consecuencias
 persistentes no disuade desvío alguno; lo que mueve el valor entregado es el
 instrumento del que el statu quo modelado carece: consecuencias que persisten. Que
 eso se sostenga en una institución real es una hipótesis para un piloto, no un

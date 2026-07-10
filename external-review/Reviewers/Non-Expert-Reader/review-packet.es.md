@@ -1,5 +1,7 @@
 # Paquete de revisión — Lector inteligente no experto
 
+> **⚠️ OBSOLETO — NO ENVIAR TAL CUAL (2026-07-10).** Este paquete apunta a un borrador de la era v1.8 y su jerarquía de evidencia pre-Path-B (ocho experimentos / multiplicador compuesto). El proyecto está ahora en **Path B**: el multiplicador está **retirado**; la única prueba confirmatoria genuinamente pre-registrada es el **gate de simetría** (NO-GO — ventaja de selección positiva pero pequeña, mediana agrupada pre-registrada Δ = 0.025 < 0.05; ratio-of-sums post-hoc 0.026). Borrador de trabajo actual **v1.13**; especificación rectora `research/claim-and-estimand-contract.md`. Un paquete + carta v1.13 Path-B está pendiente (roadmap R2-10). Conservado solo por procedencia.
+
 ## Por qué te envío esto
 
 Estoy desarrollando un proyecto de investigación independiente sobre cómo hacer algunos proyectos públicos más transparentes, medibles y responsables.

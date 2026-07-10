@@ -1,15 +1,16 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
-> **⚠️ STATUS 2026-07-10 (single current state): publication-readiness remediation — ROUND-3 audit in
-> progress.** Round-2 critical/major items are cleared; a **round-3 independent audit**
-> (`audits/2026-07-10-round3/`) then ran and returned **NOT READY**, and its blockers are being cleared now
-> (batches logged in the Round-3 section below). Decisions resolved: **T3.2** — v1.12 / 21252911 is the live
-> latest deposit, working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0 for all text/content +
-> MIT for code, single record** (the earlier Option-B/dual/NC-ND plan was dropped).
-> **Do NOT deposit v1.13** until the round-3 manuscript blockers are cleared, the stale outreach PDF is
-> regenerated or removed, and the author-gated external surfaces (live Zenodo record metadata, mixed-license
-> `.zenodo.json`, v1.13 reviewer packets) are corrected at deposit time. The former "RE-BLOCKED after round-2"
-> narrative is superseded by this line; round-2 detail is retained below as history.
+> **⚠️ STATUS 2026-07-10 (single current state): publication-readiness remediation — clearing ROUND-4
+> findings.** Round-2 and round-3 audits both ran and were remediated; a **round-4 verification audit**
+> (`audits/2026-07-10-round4/`) then confirmed most blockers cleared but returned **NOT READY** on a set of
+> fix-now items (chiefly a faithfulness regression in the new self-contained gate block, now corrected, plus
+> a few provenance/roadmap remnants). Those are being cleared now. Decisions resolved: **T3.2** — v1.12 /
+> 21252911 is the live latest deposit, working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0
+> for all text/content + MIT for code, single record.**
+> **Do NOT deposit v1.13** until the remaining manuscript blockers are cleared and the author-gated
+> deposit-time actions are done: edit the live Zenodo v1.12 metadata (title/counts/license/relation/Path-B
+> note), declare mixed CC-BY/MIT in `.zenodo.json`, rewrite the v1.13 reviewer packets + cover, then render,
+> deposit, and verify v1.13. Round-2/3 detail is retained below as history.
 
 ## ROUND-2 REMEDIATION (from `audits/2026-07-10-round2/`: consistency + errors; evaluation/improvements pending)
 

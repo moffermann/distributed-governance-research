@@ -113,8 +113,9 @@ current institution solves the same problem, not against an ideal — blocking t
    they support some claims, sharpen others, quantify the leverage
    concentrated in the scope-construction layer, measure a viable open
    construction of it, and carry the comparison end to end: from allocation to
-   delivered social value per unit of budget — the criterion public budgets
-   exist to serve. In the model, verified delivery and social prioritization
+   delivered social value per unit of budget — one relevant criterion for this
+   bounded slice of public spending (alongside distributional and rights
+   constraints the model does not represent). In the model, verified delivery and social prioritization
    interact rather than merely add; the earlier agent-based apparatus produced a
    compound of 2.22× a status-quo baseline parameterized from published
    audit-institution findings (1.4–1.6× at municipal pilot scale). We **retire
@@ -565,41 +566,50 @@ not a point multiplier.
 
 **The symmetric credit-versus-coverage gate (methods and result).** Because this
 is the paper's one confirmatory computation, its design is stated in full here
-rather than only by reference. Both arms draw the same worlds (N = 5000 candidate
-projects, K = 500 funded under a fixed budget of one-third of demand), the same
-costs, the same truth net[j] = S[j] − h·cost[j], delivery held at **parity**, and
-the same report noise report = v + Normal(0, τ); each arm acts on its **own noisy
-estimate** and is eligible to fund a project only where *its own* estimated net is
-positive (no oracle gate). They differ in exactly one way — the coverage
-mechanism. *Distributed (endogenous coverage):* each interested citizen reports
+rather than only by reference. Each world holds K = 500 candidate projects; for
+each, up to N = 5000 potential participants are drawn and each is interested with
+a project-specific probability (so reach is endogenous). Both arms then see the
+same candidate pool, the same exact costs, the same truth net[j] = S[j] − h·cost[j],
+delivery held at **parity**, and the same report noise report = v + Normal(0, τ);
+each funds a **greedy** set under a budget of one-third of total project cost, is
+eligible to fund a project only where *its own* noisy estimate of net is positive
+(no oracle gate), and its delivered value is scored on the projects' *true* net.
+The arms are symmetric except for the coverage mechanism and its matched
+counterparts. *Distributed (endogenous coverage):* each interested citizen reports
 independently with probability p if her value v ≥ 0 and p·(1 − β) if v < 0 (adverse
 voice bias), giving ĥS_D = Σreports / p, ranked by estimated net per cost.
 *Central (competent value-reader):* an appraisal budget equal to the distributed
 arm's *expected* total reports in that world, spread **evenly** across projects
-(fixed bandwidth); it samples interested citizens, observes v + Normal(0, τ), and
-ranks by score = (1 − λ)·z(net/cost) + λ·z(P/cost), where P is claimable political
-credit — the electoral credit-claiming and traceability logic by which visible,
-attributable benefits are favoured over diffuse ones (Mayhew 1974; Arnold 1990) —
-and λ is bounded credit pressure (a *posited* pressure whose real-world magnitude
-must be measured, not assumed). Credit moves *ranking*, never eligibility (no
-knowingly value-destroying planner). Delivered value is scored on
-true net over each arm's funded set; the estimand is **Δ = (D − C)/O** per world,
-where O is a full-information greedy benchmark (a reference level, not an optimum).
-The frozen grid sweeps λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 a negative control), realized
-corr(S, P) ∈ {0, 0.5, 1}, and h ∈ {1.5, 2.5, 4} over 100 seeded worlds, in a
-baseline observation regime (p = .35, β = .30, τ = .5) and a matched-budget
-low-information stress regime (p = .15, β = .60, τ = 1.0). The **pre-registered
-decision rule** — frozen before running and designed by the independent auditor to
-be adversarial — required, for a GO on rebuilding the quantitative engine, at least
-15 of the 18 primary cells with mean Δ > 0, a pooled **median Δ ≥ 0.05**, a
-bootstrap lower bound > 0, and median Δ ≥ 0 under the stress regime. The result was
-**NO-GO**: the advantage was positive in all 18 primary cells, but the
-pre-registered pooled **median Δ = 0.025**, below the 0.05 rebuild gate; the
-negative control (λ = 0) sat at ≈ 0.016, indicating no hidden asymmetry favouring
-the distributed arm. A **post-hoc** world-cluster ratio-of-sums estimate was
-Δ = 0.026 [0.023, 0.029] (Monte-Carlo uncertainty on the simulated
-data-generating process, reported separately from the median). The advantage rises
-with credit pressure λ and falls as credit aligns with value — the
+(fixed per-project bandwidth m_C); per project it samples m_C interested citizens,
+observes v + Normal(0, τ), and forms its own noisy ĥNet_C = reach·mean(observed) −
+h·cost. It ranks by score = (1 − λ)·z(ĥNet_C/cost) + λ·z(P/cost) — its **own noisy
+estimate**, never the true net — where P is claimable political credit (the
+electoral credit-claiming and traceability logic by which visible, attributable
+benefits are favoured over diffuse ones; Mayhew 1974; Arnold 1990) and λ is bounded
+credit pressure (a *posited* pressure whose real-world magnitude must be measured,
+not assumed). Credit moves *ranking*, never eligibility (no knowingly
+value-destroying planner). The legitimate asymmetries are therefore only these:
+distributed reports self-route to projects citizens care about while negative
+stakeholders participate less, and central appraisal is spread evenly while its
+ranking carries credit pressure — everything else is shared. The estimand is
+**Δ = (D − C)/O** per world, where D, C, O are delivered true net for the
+distributed, central, and full-information greedy arms and O is a reference level,
+not an optimum. The frozen grid sweeps λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 a negative
+control), a latent-correlation setting ρ ∈ {0, 0.5, 1} (realized corr(S, P) ≈ 0.00,
+0.30, 0.82), and h ∈ {1.5, 2.5, 4} over 100 seeded worlds, in a baseline
+observation regime (p = .35, β = .30, τ = .5) and a matched-budget low-information
+stress regime (p = .15, β = .60, τ = 1.0). The **pre-registered decision rule** —
+frozen before running and designed by the independent auditor to be adversarial —
+required, for a GO on rebuilding the quantitative engine, at least 15 of the 18
+primary cells with mean Δ > 0, a pooled **median Δ ≥ 0.05**, a bootstrap lower
+bound > 0, and median Δ ≥ 0 under the stress regime, plus a guard to pause if the
+λ = 0 control itself exceeded 0.05. The result was **NO-GO**: the advantage was
+positive in all 18 primary cells, but the pre-registered pooled **median Δ = 0.025**,
+below the 0.05 rebuild gate; the λ = 0 negative control sat at ≈ 0.016, within the
+pause guard (no hidden asymmetry flagged). A **post-hoc** world-cluster
+ratio-of-sums estimate was Δ = 0.026 [0.023, 0.029] (Monte-Carlo uncertainty on the
+simulated data-generating process, reported separately from the median). The
+advantage rises with credit pressure λ and falls as credit aligns with value — the
 credit-versus-coverage mechanism — but it is small, which is why the calibrated
 multiplier is retired and the paper rests on the architecture and the mechanism
 direction.
@@ -1243,7 +1253,8 @@ Applying the criterion across groups, or to the whole budget or the purpose of
 taxation, would require a separate social-welfare and incidence specification this
 paper does not provide. The model is also partial-equilibrium: strategic
 reporting, endogenous proposal supply, project complementarities, tax incidence,
-and general-equilibrium effects are outside it (§ estimand contract).
+and general-equilibrium effects are outside it (see the
+[claim-and-estimand-contract](../research/claim-and-estimand-contract.md)).
 
 **Epistemically, this is one team's self-critiqued design.** The
 adversarial corpus was produced by the same research effort it attacks,
@@ -1366,9 +1377,9 @@ advantage positive in every cell but small (a pre-registered pooled median
 research-program rebuild gate), so we retire the compound multiplier an
 earlier version reported and rest on the architecture and the *direction*
 of the mechanism. One model-internal result is worth carrying because it is
-about the delivery layer, not the multiplier: in the model, at the
-audit-documented detection intensity, detection without persistent
-consequences deters no diversion; what moves delivered value is the
+about the delivery layer, not the multiplier: in the model, at E7's
+audit-informed (but not yet fully source-verified) detection intensity,
+detection without persistent consequences deters no diversion; what moves delivered value is the
 instrument the modelled status quo lacks — consequences that persist. Whether
 that holds in a real institution is a hypothesis for a pilot, not a result
 here; but the model is unambiguous that accountability without memory is

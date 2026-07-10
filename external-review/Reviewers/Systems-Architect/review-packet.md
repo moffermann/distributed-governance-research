@@ -1,5 +1,7 @@
 # Review Packet — Systems Architect / Technologist Reviewer
 
+> **⚠️ SUPERSEDED — DO NOT SEND AS-IS (2026-07-10).** This packet targets a v1.8-era draft and its pre-Path-B evidence hierarchy (eight experiments / compound multiplier). The project is now on **Path B**: the multiplier is **retired**; the one genuinely pre-registered confirmatory test is the **symmetry gate** (NO-GO — selection advantage positive but small, pre-registered pooled median Δ = 0.025 < 0.05; post-hoc ratio-of-sums 0.026). Current working draft **v1.13**; controlling spec `research/claim-and-estimand-contract.md`. A v1.13 Path-B packet + cover is pending (roadmap R2-10). Retained for provenance only.
+
 ## Why I am sending this to you
 
 I am developing an independent research project on distributed public project governance.

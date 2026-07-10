@@ -18,7 +18,7 @@ Whenever the **draft** version changes (the `drafts/paper.md` header), **immedia
 
 The whole deposit is **CC BY 4.0** for all text and research content (corpus + manuscript) and **MIT** for
 code — a single record, one concept-DOI lineage (`10.5281/zenodo.21193846`; latest version
-`10.5281/zenodo.21252911` = v1.12). Attribution is required for everything. (An earlier plan to protect the
+`10.5281/zenodo.21252911` = v1.12). CC BY attribution applies to text/research content; MIT requires notice retention for code. (An earlier plan to protect the
 manuscript under CC BY-NC-ND with a separate record was dropped: the code/corpus are already public, so a
 protected manuscript would not have protected the implementation, and the author chose full openness.)
 
