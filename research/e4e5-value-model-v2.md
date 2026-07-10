@@ -89,12 +89,15 @@ ignores. Hayek (1945): dispersed knowledge, aggregated by budgeting. The distrib
   neglects diffuse-valuable. Harm-blindness η applies as a *secondary* discount on its read of S.
 - **Distributed:** each citizen ranks by their own S over their coverage set → union covers the
   S-tail. Voice bias β → thin coverage of some worthy projects (may not clear threshold).
-- **Delivery (1.43×):** unchanged.
+- **Delivery (~1.30×, band 1.23–1.39×):** regrounded to λ_PI (IMF PIE-X, central production loss ~0.25,
+  f_weak=0.75) with the distributed ~10× more capture-resistant (E4-v5, f_ver≈0.975). (Was 1.43× in the
+  original leakage-study calibration.)
 - **Primary knob:** `corr(S,P)` (agenda↔value misalignment). Secondary: η (harm-blindness),
   the coalition slice of P.
 
 ## Part 6 — Relation to committed work (corrected from the first draft's "supersede")
-- **KEPT:** harm-blindness (secondary), the delivery layer (+43%), capture-resistance (Props
+- **KEPT:** harm-blindness (secondary — REVIVED as a co-mechanism under the 35% net-neg correction),
+  the delivery layer (~1.30×, regrounded to λ_PI + E4-v5), capture-resistance (Props
   2–3), the metric/CI machinery, all engineering fixes, the value-theory core (Samuelson S).
 - **RETIRED:** the random-noise term (inert + A2 artifact).
 - **ADDED / RE-CENTERED:** P as the primary systematic distortion; the harm-blindness frontier
@@ -121,7 +124,7 @@ ignores. Hayek (1945): dispersed knowledge, aggregated by budgeting. The distrib
   elite-vs-mass congruence; share of the agenda on class-internal matters); the **self vs
   social-invisible allocation split** (PB microdata).
 
-## MAJOR CORRECTION (2026-07-10, author) — headline ~2.0× → ~3.0×; harm-blindness revives
+## MAJOR CORRECTION (2026-07-10, author) — headline ~2.0× → ~2.8×; harm-blindness revives
 Two literature-grounded calibrations from the author (`drafts/positive-net-social-value-calibration.md`,
 `drafts/public-investment-efficiency-loss-calibration.md`) correct two numbers below:
 - **GROSS ERROR (net-negative share).** The earlier "<1% net-negative / lopsided-positive world" was
@@ -136,8 +139,11 @@ Two literature-grounded calibrations from the author (`drafts/positive-net-socia
   block), so its loss ≈ 2.5% → f_ver ≈ **0.975** → **delivery ratio ~1.30× (band 1.23–1.39×)**, DOWN from
   the old 1.43× (which used harsher corruption-specific leakage studies, not the IMF cross-country gap).
 
-**Corrected headline: ~3.0× (band ~2.6–3.6× across p_U+, λ_PI, and corr(S,P)).**
-**= selection ~2.5× (net-neg avoidance + agenda-capture) × delivery ~1.30× (production, IMF + E4-v5 10×).**
+**Corrected headline: ~2.8× (honest band ~2.4–3.3× over corr(S,P)∈[0.1,0.3] and λ_PI∈[0.20,0.30]; the
+low-corr / independent-influence reading reaches ~3.3–4.2×).** Confirmed on a fresh held-out run
+(seed base 5000) with the corrected defaults; see `e5-sp-preregistration.md`.
+**= selection ~2.2–2.5× (net-neg avoidance + agenda-capture) × delivery ~1.30× (production, IMF + E4-v5 10×).**
+(The earlier "~3.0× / 2.6–3.6×" floor was optimistic — the corr=0.3 endpoint is ~2.2–2.4×.)
 Consequences: **(1) "bounded / best-vs-mediocre" is RETRACTED** — with 35% net-negative the central funds
 value-destroying projects (delivers 33–41% of oracle), so it is good-vs-value-destroying. **(2) The
 "agenda-capture is the SOLE driver" pivot over-corrected** — harm-blindness was declared inert on the wrong
@@ -147,6 +153,13 @@ the only motor. Open refinement: model the opportunity-cost hurdle explicitly so
 and ~27% below-opportunity-cost split is faithful (magnitude ~3× is robust to it).
 
 ## Build results & calibration (2026-07-10, `scripts/simulation/e5-sp-model.mjs`)
+> **SUPERSEDED by the MAJOR CORRECTION above (2026-07-10).** The numbers in THIS section are the
+> *pre-correction* calibration (<1% net-neg, delivery 1.43×, headline ~2.0×, "harm-blindness inert",
+> "best-vs-mediocre"). They were the honest state at the time but are retracted: the net-negative share
+> is ~35% (Doc 1), delivery is ~1.30× (Doc 2 + E4-v5), the headline is ~2.8×, harm-blindness revives,
+> and "bounded/best-vs-mediocre" is gone. Read this section as the pre-correction record; the corrected
+> state is the MAJOR CORRECTION block + `e5-sp-preregistration.md`.
+
 The v2 core is built ON E4-v4's coverage (interested sets + participation sample + β), changing
 ONLY the central's objective to P = credit-claiming. It NESTS E4: `central = (1−w)·credit·P +
 w·harm-blind-value`, so w=1 reproduces E4 and w=0 is pure agenda-capture. Value heterogeneity was

@@ -106,6 +106,7 @@ function evalWorld(seed, rho, lumpiness=0){
   let mS=0,mP=0; for(let j=0;j<K;j++){ mS+=Math.abs(S[j]); mP+=Math.abs(P[j]); } const creditScale=mS/(mP||1);
   const cen=new Float64Array(K); for(let j=0;j<K;j++) cen[j]=(1-w)*creditScale*P[j] + w*cHarmBlind[j];
   const o=deliver(fund(S,cost,K,budget),S,1.0);                        // oracle: optimal (value/cost knapsack)
+  if(!(o>0)) throw new Error("assertion failed: oracle delivered value must be > 0 (o="+o+", seed="+seed+", rho="+rho+") -- mis-calibration (world entirely net-negative?)");
   const d=deliver(fund(dis,cost,K,budget,gate,PARAMS.byValue),S,fVer); // distributed: gated by threshold; funds by value or value/cost
   const c=deliver(fund(cen,cost,K,budget),S,fWeak);                    // central: pooled budget, no threshold
   let neg=0,gatedN=0; for(let j=0;j<K;j++){ if(S[j]<0) neg++; if(gate&&gate[j]) gatedN++; }
@@ -156,10 +157,10 @@ if(process.argv.includes("--tornado")){
   console.log("TORNADO — headline ratio d/c robustness at fixed rho="+rho0+" (Core-v0 config), one knob at a time:");
   console.log("  baseline ratio = "+f(base)+"x\n");
   console.log("  knob                | low -> ratio | high -> ratio | grounding");
-  const knobs=[
+  const knobs=[  // ranges centered on the CORRECTED calibration (mean~0.06 -> ~35% net-neg; fWeak=0.75; fVer=0.975)
     ["beta (voice bias)",       "beta", 0.3, 0.5, "Verba-Schlozman-Brady"],
-    ["mean (net-neg share)",    "mean", 0.30, 0.55, "0.30~7% neg .. 0.55~0% neg"],
-    ["fVer (delivery, /0.60)",  "fVer", 0.78, 0.90, "band 1.3x-1.5x (Reinikka-Svensson/Olken)"],
+    ["mean (net-neg share)",    "mean", 0.03, 0.15, "p_U+ band [~0.55,0.75]: 0.03~45% neg .. 0.15~21% neg (mean->0 = the ~50% degenerate edge)"],
+    ["fVer (delivery, /0.75)",  "fVer", 0.90, 0.99, "central loss 25% (IMF); dist 10x-resistant (E4-v5)"],
     ["sigF (reach heavy-tail)", "sigF", 1.2, 1.8, "coverage/value spread"],
     ["w (harm-blind 2ndary)",   "w",    0.0, 0.3, "0=pure agenda .. 0.3=some value-caring"],
   ];
@@ -194,22 +195,22 @@ if(process.argv.includes("--sweepL")){
 if(process.argv.includes("--cats")){
   const A=(PARAMS.A!==undefined?PARAMS.A:20), kCat=(PARAMS.kCat!==undefined?PARAMS.kCat:10);
   console.log("3-LAYER DECOMPOSITION (A="+A+" categories, top-"+kCat+" gate; byValue="+PARAMS.byValue+", concentrate n/a here)\n");
-  console.log("  rho  | corr(S,P) | cen%oracle 2L | cen%oracle 3L |  macro   | allocation | delivery | 3-layer ratio");
+  console.log("  rho  | cen%oracle 2L | cen%oracle 3L |  macro   | allocation | delivery | 3-layer ratio");
   for(const rho of PARAMS.RHOS){
     const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalCat(s,rho,A,kCat));
     const S2=k=>sum(R.map(r=>r[k]));
     const r2=S2('d2')/S2('c2'), r3=S2('d3')/S2('c3'), deliv=PARAMS.fVer/PARAMS.fWeak;
     const macro=r3/r2, alloc=r2/deliv;
     const c2o=100*(S2('c2')/PARAMS.fWeak)/S2('o2'), c3o=100*(S2('c3')/PARAMS.fWeak)/S2('o3');
-    console.log("  "+rho.toFixed(1)+"  |    "+"?".padStart(4)+"   |     "+c2o.toFixed(0).padStart(3)+"%      |     "+c3o.toFixed(0).padStart(3)+"%      |  "+f(macro)+"x  |   "+f(alloc)+"x   |  "+f(deliv)+"x  |  "+f(r3)+"x");
+    console.log("  "+rho.toFixed(1)+"  |     "+c2o.toFixed(0).padStart(3)+"%      |     "+c3o.toFixed(0).padStart(3)+"%      |  "+f(macro)+"x  |   "+f(alloc)+"x   |  "+f(deliv)+"x  |  "+f(r3)+"x");
   }
   console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  3-layer ratio = macro x allocation x delivery. macro = (3L ratio)/(2L ratio) = the category-exclusion contribution.");
   process.exit(0);
 }
 
 console.log("E5 v2 / corrected-E4 — central max P (credit), distributed max S via participation coverage (beta="+PARAMS.beta+"), oracle max S.");
-console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PARAMS.mean+", sd="+PARAMS.sd+", projSpread="+PARAMS.projSpread+", w(value weight)="+PARAMS.w+", delivery "+PARAMS.fWeak+"/"+PARAMS.fVer+" (1.43x)");
-console.log("  rho=corr(S,P) agenda<->value misalignment. rho=1 & w=0 -> P~=S -> parity; w=1 -> E4 (harm-blind central).\n");
+console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PARAMS.mean+", sd="+PARAMS.sd+", projSpread="+PARAMS.projSpread+", w(value weight)="+PARAMS.w+", delivery "+PARAMS.fWeak+"/"+PARAMS.fVer+" ("+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x)");
+console.log("  rho=corr(S,P) agenda<->value misalignment. w=0 -> agenda-capture (primary); w=1 -> E4 (harm-blind central). At ~35% net-neg the frontier COMPRESSES toward the delivery floor as rho->1 (not exact parity).\n");
 console.log("  rho  | corr(S,P) | net-neg% | cen %oracle | dis %oracle |  Delta=(d-c)/o [95% CI]  | ratio d/c");
 for(const rho of PARAMS.RHOS){
   const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalWorld(s,rho));

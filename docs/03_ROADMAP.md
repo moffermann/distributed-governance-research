@@ -701,7 +701,7 @@ Exit criteria:
 
 ## Opportunity-cost hurdle — mechanism-fidelity refinement (2026-07-10, TOP OF STACK)
 
-The v2 headline was corrected to ~3.0× using a net-negative share of ~35% (Pohl-Mihaljek p_U+≈0.65,
+The v2 headline was corrected to ~2.8× (band ~2.4-3.3×) using a net-negative share of ~35% (Pohl-Mihaljek p_U+≈0.65,
 `drafts/positive-net-social-value-calibration.md`). That 35% is **net of the opportunity cost of
 capital** and splits (per Pohl-Mihaljek) into **~8% true harm (EIRR ≤ 0, S<0)** and **~27% below the
 social hurdle rate (S>0 gross, but wastes capital)**. The current model represents the whole 35% by
@@ -719,7 +719,7 @@ TODO (opportunity-cost hurdle):
     ~65% net-positive (Doc 1's p_U+ is an IMPLEMENTED-project share = a model OUTPUT, like %oracle),
     AND its production efficiency ~= 0.75 (Doc 2). Report across p_U+ in [0.50,0.75] and lambda_PI
     in [0.20,0.30].
-  - EXPECTED: magnitude stays ~3.0x (band ~2.6-3.6x); the MECHANISM story sharpens -- agenda-capture
+  - EXPECTED: magnitude stays ~2.8x (band ~2.4-3.3x); the MECHANISM story sharpens -- agenda-capture
     stays the primary driver (funds below-hurdle by credit), harm-blindness a smaller co-mechanism
     (only the ~8% true harm). Re-run frontier + --cats + --tornado; re-confirm held-out; update
     e4e5-value-model-v2.md, e5-sp-preregistration.md, e5-sp-paper-propagation.md.
@@ -747,7 +747,7 @@ v2 STATUS (updated 2026-07-10) — BUILT, VALIDATED, PRE-REGISTERED, PROPAGATION
   - Built the S/P model (scripts/simulation/e5-sp-model.mjs) ON E4's coverage; NESTS E4 (w=1
     reproduces the harm-blind central; w=0 = pure agenda-capture). Modes: --cats (3-layer),
     --sweepL (lumpiness), --concentrate (Core v0), --byValue, --seedBase.
-  - HEADLINE (CORRECTED 2026-07-10): ~3.0x (band ~2.6-3.6x) = selection ~2.5x x delivery ~1.30x,
+  - HEADLINE (CORRECTED 2026-07-10): ~2.8x (band ~2.4-3.3x) = selection ~2.2-2.5x x delivery ~1.30x,
     TWO layers (macro <=1x). Two author literature calibrations corrected it up from ~2.0x:
     net-negative share ~35% (Pohl-Mihaljek p_U+~=0.65, net of opportunity cost of capital -- the old
     <1% was a GROSS ERROR using pure existence value); production loss lambda_PI~=0.25 (IMF), delivery
