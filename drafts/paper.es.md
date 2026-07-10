@@ -1,6 +1,6 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Validación Adversarial y Evidencia Computacional para la Distribución Institucional Selectiva
 
-**Working paper — v1.12 (julio de 2026). Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.12 (julio de 2026). Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
 *Traducción al español del working paper v1.12 (drafts/paper.md, versión autoritativa en inglés).*
 
@@ -458,9 +458,9 @@ Un *Duty-of-Care Anchor* (ancla de deber de diligencia) nombra, antes del desemb
 estratificada: descubrimiento con ordenamiento controlado por el usuario y con
 razón visible; tarjetas de proyecto compactas; y superficies de auditoría
 progresivamente más profundas hasta el rastro completo. Los ciudadanos que no
-prestan atención son servidos por reglas de asignación por defecto del sistema
-que siguen las prioridades del ámbito de planificación, por perfiles
-automáticos configurables, y por delegación acotada y revocable con
+prestan atención son servidos por perfiles automáticos de asignación
+configurables —o un perfil por defecto sensato cuando no se define ninguno—
+y por delegación acotada y revocable con
 visibilidad de la concentración. La arquitectura no supone ciudadanos atentos;
 supone que en su mayoría son desatentos y enruta su peso a través de una
 intermediación inspeccionable (Lupia y McCubbins 1998). Esta es una respuesta
@@ -605,8 +605,8 @@ evaluar proyectos es insignificante, de modo que la ignorancia racional es el
 equilibrio (Downs 1957), y la pregunta de diseño es hacia dónde fluye el peso de
 la mayoría *desatenta*: hacia la saliencia amplificada por la prueba social
 (Bikhchandani, Hirshleifer y Welch 1992; Salganik, Dodds y Watts 2006), o
-hacia la capa de reglas por defecto de la propia arquitectura, que sigue
-las prioridades de planificación declaradas. El modelo arroja tres predicciones verificables —los topes doman
+hacia la capa de reglas por defecto de la propia arquitectura, cuyo
+enrutamiento sigue la priorización distribuida de proyectos —los perfiles de asignación agregados—, no un plan central. El modelo arroja tres predicciones verificables —los topes doman
 las cascadas (predicción 1), los valores por defecto anclan la calidad (predicción 2), el decaimiento
 se degrada con gracia solo con valores por defecto (predicción 3)— evaluadas a continuación.
 

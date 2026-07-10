@@ -66,6 +66,17 @@ Society"; Kunda (1990) / Taber-Lodge (2006) if the motivated-reasoning nuance is
 Shepsle-Johnsen (1981), Olson (1965), Bastiat (1850) already present or easy to add. KEEP the E4
 harm-blindness backbone as the *special case*, not the headline.
 
+## Paper hygiene fixes (independent of the mechanism reframe; do in the same EN+ES pass)
+- **Stale attack count/round narrative (both languages, ~7 spots each):** the paper says "**forty**
+  attacks / **four rounds** / resolutions **docs/67–109**" (paper.md:79,129,193,1002,1040,1316,1439;
+  paper.es.md:87,139,210,1077,1115,1393,1516) but the corpus now has **43 attacks (A001–A043)**,
+  resolutions **docs/67–113**, with a later ablation round (A041–A043, docs/111–113) beyond the
+  original forty. Update the count (forty→forty-three), the round count, and the docs range in lockstep.
+  (Left for the author pass because it is woven into the paper's self-description narrative and needs the
+  round-structure decided; not hot-edited autonomously — the EN↔ES mirror-sync of the "aggregated
+  allocation profiles, not a central plan" pass WAS applied 2026-07-10.)
+- **CITATION.cff/.zenodo.json/README** version already bumped to v1.12 (audit P1); no paper-body change.
+
 ## Author decision points (before applying)
 1. **Supersede vs augment:** does agenda-capture *replace* harm-blindness as Finding 4's headline
    mechanism, or sit *beside* it (modal = agenda-capture; rare-divisive = harm-blindness)? (Recommend:
