@@ -2,9 +2,9 @@
 
 **Working paper — v1.13 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
-*Traducción al español del working paper v1.12 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.13 (drafts/paper.md, versión autoritativa en inglés).*
 
-*© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI (de concepto, siempre resuelve a la última versión): 10.5281/zenodo.21193846.*
+*© 2026 Mauricio Offermann. Licenciado bajo CC BY-NC-ND 4.0 en espera de la selección de la sede de publicación — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI: el concept DOI propio de este manuscrito se asigna en su depósito separado CC BY-NC-ND (v1.13; pendiente — véase RELEASING.md). Nota: 10.5281/zenodo.21193846 es el concept DOI del record separado del corpus de investigación, no de este manuscrito.*
 
 ## Resumen
 

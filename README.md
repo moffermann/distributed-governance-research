@@ -12,7 +12,7 @@ The objective of this repository is not to defend a conclusion, but to build a t
 
 ```text
 docs/                 Architecture corpus: method, blueprint, citizen flows, diagrams,
-                      and the accepted resolution documents (docs/39-109)
+                      and the accepted resolution documents (docs/39-113)
 knowledge/            Hypotheses (H001-H059), principles (P001-P007), concepts,
                       open questions, and the canonical index (_index.md)
 attacks/              Adversarial attack briefs A001-A043 (all resolved)

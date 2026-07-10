@@ -4,8 +4,12 @@ Codified 2026-07-07 after the v1.9 cycle, to keep DOIs from going stale inside d
 
 ## The DOI rule
 
-- **Paper headers cite the concept DOI** (10.5281/zenodo.21193846 for the working paper): it never changes and always resolves to the latest deposited version, so a PDF header can never be stale again.
-- **Version DOIs** live where they are knowable: CITATION.cff, the GitHub release notes, and the Zenodo record itself.
+- **Two concept DOIs (from v1.13, dual records).** `10.5281/zenodo.21193846` is the **corpus/code** record's
+  concept DOI. The **manuscript** record gets its **own** concept DOI on its first CC BY-NC-ND deposit
+  (pre-reserve it, see below). **Paper headers must cite the MANUSCRIPT concept DOI**, not the corpus one —
+  until the manuscript record's first deposit, the header states the DOI is pending (current state). Do NOT
+  put 21193846 in the paper header as if it were the manuscript's DOI.
+- **Version DOIs** live where they are knowable: CITATION.cff, the GitHub release notes, and each Zenodo record.
 - If an exact version DOI inside the PDF is ever wanted, use **pre-reservation**: create the Zenodo new-version *draft first*, read its pre-reserved DOI (`metadata.prereserve_doi`), render the PDFs citing it, upload, then publish. Order: draft → render → upload → publish.
 
 ## The version-string rule (anti-recurrence guard for C026)
@@ -38,5 +42,13 @@ the anti-recurrence list above).
 2. `npm run check-anchors` clean.
 3. Render four outputs with `scripts/md-to-pdf.mjs` (`--lang en|es`, `--toc`, `--html` for the screen-reader edition); rasterize a few pages (PyMuPDF) and inspect them before shipping.
 4. Commit, tag `vX.Y`, `gh release create` with the four renders attached.
-5. Zenodo new version on the deposition in `_backups/zenodo-depid.txt` (token in `_backups/zenodo-token.txt`, never displayed): new-version draft → replace files → bump `version`/`publication_date` → publish → update the depid file.
-6. Sweep the *version* DOI across CITATION.cff/README notes (headers stay on the concept DOI).
+5. **Zenodo — TWO records (from v1.13).**
+   a. **Corpus/code record** (existing lineage, depid in `_backups/zenodo-depid.txt`, `.zenodo.json` metadata,
+      CC BY 4.0): new-version draft → replace files (corpus + code only, **no manuscript**) → bump
+      `version`/`publication_date` → publish → update the depid file.
+   b. **Manuscript record** (`drafts/paper.zenodo.json` metadata, CC BY-NC-ND 4.0): on first deposit this
+      MINTS a new concept DOI — **pre-reserve** it, render the paper PDFs/HTML citing it in the header, then
+      upload EN+ES manuscript renders (and, if desired, docs/101 + essay/explainer + reviewer packets) →
+      publish. Record its depid in a second backup file (e.g. `_backups/zenodo-depid-manuscript.txt`).
+6. Sweep the *version* DOIs: corpus version DOI → CITATION.cff/README/.zenodo notes; **manuscript** concept +
+   version DOI → the paper headers (EN+ES), CITATION.cff `preferred-citation`, LICENSE.md citation, README.
