@@ -129,8 +129,9 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    auditoría (1.4–1.6× a escala de piloto municipal). **Retiramos ese compuesto
    como efecto calibrado**: una prueba de estrés pre-registrada, simétrica y
    solo-de-selección reduce la ventaja de selección distribuido-menos-central a
-   un efecto agrupado de ~0.026 de un benchmark de información completa, por
-   debajo de su umbral de materialidad de 0.05. La contribución que carga el
+   una mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información
+   completa, por debajo de su umbral prefijado de 0.05 de reconstrucción del
+   programa de investigación (NO-GO). La contribución que carga el
    peso es la arquitectura y la *dirección* del mecanismo, no el multiplicador.
 
 4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
@@ -590,8 +591,8 @@ igualados, el mismo pool de proyectos, costos y ruido, entrega en paridad, cada 
 actuando sobre su propia estimación ruidosa y no sobre la verdad— encontró que la
 ventaja de selección distribuido-menos-central es **positiva en las 18 celdas
 pre-especificadas pero pequeña.** El estadístico de decisión pre-registrado es la
-**mediana agrupada Δ = 0.025**, por debajo del umbral de materialidad
-pre-registrado de **0.05**; una estimación **post-hoc** de ratio-of-sums es
+**mediana agrupada Δ = 0.025**, por debajo del **umbral de reconstrucción del
+programa de investigación** pre-registrado de **0.05**; una estimación **post-hoc** de ratio-of-sums es
 **Δ = 0.026, con un intervalo Monte-Carlo por conglomerado-de-mundos al 95%
 [0.023, 0.029]** (reportada por separado, sobre el proceso generador simulado). El
 multiplicador compuesto, por lo tanto, **no** se reclama como efecto calibrado. Esta
@@ -1015,18 +1016,21 @@ a escala, y 1.4–1.6× a escala de piloto municipal (10-40 proyectos), donde la
 selección central con cobertura plena es competitiva y el caso descansa en la
 entrega y la medición. Pero la evidencia de auditoría *parametriza la fuga de la
 línea base*; **no** calibra el efecto de tratamiento institucional de Core v0, que
-está gobernado por la prueba simétrica pre-registrada posterior (Sección 6) que
-reduce la ventaja de selección a un efecto agrupado de ~0.026 de un benchmark de
-información completa —así que estas cifras de E7 se conservan como salidas
-condicionales del aparato, no como un resultado principal sobreviviente. El
-hallazgo central del experimento fortalece la tesis más que cualquier
-multiplicador: la auditoría a su intensidad empíricamente
-documentada, sin memoria reputacional, no disuade desvío alguno —el umbral de
-incentivos del régimen calibrado queda por debajo del costo de todo oportunista,
-de modo que su fuga iguala la del régimen de cero-control, y lo que compra la
-detección del mundo real es una mentira más pequeña (la brecha de visibilidad cae
-de veintinueve a diecinueve puntos), nunca más entrega. La fuga del brazo
-calibrado aterriza dentro de la banda documentada por la auditoría (24-48% en
+está gobernado por la prueba simétrica pre-registrada posterior (Sección 6) cuya
+mediana agrupada pre-registrada de ventaja de selección es Δ = 0.025 de un
+benchmark de información completa —así que estas cifras de E7 se conservan como
+salidas condicionales del aparato, no como un resultado principal sobreviviente.
+Dentro de este aparato, y condicional a su distribución estipulada de costos de
+oportunistas y a su línea base sin memoria, un resultado cualitativo es
+instructivo: a la intensidad de detección documentada por auditorías introducida
+en el modelo, sin memoria reputacional, el modelo no disuade desvío alguno —el
+umbral de incentivos del régimen parametrizado por auditorías queda por debajo del
+costo de todo oportunista modelado, de modo que su fuga iguala la del régimen de
+cero-control, y en el modelo la detección añadida reduce la brecha de visibilidad
+(de veintinueve a diecinueve puntos) en lugar de elevar el valor entregado. Estas
+son salidas internas al modelo del aparato estipulado de E7, no un efecto causal
+estimado de la auditoría del mundo real. La fuga del brazo parametrizado por
+auditorías aterriza dentro de la banda documentada por la auditoría (24-48% en
 obras); la mecánica de fuga del modelo, alimentada con parámetros de auditoría, es
 *consistente con* el rango documentado —esto parametriza la fuga de la línea base,
 no calibra el efecto de tratamiento institucional. Y el barrido de sesgo
@@ -1352,17 +1356,19 @@ sumarse—, pero esas magnitudes son contrastes factoriales internos al modelo, 
 efectos calibrados, y no construimos el artículo sobre ellas. La afirmación sobre
 la que el artículo realmente se sostiene es más estrecha y se probó con más
 dureza: un gate pre-registrado, simétrico y solo-de-selección encuentra la
-ventaja distribuido-menos-central positiva en todas las celdas pero pequeña (un
-agrupado de ~0.026 de un benchmark de información completa, por debajo de su
-umbral de materialidad de 0.05), de modo que retiramos el multiplicador compuesto
+ventaja distribuido-menos-central positiva en todas las celdas pero pequeña (una
+mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información completa,
+por debajo de su umbral prefijado de 0.05 de reconstrucción del programa de
+investigación), de modo que retiramos el multiplicador compuesto
 que reportó una versión anterior y nos apoyamos en la arquitectura y en la
-*dirección* del mecanismo. Una oración que produjo el aparato sobrevive a esa
-disciplina justamente porque trata de la capa de entrega, no del multiplicador:
-la auditoría a su intensidad real y documentada —detección sin consecuencias
-persistentes— no disuade desvío alguno en el modelo; el instrumento que mueve el
-valor entregado es el que el statu quo carece a cualquier intensidad de
-auditoría: consecuencias que persisten. La rendición de cuentas sin memoria es
-contabilidad.
+*dirección* del mecanismo. Un resultado interno al modelo vale la pena conservar
+porque trata de la capa de entrega, no del multiplicador: en el modelo, a la
+intensidad de detección documentada por auditorías, la detección sin consecuencias
+persistentes no disuade desvío alguno; lo que mueve el valor entregado es el
+instrumento del que el statu quo modelado carece: consecuencias que persisten. Que
+eso se sostenga en una institución real es una hipótesis para un piloto, no un
+resultado aquí; pero el modelo es inequívoco en que la rendición de cuentas sin
+memoria es contabilidad.
 
 El punto más profundo es el de Friedman: una administración central gasta el
 dinero de otras personas en otras personas, la categoría de gasto con el menor

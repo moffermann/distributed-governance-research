@@ -119,8 +119,9 @@ current institution solves the same problem, not against an ideal — blocking t
    audit-institution findings (1.4–1.6× at municipal pilot scale). We **retire
    that compound as a calibrated effect**: a pre-registered, symmetric,
    selection-only stress test shrinks the distributed-minus-central selection
-   advantage to a pooled ~0.026 of a full-information benchmark, below its 0.05
-   materiality gate. The load-bearing contribution is the architecture and the
+   advantage to a pre-registered pooled median Δ = 0.025 of a full-information
+   benchmark, below its pre-set 0.05 research-program rebuild gate (NO-GO). The
+   load-bearing contribution is the architecture and the
    mechanism *direction*, not the multiplier.
 
 4. **Adversarial review as method** (Section 7). The architecture was attacked
@@ -540,7 +541,7 @@ candidate pool, costs and noise, delivery at parity, each acting on its own nois
 estimate rather than ground truth — found the distributed-minus-central selection
 advantage **positive in every one of 18 pre-specified cells but small.** The
 pre-registered decision statistic is the **pooled median Δ = 0.025**, below the
-pre-registered **0.05 materiality gate**; a **post-hoc** ratio-of-sums estimate is
+pre-registered **0.05 research-program rebuild gate**; a **post-hoc** ratio-of-sums estimate is
 **Δ = 0.026, with a 95% world-cluster Monte-Carlo interval [0.023, 0.029]**
 (reported separately, on the simulated data-generating process). The compound
 multiplier is therefore **not** claimed as a calibrated effect. This is a stylized
@@ -941,20 +942,22 @@ produced 2.22× [2.10, 2.35] per unit of budget at scale, and
 selection with full coverage is competitive and the case rests on
 delivery and metering. But the audit evidence *parameterizes the baseline's
 leak*; it does **not** calibrate the Core v0 institutional treatment effect,
-which is governed by the later pre-registered symmetric test (Section 6) that
-shrinks the selection advantage to a pooled ~0.026 of a full-information
-benchmark — so these E7 figures are retained as conditional apparatus outputs,
-not a surviving headline. The experiment's central finding strengthens the
-thesis more than any multiplier would: audit at its
-empirically documented intensity, without reputational memory, deters
-no diversion at all — the calibrated regime's incentive threshold lies
-below every opportunist's cost, so its leak equals the zero-control
-regime's, and what real-world detection buys is a smaller lie (the
-visibility gap falls from twenty-nine to nineteen points), never more
-delivery. The calibrated arm's leak lands inside the audit-documented
-band (24-48% in works); the model's leak mechanics, fed audit parameters, are
-*consistent with* the documented range — this parameterizes the baseline's leak,
-it does not calibrate the institutional treatment effect. And the bias
+which is governed by the later pre-registered symmetric test (Section 6) whose
+pre-registered pooled median selection advantage is Δ = 0.025 of a
+full-information benchmark — so these E7 figures are retained as conditional
+apparatus outputs, not a surviving headline. Within this apparatus, and
+conditional on its stipulated opportunist-cost distribution and no-memory
+baseline, one qualitative result is instructive: at the audit-documented
+detection intensity fed into the model, without reputational memory, the model
+deters no diversion — the audit-parameterized regime's incentive threshold lies
+below every modelled opportunist's cost, so its leak equals the zero-control
+regime's, and in the model the added detection reduces the visibility gap (from
+twenty-nine to nineteen points) rather than raising delivered value. These are
+model-internal outputs of E7's stipulated apparatus, not an estimated causal
+effect of real-world auditing. The audit-parameterized arm's leak lands inside
+the audit-documented band (24-48% in works); the model's leak mechanics, fed
+audit parameters, are *consistent with* the documented range — this parameterizes
+the baseline's leak, it does not calibrate the institutional treatment effect. And the bias
 sweep bounds the open-construction claim honestly: distributed
 selection degrades near-linearly with coordinated signal capture and
 crosses below a competent full-coverage municipal planner only at
@@ -1276,16 +1279,18 @@ magnitudes are model-internal factorial contrasts, not calibrated
 effects, and we do not build the paper on them. The claim the paper
 actually stands on is narrower and was tested harder: a pre-registered,
 symmetric, selection-only gate finds the distributed-minus-central
-advantage positive in every cell but small (a pooled ~0.026 of a
-full-information benchmark, below its 0.05 materiality gate), so we
-retire the compound multiplier an earlier version reported and rest on
-the architecture and the *direction* of the mechanism. One sentence the
-apparatus produced survives that discipline precisely because it is about
-the delivery layer, not the multiplier: audit at its real, documented
-intensity — detection without persistent consequences — deters no
-diversion in the model; the instrument that moves delivered value is the
-one the status quo lacks at any audit intensity: consequences that
-persist. Accountability without memory is bookkeeping.
+advantage positive in every cell but small (a pre-registered pooled median
+Δ = 0.025 of a full-information benchmark, below its pre-set 0.05
+research-program rebuild gate), so we retire the compound multiplier an
+earlier version reported and rest on the architecture and the *direction*
+of the mechanism. One model-internal result is worth carrying because it is
+about the delivery layer, not the multiplier: in the model, at the
+audit-documented detection intensity, detection without persistent
+consequences deters no diversion; what moves delivered value is the
+instrument the modelled status quo lacks — consequences that persist. Whether
+that holds in a real institution is a hypothesis for a pilot, not a result
+here; but the model is unambiguous that accountability without memory is
+bookkeeping.
 
 The deeper point is Friedman's: a central administration spends other
 people's money on other people, the spending category with the least care

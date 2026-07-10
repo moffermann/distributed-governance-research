@@ -5,9 +5,10 @@
 > **⚠️ CORRECTION (2026-07-10).** An earlier version of this companion presented a calibrated
 > value-per-budget **multiplier (~2×/2.19×/2.22×/2.26×) as "validated"**. That multiplier is **RETIRED**:
 > an independent audit + a pre-registered **symmetry gate (NO-GO)** showed the distributed selection
-> advantage is real but **small** (a pooled ~0.026 of a full-information benchmark, below its 0.05
-> materiality gate) — a *conditional, stylized-model output, not a calibrated real-world effect, and not a
-> validated Core v0 implementation*. The project now rests on the **architecture + the qualitative mechanism
+> advantage is real but **small** (pre-registered pooled **median Δ = 0.025** of a full-information
+> benchmark, below its pre-set **0.05 research-program rebuild gate** — a post-hoc ratio-of-sums estimate was
+> Δ = 0.026 [0.023, 0.029], reported separately) — a *conditional, stylized-model output, not a calibrated
+> real-world effect, and not a validated Core v0 implementation*. The project now rests on the **architecture + the qualitative mechanism
 > direction**, not a multiplier. Controlling spec: `research/claim-and-estimand-contract.md`. The
 > "How this model has been tested so far" section below has been corrected accordingly.
 
@@ -786,8 +787,10 @@ correction banner above):
   test** — both arms with matched expected appraisal budgets, delivery at
   parity, each acting on its own noisy estimate rather than ground truth —
   returned **NO-GO**: the distributed-minus-central selection advantage is
-  **positive in every pre-specified cell but small (a pooled ~0.026 of a
-  full-information benchmark, below its 0.05 materiality gate)**. So the
+  **positive in every pre-specified cell but small (pre-registered pooled
+  median Δ = 0.025 of a full-information benchmark, below its pre-set 0.05
+  research-program rebuild gate; a post-hoc ratio-of-sums estimate was
+  Δ = 0.026 [0.023, 0.029])**. So the
   honest computational finding is a **directional** one — credit-pressured
   central selection mis-allocates relative to coverage-based distributed
   selection — not a headline multiplier; the earlier figures survive only
@@ -915,7 +918,7 @@ and the layer can be bounded so its failure does not cascade into
 the non-distributable layers.
 ```
 
-The principle is made concrete in a complete architecture — formally analyzed, adversarially stress-tested, and computationally explored (the computational magnitudes are retired to a small conditional selection effect, not a calibrated multiplier; manuscript Section 3 and `research/claim-and-estimand-contract.md`). The minimum contribution can be stated as follows:
+The principle is made concrete in a complete architecture — formally analyzed, adversarially stress-tested, and computationally explored (the computational magnitudes are retired to a small conditional selection effect, not a calibrated multiplier; manuscript Section 6 and `research/claim-and-estimand-contract.md`). The minimum contribution can be stated as follows:
 
 ```text
 This paper proposes a functional architecture for distributed public project governance. It decomposes public-resource allocation into a project lifecycle governed by Planning Scopes, Value Theses, Evidential Contracts, Conditional Funding, Control Packages, Milestone Disbursement, Closure Accountability, and Reputation Updates. The model shows how bounded public projects can be opened to distributed participation without relying on popularity alone, executor self-reporting, or uncontrolled transfer of funds.
