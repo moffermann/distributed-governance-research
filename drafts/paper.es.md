@@ -66,23 +66,28 @@ un segundo multiplicador.** El ejecutor entrega, y no desvía, cuando arriesga
 más de lo que podría robar: pagos por tramos contra hitos verificados,
 retenciones, garantías exigibles, reputación y fiscalización cruzada,
 formalizados como condiciones que se pueden chequear. A igualdad de proyectos,
-en el modelo esta capa añade **~43% (1.4×)** de valor —y es la misma maquinaria
-de integridad la que hace resistente a captura a la ventaja de asignación, de
-modo que asignación y entrega son una capa y su salvaguarda, no dos efectos
+en el modelo esta capa añade **~43% (1.4×)** de valor *(un contraste interno del
+modelo, no un efecto calibrado)* —y es la misma maquinaria de integridad la que
+hace resistente a captura a la ventaja de asignación, de modo que asignación y
+entrega son una capa y su salvaguarda, no dos efectos
 independientes que se multiplican.
 
-**Combinados, en el modelo,** en un punto operativo representativo —un status
-quo ciego al daño frente a una plataforma que le da a los perjudicados una voz
-real aunque imperfecta— la arquitectura entrega cerca de **2×** el valor por
-peso de una línea base parametrizada a partir de hallazgos publicados de
-contralorías de nueve países (no calibrada a un conjunto de datos); contra esa
-línea base calibrada a auditorías el compuesto sobrevive en **~2.2×** a escala
-bajo una condición de retiro comprometida de antemano (Hallazgo 7). Los
-resultados que cargan el peso, sin embargo, son la frontera condicional y el
-umbral de captura, no el estimador puntual. La arquitectura además separa la
-planificación macro de la asignación concreta; un estudio complementario mide la
-robustez frente a una mala planificación central, con una ventaja que crece
-hasta **~5×**.
+**Sobre la magnitud — una corrección.** Una síntesis anterior combinó estas capas
+en un solo multiplicador de valor por peso. Una **prueba de estrés posterior,
+pre-registrada, simétrica y solo-de-selección** —ambos brazos con **presupuestos
+esperados de reportes de tasación igualados**, el mismo pool de proyectos, costos
+y ruido, **entrega mantenida en paridad**, cada uno actuando sobre su propia
+estimación ruidosa y no sobre la verdad— encontró que la diferencia
+distribuido-menos-central es **positiva en todas las celdas pre-especificadas pero
+pequeña: un efecto agrupado de 0.026 de un benchmark de información completa
+(intervalo Monte-Carlo por conglomerado-de-mundos al 95% 0.023–0.029), por debajo
+de su umbral de materialidad pre-registrado de 0.05.** Por lo tanto **retiramos el
+multiplicador compuesto como efecto calibrado**; las cifras del modelo basado en
+agentes anterior sobreviven solo como salidas condicionales de ese aparato
+(reportadas en la Sección 6), no como una estimación de cuánto eleva el valor la
+arquitectura. Las contribuciones que cargan el peso son la **arquitectura** y la
+**dirección** del mecanismo —la selección central presionada por el crédito asigna
+peor que la selección distribuida basada en cobertura—, no un multiplicador puntual.
 
 La arquitectura fue sometida a **crítica adversarial sistemática**: cuarenta
 ataques, cada uno con su defensa y una resolución que *o* agrega un mecanismo
@@ -198,13 +203,16 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    de ámbitos, miden una construcción abierta viable de ella, y llevan la
    comparación de extremo a extremo: desde la asignación hasta el valor social
    entregado por unidad de presupuesto —el criterio que la redistribución
-   existe para satisfacer. El resultado principal, en el modelo: la entrega
-   verificada y la priorización social se multiplican en lugar de sumarse, y
-   la arquitectura completa entrega 2.22× una línea base del statu quo
-   calibrada a partir de los hallazgos publicados de instituciones de
-   auditoría (1.4–1.6× a escala de piloto municipal), mientras que incluso ese
-   statu quo calibrado sobreestima su entrega real en diecinueve puntos
-   porcentuales.
+   existe para satisfacer. En el modelo, la entrega verificada y la
+   priorización social interactúan en lugar de solo sumarse; el aparato basado
+   en agentes anterior produjo un compuesto de 2.22× una línea base del statu
+   quo parametrizada a partir de los hallazgos publicados de instituciones de
+   auditoría (1.4–1.6× a escala de piloto municipal). **Retiramos ese compuesto
+   como efecto calibrado**: una prueba de estrés pre-registrada, simétrica y
+   solo-de-selección reduce la ventaja de selección distribuido-menos-central a
+   un efecto agrupado de ~0.026 de un benchmark de información completa, por
+   debajo de su umbral de materialidad de 0.05. La contribución que carga el
+   peso es la arquitectura y la *dirección* del mecanismo, no el multiplicador.
 
 4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
    atacada sistemáticamente: cuarenta resúmenes de ataque anclados en las
@@ -218,7 +226,9 @@ El estudio complementario mide tres efectos que amplían esta arquitectura: la
 ablación de la pila de disuasión (sus términos son individualmente redundantes
 pero conjuntamente indispensables), la factibilidad de la fiscalización por
 IA, y el efecto de separar la planificación macro de la asignación (robustez
-frente a una mala planificación central, hasta ~5×).
+frente a una mala planificación central —un contraste del aparato anterior,
+sujeto a la misma salvedad de magnitud que el compuesto anterior, no un efecto
+calibrado).
 
 La Sección 8 enuncia las limitaciones con el mismo cuidado que los resultados,
 porque bajo nuestro método ellas son resultados: cada una es un riesgo
@@ -384,13 +394,13 @@ Y el resultado sustantivo es en sí mismo nuevo:
 - **(vi)** una comparación institucional de extremo a extremo sobre el
   criterio que la redistribución existe para satisfacer —valor social
   entregado por unidad de presupuesto—, descomponiendo la selección de la
-  entrega sobre carteras apareadas, mostrando que ambas capas se multiplican,
-  e introduciendo la brecha de visibilidad (entrega oficialmente reportada
-  menos entrega real) como un déficit de rendición de cuentas medible del
-  statu quo;
+  entrega sobre carteras apareadas, mostrando que ambas capas interactúan dentro
+  del aparato anterior, e introduciendo la brecha de visibilidad (entrega
+  oficialmente reportada menos entrega real) como un déficit de rendición de
+  cuentas medible del statu quo;
 
-- **(vii)** esa comparación recalibrada contra una línea base parametrizada
-  exclusivamente a partir de los hallazgos publicados de instituciones
+- **(vii)** esa comparación contra una línea base parametrizada por auditorías,
+  construida exclusivamente a partir de los hallazgos publicados de instituciones
   supremas de auditoría de nueve jurisdicciones y la Unión Europea, bajo una
   condición preregistrada de retiro del resultado principal.
 
@@ -622,9 +632,9 @@ Cada experimento (E1–E8) corresponde a un hallazgo:
 | E2 | ¿qué sostiene la calidad de la asignación? | Hallazgo 2 |
 | E3 | ¿qué amortigua el decaimiento de la participación? | Hallazgo 3 |
 | E4 | agregación distribuida vs. construcción central (refinada por una frontera de fricciones simétricas + captura, E4-v4/v5) | Hallazgo 4 |
-| E5 | dónde gana valor la arquitectura (selección × entrega) | Hallazgo 5 |
+| E5 | dónde gana valor la arquitectura (capas de selección y entrega) | Hallazgo 5 |
 | E6 | competencia reputacional y estándar de ejecución | Hallazgo 6 |
-| E7 | comparación contra una línea base calibrada en auditoría | Hallazgo 7 |
+| E7 | comparación contra una línea base parametrizada por auditorías | Hallazgo 7 |
 | E8 | robustez bajo participación conductual endógena | cierre de §6 |
 
 Simulamos 10.000 ciudadanos a lo largo de 24 ciclos mensuales asignando sobre un
@@ -641,12 +651,28 @@ conmutable. Veinte corridas con semilla por condición; el código es sin
 dependencias y determinista (`scripts/simulation/allocation-sim.mjs`; tablas
 completas en `research/simulation-results.md`).
 
-**Sobre el cociente principal.** Reportamos tres líneas base del mismo
-cociente de valor por unidad de presupuesto: **2.19×** frente al cero-control
-(E5), **2.22×** frente al statu quo calibrado en auditoría (E7, la cifra de
-referencia) y **2.26×** bajo adopción conductual (E8). El resumen redondea a
-**~2.2×**; el ~5× de robustez frente a una mala planificación central lo mide
-el estudio complementario.
+**Estado de los cocientes compuestos anteriores.** Este aparato basado en agentes
+produjo tres líneas base del mismo cociente de valor por unidad de presupuesto:
+**2.19×** frente al cero-control (E5), **2.22×** frente al statu quo parametrizado
+por auditorías (E7) y **2.26×** bajo adopción conductual (E8). Se conservan aquí
+por trazabilidad como **salidas condicionales de ese aparato**, pero están
+**superadas para inferir magnitud** y ya no se ofrecen como la cifra principal del
+artículo.
+
+**Estado cuantitativo (rector).** Una prueba de estrés pre-registrada, simétrica y
+solo-de-selección —ambos brazos compartiendo el pool de proyectos, los costos, el
+presupuesto de tasación y el ruido, cada uno actuando sobre su propia estimación
+ruidosa y no sobre la verdad— encontró que la ventaja de selección
+distribuido-menos-central es **positiva en las 18 celdas pre-especificadas pero
+pequeña: un efecto agrupado de 0.026 de un benchmark de información completa
+(intervalo Monte-Carlo por conglomerado-de-mundos 0.023–0.029), por debajo de su
+umbral de materialidad pre-registrado de 0.05.** El multiplicador compuesto, por lo
+tanto, **no** se reclama como efecto calibrado. La especificación rectora es
+[[claim-and-estimand-contract|research/claim-and-estimand-contract.md]]; la prueba,
+su pre-registro congelado, resultados y diagnósticos están en
+`scripts/simulation/e5-sp-symmetry-gate.mjs` y `audits/2026-07-10/symmetry-gate-*`.
+Las contribuciones que cargan el peso son la arquitectura y la *dirección* del
+mecanismo, no un multiplicador puntual.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
@@ -933,7 +959,7 @@ separable de cualquier magnitud que el modelo reporte. El apéndice de objetivos
 calibración vuelve visible la línea entre lo interno al modelo y lo anclado en datos.
 
 **Hallazgo 5: el valor entregado, no la asignación, es donde la arquitectura
-justifica su valía —y la selección y la entrega se multiplican.** Un quinto
+justifica su valía —y la selección y la entrega interactúan.** Un quinto
 experimento preregistrado (`research/e5-value-delivery-design.md`) añade la
 etapa de ejecución que los primeros cuatro omitieron: ejecutores con tipos
 ocultos cuya decisión de desvío sigue la condición de incentivos de la
@@ -952,16 +978,20 @@ régimen verificado entrega un +43% sobre carteras idénticas (ΔV emparejado =
 sobreestima su entrega real en veintinueve puntos porcentuales. La misma capa de
 control, distintos proyectos: la priorización social entrega un +53-54% bajo
 cualquiera de los dos regímenes. La interacción es positiva y significativa
-(+0.085 [0.053, 0.117]): las capas se multiplican, y la arquitectura completa
-entrega, en el modelo, 2.19× la cota inferior de cero-control por unidad de
-presupuesto (0.859 vs 0.393), de manera robusta a lo largo de las tasas de
-participación directa desde el 3% (el piso del presupuesto participativo) hasta
-el 40% (escala de votación) —una cota recalibrada contra el statu quo anclado en
-auditoría en el Hallazgo 7. Dos predicciones preregistradas fallaron
+(+0.085 [0.053, 0.117]): dentro de este aparato las dos capas **interactúan en
+lugar de solo sumarse**, produciendo una **salida condicional de escenario
+cero-control de 2.19×** por unidad de presupuesto (0.859 vs 0.393) a lo largo de
+las tasas de participación directa desde el 3% (el piso del presupuesto
+participativo) hasta el 40% (escala de votación). Este compuesto es un contraste
+factorial interno del modelo, **no** un efecto calibrado (véase la nota de estado
+cuantitativo en la Sección 6 y el contrato de estimando). Dos predicciones
+preregistradas fallaron
 honestamente. El predominio esperado de la entrega sobre la selección no se
 sostuvo a esta escala —la selección central con doscientos proyectos es casi
-aleatoria (E4), inflando el margen de selección—, de modo que la afirmación
-robusta es el compuesto, no el ordenamiento. Y la esperada depuración
+aleatoria (E4), inflando el margen de selección—, de modo que dentro de este
+aparato el patrón robusto es la *interacción* de las dos capas, no su ordenamiento
+(la magnitud compuesta en sí se retira como efecto calibrado; véase la Sección 6).
+Y la esperada depuración
 reputacional nunca se activó bajo los parámetros de verificación fuerte, por la
 mejor razón posible: la condición de incentivos se cumple para todo ejecutor, de
 modo que nadie se desvía y no hay a quién excluir —la disuasión se anticipa al
@@ -1012,8 +1042,8 @@ la asignación automática, con la concentración visible por construcción —y
 excluye: ninguna regla de protocolo impide a un financiador elegir a cualquier
 actor admisible por motivos reputacionales.
 
-**Hallazgo 7: el resultado principal sobrevive a los propios auditores del
-establecido.** El ataque más agudo de la ronda de revisión del manuscrito
+**Hallazgo 7: una línea base parametrizada por auditorías — qué calibra y qué
+no.** El ataque más agudo de la ronda de revisión del manuscrito
 sostuvo que la línea base de cero-control es una caricatura —las administraciones
 reales operan instituciones de auditoría, retenciones, fianzas e inspección— y la
 respuesta fue un séptimo experimento preregistrado
@@ -1029,20 +1059,27 @@ multipaís abarca la GAO estadounidense, la NAO británica, el Tribunal de Cuent
 de Brasil, y las contralorías de Chile, Perú y Colombia; Ferraz y Finan 2008)—
 con el ancho de banda de inspección del planificador escalado al ámbito y el
 sesgo coordinado de señales barrido como el régimen de falla de Condorcet. La
-condición de retiro no se activó: en el modelo, la arquitectura completa entrega
-2.22× [2.10, 2.35] el statu quo calibrado por unidad de presupuesto a escala, y
-1.4–1.6× a escala de piloto municipal (10-40 proyectos), donde la selección
-central con cobertura plena es competitiva y el caso descansa en la entrega y la
-medición. El hallazgo central del experimento fortalece la tesis más que el
-multiplicador sobreviviente: la auditoría a su intensidad empíricamente
+condición de retiro no se activó *dentro de este aparato*: contra la línea base
+parametrizada por auditorías produjo 2.22× [2.10, 2.35] por unidad de presupuesto
+a escala, y 1.4–1.6× a escala de piloto municipal (10-40 proyectos), donde la
+selección central con cobertura plena es competitiva y el caso descansa en la
+entrega y la medición. Pero la evidencia de auditoría *parametriza la fuga de la
+línea base*; **no** calibra el efecto de tratamiento institucional de Core v0, que
+está gobernado por la prueba simétrica pre-registrada posterior (Sección 6) que
+reduce la ventaja de selección a un efecto agrupado de ~0.026 de un benchmark de
+información completa —así que estas cifras de E7 se conservan como salidas
+condicionales del aparato, no como un resultado principal sobreviviente. El
+hallazgo central del experimento fortalece la tesis más que cualquier
+multiplicador: la auditoría a su intensidad empíricamente
 documentada, sin memoria reputacional, no disuade desvío alguno —el umbral de
 incentivos del régimen calibrado queda por debajo del costo de todo oportunista,
 de modo que su fuga iguala la del régimen de cero-control, y lo que compra la
 detección del mundo real es una mentira más pequeña (la brecha de visibilidad cae
 de veintinueve a diecinueve puntos), nunca más entrega. La fuga del brazo
 calibrado aterriza dentro de la banda documentada por la auditoría (24-48% en
-obras), de modo que la mecánica de fuga del modelo, alimentada con parámetros de
-auditoría, reproduce la realidad empíricamente observada. Y el barrido de sesgo
+obras); la mecánica de fuga del modelo, alimentada con parámetros de auditoría, es
+*consistente con* el rango documentado —esto parametriza la fuga de la línea base,
+no calibra el efecto de tratamiento institucional. Y el barrido de sesgo
 acota el reclamo de construcción abierta con honestidad: la selección distribuida
 se degrada de manera casi lineal con la captura coordinada de señales y cae por
 debajo de un planificador municipal competente de cobertura plena solo con una
@@ -1056,8 +1093,8 @@ brazos de arquitectura habían impuesto— con trayectorias de adopción generad
 por un estudio conductual compañero: un modelo basado en agentes conforme a Core
 v0 de conciencia, registro, modos de participación y microdelegación confiada,
 calibrado con priors sintéticos elicitados mediante LLM (paquete de replicación:
-el repositorio distributed-governance-experiments). El resultado principal
-sobrevive: 2.26 [2.23, 2.30] a escala bajo la población calibrada y 2.15–2.9× a
+el repositorio distributed-governance-experiments). El aparato anterior produjo
+2.26 [2.23, 2.30] a escala bajo sus supuestos sintéticos de adopción y 2.15–2.9× a
 través de tres poblaciones y todas las escalas, incluida una trayectoria de
 lanzamiento que comienza con participación cercana a cero —que cuesta el 1.7%
 del cociente, porque la capa por defecto ancla por construcción los ciclos
@@ -1290,11 +1327,12 @@ escalera de regímenes operativos (docs/110) —un sobre presupuestario acotado 
 corre en piloto automático de protocolo junto al presupuesto tradicional de la
 autoridad— como una mezcla fiscal: sobre un piso de granularidad de cartera de
 aproximadamente diez por ciento, el valor verificado mezclado sube de forma
-monótona y casi lineal con la cuota del sobre, desde el punto de equilibrio
-cerca del ocho a diez por ciento, pasando por 1.5× a la mitad del presupuesto,
-hasta el 2.2× de la arquitectura completa al cien por ciento. La transición
-desde el status quo hacia el régimen abierto es una perilla, no un salto: la
-adopción puede proceder por incrementos, y cada incremento paga.
+monótona y casi lineal con la cuota del sobre dentro de ese aparato, desde el
+punto de equilibrio cerca del ocho a diez por ciento hacia arriba —un contraste
+del aparato anterior, ahora sujeto a la salvedad del multiplicador retirado
+(Sección 6), no un punto final calibrado. La transición desde el status quo hacia
+el régimen abierto es una perilla, no un salto: la adopción puede proceder por
+incrementos.
 
 Los mismos experimentos midieron una variable que este corpus había dejado sin
 regular: *cuándo* libera la autoridad el presupuesto hacia la maquinaria de
@@ -1357,17 +1395,15 @@ supeditada a hitos la condición de incentivos se cumple y el desvío se disuade
 antes de que ocurra. Segundo: manténgase fija la capa de control y cámbiese
 únicamente qué proyectos se financian, ¿planificados centralmente o priorizados
 socialmente? La priorización social entrega más bajo cualquiera de los dos
-regímenes de control (+53-54%). Y los dos efectos se multiplican en lugar de
-sumarse: la entrega verificada amplifica la buena selección, porque un proyecto
-bien elegido que tiene fugas pierde su ventaja. Y la comparación ya no descansa
-en una caricatura: recalibrada contra una línea base del statu quo construida
-exclusivamente a partir de los hallazgos publicados de instituciones supremas de
-auditoría —nueve jurisdicciones y la Unión Europea, administraciones de todo
-color político— la arquitectura completa entrega, en el modelo, 2.22 veces el
-statu quo calibrado por unidad de presupuesto a escala, 1.4-1.6 veces a escala de
-piloto municipal, de manera robusta a lo largo de las tasas de participación
-desde el piso del presupuesto participativo hasta el involucramiento a escala de
-votación. La recalibración produjo la oración más aguda del artículo: la
+regímenes de control (+53-54%). Y los dos efectos interactúan en lugar de
+solo sumarse: la entrega verificada amplifica la buena selección, porque un
+proyecto bien elegido que tiene fugas pierde su ventaja. **No** adjuntamos un
+multiplicador compuesto calibrado a esta interacción: una prueba pre-registrada,
+simétrica y solo-de-selección
+encuentra la ventaja de selección distribuido-menos-central positiva pero pequeña
+(un efecto agrupado de ~0.026 de un benchmark de información completa, por debajo de
+su umbral de materialidad de 0.05). Sobre lo que se sostiene el artículo es la
+arquitectura y la *dirección* del mecanismo, no el estimador puntual. La recalibración produjo la oración más aguda del artículo: la
 auditoría a su intensidad real y documentada —detección sin consecuencias
 persistentes— no disuade desvío alguno en el modelo; encoge la brecha reportada,
 de veintinueve puntos a diecinueve, nunca la real. El instrumento que mueve el

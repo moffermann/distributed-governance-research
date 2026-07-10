@@ -60,20 +60,25 @@ a second multiplier.** The executor delivers rather than diverts when more is at
 stake than could be stolen: milestone-gated tranche release, retention,
 enforceable guarantees, reputation, and cross-corroborated fiscalization,
 formalized as checkable conditions. On identical portfolios this layer adds
-**~43% (1.4×)** of value in the model — and it is the same integrity machinery
-that makes the allocation edge capture-resistant, so allocation and delivery are
-a layer and its safeguard, not two independent effects to be multiplied.
+**~43% (1.4×)** of value in the model *(a model-internal contrast, not a calibrated
+effect)* — and it is the same integrity machinery that makes the allocation edge
+capture-resistant, so allocation and delivery are a layer and its safeguard, not
+two independent effects to be multiplied.
 
-**Combined, in the model,** at a representative operating point — a harm-blind
-status quo facing a platform that gives the harmed real if imperfect voice — the
-architecture delivers roughly **2×** the value per unit of budget of a baseline
-parameterized from published audit-institution findings across nine countries
-(not calibrated to a dataset); against that audit-calibrated baseline the
-compound survives at **~2.2×** at scale under a pre-committed withdrawal
-condition (Finding 7). The load-bearing results, though, are the conditional
-frontier and the capture threshold, not the point estimate. The architecture
-also separates macro planning from concrete allocation; a companion study
-measures robustness to poor central planning, an advantage rising to **~5×**.
+**On magnitude — a correction.** An earlier synthesis combined these layers into a
+single value-per-budget multiplier. A subsequent **pre-registered, symmetric,
+selection-only stress test** — both arms with **matched expected appraisal-report
+budgets**, the same candidate pool, costs and noise, **delivery held at parity**,
+each acting on its own noisy estimate rather than on ground truth — found the
+distributed-minus-central difference **positive in every pre-specified cell but
+small: a pooled 0.026 of a full-information benchmark (95% world-cluster Monte-Carlo
+interval 0.023–0.029), below its pre-registered 0.05 materiality gate.** We
+therefore **retire the compound multiplier as a calibrated effect**; the earlier
+agent-based figures survive only as conditional outputs of that apparatus (reported
+in Section 6), not as an estimate of how much the architecture raises value. The
+load-bearing contributions are the **architecture** and the **direction** of the
+mechanism — credit-pressured central selection mis-allocates relative to
+coverage-based distributed selection — not a point multiplier.
 
 The architecture was developed under **systematic adversarial critique**:
 forty attacks, each with a paired defense and a resolution that either adds a
@@ -182,12 +187,15 @@ current institution solves the same problem, not against an ideal — blocking t
    concentrated in the scope-construction layer, measure a viable open
    construction of it, and carry the comparison end to end: from allocation to
    delivered social value per unit of budget — the criterion redistribution
-   exists to satisfy. The headline result, in the model: verified delivery and
-   social prioritization multiply rather than add, and the full architecture
-   delivers 2.22× a status-quo baseline calibrated from published
-   audit-institution findings (1.4–1.6× at municipal pilot scale), while even
-   that calibrated status quo overstates its real delivery by nineteen
-   percentage points.
+   exists to satisfy. In the model, verified delivery and social prioritization
+   interact rather than merely add; the earlier agent-based apparatus produced a
+   compound of 2.22× a status-quo baseline parameterized from published
+   audit-institution findings (1.4–1.6× at municipal pilot scale). We **retire
+   that compound as a calibrated effect**: a pre-registered, symmetric,
+   selection-only stress test shrinks the distributed-minus-central selection
+   advantage to a pooled ~0.026 of a full-information benchmark, below its 0.05
+   materiality gate. The load-bearing contribution is the architecture and the
+   mechanism *direction*, not the multiplier.
 
 4. **Adversarial review as method** (Section 7). The architecture was attacked
    systematically: forty attack briefs grounded in the political-science,
@@ -201,7 +209,8 @@ A companion study measures three effects that extend this architecture:
 ablation of the deterrence stack (its terms are individually redundant but
 jointly indispensable), the feasibility of AI-based fiscalization, and the
 effect of separating macro planning from allocation (robustness to poor
-central planning, up to ~5×).
+central planning — an earlier-apparatus contrast, subject to the same
+magnitude caveat as the compound above, not a calibrated effect).
 
 Section 8 states limitations with the same care as results, because under our
 method they are results: each is a named, bounded residual risk.
@@ -356,11 +365,11 @@ And the substantive result is itself new:
 - **(vi)** an end-to-end institutional comparison on the criterion
   redistribution exists to satisfy —delivered social value per unit of
   budget—, decomposing selection from delivery on matched portfolios, showing
-  the two layers multiply, and introducing the visibility gap (officially
-  reported minus real delivery) as a measurable accountability deficit of the
-  status quo;
+  the two layers interact within the earlier apparatus, and introducing the
+  visibility gap (officially reported minus real delivery) as a measurable
+  accountability deficit of the status quo;
 
-- **(vii)** that comparison recalibrated against a baseline parameterized
+- **(vii)** that comparison against an audit-parameterized baseline built
   exclusively from the published findings of supreme audit institutions across
   nine jurisdictions and the European Union, under a pre-registered
   headline-withdrawal condition.
@@ -571,9 +580,9 @@ assumptions of Propositions 1–4— in an agent-based simulation. Each experime
 | E2 | what carries allocation quality? | Finding 2 |
 | E3 | what buffers participation decay? | Finding 3 |
 | E4 | distributed aggregation vs. central construction (refined by a symmetric-frictions frontier + capture, E4-v4/v5) | Finding 4 |
-| E5 | where the architecture gains value (selection × delivery) | Finding 5 |
+| E5 | where the architecture gains value (selection and delivery layers) | Finding 5 |
 | E6 | reputational competition and execution standard | Finding 6 |
-| E7 | comparison against an audit-calibrated baseline | Finding 7 |
+| E7 | comparison against an audit-parameterized baseline | Finding 7 |
 | E8 | robustness under endogenous behavioral participation | close of §6 |
 
 We simulate 10,000 citizens over 24 monthly cycles allocating across a
@@ -589,11 +598,26 @@ seeded runs per condition; the code is dependency-free and deterministic
 (`scripts/simulation/allocation-sim.mjs`; full tables in
 [[simulation-results|research/simulation-results.md]]).
 
-**On the headline ratio.** We report three baselines of the same
-value-per-budget ratio: **2.19×** against zero-control (E5), **2.22×** against
-the audit-calibrated status quo (E7, the reference figure), and **2.26×**
-under behavioral adoption (E8). The abstract rounds to **~2.2×**; the ~5×
-robustness to poor central planning is measured by the companion study.
+**Status of the earlier compound ratios.** Three baselines of the same
+value-per-budget ratio were produced by this agent-based apparatus: **2.19×**
+against zero-control (E5), **2.22×** against the audit-parameterized status quo
+(E7), and **2.26×** under behavioral adoption (E8). They are retained here for
+traceability as **conditional outputs of that apparatus**, but are **superseded
+for magnitude inference** and are no longer offered as the paper's headline.
+
+**Quantitative status (governing).** A pre-registered, symmetric, selection-only
+stress test — both arms sharing the candidate pool, costs, appraisal budget and
+noise, each acting on its own noisy estimate rather than ground truth — found the
+distributed-minus-central selection advantage **positive in every one of 18
+pre-specified cells but small: a pooled 0.026 of a full-information benchmark
+(world-cluster Monte-Carlo interval 0.023–0.029), below its pre-registered 0.05
+materiality gate.** The compound multiplier is therefore **not** claimed as a
+calibrated effect. The controlling specification is
+[[claim-and-estimand-contract|research/claim-and-estimand-contract.md]]; the test,
+its frozen pre-registration, results, and diagnostics are
+`scripts/simulation/e5-sp-symmetry-gate.mjs` and `audits/2026-07-10/symmetry-gate-*`.
+The load-bearing contributions are the architecture and the mechanism *direction*,
+not a point multiplier.
 
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
@@ -863,7 +887,7 @@ any magnitude the model reports. The calibration-targets appendix makes the
 model-internal / data boundary a visible line.
 
 **Finding 5: delivered value, not allocation, is where the architecture
-earns its keep — and selection and delivery multiply.** A fifth,
+earns its keep — and selection and delivery interact.** A fifth,
 pre-registered experiment (`research/e5-value-delivery-design.md`) adds
 the execution stage the first four omitted: executors with hidden types
 whose diversion decision follows Proposition 1's incentive condition,
@@ -882,16 +906,20 @@ layer: the verified regime delivers +43% on identical portfolios
 official completion overstates its real delivery by twenty-nine
 percentage points. Same control layer, different
 projects: social prioritization delivers +53-54% under either regime.
-The interaction is positive and significant (+0.085 [0.053, 0.117]):
-the layers multiply, and the full architecture delivers, in the model,
-2.19× the zero-control lower bound per unit of budget (0.859 vs 0.393),
-robustly across direct-participation rates from 3% (the
-participatory-budgeting floor) to 40% (voting-scale) — a bound
-recalibrated against the audit-anchored status quo in Finding 7. Two pre-registered predictions failed honestly.
+The interaction is positive and significant (+0.085 [0.053, 0.117]): within
+this apparatus the two layers **interact rather than merely add**, yielding a
+**conditional zero-control scenario output of 2.19×** per unit of budget
+(0.859 vs 0.393) across direct-participation rates from 3% (the
+participatory-budgeting floor) to 40% (voting-scale). This compound is a
+model-internal factorial contrast, **not** a calibrated effect (see the
+quantitative-status note in Section 6 and the estimand contract). Two
+pre-registered predictions failed honestly.
 The expected dominance of delivery over selection did not hold at this
 scale — central selection at two hundred projects is near-random (E4),
-inflating the selection margin — so the robust claim is the compound,
-not the ranking. And the expected reputational cleansing never fired
+inflating the selection margin — so within this apparatus the robust pattern is
+the *interaction* of the two layers, not their ranking (the compound magnitude
+itself is retired as a calibrated effect; see Section 6). And the expected
+reputational cleansing never fired
 under the strong verification parameters, for the best possible reason:
 the incentive condition holds for every executor, so no one diverts and
 there is no one to exclude — deterrence pre-empts punishment, Becker's
@@ -938,8 +966,8 @@ with concentration visible by construction — and it never excludes: no
 protocol rule bars a funder from choosing any admissible actor on
 reputational grounds.
 
-**Finding 7: the headline survives the incumbent's own auditors.** The
-manuscript-review round's sharpest attack held that the zero-control
+**Finding 7: an audit-parameterized baseline — what it does and does not
+calibrate.** The manuscript-review round's sharpest attack held that the zero-control
 baseline is a caricature — real administrations run audit institutions,
 retentions, bonds, and inspection — and the answer was a seventh
 pre-registered experiment (`research/e7-calibrated-baseline-design.md`)
@@ -954,20 +982,26 @@ European Court of Auditors, Brazil's TCU and CGU, and the comptrollers
 of Chile, Peru and Colombia; Ferraz and Finan 2008) — with the planner's
 inspection bandwidth scaled to scope and coordinated signal bias swept
 as the Condorcet failure regime. The withdrawal condition was not
-triggered: in the model, the full architecture delivers 2.22×
-[2.10, 2.35] the calibrated status quo per unit of budget at scale, and
+triggered *within this apparatus*: against the audit-parameterized baseline it
+produced 2.22× [2.10, 2.35] per unit of budget at scale, and
 1.4–1.6× at municipal pilot scale (10-40 projects), where central
 selection with full coverage is competitive and the case rests on
-delivery and metering. The experiment's central finding strengthens the
-thesis more than the surviving multiplier does: audit at its
+delivery and metering. But the audit evidence *parameterizes the baseline's
+leak*; it does **not** calibrate the Core v0 institutional treatment effect,
+which is governed by the later pre-registered symmetric test (Section 6) that
+shrinks the selection advantage to a pooled ~0.026 of a full-information
+benchmark — so these E7 figures are retained as conditional apparatus outputs,
+not a surviving headline. The experiment's central finding strengthens the
+thesis more than any multiplier would: audit at its
 empirically documented intensity, without reputational memory, deters
 no diversion at all — the calibrated regime's incentive threshold lies
 below every opportunist's cost, so its leak equals the zero-control
 regime's, and what real-world detection buys is a smaller lie (the
 visibility gap falls from twenty-nine to nineteen points), never more
 delivery. The calibrated arm's leak lands inside the audit-documented
-band (24-48% in works), so the model's leak mechanics, fed audit
-parameters, reproduce the empirically observed reality. And the bias
+band (24-48% in works); the model's leak mechanics, fed audit parameters, are
+*consistent with* the documented range — this parameterizes the baseline's leak,
+it does not calibrate the institutional treatment effect. And the bias
 sweep bounds the open-construction claim honestly: distributed
 selection degrades near-linearly with coordinated signal capture and
 crosses below a competent full-coverage municipal planner only at
@@ -982,8 +1016,8 @@ by a companion behavioral study: a Core v0-conformant agent-based model
 of awareness, registration, participation modes, and trusted
 microdelegation, calibrated with LLM-elicited synthetic priors
 (replication package: the distributed-governance-experiments
-repository). The headline survives: 2.26 [2.23, 2.30] at scale under the
-calibrated population and 2.15–2.9× across three populations and all
+repository). The earlier apparatus produced 2.26 [2.23, 2.30] at scale under its
+synthetic adoption assumptions and 2.15–2.9× across three populations and all
 scales, including a launch trajectory that begins near zero
 participation — which costs 1.7% of the ratio, because the default layer
 anchors the thin early cycles by construction. The behavioral study also
@@ -1215,10 +1249,11 @@ operating-regime ladder (docs/110) — a bounded mandated envelope running on
 protocol autopilot beside the authority's traditional budget — as a fiscal
 blend: above a portfolio-granularity floor of roughly ten percent, blended
 verified value rises monotonically and near-linearly with the envelope
-share, from break-even near eight to ten percent through 1.5× at half the
-budget to the full architecture's 2.2× at one hundred percent. The
-transition from the status quo toward the open regime is a dial, not a
-leap: adoption can proceed in increments, and every increment pays.
+share within that apparatus, from break-even near eight to ten percent
+upward — an earlier-apparatus contrast now subject to the retired-multiplier
+caveat (Section 6), not a calibrated endpoint. The transition from the status
+quo toward the open regime is a dial, not a leap: adoption can proceed in
+increments.
 
 The same experiments measured a variable this corpus had left unregulated:
 *when* the authority releases budget into the allocation machinery. The
@@ -1280,16 +1315,14 @@ because under milestone-gated verification the incentive condition holds
 and diversion is deterred before it happens. Second: hold the control
 layer fixed and change only which projects get funded, centrally planned
 or socially prioritized? Social prioritization delivers more under
-either control regime (+53-54%). The two effects multiply rather than
-add: verified delivery amplifies good selection, because a well-chosen
-project that leaks loses its advantage. And the comparison no longer
-rests on a caricature: recalibrated against a status-quo baseline built
-exclusively from the published findings of supreme audit institutions —
-nine jurisdictions and the European Union, administrations of every
-political color — the full architecture delivers, in the model, 2.22
-times the calibrated status quo per unit of budget at scale, 1.4-1.6
-times at municipal pilot scale, robustly across participation rates from
-the participatory-budgeting floor to voting-scale engagement. The
+either control regime (+53-54%). The two effects interact rather than
+merely add: verified delivery amplifies good selection, because a well-chosen
+project that leaks loses its advantage. We do **not** attach a calibrated
+compound multiplier to this interaction: a pre-registered symmetric,
+selection-only test finds the distributed-minus-central
+selection advantage positive but small (a pooled ~0.026 of a full-information
+benchmark, below its 0.05 materiality gate). What the paper stands on is the
+architecture and the *direction* of the mechanism, not the point estimate. The
 recalibration produced the sharpest sentence in the paper: audit at its
 real, documented intensity — detection without persistent consequences —
 deters no diversion in the model; it shrinks the reported gap, from

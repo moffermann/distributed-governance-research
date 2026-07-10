@@ -1,5 +1,14 @@
 # Project Roadmap (live)
 
+> **⚠️ CONTROLLING UPDATE (2026-07-10, LATEST).** The working control document is now
+> **`audits/2026-07-10/remediation-roadmap.md`** (publication-readiness stack from the independent audit).
+> Governing decision: the pre-registered **symmetry gate returned NO-GO** — the calibrated multiplier
+> (~2×/~2.1×/~2.8×) is **retired**; the project is on **Path B** (publish the architecture + qualitative
+> mechanism). The opportunity-cost hurdle is **implemented** (not future work) and the ~2.8× expectation
+> below is **void**. The controlling claim spec is `research/claim-and-estimand-contract.md`. This file's
+> ACTIVE STACK below is being reconciled to that state (roadmap task T2.1); read the remediation roadmap
+> as authoritative until then.
+
 Restructured 2026-07-10 (audit cleanup). This is the **lean, live** roadmap: a single prioritized
 ACTIVE STACK at the top, then status, deferred studies, invariants, and conventions. The full
 pre-restructure history (C/H alignment log, residual-cleanup #1–#122, Phase 0–9 template, superseded

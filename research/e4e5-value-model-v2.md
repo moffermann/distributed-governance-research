@@ -1,5 +1,15 @@
 # E4/E5 — Value model v2: random noise → systematic agenda-capture (P)
 
+> **🛑 RETIRED FOR MAGNITUDE (2026-07-10, LATEST — controlling).** The calibrated multiplier this note
+> and its successors reported (~2.0× → ~2.8× → ~2.1×) is **withdrawn**. The independent audit
+> (`audits/2026-07-10/`) showed the v2 engine's headline was produced partly by asymmetries favoring the
+> distributed arm; a pre-registered **symmetry gate (NO-GO)** found the selection advantage real but small
+> (pooled ~0.026 of a full-information benchmark, below its 0.05 materiality gate). The controlling
+> specification is now **`research/claim-and-estimand-contract.md`**; the paper was reframed on Path B
+> (architecture + qualitative mechanism, multiplier retired). This note is retained as **design/mechanism
+> history**: its *direction* (credit-pressured central mis-selects; distributed reads value via coverage)
+> stands and was confirmed; its *magnitudes* do not. See `audits/2026-07-10/remediation-roadmap.md`.
+
 ## Status
 DESIGN, converged with the author (2026-07-09) through a Socratic dialogue, then corrected from
 an over-stated first draft. **Not yet implemented.** This is a *targeted mechanism fix*, not the

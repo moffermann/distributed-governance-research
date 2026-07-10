@@ -1,6 +1,14 @@
 # E5 v2 (S/P agenda-capture) — pre-registration
 
-> **FAITHFUL-SPLIT CORRECTION (2026-07-10, LATEST — supersedes both the original pre-reg AND the
+> **🛑 SUPERSEDED / RETIRED (2026-07-10, LATEST — controlling).** This is a **post-exploratory** analysis
+> specification, **not** a confirmatory pre-registration, and its ~2.1× headline is **retired** (see the
+> independent audit `audits/2026-07-10/` and the pre-registered **symmetry gate**, NO-GO). The one
+> genuinely pre-registered test is `audits/2026-07-10/symmetry-gate-preregistration.md`. The controlling
+> claim document is `research/claim-and-estimand-contract.md`. Everything below is retained as history.
+>
+> ---
+>
+> **FAITHFUL-SPLIT CORRECTION (2026-07-10 — supersedes both the original pre-reg AND the
 > intermediate ~2.8× post-hoc block below).** The ~35% net-negative share was first modeled (intermediate
 > correction) as ALL true harm (S<0) via a low quality-mean (0.06). That was mechanically wrong: it made
 > the credit-driven central deliver large *negative* value on ~36% of the portfolio, collapsing it to

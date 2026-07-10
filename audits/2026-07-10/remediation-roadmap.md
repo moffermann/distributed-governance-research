@@ -48,11 +48,13 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   cluster-CI separated, "credit-pressured" not "credit-maximizing", uncalibrated units stated). Governs
   every downstream claim; §7 retires the multiplier / Gilens-Page calibration / delivery product /
   "pre-registered 7/7". *(brainstorm; headline C1–C2; evaluation risk)*
-- [ ] **T1.2 — Retire the multiplier as a calibrated result** everywhere it reads as current: `drafts/paper.md`
-  + `paper.es.md` (~2.2×/+53-54× headline framing), `research/*`, `docs/03`. Replace with the qualitative
-  mechanism + the honest one-line gate result ("median advantage ≈0.025 of the full-information benchmark,
-  below its pre-registered 0.05 materiality gate") confined to a methods/appendix passage.
-  *(gate; headline all; evaluation)*
+- [x] **T1.2 — Retire the multiplier as a calibrated result** DONE (validated with Codex, contract-conformant).
+  `drafts/paper.md` + `paper.es.md` in lockstep: abstract "correction" paragraph (gate result only, no recited
+  ~2×); "Status of the earlier compound ratios" + governing "Quantitative status" paragraph; contributions,
+  Finding 5 ("interact" not "multiply"), Finding 7 ("audit-parameterized baseline — what it does and does not
+  calibrate"), E8, transition, conclusion all reframed; the 2.19/2.22/2.26 kept only as labelled conditional
+  apparatus outputs. Controlling retirement banners on `e4e5-value-model-v2.md`, `e5-sp-preregistration.md`,
+  `docs/03`; propagation note CANCELLED. check-anchors clean; EN/ES at parity. *(gate; headline all; evaluation)*
 - [ ] **T1.3 — Reframe the simulation's job:** directional/mechanism demonstration (regions, sensitivity,
   failure cases), never a privileged point estimate. *(evaluation next-steps; brainstorm)*
 - [ ] **T1.4 — Relabel provenance:** the "pre-registration" is post-exploratory → call it an *exploratory
@@ -84,7 +86,9 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   and `research/audit-2026-07-10.md` (obsolete "hurdle deferred / ~3× robust"). *(consistency M5–M6)*
 - [ ] **T2.4 — Paper internal contradictions:** abstract says delivery is "not a second multiplier / not
   two independent effects to be multiplied" while Finding 5 says they "multiply" (EN+ES); reconcile.
-  Fix the central-share number (66–77% → correct 55–65% of oracle). *(consistency M2, M8)*
+  Fix the central-share number (66–77% → correct 55–65% of oracle). Also standardize the residual "E7
+  calibrated baseline" / "recalibration" phrasing to **"audit-parameterized"** (paper.md:339, 975 + ES
+  mirrors; non-blocking, flagged in T1.2 Codex review). *(consistency M2, M8; T1.2 review)*
 - [ ] **T2.5 — Number-drift sweep:** grep every magnitude (2.0/2.2/2.8/3.0×, 1.43×, 53-54%, %oracle) and
   ensure each is either correct-current or clearly bannered historical. *(consistency number-drift)*
 
