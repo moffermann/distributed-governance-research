@@ -138,13 +138,12 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   *(standing discipline)*
 
 ## TIER 5 — Simulation trustworthiness (it ships with the paper; ~1–2 days)
-- [ ] **T5.1 — Honest engine header + CLI:** fix stale comments ("delivery 1.43×", "all scored on true S",
-  "<1% net-neg"); reject unknown flags; add `--help`; print effective params + seed base; fix the ignored
-  `--rho`; note `--concentrate=1` is inert in the canonical frontier; rename `rho→latentRho`, output
-  `corrSP`. *(headline Minor 1; errors m9; cleanliness M9)*
-- [ ] **T5.2 — Drop or archive `--cats`:** it funds gross `S` (not `net`) with a different rule, so its
-  decomposition is not the headline's; since the decomposition is no longer a core claim, **remove/archive
-  it** rather than rebuild. *(headline Major 6; errors M5; cleanliness C1)*
+- [~] **T5.1 — Honest engine header + CLI:** header comment fixed (net value, 1.30×, RETIRED-status block →
+  gate/contract) ✅. Remaining (deferred, lower-value): reject unknown flags, `--help`, print effective
+  params, fix ignored `--rho`, note `--concentrate` inert, rename `rho→latentRho`/`corrSP`. *(headline Minor 1; errors m9)*
+- [x] **T5.2 — Archive/flag `--cats`** DONE: `--cats` now prints a prominent LEGACY GROSS-VALUE DIAGNOSTIC
+  warning (it funds gross `S`, so its factors do NOT decompose the net headline); kept for provenance
+  rather than removed. *(headline Major 6; errors M5; cleanliness C1)*
 - [ ] **T5.3 — Fix the corr display + rename "oracle":** compute realized corr over ALL worlds (not the
   first 4); rename the greedy benchmark from "oracle" to "full-information greedy benchmark". *(headline
   C1, m3; errors m1)*
@@ -154,13 +153,15 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   1M-format txt). *(cleanliness m1)*
 
 ## TIER 6 — Corpus navigability (a reviewer must find the current set; ~1 day)
-- [ ] **T6.1 — `research/README.md`** manifest: one row per experiment/model (id, paper finding, status,
-  current design, engine, command, result artifact, superseded-by). *(cleanliness M4)*
-- [ ] **T6.2 — Resolve the E5 naming collision** (`e5-value-delivery-*` vs `e5-sp-*`); label historical
-  notes and result formats. *(cleanliness M4)*
-- [ ] **T6.3 — Make `docs/04_DOC_INDEX.md` navigable** (per-file rows w/ status), unique `03`. *(cleanliness M5)*
-- [ ] **T6.4 — Nits:** mixed-language heading "Honest open cabos"→"Open issues"; `.gitignore` `./`;
-  defense heading "(D041)"→"(D041–D043)". *(cleanliness nits)*
+- [x] **T6.1 — `research/README.md`** DONE: manifest naming the current authoritative set (contract, gate,
+  exploratory engine, paper) + the governing one-line result + the superseded families (with banners).
+  *(cleanliness M4)*
+- [~] **T6.2 — E5 naming collision** — documented in the new `research/README.md` conventions note; the
+  actual file rename is deferred (risky; low-value). *(cleanliness M4)*
+- [ ] **T6.3 — Make `docs/04_DOC_INDEX.md` navigable** (per-file rows w/ status), unique `03`. Deferred
+  (lower reader impact; the index is numerically complete). *(cleanliness M5)*
+- [x] **T6.4 — Nits** DONE: "Honest open cabos"→"open issues"; defense heading "(D041)"→"(D041–D043)".
+  (`.gitignore ./` left as-is — harmless.) *(cleanliness nits)*
 
 ## TIER 7 — Minimal paper-readability fixes that are correctness, not enlargement (~1 day)
 - [x] **T7.1 — Reconcile the two finding-numbering systems** DONE: abstract now says "three results
