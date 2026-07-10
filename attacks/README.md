@@ -8,7 +8,7 @@ The files in this folder are not accepted resolutions. They are attack briefs. E
 
 The paired defense briefs are in `defenses/`. Each `D00N` file corresponds to the `A00N` attack file with the same number.
 
-The accepted Phase 3 resolutions are in `docs/67` through `docs/109` (first round `docs/67`-`docs/84`; later rounds `docs/86`-`docs/103`; manuscript-review round `docs/105`-`docs/109`). Each attack file now references the resolution that integrated its accepted improvement.
+The accepted Phase 3 resolutions are in `docs/67` through `docs/113` (first round `docs/67`-`docs/84`; later rounds `docs/86`-`docs/103`; manuscript-review round `docs/105`-`docs/109`; ablation round `docs/111`-`docs/113`). Each attack file now references the resolution that integrated its accepted improvement.
 
 ## Review basis
 
@@ -97,7 +97,7 @@ These briefs originate from the five-profile external-review simulation of the p
 | `A039` | Traceable Allocation Reveals Political Preference: Vote Immunity Without Vote Secrecy | public-law reviewer, manuscript round | resolved in [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]] |
 | `A040` | The Adoption Paradox: The Visibility Gap Punishes Its Natural Adopter | public-sector practitioner reviewer, manuscript round | resolved in [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]] |
 
-## Ablation round (A041)
+## Ablation round (A041-A043)
 
 This brief originates from the satellite ablation program (pre-registered design, `distributed-governance-experiments`, 2026-07-06), which stress-tested the architecture's own mechanisms rather than a reviewer's objection: the deterrence stack proved individually redundant and jointly indispensable, and the corpus supplied no deployment guardrail against defensible cut-by-cut dismantling.
 

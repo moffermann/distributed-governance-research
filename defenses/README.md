@@ -15,7 +15,7 @@ attacks/A018-[slug].md -> defenses/D018-[slug].md
 
 These files are not promotional rebuttals. They are structured defense briefs. A valid defense may conclude that an attack is founded, partially unresolved, or strong enough to require a future resolution before the model is treated as mature.
 
-The accepted Phase 3 resolutions are in `docs/67` through `docs/103` (first round `docs/67`-`docs/84`; later rounds `docs/86`-`docs/103`). Each defense file now references the resolution that integrated its accepted improvement.
+The accepted Phase 3 resolutions are in `docs/67` through `docs/113` (first round `docs/67`-`docs/84`; later rounds `docs/86`-`docs/103`; manuscript-review round `docs/105`-`docs/109`; ablation round `docs/111`-`docs/113`). Each defense file now references the resolution that integrated its accepted improvement.
 
 ## Required defense structure
 
@@ -97,7 +97,7 @@ Paired with the external-review round attacks in `attacks/`; both defenses apply
 
 ## Manuscript-review round defense queue (D036-D040)
 
-Paired with the manuscript-review round attacks in `attacks/` (five-profile review of the published v1.6 manuscript; raw reviews in `external-review/manuscript-v1.6-round/`). No accepted resolutions yet; each pair awaits author review. D036's empirical arbiter is the pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]).
+Paired with the manuscript-review round attacks in `attacks/` (five-profile review of the then-published v1.6 manuscript; raw reviews in `external-review/manuscript-v1.6-round/`). All five are resolved (accepted improvements integrated in `docs/105`-`docs/109`). D036's empirical arbiter is the pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]).
 
 | Defense | Attack | Title | Classification |
 |---|---|---|---|

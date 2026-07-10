@@ -8,6 +8,10 @@ Codified 2026-07-07 after the v1.9 cycle, to keep DOIs from going stale inside d
 - **Version DOIs** live where they are knowable: CITATION.cff, the GitHub release notes, and the Zenodo record itself.
 - If an exact version DOI inside the PDF is ever wanted, use **pre-reservation**: create the Zenodo new-version *draft first*, read its pre-reserved DOI (`metadata.prereserve_doi`), render the PDFs citing it, upload, then publish. Order: draft → render → upload → publish.
 
+## The version-string rule (anti-recurrence guard for C026)
+
+Whenever the **draft** version changes (the `drafts/paper.md` header), **immediately** sync the version *strings* in `CITATION.cff` (`version`), `.zenodo.json` (`version` + title suffix), and `README.md` — even between deposits, with Zenodo paused. The metadata version string must never lag the draft. (DOIs are separate: headers cite the concept DOI; version DOIs are only swept on an actual deposit.) This drift recurred at v1.8→v1.12 (2026-07-10) exactly because the draft moved without a deposit.
+
 ## The cycle
 
 1. Edit `drafts/paper.md` and mirror in `drafts/paper.es.md` (English is authoritative).
