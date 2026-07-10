@@ -2,7 +2,7 @@
 
 ## Status
 
-Reviewed in paired review. Improvements accepted in [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]; the pre-registered E7 experiment remains the headline's arbiter.
+Reviewed in paired review. Improvements accepted in [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]. NOTE (2026-07-10): E7 is superseded — the later symmetry gate (NO-GO) is the current arbiter; the calibrated multiplier is retired.
 
 ## Description
 

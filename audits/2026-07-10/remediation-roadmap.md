@@ -31,15 +31,15 @@
   post-hoc CI to the pre-registered gate. *(errors M3)*
 - [x] **R2-5 — Path B incomplete in conclusion/limitations (EN+ES):** +53-54% foregrounded without the
   conditional disclaimer; "delivers more value" / "audit-anchored baseline" wrongly attributed to the gate. *(consistency #4; errors M4)*
-- [ ] **R2-8 — README + `.zenodo.json` omit the "conditional stylized-model output, not validated Core v0"
+- [x] **R2-8 — README + `.zenodo.json` omit the "conditional stylized-model output, not validated Core v0"
   caveat** where they summarize the gate. *(consistency #5)*
-- [ ] **R2-9 — Roadmap status contradictions:** this file's own top banner (now fixed above) + `docs/03`
+- [x] **R2-9 — Roadmap status contradictions:** this file's own top banner (now fixed above) + `docs/03`
   still say license/deposit pending and call the manuscript v1.12. Fix docs/03. *(consistency #6; errors M5)*
 - [x] **R2-11 — Companion citation DOI wrong (EN+ES):** paper cites `21246089` (= v0.4, verified), not the
   concept DOI. Cite concept `21246088` or ≥ v0.5 `21249060`. *(errors M6)*
-- [ ] **R2-13 — Unbannered stale multiplier notes:** `research/simulation-results.md` (paper links it for
+- [x] **R2-13 — Unbannered stale multiplier notes:** `research/simulation-results.md` (paper links it for
   tables), `e7-calibrated-baseline-design.md`, `e8-behavioral-participation-design.md`. Banner them. *(consistency #8)*
-- [ ] **R2-14 — A036 bundle names E7 (not the gate) as "headline arbiter":** attack/defense/resolution +
+- [x] **R2-14 — A036 bundle names E7 (not the gate) as "headline arbiter":** attack/defense/resolution +
   both READMEs. Add controlling-update banners; correct the README rows. *(consistency #9)*
 - [x] **R2-15 — "Five rounds" narrated as four (EN+ES):** add the A041–A043 ablation round to Section 7. *(consistency #7; errors m3)*
 - [DEFER] **R2-6 — Mechanism-hierarchy contradiction:** the abstract foregrounds harm-blindness(1.8×)/capture(10×)

@@ -1,5 +1,11 @@
 # E7 Design — Headline Sensitivity Under a Calibrated Status Quo, Realistic Scale, and Adversarial Signals
 
+> **🛑 SUPERSEDED / MULTIPLIER RETIRED (2026-07-10).** E7's "the multiplier survives recalibration" /
+> "recalibrated headline" premise is **retired**: a later pre-registered **symmetry gate (NO-GO)** is the
+> current arbiter — the distributed selection advantage is small (~0.026 of a full-information benchmark,
+> below its 0.05 gate), not a ~2× headline. E7's audit-parameterized baseline stands as an *earlier
+> apparatus* contrast only. Controlling spec: `research/claim-and-estimand-contract.md`. Kept as provenance.
+
 ## Status
 
 Pre-registered experiment design. Written before implementation and before any run; the Predictions section is committed in advance, per the corpus's adversarial discipline. Motivated by the manuscript-review round of the v1.6 paper: three of five reviewer profiles (academic, systems-architect, public-sector practitioner) independently converged on the same methodological attack, formalized as [[A036-opaque-baseline-calibration-strawman|attacks/A036-opaque-baseline-calibration-strawman.md]] — the E5 opaque arm models an administration with no working controls, the leakage anchor is category-mismatched (capitation cash transfers rather than construction), the E4 central planner's fixed bandwidth mutilates the comparator, and the signal-aggregation results hold only under bias-free signals. E7 measures what survives when each favorable choice is replaced by the reviewers' version. This is the corpus applying [[P001-comparative-critique-rule|knowledge/principles/P001-comparative-critique-rule.md]] to itself: the architecture must be compared against the real institutional system, not against a caricature of it.

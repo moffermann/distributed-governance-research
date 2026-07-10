@@ -13,11 +13,13 @@ The full pre-restructure history (C/H alignment log, residual-cleanup #1–#122,
 2.2×-era planning) is preserved verbatim in `docs/03_ROADMAP_HISTORY.md`; the doc corpus map is
 `docs/04_DOC_INDEX.md`.
 
-The project has moved from discovery → bounded v0 architecture → a working paper (v1.12, truth-of-claim
-reframed on Path B) with a reproducible simulation and a complete adversarial record (43 attacks, all
-resolved), and is now in **publication-readiness remediation**. The Zenodo deposit-version state
-(whether a new-version deposit is paused, and whether v1.12 is already live) is a **pending author
-decision** — see remediation-roadmap T3.2.
+The project has moved from discovery → bounded v0 architecture → a **working draft v1.13** (truth-of-claim
+reframed on Path B; latest deposited version v1.12, verified live at DOI 10.5281/zenodo.21252911) with a
+reproducible simulation and a complete adversarial record (43 attacks, all resolved), and is now in
+**publication-readiness remediation** (round-2 audit fixes). **Both author decisions are resolved:** the
+license is final (**CC BY 4.0** for all text/content + MIT for code, single record — the earlier dual/NC-ND
+plan was dropped), and the deposit state is confirmed (v1.12 live; only the v1.13 re-deposit is pending, a
+mechanical author step). See `audits/2026-07-10/remediation-roadmap.md`.
 
 ---
 
@@ -32,9 +34,9 @@ number was retired. The controlling claim spec is
 [`research/claim-and-estimand-contract.md`](../research/claim-and-estimand-contract.md); the pre-restructure
 history is in [`docs/03_ROADMAP_HISTORY.md`](03_ROADMAP_HISTORY.md).
 
-**Current phase:** publication-readiness remediation (see the remediation roadmap). Remaining gates: two
-author decisions (license; Zenodo deposit-version state) + low-value polish; the paper's truth-of-claim,
-consistency, and external metadata are done.
+**Current phase:** publication-readiness remediation — clearing the **round-2 audit** findings (see the
+remediation roadmap's "ROUND-2 REMEDIATION" section). Both author decisions (license, deposit state) are
+resolved; the only remaining post-remediation step is the mechanical v1.13 Zenodo re-deposit.
 
 The **post-manuscript validation program** (external expert review, empirical calibration / D-lite pilot,
 a bounded tutored pilot) remains the standing longer-horizon direction and is carried in the remediation
@@ -56,9 +58,9 @@ Phase 1 Contradiction resolution ..... done (C001-C025 propagated)
 Phase 2 Formal ERDs / state diagrams . done
 Phase 3 Adversarial rounds ........... done — 43/43 attacks resolved (docs/67-113), incl. a manuscript-review round
 Phase 4 Literature / framing ......... done for the paper (~80 references); ongoing for the v2/E5-SP material
-Phase 5-6 Manuscript ................. v1.12; multiplier RETIRED (Path B), truth-of-claim reframed 2026-07-10
+Phase 5-6 Manuscript ................. working draft v1.13 (latest deposit v1.12); multiplier RETIRED (Path B) 2026-07-10
 Phase 7 External review .............. packets prepared (v1.10); review = pending human step
-Phase 8 Zenodo ....................... deposit-version state pending AUTHOR confirmation (see remediation roadmap T3.2)
+Phase 8 Zenodo ....................... v1.12 live (21252911); v1.13 re-deposit pending (mechanical author step)
 Phase 9 Satellite experiments ........ active (github.com/moffermann/distributed-governance-experiments)
 Value model v2 (agenda-capture) ...... RETIRED as calibrated (symmetry gate NO-GO); exploratory apparatus kept for provenance
 ```

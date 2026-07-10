@@ -1,5 +1,11 @@
 # E8 — Behavioral Participation Bridge (pre-registered design)
 
+> **🛑 MULTIPLIER RETIRED (2026-07-10).** E8's "headline survives (2.26 / 2.15–2.9×)" framing is **retired**:
+> a later pre-registered **symmetry gate (NO-GO)** showed the distributed selection advantage is small
+> (~0.026 of a full-information benchmark, below its 0.05 gate), not a ~2× headline. E8's behavioral
+> adoption findings stand as an *earlier apparatus* result only. Controlling spec:
+> `research/claim-and-estimand-contract.md`. Kept as provenance.
+
 Registered 2026-07-06, before implementation. Author approvals on record: the
 integration must run the complete scenario (all arms, all scales, trajectories
 and uncertainty — not a partial slice), and delegated weight folds into the
