@@ -121,7 +121,40 @@ ignores. Hayek (1945): dispersed knowledge, aggregated by budgeting. The distrib
   elite-vs-mass congruence; share of the agenda on class-internal matters); the **self vs
   social-invisible allocation split** (PB microdata).
 
+## Build results & calibration (2026-07-10, `scripts/simulation/e5-sp-model.mjs`)
+The v2 core is built ON E4-v4's coverage (interested sets + participation sample + β), changing
+ONLY the central's objective to P = credit-claiming. It NESTS E4: `central = (1−w)·credit·P +
+w·harm-blind-value`, so w=1 reproduces E4 and w=0 is pure agenda-capture. Value heterogeneity was
+decoupled from the net-negative share (heavy-tailed REACH carries the spread; high quality-mean
+keeps net-neg <1%), so the world matches the author's (huge value spread, ~all positive).
+
+- **The frontier survives and is strong.** At 0.5% net-neg, β=0.3: parity at ρ=1 (1.48×,
+  ≈delivery floor) → **2.54× at ρ=0** (central delivers 56% of oracle). The advantage grows as the
+  agenda misaligns, driven by agenda-capture, not harm.
+- **Harm-blindness is inert when harm is rare (confirms the whole pivot).** The w=1 sanity (E4,
+  harm-blind central) delivers **99% of oracle at <1% net-neg** — i.e. harm-blindness cannot be the
+  driver; agenda-capture (56–96%) is.
+- **Calibration to Gilens & Page (2014).** Their finding: the average citizen's *independent*
+  influence on policy ≈ 0.03 (near zero); the *raw* mass-policy congruence ≈ 0.3 (inflated by
+  elite-mass agreement). Our realized corr(S,P) sits in that band → **calibrated headline ≈ 2.0×,
+  band 1.8–2.4×** for corr(S,P) ∈ [0.1, 0.3]. This RECOVERS the old ~2.2× magnitude on firmer,
+  transversal public-choice ground. Report as a **band/frontier, not a point** (the honest caveat is
+  the raw-vs-independent reading of Gilens-Page).
+- **SCOPE CONDITION — the lumpiness threshold (load-bearing).** An atomized distributed can only
+  *build* a lumpy niche project if its funder base pools the cost (reach·ω ≥ L·cost; the central's
+  pooled budget has no such threshold). Sweeping L (sparse coverage, ρ=0.2): advantage **2.4× (L=0)
+  → 1.43× (L=1, break-even) → ~parity (L=2)**. At break-even ~57% of oracle value sits in projects
+  whose beneficiaries can't pool their cost — the classic public-goods coordination problem (Olson,
+  Samuelson). **So the ~2× is CONDITIONAL on the design's coordination layers (assurance contracts /
+  matching-funds / default routing) keeping effective lumpiness low.** L is genuinely hard to
+  calibrate → reported as a sensitivity that also *quantifies why those design features are
+  load-bearing*, not decoration.
+
 ## Next
-1. Implement the S/P world + central-max-P in a fresh experiment (keep the pipeline as the v1
-   harm-blindness reference until v2 validates).
+1. DONE (first build): S/P world + central-max-P (`e5-sp-model.mjs`), nests E4, decoupled value/net-neg,
+   Gilens-Page calibration (~2×), lumpiness scope condition. The v1 harm-blindness pipeline stays as
+   reference.
 2. Same correction is owed to **E4** (the standalone allocation experiment) — see roadmap.
+3. Open: pre-register v2 predictions; propagate to the paper (decide headline framing: ~2× conditional
+   on coordination layers, grounded in agenda-capture); the self-benefit motive is deliberately NOT
+   modeled (author: individual portfolios aren't extrapolable/measurable).
