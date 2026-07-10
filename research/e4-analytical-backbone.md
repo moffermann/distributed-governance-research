@@ -1,5 +1,14 @@
 # E4 — Analytical Backbone: three closed forms the simulations obey
 
+> **🛑 MAGNITUDES RETIRED (2026-07-10, LATEST — controlling).** Every multiplier in this note (and the
+> "~99% of oracle at <1% net-negative" / "pre-registered 7/7" framing in the banner below) is **retired**.
+> The independent audit (`audits/2026-07-10/`) and the pre-registered **symmetry gate (NO-GO)** showed the
+> distributed selection advantage is real but small (pooled ~0.026 of a full-information benchmark, below
+> its 0.05 materiality gate). Controlling doc: `research/claim-and-estimand-contract.md`. This note is kept
+> as analytical/mechanism history; its closed forms illustrate the *direction*, not calibrated sizes.
+>
+> ---
+>
 > **CORRECTION / SUPERSEDED AS PRIMARY MECHANISM (2026-07-10).** The parity law **β\* = 1 − η**
 > (Proposition 1) models the distributed advantage as the central being **blind to harm**. Value
 > model v2 (`e4e5-value-model-v2.md`, `e5-sp-model.mjs`, pre-registered 7/7) showed — and confirmed

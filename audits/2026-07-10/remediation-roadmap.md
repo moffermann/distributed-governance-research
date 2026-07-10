@@ -87,12 +87,12 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
 - [ ] **T2.1 — Live roadmap `docs/03_ROADMAP.md`:** rewrite to true state (hurdle implemented; gate NO-GO;
   multiplier retired; Path B). Point to this file. Move done P0–P5 to a dated log. *(consistency M3;
   cleanliness M1)*
-- [ ] **T2.2 — Consolidate the three E5-SP notes** (`e4e5-value-model-v2.md`, `e5-sp-preregistration.md`,
-  `e5-sp-paper-propagation.md`): one current-state block each + a dated appendix for history; remove
-  "Not yet implemented", the stacked/contradExpiry banners, and the "harm-blindness revives" vs "inert"
-  whiplash. *(consistency M4–M5; cleanliness M7; errors m5)*
-- [ ] **T2.3 — Banner the retracted-era notes:** `e4-analytical-backbone.md` (<1% net-neg / 99% oracle)
-  and `research/audit-2026-07-10.md` (obsolete "hurdle deferred / ~3× robust"). *(consistency M5–M6)*
+- [~] **T2.2 — Consolidate the three E5-SP notes** — controlling RETIREMENT banners now on all three
+  (`e4e5-value-model-v2.md`, `e5-sp-preregistration.md`, `e5-sp-paper-propagation.md` = CANCELLED); the
+  deeper "one current-state block + dated appendix" consolidation is deferred (cosmetic; banners already
+  prevent misreading). *(consistency M4–M5; cleanliness M7; errors m5)*
+- [x] **T2.3 — Banner the retracted-era notes** DONE: controlling banners on `e4-analytical-backbone.md`
+  and `research/audit-2026-07-10.md` pointing to the NO-GO/contract state. *(consistency M5–M6)*
 - [ ] **T2.4 — Paper internal contradictions:** abstract says delivery is "not a second multiplier / not
   two independent effects to be multiplied" while Finding 5 says they "multiply" (EN+ES); reconcile.
   Fix the central-share number (66–77% → correct 55–65% of oracle). Also standardize the residual "E7
