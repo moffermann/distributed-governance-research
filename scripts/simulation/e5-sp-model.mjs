@@ -171,12 +171,26 @@ for(const a of process.argv.slice(2)) if(a.startsWith("--")){ const [k,v]=a.slic
 const t0=Date.now();
 const f=x=>x.toFixed(2); const sum=a=>a.reduce((p,x)=>p+x,0);
 
-// ---- TORNADO: robustness of the calibrated headline to each knob (one-at-a-time, at fixed rho) ----
+function printRetired(){
+  console.log("========================================================================================");
+  console.log("⚠️  RETIRED / EXPLORATORY ENGINE. Any multiplier printed below is NOT a calibrated effect.");
+  console.log("   An independent audit + a pre-registered SYMMETRY GATE (e5-sp-symmetry-gate.mjs, NO-GO) showed");
+  console.log("   this engine's headline is inflated by asymmetries (a benchmark-gated distributed arm, a pure-");
+  console.log("   credit central, a stipulated delivery ratio). The honest selection contrast is the symmetry");
+  console.log("   gate; the controlling spec is research/claim-and-estimand-contract.md. NOTE: 'rho' is a LATENT");
+  console.log("   Gaussian correlation, NOT Pearson corr(S,P); 'corr(S,P)' is a diagnostic; the [0.1,0.3] window");
+  console.log("   is NOT calibrated from Gilens-Page; 'oracle'/'benchmark' is a full-information greedy reference,");
+  console.log("   not an optimum; 'robust' means within-band, not validated. Kept for provenance only.");
+  console.log("========================================================================================\n");
+}
+printRetired();   // printed for EVERY mode (frontier, --tornado, --cats, --sweepL) BEFORE dispatch
+
+// ---- TORNADO: one-at-a-time sensitivity of the RETIRED exploratory ratio to each knob (at fixed latent rho) ----
 if(process.argv.includes("--tornado")){
   const rho0=(PARAMS.rho!==undefined?PARAMS.rho:0.3);   // ~ corr(S,P)~0.2, mid calibrated band
   const run=()=>{ const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalWorld(s,rho0)); return sum(R.map(r=>r.d))/sum(R.map(r=>r.c)); };
   const base=run();
-  console.log("TORNADO — headline ratio d/c robustness at fixed rho="+rho0+" (Core-v0 config), one knob at a time:");
+  console.log("TORNADO — one-at-a-time sensitivity of the RETIRED exploratory ratio d/c at fixed latent rho="+rho0+", one knob at a time:");
   console.log("  baseline ratio = "+f(base)+"x\n");
   console.log("  knob                | low -> ratio | high -> ratio | grounding");
   const knobs=[  // ranges centered on the FAITHFUL-SPLIT calibration (mean=0.27 -> ~8% harm; hurdle=2.5 -> ~28% below-hurdle; fWeak=0.75; fVer=0.975)
@@ -234,16 +248,6 @@ if(process.argv.includes("--cats")){
   process.exit(0);
 }
 
-console.log("========================================================================================");
-console.log("⚠️  RETIRED / EXPLORATORY ENGINE. The multiplier printed below is NOT a calibrated effect.");
-console.log("   An independent audit + a pre-registered SYMMETRY GATE (e5-sp-symmetry-gate.mjs, NO-GO) showed");
-console.log("   this engine's headline is inflated by asymmetries (a benchmark-gated distributed arm, a pure-");
-console.log("   credit central, a stipulated delivery ratio). The honest selection contrast is the symmetry");
-console.log("   gate; the controlling spec is research/claim-and-estimand-contract.md. NOTE: 'rho' below is a");
-console.log("   LATENT Gaussian correlation, NOT Pearson corr(S,P); 'corr(S,P)' is a diagnostic over 4 worlds;");
-console.log("   the [0.1,0.3] window is NOT calibrated from Gilens-Page; 'oracle' is a full-information greedy");
-console.log("   benchmark, not an optimum. Kept for provenance only.");
-console.log("========================================================================================\n");
 console.log("E5 v2 / corrected-E4 (EXPLORATORY) — central max P (credit), distributed max S via participation coverage (beta="+PARAMS.beta+"), full-information greedy benchmark max S.");
 console.log("  N="+PARAMS.N+", K="+PARAMS.K+", seeds="+PARAMS.seeds+", mean="+PARAMS.mean+", sd="+PARAMS.sd+", projSpread="+PARAMS.projSpread+", w(value weight)="+PARAMS.w+", delivery "+PARAMS.fWeak+"/"+PARAMS.fVer+" ("+(PARAMS.fVer/PARAMS.fWeak).toFixed(2)+"x)");
 console.log("  rho = LATENT correlation (not Pearson corr(S,P)); the credit<->value misalignment axis. w=0 -> credit-driven central; w=1 -> E4 (harm-blind). Magnitudes are exploratory, not calibrated.\n");
@@ -254,7 +258,7 @@ for(const rho of PARAMS.RHOS){
   const d=R.map(r=>r.d), c=R.map(r=>r.c), o=R.map(r=>r.o);
   const Delta=(sum(d)-sum(c))/sum(o), ratio=sum(d)/sum(c);
   const cOra=100*(sum(c)/PARAMS.fWeak)/sum(o), dOra=100*(sum(d)/PARAMS.fVer)/sum(o);
-  let SS=[],PP=[]; for(let i=0;i<Math.min(4,R.length);i++){ SS=SS.concat(Array.from(R[i].S)); PP=PP.concat(Array.from(R[i].P)); }
+  let SS=[],PP=[]; for(let i=0;i<R.length;i++){ SS=SS.concat(Array.from(R[i].S)); PP=PP.concat(Array.from(R[i].P)); }  // realized corr over ALL worlds (was min(4,..) -- a display bug)
   const rSP=corr(SS,PP), neg=100*sum(R.map(r=>r.negShare))/R.length, bh=100*sum(R.map(r=>r.belowHurdle))/R.length;
   const cnn=100*sum(R.map(r=>r.cenNetNeg))/R.length, b=bootDelta(d,c,o,0.025,0.975);
   console.log("  "+rho.toFixed(1)+"  |   "+rSP.toFixed(2).padStart(5)+"   | "+neg.toFixed(1).padStart(4)+"% | "+bh.toFixed(1).padStart(5)+"%  |   "+cnn.toFixed(1).padStart(5)+"%   |    "+cOra.toFixed(0).padStart(3)+"%     |    "+dOra.toFixed(0).padStart(3)+"%     |  "+((Delta>=0?"+":"")+f(Delta)+" ["+f(b.lo)+","+f(b.hi)+"]").padEnd(22)+" |  "+f(ratio)+"x");

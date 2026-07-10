@@ -678,7 +678,7 @@ es una prueba estilizada de un *mecanismo de selección*, no una implementación
 validada de Core v0: sus variables de valor y crédito son puntajes abstractos, no
 visibilidad, trazabilidad, permanencia o valor público medidos. La especificación
 rectora es
-[[claim-and-estimand-contract|research/claim-and-estimand-contract.md]]; la prueba,
+[claim-and-estimand-contract](../research/claim-and-estimand-contract.md); la prueba,
 su pre-registro congelado, resultados y diagnósticos están en
 `scripts/simulation/e5-sp-symmetry-gate.mjs` y `audits/2026-07-10/symmetry-gate-*`.
 Las contribuciones que cargan el peso son la arquitectura y la *dirección* del

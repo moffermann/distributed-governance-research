@@ -1,23 +1,23 @@
 # Project Roadmap (live)
 
-> **⚠️ CONTROLLING UPDATE (2026-07-10, LATEST).** The working control document is now
-> **`audits/2026-07-10/remediation-roadmap.md`** (publication-readiness stack from the independent audit).
-> Governing decision: the pre-registered **symmetry gate returned NO-GO** — the calibrated multiplier
-> (~2×/~2.1×/~2.8×) is **retired**; the project is on **Path B** (publish the architecture + qualitative
-> mechanism). The opportunity-cost hurdle is **implemented** (not future work) and the ~2.8× expectation
-> below is **void**. The controlling claim spec is `research/claim-and-estimand-contract.md`. This file's
-> ACTIVE STACK below is being reconciled to that state (roadmap task T2.1); read the remediation roadmap
-> as authoritative until then.
+> **⚠️ CONTROLLING UPDATE (2026-07-10, LATEST).** The working control document is
+> **[`audits/2026-07-10/remediation-roadmap.md`](../audits/2026-07-10/remediation-roadmap.md)** — read it
+> as authoritative. Governing decision: the pre-registered **symmetry gate returned NO-GO** — the calibrated
+> multiplier (~2×/~2.1×/~2.8×) is **retired**; the project is on **Path B** (publish the architecture +
+> qualitative mechanism). The opportunity-cost hurdle is **implemented**. The controlling claim spec is
+> [`research/claim-and-estimand-contract.md`](../research/claim-and-estimand-contract.md). This page's
+> active stack has been **replaced by the pointer below**; its former 2.8×-era body is void.
 
-Restructured 2026-07-10 (audit cleanup). This is the **lean, live** roadmap: a single prioritized
-ACTIVE STACK at the top, then status, deferred studies, invariants, and conventions. The full
-pre-restructure history (C/H alignment log, residual-cleanup #1–#122, Phase 0–9 template, superseded
-2.2×-era planning) is preserved verbatim in `docs/03_ROADMAP_HISTORY.md`. The doc corpus map is
+This page is now a **thin pointer**; the live prioritized stack lives in the remediation roadmap above.
+The full pre-restructure history (C/H alignment log, residual-cleanup #1–#122, Phase 0–9 template, superseded
+2.2×-era planning) is preserved verbatim in `docs/03_ROADMAP_HISTORY.md`; the doc corpus map is
 `docs/04_DOC_INDEX.md`.
 
-The project has moved from discovery → bounded v0 architecture → a published working paper (v1.12) with
-a reproducible simulation and a complete adversarial record (43 attacks, all resolved), and is now in
-**post-manuscript consolidation + validation**. Zenodo new-version deposit is PAUSED (git only).
+The project has moved from discovery → bounded v0 architecture → a working paper (v1.12, truth-of-claim
+reframed on Path B) with a reproducible simulation and a complete adversarial record (43 attacks, all
+resolved), and is now in **publication-readiness remediation**. The Zenodo deposit-version state
+(whether a new-version deposit is paused, and whether v1.12 is already live) is a **pending author
+decision** — see remediation-roadmap T3.2.
 
 ---
 

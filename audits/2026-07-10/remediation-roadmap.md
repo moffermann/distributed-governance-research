@@ -175,8 +175,9 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
 - [x] **T7.2 — Define undefined notation** DONE: `u` (idiosyncratic need component independent of quality)
   and `sel(θ)` (Pearson corr between θ and the funding-target-reached indicator — corrected per Codex from
   a wrong first draft) defined at first use (EN+ES). A fuller glossary table is optional (Tier 8/E1). *(cleanliness M6)*
-- [ ] **T7.3 — Portable Markdown links** in public-facing artifacts (replace Obsidian wikilinks where they
-  break on GitHub). *(cleanliness m3)*
+- [x] **T7.3 — Portable Markdown links** DONE (GitHub is a publication surface, per Codex): all 7 EN + 1 ES
+  paper wikilinks converted to standard relative Markdown (`[text](../path)`); all targets verified to exist;
+  check-anchors clean. (Internal corpus docs keep the Obsidian convention.) *(cleanliness m3)*
 
 ---
 

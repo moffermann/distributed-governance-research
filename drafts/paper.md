@@ -463,7 +463,7 @@ from real transfer.
 ## 5. Formal analysis
 
 We state the three models and their results; proofs are one-step algebra and
-appear in the companion note ([[formal-models|research/formal-models.md]]).
+appear in the companion note ([formal-models](../research/formal-models.md)).
 All agents are risk-neutral; budgets are normalized to 1. The deterrence
 structure throughout is Becker's (1968): a violation is deterred when the
 detection probability times the stake at risk exceeds its gain — our
@@ -599,7 +599,7 @@ funding progress; default followers' budget fills projects in planning-
 priority order. The funding-target closure rule is toggleable. Twenty
 seeded runs per condition; the code is dependency-free and deterministic
 (`scripts/simulation/allocation-sim.mjs`; full tables in
-[[simulation-results|research/simulation-results.md]]).
+[simulation-results](../research/simulation-results.md)).
 
 **Status of the earlier compound ratios.** Three baselines of the same
 value-per-budget ratio were produced by this agent-based apparatus: **2.19×**
@@ -619,7 +619,7 @@ multiplier is therefore **not** claimed as a calibrated effect. This is a styliz
 test of a *selection mechanism*, not a validated implementation of Core v0: its
 value and credit variables are abstract scores, not measured visibility,
 traceability, permanence, or public value. The controlling specification is
-[[claim-and-estimand-contract|research/claim-and-estimand-contract.md]]; the test,
+[claim-and-estimand-contract](../research/claim-and-estimand-contract.md); the test,
 its frozen pre-registration, results, and diagnostics are
 `scripts/simulation/e5-sp-symmetry-gate.mjs` and `audits/2026-07-10/symmetry-gate-*`.
 The load-bearing contributions are the architecture and the mechanism *direction*,
@@ -1304,7 +1304,7 @@ adversary that bypasses the per-milestone deterrence and moves leakage by an
 order of magnitude (while the delivered-value advantage survives), so
 collusion resistance — verified beneficial ownership, contributor
 Sybil-resistance, and decentralization of the assigner and the audit-budget
-floor — is a first-class requirement ([[113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION|docs/113]]), not a residual caution.
+floor — is a first-class requirement ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)), not a residual caution.
 
 ## 10. Conclusion
 
@@ -1474,11 +1474,11 @@ calibration.
 
 ---
 
-*Companion materials: formal proofs ([[formal-models|research/formal-models.md]]),
+*Companion materials: formal proofs ([formal-models](../research/formal-models.md)),
 simulation code and full result tables
 (`scripts/simulation/allocation-sim.mjs`,
-[[simulation-results|research/simulation-results.md]]), the audit-institution evidence base
-([[audit-evidence-base|research/audit-evidence-base.md]]), the architecture corpus (`docs/`,
+[simulation-results](../research/simulation-results.md)), the audit-institution evidence base
+([audit-evidence-base](../research/audit-evidence-base.md)), the architecture corpus (`docs/`,
 `knowledge/`), and the complete adversarial record (`attacks/`,
 `defenses/`, accepted resolutions `docs/67`–`docs/113`; all forty-three
 attacks resolved and propagated).*
