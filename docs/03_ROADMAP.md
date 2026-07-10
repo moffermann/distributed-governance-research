@@ -735,10 +735,13 @@ v2 STATUS (updated 2026-07-10) — BUILT, VALIDATED, PRE-REGISTERED, PROPAGATION
     bibliography, with author decision points -- NOT hot-applied (bilingual master, Zenodo paused).
   - E4 CORRECTED: e4-analytical-backbone.md marked SUPERSEDED-as-primary; beta*=1-eta demoted to
     the rare divisive/net-harmful special case; e5-sp-model.mjs is the corrected E4.
+  - ROBUSTNESS DONE (--tornado): headline robust to beta/net-neg/coverage; moves only with the
+    agenda-capture params (rho, w) + delivery band. Recorded in the pre-registration.
   NEXT (author calls):
   - APPLY the paper propagation (EN+ES together) at a deliberate version bump; then the Zenodo go.
-  - Optional deepening: calibrate reach/coverage breadth to PB microdata; a global sensitivity
-    (Sobol) over the v2 knobs; the self-benefit motive stays UNMODELED (author: not extrapolable).
+  - Optional deepening: calibrate reach/coverage breadth to PB microdata; a fuller global Sobol
+    (variance decomposition) over the v2 knobs; the self-benefit motive stays UNMODELED (author:
+    not extrapolable).
   - FROZEN/DISSOLVED v1 items: projSpread=0.010 calibration and the A2 noise-asymmetry both belong
     to the v1 harm-blindness pipeline, which is now the reference-only special case; A2 dissolves
     (v2 retired the noise term).

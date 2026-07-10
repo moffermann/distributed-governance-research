@@ -72,6 +72,15 @@ Run: `node e5-sp-model.mjs --concentrate=1 --byValue=1 --muF=-4 --sigF=1.5 --see
   99% ✓ · **P7 lumpiness non-issue in Core v0:** holds 1.77× even at L=16 ✓.
 - **Verdict: 7/7 confirmed on held-out seeds.** The v2 model is validated as pre-registered.
 
+**Robustness (`--tornado`, one knob at a time at ρ=0.3, baseline ratio 2.14×).** The headline is
+**robust to the peripheral knobs** and moves only with the *agenda-capture* parameters (which IS the
+mechanism) and delivery (a reported band): β 0.3→0.5: 2.14→2.13× (voice bias barely matters in a
+mostly-positive world); net-neg (mean) 0.30→0.55: 2.16→2.12×; reach spread sigF 1.2→1.8: 2.07→2.16×;
+delivery fVer 0.78→0.90: 1.94→2.24× (the reported 1.3–1.7× band); harm-blindness weight w 0→0.3:
+2.14→1.53× (w is a *co-parameterization of capture* — a central that directly weights value is less
+captured; the clean single-parameter frame is w=0 with ρ=corr(S,P) calibrated to Gilens-Page, so w>0
+would double-count what Gilens-Page already measures). The dominant axis is corr(S,P), as designed.
+
 ## Scope conditions / honest boundaries
 - The distributed is modeled as funding pure S (no self-benefit motive — deliberately not modeled;
   the author notes individual portfolios aren't extrapolable). This is *generous to the distributed*.

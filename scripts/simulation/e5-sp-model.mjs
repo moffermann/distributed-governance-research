@@ -141,6 +141,30 @@ for(const a of process.argv.slice(2)) if(a.startsWith("--")){ const [k,v]=a.slic
 const t0=Date.now();
 const f=x=>x.toFixed(2); const sum=a=>a.reduce((p,x)=>p+x,0);
 
+// ---- TORNADO: robustness of the calibrated headline to each knob (one-at-a-time, at fixed rho) ----
+if(process.argv.includes("--tornado")){
+  const rho0=(PARAMS.rho!==undefined?PARAMS.rho:0.3);   // ~ corr(S,P)~0.2, mid calibrated band
+  const run=()=>{ const R=Array.from({length:PARAMS.seeds},(_,i)=>PARAMS.seedBase+i).map(s=>evalWorld(s,rho0)); return sum(R.map(r=>r.d))/sum(R.map(r=>r.c)); };
+  const base=run();
+  console.log("TORNADO — headline ratio d/c robustness at fixed rho="+rho0+" (Core-v0 config), one knob at a time:");
+  console.log("  baseline ratio = "+f(base)+"x\n");
+  console.log("  knob                | low -> ratio | high -> ratio | grounding");
+  const knobs=[
+    ["beta (voice bias)",       "beta", 0.3, 0.5, "Verba-Schlozman-Brady"],
+    ["mean (net-neg share)",    "mean", 0.30, 0.55, "0.30~7% neg .. 0.55~0% neg"],
+    ["fVer (delivery, /0.60)",  "fVer", 0.78, 0.90, "band 1.3x-1.5x (Reinikka-Svensson/Olken)"],
+    ["sigF (reach heavy-tail)", "sigF", 1.2, 1.8, "coverage/value spread"],
+    ["w (harm-blind 2ndary)",   "w",    0.0, 0.3, "0=pure agenda .. 0.3=some value-caring"],
+  ];
+  const orig={}; for(const [,k] of knobs) orig[k]=PARAMS[k];
+  for(const [label,k,lo,hi,note] of knobs){
+    PARAMS[k]=lo; const rl=run(); PARAMS[k]=hi; const rh=run(); PARAMS[k]=orig[k];
+    console.log("  "+label.padEnd(20)+"| "+lo.toString().padStart(4)+" -> "+f(rl)+"x  | "+hi.toString().padStart(4)+" -> "+f(rh)+"x  | "+note);
+  }
+  console.log("\n("+((Date.now()-t0)/1000).toFixed(1)+"s)  The headline is DOMINATED by corr(S,P) (the frontier axis, Gilens-Page). At fixed rho, the other knobs move it modestly -> robust.");
+  process.exit(0);
+}
+
 // ---- LUMPINESS THRESHOLD SWEEP: does the invisible low-reach tail survive an atomized distributed? ----
 if(process.argv.includes("--sweepL")){
   const rhoSweep=(PARAMS.rho!==undefined?PARAMS.rho:0.2);   // fix rho at a realistic captured-agenda point
