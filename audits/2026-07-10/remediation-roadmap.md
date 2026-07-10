@@ -1,5 +1,13 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
+> **✅ STATUS 2026-07-10: PUBLICATION-READY conditional only on 2 author decisions.** After the NO-GO
+> decision, Tiers 0–7 were worked end-to-end (17 commits, all pushed) and validated with Codex at each step.
+> Codex's final holistic review: *"the paper and reviewer-visible repository surface are now defensibly
+> publication-ready, conditional only on the author resolving T3.1 and T3.2."* The **only remaining gates**
+> are the two AUTHOR decisions: **T3.1 (license: paper CC BY-NC-ND vs CITATION/.zenodo/live-deposit CC-BY-4.0)**
+> and **T3.2 (deposit-version state: is v1.12 / 21252911 the live record; is a new deposit paused?)**. All
+> other open items below are non-blocking polish or Tier-8 enlargements.
+
 **Date:** 2026-07-10 · **Owner:** author (Mauricio Offermann) · **Status of this file:** the working
 control document for getting to a clean publication. Supersedes the stale live roadmap until `docs/03`
 is reconciled (task T2.1).
