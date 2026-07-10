@@ -35,6 +35,7 @@ const PARAMS = {
   w: 0.0,              // central's weight on (harm-blind) VALUE vs credit P.  w=0 pure agenda-capture; w=1 -> E4
   eta: 0.1,            // harm-blindness of the value term (only matters if w>0)
   concentrate: 0,      // lumpiness gate regime: 0 = SPREAD (pessimistic); 1 = CONCENTRATE (Core v0 earmarked vouchers + 90-day recycle)
+  byValue: 0,          // distributed funding order: 0 = value/cost (efficient); 1 = pure VALUE (atomized voucher-holders fund what they value, ignore cost)
   fWeak: 0.60, fVer: 0.86,
   RHOS: [1.0, 0.8, 0.6, 0.4, 0.2, 0.0],   // agenda alignment corr(S,P) sweep
 };
@@ -61,8 +62,10 @@ function buildWorld(seed, rho){
   return {interested,cost,S,P,cHarmBlind,reach:reachA};
 }
 
-function fund(score, cost, K, budget, gate){
-  const idx=Array.from({length:K},(_,j)=>j).sort((a,b)=> score[b]/cost[b]-score[a]/cost[a]);
+function fund(score, cost, K, budget, gate, byValue){
+  // byValue=false -> rank by value/cost (efficient, knapsack-greedy); true -> rank by pure VALUE
+  // (what atomized voucher-holders do when they fund what they value most, ignoring cost-efficiency).
+  const idx=Array.from({length:K},(_,j)=>j).sort((a,b)=> (byValue? score[b]-score[a] : score[b]/cost[b]-score[a]/cost[a]));
   const chosen=[]; let sp=0;
   for(const j of idx){ if(score[j]<=0) continue; if(gate&&gate[j]) continue; if(sp+cost[j]<=budget){chosen.push(j); sp+=cost[j];} }
   return chosen;
@@ -94,9 +97,9 @@ function evalWorld(seed, rho, lumpiness=0){
   // CENTRAL: (1-w) credit P + w harm-blind value. creditScale puts P on the value scale (match mean magnitude).
   let mS=0,mP=0; for(let j=0;j<K;j++){ mS+=Math.abs(S[j]); mP+=Math.abs(P[j]); } const creditScale=mS/(mP||1);
   const cen=new Float64Array(K); for(let j=0;j<K;j++) cen[j]=(1-w)*creditScale*P[j] + w*cHarmBlind[j];
-  const o=deliver(fund(S,cost,K,budget),S,1.0);
-  const d=deliver(fund(dis,cost,K,budget,gate),S,fVer);   // distributed gated by the lumpiness threshold
-  const c=deliver(fund(cen,cost,K,budget),S,fWeak);       // central: pooled budget, no threshold
+  const o=deliver(fund(S,cost,K,budget),S,1.0);                        // oracle: optimal (value/cost knapsack)
+  const d=deliver(fund(dis,cost,K,budget,gate,PARAMS.byValue),S,fVer); // distributed: gated by threshold; funds by value or value/cost
+  const c=deliver(fund(cen,cost,K,budget),S,fWeak);                    // central: pooled budget, no threshold
   let neg=0,gatedN=0; for(let j=0;j<K;j++){ if(S[j]<0) neg++; if(gate&&gate[j]) gatedN++; }
   return {o,d,c,negShare:neg/K,gatedN,gatedOracleVal,S,P};
 }
