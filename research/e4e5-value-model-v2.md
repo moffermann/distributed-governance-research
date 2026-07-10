@@ -140,6 +140,24 @@ keeps net-neg <1%), so the world matches the author's (huge value spread, ~all p
   band 1.8–2.4×** for corr(S,P) ∈ [0.1, 0.3]. This RECOVERS the old ~2.2× magnitude on firmer,
   transversal public-choice ground. Report as a **band/frontier, not a point** (the honest caveat is
   the raw-vs-independent reading of Gilens-Page).
+- **Layer decomposition (the ~2.0x is TWO layers, not three).** At the calibrated corr(S,P) ~= 0.26:
+  **2.0x = selection 1.37x x delivery 1.43x** (roughly equal contributors). The band moves only in the
+  selection layer (delivery fixed at 1.43x): selection 1.37x (corr 0.26) -> 1.64x (corr 0.10), so the
+  headline's uncertainty = how captured the agenda is (Gilens-Page), NOT delivery. Within selection:
+  distributed 97% of oracle (loses 3% to voice bias beta), central 71% (loses 29% to agenda-capture).
+  **There is NO positive third (macro/category) layer** -- the `--cats` decomposition (categories +
+  top-k gate + category-level agenda capture) gives a **macro factor <= 1x (0.76-0.99x)**: the coarse
+  category gate RESCUES the credit-driven central (concentrates its budget into better-than-average
+  categories, cen %oracle 64%->74%), helping it more than the already-good distributed -- the same
+  forgiving-gate finding as the old harm-blindness pipeline. The three-layer view collapses to two:
+  selection x delivery.
+- **Why the advantage is BOUNDED (~2x, not 5-10x).** Even a fully value-blind central (corr(S,P)~=0)
+  delivers **~49% of oracle**, because the world is lopsided-positive (~98% net-positive -> funding
+  almost anything captures value). So the selection advantage is a **best-vs-mediocre gap (~1.4-2x),
+  not good-vs-catastrophic**. A big multiplier would need many net-NEGATIVE projects (central funds
+  harm -> delivers ~0), but those are <1%. Same root cause as harm-blindness being inert: rare harm
+  bounds the selection advantage. Honest claim: "the central funds the mediocre-but-visible, we fund
+  the best, times better delivery" -- not "the central funds disasters."
 - **The lumpiness threshold is a NON-ISSUE in Core v0 (author correction).** The naive worry — a
   lumpy niche project can't get built if its funders don't pool the cost — assumes *free-riding*
   (people withhold, hoping others pay). That does NOT apply to Core v0: the funding money is
