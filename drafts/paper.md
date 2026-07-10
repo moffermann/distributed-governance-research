@@ -341,7 +341,8 @@ technical depth but specificity: the models' parameters map one-to-one
 onto named architectural objects, so every proposition is an implementable
 dial.
 
-**What is new.** To our knowledge, no prior work combines:
+**What is new.** To our knowledge — pending a systematic prior-art review (our
+literature map is still preliminary) — no prior work combines:
 
 - **(i)** a functional decomposition of state activity into distributable and
   non-distributable layers;
@@ -351,11 +352,11 @@ dial.
 - **(iii)** formal incentive analysis of that architecture's specific
   mechanisms;
 
-- **(iv)** behavioral simulation of its citizen-facing assumptions —including,
-  to our knowledge, the first symmetric-knowledge comparison, in simulation, in which open
-  construction of allocation priorities from aggregated citizen signals is
-  measured against bandwidth-constrained central construction, and wins at
-  every tested scale—;
+- **(iv)** behavioral simulation of its citizen-facing assumptions —including
+  what we believe is an early symmetric-knowledge comparison, in simulation, of
+  open construction of allocation priorities from aggregated citizen signals
+  against bandwidth-constrained central construction (a later pre-registered
+  symmetric test finds the distributed advantage consistent but small; Section 6)—;
 
 - **(v)** a documented adversarial-review method with an explicit stopping
   rule.
@@ -606,13 +607,16 @@ traceability as **conditional outputs of that apparatus**, but are **superseded
 for magnitude inference** and are no longer offered as the paper's headline.
 
 **Quantitative status (governing).** A pre-registered, symmetric, selection-only
-stress test — both arms sharing the candidate pool, costs, appraisal budget and
-noise, each acting on its own noisy estimate rather than ground truth — found the
-distributed-minus-central selection advantage **positive in every one of 18
-pre-specified cells but small: a pooled 0.026 of a full-information benchmark
-(world-cluster Monte-Carlo interval 0.023–0.029), below its pre-registered 0.05
-materiality gate.** The compound multiplier is therefore **not** claimed as a
-calibrated effect. The controlling specification is
+stress test — both arms with matched expected appraisal-report budgets, the same
+candidate pool, costs and noise, delivery at parity, each acting on its own noisy
+estimate rather than ground truth — found the distributed-minus-central selection
+advantage **positive in every one of 18 pre-specified cells but small: a pooled
+0.026 of a full-information benchmark (95% world-cluster Monte-Carlo interval
+0.023–0.029), below its pre-registered 0.05 materiality gate.** The compound
+multiplier is therefore **not** claimed as a calibrated effect. This is a stylized
+test of a *selection mechanism*, not a validated implementation of Core v0: its
+value and credit variables are abstract scores, not measured visibility,
+traceability, permanence, or public value. The controlling specification is
 [[claim-and-estimand-contract|research/claim-and-estimand-contract.md]]; the test,
 its frozen pre-registration, results, and diagnostics are
 `scripts/simulation/e5-sp-symmetry-gate.mjs` and `audits/2026-07-10/symmetry-gate-*`.
@@ -872,12 +876,13 @@ freedoms, not money-utility — while the *summation* rests on Samuelson (1954),
 aggregation Sen himself resists; we invoke each only where it applies.
 
 *Calibration.* The magnitudes are model-internal, but the gap to data is a
-roadmap, not an apology. The decisive quantity — the central's 46–68% of
-oracle-achievable value — is a *checkable prediction*: it can be held against the
-observed ratio of realized to appraised value in the ex-post project-evaluation
-record (the World Bank's Independent Evaluation Group ratings; Flyvbjerg,
-Bruzelius and Rothengatter 2003), where comparable realized-value gaps are
-documented; the voice bias β can likewise be anchored to measured
+roadmap, not an apology. The central's 46–68% of benchmark-achievable value is a
+**candidate validation target requiring an explicit construct mapping** — not a
+direct check: the ex-post realized-to-appraised ratio (the World Bank's Independent
+Evaluation Group ratings; Flyvbjerg, Bruzelius and Rothengatter 2003) is a
+*different construct* from central selection relative to a full-information
+benchmark, so bridging them needs a stated mapping before either can calibrate the
+other; the voice bias β can likewise be anchored to measured
 participatory-budgeting demographics rather than assumed. And independent field
 evidence points the direction the model does: participatory budgeting in Brazil
 shifted spending toward sanitation and health and lowered infant mortality at
@@ -1371,7 +1376,7 @@ re-simulation.
 
 | Model quantity | Model value | Real-world proxy | Candidate dataset(s) | Status |
 |---|---|---|---|---|
-| central %-oracle | 46–68% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | checkable now (an output) |
+| central %-benchmark | 46–68% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | candidate target; needs an explicit construct mapping |
 | η (harm-blindness) | 0–0.5 | passive vs active waste share | Bandiera-Prat-Valletti 2009 (83% passive) | anchored-direction |
 | β (voice inequality) | 0.2–0.5 | PB participation bias | NYC / Paris / Porto Alegre; Decidim / Consul | calibratable |
 | q, m (detection) | q ≈ 0.5–1%, m in hundreds | complaint / whistleblowing rates | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibratable |

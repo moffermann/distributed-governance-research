@@ -370,7 +370,9 @@ contribución aquí no es la profundidad técnica sino la especificidad: los par
 arquitectónicos nombrados, de modo que cada proposición es un dial
 implementable.
 
-**Qué es nuevo.** Hasta donde sabemos, ningún trabajo previo combina:
+**Qué es nuevo.** Hasta donde sabemos —a la espera de una revisión sistemática de
+literatura previa (nuestro mapa de literatura es aún preliminar)— ningún trabajo
+previo combina:
 
 - **(i)** una descomposición funcional de la actividad estatal en capas
   distribuibles y no distribuibles;
@@ -382,9 +384,11 @@ implementable.
   esa arquitectura;
 
 - **(iv)** simulación conductual de sus supuestos de cara a la ciudadanía
-  —incluida, hasta donde sabemos, la primera comparación de conocimiento simétrico, en simulación, en la que la construcción abierta de las prioridades de asignación
-  a partir de señales ciudadanas agregadas se mide contra la construcción
-  central de ancho de banda finito, y gana en toda escala probada—;
+  —incluida lo que creemos es una comparación temprana de conocimiento simétrico,
+  en simulación, de la construcción abierta de las prioridades de asignación a
+  partir de señales ciudadanas agregadas contra la construcción central de ancho
+  de banda finito (una prueba simétrica pre-registrada posterior encuentra la
+  ventaja distribuida consistente pero pequeña; Sección 6)—;
 
 - **(v)** un método documentado de revisión adversarial con una regla de
   detención explícita.
@@ -660,14 +664,18 @@ por trazabilidad como **salidas condicionales de ese aparato**, pero están
 artículo.
 
 **Estado cuantitativo (rector).** Una prueba de estrés pre-registrada, simétrica y
-solo-de-selección —ambos brazos compartiendo el pool de proyectos, los costos, el
-presupuesto de tasación y el ruido, cada uno actuando sobre su propia estimación
-ruidosa y no sobre la verdad— encontró que la ventaja de selección
-distribuido-menos-central es **positiva en las 18 celdas pre-especificadas pero
-pequeña: un efecto agrupado de 0.026 de un benchmark de información completa
-(intervalo Monte-Carlo por conglomerado-de-mundos 0.023–0.029), por debajo de su
-umbral de materialidad pre-registrado de 0.05.** El multiplicador compuesto, por lo
-tanto, **no** se reclama como efecto calibrado. La especificación rectora es
+solo-de-selección —ambos brazos con presupuestos esperados de reportes de tasación
+igualados, el mismo pool de proyectos, costos y ruido, entrega en paridad, cada uno
+actuando sobre su propia estimación ruidosa y no sobre la verdad— encontró que la
+ventaja de selección distribuido-menos-central es **positiva en las 18 celdas
+pre-especificadas pero pequeña: un efecto agrupado de 0.026 de un benchmark de
+información completa (intervalo Monte-Carlo por conglomerado-de-mundos al 95%
+0.023–0.029), por debajo de su umbral de materialidad pre-registrado de 0.05.** El
+multiplicador compuesto, por lo tanto, **no** se reclama como efecto calibrado. Esta
+es una prueba estilizada de un *mecanismo de selección*, no una implementación
+validada de Core v0: sus variables de valor y crédito son puntajes abstractos, no
+visibilidad, trazabilidad, permanencia o valor público medidos. La especificación
+rectora es
 [[claim-and-estimand-contract|research/claim-and-estimand-contract.md]]; la prueba,
 su pre-registro congelado, resultados y diagnósticos están en
 `scripts/simulation/e5-sp-symmetry-gate.mjs` y `audits/2026-07-10/symmetry-gate-*`.
@@ -944,12 +952,14 @@ agrega —libertades, no utilidad-dinero— mientras la *suma* descansa en Samue
 aplica.
 
 *Calibración.* Las magnitudes son internas al modelo, pero la brecha con los datos
-es una hoja de ruta, no una disculpa. La cantidad decisiva —el 46–68% del valor
-alcanzable por el central— es una *predicción verificable*: puede contrastarse con
-la razón observada entre valor realizado y valor tasado en el registro de
-evaluación ex-post de proyectos (las calificaciones del Grupo de Evaluación
-Independiente del Banco Mundial; Flyvbjerg, Bruzelius y Rothengatter 2003), donde se
-documentan brechas de valor comparables; el sesgo de voz β puede anclarse igualmente
+es una hoja de ruta, no una disculpa. El 46–68% del valor alcanzable por el central
+es un **objetivo de validación candidato que requiere un mapeo de constructo
+explícito** —no una comprobación directa: la razón ex-post entre valor realizado y
+valor tasado (las calificaciones del Grupo de Evaluación Independiente del Banco
+Mundial; Flyvbjerg, Bruzelius y Rothengatter 2003) es un *constructo distinto* de la
+selección central relativa a un benchmark de información completa, así que unirlos
+requiere un mapeo declarado antes de que uno pueda calibrar al otro; el sesgo de voz
+β puede anclarse igualmente
 a demografías medidas de presupuestos participativos en vez de asumirse. Y evidencia
 de campo independiente apunta en la dirección que apunta el modelo: el presupuesto
 participativo en Brasil desplazó el gasto hacia saneamiento y salud y redujo la
@@ -1451,7 +1461,7 @@ observadas realizado/tasado, no una re-simulación.
 
 | Cantidad del modelo | Valor modelo | Proxy real | Dataset(s) candidato | Estado |
 |---|---|---|---|---|
-| %-óptimo del central | 46–68% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | verificable ya (es un output) |
+| %-benchmark del central | 46–68% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | objetivo candidato; requiere mapeo de constructo explícito |
 | η (ceguera al daño) | 0–0.5 | desperdicio pasivo vs activo | Bandiera-Prat-Valletti 2009 (83% pasivo) | dirección anclada |
 | β (desigualdad de voz) | 0.2–0.5 | sesgo de participación en PP | NYC / París / Porto Alegre; Decidim / Consul | calibrable |
 | q, m (detección) | q ≈ 0.5–1%, m en cientos | tasas de queja / denuncia | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |

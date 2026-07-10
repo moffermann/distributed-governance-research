@@ -42,7 +42,12 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   **matched-budget low-information stress regime**; do not claim prop-reach eliminates the advantage (unrun).
   *(Codex gate interpretation)*
 
-## TIER 1 — Truth of the claim (do FIRST; the credibility core; ~2–3 days)
+## TIER 1 — Truth of the claim ✅ COMPLETE (2026-07-10; validated with Codex)
+> Added in the T1 close (Codex review): an explicit "stylized test of a selection mechanism, not a
+> validated Core v0 implementation" caveat in the Section-6 quantitative-status paragraph (EN+ES), and the
+> 46–68% central-share relabelled a **candidate validation target requiring an explicit construct mapping**
+> (not a "checkable prediction") in prose + calibration table (EN+ES). Deferred to T2/T5: standardize the
+> remaining "oracle"→"full-information benchmark" wording across the paper.
 - [x] **T1.1 — Estimand contract** DONE: `research/claim-and-estimand-contract.md` (validated with Codex;
   its 5 edits applied — selection-only estimand vs future Δ_total, benchmark not an upper bound, median vs
   cluster-CI separated, "credit-pressured" not "credit-maximizing", uncalibrated units stated). Governs
@@ -55,24 +60,28 @@ claim · EN and ES mirror each other exactly · the shipped simulation reproduce
   calibrate"), E8, transition, conclusion all reframed; the 2.19/2.22/2.26 kept only as labelled conditional
   apparatus outputs. Controlling retirement banners on `e4e5-value-model-v2.md`, `e5-sp-preregistration.md`,
   `docs/03`; propagation note CANCELLED. check-anchors clean; EN/ES at parity. *(gate; headline all; evaluation)*
-- [ ] **T1.3 — Reframe the simulation's job:** directional/mechanism demonstration (regions, sensitivity,
-  failure cases), never a privileged point estimate. *(evaluation next-steps; brainstorm)*
-- [ ] **T1.4 — Relabel provenance:** the "pre-registration" is post-exploratory → call it an *exploratory
-  analysis specification*; "pre-registered 7/7" is retired. *(evaluation M2; errors M2; consistency m1)*
-- [ ] **T1.5 — Mechanism-fidelity honesty ("is this Core v0?"):** the engine's `P` does NOT implement
-  visibility×traceability×concentration and `S` has no permanence — it imposes correlated latent scores.
-  For publication, **relabel the engine as an abstract score-selection model of the mechanism**, not a
-  Core v0 simulation (implementing the real mechanism is Tier 8). *(Codex critique; errors M7)*
-- [ ] **T1.6 — Terminology:** the paper's new "agenda capture" = objective/selection misalignment, which
-  is NOT the corpus's A020 "agenda-setting/scope construction". Disambiguate the term so it does not
-  collide with the attack corpus. *(evaluation M5)*
-- [ ] **T1.7 — Retire the "converges on old ~2.2×" corroboration claim** (different apparatus; the number
-  was known during calibration → not independent). *(headline Major 7; consistency M7)*
-- [ ] **T1.8 — Scope & unsupported-claim sweep:** state the domain is a bounded public-investment slice
-  (not "the purpose of the state"); mark partial-equilibrium (no strategic behavior, complementarities,
-  GE); soften/retract the currently-unverified claims (raw congruence ≈0.3; Arnold "diffuse benefits earn
-  no return"; Core-v0 loss 2.5%; corr transportability; novelty "to our knowledge" before a systematic
-  lit review). *(errors M8–M9, suspected list; evaluation M7, m1)*
+- [x] **T1.3 — Reframe the simulation's job** DONE (covered by T1.2): the paper's "Quantitative status"
+  paragraph + Section 6 now present the sims as conditional apparatus outputs / mechanism direction, not a
+  privileged point estimate; contract §6 binds this. *(evaluation next-steps; brainstorm)*
+- [x] **T1.4 — Relabel provenance** DONE (covered by T1.1+T1.2): contract §7 + the `e5-sp-preregistration.md`
+  banner call it a post-exploratory *exploratory analysis specification*; "pre-registered 7/7" retired.
+  *(evaluation M2; errors M2; consistency m1)*
+- [x] **T1.5 — Mechanism-fidelity honesty** DONE for publication text (contract §5 + the paper call the
+  engine a "stylized model of the selection mechanism, not a validated Core v0 implementation"). The stale
+  engine *header comment* cleanup is tracked under T5.1; implementing the real mechanism is Tier 8 (E2).
+  *(Codex critique; errors M7)*
+- [x] **T1.6 — Terminology** N/A for the paper: "agenda capture" does **not** appear in `drafts/paper.md`/
+  `paper.es.md` (the term-collision with A020 was in the now-retired v2 notes). Nothing to disambiguate in
+  the publication. *(evaluation M5)*
+- [x] **T1.7 — Retire the "converges on old ~2.2×" corroboration** DONE (contract §7; the paper no longer
+  claims convergence — the ABM figures are labelled conditional apparatus outputs). *(headline Major 7;
+  consistency M7)*
+- [x] **T1.8 — Scope & unsupported-claim sweep** DONE for the paper: novelty "to our knowledge / first"
+  claims softened (prior-art review preliminary; the (iv) "wins at every scale" now "consistent but small,
+  Section 6") EN+ES. Scope/partial-equilibrium limits are governed by contract §5. NOTE: the unverified
+  notes-claims (raw congruence ≈0.3; Core-v0 2.5%; corr transportability) are NOT in the paper (they lived
+  in the retired v2 notes). The Arnold-strength / redistribution-rhetoric refinements → T2.4. *(errors
+  M8–M9; evaluation M7, m1)*
 
 ## TIER 2 — Internal consistency (reconcile everything to the new state; ~1–2 days)
 - [ ] **T2.1 — Live roadmap `docs/03_ROADMAP.md`:** rewrite to true state (hurdle implemented; gate NO-GO;
