@@ -25,9 +25,11 @@ function mkGauss(rng){ let s=null; return ()=>{ if(s!==null){const t=s;s=null;re
 
 const PARAMS = {
   N: 5000, K: 500, seeds: 20,
-  mean: 0.15,          // consensual base quality per interested citizen (lopsided-positive; net-neg share small)
+  mean: 0.40,          // consensual base quality per interested citizen (high -> net-neg share <1%)
   sd: 1.0,             // idiosyncratic spread of individual valuations around the project quality
-  projSpread: 0.25,    // PER-PROJECT quality heterogeneity (NEW; projects genuinely differ in social value)
+  projSpread: 0.15,    // per-unit quality heterogeneity (small; kept modest so net-neg stays <1%)
+  muF: -1.5, sigF: 1.2, // REACH: interested fraction = exp(muF + sigF*a), heavy-tailed -> value heterogeneity lives in REACH (stadium >> rural school), NOT in net-neg share
+  sigP: 1.0,           // credit spread: P = exp(sigP * creditLatent), where creditLatent corr rho with the REACH latent (decoupled at rho<1 -> a high-reach project CAN be low-P: the invisible sewer)
   costHi: 10, budgetFrac: 1/3,
   p: 0.35, beta: 0.30, // distributed participation rate and voice bias (harmed under-participate) -- COVERAGE, from E4
   w: 0.0,              // central's weight on (harm-blind) VALUE vs credit P.  w=0 pure agenda-capture; w=1 -> E4
@@ -41,16 +43,18 @@ function buildWorld(seed, rho){
   const rng=mulberry32(seedFor(seed, 999)); const g=mkGauss(rng);
   const interested=Array.from({length:K},()=>[]); const cost=new Float64Array(K);
   const S=new Float64Array(K), P=new Float64Array(K), cHarmBlind=new Float64Array(K);
-  const rc=Math.sqrt(Math.max(0,1-rho*rho)), eta=PARAMS.eta;
+  const rc=Math.sqrt(Math.max(0,1-rho*rho)), eta=PARAMS.eta, {muF,sigF,sigP}=PARAMS;
   for(let j=0;j<K;j++){
     cost[j]=1+(costHi-1)*rng();
-    const projQual=mean+projSpread*g();                 // this project's social quality (NEW heterogeneity)
-    const visQual=mean+rho*(projQual-mean)+rc*projSpread*g();  // this project's credit-quality, corr rho with social quality
-    const frac=0.1+0.6*rng(); let reach=0, sSum=0, hb=0;
+    const a=g();                                        // REACH latent (heavy-tailed magnitude): value heterogeneity lives here
+    const frac=Math.min(0.9, Math.max(0.005, Math.exp(muF+sigF*a)));  // heavy-tailed interested fraction (stadium ~0.9 ... rural school ~0.01)
+    const projQual=mean+projSpread*g();                 // per-unit social quality (high mean -> net-neg <1%)
+    const cLat=rho*a+rc*g();                            // CREDIT latent, corr rho with the reach latent; decoupled at rho<1 (a big-reach project can be low-P: the invisible sewer)
+    let reach=0, sSum=0, hb=0;
     for(let i=0;i<N;i++){ if(rng()<frac){ const v=projQual+sd*g(); interested[j].push(v); reach++; sSum+=v;
       hb += (v<0 ? eta*v : v); } }                       // central's harm-blind read of value (attenuate v<0 by eta)
-    S[j]=sSum;                                           // true social value
-    P[j]=reach*visQual;                                  // credit-claiming = reach x visibility-quality
+    S[j]=sSum;                                           // true social value = reach x quality (heavy-tailed via reach, lopsided-positive)
+    P[j]=Math.exp(sigP*cLat);                            // credit-claiming, DECOUPLED from reach at rho<1
     cHarmBlind[j]=hb;
   }
   return {interested,cost,S,P,cHarmBlind};
