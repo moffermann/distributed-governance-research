@@ -25,24 +25,36 @@ quo). Formalize it with a **support/harm decomposition** of true value (mean sca
 S_j = S_j⁺ − H_j          S_j⁺ = mean of positive valuations (support)
                           H_j  = mean intensity of opposition (harm)
 ```
-**Central is blind to harm** — its harm-detection coefficient is ≈0:
+**Central is MYOPIC to harm, not blind — and the myopia is salience-gated** (author's refinement, 2026-07-11).
+Politically the central DOES have a harm voice — opposition, comptroller (contraloría), press, courts — but that
+voice activates only on **visible, disputed, on-agenda** projects, NOT on the long tail of low-visibility projects
+that are the great mass. So the harm-detection coefficient is a function of project **visibility** `V_j`:
 ```
-M^C_j = a + b·S_j⁺ + w·(v_{p,j} − S_j⁺) − b_H^C·H_j + η_j ,   b_H^C ≈ 0
+M^C_j = a + b·S_j⁺ + w·(v_{p,j} − S_j⁺) − b_H^C·s(V_j)·H_j + η_j
 ```
-so the central **overvalues harmful projects** (it does not subtract the harm). **Distributed has (attenuated)
-voice** — from the report rule, its conditional expectation is
+where `V_j` = visibility/salience (big, prominent, contested projects), `s(·)` increasing with `s(low)≈0`
+(long tail: invisible → central effectively blind) and `s(high)≈1` (salient: opposition/contraloría supply harm
+voice). The **project-visibility distribution is heavy-tailed** (most projects low `V_j`), so **aggregate** central
+harm-detection is small — "near-blind" precisely because the mass lives in the tail. **Distributed has (attenuated)
+voice across the WHOLE distribution** — from the report rule,
 ```
-E[M^D_j | u] = S_j⁺ − (1−β)·H_j
+E[M^D_j | u] = S_j⁺ − (1−β)·H_j       (independent of V_j)
 ```
-so it registers harm at weight `(1−β)` while the central registers it at weight `b_H^C ≈ 0`. Distributed beats
-central on harm detection whenever `(1−β) > b_H^C`, which — if the central is near-blind — holds for **any β<1**:
-*some* voice beats *no* voice. The parity boundary moves strongly toward "distributed wins" as harm prevalence/
-intensity `H_j` rises and central harm-blindness deepens. This is where an impressive result emerges **legitimately**.
+so distributed beats central on harm for project j whenever `(1−β) > b_H^C·s(V_j)`:
+- long tail (`s≈0`): holds for **any β<1** → distributed dominates the mass;
+- salient few (`s≈1`): contested — holds only if `(1−β) > b_H^C` → parity/dispute on the visible projects.
 
-**Capability guardrail (do not gerrymander):** do NOT hardcode `b_H^C = 0`. Give it `D_F = [0, b_H^max]` and an
-`R_α` concentrated **near zero but not exactly zero** ("near-blind", per the evidence — not "provably zero"). The
-"distributed wins" result must survive as robust under merely-modest blindness, not be manufactured by a hardcoded
-zero. If the central actually has decent harm detection, the boundary moves and we report it.
+**The aggregate advantage therefore comes from the long tail** — the great mass of low-visibility projects that
+have no harm voice in the status quo but do under Core v0. This is the thesis, and it emerges **legitimately**.
+
+**This also rebuts the obvious objection.** *"The central isn't blind — it has comptroller/opposition/courts."*
+Answer: yes, but only on the few visible, disputed projects; the long tail (the mass) has no such voice in the
+status quo, and that is exactly what Core v0's coverage adds.
+
+**Capability guardrail (do not gerrymander):** do NOT hardcode `s≡0` or `b_H^C=0`. The tail heaviness (distribution
+of `V_j`), the gating shape `s(·)`, and `b_H^C` are all parameters with their own `D_M/D_F/R_α`. If the tail is less
+heavy, or the central detects more harm in the tail than assumed, the boundary moves and we report it. The
+"distributed wins" result must survive **modest, salience-gated myopia**, not a hardcoded zero.
 
 **Identification bonus:** the central now has three separately-varying regressors — `S_j⁺` (support), `v_{p,j}`
 (projection), `H_j` (harm) — a project can carry high support AND high opposition (controversial), so `H_j` varies
