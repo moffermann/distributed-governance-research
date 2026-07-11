@@ -4,3 +4,6 @@ pdf/
 ./
 research/e4e5-pipeline-run.json
 _backups/
+.env
+.env.*
+renders/distributed-governance-research-v1.13.zip
