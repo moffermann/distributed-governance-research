@@ -21,6 +21,20 @@ import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
 
+// Load ZENODO_TOKEN from a local, git-ignored .env if it isn't already in the environment.
+// (The token is never printed by this script.)
+if (!process.env.ZENODO_TOKEN) {
+  try {
+    const envPath = path.join(process.cwd(), ".env");
+    if (fs.existsSync(envPath)) {
+      for (const line of fs.readFileSync(envPath, "utf8").split(/\r?\n/)) {
+        const m = line.match(/^\s*(?:export\s+)?ZENODO_TOKEN\s*=\s*(.*?)\s*$/);
+        if (m) process.env.ZENODO_TOKEN = m[1].replace(/^["']|["']$/g, "");
+      }
+    }
+  } catch { /* ignore */ }
+}
+
 const API = "https://zenodo.org/api";
 const TOKEN = process.env.ZENODO_TOKEN;
 // The latest PUBLISHED version to branch the new version from (v1.12 record id):
