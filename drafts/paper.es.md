@@ -1623,4 +1623,5 @@ código de simulación y tablas completas de resultados
 auditoría ([audit-evidence-base](../research/audit-evidence-base.md)), el corpus de la arquitectura
 (`docs/`, `knowledge/`), y el registro adversarial completo (`attacks/`,
 `defenses/`, resoluciones aceptadas `docs/67`–`docs/113`; los cuarenta y tres
-ataques resueltos y propagados).*
+ataques resueltos y propagados —las primeras cuatro rondas por completo, la
+propagación de las D037–D040 de la ronda de revisión del manuscrito rastreada).*

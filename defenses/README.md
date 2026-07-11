@@ -97,7 +97,7 @@ Paired with the external-review round attacks in `attacks/`; both defenses apply
 
 ## Manuscript-review round defense queue (D036-D040)
 
-Paired with the manuscript-review round attacks in `attacks/` (five-profile review of the then-published v1.6 manuscript; raw reviews in `external-review/manuscript-v1.6-round/`). All five are resolved (accepted improvements integrated in `docs/105`-`docs/109`). D036's empirical arbiter is the pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]).
+Paired with the manuscript-review round attacks in `attacks/` (five-profile review of the then-published v1.6 manuscript; raw reviews in `external-review/manuscript-v1.6-round/`). All five are resolved (accepted improvements integrated in `docs/105`-`docs/109`). D036's empirical arbiter is now the pre-registered **symmetry gate (NO-GO)**; E7 is superseded (controlling update in [[105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION|docs/105_CALIBRATED_BASELINE_EVIDENCE_AND_A036_RESOLUTION.md]]).
 
 | Defense | Attack | Title | Classification |
 |---|---|---|---|

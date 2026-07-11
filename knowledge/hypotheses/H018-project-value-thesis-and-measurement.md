@@ -1,5 +1,14 @@
 # H018 — Project Value Thesis and Measurement
 
+> **⚠️ CONTROLLING UPDATE (2026-07-10, Path B).** The compound value-per-budget **multiplier is RETIRED** as a
+> calibrated effect. The "Simulation evidence" figures below (+43%, 2.19×, 2.22×, 1.4–1.6×) are **conditional,
+> model-internal apparatus outputs**, not calibrated results; the "recalibrated / survives at 2.22×" framing
+> is superseded. The one confirmatory test is the pre-registered **symmetry gate (NO-GO)**: distributed
+> selection advantage positive but small (pre-registered pooled median Δ = 0.025 of a full-information
+> benchmark, below its 0.05 research-program rebuild gate; post-hoc ratio-of-sums 0.026). Controlling spec:
+> `research/claim-and-estimand-contract.md`. The value-thesis/verification *hypothesis* itself stands; only its
+> magnitude framing is retired.
+
 ## Hypothesis
 
 Every financeable project should explicitly declare its `Value Thesis` before receiving resources, along with a proportional method for verifying whether the promised value was delivered.
@@ -233,7 +242,7 @@ That risk should not be hidden inside H018. H018 defines the value-to-fulfillmen
 
 ## Simulation evidence
 
-The pre-registered E5 experiment ([[e5-value-delivery-design|research/e5-value-delivery-design.md]], results in [[simulation-results|research/simulation-results.md]]) measures what this hypothesis's verification chain buys. On matched project portfolios, the verified-delivery layer — milestone gating, retention, recovery, and reputational stake, the operational form of the value-thesis-to-evidence chain — delivers +43% more social value per unit of budget than the zero-control opaque layer, and combined with distributed selection the full architecture delivers 2.19× that zero-control lower bound in-model — a bound the pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]) then recalibrated against an audit-anchored institutional status quo, where the multiplier survives at 2.22× at scale and 1.4-1.6× at municipal pilot scale. The opaque regime officially reports about 29 percentage points more delivery than reality; the verified chain closes that visibility gap by construction. The protection arrives ex ante: under the specified verified parameters no executor ever diverts, because the incentive condition makes diversion unprofitable before enforcement is needed, with endogenous cleansing of the executor pool measured as the second line of defense when verification weakens. The declared bounds apply: parameters are plausible rather than calibrated, and delivered value assumes the funded promise had its declared latent value — directions and orderings, not point values, are the findings.
+The pre-registered E5 experiment ([[e5-value-delivery-design|research/e5-value-delivery-design.md]], results in [[simulation-results|research/simulation-results.md]]) measures what this hypothesis's verification chain buys. On matched project portfolios, the verified-delivery layer — milestone gating, retention, recovery, and reputational stake, the operational form of the value-thesis-to-evidence chain — delivers +43% more social value per unit of budget than the zero-control opaque layer, and combined with distributed selection the full architecture delivered 2.19× that zero-control lower bound in-model — a bound the pre-registered E7 experiment ([[e7-calibrated-baseline-design|research/e7-calibrated-baseline-design.md]]) then contrasted against an audit-parameterized institutional status quo, reporting a conditional 2.22× at scale and 1.4-1.6× at municipal pilot scale (all **retired** as calibrated effects — conditional apparatus outputs only; see the banner above). The opaque regime officially reports about 29 percentage points more delivery than reality; the verified chain closes that visibility gap by construction. The protection arrives ex ante: under the specified verified parameters no executor ever diverts, because the incentive condition makes diversion unprofitable before enforcement is needed, with endogenous cleansing of the executor pool measured as the second line of defense when verification weakens. The declared bounds apply: parameters are plausible rather than calibrated, and delivered value assumes the funded promise had its declared latent value — directions and orderings, not point values, are the findings.
 
 ## Principle
 

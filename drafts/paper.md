@@ -1533,4 +1533,5 @@ simulation code and full result tables
 ([audit-evidence-base](../research/audit-evidence-base.md)), the architecture corpus (`docs/`,
 `knowledge/`), and the complete adversarial record (`attacks/`,
 `defenses/`, accepted resolutions `docs/67`–`docs/113`; all forty-three
-attacks resolved and propagated).*
+attacks resolved and propagated — the first four rounds fully, the
+manuscript-review round's D037–D040 propagation tracked).*
