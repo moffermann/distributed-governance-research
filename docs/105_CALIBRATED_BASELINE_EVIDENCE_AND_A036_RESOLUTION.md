@@ -2,8 +2,9 @@
 
 > **⚠️ CONTROLLING UPDATE (2026-07-10).** This resolution named the **E7** experiment as the headline's
 > arbiter. E7 is now **superseded**: a later pre-registered **symmetry gate (NO-GO)** is the current arbiter
-> — it retired the calibrated multiplier (the distributed selection advantage is small, ~0.026 of a
-> full-information benchmark, below its 0.05 gate). The reporting rule below still stands; the "E7 sets the
+> — it retired the calibrated multiplier (the distributed selection advantage is small: pre-registered pooled
+> median 0.025 of a full-information benchmark, below its 0.05 research-program rebuild gate; post-hoc
+> ratio-of-sums 0.026 [0.023, 0.029]). The reporting rule below still stands; the "E7 sets the
 > headline" framing does not. Controlling spec: `research/claim-and-estimand-contract.md`.
 
 ## Status

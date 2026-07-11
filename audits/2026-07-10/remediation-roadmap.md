@@ -1,8 +1,8 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
 > **⚠️ STATUS 2026-07-10 (single current state): publication-readiness remediation in progress.** Successive
-> independent audit rounds are logged under `audits/2026-07-10-round2/…-round5/`; **the highest-numbered round
-> is authoritative**, and its remaining fix-now items are being cleared. Decisions resolved: **T3.2** — v1.12 /
+> independent audit rounds are logged under `audits/2026-07-10-round2/` and successively numbered folders;
+> **the highest-numbered round is authoritative**, and its remaining fix-now items are being cleared. Decisions resolved: **T3.2** — v1.12 /
 > 21252911 is the live latest deposit, working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0
 > for all text/content + MIT for code, single record.**
 > **Do NOT deposit v1.13** until the remaining manuscript blockers in the latest audit are cleared and the
@@ -70,9 +70,9 @@
 - [DEFER] **R2-22 — D036–D040 "propagation pending" status lines vs the paper's "fully propagated" claim;**
   attack/defense README workflow language obsolete. Deferred: verifying/finishing the semantic propagation
   trace is a larger pass. *(consistency #13, #14)*
-- [DEFER] **R2-23 — "same total appraisal budget" is only approximately true** (per-project rounding; ±~1.8%).
-  Deferred: the paper's "matched *expected*" wording is already accurate; only the contract/runtime need a
-  one-word softening. *(errors m1)*
+- [x] **R2-23 — "same total appraisal budget" is only approximately true** (per-project rounding; ±~1.8%).
+  DONE: the contract §2, this roadmap's governing-decision line, and the gate script's inline comment now say
+  "matched in expectation (equal up to per-project rounding)"; the paper was already exact. *(errors m1)*
 - [DEFER] **R2-24 — Extend `check-anchors.mjs`** to all repo-relative paths (= existing T3.5). *(errors m4)*
 
 ### Round-2b — from the multidimensional-evaluation audit (`multidimensional-evaluation.md`)
@@ -151,7 +151,7 @@ is reconciled (task T2.1).
 (`symmetry-gate-preregistration.md`, `symmetry-gate-results.txt`).
 
 ## Governing decision (locked 2026-07-10)
-The pre-registered **symmetry gate returned NO-GO**: with a symmetric comparator (equal appraisal budget,
+The pre-registered **symmetry gate returned NO-GO**: with a symmetric comparator (appraisal budget matched in expectation, equal up to per-project rounding,
 own-noisy eligibility, no oracle gate, bounded-credit central, delivery parity) the distributed selection
 advantage is **real but small — pre-registered pooled median ≈0.025 of the full-information benchmark, below
 the pre-registered 0.05 research-program rebuild gate** (not a policy-materiality threshold; 18/18 cells

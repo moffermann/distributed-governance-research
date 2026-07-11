@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Manuscript-review round paired review completed. Accepted resolution: [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]], adopting this defense's secrecy-by-default package in its strongest form (no voluntary-publicity exception) plus the author's followed-projects-feed principle: no "my allocations" ledger view exists on the citizen surface. Corpus propagation pending.
+Manuscript-review round paired review completed. Accepted resolution: [[108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION|docs/108_CITIZEN_ALLOCATION_SECRECY_AND_A039_RESOLUTION.md]], adopting this defense's secrecy-by-default package in its strongest form (no voluntary-publicity exception) plus the author's followed-projects-feed principle: no "my allocations" ledger view exists on the citizen surface. Corpus propagation tracked in the remediation roadmap (R2-22); resolution accepted, not on the publication critical path.
 
 ## Attack reference
 

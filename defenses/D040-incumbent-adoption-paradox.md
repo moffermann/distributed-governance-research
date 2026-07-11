@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Manuscript-review round paired review completed. Accepted resolution: [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]], adopting this defense's package under the author's thesis boundary: the paper answers "can it be done, and is it better?" — the adoption layer answers, conditionally, "given a sponsor who decided, how must the instruments be configured". Corpus propagation pending.
+Manuscript-review round paired review completed. Accepted resolution: [[109_ADOPTION_LAYER_AND_A040_RESOLUTION|docs/109_ADOPTION_LAYER_AND_A040_RESOLUTION.md]], adopting this defense's package under the author's thesis boundary: the paper answers "can it be done, and is it better?" — the adoption layer answers, conditionally, "given a sponsor who decided, how must the instruments be configured". Corpus propagation tracked in the remediation roadmap (R2-22); resolution accepted, not on the publication critical path.
 
 ## Attack reference
 

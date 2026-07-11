@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Manuscript-review round paired review completed. Accepted resolution: [[106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION.md]]. Corpus propagation pending.
+Manuscript-review round paired review completed. Accepted resolution: [[106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION|docs/106_ENABLING_NORM_RECORD_AND_A037_RESOLUTION.md]]. Corpus propagation tracked in the remediation roadmap (R2-22); resolution accepted, not on the publication critical path.
 
 ## Attack reference
 

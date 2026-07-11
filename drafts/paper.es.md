@@ -141,8 +141,10 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    atacada sistemáticamente: cuarenta y tres resúmenes de ataque anclados en las
    literaturas de ciencia política, economía y derecho, cada uno respondido
    por una defensa emparejada y resuelto bajo una regla explícita de
-   integrar-o-acotar, con cada resolución propagada a través del corpus y el
-   registro completo de revisión público por construcción. El bucle es una
+   integrar-o-acotar, con las resoluciones propagadas a través del corpus (las
+   primeras cuatro rondas por completo; la propagación de las D037–D040 de la
+   ronda de revisión del manuscrito rastreada) y el registro completo de revisión
+   público por construcción. El bucle es una
    autocrítica estructurada, no validación externa, y así lo decimos; lo proponemos, junto con su regla de terminación y a la espera de validación externa independiente, como una propuesta metodológica preliminar para la investigación en diseño institucional.
 
 El estudio complementario mide tres efectos que amplían esta arquitectura: la

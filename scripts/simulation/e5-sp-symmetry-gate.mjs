@@ -74,7 +74,7 @@ function evalWorld(seed, rho, lambda, h, p, beta, tau){
     const hatS = sumR/p; hatNetD[j]=hatS - h*cost[j]; scoreD[j]=hatNetD[j]/cost[j]; eligD[j]=hatNetD[j]>0;
   }
 
-  // CENTRAL: same TOTAL appraisal budget as distributed, spread EVENLY (fixed bandwidth per project)
+  // CENTRAL: appraisal budget matched in expectation to distributed (equal up to per-project rounding of mC), spread EVENLY (fixed bandwidth per project)
   const mC=Math.max(1, Math.round(expReports/K));
   const hatNetC=new Float64Array(K), eligC=new Array(K).fill(false);
   const valPerCost=new Float64Array(K), credPerCost=new Float64Array(K);

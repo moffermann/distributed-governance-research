@@ -129,9 +129,10 @@ current institution solves the same problem, not against an ideal — blocking t
 4. **Adversarial review as method** (Section 7). The architecture was attacked
    systematically: forty-three attack briefs grounded in the political-science,
    economics, and law literatures, each answered by a paired defense and
-   resolved under an explicit integrate-or-bound rule, with every resolution
-   propagated through the corpus and the full review record public by
-   construction. The loop is a structured self-critique, not external
+   resolved under an explicit integrate-or-bound rule, with resolutions
+   propagated through the corpus (the first four rounds fully; the
+   manuscript-review round's D037–D040 propagation tracked) and the full review
+   record public by construction. The loop is a structured self-critique, not external
    validation, and we say so; we propose it, and its terminating rule—pending independent external validation—as a preliminary methodological proposal for institutional design research.
 
 A companion study measures three effects that extend this architecture:

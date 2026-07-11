@@ -2,7 +2,7 @@
 
 ## Integration status
 
-Manuscript-review round paired review completed. Accepted resolution: [[107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION.md]]. Author review reclassified the attack as partially founded: the platform holds no reputational exclusion power over executors or proponents, so the tiered sanctionatory procedure this defense proposed was not adopted for funder-facing reputation — the resolution is a boundary clarification (informs, never excludes), a manuscript terminology correction, and a confirmation of the existing reviewed-finding guarantees at the control-role admission boundary. This brief is preserved as the pre-reclassification record. Corpus propagation pending.
+Manuscript-review round paired review completed. Accepted resolution: [[107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION|docs/107_REPUTATION_INFORMS_NEVER_EXCLUDES_AND_A038_RESOLUTION.md]]. Author review reclassified the attack as partially founded: the platform holds no reputational exclusion power over executors or proponents, so the tiered sanctionatory procedure this defense proposed was not adopted for funder-facing reputation — the resolution is a boundary clarification (informs, never excludes), a manuscript terminology correction, and a confirmation of the existing reviewed-finding guarantees at the control-role admission boundary. This brief is preserved as the pre-reclassification record. Corpus propagation tracked in the remediation roadmap (R2-22); resolution accepted, not on the publication critical path.
 
 ## Attack reference
 
