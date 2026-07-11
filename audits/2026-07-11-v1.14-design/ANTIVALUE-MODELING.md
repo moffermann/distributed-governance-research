@@ -17,11 +17,37 @@
 3. **Single-signed voice.** `β≥0` = opponents report *less* (suppression). The opposite is equally real (organized
    opposition is *louder*, NIMBY). One parameter can't carry both regimes.
 
-## Why this matters for the capability criterion
-The central proxy systematically **misses concentrated opposition**: the projection error `w·(v_{p,j}−S_j)` is
-largest exactly where the planner's category prior rates a project high but its real beneficiaries reject it (the
-chess-court case). Coverage detects it. **Anti-value is the channel where distributed beats the proxy** — under-
-modeling it suppresses the mechanism's best case. So this is honesty AND capability.
+## THE THESIS: no voice for anti-value in the status quo; voice in Core v0 (central is blind to harm)
+This is not a modeling detail — it is the mechanism, and it is literature-backed (elite misperception / salience
+bias: the planner's channels are biased toward the visible and supportive; opponents have no channel in the status
+quo). Formalize it with a **support/harm decomposition** of true value (mean scale, both ≥0):
+```
+S_j = S_j⁺ − H_j          S_j⁺ = mean of positive valuations (support)
+                          H_j  = mean intensity of opposition (harm)
+```
+**Central is blind to harm** — its harm-detection coefficient is ≈0:
+```
+M^C_j = a + b·S_j⁺ + w·(v_{p,j} − S_j⁺) − b_H^C·H_j + η_j ,   b_H^C ≈ 0
+```
+so the central **overvalues harmful projects** (it does not subtract the harm). **Distributed has (attenuated)
+voice** — from the report rule, its conditional expectation is
+```
+E[M^D_j | u] = S_j⁺ − (1−β)·H_j
+```
+so it registers harm at weight `(1−β)` while the central registers it at weight `b_H^C ≈ 0`. Distributed beats
+central on harm detection whenever `(1−β) > b_H^C`, which — if the central is near-blind — holds for **any β<1**:
+*some* voice beats *no* voice. The parity boundary moves strongly toward "distributed wins" as harm prevalence/
+intensity `H_j` rises and central harm-blindness deepens. This is where an impressive result emerges **legitimately**.
+
+**Capability guardrail (do not gerrymander):** do NOT hardcode `b_H^C = 0`. Give it `D_F = [0, b_H^max]` and an
+`R_α` concentrated **near zero but not exactly zero** ("near-blind", per the evidence — not "provably zero"). The
+"distributed wins" result must survive as robust under merely-modest blindness, not be manufactured by a hardcoded
+zero. If the central actually has decent harm detection, the boundary moves and we report it.
+
+**Identification bonus:** the central now has three separately-varying regressors — `S_j⁺` (support), `v_{p,j}`
+(projection), `H_j` (harm) — a project can carry high support AND high opposition (controversial), so `H_j` varies
+independently of `S_j⁺`. This helps identify `(b, w, b_H^C)` and names a cleaner bridge measurement: elicit
+**support and opposition separately**, not net value (a "rate + guess others" instrument can do this).
 
 ## Proposed upgrade (integrate into the v5 model contract)
 - **F_j with first-class anti-value:** replace the symmetric Normal with a support/indifference/opposition mixture,
