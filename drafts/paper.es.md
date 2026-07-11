@@ -141,9 +141,9 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    atacada sistemáticamente: cuarenta y tres resúmenes de ataque anclados en las
    literaturas de ciencia política, economía y derecho, cada uno respondido
    por una defensa emparejada y resuelto bajo una regla explícita de
-   integrar-o-acotar, con las resoluciones propagadas a través del corpus (las
-   primeras cuatro rondas por completo; la propagación de las D037–D040 de la
-   ronda de revisión del manuscrito rastreada) y el registro completo de revisión
+   integrar-o-acotar, con las resoluciones propagadas a través del corpus (todas
+   salvo las D037–D040 de la ronda de revisión del manuscrito, cuya propagación al
+   corpus está rastreada) y el registro completo de revisión
    público por construcción. El bucle es una
    autocrítica estructurada, no validación externa, y así lo decimos; lo proponemos, junto con su regla de terminación y a la espera de validación externa independiente, como una propuesta metodológica preliminar para la investigación en diseño institucional.
 
@@ -1154,9 +1154,9 @@ de criterio, con citas ancladas a líneas dentro del corpus) → **resolución**
 documento aceptado que o bien integra un mecanismo o bien acota el riesgo) →
 **propagación** (las restricciones de la resolución enhebradas a través de cada
 documento de arquitectura afectado). El bucle corrió cinco rondas, todas
-resueltas; las primeras cuatro rondas están plenamente propagadas a través del
-corpus, y las cuatro defensas pareadas de la ronda de revisión del manuscrito
-(D037–D040) portan resoluciones aceptadas cuya propagación restante al corpus está
+resueltas; toda resolución está propagada a través del corpus salvo las cuatro
+defensas pareadas de la ronda de revisión del manuscrito (D037–D040), que portan
+resoluciones aceptadas cuya propagación restante al corpus está
 rastreada en el roadmap de remediación. La primera ronda: dieciocho ataques a los
 mecanismos de la arquitectura (manipulación de métricas, captura del
 fiscalizador, manipulación de desembolsos, colusión, control de partes
@@ -1623,5 +1623,5 @@ código de simulación y tablas completas de resultados
 auditoría ([audit-evidence-base](../research/audit-evidence-base.md)), el corpus de la arquitectura
 (`docs/`, `knowledge/`), y el registro adversarial completo (`attacks/`,
 `defenses/`, resoluciones aceptadas `docs/67`–`docs/113`; los cuarenta y tres
-ataques resueltos y propagados —las primeras cuatro rondas por completo, la
-propagación de las D037–D040 de la ronda de revisión del manuscrito rastreada).*
+ataques resueltos y propagados, salvo las D037–D040 de la ronda de revisión del
+manuscrito, cuya propagación al corpus está rastreada).*

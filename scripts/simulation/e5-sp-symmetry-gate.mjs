@@ -160,7 +160,7 @@ console.log("Primary domain: baseline, lambda in {.1,.2,.3}, rho in {0,.5}, h in
 console.log("  [C1] cells with mean Delta>0:  "+P1.posCells+"/18   (need >=15)      -> "+(c1?"PASS":"FAIL"));
 console.log("  [C2] pooled median Delta:      "+median(P1.Delta).toFixed(3)+"        (need >=0.05)    -> "+(c2?"PASS":"FAIL"));
 console.log("  [C3] pooled 95% lower bound:   "+b1.lo.toFixed(3)+"        (need >0)        -> "+(c3?"PASS":"FAIL"));
-console.log("  [C4] stress-regime median Delta: "+median(A1.Delta).toFixed(3)+"      (need >=0)       -> "+(c4?"PASS":"FAIL"));
+console.log("  [C4] matched-budget low-info stress median Delta: "+median(A1.Delta).toFixed(3)+"   (need >=0)       -> "+(c4?"PASS":"FAIL"));
 console.log("  ----------------------------------------------------------------");
 console.log("  VERDICT: "+(GO?"*** GO ***  (distributed advantage clears the 0.05 rebuild gate -> rebuild worth it)":"*** NO-GO ***  (positive in all 18 cells but small: does NOT clear the pre-registered 0.05 rebuild gate -> architecture/mechanism paper, path B; the mechanism direction is supported)"));
 console.log("  Negative control (lambda=0) pooled median Delta: "+ncMed.toFixed(3)+(ncFlag?"  !! >0.05 -> PAUSE: hidden asymmetry suspected":"  (<=0.05, ok)"));

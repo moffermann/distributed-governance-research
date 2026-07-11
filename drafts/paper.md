@@ -130,8 +130,8 @@ current institution solves the same problem, not against an ideal — blocking t
    systematically: forty-three attack briefs grounded in the political-science,
    economics, and law literatures, each answered by a paired defense and
    resolved under an explicit integrate-or-bound rule, with resolutions
-   propagated through the corpus (the first four rounds fully; the
-   manuscript-review round's D037–D040 propagation tracked) and the full review
+   propagated through the corpus (all except the manuscript-review round's
+   D037–D040, whose corpus propagation is tracked) and the full review
    record public by construction. The loop is a structured self-critique, not external
    validation, and we say so; we propose it, and its terminating rule—pending independent external validation—as a preliminary methodological proposal for institutional design research.
 
@@ -1067,8 +1067,8 @@ difference of judgment, with line-anchored citations into the corpus) →
 **resolution** (an accepted document that either integrates a mechanism or
 bounds the risk) → **propagation** (the resolution's constraints threaded
 through every affected architecture document). The loop ran five rounds, all
-resolved; the first four rounds are fully propagated through the corpus, and the
-manuscript-review round's four paired defenses (D037–D040) carry accepted
+resolved; every resolution is propagated through the corpus except the
+manuscript-review round's four paired defenses (D037–D040), which carry accepted
 resolutions whose remaining corpus propagation is tracked in the remediation
 roadmap. The first round: eighteen attacks on
 the architecture's mechanisms (metric gaming, fiscalizer capture,
@@ -1533,5 +1533,5 @@ simulation code and full result tables
 ([audit-evidence-base](../research/audit-evidence-base.md)), the architecture corpus (`docs/`,
 `knowledge/`), and the complete adversarial record (`attacks/`,
 `defenses/`, accepted resolutions `docs/67`–`docs/113`; all forty-three
-attacks resolved and propagated — the first four rounds fully, the
-manuscript-review round's D037–D040 propagation tracked).*
+attacks resolved and propagated, except the manuscript-review round's
+D037–D040, whose corpus propagation is tracked).*
