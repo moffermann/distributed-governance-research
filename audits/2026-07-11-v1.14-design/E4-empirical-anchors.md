@@ -36,25 +36,30 @@ constituent opinion show *"a strong and strikingly linear relationship"* with re
   the bias by ~2×. Two honest consequences: the central's error has a reducible (format) component and an
   irreducible (projection/information) component.
 
-## 4. The projection weight `w` is CONTEXT-DEPENDENT — range it, don't fix it (anti "forced ugliness")
-- **Dias–Lucas–Sheffer:** projection is real and directional — politicians **start from constituents near their
-  own position** ("self-similar constituents are more accessible"), reinforcing bias for right-leaning,
-  counterbalancing for left-leaning. So `w > 0` and *signed by the planner's own position vs the mean*.
+## 4. The projection weight `w` is real, LARGE, and DIRECTIONAL — sweep it (anti "forced ugliness")
 - **Gagnon-Bartsch et al. (interpersonal projection experiment):** a formal model where the prediction of others
-  loads on **own state `s_i`** iff the projection parameter α>0; **fitted α ≈ 0.01** in their task (i.e. **near
-  zero** — predictions matched actual WTW, no large systematic error).
-→ **E4 mapping:** the projection weight `w` ranges from **≈0 (Gagnon-Bartsch's clean task)** to **substantial
-  (political-opinion estimation)**. This is *measured evidence* that E4 must **sweep `w`** across a plausible
-  range and report the surface — NOT assume a "horrific" central. It directly supports the parity-surface frame:
-  where the central is near-unbiased (`w≈0`, good proxies) it wins/ties; where projection + biased information
-  bite, the distributed arm wins. The location of that boundary is the object.
+  W(m, s_j | s_i, i) loads on **own state `s_i`** iff the projection parameter α>0 (and is constant in `s_i` when
+  α=0). Reduced-form magnitudes are **large and directional**: "fresh" predictors **over-estimated** tired
+  workers' willingness-to-work by **~50%**; "tired" predictors **under-estimated** fresh workers' by **~21%**
+  (the cleaner measure); a within-subject flip (Group I) lowered guesses by ~19% (4.22 tasks, p<.001).
+  Interpersonal projection (~50%) **exceeds** the intrapersonal analog (~30%). They decompose the error into
+  **projection ≈ task-uncertainty** (roughly equal halves). *(Correction: the `α=0.01` in the paper is the cost
+  curvature, not the projection weight — projection here is substantial, not near-zero.)*
+- **Dias–Lucas–Sheffer:** projection is directional — politicians **start from constituents near their own
+  position** ("self-similar constituents more accessible"), reinforcing conservative bias for right-leaning,
+  counterbalancing for left-leaning. So `w > 0`, **signed by the planner's own position vs the population mean**.
+→ **E4 mapping:** projection is **materially non-zero, directional, and context-varying in magnitude** (≈20–50%
+  in these tasks). E4 should **sweep `w` over a plausible, sizable range** and report the surface — the honesty is
+  in the *range and direction*, not in pretending the central is either perfect or horrific. Where good proxies +
+  small `w` → central ties/wins; where projection + biased information bite → the distributed arm wins; **the
+  boundary is the object.**
 
 ## 5. Parameter-registry status after this harvest
 | Param | Was | Now | Source / caveat |
 |---|---|---|---|
 | central bias form (`a + b·true`) | ASSUMED | **PROXY-ANCHORED (structural)** | Broockman-Skovron linear-intercept-shift |
 | central bias magnitude `a` | ASSUMED | **PROXY-ANCHORED (range)** | B-S ~7–36 pts; D-L-S ~0.5/scale — transport to project-value UNVERIFIED |
-| projection weight `w` | ASSUMED | **PROXY-ANCHORED (range ≈0 → substantial)** | Gagnon-Bartsch α≈0.01; D-L-S directional projection |
+| projection weight `w` | ASSUMED | **PROXY-ANCHORED (sizable, directional; ≈20–50% in-task)** | Gagnon-Bartsch reduced-form ~21–50%; D-L-S directional projection |
 | perceived vs actual dispersion σ | ASSUMED | **PARTIALLY ANCHORED** | D-L-S / Dias 2025: format changes it ~2×; value-context UNVERIFIED |
 | citizen own-value distribution F | ASSUMED | still ASSUMED / app-measurable | the (optional) gamified app could elicit F's spread for project-value |
 
