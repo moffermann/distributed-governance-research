@@ -24,9 +24,11 @@ planner's own position):
 M_j^C  =  a  +  b · S_j^A  +  w · (v_p − S̄)  +  η_j
 ```
 - **`b` (slope, responsiveness):** the central tracks true value (b>0, near-linear). Real planners are *responsive*.
-- **`a` (intercept shift, systematic bias):** a directional bias that does **not** average out (the "novel force":
-  systematic, not random error). *Anchor:* B-S find overestimation of conservative support of **~7–36 pts** on a
-  0–100 scale (often >10, sometimes >20); D-L-S find **0.67** points on the ideology scale (point-estimate task).
+- **`a` (intercept shift, systematic bias):** a directional bias that does **not** average out (systematic, not
+  random error — **not novel in itself**; false-consensus / elite–mass misperception is well established). *Source-
+  domain magnitudes (political opinion, NOT project value):* B-S find overestimation of conservative support of
+  **~7–36 pts** on a 0–100 scale (often >10, sometimes >20); D-L-S find **0.67** points on the ideology scale
+  (point-estimate task). **Transport to project value is unverified — these size the source, not the target.**
 - **`w · (v_p − S̄)` (projection):** the planner's estimate loads on **its own value `v_p` relative to the
   population mean `S̄`** — signed by where the planner sits (Gagnon-Bartsch's model: prediction of others is
   non-constant in own state iff projection `w>0`; D-L-S: planners begin from self-similar constituents). *Anchor:*
@@ -45,8 +47,13 @@ Coverage-routed: aggregates actual citizen reports of `u_ij` (with adverse voice
 noise). It reads **F** more directly than the central's proxy `M_j^C`, at the cost of `β`-bias and sampling
 variance. (This is the credit-vs-coverage mechanism, now with `M_j^C` given an evidence-based form.)
 
-## 4. Empirical anchors (parameters move ASSUMED → PROXY-ANCHORED)
-| Param | Anchor (value / range) | Source |
+## 4. Empirical anchors (parameters are PROXY-INFORMED, **not** anchored — source ≠ target)
+> The literature gives **source-domain** coefficients (political opinion) on **different outcomes/scales**. They are
+> **not** structural coefficients of the target value-of-project equation. Target `(a, w, b)` are therefore
+> **ASSUMED, source-informed**, and enter E4 only through a declared **transport-sensitivity set** (see
+> `audits/2026-07-11-v1.14-design/THREE-TIER-VARIABLE-DOMAINS.md` and DESIGN_SKETCH_v4 §4), never as point anchors.
+
+| Param | Source-domain value / range | Source |
 |---|---|---|
 | central form `a + b·S` | linear + systematic intercept shift | Broockman-Skovron 2018 |
 | bias `a` | ~7–36 pts (0–100 scale); ~0.67 (ideology scale) | B-S 2018; Dias-Lucas-Sheffer |
@@ -58,9 +65,11 @@ variance. (This is the credit-vs-coverage mechanism, now with `M_j^C` given an e
 ## 5. The parity condition (sketch → E4's object)
 Selecting on `M_j^C` vs `M_j^D`, the distributed arm delivers more true value when the central's error (bias `a` +
 projection `w·(v_p−S̄)`) outweighs the distributed's degradation (voice bias `β`, sampling). The **boundary**
-`{θ : E[Δ_O | θ] = 0}` — with `θ = (a, w, b, β, σ, …)` swept over the anchored ranges — is E4's primary object:
-central wins on one side, distributed on the other. Honest headline: **which side reality falls on, and how large
-each region is** — not a multiplier. (Extends the E4-v4 parity law `β = 1−η` to the credit-vs-coverage form.)
+`{θ : m(θ) = 0}` — with `θ = (a, w, b, β, σ, …)` swept over the **declared transport-sensitivity sets** (not point
+anchors) — is E4's primary object: central wins on one side, distributed on the other. Honest headline: **which side
+reality falls on, and how large each region is** — not a multiplier. (The old E4-v4 harm-weight law `β = 1−η` does
+**not** generalize to this form and is **retired**; the replacement is a separate joint-normal fixed-threshold
+benchmark — DESIGN_SKETCH_v4 §5. The legacy nested-harm result lives only in its own legacy test.)
 
 ## 6. The meta-prediction instrument (Prelec)
 The "rate + guess others" method (Prelec, Seung & McCoy 2017): each person gives a vote and a **meta-prediction**

@@ -55,12 +55,17 @@ constituent opinion show *"a strong and strikingly linear relationship"* with re
   boundary is the object.**
 
 ## 5. Parameter-registry status after this harvest
+> **Correction (2026-07-11, per Codex v3 critique):** the source magnitudes are *different estimands on different
+> scales* (political opinion), **not** structural coefficients of the target value-of-project equation. So target
+> parameters are **PROXY-INFORMED (source-informed ASSUMED)**, entering only via a declared transport-sensitivity
+> set — **not** "anchored". "Anchored" is retired here; see `THREE-TIER-VARIABLE-DOMAINS.md`.
+
 | Param | Was | Now | Source / caveat |
 |---|---|---|---|
-| central bias form (`a + b·true`) | ASSUMED | **PROXY-ANCHORED (structural)** | Broockman-Skovron linear-intercept-shift |
-| central bias magnitude `a` | ASSUMED | **PROXY-ANCHORED (range)** | B-S ~7–36 pts; D-L-S ~0.5/scale — transport to project-value UNVERIFIED |
-| projection weight `w` | ASSUMED | **PROXY-ANCHORED (sizable, directional; ≈20–50% in-task)** | Gagnon-Bartsch reduced-form ~21–50%; D-L-S directional projection |
-| perceived vs actual dispersion σ | ASSUMED | **PARTIALLY ANCHORED** | D-L-S / Dias 2025: format changes it ~2×; value-context UNVERIFIED |
+| central bias form (`a + b·true`) | ASSUMED | **PROXY-INFORMED (structural form)** | Broockman-Skovron linear-intercept-shift; form transports more safely than magnitude |
+| central bias magnitude `a` | ASSUMED | **PROXY-INFORMED (source range only)** | B-S ~7–36 pts; D-L-S ~0.5/scale — **target magnitude UNIDENTIFIED**; transport-sensitivity only |
+| projection weight `w` | ASSUMED | **PROXY-INFORMED (directional; source ≈20–50% in-task)** | Gagnon-Bartsch reduced-form ~21–50%; D-L-S directional — target size UNIDENTIFIED |
+| perceived vs actual dispersion σ | ASSUMED | **PROXY-INFORMED (direction only)** | D-L-S / Dias 2025: format changes it ~2×; value-context UNVERIFIED |
 | citizen own-value distribution F | ASSUMED | still ASSUMED / app-measurable | the (optional) gamified app could elicit F's spread for project-value |
 
 ## 6. Honest limits
