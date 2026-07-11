@@ -1,6 +1,15 @@
 # Publication-readiness roadmap (from the 2026-07-10 audit + symmetry-gate outcome)
 
-> **⚠️ STATUS 2026-07-10 (single current state): publication-readiness remediation in progress.** Successive
+> **✅ STATUS 2026-07-11: MANUSCRIPT-READY.** The round-11 independent audit (`audits/2026-07-10-round11/`)
+> returned **MANUSCRIPT-READY — only author-gated deposit-time actions remain** (no non-author-gated blockers).
+> Rounds 3–11 were run and every finding remediated (see each round's `SUMMARY.md`). The four remaining items
+> are AUTHOR actions at deposit time only: (1) edit the live Zenodo v1.12 metadata directly (title/counts/
+> license/relation/Path-B note — no new DOI), (2) declare the CC-BY/MIT split in `.zenodo.json` machine
+> metadata at deposit, (3) rewrite the v1.13 reviewer packets + cover (current set quarantined), (4) render,
+> deposit, and verify v1.13. The manuscript, the confirmatory symmetry gate, the corpus, and all local
+> metadata are internally consistent and contract-conformant. History below.
+>
+> **⚠️ (superseded) STATUS 2026-07-10: publication-readiness remediation in progress.** Successive
 > independent audit rounds are logged under `audits/2026-07-10-round2/` and successively numbered folders;
 > **the highest-numbered round is authoritative**, and its remaining fix-now items are being cleared. Decisions resolved: **T3.2** — v1.12 /
 > 21252911 is the live latest deposit, working draft is **v1.13**. **T3.1 — FINAL: full openness, CC BY 4.0
