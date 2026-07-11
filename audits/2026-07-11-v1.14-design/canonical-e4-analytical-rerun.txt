@@ -1,0 +1,30 @@
+E4 ANALYTICAL BACKBONE — closed forms verified against the simulation
+
+PROP 1: parity law beta* = 1 - gamma. Analytical estimators (noise-free, sample-free).
+  advantage distributed/central; parity (~1.00) must fall on the anti-diagonal gamma+beta=1:
+
+  g\b  |  b=0.00  b=0.25  b=0.50  b=0.75  b=1.00
+  -----+----------------------------------------
+  0.00 |    2.76    1.67    1.27    1.10    1.00
+  0.25 |    2.50    1.51    1.15    1.00   0.91
+  0.50 |    2.17    1.31    1.00   0.87   0.79
+  0.75 |    1.65    1.00   0.76   0.66   0.60
+  1.00 |    1.00   0.60   0.46   0.40   0.36
+
+  => parity sits exactly where gamma+beta=1 (each anti-diagonal cell ~1.00), confirming beta*=1-gamma.
+     (With sim noise/sampling added, the (1,0) corner dips to ~0.89: the variance tie-breaker,
+      central proxy-noise vs distributed zero revelation-noise — predicted by bias-variance.)
+
+PROP 2: capture threshold rho(C) = (k_d*C + p_d*F)/(k_c + p_c*F).  [k_c=.3 p_c=.1 k_d=.3 p_d~1 F=3]
+   C=   3: lambda*_central=0.20  lambda*_distributed=1.27  rho=6.3x
+   C= 5.5: lambda*_central=0.11  lambda*_distributed=0.83  rho=7.6x
+   C=  10: lambda*_central=0.06  lambda*_distributed=0.59  rho=9.8x
+   => central threshold ~0.10-0.20 (matches sim's net-harmful onset); distributed ~0.6-1.3;
+      rho rises with C (6.3x -> 9.8x); distributed threshold floored by k_d as C->0.
+
+PROP 3: detection floor  m*q = -ln(1-p).  Reproduces the floor table:
+   beat central p=0.10 : m*q = 0.11
+   p=0.50              : m*q = 0.69
+   strong p=0.90       : m*q = 2.30
+   near-viral p=0.99   : m*q = 4.61
+   => only the product m*q matters (invariant to few-motivated vs many-informed split).
