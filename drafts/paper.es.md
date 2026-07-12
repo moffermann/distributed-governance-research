@@ -12,7 +12,7 @@ Los recursos públicos se asignan y controlan en instituciones que fusionan tres
 
 Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado consecuente es pública.
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios mapea luego dónde gana cada institución: un central competente y consciente del daño empata (el régimen de casi-paridad pre-registrado), mientras que un central realistamente miope al daño en la cola larga de baja visibilidad pierde ante la cobertura —una reconciliación, no una contradicción, del gate conservador, con todas las magnitudes reportadas como puntos de referencia declarados y motivados por fuentes, no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios mapea luego dónde gana cada institución. Un central competente y consciente del daño empata al brazo distribuido —el régimen de casi-paridad pre-registrado. Un central realistamente miope al daño en la cola larga de baja visibilidad pierde ante la selección basada en cobertura. Esto reconcilia el gate conservador en lugar de contradecirlo, y todas las magnitudes se reportan como puntos de referencia declarados y motivados por fuentes, no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
 Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las unidades de la simulación no están calibradas, son de equilibrio parcial y no identifican efectos de entrega; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
@@ -621,101 +621,27 @@ Las contribuciones que cargan el peso son la arquitectura, la dirección del
 mecanismo y el mapa de robustez comparativa v1.14 entre regímenes declarados sin
 miopía y con miopía al daño, no un multiplicador puntual ni impacto calibrado.
 
-**El gate simétrico de crédito-versus-cobertura (métodos y resultado).** Como esta
-es la única computación confirmatoria del artículo, su diseño se enuncia aquí por
-completo y no solo por referencia. Cada mundo contiene K = 500 proyectos
-candidatos; para cada uno se consideran N = 5000 participantes potenciales, cada
-uno interesado con una probabilidad específica del proyecto, de modo que el alcance
-de interesados es a lo sumo N y endógeno. Ambos brazos ven entonces el mismo pool de candidatos, los
-mismos costos exactos, la misma verdad net[j] = S[j] − h·cost[j], la entrega en
-**paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada uno
-financia un conjunto **voraz** bajo un presupuesto de un tercio del costo total de
-los proyectos, es elegible para financiar un proyecto solo donde *su propia*
-estimación ruidosa de net es positiva (sin gate de oráculo), y su valor entregado se
-puntúa sobre el net *verdadero* de los proyectos. Los brazos son simétricos salvo
-por el mecanismo de cobertura y sus contrapartes igualadas. *Distribuido (cobertura
-endógena):* cada ciudadano interesado reporta de forma independiente con
-probabilidad p si su valor v ≥ 0 y p·(1 − β) si v < 0 (sesgo de voz adverso), dando
-ĥS_D = Σreportes / p, ordenado por net estimado por costo. *Central (lector de valor
-competente):* un presupuesto de tasación ajustado al total *esperado* de reportes del
-brazo distribuido en ese mundo, repartido **de manera uniforme** entre proyectos
-como un ancho de banda fijo por proyecto redondeado m_C = round(reportes esperados /
-K) (de modo que los totales de tasación de ambos brazos son iguales en esperanza
-salvo ese redondeo); por proyecto muestrea m_C ciudadanos
-interesados, observa v + Normal(0, τ), y forma su propio ĥNet_C ruidoso =
-alcance·media(observado) − h·cost. Ordena por score = (1 − λ)·z(ĥNet_C/cost) +
-λ·z(P/cost) —su **propia estimación ruidosa**, nunca el net verdadero— donde P es el
-crédito político reclamable (la lógica electoral de reclamo de crédito y
-trazabilidad por la cual se favorecen los beneficios visibles y atribuibles sobre
-los difusos; Mayhew 1974; Arnold 1990) y λ es la presión de crédito acotada (una
-presión *postulada* cuya magnitud en el mundo real debe medirse, no suponerse). El
-crédito mueve el *orden*, nunca la elegibilidad (sin planificador que destruya valor
-a sabiendas). Las asimetrías legítimas son por tanto solo estas: los reportes
-distribuidos se auto-enrutan hacia los proyectos que a los ciudadanos les importan
-mientras los interesados negativos participan menos, y la tasación central se
-reparte de manera uniforme mientras su orden carga presión de crédito —todo lo demás
-es compartido. El estimando es **Δ = (D − C)/O** por mundo, donde D, C, O son el net
-verdadero entregado por los brazos distribuido, central y voraz de información
-completa, y O es un nivel de referencia, no un óptimo. La grilla congelada
-barre λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 un control negativo), un parámetro de
-correlación latente ρ ∈ {0, 0.5, 1} (corr(S, P) realizada ≈ 0.00, 0.30, 0.82),
-y h ∈ {1.5, 2.5, 4} sobre 100 mundos sembrados, en un régimen de
-observación base (p = .35, β = .30, τ = .5) y un régimen de estrés de baja
-información con presupuesto igualado (p = .15, β = .60, τ = 1.0). La **regla de
-decisión pre-registrada** —congelada antes de correr y diseñada por el auditor
-independiente para ser adversarial— exigía, para un GO en reconstruir el motor
-cuantitativo, al menos 15 de las 18 celdas primarias con Δ medio > 0, una **mediana
-agrupada Δ ≥ 0.05**, un límite inferior de bootstrap > 0, y mediana Δ ≥ 0 bajo el
-régimen de estrés, más un guardia para pausar si el propio control λ = 0 excedía
-0.05. El resultado fue **NO-GO**: la ventaja fue positiva en las 18
-celdas primarias, pero la **mediana agrupada Δ = 0.025** pre-registrada quedó por
-debajo del umbral de rebuild de 0.05; el control negativo λ = 0 se ubicó en
-≈ 0.016, dentro del guardia de pausa (ninguna asimetría oculta señalada).
-Una estimación **post-hoc** de ratio-of-sums por conglomerado-de-mundos fue
-Δ = 0.026 [0.023, 0.029] (incertidumbre Monte-Carlo sobre el proceso generador
-simulado, reportada por separado de la mediana). La ventaja crece con la presión de
-crédito λ y cae a medida que el crédito se alinea con el valor —el mecanismo de
-crédito-versus-cobertura— pero es pequeña, razón por la cual el multiplicador
-calibrado se retira y el artículo se apoya en la arquitectura y la dirección del
-mecanismo, ahora afinada por el mapa de robustez a continuación.
-
-**Una extensión de miopía realista (v1.14): un mapa de robustez de cuatro
-escenarios.** El gate pre-registrado anterior dota al brazo central de una tasación
-competente y *consciente del daño*. Una extensión v1.14 pregunta qué ocurre cuando el
-central es realistamente **miope al daño en la cola larga de baja visibilidad** —
-donde la fiscalización rutinaria, la oposición y la atención de auditoría alcanzan
-sobre todo a los pocos proyectos visibles y disputados. Separa el valor real en apoyo
-y daño, S = S⁺ − H, y le da al central un término de daño gobernado por saliencia,
-M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, cuya detección de daño s(V) crece con
-la visibilidad del proyecto; el brazo distribuido registra el daño en toda la
-distribución. Con el presupuesto igualado y la entrega puntuada sobre el valor real,
-cuatro escenarios declarados (más un contraste diagnóstico) nivelan la cancha para
-ambas instituciones, reportados como la fracción con signo del benchmark voraz de
-información completa, paridad en cero (`npm run e4:scenarios`). En el **endpoint
-declarado favorable al central** —baja participación y un central competente y
-consciente del daño— *gana el central*, entregando ≈ 98% del benchmark frente a ≈ 68%
-del brazo distribuido. Bajo la referencia **probable**, el brazo distribuido entrega
-≈ 91% y el central ≈ 45%. En el caso **favorable al distribuido**, el central miope
-financia proyectos de daño neto y entrega valor *negativo*, mientras el brazo
-distribuido entrega ≈ 96%. Un contraste diagnóstico que apaga la miopía al daño
-*sola* (solo las dos coordenadas del gate de daño) explica cerca del 40% del
-movimiento secuencial desde la brecha probable; el paso siguiente hacia un **paquete
-sin-miopía** plenamente consciente del daño y competente devuelve los brazos a la
-casi-paridad —el mismo régimen que el Δ ≈ 0.025 del gate pre-registrado, que por
-construcción dotó al central de tasación consciente del daño. Los dos resultados son
-por tanto el mismo fenómeno bajo supuestos opuestos, no una contradicción: si el
-central ve el daño la ventaja colapsa a la casi-paridad del gate; si es realistamente
-miope, el brazo de cobertura se adelanta. Un benchmark estilizado normal-conjunto de
-umbral fijo (`research/e4-parity-theorem.md`) ubica la frontera de paridad en la
-igualdad de las razones señal-a-ruido de covarianza de los dos selectores, y un
-sendero ceteris-paribus desde el escenario probable hacia el favorable al central
-cruza la paridad a mitad del segmento declarado. Estas magnitudes son **puntos de
-referencia y estrés declarados y motivados por fuentes, no bandas calibradas al
-dominio objetivo** (los intervalos cubren solo la variabilidad Monte-Carlo interna, y
-la fuerza de la miopía al daño es el supuesto de mayor peso y menos anclado
-empíricamente); el objeto honesto es dónde gana cada institución y cuánto depende la
-respuesta de ese supuesto, no un número único. Los ahorros de costo administrativo y
-la corrupción/filtraciones son canales separados y aditivos, excluidos aquí a propósito.
+**Una extensión de miopía realista (v1.14): dónde gana cada institución.** Esta
+extensión mapea *dónde* gana cada institución en lugar de afirmar un único número
+calibrado; toda magnitud en ella es un **punto de referencia declarado y motivado por
+fuentes, no un efecto calibrado**, y sus intervalos cubren solo la variabilidad
+Monte-Carlo interna. Bajo el escenario **probable** —un central que lee el valor
+visible y portador de crédito pero se *supone* miope al daño concentrado en la cola
+larga de baja visibilidad— la selección distribuida basada en cobertura entrega cerca
+del **91%** del benchmark voraz de información completa frente al **~45%** del central
+(una **brecha de +46,6 puntos**) —pero esa brecha se apoya en el supuesto de miopía al
+daño, la perilla **de mayor peso y menos anclada empíricamente** del modelo y el punto
+exacto donde muerde una brecha de transporte opinión-política→valor-de-proyecto no
+propagada, de modo que se lee como un punto de referencia declarado, no un pronóstico
+calibrado. Solo las coordenadas de miopía al daño explican cerca del **40%** de esa
+brecha. Haz al central competente y consciente del daño y los brazos **empatan** —cerca
+de 91% frente a 85%, nuestro gate pre-registrado de casi-paridad (mediana Δ ≈ 0.025, el
+régimen NO-GO); en el propio **endpoint declarado favorable al central, gana el
+central** rotundamente, cerca de 98% frente a 68%. Un sendero ceteris-paribus desde el
+probable hacia el favorable al central cruza la paridad en cerca de **t ≈ 0.57 del
+segmento declarado**, de modo que la cancha está genuinamente nivelada y no inclinada
+por supuesto. El mapa completo de cuatro escenarios, el contraste diagnóstico de miopía
+al daño, el teorema de benchmark y los cuatro límites están en el **Apéndice E4**.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
@@ -1560,7 +1486,127 @@ bordes están especificados, monitoreados y adjuntos a objetos nombrados —que 
 sostenemos, cómo se ve cuando el diseño institucional se trata como una
 disciplina de ingeniería antes que como una ideológica.
 
-## Apéndice: objetivos de calibración de E4
+## Apéndice E4: el gate simétrico y el mapa de robustez de cuatro escenarios
+
+Este apéndice ofrece el diseño completo del gate simétrico pre-registrado (resumido
+como "Estatus cuantitativo" en §6) y el mapa de robustez de cuatro escenarios v1.14
+completo (destacado en §6): la tabla de escenarios, la descomposición de la miopía al
+daño, la frontera, el teorema de benchmark y los cuatro límites.
+
+### El gate simétrico de crédito-versus-cobertura (métodos completos)
+
+Como esta es la única computación confirmatoria del artículo, su diseño se enuncia aquí
+por completo y no solo por referencia. Cada mundo contiene K = 500 proyectos
+candidatos; para cada uno se consideran N = 5000 participantes potenciales, cada
+uno interesado con una probabilidad específica del proyecto, de modo que el alcance
+de interesados es a lo sumo N y endógeno. Ambos brazos ven entonces el mismo pool de candidatos, los
+mismos costos exactos, la misma verdad net[j] = S[j] − h·cost[j], la entrega en
+**paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada uno
+financia un conjunto **voraz** bajo un presupuesto de un tercio del costo total de
+los proyectos, es elegible para financiar un proyecto solo donde *su propia*
+estimación ruidosa de net es positiva (sin gate de oráculo), y su valor entregado se
+puntúa sobre el net *verdadero* de los proyectos. Los brazos son simétricos salvo
+por el mecanismo de cobertura y sus contrapartes igualadas. *Distribuido (cobertura
+endógena):* cada ciudadano interesado reporta de forma independiente con
+probabilidad p si su valor v ≥ 0 y p·(1 − β) si v < 0 (sesgo de voz adverso), dando
+ĥS_D = Σreportes / p, ordenado por net estimado por costo. *Central (lector de valor
+competente):* un presupuesto de tasación ajustado al total *esperado* de reportes del
+brazo distribuido en ese mundo, repartido **de manera uniforme** entre proyectos
+como un ancho de banda fijo por proyecto redondeado m_C = round(reportes esperados /
+K) (de modo que los totales de tasación de ambos brazos son iguales en esperanza
+salvo ese redondeo); por proyecto muestrea m_C ciudadanos
+interesados, observa v + Normal(0, τ), y forma su propio ĥNet_C ruidoso =
+alcance·media(observado) − h·cost. Ordena por score = (1 − λ)·z(ĥNet_C/cost) +
+λ·z(P/cost) —su **propia estimación ruidosa**, nunca el net verdadero— donde P es el
+crédito político reclamable (la lógica electoral de reclamo de crédito y
+trazabilidad por la cual se favorecen los beneficios visibles y atribuibles sobre
+los difusos; Mayhew 1974; Arnold 1990) y λ es la presión de crédito acotada (una
+presión *postulada* cuya magnitud en el mundo real debe medirse, no suponerse). El
+crédito mueve el *orden*, nunca la elegibilidad (sin planificador que destruya valor
+a sabiendas). Las asimetrías legítimas son por tanto solo estas: los reportes
+distribuidos se auto-enrutan hacia los proyectos que a los ciudadanos les importan
+mientras los interesados negativos participan menos, y la tasación central se
+reparte de manera uniforme mientras su orden carga presión de crédito —todo lo demás
+es compartido. El estimando es **Δ = (D − C)/O** por mundo, donde D, C, O son el net
+verdadero entregado por los brazos distribuido, central y voraz de información
+completa, y O es un nivel de referencia, no un óptimo. La grilla congelada
+barre λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 un control negativo), un parámetro de
+correlación latente ρ ∈ {0, 0.5, 1} (corr(S, P) realizada ≈ 0.00, 0.30, 0.82),
+y h ∈ {1.5, 2.5, 4} sobre 100 mundos sembrados, en un régimen de
+observación base (p = .35, β = .30, τ = .5) y un régimen de estrés de baja
+información con presupuesto igualado (p = .15, β = .60, τ = 1.0). La **regla de
+decisión pre-registrada** —congelada antes de correr y diseñada por el auditor
+independiente para ser adversarial— exigía, para un GO en reconstruir el motor
+cuantitativo, al menos 15 de las 18 celdas primarias con Δ medio > 0, una **mediana
+agrupada Δ ≥ 0.05**, un límite inferior de bootstrap > 0, y mediana Δ ≥ 0 bajo el
+régimen de estrés, más un guardia para pausar si el propio control λ = 0 excedía
+0.05. El resultado fue **NO-GO**: la ventaja fue positiva en las 18
+celdas primarias, pero la **mediana agrupada Δ = 0.025** pre-registrada quedó por
+debajo del umbral de rebuild de 0.05; el control negativo λ = 0 se ubicó en
+≈ 0.016, dentro del guardia de pausa (ninguna asimetría oculta señalada).
+Una estimación **post-hoc** de ratio-of-sums por conglomerado-de-mundos fue
+Δ = 0.026 [0.023, 0.029] (incertidumbre Monte-Carlo sobre el proceso generador
+simulado, reportada por separado de la mediana). La ventaja crece con la presión de
+crédito λ y cae a medida que el crédito se alinea con el valor —el mecanismo de
+crédito-versus-cobertura— pero es pequeña, razón por la cual el multiplicador
+calibrado se retira y el artículo se apoya en la arquitectura y la dirección del
+mecanismo, ahora afinada por el mapa de robustez a continuación.
+
+### El mapa de robustez de cuatro escenarios (v1.14)
+
+El gate pre-registrado anterior dota al brazo central de una tasación
+competente y *consciente del daño*. Una extensión v1.14 pregunta qué ocurre cuando el
+central es realistamente **miope al daño en la cola larga de baja visibilidad** —
+donde la fiscalización rutinaria, la oposición y la atención de auditoría alcanzan
+sobre todo a los pocos proyectos visibles y disputados. Separa el valor real en apoyo
+y daño, S = S⁺ − H, y le da al central un término de daño gobernado por saliencia,
+M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, cuya detección de daño s(V) crece con
+la visibilidad del proyecto; el brazo distribuido registra el daño en toda la
+distribución. Con el presupuesto igualado y la entrega puntuada sobre el valor real,
+cuatro escenarios declarados (más un contraste diagnóstico) nivelan la cancha para
+ambas instituciones, reportados como la fracción con signo del benchmark voraz de
+información completa, paridad en cero (`npm run e4:scenarios`).
+
+| escenario (supuestos) | m ± IC 95% | Core v0 | central | ganador |
+|---|---|---|---|---|
+| **Endpoint declarado plenamente favorable al central** — baja participación + central competente, consciente del daño y preciso (algunas perillas quedan fuera de las bandas esperables registradas) | **−29,5%** [−29,9, −29,1] | 68% | 98% | **central** |
+| **Paquete sin miopía** — probable + visión del daño + insesgado + preciso + sin crédito (NO es un aislamiento de la miopía) | **+6,1%** [5,8, 6,4] | 91% | 85% | ≈ paridad |
+| **Solo miopía al daño** (contraste diagnóstico, no un escenario) — probable, cambiando SOLO las dos coordenadas del gate de daño | **+30,4%** [29,9, 31,0] | 91% | 61% | Core v0 |
+| **Probable** — referencia motivada por fuentes | **+46,6%** [46,0, 47,4] | 91% | 45% | Core v0 |
+| **Caso favorable al distribuido** | **+199,8%** [197, 202] | 96% | −104% | Core v0 |
+
+En el **endpoint declarado favorable al central** —baja participación y un central
+competente y consciente del daño— *gana el central*, entregando ≈ 98% del benchmark
+frente a ≈ 68% del brazo distribuido. Bajo la referencia **probable**, el brazo
+distribuido entrega ≈ 91% y el central ≈ 45%. En el caso **favorable al distribuido**,
+el central miope financia proyectos de daño neto y entrega valor *negativo*, mientras
+el brazo distribuido entrega ≈ 96%. Un contraste diagnóstico que apaga la miopía al
+daño *sola* (solo las dos coordenadas del gate de daño) explica cerca del 40% del
+movimiento secuencial desde la brecha probable; el paso siguiente hacia un **paquete
+sin-miopía** plenamente consciente del daño y competente devuelve los brazos a la
+casi-paridad —el mismo régimen que el Δ ≈ 0.025 del gate pre-registrado, que por
+construcción dotó al central de tasación consciente del daño. Los dos resultados son
+por tanto el mismo fenómeno bajo supuestos opuestos, no una contradicción: si el
+central ve el daño la ventaja colapsa a la casi-paridad del gate; si es realistamente
+miope, el brazo de cobertura se adelanta. Un benchmark estilizado normal-conjunto de
+umbral fijo (`research/e4-parity-theorem.md`) ubica la frontera de paridad en la
+igualdad de las razones señal-a-ruido de covarianza de los dos selectores, y un
+sendero ceteris-paribus desde el escenario probable hacia el favorable al central
+cruza la paridad en t ≈ 0.57 del segmento declarado. Estas magnitudes son **puntos de
+referencia y estrés declarados y motivados por fuentes, no bandas calibradas al
+dominio objetivo** (los intervalos cubren solo la variabilidad Monte-Carlo interna, y
+la fuerza de la miopía al daño es el supuesto de mayor peso y menos anclado
+empíricamente); el objeto honesto es dónde gana cada institución y cuánto depende la
+respuesta de ese supuesto, no un número único. Los cuatro límites vigentes son: (i) la
+fuerza de la miopía al daño del central es la perilla de mayor peso y menos anclada
+empíricamente; (ii) los insumos del central cargan una brecha de transporte
+opinión-política→valor-de-proyecto no propagada; (iii) los intervalos cubren solo la
+variabilidad Monte-Carlo interna, no la incertidumbre del dominio objetivo; y (iv) los
+ahorros de costo administrativo y la corrupción/filtraciones son canales separados y
+aditivos, excluidos aquí a propósito. Los escenarios, la frontera y el teorema
+reproducibles están en `scripts/simulation/e4-v5/` y `research/e4-parity-theorem.md`.
+
+### Objetivos de calibración de E4
 
 Las magnitudes de E4-v4/v5 son internas al modelo; la tabla nombra, para cada
 parámetro, el dato real que *podría* informarlo —volviendo la frontera entre lo
