@@ -1529,7 +1529,7 @@ calibration.
 | λ threshold | central ≈ 0.10 | procurement rents / bribe depth | Olken 2007; WB Enterprise Surveys | calibratable |
 | penalty f | equal both sides | legal sanction scale | held equal (conservative) | scope choice |
 
-The v1.14 four-scenario map (§6) makes the same anchoring explicit for its harm-myopia model: the visibility long
+The v1.14 four-scenario map (above; headlined in §6) makes the same anchoring explicit for its harm-myopia model: the visibility long
 tail is source-motivated by heavy-tailed public procurement (Skuhrovec et al. 2013), participation by
 participatory-budgeting turnout, and the harm-detection gate by the agenda-setting/salience literature; the
 per-knob anchors and their strength are recorded in `research/e4-plausible-anchors.md`, with the reproducible

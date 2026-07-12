@@ -1487,7 +1487,7 @@ disciplina de ingeniería antes que como una ideológica.
 ## Apéndice E4: el gate simétrico y el mapa de robustez de cuatro escenarios
 
 Este apéndice ofrece el diseño completo del gate simétrico pre-registrado (resumido
-como "Estatus cuantitativo" en §6) y el mapa de robustez de cuatro escenarios v1.14
+como "Estado cuantitativo" en §6) y el mapa de robustez de cuatro escenarios v1.14
 completo (destacado en §6): la tabla de escenarios, la descomposición de la miopía al
 daño, la frontera, el teorema de benchmark y los cuatro límites.
 
@@ -1624,7 +1624,7 @@ requiere un puente de constructo explícito**, no una calibración en un paso.
 | umbral λ | central ≈ 0.10 | rentas de compras / profundidad de soborno | Olken 2007; WB Enterprise Surveys | calibrable |
 | pena f | igual en ambos lados | escala de sanción legal | mantenida igual (conservador) | elección de alcance |
 
-El mapa de cuatro escenarios v1.14 (§6) hace explícito el mismo anclaje para su modelo de miopía al daño: la cola
+El mapa de cuatro escenarios v1.14 (arriba; destacado en §6) hace explícito el mismo anclaje para su modelo de miopía al daño: la cola
 larga de visibilidad está motivada por fuentes en las compras públicas de cola pesada (Skuhrovec et al. 2013), la
 participación por el turnout de presupuestos participativos, y el gate de detección de daño por la literatura de
 agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrados en
