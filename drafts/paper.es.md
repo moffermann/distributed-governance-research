@@ -940,7 +940,7 @@ agrega —libertades, no utilidad-dinero— mientras la *suma* descansa en Samue
 aplica.
 
 *Calibración.* Las magnitudes son internas al modelo, pero la brecha con los datos
-es una hoja de ruta, no una disculpa. El 46–68% del valor alcanzable por el central
+es una hoja de ruta, no una disculpa. El 44–85% del valor alcanzable por el central
 es un **objetivo de validación candidato que requiere un mapeo de constructo
 explícito** —no una comprobación directa: la razón ex-post entre valor realizado y
 valor tasado (las calificaciones del Grupo de Evaluación Independiente del Banco
@@ -1647,7 +1647,7 @@ requiere un puente de constructo explícito**, no una calibración en un paso.
 
 | Cantidad del modelo | Valor modelo | Proxy real | Dataset(s) candidato | Estado |
 |---|---|---|---|---|
-| %-benchmark del central | 46–68% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | objetivo candidato; requiere mapeo de constructo explícito |
+| %-benchmark del central | 44–85% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | objetivo candidato; requiere mapeo de constructo explícito |
 | η (ceguera al daño) | 0–0.5 | desperdicio pasivo vs activo | Bandiera-Prat-Valletti 2009 (83% pasivo, específico del contexto: compras de bienes estandarizados en Italia) | dirección anclada |
 | β (desigualdad de voz) | 0.2–0.5 | sesgo de participación en PP | NYC / París / Porto Alegre; Decidim / Consul | calibrable |
 | q, m (detección) | q ≈ 0.5–1%, m en cientos | tasas de queja / denuncia | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |

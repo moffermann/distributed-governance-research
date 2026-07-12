@@ -866,7 +866,7 @@ freedoms, not money-utility — while the *summation* rests on Samuelson (1954),
 aggregation Sen himself resists; we invoke each only where it applies.
 
 *Calibration.* The magnitudes are model-internal, but the gap to data is a
-roadmap, not an apology. The central's 46–68% of benchmark-achievable value is a
+roadmap, not an apology. The central's 44–85% of benchmark-achievable value is a
 **candidate validation target requiring an explicit construct mapping** — not a
 direct check: the ex-post realized-to-appraised ratio (the World Bank's Independent
 Evaluation Group ratings; Flyvbjerg, Bruzelius and Rothengatter 2003) is a
@@ -1552,7 +1552,7 @@ calibration.
 
 | Model quantity | Model value | Real-world proxy | Candidate dataset(s) | Status |
 |---|---|---|---|---|
-| central %-benchmark | 46–68% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | candidate target; needs an explicit construct mapping |
+| central %-benchmark | 44–85% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | candidate target; needs an explicit construct mapping |
 | η (harm-blindness) | 0–0.5 | passive vs active waste share | Bandiera-Prat-Valletti 2009 (83% passive, setting-specific: Italian standardized-goods procurement) | anchored-direction |
 | β (voice inequality) | 0.2–0.5 | PB participation bias | NYC / Paris / Porto Alegre; Decidim / Consul | calibratable |
 | q, m (detection) | q ≈ 0.5–1%, m in hundreds | complaint / whistleblowing rates | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibratable |
