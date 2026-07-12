@@ -32,10 +32,11 @@ const m = (over) => estimand({ ...baseConfig(), ...WORLD, ...over }, { nWorlds: 
   const val = m({ s_exp: 0, b_H_C: 1, a: 0, w: 0, b: 1, sigma_C: 0.02, lambda: 0, beta: 0, p: 1, sigma_e: 0 });
   check('FIX null => |m| negligible', Math.abs(val) < 0.03, `m=${val.toFixed(4)}`);
 }
-// BOUNDARY: partial myopia + moderate voice => small-magnitude, pipeline must run & stay finite.
+// BOUNDARY: a genuine near-parity case (the NO_MYOPIA continuity anchor sits near the frontier).
 {
-  const val = m({ s_exp: 1, b_H_C: 0.5, beta: 0.4, lambda: 0.1 });
-  check('FIX boundary => finite & modest', Number.isFinite(val) && Math.abs(val) < 0.5, `m=${val.toFixed(3)}`);
+  const { NO_MYOPIA } = await import('./scenario-configs.mjs');
+  const val = m(NO_MYOPIA);
+  check('FIX boundary (near-parity) => |m| small', Number.isFinite(val) && Math.abs(val) < 0.15, `m=${val.toFixed(3)}`);
 }
 
 // ---- Attribution: the distributed advantage must be driven by harm myopia ----
