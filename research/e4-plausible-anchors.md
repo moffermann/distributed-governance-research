@@ -51,7 +51,9 @@
 > **CORRECTION (Codex v7):** the earlier "PRO-CENTRAL = +6.1%" conflated two distinct scenarios. Fixed. The
 > central's FULL best plausible case (every knob central-favourable) is `PRO_CENTRAL` in `scenario-configs.mjs`
 > (the single source of truth) and the CENTRAL WINS there. The +6.1% is a SEPARATE `NO_MYOPIA` scenario (myopia
-> isolated). Code now matches this table; a regression test pins the signs so they cannot fork again.
+> isolated). Authoritative values live in `scenario-configs.mjs`; a regression test pins the sign ORDERING
+> (`PRO_CENTRAL < NO_MYOPIA < MYOPIA_OFF < PROBABLE < PRO_DIST`) — a partial guard, it does NOT enforce exact-config
+> equality, so any narrative values below are illustrative rationale only, not authoritative.
 
 | scenario | m (gap) | 95% CI | Core v0 delivers | central delivers | winner |
 |---|---|---|---|---|---|
@@ -70,9 +72,11 @@
   opposite assumptions — a qualitative reconciliation hypothesis, not a reproduced limit.
 
 ### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
-- **Single-knob robustness:** from the PROBABLE scenario, NO single axis (`s_exp, b_H_C, p, beta, a_V`) crosses the
-  parity frontier within its plotted range — Core v0 wins throughout (+25% to +54%). The conclusion is robust to any
-  ONE assumption; reaching parity requires COMBINING central-favourable conditions.
+- **Robustness over five plotted slices (NOT all parameters):** across the five prespecified one-factor slices
+  (`s_exp, b_H_C, p, beta, a_V`), none crosses the parity frontier from the PROBABLE scenario within its plotted
+  range — Core v0 wins throughout (+25% to +54%). This is a limited robustness statement over those five slices;
+  reaching parity requires COMBINING central-favourable conditions (and other coordinates can flip the sign — e.g.
+  the targeted PRO_CENTRAL-region probe in `e4:evidence`).
 - **Combined scenario-path frontier (CORRECTED, Codex v7):** interpolating PROBABLE → the central's FULL best
   plausible case (`PRO_CENTRAL`), m falls +47% → −30%; the **frontier (m=0) is at t ≈ 0.57** — i.e. conditions ~57%
   of the way from probable toward the central's full best case flip the winner to the central. That is a PLAUSIBLE
@@ -103,7 +107,8 @@ Per axis we also give: D_F range, ceteris-paribus frontier location, evidence fo
   already selects the interested subset, so PB turnout ≈ **reach × p**. With reach mean ≈0.13, a 1–3% turnout ⇒
   `p ≈ 0.08–0.25`. → When reach (`a_r,b_r`) is anchored later, JOINTLY verify `reach × p ≈ 1–3%` (one observable
   constrains two knobs).
-- **Proposed bands:** PRO-CENTRAL `p≈0.05` (sparse citizen signal); PROBABLE `p∈[0.08,0.25]`; PRO-DISTRIBUTED `p≈0.45`.
+- **Direction (rationale; authoritative values in `scenario-configs.mjs`):** central-favourable = LOW participation
+  (sparse citizen signal); PROBABLE ≈ `p∈[0.08,0.25]` (the evidence-anchored band); distributed-favourable = HIGH.
 - **Decision:** PENDING author confirmation.
 
 ### var #1 — `a_V, b_V` (visibility tail shape) — ✅ CONFIRMED (author, 2026-07-11)
@@ -114,8 +119,9 @@ Per axis we also give: D_F range, ceteris-paribus frontier location, evidence fo
   highly visible projects + a long tail of many small, low-visibility ones ⇒ `a_V < 1` (mass near low visibility) is
   the PROBABLE case, reflecting real spending — not a convenient assumption. The Beta is a bounded stylized
   approximation of the power law (do not overclaim an exponent fit).
-- **Proposed bands:** PRO-CENTRAL `a_V≈1.0` (lighter tail, more projects visible → oversight reaches them);
-  PROBABLE `a_V∈[0.3,0.8], b_V∈[2,5]` (heavy tail); PRO-DISTRIBUTED `a_V≈0.2` (very heavy tail).
+- **Direction (rationale; authoritative values in `scenario-configs.mjs`):** central-favourable = FLATTER tail
+  (more projects visible → oversight reaches them); PROBABLE ≈ `a_V∈[0.3,0.8], b_V∈[2,5]` (heavy tail);
+  distributed-favourable = HEAVIER tail.
 - **Caveat:** procurement VALUE proxies the size dimension of visibility, not visibility per se (controversy/media
   also drive it); one-country study. Could add US/Chile corroboration later.
 - **Decision:** PENDING author confirmation of the bands.

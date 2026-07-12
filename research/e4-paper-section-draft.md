@@ -9,7 +9,7 @@
 
 **Question.** At an equal budget and the same candidate projects, does coverage-routed distributed appraisal (Core
 v0) deliver more true social value than a competent central-proxy appraisal — and under exactly what conditions does
-each win? We answer with a mechanism model, a stylized benchmark theorem, and four **source-motivated declared scenarios** that level
+each win? We answer with a mechanism model, a stylized benchmark theorem, and four **source-motivated declared scenarios** (plus one diagnostic contrast) that level
 the field for both institutions.
 
 **Mechanism.** True value splits into support and harm, `S = S⁺ − H` (mean scale). The central planner reads
@@ -33,7 +33,9 @@ within ~0.2 Monte-Carlo SE); it nests the production harm-gated signal only unde
 restrictions, so it is a sanity-check limit, **not** a proof about the full engine (eligibility, heterogeneous
 costs, MNAR, credit) — which is the object.
 
-**Four declared scenarios (level the field both ways).** Each knob's reference value is motivated empirically (public-
+**Four declared scenarios + one diagnostic contrast (level the field both ways).** The four substantive scenarios are
+PRO-CENTRAL, NO-MYOPIA (bundle), PROBABLE, PRO-DISTRIBUTED; "Harm-myopia only" is a **diagnostic contrast**, not a
+declared scenario. Each knob's reference value is motivated empirically (public-
 procurement value is heavy-tailed — Skuhrovec et al. 2013, >40k Czech procurements, Zipf/Pareto — so most projects are
 low-visibility; participatory-budgeting turnout ≈1–3% informs participation as a joint moment), theoretically
 (agenda-setting/salience for harm myopia), or proxy-informed with a stated, **not-yet-propagated** transport gap
@@ -43,32 +45,34 @@ full-information greedy benchmark, parity at 0) and each arm's delivered level `
 
 | scenario (assumptions) | m ± 95% CI | Core v0 | central | winner |
 |---|---|---|---|---|
-| **Central's full best plausible case** — low participation + competent, harm-aware, precise central | **−29.5%** [−29.9, −29.1] | 68% | 98% | **central** |
+| **Central's declared full-favourable endpoint** — low participation + competent, harm-aware, precise central (some knobs sit outside the registered expectable bands) | **−29.5%** [−29.9, −29.1] | 68% | 98% | **central** |
 | **No-myopia bundle** — probable + harm sight + unbiased + precise + no credit (NOT a myopia isolation) | **+6.1%** [5.8, 6.4] | 91% | 85% | ≈ parity |
-| **Harm-myopia only** — probable, changing ONLY the two harm-gate coordinates | **+30.4%** [29.9, 31.0] | 91% | 61% | Core v0 |
+| **Harm-myopia only** (diagnostic contrast, not a scenario) — probable, changing ONLY the two harm-gate coordinates | **+30.4%** [29.9, 31.0] | 91% | 61% | Core v0 |
 | **Probable** — source-motivated reference | **+46.6%** [46.0, 47.4] | 91% | 45% | Core v0 |
 | **Distributed's favourable case** | **+199.8%** [197, 202] | 96% | −104% | Core v0 |
 
-The field is genuinely level: **the central has a real winning region** — under its full best plausible case (low
-citizen participation and a competent, harm-aware central) it wins ~30% and delivers 98% of the benchmark. Core v0
-wins under the probable reference. The `D/O`/`C/O` split shows why: the central's delivered level swings 45%→85%→98%
-(and −104% when myopic on harmful projects), depending on whether it sees the anti-value and on participation.
+The field is genuinely level: **the central has a real winning region** — at its declared full-favourable endpoint
+(low citizen participation and a competent, harm-aware central) it wins ~30% and delivers 98% of the benchmark. Core
+v0 wins under the probable reference. The `D/O`/`C/O` split shows why: the central's delivered level swings
+45%→85%→98% (and −104% when myopic on harmful projects), depending on whether it sees the anti-value and on
+participation. The scenarios are declared reference/stress points, not a jointly-calibrated probability region.
 
 **Reconciliation with the symmetry-gate NO-GO.** A pre-registered symmetry gate elsewhere reports a small pooled
 advantage (Δ≈0.025, below its rebuild threshold). That test **deliberately equips the central with competent,
-harm-aware appraisal** — the **no-myopia bundle** row above (+6.1%, same near-parity regime). Attribution is honest:
-turning off harm-myopia **alone** (only the two harm-gate coordinates) moves the probable advantage +46.6% → +30.4%
-— the harm channel accounts for **most, not all**, of it; the further drop to +6.1% is added central competence
-(unbiasedness, precision, no credit distortion), which the gate also assumes. The two results are the same
-phenomenon under opposite assumptions — a **qualitative reconciliation hypothesis** (different DGPs), not a
-reproduced limit.
+harm-aware appraisal** — the **no-myopia bundle** row above (+6.1%, same near-parity regime). Attribution is a
+**sequential, path-dependent** decomposition (the model is nonlinear): turning off harm-myopia **alone** (only the
+two harm-gate coordinates) reduces the probable gap +46.6% → +30.4%, i.e. **16.2 of the 40.5-point decline to +6.1%
+(~40%)**; the further step to the full no-myopia bundle (unbiasedness, precision, no credit distortion — which the
+gate also assumes) reduces it **24.3 points (~60%)**. So harm-myopia is a **large part but not the majority** of the
+collapse. The two results are the same phenomenon under opposite assumptions — a **qualitative reconciliation
+hypothesis** (different DGPs), not a reproduced limit.
 
 **Where the frontier is.** Across five prespecified one-factor slices (`s_exp, b_H_C, p, beta, a_V`), none flips the
 winner from the probable scenario within its plotted range (a limited robustness statement over those five slices,
-not all parameters). Interpolating the full set of conditions from probable toward the central's best
-plausible case, the parity frontier is at **t ≈ 0.57** — reached **within** the plausible range, not beyond it. The
-winner therefore depends on where reality sits between the probable and central-favourable scenarios; `t` is an
-illustrative linear mix, not a calibrated competence scale.
+not all parameters). Interpolating the full set of conditions from probable toward the declared central-favourable
+endpoint, the parity frontier is at **t ≈ 0.57** — reached **within the declared interpolation segment**. Which side
+a real setting falls on depends on where a measured target configuration would lie between the declared scenarios;
+`t` is an illustrative linear mix, not a calibrated competence scale.
 
 **Honest limits.** (1) Central magnitudes are proxy-informed, not target-identified: the political-opinion→project-
 value transport is an assumption; only target-domain bridge data (planner forecasts, citizen value distributions)

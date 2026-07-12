@@ -1,9 +1,11 @@
 # E4 analytic benchmark — the joint-normal fixed-threshold parity theorem
 
-> The limiting-case theorem behind the numerical frontier. The full engine adds eligibility gates, heterogeneous
-> costs, greedy residual fill, MNAR reports, z-scoring, and credit — this theorem is the clean special case it
-> reduces to under stated assumptions. Regression: `scripts/simulation/e4-v5/theorem-check.mjs` (matches within
-> ~0.2 Monte-Carlo SE). Replaces the retired `β = 1−η` harm-weight law (which does not nest the v1.14 model).
+> A **stylized no-myopia Gaussian benchmark**, not a reduction of the full engine. The production engine adds
+> eligibility gates, heterogeneous costs, greedy residual fill, MNAR reports, z-scoring, credit, AND a salience-gated
+> harm term; this theorem nests it ONLY under the extra restrictions in **Honest scope** below (no harm gate, net
+> `S`). It is a sanity-check limit, not a proof about the production engine. Regression:
+> `scripts/simulation/e4-v5/theorem-check.mjs` (matches within ~0.2 Monte-Carlo SE). Replaces the retired `β = 1−η`
+> harm-weight law (which does not nest the v1.14 model).
 
 ## Setup
 Candidate projects are i.i.d. draws of `(S, X)`, where `S` is true (mean-scale) value and `X` is a selector's
@@ -54,6 +56,12 @@ so the covariance-ratio equality is the parity boundary **in the large-project l
 numerical; the engine's ratio-of-sums estimator is the finite-`K` object the lemma approximates.
 
 ## Honest scope
+- **The production central signal is NOT this benchmark's `X_C` without extra restrictions.** The engine's central
+  estimate is `M^C = a + b·S⁺ + w·(v_{p,j}−S⁺) − b_H^C·s(V)·H + η` (support `S⁺`, minus a **visibility-gated harm**
+  term). The benchmark uses `X_C = a + (b−w)S + w·v_p + η` on **net** `S` with **no harm gate**. Nesting the
+  production signal into the benchmark therefore requires the restrictions **`s(V) ≡ const` (or `H ≡ 0`) and
+  `S⁺ → S`** — i.e. no salience-gated harm myopia. So the theorem is a **stylized no-myopia Gaussian benchmark**,
+  NOT a proof that the full harm-gated engine reduces to it.
 - The MNAR distributed signal is **not** exactly jointly normal at finite reach (thresholded non-response +
   Bernoulli thinning); the Gaussian mapping is a **moment-matched reduced-form approximation**, not an identity.
   So this lemma is the analytic sanity check, and the numerical frontier (with the true DGP) is the object.
