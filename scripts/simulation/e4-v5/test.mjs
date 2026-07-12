@@ -83,6 +83,21 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
     `PRO_CENTRAL=${mc.toFixed(2)} NO_MYOPIA=${mn.toFixed(2)} MYOPIA_OFF=${mo.toFixed(2)} PROBABLE=${mp.toFixed(2)} PRO_DIST=${md.toFixed(2)}`);
 }
 
+// ---- Condition 1 (balanced degradation): the central's harm-myopia effect must DOMINATE the distributed arm's
+//      signal-quality-composition effect. Both arms carry a modeled degradation; the central's must be >> the
+//      distributed's, or the comparison is not honest. ----
+{
+  const { PROBABLE, NO_MYOPIA } = await import('./scenario-configs.mjs');
+  const sm = (over) => estimand({ ...baseConfig(), N: 800, K: 120, ...over }, { nWorlds: 300 }).m_hat;
+  const mp = sm(PROBABLE);
+  const mPure = sm({ ...PROBABLE, f_active: 1.0, f_deleg: 0.0, phi_prof: 1.0, k_deleg: 1.0 });  // no distributed degradation
+  const mNo = sm(NO_MYOPIA);                                                                     // central harm-aware
+  const noiseEff = Math.abs(mp - mPure), myopiaEff = Math.abs(mp - mNo);
+  check('CONDITION1 central harm-myopia effect >> distributed signal-noise effect',
+    myopiaEff > 10 * noiseEff && myopiaEff > 0.15,
+    `noise=${(100 * noiseEff).toFixed(1)}pts myopia=${(100 * myopiaEff).toFixed(1)}pts`);
+}
+
 // ---- Embargo: reject multiplier/ratio notation in rendered text ----
 const rejects = (txt) => { try { assertNoEmbargoedTokens(txt); return false; } catch { return true; } };
 check('EMBARGO rejects "2.2x"', rejects('gain of 2.2x'));

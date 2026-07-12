@@ -61,17 +61,30 @@ export function generateWorld(cfg, rng) {
     if (n === 0) continue;                                      // inadmissible in ALL arms (dropped, counted below)
 
     let sumPos = 0, sumNeg = 0, sumReport = 0;
+    const fProfileStart = cfg.f_active + cfg.f_deleg;           // channel thresholds; rest (=f_profile) = profile rules
     for (let i = 0; i < n; i++) {
       let u = q + cfg.sigma * rng.normal();
       if (rng.u() < cfg.pi_opp) u -= rng.exponential(cfg.mu_opp);   // intense-minority opposition
       if (u >= 0) sumPos += u; else sumNeg += -u;
       const reportProb = u >= 0 ? cfg.p : cfg.p * (1 - cfg.beta);
-      if (rng.u() < reportProb) sumReport += (u + cfg.sigma_e * rng.normal()) / cfg.p;
+      if (rng.u() < reportProb) {
+        // Signal-quality channel of Core-v0's universal coverage. active: full individual fidelity. microdelegation:
+        // individual signal + bounded, revocable extra noise (delegate can ask). profile rule: category-aligned proxy
+        // that reverts toward the project category mean q — high SUPPORT alignment but coarser on the individual's
+        // project-specific idiosyncrasy AND harm perception (the honest cost of categorization).
+        const ch = rng.u();
+        let sig;
+        if (ch < cfg.f_active)       sig = u + cfg.sigma_e * rng.normal();
+        else if (ch < fProfileStart) sig = u + cfg.k_deleg * cfg.sigma_e * rng.normal();
+        else                         sig = cfg.phi_prof * u + (1 - cfg.phi_prof) * q + cfg.sigma_e * rng.normal();
+        sumReport += sig / cfg.p;
+      }
     }
     const Splus = sumPos / n;                                   // support (mean of positive parts)
     const H = sumNeg / n;                                       // harm (mean opposition intensity)
     const S = Splus - H;                                        // true net value (mean scale)
-    const M_D = sumReport / n;                                  // behavioral coverage estimator; E[M_D|u]=S+ -(1-beta)H
+    const M_D = sumReport / n;                                  // coverage estimator with signal-quality composition
+                                                               // (active/microdelegation/profile); pure f_active=1 => E[M_D|u]=S+ -(1-beta)H
 
     const v_pj = cfg.v_p0 + cfg.gamma * g + cfg.sigma_v * rng.normal();
     const sV = Math.pow(Math.max(0, Math.min(1, V)), cfg.s_exp);// harm gate: ~0 on long tail, ~1 when salient
