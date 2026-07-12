@@ -29,8 +29,8 @@ export function renderReport(out) {
   const text = [
     `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
     `  m̂ (signed fraction of full-information oracle, parity at 0): ${pct(out.m_hat)}  CI=[${pct(out.ci[0])}, ${pct(out.ci[1])}]`,
-    `  sign backbone over D_F (measure-free): Core v0 wins ${sh(out.df_dist_share)} of corners · central ${sh(out.df_cent_share)} · parity ${sh(out.df_par_share)}`,
-    `  magnitude over R_α (measured):`,
+    `  sign backbone over D_F: Core v0 wins ${sh(out.df_dist_share)} of sampled θ-points · central ${sh(out.df_cent_share)} · parity ${sh(out.df_par_share)}  (a COUNT of resolved points, not a probability)`,
+    `  magnitude over R_α (declared sensitivity boxes; a value >100% means the losing arm destroys value, so the gap exceeds the oracle):`,
     mag,
     `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
     `  π_deg (degenerate-world share): ${pct(out.pi_deg)}`,

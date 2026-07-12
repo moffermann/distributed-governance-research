@@ -4,48 +4,47 @@
 // evidence manifest, and a repaired state machine (set-based materiality, degeneracy/sufficiency aborts). Every
 // output byte is routed through the sole embargo adapter.
 import { fileURLToPath } from 'node:url';
-import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, baseConfig, resolvedHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
-import { estimand } from './engine.mjs';
+import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, EVIDENCE, baseConfig, resolvedHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
+import { estimand, makeRng } from './engine.mjs';
 import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
 import { validateOutput } from './schema.mjs';
 
-// Evidence world INSIDE the registered R_alpha for N,K (Codex v5: N=900 was outside [1000,20000]).
-const WORLD = { N: 1500, K: 150 };
-const SWEEP_NW = 110, BASE_NW = 500, SEED = NUM.seed.value;
-
-// --- declared fixed vs uncertain split (the sweep is over UNCERTAIN; FIXED_CHECK are perturbed one-at-a-time) ---
-const UNCERTAIN   = ['p', 'beta', 'sigma_e', 's_exp', 'b_H_C', 'w', 'pi_opp']; // carry the sign uncertainty
-const FIXED_CHECK = ['sigma', 'mu_opp', 'sigma_C', 'gamma', 'h', 'lambda', 'a', 'b', 'zeta', 'v_p0']; // held; flip-tested
-// world-shape/scale (N,K,m_q,s_q,c_lo,c_hi,a_r,b_r,a_V,b_V,phi,sigma_v) held as nuisances at declared values.
+// All evidence-governing settings come from the contract's EVIDENCE block (single source of truth, hashed into theta_id).
+const WORLD = EVIDENCE.world, SWEEP_NW = EVIDENCE.sweep_nw, BASE_NW = EVIDENCE.base_nw, N_RANDOM = EVIDENCE.n_random;
+const SEED = NUM.seed.value;
+const UNCERTAIN = EVIDENCE.uncertain, FIXED_CHECK = EVIDENCE.fixed_check;
 
 const MANIFEST = {
   contract_version: CONTRACT_VERSION, world: WORLD, seed: SEED,
-  base_nw: BASE_NW, sweep_nw: SWEEP_NW,
+  base_nw: BASE_NW, sweep_nw: SWEEP_NW, n_random: N_RANDOM,
   uncertain: UNCERTAIN, fixed_check: FIXED_CHECK,
   o_min_frac: CLASSIFY.o_min_frac.value, delta: CLASSIFY.delta.value, zero_tol: CLASSIFY.zero_tol.value,
-  alpha_levels: ALPHA_LEVELS, alpha_factor: { 0.5: 0.6, 0.8: 1.0, 0.95: 1.3 }, headline_alpha: 0.8,
-  estimand: 'ratio-of-sums Σ(D−C)/ΣO over kept worlds (O>o_min); sign backbone = sign shares over joint D_F corners; magnitude = m over joint R_alpha',
-  optimizer: 'joint-corners+center over UNCERTAIN box; one-at-a-time FIXED_CHECK flip probe',
+  alpha_levels: ALPHA_LEVELS, alpha_width: EVIDENCE.alpha_width, headline_alpha: EVIDENCE.headline_alpha,
+  estimand: 'ratio-of-sums Sum(D-C)/Sum(O) over kept worlds (O>o_min); sign backbone = sign SHARES (count of resolved sample points, NOT a probability) over the joint D_F; magnitude = m over joint R_alpha sensitivity boxes',
+  optimizer: 'joint corners + center + N_RANDOM uniform interior samples over the UNCERTAIN box; one-at-a-time FIXED_CHECK flip probe (a sampled envelope may still under-cover interior extrema)',
 };
 const THETA_ID = 'e4v6+' + resolvedHash(MANIFEST);
 
-function corners(bx) {
+// sample points over a box: 2^k corners (k<=8) + center + N_RANDOM uniform interior points (seeded, reproducible).
+function samplePoints(bx, nRandom) {
   const keys = Object.keys(bx), pts = [], n = 1 << keys.length;
   for (let m = 0; m < n; m++) { const p = {}; keys.forEach((k, bi) => { p[k] = (m >> bi & 1) ? bx[k][1] : bx[k][0]; }); pts.push(p); }
   const c = {}; keys.forEach((k) => { c[k] = 0.5 * (bx[k][0] + bx[k][1]); }); pts.push(c);
+  const rng = makeRng((SEED ^ 0x5bd1e995) >>> 0);
+  for (let i = 0; i < nRandom; i++) { const p = {}; keys.forEach((k) => { p[k] = bx[k][0] + (bx[k][1] - bx[k][0]) * rng.u(); }); pts.push(p); }
   return pts;
 }
 const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
 function scaleBand([lo, hi], factor, clip) { const c = 0.5 * (lo + hi), h = 0.5 * (hi - lo) * factor; return [Math.max(c - h, clip[0]), Math.min(c + h, clip[1])]; }
-const ralphaBoxOf = (keys, alpha) => Object.fromEntries(keys.map((k) => [k, scaleBand(THETA[k].ralpha, MANIFEST.alpha_factor[alpha], THETA[k].df)]));
+const ralphaBoxOf = (keys, alpha) => Object.fromEntries(keys.map((k) => [k, scaleBand(THETA[k].ralpha, EVIDENCE.alpha_width[String(alpha)], THETA[k].df)]));
 
-// envelope of m over a joint box (min/max across corners+center) using ONE absolute o_min floor. Corners with too
-// few retained worlds (degenerate: O mostly below the floor) are SKIPPED and counted, so exploding ratios cannot
-// set the envelope; if any corner is skipped the envelope is flagged not-fully-resolved.
+// envelope of m over a joint box (min/max across corners+center+random interior). Sample points with too few
+// retained worlds (degenerate: O mostly below the relative floor) are SKIPPED and counted, so exploding ratios
+// cannot set the envelope; if any point is skipped the envelope is flagged not-fully-resolved.
 function envelope(base, bx, nWorlds, oMinAbs) {
   const zt = CLASSIFY.zero_tol.value;
   let lo = Infinity, hi = -Infinity, argLo = null, argHi = null, skipped = 0, total = 0, nPos = 0, nNeg = 0, nPar = 0;
-  for (const p of corners(bx)) {
+  for (const p of samplePoints(bx, N_RANDOM)) {
     total++;
     const r = estimand({ ...base, ...p }, { nWorlds, seed: SEED, oMinAbs });
     if (!r.enough || !Number.isFinite(r.m_hat)) { skipped++; continue; }

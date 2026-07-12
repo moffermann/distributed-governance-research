@@ -82,6 +82,23 @@ export const CLASSIFY = {
 // alpha coverage family for the magnitude (R_alpha) layer
 export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
 
+// ---- EVIDENCE configuration (single source of truth for the evidence run; hashed into theta_id) ----
+export const EVIDENCE = {
+  world:        { N: 1500, K: 150 },   // inside R_alpha for N,K
+  base_nw:      500,                    // Monte-Carlo worlds for the base point
+  sweep_nw:     110,                    // worlds per swept cell
+  n_random:     64,                     // random interior samples added to corners+center per envelope (mitigates
+                                        //   corners-only under-coverage of interior extrema)
+  headline_alpha: 0.8,                  // R_alpha level used for the materiality decision
+  // Declared fixed-vs-uncertain split. UNCERTAIN carries the scientific sign uncertainty and is swept jointly;
+  // FIXED_CHECK are held but each is perturbed one-at-a-time to its D_F endpoints to probe for a sign flip.
+  uncertain:    ['p', 'beta', 'sigma_e', 's_exp', 'b_H_C', 'w', 'pi_opp'],
+  fixed_check:  ['sigma', 'mu_opp', 'sigma_C', 'gamma', 'h', 'lambda', 'a', 'b', 'zeta', 'v_p0'],
+  // Nested R_alpha SENSITIVITY-WIDTH factors (fraction of the declared expectable band width). These are DECLARED
+  // sensitivity widths, NOT verified probability coverage — a true measure-based coverage awaits target-domain data.
+  alpha_width:  { '0.5': 0.6, '0.8': 1.0, '0.95': 1.3 },
+};
+
 // ---- CLOSED output schema (embargo-critical): additionalProperties:false; cannot express D/C or ratio-parity-1 ----
 export const OUTPUT_SCHEMA = {
   $schema: 'http://json-schema.org/draft-07/schema#',
