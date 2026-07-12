@@ -1,0 +1,1092 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\devel\claude-projects\distributed-governance-research
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 019f5439-626a-7363-b78c-3892a09c8380
+--------
+user
+# Adversarial critique of E4 v1.14 (v7 state) — the CODE + the anchored-scenario framing — for Codex
+
+Repo: C:/devel/claude-projects/distributed-governance-research (branch master). Since your v5 critique the design has
+advanced substantially. RUN the code: `npm run e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`,
+`e4:evidence`.
+
+Read the code `scripts/simulation/e4-v5/` (contract, engine, schema, adapter, evidence, controls, test,
+theorem-check, scenarios, scenario-configs, frontier), the anchors `research/e4-plausible-anchors.md`, the theorem
+`research/e4-parity-theorem.md`, and the prior panel findings you should NOT re-derive:
+`audits/2026-07-11-v1.14-design/{CRITIQUE_v5_SUMMARY.md,REVIEW_PANEL_CONSOLIDATED.md}` and `review-*.md`.
+
+## What changed (verify + attack)
+1. **Panel Tier-1 fixes:** latent crash fixed; `theta_id` now folds the resolved contract hash (mutating a THETA
+   value changes it — verify); `validateConfig` rejects ±Infinity; `validateDomain` no longer forces zeta≥0; dead
+   params (`rho_P`, `common_random`) removed.
+2. **Estimand:** ratio-of-sums `Σ(D−C)/ΣO` with a per-arm efficiency decomposition `D/O`, `C/O`.
+3. **Anchored 3-scenario framing (author):** PRO-CENTRAL (harm-myopia off, competent central — the continuity anchor
+   to the earlier ~0.025 NO-GO), PROBABLE (evidence-anchored), PRO-DISTRIBUTED. Each knob's probable value is
+   justified by empirical measurement (public-procurement heavy tail arXiv:1309.0218; PB turnout) or theory or
+   proxy-with-transport-gap — see the master table in `e4-plausible-anchors.md`. Results: PRO-CENTRAL m=+6.1%,
+   PROBABLE +46.6%, PRO-DIST +199.8% (with D/O,C/O). Continuity: removing myopia collapses +46.6%→+6.1%.
+4. **Ceteris-paribus frontiers:** no single knob flips the winner from PROBABLE; a combined central-competence axis
+   locates the parity frontier at t≈1.13 (central wins only if BETTER than a fully-competent plausible central).
+5. Legacy engines behind `E4_ALLOW_LEGACY=1` (NOTE: panel found ~19 retired engines exist; only 2 guarded — still open).
+
+## IMPORTANT — several parallel subagents. RUN the code. Do not rubber-stamp.
+
+## Task — attack hardest at the NEW work
+- **Scenario anchoring honesty:** are the PROBABLE bands genuinely evidence/theory-anchored, or still analyst-chosen
+  to favour distribution? Is the transport gap (political-opinion→project-value) honestly handled for `w,a,b`? Is
+  PRO-CENTRAL a fair "central's best case" or is it under-powered? Is the continuity claim (≈0.025 regime) sound?
+- **Frontier methodology:** is the ceteris-paribus-from-PROBABLE + combined-competence-axis a valid way to LOCATE
+  the frontier, or does starting at PROBABLE bias "no single knob flips it"? Is the t≈1.13 result robust?
+- **The D/O,C/O decomposition and the >100% / negative values** — honest, or artefacts?
+- **Still-open panel items:** universal legacy guard (H3), text-embargo confusables (M2), the global sweep still
+  under construction, R_α "coverage" not verified, theorem scoped as no-myopia limit (M1).
+- Re-check your 7 v5 blockers: cleared / partial / not-cleared NOW.
+
+## Output
+Each subagent → `audits/2026-07-11-v1.14-design/critique-v7-<dimension>.md`. Then `CRITIQUE_v7_SUMMARY.md`: overall
+verdict, per-blocker table, remaining blockers ranked, single sharpest improvement, explicit yes/no on
+multiplier-relapse and capability-met, and the shortest path to preregisterable. Say plainly if it is ready.
+codex
+I’ll run this as an adversarial review, not an implementation pass. I’ll first load the repository’s routing rules, then split the code execution/contract audit, anchoring audit, and frontier/estimand audit across parallel reviewers, with a final independent synthesis and verification of every generated audit artifact.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = @('"'AGENTS.md','agents/routing-rules-codex-md.md','agents/review-all.md'); foreach ("'$f in $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }' in C:\devel\claude-projects\distributed-governance-research
+2026-07-12T02:48:10.913597Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.2 seconds
+Output:
+FILE: AGENTS.md
+FILE: agents/routing-rules-codex-md.md
+FILE: agents/review-all.md
+Get-Content : No se encuentra la ruta de acceso 'AGENTS.md' porque no existe.
+En línea: 2 Carácter: 134
++ ... $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (AGENTS.md:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+Get-Content : No se encuentra la ruta de acceso 'agents/routing-rules-codex-md.md' porque no existe.
+En línea: 2 Carácter: 134
++ ... $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (agents/routing-rules-codex-md.md:String) [Get-Content], ItemNotFoundExc 
+   eption
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+Get-Content : No se encuentra la ruta de acceso 'agents/review-all.md' porque no existe.
+En línea: 2 Carácter: 134
++ ... $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (agents/review-all.md:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+
+ exited 1 in 209ms:
+FILE: AGENTS.md
+FILE: agents/routing-rules-codex-md.md
+FILE: agents/review-all.md
+Get-Content : No se encuentra la ruta de acceso 'AGENTS.md' porque no existe.
+En línea: 2 Carácter: 134
++ ... $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (AGENTS.md:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+Get-Content : No se encuentra la ruta de acceso 'agents/routing-rules-codex-md.md' porque no existe.
+En línea: 2 Carácter: 134
++ ... $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (agents/routing-rules-codex-md.md:String) [Get-Content], ItemNotFoundExc 
+   eption
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+Get-Content : No se encuentra la ruta de acceso 'agents/review-all.md' porque no existe.
+En línea: 2 Carácter: 134
++ ... $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (agents/review-all.md:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Location; Get-ChildItem -Force | Select-Object -First 20 Name,Mode' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 182ms:
+
+Path                                                    
+----                                                    
+C:\devel\claude-projects\distributed-governance-research
+
+Name : .git
+Mode : d--h--
+
+
+Name : attacks
+Mode : d-----
+
+
+Name : audits
+Mode : d-----
+
+
+Name : contradictions
+Mode : d-----
+
+
+Name : defenses
+Mode : d-----
+
+
+Name : docs
+Mode : d-----
+
+
+Name : drafts
+Mode : d-----
+
+
+Name : external-review
+Mode : d-----
+
+
+Name : knowledge
+Mode : d-----
+
+
+Name : node_modules
+Mode : d-----
+
+
+Name : pdf
+Mode : d-----
+
+
+Name : renders
+Mode : d-----
+
+
+Name : research
+Mode : d-----
+
+
+Name : scripts
+Mode : d-----
+
+
+Name : tmp
+Mode : d-----
+
+
+Name : .env
+Mode : -a----
+
+
+Name : .gitignore
+Mode : -a----
+
+
+Name : .zenodo.json
+Mode : -a----
+
+
+Name : CITATION.cff
+Mode : -a----
+
+
+Name : LICENSE.md
+Mode : -a----
+
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg --files -g 'AGENTS.md' -g 'routing-rules-codex-md.md' -g 'review-all.md' C:\\devel\\claude-projects C:\\Users\\Gamer\\.codex 2>"'$null' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 248ms:
+C:\devel\claude-projects\AGENTS.md
+C:\Users\Gamer\.codex\AGENTS.md
+C:\Users\Gamer\.codex\agents\routing-rules-codex-md.md
+C:\Users\Gamer\.codex\agents\review-all.md
+C:\Users\Gamer\.codex\skills\vercel-react-native-skills\AGENTS.md
+C:\Users\Gamer\.codex\skills\vercel-react-best-practices\AGENTS.md
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = @('"'C:\\devel\\claude-projects\\AGENTS.md','C:\\Users\\Gamer\\.codex\\agents\\routing-rules-codex-md.md','C:\\Users\\Gamer\\.codex\\agents\\review-all.md'); foreach ("'$f in $files) { Write-Output "FILE: $f"; Get-Content -LiteralPath $f -Raw }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 193ms:
+FILE: C:\devel\claude-projects\AGENTS.md
+# AGENTS.md
+
+## Project
+
+This repository is the persistent brain for the **Distributed Governance Research** project.
+
+The project explores a functional architecture for distributed governance: which state functions should remain centralized, which can be distributed, and under what institutional, technological, and legitimacy conditions.
+
+The central frame is **not** “more state vs less state.” The central frame is:
+
+> Which functions and functional layers benefit from centralization, which benefit from distribution, and which require hybrid architectures, based on their functional nature?
+
+## Current research status
+
+This is a v0 consolidation project. Do not treat current documents as final claims, but do treat accepted v0 resolutions as the current working baseline until deliberately revised.
+
+Core orientation documents:
+
+- `docs/00_RESEARCH_PHILOSOPHY.md`
+- `docs/01_RESEARCH_METHOD.md`
+- `docs/02_PROJECT_SCOPE.md`
+- `docs/03_ROADMAP.md`
+- `docs/33_DISTRIBUTED_GOVERNANCE_SYSTEM_V0_BLUEPRINT.md`
+- `docs/34_CORE_V0_SCOPE_FREEZE.md`
+- `docs/35_CONSOLIDATED_ENTITY_OBJECT_STATE_MAP.md`
+- `docs/36_DIAGRAM_INDEX_AND_FLOW_DIAGRAMS_V0.md`
+- `docs/37_SCOPE_CLASSIFICATION_MATRIX_V0.md`
+- `docs/38_V0_CONTRADICTION_AND_FAILURE_MODE_CHECKLIST.md`
+- `knowledge/00_SESSION_2026-06-25_DISTILLATION.md`
+- `knowledge/01_SESSION_RICARDO_REVIEW_ROUND.md`
+- `knowledge/concepts/core-glossary-v0.md`
+
+Current status:
+
+- C001-C025 have accepted resolution documents in `docs/39` through `docs/63`; A001-A035 have accepted resolutions in `docs/67` through `docs/103`, all propagated into the core corpus.
+- The working paper is at v1.4 (`drafts/paper.md`, English authoritative; Spanish translation `drafts/paper.es.md`), with formal models (`research/formal-models.md`), a reproducible four-experiment simulation (`research/simulation-results.md`), and a literature map.
+- The v0 diagram format has been consolidated: Mermaid-in-Markdown is the canonical source, generated SVG outputs are secondary artifacts under `docs/diagrams/generated/`, and Mermaid CLI is installed as a local npm dev dependency.
+- Corpus references use Obsidian wikilinks (`[[BASENAME|path.md]]`); run `npm run check-anchors` after edits and keep the sweep clean.
+- The current priority is the post-manuscript validation program: external expert review with the packets in `external-review/`, simulation calibration against participatory-budgeting data, and a bounded tutored pilot. Open consistency findings live in `contradictions/` pending author review.
+- Accepted C### resolution documents supersede conflicting older hypotheses, session notes, diagrams, or secondary documents unless the user explicitly reopens the resolution.
+- No remaining C020-C025 contradiction should be reopened unless the user explicitly asks to revise an accepted resolution.
+- Some older documents still reflect superseded assumptions. In particular, C007 now distinguishes public authorities from state-owned or publicly owned operators: authority power creates the exclusion, while public ownership alone does not always exclude an operator.
+- C007 does not prohibit external tutored-scope moderation: a public authority may review eligibility, duplication, scope, or compatibility in a configured tutored operating mode, but it does not become an internal project actor, executor, fiscalizer, ordinary moderator, or competitor in the same controlled scope. An operator controlled by that authority is excluded by default inside that tutored scope.
+
+## Working method
+
+Use the repository as a research system, not merely a writing folder.
+
+Every important idea should be processed through recursive hypothesis refinement:
+
+1. Capture the idea.
+2. Convert it into a hypothesis.
+3. Identify assumptions.
+4. Attack it with objections and edge cases.
+5. Refine it.
+6. Classify it.
+7. Persist it in the right folder.
+8. Record unresolved questions.
+
+Do not prematurely convert interesting ideas into polished essays or papers.
+
+## Concept-boundary and challenge rule
+
+When discussing or consolidating a research issue, Codex must not assume that the user's latest objection refers to the same object, evidence type, role, workflow, lifecycle stage, or legal effect currently under review.
+
+Before accepting, rejecting, or integrating a critique, Codex must:
+
+1. identify the precise concept being discussed;
+2. check whether the user's point belongs to that concept or to a neighboring concept;
+3. state the boundary when there is ambiguity;
+4. respectfully challenge the user's framing when it appears to mix distinct concepts.
+
+This applies even when the user is confident. The user may be correct about one concept while accidentally applying it to another.
+
+Example:
+
+- `Complaint Evidence` is evidence used to support, refute, or contextualize a complaint.
+- `Fulfillment Evidence` is evidence used to verify value thesis metrics, deliverables, milestones, disbursement, closure, or reputation.
+
+If H015 is about observability-based formal evaluation, Codex must not treat comments about complaint filing as objections to fulfillment-evaluation authority without first separating the two evidence concepts.
+
+## Collaborative resolution routine
+
+Use `.codex/skills/collaborative-resolution-workflow/SKILL.md` when resolving contradictions, objections, open questions, external review points, or major hypothesis refinements.
+
+Communication and document language:
+
+- Always communicate with the user in Spanish, regardless of which skill is active.
+- Always write durable repository documents in English.
+- Always include concrete examples from the current case being analyzed when explaining an issue or proposing a resolution.
+
+Default sequence:
+
+1. Read the relevant contradiction, hypothesis, or open question.
+2. Explain the issue in plain language.
+3. Propose a resolution consistent with the project guidelines.
+4. Include examples from the current use case.
+5. Keep ordinary citizen participation simple.
+6. Avoid unnecessary bureaucracy.
+7. Preserve transparency, auditability, and public traceability.
+8. Let the user challenge the proposal and add ideas.
+9. Iterate until the idea is mature.
+10. Consolidate the accepted resolution in the correct repository files.
+11. Update indexes and links so the resolution is not disconnected.
+12. Update the roadmap before every commit.
+13. Commit and push the consolidated result.
+14. Tell the user the next roadmap step and restart the routine from the beginning for that next point.
+
+## Research philosophy
+
+The project is built around criticism, not confirmation.
+
+> The goal is not to prove that an idea is correct. The goal is to try to destroy it systematically. If it survives, it may deserve to become theory.
+
+## Tone and style
+
+When communicating with the user:
+
+- write in Spanish;
+- explain issues clearly before proposing solutions;
+- include examples from the concrete case currently under review;
+- keep the discussion precise and practical.
+
+When writing project documents:
+
+- be precise, not rhetorical;
+- write in English;
+- avoid ideological labels unless carefully defined;
+- prefer functional distinctions over political slogans;
+- distinguish hypothesis from evidence;
+- explicitly mark open questions;
+- do not hide serious objections;
+- do not overclaim originality before literature review.
+
+## Core concepts to preserve
+
+The following distinctions are central and should not be blurred:
+
+### Algorithm as coordinator vs algorithm as decider
+
+The preferred architecture uses algorithms to coordinate, structure, record, aggregate, and execute human decisions, not to replace human judgment with a central decision-maker.
+
+### Institutions vs institutional monopolies
+
+The project does not necessarily seek to eliminate institutions. It challenges monopoly institutions where competition, auditability, and distributed accountability could produce better incentives.
+
+### State vs state functions
+
+The state should be decomposed into functions. Defense, security, justice, legislation, and resource allocation are not the same type of problem.
+
+### Value vs economic return
+
+Value is broader than money. A project generates value if it educates better, cares better, saves lives, reduces suffering, reduces poverty, strengthens a community, generates knowledge, improves culture, or solves real human problems.
+
+### Distribution depends on functional layer
+
+Distribution should be analyzed by functional layer, not only by broad institution or policy sector. Layers that define public guarantees, civil rights, mandatory coverage, accreditation, legitimate force, rights deprivation, enforceable legal authority, or macro fiscal stability tend to require stronger central coordination, common rules, or legally recognized authority. Layers centered on information, deliberation, bounded resource allocation, service delivery, evidence, fiscalization, evaluation, accountability, and trust tend to have more distribution potential. Centralized legal frameworks do not imply centralized state service provision, and platform consequences must be distinguished from legal consequences.
+
+## Folder conventions
+
+Use these folders consistently:
+
+- `docs/` — project philosophy, method, roadmap, role definitions, setup guides.
+- `knowledge/concepts/` — stable or emerging conceptual definitions.
+- `knowledge/hypotheses/` — named hypotheses, one per file.
+- `knowledge/objections/` — serious objections and failure modes.
+- `knowledge/open-questions/` — unresolved questions.
+- `research/` — literature notes, paper summaries, annotated bibliography.
+- `drafts/` — essays, paper outlines, article drafts.
+- `.codex/skills/` — canonical project-local Codex skills and reusable workflows that travel with this repository.
+
+## File naming conventions
+
+Use clear, stable names:
+
+- Hypotheses: `H###-short-name.md`
+- Concepts: `short-concept-name.md`
+- Objections: `O###-short-name.md`
+- Sessions: `YYYY-MM-DD-short-session-name.md` or numbered session distillations.
+
+## Obsidian compatibility
+
+Prefer Markdown files that work well in Obsidian. When useful, use internal links such as:
+
+- `[[distributed-trust]]`
+- `[[core-glossary-v0]]`
+- `[[H001-functional-distribution]]`
+
+Do not require Obsidian-specific plugins for core readability.
+
+## Codex behavior
+
+When working in Codex:
+
+1. Read `AGENTS.md` first.
+2. Read the relevant docs and glossary before making changes.
+3. Apply the appropriate project-local skill from `.codex/skills/`.
+4. Update or create files in the correct folder.
+5. Preserve uncertainty and open questions.
+6. Update `knowledge/_index.md` when creating durable resolution, hypothesis, concept, or core document files.
+7. Update `docs/03_ROADMAP.md` before every commit.
+8. Commit and push only after the user has accepted the consolidated resolution or explicitly requested the change.
+9. Commit changes with descriptive messages.
+10. After each commit, tell the user the next roadmap step and restart the collaborative resolution routine for that next point.
+11. Keep all user-facing communication in Spanish and all persisted repository documents in English.
+
+## Agent routing and commit traceability
+
+Apply agent routing for every substantial change.
+
+Runtime guidance:
+
+- `dry-enforcer` before creating new code artifacts.
+- `backend-architect` after backend changes.
+- `frontend-architect` after frontend changes.
+- `security-reviewer` after security-sensitive changes.
+- `documentation-writer` when public contracts, research modules, repository instructions, or durable project documents are created or changed.
+
+Commit-time traceability:
+
+When one or more agent roles apply, include this trailer in the commit message:
+
+```text
+Agents-Reviewed: <comma-separated-agent-list>
+```
+
+If no executable agent tooling exists, perform the review discipline manually and record the applicable role names in the trailer. Do not claim a review role that was not applied.
+
+## Current next priority
+
+The current project phase is **post-manuscript validation** (Phase 3, "Attack the Architecture," is fully resolved and propagated: 35/35).
+
+Priority artifacts:
+
+1. external expert review using the prepared bilingual packets in `external-review/`;
+2. calibration of the allocation simulation against real participatory-budgeting data;
+3. a bounded tutored pilot with the instrumentation the resolutions already require (hours-per-resolution, control-supply density, engagement decay, fiscal reliability);
+4. resolution of the open consistency findings in `contradictions/` as the author reviews them;
+5. commit and push each accepted work unit, keeping `npm run check-anchors` clean.
+
+FILE: C:\Users\Gamer\.codex\agents\routing-rules-codex-md.md
+# Seccion para AGENTS.md (Codex)
+
+Copia este bloque dentro del `AGENTS.md` del proyecto.
+
+## Routing de Agentes (obligatorio)
+
+### Regla 1: dry-enforcer (antes de crear)
+Cuando: antes de crear archivo nuevo, funcion nueva, clase nueva, componente nuevo, hook nuevo, endpoint nuevo o modulo nuevo.
+Accion: revisar primero si existe implementacion reutilizable.
+
+### Regla 2: backend-architect (despues de backend)
+Cuando: cambios en backend (`*.py`, `*.go`, `*.rs`, `*.java`, `api/`, `routes/`, `controllers/`, `models/`, `services/`, `middleware/`, `migrations/`, `schemas/`, `db/`).
+Accion: validar arquitectura, modelos, queries y manejo de errores.
+
+### Regla 3: frontend-architect (despues de frontend)
+Cuando: cambios en frontend (`*.jsx`, `*.tsx`, `*.vue`, `*.svelte`, `components/`, `pages/`, `views/`, `layouts/`, `hooks/`, `stores/`, `styles/`).
+Accion: validar composicion, estado, accesibilidad y performance.
+
+### Regla 4: security-reviewer (despues de cambios sensibles)
+Cuando: auth, permisos, tokens, cifrado, CORS, input usuario, endpoints publicos, secretos, rate limiting.
+Accion: auditar riesgos y priorizar hallazgos por severidad.
+
+### Regla 5: documentation-writer (cuando cambia interfaz publica)
+Cuando: nuevos modulos, APIs, contratos, componentes significativos o ADRs.
+Accion: actualizar docs, README y ejemplos.
+
+## Orden sugerido
+
+1. dry-enforcer
+2. implementar
+3. backend-architect y/o frontend-architect
+4. security-reviewer (si aplica)
+5. documentation-writer (si aplica)
+
+## Cierre de tarea
+
+Registrar agentes consultados en commit message:
+
+```txt
+Agents-Reviewed: dry-enforcer, backend-architect
+```
+
+FILE: C:\Users\Gamer\.codex\agents\review-all.md
+# review-all (Codex)
+
+Pipeline de revision integral para los cambios actuales.
+
+## Flujo
+
+1. Identificar cambios:
+- Si quieres ultimos cambios: `git diff --name-only HEAD~1`
+- Si quieres staged: `git diff --cached --name-only`
+
+2. Clasificar:
+- Archivos nuevos -> `dry-enforcer`
+- Cambios backend -> `backend-architect`
+- Cambios frontend -> `frontend-architect`
+- Cambios sensibles -> `security-reviewer`
+- Nuevos contratos/modulos -> `documentation-writer`
+
+3. Ejecutar revisiones en orden:
+- dry-enforcer (si aplica)
+- backend-architect (si aplica)
+- frontend-architect (si aplica)
+- security-reviewer (si aplica)
+- documentation-writer (si aplica)
+
+4. Consolidar salida:
+- agentes sin findings,
+- findings por severidad,
+- bloqueantes,
+- TODOs.
+
+5. Registrar en commit:
+
+```txt
+Agents-Reviewed: dry-enforcer, backend-architect, security-reviewer
+```
+
+
+codex
+The repository’s local instructions add two constraints I’m applying: all durable audit files will be in English, while I’ll report to you in Spanish; and because these are new durable research documents, I’ll apply the `dry-enforcer` check before creation and a `documentation-writer` review after synthesis. I’m also loading the project’s collaborative-resolution workflow because this task is explicitly an objection/refinement exercise.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -LiteralPath '.codex\\skills\\collaborative-resolution-workflow\\SKILL.md' -Raw" in C:\devel\claude-projects\distributed-governance-research
+2026-07-12T02:48:29.013127Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.2 seconds
+Output:
+Get-Content : No se encuentra la ruta de acceso '.codex\skills\collaborative-resolution-workflow\SKILL.md' porque no 
+existe.
+En línea: 2 Carácter: 1
++ Get-Content -LiteralPath '.codex\skills\collaborative-resolution-work ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.codex\skills\c...rkflow\SKILL.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+
+ exited 1 in 198ms:
+Get-Content : No se encuentra la ruta de acceso '.codex\skills\collaborative-resolution-workflow\SKILL.md' porque no 
+existe.
+En línea: 2 Carácter: 1
++ Get-Content -LiteralPath '.codex\skills\collaborative-resolution-work ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.codex\skills\c...rkflow\SKILL.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg --files C:\\devel\\claude-projects C:\\Users\\Gamer\\.codex | rg 'collaborative-resolution-workflow[\\\\/]SKILL\\.md"'$'"'" in C:\devel\claude-projects\distributed-governance-research
+2026-07-12T02:48:33.460201Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.5 seconds
+Output:
+
+ exited 1 in 522ms:
+  → Inventory repository state, prior v5/v1.14 findings, and apply dry-enforcer reuse check
+  • Run all six E4 command suites and independently probe claimed Tier-1 fixes
+  • Parallel adversarial audits: code/contracts, scenario anchoring, frontier/estimand/theorem
+  • Synthesize v7 verdict, seven-blocker status, ranked blockers, and preregistration path
+  • Documentation-writer review, rerun verification, and inspect final diff
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$ErrorActionPreference='"'Stop'; git status --short; Write-Output 'V7 artifacts already present:'; rg --files audits/2026-07-11-v1.14-design | rg 'critique-v7|CRITIQUE_v7' ; Write-Output 'Available prior audit files:'; Get-ChildItem -LiteralPath 'audits\\2026-07-11-v1.14-design' -File | Select-Object -ExpandProperty Name; Write-Output 'E4 source files:'; rg --files scripts/simulation/e4-v5; Write-Output 'Package scripts:'; rg -n '\"e4:(controls|test|theorem|scenarios|frontier|evidence)\"' package.json" in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 244ms:
+?? audits/2026-07-11-v1.14-design/codex-v7-run.log
+V7 artifacts already present:
+audits/2026-07-11-v1.14-design\CRITIQUE_v7_PROMPT.md
+Available prior audit files:
+ADMIN-COST-LEG.md
+ANTIVALUE-MODELING.md
+canonical-e4-analytical-rerun.txt
+canonical-e4-v4-frontier-rerun.txt
+canonical-symmetry-gate-rerun.txt
+codex-run.log
+codex-v2-run.log
+codex-v3-run.log
+codex-v4-run.log
+codex-v5-run.log
+codex-v6-run.log
+codex-v7-run.log
+critique-code-grounding.md
+critique-honesty-guardrails.md
+critique-novelty-publishability.md
+critique-parameterization-identifiability.md
+critique-range-provenance.md
+critique-sensitivity-floor.md
+critique-theory-primitives.md
+critique-v2-anchored-central-model.md
+critique-v2-dependence-sensitivity.md
+critique-v2-dgp-registry-identification.md
+critique-v2-multiplier-estimand.md
+critique-v2-novelty-positioning.md
+critique-v2-parity-boundary-analytic.md
+critique-v2-parity-objective-floor.md
+critique-v3-analytic-benchmark.md
+critique-v3-complete-dgp.md
+critique-v3-frozen-estimand.md
+critique-v3-measure-free-sensitivity.md
+critique-v3-mechanical-embargo.md
+critique-v3-novelty-positioning.md
+critique-v3-transport-partial-id.md
+critique-v4-analytic-theorem.md
+critique-v4-domains-capability.md
+critique-v4-estimand-state-machine.md
+critique-v4-identification.md
+critique-v4-mechanical-embargo.md
+critique-v4-novelty-alignment.md
+critique-v4-unit-contract.md
+critique-v5-analytic-theorem.md
+critique-v5-antivalue-novelty-alignment.md
+critique-v5-domains-capability.md
+critique-v5-estimand-state-machine.md
+critique-v5-identification.md
+critique-v5-mechanical-embargo.md
+critique-v5-unit-contract.md
+CRITIQUE_PROMPT.md
+CRITIQUE_SUMMARY.md
+CRITIQUE_v2_PROMPT.md
+CRITIQUE_v2_SUMMARY.md
+CRITIQUE_v3_PROMPT.md
+CRITIQUE_v3_SUMMARY.md
+CRITIQUE_v4_PROMPT.md
+CRITIQUE_v4_SUMMARY.md
+CRITIQUE_v5_PROMPT.md
+CRITIQUE_v5_SUMMARY.md
+CRITIQUE_v6_PROMPT.md
+CRITIQUE_v7_PROMPT.md
+DESIGN_SKETCH.md
+DESIGN_SKETCH_v2.md
+DESIGN_SKETCH_v3.md
+DESIGN_SKETCH_v4.md
+DESIGN_SKETCH_v5.md
+E4-empirical-anchors.md
+E4-prior-art-review.md
+LEAKAGE-CORRUPTION-LEG.md
+review-econ.md
+review-engine.md
+review-paper.md
+review-repro.md
+review-stats.md
+REVIEW_PANEL_CONSOLIDATED.md
+ROADMAP.md
+THREE-TIER-VARIABLE-DOMAINS.md
+V1.14_PLAN_AND_DECISIONS.md
+v2-reproduction-e4-v4-symmetric-frontier.txt
+v2-reproduction-e5-sp-symmetry-gate.txt
+E4 source files:
+scripts/simulation/e4-v5\theorem-check.mjs
+scripts/simulation/e4-v5\test.mjs
+scripts/simulation/e4-v5\schema.mjs
+scripts/simulation/e4-v5\scenarios.mjs
+scripts/simulation/e4-v5\scenario-configs.mjs
+scripts/simulation/e4-v5\frontier.mjs
+scripts/simulation/e4-v5\evidence.mjs
+scripts/simulation/e4-v5\engine.mjs
+scripts/simulation/e4-v5\controls.mjs
+scripts/simulation/e4-v5\contract.mjs
+scripts/simulation/e4-v5\atlas.mjs
+scripts/simulation/e4-v5\adapter.mjs
+Package scripts:
+9:    "e4:evidence": "node scripts/simulation/e4-v5/evidence.mjs",
+10:    "e4:controls": "node scripts/simulation/e4-v5/controls.mjs",
+11:    "e4:test": "node scripts/simulation/e4-v5/test.mjs",
+12:    "e4:theorem": "node scripts/simulation/e4-v5/theorem-check.mjs",
+13:    "e4:scenarios": "node scripts/simulation/e4-v5/scenarios.mjs",
+14:    "e4:frontier": "node scripts/simulation/e4-v5/frontier.mjs"
+
+codex
+The `dry-enforcer` reuse check found no existing v7 dimension audits or summary to extend—only the prompt and an untracked run log that I will preserve. I’m now dispatching three independent adversarial tracks with non-overlapping output files; each reviewer must execute relevant commands and ground findings in exact code/document evidence.
+2026-07-12T02:49:18.610662Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 2.1 seconds
+Output:
+
+> distributed-governance-research@0.0.0 e4:evidence
+> node scripts/simulation/e4-v5/evidence.mjs
+
+file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37
+const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
+                                                      ^
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at boxOf (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37:55)
+    at buildEvidence (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:105:32)
+    at main (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:128:33)
+    at file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:143:76
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'npm run e4:test' in C:\devel\claude-projects\distributed-governance-research
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'npm run e4:scenarios' in C:\devel\claude-projects\distributed-governance-research
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'npm run e4:theorem' in C:\devel\claude-projects\distributed-governance-research
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'npm run e4:frontier' in C:\devel\claude-projects\distributed-governance-research
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'npm run e4:controls' in C:\devel\claude-projects\distributed-governance-research
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'npm run e4:evidence' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 604ms:
+
+> distributed-governance-research@0.0.0 e4:theorem
+> node scripts/simulation/e4-v5/theorem-check.mjs
+
+E4 analytic benchmark — joint-normal fixed-threshold lemma
+  Cov(S,X)/sd(X) = 0.8000   z_q=0.524   selected share=0.300 (target q=0.3)
+  analytic  V = 0.63815
+  empirical V = 0.63787  (MC SE=0.00166)
+  |Δ| = 0.00029  = 0.17 SE
+
+PASS  analytic identity matches simulation within 3 MC SE
+
+2026-07-12T02:49:21.914597Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.2 seconds
+Output:
+Get-Content : No se encuentra la ruta de acceso 
+'C:\devel\claude-projects\distributed-governance-research\agents\routing-rules-codex-md.md' porque no existe.
+En línea: 2 Carácter: 1
++ Get-Content -Raw 'agents/routing-rules-codex-md.md'; Get-Content -Raw ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\devel\claude...les-codex-md.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+Get-Content : No se encuentra la ruta de acceso 
+'C:\devel\claude-projects\distributed-governance-research\agents\review-all.md' porque no existe.
+En línea: 2 Carácter: 54
++ ... s/routing-rules-codex-md.md'; Get-Content -Raw 'agents/review-all.md'
++                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\devel\claude...s\review-all.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+
+2026-07-12T02:49:23.381981Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 2.1 seconds
+Output:
+
+> distributed-governance-research@0.0.0 e4:evidence
+> node scripts/simulation/e4-v5/evidence.mjs
+
+file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37
+const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
+                                                      ^
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at boxOf (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37:55)
+    at buildEvidence (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:105:32)
+    at main (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:128:33)
+    at file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:143:76
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1
+
+ exited 1 in 2112ms:
+
+> distributed-governance-research@0.0.0 e4:evidence
+> node scripts/simulation/e4-v5/evidence.mjs
+
+file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37
+const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
+                                                      ^
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at boxOf (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37:55)
+    at buildEvidence (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:105:32)
+    at main (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:128:33)
+    at file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:143:76
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1
+
+2026-07-12T02:49:28.087716Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.2 seconds
+Output:
+scripts/simulation/e4-v5\theorem-check.mjs
+scripts/simulation/e4-v5\test.mjs
+scripts/simulation/e4-v5\schema.mjs
+scripts/simulation/e4-v5\scenarios.mjs
+scripts/simulation/e4-v5\scenario-configs.mjs
+scripts/simulation/e4-v5\frontier.mjs
+scripts/simulation/e4-v5\evidence.mjs
+scripts/simulation/e4-v5\engine.mjs
+scripts/simulation/e4-v5\controls.mjs
+scripts/simulation/e4-v5\contract.mjs
+scripts/simulation/e4-v5\atlas.mjs
+scripts/simulation/e4-v5\adapter.mjs
+audits\2026-07-11-v1.14-design\REVIEW_PANEL_CONSOLIDATED.md
+audits\2026-07-11-v1.14-design\review-stats.md
+audits\2026-07-11-v1.14-design\review-repro.md
+audits\2026-07-11-v1.14-design\review-paper.md
+audits\2026-07-11-v1.14-design\review-engine.md
+audits\2026-07-11-v1.14-design\review-econ.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v5_SUMMARY.md
+research\e4-parity-theorem.md
+research\e4-plausible-anchors.md
+rg: .claude: El sistema no puede encontrar el archivo especificado. (os error 2)
+
+codex
+The first execution pass already exposed a concrete regression: `npm run e4:evidence` crashes in `boxOf(...)` because it receives an undefined key set. I’m rerunning all six sequentially so one failure cannot mask the others, then I’ll trace this failure against the claimed “latent crash fixed” statement rather than assuming they refer to the same code path.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$cmds = @('"'e4:controls','e4:test','e4:theorem','e4:scenarios','e4:frontier','e4:evidence'); foreach ("'$s in $cmds) { Write-Output "COMMAND npm run $s"; & npm.cmd run $s 2>&1; Write-Output "EXIT $LASTEXITCODE" }' in C:\devel\claude-projects\distributed-governance-research
+2026-07-12T02:49:53.936444Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 2 seconds
+Output:
+
+> distributed-governance-research@0.0.0 e4:evidence
+> node scripts/simulation/e4-v5/evidence.mjs
+
+file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37
+const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
+                                                      ^
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at boxOf (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:37:55)
+    at buildEvidence (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:105:32)
+    at main (file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:128:33)
+    at file:///C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:143:76
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'git status --short; git diff -- scripts/simulation/e4-v5/contract.mjs' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 171ms:
+ M scripts/simulation/e4-v5/contract.mjs
+ M scripts/simulation/e4-v5/evidence.mjs
+?? audits/2026-07-11-v1.14-design/codex-v7-run.log
+diff --git a/scripts/simulation/e4-v5/contract.mjs b/scripts/simulation/e4-v5/contract.mjs
+index 7def8cf..17105f3 100644
+--- a/scripts/simulation/e4-v5/contract.mjs
++++ b/scripts/simulation/e4-v5/contract.mjs
+@@ -90,14 +90,13 @@ export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
+ // Current block is the working v6 config; do not treat the swept set below as the final "everything" sweep.
+ export const EVIDENCE = {
+   world:        { N: 1500, K: 150 },   // inside R_alpha for N,K
+-  base_nw:      500,                    // Monte-Carlo worlds for the base point
+-  sweep_nw:     110,                    // worlds per swept cell
+-  n_random:     64,                     // random interior samples added to corners+center per envelope
+-  headline_alpha: 0.8,                  // R_alpha level used for the materiality decision
+-  uncertain:    ['p', 'beta', 'sigma_e', 's_exp', 'b_H_C', 'w', 'pi_opp'],
+-  fixed_check:  ['sigma', 'mu_opp', 'sigma_C', 'gamma', 'h', 'lambda', 'a', 'b', 'zeta', 'v_p0'],
+-  // Nested R_alpha SENSITIVITY-WIDTH factors (DECLARED sensitivity widths, NOT verified probability coverage).
+-  alpha_width:  { '0.5': 0.6, '0.8': 1.0, '0.95': 1.3 },
++  probable_nw:  800,                    // worlds for the PROBABLE headline point (with CI)
++  sweep_nw:     90,                     // worlds per envelope sample point
++  n_env:        400,                    // uniform samples over the ANCHORED scenario envelope (defensible box, not
++                                        //   arbitrary raw D_F — sampling uniform over a too-wide D_F would distort the
++                                        //   sign fraction). The envelope per knob = [min,max] of the 3 anchored scenarios.
++  // Held at base (not varied by the anchored scenarios): computational/cost/value-scale nuisances.
++  fixed:        ['N', 'K', 'c_lo', 'c_hi', 'm_q', 's_q', 'sigma', 'sigma_v', 'v_p0', 'phi', 'h'],
+ };
+ 
+ // ---- CLOSED output schema (embargo-critical): additionalProperties:false; cannot express D/C or ratio-parity-1 ----
+warning: in the working copy of 'scripts/simulation/e4-v5/contract.mjs', LF will be replaced by CRLF the next time Git touches it
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'git diff -- scripts/simulation/e4-v5/evidence.mjs' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 157ms:
+diff --git a/scripts/simulation/e4-v5/evidence.mjs b/scripts/simulation/e4-v5/evidence.mjs
+index aeeb76e..f5d6a82 100644
+--- a/scripts/simulation/e4-v5/evidence.mjs
++++ b/scripts/simulation/e4-v5/evidence.mjs
+@@ -1,88 +1,62 @@
+-// E4 v1.14 — the exclusive evidence path (`npm run e4:evidence`). v6: replaces the 4-key corners slice with a
+-// declared fixed-vs-uncertain split, a joint envelope over the UNCERTAIN set (incl. the coordinates Codex showed
+-// flip the sign: p, sigma_e), endpoint Monte-Carlo uncertainty, a fixed-coordinate flip check, a resolved+hashed
+-// evidence manifest, and a repaired state machine (set-based materiality, degeneracy/sufficiency aborts). Every
+-// output byte is routed through the sole embargo adapter.
++// E4 v1.14 — the exclusive evidence path (`npm run e4:evidence`). v7: the GLOBAL "report everything" object is a
++// uniform Monte-Carlo over the ANCHORED scenario envelope (per knob = [min,max] of the three anchored scenarios in
++// research/e4-plausible-anchors.md) — a DEFENSIBLE box, not the arbitrary raw D_F (uniform over a too-wide D_F would
++// distort the sign fraction). It reports: the PROBABLE headline point m ± 95% CI, and across the plausible envelope
++// the DISTRIBUTION of m (p5/p50/p95) and the VOLUME fraction where each institution wins (with binomial SE). Sign is
++// classified from those volume fractions. Every output byte is routed through the sole embargo adapter.
+ import { fileURLToPath } from 'node:url';
+-import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
++import { THETA, NUM, CLASSIFY, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
+ import { estimand, makeRng } from './engine.mjs';
++import { PRO_CENTRAL, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
+ import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
+ import { validateOutput } from './schema.mjs';
+ 
+-// All evidence-governing settings come from the contract's EVIDENCE block (single source of truth, hashed into theta_id).
+-const WORLD = EVIDENCE.world, SWEEP_NW = EVIDENCE.sweep_nw, BASE_NW = EVIDENCE.base_nw, N_RANDOM = EVIDENCE.n_random;
+ const SEED = NUM.seed.value;
+-const UNCERTAIN = EVIDENCE.uncertain, FIXED_CHECK = EVIDENCE.fixed_check;
++const SWEPT = Object.keys(PROBABLE);   // the knobs varied by the anchored scenarios
++const ENV = Object.fromEntries(SWEPT.map((k) => {
++  const vals = [PRO_CENTRAL[k], PROBABLE[k], PRO_DIST[k]].filter((v) => v !== undefined);
++  return [k, [Math.min(...vals), Math.max(...vals)]];
++}));
+ 
+ const MANIFEST = {
+   contract_version: CONTRACT_VERSION, contract_hash: contractHash(), world: WORLD, seed: SEED,
+-  base_nw: BASE_NW, sweep_nw: SWEEP_NW, n_random: N_RANDOM,
+-  uncertain: UNCERTAIN, fixed_check: FIXED_CHECK,
++  probable_nw: EVIDENCE.probable_nw, sweep_nw: EVIDENCE.sweep_nw, n_env: EVIDENCE.n_env,
++  swept: SWEPT, envelope: ENV, fixed: EVIDENCE.fixed,
+   o_min_frac: CLASSIFY.o_min_frac.value, delta: CLASSIFY.delta.value, zero_tol: CLASSIFY.zero_tol.value,
+-  alpha_levels: ALPHA_LEVELS, alpha_width: EVIDENCE.alpha_width, headline_alpha: EVIDENCE.headline_alpha,
+-  estimand: 'ratio-of-sums Sum(D-C)/Sum(O) over kept worlds (O>o_min); sign backbone = sign SHARES (count of resolved sample points, NOT a probability) over the joint D_F; magnitude = m over joint R_alpha sensitivity boxes',
+-  optimizer: 'joint corners + center + N_RANDOM uniform interior samples over the UNCERTAIN box; one-at-a-time FIXED_CHECK flip probe (a sampled envelope may still under-cover interior extrema)',
++  estimand: 'ratio-of-sums Sum(D-C)/Sum(O) over kept worlds; headline = PROBABLE scenario m+-CI; global = uniform MC over the anchored envelope -> sign VOLUME fractions (with SE) + m distribution p5/p50/p95',
+ };
+-const THETA_ID = 'e4v6+' + resolvedHash(MANIFEST);
++const THETA_ID = 'e4v7+' + resolvedHash(MANIFEST);
+ 
+-// sample points over a box: 2^k corners (k<=8) + center + N_RANDOM uniform interior points (seeded, reproducible).
+-function samplePoints(bx, nRandom) {
+-  const keys = Object.keys(bx), pts = [], n = 1 << keys.length;
+-  for (let m = 0; m < n; m++) { const p = {}; keys.forEach((k, bi) => { p[k] = (m >> bi & 1) ? bx[k][1] : bx[k][0]; }); pts.push(p); }
+-  const c = {}; keys.forEach((k) => { c[k] = 0.5 * (bx[k][0] + bx[k][1]); }); pts.push(c);
+-  const rng = makeRng((SEED ^ 0x5bd1e995) >>> 0);
+-  for (let i = 0; i < nRandom; i++) { const p = {}; keys.forEach((k) => { p[k] = bx[k][0] + (bx[k][1] - bx[k][0]) * rng.u(); }); pts.push(p); }
+-  return pts;
+-}
+-const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
+-function scaleBand([lo, hi], factor, clip) { const c = 0.5 * (lo + hi), h = 0.5 * (hi - lo) * factor; return [Math.max(c - h, clip[0]), Math.min(c + h, clip[1])]; }
+-const ralphaBoxOf = (keys, alpha) => Object.fromEntries(keys.map((k) => [k, scaleBand(THETA[k].ralpha, EVIDENCE.alpha_width[String(alpha)], THETA[k].df)]));
+-
+-// envelope of m over a joint box (min/max across corners+center+random interior). Sample points with too few
+-// retained worlds (degenerate: O mostly below the relative floor) are SKIPPED and counted, so exploding ratios
+-// cannot set the envelope; if any point is skipped the envelope is flagged not-fully-resolved.
+-function envelope(base, bx, nWorlds, oMinAbs) {
+-  const zt = CLASSIFY.zero_tol.value;
+-  let lo = Infinity, hi = -Infinity, argLo = null, argHi = null, skipped = 0, total = 0, nPos = 0, nNeg = 0, nPar = 0;
+-  for (const p of samplePoints(bx, N_RANDOM)) {
+-    total++;
+-    const r = estimand({ ...base, ...p }, { nWorlds, seed: SEED, oMinAbs });
+-    if (!r.enough || !Number.isFinite(r.m_hat)) { skipped++; continue; }
+-    if (r.m_hat < lo) { lo = r.m_hat; argLo = { ...p }; }
+-    if (r.m_hat > hi) { hi = r.m_hat; argHi = { ...p }; }
+-    if (r.m_hat > zt) nPos++; else if (r.m_hat < -zt) nNeg++; else nPar++;
+-  }
+-  const resolved = total - skipped;
+-  return { lo, hi, argLo, argHi, skipped, total, enough: skipped === 0, resolvedCells: resolved,
+-    distShare: resolved ? nPos / resolved : NaN, centShare: resolved ? nNeg / resolved : NaN, parShare: resolved ? nPar / resolved : NaN };
+-}
++const pctl = (arr, q) => { if (!arr.length) return NaN; const a = [...arr].sort((x, y) => x - y); const i = Math.min(a.length - 1, Math.max(0, Math.round(q * (a.length - 1)))); return a[i]; };
+ 
+-// one-at-a-time flip probe over the held FIXED_CHECK coordinates: does any single held coord, moved to a D_F
+-// endpoint, flip the base sign? (Codex: omitted coordinates reverse sign.)
+-function fixedFlipProbe(base, oMinAbs) {
+-  const flips = [];
++// uniform Monte-Carlo over the anchored envelope: fraction of samples where each arm wins (volume, with SE) + m dist.
++function envelopeSweep(nWorlds, n) {
++  const base = { ...baseConfig(), ...WORLD };
++  const rng = makeRng((SEED ^ 0x5bd1e995) >>> 0);
++  const ms = []; let pos = 0, neg = 0, par = 0, resolved = 0;
+   const zt = CLASSIFY.zero_tol.value;
+-  const m0 = estimand(base, { nWorlds: SWEEP_NW, seed: SEED, oMinAbs }).m_hat;
+-  const s0 = Math.sign(m0);
+-  for (const k of FIXED_CHECK) {
+-    for (const end of THETA[k].df) {
+-      const r = estimand({ ...base, [k]: end }, { nWorlds: SWEEP_NW, seed: SEED, oMinAbs });
+-      if (r.enough && Number.isFinite(r.m_hat) && Math.abs(r.m_hat) > zt && Math.sign(r.m_hat) !== s0) flips.push(`${k}=${end}→${(100 * r.m_hat).toFixed(0)}%`);
+-    }
++  for (let i = 0; i < n; i++) {
++    const cfg = { ...base, ...PROBABLE };
++    for (const k of SWEPT) cfg[k] = ENV[k][0] + (ENV[k][1] - ENV[k][0]) * rng.u();
++    const r = estimand(cfg, { nWorlds, seed: SEED });
++    if (!r.enough || !Number.isFinite(r.m_hat)) continue;
++    resolved++; ms.push(r.m_hat);
++    if (r.m_hat > zt) pos++; else if (r.m_hat < -zt) neg++; else par++;
+   }
+-  return flips;
++  const share = (c) => (resolved ? c / resolved : NaN);
++  const se = (p) => (resolved ? Math.sqrt(Math.max(0, p * (1 - p)) / resolved) : NaN);
++  return { resolved, n, distShare: share(pos), centShare: share(neg), parShare: share(par),
++    distShareSE: se(share(pos)), p5: pctl(ms, 0.05), p50: pctl(ms, 0.50), p95: pctl(ms, 0.95),
++    enough: resolved >= EVIDENCE.n_env * 0.5 };
+ }
+ 
+ export function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
+   const d = CLASSIFY.delta.value;
+-  // sign backbone over D_F from the SIGN SHARES of resolved corners (magnitude over D_F is not meaningful —
+-  // an arm can deliver large negative value, so (D−C)/O is unbounded there; only the sign pattern is reported).
+   let sign_status;
+   if (dfEnv.distShare > 0 && dfEnv.centShare > 0) sign_status = 'indeterminate';
+   else if (dfEnv.distShare > 0 && dfEnv.centShare === 0) sign_status = 'pos';
+   else if (dfEnv.centShare > 0 && dfEnv.distShare === 0) sign_status = 'neg';
+   else sign_status = 'zero-touching';
+-  // set-based materiality over the headline R_alpha interval (NOT the base-point CI)
+   const [rl, rh] = ralphaHeadline;
+   let materiality_status;
+   if (rl > d || rh < -d) materiality_status = 'material';
+@@ -95,49 +69,40 @@ export function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
+ 
+ export function buildEvidence() {
+   const base = { ...baseConfig(), ...WORLD };
+-  if (!inRalpha({ ...base }, ['N', 'K'])) throw new Error('[evidence] world N/K outside declared R_alpha');
+-  const pt = estimand(base, { nWorlds: BASE_NW, seed: SEED });
+-  if (!pt.enough) throw new Error(`[evidence] base point insufficient: only ${pt.n_kept} kept worlds (< max(${NUM.min_kept_floor.value}, ${NUM.min_kept_frac.value}·worlds)) — aborting fail-closed`);
+-  // per-corner relative o_min (each cell drops its own O≈0 worlds); the ratio-of-sums estimand is scale-robust, so a
+-  // single shared floor is unnecessary and would over-exclude naturally low-value corners.
+-  const oMinAbs = null;
+-
+-  const dfEnv = envelope(base, boxOf(UNCERTAIN, 'df'), SWEEP_NW, oMinAbs);
+-  if (dfEnv.resolvedCells === 0) throw new Error('[evidence] D_F envelope has no resolved cells — aborting fail-closed');
+-
+-  const m_Ralpha = {};
+-  for (const al of ALPHA_LEVELS) { const e = envelope(base, ralphaBoxOf(UNCERTAIN, al), SWEEP_NW, oMinAbs); m_Ralpha[String(al)] = [e.lo, e.hi]; }
+-  const ralphaHeadline = m_Ralpha[String(MANIFEST.headline_alpha)];
++  if (!inRalpha(base, ['N', 'K'])) throw new Error('[evidence] world N/K outside declared R_alpha');
++  const pt = estimand({ ...base, ...PROBABLE }, { nWorlds: EVIDENCE.probable_nw, seed: SEED });   // PROBABLE headline
++  if (!pt.enough) throw new Error(`[evidence] probable point insufficient: ${pt.n_kept} kept — aborting fail-closed`);
+ 
+-  const flips = fixedFlipProbe(base, oMinAbs);
+-  const st = classify({ point: pt, dfEnv, ralphaHeadline, pi_deg: pt.pi_deg, enough: pt.enough });
++  const env = envelopeSweep(EVIDENCE.sweep_nw, EVIDENCE.n_env);
++  if (env.resolved === 0) throw new Error('[evidence] envelope sweep has no resolved samples — aborting fail-closed');
+ 
++  const st = classify({ point: pt, dfEnv: env, ralphaHeadline: pt.ci, pi_deg: pt.pi_deg, enough: pt.enough });
+   const out = {
+     contract_version: CONTRACT_VERSION, theta_id: THETA_ID, pi_deg: pt.pi_deg,
+     m_hat: pt.m_hat, ci: pt.ci,
+-    df_dist_share: dfEnv.distShare, df_cent_share: dfEnv.centShare, df_par_share: dfEnv.parShare,
+-    m_Ralpha, ...st,
++    df_dist_share: env.distShare, df_cent_share: env.centShare, df_par_share: env.parShare, df_dist_share_se: env.distShareSE,
++    ...st,
+   };
+   const errs = validateOutput(out);
+   if (errs.length) throw new Error('[evidence] output invalid: ' + errs.join('; '));
+-  return { out, dfEnv, flips, manifest: MANIFEST };
++  return { out, env, pt, manifest: MANIFEST };
+ }
+ 
+-// ---- render everything through the sole embargo adapter (no bypassing lines) ----
+ function main() {
+-  const { out, dfEnv, flips } = buildEvidence();
+-  const notRobust = out.df_dist_share > 0 && out.df_cent_share > 0;
+-  const extra = [
+-    '',
+-    `  D_F sign backbone over UNCERTAIN {${MANIFEST.uncertain.join(', ')}}:`,
+-    `    resolved corners: ${dfEnv.resolvedCells}/${dfEnv.total} (${dfEnv.skipped} skipped as degenerate)`,
+-    `    → the winner is ${notRobust ? 'NOT sign-robust across the full physically-possible set (both institutions win in some corners)' : 'sign-robust across the resolved corners'}`,
+-    `  fixed-coordinate flip probe over {${MANIFEST.fixed_check.join(', ')}}: ${flips.length ? 'SIGN FLIPS: ' + flips.join(', ') : 'no held coordinate flips the base sign'}`,
+-    `  contract hash: ${MANIFEST.contract_hash}   run (theta_id): ${out.theta_id}`,
+-  ];
+-  const full = renderReport(out) + '\n' + extra.join('\n');
+-  assertNoEmbargoedTokens(full);          // the WHOLE artifact, not just the core report
+-  console.log(full);
++  const { out, env, pt } = buildEvidence();
++  const P = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
++  const sh = (x) => (100 * x).toFixed(0) + '%';
++  const text = [
++    `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
++    `  PROBABLE scenario (evidence-anchored) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
++    `  across the anchored plausible envelope (${env.resolved}/${env.n} resolved):`,
++    `    m distribution: p5 ${P(env.p5)} · median ${P(env.p50)} · p95 ${P(env.p95)}`,
++    `    Core v0 wins ${sh(env.distShare)} of the plausible envelope (± ${sh(env.distShareSE)} SE) · central ${sh(env.centShare)} · parity ${sh(env.parShare)}`,
++    `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
++    `  π_deg: ${sh(out.pi_deg)}   contract hash: ${MANIFEST.contract_hash}`,
++    `  (three named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)`,
++  ].join('\n');
++  assertNoEmbargoedTokens(text);
++  console.log(text);
+ }
+-// run the (slow) sweep only when executed directly, so importing classify/buildEvidence for tests does not trigger it.
+ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
+warning: in the working copy of 'scripts/simulation/e4-v5/evidence.mjs', LF will be replaced by CRLF the next time Git touches it
+

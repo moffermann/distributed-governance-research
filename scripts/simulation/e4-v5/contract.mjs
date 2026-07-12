@@ -90,14 +90,13 @@ export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
 // Current block is the working v6 config; do not treat the swept set below as the final "everything" sweep.
 export const EVIDENCE = {
   world:        { N: 1500, K: 150 },   // inside R_alpha for N,K
-  base_nw:      500,                    // Monte-Carlo worlds for the base point
-  sweep_nw:     110,                    // worlds per swept cell
-  n_random:     64,                     // random interior samples added to corners+center per envelope
-  headline_alpha: 0.8,                  // R_alpha level used for the materiality decision
-  uncertain:    ['p', 'beta', 'sigma_e', 's_exp', 'b_H_C', 'w', 'pi_opp'],
-  fixed_check:  ['sigma', 'mu_opp', 'sigma_C', 'gamma', 'h', 'lambda', 'a', 'b', 'zeta', 'v_p0'],
-  // Nested R_alpha SENSITIVITY-WIDTH factors (DECLARED sensitivity widths, NOT verified probability coverage).
-  alpha_width:  { '0.5': 0.6, '0.8': 1.0, '0.95': 1.3 },
+  probable_nw:  800,                    // worlds for the PROBABLE headline point (with CI)
+  sweep_nw:     90,                     // worlds per envelope sample point
+  n_env:        400,                    // uniform samples over the ANCHORED scenario envelope (defensible box, not
+                                        //   arbitrary raw D_F — sampling uniform over a too-wide D_F would distort the
+                                        //   sign fraction). The envelope per knob = [min,max] of the 3 anchored scenarios.
+  // Held at base (not varied by the anchored scenarios): computational/cost/value-scale nuisances.
+  fixed:        ['N', 'K', 'c_lo', 'c_hi', 'm_q', 's_q', 'sigma', 'sigma_v', 'v_p0', 'phi', 'h'],
 };
 
 // ---- CLOSED output schema (embargo-critical): additionalProperties:false; cannot express D/C or ratio-parity-1 ----

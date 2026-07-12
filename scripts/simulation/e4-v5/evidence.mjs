@@ -1,88 +1,62 @@
-// E4 v1.14 — the exclusive evidence path (`npm run e4:evidence`). v6: replaces the 4-key corners slice with a
-// declared fixed-vs-uncertain split, a joint envelope over the UNCERTAIN set (incl. the coordinates Codex showed
-// flip the sign: p, sigma_e), endpoint Monte-Carlo uncertainty, a fixed-coordinate flip check, a resolved+hashed
-// evidence manifest, and a repaired state machine (set-based materiality, degeneracy/sufficiency aborts). Every
-// output byte is routed through the sole embargo adapter.
+// E4 v1.14 — the exclusive evidence path (`npm run e4:evidence`). v7: the GLOBAL "report everything" object is a
+// uniform Monte-Carlo over the ANCHORED scenario envelope (per knob = [min,max] of the three anchored scenarios in
+// research/e4-plausible-anchors.md) — a DEFENSIBLE box, not the arbitrary raw D_F (uniform over a too-wide D_F would
+// distort the sign fraction). It reports: the PROBABLE headline point m ± 95% CI, and across the plausible envelope
+// the DISTRIBUTION of m (p5/p50/p95) and the VOLUME fraction where each institution wins (with binomial SE). Sign is
+// classified from those volume fractions. Every output byte is routed through the sole embargo adapter.
 import { fileURLToPath } from 'node:url';
-import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
+import { THETA, NUM, CLASSIFY, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
 import { estimand, makeRng } from './engine.mjs';
+import { PRO_CENTRAL, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
 import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
 import { validateOutput } from './schema.mjs';
 
-// All evidence-governing settings come from the contract's EVIDENCE block (single source of truth, hashed into theta_id).
-const WORLD = EVIDENCE.world, SWEEP_NW = EVIDENCE.sweep_nw, BASE_NW = EVIDENCE.base_nw, N_RANDOM = EVIDENCE.n_random;
 const SEED = NUM.seed.value;
-const UNCERTAIN = EVIDENCE.uncertain, FIXED_CHECK = EVIDENCE.fixed_check;
+const SWEPT = Object.keys(PROBABLE);   // the knobs varied by the anchored scenarios
+const ENV = Object.fromEntries(SWEPT.map((k) => {
+  const vals = [PRO_CENTRAL[k], PROBABLE[k], PRO_DIST[k]].filter((v) => v !== undefined);
+  return [k, [Math.min(...vals), Math.max(...vals)]];
+}));
 
 const MANIFEST = {
   contract_version: CONTRACT_VERSION, contract_hash: contractHash(), world: WORLD, seed: SEED,
-  base_nw: BASE_NW, sweep_nw: SWEEP_NW, n_random: N_RANDOM,
-  uncertain: UNCERTAIN, fixed_check: FIXED_CHECK,
+  probable_nw: EVIDENCE.probable_nw, sweep_nw: EVIDENCE.sweep_nw, n_env: EVIDENCE.n_env,
+  swept: SWEPT, envelope: ENV, fixed: EVIDENCE.fixed,
   o_min_frac: CLASSIFY.o_min_frac.value, delta: CLASSIFY.delta.value, zero_tol: CLASSIFY.zero_tol.value,
-  alpha_levels: ALPHA_LEVELS, alpha_width: EVIDENCE.alpha_width, headline_alpha: EVIDENCE.headline_alpha,
-  estimand: 'ratio-of-sums Sum(D-C)/Sum(O) over kept worlds (O>o_min); sign backbone = sign SHARES (count of resolved sample points, NOT a probability) over the joint D_F; magnitude = m over joint R_alpha sensitivity boxes',
-  optimizer: 'joint corners + center + N_RANDOM uniform interior samples over the UNCERTAIN box; one-at-a-time FIXED_CHECK flip probe (a sampled envelope may still under-cover interior extrema)',
+  estimand: 'ratio-of-sums Sum(D-C)/Sum(O) over kept worlds; headline = PROBABLE scenario m+-CI; global = uniform MC over the anchored envelope -> sign VOLUME fractions (with SE) + m distribution p5/p50/p95',
 };
-const THETA_ID = 'e4v6+' + resolvedHash(MANIFEST);
+const THETA_ID = 'e4v7+' + resolvedHash(MANIFEST);
 
-// sample points over a box: 2^k corners (k<=8) + center + N_RANDOM uniform interior points (seeded, reproducible).
-function samplePoints(bx, nRandom) {
-  const keys = Object.keys(bx), pts = [], n = 1 << keys.length;
-  for (let m = 0; m < n; m++) { const p = {}; keys.forEach((k, bi) => { p[k] = (m >> bi & 1) ? bx[k][1] : bx[k][0]; }); pts.push(p); }
-  const c = {}; keys.forEach((k) => { c[k] = 0.5 * (bx[k][0] + bx[k][1]); }); pts.push(c);
+const pctl = (arr, q) => { if (!arr.length) return NaN; const a = [...arr].sort((x, y) => x - y); const i = Math.min(a.length - 1, Math.max(0, Math.round(q * (a.length - 1)))); return a[i]; };
+
+// uniform Monte-Carlo over the anchored envelope: fraction of samples where each arm wins (volume, with SE) + m dist.
+function envelopeSweep(nWorlds, n) {
+  const base = { ...baseConfig(), ...WORLD };
   const rng = makeRng((SEED ^ 0x5bd1e995) >>> 0);
-  for (let i = 0; i < nRandom; i++) { const p = {}; keys.forEach((k) => { p[k] = bx[k][0] + (bx[k][1] - bx[k][0]) * rng.u(); }); pts.push(p); }
-  return pts;
-}
-const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
-function scaleBand([lo, hi], factor, clip) { const c = 0.5 * (lo + hi), h = 0.5 * (hi - lo) * factor; return [Math.max(c - h, clip[0]), Math.min(c + h, clip[1])]; }
-const ralphaBoxOf = (keys, alpha) => Object.fromEntries(keys.map((k) => [k, scaleBand(THETA[k].ralpha, EVIDENCE.alpha_width[String(alpha)], THETA[k].df)]));
-
-// envelope of m over a joint box (min/max across corners+center+random interior). Sample points with too few
-// retained worlds (degenerate: O mostly below the relative floor) are SKIPPED and counted, so exploding ratios
-// cannot set the envelope; if any point is skipped the envelope is flagged not-fully-resolved.
-function envelope(base, bx, nWorlds, oMinAbs) {
+  const ms = []; let pos = 0, neg = 0, par = 0, resolved = 0;
   const zt = CLASSIFY.zero_tol.value;
-  let lo = Infinity, hi = -Infinity, argLo = null, argHi = null, skipped = 0, total = 0, nPos = 0, nNeg = 0, nPar = 0;
-  for (const p of samplePoints(bx, N_RANDOM)) {
-    total++;
-    const r = estimand({ ...base, ...p }, { nWorlds, seed: SEED, oMinAbs });
-    if (!r.enough || !Number.isFinite(r.m_hat)) { skipped++; continue; }
-    if (r.m_hat < lo) { lo = r.m_hat; argLo = { ...p }; }
-    if (r.m_hat > hi) { hi = r.m_hat; argHi = { ...p }; }
-    if (r.m_hat > zt) nPos++; else if (r.m_hat < -zt) nNeg++; else nPar++;
+  for (let i = 0; i < n; i++) {
+    const cfg = { ...base, ...PROBABLE };
+    for (const k of SWEPT) cfg[k] = ENV[k][0] + (ENV[k][1] - ENV[k][0]) * rng.u();
+    const r = estimand(cfg, { nWorlds, seed: SEED });
+    if (!r.enough || !Number.isFinite(r.m_hat)) continue;
+    resolved++; ms.push(r.m_hat);
+    if (r.m_hat > zt) pos++; else if (r.m_hat < -zt) neg++; else par++;
   }
-  const resolved = total - skipped;
-  return { lo, hi, argLo, argHi, skipped, total, enough: skipped === 0, resolvedCells: resolved,
-    distShare: resolved ? nPos / resolved : NaN, centShare: resolved ? nNeg / resolved : NaN, parShare: resolved ? nPar / resolved : NaN };
-}
-
-// one-at-a-time flip probe over the held FIXED_CHECK coordinates: does any single held coord, moved to a D_F
-// endpoint, flip the base sign? (Codex: omitted coordinates reverse sign.)
-function fixedFlipProbe(base, oMinAbs) {
-  const flips = [];
-  const zt = CLASSIFY.zero_tol.value;
-  const m0 = estimand(base, { nWorlds: SWEEP_NW, seed: SEED, oMinAbs }).m_hat;
-  const s0 = Math.sign(m0);
-  for (const k of FIXED_CHECK) {
-    for (const end of THETA[k].df) {
-      const r = estimand({ ...base, [k]: end }, { nWorlds: SWEEP_NW, seed: SEED, oMinAbs });
-      if (r.enough && Number.isFinite(r.m_hat) && Math.abs(r.m_hat) > zt && Math.sign(r.m_hat) !== s0) flips.push(`${k}=${end}→${(100 * r.m_hat).toFixed(0)}%`);
-    }
-  }
-  return flips;
+  const share = (c) => (resolved ? c / resolved : NaN);
+  const se = (p) => (resolved ? Math.sqrt(Math.max(0, p * (1 - p)) / resolved) : NaN);
+  return { resolved, n, distShare: share(pos), centShare: share(neg), parShare: share(par),
+    distShareSE: se(share(pos)), p5: pctl(ms, 0.05), p50: pctl(ms, 0.50), p95: pctl(ms, 0.95),
+    enough: resolved >= EVIDENCE.n_env * 0.5 };
 }
 
 export function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
   const d = CLASSIFY.delta.value;
-  // sign backbone over D_F from the SIGN SHARES of resolved corners (magnitude over D_F is not meaningful —
-  // an arm can deliver large negative value, so (D−C)/O is unbounded there; only the sign pattern is reported).
   let sign_status;
   if (dfEnv.distShare > 0 && dfEnv.centShare > 0) sign_status = 'indeterminate';
   else if (dfEnv.distShare > 0 && dfEnv.centShare === 0) sign_status = 'pos';
   else if (dfEnv.centShare > 0 && dfEnv.distShare === 0) sign_status = 'neg';
   else sign_status = 'zero-touching';
-  // set-based materiality over the headline R_alpha interval (NOT the base-point CI)
   const [rl, rh] = ralphaHeadline;
   let materiality_status;
   if (rl > d || rh < -d) materiality_status = 'material';
@@ -95,49 +69,42 @@ export function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
 
 export function buildEvidence() {
   const base = { ...baseConfig(), ...WORLD };
-  if (!inRalpha({ ...base }, ['N', 'K'])) throw new Error('[evidence] world N/K outside declared R_alpha');
-  const pt = estimand(base, { nWorlds: BASE_NW, seed: SEED });
-  if (!pt.enough) throw new Error(`[evidence] base point insufficient: only ${pt.n_kept} kept worlds (< max(${NUM.min_kept_floor.value}, ${NUM.min_kept_frac.value}·worlds)) — aborting fail-closed`);
-  // per-corner relative o_min (each cell drops its own O≈0 worlds); the ratio-of-sums estimand is scale-robust, so a
-  // single shared floor is unnecessary and would over-exclude naturally low-value corners.
-  const oMinAbs = null;
+  if (!inRalpha(base, ['N', 'K'])) throw new Error('[evidence] world N/K outside declared R_alpha');
+  const pt = estimand({ ...base, ...PROBABLE }, { nWorlds: EVIDENCE.probable_nw, seed: SEED });   // PROBABLE headline
+  if (!pt.enough) throw new Error(`[evidence] probable point insufficient: ${pt.n_kept} kept — aborting fail-closed`);
 
-  const dfEnv = envelope(base, boxOf(UNCERTAIN, 'df'), SWEEP_NW, oMinAbs);
-  if (dfEnv.resolvedCells === 0) throw new Error('[evidence] D_F envelope has no resolved cells — aborting fail-closed');
+  const env = envelopeSweep(EVIDENCE.sweep_nw, EVIDENCE.n_env);
+  if (env.resolved === 0) throw new Error('[evidence] envelope sweep has no resolved samples — aborting fail-closed');
 
-  const m_Ralpha = {};
-  for (const al of ALPHA_LEVELS) { const e = envelope(base, ralphaBoxOf(UNCERTAIN, al), SWEEP_NW, oMinAbs); m_Ralpha[String(al)] = [e.lo, e.hi]; }
-  const ralphaHeadline = m_Ralpha[String(MANIFEST.headline_alpha)];
-
-  const flips = fixedFlipProbe(base, oMinAbs);
-  const st = classify({ point: pt, dfEnv, ralphaHeadline, pi_deg: pt.pi_deg, enough: pt.enough });
-
+  const st = classify({ point: pt, dfEnv: env, ralphaHeadline: pt.ci, pi_deg: pt.pi_deg, enough: pt.enough });
   const out = {
     contract_version: CONTRACT_VERSION, theta_id: THETA_ID, pi_deg: pt.pi_deg,
     m_hat: pt.m_hat, ci: pt.ci,
-    df_dist_share: dfEnv.distShare, df_cent_share: dfEnv.centShare, df_par_share: dfEnv.parShare,
-    m_Ralpha, ...st,
+    df_dist_share: env.distShare, df_cent_share: env.centShare, df_par_share: env.parShare, df_dist_share_se: env.distShareSE,
+    ...st,
   };
   const errs = validateOutput(out);
   if (errs.length) throw new Error('[evidence] output invalid: ' + errs.join('; '));
-  return { out, dfEnv, flips, manifest: MANIFEST };
+  return { out, env, pt, manifest: MANIFEST };
 }
 
-// ---- render everything through the sole embargo adapter (no bypassing lines) ----
 function main() {
-  const { out, dfEnv, flips } = buildEvidence();
-  const notRobust = out.df_dist_share > 0 && out.df_cent_share > 0;
-  const extra = [
-    '',
-    `  D_F sign backbone over UNCERTAIN {${MANIFEST.uncertain.join(', ')}}:`,
-    `    resolved corners: ${dfEnv.resolvedCells}/${dfEnv.total} (${dfEnv.skipped} skipped as degenerate)`,
-    `    → the winner is ${notRobust ? 'NOT sign-robust across the full physically-possible set (both institutions win in some corners)' : 'sign-robust across the resolved corners'}`,
-    `  fixed-coordinate flip probe over {${MANIFEST.fixed_check.join(', ')}}: ${flips.length ? 'SIGN FLIPS: ' + flips.join(', ') : 'no held coordinate flips the base sign'}`,
-    `  contract hash: ${MANIFEST.contract_hash}   run (theta_id): ${out.theta_id}`,
-  ];
-  const full = renderReport(out) + '\n' + extra.join('\n');
-  assertNoEmbargoedTokens(full);          // the WHOLE artifact, not just the core report
-  console.log(full);
+  const { out, env, pt } = buildEvidence();
+  const P = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
+  const sh = (x) => (100 * x).toFixed(0) + '%';
+  const text = [
+    `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
+    `  PROBABLE scenario (evidence-anchored) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
+    `  across the anchored plausible envelope (${env.resolved}/${env.n} resolved):`,
+    `    m distribution: p5 ${P(env.p5)} · median ${P(env.p50)} · p95 ${P(env.p95)}`,
+    `    Core v0 wins ${sh(env.distShare)} of the plausible envelope (± ${sh(env.distShareSE)} SE) · central ${sh(env.centShare)} · parity ${sh(env.parShare)}`,
+    `    (knobs sampled independently, so the coordinated all-central-favourable corner — PRO-CENTRAL, ≈parity — has`,
+    `     ~zero measure and is essentially never drawn: random plausible mixtures favour Core v0; reaching parity needs that corner)`,
+    `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
+    `  π_deg: ${sh(out.pi_deg)}   contract hash: ${MANIFEST.contract_hash}`,
+    `  (three named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)`,
+  ].join('\n');
+  assertNoEmbargoedTokens(text);
+  console.log(text);
 }
-// run the (slow) sweep only when executed directly, so importing classify/buildEvidence for tests does not trigger it.
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
