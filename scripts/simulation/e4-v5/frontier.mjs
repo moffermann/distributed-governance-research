@@ -65,8 +65,9 @@ safeLog(`    t=0 probable scenario → t=1 central's full best plausible case`);
 safeLog(`    m across t: ` + ts.filter((_, i) => i % 2 === 0).map((t, i) => `t=${t.toFixed(2)}:${pct(tms[i * 2])}`).join('  '));
 safeLog(tf === null
   ? `    frontier: none in t∈[0,2] — one endpoint does not cross parity`
-  : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  conditions ${tf < 1 ? `~${Math.round(tf * 100)}% of the way from probable to the central's full best case flip the winner to the central (a PLAUSIBLE region, not beyond-realistic)` : `must exceed the central's full best plausible case (t>1)`}`);
+  : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  conditions ${tf < 1 ? `~${Math.round(tf * 100)}% of the way from probable to the declared central-favourable endpoint flip the winner to the central (within the declared interpolation segment)` : `must exceed the declared central-favourable endpoint (t>1)`}`);
 safeLog('');
-safeLog('Read: no single knob flips the winner from the probable scenario (robust to any ONE assumption); the');
-safeLog('frontier lives on the combined path and is reached WITHIN the plausible range as conditions favour the central.');
-safeLog('NOTE: t is a linear mix of heterogeneous knobs, an illustrative path — not a calibrated competence scale.');
+safeLog('Read: none of the FIVE plotted one-factor slices flips the winner from the probable scenario over its plotted');
+safeLog('range (a limited robustness statement over those five slices, NOT over all parameters). The frontier is reached');
+safeLog('on the combined path within the declared interpolation segment. NOTE: t is a linear mix of heterogeneous knobs,');
+safeLog('an illustrative path — not a calibrated competence scale.');

@@ -95,6 +95,10 @@ check('EMBARGO rejects "twice"', rejects('twice as much value'));
 check('EMBARGO rejects "double"', rejects('double the delivered value'));
 check('EMBARGO rejects lowercase "d/c"', rejects('the d/c ratio'));
 check('EMBARGO rejects zero-width-split "2.2​x"', rejects('gain of 2.2​x'));
+check('EMBARGO rejects "fourfold"', rejects('a fourfold increase'));
+check('EMBARGO rejects "two times"', rejects('two times more value'));
+check('EMBARGO rejects HTML "&times;"', rejects('gain of 2.2&times;'));
+check('EMBARGO rejects word-joiner-split "2.2⁠x"', rejects('gain of 2.2⁠x'));
 check('EMBARGO rejects "D/C"', rejects('ratio D/C = 1.4'));
 check('EMBARGO allows clean percent text', !rejects('m̂ is 45.7% of the oracle, parity at 0'));
 

@@ -8,21 +8,26 @@ import { validateOutput } from './schema.mjs';
 // Normalize away zero-width chars and map Unicode confusables to ASCII so a Cyrillic 'х', the multiplication/cross
 // signs (× ✕ ✖ ⨯), a non-breaking hyphen, a division slash, etc. cannot smuggle a multiplier/ratio past the filter
 // (rev-repro M2 + Codex v8 broader bypasses).
-const ZERO_WIDTH = /[​‌‍﻿]/g;
+const ZERO_WIDTH = /[​‌‍⁠﻿­]/g; // ZWSP/ZWNJ/ZWJ/word-joiner(U+2060)/BOM/soft-hyphen(U+00AD)
+const HTML_MULT  = /&times;|&#0*215;|&#x0*d7;/gi;   // HTML-entity multiplication sign → x
 const CONF_X = /[×✕✖⨯хХｘＸ]/g;               // → x
 const CONF_HYPHEN = /[‐‑‒–—]/g; // various hyphens/dashes → '-'
 const CONF_SLASH = /[⁄∕／]/g;   // fraction/division/fullwidth slash → '/'
+const NUMWORD = 'one|two|three|four|five|six|seven|eight|nine|ten|twenty|thirty|forty|fifty|hundred|thousand|many|several';
 const MULT_SUFFIX = /\d\s*x/i;                 // a number followed by x (after normalization)
-const FOLD_TIMES  = /\d(\.\d+)?\s*-?\s*(fold|times)\b/i;              // "2.2-fold", "2.2 times"
-const WORD_MULT   = /\b(twice|double|triple|quadruple|[a-z]+-fold)\b/i; // "twice", "double", "two-fold"
+const NUM_FOLD    = new RegExp(`(\\d(\\.\\d+)?|\\b(${NUMWORD}))[\\s-]*(fold|times)\\b`, 'i');   // "2.2-fold","two times","fourfold"
+const WORD_MULT   = /\b(twice|thrice|double|triple|quadruple)\b/i;   // bare word multipliers
 const RATIO_TOKEN = /\b[dc]\s*\/\s*[cd]\b/i;   // D/C or C/D, any case
 
+// NOTE: this rejects the TESTED token classes (ASCII/Unicode/confusable/HTML-entity 'x' after a number;
+// numeric or number-word N-fold / N-times; bare twice/double/triple/quadruple; D/C or C/D any case; zero-width
+// splits). It is not a proof against every conceivable obfuscation — see the test suite for the covered classes.
 export function assertNoEmbargoedTokens(text) {
-  const norm = text.replace(ZERO_WIDTH, '').replace(CONF_X, 'x').replace(CONF_HYPHEN, '-').replace(CONF_SLASH, '/');
+  const norm = text.replace(ZERO_WIDTH, '').replace(HTML_MULT, 'x').replace(CONF_X, 'x').replace(CONF_HYPHEN, '-').replace(CONF_SLASH, '/');
   const hits = [];
-  if (MULT_SUFFIX.test(norm)) hits.push('multiplier-suffix (number+x, incl. Unicode confusables)');
-  if (FOLD_TIMES.test(norm)) hits.push('numeric fold/times multiplier phrasing');
-  if (WORD_MULT.test(norm)) hits.push('word multiplier (twice/double/triple/N-fold)');
+  if (MULT_SUFFIX.test(norm)) hits.push('multiplier-suffix (number+x, incl. Unicode/HTML confusables)');
+  if (NUM_FOLD.test(norm)) hits.push('N-fold / N-times multiplier phrasing (numeric or word)');
+  if (WORD_MULT.test(norm)) hits.push('word multiplier (twice/thrice/double/triple/quadruple)');
   if (RATIO_TOKEN.test(norm)) hits.push('institution ratio (D/C or C/D, any case)');
   for (const tok of EMBARGO_TOKENS) if (text.includes(tok)) hits.push(`token '${tok}'`);
   if (hits.length) throw new Error(`[embargo] rendered text contains forbidden performance notation: ${hits.join(', ')}`);

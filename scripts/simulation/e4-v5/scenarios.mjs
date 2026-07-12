@@ -21,7 +21,7 @@ run('PROBABLE', PROBABLE);           // source-motivated declared reference
 run('MYOPIA-OFF', MYOPIA_OFF);       // GENUINE myopia-only contrast (only s_exp,b_H_C change) — attributes the harm channel ALONE
 run('NO-MYOPIA', NO_MYOPIA);         // harm-aware AND competent bundle — continuity anchor to the ~0.025 gate
 run('PRO-DISTRIBUTED', PRO_DIST);
-safeLog('\nPRO-CENTRAL = central\'s FULL best plausible case (every knob central-favourable) → the central wins.');
-safeLog('Attribution (honest): harm-myopia ALONE (MYOPIA-OFF, only s_exp,b_H_C) moves PROBABLE +46.6% → ~+30% — most of the');
-safeLog('advantage but not all. NO-MYOPIA (harm sight PLUS unbiased/precise/no-credit) reaches ~+6%, the ~0.025-gate regime;');
-safeLog('the extra collapse is added central competence, NOT harm myopia alone. Read C/O < 0 as the central destroying value.');
+safeLog('\nPRO-CENTRAL = a declared central-favourable endpoint (every knob central-favourable) → the central wins.');
+safeLog('Sequential attribution (path-dependent, nonlinear model): harm-myopia ALONE (MYOPIA-OFF, only s_exp,b_H_C)');
+safeLog('reduces the probable gap +46.6% → +30.4%, i.e. 16.2 of the 40.5-pt decline to +6.1% (~40%); the further step to');
+safeLog('the NO-MYOPIA bundle (unbiased/precise/no-credit) reduces it 24.3 pts (~60%). Read C/O < 0 as the central destroying value.');
