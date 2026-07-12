@@ -101,6 +101,25 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
     `noise=${(100 * noiseEff).toFixed(1)}pts harmGate=${(100 * harmGateEff).toFixed(1)}pts`);
 }
 
+// ---- E5 multi-layer: with the delivery/budget channels OFF (default), E5 reduces EXACTLY to the E4 selection
+//      result (the central is granted zero admin cost + zero leakage). Turning the central's cost/leakage ON grows
+//      the coverage gap, sign preserved; the channel decomposition is exact (no hidden conflation). ----
+{
+  const { layeredEstimand } = await import('./e5-layers.mjs');
+  const { PROBABLE } = await import('./scenario-configs.mjs');
+  const base = { ...baseConfig(), N: 800, K: 120, ...PROBABLE };
+  const off = layeredEstimand(base, { nWorlds: 300 });
+  check('E5 layers OFF => m5 == selection (reduces to E4)', Math.abs(off.m5 - off.m_selection) < 1e-12 && off.layersOff,
+    `m5=${off.m5.toFixed(4)} sel=${off.m_selection.toFixed(4)}`);
+  const withCost = layeredEstimand({ ...base, kappa_C: 0.4, kappa_D: 0.1 }, { nWorlds: 300 });
+  check('E5 admin cost ON (kappa_C>kappa_D) grows the coverage gap (sign preserved)', withCost.m5 > off.m5 && withCost.m_admin > 0,
+    `m5 ${off.m5.toFixed(3)} -> ${withCost.m5.toFixed(3)}`);
+  const w = layeredEstimand({ ...base, kappa_C: 0.4, kappa_D: 0.1, leak_C: 0.3, leak_D: 0.1 }, { nWorlds: 300 });
+  check('E5 channel decomposition is exact (no hidden conflation)',
+    Math.abs(w.m5 - (w.m_selection + w.m_admin + w.m_leak + w.interaction)) < 1e-12,
+    `resid=${(w.m5 - (w.m_selection + w.m_admin + w.m_leak + w.interaction)).toExponential(1)}`);
+}
+
 // ---- Embargo: reject multiplier/ratio notation in rendered text ----
 const rejects = (txt) => { try { assertNoEmbargoedTokens(txt); return false; } catch { return true; } };
 check('EMBARGO rejects "2.2x"', rejects('gain of 2.2x'));

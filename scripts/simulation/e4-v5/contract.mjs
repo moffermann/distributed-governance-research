@@ -65,6 +65,15 @@ export const THETA = {
   // ---- selection ----
   h:       { value: 0.0,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0, 1.0], note: 'opportunity-cost hurdle (shared across arms)' },
   lambda:  { value: 0.15, kind: 'physical',    dm: [0, 1], df: [0, 1], ralpha: [0, 0.4], note: 'central credit-pressure weight (credit salience P = visibility V; a linear scale on P would cancel under z-scoring, so none is registered)' },
+
+  // ---- E5 DELIVERY / BUDGET LAYERS (parametric channels; DEFAULT 0 = OFF => the central is granted zero admin
+  //      cost and zero leakage, and E5 reduces EXACTLY to the E4 selection result). Turned on only in the
+  //      cost+corruption extension, anchored to real public-budget/corruption data (ADMIN-COST-LEG.md,
+  //      LEAKAGE-CORRUPTION-LEG.md). Delivered value per arm = selection · (1-kappa) · (1-leak). ----
+  kappa_C: { value: 0.0, kind: 'physical', dm: [0, 1], df: [0, 0.9], ralpha: [0, 0.6], note: 'admin-machinery cost share the CENTRAL consumes (value-proxy studies, allocation, prioritization, AI-fiscalization, delivery mgmt, licenses, travel). OFF=0' },
+  kappa_D: { value: 0.0, kind: 'physical', dm: [0, 1], df: [0, 0.9], ralpha: [0, 0.3], note: "Core v0's OWN operating cost share (platform + AI). base: kappa_D < kappa_C. OFF=0" },
+  leak_C:  { value: 0.0, kind: 'physical', dm: [0, 1], df: [0, 0.9], ralpha: [0, 0.5], note: 'leakage/diversion fraction of allocated funds under the OPAQUE central process. OFF=0' },
+  leak_D:  { value: 0.0, kind: 'physical', dm: [0, 1], df: [0, 0.9], ralpha: [0, 0.3], note: "leakage fraction under Core v0 (auditable; base: leak_D < leak_C but NOT zero — new attack surfaces). OFF=0" },
 };
 
 // Aggregation A is NORMATIVE and declared, never randomized into a prior.
@@ -176,6 +185,7 @@ export function validateDomain(cfg) {
   const unit = (k) => { if (cfg[k] < 0 || cfg[k] > 1) bad.push(`${k} must be in [0,1]`); };
   unit('p'); unit('beta'); unit('pi_opp'); unit('lambda');
   unit('f_active'); unit('f_deleg'); unit('phi_prof'); unit('d_bias');
+  unit('kappa_C'); unit('kappa_D'); unit('leak_C'); unit('leak_D');
   if (cfg.f_active + cfg.f_deleg > 1 + 1e-9) bad.push('f_active + f_deleg must be <= 1 (f_profile = 1 - f_active - f_deleg >= 0)');
   if (!(cfg.k_deleg >= 1)) bad.push('k_deleg must be >= 1 (delegation adds noise, never removes it)');
   if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');   // zeta is a correlation, NOT a unit interval
