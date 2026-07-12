@@ -123,8 +123,9 @@ current institution solves the same problem, not against an ideal — blocking t
    selection-only stress test shrinks the distributed-minus-central selection
    advantage to a pre-registered pooled median Δ = 0.025 of a full-information
    benchmark, below its pre-set 0.05 research-program rebuild gate (NO-GO). The
-   load-bearing contribution is the architecture and the
-   mechanism *direction*, not the multiplier.
+   load-bearing contribution is the architecture and the qualitative mechanism,
+   whose comparative scope the v1.14 robustness map delimits across the no-myopia
+   and harm-myopia regimes—not the multiplier.
 
 4. **Adversarial review as method** (Section 7). The architecture was attacked
    systematically: forty-three attack briefs grounded in the political-science,
@@ -562,8 +563,9 @@ threshold. The controlling specification is
 [claim-and-estimand-contract](../research/claim-and-estimand-contract.md); the test,
 its frozen pre-registration, results, and diagnostics are
 `scripts/simulation/e5-sp-symmetry-gate.mjs` and `audits/2026-07-10/symmetry-gate-*`.
-The load-bearing contributions are the architecture and the mechanism *direction*,
-not a point multiplier.
+The load-bearing contributions are the architecture, the mechanism direction, and
+the v1.14 comparative robustness map across declared no-myopia and harm-myopia
+regimes—not a point multiplier or calibrated impact.
 
 **The symmetric credit-versus-coverage gate (methods and result).** Because this
 is the paper's one confirmatory computation, its design is stated in full here
@@ -1422,9 +1424,12 @@ actually stands on is narrower and was tested harder: a pre-registered,
 symmetric, selection-only gate finds the distributed-minus-central
 advantage positive in every cell but small (a pre-registered pooled median
 Δ = 0.025 of a full-information benchmark, below its pre-set 0.05
-research-program rebuild gate), so we retire the compound multiplier an
-earlier version reported and rest on the architecture and the *direction*
-of the mechanism. One model-internal result is worth carrying because it is
+research-program rebuild gate). The v1.14 robustness map treats that result as the
+near-parity no-myopia anchor and maps where each institution wins across declared
+harm-myopia scenarios, including a central-favourable endpoint. We therefore retire
+the compound multiplier an earlier version reported and rest on the architecture,
+the qualitative mechanism, and this conditional comparative map; its magnitudes are
+declared reference and stress points, not calibrated impact. One model-internal result is worth carrying because it is
 about the delivery layer, not the multiplier: in the model, at E7's
 audit-informed (but not yet fully source-verified) detection intensity,
 detection without persistent consequences deters no diversion; what moves delivered value is the

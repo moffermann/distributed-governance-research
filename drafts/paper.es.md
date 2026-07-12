@@ -2,7 +2,7 @@
 
 **Working paper — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo, ahora afinada por un mapa de robustez de cuatro escenarios (E4 v1.14) que reconcilia el gate conservador —su régimen de casi-paridad sin-miopía— con un caso realista en el que el central es miope al daño en la cola larga de baja visibilidad y la selección por cobertura se adelanta; todas esas magnitudes son puntos de referencia declarados, no impacto calibrado. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
-*Traducción al español del working paper v1.13 (drafts/paper.md, versión autoritativa en inglés).*
+*Traducción al español del working paper v1.14 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY 4.0 — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI (de concepto, siempre resuelve a la última versión): 10.5281/zenodo.21193846.*
 
@@ -134,8 +134,10 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    solo-de-selección reduce la ventaja de selección distribuido-menos-central a
    una mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información
    completa, por debajo de su umbral prefijado de 0.05 de reconstrucción del
-   programa de investigación (NO-GO). La contribución que carga el
-   peso es la arquitectura y la *dirección* del mecanismo, no el multiplicador.
+   programa de investigación (NO-GO). La contribución que carga el peso es la
+   arquitectura y el mecanismo cualitativo, cuyo alcance comparativo el mapa de
+   robustez v1.14 delimita entre los regímenes sin miopía y con miopía al daño,
+   no el multiplicador.
 
 4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
    atacada sistemáticamente: cuarenta y tres resúmenes de ataque anclados en las
@@ -615,8 +617,9 @@ materialidad de política calibrado. La especificación rectora es
 [claim-and-estimand-contract](../research/claim-and-estimand-contract.md); la prueba,
 su pre-registro congelado, resultados y diagnósticos están en
 `scripts/simulation/e5-sp-symmetry-gate.mjs` y `audits/2026-07-10/symmetry-gate-*`.
-Las contribuciones que cargan el peso son la arquitectura y la *dirección* del
-mecanismo, no un multiplicador puntual.
+Las contribuciones que cargan el peso son la arquitectura, la dirección del
+mecanismo y el mapa de robustez comparativa v1.14 entre regímenes declarados sin
+miopía y con miopía al daño, no un multiplicador puntual ni impacto calibrado.
 
 **El gate simétrico de crédito-versus-cobertura (métodos y resultado).** Como esta
 es la única computación confirmatoria del artículo, su diseño se enuncia aquí por
@@ -1513,9 +1516,13 @@ dureza: un gate pre-registrado, simétrico y solo-de-selección encuentra la
 ventaja distribuido-menos-central positiva en todas las celdas pero pequeña (una
 mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información completa,
 por debajo de su umbral prefijado de 0.05 de reconstrucción del programa de
-investigación), de modo que retiramos el multiplicador compuesto
-que reportó una versión anterior y nos apoyamos en la arquitectura y en la
-*dirección* del mecanismo. Un resultado interno al modelo vale la pena conservar
+investigación). El mapa de robustez v1.14 trata ese resultado como el ancla de
+casi paridad sin miopía y mapea dónde gana cada institución entre escenarios
+declarados de miopía al daño, incluido un endpoint favorable al central. Por lo
+tanto retiramos el multiplicador compuesto que reportó una versión anterior y nos
+apoyamos en la arquitectura, el mecanismo cualitativo y este mapa comparativo
+condicional; sus magnitudes son puntos de referencia y estrés declarados, no
+impacto calibrado. Un resultado interno al modelo vale la pena conservar
 porque trata de la capa de entrega, no del multiplicador: en el modelo, a la
 intensidad de detección informada por auditorías de E7 (aún no plenamente
 verificada en sus fuentes), la detección sin consecuencias
