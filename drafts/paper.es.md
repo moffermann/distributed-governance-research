@@ -1,6 +1,6 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Pruebas de Estrés Adversariales y una Prueba Computacional Simétrica de la Distribución Institucional Selectiva
 
-**Working paper — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo, ahora afinada por un mapa de robustez de cuatro escenarios (E4 v1.14): bajo la participación universal por arquitectura de Core v0, un central realistamente miope al daño en la cola larga de baja visibilidad es superado por la selección por cobertura, y hasta un central plenamente idealizado alcanza a lo sumo un empate apenas —consistente en dirección con la casi-paridad del gate conservador; todas esas magnitudes son puntos de referencia declarados, no impacto calibrado. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo, ahora afinada por un mapa de robustez de cuatro escenarios (E4 v1.14): modelando al central como lo describe la evidencia —casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek, Scott, Olson, Bandiera–Prat–Valletti, Flyvbjerg)— la selección por cobertura gana decisivamente (~99% del benchmark frente a ~44%) y de forma robusta; la casi-paridad del gate pre-registrado es el piso conservador, y el central solo supera a la cobertura abandonando los supuestos anclados, mientras la idealización simétrica del brazo distribuido gana por goleada; todas esas magnitudes son puntos de referencia declarados de un modelo estilizado de instituciones comparadas, no impacto calibrado. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
 *Traducción al español del working paper v1.14 (drafts/paper.md, versión autoritativa en inglés).*
 
@@ -12,7 +12,7 @@ Los recursos públicos se asignan y controlan en instituciones que fusionan tres
 
 Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado consecuente es pública.
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios examina luego el caso probable: un central realistamente miope al daño concentrado en la cola larga de baja visibilidad es superado por la selección basada en cobertura —un punto de referencia declarado y motivado por fuentes, no un efecto calibrado, que se apoya sobre todo en ese supuesto de miopía al daño. Como la participación de Core v0 es universal por arquitectura, hasta un central plenamente idealizado —competente, consciente del daño, insesgado y sin crédito— alcanza a lo sumo un empate estadístico apenas; esto es consistente en dirección con la casi-paridad del gate pre-registrado, de modo que el resultado refleja el supuesto de competencia del central y no la arquitectura por sí sola. El mapa comparativo completo se reporta en un apéndice, con todas las magnitudes como puntos de referencia declarados y no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios modela luego al selector central como lo describe la evidencia —casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg et al. 2003), proyectando sus propios priores sobre los constituyentes (Broockman–Skovron 2018) y ladeado hacia el crédito (Mayhew 1974; Arnold 1990). En ese caso empíricamente anclado la selección distribuida basada en cobertura gana decisivamente —cerca del 99% del benchmark de información completa frente al ~44% del central— de forma robusta en todo el espacio anclado y ante la degradación realista de señal de la cobertura universal de Core v0. El central supera a la cobertura solo abandonando los supuestos anclados (otorgándole la visión del daño que la literatura le niega) en un mundo casi sin daño, mientras la idealización simétrica del brazo distribuido gana por goleada. Estas son magnitudes de referencia declaradas de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; la única sensibilidad que reduce materialmente la brecha —nunca su signo en el rango plausible— es el error correlado/de modo común en el brazo de cobertura. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
 Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las unidades de la simulación no están calibradas, son de equilibrio parcial y no identifican efectos de entrega; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
@@ -621,30 +621,31 @@ Las contribuciones que cargan el peso son la arquitectura, la dirección del
 mecanismo y el mapa de robustez comparativa v1.14 entre regímenes declarados sin
 miopía y con miopía al daño, no un multiplicador puntual ni impacto calibrado.
 
-**Una extensión de miopía realista (v1.14): el caso probable.** Bajo el punto de
-referencia **probable** motivado por fuentes —un tasador central que lee el valor
-visible y portador de crédito pero se *supone* miope al daño concentrado en la cola
-larga de baja visibilidad, distorsionado por crédito y menos preciso— la selección
-distribuida basada en cobertura entrega cerca del **99%** del benchmark voraz de
-información completa frente al **~44%** del central (una **brecha de +54,6 puntos**).
-Esta magnitud es un **punto de referencia declarado y motivado por fuentes, no un
-efecto calibrado**: se apoya sobre todo en la fuerza de la miopía al daño —la perilla
-**de mayor peso y menos anclada empíricamente** del modelo, a la que un contraste
-diagnóstico atribuye cerca del **40%** de la brecha—, los insumos del central cargan
-una brecha de transporte opinión-política→valor-de-proyecto no propagada, y los
-intervalos reportados cubren solo la variabilidad Monte-Carlo interna. Este resultado
-es **consistente en dirección con** nuestro gate de simetría pre-registrado, que
-devolvió casi-paridad (mediana Δ ≈ 0.025, el régimen NO-GO): ese gate dota al central
-de una tasación competente y consciente del daño pero bajo un régimen de *participación
-muestreada conservadora*. Como la participación de asignación neta de Core v0 es
-**universal por arquitectura** (perfiles y delegados cubren a los pasivos, así que es un
-hecho, no un turnout bajo que anclar), la ventaja de cobertura es mayor aquí, y hasta un
-central plenamente idealizado —competente, consciente del daño, insesgado y sin
-crédito— alcanza a lo sumo un **empate estadístico apenas**. El resultado por tanto
-refleja el supuesto de **competencia del central**, no la arquitectura por sí sola. Los
-escenarios declarados abarcan un mapa comparativo completo —incluido ese endpoint del
-central plenamente idealizado, en el que los dos brazos a lo sumo empatan, y un caso
-favorable al distribuido— reportado íntegramente en el **Apéndice E4**.
+**El caso anclado es decisivo (E4 v1.14).** Cuando el selector central se modela como
+lo describe la evidencia —casi ciego al *daño difuso en la cola larga de baja
+visibilidad* (Hayek 1945; Scott 1998; Olson 1965; Bandiera, Prat y Valletti 2009, donde
+el **83% del desperdicio público es pasivo**; Flyvbjerg et al. 2003, donde **nueve de
+cada diez** megaproyectos se pasan de presupuesto y los beneficios se sobreestiman),
+proyectando sus propios priores sobre los constituyentes (Broockman y Skovron 2018), y
+ladeado hacia el crédito reclamable (Mayhew 1974; Arnold 1990), en un espacio de
+proyectos de cola pesada y baja visibilidad (Skuhrovec et al. 2013)— **la selección
+distribuida basada en cobertura entrega cerca del 99% del benchmark voraz de
+información completa frente al ~44% del central: una brecha de +54 puntos.** Esto no es
+un filo de cuchillo. Es robusto en todo el espacio de parámetros anclado; sobrevive a la
+degradación realista de señal de la cobertura universal de Core v0 (una composición
+~5% reportes activos / ~35% microdelegación / ~60% reglas de perfil, cada canal
+anclado); y se mantiene incluso otorgándole al central toda competencia *salvo* la
+visión del daño (~+14%). El central solo supera a la cobertura **abandonando los
+supuestos anclados** —otorgándole la visión del daño que la literatura le niega— y aun
+así solo en un mundo casi sin daño; la idealización *simétrica* del brazo distribuido
+(señal perfecta, mundo con daño, central en su miopía anclada) gana por goleada
+(~+118%). Estas son magnitudes de referencia declaradas y motivadas por fuentes, de un
+modelo estilizado de instituciones comparadas, no efectos de campo calibrados; la única
+sensibilidad que reduce materialmente la brecha —sin voltear su signo en el rango
+plausible— es el error correlado/de modo común en el brazo de cobertura (una plataforma/
+recomendador compartido o delegación concentrada), que lleva ~+54% a ~+26% con
+correlación fuerte. El mapa completo de cuatro escenarios, el anclaje literario, los
+rincones idealizados simétricos y la frontera de modo común están en el **Apéndice E4**.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
@@ -1106,14 +1107,16 @@ impuesto: 0.309 emergente contra el 0.30 asumido.
 **Qué sobrevive.** Reducido a lo que la prueba rectora sostiene: (1) bajo el gate
 simétrico pre-registrado la ventaja de selección distribuida es *positiva pero
 pequeña* (mediana Δ = 0.025, por debajo del umbral de rebuild de 0.05; NO-GO); (1b)
-una extensión de robustez de cuatro escenarios (v1.14) mapea dónde queda cada
-institución una vez que el central puede ser realistamente *miope al daño en la cola
-larga de baja visibilidad*: bajo la participación universal por arquitectura de Core v0,
-la selección por cobertura lidera en todo el espacio, y hasta un central plenamente
-idealizado —competente, consciente del daño, insesgado y sin crédito— alcanza a lo sumo
-un empate apenas (consistente en dirección con la casi-paridad del gate), mientras que
-un central miope pierde decisivamente ante la cobertura, con todas las magnitudes
-reportadas como puntos de referencia y estrés declarados, no impacto calibrado; (2)
+una extensión de robustez de cuatro escenarios (v1.14) modela al central como lo
+describe la evidencia —*casi ciego al daño difuso en la cola larga de baja visibilidad*
+(Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg 2003): en
+ese caso empíricamente anclado la selección por cobertura gana *decisivamente* (≈ 99%
+del benchmark frente a ≈ 44%) y de forma robusta, hasta un central al que se le otorga
+toda competencia salvo la visión del daño igual pierde (≈ +14%), y el central empata
+solo abandonando los supuestos anclados —en un mundo casi sin daño— mientras la
+idealización simétrica del brazo *distribuido* gana por goleada, con todas las
+magnitudes reportadas como puntos de referencia declarados de un modelo estilizado, no
+impacto calibrado; (2)
 las contribuciones que cargan el peso son la arquitectura y el mecanismo
 cualitativo de crédito-versus-cobertura —el ordenamiento central presionado por
 crédito subpondera el valor difuso que la selección distribuida basada en cobertura
@@ -1447,11 +1450,14 @@ dureza: un gate pre-registrado, simétrico y solo-de-selección encuentra la
 ventaja distribuido-menos-central positiva en todas las celdas pero pequeña (una
 mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información completa,
 por debajo de su umbral prefijado de 0.05 de reconstrucción del programa de
-investigación). El mapa de robustez v1.14 es consistente en dirección con
-ese gate de casi-paridad y mapea dónde queda cada institución entre escenarios
-declarados de miopía al daño: bajo la participación universal por arquitectura de Core
-v0, la selección por cobertura lidera en todo el espacio y un central plenamente
-idealizado alcanza a lo sumo un empate apenas en el extremo. Por lo
+investigación). El mapa de robustez v1.14 modela luego al central como lo
+describe la evidencia —casi ciego al daño difuso en la cola larga de baja visibilidad
+(Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg 2003)— y en
+ese caso empíricamente anclado la selección por cobertura gana *decisivamente* (≈ 99%
+del benchmark frente a ≈ 44%) y de forma robusta. Los dos son consistentes: la
+casi-paridad del gate pre-registrado es un piso conservador —le *otorgó* al central la
+visión del daño, bajo participación muestreada— y el central solo supera a la cobertura
+abandonando los supuestos anclados que el gate asumía. Por lo
 tanto retiramos el multiplicador compuesto que reportó una versión anterior y nos
 apoyamos en la arquitectura, el mecanismo cualitativo y este mapa comparativo
 condicional; sus magnitudes son puntos de referencia y estrés declarados, no
@@ -1561,70 +1567,72 @@ mecanismo, ahora afinada por el mapa de robustez a continuación.
 
 ### El mapa de robustez de cuatro escenarios (v1.14)
 
-El gate pre-registrado anterior dota al brazo central de una tasación
-competente y *consciente del daño*. Una extensión v1.14 pregunta qué ocurre cuando el
-central es realistamente **miope al daño en la cola larga de baja visibilidad** —
-donde la fiscalización rutinaria, la oposición y la atención de auditoría alcanzan
-sobre todo a los pocos proyectos visibles y disputados. Separa el valor real en apoyo
-y daño, S = S⁺ − H, y le da al central un término de daño gobernado por saliencia,
-M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, cuya detección de daño s(V) crece con
-la visibilidad del proyecto; el brazo distribuido registra el daño en toda la
-distribución. **La participación de asignación neta se mantiene en su valor
-arquitectónico —universal (p = 1)—** porque en Core v0 los perfiles y delegados asignan
-en nombre de los pasivos, así que la participación es un *hecho*, no un turnout bajo de
-presupuesto participativo que anclar y usar contra la cobertura (una versión anterior lo
-ancló por error al turnout de PB, lo que hambreaba al brazo distribuido). Con el
-presupuesto de tasación igualado y la entrega puntuada sobre el valor real, cuatro
-escenarios declarados (más un contraste diagnóstico) mapean dónde queda cada
-institución, reportados como la fracción con signo del benchmark voraz de información
-completa, paridad en cero (`npm run e4:scenarios`).
+El gate pre-registrado anterior dota al brazo central de una tasación competente y
+*consciente del daño*. Una extensión v1.14 hace la pregunta empíricamente fundada: qué
+ocurre cuando el central se modela como lo describe la evidencia — **casi ciego al daño
+difuso en la cola larga de baja visibilidad**. Esa ceguera está sobre-determinada por la
+literatura: el problema del conocimiento (Hayek 1945), la legibilidad estatal (Scott
+1998), los costos difusos políticamente sub-ponderados (Olson 1965; Schattschneider 1960;
+Wilson 1973), el 83% del desperdicio público que es *pasivo* y no elegido (Bandiera, Prat
+y Valletti 2009), lo visible-versus-lo-no-visto (Bastiat 1850) y el control de agenda
+(Bachrach y Baratz 1962). El modelo lo realiza como un término de daño gobernado por
+saliencia, M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, cuya detección de daño s(V)
+crece con la visibilidad del proyecto, mientras el brazo distribuido registra el daño en
+toda la distribución. **La participación de asignación neta es universal por arquitectura
+(p = 1)** —en Core v0 los perfiles y delegados asignan en nombre de los pasivos, así que
+es un *hecho*, no un turnout bajo de presupuesto participativo. Su *calidad de señal* es
+una composición anclada: ~5% reportes activos directos (la cifra de turnout de un
+dígito), ~35% microdelegación (señal individual, revocable — Kling et al. 2015) y ~60%
+reglas de perfil (un default de categoría de alta alineación, ya que la gente
+mayoritariamente conserva los defaults — Samuelson y Zeckhauser 1988). El anclaje
+literario completo de cada perilla está en `research/e4-calibration-literature-anchors.md`.
+Puntuando la entrega sobre el valor real, cuatro escenarios declarados (más un contraste
+diagnóstico) mapean dónde queda cada institución, como la fracción con signo del benchmark
+voraz de información completa, paridad en cero (`npm run e4:scenarios`):
 
 | escenario (supuestos) | m ± IC 95% | Core v0 | central | ganador |
 |---|---|---|---|---|
-| **Endpoint declarado plenamente favorable al central** — central competente, consciente del daño, preciso y sin crédito + poco daño (algunas perillas quedan fuera de las bandas esperables registradas) | **−1,4%** [−1,5, −1,3] | 96,3% | 97,7% | ≈ empate (central +1,4 pts) |
-| **Paquete sin miopía** — probable + visión del daño + insesgado + preciso + sin crédito (NO es un aislamiento de la miopía) | **+13,9%** [+13,6, +14,2] | 98,9% | 85,0% | Core v0 |
-| **Solo miopía al daño** (contraste diagnóstico, no un escenario) — probable, cambiando SOLO las dos coordenadas del gate de daño | **+38,4%** [+37,8, +39,0] | 98,9% | 60,5% | Core v0 |
-| **Probable** — referencia motivada por fuentes | **+54,6%** [+53,8, +55,4] | 98,9% | 44,3% | Core v0 |
-| **Caso favorable al distribuido** | **+205,7%** [+203,0, +208,7] | 98,9% | −106,8% | Core v0 |
+| **Probable — el caso empíricamente anclado** (central miope al daño difuso, proyectando, credit-tilted; distribuido en su composición de cobertura anclada) | **+54,0%** [+53,2, +54,9] | 98,2% | 44,1% | **Core v0 (decisivo)** |
+| **Solo miopía al daño** (contraste diagnóstico: probable, cambiando SOLO las dos coordenadas del gate de daño) | **+37,5%** [+36,8, +38,1] | 98,2% | 60,7% | Core v0 |
+| **Paquete sin miopía** — probable, pero al central se le otorga visión del daño + insesgamiento + precisión + sin crédito | **+13,4%** [+13,1, +13,7] | 98,5% | 85,1% | Core v0 |
+| **Caso favorable al distribuido** | **+201,3%** [+198,9, +204,2] | 95,7% | −105,7% | Core v0 |
+| **Endpoint declarado favorable al central** (un lector residualmente imperfecto en un mundo casi sin daño) | **−2,4%** [−2,5, −2,2] | 95,4% | 97,7% | central (inmaterial) |
 
-En el **endpoint declarado plenamente favorable al central** —un central competente,
-consciente del daño, preciso y sin crédito, enfrentando poco daño— los brazos **a lo
-sumo empatan**: el central entrega ≈ 97,7% del benchmark frente a ≈ 96,3% del brazo
-distribuido (m ≈ −1,4%), y aun 20% adentro de ese endpoint el brazo de cobertura gana
-todos los sorteos, de modo que el conjunto donde gana el central se ha colapsado a una
-astilla de medida casi nula en el rincón idealizado exacto. Bajo la referencia
-**probable**, el brazo distribuido entrega ≈ 98,9% y el central ≈ 44,3%. En el caso
-**favorable al distribuido**, el central miope financia proyectos de daño neto y entrega
-valor *negativo* (≈ −106,8%), mientras el brazo distribuido entrega ≈ 98,9%. Un
-contraste diagnóstico que apaga la miopía al daño *sola* (solo las dos coordenadas del
-gate de daño) explica cerca del **40%** del movimiento secuencial desde la brecha
-probable (16,3 de un declive de 40,8 puntos); el paso siguiente hacia un **paquete
-sin-miopía** plenamente consciente del daño y competente explica el ≈ 60% restante y aun
-así deja al brazo de cobertura adelante (≈ +13,9%). Esto es **consistente en dirección
-con** la casi-paridad del gate pre-registrado (Δ ≈ 0.025): ese gate dotó al central de
-tasación consciente del daño pero bajo un régimen de *participación muestreada
-conservadora*; bajo la participación universal de Core v0 la ventaja de cobertura es
-mayor, y un central competente alcanza la paridad solo en el endpoint plenamente
-idealizado. Un benchmark estilizado normal-conjunto de umbral fijo
-(`research/e4-parity-theorem.md`) ubica la frontera de paridad en la igualdad de las
-razones señal-a-ruido de covarianza de los dos selectores; ninguna de las cinco
-rebanadas de un-solo-factor voltea al ganador desde el escenario probable sobre su
-rango, y el sendero ceteris-paribus combinado desde el probable hacia el endpoint del
-central plenamente idealizado cruza la paridad solo en **t ≈ 0.94 del segmento
-declarado** —la cancha *no* está nivelada: la cobertura gana en esencialmente todo el
-espacio, y el central alcanza a lo sumo un empate solo en el rincón idealizado extremo.
-Estas magnitudes son **puntos de referencia y estrés declarados y motivados por fuentes,
-no bandas calibradas al dominio objetivo** (los intervalos cubren solo la variabilidad
-Monte-Carlo interna, y la fuerza de la miopía al daño es el supuesto de mayor peso y
-menos anclado empíricamente); el objeto honesto es dónde queda cada institución y cuánto
-depende la respuesta de ese supuesto, no un número único. Los cuatro límites vigentes son: (i) la
-fuerza de la miopía al daño del central es la perilla de mayor peso y menos anclada
-empíricamente; (ii) los insumos del central cargan una brecha de transporte
-opinión-política→valor-de-proyecto no propagada; (iii) los intervalos cubren solo la
-variabilidad Monte-Carlo interna, no la incertidumbre del dominio objetivo; y (iv) los
-ahorros de costo administrativo y la corrupción/filtraciones son canales separados y
-aditivos, excluidos aquí a propósito. Los escenarios, la frontera y el teorema
-reproducibles están en `scripts/simulation/e4-v5/` y `research/e4-parity-theorem.md`.
+**El resultado anclado es decisivo y robusto.** Bajo el caso **probable**
+(empíricamente anclado) el brazo distribuido entrega ≈ 98,2% del benchmark y el central
+≈ 44,1% —una brecha de +54 puntos— y la cobertura gana en esencialmente todo el espacio
+de parámetros anclado. Apagar la miopía al daño *sola* (las dos coordenadas del gate)
+recupera cerca del **40%** de la brecha (16,5 de un declive de 40,6 puntos); otorgar al
+central el paquete *completo* competente-y-consciente-del-daño recupera el resto y aun
+así deja a la cobertura adelante (**≈ +13,4%**) —de modo que hasta un central idealizado
+en todo *salvo* la visión del daño que la literatura le niega igual pierde. El central
+empata solo **abandonando los supuestos anclados**: un lector corregido (sin miopía —
+contra Hayek/Scott/Olson/Bandiera; sin proyección — contra Broockman y Skovron 2018) en
+un mundo casi sin daño alcanza apenas ≈ −3%, un rincón inmaterial y anti-empírico. Ese
+rincón se reporta **simétricamente** con el rincón igualmente idealizado del brazo
+distribuido (señal perfecta, mundo con daño, central en su miopía *anclada*), que
+alcanza **≈ +118%** —la idealización es salvajemente asimétrica, y ninguno de los dos
+rincones está empíricamente fundado. La única sensibilidad que reduce materialmente la
+brecha anclada es el **error correlado / de modo común** sobre el tramo de
+perfil-y-delegación (una plataforma/recomendador compartido, o delegación concentrada en
+super-delegados — Kling et al. 2015): lleva ≈ +54% a ≈ +44% (modesto) y ≈ +26% (fuerte),
+cruzando la paridad solo a un nivel grande de error compartido (σ_cm ≈ 2,1). Ninguna
+rebanada de un-solo-factor voltea al ganador sobre su rango plausible; el sendero
+ceteris-paribus combinado desde el probable hacia el endpoint del central plenamente
+idealizado cruza la paridad solo en **t ≈ 0,91 del segmento declarado**. Estas
+magnitudes son **puntos de referencia declarados y motivados por fuentes, de un modelo
+estilizado de instituciones comparadas, no efectos de campo calibrados al dominio
+objetivo** (los intervalos cubren solo la variabilidad Monte-Carlo interna). Los cuatro
+límites vigentes son: (i) la *magnitud* exacta del gate de daño es una forma funcional
+estilizada —su *dirección* está fuertemente anclada, y el resultado es robusto en la
+banda s_exp ∈ [1, 2,5] (≈ +48% a ≈ +54%); (ii) los insumos del central cargan una brecha
+de transporte opinión-política→valor-de-proyecto no propagada; (iii) el brazo distribuido
+se modela con errores independientes más un término de modo común, este último su única
+sensibilidad estructural; y (iv) los ahorros de costo administrativo y la
+corrupción/filtraciones son canales separados y aditivos, excluidos aquí a propósito. Los
+escenarios, la frontera, la evidencia, el teorema y el anclaje literario completo
+reproducibles están en `scripts/simulation/e4-v5/`, `research/e4-parity-theorem.md` y
+`research/e4-calibration-literature-anchors.md`.
 
 ### Objetivos de calibración de E4
 
@@ -1667,6 +1675,7 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - Becker, G., and G. Stigler (1974). "Law Enforcement, Malfeasance, and Compensation of Enforcers." *Journal of Legal Studies* 3(1).
 - Bikhchandani, S., D. Hirshleifer, and I. Welch (1992). "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." *Journal of Political Economy* 100(5).
 - Brennan, J. (2016). *Against Democracy*. Princeton University Press.
+- Broockman, D., and C. Skovron (2018). "Bias in Perceptions of Public Opinion among Political Elites." *American Political Science Review* 112(3).
 - Blum, C., and C. I. Zuber (2016). "Liquid Democracy: Potentials, Problems, and Perspectives." *Journal of Political Philosophy* 24(2).
 - Bovens, M. (2007). "Analysing and Assessing Accountability: A Conceptual Framework." *European Law Journal* 13(4).
 - Buchanan, J., and G. Tullock (1962). *The Calculus of Consent*. University of Michigan Press.
@@ -1684,6 +1693,7 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - Flyvbjerg, B., N. Bruzelius, and W. Rothengatter (2003). *Megaprojects and Risk: An Anatomy of Ambition*. Cambridge University Press.
 - Friedman, M. (1962). *Capitalism and Freedom*. University of Chicago Press.
 - Friedman, M., and R. Friedman (1980). *Free to Choose*. Harcourt.
+- Einstein, K. L., M. Palmer, and D. M. Glick (2019). *Neighborhood Defenders: Participatory Politics and America's Housing Crisis*. Cambridge University Press.
 - Fung, A., and E. O. Wright (2003). *Deepening Democracy: Institutional Innovations in Empowered Participatory Governance*. Verso.
 - Gaus, G. (2011). *The Order of Public Reason*. Cambridge University Press.
 - Gibbard, A. (1973). "Manipulation of Voting Schemes: A General Result." *Econometrica* 41(4).
@@ -1697,6 +1707,7 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - Jensen, M., and W. Meckling (1976). "Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure." *Journal of Financial Economics* 3(4).
 - Kahng, A., S. Mackenzie, and A. Procaccia (2018). "Liquid Democracy: An Algorithmic Perspective." *AAAI*.
 - Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
+- Kling, C. C., J. Kunegis, H. Hartmann, M. Strohmaier, and S. Staab (2015). "Voting Behaviour and Power in Online Democracy: A Study of LiquidFeedback in Germany's Pirate Party." arXiv:1503.07723.
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
 - Lalley, S., and E. G. Weyl (2018). "Quadratic Voting: How Mechanism Design Can Radicalize Democracy." *AEA Papers and Proceedings* 108.
 - Landemore, H. (2020). *Open Democracy: Reinventing Popular Rule for the Twenty-First Century*. Princeton University Press.
@@ -1707,6 +1718,7 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - Musgrave, R. (1959). *The Theory of Public Finance*. McGraw-Hill.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
+- Noelle-Neumann, E. (1974). "The Spiral of Silence: A Theory of Public Opinion." *Journal of Communication* 24(2).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Oates, W. (1972). *Fiscal Federalism*. Harcourt Brace Jovanovich.
 - Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, concept doi:10.5281/zenodo.21246088 (always resolves to the latest version).
@@ -1722,11 +1734,13 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
 - Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
 - Samuelson, P. (1954). "The Pure Theory of Public Expenditure." *Review of Economics and Statistics* 36(4).
+- Samuelson, W., and R. Zeckhauser (1988). "Status Quo Bias in Decision Making." *Journal of Risk and Uncertainty* 1(1).
 - Satterthwaite, M. (1975). "Strategy-Proofness and Arrow's Conditions: Existence and Correspondence Theorems for Voting Procedures and Social Welfare Functions." *Journal of Economic Theory* 10(2).
 - Schattschneider, E. E. (1960). *The Semisovereign People*. Holt, Rinehart and Winston.
 - Scott, J. (1998). *Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed*. Yale University Press.
 - Sen, A. (1999). *Development as Freedom*. Oxford University Press.
 - Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
+- Skuhrovec, J., et al. (2013). "Exponential and power laws in public procurement markets." arXiv:1309.0218.
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
 - Stokes, S. (2005). "Perverse Accountability: A Formal Model of Machine Politics with Evidence from Argentina." *American Political Science Review* 99(3).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
