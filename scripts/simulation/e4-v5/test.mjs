@@ -72,7 +72,7 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
   check('LEGACY all retired top-level engines are guarded', unguarded.length === 0, unguarded.length ? 'UNGUARDED: ' + unguarded.join(', ') : `${readdirSync(dir).filter((f) => f.endsWith('.mjs')).length} guarded`);
 }
 
-// ---- Scenario integrity: pin the honest signs so scenario-configs.mjs can't silently drift from the doc (Codex v7) ----
+// ---- Scenario integrity: pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose. ----
 {
   const { PRO_CENTRAL, NO_MYOPIA, MYOPIA_OFF, PROBABLE, PRO_DIST } = await import('./scenario-configs.mjs');
   const sm = (over) => estimand({ ...baseConfig(), N: 800, K: 120, ...over }, { nWorlds: 300 }).m_hat;
