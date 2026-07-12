@@ -1109,21 +1109,23 @@ simétrico pre-registrado la ventaja de selección distribuida es *positiva pero
 pequeña* (mediana Δ = 0.025, por debajo del umbral de rebuild de 0.05; NO-GO); (1b)
 una extensión de robustez de cuatro escenarios (v1.14) modela al central como lo
 describe la evidencia —*casi ciego al daño difuso en la cola larga de baja visibilidad*
-(Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg 2003): en
+(Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg et al. 2003): en
 ese caso empíricamente anclado la selección por cobertura gana *decisivamente* (≈ 99%
 del benchmark frente a ≈ 44%) y de forma robusta, hasta un central al que se le otorga
-toda competencia salvo la visión del daño igual pierde (≈ +14%), y el central empata
-solo abandonando los supuestos anclados —en un mundo casi sin daño— mientras la
-idealización simétrica del brazo *distribuido* gana por goleada, con todas las
-magnitudes reportadas como puntos de referencia declarados de un modelo estilizado, no
-impacto calibrado; (2)
+toda competencia salvo la visión del daño igual pierde (≈ +14%), y el central se pone
+apenas adelante solo abandonando los supuestos anclados —en un mundo casi sin daño—
+mientras la idealización simétrica del brazo *distribuido* gana por goleada, con todas
+las magnitudes reportadas como puntos de referencia declarados de un modelo estilizado,
+no impacto calibrado; (2)
 las contribuciones que cargan el peso son la arquitectura y el mecanismo
 cualitativo de crédito-versus-cobertura —el ordenamiento central presionado por
 crédito subpondera el valor difuso que la selección distribuida basada en cobertura
-sí visibiliza; (3) todo cociente compuesto anterior (2.19×/2.22×/2.26×, +43%,
-+53–54%, ~2×–5×) es una salida condicional interna al modelo, no un efecto
-calibrado; y (4) cualquier efecto calibrado de valor total entregado —selección *y*
-entrega, sobre datos reales— queda como trabajo futuro.
+sí visibiliza; (3) todo cociente compuesto de valor-por-presupuesto que reportó una
+versión anterior se retira aquí como efecto calibrado —fue una salida condicional
+interna al modelo, no un efecto de campo calibrado; y (4) cualquier efecto calibrado de
+valor total entregado —selección *y* entrega (costo administrativo y fuga), sobre datos
+reales— es trabajo futuro, desarrollado como canales declarados separados en vez de un
+único número conflacionado.
 
 ## 7. La revisión adversarial como método
 
@@ -1452,7 +1454,7 @@ mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información compl
 por debajo de su umbral prefijado de 0.05 de reconstrucción del programa de
 investigación). El mapa de robustez v1.14 modela luego al central como lo
 describe la evidencia —casi ciego al daño difuso en la cola larga de baja visibilidad
-(Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg 2003)— y en
+(Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg et al. 2003)— y en
 ese caso empíricamente anclado la selección por cobertura gana *decisivamente* (≈ 99%
 del benchmark frente a ≈ 44%) y de forma robusta. Los dos son consistentes: la
 casi-paridad del gate pre-registrado es un piso conservador —le *otorgó* al central la
@@ -1606,13 +1608,16 @@ recupera cerca del **40%** de la brecha (16,5 de un declive de 40,6 puntos); oto
 central el paquete *completo* competente-y-consciente-del-daño recupera el resto y aun
 así deja a la cobertura adelante (**≈ +13,4%**) —de modo que hasta un central idealizado
 en todo *salvo* la visión del daño que la literatura le niega igual pierde. El central
-empata solo **abandonando los supuestos anclados**: un lector corregido (sin miopía —
-contra Hayek/Scott/Olson/Bandiera; sin proyección — contra Broockman y Skovron 2018) en
-un mundo casi sin daño alcanza apenas ≈ −3%, un rincón inmaterial y anti-empírico. Ese
-rincón se reporta **simétricamente** con el rincón igualmente idealizado del brazo
-distribuido (señal perfecta, mundo con daño, central en su miopía *anclada*), que
-alcanza **≈ +118%** —la idealización es salvajemente asimétrica, y ninguno de los dos
-rincones está empíricamente fundado. La única sensibilidad que reduce materialmente la
+se pone apenas adelante solo **abandonando los supuestos anclados**: un lector corregido
+(sin miopía — contra Hayek/Scott/Olson/Bandiera; sin proyección — contra Broockman y
+Skovron 2018) en un mundo casi sin daño alcanza apenas ≈ −3%, un rincón marginal y
+anti-empírico. Ese rincón se reporta **simétricamente** con el rincón *igualmente
+idealizado* del brazo distribuido —construido para reflejar la misma receta: señal
+distribuida perfecta en un mundo con daño con el central en su miopía *anclada*—, que
+alcanza **≈ +118%** (el escenario más amplio `PRO-DIST` de la tabla, +201%, es aún más
+favorable porque *además* degrada al central por debajo de su nivel anclado). La
+idealización es salvajemente asimétrica, y ninguno de los dos rincones está empíricamente
+fundado. La única sensibilidad que reduce materialmente la
 brecha anclada es el **error correlado / de modo común** sobre el tramo de
 perfil-y-delegación (una plataforma/recomendador compartido, o delegación concentrada en
 super-delegados — Kling et al. 2015): lleva ≈ +54% a ≈ +44% (modesto) y ≈ +26% (fuerte),

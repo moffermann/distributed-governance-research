@@ -1030,17 +1030,18 @@ four-scenario robustness extension models the central as the evidence describes 
 Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg et al. 2003): in that empirically-anchored
 case coverage-routed selection wins *decisively* (≈ 99% of benchmark vs ≈ 44%) and
 robustly, even a central granted every competence except harm-sight still loses
-(≈ +14%), and the central draws level only by abandoning the anchored premises — on a
-near-harmless world — while the symmetric idealization of the *distributed* arm wins by
+(≈ +14%), and the central pulls narrowly ahead only by abandoning the anchored premises
+— on a near-harmless world — while the symmetric idealization of the *distributed* arm wins by
 a landslide, with all magnitudes reported as declared reference points from a stylized
 model, not calibrated impact; (2) the
 load-bearing contributions are the architecture and the qualitative
 credit-versus-coverage mechanism — credit-pressured central ranking underweights
 diffuse value that coverage-based distributed selection surfaces; (3) every compound
-ratio above
-(2.19×/2.22×/2.26×, +43%, +53–54%, ~2×–5×) is a conditional, model-internal
-apparatus output, not a calibrated effect; and (4) any calibrated total delivered-
-value effect — selection *and* delivery, on real data — remains future work.
+value-per-budget ratio an earlier version reported is retired here as a calibrated
+effect — it was a conditional, model-internal apparatus output, not a calibrated field
+effect; and (4) any calibrated total delivered-value effect — selection *and* delivery
+(administrative cost and leakage), on real data — is future work, developed as separate
+declared channels rather than a single conflated number.
 
 ## 7. Adversarial review as method
 
@@ -1512,13 +1513,16 @@ parameter space. Turning off harm-myopia *alone* (the two harm-gate coordinates)
 recovers about **40%** of the gap (16.5 of a 40.6-point decline); granting the central
 the *full* competent-but-harm-aware bundle recovers the rest yet still leaves coverage
 ahead (**≈ +13.4%**) — so even a central idealized in every way *except* the harm-sight
-the literature denies it still loses. The central draws level only by **abandoning the
-anchored premises**: a corrected reader (no myopia — against Hayek/Scott/Olson/Bandiera;
-no projection — against Broockman and Skovron 2018) on a near-harmless world reaches
-only ≈ −3%, an immaterial, anti-empirical corner. That corner is reported
-**symmetrically** with the distributed arm's equally-idealized corner (perfect signal,
-harm-rich world, central kept at its *anchored* myopia), which reaches **≈ +118%** —
-idealization is wildly asymmetric, and neither corner is empirically grounded. The one
+the literature denies it still loses. The central pulls narrowly ahead only by
+**abandoning the anchored premises**: a corrected reader (no myopia — against
+Hayek/Scott/Olson/Bandiera; no projection — against Broockman and Skovron 2018) on a
+near-harmless world reaches only ≈ −3%, a marginal, anti-empirical corner. That corner
+is reported **symmetrically** with the distributed arm's *equally-idealized* corner —
+built to mirror the same recipe: perfect distributed signal on a harm-rich world with
+the central kept at its *anchored* myopia — which reaches **≈ +118%** (the broader
+`PRO-DIST` scenario in the table, +201%, is more favourable still because it *also*
+degrades the central below its anchored level). Idealization is wildly asymmetric, and
+neither corner is empirically grounded. The one
 sensitivity that materially shrinks the anchored gap is **correlated / common-mode
 error** on the profile-and-delegation share (a shared platform/recommender, or
 delegation concentrated on super-delegates — Kling et al. 2015): it takes ≈ +54% down
