@@ -11,16 +11,22 @@
 🔲 not yet fixed · 🔎 evidence being gathered · ✅ fixed (anchor recorded)
 
 ## Variable ledger (D_F = physically possible; R_α = probable/expectable, justified)
+> **FULL literature anchoring: `research/e4-calibration-literature-anchors.md`** (verified citations, 2026-07-12).
+> The headline — central near-blind to diffuse harm — is over-determined (Hayek/Scott/Olson/Bandiera); the burden of
+> idealization is on the central-SEES-harm case, not the anchored central-myopic one.
+
 | Variable | Type | D_F | R_α (probable) | Anchor / source | Strength | Status |
 |---|---|---|---|---|---|---|
 | `a_V,b_V` visibility tail shape | E | contract | probable `a_V∈[0.3,0.8], b_V∈[2,5]` | heavy-tailed public procurement (Skuhrovec arXiv:1309.0218; Zipf/Pareto) | strong (dir.), stylized (mag.) | ✅ CONFIRMED |
 | `p` net-allocation participation | facto | fixed | `p = 1.0` (universal) | Core v0 architecture (profiles + delegates cover the passive) — NOT PB turnout | facto (not a knob) | ✅ REVISED |
-| `pi_opp` opposition prevalence | E | contract | TBD | NIMBY/opposition & referendum rates | — | 🔲 |
-| `s_exp,b_H_C` harm myopia | T | contract | band `s_exp∈[1,2.5], b_H_C∈[0.5,1.3]` (stylized, not measured) | convex salience gate: agenda-setting/salience — oversight/opposition/audit concentrate on visible, contested projects (McCombs–Shaw; Bachrach–Baratz non-decision); EIA/audit/press catch harm as V→1 | direction anchored, magnitude stylized | 🔎 anchored-direction |
-| `w` projection | P | contract | TBD | Gagnon-Bartsch / Dias-Lucas-Sheffer (transport gap) | — | 🔲 |
-| `a,b` bias / responsiveness | P | contract | TBD | Broockman-Skovron (transport gap) | — | 🔲 |
-| `a_r,b_r` reach | E/T | contract | TBD | local-project interest share | — | 🔲 |
-| `beta` voice suppression | T | contract | TBD | spiral of silence; weak empirics | — | 🔲 |
+| `pi_opp` opposition prevalence | E | contract | band | NIMBY/intense-minority opposition & referendum rates | direction anchored | 🔎 |
+| `s_exp,b_H_C` harm myopia (HEADLINE) | T | contract | band `s_exp∈[1,2.5], b_H_C∈[0.5,1.3]` (stylized mag.) | **over-determined**: Hayek 1945 (knowledge problem); Scott 1998 (legibility, *Seeing Like a State*); Olson 1965 + Schattschneider 1935 + Wilson 1980 (diffuse costs under-weighted); Bandiera–Prat–Valletti 2009 (**83% passive waste**); Bastiat 1850; Bachrach–Baratz 1962 (non-decision) | **direction strongly anchored (theory+empirics)**, magnitude stylized+swept | ✅ ANCHORED |
+| `w,a,b` projection / bias | P | contract | band | Broockman–Skovron 2018 (**3,765 politicians dramatically overestimate** constituents' conservatism); Dias–Lucas–Sheffer; Gagnon-Bartsch (~21–50% projection) | strong (dir.+mag. band) | ✅ ANCHORED |
+| `lambda` credit tilt | T | contract | band | Mayhew 1974; Arnold 1990 (electoral credit-claiming / traceability) | direction anchored | 🔎 |
+| `f_active/f_deleg/f_profile` coverage composition | E/T | contract | ~5% / ~35% / ~60% | PB turnout (active); Samuelson–Zeckhauser 1988 status-quo/default bias (profile ~60%); Kling et al. 2015 LiquidFeedback (delegation) | direction anchored | 🔎 |
+| `sigma_cm` common-mode error | T | contract | swept (0 = reference) | Kling et al. 2015 / Gölz–Kahng 2018 (liquid-democracy super-delegate concentration → correlated) | direction anchored | 🔎 |
+| `beta` voice suppression | T | contract | band | Noelle-Neumann 1974 (spiral of silence); Olson 1965 (diffuse under-mobilized) | direction anchored | 🔎 |
+| `a_r,b_r` reach | E/T | contract | band | local-project interest share (procurement/PB) | direction anchored | 🔎 |
 | `phi` budget share, noises, scales | A | contract | contract | declared model scale | n/a | 🔲 |
 
 > **Harm-gate (`s_exp,b_H_C`) — the load-bearing, least-empirically-pinned knob (now anchored-direction, magnitude
