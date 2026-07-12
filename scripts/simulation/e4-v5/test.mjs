@@ -3,7 +3,7 @@
 // truth — i.e. results are surfaced, not selected-in or washed out. Plus: the closed schema + embargo reject
 // forbidden multiplier/ratio notation.
 import { execSync } from 'node:child_process';
-import { baseConfig, validateConfig } from './contract.mjs';
+import { baseConfig, validateConfig, CLASSIFY } from './contract.mjs';
 import { estimand } from './engine.mjs';
 import { assertNoEmbargoedTokens } from './adapter.mjs';
 import { validateOutput } from './schema.mjs';
@@ -87,15 +87,18 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
 //      signal-quality-composition effect. Both arms carry a modeled degradation; the central's must be >> the
 //      distributed's, or the comparison is not honest. ----
 {
-  const { PROBABLE, NO_MYOPIA } = await import('./scenario-configs.mjs');
+  const { PROBABLE, MYOPIA_OFF } = await import('./scenario-configs.mjs');
   const sm = (over) => estimand({ ...baseConfig(), N: 800, K: 120, ...over }, { nWorlds: 300 }).m_hat;
   const mp = sm(PROBABLE);
-  const mPure = sm({ ...PROBABLE, f_active: 1.0, f_deleg: 0.0, phi_prof: 1.0, k_deleg: 1.0 });  // no distributed degradation
-  const mNo = sm(NO_MYOPIA);                                                                     // central harm-aware
-  const noiseEff = Math.abs(mp - mPure), myopiaEff = Math.abs(mp - mNo);
-  check('CONDITION1 central harm-myopia effect >> distributed signal-noise effect',
-    myopiaEff > 10 * noiseEff && myopiaEff > 0.15,
-    `noise=${(100 * noiseEff).toFixed(1)}pts myopia=${(100 * myopiaEff).toFixed(1)}pts`);
+  const mPure = sm({ ...PROBABLE, f_active: 1.0, f_deleg: 0.0, phi_prof: 1.0, k_deleg: 1.0, d_bias: 0.0 }); // no distributed degradation
+  const mHarm = sm(MYOPIA_OFF);            // harm-gate ALONE (2 coords) — the genuine harm-myopia contrast, not the 8-coord bundle
+  const noiseEff = mp - mPure;             // signed: the realistic composition should not swing m much
+  const harmGateEff = mp - mHarm;          // signed: turning off harm-myopia should REDUCE the coverage advantage (>0)
+  // signed/locality diagnostics (NOT a circular magnitude ratio): the harm-gate effect is positive & material, and the
+  // distributed signal-noise effect stays inside the materiality band and below the harm-gate effect.
+  check('CONDITION1 harm-gate effect positive & material; distributed noise effect small & smaller',
+    harmGateEff > CLASSIFY.delta.value && Math.abs(noiseEff) < CLASSIFY.delta.value && harmGateEff > Math.abs(noiseEff),
+    `noise=${(100 * noiseEff).toFixed(1)}pts harmGate=${(100 * harmGateEff).toFixed(1)}pts`);
 }
 
 // ---- Embargo: reject multiplier/ratio notation in rendered text ----

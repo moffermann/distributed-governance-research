@@ -118,13 +118,13 @@ function main() {
   const ruleOf3 = env.centShare === 0 ? (3 / env.resolved) : NaN;   // one-sided 95% upper bound when 0 observed
   const regionExists = centralRegion.cen > 0;
   const regionLine = regionExists
-    ? '    ⇒ a central-winning region EXISTS off the independent-box sample; the GLOBAL winner is region-dependent, not one-sided'
-    : '    ⇒ NO central-winning draw even 20% inward of the endpoint; the central reaches at most a bare tie at the exact fully-idealized PRO-CENTRAL endpoint — the central-winning set has collapsed to a measure-near-zero sliver';
+    ? `    ⇒ a central-winning region EXISTS off the independent-box sample (${centralRegion.cen}/${centralRegion.ok} inward draws); the winner is region-dependent, not one-sided`
+    : `    ⇒ 0 central wins in ${centralRegion.ok} probe draws (rule-of-three upper bound ≈ ${(300 / centralRegion.ok).toFixed(1)}% on the central-win rate) — does NOT establish the region's measure`;
   const regionTag = regionExists ? ' (region-dependent)' : '';
   const text = [
-    `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
+    `E4 evidence (EXPLORATORY — not an anchored plausibility measure) — contract ${out.contract_version} — θ:${out.theta_id}`,
     `  PROBABLE scenario (source-motivated declared reference) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
-    `  finite product-box sample of the declared envelope (${env.resolved}/${env.n} draws, knobs independent uniform):`,
+    `  EXPLORATORY independent-box sweep over the declared-scenario envelope (${env.resolved}/${env.n} draws, knobs independent uniform — a coordinate-dependent box, NOT an anchored joint measure; pending preregistration):`,
     `    m distribution: p5 ${P(env.p5)} · median ${P(env.p50)} · p95 ${P(env.p95)}`,
     `    Core v0 wins ${env.resolved - Math.round(env.centShare * env.resolved) - Math.round(env.parShare * env.resolved)}/${env.resolved} draws · central ${Math.round(env.centShare * env.resolved)} · parity ${Math.round(env.parShare * env.resolved)}` +
       (Number.isFinite(ruleOf3) ? `   (0 central: one-sided 95% upper bound on central-win prob ≈ ${sh(ruleOf3)}, rule of three — NOT zero)` : ''),
