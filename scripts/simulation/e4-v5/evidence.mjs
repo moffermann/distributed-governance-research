@@ -3,6 +3,7 @@
 // flip the sign: p, sigma_e), endpoint Monte-Carlo uncertainty, a fixed-coordinate flip check, a resolved+hashed
 // evidence manifest, and a repaired state machine (set-based materiality, degeneracy/sufficiency aborts). Every
 // output byte is routed through the sole embargo adapter.
+import { fileURLToPath } from 'node:url';
 import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, baseConfig, resolvedHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
 import { estimand } from './engine.mjs';
 import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
@@ -73,7 +74,7 @@ function fixedFlipProbe(base, oMinAbs) {
   return flips;
 }
 
-function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
+export function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
   const d = CLASSIFY.delta.value;
   // sign backbone over D_F from the SIGN SHARES of resolved corners (magnitude over D_F is not meaningful —
   // an arm can deliver large negative value, so (D−C)/O is unbounded there; only the sign pattern is reported).
@@ -124,15 +125,20 @@ export function buildEvidence() {
 }
 
 // ---- render everything through the sole embargo adapter (no bypassing lines) ----
-const { out, dfEnv, flips } = buildEvidence();
-const extra = [
-  '',
-  `  D_F sign backbone over UNCERTAIN {${MANIFEST.uncertain.join(', ')}}:`,
-  `    resolved corners: ${dfEnv.resolvedCells}/${dfEnv.total} (${dfEnv.skipped} skipped as degenerate)`,
-  `    → the winner is NOT sign-robust across the full physically-possible set (both institutions win in some corners)`,
-  `  fixed-coordinate flip probe over {${MANIFEST.fixed_check.join(', ')}}: ${flips.length ? 'SIGN FLIPS: ' + flips.join(', ') : 'no held coordinate flips the base sign'}`,
-  `  manifest hash: ${out.theta_id}`,
-];
-const full = renderReport(out) + '\n' + extra.join('\n');
-assertNoEmbargoedTokens(full);          // the WHOLE artifact, not just the core report
-console.log(full);
+function main() {
+  const { out, dfEnv, flips } = buildEvidence();
+  const notRobust = out.df_dist_share > 0 && out.df_cent_share > 0;
+  const extra = [
+    '',
+    `  D_F sign backbone over UNCERTAIN {${MANIFEST.uncertain.join(', ')}}:`,
+    `    resolved corners: ${dfEnv.resolvedCells}/${dfEnv.total} (${dfEnv.skipped} skipped as degenerate)`,
+    `    → the winner is ${notRobust ? 'NOT sign-robust across the full physically-possible set (both institutions win in some corners)' : 'sign-robust across the resolved corners'}`,
+    `  fixed-coordinate flip probe over {${MANIFEST.fixed_check.join(', ')}}: ${flips.length ? 'SIGN FLIPS: ' + flips.join(', ') : 'no held coordinate flips the base sign'}`,
+    `  manifest hash: ${out.theta_id}`,
+  ];
+  const full = renderReport(out) + '\n' + extra.join('\n');
+  assertNoEmbargoedTokens(full);          // the WHOLE artifact, not just the core report
+  console.log(full);
+}
+// run the (slow) sweep only when executed directly, so importing classify/buildEvidence for tests does not trigger it.
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();

@@ -18,6 +18,11 @@
 // Delta=(D-C)/O on TRUE net delivered. GO/NO-GO evaluated against the frozen pre-registration.
 
 // ---- deterministic primitives (copied verbatim from e5-sp-model.mjs) ----
+// LEGACY RUNTIME GUARD — reproduction-only. This is the v1.13 deposited gate; it must never feed v1.14 artifacts.
+if (process.env.E4_ALLOW_LEGACY !== '1') {
+  console.error('[legacy guard] pre-v1.14 engine; NOT the v1.14 evidence path. Set E4_ALLOW_LEGACY=1 to run for v1.12/v1.13 reproduction only.');
+  process.exit(2);
+}
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};}
 function seedFor(a,b){ let h=(a>>>0); h=Math.imul(h^0x9e3779b9,0x85ebca6b); h^=(b>>>0); h=Math.imul(h^(h>>>13),0xc2b2ae35); return (h^(h>>>16))>>>0; }
 function mkGauss(rng){ let s=null; return ()=>{ if(s!==null){const t=s;s=null;return t;} let u=0,v=0;while(u===0)u=rng();while(v===0)v=rng();const r=Math.sqrt(-2*Math.log(u)),a=2*Math.PI*v;s=r*Math.sin(a);return r*Math.cos(a);}; }

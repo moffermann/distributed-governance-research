@@ -2,10 +2,12 @@
 // Proves the pipeline SURFACES a strong distributed win, a strong central win, and a null when each is the ground
 // truth — i.e. results are surfaced, not selected-in or washed out. Plus: the closed schema + embargo reject
 // forbidden multiplier/ratio notation.
+import { execSync } from 'node:child_process';
 import { baseConfig, validateConfig } from './contract.mjs';
 import { estimand } from './engine.mjs';
 import { assertNoEmbargoedTokens } from './adapter.mjs';
 import { validateOutput } from './schema.mjs';
+import { classify } from './evidence.mjs';
 
 const WORLD = { N: 900, K: 120 };
 const NW = 500;
@@ -34,6 +36,31 @@ const m = (over) => estimand({ ...baseConfig(), ...WORLD, ...over }, { nWorlds: 
 {
   const val = m({ s_exp: 1, b_H_C: 0.5, beta: 0.4, lambda: 0.1 });
   check('FIX boundary => finite & modest', Number.isFinite(val) && Math.abs(val) < 0.5, `m=${val.toFixed(3)}`);
+}
+
+// ---- Attribution: the distributed advantage must be driven by harm myopia ----
+// Removing opposition (pi_opp=0 => no harm to be blind to) should SHRINK the distributed advantage.
+{
+  const withHarm = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, pi_opp: 0.25 });
+  const noHarm  = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, pi_opp: 0.0 });
+  check('ATTRIB harm channel drives the advantage (m falls when pi_opp->0)', withHarm > noHarm + 0.02, `m(pi_opp=.25)=${withHarm.toFixed(3)} > m(pi_opp=0)=${noHarm.toFixed(3)}`);
+}
+
+// ---- State machine (classify) tested DIRECTLY, not bypassed ----
+const pt = (ci) => ({ ci });
+check('CLASSIFY both-sign corners => indeterminate', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 0.6, centShare: 0.3 }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: true }).sign_status === 'indeterminate');
+check('CLASSIFY all-distributed corners => pos', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: true }).sign_status === 'pos');
+check('CLASSIFY R_alpha within band => negligible', classify({ point: pt([-0.01, 0.01]), dfEnv: { distShare: 0.5, centShare: 0.5 }, ralphaHeadline: [-0.01, 0.02], pi_deg: 0, enough: true }).materiality_status === 'negligible');
+check('CLASSIFY R_alpha straddling delta => uncertain', classify({ point: pt([0, 0.2]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.01, 0.2], pi_deg: 0, enough: true }).materiality_status === 'uncertain');
+check('CLASSIFY pi_deg=1 => degenerate', classify({ point: pt([0, 0]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.1, 0.2], pi_deg: 1, enough: false }).degeneracy_status === 'degenerate');
+check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 1, centShare: 0, enough: false }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: false }).numerical_status === 'unresolved');
+
+// ---- Legacy release guard: the retired engine must refuse to run without the reproduction flag ----
+{
+  let guarded = false;
+  try { execSync('node scripts/simulation/e4-v4-symmetric-frontier.mjs', { stdio: 'pipe' }); }
+  catch (e) { guarded = e.status === 2; }
+  check('LEGACY guard blocks e4-v4 from running (would feed retired D/C)', guarded);
 }
 
 // ---- Embargo: reject multiplier/ratio notation in rendered text ----
