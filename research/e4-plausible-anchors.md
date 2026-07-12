@@ -57,12 +57,12 @@
 
 | scenario | m (gap) | 95% CI | Core v0 delivers | central delivers | winner |
 |---|---|---|---|---|---|
-| PRO-CENTRAL (central's full best plausible case) | **−29.5%** | [−29.9, −29.1] | 68% of oracle | 98% | **central** |
+| PRO-CENTRAL (central's declared full-favourable endpoint) | **−29.5%** | [−29.9, −29.1] | 68% of oracle | 98% | **central** |
 | NO-MYOPIA (probable, but central sees harm — continuity anchor) | **+6.1%** | [5.8, 6.4] | 91% | 85% | ≈ parity |
 | PROBABLE (source-motivated reference) | **+46.6%** | [46.0, 47.4] | 91% | 45% | Core v0 |
 | PRO-DISTRIBUTED (favourable, moderate) | **+199.8%** | [197, 202] | 96% | −104% (destroys value) | Core v0 |
 
-- **Level field (both ways):** the central has a genuine winning region — under its full best plausible case (low
+- **Level field (both ways):** the central has a genuine winning region — under its declared full-favourable endpoint (low
   participation + competent, harm-aware central) it wins ~30% and delivers 98% of the oracle. Core v0 wins under the
   probable reference. The story from D/O: Core v0 is fairly robust (68–96%); the central swings 45%→85%→98% (or −104%
   when myopic + harmful) — it depends on whether it sees the anti-value AND on citizen participation.
@@ -80,9 +80,10 @@
 - **Combined scenario-path frontier (CORRECTED, Codex v7):** interpolating PROBABLE → the central's FULL best
   plausible case (`PRO_CENTRAL`), m falls +47% → −30%; the **frontier (m=0) is at t ≈ 0.57** — i.e. conditions ~57%
   of the way from probable toward the central's full best case flip the winner to the central. That is a PLAUSIBLE
-  region, NOT beyond-realistic (the earlier "t≈1.13 / beyond realistic" claim was wrong — it used a partial 8-knob
-  path). Honest headline: *the winner depends on where reality sits between the probable and the central-favourable
-  scenarios; no single knob decides it.* `t` is an illustrative linear mix, not a calibrated competence scale.
+  segment, NOT beyond-realistic (the earlier "t≈1.13 / beyond realistic" claim was wrong — it used a partial 8-knob
+  path). Honest headline: *which side a real setting falls on depends on where a measured target configuration would
+  lie between the declared scenarios; none of the five plotted slices decides it alone.* `t` is an illustrative
+  linear mix, not a calibrated competence scale.
 
 ## Fixed variables (details)
 _(populated as we fix each, one at a time)_
@@ -92,7 +93,8 @@ Five named scenarios (values in `scenario-configs.mjs`), each a full config → 
 - **PRO-CENTRAL** — the central's FULL best plausible case (every knob central-favourable). The central WINS
   (≈ −30%, delivers 98% of the benchmark). This is the honest "central's favourable region", NOT near-parity.
 - **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast
-  (≈ +30%): attributes the harm channel ALONE (most, not all, of the probable advantage).
+  (≈ +30%): a diagnostic contrast attributing the harm channel ALONE — a sequential ~40% of the decline (16.2 of
+  40.5 pts); the further step to the NO-MYOPIA bundle is the remaining ~60%.
 - **NO-MYOPIA** — a harm-aware AND otherwise-competent central bundle (≈ +6%). The continuity anchor to the
   symmetry-gate ~0.025 near-parity (that gate equips the central with competent harm-aware appraisal). NOT a myopia
   isolation — it also improves projection/bias/noise/credit.
@@ -108,7 +110,7 @@ Per axis we also give: D_F range, ceteris-paribus frontier location, evidence fo
   `p ≈ 0.08–0.25`. → When reach (`a_r,b_r`) is anchored later, JOINTLY verify `reach × p ≈ 1–3%` (one observable
   constrains two knobs).
 - **Direction (rationale; authoritative values in `scenario-configs.mjs`):** central-favourable = LOW participation
-  (sparse citizen signal); PROBABLE ≈ `p∈[0.08,0.25]` (the evidence-anchored band); distributed-favourable = HIGH.
+  (sparse citizen signal); PROBABLE ≈ `p∈[0.08,0.25]` (the source-motivated band); distributed-favourable = HIGH.
 - **Decision:** PENDING author confirmation.
 
 ### var #1 — `a_V, b_V` (visibility tail shape) — ✅ CONFIRMED (author, 2026-07-11)

@@ -1,6 +1,7 @@
-// E4 v1.14 — the SOLE render adapter (mechanical embargo). Every official artifact must render through here.
-// It (a) validates against the closed schema, and (b) rejects any institution-performance multiplier notation:
-// ASCII 'x'/'X' as a multiplier suffix on a number, the Unicode multiplication sign, and bare 'D/C'/'C/D' ratios.
+// E4 v1.14 — the render adapter (mechanical embargo). Official E4 evidence/scenarios/frontier text routes through
+// here (renderReport / safeLog). It (a) validates against the closed schema, and (b) rejects the TESTED CLASSES of
+// institution-performance multiplier notation (see the NOTE on assertNoEmbargoedTokens and the test suite) — NOT a
+// proof against every conceivable obfuscation, and it does not by itself route every repository artifact.
 // m_hat is a SIGNED FRACTION of the oracle (parity at 0), never a ratio-with-parity-1 and never suffixed with 'x'.
 import { EMBARGO_TOKENS } from './contract.mjs';
 import { validateOutput } from './schema.mjs';

@@ -1,7 +1,7 @@
-// E4 v1.14 — the THREE anchored scenarios (research/e4-plausible-anchors.md). Each scenario is a full config; we
-// report m ± 95% CI. PRO-CENTRAL is the central's best plausible case AND the continuity anchor (should reproduce
-// the earlier ~0.025 near-parity). PROBABLE is the evidence/theory-anchored expectable case. PRO-DISTRIBUTED is the
-// distributed's favourable case. Run: node scripts/simulation/e4-v5/scenarios.mjs
+// E4 v1.14 — FOUR declared scenarios + ONE diagnostic contrast (research/e4-plausible-anchors.md; values in
+// scenario-configs.mjs). Each is a full config; we report m ± 95% CI. PRO-CENTRAL = declared central-favourable
+// endpoint (central wins). NO-MYOPIA (bundle) = continuity anchor to the ~0.025 gate. MYOPIA-OFF = diagnostic
+// harm-only contrast. PROBABLE = source-motivated reference. PRO-DISTRIBUTED = distributed-favourable.
 import { baseConfig } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 import { estimand } from './engine.mjs';

@@ -58,10 +58,11 @@ numerical; the engine's ratio-of-sums estimator is the finite-`K` object the lem
 ## Honest scope
 - **The production central signal is NOT this benchmark's `X_C` without extra restrictions.** The engine's central
   estimate is `M^C = a + b·S⁺ + w·(v_{p,j}−S⁺) − b_H^C·s(V)·H + η` (support `S⁺`, minus a **visibility-gated harm**
-  term). The benchmark uses `X_C = a + (b−w)S + w·v_p + η` on **net** `S` with **no harm gate**. Nesting the
-  production signal into the benchmark therefore requires the restrictions **`s(V) ≡ const` (or `H ≡ 0`) and
-  `S⁺ → S`** — i.e. no salience-gated harm myopia. So the theorem is a **stylized no-myopia Gaussian benchmark**,
-  NOT a proof that the full harm-gated engine reduces to it.
+  term). The benchmark's `X_C = a + (b−w)S + w·v_p + η` uses **net** `S = S⁺ − H` with no separate harm term. Matching
+  them requires `−b_H^C·s(V)·H = −(b−w)·H`, i.e. the **coefficient condition `b_H^C·s(V) = b−w`** (a constant gate at
+  exactly that value) — OR the trivial `H ≡ 0`. A constant gate ALONE is insufficient. So the benchmark literally
+  nests the production signal only in that special case; otherwise it is a **modified net-`S`, no-separate-harm
+  stylized model** — a sanity-check Gaussian benchmark, NOT a proof that the full harm-gated engine reduces to it.
 - The MNAR distributed signal is **not** exactly jointly normal at finite reach (thresholded non-response +
   Bernoulli thinning); the Gaussian mapping is a **moment-matched reduced-form approximation**, not an identity.
   So this lemma is the analytic sanity check, and the numerical frontier (with the true DGP) is the object.

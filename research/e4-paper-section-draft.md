@@ -1,7 +1,8 @@
 # E4 — draft paper section (EN; ES mirror on integration) — v2 anchored-scenario framing — DRAFT
 
-> Rewritten to the author's anchored three-scenario framing. Resolves the rev-paper blockers: (1) reconciles with
-> the paper's own symmetry-gate NO-GO (Δ≈0.025) instead of contradicting it; (2) reports the actual numbers.
+> Rewritten to the author's anchored framing — four declared scenarios plus one diagnostic contrast. Resolves the
+> rev-paper blockers: (1) reconciles with the paper's own symmetry-gate NO-GO (Δ≈0.025) instead of contradicting it;
+> (2) reports the actual numbers.
 > Source of numbers: `npm run e4:scenarios | e4:frontier | e4:evidence`; anchors in `research/e4-plausible-anchors.md`.
 > Framed as a comparative-institutions robustness result with anchored scenarios + a benchmark theorem, NOT a multiplier.
 
