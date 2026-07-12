@@ -83,19 +83,20 @@ export const CLASSIFY = {
 export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
 
 // ---- EVIDENCE configuration (single source of truth for the evidence run; hashed into theta_id) ----
+// NOTE (2026-07-11): a v6.1 redesign is planned — report EVERYTHING via a space-filling sweep over the WHOLE
+// uncertain set (incl. thesis levers a_V,b_V,s_exp; NO frozen favourable lever) + ceteris-paribus frontier locators
+// (per axis: frontier location, possible values, central's best case, probable case ± CI). That rewrite is GATED on
+// first anchoring each variable's probable (R_alpha) value to theory/empirics — see research/e4-plausible-anchors.md.
+// Current block is the working v6 config; do not treat the swept set below as the final "everything" sweep.
 export const EVIDENCE = {
   world:        { N: 1500, K: 150 },   // inside R_alpha for N,K
   base_nw:      500,                    // Monte-Carlo worlds for the base point
   sweep_nw:     110,                    // worlds per swept cell
-  n_random:     64,                     // random interior samples added to corners+center per envelope (mitigates
-                                        //   corners-only under-coverage of interior extrema)
+  n_random:     64,                     // random interior samples added to corners+center per envelope
   headline_alpha: 0.8,                  // R_alpha level used for the materiality decision
-  // Declared fixed-vs-uncertain split. UNCERTAIN carries the scientific sign uncertainty and is swept jointly;
-  // FIXED_CHECK are held but each is perturbed one-at-a-time to its D_F endpoints to probe for a sign flip.
   uncertain:    ['p', 'beta', 'sigma_e', 's_exp', 'b_H_C', 'w', 'pi_opp'],
   fixed_check:  ['sigma', 'mu_opp', 'sigma_C', 'gamma', 'h', 'lambda', 'a', 'b', 'zeta', 'v_p0'],
-  // Nested R_alpha SENSITIVITY-WIDTH factors (fraction of the declared expectable band width). These are DECLARED
-  // sensitivity widths, NOT verified probability coverage — a true measure-based coverage awaits target-domain data.
+  // Nested R_alpha SENSITIVITY-WIDTH factors (DECLARED sensitivity widths, NOT verified probability coverage).
   alpha_width:  { '0.5': 0.6, '0.8': 1.0, '0.95': 1.3 },
 };
 
@@ -111,9 +112,10 @@ export const OUTPUT_SCHEMA = {
     pi_deg:             { type: 'number', minimum: 0, maximum: 1 },
     m_hat:              { type: 'number' },                 // Σ(D-C)/ΣO over kept worlds, a signed fraction of oracle
     ci:                 { type: 'array', items: { type: 'number' }, minItems: 2, maxItems: 2 },
-    df_dist_share:      { type: 'number', minimum: 0, maximum: 1 },  // SIGN backbone over joint D_F: share of resolved
-    df_cent_share:      { type: 'number', minimum: 0, maximum: 1 },  //   corners where each institution wins (magnitude
-    df_par_share:       { type: 'number', minimum: 0, maximum: 1 },  //   over D_F is not meaningful — arms can destroy value)
+    df_dist_share:      { type: 'number', minimum: 0, maximum: 1 },  // SIGN over D_F: uniform-VOLUME fraction (space-filling
+    df_cent_share:      { type: 'number', minimum: 0, maximum: 1 },  //   MC) where each institution wins — a real volume
+    df_par_share:       { type: 'number', minimum: 0, maximum: 1 },  //   fraction, not a corner count
+    df_dist_share_se:   { type: 'number', minimum: 0, maximum: 1 },  // Monte-Carlo SE of df_dist_share (binomial)
     m_Ralpha:           { type: 'object' },                 // magnitude by alpha level (measured over joint R_alpha)
     sign_status:        { enum: ['pos', 'neg', 'zero-touching', 'indeterminate'] },
     materiality_status: { enum: ['material', 'negligible', 'uncertain'] },
