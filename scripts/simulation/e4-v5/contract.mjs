@@ -47,7 +47,8 @@ export const THETA = {
   f_active: { value: 1.0, kind: 'physical', dm: [0, 1], df: [0, 1], ralpha: [0.02, 0.10], note: 'share with ACTIVE direct participation (signal fidelity 1.0)' },
   f_deleg:  { value: 0.0, kind: 'physical', dm: [0, 1], df: [0, 1], ralpha: [0.2, 0.5],   note: 'share via MICRODELEGATION (individual signal + modest, revocable noise)' },
   k_deleg:  { value: 1.0, kind: 'physical', dm: [0, Infinity], df: [1, 5], ralpha: [1.2, 2.0], note: 'delegation report-noise multiplier on sigma_e (>=1; bounded, revocable, delegate can ask)' },
-  phi_prof: { value: 1.0, kind: 'physical', dm: [0, 1], df: [0, 1], ralpha: [0.7, 0.95], note: 'PROFILE-rule category fidelity: signal = phi_prof*u + (1-phi_prof)*q (high alignment; coarser on project-specific harm)' },
+  phi_prof: { value: 1.0, kind: 'physical', dm: [0, 1], df: [0, 1], ralpha: [0.7, 0.95], note: 'PROFILE-rule category fidelity: signal = phi_prof*u + (1-phi_prof)*qCat, where qCat is the OBSERVABLE category proxy (m_q+s_q*g), NOT latent true q' },
+  d_bias:   { value: 0.0, kind: 'physical', dm: [0, 1], df: [0, 1], ralpha: [0.05, 0.2], note: 'microdelegation BIAS: persistent pull of the delegated signal toward the delegate category view qCat (bounded — revocable, delegate can ask)' },
 
   // ---- central arm (salience-gated harm myopia) ----
   v_p0:    { value: 0.6,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.5, 1.5], note: "planner's own baseline position" },
@@ -173,7 +174,7 @@ export function validateDomain(cfg) {
   if (!(cfg.phi > 0 && cfg.phi < 1)) bad.push('phi must be in (0,1)');
   const unit = (k) => { if (cfg[k] < 0 || cfg[k] > 1) bad.push(`${k} must be in [0,1]`); };
   unit('p'); unit('beta'); unit('pi_opp'); unit('lambda');
-  unit('f_active'); unit('f_deleg'); unit('phi_prof');
+  unit('f_active'); unit('f_deleg'); unit('phi_prof'); unit('d_bias');
   if (cfg.f_active + cfg.f_deleg > 1 + 1e-9) bad.push('f_active + f_deleg must be <= 1 (f_profile = 1 - f_active - f_deleg >= 0)');
   if (!(cfg.k_deleg >= 1)) bad.push('k_deleg must be >= 1 (delegation adds noise, never removes it)');
   if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');   // zeta is a correlation, NOT a unit interval

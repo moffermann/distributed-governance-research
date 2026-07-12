@@ -55,6 +55,9 @@ export function generateWorld(cfg, rng) {
     const V = rng.beta(cfg.a_V, cfg.b_V);                       // visibility in [0,1], heavy-tailed toward 0
     const qStd = cfg.s_q > 0 ? (q - cfg.m_q) / cfg.s_q : 0;
     const g = cfg.zeta * qStd + Math.sqrt(Math.max(0, 1 - cfg.zeta * cfg.zeta)) * rng.normal();
+    const qCat = cfg.m_q + cfg.s_q * g;                         // OBSERVABLE category-value proxy (noisy, shrunk toward
+                                                               // the mean by 1-zeta) — what a profile rule/delegate sees;
+                                                               // NOT the latent true q (using true q would flatter coverage)
     const c = cfg.c_lo + (cfg.c_hi - cfg.c_lo) * rng.u();
     const r = rng.beta(cfg.a_r, cfg.b_r);
     const n = rng.binomialApprox(cfg.N, r);
@@ -69,14 +72,14 @@ export function generateWorld(cfg, rng) {
       const reportProb = u >= 0 ? cfg.p : cfg.p * (1 - cfg.beta);
       if (rng.u() < reportProb) {
         // Signal-quality channel of Core-v0's universal coverage. active: full individual fidelity. microdelegation:
-        // individual signal + bounded, revocable extra noise (delegate can ask). profile rule: category-aligned proxy
-        // that reverts toward the project category mean q — high SUPPORT alignment but coarser on the individual's
-        // project-specific idiosyncrasy AND harm perception (the honest cost of categorization).
+        // individual signal + bounded revocable noise AND a small persistent bias d_bias toward the delegate's category
+        // view qCat (the delegate values somewhat differently). profile rule: reverts toward the OBSERVABLE category
+        // proxy qCat — high alignment but coarser on the individual's project-specific idiosyncrasy AND harm perception.
         const ch = rng.u();
         let sig;
         if (ch < cfg.f_active)       sig = u + cfg.sigma_e * rng.normal();
-        else if (ch < fProfileStart) sig = u + cfg.k_deleg * cfg.sigma_e * rng.normal();
-        else                         sig = cfg.phi_prof * u + (1 - cfg.phi_prof) * q + cfg.sigma_e * rng.normal();
+        else if (ch < fProfileStart) sig = (1 - cfg.d_bias) * u + cfg.d_bias * qCat + cfg.k_deleg * cfg.sigma_e * rng.normal();
+        else                         sig = cfg.phi_prof * u + (1 - cfg.phi_prof) * qCat + cfg.sigma_e * rng.normal();
         sumReport += sig / cfg.p;
       }
     }

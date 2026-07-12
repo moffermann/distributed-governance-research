@@ -23,7 +23,7 @@
 //   ~5% ACTIVE direct participation (full fidelity; the 3–5% "turnout" figure in the paper is THIS share, not total),
 //   ~35% MICRODELEGATION (individual signal + bounded revocable noise), ~60% PROFILE rules (category-aligned, high
 //   alignment but coarser on project-specific harm). Same across every scenario (Core v0 architecture).
-export const COMPOSITION = { f_active: 0.05, f_deleg: 0.35, k_deleg: 1.5, phi_prof: 0.85 };
+export const COMPOSITION = { f_active: 0.05, f_deleg: 0.35, k_deleg: 1.5, phi_prof: 0.85, d_bias: 0.1 };
 export const PROBABLE = { ...COMPOSITION, a_V: 0.5, b_V: 3.5, p: 1.0, a_r: 1.5, b_r: 8, pi_opp: 0.15, mu_opp: 3.0,
   s_exp: 2.5, b_H_C: 0.5, w: 0.5, a: 0.2, b: 0.9, beta: 0.35, lambda: 0.15, zeta: 0.6, gamma: 0.5,
   sigma_e: 0.5, sigma_C: 0.5 };
