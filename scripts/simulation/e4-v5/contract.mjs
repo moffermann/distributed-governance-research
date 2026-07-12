@@ -112,7 +112,7 @@ export const OUTPUT_SCHEMA = {
   $schema: 'http://json-schema.org/draft-07/schema#',
   type: 'object',
   additionalProperties: false,
-  required: ['contract_version', 'theta_id', 'pi_deg', 'm_hat', 'ci', 'df_dist_share', 'df_cent_share', 'sign_status', 'materiality_status', 'degeneracy_status', 'numerical_status'],
+  required: ['contract_version', 'theta_id', 'pi_deg', 'm_hat', 'ci', 'df_dist_share', 'df_cent_share', 'df_par_share', 'sign_status', 'materiality_status', 'degeneracy_status', 'numerical_status'],
   properties: {
     contract_version:   { type: 'string' },
     theta_id:           { type: 'string' },
