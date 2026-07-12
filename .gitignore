@@ -7,3 +7,6 @@ _backups/
 .env
 .env.*
 renders/distributed-governance-research-v1.13.zip
+
+# generated atlas data
+scripts/simulation/e4-v5/atlas-data.json
