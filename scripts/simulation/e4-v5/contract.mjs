@@ -141,7 +141,7 @@ export function validateConfig(cfg, { requireAll = true } = {}) {
     if (missing.length) throw new Error(`[contract] missing required parameter(s): ${missing.join(', ')}`);
   }
   for (const [k, v] of Object.entries(cfg)) {
-    if (typeof v !== 'number' || Number.isNaN(v)) throw new Error(`[contract] ${k} must be a number, got ${v}`);
+    if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`[contract] ${k} must be a finite number, got ${v}`);
     const { dm } = THETA[k];
     if (v < dm[0] || v > dm[1]) throw new Error(`[contract] ${k}=${v} outside mathematical domain [${dm[0]}, ${dm[1]}]`);
   }
@@ -163,8 +163,8 @@ export function validateDomain(cfg) {
   if (!(cfg.c_hi > cfg.c_lo)) bad.push('c_hi must be > c_lo');
   if (!(cfg.phi > 0 && cfg.phi < 1)) bad.push('phi must be in (0,1)');
   const unit = (k) => { if (cfg[k] < 0 || cfg[k] > 1) bad.push(`${k} must be in [0,1]`); };
-  unit('p'); unit('beta'); unit('pi_opp'); unit('lambda'); unit('zeta') /* zeta in [-1,1] handled by dm */;
-  if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');
+  unit('p'); unit('beta'); unit('pi_opp'); unit('lambda');
+  if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');   // zeta is a correlation, NOT a unit interval
   const nonneg = (k) => { if (cfg[k] < 0) bad.push(`${k} must be >= 0`); };
   ['s_q', 'sigma', 'mu_opp', 'sigma_e', 'sigma_v', 'sigma_C', 's_exp', 'h'].forEach(nonneg);
   if (bad.length) throw new Error(`[contract] executable-domain violation: ${bad.join('; ')}`);
@@ -194,7 +194,7 @@ export function baseConfig() {
 // Deterministic content hash of the frozen sets (so the joint D_F/R_alpha objects and thresholds are pinned before
 // any production run). Simple FNV-1a over a canonical JSON — no Date/Math.random.
 export function contractHash() {
-  const canonical = JSON.stringify({ v: CONTRACT_VERSION, THETA, NUM, CLASSIFY, ALPHA_LEVELS, AGGREGATION });
+  const canonical = JSON.stringify({ v: CONTRACT_VERSION, THETA, NUM, CLASSIFY, ALPHA_LEVELS, AGGREGATION, EVIDENCE });
   let h = 0x811c9dc5;
   for (let i = 0; i < canonical.length; i++) {
     h ^= canonical.charCodeAt(i);

@@ -4,7 +4,7 @@
 // evidence manifest, and a repaired state machine (set-based materiality, degeneracy/sufficiency aborts). Every
 // output byte is routed through the sole embargo adapter.
 import { fileURLToPath } from 'node:url';
-import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, EVIDENCE, baseConfig, resolvedHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
+import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
 import { estimand, makeRng } from './engine.mjs';
 import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
 import { validateOutput } from './schema.mjs';
@@ -15,7 +15,7 @@ const SEED = NUM.seed.value;
 const UNCERTAIN = EVIDENCE.uncertain, FIXED_CHECK = EVIDENCE.fixed_check;
 
 const MANIFEST = {
-  contract_version: CONTRACT_VERSION, world: WORLD, seed: SEED,
+  contract_version: CONTRACT_VERSION, contract_hash: contractHash(), world: WORLD, seed: SEED,
   base_nw: BASE_NW, sweep_nw: SWEEP_NW, n_random: N_RANDOM,
   uncertain: UNCERTAIN, fixed_check: FIXED_CHECK,
   o_min_frac: CLASSIFY.o_min_frac.value, delta: CLASSIFY.delta.value, zero_tol: CLASSIFY.zero_tol.value,
@@ -97,7 +97,7 @@ export function buildEvidence() {
   const base = { ...baseConfig(), ...WORLD };
   if (!inRalpha({ ...base }, ['N', 'K'])) throw new Error('[evidence] world N/K outside declared R_alpha');
   const pt = estimand(base, { nWorlds: BASE_NW, seed: SEED });
-  if (!pt.enough) throw new Error(`[evidence] base point insufficient: only ${pt.n_kept} kept worlds (< ${NUM.min_kept_worlds.value}) — aborting fail-closed`);
+  if (!pt.enough) throw new Error(`[evidence] base point insufficient: only ${pt.n_kept} kept worlds (< max(${NUM.min_kept_floor.value}, ${NUM.min_kept_frac.value}·worlds)) — aborting fail-closed`);
   // per-corner relative o_min (each cell drops its own O≈0 worlds); the ratio-of-sums estimand is scale-robust, so a
   // single shared floor is unnecessary and would over-exclude naturally low-value corners.
   const oMinAbs = null;
@@ -133,7 +133,7 @@ function main() {
     `    resolved corners: ${dfEnv.resolvedCells}/${dfEnv.total} (${dfEnv.skipped} skipped as degenerate)`,
     `    → the winner is ${notRobust ? 'NOT sign-robust across the full physically-possible set (both institutions win in some corners)' : 'sign-robust across the resolved corners'}`,
     `  fixed-coordinate flip probe over {${MANIFEST.fixed_check.join(', ')}}: ${flips.length ? 'SIGN FLIPS: ' + flips.join(', ') : 'no held coordinate flips the base sign'}`,
-    `  manifest hash: ${out.theta_id}`,
+    `  contract hash: ${MANIFEST.contract_hash}   run (theta_id): ${out.theta_id}`,
   ];
   const full = renderReport(out) + '\n' + extra.join('\n');
   assertNoEmbargoedTokens(full);          // the WHOLE artifact, not just the core report
