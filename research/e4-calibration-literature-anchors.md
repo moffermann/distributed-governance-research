@@ -54,6 +54,13 @@ The central substitutes its own prior for constituents' values (`w·(v_p − S�
 - **Dias, N., Lucas, J., & Sheffer, L. ("Beyond the mean")** + Gagnon-Bartsch: planners mis-estimate the
   *distribution* of preferences via projection (~21–50% directional projection; bias partially reduced by
   distribution-elicitation). Anchors the projection magnitude band.
+- **Flyvbjerg, B. (2014). "What You Should Know about Megaprojects and Why: An Overview." *Project Management
+  Journal* 45(2); and "The Iron Law of Megaprojects."** Quantitative and systematic across **104 countries, 70
+  years**: **nine out of ten** megaprojects run over budget; **benefit shortfalls of 40–50% are common (75% not
+  uncommon)** — costs underestimated AND benefits overestimated, yielding a falsely high benefit-cost ratio. Direct
+  large-sample evidence that the central selector systematically over-rates net value: it over-weights benefits
+  (projection/optimism, §2) and under-weights costs/harm (myopia, §1). This is the empirical face of both central
+  handicaps at once.
 
 ## 3. Credit-claiming / traceability tilt (`lambda`) — ANCHORED (theory)
 - **Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale UP** + **Arnold, R. D. (1990). *The Logic of
@@ -82,15 +89,23 @@ Net-allocation participation is universal by architecture (a facto). Its composi
   common-mode error across the delegated share (does not average out). Anchors both the delegation channel and the
   common-mode error term `sigma_cm` (the one honest structural sensitivity for the distributed arm).
 
-## 6. Adverse voice bias (`beta`) — ANCHORED (theory)
+## 6. Adverse voice bias (`beta`) — ANCHORED (theory + empirics)
 - **Noelle-Neumann, E. (1974). "The Spiral of Silence: A Theory of Public Opinion." *Journal of Communication*
   24(2).** Perceived-minority opinions self-censor to avoid isolation → opponents/harmed parties under-report in the
   distributed arm (a HANDICAP on distributed harm-catching, conservative, not a flattery). Reinforced by Olson (§1):
   diffuse harmed are under-mobilized.
+- **Einstein, K. L., Palmer, M., & Glick, D. M. (2019). *Neighborhood Defenders*. Cambridge University Press** (and
+  Perspectives on Politics). Coded thousands of citizens speaking at planning/zoning meetings matched to voter files:
+  participants are **systematically unrepresentative** (older, male, homeowners, longtime residents) and skew
+  strongly toward one valence — empirical evidence that *who speaks is not who is affected*, exactly the voice bias
+  `beta`. Note the model uses β as a HANDICAP on the distributed arm (opponents under-report), so this anchor is
+  conservative for the headline.
 
-## 7. Anti-value / opposition prevalence & intensity (`pi_opp`, `mu_opp`) — direction anchored
-- NIMBY / intense-minority opposition & local referendum literature: a minority of projects carry concentrated,
-  intense opposition (harm). Direction anchored; prevalence swept in `R_alpha`.
+## 7. Anti-value / opposition prevalence & intensity (`pi_opp`, `mu_opp`) — ANCHORED (empirics)
+- **Einstein, Palmer & Glick (2019), *Neighborhood Defenders*.** Local hearings are dominated by an **intense
+  minority** — participants "overwhelmingly opposed," presenting as experts, who succeed in denying or delaying
+  projects. Anchors that a minority of projects carry concentrated, intense opposition (`pi_opp` small, `mu_opp`
+  large) — the anti-value the coverage arm catches and the myopic central misses. Prevalence swept in `R_alpha`.
 
 ---
 
