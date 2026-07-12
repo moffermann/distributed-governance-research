@@ -3,7 +3,7 @@
 // the central salience-gated harm-myopia model. All value quantities are per-interested-person means. Every literal
 // the engine uses comes from the contract; validateConfig() is called before any run (fail-closed).
 
-import { THETA, NUM, CLASSIFY, validateConfig } from './contract.mjs';
+import { THETA, NUM, CLASSIFY, validateConfig, validateDomain } from './contract.mjs';
 
 // ---------------- seeded PRNG (Date.now / Math.random forbidden for reproducibility) ----------------
 export function makeRng(seed) {
@@ -77,7 +77,7 @@ export function generateWorld(cfg, rng) {
     const sV = Math.pow(Math.max(0, Math.min(1, V)), cfg.s_exp);// harm gate: ~0 on long tail, ~1 when salient
     const M_C = cfg.a + cfg.b * Splus + cfg.w * (v_pj - Splus) - cfg.b_H_C * sV * H + cfg.sigma_C * rng.normal();
 
-    const P = cfg.rho_P * V;                                    // visible salience -> credit
+    const P = V;                                               // visible salience -> credit (linear scale would cancel under z)
     projects.push({ S, c, M_C, M_D, P });
   }
   return projects;
@@ -136,8 +136,9 @@ function median(arr) {
   return a.length % 2 ? a[mid] : 0.5 * (a[mid - 1] + a[mid]);
 }
 
-export function estimand(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value } = {}) {
+export function estimand(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, oMinAbs = null } = {}) {
   validateConfig(cfg);
+  validateDomain(cfg);
   const rng = makeRng(seed);
   const worlds = [];
   for (let wI = 0; wI < nWorlds; wI++) {
@@ -145,27 +146,35 @@ export function estimand(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.va
     if (!empty) worlds.push({ D, C, O });
   }
   const Os = worlds.map((x) => x.O);
-  const o_min = CLASSIFY.o_min_frac.value * median(Os);
+  // o_min is an ABSOLUTE floor (default from this config's own median). Passing oMinAbs pins ONE floor across a
+  // whole sweep, so degenerate corners (tiny O => exploding (D-C)/O) get most worlds excluded and flagged, rather
+  // than injecting divergent ratios into the envelope (Codex: denominator-weighting divergence).
+  const o_min = oMinAbs !== null ? oMinAbs : CLASSIFY.o_min_frac.value * median(Os);
   const kept = worlds.filter((x) => x.O > o_min);
   const degCount = worlds.length - kept.length;
   const pi_deg = worlds.length ? degCount / worlds.length : 1;
-  const ratios = kept.map((x) => (x.D - x.C) / x.O);
-  const m_hat = ratios.length ? ratios.reduce((s, r) => s + r, 0) / ratios.length : NaN;
+  // RATIO OF SUMS (robust): m = Σ(D−C)/ΣO over retained worlds. Bounded and stable — a single tiny-O world cannot
+  // dominate (as it would in the per-world-ratio mean, Codex's (1,1)/(−1,100) divergence). Interpretation: total
+  // true value the arm delivers, as a fraction of the total full-information achievable value.
+  const num = kept.reduce((s, x) => s + (x.D - x.C), 0);
+  const den = kept.reduce((s, x) => s + x.O, 0);
+  const m_hat = den > 0 ? num / den : NaN;
 
-  // world-cluster bootstrap CI (inner simulation variability only)
+  // world-cluster bootstrap CI (inner simulation variability only): resample worlds, recompute the ratio of sums.
   const B = NUM.bootstrap_reps.value;
   const bootRng = makeRng((seed ^ 0x9e3779b9) >>> 0);
   const boots = [];
-  if (ratios.length) {
+  if (kept.length) {
     for (let bI = 0; bI < B; bI++) {
-      let acc = 0;
-      for (let t = 0; t < ratios.length; t++) acc += ratios[Math.floor(bootRng.u() * ratios.length)];
-      boots.push(acc / ratios.length);
+      let bn = 0, bd = 0;
+      for (let t = 0; t < kept.length; t++) { const w = kept[Math.floor(bootRng.u() * kept.length)]; bn += (w.D - w.C); bd += w.O; }
+      if (bd > 0) boots.push(bn / bd);
     }
     boots.sort((a, b) => a - b);
   }
   const lo = boots.length ? boots[Math.floor((1 - NUM.ci_level.value) / 2 * boots.length)] : NaN;
   const hi = boots.length ? boots[Math.floor((1 + NUM.ci_level.value) / 2 * boots.length) - 1] : NaN;
 
-  return { m_hat, ci: [lo, hi], pi_deg, n_kept: kept.length, n_worlds: worlds.length, o_min };
+  const enough = kept.length >= Math.max(NUM.min_kept_floor.value, NUM.min_kept_frac.value * worlds.length);
+  return { m_hat, ci: [lo, hi], pi_deg, n_kept: kept.length, n_worlds: worlds.length, o_min, enough };
 }

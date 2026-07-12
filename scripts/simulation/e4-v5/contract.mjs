@@ -54,8 +54,7 @@ export const THETA = {
 
   // ---- selection ----
   h:       { value: 0.0,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0, 1.0], note: 'opportunity-cost hurdle (shared across arms)' },
-  lambda:  { value: 0.15, kind: 'physical',    dm: [0, 1], df: [0, 1], ralpha: [0, 0.4], note: 'central credit-pressure weight' },
-  rho_P:   { value: 1.0,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [0.5, 2.0], note: 'salience->credit loading' },
+  lambda:  { value: 0.15, kind: 'physical',    dm: [0, 1], df: [0, 1], ralpha: [0, 0.4], note: 'central credit-pressure weight (credit salience P = visibility V; a linear scale on P would cancel under z-scoring, so none is registered)' },
 };
 
 // Aggregation A is NORMATIVE and declared, never randomized into a prior.
@@ -67,8 +66,9 @@ export const NUM = {
   seed:           { value: 20260711, note: 'base PRNG seed (Date.now/Math.random forbidden)' },
   bootstrap_reps: { value: 400,  note: 'world-cluster bootstrap replications (inner variability only)' },
   ci_level:       { value: 0.95, note: 'bootstrap CI level' },
-  common_random:  { value: true, note: 'common random numbers across arms within a world' },
   z_fallback_sd:  { value: 1.0,  note: 'z-score sd fallback when eligible-set sd=0' },
+  min_kept_frac:  { value: 0.5,  note: 'a cell is sufficient only if kept/(simulated) worlds >= this' },
+  min_kept_floor: { value: 40,   note: 'and kept worlds >= this absolute floor; else numerically-unresolved/degenerate' },
 };
 
 // ---- estimand thresholds (frozen, mean-value units; NOT the retired 0.05) ----
@@ -87,15 +87,16 @@ export const OUTPUT_SCHEMA = {
   $schema: 'http://json-schema.org/draft-07/schema#',
   type: 'object',
   additionalProperties: false,
-  required: ['contract_version', 'theta_id', 'pi_deg', 'm_hat', 'ci', 'sign_status', 'materiality_status', 'degeneracy_status', 'numerical_status'],
+  required: ['contract_version', 'theta_id', 'pi_deg', 'm_hat', 'ci', 'df_dist_share', 'df_cent_share', 'sign_status', 'materiality_status', 'degeneracy_status', 'numerical_status'],
   properties: {
     contract_version:   { type: 'string' },
     theta_id:           { type: 'string' },
     pi_deg:             { type: 'number', minimum: 0, maximum: 1 },
-    m_hat:              { type: 'number' },                 // E[(D-C)/O | O>o_min], a signed fraction of oracle
+    m_hat:              { type: 'number' },                 // Σ(D-C)/ΣO over kept worlds, a signed fraction of oracle
     ci:                 { type: 'array', items: { type: 'number' }, minItems: 2, maxItems: 2 },
-    m_lo_DF:            { type: 'number' },                 // sign backbone (measure-free over joint D_F)
-    m_hi_DF:            { type: 'number' },
+    df_dist_share:      { type: 'number', minimum: 0, maximum: 1 },  // SIGN backbone over joint D_F: share of resolved
+    df_cent_share:      { type: 'number', minimum: 0, maximum: 1 },  //   corners where each institution wins (magnitude
+    df_par_share:       { type: 'number', minimum: 0, maximum: 1 },  //   over D_F is not meaningful — arms can destroy value)
     m_Ralpha:           { type: 'object' },                 // magnitude by alpha level (measured over joint R_alpha)
     sign_status:        { enum: ['pos', 'neg', 'zero-touching', 'indeterminate'] },
     materiality_status: { enum: ['material', 'negligible', 'uncertain'] },
@@ -128,6 +129,42 @@ export function validateConfig(cfg, { requireAll = true } = {}) {
     if (v < dm[0] || v > dm[1]) throw new Error(`[contract] ${k}=${v} outside mathematical domain [${dm[0]}, ${dm[1]}]`);
   }
   return true;
+}
+
+// Executable-domain validation (fail closed): the printed DGP is only defined on a subset of the scalar box.
+// validateConfig checks names + scalar bounds; validateDomain checks the constraints that keep the DGP meaningful.
+export function validateDomain(cfg) {
+  const bad = [];
+  const finite = (k) => { if (!Number.isFinite(cfg[k])) bad.push(`${k} not finite`); };
+  for (const k of Object.keys(THETA)) finite(k);
+  const intPos = (k, min) => { if (!Number.isInteger(cfg[k]) || cfg[k] < min) bad.push(`${k} must be integer >= ${min}`); };
+  intPos('N', 1); intPos('K', 2);
+  const pos = (k) => { if (!(cfg[k] > 0)) bad.push(`${k} must be > 0`); };
+  pos('a_V'); pos('b_V'); pos('a_r'); pos('b_r');           // Beta shapes must be positive
+  pos('p');                                                 // engine divides by p
+  if (!(cfg.c_lo > 0)) bad.push('c_lo must be > 0');
+  if (!(cfg.c_hi > cfg.c_lo)) bad.push('c_hi must be > c_lo');
+  if (!(cfg.phi > 0 && cfg.phi < 1)) bad.push('phi must be in (0,1)');
+  const unit = (k) => { if (cfg[k] < 0 || cfg[k] > 1) bad.push(`${k} must be in [0,1]`); };
+  unit('p'); unit('beta'); unit('pi_opp'); unit('lambda'); unit('zeta') /* zeta in [-1,1] handled by dm */;
+  if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');
+  const nonneg = (k) => { if (cfg[k] < 0) bad.push(`${k} must be >= 0`); };
+  ['s_q', 'sigma', 'mu_opp', 'sigma_e', 'sigma_v', 'sigma_C', 's_exp', 'h'].forEach(nonneg);
+  if (bad.length) throw new Error(`[contract] executable-domain violation: ${bad.join('; ')}`);
+  return true;
+}
+
+// Is cfg[k] within its declared expectable band R_alpha? (region membership, for manifests/labels — not fatal)
+export function inRalpha(cfg, keys = Object.keys(THETA)) {
+  return keys.every((k) => cfg[k] >= THETA[k].ralpha[0] && cfg[k] <= THETA[k].ralpha[1]);
+}
+
+// FNV-1a hash of an arbitrary JSON-able manifest (no Date/Math.random).
+export function resolvedHash(manifest) {
+  const s = JSON.stringify(manifest);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return 'fnv1a-' + h.toString(16).padStart(8, '0');
 }
 
 // Base config = registered default values.

@@ -25,10 +25,11 @@ export function renderReport(out) {
   const mag = out.m_Ralpha
     ? Object.entries(out.m_Ralpha).map(([al, iv]) => `  α=${al}: [${pct(iv[0])}, ${pct(iv[1])}] of oracle`).join('\n')
     : '  (magnitude layer not computed)';
+  const sh = (x) => (100 * x).toFixed(0) + '%';
   const text = [
     `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
     `  m̂ (signed fraction of full-information oracle, parity at 0): ${pct(out.m_hat)}  CI=[${pct(out.ci[0])}, ${pct(out.ci[1])}]`,
-    `  sign backbone over D_F (measure-free): [${pct(out.m_lo_DF)}, ${pct(out.m_hi_DF)}]`,
+    `  sign backbone over D_F (measure-free): Core v0 wins ${sh(out.df_dist_share)} of corners · central ${sh(out.df_cent_share)} · parity ${sh(out.df_par_share)}`,
     `  magnitude over R_α (measured):`,
     mag,
     `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,

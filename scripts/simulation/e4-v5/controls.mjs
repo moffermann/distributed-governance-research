@@ -34,13 +34,15 @@ const check = (name, ok, detail) => { pass(name, ok, detail); allOk = allOk && o
   check('C1 estimand m == 0', Math.abs(m_hat) < 1e-9, `m=${m_hat.toExponential(2)}`);
 }
 
-// ---- Control 2: pathway inactivation — credit (lambda=0) ----
-// At lambda=0, the credit salience P must not affect central selection: varying rho_P leaves C unchanged world-by-world.
+// ---- Control 2: credit channel is ACTIVE (and structurally inert at lambda=0) ----
+// Credit salience P=V feeds the central rank only through lambda; at lambda=0 the term is multiplied by 0 (inert by
+// construction), so the meaningful test is that raising lambda actually changes the central selection.
 {
-  const base = { ...baseConfig(), ...SMALL, lambda: 0 };
-  const A = runWorlds({ ...base, rho_P: 1 });
-  const Bb = runWorlds({ ...base, rho_P: 5 });
-  check('C2 lambda=0 => credit P inert', maxAbsDiff(A, Bb, 'C') < 1e-9, `max|dC|=${maxAbsDiff(A, Bb, 'C').toExponential(2)}`);
+  const base = { ...baseConfig(), ...SMALL };
+  const A = runWorlds({ ...base, lambda: 0 });
+  const Bb = runWorlds({ ...base, lambda: 0.4 });
+  const d = maxAbsDiff(A, Bb, 'C');
+  check('C2 credit channel active (C changes with lambda)', d > 1e-9, `max|dC|=${d.toExponential(2)}`);
 }
 
 // ---- Control 3: pathway inactivation — projection (w=0) ----

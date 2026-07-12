@@ -23,6 +23,16 @@ export function validateOutput(obj) {
     }
     if (spec.minimum !== undefined && v < spec.minimum) errs.push(`${k} below minimum`);
     if (spec.maximum !== undefined && v > spec.maximum) errs.push(`${k} above maximum`);
+    // recursive finiteness: no NaN/Infinity may serialize
+    if (spec.type === 'number' && !Number.isFinite(v)) errs.push(`${k} must be finite (got ${v})`);
+    if (spec.type === 'array') for (const el of (Array.isArray(v) ? v : [])) if (!Number.isFinite(el)) errs.push(`${k} has non-finite element`);
+  }
+  // m_Ralpha nested object: each entry must be a [finite, finite] interval with lo<=hi
+  if (obj.m_Ralpha && typeof obj.m_Ralpha === 'object') {
+    for (const [al, iv] of Object.entries(obj.m_Ralpha)) {
+      if (!Array.isArray(iv) || iv.length !== 2 || !iv.every(Number.isFinite)) errs.push(`m_Ralpha[${al}] must be [finite,finite]`);
+      else if (iv[0] > iv[1]) errs.push(`m_Ralpha[${al}] inverted`);
+    }
   }
   return errs;
 }

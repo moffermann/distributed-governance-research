@@ -44,8 +44,10 @@ check('EMBARGO rejects "D/C"', rejects('ratio D/C = 1.4'));
 check('EMBARGO allows clean percent text', !rejects('m̂ is 45.7% of the oracle, parity at 0'));
 
 // ---- Closed schema: reject an extra field / missing required ----
-check('SCHEMA rejects extra field', validateOutput({ contract_version: 'x', theta_id: 't', pi_deg: 0, m_hat: 0, ci: [0, 0], sign_status: 'pos', materiality_status: 'material', degeneracy_status: 'ok', numerical_status: 'resolved', ratio_D_over_C: 2.2 }).length > 0);
-check('SCHEMA accepts a clean output', validateOutput({ contract_version: 'x', theta_id: 't', pi_deg: 0, m_hat: 0.1, ci: [0.05, 0.15], sign_status: 'pos', materiality_status: 'material', degeneracy_status: 'ok', numerical_status: 'resolved' }).length === 0);
+const CLEAN = { contract_version: 'x', theta_id: 't', pi_deg: 0, m_hat: 0.1, ci: [0.05, 0.15], df_dist_share: 0.7, df_cent_share: 0.3, sign_status: 'indeterminate', materiality_status: 'material', degeneracy_status: 'ok', numerical_status: 'resolved' };
+check('SCHEMA rejects extra field (ratio smuggling)', validateOutput({ ...CLEAN, ratio_D_over_C: 2.2 }).length > 0);
+check('SCHEMA rejects non-finite m_hat', validateOutput({ ...CLEAN, m_hat: Infinity }).length > 0);
+check('SCHEMA accepts a clean output', validateOutput(CLEAN).length === 0);
 
 // ---- Fail-closed config: unknown parameter throws ----
 {
