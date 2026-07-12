@@ -16,7 +16,7 @@ function run(name, over) {
 }
 
 safeLog('E4 — anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0)\n');
-run('PRO-CENTRAL', PRO_CENTRAL);      // central's FULL best plausible case — central WINS
+run('PRO-CENTRAL', PRO_CENTRAL);      // declared central-favourable endpoint — central WINS
 run('PROBABLE', PROBABLE);           // source-motivated declared reference
 run('MYOPIA-OFF', MYOPIA_OFF);       // GENUINE myopia-only contrast (only s_exp,b_H_C change) — attributes the harm channel ALONE
 run('NO-MYOPIA', NO_MYOPIA);         // harm-aware AND competent bundle — continuity anchor to the ~0.025 gate

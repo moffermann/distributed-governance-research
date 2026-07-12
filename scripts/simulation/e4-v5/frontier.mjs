@@ -1,7 +1,8 @@
 // E4 v1.14 — ceteris-paribus FRONTIER locators. Hold all knobs at the PROBABLE scenario, sweep ONE axis across its
 // physically-possible range, and locate where m = D/O − C/O crosses 0 (the parity frontier). Report the frontier
-// location, the plausible (R_alpha) value marked on the axis, and which side of the frontier the plausible value
-// falls on. Answers "where is the frontier, and does reality sit on the Core-v0 side?". Run: npm run e4:frontier
+// location, the probable reference value marked on the axis, and the result at that value. Together with the declared
+// combined path, this shows where a measured target configuration would lie relative to the reported frontiers.
+// Run: npm run e4:frontier
 import { baseConfig, THETA } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 import { estimand } from './engine.mjs';
@@ -43,25 +44,25 @@ for (const ax of AXES) {
     const who = ms[Math.floor(STEPS / 2)] > 0 ? 'Core v0 wins across the whole plotted range' : 'central wins across the whole plotted range';
     safeLog(`    frontier: none in [${ax.lo}, ${ax.hi}] — ${who}`);
   } else {
-    safeLog(`    frontier (m=0) at ${ax.k} ≈ ${frontier.toFixed(2)}   |   plausible value = ${ax.plaus}  →  m = ${pct(mAtPlaus)} (Core v0 ${mAtPlaus > 0 ? 'wins' : 'loses'} at the plausible point)`);
+    safeLog(`    frontier (m=0) at ${ax.k} ≈ ${frontier.toFixed(2)}   |   plausible value = ${ax.plaus}  →  m = ${pct(mAtPlaus)} (Core v0 ${mAtPlaus > 0 ? 'wins' : 'loses'} at the reference point)`);
   }
   // compact curve
   safeLog('    m across axis: ' + xs.map((x, i) => `${x.toFixed(2)}:${pct(ms[i])}`).join('  '));
   safeLog('');
 }
-// ---- combined scenario-path frontier: interpolate PROBABLE -> PRO_CENTRAL (the central's FULL best plausible case),
-// locate m=0. t=0 is the probable scenario; t=1 is the central's full best plausible case (a PLAUSIBLE point, not
+// ---- combined scenario-path frontier: interpolate PROBABLE -> PRO_CENTRAL (the declared central-favourable endpoint),
+// locate m=0. t=0 is the probable scenario; t=1 is the declared central-favourable endpoint (a declared endpoint, not
 // beyond-realistic). The crossing t* tells how far toward central-favourable conditions parity is reached. ----
 import { PRO_CENTRAL } from './scenario-configs.mjs';
 const compKeys = Object.keys(PRO_CENTRAL).filter((k) => PRO_CENTRAL[k] !== PROBABLE[k]);
 const clampDF = (k, v) => Math.max(THETA[k].df[0], Math.min(THETA[k].df[1], v));
 const lerp = (t) => { const c = { ...base }; for (const k of compKeys) c[k] = clampDF(k, PROBABLE[k] + t * (PRO_CENTRAL[k] - PROBABLE[k])); return c; };
-safeLog('■ probable → central\'s full best plausible case (combined path; t=1 is a plausible scenario, not extrapolation)');
+safeLog('■ probable → declared central-favourable endpoint (combined path; t in [0,1] is the declared interpolation segment)');
 const ts = [], tms = [];
 for (let i = 0; i <= 16; i++) { const t = i / 8; const m = estimand(lerp(t), { nWorlds: NW }).m_hat; ts.push(t); tms.push(m); }
 let tf = null;
 for (let i = 0; i < ts.length - 1; i++) if ((tms[i] > 0) !== (tms[i + 1] > 0)) { tf = ts[i] + (0 - tms[i]) * (ts[i + 1] - ts[i]) / (tms[i + 1] - tms[i]); break; }
-safeLog(`    t=0 probable scenario → t=1 central's full best plausible case`);
+safeLog(`    t=0 probable scenario → t=1 declared central-favourable endpoint`);
 safeLog(`    m across t: ` + ts.filter((_, i) => i % 2 === 0).map((t, i) => `t=${t.toFixed(2)}:${pct(tms[i * 2])}`).join('  '));
 safeLog(tf === null
   ? `    frontier: none in t∈[0,2] — one endpoint does not cross parity`

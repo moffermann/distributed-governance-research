@@ -85,7 +85,7 @@ export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
 // ---- EVIDENCE configuration (single source of truth for the evidence run; hashed into theta_id) ----
 // NOTE (2026-07-11): a v6.1 redesign is planned — report EVERYTHING via a space-filling sweep over the WHOLE
 // uncertain set (incl. thesis levers a_V,b_V,s_exp; NO frozen favourable lever) + ceteris-paribus frontier locators
-// (per axis: frontier location, possible values, central's best case, probable case ± CI). That rewrite is GATED on
+// (per axis: frontier location, possible values, the declared central-favourable endpoint, probable case ± CI). That rewrite is GATED on
 // first anchoring each variable's probable (R_alpha) value to theory/empirics — see research/e4-plausible-anchors.md.
 // Current block is the working v6 config; do not treat the swept set below as the final "everything" sweep.
 export const EVIDENCE = {

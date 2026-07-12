@@ -16,7 +16,7 @@
 export const PROBABLE = { a_V: 0.5, b_V: 3.5, p: 0.15, a_r: 1.5, b_r: 8, pi_opp: 0.15, mu_opp: 3.0,
   s_exp: 2.5, b_H_C: 0.5, w: 0.5, a: 0.2, b: 0.9, beta: 0.35, lambda: 0.15, zeta: 0.6, gamma: 0.5,
   sigma_e: 0.5, sigma_C: 0.5 };
-// Central's full best plausible case (every knob central-favourable). Winner: central (~ −30%).
+// Declared central-favourable endpoint (every knob central-favourable). Winner: central (~ −30%).
 export const PRO_CENTRAL = { a_V: 1.0, b_V: 1.5, p: 0.05, a_r: 0.8, b_r: 14, pi_opp: 0.03, mu_opp: 1.5,
   s_exp: 0.5, b_H_C: 1.2, w: 0.1, a: 0.0, b: 1.0, beta: 0.8, lambda: 0.0, zeta: 0.85, gamma: 0.3,
   sigma_e: 1.2, sigma_C: 0.2 };

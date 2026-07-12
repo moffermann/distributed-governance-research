@@ -1,7 +1,7 @@
 # E4 — plausible-value anchors (the "probable case", justified per variable) — LIVING DOC
 
 > Author framing (2026-07-11): report EVERYTHING (space-filling sweep), then LOCATE the frontier ceteris-paribus and
-> state, per axis: where the frontier is, the possible estimated values, the central's BEST case, and the PROBABLE
+> state, per axis: where the frontier is, the possible estimated values, the central's declared favourable endpoint, and the PROBABLE
 > case (XX ± CI). The "probable case" for each variable must be JUSTIFIED — by a theoretical argument or an empirical
 > measurement — not chosen by the analyst. We fix variables ONE AT A TIME here; each entry records the anchor and its
 > strength. Anchor types: E=empirical measurement · T=theoretical argument · P=proxy-informed (transport gap) ·
@@ -48,17 +48,16 @@
 **Frontier axes (ceteris-paribus, from PROBABLE):** `s_exp, b_H_C, p, beta` (+ `a_V`) — locate where m crosses 0.
 
 ### RESULTS — anchored scenarios (`npm run e4:scenarios`, N=1500,K=150, 800 worlds)
-> **CORRECTION (Codex v7):** the earlier "PRO-CENTRAL = +6.1%" conflated two distinct scenarios. Fixed. The
-> central's FULL best plausible case (every knob central-favourable) is `PRO_CENTRAL` in `scenario-configs.mjs`
-> (the single source of truth) and the CENTRAL WINS there. The +6.1% is a SEPARATE `NO_MYOPIA` scenario (myopia
-> isolated). Authoritative values live in `scenario-configs.mjs`; a regression test pins the sign ORDERING
-> (`PRO_CENTRAL < NO_MYOPIA < MYOPIA_OFF < PROBABLE < PRO_DIST`) — a partial guard, it does NOT enforce exact-config
-> equality, so any narrative values below are illustrative rationale only, not authoritative.
+> **CORRECTION:** `PRO_CENTRAL` is the central's declared full-favourable endpoint, and the central wins there.
+> `NO_MYOPIA` is the separate harm-aware and otherwise-competent continuity bundle at +6.1%, **not a myopia
+> isolation**; `MYOPIA_OFF` is the two-harm-coordinate diagnostic contrast at +30.4%. Authoritative configs live in
+> `scenario-configs.mjs`; the regression pins executable outcome ORDERING only, not exact configs, magnitudes,
+> labels, or prose.
 
 | scenario | m (gap) | 95% CI | Core v0 delivers | central delivers | winner |
 |---|---|---|---|---|---|
 | PRO-CENTRAL (central's declared full-favourable endpoint) | **−29.5%** | [−29.9, −29.1] | 68% of oracle | 98% | **central** |
-| NO-MYOPIA (probable, but central sees harm — continuity anchor) | **+6.1%** | [5.8, 6.4] | 91% | 85% | ≈ parity |
+| NO-MYOPIA (harm-aware and otherwise-competent continuity bundle) | **+6.1%** | [5.8, 6.4] | 91% | 85% | ≈ parity |
 | PROBABLE (source-motivated reference) | **+46.6%** | [46.0, 47.4] | 91% | 45% | Core v0 |
 | PRO-DISTRIBUTED (favourable, moderate) | **+199.8%** | [197, 202] | 96% | −104% (destroys value) | Core v0 |
 
@@ -66,10 +65,11 @@
   participation + competent, harm-aware central) it wins ~30% and delivers 98% of the oracle. Core v0 wins under the
   probable reference. The story from D/O: Core v0 is fairly robust (68–96%); the central swings 45%→85%→98% (or −104%
   when myopic + harmful) — it depends on whether it sees the anti-value AND on citizen participation.
-- **Continuity / reconciliation with the NO-GO:** isolating harm-myopia (NO-MYOPIA: probable but central sees harm)
-  gives +6.1%, the same near-parity regime as the symmetry-gate ~2.5%. The +46% is the harm-myopia mechanism; the
-  gate deliberately equips the central with harm-aware appraisal, so the two results are the SAME phenomenon under
-  opposite assumptions — a qualitative reconciliation hypothesis, not a reproduced limit.
+- **Continuity / reconciliation with the NO-GO:** in this sequential, path-dependent decomposition, `MYOPIA_OFF`
+  changes only `s_exp,b_H_C` and reduces the gap `+46.6% → +30.4%`, or 16.2 of the 40.5-point decline to `NO_MYOPIA`
+  (~40%). The further move to the harm-aware and otherwise-competent `NO_MYOPIA` bundle reduces it by 24.3 points
+  (~60%). `NO_MYOPIA` is the continuity anchor to the symmetry-gate near-parity regime; this is a qualitative
+  reconciliation hypothesis across different DGPs, not a reproduced limit.
 
 ### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
 - **Robustness over five plotted slices (NOT all parameters):** across the five prespecified one-factor slices
@@ -90,7 +90,7 @@ _(populated as we fix each, one at a time)_
 
 ## Anchored scenarios (author framing 2026-07-11) — level the field both ways
 Five named scenarios (values in `scenario-configs.mjs`), each a full config → `m ± 95% CI` (inner MC only):
-- **PRO-CENTRAL** — the central's FULL best plausible case (every knob central-favourable). The central WINS
+- **PRO-CENTRAL** — the central's declared full-favourable endpoint (every knob central-favourable). The central WINS
   (≈ −30%, delivers 98% of the benchmark). This is the honest "central's favourable region", NOT near-parity.
 - **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast
   (≈ +30%): a diagnostic contrast attributing the harm channel ALONE — a sequential ~40% of the decline (16.2 of
