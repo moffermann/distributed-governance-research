@@ -4,7 +4,7 @@
 // win). NO-MYOPIA (bundle) = a competent harm-aware central. MYOPIA-OFF = diagnostic harm-only contrast.
 // PROBABLE = source-motivated reference. PRO-DISTRIBUTED = distributed-favourable. All prose below is COMPUTED
 // from the runs (never hardcoded), so it can never drift from the numbers.
-import { baseConfig } from './contract.mjs';
+import { baseConfig, contractHash } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 import { estimand } from './engine.mjs';
 import { PRO_CENTRAL, NO_MYOPIA, MYOPIA_OFF, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
@@ -18,7 +18,7 @@ function run(name, over) {
   return r;
 }
 
-safeLog('E4 — anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0)\n');
+safeLog(`E4 — anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0) — contract ${contractHash()} (captures the full resolved THETA incl. the coverage composition)\n`);
 const rc = run('PRO-CENTRAL', PRO_CENTRAL);      // declared central-favourable endpoint — at faithful participation, ~parity
 const rp = run('PROBABLE', PROBABLE);            // source-motivated declared reference
 const ro = run('MYOPIA-OFF', MYOPIA_OFF);        // GENUINE myopia-only contrast (only s_exp,b_H_C change) — harm channel ALONE

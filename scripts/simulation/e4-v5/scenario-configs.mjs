@@ -19,10 +19,15 @@
 //   MYOPIA_OFF    = a DIAGNOSTIC CONTRAST (not a scenario): PROBABLE with ONLY the two harm-gate coords changed
 //                   (s_exp, b_H_C). Sequential, path-dependent attribution: harm-myopia ALONE moves +54.6% → +38.4%
 //                   (16.2 of the 40.7-pt decline to +13.9%, ~40%); the further step to the NO_MYOPIA bundle is ~60%.
+// SEMANTICS (two distinct things — do not conflate): ARCHITECTURAL COVERAGE is universal (p=1: every citizen's share
+// IS allocated, via direct action, delegate, or profile) — a facto. That is SEPARATE from per-channel SIGNAL
+// OBSERVATION quality: universal coverage does NOT mean universal full-fidelity project-specific reports. The
+// observation quality is the composition below.
 // Signal-quality composition of Core v0's universal coverage (a facto split, not a knob to gerrymander):
 //   ~5% ACTIVE direct participation (full fidelity; the 3–5% "turnout" figure in the paper is THIS share, not total),
-//   ~35% MICRODELEGATION (individual signal + bounded revocable noise), ~60% PROFILE rules (category-aligned, high
-//   alignment but coarser on project-specific harm). Same across every scenario (Core v0 architecture).
+//   ~35% MICRODELEGATION (individual signal + bounded revocable noise + small bias d_bias toward the delegate view),
+//   ~60% PROFILE rules (revert toward the OBSERVABLE category proxy qCat; high alignment, coarser on project harm).
+//   Same across every scenario (Core v0 architecture).
 export const COMPOSITION = { f_active: 0.05, f_deleg: 0.35, k_deleg: 1.5, phi_prof: 0.85, d_bias: 0.1 };
 export const PROBABLE = { ...COMPOSITION, a_V: 0.5, b_V: 3.5, p: 1.0, a_r: 1.5, b_r: 8, pi_opp: 0.15, mu_opp: 3.0,
   s_exp: 2.5, b_H_C: 0.5, w: 0.5, a: 0.2, b: 0.9, beta: 0.35, lambda: 0.15, zeta: 0.6, gamma: 0.5,

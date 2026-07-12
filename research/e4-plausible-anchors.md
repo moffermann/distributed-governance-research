@@ -16,12 +16,21 @@
 | `a_V,b_V` visibility tail shape | E | contract | probable `a_V∈[0.3,0.8], b_V∈[2,5]` | heavy-tailed public procurement (Skuhrovec arXiv:1309.0218; Zipf/Pareto) | strong (dir.), stylized (mag.) | ✅ CONFIRMED |
 | `p` net-allocation participation | facto | fixed | `p = 1.0` (universal) | Core v0 architecture (profiles + delegates cover the passive) — NOT PB turnout | facto (not a knob) | ✅ REVISED |
 | `pi_opp` opposition prevalence | E | contract | TBD | NIMBY/opposition & referendum rates | — | 🔲 |
-| `s_exp,b_H_C` harm myopia | T | contract | TBD | agenda-setting / salience (oversight reaches only the visible) | — | 🔲 |
+| `s_exp,b_H_C` harm myopia | T | contract | band `s_exp∈[1,2.5], b_H_C∈[0.5,1.3]` (stylized, not measured) | convex salience gate: agenda-setting/salience — oversight/opposition/audit concentrate on visible, contested projects (McCombs–Shaw; Bachrach–Baratz non-decision); EIA/audit/press catch harm as V→1 | direction anchored, magnitude stylized | 🔎 anchored-direction |
 | `w` projection | P | contract | TBD | Gagnon-Bartsch / Dias-Lucas-Sheffer (transport gap) | — | 🔲 |
 | `a,b` bias / responsiveness | P | contract | TBD | Broockman-Skovron (transport gap) | — | 🔲 |
 | `a_r,b_r` reach | E/T | contract | TBD | local-project interest share | — | 🔲 |
 | `beta` voice suppression | T | contract | TBD | spiral of silence; weak empirics | — | 🔲 |
 | `phi` budget share, noises, scales | A | contract | contract | declared model scale | n/a | 🔲 |
+
+> **Harm-gate (`s_exp,b_H_C`) — the load-bearing, least-empirically-pinned knob (now anchored-direction, magnitude
+> stylized).** Direction: a CONVEX salience gate `s(V)=V^s_exp` (oversight/opposition/audit/press concentrate on
+> visible, contested projects — agenda-setting; and catch harm as visibility V→1 via EIA/audit) is theory-anchored;
+> the EXPONENT is a stylized parameter, NOT measured. It is reported across the anchored band, and the result is robust
+> across it: on the probable world, `s_exp=1.0` (linear gate; central detects ~12% of harm on a median project) gives
+> m≈+48%, `s_exp=1.5` ≈+51%, `s_exp=2.5` (strong tail-myopia; ~0.6% median detection) ≈+54%. The paper reports this
+> sensitivity and the full competent-central range (fully harm-aware ≈+14% → best-competent-reader endpoint ≈−3%),
+> so the headline does not rest on the exponent alone.
 
 ## KNOB ANCHOR TABLE (anchors + direction only — EXACT VALUES LIVE IN CODE)
 > **AUTHORITATIVE scenario values = `scripts/simulation/e4-v5/scenario-configs.mjs` (single source).** This table
