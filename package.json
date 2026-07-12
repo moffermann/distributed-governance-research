@@ -10,7 +10,8 @@
     "e4:controls": "node scripts/simulation/e4-v5/controls.mjs",
     "e4:test": "node scripts/simulation/e4-v5/test.mjs",
     "e4:theorem": "node scripts/simulation/e4-v5/theorem-check.mjs",
-    "e4:scenarios": "node scripts/simulation/e4-v5/scenarios.mjs"
+    "e4:scenarios": "node scripts/simulation/e4-v5/scenarios.mjs",
+    "e4:frontier": "node scripts/simulation/e4-v5/frontier.mjs"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "11.16.0",

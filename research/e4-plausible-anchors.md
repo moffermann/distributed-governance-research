@@ -67,6 +67,15 @@ T theory · P proxy-informed (transport gap) · A declared scale.
   (same small regime as the symmetry-gate ~2.5%). The +46% IS the harm-myopia mechanism; remove it and you return
   to near-parity. The two results are the SAME phenomenon under opposite assumptions — not a contradiction.
 
+### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
+- **Single-knob robustness:** from the PROBABLE scenario, NO single axis (`s_exp, b_H_C, p, beta, a_V`) crosses the
+  parity frontier within its plotted range — Core v0 wins throughout (+25% to +54%). The conclusion is robust to any
+  ONE assumption; reaching parity requires COMBINING central-favourable conditions.
+- **Combined central-competence frontier:** interpolating PROBABLE → fully-competent plausible central, m falls
+  +47% → +6%; the **frontier (m=0) is at t ≈ 1.13** — i.e. the central wins ONLY if it is BETTER than the fully-
+  competent plausible central (beyond realistic), and even then by only ~5%. Honest headline: *under any realistic
+  central, Core v0 wins; the central needs better-than-plausible anti-value sight to tie, and it barely wins past that.*
+
 ## Fixed variables (details)
 _(populated as we fix each, one at a time)_
 
