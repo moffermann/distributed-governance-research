@@ -484,8 +484,8 @@ programa de ablación pre-registrado sobre los experimentos complementarios
 desigualdad se sostiene con holgura, de modo que quitar cualquier término
 individual cuesta casi nada — y un despliegue negociado concesión defendible por
 concesión puede cruzar el umbral de forma invisible, terminando por debajo del
-status quo que reemplazó (0.87× de valor verificado con la calidad de selección
-intacta) mientras luce plenamente instrumentado. El corpus exige por ello que
+status quo que reemplazó (entregando cerca del 87% del valor verificado del status
+quo, con la calidad de selección intacta) mientras luce plenamente instrumentado. El corpus exige por ello que
 cada ámbito publique su margen de la desigualdad de disuasión en su configuración
 operativa, recomputado ante cada cambio de término, con las reducciones de
 términos clasificadas como cambios de regla materiales (docs/111). La misma
@@ -666,9 +666,9 @@ está— acotada en consecuencia.
 
 **Hallazgo 2: el ancla por defecto, no la atención ciudadana, sostiene la
 calidad de la asignación.** Una mezcla anclada en valores por defecto, con un
-planificador casi perfectamente informado (r ≈ 0.97), alcanza sel(θ) ≈ 0.71:
-entre 1.6× y 2× las configuraciones impulsadas por saliencia (≈ 0.35–0.43). En
-cambio, quintuplicar la atención ciudadana (α de 2% a 10%) casi no mueve la
+planificador casi perfectamente informado (r ≈ 0.97), alcanza sel(θ) ≈ 0.71 —
+muy por encima de las configuraciones impulsadas por saliencia (≈ 0.35–0.43). En
+cambio, subir la atención ciudadana de 2% a 10% casi no mueve la
 aguja —a lo sumo ≈ 0.08 en los regímenes de saliencia, y prácticamente nada en
 los anclados en valores por defecto—, mientras que degradar la calidad
 informativa del vector de casi perfecta a moderada (r ≈ 0.97 → 0.55) cuesta ≈
@@ -827,9 +827,8 @@ proyectos por S⁺ − θ·S⁻ con θ_C = η y θ_D = 1 − β, de modo que el 
 domina exactamente cuando su coeficiente está más cerca del peso verdadero del
 daño, que es uno —es decir, **β < 1 − η**—. La simulación confirma la ley
 (paridad en la anti-diagonal η + β = 1) y cuantifica la degradación del valor
-entregado fuera de ella (desde la paridad hasta ~1.8× como **cociente
-distribuido-a-central** a lo largo de la caja plausible —esto es D/C, no una
-fracción del benchmark de información completa). La ventaja es así una propiedad de
+entregado fuera de ella (desde la paridad en la anti-diagonal hasta una ventaja
+distribuida sustancial a lo largo de la caja plausible). La ventaja es así una propiedad de
 *incluir a los perjudicados*, no de la agregación en sí; alcanza la paridad a lo
 largo de la anti-diagonal β = 1 − η y se convierte en una victoria del central por
 debajo de ella (β > 1 − η) —lo que absorbe la objeción del sesgo de participación
@@ -885,14 +884,14 @@ sesgo-varianza *predeciría* que sobre la línea de paridad, donde el sesgo se
 cancela, gana el estimador de menor varianza —el ruido de revelación del
 distribuido es cero (cada quien conoce su propio valor), el ruido de proxy del
 central no—. La simulación implementada **no** lo confirma en el rincón
-responsable: en (η = 1, β = 0) el cociente medido es **0.89× —una victoria del
-central (D/C < 1)**—, así que la lectura honesta es la ley de paridad sin ruido
+responsable: en (η = 1, β = 0) el resultado medido es una leve **victoria del
+central** (el distribuido entrega cerca del 89% del valor del central allí), así que la lectura honesta es la ley de paridad sin ruido
 β = 1 − η, y el ladeo sesgo-varianza hacia el distribuido no se sostiene allí.
 **(ii) El umbral de captura.** De renta >
 adquisición + P(detección)·pena, el umbral del central λ\*_C = (k_c + p_c·f)/C
 tiende a cero al reducirse su detección, mientras el del distribuido λ\*_D = k_d +
 p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la razón
-de resistencia ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×, creciente en el
+de resistencia ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6 a 10 en el rango plausible, creciente en el
 costo del proyecto. **(iii) El piso de detección.** Con detección de bola de
 nieve P = 1 − (1 − q)^m, superar una tasa central p_c requiere, en la aproximación
 de *q* pequeño (Poisson) (1 − q)^m ≈ e^{−m·q}, un valor esperado

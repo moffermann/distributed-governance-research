@@ -440,8 +440,9 @@ pre-registered ablation on the companion experiments (Offermann 2026b)
 measured the consequence: at the designed operating point the inequality
 holds with slack, so removing any single term costs almost nothing — and a
 deployment negotiated one defensible concession at a time can cross the
-threshold invisibly, ending below the status quo it replaced (0.87× verified
-value with selection quality intact) while looking fully instrumented. The
+threshold invisibly, ending below the status quo it replaced (delivering about
+87% of the status quo's verified value, with selection quality intact) while
+looking fully instrumented. The
 corpus therefore requires every scope to publish its deterrence-inequality
 margin in its operating configuration, recomputed on every term change, with
 term reductions classified as material rule changes (docs/111). The same
@@ -610,9 +611,9 @@ is — bounded accordingly.
 
 **Finding 2: the default anchor, not citizen attention, carries allocation
 quality.** A default-anchored mix, with a near-perfectly informed planner (r ≈
-0.97), reaches sel(θ) ≈ 0.71: between 1.6× and 2× the salience-driven
-configurations (≈ 0.35–0.43). Quintupling citizen attention (α from 2% to
-10%), by contrast, barely moves the needle —at most ≈ 0.08 in salience-driven
+0.97), reaches sel(θ) ≈ 0.71 — well above the salience-driven
+configurations (≈ 0.35–0.43). Raising citizen attention from 2% to
+10%, by contrast, barely moves the needle —at most ≈ 0.08 in salience-driven
 regimes, and essentially nothing in default-anchored ones—, while degrading
 the vector's informational quality from near-perfect to moderate (r ≈ 0.97 →
 0.55) costs ≈ 0.29 of selection. The anchor rules, not attention.
@@ -763,8 +764,8 @@ ranking projects by S⁺ − θ·S⁻ with θ_C = η and θ_D = 1 − β, so the
 dominates exactly when its coefficient is closer to the true harm-weight of one
 — i.e. **β < 1 − η**. The simulation confirms the law (parity on the
 anti-diagonal η + β = 1) and quantifies the delivered-value degradation off it
-(rough parity to ~1.8× as a **distributed-to-central ratio** across the plausible
-box — this is D/C, not a fraction of the full-information benchmark). The advantage
+(from parity on the anti-diagonal to a substantial distributed lead across the
+plausible box). The advantage
 is thus a property of *including the harmed*, not of aggregation per se; it reaches
 parity along the anti-diagonal β = 1 − η and turns into a central win below it
 (β > 1 − η) — which absorbs the participation-bias objection into the model's own
@@ -817,15 +818,16 @@ harm-weight is one, the distributed arm delivers more true value **iff
 that on the parity line, where the bias cancels, the lower-variance estimator wins —
 the distributed's revelation noise is zero (a funder knows her own value), the
 central's proxy noise is not. The implemented simulation does **not** bear this out
-at the accountable corner: at (η = 1, β = 0) the measured ratio is **0.89× — a
-central win (D/C < 1)** — so the honest reading is the noise-free parity law
-β = 1 − η, and the bias–variance tilt toward the distributed is not supported there.
+at the accountable corner: at (η = 1, β = 0) the measured outcome is a slight
+**central win** (the distributed delivers about 89% of the central's value there) — so
+the honest reading is the noise-free parity law β = 1 − η, and the bias–variance tilt
+toward the distributed is not supported there.
 **(ii) The capture
 threshold.** From rent > acquisition + P(detect)·penalty, the central's threshold
 λ\*_C = (k_c + p_c·f)/C falls toward zero as its detection shrinks, while the
 distributed's λ\*_D = k_d + p_d·f/C is *floored* by the equal-wallet acquisition
-term k_d; the resistance ratio ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6–10×,
-rising in project cost. **(iii) The detection floor.** With snowball detection
+term k_d; the resistance ratio ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6 to 10 in the
+plausible range, rising in project cost. **(iii) The detection floor.** With snowball detection
 P = 1 − (1 − q)^m, beating a central rate p_c needs, in the small-*q* (Poisson)
 approximation (1 − q)^m ≈ e^{−m·q}, only an expected m·q ≥ −ln(1 − p_c) ≈ 0.1
 reporters — the exact Bernoulli condition is m ≥ ln(1 − p_c)/ln(1 − q), which
