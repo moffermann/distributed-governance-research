@@ -175,6 +175,8 @@ export function estimand(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.va
   const lo = boots.length ? boots[Math.floor((1 - NUM.ci_level.value) / 2 * boots.length)] : NaN;
   const hi = boots.length ? boots[Math.floor((1 + NUM.ci_level.value) / 2 * boots.length) - 1] : NaN;
 
+  const sumD = kept.reduce((s, x) => s + x.D, 0), sumC = kept.reduce((s, x) => s + x.C, 0);
+  const dOverO = den > 0 ? sumD / den : NaN, cOverO = den > 0 ? sumC / den : NaN;  // efficiency of each arm vs oracle
   const enough = kept.length >= Math.max(NUM.min_kept_floor.value, NUM.min_kept_frac.value * worlds.length);
-  return { m_hat, ci: [lo, hi], pi_deg, n_kept: kept.length, n_worlds: worlds.length, o_min, enough };
+  return { m_hat, ci: [lo, hi], pi_deg, n_kept: kept.length, n_worlds: worlds.length, o_min, enough, dOverO, cOverO };
 }
