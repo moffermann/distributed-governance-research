@@ -89,6 +89,11 @@ check('EMBARGO rejects Cyrillic "2.2х"', rejects('gain of 2.2х'));
 check('EMBARGO rejects "✕" cross', rejects('gain of 2.2✕'));
 check('EMBARGO rejects "2.2-fold"', rejects('a 2.2-fold gain'));
 check('EMBARGO rejects "2.2 times"', rejects('2.2 times more value'));
+check('EMBARGO rejects word "two-fold"', rejects('a two-fold advantage'));
+check('EMBARGO rejects "twice"', rejects('twice as much value'));
+check('EMBARGO rejects "double"', rejects('double the delivered value'));
+check('EMBARGO rejects lowercase "d/c"', rejects('the d/c ratio'));
+check('EMBARGO rejects zero-width-split "2.2​x"', rejects('gain of 2.2​x'));
 check('EMBARGO rejects "D/C"', rejects('ratio D/C = 1.4'));
 check('EMBARGO allows clean percent text', !rejects('m̂ is 45.7% of the oracle, parity at 0'));
 

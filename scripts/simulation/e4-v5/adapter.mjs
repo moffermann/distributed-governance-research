@@ -5,23 +5,32 @@
 import { EMBARGO_TOKENS } from './contract.mjs';
 import { validateOutput } from './schema.mjs';
 
-// Normalize Unicode confusables to ASCII 'x' so a Cyrillic 'х' (U+0445), the multiplication/cross signs (× ✕ ⨯),
-// etc. cannot smuggle a multiplier past the filter (rev-repro M2).
-const CONFUSABLES = /[×✕✖⨯хХｘＸ]/g;   // × ✕ ✖ ⨯ х Х ｘ Ｘ
-const MULT_SUFFIX = /\d\s*x/i;                   // a number followed by x (after confusable-normalization)
-const FOLD_TIMES  = /\d(\.\d+)?\s*[- ]?(fold|times)\b/i;   // "2.2-fold", "2.2 times"
-const RATIO_TOKEN = /\b[DC]\s*\/\s*[CD]\b/;      // D/C or C/D
+// Normalize away zero-width chars and map Unicode confusables to ASCII so a Cyrillic 'х', the multiplication/cross
+// signs (× ✕ ✖ ⨯), a non-breaking hyphen, a division slash, etc. cannot smuggle a multiplier/ratio past the filter
+// (rev-repro M2 + Codex v8 broader bypasses).
+const ZERO_WIDTH = /[​‌‍﻿]/g;
+const CONF_X = /[×✕✖⨯хХｘＸ]/g;               // → x
+const CONF_HYPHEN = /[‐‑‒–—]/g; // various hyphens/dashes → '-'
+const CONF_SLASH = /[⁄∕／]/g;   // fraction/division/fullwidth slash → '/'
+const MULT_SUFFIX = /\d\s*x/i;                 // a number followed by x (after normalization)
+const FOLD_TIMES  = /\d(\.\d+)?\s*-?\s*(fold|times)\b/i;              // "2.2-fold", "2.2 times"
+const WORD_MULT   = /\b(twice|double|triple|quadruple|[a-z]+-fold)\b/i; // "twice", "double", "two-fold"
+const RATIO_TOKEN = /\b[dc]\s*\/\s*[cd]\b/i;   // D/C or C/D, any case
 
 export function assertNoEmbargoedTokens(text) {
-  const norm = text.replace(CONFUSABLES, 'x');
+  const norm = text.replace(ZERO_WIDTH, '').replace(CONF_X, 'x').replace(CONF_HYPHEN, '-').replace(CONF_SLASH, '/');
   const hits = [];
   if (MULT_SUFFIX.test(norm)) hits.push('multiplier-suffix (number+x, incl. Unicode confusables)');
-  if (FOLD_TIMES.test(norm)) hits.push('fold/times multiplier phrasing');
-  if (RATIO_TOKEN.test(norm)) hits.push('institution ratio (D/C or C/D)');
+  if (FOLD_TIMES.test(norm)) hits.push('numeric fold/times multiplier phrasing');
+  if (WORD_MULT.test(norm)) hits.push('word multiplier (twice/double/triple/N-fold)');
+  if (RATIO_TOKEN.test(norm)) hits.push('institution ratio (D/C or C/D, any case)');
   for (const tok of EMBARGO_TOKENS) if (text.includes(tok)) hits.push(`token '${tok}'`);
   if (hits.length) throw new Error(`[embargo] rendered text contains forbidden performance notation: ${hits.join(', ')}`);
   return true;
 }
+
+// A print helper that routes every line through the embargo before emitting (for scenarios/frontier that print directly).
+export function safeLog(...lines) { const t = lines.join(' '); assertNoEmbargoedTokens(t); console.log(t); }
 
 export function renderReport(out) {
   const errs = validateOutput(out);
