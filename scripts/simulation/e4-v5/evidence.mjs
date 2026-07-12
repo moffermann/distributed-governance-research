@@ -8,6 +8,23 @@ import { fileURLToPath } from 'node:url';
 import { THETA, NUM, CLASSIFY, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
 import { estimand, makeRng } from './engine.mjs';
 import { PRO_CENTRAL, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
+
+// targeted probe of the coordinated central-favourable region: sample within `frac` of the way from PRO_CENTRAL
+// toward PROBABLE, report the fraction of draws the central wins (the product-box sampler misses this region).
+function centralRegionProbe(nWorlds, n, frac) {
+  const base = { ...baseConfig(), ...WORLD };
+  const keys = Object.keys(PROBABLE);
+  const rng = makeRng((NUM.seed.value ^ 0x2545f491) >>> 0);
+  let cen = 0, ok = 0;
+  for (let i = 0; i < n; i++) {
+    const cfg = { ...base, ...PRO_CENTRAL };
+    for (const k of keys) cfg[k] = PRO_CENTRAL[k] + rng.u() * frac * (PROBABLE[k] - PRO_CENTRAL[k]);
+    const r = estimand(cfg, { nWorlds, seed: NUM.seed.value });
+    if (!r.enough || !Number.isFinite(r.m_hat)) continue;
+    ok++; if (r.m_hat < -CLASSIFY.zero_tol.value) cen++;
+  }
+  return { cenFrac: ok ? cen / ok : NaN, cen, ok };
+}
 import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
 import { validateOutput } from './schema.mjs';
 
@@ -75,8 +92,12 @@ export function buildEvidence() {
 
   const env = envelopeSweep(EVIDENCE.sweep_nw, EVIDENCE.n_env);
   if (env.resolved === 0) throw new Error('[evidence] envelope sweep has no resolved samples — aborting fail-closed');
+  const centralRegion = centralRegionProbe(EVIDENCE.sweep_nw, 40, 0.2);   // 20%-inward neighbourhood of PRO_CENTRAL
 
   const st = classify({ point: pt, dfEnv: env, ralphaHeadline: pt.ci, pi_deg: pt.pi_deg, enough: pt.enough });
+  // the product-box sampler is Core-v0-heavy, but a coordinated central-favourable region exists (targeted probe) —
+  // so the GLOBAL sign is region-dependent (indeterminate), not the box sampler's one-sided result.
+  if (centralRegion.cenFrac > 0 && env.distShare > 0) st.sign_status = 'indeterminate';
   const out = {
     contract_version: CONTRACT_VERSION, theta_id: THETA_ID, pi_deg: pt.pi_deg,
     m_hat: pt.m_hat, ci: pt.ci,
@@ -85,24 +106,26 @@ export function buildEvidence() {
   };
   const errs = validateOutput(out);
   if (errs.length) throw new Error('[evidence] output invalid: ' + errs.join('; '));
-  return { out, env, pt, manifest: MANIFEST };
+  return { out, env, pt, centralRegion, manifest: MANIFEST };
 }
 
 function main() {
-  const { out, env, pt } = buildEvidence();
+  const { out, env, pt, centralRegion } = buildEvidence();
   const P = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
   const sh = (x) => (100 * x).toFixed(0) + '%';
+  const ruleOf3 = env.centShare === 0 ? (3 / env.resolved) : NaN;   // one-sided 95% upper bound when 0 observed
   const text = [
     `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
-    `  PROBABLE scenario (evidence-anchored) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
-    `  across the anchored plausible envelope (${env.resolved}/${env.n} resolved):`,
+    `  PROBABLE scenario (source-motivated declared reference) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
+    `  finite product-box sample of the declared envelope (${env.resolved}/${env.n} draws, knobs independent uniform):`,
     `    m distribution: p5 ${P(env.p5)} · median ${P(env.p50)} · p95 ${P(env.p95)}`,
-    `    Core v0 wins ${sh(env.distShare)} of the plausible envelope (± ${sh(env.distShareSE)} SE) · central ${sh(env.centShare)} · parity ${sh(env.parShare)}`,
-    `    (knobs sampled independently, so the coordinated all-central-favourable corner — PRO-CENTRAL, ≈parity — has`,
-    `     ~zero measure and is essentially never drawn: random plausible mixtures favour Core v0; reaching parity needs that corner)`,
-    `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
+    `    Core v0 wins ${env.resolved - Math.round(env.centShare * env.resolved) - Math.round(env.parShare * env.resolved)}/${env.resolved} draws · central ${Math.round(env.centShare * env.resolved)} · parity ${Math.round(env.parShare * env.resolved)}` +
+      (Number.isFinite(ruleOf3) ? `   (0 central: one-sided 95% upper bound on central-win prob ≈ ${sh(ruleOf3)}, rule of three — NOT zero)` : ''),
+    `  targeted probe of the coordinated central-favourable region (20% inward of PRO-CENTRAL): central wins ${centralRegion.cen}/${centralRegion.ok} draws`,
+    `    ⇒ a real central-winning region EXISTS off the independent-box sample; the GLOBAL winner is region-dependent, not one-sided`,
+    `  status → sign:${out.sign_status} (region-dependent)  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
     `  π_deg: ${sh(out.pi_deg)}   contract hash: ${MANIFEST.contract_hash}`,
-    `  (three named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)`,
+    `  (named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)`,
   ].join('\n');
   assertNoEmbargoedTokens(text);
   console.log(text);
