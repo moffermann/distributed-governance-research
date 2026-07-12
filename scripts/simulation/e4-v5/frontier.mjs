@@ -22,6 +22,9 @@ const AXES = [
   // Signal-quality axis: fidelity of the ~60% profile-rule coverage to the individual's project-specific value.
   // phi_prof=1 => full individual fidelity; phi_prof=0 => the profile reverts entirely to the category mean q.
   { k: 'phi_prof', lo: 0.0, hi: 1.0, plaus: PROBABLE.phi_prof, note: 'distributed signal quality (profile category fidelity)' },
+  // Correlated/common-mode error on the profile+delegation share — the ONE axis that materially moves the magnitude
+  // and can reach parity (real profiles share a platform; delegation concentrates). 0 = the independent-error reference.
+  { k: 'sigma_cm', lo: 0.0, hi: 2.5, plaus: 0, note: 'correlated/common-mode error (the binding distributed-side sensitivity)' },
 ];
 
 const base = { ...baseConfig(), ...WORLD, ...PROBABLE };
@@ -72,8 +75,9 @@ safeLog(tf === null
   ? `    frontier: none in t∈[0,2] — one endpoint does not cross parity`
   : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  conditions ${tf < 1 ? `~${Math.round(tf * 100)}% of the way from probable to the declared central-favourable endpoint flip the winner to the central (within the declared interpolation segment)` : `must exceed the declared central-favourable endpoint (t>1)`}`);
 safeLog('');
-safeLog('Read: none of the FIVE plotted one-factor slices flips the winner from the probable scenario over its plotted');
-safeLog('range (a limited robustness statement over those five slices, NOT over all parameters; the fifth, phi_prof, is');
-safeLog('the distributed signal-quality axis — even at phi_prof=0 the coverage arm still wins). The frontier is reached');
+safeLog('Read: of the SIX plotted one-factor slices, five never flip the winner over their plotted range; the sixth —');
+safeLog('correlated/common-mode error (sigma_cm) — is the one axis that materially moves the magnitude and can reach');
+safeLog('parity, but only at a LARGE shared-error level (coverage is robust in sign up to a substantial common-mode).');
+safeLog('The combined-path frontier is reached');
 safeLog('on the combined path within the declared interpolation segment. NOTE: t is a linear mix of heterogeneous knobs,');
 safeLog('an illustrative path — not a calibrated competence scale.');

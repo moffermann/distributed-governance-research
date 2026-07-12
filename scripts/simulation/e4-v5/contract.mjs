@@ -49,6 +49,7 @@ export const THETA = {
   k_deleg:  { value: 1.0, kind: 'physical', dm: [0, Infinity], df: [1, 5], ralpha: [1.2, 2.0], note: 'delegation report-noise multiplier on sigma_e (>=1; bounded, revocable, delegate can ask)' },
   phi_prof: { value: 1.0, kind: 'physical', dm: [0, 1], df: [0, 1], ralpha: [0.7, 0.95], note: 'PROFILE-rule category fidelity: signal = phi_prof*u + (1-phi_prof)*qCat, where qCat is the OBSERVABLE category proxy (m_q+s_q*g), NOT latent true q' },
   d_bias:   { value: 0.0, kind: 'physical', dm: [0, 1], df: [0, 1], ralpha: [0.05, 0.2], note: 'microdelegation BIAS: persistent pull of the delegated signal toward the delegate category view qCat (bounded — revocable, delegate can ask)' },
+  sigma_cm: { value: 0.0, kind: 'physical', dm: [0, Infinity], df: [0, 10], ralpha: [0.3, 1.0], note: 'COMMON-MODE error sd on the profile/delegation share: one per-project shared error (shared platform/recommender; concentrated super-delegates) that does NOT average out across reporters. 0 = independent errors (clean reference)' },
 
   // ---- central arm (salience-gated harm myopia) ----
   v_p0:    { value: 0.6,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.5, 1.5], note: "planner's own baseline position" },
@@ -179,7 +180,7 @@ export function validateDomain(cfg) {
   if (!(cfg.k_deleg >= 1)) bad.push('k_deleg must be >= 1 (delegation adds noise, never removes it)');
   if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');   // zeta is a correlation, NOT a unit interval
   const nonneg = (k) => { if (cfg[k] < 0) bad.push(`${k} must be >= 0`); };
-  ['s_q', 'sigma', 'mu_opp', 'sigma_e', 'sigma_v', 'sigma_C', 's_exp', 'h'].forEach(nonneg);
+  ['s_q', 'sigma', 'mu_opp', 'sigma_e', 'sigma_v', 'sigma_C', 's_exp', 'h', 'sigma_cm'].forEach(nonneg);
   if (bad.length) throw new Error(`[contract] executable-domain violation: ${bad.join('; ')}`);
   return true;
 }

@@ -58,6 +58,9 @@ export function generateWorld(cfg, rng) {
     const qCat = cfg.m_q + cfg.s_q * g;                         // OBSERVABLE category-value proxy (noisy, shrunk toward
                                                                // the mean by 1-zeta) — what a profile rule/delegate sees;
                                                                // NOT the latent true q (using true q would flatter coverage)
+    const cm = cfg.sigma_cm * rng.normal();                    // COMMON-MODE error: ONE per-project shared error on the
+                                                               // profile/delegation share (shared platform/recommender;
+                                                               // concentrated super-delegates) — does NOT average out
     const c = cfg.c_lo + (cfg.c_hi - cfg.c_lo) * rng.u();
     const r = rng.beta(cfg.a_r, cfg.b_r);
     const n = rng.binomialApprox(cfg.N, r);
@@ -78,8 +81,8 @@ export function generateWorld(cfg, rng) {
         const ch = rng.u();
         let sig;
         if (ch < cfg.f_active)       sig = u + cfg.sigma_e * rng.normal();
-        else if (ch < fProfileStart) sig = (1 - cfg.d_bias) * u + cfg.d_bias * qCat + cfg.k_deleg * cfg.sigma_e * rng.normal();
-        else                         sig = cfg.phi_prof * u + (1 - cfg.phi_prof) * qCat + cfg.sigma_e * rng.normal();
+        else if (ch < fProfileStart) sig = (1 - cfg.d_bias) * u + cfg.d_bias * qCat + cfg.k_deleg * cfg.sigma_e * rng.normal() + cm;
+        else                         sig = cfg.phi_prof * u + (1 - cfg.phi_prof) * qCat + cfg.sigma_e * rng.normal() + cm;
         sumReport += sig / cfg.p;
       }
     }

@@ -41,3 +41,9 @@ safeLog(`the NO-MYOPIA bundle (unbiased/precise/no-credit) reduces it ${pts(furt
 const mPure = estimand({ ...baseConfig(), ...WORLD, ...PROBABLE, f_active: 1.0, f_deleg: 0.0, phi_prof: 1.0, k_deleg: 1.0, d_bias: 0.0 }, { nWorlds: NW }).m_hat;
 const noiseEff = mp - mPure, harmGateEff = mp - mo;   // apples-to-apples: each is ONE mechanism's ceteris-paribus effect
 safeLog(`Balance (condition 1): distributed signal-noise effect ${pts(noiseEff)} pts vs the central harm-gate-ALONE effect ${pts(harmGateEff)} pts (MYOPIA_OFF — the two harm coordinates only) — the central's harm-myopia dominates the distributed signal degradation. (The full competent-central bundle — harm sight + unbiased + precise + no credit — accounts for ${pts(declineTot)} pts, most of the gap.)`);
+// Robustness to CORRELATED / common-mode error — the ONE place the coverage arm is structurally advantaged (the
+// composition otherwise treats ~n reports/project as independent, so IID error averages out by LLN). Real profiles
+// share a platform/recommender and delegation concentrates on super-delegates => a per-project shared error that does
+// NOT average out. The point estimate above is the independent-error reference (sigma_cm=0); here is the stress:
+const cmRun = (s) => estimand({ ...baseConfig(), ...WORLD, ...PROBABLE, sigma_cm: s }, { nWorlds: NW }).m_hat;
+safeLog(`Common-mode robustness (correlated profile/delegate error): PROBABLE ${pct(cmRun(0))} (independent reference) → ${pct(cmRun(0.5))} (modest) → ${pct(cmRun(1.0))} (strong). Coverage still leads across the range; this right-sizes the robustness claim (it does not flip the sign).`);
