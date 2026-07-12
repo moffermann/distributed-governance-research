@@ -1,0 +1,2663 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\devel\claude-projects\distributed-governance-research
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 019f5493-3580-75d1-a3ca-88ce26249384
+--------
+user
+# Codex critique v14 — confirm publication-ready on E4 v1.14
+
+Repo: master, commit 58dfa85+. Your v13 verdict: the SUBSTANTIVE result clears the stated comparative-institutions
+robustness bar; multiplier-relapse NO; the taxonomy repair verified; and the ONLY remaining blocker was one
+traceability overclaim comment at `scripts/simulation/e4-v5/test.mjs:75`. You gave the exact fix; it is now applied
+VERBATIM ("pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose") and
+verified clean in the committed tree, with all Codex-flagged phrases (best-plausible / isolation / five-named /
+prevents-drift / does-reality-sit) confirmed absent.
+
+RUN: `npm run e4:controls && e4:test && e4:theorem && e4:scenarios && e4:frontier && e4:evidence`.
+Read `scripts/simulation/e4-v5/*` and `research/{e4-plausible-anchors.md,e4-paper-section-draft.md,e4-parity-theorem.md}`.
+Do NOT introduce new requirements beyond the stated bar or impose a calibrated-impact bar the paper disclaims.
+
+## Task
+Confirm the test.mjs:75 fix is in place and that no blocking overclaim/dishonest-label remains. Then answer plainly:
+**Is E4 (code + paper draft) publication-ready as a comparative-institutions robustness result?** YES or NO. If NO,
+list ONLY remaining BLOCKING items with file:line + exact fix.
+
+## Output
+`audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md`: explicit YES/NO on publication-ready; yes/no on
+multiplier-relapse; remaining blockers if any.
+codex
+I’ll run the full E4 verification suite, inspect the requested code and research files, and apply the repository’s required agent-routing checks before writing the v14 summary. I’ll keep the verdict constrained to the stated comparative-institutions robustness bar.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw AGENTS.md; Get-Content -Raw agents/routing-rules-codex-md.md; Get-Content -Raw agents/review-all.md; git status --short; git rev-parse --short HEAD' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 215ms:
+?? audits/2026-07-11-v1.14-design/codex-v14-run.log
+6d4a712
+Get-Content : No se encuentra la ruta de acceso 'C:\devel\claude-projects\distributed-governance-research\AGENTS.md' 
+porque no existe.
+En línea: 2 Carácter: 1
++ Get-Content -Raw AGENTS.md; Get-Content -Raw agents/routing-rules-cod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\devel\claude...earch\AGENTS.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+Get-Content : No se encuentra la ruta de acceso 
+'C:\devel\claude-projects\distributed-governance-research\agents\routing-rules-codex-md.md' porque no existe.
+En línea: 2 Carácter: 29
++ ...  AGENTS.md; Get-Content -Raw agents/routing-rules-codex-md.md; Get-Co ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\devel\claude...les-codex-md.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+Get-Content : No se encuentra la ruta de acceso 
+'C:\devel\claude-projects\distributed-governance-research\agents\review-all.md' porque no existe.
+En línea: 2 Carácter: 80
++ ... ting-rules-codex-md.md; Get-Content -Raw agents/review-all.md; git st ...
++                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\devel\claude...s\review-all.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg --files -g 'AGENTS.md' -g 'routing-rules-codex-md.md' -g 'review-all.md' -g 'scripts/simulation/e4-v5/**' -g 'research/e4-plausible-anchors.md' -g 'research/e4-paper-section-draft.md' -g 'research/e4-parity-theorem.md' -g 'audits/2026-07-11-v1.14-design/**'" in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 138ms:
+scripts\simulation\e4-v5\theorem-check.mjs
+scripts\simulation\e4-v5\test.mjs
+scripts\simulation\e4-v5\schema.mjs
+scripts\simulation\e4-v5\scenarios.mjs
+scripts\simulation\e4-v5\scenario-configs.mjs
+scripts\simulation\e4-v5\frontier.mjs
+scripts\simulation\e4-v5\evidence.mjs
+scripts\simulation\e4-v5\engine.mjs
+scripts\simulation\e4-v5\controls.mjs
+scripts\simulation\e4-v5\contract.mjs
+scripts\simulation\e4-v5\atlas.mjs
+scripts\simulation\e4-v5\atlas-data.json
+scripts\simulation\e4-v5\adapter.mjs
+research\e4-paper-section-draft.md
+research\e4-plausible-anchors.md
+research\e4-parity-theorem.md
+audits\2026-07-11-v1.14-design\critique-v11-code-controls.md
+audits\2026-07-11-v1.14-design\critique-v10-scope-embargo.md
+audits\2026-07-11-v1.14-design\critique-v10-scenario-attribution.md
+audits\2026-07-11-v1.14-design\critique-v10-evidence-labels.md
+audits\2026-07-11-v1.14-design\critique-theory-primitives.md
+audits\2026-07-11-v1.14-design\critique-sensitivity-floor.md
+audits\2026-07-11-v1.14-design\critique-range-provenance.md
+audits\2026-07-11-v1.14-design\critique-parameterization-identifiability.md
+audits\2026-07-11-v1.14-design\critique-novelty-publishability.md
+audits\2026-07-11-v1.14-design\critique-honesty-guardrails.md
+audits\2026-07-11-v1.14-design\critique-code-grounding.md
+audits\2026-07-11-v1.14-design\codex-v9-run.log
+audits\2026-07-11-v1.14-design\codex-v8-run.log
+audits\2026-07-11-v1.14-design\codex-v7-run.log
+audits\2026-07-11-v1.14-design\codex-v6-run.log
+audits\2026-07-11-v1.14-design\codex-v5-run.log
+audits\2026-07-11-v1.14-design\codex-v4-run.log
+audits\2026-07-11-v1.14-design\codex-v3-run.log
+audits\2026-07-11-v1.14-design\codex-v2-run.log
+audits\2026-07-11-v1.14-design\codex-v14-run.log
+audits\2026-07-11-v1.14-design\codex-v13-run.log
+audits\2026-07-11-v1.14-design\codex-v12-run.log
+audits\2026-07-11-v1.14-design\codex-v11-run.log
+audits\2026-07-11-v1.14-design\codex-v10-run.log
+audits\2026-07-11-v1.14-design\codex-run.log
+audits\2026-07-11-v1.14-design\canonical-symmetry-gate-rerun.txt
+audits\2026-07-11-v1.14-design\canonical-e4-v4-frontier-rerun.txt
+audits\2026-07-11-v1.14-design\canonical-e4-analytical-rerun.txt
+audits\2026-07-11-v1.14-design\ANTIVALUE-MODELING.md
+audits\2026-07-11-v1.14-design\ADMIN-COST-LEG.md
+audits\2026-07-11-v1.14-design\critique-v5-mechanical-embargo.md
+audits\2026-07-11-v1.14-design\critique-v5-identification.md
+audits\2026-07-11-v1.14-design\critique-v5-estimand-state-machine.md
+audits\2026-07-11-v1.14-design\critique-v5-domains-capability.md
+audits\2026-07-11-v1.14-design\critique-v5-antivalue-novelty-alignment.md
+audits\2026-07-11-v1.14-design\critique-v5-analytic-theorem.md
+audits\2026-07-11-v1.14-design\critique-v4-unit-contract.md
+audits\2026-07-11-v1.14-design\critique-v4-novelty-alignment.md
+audits\2026-07-11-v1.14-design\critique-v4-mechanical-embargo.md
+audits\2026-07-11-v1.14-design\critique-v4-identification.md
+audits\2026-07-11-v1.14-design\critique-v4-estimand-state-machine.md
+audits\2026-07-11-v1.14-design\critique-v4-domains-capability.md
+audits\2026-07-11-v1.14-design\critique-v4-analytic-theorem.md
+audits\2026-07-11-v1.14-design\critique-v3-transport-partial-id.md
+audits\2026-07-11-v1.14-design\critique-v3-novelty-positioning.md
+audits\2026-07-11-v1.14-design\critique-v3-mechanical-embargo.md
+audits\2026-07-11-v1.14-design\critique-v3-measure-free-sensitivity.md
+audits\2026-07-11-v1.14-design\critique-v3-frozen-estimand.md
+audits\2026-07-11-v1.14-design\critique-v3-complete-dgp.md
+audits\2026-07-11-v1.14-design\critique-v3-analytic-benchmark.md
+audits\2026-07-11-v1.14-design\critique-v2-parity-objective-floor.md
+audits\2026-07-11-v1.14-design\critique-v2-parity-boundary-analytic.md
+audits\2026-07-11-v1.14-design\critique-v2-novelty-positioning.md
+audits\2026-07-11-v1.14-design\critique-v2-multiplier-estimand.md
+audits\2026-07-11-v1.14-design\critique-v2-dgp-registry-identification.md
+audits\2026-07-11-v1.14-design\critique-v2-dependence-sensitivity.md
+audits\2026-07-11-v1.14-design\critique-v2-anchored-central-model.md
+audits\2026-07-11-v1.14-design\critique-v12-theorem-mechanism.md
+audits\2026-07-11-v1.14-design\critique-v12-publication-language.md
+audits\2026-07-11-v1.14-design\critique-v12-code-controls.md
+audits\2026-07-11-v1.14-design\critique-v11-theorem-mechanism.md
+audits\2026-07-11-v1.14-design\critique-v11-publication-language.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v5_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v4_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v4_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v3_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v3_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v2_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v2_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v14_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v13_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v13_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v12_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v12_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v11_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v11_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v10_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v10_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_PROMPT.md
+audits\2026-07-11-v1.14-design\critique-v9-theorem-paper.md
+audits\2026-07-11-v1.14-design\critique-v9-scenarios-evidence.md
+audits\2026-07-11-v1.14-design\critique-v9-code-release.md
+audits\2026-07-11-v1.14-design\critique-v8-theorem-paper.md
+audits\2026-07-11-v1.14-design\critique-v8-scenarios-frontier.md
+audits\2026-07-11-v1.14-design\critique-v8-code-release.md
+audits\2026-07-11-v1.14-design\critique-v7-scenario-anchors.md
+audits\2026-07-11-v1.14-design\critique-v7-frontier-estimand.md
+audits\2026-07-11-v1.14-design\critique-v7-code-contracts.md
+audits\2026-07-11-v1.14-design\critique-v5-unit-contract.md
+audits\2026-07-11-v1.14-design\E4-empirical-anchors.md
+audits\2026-07-11-v1.14-design\DESIGN_SKETCH_v5.md
+audits\2026-07-11-v1.14-design\DESIGN_SKETCH_v4.md
+audits\2026-07-11-v1.14-design\DESIGN_SKETCH_v3.md
+audits\2026-07-11-v1.14-design\DESIGN_SKETCH_v2.md
+audits\2026-07-11-v1.14-design\DESIGN_SKETCH.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v9_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v9_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v8_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v8_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v7_SUMMARY.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v7_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v6_PROMPT.md
+audits\2026-07-11-v1.14-design\CRITIQUE_v5_SUMMARY.md
+audits\2026-07-11-v1.14-design\review-stats.md
+audits\2026-07-11-v1.14-design\review-repro.md
+audits\2026-07-11-v1.14-design\review-paper.md
+audits\2026-07-11-v1.14-design\review-engine.md
+audits\2026-07-11-v1.14-design\review-econ.md
+audits\2026-07-11-v1.14-design\LEAKAGE-CORRUPTION-LEG.md
+audits\2026-07-11-v1.14-design\E4-prior-art-review.md
+audits\2026-07-11-v1.14-design\THREE-TIER-VARIABLE-DOMAINS.md
+audits\2026-07-11-v1.14-design\ROADMAP.md
+audits\2026-07-11-v1.14-design\REVIEW_PANEL_CONSOLIDATED.md
+audits\2026-07-11-v1.14-design\V1.14_PLAN_AND_DECISIONS.md
+audits\2026-07-11-v1.14-design\v2-reproduction-e4-v4-symmetric-frontier.txt
+audits\2026-07-11-v1.14-design\v2-reproduction-e5-sp-symmetry-gate.txt
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg --files -g '*agent*' -g '*.md' .claude agents .codex 2>"'$null | Select-Object -First 200' in C:\devel\claude-projects\distributed-governance-research
+2026-07-12T04:26:33.696087Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.2 seconds
+Output:
+
+ exited 1 in 173ms:
+  → Run the complete E4 v1.14 verification command and capture results
+  • Inspect every requested simulation and research file for the line-75 fix, multiplier relapse, and blocking label/claim issues
+  • Apply required agent-routing review and reconcile findings
+  • Write and verify CRITIQUE_v14_SUMMARY.md
+codex
+The repository’s routing files are not present in this checkout, so I’m applying the supplied AGENTS.md rules directly. I’m routing the prospective audit artifact through a dry/traceability check now, while separate code and paper reviews independently test the requested publication claim.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw package.json; npm run e4:controls; if ($LASTEXITCODE -eq 0) { npm run e4:test }; if ($LASTEXITCODE -eq 0) { npm run e4:theorem }; if ($LASTEXITCODE -eq 0) { npm run e4:scenarios }; if ($LASTEXITCODE -eq 0) { npm run e4:frontier }; if ($LASTEXITCODE -eq 0) { npm run e4:evidence }' in C:\devel\claude-projects\distributed-governance-research
+codex
+The full suite is still running. The pre-artifact routing check found no duplication or added requirement: v14 should be a concise closure record with the direct verdict, exact line-75 verification, multiplier-relapse status, and blockers only if any.
+2026-07-12T04:27:45.323902Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.2 seconds
+Output:
+   1: # Codex critique v13 — final publication-ready verdict on E4 v1.14
+   2: 
+   3: Repo: master, commit e7e461e+. Your v12 verdict: the SUBSTANTIVE result CLEARS the stated limited bar (numerical
+   4: design, evidence, Gaussian lemma, mechanism, declared-scenario design, measurement plan viable; all six commands
+   5: pass; NO_MYOPIA attribution, declared-endpoint labels, neutral frontier framing, tested-classes adapter scope, and
+   6: exact theorem-nesting condition all VERIFIED; no multiplier relapse). You held publication-ready = NO on just TWO
+   7: taxonomy/traceability overclaims. Both are now fixed and VERIFIED clean in the committed tree:
+   8: - the anchor's "Five named scenarios" → "Four substantive declared scenarios + one diagnostic contrast";
+   9: - the sign-ordering regression is now stated to pin OUTCOME ORDERING ONLY (it does NOT prevent code/document
+  10:   divergence), in both `research/e4-plausible-anchors.md` and `scripts/simulation/e4-v5/scenario-configs.mjs`.
+  11: 
+  12: RUN: `npm run e4:controls && e4:test && e4:theorem && e4:scenarios && e4:frontier && e4:evidence`.
+  13: Read `scripts/simulation/e4-v5/*`, `research/{e4-plausible-anchors.md,e4-paper-section-draft.md,e4-parity-theorem.md}`,
+  14: and your `CRITIQUE_v12_SUMMARY.md`. Do NOT re-open settled points or impose a calibrated-impact bar the paper disclaims.
+  15: 
+  16: ## Task
+  17: Verify the two fixes hold. Then give the DECISIVE verdict: **is E4 (code + paper draft) NOW publication-ready as a
+  18: comparative-institutions robustness result (mechanism + stylized theorem + declared scenarios + measurement plan)?**
+  19: Answer YES or NO plainly. If NO, list ONLY remaining BLOCKING overclaims/dishonest-labels (file:line + exact fix) —
+  20: no stylistic nitpicks.
+  21: 
+  22: ## Output
+  23: `audits/2026-07-11-v1.14-design/CRITIQUE_v13_SUMMARY.md`: explicit YES/NO on publication-ready, any remaining
+  24: blockers, and yes/no on multiplier-relapse. If ready, say so plainly.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = @((Get-ChildItem scripts/simulation/e4-v5 -File | Sort-Object Name).FullName, (Resolve-Path research/e4-plausible-anchors.md).Path, (Resolve-Path research/e4-paper-section-draft.md).Path, (Resolve-Path research/e4-parity-theorem.md).Path, (Resolve-Path audits/2026-07-11-v1.14-design/CRITIQUE_v13_SUMMARY.md).Path); foreach ($f in $files) { $rel = Resolve-Path -Relative $f; $lines = (Get-Content $f).Count; $bytes = (Get-Item $f).Length; Write-Output "$rel`t$lines`t$bytes" }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 204ms:
+.\scripts\simulation\e4-v5\adapter.mjs .\scripts\simulation\e4-v5\atlas.mjs .\scripts\simulation\e4-v5\atlas-data.json .\scripts\simulation\e4-v5\contract.mjs .\scripts\simulation\e4-v5\controls.mjs .\scripts\simulation\e4-v5\engine.mjs .\scripts\simulation\e4-v5\evidence.mjs .\scripts\simulation\e4-v5\frontier.mjs .\scripts\simulation\e4-v5\scenario-configs.mjs .\scripts\simulation\e4-v5\scenarios.mjs .\scripts\simulation\e4-v5\schema.mjs .\scripts\simulation\e4-v5\test.mjs .\scripts\simulation\e4-v5\theorem-check.mjs	1257	13
+.\research\e4-plausible-anchors.md	130	11530
+.\research\e4-paper-section-draft.md	93	8478
+.\research\e4-parity-theorem.md	69	4498
+.\audits\2026-07-11-v1.14-design\CRITIQUE_v13_SUMMARY.md	56	3035
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = @(); $files += Get-ChildItem scripts/simulation/e4-v5 -File | Sort-Object Name; $files += Get-Item research/e4-plausible-anchors.md,research/e4-paper-section-draft.md,research/e4-parity-theorem.md,audits/2026-07-11-v1.14-design/CRITIQUE_v13_SUMMARY.md; foreach ($f in $files) { $rel = Resolve-Path -Relative $f.FullName; $lines = (Get-Content $f.FullName).Count; Write-Output "$rel`t$lines`t$($f.Length)" }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 197ms:
+.\scripts\simulation\e4-v5\adapter.mjs	60	4674
+.\scripts\simulation\e4-v5\atlas.mjs	71	3914
+.\scripts\simulation\e4-v5\atlas-data.json	184	4038
+.\scripts\simulation\e4-v5\contract.mjs	208	15517
+.\scripts\simulation\e4-v5\controls.mjs	75	4035
+.\scripts\simulation\e4-v5\engine.mjs	182	9299
+.\scripts\simulation\e4-v5\evidence.mjs	133	8821
+.\scripts\simulation\e4-v5\frontier.mjs	74	5363
+.\scripts\simulation\e4-v5\scenario-configs.mjs	33	3000
+.\scripts\simulation\e4-v5\scenarios.mjs	27	2146
+.\scripts\simulation\e4-v5\schema.mjs	38	2365
+.\scripts\simulation\e4-v5\test.mjs	119	8232
+.\scripts\simulation\e4-v5\theorem-check.mjs	53	3536
+.\research\e4-plausible-anchors.md	130	11530
+.\research\e4-paper-section-draft.md	93	8478
+.\research\e4-parity-theorem.md	69	4498
+.\audits\2026-07-11-v1.14-design\CRITIQUE_v13_SUMMARY.md	56	3035
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = '"'adapter.mjs','atlas.mjs','atlas-data.json','contract.mjs','controls.mjs','engine.mjs'; foreach ("'$name in $files) { Write-Output "===== scripts/simulation/e4-v5/$name ====="; Get-Content -Raw "scripts/simulation/e4-v5/$name" }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 179ms:
+===== scripts/simulation/e4-v5/adapter.mjs =====
+// E4 v1.14 — the render adapter (mechanical embargo). Official E4 evidence/scenarios/frontier text routes through
+// here (renderReport / safeLog). It (a) validates against the closed schema, and (b) rejects the TESTED CLASSES of
+// institution-performance multiplier notation (see the NOTE on assertNoEmbargoedTokens and the test suite) — NOT a
+// proof against every conceivable obfuscation, and it does not by itself route every repository artifact.
+// m_hat is a SIGNED FRACTION of the oracle (parity at 0), never a ratio-with-parity-1 and never suffixed with 'x'.
+import { EMBARGO_TOKENS } from './contract.mjs';
+import { validateOutput } from './schema.mjs';
+
+// Normalize away zero-width chars and map Unicode confusables to ASCII so a Cyrillic 'х', the multiplication/cross
+// signs (× ✕ ✖ ⨯), a non-breaking hyphen, a division slash, etc. cannot smuggle a multiplier/ratio past the filter
+// (rev-repro M2 + Codex v8 broader bypasses).
+const ZERO_WIDTH = /[​‌‍⁠﻿­]/g; // ZWSP/ZWNJ/ZWJ/word-joiner(U+2060)/BOM/soft-hyphen(U+00AD)
+const HTML_MULT  = /&times;|&#0*215;|&#x0*d7;/gi;   // HTML-entity multiplication sign → x
+const CONF_X = /[×✕✖⨯хХｘＸ]/g;               // → x
+const CONF_HYPHEN = /[‐‑‒–—]/g; // various hyphens/dashes → '-'
+const CONF_SLASH = /[⁄∕／]/g;   // fraction/division/fullwidth slash → '/'
+const NUMWORD = 'one|two|three|four|five|six|seven|eight|nine|ten|twenty|thirty|forty|fifty|hundred|thousand|many|several';
+const MULT_SUFFIX = /\d\s*x/i;                 // a number followed by x (after normalization)
+const NUM_FOLD    = new RegExp(`(\\d(\\.\\d+)?|\\b(${NUMWORD}))[\\s-]*(fold|times)\\b`, 'i');   // "2.2-fold","two times","fourfold"
+const WORD_MULT   = /\b(twice|thrice|double|triple|quadruple)\b/i;   // bare word multipliers
+const RATIO_TOKEN = /\b[dc]\s*\/\s*[cd]\b/i;   // D/C or C/D, any case
+
+// NOTE: this rejects the TESTED token classes (ASCII/Unicode/confusable/HTML-entity 'x' after a number;
+// numeric or number-word N-fold / N-times; bare twice/double/triple/quadruple; D/C or C/D any case; zero-width
+// splits). It is not a proof against every conceivable obfuscation — see the test suite for the covered classes.
+export function assertNoEmbargoedTokens(text) {
+  const norm = text.replace(ZERO_WIDTH, '').replace(HTML_MULT, 'x').replace(CONF_X, 'x').replace(CONF_HYPHEN, '-').replace(CONF_SLASH, '/');
+  const hits = [];
+  if (MULT_SUFFIX.test(norm)) hits.push('multiplier-suffix (number+x, incl. Unicode/HTML confusables)');
+  if (NUM_FOLD.test(norm)) hits.push('N-fold / N-times multiplier phrasing (numeric or word)');
+  if (WORD_MULT.test(norm)) hits.push('word multiplier (twice/thrice/double/triple/quadruple)');
+  if (RATIO_TOKEN.test(norm)) hits.push('institution ratio (D/C or C/D, any case)');
+  for (const tok of EMBARGO_TOKENS) if (text.includes(tok)) hits.push(`token '${tok}'`);
+  if (hits.length) throw new Error(`[embargo] rendered text contains forbidden performance notation: ${hits.join(', ')}`);
+  return true;
+}
+
+// A print helper that routes every line through the embargo before emitting (for scenarios/frontier that print directly).
+export function safeLog(...lines) { const t = lines.join(' '); assertNoEmbargoedTokens(t); console.log(t); }
+
+export function renderReport(out) {
+  const errs = validateOutput(out);
+  if (errs.length) throw new Error(`[embargo] output failed closed schema: ${errs.join('; ')}`);
+  const pct = (x) => (100 * x).toFixed(1) + '%';                 // signed fraction of oracle, NOT a multiplier
+  const mag = out.m_Ralpha
+    ? Object.entries(out.m_Ralpha).map(([al, iv]) => `  α=${al}: [${pct(iv[0])}, ${pct(iv[1])}] of oracle`).join('\n')
+    : '  (magnitude layer not computed)';
+  const sh = (x) => (100 * x).toFixed(0) + '%';
+  const text = [
+    `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
+    `  m̂ (signed fraction of full-information oracle, parity at 0): ${pct(out.m_hat)}  CI=[${pct(out.ci[0])}, ${pct(out.ci[1])}]`,
+    `  sign backbone over D_F: Core v0 wins ${sh(out.df_dist_share)} of sampled θ-points · central ${sh(out.df_cent_share)} · parity ${sh(out.df_par_share)}  (a COUNT of resolved points, not a probability)`,
+    `  magnitude over R_α (declared sensitivity boxes; a value >100% means the losing arm destroys value, so the gap exceeds the oracle):`,
+    mag,
+    `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
+    `  π_deg (degenerate-world share): ${pct(out.pi_deg)}`,
+  ].join('\n');
+  assertNoEmbargoedTokens(text);
+  return text;
+}
+
+===== scripts/simulation/e4-v5/atlas.mjs =====
+// E4 v1.14 — parity ATLAS (visualization only; does not touch the model). Sweeps TWO axes and reports m(theta)
+// at each cell, holding all other parameters at their registered defaults. This is an explicit 2-axis SLICE
+// (honest by construction — it does not claim to be the full 30-parameter joint set). Output:
+//   (1) an accessible numeric grid + ASCII heat map to the console (primary, screen-reader friendly), and
+//   (2) a JSON grid written to atlas-data.json for a color heatmap artifact.
+// Run: node scripts/simulation/e4-v5/atlas.mjs
+import { writeFileSync } from 'node:fs';
+import { baseConfig, THETA } from './contract.mjs';
+import { estimand } from './engine.mjs';
+
+const WORLD = { N: 1200, K: 130 };
+const NW = 250;
+const STEPS = 11;
+
+// Two axes chosen to CROSS the parity frontier (so both colors appear), reflecting the thesis:
+//   X = p      (citizen participation / distributed data density: low => distributed noisy & sparse => central wins)
+//   Y = s_exp  (central harm myopia: 0 => central sees harm everywhere; high => blind on the long tail => distributed wins)
+// All other parameters held at their registered defaults (b_H_C=0.5, beta=0.4, ...). Honest 2-axis slice.
+const AX = { key: 'p',     from: 0.02, to: 0.6, label: 'p  citizen participation (→ denser distributed evidence)' };
+const AY = { key: 's_exp', from: 0.0,  to: 6.0, label: 's_exp  central harm myopia (→ central blind on the long tail)' };
+const HOLD = {};
+
+const lin = (a, b, n, i) => a + (b - a) * (i / (n - 1));
+const grid = [];       // grid[iy][ix] = m
+const xs = [], ys = [];
+for (let i = 0; i < STEPS; i++) { xs.push(lin(AX.from, AX.to, STEPS, i)); ys.push(lin(AY.from, AY.to, STEPS, i)); }
+
+for (let iy = STEPS - 1; iy >= 0; iy--) {          // top row = highest Y
+  const row = [];
+  for (let ix = 0; ix < STEPS; ix++) {
+    const cfg = { ...baseConfig(), ...WORLD, ...HOLD, [AX.key]: xs[ix], [AY.key]: ys[iy] };
+    row.push(estimand(cfg, { nWorlds: NW }).m_hat);
+  }
+  grid.push(row);
+}
+
+// ---- ASCII heat map (accessible) ----
+// glyph by sign & magnitude: distributed wins (+) as D/d, central wins (-) as C/c, parity as ·
+const glyph = (m) => {
+  if (m > 0.20) return 'D'; if (m > 0.05) return 'd';
+  if (m < -0.20) return 'C'; if (m < -0.05) return 'c';
+  return '·';
+};
+console.log('E4 parity atlas — m(θ) = (D − C)/O, signed fraction of the full-information oracle (parity at 0)');
+console.log(`  X → ${AX.label}`);
+console.log(`  Y ↑ ${AY.label}`);
+console.log('  glyph: D=distributed wins strongly, d=mildly, ·=parity, c=central mildly, C=central strongly\n');
+console.log('        ' + xs.map((x) => x.toFixed(2).padStart(6)).join(''));
+for (let r = 0; r < STEPS; r++) {
+  const yval = ys[STEPS - 1 - r].toFixed(2).padStart(5);
+  const glyphs = grid[r].map((m) => glyph(m).padStart(6)).join('');
+  console.log(`  ${yval} ${glyphs}`);
+}
+console.log('\n  numeric grid (%, top row = highest ' + AY.key + '):');
+console.log('        ' + xs.map((x) => x.toFixed(2).padStart(7)).join(''));
+for (let r = 0; r < STEPS; r++) {
+  const yval = ys[STEPS - 1 - r].toFixed(2).padStart(5);
+  console.log(`  ${yval} ` + grid[r].map((m) => (100 * m).toFixed(0).padStart(7)).join(''));
+}
+
+// region shares
+let win = 0, lose = 0, par = 0;
+for (const row of grid) for (const m of row) { if (m > 0.05) win++; else if (m < -0.05) lose++; else par++; }
+const tot = STEPS * STEPS;
+console.log(`\n  region shares over this slice: distributed-wins ${(100*win/tot).toFixed(0)}% · parity ${(100*par/tot).toFixed(0)}% · central-wins ${(100*lose/tot).toFixed(0)}%`);
+
+writeFileSync(new URL('./atlas-data.json', import.meta.url), JSON.stringify({
+  xKey: AX.key, yKey: AY.key, xLabel: AX.label, yLabel: AY.label, hold: HOLD, world: WORLD, nWorlds: NW,
+  xs, ys: [...ys], grid, note: 'grid[0] = highest Y row; m = (D-C)/O signed fraction of oracle',
+}, null, 2));
+console.log('\n  wrote atlas-data.json');
+
+===== scripts/simulation/e4-v5/atlas-data.json =====
+{
+  "xKey": "p",
+  "yKey": "s_exp",
+  "xLabel": "p  citizen participation (→ denser distributed evidence)",
+  "yLabel": "s_exp  central harm myopia (→ central blind on the long tail)",
+  "hold": {},
+  "world": {
+    "N": 1200,
+    "K": 130
+  },
+  "nWorlds": 250,
+  "xs": [
+    0.02,
+    0.078,
+    0.13599999999999998,
+    0.19399999999999998,
+    0.252,
+    0.31,
+    0.368,
+    0.426,
+    0.484,
+    0.542,
+    0.6
+  ],
+  "ys": [
+    0,
+    0.6000000000000001,
+    1.2000000000000002,
+    1.7999999999999998,
+    2.4000000000000004,
+    3,
+    3.5999999999999996,
+    4.199999999999999,
+    4.800000000000001,
+    5.4,
+    6
+  ],
+  "grid": [
+    [
+      0.168326775092858,
+      0.3653119164885476,
+      0.4203132115090371,
+      0.46533142676427774,
+      0.4836783342916202,
+      0.4946041147863502,
+      0.5196433163586335,
+      0.516637277650549,
+      0.5422493243015093,
+      0.5290028650214429,
+      0.5388680041221641
+    ],
+    [
+      0.16777586893963395,
+      0.36490560930663335,
+      0.4201960111544613,
+      0.46398214060919424,
+      0.48382201315678663,
+      0.49374010578579186,
+      0.5196228020504583,
+      0.5163540833039421,
+      0.542004422908616,
+      0.5285543354062548,
+      0.5382162548404973
+    ],
+    [
+      0.1670505048432075,
+      0.36381833260508717,
+      0.4194151534537187,
+      0.4634029619272557,
+      0.48335689215585725,
+      0.49314207360703793,
+      0.5197912439682723,
+      0.5145312054299663,
+      0.5409457515547534,
+      0.5274375220118273,
+      0.5370688513897205
+    ],
+    [
+      0.16618718393972687,
+      0.3627841921043599,
+      0.41841228821621257,
+      0.4621062495204383,
+      0.482382736496964,
+      0.4921317717130077,
+      0.5188344173545285,
+      0.5129968766739653,
+      0.538215810117543,
+      0.5265420197241745,
+      0.5364527567483394
+    ],
+    [
+      0.16435081216276187,
+      0.36097615491759133,
+      0.41718858687389354,
+      0.45929878088903986,
+      0.4810479089252068,
+      0.49216029039574843,
+      0.5172968595919909,
+      0.5118660229262596,
+      0.5371189206610675,
+      0.5244514866815068,
+      0.5355190464049422
+    ],
+    [
+      0.1610359648999329,
+      0.35872318818519144,
+      0.4152051215108799,
+      0.4564923037463767,
+      0.47674499564723816,
+      0.4895192767041596,
+      0.5141978517520622,
+      0.5104239023082708,
+      0.5349979352204675,
+      0.5205797027426721,
+      0.5332939343892507
+    ],
+    [
+      0.1576290076029091,
+      0.35472739755469707,
+      0.410242311666006,
+      0.45129374928820676,
+      0.47236362154494904,
+      0.48592080071582877,
+      0.5093472144170422,
+      0.5061044170952406,
+      0.5305942960523972,
+      0.516282223183763,
+      0.5294887079004981
+    ],
+    [
+      0.15074925759340263,
+      0.34775555757382115,
+      0.40392605687809696,
+      0.4432079021290875,
+      0.4624917429047208,
+      0.4780425999523082,
+      0.4997534776426673,
+      0.5002289873888827,
+      0.5205625226088744,
+      0.5073203675975007,
+      0.5195314608828937
+    ],
+    [
+      0.1339917589012703,
+      0.33448152443397317,
+      0.3837225463218538,
+      0.4242141378558422,
+      0.4454282560125526,
+      0.46214846400268744,
+      0.4835113305390891,
+      0.4836048501104608,
+      0.5033367691999696,
+      0.4904616532778119,
+      0.5043962509441271
+    ],
+    [
+      0.08729690619863469,
+      0.29241986760852606,
+      0.3459145010018624,
+      0.3808013751108677,
+      0.4018886243589298,
+      0.42036424772473385,
+      0.44499063322283683,
+      0.4411314467467305,
+      0.4581054131620161,
+      0.4519321014903756,
+      0.4610547043235986
+    ],
+    [
+      -0.07179653447657741,
+      0.12998079485664316,
+      0.18464793290527315,
+      0.2219674746593265,
+      0.24902553550015663,
+      0.26320954999622875,
+      0.27956705721242536,
+      0.2869459210674243,
+      0.2970993029478519,
+      0.29108369977855447,
+      0.3027064721609434
+    ]
+  ],
+  "note": "grid[0] = highest Y row; m = (D-C)/O signed fraction of oracle"
+}
+===== scripts/simulation/e4-v5/contract.mjs =====
+// E4 v1.14 — MACHINE-READABLE MODEL CONTRACT (single source of truth)
+// Codex's single sharpest improvement: one versioned, outcome-blind contract that is the ONLY path to evidence.
+// It enumerates theta_all, numerical constants, joint D_F / R_alpha sets, o_min/delta, classification thresholds,
+// and the closed output schema. `validate()` throws on unknown or unused fields. Nothing in the engine may use a
+// literal that is not registered here.
+//
+// Param `kind`:
+//   physical    — a real quantity with a hard physical domain; D_M\D_F is genuine impossibility (prob in [0,1], sd>=0)
+//   directional — a theory-backed sign assumption (w,b,b_H_C,gamma >= 0). NOT a physical law: base case keeps the
+//                 sign, but a sign-reversal RIVAL model is reported as sensitivity (author decision 2026-07-11).
+//   structural  — a shape/location parameter (means, spreads, counts)
+//   numerical   — a solver/Monte-Carlo constant
+//   normative   — a declared normative choice (aggregation A); never randomized
+
+export const CONTRACT_VERSION = 'e4-v5.0.0';
+
+// Each entry: { value, kind, dm:[lo,hi], df:[lo,hi], ralpha:[lo,hi], note }
+// dm = mathematical domain; df = physically-possible (sign backbone); ralpha = expectable band (magnitude headline).
+export const THETA = {
+  // ---- population & projects (structural) ----
+  N:      { value: 4000, kind: 'structural', dm: [1, Infinity],   df: [100, 100000], ralpha: [1000, 20000], note: 'population size' },
+  K:      { value: 200,  kind: 'structural', dm: [2, Infinity],   df: [20, 5000],    ralpha: [80, 800],     note: 'candidate projects' },
+  m_q:    { value: 0.4,  kind: 'structural', dm: [-Infinity, Infinity], df: [-5, 5],  ralpha: [0.0, 1.0],    note: 'mean project quality (mean scale)' },
+  s_q:    { value: 1.0,  kind: 'physical',   dm: [0, Infinity],   df: [0, 10],       ralpha: [0.5, 2.0],    note: 'sd of project quality' },
+  a_V:    { value: 0.5,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [0.3, 1.0],    note: 'visibility Beta a (a<1 => heavy tail toward 0)' },
+  b_V:    { value: 3.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [1.5, 6.0],    note: 'visibility Beta b (mass on low-visibility long tail)' },
+  zeta:   { value: 0.6,  kind: 'physical',   dm: [-1, 1],         df: [0, 1],        ralpha: [0.3, 0.85],   note: 'corr(category signal g, quality q)' },
+  c_lo:   { value: 1.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.01, 1e6],   ralpha: [0.5, 2.0],    note: 'min cost' },
+  c_hi:   { value: 5.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.01, 1e6],   ralpha: [3.0, 10.0],   note: 'max cost' },
+  a_r:    { value: 1.2,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [0.8, 3.0],    note: 'reach Beta a' },
+  b_r:    { value: 8.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [4.0, 20.0],   note: 'reach Beta b (most projects reach a minority)' },
+  phi:    { value: 0.35, kind: 'physical',   dm: [0, 1],          df: [0.01, 0.99],  ralpha: [0.2, 0.6],    note: 'budget share of total cost' },
+
+  // ---- individual value & ANTI-VALUE (opposition != indifference) ----
+  sigma:   { value: 1.0,  kind: 'physical', dm: [0, Infinity], df: [0, 10],   ralpha: [0.5, 2.0],  note: 'sd of idiosyncratic taste eps' },
+  pi_opp:  { value: 0.15, kind: 'physical', dm: [0, 1],        df: [0, 1],    ralpha: [0.03, 0.35], note: 'prevalence of intense opponents' },
+  mu_opp:  { value: 3.0,  kind: 'physical', dm: [0, Infinity], df: [0, 50],   ralpha: [1.0, 6.0],  note: 'mean opposition intensity (Exponential)' },
+
+  // ---- distributed arm (coverage) ----
+  p:       { value: 0.25, kind: 'physical', dm: [0, 1], df: [1e-3, 1], ralpha: [0.05, 0.6], note: 'participation prob (report if support)' },
+  beta:    { value: 0.40, kind: 'physical', dm: [0, 1], df: [0, 1],    ralpha: [0.1, 0.7],  note: 'adverse-voice suppression of opponents' },
+  sigma_e: { value: 0.5,  kind: 'physical', dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of report noise' },
+
+  // ---- central arm (salience-gated harm myopia) ----
+  v_p0:    { value: 0.6,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.5, 1.5], note: "planner's own baseline position" },
+  gamma:   { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 5],  ralpha: [0.2, 1.2],  note: 'loading of planner projection on category signal g' },
+  sigma_v: { value: 0.5,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of projection idiosyncrasy' },
+  a:       { value: 0.2,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.3, 0.8], note: 'central intercept / systematic level bias' },
+  b:       { value: 0.9,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.6, 1.1],  note: 'central responsiveness to SUPPORT S+' },
+  w:       { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.2, 1.0],  note: 'directional projection weight' },
+  b_H_C:   { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.1, 1.0],  note: 'central harm-detection coefficient (myopia; salience-gated)' },
+  s_exp:   { value: 2.0,  kind: 'physical',    dm: [0, Infinity], df: [0.2, 10], ralpha: [1.0, 4.0], note: 'harm-gate exponent: s(V)=V^s_exp (>1 => near-blind on long tail)' },
+  sigma_C: { value: 0.5,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of central estimation noise eta' },
+
+  // ---- selection ----
+  h:       { value: 0.0,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0, 1.0], note: 'opportunity-cost hurdle (shared across arms)' },
+  lambda:  { value: 0.15, kind: 'physical',    dm: [0, 1], df: [0, 1], ralpha: [0, 0.4], note: 'central credit-pressure weight (credit salience P = visibility V; a linear scale on P would cancel under z-scoring, so none is registered)' },
+};
+
+// Aggregation A is NORMATIVE and declared, never randomized into a prior.
+export const AGGREGATION = { primary: 'mean', alternatives: ['harm_weighted'], note: 'A=mean primary; harm-weighted is a SEPARATE declared estimand' };
+
+// ---- numerical / Monte-Carlo constants (nu_all) ----
+export const NUM = {
+  n_worlds:       { value: 1500, note: 'Monte-Carlo worlds per theta' },
+  seed:           { value: 20260711, note: 'base PRNG seed (Date.now/Math.random forbidden)' },
+  bootstrap_reps: { value: 400,  note: 'world-cluster bootstrap replications (inner variability only)' },
+  ci_level:       { value: 0.95, note: 'bootstrap CI level' },
+  z_fallback_sd:  { value: 1.0,  note: 'z-score sd fallback when eligible-set sd=0' },
+  min_kept_frac:  { value: 0.5,  note: 'a cell is sufficient only if kept/(simulated) worlds >= this' },
+  min_kept_floor: { value: 40,   note: 'and kept worlds >= this absolute floor; else numerically-unresolved/degenerate' },
+};
+
+// ---- estimand thresholds (frozen, mean-value units; NOT the retired 0.05) ----
+export const CLASSIFY = {
+  o_min_frac:  { value: 0.05, note: 'o_min = o_min_frac * median(O_W); worlds with O<=o_min excluded from m, counted in pi_deg' },
+  delta:       { value: 0.03, note: 'materiality band on m (fraction-of-oracle units); justified in delivered-value terms, NOT the 0.05 rebuild gate' },
+  zero_tol:    { value: 0.005, note: 'sign_status=zero-touching when |m|<=zero_tol or CI straddles 0 within this' },
+  pi_deg_warn: { value: 0.10, note: 'degeneracy_status=high above this share' },
+};
+
+// alpha coverage family for the magnitude (R_alpha) layer
+export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
+
+// ---- EVIDENCE configuration (single source of truth for the evidence run; hashed into theta_id) ----
+// NOTE (2026-07-11): a v6.1 redesign is planned — report EVERYTHING via a space-filling sweep over the WHOLE
+// uncertain set (incl. thesis levers a_V,b_V,s_exp; NO frozen favourable lever) + ceteris-paribus frontier locators
+// (per axis: frontier location, possible values, the declared central-favourable endpoint, probable case ± CI). That rewrite is GATED on
+// first anchoring each variable's probable (R_alpha) value to theory/empirics — see research/e4-plausible-anchors.md.
+// Current block is the working v6 config; do not treat the swept set below as the final "everything" sweep.
+export const EVIDENCE = {
+  world:        { N: 1500, K: 150 },   // inside R_alpha for N,K
+  probable_nw:  800,                    // worlds for the PROBABLE headline point (with CI)
+  sweep_nw:     90,                     // worlds per envelope sample point
+  n_env:        400,                    // uniform samples over the ANCHORED scenario envelope (defensible box, not
+                                        //   arbitrary raw D_F — sampling uniform over a too-wide D_F would distort the
+                                        //   sign fraction). The envelope per knob = [min,max] of the 3 anchored scenarios.
+  // Held at base (not varied by the anchored scenarios): computational/cost/value-scale nuisances.
+  fixed:        ['N', 'K', 'c_lo', 'c_hi', 'm_q', 's_q', 'sigma', 'sigma_v', 'v_p0', 'phi', 'h'],
+};
+
+// ---- CLOSED output schema (embargo-critical): additionalProperties:false; cannot express D/C or ratio-parity-1 ----
+export const OUTPUT_SCHEMA = {
+  $schema: 'http://json-schema.org/draft-07/schema#',
+  type: 'object',
+  additionalProperties: false,
+  required: ['contract_version', 'theta_id', 'pi_deg', 'm_hat', 'ci', 'df_dist_share', 'df_cent_share', 'sign_status', 'materiality_status', 'degeneracy_status', 'numerical_status'],
+  properties: {
+    contract_version:   { type: 'string' },
+    theta_id:           { type: 'string' },
+    pi_deg:             { type: 'number', minimum: 0, maximum: 1 },
+    m_hat:              { type: 'number' },                 // Σ(D-C)/ΣO over kept worlds, a signed fraction of oracle
+    ci:                 { type: 'array', items: { type: 'number' }, minItems: 2, maxItems: 2 },
+    df_dist_share:      { type: 'number', minimum: 0, maximum: 1 },  // SIGN over D_F: uniform-VOLUME fraction (space-filling
+    df_cent_share:      { type: 'number', minimum: 0, maximum: 1 },  //   MC) where each institution wins — a real volume
+    df_par_share:       { type: 'number', minimum: 0, maximum: 1 },  //   fraction, not a corner count
+    df_dist_share_se:   { type: 'number', minimum: 0, maximum: 1 },  // Monte-Carlo SE of df_dist_share (binomial)
+    m_Ralpha:           { type: 'object' },                 // magnitude by alpha level (measured over joint R_alpha)
+    sign_status:        { enum: ['pos', 'neg', 'zero-touching', 'indeterminate'] },
+    materiality_status: { enum: ['material', 'negligible', 'uncertain'] },
+    degeneracy_status:  { enum: ['ok', 'high', 'degenerate'] },
+    numerical_status:   { enum: ['resolved', 'unresolved'] },
+  },
+  // NOTE: there is deliberately NO field able to carry D/C, a ratio with parity 1, or an institution-performance
+  // multiplier. The render adapter additionally rejects the tokens 'x'/'×'/'D/C' in performance context.
+};
+
+// Tokens the sole render adapter must reject in institution-performance context (ASCII x, Unicode multiplication, ratio).
+export const EMBARGO_TOKENS = ['×', 'D/C', 'C/D'];
+
+// ---------- validation: fail-closed on unknown / unused ----------
+export function knownThetaKeys() { return new Set(Object.keys(THETA)); }
+
+// Throw if a config carries any key not registered in THETA (unknown), or (optionally) if a registered key is
+// missing (unused-required). Engines call this before running.
+export function validateConfig(cfg, { requireAll = true } = {}) {
+  const known = knownThetaKeys();
+  const bad = Object.keys(cfg).filter((k) => !known.has(k));
+  if (bad.length) throw new Error(`[contract] unknown parameter(s) not in THETA: ${bad.join(', ')}`);
+  if (requireAll) {
+    const missing = [...known].filter((k) => !(k in cfg));
+    if (missing.length) throw new Error(`[contract] missing required parameter(s): ${missing.join(', ')}`);
+  }
+  for (const [k, v] of Object.entries(cfg)) {
+    if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`[contract] ${k} must be a finite number, got ${v}`);
+    const { dm } = THETA[k];
+    if (v < dm[0] || v > dm[1]) throw new Error(`[contract] ${k}=${v} outside mathematical domain [${dm[0]}, ${dm[1]}]`);
+  }
+  return true;
+}
+
+// Executable-domain validation (fail closed): the printed DGP is only defined on a subset of the scalar box.
+// validateConfig checks names + scalar bounds; validateDomain checks the constraints that keep the DGP meaningful.
+export function validateDomain(cfg) {
+  const bad = [];
+  const finite = (k) => { if (!Number.isFinite(cfg[k])) bad.push(`${k} not finite`); };
+  for (const k of Object.keys(THETA)) finite(k);
+  const intPos = (k, min) => { if (!Number.isInteger(cfg[k]) || cfg[k] < min) bad.push(`${k} must be integer >= ${min}`); };
+  intPos('N', 1); intPos('K', 2);
+  const pos = (k) => { if (!(cfg[k] > 0)) bad.push(`${k} must be > 0`); };
+  pos('a_V'); pos('b_V'); pos('a_r'); pos('b_r');           // Beta shapes must be positive
+  pos('p');                                                 // engine divides by p
+  if (!(cfg.c_lo > 0)) bad.push('c_lo must be > 0');
+  if (!(cfg.c_hi > cfg.c_lo)) bad.push('c_hi must be > c_lo');
+  if (!(cfg.phi > 0 && cfg.phi < 1)) bad.push('phi must be in (0,1)');
+  const unit = (k) => { if (cfg[k] < 0 || cfg[k] > 1) bad.push(`${k} must be in [0,1]`); };
+  unit('p'); unit('beta'); unit('pi_opp'); unit('lambda');
+  if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');   // zeta is a correlation, NOT a unit interval
+  const nonneg = (k) => { if (cfg[k] < 0) bad.push(`${k} must be >= 0`); };
+  ['s_q', 'sigma', 'mu_opp', 'sigma_e', 'sigma_v', 'sigma_C', 's_exp', 'h'].forEach(nonneg);
+  if (bad.length) throw new Error(`[contract] executable-domain violation: ${bad.join('; ')}`);
+  return true;
+}
+
+// Is cfg[k] within its declared expectable band R_alpha? (region membership, for manifests/labels — not fatal)
+export function inRalpha(cfg, keys = Object.keys(THETA)) {
+  return keys.every((k) => cfg[k] >= THETA[k].ralpha[0] && cfg[k] <= THETA[k].ralpha[1]);
+}
+
+// FNV-1a hash of an arbitrary JSON-able manifest (no Date/Math.random).
+export function resolvedHash(manifest) {
+  const s = JSON.stringify(manifest);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return 'fnv1a-' + h.toString(16).padStart(8, '0');
+}
+
+// Base config = registered default values.
+export function baseConfig() {
+  const cfg = {};
+  for (const [k, spec] of Object.entries(THETA)) cfg[k] = spec.value;
+  return cfg;
+}
+
+// Deterministic content hash of the frozen sets (so the joint D_F/R_alpha objects and thresholds are pinned before
+// any production run). Simple FNV-1a over a canonical JSON — no Date/Math.random.
+export function contractHash() {
+  const canonical = JSON.stringify({ v: CONTRACT_VERSION, THETA, NUM, CLASSIFY, ALPHA_LEVELS, AGGREGATION, EVIDENCE });
+  let h = 0x811c9dc5;
+  for (let i = 0; i < canonical.length; i++) {
+    h ^= canonical.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return 'fnv1a-' + h.toString(16).padStart(8, '0');
+}
+
+export const directionalKeys = () => Object.entries(THETA).filter(([, s]) => s.kind === 'directional').map(([k]) => k);
+export const physicalKeys    = () => Object.entries(THETA).filter(([, s]) => s.kind === 'physical').map(([k]) => k);
+
+===== scripts/simulation/e4-v5/controls.mjs =====
+// E4 v1.14 — negative controls. These MUST pass or the model is not trustworthy (DESIGN_SKETCH_v5 §5).
+// Run: node scripts/simulation/e4-v5/controls.mjs
+import { baseConfig } from './contract.mjs';
+import { makeRng, runWorld, estimand } from './engine.mjs';
+
+const SMALL = { N: 900, K: 120 };            // smaller world for fast, still-meaningful controls (both within D_M)
+const NW = 300, SEED = 20260711;
+
+// run NW worlds, return per-world {D,C,O} arrays (common random numbers => aligned across configs)
+function runWorlds(cfg) {
+  const rng = makeRng(SEED);
+  const out = [];
+  for (let i = 0; i < NW; i++) { const r = runWorld(cfg, rng); if (!r.empty) out.push(r); }
+  return out;
+}
+const maxAbsDiff = (a, b, key) => Math.max(...a.map((x, i) => Math.abs(x[key] - b[i][key])));
+const pass = (name, ok, detail) => console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? '  — ' + detail : ''}`);
+
+let allOk = true;
+const check = (name, ok, detail) => { pass(name, ok, detail); allOk = allOk && ok; };
+
+// ---- Control 1: signal recovery + exact joint symmetry ----
+// a=w=0, b=1, sigma_C=0, b_H_C=1, s_exp=0 (gate=1 everywhere) => M_C = S+ - H = S.
+// p=1, beta=0, sigma_e=0 => everyone reports truthfully => M_D = S. All three arms == oracle => D=C=O => m=0.
+{
+  const cfg = { ...baseConfig(), ...SMALL,
+    a: 0, w: 0, b: 1, sigma_C: 0, b_H_C: 1, s_exp: 0, lambda: 0,
+    p: 1, beta: 0, sigma_e: 0 };
+  const worlds = runWorlds(cfg);
+  const maxDC = Math.max(...worlds.map((x) => Math.abs(x.D - x.C)));
+  const maxDO = Math.max(...worlds.map((x) => Math.abs(x.D - x.O)));
+  const { m_hat } = estimand(cfg, { nWorlds: NW });
+  check('C1 signal recovery: M_C=M_D=S => D=C=O', maxDC < 1e-9 && maxDO < 1e-9, `max|D-C|=${maxDC.toExponential(2)}, max|D-O|=${maxDO.toExponential(2)}`);
+  check('C1 estimand m == 0', Math.abs(m_hat) < 1e-9, `m=${m_hat.toExponential(2)}`);
+}
+
+// ---- Control 2: credit channel is ACTIVE (and structurally inert at lambda=0) ----
+// Credit salience P=V feeds the central rank only through lambda; at lambda=0 the term is multiplied by 0 (inert by
+// construction), so the meaningful test is that raising lambda actually changes the central selection.
+{
+  const base = { ...baseConfig(), ...SMALL };
+  const A = runWorlds({ ...base, lambda: 0 });
+  const Bb = runWorlds({ ...base, lambda: 0.4 });
+  const d = maxAbsDiff(A, Bb, 'C');
+  check('C2 credit channel active (C changes with lambda)', d > 1e-9, `max|dC|=${d.toExponential(2)}`);
+}
+
+// ---- Control 3: pathway inactivation — projection (w=0) ----
+// At w=0, the planner position v_p must not affect M_C: varying v_p0 leaves C unchanged world-by-world.
+{
+  const base = { ...baseConfig(), ...SMALL, w: 0 };
+  const A = runWorlds({ ...base, v_p0: 0.6 });
+  const Bb = runWorlds({ ...base, v_p0: 3.0 });
+  check('C3 w=0 => planner position inert', maxAbsDiff(A, Bb, 'C') < 1e-9, `max|dC|=${maxAbsDiff(A, Bb, 'C').toExponential(2)}`);
+}
+
+// ---- Control 4: harm channel is ACTIVE and directional ----
+// At s_exp=0 (gate=1 everywhere), raising central harm-detection b_H_C from 0 -> 1 should move central toward the
+// oracle (it stops overvaluing harmful projects). Expect m(theta)=E[(D-C)/O] to DECREASE (central improves).
+{
+  const base = { ...baseConfig(), ...SMALL, s_exp: 0 };
+  const blind = estimand({ ...base, b_H_C: 0 }, { nWorlds: NW }).m_hat;
+  const sighted = estimand({ ...base, b_H_C: 1 }, { nWorlds: NW }).m_hat;
+  check('C4 harm channel active (m falls as central sees harm)', sighted < blind - 1e-4, `m(b_H_C=0)=${blind.toFixed(4)} -> m(b_H_C=1)=${sighted.toFixed(4)}`);
+}
+
+// ---- Baseline descriptive run (not a pass/fail) ----
+{
+  const cfg = { ...baseConfig(), ...SMALL };
+  const r = estimand(cfg, { nWorlds: NW });
+  console.log(`\nBaseline (defaults, SMALL world): m_hat=${r.m_hat.toFixed(4)}  CI=[${r.ci[0].toFixed(4)}, ${r.ci[1].toFixed(4)}]  pi_deg=${r.pi_deg.toFixed(3)}  kept=${r.n_kept}/${r.n_worlds}`);
+}
+
+console.log(`\n${allOk ? 'ALL CONTROLS PASSED' : 'SOME CONTROLS FAILED'}`);
+process.exit(allOk ? 0 : 1);
+
+===== scripts/simulation/e4-v5/engine.mjs =====
+// E4 v1.14 — fresh mean-scale engine, driven ONLY by the contract.
+// Implements DESIGN_SKETCH_v5 §1-§2: anti-value (S = S+ - H), the behavioral coverage estimator (MNAR mean), and
+// the central salience-gated harm-myopia model. All value quantities are per-interested-person means. Every literal
+// the engine uses comes from the contract; validateConfig() is called before any run (fail-closed).
+
+import { THETA, NUM, CLASSIFY, validateConfig, validateDomain } from './contract.mjs';
+
+// ---------------- seeded PRNG (Date.now / Math.random forbidden for reproducibility) ----------------
+export function makeRng(seed) {
+  let s = seed >>> 0;
+  const u = () => { // mulberry32
+    s |= 0; s = (s + 0x6D2B79F5) | 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  let spare = null;
+  const normal = () => { // Box-Muller with cached spare
+    if (spare !== null) { const v = spare; spare = null; return v; }
+    let a = u(); if (a < 1e-12) a = 1e-12;
+    const b = u();
+    const r = Math.sqrt(-2 * Math.log(a)), th = 2 * Math.PI * b;
+    spare = r * Math.sin(th);
+    return r * Math.cos(th);
+  };
+  const exponential = (mean) => -mean * Math.log(1 - u() + 1e-12);
+  const gamma = (k) => { // Marsaglia-Tsang
+    if (k < 1) return gamma(k + 1) * Math.pow(u() + 1e-12, 1 / k);
+    const d = k - 1 / 3, c = 1 / Math.sqrt(9 * d);
+    for (;;) {
+      let x, v;
+      do { x = normal(); v = 1 + c * x; } while (v <= 0);
+      v = v * v * v;
+      const uu = u();
+      if (uu < 1 - 0.0331 * x * x * x * x) return d * v;
+      if (Math.log(uu + 1e-12) < 0.5 * x * x + d * (1 - v + Math.log(v))) return d * v;
+    }
+  };
+  const beta = (a, b) => { const ga = gamma(a), gb = gamma(b); return ga / (ga + gb); };
+  const binomialApprox = (n, prob) => {
+    if (n <= 0 || prob <= 0) return 0;
+    if (prob >= 1) return n;
+    const m = n * prob, sd = Math.sqrt(n * prob * (1 - prob));
+    return Math.max(0, Math.min(n, Math.round(m + sd * normal())));
+  };
+  return { u, normal, exponential, gamma, beta, binomialApprox };
+}
+
+// ---------------- world generation (one economy of projects) ----------------
+// Returns an array of admissible projects, each with true net value S, cost c, and the three arms' signals.
+export function generateWorld(cfg, rng) {
+  const projects = [];
+  for (let j = 0; j < cfg.K; j++) {
+    const q = cfg.m_q + cfg.s_q * rng.normal();
+    const V = rng.beta(cfg.a_V, cfg.b_V);                       // visibility in [0,1], heavy-tailed toward 0
+    const qStd = cfg.s_q > 0 ? (q - cfg.m_q) / cfg.s_q : 0;
+    const g = cfg.zeta * qStd + Math.sqrt(Math.max(0, 1 - cfg.zeta * cfg.zeta)) * rng.normal();
+    const c = cfg.c_lo + (cfg.c_hi - cfg.c_lo) * rng.u();
+    const r = rng.beta(cfg.a_r, cfg.b_r);
+    const n = rng.binomialApprox(cfg.N, r);
+    if (n === 0) continue;                                      // inadmissible in ALL arms (dropped, counted below)
+
+    let sumPos = 0, sumNeg = 0, sumReport = 0;
+    for (let i = 0; i < n; i++) {
+      let u = q + cfg.sigma * rng.normal();
+      if (rng.u() < cfg.pi_opp) u -= rng.exponential(cfg.mu_opp);   // intense-minority opposition
+      if (u >= 0) sumPos += u; else sumNeg += -u;
+      const reportProb = u >= 0 ? cfg.p : cfg.p * (1 - cfg.beta);
+      if (rng.u() < reportProb) sumReport += (u + cfg.sigma_e * rng.normal()) / cfg.p;
+    }
+    const Splus = sumPos / n;                                   // support (mean of positive parts)
+    const H = sumNeg / n;                                       // harm (mean opposition intensity)
+    const S = Splus - H;                                        // true net value (mean scale)
+    const M_D = sumReport / n;                                  // behavioral coverage estimator; E[M_D|u]=S+ -(1-beta)H
+
+    const v_pj = cfg.v_p0 + cfg.gamma * g + cfg.sigma_v * rng.normal();
+    const sV = Math.pow(Math.max(0, Math.min(1, V)), cfg.s_exp);// harm gate: ~0 on long tail, ~1 when salient
+    const M_C = cfg.a + cfg.b * Splus + cfg.w * (v_pj - Splus) - cfg.b_H_C * sV * H + cfg.sigma_C * rng.normal();
+
+    const P = V;                                               // visible salience -> credit (linear scale would cancel under z)
+    projects.push({ S, c, M_C, M_D, P });
+  }
+  return projects;
+}
+
+// ---------------- selection: one common interface for all three arms ----------------
+function zscore(vals, fallbackSd) {
+  const n = vals.length;
+  if (n === 0) return [];
+  const mean = vals.reduce((s, x) => s + x, 0) / n;
+  let v = 0; for (const x of vals) v += (x - mean) * (x - mean);
+  let sd = Math.sqrt(v / n);
+  if (!(sd > 0)) sd = fallbackSd;
+  return vals.map((x) => (x - mean) / sd);
+}
+
+// Fund greedily by rank score among the arm's own eligible set, under budget, exact residual fill, tie-break lower j.
+function fundedValue(projects, signalKey, cfg, budget, opts = {}) {
+  const idx = [];
+  for (let j = 0; j < projects.length; j++) {
+    const x = projects[j][signalKey];
+    if (x - cfg.h * projects[j].c > 0) idx.push(j);            // own-estimate eligibility gate
+  }
+  if (idx.length === 0) return 0;
+  const rawVal = idx.map((j) => (projects[j][signalKey] - cfg.h * projects[j].c) / projects[j].c);
+  let score = zscore(rawVal, NUM.z_fallback_sd.value);
+  if (opts.creditTilt) {                                        // central credit tilt
+    const zP = zscore(idx.map((j) => projects[j].P / projects[j].c), NUM.z_fallback_sd.value);
+    score = score.map((s, t) => (1 - cfg.lambda) * s + cfg.lambda * zP[t]);
+  }
+  const order = idx.map((j, t) => ({ j, s: score[t] }))
+    .sort((A, B) => (B.s - A.s) || (A.j - B.j));               // desc score, tie-break lower index
+  let spent = 0, delivered = 0;
+  for (const { j } of order) {
+    if (spent + projects[j].c <= budget) { spent += projects[j].c; delivered += projects[j].S; }
+  }
+  return delivered;
+}
+
+export function runWorld(cfg, rng) {
+  const projects = generateWorld(cfg, rng);
+  if (projects.length === 0) return { D: 0, C: 0, O: 0, empty: true };
+  let totalCost = 0; for (const pr of projects) totalCost += pr.c;
+  const budget = cfg.phi * totalCost;
+  const O = fundedValue(projects, 'S',   cfg, budget);
+  const C = fundedValue(projects, 'M_C', cfg, budget, { creditTilt: true });
+  const D = fundedValue(projects, 'M_D', cfg, budget);
+  return { D, C, O, empty: false };
+}
+
+// ---------------- estimand m(theta) = E[(D-C)/O | O>o_min], plus pi_deg ----------------
+function median(arr) {
+  if (arr.length === 0) return 0;
+  const a = [...arr].sort((x, y) => x - y);
+  const mid = a.length >> 1;
+  return a.length % 2 ? a[mid] : 0.5 * (a[mid - 1] + a[mid]);
+}
+
+export function estimand(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, oMinAbs = null } = {}) {
+  validateConfig(cfg);
+  validateDomain(cfg);
+  const rng = makeRng(seed);
+  const worlds = [];
+  for (let wI = 0; wI < nWorlds; wI++) {
+    const { D, C, O, empty } = runWorld(cfg, rng);
+    if (!empty) worlds.push({ D, C, O });
+  }
+  const Os = worlds.map((x) => x.O);
+  // o_min is an ABSOLUTE floor (default from this config's own median). Passing oMinAbs pins ONE floor across a
+  // whole sweep, so degenerate corners (tiny O => exploding (D-C)/O) get most worlds excluded and flagged, rather
+  // than injecting divergent ratios into the envelope (Codex: denominator-weighting divergence).
+  const o_min = oMinAbs !== null ? oMinAbs : CLASSIFY.o_min_frac.value * median(Os);
+  const kept = worlds.filter((x) => x.O > o_min);
+  const degCount = worlds.length - kept.length;
+  const pi_deg = worlds.length ? degCount / worlds.length : 1;
+  // RATIO OF SUMS (robust): m = Σ(D−C)/ΣO over retained worlds. Bounded and stable — a single tiny-O world cannot
+  // dominate (as it would in the per-world-ratio mean, Codex's (1,1)/(−1,100) divergence). Interpretation: total
+  // true value the arm delivers, as a fraction of the total full-information achievable value.
+  const num = kept.reduce((s, x) => s + (x.D - x.C), 0);
+  const den = kept.reduce((s, x) => s + x.O, 0);
+  const m_hat = den > 0 ? num / den : NaN;
+
+  // world-cluster bootstrap CI (inner simulation variability only): resample worlds, recompute the ratio of sums.
+  const B = NUM.bootstrap_reps.value;
+  const bootRng = makeRng((seed ^ 0x9e3779b9) >>> 0);
+  const boots = [];
+  if (kept.length) {
+    for (let bI = 0; bI < B; bI++) {
+      let bn = 0, bd = 0;
+      for (let t = 0; t < kept.length; t++) { const w = kept[Math.floor(bootRng.u() * kept.length)]; bn += (w.D - w.C); bd += w.O; }
+      if (bd > 0) boots.push(bn / bd);
+    }
+    boots.sort((a, b) => a - b);
+  }
+  const lo = boots.length ? boots[Math.floor((1 - NUM.ci_level.value) / 2 * boots.length)] : NaN;
+  const hi = boots.length ? boots[Math.floor((1 + NUM.ci_level.value) / 2 * boots.length) - 1] : NaN;
+
+  const sumD = kept.reduce((s, x) => s + x.D, 0), sumC = kept.reduce((s, x) => s + x.C, 0);
+  const dOverO = den > 0 ? sumD / den : NaN, cOverO = den > 0 ? sumC / den : NaN;  // efficiency of each arm vs oracle
+  const enough = kept.length >= Math.max(NUM.min_kept_floor.value, NUM.min_kept_frac.value * worlds.length);
+  return { m_hat, ci: [lo, hi], pi_deg, n_kept: kept.length, n_worlds: worlds.length, o_min, enough, dOverO, cOverO };
+}
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$i=0; Get-Content scripts/simulation/e4-v5/contract.mjs | ForEach-Object { $i++; if ($i -le 120) { '"'{0,4}: {1}' -f "'$i, $_ } }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 172ms:
+   1: // E4 v1.14 — MACHINE-READABLE MODEL CONTRACT (single source of truth)
+   2: // Codex's single sharpest improvement: one versioned, outcome-blind contract that is the ONLY path to evidence.
+   3: // It enumerates theta_all, numerical constants, joint D_F / R_alpha sets, o_min/delta, classification thresholds,
+   4: // and the closed output schema. `validate()` throws on unknown or unused fields. Nothing in the engine may use a
+   5: // literal that is not registered here.
+   6: //
+   7: // Param `kind`:
+   8: //   physical    — a real quantity with a hard physical domain; D_M\D_F is genuine impossibility (prob in [0,1], sd>=0)
+   9: //   directional — a theory-backed sign assumption (w,b,b_H_C,gamma >= 0). NOT a physical law: base case keeps the
+  10: //                 sign, but a sign-reversal RIVAL model is reported as sensitivity (author decision 2026-07-11).
+  11: //   structural  — a shape/location parameter (means, spreads, counts)
+  12: //   numerical   — a solver/Monte-Carlo constant
+  13: //   normative   — a declared normative choice (aggregation A); never randomized
+  14: 
+  15: export const CONTRACT_VERSION = 'e4-v5.0.0';
+  16: 
+  17: // Each entry: { value, kind, dm:[lo,hi], df:[lo,hi], ralpha:[lo,hi], note }
+  18: // dm = mathematical domain; df = physically-possible (sign backbone); ralpha = expectable band (magnitude headline).
+  19: export const THETA = {
+  20:   // ---- population & projects (structural) ----
+  21:   N:      { value: 4000, kind: 'structural', dm: [1, Infinity],   df: [100, 100000], ralpha: [1000, 20000], note: 'population size' },
+  22:   K:      { value: 200,  kind: 'structural', dm: [2, Infinity],   df: [20, 5000],    ralpha: [80, 800],     note: 'candidate projects' },
+  23:   m_q:    { value: 0.4,  kind: 'structural', dm: [-Infinity, Infinity], df: [-5, 5],  ralpha: [0.0, 1.0],    note: 'mean project quality (mean scale)' },
+  24:   s_q:    { value: 1.0,  kind: 'physical',   dm: [0, Infinity],   df: [0, 10],       ralpha: [0.5, 2.0],    note: 'sd of project quality' },
+  25:   a_V:    { value: 0.5,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [0.3, 1.0],    note: 'visibility Beta a (a<1 => heavy tail toward 0)' },
+  26:   b_V:    { value: 3.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [1.5, 6.0],    note: 'visibility Beta b (mass on low-visibility long tail)' },
+  27:   zeta:   { value: 0.6,  kind: 'physical',   dm: [-1, 1],         df: [0, 1],        ralpha: [0.3, 0.85],   note: 'corr(category signal g, quality q)' },
+  28:   c_lo:   { value: 1.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.01, 1e6],   ralpha: [0.5, 2.0],    note: 'min cost' },
+  29:   c_hi:   { value: 5.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.01, 1e6],   ralpha: [3.0, 10.0],   note: 'max cost' },
+  30:   a_r:    { value: 1.2,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [0.8, 3.0],    note: 'reach Beta a' },
+  31:   b_r:    { value: 8.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [4.0, 20.0],   note: 'reach Beta b (most projects reach a minority)' },
+  32:   phi:    { value: 0.35, kind: 'physical',   dm: [0, 1],          df: [0.01, 0.99],  ralpha: [0.2, 0.6],    note: 'budget share of total cost' },
+  33: 
+  34:   // ---- individual value & ANTI-VALUE (opposition != indifference) ----
+  35:   sigma:   { value: 1.0,  kind: 'physical', dm: [0, Infinity], df: [0, 10],   ralpha: [0.5, 2.0],  note: 'sd of idiosyncratic taste eps' },
+  36:   pi_opp:  { value: 0.15, kind: 'physical', dm: [0, 1],        df: [0, 1],    ralpha: [0.03, 0.35], note: 'prevalence of intense opponents' },
+  37:   mu_opp:  { value: 3.0,  kind: 'physical', dm: [0, Infinity], df: [0, 50],   ralpha: [1.0, 6.0],  note: 'mean opposition intensity (Exponential)' },
+  38: 
+  39:   // ---- distributed arm (coverage) ----
+  40:   p:       { value: 0.25, kind: 'physical', dm: [0, 1], df: [1e-3, 1], ralpha: [0.05, 0.6], note: 'participation prob (report if support)' },
+  41:   beta:    { value: 0.40, kind: 'physical', dm: [0, 1], df: [0, 1],    ralpha: [0.1, 0.7],  note: 'adverse-voice suppression of opponents' },
+  42:   sigma_e: { value: 0.5,  kind: 'physical', dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of report noise' },
+  43: 
+  44:   // ---- central arm (salience-gated harm myopia) ----
+  45:   v_p0:    { value: 0.6,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.5, 1.5], note: "planner's own baseline position" },
+  46:   gamma:   { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 5],  ralpha: [0.2, 1.2],  note: 'loading of planner projection on category signal g' },
+  47:   sigma_v: { value: 0.5,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of projection idiosyncrasy' },
+  48:   a:       { value: 0.2,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.3, 0.8], note: 'central intercept / systematic level bias' },
+  49:   b:       { value: 0.9,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.6, 1.1],  note: 'central responsiveness to SUPPORT S+' },
+  50:   w:       { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.2, 1.0],  note: 'directional projection weight' },
+  51:   b_H_C:   { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.1, 1.0],  note: 'central harm-detection coefficient (myopia; salience-gated)' },
+  52:   s_exp:   { value: 2.0,  kind: 'physical',    dm: [0, Infinity], df: [0.2, 10], ralpha: [1.0, 4.0], note: 'harm-gate exponent: s(V)=V^s_exp (>1 => near-blind on long tail)' },
+  53:   sigma_C: { value: 0.5,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of central estimation noise eta' },
+  54: 
+  55:   // ---- selection ----
+  56:   h:       { value: 0.0,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0, 1.0], note: 'opportunity-cost hurdle (shared across arms)' },
+  57:   lambda:  { value: 0.15, kind: 'physical',    dm: [0, 1], df: [0, 1], ralpha: [0, 0.4], note: 'central credit-pressure weight (credit salience P = visibility V; a linear scale on P would cancel under z-scoring, so none is registered)' },
+  58: };
+  59: 
+  60: // Aggregation A is NORMATIVE and declared, never randomized into a prior.
+  61: export const AGGREGATION = { primary: 'mean', alternatives: ['harm_weighted'], note: 'A=mean primary; harm-weighted is a SEPARATE declared estimand' };
+  62: 
+  63: // ---- numerical / Monte-Carlo constants (nu_all) ----
+  64: export const NUM = {
+  65:   n_worlds:       { value: 1500, note: 'Monte-Carlo worlds per theta' },
+  66:   seed:           { value: 20260711, note: 'base PRNG seed (Date.now/Math.random forbidden)' },
+  67:   bootstrap_reps: { value: 400,  note: 'world-cluster bootstrap replications (inner variability only)' },
+  68:   ci_level:       { value: 0.95, note: 'bootstrap CI level' },
+  69:   z_fallback_sd:  { value: 1.0,  note: 'z-score sd fallback when eligible-set sd=0' },
+  70:   min_kept_frac:  { value: 0.5,  note: 'a cell is sufficient only if kept/(simulated) worlds >= this' },
+  71:   min_kept_floor: { value: 40,   note: 'and kept worlds >= this absolute floor; else numerically-unresolved/degenerate' },
+  72: };
+  73: 
+  74: // ---- estimand thresholds (frozen, mean-value units; NOT the retired 0.05) ----
+  75: export const CLASSIFY = {
+  76:   o_min_frac:  { value: 0.05, note: 'o_min = o_min_frac * median(O_W); worlds with O<=o_min excluded from m, counted in pi_deg' },
+  77:   delta:       { value: 0.03, note: 'materiality band on m (fraction-of-oracle units); justified in delivered-value terms, NOT the 0.05 rebuild gate' },
+  78:   zero_tol:    { value: 0.005, note: 'sign_status=zero-touching when |m|<=zero_tol or CI straddles 0 within this' },
+  79:   pi_deg_warn: { value: 0.10, note: 'degeneracy_status=high above this share' },
+  80: };
+  81: 
+  82: // alpha coverage family for the magnitude (R_alpha) layer
+  83: export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
+  84: 
+  85: // ---- EVIDENCE configuration (single source of truth for the evidence run; hashed into theta_id) ----
+  86: // NOTE (2026-07-11): a v6.1 redesign is planned — report EVERYTHING via a space-filling sweep over the WHOLE
+  87: // uncertain set (incl. thesis levers a_V,b_V,s_exp; NO frozen favourable lever) + ceteris-paribus frontier locators
+  88: // (per axis: frontier location, possible values, the declared central-favourable endpoint, probable case ± CI). That rewrite is GATED on
+  89: // first anchoring each variable's probable (R_alpha) value to theory/empirics — see research/e4-plausible-anchors.md.
+  90: // Current block is the working v6 config; do not treat the swept set below as the final "everything" sweep.
+  91: export const EVIDENCE = {
+  92:   world:        { N: 1500, K: 150 },   // inside R_alpha for N,K
+  93:   probable_nw:  800,                    // worlds for the PROBABLE headline point (with CI)
+  94:   sweep_nw:     90,                     // worlds per envelope sample point
+  95:   n_env:        400,                    // uniform samples over the ANCHORED scenario envelope (defensible box, not
+  96:                                         //   arbitrary raw D_F — sampling uniform over a too-wide D_F would distort the
+  97:                                         //   sign fraction). The envelope per knob = [min,max] of the 3 anchored scenarios.
+  98:   // Held at base (not varied by the anchored scenarios): computational/cost/value-scale nuisances.
+  99:   fixed:        ['N', 'K', 'c_lo', 'c_hi', 'm_q', 's_q', 'sigma', 'sigma_v', 'v_p0', 'phi', 'h'],
+ 100: };
+ 101: 
+ 102: // ---- CLOSED output schema (embargo-critical): additionalProperties:false; cannot express D/C or ratio-parity-1 ----
+ 103: export const OUTPUT_SCHEMA = {
+ 104:   $schema: 'http://json-schema.org/draft-07/schema#',
+ 105:   type: 'object',
+ 106:   additionalProperties: false,
+ 107:   required: ['contract_version', 'theta_id', 'pi_deg', 'm_hat', 'ci', 'df_dist_share', 'df_cent_share', 'sign_status', 'materiality_status', 'degeneracy_status', 'numerical_status'],
+ 108:   properties: {
+ 109:     contract_version:   { type: 'string' },
+ 110:     theta_id:           { type: 'string' },
+ 111:     pi_deg:             { type: 'number', minimum: 0, maximum: 1 },
+ 112:     m_hat:              { type: 'number' },                 // Σ(D-C)/ΣO over kept worlds, a signed fraction of oracle
+ 113:     ci:                 { type: 'array', items: { type: 'number' }, minItems: 2, maxItems: 2 },
+ 114:     df_dist_share:      { type: 'number', minimum: 0, maximum: 1 },  // SIGN over D_F: uniform-VOLUME fraction (space-filling
+ 115:     df_cent_share:      { type: 'number', minimum: 0, maximum: 1 },  //   MC) where each institution wins — a real volume
+ 116:     df_par_share:       { type: 'number', minimum: 0, maximum: 1 },  //   fraction, not a corner count
+ 117:     df_dist_share_se:   { type: 'number', minimum: 0, maximum: 1 },  // Monte-Carlo SE of df_dist_share (binomial)
+ 118:     m_Ralpha:           { type: 'object' },                 // magnitude by alpha level (measured over joint R_alpha)
+ 119:     sign_status:        { enum: ['pos', 'neg', 'zero-touching', 'indeterminate'] },
+ 120:     materiality_status: { enum: ['material', 'negligible', 'uncertain'] },
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$i=0; Get-Content scripts/simulation/e4-v5/contract.mjs | ForEach-Object { $i++; if ($i -ge 121) { '"'{0,4}: {1}' -f "'$i, $_ } }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 175ms:
+ 121:     degeneracy_status:  { enum: ['ok', 'high', 'degenerate'] },
+ 122:     numerical_status:   { enum: ['resolved', 'unresolved'] },
+ 123:   },
+ 124:   // NOTE: there is deliberately NO field able to carry D/C, a ratio with parity 1, or an institution-performance
+ 125:   // multiplier. The render adapter additionally rejects the tokens 'x'/'×'/'D/C' in performance context.
+ 126: };
+ 127: 
+ 128: // Tokens the sole render adapter must reject in institution-performance context (ASCII x, Unicode multiplication, ratio).
+ 129: export const EMBARGO_TOKENS = ['×', 'D/C', 'C/D'];
+ 130: 
+ 131: // ---------- validation: fail-closed on unknown / unused ----------
+ 132: export function knownThetaKeys() { return new Set(Object.keys(THETA)); }
+ 133: 
+ 134: // Throw if a config carries any key not registered in THETA (unknown), or (optionally) if a registered key is
+ 135: // missing (unused-required). Engines call this before running.
+ 136: export function validateConfig(cfg, { requireAll = true } = {}) {
+ 137:   const known = knownThetaKeys();
+ 138:   const bad = Object.keys(cfg).filter((k) => !known.has(k));
+ 139:   if (bad.length) throw new Error(`[contract] unknown parameter(s) not in THETA: ${bad.join(', ')}`);
+ 140:   if (requireAll) {
+ 141:     const missing = [...known].filter((k) => !(k in cfg));
+ 142:     if (missing.length) throw new Error(`[contract] missing required parameter(s): ${missing.join(', ')}`);
+ 143:   }
+ 144:   for (const [k, v] of Object.entries(cfg)) {
+ 145:     if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`[contract] ${k} must be a finite number, got ${v}`);
+ 146:     const { dm } = THETA[k];
+ 147:     if (v < dm[0] || v > dm[1]) throw new Error(`[contract] ${k}=${v} outside mathematical domain [${dm[0]}, ${dm[1]}]`);
+ 148:   }
+ 149:   return true;
+ 150: }
+ 151: 
+ 152: // Executable-domain validation (fail closed): the printed DGP is only defined on a subset of the scalar box.
+ 153: // validateConfig checks names + scalar bounds; validateDomain checks the constraints that keep the DGP meaningful.
+ 154: export function validateDomain(cfg) {
+ 155:   const bad = [];
+ 156:   const finite = (k) => { if (!Number.isFinite(cfg[k])) bad.push(`${k} not finite`); };
+ 157:   for (const k of Object.keys(THETA)) finite(k);
+ 158:   const intPos = (k, min) => { if (!Number.isInteger(cfg[k]) || cfg[k] < min) bad.push(`${k} must be integer >= ${min}`); };
+ 159:   intPos('N', 1); intPos('K', 2);
+ 160:   const pos = (k) => { if (!(cfg[k] > 0)) bad.push(`${k} must be > 0`); };
+ 161:   pos('a_V'); pos('b_V'); pos('a_r'); pos('b_r');           // Beta shapes must be positive
+ 162:   pos('p');                                                 // engine divides by p
+ 163:   if (!(cfg.c_lo > 0)) bad.push('c_lo must be > 0');
+ 164:   if (!(cfg.c_hi > cfg.c_lo)) bad.push('c_hi must be > c_lo');
+ 165:   if (!(cfg.phi > 0 && cfg.phi < 1)) bad.push('phi must be in (0,1)');
+ 166:   const unit = (k) => { if (cfg[k] < 0 || cfg[k] > 1) bad.push(`${k} must be in [0,1]`); };
+ 167:   unit('p'); unit('beta'); unit('pi_opp'); unit('lambda');
+ 168:   if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');   // zeta is a correlation, NOT a unit interval
+ 169:   const nonneg = (k) => { if (cfg[k] < 0) bad.push(`${k} must be >= 0`); };
+ 170:   ['s_q', 'sigma', 'mu_opp', 'sigma_e', 'sigma_v', 'sigma_C', 's_exp', 'h'].forEach(nonneg);
+ 171:   if (bad.length) throw new Error(`[contract] executable-domain violation: ${bad.join('; ')}`);
+ 172:   return true;
+ 173: }
+ 174: 
+ 175: // Is cfg[k] within its declared expectable band R_alpha? (region membership, for manifests/labels — not fatal)
+ 176: export function inRalpha(cfg, keys = Object.keys(THETA)) {
+ 177:   return keys.every((k) => cfg[k] >= THETA[k].ralpha[0] && cfg[k] <= THETA[k].ralpha[1]);
+ 178: }
+ 179: 
+ 180: // FNV-1a hash of an arbitrary JSON-able manifest (no Date/Math.random).
+ 181: export function resolvedHash(manifest) {
+ 182:   const s = JSON.stringify(manifest);
+ 183:   let h = 0x811c9dc5;
+ 184:   for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+ 185:   return 'fnv1a-' + h.toString(16).padStart(8, '0');
+ 186: }
+ 187: 
+ 188: // Base config = registered default values.
+ 189: export function baseConfig() {
+ 190:   const cfg = {};
+ 191:   for (const [k, spec] of Object.entries(THETA)) cfg[k] = spec.value;
+ 192:   return cfg;
+ 193: }
+ 194: 
+ 195: // Deterministic content hash of the frozen sets (so the joint D_F/R_alpha objects and thresholds are pinned before
+ 196: // any production run). Simple FNV-1a over a canonical JSON — no Date/Math.random.
+ 197: export function contractHash() {
+ 198:   const canonical = JSON.stringify({ v: CONTRACT_VERSION, THETA, NUM, CLASSIFY, ALPHA_LEVELS, AGGREGATION, EVIDENCE });
+ 199:   let h = 0x811c9dc5;
+ 200:   for (let i = 0; i < canonical.length; i++) {
+ 201:     h ^= canonical.charCodeAt(i);
+ 202:     h = Math.imul(h, 0x01000193) >>> 0;
+ 203:   }
+ 204:   return 'fnv1a-' + h.toString(16).padStart(8, '0');
+ 205: }
+ 206: 
+ 207: export const directionalKeys = () => Object.entries(THETA).filter(([, s]) => s.kind === 'directional').map(([k]) => k);
+ 208: export const physicalKeys    = () => Object.entries(THETA).filter(([, s]) => s.kind === 'physical').map(([k]) => k);
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = '"'evidence.mjs','frontier.mjs','scenario-configs.mjs','scenarios.mjs','schema.mjs','test.mjs','theorem-check.mjs'; foreach ("'$name in $files) { Write-Output "===== scripts/simulation/e4-v5/$name ====="; Get-Content -Raw "scripts/simulation/e4-v5/$name" }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 175ms:
+===== scripts/simulation/e4-v5/evidence.mjs =====
+// E4 v1.14 — the exclusive evidence path (`npm run e4:evidence`). v7: the GLOBAL "report everything" object is a
+// uniform Monte-Carlo over the ANCHORED scenario envelope (per knob = [min,max] of the three anchored scenarios in
+// research/e4-plausible-anchors.md) — a DEFENSIBLE box, not the arbitrary raw D_F (uniform over a too-wide D_F would
+// distort the sign fraction). It reports: the PROBABLE headline point m ± 95% CI, and across the plausible envelope
+// the DISTRIBUTION of m (p5/p50/p95) and the VOLUME fraction where each institution wins (with binomial SE). Sign is
+// classified from those volume fractions. Every output byte is routed through the sole embargo adapter.
+import { fileURLToPath } from 'node:url';
+import { THETA, NUM, CLASSIFY, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
+import { estimand, makeRng } from './engine.mjs';
+import { PRO_CENTRAL, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
+
+// targeted probe of the coordinated central-favourable region: sample within `frac` of the way from PRO_CENTRAL
+// toward PROBABLE, report the fraction of draws the central wins (the product-box sampler misses this region).
+function centralRegionProbe(nWorlds, n, frac) {
+  const base = { ...baseConfig(), ...WORLD };
+  const keys = Object.keys(PROBABLE);
+  const rng = makeRng((NUM.seed.value ^ 0x2545f491) >>> 0);
+  let cen = 0, ok = 0;
+  for (let i = 0; i < n; i++) {
+    const cfg = { ...base, ...PRO_CENTRAL };
+    for (const k of keys) cfg[k] = PRO_CENTRAL[k] + rng.u() * frac * (PROBABLE[k] - PRO_CENTRAL[k]);
+    const r = estimand(cfg, { nWorlds, seed: NUM.seed.value });
+    if (!r.enough || !Number.isFinite(r.m_hat)) continue;
+    ok++; if (r.m_hat < -CLASSIFY.zero_tol.value) cen++;
+  }
+  return { cenFrac: ok ? cen / ok : NaN, cen, ok };
+}
+import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
+import { validateOutput } from './schema.mjs';
+
+const SEED = NUM.seed.value;
+const SWEPT = Object.keys(PROBABLE);   // the knobs varied by the anchored scenarios
+const ENV = Object.fromEntries(SWEPT.map((k) => {
+  const vals = [PRO_CENTRAL[k], PROBABLE[k], PRO_DIST[k]].filter((v) => v !== undefined);
+  return [k, [Math.min(...vals), Math.max(...vals)]];
+}));
+
+const MANIFEST = {
+  contract_version: CONTRACT_VERSION, contract_hash: contractHash(), world: WORLD, seed: SEED,
+  probable_nw: EVIDENCE.probable_nw, sweep_nw: EVIDENCE.sweep_nw, n_env: EVIDENCE.n_env,
+  swept: SWEPT, envelope: ENV, fixed: EVIDENCE.fixed,
+  o_min_frac: CLASSIFY.o_min_frac.value, delta: CLASSIFY.delta.value, zero_tol: CLASSIFY.zero_tol.value,
+  estimand: 'ratio-of-sums Sum(D-C)/Sum(O) over kept worlds; headline = PROBABLE scenario m+-CI; global = uniform MC over the anchored envelope -> sign VOLUME fractions (with SE) + m distribution p5/p50/p95',
+};
+const THETA_ID = 'e4v7+' + resolvedHash(MANIFEST);
+
+const pctl = (arr, q) => { if (!arr.length) return NaN; const a = [...arr].sort((x, y) => x - y); const i = Math.min(a.length - 1, Math.max(0, Math.round(q * (a.length - 1)))); return a[i]; };
+
+// uniform Monte-Carlo over the anchored envelope: fraction of samples where each arm wins (volume, with SE) + m dist.
+function envelopeSweep(nWorlds, n) {
+  const base = { ...baseConfig(), ...WORLD };
+  const rng = makeRng((SEED ^ 0x5bd1e995) >>> 0);
+  const ms = []; let pos = 0, neg = 0, par = 0, resolved = 0;
+  const zt = CLASSIFY.zero_tol.value;
+  for (let i = 0; i < n; i++) {
+    const cfg = { ...base, ...PROBABLE };
+    for (const k of SWEPT) cfg[k] = ENV[k][0] + (ENV[k][1] - ENV[k][0]) * rng.u();
+    const r = estimand(cfg, { nWorlds, seed: SEED });
+    if (!r.enough || !Number.isFinite(r.m_hat)) continue;
+    resolved++; ms.push(r.m_hat);
+    if (r.m_hat > zt) pos++; else if (r.m_hat < -zt) neg++; else par++;
+  }
+  const share = (c) => (resolved ? c / resolved : NaN);
+  const se = (p) => (resolved ? Math.sqrt(Math.max(0, p * (1 - p)) / resolved) : NaN);
+  return { resolved, n, distShare: share(pos), centShare: share(neg), parShare: share(par),
+    distShareSE: se(share(pos)), p5: pctl(ms, 0.05), p50: pctl(ms, 0.50), p95: pctl(ms, 0.95),
+    enough: resolved >= EVIDENCE.n_env * 0.5 };
+}
+
+export function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
+  const d = CLASSIFY.delta.value;
+  let sign_status;
+  if (dfEnv.distShare > 0 && dfEnv.centShare > 0) sign_status = 'indeterminate';
+  else if (dfEnv.distShare > 0 && dfEnv.centShare === 0) sign_status = 'pos';
+  else if (dfEnv.centShare > 0 && dfEnv.distShare === 0) sign_status = 'neg';
+  else sign_status = 'zero-touching';
+  const [rl, rh] = ralphaHeadline;
+  let materiality_status;
+  if (rl > d || rh < -d) materiality_status = 'material';
+  else if (rl > -d && rh < d) materiality_status = 'negligible';
+  else materiality_status = 'uncertain';
+  const degeneracy_status = pi_deg >= 1 ? 'degenerate' : (pi_deg > CLASSIFY.pi_deg_warn.value ? 'high' : 'ok');
+  const numerical_status = (enough && dfEnv.enough && (point.ci[1] - point.ci[0]) < d) ? 'resolved' : 'unresolved';
+  return { sign_status, materiality_status, degeneracy_status, numerical_status };
+}
+
+export function buildEvidence() {
+  const base = { ...baseConfig(), ...WORLD };
+  if (!inRalpha(base, ['N', 'K'])) throw new Error('[evidence] world N/K outside declared R_alpha');
+  const pt = estimand({ ...base, ...PROBABLE }, { nWorlds: EVIDENCE.probable_nw, seed: SEED });   // PROBABLE headline
+  if (!pt.enough) throw new Error(`[evidence] probable point insufficient: ${pt.n_kept} kept — aborting fail-closed`);
+
+  const env = envelopeSweep(EVIDENCE.sweep_nw, EVIDENCE.n_env);
+  if (env.resolved === 0) throw new Error('[evidence] envelope sweep has no resolved samples — aborting fail-closed');
+  const centralRegion = centralRegionProbe(EVIDENCE.sweep_nw, 40, 0.2);   // 20%-inward neighbourhood of PRO_CENTRAL
+
+  const st = classify({ point: pt, dfEnv: env, ralphaHeadline: pt.ci, pi_deg: pt.pi_deg, enough: pt.enough });
+  // the product-box sampler is Core-v0-heavy, but a coordinated central-favourable region exists (targeted probe) —
+  // so the GLOBAL sign is region-dependent (indeterminate), not the box sampler's one-sided result.
+  if (centralRegion.cenFrac > 0 && env.distShare > 0) st.sign_status = 'indeterminate';
+  const out = {
+    contract_version: CONTRACT_VERSION, theta_id: THETA_ID, pi_deg: pt.pi_deg,
+    m_hat: pt.m_hat, ci: pt.ci,
+    df_dist_share: env.distShare, df_cent_share: env.centShare, df_par_share: env.parShare, df_dist_share_se: env.distShareSE,
+    ...st,
+  };
+  const errs = validateOutput(out);
+  if (errs.length) throw new Error('[evidence] output invalid: ' + errs.join('; '));
+  return { out, env, pt, centralRegion, manifest: MANIFEST };
+}
+
+function main() {
+  const { out, env, pt, centralRegion } = buildEvidence();
+  const P = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
+  const sh = (x) => (100 * x).toFixed(0) + '%';
+  const ruleOf3 = env.centShare === 0 ? (3 / env.resolved) : NaN;   // one-sided 95% upper bound when 0 observed
+  const text = [
+    `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
+    `  PROBABLE scenario (source-motivated declared reference) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
+    `  finite product-box sample of the declared envelope (${env.resolved}/${env.n} draws, knobs independent uniform):`,
+    `    m distribution: p5 ${P(env.p5)} · median ${P(env.p50)} · p95 ${P(env.p95)}`,
+    `    Core v0 wins ${env.resolved - Math.round(env.centShare * env.resolved) - Math.round(env.parShare * env.resolved)}/${env.resolved} draws · central ${Math.round(env.centShare * env.resolved)} · parity ${Math.round(env.parShare * env.resolved)}` +
+      (Number.isFinite(ruleOf3) ? `   (0 central: one-sided 95% upper bound on central-win prob ≈ ${sh(ruleOf3)}, rule of three — NOT zero)` : ''),
+    `  targeted probe of the coordinated central-favourable region (20% inward of PRO-CENTRAL): central wins ${centralRegion.cen}/${centralRegion.ok} draws`,
+    `    ⇒ a real central-winning region EXISTS off the independent-box sample; the GLOBAL winner is region-dependent, not one-sided`,
+    `  status → sign:${out.sign_status} (region-dependent)  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
+    `  π_deg: ${sh(out.pi_deg)}   contract hash: ${MANIFEST.contract_hash}`,
+    `  (named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)`,
+  ].join('\n');
+  assertNoEmbargoedTokens(text);
+  console.log(text);
+}
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
+
+===== scripts/simulation/e4-v5/frontier.mjs =====
+// E4 v1.14 — ceteris-paribus FRONTIER locators. Hold all knobs at the PROBABLE scenario, sweep ONE axis across its
+// physically-possible range, and locate where m = D/O − C/O crosses 0 (the parity frontier). Report the frontier
+// location, the probable reference value marked on the axis, and the result at that value. Together with the declared
+// combined path, this shows where a measured target configuration would lie relative to the reported frontiers.
+// Run: npm run e4:frontier
+import { baseConfig, THETA } from './contract.mjs';
+import { safeLog } from './adapter.mjs';
+import { estimand } from './engine.mjs';
+import { PROBABLE, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
+
+const NW = 400, STEPS = 15;
+const pct = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(0) + '%';
+
+// axes to locate, with a plotting range (clipped from D_F to a legible span) and the plausible value + who-wins-which-way
+const AXES = [
+  { k: 's_exp',  lo: 0.2, hi: 8,   plaus: PROBABLE.s_exp,  note: 'central harm myopia (higher = blinder on the long tail)' },
+  { k: 'b_H_C',  lo: 0.0, hi: 2.0, plaus: PROBABLE.b_H_C,  note: 'central harm detection (higher = less myopic)' },
+  { k: 'p',      lo: 0.02, hi: 0.6, plaus: PROBABLE.p,     note: 'citizen participation (higher = denser distributed signal)' },
+  { k: 'beta',   lo: 0.0, hi: 0.95, plaus: PROBABLE.beta,  note: 'silencing of opponents (higher = weaker distributed harm-voice)' },
+  { k: 'a_V',    lo: 0.2, hi: 3.0, plaus: PROBABLE.a_V,    note: 'visibility tail (higher a_V = flatter tail, more projects visible)' },
+];
+
+const base = { ...baseConfig(), ...WORLD, ...PROBABLE };
+safeLog('E4 — ceteris-paribus frontiers (others held at the PROBABLE scenario). m = D/O − C/O, parity at 0.\n');
+
+for (const ax of AXES) {
+  const xs = [], ms = [];
+  for (let i = 0; i < STEPS; i++) {
+    const x = ax.lo + (ax.hi - ax.lo) * i / (STEPS - 1);
+    const m = estimand({ ...base, [ax.k]: x }, { nWorlds: NW }).m_hat;
+    xs.push(x); ms.push(m);
+  }
+  // find the frontier: first adjacent pair whose sign changes; linear-interpolate the crossing
+  let frontier = null;
+  for (let i = 0; i < STEPS - 1; i++) {
+    if (Number.isFinite(ms[i]) && Number.isFinite(ms[i + 1]) && (ms[i] > 0) !== (ms[i + 1] > 0)) {
+      frontier = xs[i] + (0 - ms[i]) * (xs[i + 1] - xs[i]) / (ms[i + 1] - ms[i]);
+      break;
+    }
+  }
+  const mAtPlaus = estimand({ ...base, [ax.k]: ax.plaus }, { nWorlds: NW }).m_hat;
+  safeLog(`■ ${ax.k}  — ${ax.note}`);
+  if (frontier === null) {
+    const who = ms[Math.floor(STEPS / 2)] > 0 ? 'Core v0 wins across the whole plotted range' : 'central wins across the whole plotted range';
+    safeLog(`    frontier: none in [${ax.lo}, ${ax.hi}] — ${who}`);
+  } else {
+    safeLog(`    frontier (m=0) at ${ax.k} ≈ ${frontier.toFixed(2)}   |   plausible value = ${ax.plaus}  →  m = ${pct(mAtPlaus)} (Core v0 ${mAtPlaus > 0 ? 'wins' : 'loses'} at the reference point)`);
+  }
+  // compact curve
+  safeLog('    m across axis: ' + xs.map((x, i) => `${x.toFixed(2)}:${pct(ms[i])}`).join('  '));
+  safeLog('');
+}
+// ---- combined scenario-path frontier: interpolate PROBABLE -> PRO_CENTRAL (the declared central-favourable endpoint),
+// locate m=0. t=0 is the probable scenario; t=1 is the declared central-favourable endpoint (a declared endpoint, not
+// beyond-realistic). The crossing t* tells how far toward central-favourable conditions parity is reached. ----
+import { PRO_CENTRAL } from './scenario-configs.mjs';
+const compKeys = Object.keys(PRO_CENTRAL).filter((k) => PRO_CENTRAL[k] !== PROBABLE[k]);
+const clampDF = (k, v) => Math.max(THETA[k].df[0], Math.min(THETA[k].df[1], v));
+const lerp = (t) => { const c = { ...base }; for (const k of compKeys) c[k] = clampDF(k, PROBABLE[k] + t * (PRO_CENTRAL[k] - PROBABLE[k])); return c; };
+safeLog('■ probable → declared central-favourable endpoint (combined path; t in [0,1] is the declared interpolation segment)');
+const ts = [], tms = [];
+for (let i = 0; i <= 16; i++) { const t = i / 8; const m = estimand(lerp(t), { nWorlds: NW }).m_hat; ts.push(t); tms.push(m); }
+let tf = null;
+for (let i = 0; i < ts.length - 1; i++) if ((tms[i] > 0) !== (tms[i + 1] > 0)) { tf = ts[i] + (0 - tms[i]) * (ts[i + 1] - ts[i]) / (tms[i + 1] - tms[i]); break; }
+safeLog(`    t=0 probable scenario → t=1 declared central-favourable endpoint`);
+safeLog(`    m across t: ` + ts.filter((_, i) => i % 2 === 0).map((t, i) => `t=${t.toFixed(2)}:${pct(tms[i * 2])}`).join('  '));
+safeLog(tf === null
+  ? `    frontier: none in t∈[0,2] — one endpoint does not cross parity`
+  : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  conditions ${tf < 1 ? `~${Math.round(tf * 100)}% of the way from probable to the declared central-favourable endpoint flip the winner to the central (within the declared interpolation segment)` : `must exceed the declared central-favourable endpoint (t>1)`}`);
+safeLog('');
+safeLog('Read: none of the FIVE plotted one-factor slices flips the winner from the probable scenario over its plotted');
+safeLog('range (a limited robustness statement over those five slices, NOT over all parameters). The frontier is reached');
+safeLog('on the combined path within the declared interpolation segment. NOTE: t is a linear mix of heterogeneous knobs,');
+safeLog('an illustrative path — not a calibrated competence scale.');
+
+===== scripts/simulation/e4-v5/scenario-configs.mjs =====
+// E4 v1.14 — the anchored scenario configs. SINGLE SOURCE OF TRUTH for the scenario points (the docs reference these,
+// they do NOT duplicate the values — this reduces the doc↔code fork risk Codex v7 caught; the sign-ordering test
+// pins executable outcome ordering ONLY, not exact configs/labels/prose). Anchors + justification per
+// knob: research/e4-plausible-anchors.md.
+//
+// FOUR substantive declared scenarios + ONE diagnostic contrast (do not conflate):
+//   PRO_CENTRAL   = a declared central-favourable ENDPOINT (every knob central-favourable; some sit outside the
+//                   registered expectable bands). → the central GENUINELY WINS here (levels the field for the central).
+//   NO_MYOPIA     = a harm-aware AND otherwise-competent central BUNDLE (harm sight + unbiased + precise + no credit).
+//                   NOT a myopia isolation. This is the CONTINUITY anchor to the earlier symmetry-gate ~0.025
+//                   near-parity (that gate equips the central with competent harm-aware appraisal), reached at ~+6%.
+//   PROBABLE      = the source-motivated declared reference point (~+46.6%).
+//   PRO_DIST      = the distributed arm's favourable case (~+200%).
+//   MYOPIA_OFF    = a DIAGNOSTIC CONTRAST (not a scenario): PROBABLE with ONLY the two harm-gate coords changed
+//                   (s_exp, b_H_C). Sequential, path-dependent attribution: harm-myopia ALONE moves +46.6% → +30.4%
+//                   (16.2 of the 40.5-pt decline to +6.1%, ~40%); the further step to the NO_MYOPIA bundle is ~60%.
+export const PROBABLE = { a_V: 0.5, b_V: 3.5, p: 0.15, a_r: 1.5, b_r: 8, pi_opp: 0.15, mu_opp: 3.0,
+  s_exp: 2.5, b_H_C: 0.5, w: 0.5, a: 0.2, b: 0.9, beta: 0.35, lambda: 0.15, zeta: 0.6, gamma: 0.5,
+  sigma_e: 0.5, sigma_C: 0.5 };
+// Declared central-favourable endpoint (every knob central-favourable). Winner: central (~ −30%).
+export const PRO_CENTRAL = { a_V: 1.0, b_V: 1.5, p: 0.05, a_r: 0.8, b_r: 14, pi_opp: 0.03, mu_opp: 1.5,
+  s_exp: 0.5, b_H_C: 1.2, w: 0.1, a: 0.0, b: 1.0, beta: 0.8, lambda: 0.0, zeta: 0.85, gamma: 0.3,
+  sigma_e: 1.2, sigma_C: 0.2 };
+// GENUINE myopia-only contrast: PROBABLE with ONLY the two harm-gate coordinates changed. Winner: Core v0 (~ +30%).
+export const MYOPIA_OFF = { ...PROBABLE, s_exp: 0.5, b_H_C: 1.3 };
+// Harm-aware AND competent central bundle (NOT myopia-isolation): PROBABLE + harm sight + unbiased + precise + no
+// credit. Continuity anchor to the symmetry-gate ~0.025 near-parity. Winner: near-parity (~ +6%).
+export const NO_MYOPIA = { ...PROBABLE, s_exp: 0.5, b_H_C: 1.3, w: 0.1, a: 0.0, b: 1.0, lambda: 0.0, zeta: 0.85, sigma_C: 0.35 };
+// Distributed arm's favourable case (not stacked to catastrophe).
+export const PRO_DIST = { a_V: 0.25, b_V: 4.5, p: 0.40, a_r: 2.5, b_r: 6, pi_opp: 0.28, mu_opp: 3.5,
+  s_exp: 4.0, b_H_C: 0.25, w: 1.1, a: 0.4, b: 0.75, beta: 0.12, lambda: 0.30, zeta: 0.4, gamma: 0.8,
+  sigma_e: 0.25, sigma_C: 0.7 };
+export const SCENARIO_WORLD = { N: 1500, K: 150 };
+
+===== scripts/simulation/e4-v5/scenarios.mjs =====
+// E4 v1.14 — FOUR declared scenarios + ONE diagnostic contrast (research/e4-plausible-anchors.md; values in
+// scenario-configs.mjs). Each is a full config; we report m ± 95% CI. PRO-CENTRAL = declared central-favourable
+// endpoint (central wins). NO-MYOPIA (bundle) = continuity anchor to the ~0.025 gate. MYOPIA-OFF = diagnostic
+// harm-only contrast. PROBABLE = source-motivated reference. PRO-DISTRIBUTED = distributed-favourable.
+import { baseConfig } from './contract.mjs';
+import { safeLog } from './adapter.mjs';
+import { estimand } from './engine.mjs';
+import { PRO_CENTRAL, NO_MYOPIA, MYOPIA_OFF, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
+
+const NW = 800;
+const pct = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
+function run(name, over) {
+  const r = estimand({ ...baseConfig(), ...WORLD, ...over }, { nWorlds: NW });
+  safeLog(`${name.padEnd(16)} m = ${pct(r.m_hat).padStart(8)}  95% CI [${pct(r.ci[0])}, ${pct(r.ci[1])}]   Core v0 delivers ${pct(r.dOverO)} of oracle · central ${pct(r.cOverO)}`);
+  return r;
+}
+
+safeLog('E4 — anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0)\n');
+run('PRO-CENTRAL', PRO_CENTRAL);      // declared central-favourable endpoint — central WINS
+run('PROBABLE', PROBABLE);           // source-motivated declared reference
+run('MYOPIA-OFF', MYOPIA_OFF);       // GENUINE myopia-only contrast (only s_exp,b_H_C change) — attributes the harm channel ALONE
+run('NO-MYOPIA', NO_MYOPIA);         // harm-aware AND competent bundle — continuity anchor to the ~0.025 gate
+run('PRO-DISTRIBUTED', PRO_DIST);
+safeLog('\nPRO-CENTRAL = a declared central-favourable endpoint (every knob central-favourable) → the central wins.');
+safeLog('Sequential attribution (path-dependent, nonlinear model): harm-myopia ALONE (MYOPIA-OFF, only s_exp,b_H_C)');
+safeLog('reduces the probable gap +46.6% → +30.4%, i.e. 16.2 of the 40.5-pt decline to +6.1% (~40%); the further step to');
+safeLog('the NO-MYOPIA bundle (unbiased/precise/no-credit) reduces it 24.3 pts (~60%). Read C/O < 0 as the central destroying value.');
+
+===== scripts/simulation/e4-v5/schema.mjs =====
+// E4 v1.14 — minimal closed-schema validator (no external deps). Enforces additionalProperties:false, required
+// fields, and enums from the contract's OUTPUT_SCHEMA. The schema deliberately has NO field able to carry D/C or a
+// ratio-with-parity-1; this validator guarantees no extra field sneaks one in.
+import { OUTPUT_SCHEMA } from './contract.mjs';
+
+export function validateOutput(obj) {
+  const S = OUTPUT_SCHEMA, errs = [];
+  if (typeof obj !== 'object' || obj === null) return ['output is not an object'];
+  for (const k of Object.keys(obj)) {
+    if (!(k in S.properties)) errs.push(`forbidden extra field: ${k}`); // additionalProperties:false
+  }
+  for (const k of S.required) if (!(k in obj)) errs.push(`missing required field: ${k}`);
+  for (const [k, spec] of Object.entries(S.properties)) {
+    if (!(k in obj)) continue;
+    const v = obj[k];
+    if (spec.enum && !spec.enum.includes(v)) errs.push(`${k}=${JSON.stringify(v)} not in enum ${JSON.stringify(spec.enum)}`);
+    if (spec.type === 'number' && typeof v !== 'number') errs.push(`${k} must be number`);
+    if (spec.type === 'string' && typeof v !== 'string') errs.push(`${k} must be string`);
+    if (spec.type === 'array') {
+      if (!Array.isArray(v)) errs.push(`${k} must be array`);
+      else if (spec.minItems && v.length < spec.minItems) errs.push(`${k} too short`);
+      else if (spec.maxItems && v.length > spec.maxItems) errs.push(`${k} too long`);
+    }
+    if (spec.minimum !== undefined && v < spec.minimum) errs.push(`${k} below minimum`);
+    if (spec.maximum !== undefined && v > spec.maximum) errs.push(`${k} above maximum`);
+    // recursive finiteness: no NaN/Infinity may serialize
+    if (spec.type === 'number' && !Number.isFinite(v)) errs.push(`${k} must be finite (got ${v})`);
+    if (spec.type === 'array') for (const el of (Array.isArray(v) ? v : [])) if (!Number.isFinite(el)) errs.push(`${k} has non-finite element`);
+  }
+  // m_Ralpha nested object: each entry must be a [finite, finite] interval with lo<=hi
+  if (obj.m_Ralpha && typeof obj.m_Ralpha === 'object') {
+    for (const [al, iv] of Object.entries(obj.m_Ralpha)) {
+      if (!Array.isArray(iv) || iv.length !== 2 || !iv.every(Number.isFinite)) errs.push(`m_Ralpha[${al}] must be [finite,finite]`);
+      else if (iv[0] > iv[1]) errs.push(`m_Ralpha[${al}] inverted`);
+    }
+  }
+  return errs;
+}
+
+===== scripts/simulation/e4-v5/test.mjs =====
+// E4 v1.14 — acceptance fixtures (capability criterion) + embargo self-tests. Run: npm run e4:test
+// Proves the pipeline SURFACES a strong distributed win, a strong central win, and a null when each is the ground
+// truth — i.e. results are surfaced, not selected-in or washed out. Plus: the closed schema + embargo reject
+// forbidden multiplier/ratio notation.
+import { execSync } from 'node:child_process';
+import { baseConfig, validateConfig } from './contract.mjs';
+import { estimand } from './engine.mjs';
+import { assertNoEmbargoedTokens } from './adapter.mjs';
+import { validateOutput } from './schema.mjs';
+import { classify } from './evidence.mjs';
+
+const WORLD = { N: 900, K: 120 };
+const NW = 500;
+let ok = true;
+const check = (name, cond, detail) => { console.log(`${cond ? 'PASS' : 'FAIL'}  ${name}${detail ? '  — ' + detail : ''}`); ok = ok && cond; };
+const m = (over) => estimand({ ...baseConfig(), ...WORLD, ...over }, { nWorlds: NW }).m_hat;
+
+// ---- Acceptance fixtures: ground truth known by construction ----
+// STRONG DISTRIBUTED: central near-blind on the long tail (s_exp high), modest voice suppression => distributed wins big.
+{
+  const val = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, lambda: 0.15 });
+  check('FIX strong-distributed => m materially > 0', val > 0.10, `m=${val.toFixed(3)}`);
+}
+// STRONG CENTRAL: central competent (gate=1, sees harm, low noise, no credit tilt), distributed crippled
+// (opponents silenced, low participation, noisy) => central wins.
+{
+  const val = m({ s_exp: 0, b_H_C: 1, a: 0, w: 0, b: 1, sigma_C: 0.05, lambda: 0, beta: 0.9, p: 0.05, sigma_e: 1.5 });
+  check('FIX strong-central => m < 0 (central wins)', val < -0.03, `m=${val.toFixed(3)}`);
+}
+// NULL: both arms near the oracle => negligible gap.
+{
+  const val = m({ s_exp: 0, b_H_C: 1, a: 0, w: 0, b: 1, sigma_C: 0.02, lambda: 0, beta: 0, p: 1, sigma_e: 0 });
+  check('FIX null => |m| negligible', Math.abs(val) < 0.03, `m=${val.toFixed(4)}`);
+}
+// BOUNDARY: a genuine near-parity case (the NO_MYOPIA continuity anchor sits near the frontier).
+{
+  const { NO_MYOPIA } = await import('./scenario-configs.mjs');
+  const val = m(NO_MYOPIA);
+  check('FIX boundary (near-parity) => |m| small', Number.isFinite(val) && Math.abs(val) < 0.15, `m=${val.toFixed(3)}`);
+}
+
+// ---- Attribution: the distributed advantage must be driven by harm myopia ----
+// Removing opposition (pi_opp=0 => no harm to be blind to) should SHRINK the distributed advantage.
+{
+  const withHarm = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, pi_opp: 0.25 });
+  const noHarm  = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, pi_opp: 0.0 });
+  check('ATTRIB harm channel drives the advantage (m falls when pi_opp->0)', withHarm > noHarm + 0.02, `m(pi_opp=.25)=${withHarm.toFixed(3)} > m(pi_opp=0)=${noHarm.toFixed(3)}`);
+}
+
+// ---- State machine (classify) tested DIRECTLY, not bypassed ----
+const pt = (ci) => ({ ci });
+check('CLASSIFY both-sign corners => indeterminate', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 0.6, centShare: 0.3 }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: true }).sign_status === 'indeterminate');
+check('CLASSIFY all-distributed corners => pos', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: true }).sign_status === 'pos');
+check('CLASSIFY R_alpha within band => negligible', classify({ point: pt([-0.01, 0.01]), dfEnv: { distShare: 0.5, centShare: 0.5 }, ralphaHeadline: [-0.01, 0.02], pi_deg: 0, enough: true }).materiality_status === 'negligible');
+check('CLASSIFY R_alpha straddling delta => uncertain', classify({ point: pt([0, 0.2]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.01, 0.2], pi_deg: 0, enough: true }).materiality_status === 'uncertain');
+check('CLASSIFY pi_deg=1 => degenerate', classify({ point: pt([0, 0]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.1, 0.2], pi_deg: 1, enough: false }).degeneracy_status === 'degenerate');
+check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 1, centShare: 0, enough: false }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: false }).numerical_status === 'unresolved');
+
+// ---- Legacy release guard: the retired engine must refuse to run without the reproduction flag ----
+{
+  let guarded = false;
+  try { execSync('node scripts/simulation/e4-v4-symmetric-frontier.mjs', { stdio: 'pipe' }); }
+  catch (e) { guarded = e.status === 2; }
+  check('LEGACY guard blocks e4-v4 from running (would feed retired D/C)', guarded);
+}
+// ---- Universal legacy guard: EVERY retired top-level sim engine must carry the guard (rev-repro H3) ----
+{
+  const { readdirSync, readFileSync } = await import('node:fs');
+  const dir = 'scripts/simulation';
+  const unguarded = readdirSync(dir).filter((f) => f.endsWith('.mjs'))
+    .filter((f) => !readFileSync(`${dir}/${f}`, 'utf8').includes('E4_ALLOW_LEGACY'));
+  check('LEGACY all retired top-level engines are guarded', unguarded.length === 0, unguarded.length ? 'UNGUARDED: ' + unguarded.join(', ') : `${readdirSync(dir).filter((f) => f.endsWith('.mjs')).length} guarded`);
+}
+
+// ---- Scenario integrity: pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose. ----
+{
+  const { PRO_CENTRAL, NO_MYOPIA, MYOPIA_OFF, PROBABLE, PRO_DIST } = await import('./scenario-configs.mjs');
+  const sm = (over) => estimand({ ...baseConfig(), N: 800, K: 120, ...over }, { nWorlds: 300 }).m_hat;
+  const mc = sm(PRO_CENTRAL), mn = sm(NO_MYOPIA), mo = sm(MYOPIA_OFF), mp = sm(PROBABLE), md = sm(PRO_DIST);
+  check('SCENARIO ordering pinned (central < no-myopia < myopia-off < probable < distributed)',
+    mc < -0.05 && mn > 0 && mn < mo && mo < mp && mp > 0.30 && md > mp,
+    `PRO_CENTRAL=${mc.toFixed(2)} NO_MYOPIA=${mn.toFixed(2)} MYOPIA_OFF=${mo.toFixed(2)} PROBABLE=${mp.toFixed(2)} PRO_DIST=${md.toFixed(2)}`);
+}
+
+// ---- Embargo: reject multiplier/ratio notation in rendered text ----
+const rejects = (txt) => { try { assertNoEmbargoedTokens(txt); return false; } catch { return true; } };
+check('EMBARGO rejects "2.2x"', rejects('gain of 2.2x'));
+check('EMBARGO rejects Unicode "2.2×"', rejects('gain of 2.2×'));
+check('EMBARGO rejects Cyrillic "2.2х"', rejects('gain of 2.2х'));
+check('EMBARGO rejects "✕" cross', rejects('gain of 2.2✕'));
+check('EMBARGO rejects "2.2-fold"', rejects('a 2.2-fold gain'));
+check('EMBARGO rejects "2.2 times"', rejects('2.2 times more value'));
+check('EMBARGO rejects word "two-fold"', rejects('a two-fold advantage'));
+check('EMBARGO rejects "twice"', rejects('twice as much value'));
+check('EMBARGO rejects "double"', rejects('double the delivered value'));
+check('EMBARGO rejects lowercase "d/c"', rejects('the d/c ratio'));
+check('EMBARGO rejects zero-width-split "2.2​x"', rejects('gain of 2.2​x'));
+check('EMBARGO rejects "fourfold"', rejects('a fourfold increase'));
+check('EMBARGO rejects "two times"', rejects('two times more value'));
+check('EMBARGO rejects HTML "&times;"', rejects('gain of 2.2&times;'));
+check('EMBARGO rejects word-joiner-split "2.2⁠x"', rejects('gain of 2.2⁠x'));
+check('EMBARGO rejects "D/C"', rejects('ratio D/C = 1.4'));
+check('EMBARGO allows clean percent text', !rejects('m̂ is 45.7% of the oracle, parity at 0'));
+
+// ---- Closed schema: reject an extra field / missing required ----
+const CLEAN = { contract_version: 'x', theta_id: 't', pi_deg: 0, m_hat: 0.1, ci: [0.05, 0.15], df_dist_share: 0.7, df_cent_share: 0.3, sign_status: 'indeterminate', materiality_status: 'material', degeneracy_status: 'ok', numerical_status: 'resolved' };
+check('SCHEMA rejects extra field (ratio smuggling)', validateOutput({ ...CLEAN, ratio_D_over_C: 2.2 }).length > 0);
+check('SCHEMA rejects non-finite m_hat', validateOutput({ ...CLEAN, m_hat: Infinity }).length > 0);
+check('SCHEMA accepts a clean output', validateOutput(CLEAN).length === 0);
+
+// ---- Fail-closed config: unknown parameter throws ----
+{
+  let threw = false;
+  try { validateConfig({ ...baseConfig(), bogus_param: 1 }); } catch { threw = true; }
+  check('CONTRACT fail-closed on unknown parameter', threw);
+}
+
+console.log(`\n${ok ? 'ALL TESTS PASSED' : 'SOME TESTS FAILED'}`);
+process.exit(ok ? 0 : 1);
+
+===== scripts/simulation/e4-v5/theorem-check.mjs =====
+// E4 v1.14 — regression test for the analytic BENCHMARK (joint-normal fixed-threshold selection lemma).
+// Lemma: for (S, X) jointly normal and top-fraction-q selection by X at population threshold t = μ_X + σ_X·z_q,
+//   V := E[S·1{X>t}] = q·μ_S + φ(z_q)·Cov(S,X)/sd(X).
+// Parity of two selectors X_C, X_D ⇔ Cov(S,X_D)/sd(X_D) = Cov(S,X_C)/sd(X_C).
+// This checks the analytic identity that underpins the numerical frontier (the full engine adds eligibility, costs,
+// credit — the theorem is the limiting case). Run: node scripts/simulation/e4-v5/theorem-check.mjs
+import { makeRng } from './engine.mjs';
+
+const PHI = (z) => Math.exp(-0.5 * z * z) / Math.sqrt(2 * Math.PI);
+// inverse normal CDF (Acklam) for z_q = Phi^{-1}(1-q)
+function invNorm(p) {
+  const a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02, 1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00];
+  const b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02, 6.680131188771972e+01, -1.328068155288572e+01];
+  const c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00, -2.549732539343734e+00, 4.374664141464968e+00, 2.938163982698783e+00];
+  const d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00, 3.754408661907416e+00];
+  const pl = 0.02425, ph = 1 - pl; let q, r;
+  if (p < pl) { q = Math.sqrt(-2 * Math.log(p)); return (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1); }
+  if (p <= ph) { q = p - 0.5; r = q * q; return (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q / (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1); }
+  q = Math.sqrt(-2 * Math.log(1 - p)); return -(((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1);
+}
+
+const rng = makeRng(4242);
+const N = 400000, q = 0.3;
+const muS = 1.2, sigS = 1.0;
+// X = alpha + b*S + noise  => Cov(S,X)=b*sigS^2, Var(X)=b^2 sigS^2 + sigN^2
+const alpha = 0.5, b = 0.8, sigN = 0.6;
+const S = new Float64Array(N), X = new Float64Array(N);
+for (let i = 0; i < N; i++) { const s = muS + sigS * rng.normal(); S[i] = s; X[i] = alpha + b * s + sigN * rng.normal(); }
+
+const covSX = b * sigS * sigS, sdX = Math.sqrt(b * b * sigS * sigS + sigN * sigN);
+const muX = alpha + b * muS;
+const zq = invNorm(1 - q), t = muX + sdX * zq;
+const analyticV = q * muS + PHI(zq) * covSX / sdX;
+
+// empirical V = mean over ALL candidates of S*1{X>t}
+let sumSel = 0, nSel = 0;
+for (let i = 0; i < N; i++) if (X[i] > t) { sumSel += S[i]; nSel++; }
+const empiricalV = sumSel / N;
+
+// Monte-Carlo SE of empirical V
+let v2 = 0; for (let i = 0; i < N; i++) { const g = X[i] > t ? S[i] : 0; v2 += (g - empiricalV) * (g - empiricalV); }
+const se = Math.sqrt(v2 / N / N);
+const zscore = Math.abs(empiricalV - analyticV) / se;
+
+console.log('E4 analytic benchmark — joint-normal fixed-threshold lemma');
+console.log(`  Cov(S,X)/sd(X) = ${(covSX / sdX).toFixed(4)}   z_q=${zq.toFixed(3)}   selected share=${(nSel / N).toFixed(3)} (target q=${q})`);
+console.log(`  analytic  V = ${analyticV.toFixed(5)}`);
+console.log(`  empirical V = ${empiricalV.toFixed(5)}  (MC SE=${se.toFixed(5)})`);
+console.log(`  |Δ| = ${Math.abs(empiricalV - analyticV).toFixed(5)}  = ${zscore.toFixed(2)} SE`);
+
+const ok = zscore < 3;
+console.log(`\n${ok ? 'PASS' : 'FAIL'}  analytic identity matches simulation within 3 MC SE`);
+process.exit(ok ? 0 : 1);
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = '"'research/e4-plausible-anchors.md','research/e4-paper-section-draft.md','research/e4-parity-theorem.md','audits/2026-07-11-v1.14-design/CRITIQUE_v13_SUMMARY.md'; foreach ("'$f in $files) { Write-Output "===== $f ====="; $i=0; Get-Content $f | ForEach-Object { $i++; '"'{0,4}: {1}' -f "'$i, $_ } }' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 204ms:
+===== research/e4-plausible-anchors.md =====
+   1: # E4 — plausible-value anchors (the "probable case", justified per variable) — LIVING DOC
+   2: 
+   3: > Author framing (2026-07-11): report EVERYTHING (space-filling sweep), then LOCATE the frontier ceteris-paribus and
+   4: > state, per axis: where the frontier is, the possible estimated values, the central's declared favourable endpoint, and the PROBABLE
+   5: > case (XX ± CI). The "probable case" for each variable must be JUSTIFIED — by a theoretical argument or an empirical
+   6: > measurement — not chosen by the analyst. We fix variables ONE AT A TIME here; each entry records the anchor and its
+   7: > strength. Anchor types: E=empirical measurement · T=theoretical argument · P=proxy-informed (transport gap) ·
+   8: > A=declared scale assumption.
+   9: 
+  10: ## Status legend
+  11: 🔲 not yet fixed · 🔎 evidence being gathered · ✅ fixed (anchor recorded)
+  12: 
+  13: ## Variable ledger (D_F = physically possible; R_α = probable/expectable, justified)
+  14: | Variable | Type | D_F | R_α (probable) | Anchor / source | Strength | Status |
+  15: |---|---|---|---|---|---|---|
+  16: | `a_V,b_V` visibility tail shape | E | contract | probable `a_V∈[0.3,0.8], b_V∈[2,5]` | heavy-tailed public procurement (Skuhrovec arXiv:1309.0218; Zipf/Pareto) | strong (dir.), stylized (mag.) | ✅ CONFIRMED |
+  17: | `p` participation | E | contract | TBD | participatory-budgeting turnout | — | 🔎 (var #2, in progress) |
+  18: | `pi_opp` opposition prevalence | E | contract | TBD | NIMBY/opposition & referendum rates | — | 🔲 |
+  19: | `s_exp,b_H_C` harm myopia | T | contract | TBD | agenda-setting / salience (oversight reaches only the visible) | — | 🔲 |
+  20: | `w` projection | P | contract | TBD | Gagnon-Bartsch / Dias-Lucas-Sheffer (transport gap) | — | 🔲 |
+  21: | `a,b` bias / responsiveness | P | contract | TBD | Broockman-Skovron (transport gap) | — | 🔲 |
+  22: | `a_r,b_r` reach | E/T | contract | TBD | local-project interest share | — | 🔲 |
+  23: | `beta` voice suppression | T | contract | TBD | spiral of silence; weak empirics | — | 🔲 |
+  24: | `phi` budget share, noises, scales | A | contract | contract | declared model scale | n/a | 🔲 |
+  25: 
+  26: ## KNOB ANCHOR TABLE (anchors + direction only — EXACT VALUES LIVE IN CODE)
+  27: > **AUTHORITATIVE scenario values = `scripts/simulation/e4-v5/scenario-configs.mjs` (single source).** This table
+  28: > gives each knob's anchor TYPE and the qualitative DIRECTION from central-favourable → distributed-favourable; it
+  29: > deliberately does NOT duplicate the numeric points (that duplication forked once — Codex v7). A regression test
+  30: > (`npm run e4:test`) pins the scenario sign ORDERING only — it does NOT enforce exact configs, magnitudes, labels,
+  31: > or prose, so it cannot by itself prevent code and this narrative from diverging.
+  32: > Anchor: E empirical · T theory · P proxy-informed (transport gap) · A declared scale.
+  33: 
+  34: | knob | anchor | direction: central-favourable → distributed-favourable | justification |
+  35: |---|---|---|---|
+  36: | `a_V,b_V` | E | flatter tail (more visible) → heavier tail (more low-visibility) | procurement heavy tail (Skuhrovec arXiv:1309.0218) |
+  37: | `p` | E | low → high participation | PB turnout ×reach ≈1–3% (Brennan/SignalCleveland) |
+  38: | `a_r,b_r` | E/joint | low → high reach | joint constraint `reach×p ≈ turnout` |
+  39: | `pi_opp,mu_opp` | T/E | little/mild opposition → prevalent/intense | opposition/NIMBY prevalence & intensity |
+  40: | `s_exp` | T | concave/flat gate (central sees harm) → convex (myopic on tail) | agenda-setting/salience |
+  41: | `b_H_C` | T | high harm-detection → low | central competence at reading harm |
+  42: | `w,a,b` | P | low projection/bias, faithful slope → high projection/bias | Broockman-Skovron / Gagnon-Bartsch (transport gap) |
+  43: | `beta` | T | opponents silenced → free voice | spiral of silence |
+  44: | `lambda` | T | no credit pressure → high | clientelism / credit-claiming |
+  45: | `zeta,gamma` | A/T | good category proxy → poor | proxy quality |
+  46: | `sigma_e,sigma_C` | A | noisy citizen reports + precise central → clean reports + noisy central | measurement-noise scale |
+  47: | `sigma,sigma_v,v_p0,phi,h,m_q,s_q,c_lo,c_hi,N,K` | A | held at contract defaults (not scenario-varied) | value/cost/computational scale |
+  48: 
+  49: **Frontier axes (ceteris-paribus, from PROBABLE):** `s_exp, b_H_C, p, beta` (+ `a_V`) — locate where m crosses 0.
+  50: 
+  51: ### RESULTS — anchored scenarios (`npm run e4:scenarios`, N=1500,K=150, 800 worlds)
+  52: > **CORRECTION:** `PRO_CENTRAL` is the central's declared full-favourable endpoint, and the central wins there.
+  53: > `NO_MYOPIA` is the separate harm-aware and otherwise-competent continuity bundle at +6.1%, **not a myopia
+  54: > isolation**; `MYOPIA_OFF` is the two-harm-coordinate diagnostic contrast at +30.4%. Authoritative configs live in
+  55: > `scenario-configs.mjs`; the regression pins executable outcome ORDERING only, not exact configs, magnitudes,
+  56: > labels, or prose.
+  57: 
+  58: | scenario | m (gap) | 95% CI | Core v0 delivers | central delivers | winner |
+  59: |---|---|---|---|---|---|
+  60: | PRO-CENTRAL (central's declared full-favourable endpoint) | **−29.5%** | [−29.9, −29.1] | 68% of oracle | 98% | **central** |
+  61: | NO-MYOPIA (harm-aware and otherwise-competent continuity bundle) | **+6.1%** | [5.8, 6.4] | 91% | 85% | ≈ parity |
+  62: | PROBABLE (source-motivated reference) | **+46.6%** | [46.0, 47.4] | 91% | 45% | Core v0 |
+  63: | PRO-DISTRIBUTED (favourable, moderate) | **+199.8%** | [197, 202] | 96% | −104% (destroys value) | Core v0 |
+  64: 
+  65: - **Level field (both ways):** the central has a genuine winning region — under its declared full-favourable endpoint (low
+  66:   participation + competent, harm-aware central) it wins ~30% and delivers 98% of the oracle. Core v0 wins under the
+  67:   probable reference. The story from D/O: Core v0 is fairly robust (68–96%); the central swings 45%→85%→98% (or −104%
+  68:   when myopic + harmful) — it depends on whether it sees the anti-value AND on citizen participation.
+  69: - **Continuity / reconciliation with the NO-GO:** in this sequential, path-dependent decomposition, `MYOPIA_OFF`
+  70:   changes only `s_exp,b_H_C` and reduces the gap `+46.6% → +30.4%`, or 16.2 of the 40.5-point decline to `NO_MYOPIA`
+  71:   (~40%). The further move to the harm-aware and otherwise-competent `NO_MYOPIA` bundle reduces it by 24.3 points
+  72:   (~60%). `NO_MYOPIA` is the continuity anchor to the symmetry-gate near-parity regime; this is a qualitative
+  73:   reconciliation hypothesis across different DGPs, not a reproduced limit.
+  74: 
+  75: ### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
+  76: - **Robustness over five plotted slices (NOT all parameters):** across the five prespecified one-factor slices
+  77:   (`s_exp, b_H_C, p, beta, a_V`), none crosses the parity frontier from the PROBABLE scenario within its plotted
+  78:   range — Core v0 wins throughout (+25% to +54%). This is a limited robustness statement over those five slices;
+  79:   reaching parity requires COMBINING central-favourable conditions (and other coordinates can flip the sign — e.g.
+  80:   the targeted PRO_CENTRAL-region probe in `e4:evidence`).
+  81: - **Combined scenario-path frontier (CORRECTED, Codex v7):** interpolating PROBABLE → the declared central-favourable
+  82:   endpoint (`PRO_CENTRAL`), m falls +47% → −30%; the **frontier (m=0) is at t ≈ 0.57** — i.e. conditions ~57%
+  83:   of the way from probable toward the declared central-favourable endpoint flip the winner to the central, within the
+  84:   declared interpolation segment (the earlier "t≈1.13 / beyond realistic" claim was wrong — it used a partial 8-knob
+  85:   path). Honest headline: *which side a real setting falls on depends on where a measured target configuration would
+  86:   lie between the declared scenarios; none of the five plotted slices decides it alone.* `t` is an illustrative
+  87:   linear mix, not a calibrated competence scale.
+  88: 
+  89: ## Fixed variables (details)
+  90: _(populated as we fix each, one at a time)_
+  91: 
+  92: ## Anchored scenarios (author framing 2026-07-11) — level the field both ways
+  93: Four substantive declared scenarios + one diagnostic contrast (values in `scenario-configs.mjs`), each a full config → `m ± 95% CI` (inner MC only):
+  94: - **PRO-CENTRAL** — the central's declared full-favourable endpoint (every knob central-favourable). The central WINS
+  95:   (≈ −30%, delivers 98% of the benchmark). This is the honest "central's favourable region", NOT near-parity.
+  96: - **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast
+  97:   (≈ +30%): a diagnostic contrast attributing the harm channel ALONE — a sequential ~40% of the decline (16.2 of
+  98:   40.5 pts); the further step to the NO-MYOPIA bundle is the remaining ~60%.
+  99: - **NO-MYOPIA** — a harm-aware AND otherwise-competent central bundle (≈ +6%). The continuity anchor to the
+ 100:   symmetry-gate ~0.025 near-parity (that gate equips the central with competent harm-aware appraisal). NOT a myopia
+ 101:   isolation — it also improves projection/bias/noise/credit.
+ 102: - **PROBABLE** — source-motivated declared reference (≈ +46.6%), with the why/conditions.
+ 103: - **PRO-DISTRIBUTED** — favourable for distributed (≈ +200%; central destroys value).
+ 104: Per axis we also give: D_F range, ceteris-paribus frontier location, evidence for the probable value, result ± CI.
+ 105: 
+ 106: ### var #2 — `p` (participation) — ✅ CONFIRMED (author, 2026-07-11)
+ 107: - **Anchor type: E (empirical), with a mapping caveat.** Participatory-budgeting turnout (whole population) is low
+ 108:   single digits: San Francisco District 7 ~2,100/84,000 ≈ **2.5%** (Brennan Center); a ~280k city ~0.4–1.4%
+ 109:   (Signal Cleveland; PB Project). **Caveat:** in the model `p` is the reporting rate among the INTERESTED; reach `r`
+ 110:   already selects the interested subset, so PB turnout ≈ **reach × p**. With reach mean ≈0.13, a 1–3% turnout ⇒
+ 111:   `p ≈ 0.08–0.25`. → When reach (`a_r,b_r`) is anchored later, JOINTLY verify `reach × p ≈ 1–3%` (one observable
+ 112:   constrains two knobs).
+ 113: - **Direction (rationale; authoritative values in `scenario-configs.mjs`):** central-favourable = LOW participation
+ 114:   (sparse citizen signal); PROBABLE ≈ `p∈[0.08,0.25]` (the source-motivated band); distributed-favourable = HIGH.
+ 115: - **Decision:** PENDING author confirmation.
+ 116: 
+ 117: ### var #1 — `a_V, b_V` (visibility tail shape) — ✅ CONFIRMED (author, 2026-07-11)
+ 118: - **Anchor type: E (empirical).** Public procurement value is heavy-tailed / power-law. Skuhrovec et al.,
+ 119:   *Exponential and power laws in public procurement markets* (arXiv:1309.0218): >40,000 Czech procurements 2006-2011,
+ 120:   power laws in revenues/spendings, top spenders follow Zipf (Pareto-like, heavy-tailed); reported exponent α≈1–1.24
+ 121:   (not verbatim-verified from abstract). Corroborated by IT-project cost power-law (arXiv:2210.01573). ⇒ a few large,
+ 122:   highly visible projects + a long tail of many small, low-visibility ones ⇒ `a_V < 1` (mass near low visibility) is
+ 123:   the PROBABLE case, reflecting real spending — not a convenient assumption. The Beta is a bounded stylized
+ 124:   approximation of the power law (do not overclaim an exponent fit).
+ 125: - **Direction (rationale; authoritative values in `scenario-configs.mjs`):** central-favourable = FLATTER tail
+ 126:   (more projects visible → oversight reaches them); PROBABLE ≈ `a_V∈[0.3,0.8], b_V∈[2,5]` (heavy tail);
+ 127:   distributed-favourable = HEAVIER tail.
+ 128: - **Caveat:** procurement VALUE proxies the size dimension of visibility, not visibility per se (controversy/media
+ 129:   also drive it); one-country study. Could add US/Chile corroboration later.
+ 130: - **Decision:** PENDING author confirmation of the bands.
+===== research/e4-paper-section-draft.md =====
+   1: # E4 — draft paper section (EN; ES mirror on integration) — v2 anchored-scenario framing — DRAFT
+   2: 
+   3: > Rewritten to the author's anchored framing — four declared scenarios plus one diagnostic contrast. Resolves the
+   4: > rev-paper blockers: (1) reconciles with the paper's own symmetry-gate NO-GO (Δ≈0.025) instead of contradicting it;
+   5: > (2) reports the actual numbers.
+   6: > Source of numbers: `npm run e4:scenarios | e4:frontier | e4:evidence`; anchors in `research/e4-plausible-anchors.md`.
+   7: > Framed as a comparative-institutions robustness result with anchored scenarios + a benchmark theorem, NOT a multiplier.
+   8: 
+   9: ## E4. When does coverage-routed selection beat central-proxy selection?
+  10: 
+  11: **Question.** At an equal budget and the same candidate projects, does coverage-routed distributed appraisal (Core
+  12: v0) deliver more true social value than a competent central-proxy appraisal — and under exactly what conditions does
+  13: each win? We answer with a mechanism model, a stylized benchmark theorem, and four **source-motivated declared scenarios** (plus one diagnostic contrast) that level
+  14: the field for both institutions.
+  15: 
+  16: **Mechanism.** True value splits into support and harm, `S = S⁺ − H` (mean scale). The central planner reads
+  17: visible/salient value but is **myopic to harm, salience-gated**: harm-detection `b_H^C·s(V)` rises with a project's
+  18: visibility `V`, so on the **low-visibility long tail** — the mass of public projects — it is nearly blind to
+  19: concentrated opposition (oversight, opposition, comptroller reach mainly the visible, contested few). The
+  20: distributed arm registers harm at weight `(1−β)` across the whole distribution. Under the declared salience-gating
+  21: proxy (agenda-setting/salience — the load-bearing and least-empirically-pinned assumption), the aggregate advantage
+  22: comes from the long tail: the projects that have no anti-value voice in the status quo.
+  23: 
+  24: **Model (matched budget; selection only).** `M^C = a + b·S⁺ + w·(v_{p,j}−S⁺) − b_H^C·s(V)·H + η` (project-varying
+  25: `v_{p,j}` identifies `w`; form informed by elite-misperception evidence with an explicit political-opinion→project-
+  26: value transport gap). The distributed estimate is a baseline-expanded, MNAR-biased mean of citizen reports. Both
+  27: arms fund greedily under a shared budget; delivered value is scored on true `S`. Administrative-cost savings and
+  28: corruption/leakage are separate, additive channels, deliberately excluded here.
+  29: 
+  30: **Stylized benchmark theorem.** Under joint normality and fixed-threshold selection, expected selected value per
+  31: candidate is `V_k = q·μ_S + φ(z_q)·Cov(S,X_k)/sd(X_k)`, so parity ⇔ `Cov(S,X_D)/sd(X_D) = Cov(S,X_C)/sd(X_C)` (the
+  32: intercept `a` is absent). This is a **stylized Gaussian fixed-threshold benchmark** (verified against simulation
+  33: within ~0.2 Monte-Carlo SE); it nests the production harm-gated signal only under extra coefficient/gate
+  34: restrictions, so it is a sanity-check limit, **not** a proof about the full engine (eligibility, heterogeneous
+  35: costs, MNAR, credit) — which is the object.
+  36: 
+  37: **Four declared scenarios + one diagnostic contrast (level the field both ways).** The four substantive scenarios are
+  38: PRO-CENTRAL, NO-MYOPIA (bundle), PROBABLE, PRO-DISTRIBUTED; "Harm-myopia only" is a **diagnostic contrast**, not a
+  39: declared scenario. Each knob's reference value is motivated empirically (public-
+  40: procurement value is heavy-tailed — Skuhrovec et al. 2013, >40k Czech procurements, Zipf/Pareto — so most projects are
+  41: low-visibility; participatory-budgeting turnout ≈1–3% informs participation as a joint moment), theoretically
+  42: (agenda-setting/salience for harm myopia), or proxy-informed with a stated, **not-yet-propagated** transport gap
+  43: (projection/bias). We are explicit that most magnitudes are declared reference/stress points, not target-domain
+  44: calibrated bands (the CIs cover inner Monte-Carlo variability only). Reporting `m = D/O − C/O` (signed fraction of the
+  45: full-information greedy benchmark, parity at 0) and each arm's delivered level `D/O`, `C/O`:
+  46: 
+  47: | scenario (assumptions) | m ± 95% CI | Core v0 | central | winner |
+  48: |---|---|---|---|---|
+  49: | **Central's declared full-favourable endpoint** — low participation + competent, harm-aware, precise central (some knobs sit outside the registered expectable bands) | **−29.5%** [−29.9, −29.1] | 68% | 98% | **central** |
+  50: | **No-myopia bundle** — probable + harm sight + unbiased + precise + no credit (NOT a myopia isolation) | **+6.1%** [5.8, 6.4] | 91% | 85% | ≈ parity |
+  51: | **Harm-myopia only** (diagnostic contrast, not a scenario) — probable, changing ONLY the two harm-gate coordinates | **+30.4%** [29.9, 31.0] | 91% | 61% | Core v0 |
+  52: | **Probable** — source-motivated reference | **+46.6%** [46.0, 47.4] | 91% | 45% | Core v0 |
+  53: | **Distributed's favourable case** | **+199.8%** [197, 202] | 96% | −104% | Core v0 |
+  54: 
+  55: The field is genuinely level: **the central has a real winning region** — at its declared full-favourable endpoint
+  56: (low citizen participation and a competent, harm-aware central) it wins ~30% and delivers 98% of the benchmark. Core
+  57: v0 wins under the probable reference. The `D/O`/`C/O` split shows why: the central's delivered level swings
+  58: 45%→85%→98% (and −104% when myopic on harmful projects), depending on whether it sees the anti-value and on
+  59: participation. The scenarios are declared reference/stress points, not a jointly-calibrated probability region.
+  60: 
+  61: **Reconciliation with the symmetry-gate NO-GO.** A pre-registered symmetry gate elsewhere reports a small pooled
+  62: advantage (Δ≈0.025, below its rebuild threshold). That test **deliberately equips the central with competent,
+  63: harm-aware appraisal** — the **no-myopia bundle** row above (+6.1%, same near-parity regime). Attribution is a
+  64: **sequential, path-dependent** decomposition (the model is nonlinear): turning off harm-myopia **alone** (only the
+  65: two harm-gate coordinates) reduces the probable gap +46.6% → +30.4%, i.e. **16.2 of the 40.5-point decline to +6.1%
+  66: (~40%)**; the further step to the full no-myopia bundle (unbiasedness, precision, no credit distortion — which the
+  67: gate also assumes) reduces it **24.3 points (~60%)**. So harm-myopia is a **large part but not the majority** of the
+  68: collapse. The two results are the same phenomenon under opposite assumptions — a **qualitative reconciliation
+  69: hypothesis** (different DGPs), not a reproduced limit.
+  70: 
+  71: **Where the frontier is.** Across five prespecified one-factor slices (`s_exp, b_H_C, p, beta, a_V`), none flips the
+  72: winner from the probable scenario within its plotted range (a limited robustness statement over those five slices,
+  73: not all parameters). Interpolating the full set of conditions from probable toward the declared central-favourable
+  74: endpoint, the parity frontier is at **t ≈ 0.57** — reached **within the declared interpolation segment**. Which side
+  75: a real setting falls on depends on where a measured target configuration would lie between the declared scenarios;
+  76: `t` is an illustrative linear mix, not a calibrated competence scale.
+  77: 
+  78: **Honest limits.** (1) Central magnitudes are proxy-informed, not target-identified: the political-opinion→project-
+  79: value transport is an assumption; only target-domain bridge data (planner forecasts, citizen value distributions)
+  80: could shrink it. (2) The harm-myopia strength (`s_exp, b_H^C`) is theory-anchored (agenda-setting), the least
+  81: empirically pinned knob and the crux. (3) `m>100%`/negative reflect legitimate value destruction (the losing arm
+  82: funds net-harmful projects), read via `D/O`, `C/O`. (4) Cost and leakage channels are separate legs. E4 is a
+  83: comparative-institutions robustness result with anchored scenarios + a benchmark theorem + a measurement plan —
+  84: not an impact estimate.
+  85: 
+  86: ## Integration checklist (EN + ES, keep 13/13 parity)
+  87: - Replace the E4 subsection of `drafts/paper.md`; mirror in `drafts/paper.es.md`.
+  88: - Add citations: Skuhrovec et al. 2013 (arXiv:1309.0218); PB turnout (Brennan Center); Broockman–Skovron 2018;
+  89:   Gagnon-Bartsch; Dias–Lucas–Sheffer 2025; Prelec et al. 2017; prior-art (Böttcher–Klingebiel 2024; Rey–Endriss 2024;
+  90:   Boehmer et al. 2023; Liesiö et al. 2007; Mollick–Nanda 2016).
+  91: - Reproducibility appendix: `npm run e4:controls | e4:test | e4:theorem | e4:scenarios | e4:frontier | e4:evidence`
+  92:   + the contract hash.
+  93: - Keep the embargo: no `×`, no `D/C`, parity at 0, sign + magnitude separated, D/O·C/O for interpretation.
+===== research/e4-parity-theorem.md =====
+   1: # E4 analytic benchmark — the joint-normal fixed-threshold parity theorem
+   2: 
+   3: > A **stylized no-myopia Gaussian benchmark**, not a reduction of the full engine. The production engine adds
+   4: > eligibility gates, heterogeneous costs, greedy residual fill, MNAR reports, z-scoring, credit, AND a salience-gated
+   5: > harm term; this theorem nests it ONLY under the extra restrictions in **Honest scope** below (no harm gate, net
+   6: > `S`). It is a sanity-check limit, not a proof about the production engine. Regression:
+   7: > `scripts/simulation/e4-v5/theorem-check.mjs` (matches within ~0.2 Monte-Carlo SE). Replaces the retired `β = 1−η`
+   8: > harm-weight law (which does not nest the v1.14 model).
+   9: 
+  10: ## Setup
+  11: Candidate projects are i.i.d. draws of `(S, X)`, where `S` is true (mean-scale) value and `X` is a selector's
+  12: signal (the central estimate `X_C = M^C`, or the distributed estimate `X_D = M^D`). Assume:
+  13: 1. `(S, X)` is **jointly normal**, `Var(X) > 0`.
+  14: 2. Equal costs, no eligibility gate, no credit; each selector funds the top fraction `q ∈ (0,1)` by its own `X`.
+  15: 3. Selection is at the **population threshold** `t = μ_X + σ_X · z_q`, `z_q = Φ⁻¹(1−q)` (equivalently, the exact
+  16:    top-`qK` quota in the `K → ∞` limit).
+  17: 
+  18: ## Lemma (expected selected value per candidate)
+  19: ```
+  20: V := E[S · 1{X > t}] = q·μ_S + φ(z_q) · Cov(S,X)/σ_X ,
+  21: ```
+  22: where `φ` is the standard normal pdf.
+  23: 
+  24: **Proof.** Joint normality gives the linear conditional mean `E[S | X = x] = μ_S + (Cov(S,X)/σ_X²)(x − μ_X)`. Then
+  25: ```
+  26: E[S·1{X>t}] = ∫_t^∞ E[S|X=x] f_X(x) dx
+  27:             = μ_S·P(X>t) + (Cov(S,X)/σ_X²)·∫_t^∞ (x − μ_X) f_X(x) dx.
+  28: ```
+  29: `P(X>t) = q`, and the standard truncated-normal identity `∫_t^∞ (x − μ_X) f_X(x) dx = σ_X·φ(z_q)` give
+  30: `V = q·μ_S + (Cov(S,X)/σ_X²)·σ_X·φ(z_q) = q·μ_S + φ(z_q)·Cov(S,X)/σ_X`. ∎
+  31: 
+  32: ## Parity condition
+  33: For two selectors `X_C`, `X_D` at the same `q`, the common `q·μ_S` term and the common positive tail factor
+  34: `φ(z_q)` cancel, so
+  35: ```
+  36: V_D = V_C   ⇔   Cov(S,X_D)/σ_{X_D} = Cov(S,X_C)/σ_{X_C}.
+  37: ```
+  38: **The parity boundary is the equality of the two signal-to-noise covariance ratios `Cov(S,X_k)/sd(X_k)`.** The
+  39: intercept `a` of the central model is **absent** (rank-invariant under a fixed funded share with no gate); it
+  40: re-enters only in the numerical model through the own-estimate eligibility gate and heterogeneous `/c_j`.
+  41: 
+  42: For the central signal `X_C = a + (b−w)·S + w·v_p + η` with a distinct project-varying projection `Z = v_p − S`
+  43: (typed as its own variable, `η ⊥ (S, v_p)`):
+  44: ```
+  45: Cov(S,X_C) = b·Var(S) + w·Cov(S,Z),
+  46: Var(X_C)   = b²·Var(S) + w²·Var(Z) + 2bw·Cov(S,Z) + Var(η).
+  47: ```
+  48: 
+  49: ## Large-K corollary (link to the frozen estimand)
+  50: The lemma is about expected selected sums, not automatically the frozen ratio-of-sums estimand. If
+  51: `O_K/K → V_O > 0` (oracle LLN), the numerators `D_K/K, C_K/K` converge, and `Pr(O_K ≤ o_min) → 0`, then
+  52: ```
+  53: m_K = Σ(D_K − C_K)/Σ O_K  →  (V_D − V_C)/V_O ,
+  54: ```
+  55: so the covariance-ratio equality is the parity boundary **in the large-project limit**. Finite-world `m` is
+  56: numerical; the engine's ratio-of-sums estimator is the finite-`K` object the lemma approximates.
+  57: 
+  58: ## Honest scope
+  59: - **The production central signal is NOT this benchmark's `X_C` without extra restrictions.** The engine's central
+  60:   estimate is `M^C = a + b·S⁺ + w·(v_{p,j}−S⁺) − b_H^C·s(V)·H + η` (support `S⁺`, minus a **visibility-gated harm**
+  61:   term). The benchmark's `X_C = a + (b−w)S + w·v_p + η` uses **net** `S = S⁺ − H` with no separate harm term. Matching
+  62:   them requires `−b_H^C·s(V)·H = −(b−w)·H`, i.e. the **coefficient condition `b_H^C·s(V) = b−w`** (a constant gate at
+  63:   exactly that value) — OR the trivial `H ≡ 0`. A constant gate ALONE is insufficient. So the benchmark literally
+  64:   nests the production signal only in that special case; otherwise it is a **modified net-`S`, no-separate-harm
+  65:   stylized model** — a sanity-check Gaussian benchmark, NOT a proof that the full harm-gated engine reduces to it.
+  66: - The MNAR distributed signal is **not** exactly jointly normal at finite reach (thresholded non-response +
+  67:   Bernoulli thinning); the Gaussian mapping is a **moment-matched reduced-form approximation**, not an identity.
+  68:   So this lemma is the analytic sanity check, and the numerical frontier (with the true DGP) is the object.
+  69: - `a` is deliberately absent from the benchmark frontier; do not read a benchmark magnitude off `a`.
+===== audits/2026-07-11-v1.14-design/CRITIQUE_v13_SUMMARY.md =====
+   1: # Codex critique v13 — final publication-ready verdict on E4 v1.14
+   2: 
+   3: ## Verdict
+   4: 
+   5: **NO — E4 is not yet publication-ready as a comparative-institutions robustness result.**
+   6: 
+   7: The substantive result still clears the stated limited bar: mechanism, stylized theorem, four declared scenarios
+   8: plus one diagnostic contrast, and measurement plan are viable. This verdict does not impose the calibrated-impact
+   9: bar the paper disclaims. All six prescribed commands pass. **Multiplier relapse: NO.**
+  10: 
+  11: The taxonomy repair is clean, but the traceability repair is incomplete across the committed tree. One instance of
+  12: the exact v12 overclaim remains in the executable test source.
+  13: 
+  14: ## Verification of the two repairs
+  15: 
+  16: - **Scenario taxonomy — VERIFIED.** `research/e4-plausible-anchors.md:93` now says “Four substantive declared
+  17:   scenarios + one diagnostic contrast.” `scripts/simulation/e4-v5/scenario-configs.mjs:6-14` agrees and identifies
+  18:   `MYOPIA_OFF` as a diagnostic contrast, not a scenario.
+  19: - **Ordering-test scope — NOT CLEAN ACROSS THE TREE.** `research/e4-plausible-anchors.md:29-31` correctly says the
+  20:   regression pins ordering only and cannot prevent code/narrative divergence. `scenario-configs.mjs:1-3` likewise
+  21:   limits the test to executable outcome ordering, not configs, labels, or prose. But
+  22:   `scripts/simulation/e4-v5/test.mjs:75` still says the test pins signs so the configs “can't silently drift from the
+  23:   doc.” The assertion at lines 80-82 checks outcome ordering only.
+  24: 
+  25: ## Prescribed runs
+  26: 
+  27: All commands exited 0 on `master` at `8a9ea6d50a2d51a03abed69f56b048eed815f622`, which includes `e7e461e`.
+  28: 
+  29: | command | reproduced result |
+  30: |---|---|
+  31: | `npm run e4:controls` | all controls pass; harm control `0.4632 -> 0.1118` |
+  32: | `npm run e4:test` | all 35 checks pass; scenario ordering and tested embargo classes pass |
+  33: | `npm run e4:theorem` | analytic identity error `0.00029 = 0.17` Monte-Carlo SE |
+  34: | `npm run e4:scenarios` | `-29.5%, +46.6%, +30.4%, +6.1%, +199.8%`; correct sequential 40/60 attribution |
+  35: | `npm run e4:frontier` | no crossing on five plotted slices; declared combined path crosses at `t ~= 0.57` |
+  36: | `npm run e4:evidence` | finite box `399/0/1`; targeted central probe `40/40`; `sign:indeterminate` |
+  37: 
+  38: ## Remaining blocking overclaims/dishonest labels
+  39: 
+  40: 1. **False ordering-test traceability — `scripts/simulation/e4-v5/test.mjs:75`.** The comment claims the sign test
+  41:    prevents `scenario-configs.mjs` from silently drifting from the document, while the assertion pins executable
+  42:    outcome ordering only.
+  43: 
+  44:    **Exact fix:** replace line 75 with:
+  45: 
+  46:    ```js
+  47:    // ---- Scenario integrity: pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose. ----
+  48:    ```
+  49: 
+  50: No other blocking overclaim or dishonest label remains under the stated comparative-institutions robustness bar.
+  51: 
+  52: ## Direct answers
+  53: 
+  54: - **Publication-ready? NO.** The one live traceability overclaim above must be removed; no substantive redesign is
+  55:   required.
+  56: - **Multiplier relapse? NO.**
+
+2026-07-12T04:28:25.518411Z ERROR codex_core::tools::router: error=Exit code: 124
+Wall time: 64 seconds
+Output:
+command timed out after 64019 milliseconds
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "git branch --show-current; git log -1 --format='%H %s'; git blame -L 75,75 -- scripts/simulation/e4-v5/test.mjs; "'$line=(Get-Content scripts/simulation/e4-v5/test.mjs)[74]; Write-Output "LINE75=$line"; rg -n -i --hidden --glob '"'"'!node_modules/**'"' --glob '"'!audits/2026-07-11-v1.14-design/CRITIQUE_v*_PROMPT.md'"' --glob '"'!audits/2026-07-11-v1.14-design/CRITIQUE_v*_SUMMARY.md'"' 'best[- ]plausible|five[- ]named|prevents[- ]drift|does[- ]reality[- ]sit|myopia[- ]isolation' scripts/simulation/e4-v5 research; if ("'$LASTEXITCODE -eq 1) { Write-Output '"'FLAGGED_PHRASE_SWEEP=CLEAN'; exit 0 }" in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 255ms:
+master
+6d4a712ce9b62e9986e453c8791ebc9e08f508da Add v14 Codex prompt (confirm publication-ready)
+58dfa853 (Mauricio Offermann 2026-07-12 00:25:40 -0400 75) // ---- Scenario integrity: pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose. ----
+LINE75=// ---- Scenario integrity: pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose. ----
+research\e4-plausible-anchors.md:96:- **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast
+scripts/simulation/e4-v5\scenario-configs.mjs:10://                   NOT a myopia isolation. This is the CONTINUITY anchor to the earlier symmetry-gate ~0.025
+scripts/simulation/e4-v5\scenario-configs.mjs:26:// Harm-aware AND competent central bundle (NOT myopia-isolation): PROBABLE + harm sight + unbiased + precise + no
+research\e4-paper-section-draft.md:50:| **No-myopia bundle** — probable + harm sight + unbiased + precise + no credit (NOT a myopia isolation) | **+6.1%** [5.8, 6.4] | 91% | 85% | ≈ parity |
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n -i 'best[- ]plausible|five[- ]named|prevents[- ]drift|does[- ]reality[- ]sit|isolation' audits/2026-07-11-v1.14-design/CRITIQUE_v1[0-3]_SUMMARY.md audits/2026-07-11-v1.14-design/critique-v1[0-3]-*.md" in C:\devel\claude-projects\distributed-governance-research
+2026-07-12T04:28:39.053043Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.1 seconds
+Output:
+rg: audits/2026-07-11-v1.14-design/CRITIQUE_v1[0-3]_SUMMARY.md: El sistema no puede encontrar el archivo especificado. (os error 2)
+rg: audits/2026-07-11-v1.14-design/critique-v1[0-3]-*.md: El nombre de archivo, el nombre de directorio o la sintaxis de la etiqueta del volumen no son correctos. (os error 123)
+
+ exited 1 in 143ms:
+rg: audits/2026-07-11-v1.14-design/CRITIQUE_v1[0-3]_SUMMARY.md: El sistema no puede encontrar el archivo especificado. (os error 2)
+rg: audits/2026-07-11-v1.14-design/critique-v1[0-3]-*.md: El nombre de archivo, el nombre de directorio o la sintaxis de la etiqueta del volumen no son correctos. (os error 123)
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n -i -g 'CRITIQUE_v1*_SUMMARY.md' -g 'critique-v1*.md' 'best[- ]plausible|five[- ]named|prevents[- ]drift|does[- ]reality[- ]sit|isolation' audits/2026-07-11-v1.14-design" in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 153ms:
+audits/2026-07-11-v1.14-design\critique-v11-code-controls.md:26:| **1 — attribution** | **VERIFIED in code** | The registry distinguishes four substantive scenarios from `MYOPIA_OFF`, labels `NO_MYOPIA` the continuity bundle, and states the sequential 16.2/40.5 (~40%) then 24.3/40.5 (~60%) decomposition (`scenario-configs.mjs:5-15`). The configs implement it: `MYOPIA_OFF` changes only `s_exp,b_H_C`, while `NO_MYOPIA` adds the competence coordinates (`scenario-configs.mjs:23-27`). Runtime repeats the qualified, path-dependent split (`scenarios.mjs:24-27`). No affirmative “most” or bundled-myopia-isolation claim remains in executable scenario prose. |
+audits/2026-07-11-v1.14-design\critique-v11-code-controls.md:28:| **4 — declared endpoint/path labels in code** | **VERIFIED** | The registry and runner now call `PRO_CENTRAL` a declared central-favourable endpoint (`scenario-configs.mjs:19`; `scenarios.mjs:19,24`). Frontier source and canonical stdout call `t∈[0,1]` the declared interpolation segment and the endpoint declared, while the header conditions interpretation on where a measured target configuration would lie (`frontier.mjs:1-5,53-65,69-74`). The stale `best plausible`, `plausible scenario`, and reality-positioning labels are absent from these code surfaces. |
+audits/2026-07-11-v1.14-design\critique-v10-scope-embargo.md:44:| Frontier limited to five plotted/prespecified one-factor slices | **VERIFIED in the main paper paragraph and final stdout interpretation; FAILED globally** | `e4-paper-section-draft.md:70-75` says five named slices and “not all parameters.” `frontier.mjs:70-73` says five plotted slices and “NOT over all parameters,” reproduced verbatim at runtime. But `e4-plausible-anchors.md:84-85` still promotes this to “no single knob decides it,” which is not established for the other coordinates. |
+audits/2026-07-11-v1.14-design\critique-v10-scope-embargo.md:45:| Combined path labelled declared/illustrative rather than calibrated | **FAILED on canonical stdout and anchors** | The final frontier sentence correctly says “declared interpolation segment” and calls `t` illustrative (`frontier.mjs:68,70-73`), but the heading and path label still print “central's full best plausible case” and “t=1 is a plausible scenario” (`frontier.mjs:52-64`; reproduced by `npm run e4:frontier`). The anchor repeats “full best plausible,” “PLAUSIBLE region,” and “where reality sits” (`e4-plausible-anchors.md:52,60,65,80-85,92`). These contradict the declared-endpoint framing and matter because some endpoint knobs lie outside registered expectable bands. |
+audits/2026-07-11-v1.14-design\critique-v10-scope-embargo.md:93:2. **MEDIUM (frontier/endpoint scope):** replace all remaining “full best plausible,” “plausible scenario/region,”
+audits/2026-07-11-v1.14-design\critique-v10-scenario-attribution.md:37:Use one formulation throughout: **four substantive declared scenarios plus one diagnostic contrast**. Remove the paper's “three-scenario framing,” the runner's “THREE” header and stale `PRO_CENTRAL` continuity claim, the anchor's “Five named scenarios,” and the registry's internally inconsistent “Four named scenarios” enumeration. These contradictions are exactly the stale scenario-count defect the v10 premise says was fixed.
+audits/2026-07-11-v1.14-design\critique-v12-code-controls.md:11:- The retired best-plausible/plausible-scenario/reality-question endpoint labels are gone from the reviewed live
+audits/2026-07-11-v1.14-design\critique-v12-code-controls.md:41:   “Five named scenarios,” although `MYOPIA_OFF` is a diagnostic contrast and the other live surfaces correctly state
+audits/2026-07-11-v1.14-design\critique-v11-theorem-mechanism.md:68:- `research/e4-plausible-anchors.md:91-100` says “Five named scenarios,” conflating the diagnostic with the four
+audits/2026-07-11-v1.14-design\critique-v11-publication-language.md:18:| 1 — sequential attribution and isolation labels | **VERIFIED** | The registry header gives the sequential 16.2/40.5 (~40%) harm-gate step and ~60% added-competence step, with `MYOPIA_OFF` as the diagnostic and `NO_MYOPIA` as the bundle ([scenario-configs.mjs:5](../../scripts/simulation/e4-v5/scenario-configs.mjs#L5), [scenario-configs.mjs:13](../../scripts/simulation/e4-v5/scenario-configs.mjs#L13)). The anchor correction, table label, and reconciliation paragraph now say the same thing ([anchors:51](../../research/e4-plausible-anchors.md#L51), [anchors:59](../../research/e4-plausible-anchors.md#L59), [anchors:68](../../research/e4-plausible-anchors.md#L68)). The paper gives the same path-dependent decomposition ([paper draft:61](../../research/e4-paper-section-draft.md#L61)). |
+audits/2026-07-11-v1.14-design\critique-v11-publication-language.md:19:| 3 — four substantive scenarios plus one diagnostic contrast and ordering scope | **FAILED** | The registry, runner, and paper use the requested taxonomy and identify `NO_MYOPIA` as the continuity anchor ([scenario-configs.mjs:5](../../scripts/simulation/e4-v5/scenario-configs.mjs#L5), [scenarios.mjs:1](../../scripts/simulation/e4-v5/scenarios.mjs#L1), [paper draft:37](../../research/e4-paper-section-draft.md#L37)). The anchor nevertheless says “Five named scenarios” ([anchors:91](../../research/e4-plausible-anchors.md#L91)). It also says the ordering regression means “code and this narrative cannot silently diverge” ([anchors:29](../../research/e4-plausible-anchors.md#L29)), and the test comment similarly says configs cannot drift from the doc ([test.mjs:75](../../scripts/simulation/e4-v5/test.mjs#L75)). The test at lines 80–82 binds executable outcome ordering only. |
+audits/2026-07-11-v1.14-design\critique-v11-publication-language.md:20:| 4 — declared labels and calibrated-sounding language | **VERIFIED** | `evidence-anchored` and the retired “best plausible”/“plausible scenario”/“does reality sit” formulations are absent from the non-audit publication/code surface. The anchor uses declared full-favourable endpoint, declared interpolation segment, conditional measured-target, and five-slice language ([anchors:51](../../research/e4-plausible-anchors.md#L51), [anchors:80](../../research/e4-plausible-anchors.md#L80)); the registry and runner use declared-endpoint labels ([scenario-configs.mjs:19](../../scripts/simulation/e4-v5/scenario-configs.mjs#L19), [scenarios.mjs:19](../../scripts/simulation/e4-v5/scenarios.mjs#L19)); and canonical frontier comments/stdout use the conditional target and declared endpoint/segment ([frontier.mjs:1](../../scripts/simulation/e4-v5/frontier.mjs#L1), [frontier.mjs:53](../../scripts/simulation/e4-v5/frontier.mjs#L53), [frontier.mjs:60](../../scripts/simulation/e4-v5/frontier.mjs#L60)). |
+audits/2026-07-11-v1.14-design\CRITIQUE_v10_SUMMARY.md:13:`NO_MYOPIA` result an isolation. The package also retains three/four/five-scenario contradictions, one literal `evidence-anchored`
+audits/2026-07-11-v1.14-design\CRITIQUE_v10_SUMMARY.md:14:label, calibrated-sounding “best plausible/where reality sits” language, and an algebraically incomplete statement
+audits/2026-07-11-v1.14-design\CRITIQUE_v10_SUMMARY.md:41:| **1. Myopia attribution** | **FAILED repository-wide; executable and main paper verified** | `MYOPIA_OFF` changes only `s_exp,b_H_C`; `NO_MYOPIA` is the eight-field bundle; scenarios stdout and the paper correctly report 16.2/40.5 points (~40%) then 24.3/40.5 (~60%). But `e4-plausible-anchors.md:53-54,69-72,94-95` restores the bundled-isolation/full-harm attribution and “most”; `scenario-configs.mjs:8-10` also says “most.” |
+audits/2026-07-11-v1.14-design\CRITIQUE_v10_SUMMARY.md:44:| **4. Labels** | **FAILED** | Evidence stdout and the main paper use source-motivated/declared labels, but `e4-plausible-anchors.md:111` still says `evidence-anchored`. The anchors and canonical frontier also retain “full best plausible case,” “plausible scenario/region,” and “where reality sits” (`e4-plausible-anchors.md:52-65,80-95`; `frontier.mjs:52-64`), even though the paper acknowledges that the endpoint is declared and some knobs lie outside registered expectable bands. |
+audits/2026-07-11-v1.14-design\CRITIQUE_v10_SUMMARY.md:72:Replace the remaining `evidence-anchored`, “best plausible,” “plausible scenario/region,” “where reality sits,” and
+audits/2026-07-11-v1.14-design\CRITIQUE_v12_SUMMARY.md:14:committed tree: the anchor still calls four substantive scenarios plus one diagnostic contrast “Five named
+audits/2026-07-11-v1.14-design\CRITIQUE_v12_SUMMARY.md:28:committed-tree search is clean for `best plausible`, `full best plausible`, `best case`, `plausible scenario`,
+audits/2026-07-11-v1.14-design\CRITIQUE_v12_SUMMARY.md:29:`plausible segment`, `does reality sit`, and `any notation` across `scripts/simulation/e4-v5/` and the three specified
+audits/2026-07-11-v1.14-design\CRITIQUE_v12_SUMMARY.md:53:1. **False scenario taxonomy — `research/e4-plausible-anchors.md:91-92`.** The text says “Five named scenarios,”
+audits/2026-07-11-v1.14-design\critique-v12-theorem-mechanism.md:17:| `NO_MYOPIA` attribution | **VERIFIED** | `research/e4-plausible-anchors.md:51-55,59-60,68-72` calls it a harm-aware and otherwise-competent bundle, identifies `MYOPIA_OFF` as the two-coordinate isolation, limits the regression to outcome ordering in the correction block, and gives the sequential 16.2/40.5 (~40%) then 24.3/40.5 (~60%) decomposition. The paper and executable scenario registry/runner agree. |
+audits/2026-07-11-v1.14-design\critique-v12-theorem-mechanism.md:47:   - `research/e4-plausible-anchors.md:91-92` introduces “Five named scenarios,” although the registry, runner, paper,
+audits/2026-07-11-v1.14-design\CRITIQUE_v11_SUMMARY.md:45:| **3. Taxonomy and ordering scope** | **FAILED narrowly** | The registry, runner, and draft correctly use four substantive scenarios plus one diagnostic contrast and identify `NO_MYOPIA` as the continuity anchor (`scenario-configs.mjs:5-15`; `scenarios.mjs:1-4`; paper draft `:37-39`). The anchor still says “Five named scenarios” (`e4-plausible-anchors.md:91-100`) and claims the ordering test prevents code/narrative divergence (`:29-30`); `test.mjs:75` repeats that overclaim even though `:80-82` pins outcome ordering only. |
+audits/2026-07-11-v1.14-design\CRITIQUE_v11_SUMMARY.md:46:| **4. Labels** | **VERIFIED** | `evidence-anchored`, the endpoint/path uses of “best plausible”/“plausible scenario,” and “does reality sit” are purged from the reviewed live E4 surface. The anchor, paper, registry/runner, and canonical frontier stdout now use the declared-endpoint, declared-interpolation-segment, and conditional measured-target wording. |
+audits/2026-07-11-v1.14-design\critique-v12-publication-language.md:18:| Declared endpoint/segment and neutral frontier wording | **VERIFIED** | The specified surface has zero occurrences of `best plausible`, `full best plausible`, `best case`, `plausible scenario`, `plausible segment`, or `does reality sit`. The endpoint and combined path are declared rather than calibrated (`frontier.mjs:53-74`; `e4-plausible-anchors.md:80-86`; `e4-paper-section-draft.md:71-76`), and the frontier header conditions real-setting interpretation on a measured target (`frontier.mjs:1-5`). |
+audits/2026-07-11-v1.14-design\critique-v12-publication-language.md:23:1. **Taxonomy contradiction.** `research/e4-plausible-anchors.md:91-92` introduces “Five named scenarios,” although
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "git show --stat --oneline 58dfa85; git show --format=fuller --no-ext-diff 58dfa85 -- scripts/simulation/e4-v5/test.mjs; rg -n -i 'best plausible|full best plausible|best case|plausible scenario|plausible segment|does reality sit|five named scenarios|prevent(s|ed)? drift|cannot silently diverge|can.t silently drift' scripts/simulation/e4-v5 research/e4-plausible-anchors.md research/e4-paper-section-draft.md research/e4-parity-theorem.md; if ("'$LASTEXITCODE -eq 1) { Write-Output '"'EXACT_FLAGGED_PHRASES=CLEAN'; exit 0 }" in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 210ms:
+58dfa85 E4 v13: remove the last traceability overclaim (test.mjs:75 comment)
+ .../CRITIQUE_v13_SUMMARY.md                        |   56 +
+ audits/2026-07-11-v1.14-design/codex-v13-run.log   | 2642 ++++++++++++++++++++
+ scripts/simulation/e4-v5/test.mjs                  |    2 +-
+ 3 files changed, 2699 insertions(+), 1 deletion(-)
+commit 58dfa85356c172566edc915bbf3e4d63723ac060
+Author:     Mauricio Offermann <mauricio.offermann@gocode.cl>
+AuthorDate: Sun Jul 12 00:25:40 2026 -0400
+Commit:     Mauricio Offermann <mauricio.offermann@gocode.cl>
+CommitDate: Sun Jul 12 00:25:40 2026 -0400
+
+    E4 v13: remove the last traceability overclaim (test.mjs:75 comment)
+    
+    Codex v13: substance passes the bar; ONE live overclaim remained. test.mjs comment now says the
+    sign test pins EXECUTABLE OUTCOME ORDERING ONLY (does not bind configs/magnitudes/labels/prose).
+    No other blocking overclaim remains under the robustness bar. Verified CLEAN. All 35 checks pass.
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+diff --git a/scripts/simulation/e4-v5/test.mjs b/scripts/simulation/e4-v5/test.mjs
+index 6855f67..4cbcb7b 100644
+--- a/scripts/simulation/e4-v5/test.mjs
++++ b/scripts/simulation/e4-v5/test.mjs
+@@ -72,7 +72,7 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
+   check('LEGACY all retired top-level engines are guarded', unguarded.length === 0, unguarded.length ? 'UNGUARDED: ' + unguarded.join(', ') : `${readdirSync(dir).filter((f) => f.endsWith('.mjs')).length} guarded`);
+ }
+ 
+-// ---- Scenario integrity: pin the honest signs so scenario-configs.mjs can't silently drift from the doc (Codex v7) ----
++// ---- Scenario integrity: pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose. ----
+ {
+   const { PRO_CENTRAL, NO_MYOPIA, MYOPIA_OFF, PROBABLE, PRO_DIST } = await import('./scenario-configs.mjs');
+   const sm = (over) => estimand({ ...baseConfig(), N: 800, K: 120, ...over }, { nWorlds: 300 }).m_hat;
+EXACT_FLAGGED_PHRASES=CLEAN
+
+ succeeded in 117454ms:
+{
+  "name": "distributed-governance-research",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Local tooling for generated diagram artifacts in the Distributed Governance Research project.",
+  "scripts": {
+    "check-anchors": "node scripts/check-anchors.mjs",
+    "fix-anchors": "node scripts/check-anchors.mjs --fix",
+    "e4:evidence": "node scripts/simulation/e4-v5/evidence.mjs",
+    "e4:controls": "node scripts/simulation/e4-v5/controls.mjs",
+    "e4:test": "node scripts/simulation/e4-v5/test.mjs",
+    "e4:theorem": "node scripts/simulation/e4-v5/theorem-check.mjs",
+    "e4:scenarios": "node scripts/simulation/e4-v5/scenarios.mjs",
+    "e4:frontier": "node scripts/simulation/e4-v5/frontier.mjs"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "11.16.0",
+    "pdf-lib": "^1.17.1"
+  }
+}
+
+
+> distributed-governance-research@0.0.0 e4:controls
+> node scripts/simulation/e4-v5/controls.mjs
+
+PASS  C1 signal recovery: M_C=M_D=S => D=C=O  — max|D-C|=0.00e+0, max|D-O|=0.00e+0
+PASS  C1 estimand m == 0  — m=0.00e+0
+PASS  C2 credit channel active (C changes with lambda)  — max|dC|=1.62e+1
+PASS  C3 w=0 => planner position inert  — max|dC|=0.00e+0
+PASS  C4 harm channel active (m falls as central sees harm)  — m(b_H_C=0)=0.4632 -> m(b_H_C=1)=0.1118
+
+Baseline (defaults, SMALL world): m_hat=0.4465  CI=[0.4318, 0.4617]  pi_deg=0.000  kept=300/300
+
+ALL CONTROLS PASSED
+
+> distributed-governance-research@0.0.0 e4:test
+> node scripts/simulation/e4-v5/test.mjs
+
+PASS  FIX strong-distributed => m materially > 0  — m=0.454
+PASS  FIX strong-central => m < 0 (central wins)  — m=-0.415
+PASS  FIX null => |m| negligible  — m=0.0001
+PASS  FIX boundary (near-parity) => |m| small  — m=0.032
+PASS  ATTRIB harm channel drives the advantage (m falls when pi_opp->0)  — m(pi_opp=.25)=0.720 > m(pi_opp=0)=0.273
+PASS  CLASSIFY both-sign corners => indeterminate
+PASS  CLASSIFY all-distributed corners => pos
+PASS  CLASSIFY R_alpha within band => negligible
+PASS  CLASSIFY R_alpha straddling delta => uncertain
+PASS  CLASSIFY pi_deg=1 => degenerate
+PASS  CLASSIFY insufficient => numerical unresolved
+PASS  LEGACY guard blocks e4-v4 from running (would feed retired D/C)
+PASS  LEGACY all retired top-level engines are guarded  — 19 guarded
+PASS  SCENARIO ordering pinned (central < no-myopia < myopia-off < probable < distributed)  — PRO_CENTRAL=-0.39 NO_MYOPIA=0.02 MYOPIA_OFF=0.28 PROBABLE=0.44 PRO_DIST=1.95
+PASS  EMBARGO rejects "2.2x"
+PASS  EMBARGO rejects Unicode "2.2×"
+PASS  EMBARGO rejects Cyrillic "2.2х"
+PASS  EMBARGO rejects "✕" cross
+PASS  EMBARGO rejects "2.2-fold"
+PASS  EMBARGO rejects "2.2 times"
+PASS  EMBARGO rejects word "two-fold"
+PASS  EMBARGO rejects "twice"
+PASS  EMBARGO rejects "double"
+PASS  EMBARGO rejects lowercase "d/c"
+PASS  EMBARGO rejects zero-width-split "2.2​x"
+PASS  EMBARGO rejects "fourfold"
+PASS  EMBARGO rejects "two times"
+PASS  EMBARGO rejects HTML "&times;"
+PASS  EMBARGO rejects word-joiner-split "2.2⁠x"
+PASS  EMBARGO rejects "D/C"
+PASS  EMBARGO allows clean percent text
+PASS  SCHEMA rejects extra field (ratio smuggling)
+PASS  SCHEMA rejects non-finite m_hat
+PASS  SCHEMA accepts a clean output
+PASS  CONTRACT fail-closed on unknown parameter
+
+ALL TESTS PASSED
+
+> distributed-governance-research@0.0.0 e4:theorem
+> node scripts/simulation/e4-v5/theorem-check.mjs
+
+E4 analytic benchmark — joint-normal fixed-threshold lemma
+  Cov(S,X)/sd(X) = 0.8000   z_q=0.524   selected share=0.300 (target q=0.3)
+  analytic  V = 0.63815
+  empirical V = 0.63787  (MC SE=0.00166)
+  |Δ| = 0.00029  = 0.17 SE
+
+PASS  analytic identity matches simulation within 3 MC SE
+
+> distributed-governance-research@0.0.0 e4:scenarios
+> node scripts/simulation/e4-v5/scenarios.mjs
+
+E4 — anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0)
+
+PRO-CENTRAL      m =   -29.5%  95% CI [-29.9%, -29.1%]   Core v0 delivers +68.1% of oracle · central +97.6%
+PROBABLE         m =   +46.6%  95% CI [+46.0%, +47.4%]   Core v0 delivers +91.2% of oracle · central +44.6%
+MYOPIA-OFF       m =   +30.4%  95% CI [+29.9%, +31.0%]   Core v0 delivers +91.2% of oracle · central +60.8%
+NO-MYOPIA        m =    +6.1%  95% CI [+5.8%, +6.4%]   Core v0 delivers +91.2% of oracle · central +85.2%
+PRO-DISTRIBUTED  m =  +199.8%  95% CI [+197.0%, +202.1%]   Core v0 delivers +95.8% of oracle · central -104.0%
+
+PRO-CENTRAL = a declared central-favourable endpoint (every knob central-favourable) → the central wins.
+Sequential attribution (path-dependent, nonlinear model): harm-myopia ALONE (MYOPIA-OFF, only s_exp,b_H_C)
+reduces the probable gap +46.6% → +30.4%, i.e. 16.2 of the 40.5-pt decline to +6.1% (~40%); the further step to
+the NO-MYOPIA bundle (unbiased/precise/no-credit) reduces it 24.3 pts (~60%). Read C/O < 0 as the central destroying value.
+
+> distributed-governance-research@0.0.0 e4:frontier
+> node scripts/simulation/e4-v5/frontier.mjs
+
+E4 — ceteris-paribus frontiers (others held at the PROBABLE scenario). m = D/O − C/O, parity at 0.
+
+■ s_exp  — central harm myopia (higher = blinder on the long tail)
+    frontier: none in [0.2, 8] — Core v0 wins across the whole plotted range
+    m across axis: 0.20:+33%  0.76:+42%  1.31:+45%  1.87:+46%  2.43:+46%  2.99:+47%  3.54:+47%  4.10:+47%  4.66:+47%  5.21:+47%  5.77:+47%  6.33:+47%  6.89:+47%  7.44:+47%  8.00:+47%
+
+■ b_H_C  — central harm detection (higher = less myopic)
+    frontier: none in [0, 2] — Core v0 wins across the whole plotted range
+    m across axis: 0.00:+47%  0.14:+47%  0.29:+47%  0.43:+47%  0.57:+46%  0.71:+46%  0.86:+46%  1.00:+46%  1.14:+46%  1.29:+45%  1.43:+45%  1.57:+45%  1.71:+45%  1.86:+45%  2.00:+45%
+
+■ p  — citizen participation (higher = denser distributed signal)
+    frontier: none in [0.02, 0.6] — Core v0 wins across the whole plotted range
+    m across axis: 0.02:+25%  0.06:+39%  0.10:+44%  0.14:+48%  0.19:+50%  0.23:+50%  0.27:+51%  0.31:+51%  0.35:+52%  0.39:+52%  0.43:+52%  0.48:+52%  0.52:+53%  0.56:+52%  0.60:+54%
+
+■ beta  — silencing of opponents (higher = weaker distributed harm-voice)
+    frontier: none in [0, 0.95] — Core v0 wins across the whole plotted range
+    m across axis: 0.00:+49%  0.07:+47%  0.14:+48%  0.20:+47%  0.27:+47%  0.34:+47%  0.41:+47%  0.47:+47%  0.54:+46%  0.61:+46%  0.68:+45%  0.75:+46%  0.81:+45%  0.88:+45%  0.95:+42%
+
+■ a_V  — visibility tail (higher a_V = flatter tail, more projects visible)
+    frontier: none in [0.2, 3] — Core v0 wins across the whole plotted range
+    m across axis: 0.20:+48%  0.40:+47%  0.60:+47%  0.80:+47%  1.00:+47%  1.20:+47%  1.40:+47%  1.60:+46%  1.80:+45%  2.00:+45%  2.20:+44%  2.40:+44%  2.60:+44%  2.80:+44%  3.00:+44%
+
+■ probable → declared central-favourable endpoint (combined path; t in [0,1] is the declared interpolation segment)
+    t=0 probable scenario → t=1 declared central-favourable endpoint
+    m across t: t=0.00:+47%  t=0.25:+25%  t=0.50:+5%  t=0.75:-13%  t=1.00:-30%  t=1.25:-49%  t=1.50:-96%  t=1.75:-97%  t=2.00:-98%
+    frontier (m=0) at t ≈ 0.57  →  conditions ~57% of the way from probable to the declared central-favourable endpoint flip the winner to the central (within the declared interpolation segment)
+
+Read: none of the FIVE plotted one-factor slices flips the winner from the probable scenario over its plotted
+range (a limited robustness statement over those five slices, NOT over all parameters). The frontier is reached
+on the combined path within the declared interpolation segment. NOTE: t is a linear mix of heterogeneous knobs,
+an illustrative path — not a calibrated competence scale.
+
+> distributed-governance-research@0.0.0 e4:evidence
+> node scripts/simulation/e4-v5/evidence.mjs
+
+E4 evidence — contract e4-v5.0.0 — θ:e4v7+fnv1a-2ea996da
+  PROBABLE scenario (source-motivated declared reference) headline: m = +46.6%  95% CI [+46.0%, +47.4%]   Core v0 +91.2% of oracle · central +44.6%
+  finite product-box sample of the declared envelope (400/400 draws, knobs independent uniform):
+    m distribution: p5 +18.9% · median +42.0% · p95 +88.3%
+    Core v0 wins 399/400 draws · central 0 · parity 1   (0 central: one-sided 95% upper bound on central-win prob ≈ 1%, rule of three — NOT zero)
+  targeted probe of the coordinated central-favourable region (20% inward of PRO-CENTRAL): central wins 40/40 draws
+    ⇒ a real central-winning region EXISTS off the independent-box sample; the GLOBAL winner is region-dependent, not one-sided
+  status → sign:indeterminate (region-dependent)  materiality:material  degeneracy:ok  numerical:resolved
+  π_deg: 0%   contract hash: fnv1a-47acd0af
+  (named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)
+
+codex
+All six prescribed commands exited 0. The reproduced outputs match v13’s substantive record: all controls/tests pass, theorem error is 0.17 MC SE, scenario ordering and 40/60 sequential attribution reproduce, the five-slice limit is explicit, the combined path crosses at about 0.57, and evidence remains region-dependent. The exact retired endpoint/taxonomy/traceability phrases are absent from the live reviewed surface.
+collab: Wait
+apply patch
+patch: completed
+C:\devel\claude-projects\distributed-governance-research\audits\2026-07-11-v1.14-design\CRITIQUE_v14_SUMMARY.md
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md; git diff --check; git status --short' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 194ms:
+# Codex critique v14 — publication-ready verdict on E4 v1.14
+
+## Verdict
+
+**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
+
+This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
+
+## Verification
+
+- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
+- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
+- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
+
+## Direct answers
+
+- **Publication-ready? YES.**
+- **Multiplier relapse? NO.**
+- **Remaining blockers: NONE.**
+
+?? audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+?? audits/2026-07-11-v1.14-design/codex-v14-run.log
+
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+codex
+I’ve written the requested v14 summary with a plain YES verdict, multiplier relapse NO, and no remaining blockers. The file passes the whitespace/diff check; I’m waiting only for the final independent code-routing review before closing.
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+collab: Wait
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+collab: Wait
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+The full suite passed, all requested files were reviewed, required routing reviews concurred, and the v14 summary was written and checked.
+  ✓ Run the complete E4 v1.14 verification command and capture results
+  ✓ Inspect every requested simulation and research file for the line-75 fix, multiplier relapse, and blocking label/claim issues
+  ✓ Apply required agent-routing review and reconcile findings
+  ✓ Write and verify CRITIQUE_v14_SUMMARY.md
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+codex
+**YES.** E4 code and paper draft are publication-ready as a comparative-institutions robustness result under the stated bar.
+
+- `test.mjs:75` exact fix: verified
+- All six prescribed commands: passed
+- Blocking overclaim/dishonest label: none
+- Multiplier relapse: no
+- Remaining blockers: none
+
+Summary: [CRITIQUE_v14_SUMMARY.md](C:/devel/claude-projects/distributed-governance-research/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md)
+diff --git a/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba34dc1665e6ba1f950a43dc9f60494964f40b71
+--- /dev/null
++++ b/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md
+@@ -0,0 +1,19 @@
++# Codex critique v14 — publication-ready verdict on E4 v1.14
++
++## Verdict
++
++**YES — E4 (code + paper draft) is publication-ready as a comparative-institutions robustness result under the stated bar.**
++
++This verdict does not impose the calibrated-impact bar the paper expressly disclaims.
++
++## Verification
++
++- **`scripts/simulation/e4-v5/test.mjs:75` fix: VERIFIED.** The committed line says: “pin executable outcome ORDERING only; this does not bind configs, magnitudes, labels, or prose.” It now matches what the assertion actually tests.
++- **Prescribed runs: PASS.** `e4:controls`, `e4:test`, `e4:theorem`, `e4:scenarios`, `e4:frontier`, and `e4:evidence` all exited 0 on `master` at `6d4a712`, which contains the fix commit `58dfa85`.
++- **Blocking overclaim/dishonest label: NONE.** The live code and requested research files consistently distinguish four substantive declared scenarios from one diagnostic contrast, limit the theorem and frontier claims to their stated scope, and label the result as robustness rather than calibrated impact.
++
++## Direct answers
++
++- **Publication-ready? YES.**
++- **Multiplier relapse? NO.**
++- **Remaining blockers: NONE.**
+
+tokens used
+83,534
+**YES.** E4 code and paper draft are publication-ready as a comparative-institutions robustness result under the stated bar.
+
+- `test.mjs:75` exact fix: verified
+- All six prescribed commands: passed
+- Blocking overclaim/dishonest label: none
+- Multiplier relapse: no
+- Remaining blockers: none
+
+Summary: [CRITIQUE_v14_SUMMARY.md](C:/devel/claude-projects/distributed-governance-research/audits/2026-07-11-v1.14-design/CRITIQUE_v14_SUMMARY.md)

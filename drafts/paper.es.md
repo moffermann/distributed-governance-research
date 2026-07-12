@@ -12,7 +12,7 @@ Los recursos públicos se asignan y controlan en instituciones que fusionan tres
 
 Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado consecuente es pública.
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios mapea luego dónde gana cada institución: un central competente y consciente del daño empata (el régimen de casi-paridad pre-registrado), mientras que un central realistamente miope al daño en la cola larga de baja visibilidad pierde ante la cobertura —una reconciliación, no una contradicción, del gate conservador, con todas las magnitudes reportadas como puntos de referencia declarados y motivados por fuentes, no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
 Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las unidades de la simulación no están calibradas, son de equilibrio parcial y no identifican efectos de entrega; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
@@ -674,7 +674,45 @@ simulado, reportada por separado de la mediana). La ventaja crece con la presió
 crédito λ y cae a medida que el crédito se alinea con el valor —el mecanismo de
 crédito-versus-cobertura— pero es pequeña, razón por la cual el multiplicador
 calibrado se retira y el artículo se apoya en la arquitectura y la dirección del
-mecanismo.
+mecanismo, ahora afinada por el mapa de robustez a continuación.
+
+**Una extensión de miopía realista (v1.14): un mapa de robustez de cuatro
+escenarios.** El gate pre-registrado anterior dota al brazo central de una tasación
+competente y *consciente del daño*. Una extensión v1.14 pregunta qué ocurre cuando el
+central es realistamente **miope al daño en la cola larga de baja visibilidad** —
+donde la fiscalización rutinaria, la oposición y la atención de auditoría alcanzan
+sobre todo a los pocos proyectos visibles y disputados. Separa el valor real en apoyo
+y daño, S = S⁺ − H, y le da al central un término de daño gobernado por saliencia,
+M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, cuya detección de daño s(V) crece con
+la visibilidad del proyecto; el brazo distribuido registra el daño en toda la
+distribución. Con el presupuesto igualado y la entrega puntuada sobre el valor real,
+cuatro escenarios declarados (más un contraste diagnóstico) nivelan la cancha para
+ambas instituciones, reportados como la fracción con signo del benchmark voraz de
+información completa, paridad en cero (`npm run e4:scenarios`). En el **endpoint
+declarado favorable al central** —baja participación y un central competente y
+consciente del daño— *gana el central*, entregando ≈ 98% del benchmark frente a ≈ 68%
+del brazo distribuido. Bajo la referencia **probable**, el brazo distribuido entrega
+≈ 91% y el central ≈ 45%. En el caso **favorable al distribuido**, el central miope
+financia proyectos de daño neto y entrega valor *negativo*, mientras el brazo
+distribuido entrega ≈ 96%. Un contraste diagnóstico que apaga la miopía al daño
+*sola* (solo las dos coordenadas del gate de daño) explica cerca del 40% del
+movimiento secuencial desde la brecha probable; el paso siguiente hacia un **paquete
+sin-miopía** plenamente consciente del daño y competente devuelve los brazos a la
+casi-paridad —el mismo régimen que el Δ ≈ 0.025 del gate pre-registrado, que por
+construcción dotó al central de tasación consciente del daño. Los dos resultados son
+por tanto el mismo fenómeno bajo supuestos opuestos, no una contradicción: si el
+central ve el daño la ventaja colapsa a la casi-paridad del gate; si es realistamente
+miope, el brazo de cobertura se adelanta. Un benchmark estilizado normal-conjunto de
+umbral fijo (`research/e4-parity-theorem.md`) ubica la frontera de paridad en la
+igualdad de las razones señal-a-ruido de covarianza de los dos selectores, y un
+sendero ceteris-paribus desde el escenario probable hacia el favorable al central
+cruza la paridad a mitad del segmento declarado. Estas magnitudes son **puntos de
+referencia y estrés declarados y motivados por fuentes, no bandas calibradas al
+dominio objetivo** (los intervalos cubren solo la variabilidad Monte-Carlo interna, y
+la fuerza de la miopía al daño es el supuesto de mayor peso y menos anclado
+empíricamente); el objeto honesto es dónde gana cada institución y cuánto depende la
+respuesta de ese supuesto, no un número único. Los ahorros de costo administrativo y
+la corrupción/filtraciones son canales separados y aditivos, excluidos aquí a propósito.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
