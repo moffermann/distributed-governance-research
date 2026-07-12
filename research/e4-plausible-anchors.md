@@ -23,34 +23,27 @@
 | `beta` voice suppression | T | contract | TBD | spiral of silence; weak empirics | — | 🔲 |
 | `phi` budget share, noises, scales | A | contract | contract | declared model scale | n/a | 🔲 |
 
-## MASTER SCENARIO TABLE (all knobs; author delegated range definition 2026-07-11)
-Three named point-scenarios across every knob (each scenario = a full config → run → m ± 95% CI). PRO-CENTRAL is the
-central's best plausible case (and the continuity anchor to the earlier ~0.025 near-parity). PROBABLE is the
-evidence/theory-anchored expectable case. PRO-DISTRIBUTED is the distributed's favourable case. Anchor: E empirical ·
-T theory · P proxy-informed (transport gap) · A declared scale.
+## KNOB ANCHOR TABLE (anchors + direction only — EXACT VALUES LIVE IN CODE)
+> **AUTHORITATIVE scenario values = `scripts/simulation/e4-v5/scenario-configs.mjs` (single source).** This table
+> gives each knob's anchor TYPE and the qualitative DIRECTION from central-favourable → distributed-favourable; it
+> deliberately does NOT duplicate the numeric points (that duplication forked once — Codex v7). A regression test
+> (`npm run e4:test`) pins the scenario sign ordering so code and this narrative cannot silently diverge.
+> Anchor: E empirical · T theory · P proxy-informed (transport gap) · A declared scale.
 
-| knob | anchor | pro-central | PROBABLE | pro-distributed | justification |
-|---|---|---|---|---|---|
-| `a_V` | E | 1.0 | 0.5 | 0.2 | procurement heavy tail (Skuhrovec 1309.0218); proC=flatter (more visible) |
-| `b_V` | E | 1.5 | 3.5 | 5.0 | " (mass on low-visibility long tail) |
-| `p` | E | 0.05 | 0.15 | 0.45 | PB turnout ×reach ≈1–3% (Brennan/SignalCleveland) |
-| `a_r` | E/joint | 0.8 | 1.5 | 3.0 | reach mean proC≈0.05, prob≈0.16, proD≈0.375; joint `reach×p≈turnout` |
-| `b_r` | E/joint | 14 | 8 | 5 | " |
-| `pi_opp` | T/E | 0.03 | 0.15 | 0.35 | opposition/NIMBY prevalence among affected; proC=little harm to miss |
-| `mu_opp` | A | 1.5 | 3.0 | 5.0 | opposition intensity scale |
-| `s_exp` | T | 0.5 | 2.5 | 5.0 | agenda-setting/salience — proC concave/flat (central sees harm on tail), prob convex (myopic on tail) |
-| `b_H_C` | T | 1.2 | 0.5 | 0.2 | central harm-detection where it looks; proC=competent detector |
-| `w` | P | 0.1 | 0.5 | 1.3 | projection (Gagnon-Bartsch/D-L-S, transport gap) |
-| `a` | P | 0.0 | 0.2 | 0.6 | systematic bias intercept (Broockman-Skovron, transport gap) |
-| `b` | P | 1.0 | 0.9 | 0.7 | responsiveness near-linear (B-S); proC=faithful |
-| `beta` | T | 0.8 | 0.35 | 0.1 | adverse-voice suppression (spiral of silence); proC=opponents silenced |
-| `lambda` | T | 0.0 | 0.15 | 0.35 | credit pressure / clientelism; proC=none |
-| `zeta` | A/T | 0.85 | 0.6 | 0.35 | category-signal↔quality corr; proC=good proxy |
-| `gamma` | tied w | 0.3 | 0.5 | 0.9 | projection loading on category signal |
-| `sigma_e` | A | 1.2 | 0.5 | 0.2 | report noise; proC=noisy citizen reports |
-| `sigma_C` | A | 0.2 | 0.5 | 0.8 | central estimation noise; proC=precise central |
-| `sigma,sigma_v,v_p0,phi,h` | A | base | base | base | scale/structural (held at contract defaults) |
-| `m_q,s_q,c_lo,c_hi,N,K` | A | base | base | base | value/cost/computational scale (held) |
+| knob | anchor | direction: central-favourable → distributed-favourable | justification |
+|---|---|---|---|
+| `a_V,b_V` | E | flatter tail (more visible) → heavier tail (more low-visibility) | procurement heavy tail (Skuhrovec arXiv:1309.0218) |
+| `p` | E | low → high participation | PB turnout ×reach ≈1–3% (Brennan/SignalCleveland) |
+| `a_r,b_r` | E/joint | low → high reach | joint constraint `reach×p ≈ turnout` |
+| `pi_opp,mu_opp` | T/E | little/mild opposition → prevalent/intense | opposition/NIMBY prevalence & intensity |
+| `s_exp` | T | concave/flat gate (central sees harm) → convex (myopic on tail) | agenda-setting/salience |
+| `b_H_C` | T | high harm-detection → low | central competence at reading harm |
+| `w,a,b` | P | low projection/bias, faithful slope → high projection/bias | Broockman-Skovron / Gagnon-Bartsch (transport gap) |
+| `beta` | T | opponents silenced → free voice | spiral of silence |
+| `lambda` | T | no credit pressure → high | clientelism / credit-claiming |
+| `zeta,gamma` | A/T | good category proxy → poor | proxy quality |
+| `sigma_e,sigma_C` | A | noisy citizen reports + precise central → clean reports + noisy central | measurement-noise scale |
+| `sigma,sigma_v,v_p0,phi,h,m_q,s_q,c_lo,c_hi,N,K` | A | held at contract defaults (not scenario-varied) | value/cost/computational scale |
 
 **Frontier axes (ceteris-paribus, from PROBABLE):** `s_exp, b_H_C, p, beta` (+ `a_V`) — locate where m crosses 0.
 
@@ -90,15 +83,18 @@ T theory · P proxy-informed (transport gap) · A declared scale.
 ## Fixed variables (details)
 _(populated as we fix each, one at a time)_
 
-## Three anchored scenarios (author framing 2026-07-11) — level the field both ways
-Across ALL knobs, report three named scenarios, each with stated assumptions:
-- **PRO-CENTRAL** — forced to favour the central, ANCHORED to reproduce the earlier ~0.025 near-parity
-  (the symmetry-gate NO-GO) under explicit assumptions (competent central that SEES anti-value: low myopia, high
-  `b_H_C` / low `s_exp`, light visibility tail). Central's best case AND a continuity check reconciling with the
-  prior result — NOT a contradiction. (Verify: engine under no-myopia settings ≈ near-parity.)
-- **PROBABLE** — evidence-anchored expectable values → `m ± 95% CI`, with the why/conditions.
-- **PRO-DISTRIBUTED** — favourable/expectable for distributed → `m ± 95% CI`.
-Per knob we also give: D_F range, frontier location, evidence for the probable value, result ± CI.
+## Anchored scenarios (author framing 2026-07-11) — level the field both ways
+Five named scenarios (values in `scenario-configs.mjs`), each a full config → `m ± 95% CI` (inner MC only):
+- **PRO-CENTRAL** — the central's FULL best plausible case (every knob central-favourable). The central WINS
+  (≈ −30%, delivers 98% of the benchmark). This is the honest "central's favourable region", NOT near-parity.
+- **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast
+  (≈ +30%): attributes the harm channel ALONE (most, not all, of the probable advantage).
+- **NO-MYOPIA** — a harm-aware AND otherwise-competent central bundle (≈ +6%). The continuity anchor to the
+  symmetry-gate ~0.025 near-parity (that gate equips the central with competent harm-aware appraisal). NOT a myopia
+  isolation — it also improves projection/bias/noise/credit.
+- **PROBABLE** — source-motivated declared reference (≈ +46.6%), with the why/conditions.
+- **PRO-DISTRIBUTED** — favourable for distributed (≈ +200%; central destroys value).
+Per axis we also give: D_F range, ceteris-paribus frontier location, evidence for the probable value, result ± CI.
 
 ### var #2 — `p` (participation) — ✅ CONFIRMED (author, 2026-07-11)
 - **Anchor type: E (empirical), with a mapping caveat.** Participatory-budgeting turnout (whole population) is low
