@@ -28,9 +28,12 @@
 > visible, contested projects — agenda-setting; and catch harm as visibility V→1 via EIA/audit) is theory-anchored;
 > the EXPONENT is a stylized parameter, NOT measured. It is reported across the anchored band, and the result is robust
 > across it: on the probable world, `s_exp=1.0` (linear gate; central detects ~12% of harm on a median project) gives
-> m≈+48%, `s_exp=1.5` ≈+51%, `s_exp=2.5` (strong tail-myopia; ~0.6% median detection) ≈+54%. The paper reports this
-> sensitivity and the full competent-central range (fully harm-aware ≈+14% → best-competent-reader endpoint ≈−3%),
-> so the headline does not rest on the exponent alone.
+> m≈+48%, `s_exp=1.5` ≈+51%, `s_exp=2.5` (strong tail-myopia; ~0.6% median detection) ≈+54%. Within the anchored
+> space (central still myopic per the literature AND still projecting) the competent-central range is ≈+14% (fully
+> harm-aware) → ≈+54% — coverage wins throughout; the headline does not rest on the exponent alone. NOTE: a central
+> "winning" corner (≈−3%) exists ONLY by abandoning the anchored myopia AND projection AND assuming a near-harmless
+> world — an anti-empirical corner, reported SYMMETRICALLY with the idealized-distributed corner (≈+118%), never as a
+> privileged "central winning region" (that asymmetric idealization is the bias this project explicitly avoids).
 
 ## KNOB ANCHOR TABLE (anchors + direction only — EXACT VALUES LIVE IN CODE)
 > **AUTHORITATIVE scenario values = `scripts/simulation/e4-v5/scenario-configs.mjs` (single source).** This table
