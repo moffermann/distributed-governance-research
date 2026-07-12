@@ -21,9 +21,14 @@ reality **plus a substantial intercept shift**; Dias–Lucas–Sheffer: **direct
 planner's own position):
 
 ```
-M_j^C  =  a  +  b · S_j^A  +  w · (v_p − S̄)  +  η_j
+M_j^C  =  a  +  b · S_j⁺  +  w · (v_{p,j} − S_j⁺)  −  b_H^C · s(V_j) · H_j  +  η_j
 ```
-- **`b` (slope, responsiveness):** the central tracks true value (b>0, near-linear). Real planners are *responsive*.
+> **v1.14 update (superseding the earlier `a + b·S + w·(v_p − S̄)` form):** the projection is **project-varying**
+> `v_{p,j}` (identifies `w` separately from `a`/`b`; see DESIGN_SKETCH_v5 §B.4), value splits into support `S⁺` and
+> harm `H` (`S = S⁺ − H`), and the central is **myopic to harm, salience-gated**: `−b_H^C·s(V_j)·H_j` with `s(·)`
+> increasing in visibility `V_j` (near-blind on the low-visibility long tail — see `ANTIVALUE-MODELING.md`). The
+> earlier project-invariant equation is retired.
+- **`b` (slope, responsiveness):** the central tracks visible/support value (b>0, near-linear). Real planners are *responsive*.
 - **`a` (intercept shift, systematic bias):** a directional bias that does **not** average out (systematic, not
   random error — **not novel in itself**; false-consensus / elite–mass misperception is well established). *Source-
   domain magnitudes (political opinion, NOT project value):* B-S find overestimation of conservative support of
@@ -63,19 +68,21 @@ variance. (This is the credit-vs-coverage mechanism, now with `M_j^C` given an e
 | citizen value distribution F | still ASSUMED (app-elicitable) | — |
 
 ## 5. The parity condition (sketch → E4's object)
-Selecting on `M_j^C` vs `M_j^D`, the distributed arm delivers more true value when the central's error (bias `a` +
-projection `w·(v_p−S̄)`) outweighs the distributed's degradation (voice bias `β`, sampling). The **boundary**
-`{θ : m(θ) = 0}` — with `θ = (a, w, b, β, σ, …)` swept over the **declared transport-sensitivity sets** (not point
-anchors) — is E4's primary object: central wins on one side, distributed on the other. Honest headline: **which side
-reality falls on, and how large each region is** — not a multiplier. (The old E4-v4 harm-weight law `β = 1−η` does
-**not** generalize to this form and is **retired**; the replacement is a separate joint-normal fixed-threshold
-benchmark — DESIGN_SKETCH_v4 §5. The legacy nested-harm result lives only in its own legacy test.)
+Selecting on `M_j^C` vs `M_j^D`, the distributed arm delivers more true value when the central's error (bias `a`,
+projection `w·(v_{p,j}−S⁺)`, and **salience-gated harm myopia** `b_H^C·s(V)`) outweighs the distributed's
+degradation (voice bias `β`, sampling). The primary object is the **sign backbone over `D_F`** (does the winner
+flip across the physically-possible set?) plus the **magnitude over the expectable `R_α`** — reported by the
+certified evidence pipeline (`scripts/simulation/e4-v5/evidence.mjs`), never a multiplier. The parity **benchmark**
+is proved analytically in `e4-parity-theorem.md` (joint-normal fixed-threshold: parity ⇔ equal `Cov(S,X_k)/sd(X_k)`;
+regression `npm run e4:theorem`). (The old E4-v4 harm-weight law `β = 1−η` does **not** generalize and is
+**retired**; the legacy nested-harm result lives only behind its legacy runtime guard.)
 
 ## 6. The meta-prediction instrument (Prelec)
 The "rate + guess others" method (Prelec, Seung & McCoy 2017): each person gives a vote and a **meta-prediction**
 of others' answers; the **surprisingly popular** answer (actual frequency > average predicted frequency) provably
-recovers truth in the large-crowd limit. This is the established instrument for eliciting `w` and the F↔G gap; it
-also formalizes *why* G systematically deviates from truth (people mis-predict the aggregate in a structured way).
+recovers truth in the large-crowd limit. It is an established instrument for **measuring the F↔G gap / projection
+direction** (and a candidate bridge instrument to elicit `S⁺, H, v_{p,j}` separately) — **not** a measurement of the
+target structural `w` in the value-of-project equation, which stays PROXY-INFORMED absent target-domain bridge data.
 
 ## 7. Honest scope
 - The magnitudes are from **political-opinion** perception; **transport to public-project value is an assumption**
