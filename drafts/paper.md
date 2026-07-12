@@ -117,9 +117,9 @@ current institution solves the same problem, not against an ideal — blocking t
    bounded slice of public spending (alongside distributional and rights
    constraints the model does not represent). In the model, verified delivery and social prioritization
    interact rather than merely add; the earlier agent-based apparatus produced a
-   compound of 2.22× a status-quo baseline parameterized from published
-   audit-institution findings (1.4–1.6× at municipal pilot scale). We **retire
-   that compound as a calibrated effect**: a pre-registered, symmetric,
+   compound value-per-budget ratio against a status-quo baseline parameterized from
+   published audit-institution findings (only near-parity at municipal pilot scale). We
+   **retire that compound as a calibrated effect**: a pre-registered, symmetric,
    selection-only stress test shrinks the distributed-minus-central selection
    advantage to a pre-registered pooled median Δ = 0.025 of a full-information
    benchmark, below its pre-set 0.05 research-program rebuild gate (NO-GO). The
@@ -537,12 +537,17 @@ seeded runs per condition; the code is dependency-free and deterministic
 (`scripts/simulation/allocation-sim.mjs`; full tables in
 [simulation-results](../research/simulation-results.md)).
 
-**Status of the earlier compound ratios.** Three baselines of the same
-value-per-budget ratio were produced by this agent-based apparatus: **2.19×**
-against zero-control (E5), **2.22×** against the audit-parameterized status quo
-(E7), and **2.26×** under behavioral adoption (E8). They are retained here for
-traceability as **conditional outputs of that apparatus**, but are **superseded
-for magnitude inference** and are no longer offered as the paper's headline.
+**Status of the earlier compound ratios (retired).** An earlier version reported a
+single compound value-per-budget ratio against three baselines (a zero control, E5; an
+audit-parameterized status quo, E7; behavioral adoption, E8). That single number
+**conflated three distinct channels** — selection quality, administrative-machinery
+cost, and leakage/diversion — and is **retired as a calibrated effect**. E5 is now
+formalized as a transparent multi-layer stack: selection quality at *matched* project
+budget (the E4 result above), with administrative cost and leakage as **separate,
+declared, parametric channels** — default off, so the central is granted zero cost and
+zero leakage, and E5 then reduces exactly to the selection result — each reported
+without conflation and, in the cost-and-corruption extension, anchored to real
+public-budget and procurement-corruption data (`scripts/simulation/e4-v5/e5-layers.mjs`).
 
 **Quantitative status (governing).** A pre-registered, symmetric, selection-only
 stress test — both arms with matched expected appraisal-report budgets, the same
@@ -637,8 +642,9 @@ profiles that route budget within it. The distributed arm is robust to the
 quality of that categorization and a central arm is fragile to it, so the
 advantage over a central status quo is not fixed: it grows as central planning
 worsens — a model-internal direction the companion apparatus illustrates (a
-conditional contrast rising from roughly twofold to more than fivefold, not a
-calibrated multiplier; see the quantitative-status note in this section).
+conditional contrast that widens substantially as the central categorization
+degrades, not a calibrated multiplier; see the quantitative-status note in this
+section).
 
 Two architectural facts scope the statement and forestall a tempting
 over-reading. First, the default layer is pluggable, not mandatorily central:
@@ -896,19 +902,17 @@ detection, and a reputational stake: a visible confirmed-diversion record
 that costs future selection by funders).
 Crossing delivery with the two E4 selection regimes yields a 2×2 whose
 main effects are two plain questions. Same projects, different control
-layer: the verified regime delivers +43% on identical portfolios
-(paired ΔV = 0.168 [0.143, 0.193]), and the zero-control regime's
-official completion overstates its real delivery by twenty-nine
-percentage points. Same control layer, different
-projects: social prioritization delivers +53-54% under either regime.
-The interaction is positive and significant (+0.085 [0.053, 0.117]): within
-this apparatus the two layers **interact rather than merely add**, yielding a
-**conditional zero-control scenario output of 2.19×** per unit of budget
-(0.859 vs 0.393) across direct-participation rates from 3% (the
-participatory-budgeting floor) to 40% (voting-scale). This compound is a
-model-internal factorial contrast, **not** a calibrated effect (see the
-quantitative-status note in Section 6 and the estimand contract). Two
-pre-registered predictions failed honestly.
+layer: the verified (milestone-gated) regime delivers +43% on identical
+portfolios (paired ΔV = 0.168 [0.143, 0.193]) over a zero-control regime
+whose official completion overstates its real delivery by twenty-nine
+percentage points. Same control layer, different projects: social
+prioritization delivers +53-54% under either regime. The interaction is
+positive and significant (+0.085 [0.053, 0.117]): the two layers **interact
+rather than merely add**. An earlier version summarized this as a single
+compound value-per-budget output; that compound is **retired** as a
+model-internal factorial contrast, not a calibrated effect — E5 now reports
+selection, administrative cost, and leakage as **separate declared channels**
+(Section 6). Two pre-registered predictions failed honestly.
 The expected dominance of delivery over selection did not hold at this
 scale — central selection at two hundred projects is near-random (E4),
 inflating the selection margin — so within this apparatus the robust pattern is
@@ -978,10 +982,10 @@ European Court of Auditors, Brazil's TCU and CGU, and the comptrollers
 of Chile, Peru and Colombia; Ferraz and Finan 2008) — with the planner's
 inspection bandwidth scaled to scope and coordinated signal bias swept
 as the Condorcet failure regime. The withdrawal condition was not
-triggered *within this apparatus*: against the audit-parameterized baseline it
-produced 2.22× [2.10, 2.35] per unit of budget at scale, and
-1.4–1.6× at municipal pilot scale (10-40 projects), where central
-selection with full coverage is competitive and the case rests on
+triggered *within this apparatus*: against the audit-parameterized baseline the
+earlier compound was substantial at scale but only near-parity at municipal
+pilot scale (10-40 projects), where central selection with full coverage is
+competitive and the case rests on
 delivery and metering. But the audit evidence *parameterizes the baseline's
 leak*; it does **not** calibrate the Core v0 institutional treatment effect,
 which is governed by the later pre-registered symmetric test (Section 6) whose
@@ -1014,8 +1018,8 @@ by a companion behavioral study: a Core v0-conformant agent-based model
 of awareness, registration, participation modes, and trusted
 microdelegation, calibrated with LLM-elicited synthetic priors
 (replication package: the distributed-governance-experiments
-repository). The earlier apparatus produced 2.26 [2.23, 2.30] at scale under its
-synthetic adoption assumptions and 2.15–2.9× across three populations and all
+repository). The earlier apparatus produced a compound at scale under its
+synthetic adoption assumptions that varied across three populations and all
 scales, including a launch trajectory that begins near zero
 participation — which costs 1.7% of the ratio, because the default layer
 anchors the thin early cycles by construction. The behavioral study also

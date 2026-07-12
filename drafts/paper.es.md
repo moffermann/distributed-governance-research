@@ -127,10 +127,10 @@ ideal inalcanzable, no contra la alternativa disponible— en ambas direcciones
    acotada del gasto público (junto a las restricciones distributivas y de derechos
    que el modelo no representa). En el modelo, la entrega verificada y la
    priorización social interactúan en lugar de solo sumarse; el aparato basado
-   en agentes anterior produjo un compuesto de 2.22× frente a una línea base del statu
-   quo parametrizada a partir de los hallazgos publicados de instituciones de
-   auditoría (1.4–1.6× a escala de piloto municipal). **Retiramos ese compuesto
-   como efecto calibrado**: una prueba de estrés pre-registrada, simétrica y
+   en agentes anterior produjo un compuesto de valor por unidad de presupuesto frente a
+   una línea base del statu quo parametrizada a partir de los hallazgos publicados de
+   instituciones de auditoría (solo casi-paridad a escala de piloto municipal).
+   **Retiramos ese compuesto como efecto calibrado**: una prueba de estrés pre-registrada, simétrica y
    solo-de-selección reduce la ventaja de selección distribuido-menos-central a
    una mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información
    completa, por debajo de su umbral prefijado de 0.05 de reconstrucción del
@@ -589,13 +589,18 @@ conmutable. Veinte corridas con semilla por condición; el código es sin
 dependencias y determinista (`scripts/simulation/allocation-sim.mjs`; tablas
 completas en [simulation-results](../research/simulation-results.md)).
 
-**Estado de los cocientes compuestos anteriores.** Este aparato basado en agentes
-produjo tres líneas base del mismo cociente de valor por unidad de presupuesto:
-**2.19×** frente al cero-control (E5), **2.22×** frente al statu quo parametrizado
-por auditorías (E7) y **2.26×** bajo adopción conductual (E8). Se conservan aquí
-por trazabilidad como **salidas condicionales de ese aparato**, pero están
-**superadas para inferir magnitud** y ya no se ofrecen como la cifra principal del
-artículo.
+**Estado de los cocientes compuestos anteriores (retirados).** Una versión anterior
+reportó un único cociente compuesto de valor por unidad de presupuesto frente a tres
+líneas base (un cero-control, E5; un statu quo parametrizado por auditorías, E7;
+adopción conductual, E8). Ese número único **conflacionaba tres canales distintos** —
+calidad de selección, costo de maquinaria administrativa y fuga/desvío— y se **retira
+como efecto calibrado**. E5 ahora se formaliza como una pila multi-capa transparente:
+calidad de selección a presupuesto *igualado* (el resultado de E4 anterior), con el
+costo administrativo y la fuga como **canales declarados, separados y paramétricos**
+—apagados por defecto, así que al central se le otorga costo cero y fuga cero, y E5 se
+reduce exactamente al resultado de selección—, cada uno reportado sin conflación y, en
+la extensión de costo-y-corrupción, anclado a datos reales de presupuesto público y
+corrupción-en-compras (`scripts/simulation/e4-v5/e5-layers.mjs`).
 
 **Estado cuantitativo (rector).** Una prueba de estrés pre-registrada, simétrica y
 solo-de-selección —ambos brazos con presupuestos esperados de reportes de tasación
@@ -695,9 +700,9 @@ los perfiles de asignación agregados que rutean el presupuesto dentro de ella.
 El arreglo distribuido es robusto a la calidad de esa categorización y el
 central es frágil a ella, así que la ventaja sobre un status quo central no es
 fija: crece a medida que empeora la planificación central —una dirección interna
-al modelo que el aparato complementario ilustra (un contraste condicional que
-sube de ~2× a más de 5×, no un multiplicador calibrado; véase la nota de estado
-cuantitativo en esta sección).
+al modelo que el aparato complementario ilustra (un contraste condicional que se
+amplía sustancialmente a medida que se degrada la categorización central, no un
+multiplicador calibrado; véase la nota de estado cuantitativo en esta sección).
 
 Dos hechos arquitectónicos acotan el enunciado y evitan una
 sobreinterpretación tentadora. Primero, la capa por defecto es sustituible, no
@@ -976,14 +981,11 @@ régimen verificado entrega un +43% sobre carteras idénticas (ΔV emparejado =
 sobreestima su entrega real en veintinueve puntos porcentuales. La misma capa de
 control, distintos proyectos: la priorización social entrega un +53-54% bajo
 cualquiera de los dos regímenes. La interacción es positiva y significativa
-(+0.085 [0.053, 0.117]): dentro de este aparato las dos capas **interactúan en
-lugar de solo sumarse**, produciendo una **salida condicional de escenario
-cero-control de 2.19×** por unidad de presupuesto (0.859 vs 0.393) a lo largo de
-las tasas de participación directa desde el 3% (el piso del presupuesto
-participativo) hasta el 40% (escala de votación). Este compuesto es un contraste
-factorial interno del modelo, **no** un efecto calibrado (véase la nota de estado
-cuantitativo en la Sección 6 y el contrato de estimando). Dos predicciones
-preregistradas fallaron
+(+0.085 [0.053, 0.117]): las dos capas **interactúan en lugar de solo sumarse**. Una
+versión anterior resumía esto como una única salida compuesta de valor por unidad de
+presupuesto; ese compuesto se **retira** como contraste factorial interno del modelo,
+no un efecto calibrado — E5 ahora reporta selección, costo administrativo y fuga como
+**canales declarados separados** (Sección 6). Dos predicciones preregistradas fallaron
 honestamente. El predominio esperado de la entrega sobre la selección no se
 sostuvo a esta escala —la selección central con doscientos proyectos es casi
 aleatoria (E4), inflando el margen de selección—, de modo que dentro de este
@@ -1059,10 +1061,9 @@ de Brasil, y las contralorías de Chile, Perú y Colombia; Ferraz y Finan 2008)�
 con el ancho de banda de inspección del planificador escalado al ámbito y el
 sesgo coordinado de señales barrido como el régimen de falla de Condorcet. La
 condición de retiro no se activó *dentro de este aparato*: contra la línea base
-parametrizada por auditorías produjo 2.22× [2.10, 2.35] por unidad de presupuesto
-a escala, y 1.4–1.6× a escala de piloto municipal (10-40 proyectos), donde la
-selección central con cobertura plena es competitiva y el caso descansa en la
-entrega y la medición. Pero la evidencia de auditoría *parametriza la fuga de la
+parametrizada por auditorías el compuesto anterior fue sustancial a escala pero solo
+casi-paridad a escala de piloto municipal (10-40 proyectos), donde la selección central
+con cobertura plena es competitiva y el caso descansa en la entrega y la medición. Pero la evidencia de auditoría *parametriza la fuga de la
 línea base*; **no** calibra el efecto de tratamiento institucional de Core v0, que
 está gobernado por la prueba simétrica pre-registrada posterior (Sección 6) cuya
 mediana agrupada pre-registrada de ventaja de selección es Δ = 0.025 de un
@@ -1096,7 +1097,7 @@ por un estudio conductual compañero: un modelo basado en agentes conforme a Cor
 v0 de conciencia, registro, modos de participación y microdelegación confiada,
 calibrado con priors sintéticos elicitados mediante LLM (paquete de replicación:
 el repositorio distributed-governance-experiments). El aparato anterior produjo
-2.26 [2.23, 2.30] a escala bajo sus supuestos sintéticos de adopción y 2.15–2.9× a
+un compuesto a escala bajo sus supuestos sintéticos de adopción que varió a
 través de tres poblaciones y todas las escalas, incluida una trayectoria de
 lanzamiento que comienza con participación cercana a cero —que cuesta el 1.7%
 del cociente, porque la capa por defecto ancla por construcción los ciclos
