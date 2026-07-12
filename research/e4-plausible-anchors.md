@@ -77,10 +77,10 @@
   range — Core v0 wins throughout (+25% to +54%). This is a limited robustness statement over those five slices;
   reaching parity requires COMBINING central-favourable conditions (and other coordinates can flip the sign — e.g.
   the targeted PRO_CENTRAL-region probe in `e4:evidence`).
-- **Combined scenario-path frontier (CORRECTED, Codex v7):** interpolating PROBABLE → the central's FULL best
-  plausible case (`PRO_CENTRAL`), m falls +47% → −30%; the **frontier (m=0) is at t ≈ 0.57** — i.e. conditions ~57%
-  of the way from probable toward the central's full best case flip the winner to the central. That is a PLAUSIBLE
-  segment, NOT beyond-realistic (the earlier "t≈1.13 / beyond realistic" claim was wrong — it used a partial 8-knob
+- **Combined scenario-path frontier (CORRECTED, Codex v7):** interpolating PROBABLE → the declared central-favourable
+  endpoint (`PRO_CENTRAL`), m falls +47% → −30%; the **frontier (m=0) is at t ≈ 0.57** — i.e. conditions ~57%
+  of the way from probable toward the declared central-favourable endpoint flip the winner to the central, within the
+  declared interpolation segment (the earlier "t≈1.13 / beyond realistic" claim was wrong — it used a partial 8-knob
   path). Honest headline: *which side a real setting falls on depends on where a measured target configuration would
   lie between the declared scenarios; none of the five plotted slices decides it alone.* `t` is an illustrative
   linear mix, not a calibrated competence scale.
