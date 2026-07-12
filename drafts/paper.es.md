@@ -12,7 +12,7 @@ Los recursos públicos se asignan y controlan en instituciones que fusionan tres
 
 Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado consecuente es pública.
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios mapea luego dónde gana cada institución. Un central competente y consciente del daño empata al brazo distribuido —el régimen de casi-paridad pre-registrado. Un central realistamente miope al daño en la cola larga de baja visibilidad pierde ante la selección basada en cobertura. Esto reconcilia el gate conservador en lugar de contradecirlo, y todas las magnitudes se reportan como puntos de referencia declarados y motivados por fuentes, no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios examina luego el caso probable: un central realistamente miope al daño concentrado en la cola larga de baja visibilidad es superado por la selección basada en cobertura —un punto de referencia declarado y motivado por fuentes, no un efecto calibrado, que se apoya sobre todo en ese supuesto de miopía al daño. Esto es consistente con, no contrario a, el gate pre-registrado: dótese al central de una tasación competente y consciente del daño y los brazos vuelven a la casi-paridad, de modo que el resultado refleja el supuesto de competencia del central y no la arquitectura por sí sola. El mapa comparativo completo —incluido un empate de casi-paridad y un endpoint favorable al central— se reporta en un apéndice, con todas las magnitudes como puntos de referencia declarados y no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
 Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las unidades de la simulación no están calibradas, son de equilibrio parcial y no identifican efectos de entrega; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
@@ -621,27 +621,25 @@ Las contribuciones que cargan el peso son la arquitectura, la dirección del
 mecanismo y el mapa de robustez comparativa v1.14 entre regímenes declarados sin
 miopía y con miopía al daño, no un multiplicador puntual ni impacto calibrado.
 
-**Una extensión de miopía realista (v1.14): dónde gana cada institución.** Esta
-extensión mapea *dónde* gana cada institución en lugar de afirmar un único número
-calibrado; toda magnitud en ella es un **punto de referencia declarado y motivado por
-fuentes, no un efecto calibrado**, y sus intervalos cubren solo la variabilidad
-Monte-Carlo interna. Bajo el escenario **probable** —un central que lee el valor
+**Una extensión de miopía realista (v1.14): el caso probable.** Bajo el punto de
+referencia **probable** motivado por fuentes —un tasador central que lee el valor
 visible y portador de crédito pero se *supone* miope al daño concentrado en la cola
-larga de baja visibilidad— la selección distribuida basada en cobertura entrega cerca
-del **91%** del benchmark voraz de información completa frente al **~45%** del central
-(una **brecha de +46,6 puntos**) —pero esa brecha se apoya en el supuesto de miopía al
-daño, la perilla **de mayor peso y menos anclada empíricamente** del modelo y el punto
-exacto donde muerde una brecha de transporte opinión-política→valor-de-proyecto no
-propagada, de modo que se lee como un punto de referencia declarado, no un pronóstico
-calibrado. Solo las coordenadas de miopía al daño explican cerca del **40%** de esa
-brecha. Haz al central competente y consciente del daño y los brazos **empatan** —cerca
-de 91% frente a 85%, nuestro gate pre-registrado de casi-paridad (mediana Δ ≈ 0.025, el
-régimen NO-GO); en el propio **endpoint declarado favorable al central, gana el
-central** rotundamente, cerca de 98% frente a 68%. Un sendero ceteris-paribus desde el
-probable hacia el favorable al central cruza la paridad en cerca de **t ≈ 0.57 del
-segmento declarado**, de modo que la cancha está genuinamente nivelada y no inclinada
-por supuesto. El mapa completo de cuatro escenarios, el contraste diagnóstico de miopía
-al daño, el teorema de benchmark y los cuatro límites están en el **Apéndice E4**.
+larga de baja visibilidad, distorsionado por crédito y menos preciso— la selección
+distribuida basada en cobertura entrega cerca del **91%** del benchmark voraz de
+información completa frente al **~45%** del central (una **brecha de +46,6 puntos**).
+Esta magnitud es un **punto de referencia declarado y motivado por fuentes, no un
+efecto calibrado**: se apoya sobre todo en la fuerza de la miopía al daño —la perilla
+**de mayor peso y menos anclada empíricamente** del modelo, a la que un contraste
+diagnóstico atribuye cerca del **40%** de la brecha—, los insumos del central cargan
+una brecha de transporte opinión-política→valor-de-proyecto no propagada, y los
+intervalos reportados cubren solo la variabilidad Monte-Carlo interna. Este resultado
+es **consistente con, no contrario a**, nuestro gate de simetría pre-registrado, que
+devolvió casi-paridad (mediana Δ ≈ 0.025, el régimen NO-GO): ese gate por construcción
+dota al central de una tasación competente y consciente del daño, de modo que la
+diferencia refleja el **supuesto de competencia del central**, no la arquitectura por
+sí sola. Los escenarios declarados abarcan un mapa comparativo completo —incluido un
+empate de casi-paridad y un endpoint favorable al central en el que el brazo de
+tasación rinde mejor— reportado íntegramente en el **Apéndice E4**.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae

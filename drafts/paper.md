@@ -10,7 +10,7 @@ Public resources are allocated and controlled by institutions that fuse three fu
 
 We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
 
-Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then maps where each institution wins. A competent, harm-aware central ties the distributed arm — the pre-registered near-parity regime. A central realistically myopic to harm on the low-visibility long tail loses to coverage-routed selection. This reconciles the conservative gate rather than contradicting it, and all magnitudes are reported as source-motivated declared reference points, not calibrated impact. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
+Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then examines the probable case: a central realistically myopic to concentrated harm on the low-visibility long tail is outperformed by coverage-routed selection — a source-motivated declared reference point, not a calibrated effect, resting most heavily on that harm-myopia assumption. This is consistent with, not contrary to, the pre-registered gate: equip the central with competent, harm-aware appraisal and the arms return to near-parity, so the result reflects the assumed central competence rather than architecture alone. The full comparative map — including a near-parity tie and a central-favourable endpoint — is reported in an appendix, all magnitudes as declared reference points rather than calibrated impact. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
 
 This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulation's units are uncalibrated and partial-equilibrium and do not identify delivery effects; and claims are scoped to infrastructure-like public investment. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
 
@@ -567,26 +567,24 @@ The load-bearing contributions are the architecture, the mechanism direction, an
 the v1.14 comparative robustness map across declared no-myopia and harm-myopia
 regimes—not a point multiplier or calibrated impact.
 
-**A realistic-myopia extension (v1.14): where each institution wins.** This
-extension maps *where* each institution wins rather than asserting one calibrated
-number; every magnitude in it is a **declared, source-motivated reference point, not
-a calibrated effect**, and its intervals cover inner Monte-Carlo variability only.
-Under the **probable** scenario — a central that reads visible, credit-bearing value
-but is *assumed* myopic to concentrated harm on the low-visibility long tail —
-coverage-routed distributed selection delivers about **91%** of the full-information
-greedy benchmark against the central's **~45%** (a **+46.6-point gap**) — but that
-gap rests on the harm-myopia assumption, the model's **load-bearing,
-least-empirically-pinned knob** and the very place an unpropagated
-political-opinion→project-value transport gap bites, so it reads as a declared
-reference point, not a calibrated forecast. The harm-myopia coordinates alone account
-for about **40%** of that gap. Make the central competent and harm-aware and the arms
-**tie** — about 91% versus 85%, our pre-registered near-parity gate (median
-Δ ≈ 0.025, the NO-GO regime); at the central's own **declared favourable endpoint the
-central wins** outright, about 98% versus 68%. A ceteris-paribus path from the
-probable to the central-favourable case crosses parity at about **t ≈ 0.57 of the
-declared segment**, so the field is genuinely level rather than tilted by assumption.
-The full four-scenario map, the diagnostic harm-myopia contrast, the benchmark
-theorem, and the four limits are in **Appendix E4**.
+**A realistic-myopia extension (v1.14): the probable case.** Under the
+source-motivated **probable** reference point — a central appraiser that reads
+visible, credit-bearing value but is *assumed* myopic to concentrated harm on the
+low-visibility long tail, credit-distorted, and less precise — coverage-routed
+distributed selection delivers about **91%** of the full-information greedy benchmark
+against the central's **~45%** (a **+46.6-point gap**). This magnitude is a
+**declared, source-motivated reference point, not a calibrated effect**: it rests most
+heavily on the harm-myopia strength — the model's **load-bearing,
+least-empirically-pinned knob**, to which a diagnostic contrast attributes about
+**40%** of the gap — the central inputs carry an unpropagated
+political-opinion→project-value transport gap, and the reported intervals cover inner
+Monte-Carlo variability only. This result is **consistent with, not contrary to**, our
+pre-registered symmetry gate, which returned near-parity (median Δ ≈ 0.025, the
+NO-GO regime): that gate by construction equips the central with competent,
+harm-aware appraisal, so the difference reflects the **central-competence assumption**,
+not architecture alone. The declared scenarios span a full comparative map — including
+a near-parity tie and a central-favourable endpoint in which the appraisal arm
+outperforms — reported in full in **Appendix E4**.
 
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
