@@ -24,17 +24,33 @@ accept honest fixes, rebut unfair degradations, keep the result honest but not f
 - **Distributed is NOT flattered:** harsher signal barely moves it (φ_prof=0.3 +54%, k_deleg=4 +54%, φ_prof=0 +54%).
 - **The one binding sensitivity is common-mode error** (the only place coverage was structurally advantaged): magnitude +54%→+26% at strong correlation, sign robust to ~2.1.
 
-## The honest result (balanced, both arms have a winning region)
-- PROBABLE (independent-error reference): m=+54.0% (Core v0 98.2% vs central 44.2%).
-- Competent-central range: fully harm-aware ~+14% → best-competent-reader endpoint ~−3% (a small MATERIAL central win on a near-harmless world).
+## CORRECTION (author, 2026-07-12): the "genuine central winning region" framing was itself the asymmetric-idealization bias
+Codex's central-strawman role pushed me to report the best-competent-central corner (~−3%) as "a genuine winning
+region", and I accepted it. The author correctly flagged this as the very asymmetry we had agreed to avoid: that
+corner idealizes ONLY the central and requires ABANDONING the two anchored central handicaps — harm-myopia (vs the
+salience/agenda-setting literature) and projection (vs Broockman–Skovron) — PLUS a near-harmless "Narnia" world
+(pi_opp≈0.03). Reporting it without the SYMMETRIC idealized-distributed corner privileges the central. Symmetric fact:
+the idealized-distributed corner (perfect signal, harm-rich world, central kept at its ANCHORED myopia) wins m≈+118%.
+So idealization is wildly asymmetric — the central must contradict the literature to eke out −3%, the distributed's
+symmetric idealization wins by a landslide. The honest statement is NOT "both arms have a winning region"; it is that
+WITHIN THE EMPIRICALLY-ANCHORED SPACE coverage wins decisively, and the central "wins" only in an anti-empirical corner.
+
+## The honest result (anchored space; idealized corners reported symmetrically, neither empirically grounded)
+- PROBABLE (anchored: central myopic per lit + distributed realistic composition): m=+54.0% (Core v0 98.2% vs central 44.2%).
+- Anchored competent-central range: fully harm-aware ~+14% → probable ~+54%. Even a fully-competent-BUT-STILL-ANCHORED central loses.
+- Idealized corners (symmetric, both anti-empirical): central's best ~−3% (abandons myopia + projection, Narnia world) vs distributed's best ~+118% (anchored-myopic central).
 - Common-mode robustness: +54% (independent) → +44% (modest) → +26% (strong); parity only at a large sigma_cm≈2.1.
 - Harm-myopia (anchored, stylized): the load-bearing knob; the headline does not rest on it alone (competent-central range + common-mode both reported).
 - Attribution: harm-gate ALONE (MYOPIA_OFF) ~16.5 pts; full competent-central bundle ~40 pts.
 
-## Verdict (defender)
-E4's **implementation and results are publication-ready.** The model is honest and balanced: fair machinery, a
-non-strawman central with a genuine small winning region, an un-flattered distributed arm, every decisive knob
-anchored or swept, the one structural advantage (error independence) modeled and right-sized, and full contract/
-schema/provenance discipline. No fix was accepted that unfairly degraded either arm; no over-correction was let
-through that would forced-ugly the result. Robust in SIGN across the whole defensible space; magnitude honestly
-bracketed (+14% to +54%, common-mode floor into the +20s). Pending: the paper-prose propagation (separate phase).
+## Verdict (defender, corrected)
+E4's **implementation and results are publication-ready.** The model is honest: fair machinery (a perfect central
+delivers 100% of the oracle — the structure is not rigged), an un-flattered distributed arm, every decisive knob
+anchored or swept, the one structural distributed advantage (error independence) modeled and right-sized, and full
+contract/schema/provenance discipline. Idealized corners are reported SYMMETRICALLY (central ~−3% only by contradicting
+the anchored literature + a Narnia world; distributed ~+118% at the symmetric idealization) — neither is empirically
+grounded, and the central's is not privileged. Within the empirically-anchored space the result is **one-sided for
+coverage** (probable +54%; even a fully-competent-but-anchored central loses at ~+14%); the only sensitivity that
+materially moves the magnitude (not the sign) is correlated/common-mode error. No over-correction was let through:
+the earlier "genuine central winning region" framing was itself the asymmetric-idealization bias and has been fixed.
+Pending: the paper-prose propagation (separate phase).

@@ -28,10 +28,14 @@ const pts = (x) => (100 * x).toFixed(1);
 const mp = rp.m_hat, mo = ro.m_hat, mn = rn.m_hat;
 const declineTot = mp - mn, myopiaAlone = mp - mo, further = mo - mn;
 const outcome = (m) => (m < -0.03 ? 'the central wins (material)' : m > 0.03 ? 'Core v0 wins (material)' : 'an immaterial difference (within the materiality band)');
-// PRO_CENTRAL is a declared favourable-but-residually-imperfect endpoint, NOT the model's best competent central.
-// Best competent reader (unbiased, precise, credit-free, near-full harm sight) on the SAME favourable world:
+// SYMMETRY of idealized corners (author's correction): reporting ONLY the central's idealized corner is the
+// asymmetric-idealization bias. An equally-idealized corner exists for each arm — and they are wildly asymmetric.
+// The central's best corner requires ABANDONING the two anchored central handicaps (harm-myopia — salience/
+// agenda-setting; projection — Broockman-Skovron) AND a near-harmless "Narnia" world; the symmetric idealized-
+// distributed corner keeps the central at its ANCHORED myopia and still wins by a landslide.
 const bestCentral = estimand({ ...baseConfig(), ...WORLD, ...PRO_CENTRAL, w: 0, a: 0, b: 1, lambda: 0, b_H_C: 1, s_exp: 0.2, sigma_C: 0.2 }, { nWorlds: NW }).m_hat;
-safeLog(`\nPRO-CENTRAL = a declared favourable-but-residually-imperfect central endpoint: ${outcome(rc.m_hat)} (m = ${pct(rc.m_hat)}). The model's BEST competent central (a corrected reader on the same favourable world) delivers m = ${pct(bestCentral)} — a small but MATERIAL central win. So the central DOES have a genuine winning region, but only where the world itself carries little harm to catch; on the probable world coverage leads across the whole competent-central range.`);
+const bestDist = estimand({ ...baseConfig(), ...WORLD, ...PROBABLE, f_active: 1, f_deleg: 0, beta: 0, sigma_cm: 0, pi_opp: 0.30 }, { nWorlds: NW }).m_hat;
+safeLog(`\nSYMMETRY of idealized corners (neither is empirically grounded): the CENTRAL's best corner reaches only m = ${pct(bestCentral)}, and ONLY by abandoning both anchored central handicaps (harm-myopia — vs the salience literature; projection — vs Broockman-Skovron) AND assuming a near-harmless world. The SYMMETRIC idealized-DISTRIBUTED corner (perfect signal on a harm-rich world, central KEPT at its anchored myopia) reaches m = ${pct(bestDist)}. Idealization is wildly asymmetric: the central must contradict the anchored literature to eke out a sliver; the distributed's symmetric idealization wins by a landslide. Reporting only the central's corner would be the asymmetric-idealization bias. Within the EMPIRICALLY-ANCHORED space coverage wins decisively — probable ${pct(rp.m_hat)}, and even a fully-competent-but-still-anchored central loses.`);
 safeLog('Sequential attribution (path-dependent, nonlinear model): harm-myopia ALONE (MYOPIA-OFF, only s_exp,b_H_C)');
 safeLog(`reduces the probable gap ${pct(mp)} → ${pct(mo)}, i.e. ${pts(myopiaAlone)} of the ${pts(declineTot)}-pt decline to ${pct(mn)} (~${Math.round(100 * myopiaAlone / declineTot)}%); the further step to`);
 safeLog(`the NO-MYOPIA bundle (unbiased/precise/no-credit) reduces it ${pts(further)} pts (~${Math.round(100 * further / declineTot)}%). Read C/O < 0 as the central destroying value.`);
