@@ -5,14 +5,19 @@
 import { EMBARGO_TOKENS } from './contract.mjs';
 import { validateOutput } from './schema.mjs';
 
-// reject "2.2x", "2.2X", "×", "D/C", "C/D" appearing in rendered performance text
-const MULT_SUFFIX = /\d\s*[xX×]\b/;              // a number immediately followed by x/X/× (multiplier notation)
+// Normalize Unicode confusables to ASCII 'x' so a Cyrillic 'х' (U+0445), the multiplication/cross signs (× ✕ ⨯),
+// etc. cannot smuggle a multiplier past the filter (rev-repro M2).
+const CONFUSABLES = /[×✕✖⨯хХｘＸ]/g;   // × ✕ ✖ ⨯ х Х ｘ Ｘ
+const MULT_SUFFIX = /\d\s*x/i;                   // a number followed by x (after confusable-normalization)
+const FOLD_TIMES  = /\d(\.\d+)?\s*[- ]?(fold|times)\b/i;   // "2.2-fold", "2.2 times"
 const RATIO_TOKEN = /\b[DC]\s*\/\s*[CD]\b/;      // D/C or C/D
 
 export function assertNoEmbargoedTokens(text) {
+  const norm = text.replace(CONFUSABLES, 'x');
   const hits = [];
-  if (MULT_SUFFIX.test(text)) hits.push('multiplier-suffix (number+x/×)');
-  if (RATIO_TOKEN.test(text)) hits.push('institution ratio (D/C or C/D)');
+  if (MULT_SUFFIX.test(norm)) hits.push('multiplier-suffix (number+x, incl. Unicode confusables)');
+  if (FOLD_TIMES.test(norm)) hits.push('fold/times multiplier phrasing');
+  if (RATIO_TOKEN.test(norm)) hits.push('institution ratio (D/C or C/D)');
   for (const tok of EMBARGO_TOKENS) if (text.includes(tok)) hits.push(`token '${tok}'`);
   if (hits.length) throw new Error(`[embargo] rendered text contains forbidden performance notation: ${hits.join(', ')}`);
   return true;

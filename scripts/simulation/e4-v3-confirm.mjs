@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+// LEGACY RUNTIME GUARD (reproduction-only) — pre-v1.14 engine with retired multiplier/ratio framing.
+// NOT the v1.14 evidence path (npm run e4:evidence). Set E4_ALLOW_LEGACY=1 to run for v1.12/v1.13 reproduction.
+if (process.env.E4_ALLOW_LEGACY !== "1") { console.error("[legacy guard] pre-v1.14 engine; NOT v1.14 evidence. Set E4_ALLOW_LEGACY=1 to reproduce v1.12/v1.13 only."); process.exit(2); }
+
 // E4-v3 CONFIRMATORY validation on HELD-OUT seeds (bases 5000/6000/7000, which
 // played no role in the exploratory design). Tests the 6 pre-registered
 // predictions of research/e4-v3-preregistration.md and prints PASS/PARTIAL/FAIL.

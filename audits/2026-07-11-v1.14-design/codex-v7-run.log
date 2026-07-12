@@ -1090,3 +1090,2537 @@ index aeeb76e..f5d6a82 100644
  if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
 warning: in the working copy of 'scripts/simulation/e4-v5/evidence.mjs', LF will be replaced by CRLF the next time Git touches it
 
+2026-07-12T02:50:52.154836Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.2 seconds
+Output:
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:17:- **C3. Undisclosed change of estimand.** Engine computes ratio-of-sums `Σ(D−C)/ΣO` (`engine.mjs:156-161`) but
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:18:  `DESIGN_SKETCH_v5:54`, `e4-parity-theorem.md:27`, and the `engine.mjs:131` comment still say per-world mean
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:20:  [stats#1] Fix: reconcile all three, log the post-hoc revision, add a both-estimands sign-agreement line.
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:26:  `s_exp<1` at widest α, space-filling design (not corner enumeration), re-derive, RELABEL honestly.
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:29:  Root cause (verified): the gate switches OFF harm-myopia; control C4 shows a harm-aware planner collapses m
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:41:  ("1.36x") run unguarded; test checks only e4-v4. [repro#2] Fix: universal guard on all retired multiplier engines
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:50:  gate; theorem-check never checks engine→lemma. [paper, engine#3, stats#7] Fix: demote to "validation of the
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:51:  no-myopia Gaussian limit", not "the parity boundary".
+audits/2026-07-11-v1.14-design/REVIEW_PANEL_CONSOLIDATED.md:62:- **M7. admin-leg `m_total` multiplies matched-budget m by a budget factor — spurious separability** (selection
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:8:registry, a conditional signed estimand, a canonical evidence command, a closed-field renderer, and executable
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:11:and the canonical output uses a parity-zero fraction rather than a parity-one institutional ratio
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:16:`D_F` and `R_alpha` intervals are not extrema over the contract's joint domains. The evidence script varies only
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:18:joint alpha coverage (`scripts/simulation/e4-v5/evidence.mjs:10-39,57-64`). Focused executable attacks found values
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:21:`R_alpha=[1000,20000]` (`scripts/simulation/e4-v5/contract.mjs:21`; `scripts/simulation/e4-v5/evidence.mjs:10-12`).
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:24:coverage factors, rival ranges, and the sweep algorithm live outside the contract and outside its hash, although
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:55:## Seven-blocker clearance table
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:57:| # | V4 blocker | V5 status | Implementation assessment |
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:59:| 1 | Contract and engine unit consistency | **PARTIAL** | The mean-scale arithmetic, `S=Splus-H`, and interior MNAR expectation are correct. But the evidence run overrides hashed defaults, result-governing rules and literals remain outside the contract, validation admits undefined/invalid configurations, the claimed Binomial is a clamped normal approximation, `NUM.common_random` is unused, and positive `rho_P` magnitude cancels under z-scoring (`critique-v5-unit-contract.md`). |
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:61:| 3 | Estimand and state machine | **PARTIAL** | `o_min_frac`, `delta`, and `zero_tol` are registered and four fields are emitted. Materiality ignores `R_alpha` and uses only the base CI; `numerical_status` is only `CI width<delta`; `pi_deg=1` does not fail closed; non-finite and malformed nested values pass the schema; empty worlds are omitted from degeneracy; and the `o_min` bootstrap fixes its estimated threshold and retained membership (`critique-v5-estimand-state-machine.md`). |
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:62:| 4 | Analytic theorem | **PARTIAL** | The narrow fixed-population-threshold identity is correct and an independent normal-limit fixture matched it within 1.35 Monte Carlo SE. No proof or regression test ships despite the design's claim. The production support/harm signal, eligibility gate, costs, credit tilt, and budget selector are outside the theorem; intercept invariance can fail under the production gate (`critique-v5-analytic-theorem.md`). |
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:63:| 5 | Joint `D_F/R_alpha` and capability | **PARTIAL** | Endpoint tables and deterministic point fixtures now exist. The sweep is a four-dimensional slice, not the declared 30-parameter joint set; `ALPHA_FACTOR` has no law or verified coverage and is unhashed; omitted parameters reverse sign; and the fixtures bypass the evidence builder/state machine. The “boundary” at .417 is not a boundary. **Capability criterion: NO** (`critique-v5-domains-capability.md`). |
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:64:| 6 | Mechanical embargo | **PARTIAL** | The canonical report is clean and exact `2.2x`, literal `×`, and uppercase `D/C` are rejected. Equivalent semantics, case/Unicode/confusable variants, forged provenance, and parity-one values can pass; two evidence lines bypass the adapter; and legacy multiplier engines remain directly runnable behind comments rather than guards. **Multiplier-relapse risk: YES — MATERIAL** (`critique-v5-mechanical-embargo.md`). |
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:69:It is not a preregistration pass. “Partial” means the old defect was materially narrowed, not that the remaining
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:72:## Remaining blockers, ranked
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:84:joint law from which nested `R_alpha` sets have verified coverage; use stable random substreams and a certified
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:93:Beta shapes, fractional/infinite counts, reversed/zero costs, `p=0`, and other configurations on which the printed
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:96:**Required fix:** hash a resolved production manifest containing the actual configuration and every evidence-
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:116:equivalent parity-one semantics through the renderer. Rival sensitivity and the hash are appended outside it
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:118:ratios with `x`; their “cannot feed” claim is only a comment
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:119:(`scripts/simulation/e4-v4-symmetric-frontier.mjs:1-6,61-104`).
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:121:**Required fix:** authenticate schema/contract/engine/config hashes and estimand kind, constrain all rendered strings,
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:122:render and rescan the complete final artifact, isolate legacy runners under an explicit reproduction-only guard and
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:123:namespace, and make a legacy-feed attempt a failing release test.
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:127:The correct Gaussian lemma has no proof/test artifact. Capability fixtures invoke `estimand()` directly rather than
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:129:does not isolate harm myopia and remains strongly positive when `pi_opp=0`; no test attributes portfolio advantage
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:136:mobilization/dependence rivals; align or supersede the companions before preregistration.
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:141:certified joint-set evaluator.** The manifest must identify the actual world/configuration, fixed and uncertain
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:142:coordinates, joint `D_F`, measured nested `R_alpha`, random streams, optimizer, Monte Carlo budgets, endpoint error,
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:144:domain membership, coverage construction, and extrema. This is the shortest change that simultaneously repairs the
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:149:- **Multiplier-relapse risk: YES — MATERIAL.** The canonical command is clean, but parity-one semantics can pass a
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:150:  forged schema-valid object, equivalent token variants pass, some official text bypasses the adapter, and legacy
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:151:  multiplier engines remain unguarded and executable.
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:152:- **Capability criterion now met: NO.** The fixtures prove that hand-chosen point configurations can produce three
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:161:2. Define defensible full joint `D_F` and measured nested `R_alpha` objects, including dependence and coverage;
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:164:   minimum, whole-world bootstrap/recalibration of `o_min`, and genuine numerical certificates.
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:167:5. Put every final byte through an authenticated sole adapter and mechanically quarantine legacy engines/artifacts.
+audits/2026-07-11-v1.14-design/CRITIQUE_v5_SUMMARY.md:171:Only after these steps should v5 be described as preregistration-ready.
+research/e4-parity-theorem.md:1:# E4 analytic benchmark — the joint-normal fixed-threshold parity theorem
+research/e4-parity-theorem.md:3:> The limiting-case theorem behind the numerical frontier. The full engine adds eligibility gates, heterogeneous
+research/e4-parity-theorem.md:4:> costs, greedy residual fill, MNAR reports, z-scoring, and credit — this theorem is the clean special case it
+research/e4-parity-theorem.md:5:> reduces to under stated assumptions. Regression: `scripts/simulation/e4-v5/theorem-check.mjs` (matches within
+research/e4-parity-theorem.md:36:**The parity boundary is the equality of the two signal-to-noise covariance ratios `Cov(S,X_k)/sd(X_k)`.** The
+research/e4-parity-theorem.md:47:## Large-K corollary (link to the frozen estimand)
+research/e4-parity-theorem.md:48:The lemma is about expected selected sums, not automatically the frozen ratio-of-sums estimand. If
+research/e4-parity-theorem.md:53:so the covariance-ratio equality is the parity boundary **in the large-project limit**. Finite-world `m` is
+research/e4-parity-theorem.md:54:numerical; the engine's ratio-of-sums estimator is the finite-`K` object the lemma approximates.
+research/e4-parity-theorem.md:59:  So this lemma is the analytic sanity check, and the numerical frontier (with the true DGP) is the object.
+research/e4-parity-theorem.md:60:- `a` is deliberately absent from the benchmark frontier; do not read a benchmark magnitude off `a`.
+research/e4-plausible-anchors.md:3:> Author framing (2026-07-11): report EVERYTHING (space-filling sweep), then LOCATE the frontier ceteris-paribus and
+research/e4-plausible-anchors.md:4:> state, per axis: where the frontier is, the possible estimated values, the central's BEST case, and the PROBABLE
+research/e4-plausible-anchors.md:19:| `s_exp,b_H_C` harm myopia | T | contract | TBD | agenda-setting / salience (oversight reaches only the visible) | — | 🔲 |
+research/e4-plausible-anchors.md:28:central's best plausible case (and the continuity anchor to the earlier ~0.025 near-parity). PROBABLE is the
+research/e4-plausible-anchors.md:60:| PRO-CENTRAL (myopia OFF, competent central) | **+6.1%** | [5.8, 6.4] | 91% of oracle | 85% |
+research/e4-plausible-anchors.md:64:- **The story (from D/O vs C/O):** Core v0 is ROBUST — it delivers ~91–96% of the achievable value in all three;
+research/e4-plausible-anchors.md:66:- **Continuity / reconciliation with the NO-GO:** removing harm-myopia collapses the advantage +46.6% → +6.1%
+research/e4-plausible-anchors.md:67:  (same small regime as the symmetry-gate ~2.5%). The +46% IS the harm-myopia mechanism; remove it and you return
+research/e4-plausible-anchors.md:68:  to near-parity. The two results are the SAME phenomenon under opposite assumptions — not a contradiction.
+research/e4-plausible-anchors.md:70:### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
+research/e4-plausible-anchors.md:72:  parity frontier within its plotted range — Core v0 wins throughout (+25% to +54%). The conclusion is robust to any
+research/e4-plausible-anchors.md:73:  ONE assumption; reaching parity requires COMBINING central-favourable conditions.
+research/e4-plausible-anchors.md:74:- **Combined central-competence frontier:** interpolating PROBABLE → fully-competent plausible central, m falls
+research/e4-plausible-anchors.md:75:  +47% → +6%; the **frontier (m=0) is at t ≈ 1.13** — i.e. the central wins ONLY if it is BETTER than the fully-
+research/e4-plausible-anchors.md:84:- **PRO-CENTRAL** — forced to favour the central, ANCHORED to reproduce the earlier ~0.025 near-parity
+research/e4-plausible-anchors.md:85:  (the symmetry-gate NO-GO) under explicit assumptions (competent central that SEES anti-value: low myopia, high
+research/e4-plausible-anchors.md:87:  prior result — NOT a contradiction. (Verify: engine under no-myopia settings ≈ near-parity.)
+research/e4-plausible-anchors.md:90:Per knob we also give: D_F range, frontier location, evidence for the probable value, result ± CI.
+research/e4-plausible-anchors.md:113:  also drive it); one-country study. Could add US/Chile corroboration later.
+rg: audits/2026-07-11-v1.14-design/review-*.md: El nombre de archivo, el nombre de directorio o la sintaxis de la etiqueta del volumen no son correctos. (os error 123)
+
+codex
+A concurrent process modified `contract.mjs` and then `evidence.mjs` after the review began; none of the three reviewers made those edits. That made the initial command pass a mixed-version run and therefore unusable as evidence. I’m freezing the audit to the committed `master`/`HEAD` snapshot named in your request in an isolated temporary worktree, preserving the concurrent changes untouched; the audit will explicitly record the audited commit and distinguish any working-tree-only drift.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$head = git rev-parse HEAD; $branch = git branch --show-current; Write-Output "HEAD=$head BRANCH=$branch"; $tmp = '"'C:\\devel\\claude-projects\\distributed-governance-research-v7-audit'; if (Test-Path -LiteralPath "'$tmp) { Write-Output "TEMP_EXISTS=$tmp" } else { git worktree add --detach $tmp $head }; Write-Output "TEMP=$tmp"; git -C $tmp status --short; git -C $tmp rev-parse HEAD' in C:\devel\claude-projects\distributed-governance-research
+ succeeded in 683ms:
+HEAD=3b41007e71c9e8c1d7494fce1fde271438263dc4 BRANCH=master
+HEAD is now at 3b41007 Add v7 Codex critique prompt (anchored-scenario state)
+TEMP=C:\devel\claude-projects\distributed-governance-research-v7-audit
+3b41007e71c9e8c1d7494fce1fde271438263dc4
+Preparing worktree (detached HEAD 3b41007)
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '& npm.cmd run e4:scenarios 2>&1; $ec=$LASTEXITCODE; Write-Output "CAPTURED_EXIT=$ec"; exit 0' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '& npm.cmd run e4:evidence 2>&1; $ec=$LASTEXITCODE; Write-Output "CAPTURED_EXIT=$ec"; exit 0' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '& npm.cmd run e4:frontier 2>&1; $ec=$LASTEXITCODE; Write-Output "CAPTURED_EXIT=$ec"; exit 0' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '& npm.cmd run e4:theorem 2>&1; $ec=$LASTEXITCODE; Write-Output "CAPTURED_EXIT=$ec"; exit 0' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '& npm.cmd run e4:controls 2>&1; $ec=$LASTEXITCODE; Write-Output "CAPTURED_EXIT=$ec"; exit 0' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '& npm.cmd run e4:test 2>&1; $ec=$LASTEXITCODE; Write-Output "CAPTURED_EXIT=$ec"; exit 0' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 519ms:
+
+> distributed-governance-research@0.0.0 e4:theorem
+> node scripts/simulation/e4-v5/theorem-check.mjs
+
+E4 analytic benchmark — joint-normal fixed-threshold lemma
+  Cov(S,X)/sd(X) = 0.8000   z_q=0.524   selected share=0.300 (target q=0.3)
+  analytic  V = 0.63815
+  empirical V = 0.63787  (MC SE=0.00166)
+  |Δ| = 0.00029  = 0.17 SE
+
+PASS  analytic identity matches simulation within 3 MC SE
+CAPTURED_EXIT=0
+
+ succeeded in 2126ms:
+
+> distributed-governance-research@0.0.0 e4:controls
+> node scripts/simulation/e4-v5/controls.mjs
+
+PASS  C1 signal recovery: M_C=M_D=S => D=C=O  — max|D-C|=0.00e+0, max|D-O|=0.00e+0
+PASS  C1 estimand m == 0  — m=0.00e+0
+PASS  C2 credit channel active (C changes with lambda)  — max|dC|=1.62e+1
+PASS  C3 w=0 => planner position inert  — max|dC|=0.00e+0
+PASS  C4 harm channel active (m falls as central sees harm)  — m(b_H_C=0)=0.4632 -> m(b_H_C=1)=0.1118
+
+Baseline (defaults, SMALL world): m_hat=0.4465  CI=[0.4318, 0.4617]  pi_deg=0.000  kept=300/300
+
+ALL CONTROLS PASSED
+CAPTURED_EXIT=0
+
+ succeeded in 2245ms:
+
+> distributed-governance-research@0.0.0 e4:test
+> node scripts/simulation/e4-v5/test.mjs
+
+PASS  FIX strong-distributed => m materially > 0  — m=0.454
+PASS  FIX strong-central => m < 0 (central wins)  — m=-0.415
+PASS  FIX null => |m| negligible  — m=0.0001
+PASS  FIX boundary => finite & modest  — m=0.410
+PASS  ATTRIB harm channel drives the advantage (m falls when pi_opp->0)  — m(pi_opp=.25)=0.720 > m(pi_opp=0)=0.273
+PASS  CLASSIFY both-sign corners => indeterminate
+PASS  CLASSIFY all-distributed corners => pos
+PASS  CLASSIFY R_alpha within band => negligible
+PASS  CLASSIFY R_alpha straddling delta => uncertain
+PASS  CLASSIFY pi_deg=1 => degenerate
+PASS  CLASSIFY insufficient => numerical unresolved
+PASS  LEGACY guard blocks e4-v4 from running (would feed retired D/C)
+PASS  EMBARGO rejects "2.2x"
+PASS  EMBARGO rejects Unicode "2.2×"
+PASS  EMBARGO rejects "D/C"
+PASS  EMBARGO allows clean percent text
+PASS  SCHEMA rejects extra field (ratio smuggling)
+PASS  SCHEMA rejects non-finite m_hat
+PASS  SCHEMA accepts a clean output
+PASS  CONTRACT fail-closed on unknown parameter
+
+ALL TESTS PASSED
+CAPTURED_EXIT=0
+
+ succeeded in 4884ms:
+
+> distributed-governance-research@0.0.0 e4:scenarios
+> node scripts/simulation/e4-v5/scenarios.mjs
+
+E4 — three anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0)
+
+PRO-CENTRAL      m =    +6.1%  95% CI [+5.8%, +6.4%]   Core v0 delivers +91.2% of oracle · central +85.2%
+PROBABLE         m =   +46.6%  95% CI [+46.0%, +47.4%]   Core v0 delivers +91.2% of oracle · central +44.6%
+PRO-DISTRIBUTED  m =  +199.8%  95% CI [+197.0%, +202.1%]   Core v0 delivers +95.8% of oracle · central -104.0%
+
+Continuity: PRO-CENTRAL removes harm-myopia → should collapse toward parity (the ~0.025 regime).
+Read C/O < 0 as: under that scenario the central funds net-harmful projects (destroys value).
+CAPTURED_EXIT=0
+
+ succeeded in 61558ms:
+
+> distributed-governance-research@0.0.0 e4:frontier
+> node scripts/simulation/e4-v5/frontier.mjs
+
+E4 — ceteris-paribus frontiers (others held at the PROBABLE scenario). m = D/O − C/O, parity at 0.
+
+■ s_exp  — central harm myopia (higher = blinder on the long tail)
+    frontier: none in [0.2, 8] — Core v0 wins across the whole plotted range
+    m across axis: 0.20:+33%  0.76:+42%  1.31:+45%  1.87:+46%  2.43:+46%  2.99:+47%  3.54:+47%  4.10:+47%  4.66:+47%  5.21:+47%  5.77:+47%  6.33:+47%  6.89:+47%  7.44:+47%  8.00:+47%
+
+■ b_H_C  — central harm detection (higher = less myopic)
+    frontier: none in [0, 2] — Core v0 wins across the whole plotted range
+    m across axis: 0.00:+47%  0.14:+47%  0.29:+47%  0.43:+47%  0.57:+46%  0.71:+46%  0.86:+46%  1.00:+46%  1.14:+46%  1.29:+45%  1.43:+45%  1.57:+45%  1.71:+45%  1.86:+45%  2.00:+45%
+
+■ p  — citizen participation (higher = denser distributed signal)
+    frontier: none in [0.02, 0.6] — Core v0 wins across the whole plotted range
+    m across axis: 0.02:+25%  0.06:+39%  0.10:+44%  0.14:+48%  0.19:+50%  0.23:+50%  0.27:+51%  0.31:+51%  0.35:+52%  0.39:+52%  0.43:+52%  0.48:+52%  0.52:+53%  0.56:+52%  0.60:+54%
+
+■ beta  — silencing of opponents (higher = weaker distributed harm-voice)
+    frontier: none in [0, 0.95] — Core v0 wins across the whole plotted range
+    m across axis: 0.00:+49%  0.07:+47%  0.14:+48%  0.20:+47%  0.27:+47%  0.34:+47%  0.41:+47%  0.47:+47%  0.54:+46%  0.61:+46%  0.68:+45%  0.75:+46%  0.81:+45%  0.88:+45%  0.95:+42%
+
+■ a_V  — visibility tail (higher a_V = flatter tail, more projects visible)
+    frontier: none in [0.2, 3] — Core v0 wins across the whole plotted range
+    m across axis: 0.20:+48%  0.40:+47%  0.60:+47%  0.80:+47%  1.00:+47%  1.20:+47%  1.40:+47%  1.60:+46%  1.80:+45%  2.00:+45%  2.20:+44%  2.40:+44%  2.60:+44%  2.80:+44%  3.00:+44%
+
+■ central competence (combined: harm-detection↑, myopia↓, bias↓, projection↓, noise↓, credit↓)
+    t=0 probable central → t=1 fully-competent plausible central → t>1 better-than-realistic
+    m across t: t=0.00:+47%  t=0.25:+36%  t=0.50:+26%  t=0.75:+16%  t=1.00:+6%  t=1.25:-2%  t=1.50:-4%  t=1.75:-5%  t=2.00:-5%
+    frontier (m=0) at t ≈ 1.13  →  the central wins ONLY if it is BETTER than the fully-competent plausible case (t>1) — i.e. beyond realistic
+
+Read: no single knob flips the winner from the probable scenario (robust); the frontier lives on the
+combined central-competence axis — and sits at/beyond the fully-competent plausible central.
+CAPTURED_EXIT=0
+
+codex
+The clean-snapshot run is still executing—`e4:evidence` is the long pole—but the reviewers are now all using the same immutable commit (`3b41007e`). In parallel I’m extracting the exact v5 blocker definitions and the panel’s “do not re-derive” findings so the final table uses the original criteria, not renamed substitutes.
+ succeeded in 131077ms:
+
+> distributed-governance-research@0.0.0 e4:evidence
+> node scripts/simulation/e4-v5/evidence.mjs
+
+E4 evidence — contract e4-v5.0.0 — θ:e4v6+fnv1a-5834b8ed
+  m̂ (signed fraction of full-information oracle, parity at 0): 46.4%  CI=[45.4%, 47.4%]
+  sign backbone over D_F: Core v0 wins 78% of sampled θ-points · central 21% · parity 2%  (a COUNT of resolved points, not a probability)
+  magnitude over R_α (declared sensitivity boxes; a value >100% means the losing arm destroys value, so the gap exceeds the oracle):
+  α=0.5: [25.8%, 120.6%] of oracle
+  α=0.8: [2.5%, 191.5%] of oracle
+  α=0.95: [-73.2%, 267.2%] of oracle
+  status → sign:indeterminate  materiality:uncertain  degeneracy:ok  numerical:resolved
+  π_deg (degenerate-world share): 0.0%
+
+  D_F sign backbone over UNCERTAIN {p, beta, sigma_e, s_exp, b_H_C, w, pi_opp}:
+    resolved corners: 193/193 (0 skipped as degenerate)
+    → the winner is NOT sign-robust across the full physically-possible set (both institutions win in some corners)
+  fixed-coordinate flip probe over {sigma, mu_opp, sigma_C, gamma, h, lambda, a, b, zeta, v_p0}: no held coordinate flips the base sign
+  contract hash: fnv1a-a572249c   run (theta_id): e4v6+fnv1a-5834b8ed
+CAPTURED_EXIT=0
+
+2026-07-12T02:53:36.852469Z ERROR codex_core::tools::router: error=Exit code: 124
+Wall time: 124 seconds
+Output:
+command timed out after 124046 milliseconds
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$base='"'C:\\devel\\claude-projects\\distributed-governance-research-v7-audit\\audits\\2026-07-11-v1.14-design'; Get-ChildItem -LiteralPath "'$base -File | Where-Object { $_.Name -in @('"'CRITIQUE_v5_SUMMARY.md','REVIEW_PANEL_CONSOLIDATED.md') -or "'$_.Name -like '"'review-*.md' } | Select-Object Name,Length; Get-Item 'C:\\devel\\claude-projects\\distributed-governance-research-v7-audit\\research\\e4-plausible-anchors.md','C:\\devel\\claude-projects\\distributed-governance-research-v7-audit\\research\\e4-parity-theorem.md' | Select-Object FullName,Length" in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 198ms:
+
+Name                         Length
+----                         ------
+CRITIQUE_v5_SUMMARY.md        15152
+review-econ.md                15730
+review-engine.md              10451
+review-paper.md               15367
+review-repro.md               11595
+review-stats.md               17435
+REVIEW_PANEL_CONSOLIDATED.md   6868
+                               9715
+                               3552
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files=@('"'audits\\2026-07-11-v1.14-design\\CRITIQUE_v5_SUMMARY.md','audits\\2026-07-11-v1.14-design\\REVIEW_PANEL_CONSOLIDATED.md','research\\e4-plausible-anchors.md','research\\e4-parity-theorem.md'); foreach("'$f in $files){Write-Output "`n===== $f ====="; Get-Content -LiteralPath $f -Raw}' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 196ms:
+
+===== audits\2026-07-11-v1.14-design\CRITIQUE_v5_SUMMARY.md =====
+# Adversarial critique summary — E4 v5 implementation
+
+## Overall verdict
+
+**NEEDS CHANGES — viable, substantially implemented, and much stronger than v4, but not ready to preregister.**
+
+V5 clears the threshold question that dominated v4: there is now a running mean-scale DGP, a versioned parameter
+registry, a conditional signed estimand, a canonical evidence command, a closed-field renderer, and executable
+controls. The core algebra is real. `S=Splus-H` is computed exactly; the interior-domain MNAR process has
+`E[M_D|u]=Splus-(1-beta)H`; the default latent central regression is full rank; all three official commands exit 0;
+and the canonical output uses a parity-zero fraction rather than a parity-one institutional ratio
+(`scripts/simulation/e4-v5/engine.mjs:63-81,97-170`; `scripts/simulation/e4-v5/contract.mjs:15-149`;
+`scripts/simulation/e4-v5/adapter.mjs:21-38`).
+
+The advertised evidence claims are nevertheless stronger than the code warrants. Most decisively, the reported
+`D_F` and `R_alpha` intervals are not extrema over the contract's joint domains. The evidence script varies only
+four of 30 registered parameters, uses corners plus one center, and labels arbitrary coordinate-width scaling as
+joint alpha coverage (`scripts/simulation/e4-v5/evidence.mjs:10-39,57-64`). Focused executable attacks found values
+outside both published upper endpoints and found negative, near-null, and strong-positive results inside the
+declared per-parameter `R_.8` product. The canonical `N=900` evidence world is itself outside `N`'s registered
+`R_alpha=[1000,20000]` (`scripts/simulation/e4-v5/contract.mjs:21`; `scripts/simulation/e4-v5/evidence.mjs:10-12`).
+
+The “single source of truth” is also incomplete. Evidence-critical world sizes, Monte Carlo budgets, swept keys,
+coverage factors, rival ranges, and the sweep algorithm live outside the contract and outside its hash, although
+the artifact is labeled `base+contractHash()` (`scripts/simulation/e4-v5/contract.mjs:140-149`;
+`scripts/simulation/e4-v5/evidence.mjs:10-16,37-39,65-81`). Validation checks names and independent scalar bounds,
+not the executable domain, finiteness, cross-field constraints, parameter liveness, region membership, or actual
+consumption (`scripts/simulation/e4-v5/contract.mjs:112-130`). The state machine then classifies materiality from
+the base-point CI rather than the identified magnitude set and can serialize or misclassify non-finite/degenerate
+results (`scripts/simulation/e4-v5/evidence.mjs:24-30,41-64`; `scripts/simulation/e4-v5/schema.mjs:6-27`).
+
+**Do not preregister v5 unchanged.** It is now an auditable implementation rather than a design skeleton, but its
+headline partial-identification and capability claims are not yet delivered by the executable evidence path.
+
+## Reproduction result
+
+The required commands were run from the repository root on 2026-07-11:
+
+```text
+npm run e4:controls  -> exit 0, ALL CONTROLS PASSED
+  baseline m_hat=0.4540, CI=[0.4388,0.4699], pi_deg=0.000
+
+npm run e4:test      -> exit 0, ALL TESTS PASSED
+  strong-distributed=0.462; strong-central=-0.420; null=0.0002; boundary=0.417
+
+npm run e4:evidence  -> exit 0
+  m_hat=45.7%, CI=[44.5%,46.8%]
+  D_F=[-6.1%,110.0%]
+  R_.95=[14.5%,74.7%]
+  sign=indeterminate, materiality=material, degeneracy=ok, numerical=resolved
+```
+
+These happy-path results are reproducible. The critique files record the focused counterprobes and exact outputs.
+
+## Seven-blocker clearance table
+
+| # | V4 blocker | V5 status | Implementation assessment |
+|---:|---|---|---|
+| 1 | Contract and engine unit consistency | **PARTIAL** | The mean-scale arithmetic, `S=Splus-H`, and interior MNAR expectation are correct. But the evidence run overrides hashed defaults, result-governing rules and literals remain outside the contract, validation admits undefined/invalid configurations, the claimed Binomial is a clamped normal approximation, `NUM.common_random` is unused, and positive `rho_P` magnitude cancels under z-scoring (`critique-v5-unit-contract.md`). |
+| 2 | Identification in practice | **PARTIAL** | The default latent design is full rank and recovers `(a,b,w,b_H_C)`, removing v4's exact coefficient collapse. The actual regressor is `s(V)H`; the engine discards the latent bridge variables; allowed endpoints can be singular or weak; and corners+center demonstrably misses `D_F` and `R_.95` extrema. Published upper endpoints 1.1000 and .7471 were exceeded by interior-face values 1.1142 and .7690 (`critique-v5-identification.md`). |
+| 3 | Estimand and state machine | **PARTIAL** | `o_min_frac`, `delta`, and `zero_tol` are registered and four fields are emitted. Materiality ignores `R_alpha` and uses only the base CI; `numerical_status` is only `CI width<delta`; `pi_deg=1` does not fail closed; non-finite and malformed nested values pass the schema; empty worlds are omitted from degeneracy; and the `o_min` bootstrap fixes its estimated threshold and retained membership (`critique-v5-estimand-state-machine.md`). |
+| 4 | Analytic theorem | **PARTIAL** | The narrow fixed-population-threshold identity is correct and an independent normal-limit fixture matched it within 1.35 Monte Carlo SE. No proof or regression test ships despite the design's claim. The production support/harm signal, eligibility gate, costs, credit tilt, and budget selector are outside the theorem; intercept invariance can fail under the production gate (`critique-v5-analytic-theorem.md`). |
+| 5 | Joint `D_F/R_alpha` and capability | **PARTIAL** | Endpoint tables and deterministic point fixtures now exist. The sweep is a four-dimensional slice, not the declared 30-parameter joint set; `ALPHA_FACTOR` has no law or verified coverage and is unhashed; omitted parameters reverse sign; and the fixtures bypass the evidence builder/state machine. The “boundary” at .417 is not a boundary. **Capability criterion: NO** (`critique-v5-domains-capability.md`). |
+| 6 | Mechanical embargo | **PARTIAL** | The canonical report is clean and exact `2.2x`, literal `×`, and uppercase `D/C` are rejected. Equivalent semantics, case/Unicode/confusable variants, forged provenance, and parity-one values can pass; two evidence lines bypass the adapter; and legacy multiplier engines remain directly runnable behind comments rather than guards. **Multiplier-relapse risk: YES — MATERIAL** (`critique-v5-mechanical-embargo.md`). |
+| 7 | Anti-value, novelty, and companion alignment | **PARTIAL** | The anti-value decomposition, attenuated adverse voice, and `V^s_exp` harm gate are implemented; default central harm loading is genuinely small. The long-tail attribution is not isolated, thesis-defining visibility/opposition parameters are omitted from evidence, `V` is independent of harm/disputedness, suppression is the only adverse-voice regime, and the companions retain the old equation and anchoring/Prelec overclaims (`critique-v5-antivalue-novelty-alignment.md`). |
+
+**Clearance count: 0 cleared, 7 partial, 0 not-cleared.** This is genuine progress from v4's 0/6/1: the former
+not-cleared embargo row now has a functioning canonical path, and every row has at least one implemented component.
+It is not a preregistration pass. “Partial” means the old defect was materially narrowed, not that the remaining
+claim is safe to publish.
+
+## Remaining blockers, ranked
+
+### 1. The reported partial-identification sets are not the registered joint sets or certified bounds
+
+`SIGN_KEYS=['w','b_H_C','beta','s_exp']` freezes 26 registered coordinates at defaults
+(`scripts/simulation/e4-v5/evidence.mjs:14-16,57-63`). Omitted one-factor probes already reverse sign: for example,
+`p=.001` gives about `m=-.376` and `sigma_e=10` gives about `m=-.064`, while both are admitted by `D_F`. Within the
+full declared per-coordinate `R_.8` product, focused points give approximately `-.335`, `.005`, and `+.852`.
+Separately, interior-face searches exceed the four-key corners+center maxima. The serialized intervals are therefore
+neither full-domain envelopes nor numerical bounds.
+
+**Required fix:** define which coordinates are fixed versus uncertain; freeze a genuinely joint `D_F` and a measured
+joint law from which nested `R_alpha` sets have verified coverage; use stable random substreams and a certified
+global/face optimizer with simultaneous Monte Carlo endpoint enclosures; fail closed when certification fails.
+
+### 2. The artifact hash does not identify the evidence procedure actually run
+
+The contract hash excludes the resolved `N/K` overrides, base/sweep world counts, swept-key list, `ALPHA_FACTOR`,
+optimizer rule, rival ranges, and output/embargo procedure (`scripts/simulation/e4-v5/contract.mjs:140-149`;
+`scripts/simulation/e4-v5/evidence.mjs:10-16,37-39,79-81`). The artifact's `base+hash` label is false in the ordinary
+sense because the production run does not use base `N`, base `K`, or base `n_worlds`. The validator accepts zero
+Beta shapes, fractional/infinite counts, reversed/zero costs, `p=0`, and other configurations on which the printed
+DGP is undefined or changes meaning (`scripts/simulation/e4-v5/contract.mjs:21-42,117-130`).
+
+**Required fix:** hash a resolved production manifest containing the actual configuration and every evidence-
+governing rule; validate finiteness, integrality, positive shapes/costs, ordered bounds, cross-field constraints,
+region membership, and registered-parameter liveness. Register or explicitly allowlist result-governing numerical
+constants and implement the stated count law.
+
+### 3. Classification fails open and does not classify the identified magnitude object
+
+`classify()` never receives `m_Ralpha`; materiality is a base-point CI label
+(`scripts/simulation/e4-v5/evidence.mjs:41-64`). `numerical_status` does not inspect optimization or endpoint error.
+When all worlds or sweep cells degenerate, `NaN`/infinities can pass the schema and inverted endpoints can produce a
+positive sign. The bootstrap does not recompute the in-sample median threshold or retained set
+(`scripts/simulation/e4-v5/engine.mjs:147-170`; `scripts/simulation/e4-v5/schema.mjs:13-26`).
+
+**Required fix:** recursively require finite, ordered, complete output; abort on all-degenerate/insufficient cells;
+classify materiality at a frozen headline alpha or per alpha from confidence-enclosed set endpoints; and define
+numerical resolution as a certificate over simulation, optimization, and decision-boundary error.
+
+### 4. The embargo is a clean formatter, not an exclusive release boundary
+
+The exact test strings are rejected, but arbitrary caller-controlled strings and unauthenticated numbers can carry
+equivalent parity-one semantics through the renderer. Rival sensitivity and the hash are appended outside it
+(`scripts/simulation/e4-v5/evidence.mjs:86-89`). Legacy runners remain directly executable and still compute/print
+ratios with `x`; their “cannot feed” claim is only a comment
+(`scripts/simulation/e4-v4-symmetric-frontier.mjs:1-6,61-104`).
+
+**Required fix:** authenticate schema/contract/engine/config hashes and estimand kind, constrain all rendered strings,
+render and rescan the complete final artifact, isolate legacy runners under an explicit reproduction-only guard and
+namespace, and make a legacy-feed attempt a failing release test.
+
+### 5. Validation and attribution promises still exceed the shipped tests
+
+The correct Gaussian lemma has no proof/test artifact. Capability fixtures invoke `estimand()` directly rather than
+the production sweep/classifier/renderer (`scripts/simulation/e4-v5/test.mjs:10-37`). The strong-distributed fixture
+does not isolate harm myopia and remains strongly positive when `pi_opp=0`; no test attributes portfolio advantage
+to low visibility. The public companions still contradict v5's project-varying support/harm model and transport
+caveats (`research/e4-value-estimation-foundation.md:18-37,50-83`;
+`audits/2026-07-11-v1.14-design/E4-empirical-anchors.md:3-8,18-26,57-75`).
+
+**Required fix:** ship the narrow proof and Gaussian benchmark tests; make positive/negative/null/boundary fixtures
+exercise the complete release pipeline inside declared domains; add harm-channel/visibility-bin attribution and
+mobilization/dependence rivals; align or supersede the companions before preregistration.
+
+## Single sharpest improvement
+
+**Replace the unhashed four-key corners+center slice with one hashed resolved-evidence manifest and a fail-closed,
+certified joint-set evaluator.** The manifest must identify the actual world/configuration, fixed and uncertain
+coordinates, joint `D_F`, measured nested `R_alpha`, random streams, optimizer, Monte Carlo budgets, endpoint error,
+classifier, schema, and renderer. No sign or magnitude interval should serialize unless the evaluator certifies
+domain membership, coverage construction, and extrema. This is the shortest change that simultaneously repairs the
+headline result, capability claim, contract provenance, numerical status, and much of the gerrymandering risk.
+
+## Explicit answers
+
+- **Multiplier-relapse risk: YES — MATERIAL.** The canonical command is clean, but parity-one semantics can pass a
+  forged schema-valid object, equivalent token variants pass, some official text bypasses the adapter, and legacy
+  multiplier engines remain unguarded and executable.
+- **Capability criterion now met: NO.** The fixtures prove that hand-chosen point configurations can produce three
+  signs. They do not prove that the frozen evidence pipeline surfaces them: they bypass the sweep and classifier,
+  use out-of-domain settings, and the boundary fixture is not near any declared boundary.
+- **Ready to preregister: NO.** The model is viable; the current partial-identification artifact is not certified.
+
+## Shortest concrete path to preregisterable
+
+1. Freeze and hash the fully resolved production manifest; make validation fail closed on the real executable
+   domain, region membership, non-finite values, dead parameters, and unregistered evidence rules.
+2. Define defensible full joint `D_F` and measured nested `R_alpha` objects, including dependence and coverage;
+   stabilize random streams and replace corners+center with certified optimization plus endpoint uncertainty.
+3. Repair the state machine: finite recursive schema, all-degenerate abort, set-based materiality, retained-world
+   minimum, whole-world bootstrap/recalibration of `o_min`, and genuine numerical certificates.
+4. Run strong-positive, strong-negative, null, and true-boundary fixtures through the entire evidence-to-render path
+   inside declared domains; add adversarial omitted-coordinate and optimizer fixtures.
+5. Put every final byte through an authenticated sole adapter and mechanically quarantine legacy engines/artifacts.
+6. Ship the narrow analytic proof/regression suite, add anti-value/visibility attribution and rival tests, and align
+   or supersede the two contradictory companion documents.
+
+Only after these steps should v5 be described as preregistration-ready.
+
+
+===== audits\2026-07-11-v1.14-design\REVIEW_PANEL_CONSOLIDATED.md =====
+# E4 v6 — consolidated findings (5-agent panel + Codex v5) — 2026-07-11
+
+Five adversarial reviewers (stats, engine, repro, econ, paper) + Codex v5. Core model/mechanism verified CORRECT
+(rev-engine, empirically); the closed output schema is a genuine barrier. The **evidence layer is under-certified
+and partly gerrymandered**, **provenance (theta_id) is broken**, there is a **latent crash**, and the **paper draft
+over-reaches and contradicts the prior NO-GO**. Verdicts: econ MAJOR, paper MAJOR, repro CONDITIONAL, stats
+NEEDS-CHANGES, engine CORRECT-with-1-bug.
+
+## TIER 1 — CRITICAL (correctness + integrity; do first)
+- **C1. Latent crash on the fail-closed path.** `evidence.mjs:100` dereferences `NUM.min_kept_worlds` (renamed to
+  `min_kept_floor/frac`) → TypeError exactly when the base-point-insufficient abort should print. [engine#1, stats#8]
+  Fix: use the real fields.
+- **C2. `theta_id` does not identify the run (provable).** Manifest omits resolved THETA values, swept D_F/R_α
+  bounds, and NUM/CLASSIFY; `contractHash()` is dead code. Mutating `b_H_C.value`, `p.df`, `bootstrap_reps` leaves
+  `theta_id` byte-identical. [repro#1] Fix: `theta_id = hash(resolved contract THETA+NUM+CLASSIFY+EVIDENCE + config)`;
+  emit `contract_hash` too; fold in `contractHash()`.
+- **C3. Undisclosed change of estimand.** Engine computes ratio-of-sums `Σ(D−C)/ΣO` (`engine.mjs:156-161`) but
+  `DESIGN_SKETCH_v5:54`, `e4-parity-theorem.md:27`, and the `engine.mjs:131` comment still say per-world mean
+  `E[(D−C)/O]`. They agree at base (0.464 vs 0.471) but diverge at heterogeneous-O corners that set the envelope.
+  [stats#1] Fix: reconcile all three, log the post-hoc revision, add a both-estimands sign-agreement line.
+- **C4. Gerrymandered sweep (the honesty defect).** The thesis levers — visibility tail shape `a_V,b_V` and the
+  convex gate `s_exp` (headline band `[1,4]` never concave) — plus `phi,a_r,b_r,c_lo,c_hi,sigma_v,m_q,s_q` are FROZEN
+  at base, yet `evidence.mjs`/paper call it "the full physically-possible set." Probes: ros swings 0.37–0.49 across
+  `a_V,b_V`. So "distributed wins the long tail" ≈ "we assumed blindness on the long tail" — violates the
+  don't-gerrymander guardrail. [econ#1, stats#4] Fix: move `a_V,b_V,phi,a_r,b_r` into `EVIDENCE.uncertain`, let
+  `s_exp<1` at widest α, space-filling design (not corner enumeration), re-derive, RELABEL honestly.
+- **C5. Paper contradicts its own pre-registered NO-GO.** The draft's 46%/78% headline sits in the same §6 as the
+  symmetry-gate `Δ=0.026 < 0.05` NO-GO (`paper.md:546-566`) with no reconciliation → reads as result-shopping.
+  Root cause (verified): the gate switches OFF harm-myopia; control C4 shows a harm-aware planner collapses m
+  46%→11% (~76% of the effect is the harm-visibility assumption). [paper#1] Fix: continuity paragraph — different
+  conditional question; the gate deliberately excludes this mechanism; sign-map ≠ magnitude claim.
+
+## TIER 2 — HIGH (evidence honesty + hardening)
+- **H1. Sign-shares (78/21) are a sampling artifact** — 66% of 193 points are measure-zero corners; not a
+  probability/volume. [stats#2] Fix: drop the percentages (keep `sign_status`) or replace with a uniform-volume MC
+  share + SE.
+- **H2. R_α envelope uncertified yet stamped `numerical:resolved`** — endpoints are single 110-world estimates, no
+  error bars; 64 pts in 7-D under-cover. [stats#3] Fix: MC-enclose endpoints, label as inner bound "≥ this wide",
+  gate `resolved` on envelope error (not base-CI width).
+- **H3. Legacy guard covers 2 of ~19 retired engines** — `e4-v3-headline.mjs` ("1.98x","10.97x"), `e5-sp-model.mjs`
+  ("1.36x") run unguarded; test checks only e4-v4. [repro#2] Fix: universal guard on all retired multiplier engines
+  + a test that greps the sim dir for unguarded `x`/`D/C` emitters.
+- **H4. Paper hides numbers** — the Result paragraph reports none while the engine emits 78/21, m̂=46.4%, three R_α
+  intervals. [paper#2] Fix: report with interpretation (>100% = losing arm destroys value).
+- **H5. Missing inactivation controls** — β=0 sign-invariance, b_H_C=0/s=0 harm-inert, λ=0 P-inert (declared in
+  DESIGN §5-iii, only C1-C4 built; C2 tests magnitude not direction). [engine#2] Fix: add the three + regressions.
+
+## TIER 3 — MEDIUM
+- **M1. Theorem over-billed.** It is a textbook selection identity on NET-S with NO harm gate; engine uses `S⁺` +
+  gate; theorem-check never checks engine→lemma. [paper, engine#3, stats#7] Fix: demote to "validation of the
+  no-myopia Gaussian limit", not "the parity boundary".
+- **M2. Text embargo is a token blocklist** — Cyrillic `х`, `✕`, "2.2-fold", "2.2 times" pass; `\b` misses `×`.
+  [repro#3] Fix: broaden (normalize confusables, block "N-fold"/"N times"); note the closed schema is the real barrier.
+- **M3. `V ⊥ r` by fiat** — distributed keeps noise-free harm voice exactly where central is blinded. [econ#2]
+  Fix: add `corr(V, r)` as a swept dependence.
+- **M4. Single-signed β** — no organized/NIMBY mobilization (β<0); its omission favors the distributed arm (can't
+  express minority-veto downside). [econ#3] Fix: signed voice parameter (also in ANTIVALUE-MODELING backlog).
+- **M5. π_deg self-referential** (relative o_min) + degeneracy fail-close unreachable. [stats#5] Fix: absolute or
+  base-anchored o_min for π_deg; make degenerate reachable.
+- **M6. validateDomain forces `zeta≥0`** (contra dm `[-1,1]`); `validateConfig` accepts ±Infinity; `atlas.mjs`
+  bypasses the sole adapter. [repro#4] Fix: correct zeta bound, finiteness in validateConfig, route/label atlas.
+- **M7. admin-leg `m_total` multiplies matched-budget m by a budget factor — spurious separability** (selection
+  interacts with phi). [econ#4] Fix: note the interaction; don't multiply — re-run selection under the reduced budget.
+- **M8. Residual transport overclaims** in companions (`foundation:4-5` vs `:55`; `anchors:18,24`). [econ#5, paper]
+
+## TIER 4 — LOW
+prior-art deltas missing from section body; single greedy-rule confound → reframe as a strength (identical
+interface); base-CI oversells precision [stats#6]; `exponential()` ~1e-12 negative edge; oracle greedy≠optimal
+knapsack (footnote); no CI / `npm test`; "roughly half" → cite exact control (m 46→11, ~76%).
+
+## Cross-cutting read
+The model is honest and correct; the **headline over-claims what the evidence certifies**. The two moves that most
+raise credibility: **(C4) de-gerrymander the sweep** and **(C5) reconcile with the NO-GO** — together they reframe
+the whole result as "here is how much the winner depends on each assumption", which is stronger than any single
+number. Expect the 78/21 to move toward more indeterminacy after C4 — that is the honest outcome.
+
+
+===== research\e4-plausible-anchors.md =====
+# E4 — plausible-value anchors (the "probable case", justified per variable) — LIVING DOC
+
+> Author framing (2026-07-11): report EVERYTHING (space-filling sweep), then LOCATE the frontier ceteris-paribus and
+> state, per axis: where the frontier is, the possible estimated values, the central's BEST case, and the PROBABLE
+> case (XX ± CI). The "probable case" for each variable must be JUSTIFIED — by a theoretical argument or an empirical
+> measurement — not chosen by the analyst. We fix variables ONE AT A TIME here; each entry records the anchor and its
+> strength. Anchor types: E=empirical measurement · T=theoretical argument · P=proxy-informed (transport gap) ·
+> A=declared scale assumption.
+
+## Status legend
+🔲 not yet fixed · 🔎 evidence being gathered · ✅ fixed (anchor recorded)
+
+## Variable ledger (D_F = physically possible; R_α = probable/expectable, justified)
+| Variable | Type | D_F | R_α (probable) | Anchor / source | Strength | Status |
+|---|---|---|---|---|---|---|
+| `a_V,b_V` visibility tail shape | E | contract | probable `a_V∈[0.3,0.8], b_V∈[2,5]` | heavy-tailed public procurement (Skuhrovec arXiv:1309.0218; Zipf/Pareto) | strong (dir.), stylized (mag.) | ✅ CONFIRMED |
+| `p` participation | E | contract | TBD | participatory-budgeting turnout | — | 🔎 (var #2, in progress) |
+| `pi_opp` opposition prevalence | E | contract | TBD | NIMBY/opposition & referendum rates | — | 🔲 |
+| `s_exp,b_H_C` harm myopia | T | contract | TBD | agenda-setting / salience (oversight reaches only the visible) | — | 🔲 |
+| `w` projection | P | contract | TBD | Gagnon-Bartsch / Dias-Lucas-Sheffer (transport gap) | — | 🔲 |
+| `a,b` bias / responsiveness | P | contract | TBD | Broockman-Skovron (transport gap) | — | 🔲 |
+| `a_r,b_r` reach | E/T | contract | TBD | local-project interest share | — | 🔲 |
+| `beta` voice suppression | T | contract | TBD | spiral of silence; weak empirics | — | 🔲 |
+| `phi` budget share, noises, scales | A | contract | contract | declared model scale | n/a | 🔲 |
+
+## MASTER SCENARIO TABLE (all knobs; author delegated range definition 2026-07-11)
+Three named point-scenarios across every knob (each scenario = a full config → run → m ± 95% CI). PRO-CENTRAL is the
+central's best plausible case (and the continuity anchor to the earlier ~0.025 near-parity). PROBABLE is the
+evidence/theory-anchored expectable case. PRO-DISTRIBUTED is the distributed's favourable case. Anchor: E empirical ·
+T theory · P proxy-informed (transport gap) · A declared scale.
+
+| knob | anchor | pro-central | PROBABLE | pro-distributed | justification |
+|---|---|---|---|---|---|
+| `a_V` | E | 1.0 | 0.5 | 0.2 | procurement heavy tail (Skuhrovec 1309.0218); proC=flatter (more visible) |
+| `b_V` | E | 1.5 | 3.5 | 5.0 | " (mass on low-visibility long tail) |
+| `p` | E | 0.05 | 0.15 | 0.45 | PB turnout ×reach ≈1–3% (Brennan/SignalCleveland) |
+| `a_r` | E/joint | 0.8 | 1.5 | 3.0 | reach mean proC≈0.05, prob≈0.16, proD≈0.375; joint `reach×p≈turnout` |
+| `b_r` | E/joint | 14 | 8 | 5 | " |
+| `pi_opp` | T/E | 0.03 | 0.15 | 0.35 | opposition/NIMBY prevalence among affected; proC=little harm to miss |
+| `mu_opp` | A | 1.5 | 3.0 | 5.0 | opposition intensity scale |
+| `s_exp` | T | 0.5 | 2.5 | 5.0 | agenda-setting/salience — proC concave/flat (central sees harm on tail), prob convex (myopic on tail) |
+| `b_H_C` | T | 1.2 | 0.5 | 0.2 | central harm-detection where it looks; proC=competent detector |
+| `w` | P | 0.1 | 0.5 | 1.3 | projection (Gagnon-Bartsch/D-L-S, transport gap) |
+| `a` | P | 0.0 | 0.2 | 0.6 | systematic bias intercept (Broockman-Skovron, transport gap) |
+| `b` | P | 1.0 | 0.9 | 0.7 | responsiveness near-linear (B-S); proC=faithful |
+| `beta` | T | 0.8 | 0.35 | 0.1 | adverse-voice suppression (spiral of silence); proC=opponents silenced |
+| `lambda` | T | 0.0 | 0.15 | 0.35 | credit pressure / clientelism; proC=none |
+| `zeta` | A/T | 0.85 | 0.6 | 0.35 | category-signal↔quality corr; proC=good proxy |
+| `gamma` | tied w | 0.3 | 0.5 | 0.9 | projection loading on category signal |
+| `sigma_e` | A | 1.2 | 0.5 | 0.2 | report noise; proC=noisy citizen reports |
+| `sigma_C` | A | 0.2 | 0.5 | 0.8 | central estimation noise; proC=precise central |
+| `sigma,sigma_v,v_p0,phi,h` | A | base | base | base | scale/structural (held at contract defaults) |
+| `m_q,s_q,c_lo,c_hi,N,K` | A | base | base | base | value/cost/computational scale (held) |
+
+**Frontier axes (ceteris-paribus, from PROBABLE):** `s_exp, b_H_C, p, beta` (+ `a_V`) — locate where m crosses 0.
+
+### RESULTS — three anchored scenarios (`npm run e4:scenarios`, N=1500,K=150, 800 worlds)
+| scenario | m (gap) | 95% CI | Core v0 delivers | central delivers |
+|---|---|---|---|---|
+| PRO-CENTRAL (myopia OFF, competent central) | **+6.1%** | [5.8, 6.4] | 91% of oracle | 85% |
+| PROBABLE (evidence-anchored) | **+46.6%** | [46.0, 47.4] | 91% | 45% |
+| PRO-DISTRIBUTED (favourable, moderate) | **+199.8%** | [197, 202] | 96% | −104% (destroys value) |
+
+- **The story (from D/O vs C/O):** Core v0 is ROBUST — it delivers ~91–96% of the achievable value in all three;
+  the central is FRAGILE — 85% → 45% → −104% depending entirely on whether it sees the anti-value.
+- **Continuity / reconciliation with the NO-GO:** removing harm-myopia collapses the advantage +46.6% → +6.1%
+  (same small regime as the symmetry-gate ~2.5%). The +46% IS the harm-myopia mechanism; remove it and you return
+  to near-parity. The two results are the SAME phenomenon under opposite assumptions — not a contradiction.
+
+### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
+- **Single-knob robustness:** from the PROBABLE scenario, NO single axis (`s_exp, b_H_C, p, beta, a_V`) crosses the
+  parity frontier within its plotted range — Core v0 wins throughout (+25% to +54%). The conclusion is robust to any
+  ONE assumption; reaching parity requires COMBINING central-favourable conditions.
+- **Combined central-competence frontier:** interpolating PROBABLE → fully-competent plausible central, m falls
+  +47% → +6%; the **frontier (m=0) is at t ≈ 1.13** — i.e. the central wins ONLY if it is BETTER than the fully-
+  competent plausible central (beyond realistic), and even then by only ~5%. Honest headline: *under any realistic
+  central, Core v0 wins; the central needs better-than-plausible anti-value sight to tie, and it barely wins past that.*
+
+## Fixed variables (details)
+_(populated as we fix each, one at a time)_
+
+## Three anchored scenarios (author framing 2026-07-11) — level the field both ways
+Across ALL knobs, report three named scenarios, each with stated assumptions:
+- **PRO-CENTRAL** — forced to favour the central, ANCHORED to reproduce the earlier ~0.025 near-parity
+  (the symmetry-gate NO-GO) under explicit assumptions (competent central that SEES anti-value: low myopia, high
+  `b_H_C` / low `s_exp`, light visibility tail). Central's best case AND a continuity check reconciling with the
+  prior result — NOT a contradiction. (Verify: engine under no-myopia settings ≈ near-parity.)
+- **PROBABLE** — evidence-anchored expectable values → `m ± 95% CI`, with the why/conditions.
+- **PRO-DISTRIBUTED** — favourable/expectable for distributed → `m ± 95% CI`.
+Per knob we also give: D_F range, frontier location, evidence for the probable value, result ± CI.
+
+### var #2 — `p` (participation) — ✅ CONFIRMED (author, 2026-07-11)
+- **Anchor type: E (empirical), with a mapping caveat.** Participatory-budgeting turnout (whole population) is low
+  single digits: San Francisco District 7 ~2,100/84,000 ≈ **2.5%** (Brennan Center); a ~280k city ~0.4–1.4%
+  (Signal Cleveland; PB Project). **Caveat:** in the model `p` is the reporting rate among the INTERESTED; reach `r`
+  already selects the interested subset, so PB turnout ≈ **reach × p**. With reach mean ≈0.13, a 1–3% turnout ⇒
+  `p ≈ 0.08–0.25`. → When reach (`a_r,b_r`) is anchored later, JOINTLY verify `reach × p ≈ 1–3%` (one observable
+  constrains two knobs).
+- **Proposed bands:** PRO-CENTRAL `p≈0.05` (sparse citizen signal); PROBABLE `p∈[0.08,0.25]`; PRO-DISTRIBUTED `p≈0.45`.
+- **Decision:** PENDING author confirmation.
+
+### var #1 — `a_V, b_V` (visibility tail shape) — ✅ CONFIRMED (author, 2026-07-11)
+- **Anchor type: E (empirical).** Public procurement value is heavy-tailed / power-law. Skuhrovec et al.,
+  *Exponential and power laws in public procurement markets* (arXiv:1309.0218): >40,000 Czech procurements 2006-2011,
+  power laws in revenues/spendings, top spenders follow Zipf (Pareto-like, heavy-tailed); reported exponent α≈1–1.24
+  (not verbatim-verified from abstract). Corroborated by IT-project cost power-law (arXiv:2210.01573). ⇒ a few large,
+  highly visible projects + a long tail of many small, low-visibility ones ⇒ `a_V < 1` (mass near low visibility) is
+  the PROBABLE case, reflecting real spending — not a convenient assumption. The Beta is a bounded stylized
+  approximation of the power law (do not overclaim an exponent fit).
+- **Proposed bands:** PRO-CENTRAL `a_V≈1.0` (lighter tail, more projects visible → oversight reaches them);
+  PROBABLE `a_V∈[0.3,0.8], b_V∈[2,5]` (heavy tail); PRO-DISTRIBUTED `a_V≈0.2` (very heavy tail).
+- **Caveat:** procurement VALUE proxies the size dimension of visibility, not visibility per se (controversy/media
+  also drive it); one-country study. Could add US/Chile corroboration later.
+- **Decision:** PENDING author confirmation of the bands.
+
+
+===== research\e4-parity-theorem.md =====
+# E4 analytic benchmark — the joint-normal fixed-threshold parity theorem
+
+> The limiting-case theorem behind the numerical frontier. The full engine adds eligibility gates, heterogeneous
+> costs, greedy residual fill, MNAR reports, z-scoring, and credit — this theorem is the clean special case it
+> reduces to under stated assumptions. Regression: `scripts/simulation/e4-v5/theorem-check.mjs` (matches within
+> ~0.2 Monte-Carlo SE). Replaces the retired `β = 1−η` harm-weight law (which does not nest the v1.14 model).
+
+## Setup
+Candidate projects are i.i.d. draws of `(S, X)`, where `S` is true (mean-scale) value and `X` is a selector's
+signal (the central estimate `X_C = M^C`, or the distributed estimate `X_D = M^D`). Assume:
+1. `(S, X)` is **jointly normal**, `Var(X) > 0`.
+2. Equal costs, no eligibility gate, no credit; each selector funds the top fraction `q ∈ (0,1)` by its own `X`.
+3. Selection is at the **population threshold** `t = μ_X + σ_X · z_q`, `z_q = Φ⁻¹(1−q)` (equivalently, the exact
+   top-`qK` quota in the `K → ∞` limit).
+
+## Lemma (expected selected value per candidate)
+```
+V := E[S · 1{X > t}] = q·μ_S + φ(z_q) · Cov(S,X)/σ_X ,
+```
+where `φ` is the standard normal pdf.
+
+**Proof.** Joint normality gives the linear conditional mean `E[S | X = x] = μ_S + (Cov(S,X)/σ_X²)(x − μ_X)`. Then
+```
+E[S·1{X>t}] = ∫_t^∞ E[S|X=x] f_X(x) dx
+            = μ_S·P(X>t) + (Cov(S,X)/σ_X²)·∫_t^∞ (x − μ_X) f_X(x) dx.
+```
+`P(X>t) = q`, and the standard truncated-normal identity `∫_t^∞ (x − μ_X) f_X(x) dx = σ_X·φ(z_q)` give
+`V = q·μ_S + (Cov(S,X)/σ_X²)·σ_X·φ(z_q) = q·μ_S + φ(z_q)·Cov(S,X)/σ_X`. ∎
+
+## Parity condition
+For two selectors `X_C`, `X_D` at the same `q`, the common `q·μ_S` term and the common positive tail factor
+`φ(z_q)` cancel, so
+```
+V_D = V_C   ⇔   Cov(S,X_D)/σ_{X_D} = Cov(S,X_C)/σ_{X_C}.
+```
+**The parity boundary is the equality of the two signal-to-noise covariance ratios `Cov(S,X_k)/sd(X_k)`.** The
+intercept `a` of the central model is **absent** (rank-invariant under a fixed funded share with no gate); it
+re-enters only in the numerical model through the own-estimate eligibility gate and heterogeneous `/c_j`.
+
+For the central signal `X_C = a + (b−w)·S + w·v_p + η` with a distinct project-varying projection `Z = v_p − S`
+(typed as its own variable, `η ⊥ (S, v_p)`):
+```
+Cov(S,X_C) = b·Var(S) + w·Cov(S,Z),
+Var(X_C)   = b²·Var(S) + w²·Var(Z) + 2bw·Cov(S,Z) + Var(η).
+```
+
+## Large-K corollary (link to the frozen estimand)
+The lemma is about expected selected sums, not automatically the frozen ratio-of-sums estimand. If
+`O_K/K → V_O > 0` (oracle LLN), the numerators `D_K/K, C_K/K` converge, and `Pr(O_K ≤ o_min) → 0`, then
+```
+m_K = Σ(D_K − C_K)/Σ O_K  →  (V_D − V_C)/V_O ,
+```
+so the covariance-ratio equality is the parity boundary **in the large-project limit**. Finite-world `m` is
+numerical; the engine's ratio-of-sums estimator is the finite-`K` object the lemma approximates.
+
+## Honest scope
+- The MNAR distributed signal is **not** exactly jointly normal at finite reach (thresholded non-response +
+  Bernoulli thinning); the Gaussian mapping is a **moment-matched reduced-form approximation**, not an identity.
+  So this lemma is the analytic sanity check, and the numerical frontier (with the true DGP) is the object.
+- `a` is deliberately absent from the benchmark frontier; do not read a benchmark magnitude off `a`.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files=@('"'audits\\2026-07-11-v1.14-design\\review-engine.md','audits\\2026-07-11-v1.14-design\\review-repro.md','audits\\2026-07-11-v1.14-design\\review-stats.md'); foreach("'$f in $files){Write-Output "`n===== $f ====="; Get-Content -LiteralPath $f -Raw}' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 192ms:
+
+===== audits\2026-07-11-v1.14-design\review-engine.md =====
+# E4 v5 engine — adversarial simulation / code-correctness review (2026-07-11)
+
+Reviewer scope: mean-scale DGP correctness of `scripts/simulation/e4-v5/{engine,contract,controls,test}.mjs`
+against `DESIGN_SKETCH_v5.md` + `ANTIVALUE-MODELING.md`, plus faithfulness of `research/e4-paper-section-draft.md`.
+Ran `npm run e4:controls`, `npm run e4:test`, `node .../evidence.mjs`, `node .../theorem-check.mjs`, and targeted
+Monte-Carlo probes. All shipped suites pass.
+
+## Overall verdict
+
+The core DGP is **correct and faithful**. The anti-value decomposition, the MNAR behavioral estimator, and the
+salience-gated central signal all match the spec, and I verified the load-bearing algebra empirically. The estimand
+is honest and the embargo/schema machinery is sound. There is **one demonstrable bug** (a crash on a fail-closed
+abort path), a **partially-implemented control battery** relative to the spec it cites, and a **theorem-vs-engine
+signal mismatch** the paper should name. None of these inflate the headline result; the engine is trustworthy for
+the evidence run once the crash guard is fixed.
+
+### What I verified as CORRECT (not rubber-stamping — these were checked, several empirically)
+
+- **Anti-value decomposition** (`engine.mjs:64-73`): `u = q + σ·N − 1{U<π_opp}·Exp(μ_opp)`; `S⁺=mean(max(u,0))`,
+  `H=mean(max(−u,0))`, `S=S⁺−H=mean(u)`. Faithful, no scale bug. Means are over the `n_j` interested people.
+- **MNAR estimator algebra** (`engine.mjs:68-74`): I drew 4000 report realizations over a fixed population and got
+  `E[M_D] = 0.1656` vs predicted `S⁺−(1−β)H = 0.1653` (diff 3e-4, MC noise). The `/p` (not `/p(1−β)`) division is the
+  deliberate behavioral bias, and it is **labeled honestly** as a "behavioral coverage estimator", not an unbiased
+  Horvitz-Thompson estimator. Correct.
+- **Central signal identification** (`engine.mjs:76-78`): `M_C = a + (b−w)·S⁺ + w·v_{p,j} − b_H^C·s(V)·H + η`. `w` is
+  identified because `v_{p,j}` is genuinely project-varying (`v_p0 + γ·g_j + ξ_j`, `σ_v>0`, `ζ<1`) and therefore not
+  collinear with `S⁺`. **No collinearity re-introduced** — this is the real fix over v4's project-invariant `v_p`.
+  Control C3 (`w=0 ⇒ v_p inert`, `max|dC|=0`) confirms the pathway.
+- **`s(V)=V^{s_exp}` gate** with `V∈Beta(a_V,b_V)` heavy-tailed toward 0 → aggregate near-blindness on the long tail.
+  Matches `ANTIVALUE-MODELING.md`. `s_exp=0 ⇒ gate≡1` used correctly by controls.
+- **Estimand** `m = Σ(D−C)/ΣO` over kept worlds: ratio-of-sums (O-weighted), documented, robust to tiny-O divergence.
+  Parity at 0. No div-by-zero (kept ⇒ O>o_min ⇒ den>0; empty den guarded to NaN + `enough=false`).
+- **"Oracle" is a genuine upper bound in practice**: over 1500 worlds, `D>O` and `C>O` occurred **0 times each** —
+  greedy-by-true-density dominates greedy-by-noisy-density every world. (Caveat under Issue 6.)
+- **No dead θ params**: all 30 registered parameters are read by the engine. **No hidden *model* literal**: the only
+  unregistered constants are RNG/seed-derivation magic numbers (see Issue 4).
+- **Numerical edges**: `exp`, `gamma`, `beta`, `binomialApprox` guarded; empty-world path returns early; `p>0`,
+  `c_hi>c_lo`, `φ∈(0,1)` enforced by `validateDomain`. `K=2` degenerate cell resolves to `enough=false` (not a crash).
+
+---
+
+## Ranked issues
+
+### 1. [HIGH — demonstrated crash] Fail-closed abort dereferences a non-existent contract key
+`evidence.mjs:100`
+```js
+if (!pt.enough) throw new Error(`... only ${pt.n_kept} kept worlds (< ${NUM.min_kept_worlds.value}) — aborting ...`);
+```
+`NUM` has **no** `min_kept_worlds` (keys: `n_worlds, seed, bootstrap_reps, ci_level, z_fallback_sd, min_kept_frac,
+min_kept_floor`). Demonstrated:
+```
+CRASH on abort path: TypeError - Cannot read properties of undefined (reading 'value')
+```
+The one guard meant to *gracefully* abort the evidence run when the base point is under-resolved instead throws an
+opaque `TypeError`, burying the real diagnostic (`n_kept`, the actual floor). It is dormant only because the base
+config currently keeps enough worlds; any parameter/world change that trips insufficiency turns a clear fail-closed
+message into a confusing stack trace.
+**Fix:** reference the real floor, e.g. `>= ${NUM.min_kept_floor.value} kept and >= ${NUM.min_kept_frac.value} of
+simulated`, or register `min_kept_worlds` in the contract. Add a control that forces `!pt.enough` and asserts the
+message renders.
+
+### 2. [MEDIUM] Control battery is a subset of the spec it cites — inactivation controls (iii) incomplete
+`controls.mjs` implements C1 (signal recovery + exact joint symmetry), C2 (credit active), C3 (`w=0` inert),
+C4 (harm active). But `DESIGN_SKETCH_v5.md §5` control (iii) declares **four** inactivation checks; three are absent:
+- `β=0 ⇒ report sign-invariant` (opponents report at the same rate `p` as supporters) — not tested.
+- `b_H^C=0` (or `s=0`) `⇒ harm term inert` as an *inactivation* equality — only the *activation* direction (C4) is
+  tested.
+- `λ=0 ⇒ P inert` — C2 only tests that raising `λ` *changes* C; the `λ=0` inertness is asserted by the comment, not a
+  check (it is trivially true by construction, but the spec asks for it).
+
+The **symmetry proof itself (C1) is strong** — `D=C=O` world-by-world to `<1e-9` genuinely exercises the shared
+selection interface with identical signals, and it does not pass trivially (it would fail if any arm-specific branch
+leaked). But the battery header claims "These MUST pass or the model is not trustworthy" while covering less than the
+design's control set. Two further gaps worth noting:
+- **C2 tests magnitude, not direction**: it asserts `C` changes with `λ`, not that credit tilt moves `C` *away from
+  the oracle*. A sign-agnostic change would pass. Strengthen to a directional assertion.
+- Controls call `runWorld`/`estimand` where `runWorld`/`generateWorld` are exported and run **without**
+  `validateConfig` — see Issue 4.
+
+**Fix:** add the three missing inactivation controls (all cheap world-by-world equality checks) and make C2
+directional. This makes the "must pass" battery actually match the spec.
+
+### 3. [MEDIUM] Analytic benchmark models a *different* central than the engine (net `S` vs support `S⁺`; no harm gate)
+`research/e4-parity-theorem.md:40` and `DESIGN_SKETCH_v5.md §4` write the central signal as
+`X_C = a + (b−w)·S + w·v_p + η` — **net value `S`, and no salience-gated harm term**. The engine
+(`engine.mjs:78`) uses **support `S⁺`** and adds `− b_H^C·s(V)·H`. So the benchmark's central is *harm-aware*
+(reads net `S`), whereas the engine's central is the harm-*myopic* one that is the entire thesis. Moreover
+`theorem-check.mjs` validates the joint-normal **identity in isolation** on synthetic Gaussian `(S,X)` — it never
+runs the engine DGP — so nothing demonstrates the engine reduces to the lemma. The paper draft's
+"the theorem is the checked limiting case (regression within ~0.2 Monte-Carlo SE)" (line 43) is therefore slightly
+generous: the check confirms the *lemma's algebra*, not engine→lemma convergence, and the lemma's central signal
+abstracts away both `S→S⁺` and the harm gate.
+**Fix:** in the theorem note and paper, state explicitly that the analytic benchmark is the **no-myopia Gaussian
+limit** (`s≡0`/`H` neutralized, `S⁺≈S`), and that `theorem-check` verifies the selection identity, not engine
+convergence. Optionally add a regression that runs the engine in the neutralized regime and checks it approaches
+`V_k`.
+
+### 4. [LOW] Two invariant claims are overstated vs the code
+- `contract.mjs:4-5` / header: "Nothing in the engine may use a literal that is not registered here." The engine uses
+  unregistered constants: seed-derivation `0x9e3779b9` (`engine.mjs:165`) and `0x5bd1e995` (`evidence.mjs:33`), plus
+  RNG algorithm constants and `1e-12` guards. These are algorithmic, not model parameters, so benign — but the
+  absolute claim is false as written. Soften to "no unregistered *model/θ* literal", or register the seed-derivation
+  salts.
+- `engine.mjs:4`: "validateConfig() is called before any run (fail-closed)." True for `estimand()`, but
+  `runWorld`/`generateWorld` are exported and invoked **un-validated** by `controls.mjs`. Fine for trusted callers,
+  but the comment implies universal enforcement. Either validate in `runWorld` or reword.
+
+### 5. [LOW] `exponential(mean)` can return a tiny negative value
+`engine.mjs:26`: `-mean * Math.log(1 - u() + 1e-12)`. When `u()≈0`, the argument `1-u+1e-12 > 1`, so `log>0` and the
+draw is **negative** (magnitude ~`1e-12·μ_opp`). An opposition intensity must be `≥0`. Empirically it never fired
+(min over 2,000,000 draws = `4.09e-7`, 0 negatives) because mulberry32 rarely hits exactly 0, so this is cosmetic —
+but it is a latent sign violation in a quantity the model treats as strictly non-negative.
+**Fix:** `-mean * Math.log(Math.max(1e-12, 1 - u()))` (clamp the argument into `(0,1]`).
+
+### 6. [LOW — good news, minor label] "Oracle" is greedy-by-true-density, not optimal knapsack
+`fundedValue(..., 'S', ...)` funds greedily by true value density `(S−h·c)/c`, so `O` is the *same-procedure
+full-information* benchmark, not the optimal selection. Empirically `D>O`/`C>O` never occur (0/1500 each), so `O` is
+a valid upper bound and `m` is well-defined; a world's `m` exceeding 100% comes from `C<0` (losing arm destroys
+value), which the adapter already explains (`adapter.mjs:33`). Just add a one-line footnote that the oracle is the
+full-information *greedy* benchmark, not the optimum, so "fraction of the oracle" is not misread as "fraction of the
+theoretical maximum."
+
+---
+
+## Highest-value recommendation
+
+**Fix the `evidence.mjs:100` crash (Issue 1) and complete the declared control battery (Issue 2) together.** The
+crash silently converts the headline number's own safety guard into a stack trace, and the control set that the
+project advertises as its trust anchor is missing three of the four inactivation checks it cites. Both are small,
+mechanical fixes that directly protect the credibility of the evidence run — and both should have their own
+regression test (force `!pt.enough`; assert each inactivation equality) so they cannot silently regress again.
+
+
+===== audits\2026-07-11-v1.14-design\review-repro.md =====
+# E4 v1.14 — Reproducibility / Release-Integrity Review
+
+**Auditor role:** adversarial reproducibility & release-integrity.
+**Scope:** `scripts/simulation/e4-v5/{contract,schema,adapter,evidence,engine,test,controls,atlas,theorem-check}.mjs`, the two legacy engines, `research/e4-paper-section-draft.md`, `package.json`.
+**Date:** 2026-07-11. **Ran:** `npm run e4:test` (all pass), `npm run e4:evidence` (renders clean), `node e5-sp-model.mjs` / `e4-v3-headline.mjs` (unguarded, exit 0), plus a hash-sensitivity probe.
+
+---
+
+## Overall verdict: CONDITIONAL — do not rely on the current provenance/embargo story for release
+
+The **object-level** embargo is genuinely strong: the closed schema (`additionalProperties:false`) has no field able to carry a `D/C`, a parity-1 ratio, or an `x` multiplier, and `validateOutput` rejects extra/non-finite fields (proven by tests at `test.mjs:75-77`). A *schema-valid v1.14 evidence object cannot carry a multiplier.* That part holds.
+
+But the surrounding **provenance and process** guarantees do not hold as advertised:
+
+1. `theta_id` does **not** identify the run — result-governing values are outside the hash (empirically proven identical after mutating them).
+2. The legacy runtime guard is applied to **2 of ~19** pre-v1.14 engines; the rest (including the literal `e4-v3-headline.mjs` and `e5-sp-model.mjs`) still run unguarded and print the retired `1.98x` / `ratio d/c` framing.
+3. The text embargo is a token blocklist, bypassable by Unicode confusables and spelled-out multipliers.
+4. There is **no CI and no `npm test`**, so none of the above is enforced on change.
+
+Residual multiplier-relapse risk: **YES at the process level, NO at the schema-object level** (details at the end).
+
+---
+
+## Ranked issues (file:line · why · concrete fix)
+
+### R1 — CRITICAL: `theta_id` does not identify the run (provenance is broken)
+`evidence.mjs:17-26` builds `MANIFEST` from a *subset* of settings and hashes only that (`resolvedHash(MANIFEST)`, `evidence.mjs:26`). The manifest omits everything that actually governs the numbers:
+- the resolved **base parameter values** (`baseConfig()` / `THETA[k].value`),
+- the **swept bounds** `THETA[k].df` and `THETA[k].ralpha` that define the D_F / R_α envelopes,
+- the numerical constants `NUM.bootstrap_reps / ci_level / min_kept_frac / min_kept_floor / z_fallback_sd` and `CLASSIFY.pi_deg_warn`.
+
+`contractHash()` (`contract.mjs:196-204`) *does* cover `THETA/NUM/CLASSIFY/ALPHA_LEVELS/AGGREGATION`, but it is **dead code** — grep shows it is never called or emitted anywhere. So the one function that would pin the contract is unused.
+
+**Proof (hash-sensitivity probe):** rebuilding the manifest exactly as `evidence.mjs` does, then setting `THETA.b_H_C.value=5.0`, `THETA.p.df=[1e-3,0.99]`, `NUM.bootstrap_reps.value=999` (all result-governing) yields the **same** id:
+```
+theta_id BEFORE: e4v6+fnv1a-fb1a3ac9
+theta_id AFTER : e4v6+fnv1a-fb1a3ac9   IDENTICAL: true
+```
+Two materially different runs share one `theta_id`. The "θ_id is a hash of a resolved evidence manifest" claim (and the paper's "contract hash in the artifact") is unmet.
+
+**Fix:** fold the resolved contract into the manifest and *print it*. Minimum: add `contract_hash: contractHash()` to `MANIFEST`. Better: hash the **resolved config actually run** — `resolvedHash({ ...MANIFEST, base: baseConfig(), sweptDf: pick(THETA,'df',[...UNCERTAIN,...FIXED_CHECK]), sweptRalpha: pick(THETA,'ralpha',UNCERTAIN), num: NUM, classify: CLASSIFY })`. Then emit both `contract_hash` and `theta_id` in the rendered artifact.
+
+### R2 — CRITICAL: legacy guard covers only 2 of ~19 retired engines
+`e4-v4-symmetric-frontier.mjs:30-34` and `e5-sp-symmetry-gate.mjs:21-25` carry the `E4_ALLOW_LEGACY` guard. **No other engine does.** `grep -L E4_ALLOW_LEGACY scripts/simulation/*.mjs` lists 17 unguarded files, including the ones that produce the retired headline:
+```
+e4-v3-headline.mjs   → prints "1.98x (+98%)", "0.98x to 10.97x; median 1.63x"   (exit 0, no flag)
+e5-sp-model.mjs      → prints "1.36x", "ratio d/c", uses Date.now()             (exit 0, no flag)
+e4-v5-capture.mjs, e4-v5-detection-floor.mjs, e4-v3-*, e4-v4-morris/robustness  (all unguarded)
+```
+The design intent ("legacy multiplier engines must not be able to feed v1.14 artifacts") is enforced only on the two files an auditor is told to open; the actual multiplier generator (`e4-v3-headline.mjs`) is wide open. `test.mjs:59-64` only checks `e4-v4-symmetric-frontier.mjs`, giving false confidence.
+
+**Fix:** put the guard in one shared module (`legacy-guard.mjs` exporting a `requireLegacyFlag()` called at top of file) and import it in *every* pre-v1.14 engine; or physically move all retired engines to `scripts/simulation/legacy/` and guard at a directory-level entry. Extend `test.mjs` to assert the guard on the whole `legacy/` set, not one file.
+
+### R3 — HIGH: text embargo is a bypassable blocklist (confusables + spelled-out)
+`adapter.mjs:9` `MULT_SUFFIX=/\d\s*[xX×]\b/` and `contract.mjs:128` `EMBARGO_TOKENS=['×','D/C','C/D']` only cover ASCII `x/X` and one Unicode `×`. All of these pass untouched:
+- Cyrillic `х` (U+0445), fullwidth `ｘ`, `✕` (U+2715), `⨯` (U+2A2F): e.g. `"2.2х"`, `"2.2✕"`.
+- Spelled-out equivalents: `"2.2-fold"`, `"2.2 times"`, `"twice the value"`, `"98% more"`.
+- Note the `\b` in `MULT_SUFFIX` means `"2.2×"` is **not** matched by the regex at all — it is caught only incidentally by `EMBARGO_TOKENS.includes('×')` (`adapter.mjs:16`); drop `×` from the token list and the regex would silently miss it.
+
+**Fix:** normalize before matching — NFKC + a confusable fold — then match `number + {x, ×, fold, times, -fold}` and word forms (`twice`, `two-fold`). But state plainly in-code that a blocklist can never be complete: the **schema is the primary barrier; the text check is defense-in-depth only.** Do not let the paper claim the text embargo *prevents* relapse.
+
+### R4 — MEDIUM: `atlas.mjs` bypasses the sole adapter and emits a figure-data artifact
+`atlas.mjs` `console.log`s the glyph legend `D=…, C=…` and `"m(θ) = (D − C)/O"` (`atlas.mjs:44-65`) and `writeFileSync('atlas-data.json', …)` (`atlas.mjs:67-70`) — none routed through `assertNoEmbargoedTokens`. The design says "every official artifact must render through here." `atlas-data.json` is a heatmap **figure source**; if it is cited in the paper it is an un-embargoed artifact. (It is currently *not* git-tracked, which limits blast radius, but the generator ships.)
+
+**Fix:** route the atlas summary string and the JSON `note` through `assertNoEmbargoedTokens` before write; and add an in-file banner that atlas is visualization-only and its JSON is not an evidence artifact. Ideally have atlas import `renderReport`-style checking rather than free `console.log`.
+
+### R5 — MEDIUM: run-governing constants outside the hash (subsumed by R1)
+Even the values *inside* `CLASSIFY` that reach the manifest (`o_min_frac`, `delta`, `zero_tol`) are hand-copied (`evidence.mjs:21`), so the manifest and the contract can silently diverge. `NUM.bootstrap_reps/ci_level` (govern `ci` → `numerical_status`) and `NUM.min_kept_frac/floor` (govern `enough` → `degeneracy`/`numerical`) never reach it.
+**Fix:** stop hand-copying; hash the whole `NUM`/`CLASSIFY` objects (folded into the R1 fix) so the manifest cannot drift from the contract.
+
+### R6 — LOW/MEDIUM: two executable-domain defects in `contract.mjs`
+- `validateDomain` `unit('zeta')` (`contract.mjs:166`) forces `zeta∈[0,1]`, contradicting its own declared `dm:[-1,1]` (`contract.mjs:27`) and the very next line's `[-1,1]` check (`contract.mjs:167`). A legitimate negative-`zeta` sensitivity run would be **rejected**. The executable domain is silently narrower than declared.
+- `validateConfig` (`contract.mjs:144`) rejects `NaN` but **accepts `±Infinity`** (`Infinity > Infinity` is false, so `N:Infinity` passes). It is only caught downstream by `validateDomain`'s `finite()` — fine inside `estimand`, but `validateConfig` is exported and used standalone (`test.mjs:82`), so on its own it is not fail-closed.
+**Fix:** delete the erroneous `unit('zeta')`; add `|| !Number.isFinite(v)` to the `validateConfig` number guard.
+
+### R7 — LOW: no CI, no `npm test` (nothing is enforced)
+No `.github/workflows/` exists in the repo; `package.json` has no `test` script, so `npm test` fails and Task #10's "CI" is not real. The four reproducibility commands the paper points to (`e4:controls|test|theorem|evidence`) are never run automatically.
+**Fix:** add `"test": "node …/controls.mjs && node …/test.mjs && node …/theorem-check.mjs"` and a CI workflow that runs those plus `e4:evidence` and greps the rendered output to assert it *contains* `parity at 0` and *does not* match a multiplier pattern.
+
+### R8 — LOW: provenance/naming traps
+`CONTRACT_VERSION='e4-v5.0.0'` (`contract.mjs:15`) but the id prefix is hardcoded `'e4v6+'` (`evidence.mjs:26`), the dir is `e4-v5/`, and the paper calls it "v1.14"/"v6" — four names for one thing. Worse, **top-level** `e4-v5-capture.mjs` / `e4-v5-detection-floor.mjs` are legacy files unrelated to the v1.14 `e4-v5/` package — a directory/name collision that invites citing the wrong artifact.
+**Fix:** derive the id prefix from `CONTRACT_VERSION`; rename or namespace the legacy `e4-v5-*.mjs` files under `legacy/`.
+
+### R9 — LOW: paper reproducibility claim currently false
+`e4-paper-section-draft.md:67-68` promises "the contract hash in the artifact." No contract hash is emitted (R1); `theta_id` doesn't pin the contract. The draft is hedged ("DRAFT, pending Codex v6 confirmation"), but this line must not survive integration until R1 lands.
+**Fix:** after R1, print both `contract_hash` and `theta_id`; update the appendix to name them.
+
+---
+
+## Residual multiplier-relapse risk: **YES (process), NO (schema object)**
+
+- **NO** at the object level: a v1.14 evidence object physically cannot carry a `D/C` / parity-1 ratio / `x` field — the closed schema has no such property and `validateOutput` rejects extras and non-finite values (`schema.mjs:9-11,27`; proven `test.mjs:75-76`). A forged schema-valid object cannot smuggle a multiplier field.
+- **YES** at the process level, two concrete live bypasses:
+  1. **R2** — `node scripts/simulation/e4-v3-headline.mjs` runs today with no flag and prints `"distributed … -> 1.98x (+98%)"` and `"0.98x to 10.97x; median 1.63x"`. Nothing stops that text being pasted into a v1.14 deliverable; the adapter only guards strings *it* is asked to render.
+  2. **R3** — a rendered line reading `"distributed delivers 2.2✕"` or `"2.2-fold the central arm"` passes `assertNoEmbargoedTokens` unchanged.
+
+So the mechanical barrier that actually works is the **closed schema**, not the guard or the token filter. The embargo should be re-described accordingly.
+
+---
+
+## Single highest-value recommendation
+
+**Make `theta_id` a hash of the resolved contract + config, and emit both `contract_hash` and `theta_id` in every artifact (R1).** It is the foundation the entire "contract is the single source of truth" claim rests on; it is currently broken in a way that is invisible (the id looks precise while being blind to the numbers that matter), and it is proven above with a 3-line mutation that leaves the id unchanged. Fixing it also subsumes R5 and unblocks the paper's reproducibility claim (R9). Fold in the dead `contractHash()` rather than writing new hashing.
+
+
+===== audits\2026-07-11-v1.14-design\review-stats.md =====
+# Adversarial statistics / causal-inference review — E4 v1.14 (v6 engine)
+
+Reviewer stance: hostile referee. Every claim checked against the code; every issue carries a concrete fix.
+Commands run 2026-07-11 from repo root: `npm run e4:theorem` (PASS, |Δ|=0.17 MC SE) and `npm run e4:evidence`
+(m̂=46.4%, CI=[45.4%,47.4%], D_F shares 78/21/2, R_.5/.8/.95 = [25.8,120.6]/[2.5,191.5]/[-73.2,267.2]%,
+sign=indeterminate, materiality=uncertain, numerical=resolved). I also ran a direct estimand/parameter probe
+(see Issue 1 and Issue 4 for the numbers).
+
+## Overall verdict
+
+**NEEDS CHANGES — DO NOT PRE-REGISTER YET.** The architecture is honest in intent and much of the machinery is
+statistically sound: the estimand is signed and parity-at-zero, the sign object is separated from the magnitude
+object, the four status fields are orthogonal, the analytic lemma is *correct*, and the honest-limits paragraph in
+the paper draft names most of the real weaknesses. But three things a hostile referee will not let pass:
+
+1. The **actually-computed estimand (ratio-of-sums) is not the estimand frozen in the design-of-record and the
+   theorem doc (per-world-ratio mean)**, and the code comment contradicts the code in the same file. That is a
+   pre-registration-integrity defect, not a cosmetic one — the whole selling point is "one contract, one estimand."
+2. The **headline identification objects are uncertified**: the D_F "sign shares" (78%/21%) are a sampling-design
+   artifact, and the R_α magnitude interval is an uncertified, known-to-under-cover sampled envelope whose endpoints
+   carry no Monte-Carlo error yet are stamped `numerical:resolved`.
+3. **Load-bearing thesis parameters (the visibility shape a_V, b_V) are frozen out of the sweep entirely**, so the
+   "advantage comes from the long tail" claim is not stress-tested on the very parameters that define the long tail.
+
+None of these is fatal to the design; all are fixable before pre-registration. But as shipped, the executable
+evidence still overstates what is identified — the same verdict the external v5 critique reached, now narrowed to a
+smaller, sharper set.
+
+## Ranked issues
+
+### 1. Estimand was silently switched (per-world-ratio mean → ratio-of-sums); the "single source of truth" now contradicts itself — CHANGE OF ESTIMAND
+- **Where.** Frozen definition in `audits/2026-07-11-v1.14-design/DESIGN_SKETCH_v5.md:54` and
+  `research/e4-parity-theorem.md:27` (setup) both state `m(θ)=E_W[(D−C)/O | O>o_min]` — the **mean of per-world
+  ratios**. The engine computes `Σ(D−C)/ΣO` — the **ratio of sums** (`scripts/simulation/e4-v5/engine.mjs:156-161`).
+  Worse, the section header on `engine.mjs:131` still reads `m(theta) = E[(D-C)/O | O>o_min]` — the comment
+  contradicts the code *four lines below it*. `contract.mjs:112` and the paper draft were updated to ratio-of-sums,
+  so the chain is now internally inconsistent about its own primary quantity.
+- **Why it matters.** Ratio-of-sums is O-weighted (each world enters with weight O_W); the per-world mean is
+  equal-weighted. These are **different estimands** and are **not sign-equivalent in general**: they diverge exactly
+  when sign(D−C) is correlated with O, i.e. at the heterogeneous-O corners that set the D_F envelope and the R_α
+  endpoints. At the base config they nearly coincide (I measured **ros=0.4643 vs per-world-mean=0.4712**), which is
+  *reassuring for the headline but irrelevant for the envelope* — the switch was justified precisely by divergent
+  corners, so the corners are where it can move the reported extrema and even a sign. Switching the pre-registered
+  estimand after seeing behavior, without recording it as a deviation, is the textbook analyst-degree-of-freedom a
+  referee looks for.
+- **Fix.** (a) Update `DESIGN_SKETCH_v5.md:54`, `e4-parity-theorem.md:27`, and the `engine.mjs:131` comment to the
+  ratio-of-sums definition, and log it explicitly as a post-hoc estimand revision with its (good) rationale — the
+  Codex `(1,1)/(−1,100)` divergence — so the record is honest. (b) Add one cheap robustness line to the evidence:
+  report both estimands at the base point and confirm sign agreement across the D_F corners (it is essentially free —
+  the per-world mean is one extra reduction over `kept`).
+
+### 2. The D_F "sign shares" (78% / 21% / 2%) are a sampling-design artifact, not a well-defined quantity
+- **Where.** `scripts/simulation/e4-v5/evidence.mjs:47-57` counts `nPos/nNeg/nPar` over `samplePoints`, and
+  `adapter.mjs:32` prints "Core v0 wins 78% of sampled θ-points."
+- **Why it matters.** `samplePoints` (`evidence.mjs:29-35`) emits `2^k` corners + 1 center + `N_RANDOM` interior. For
+  the k=7 UNCERTAIN box that is **128 corners + 1 + 64 = 193 points, 66% of them corners**. Corners are a measure-zero,
+  maximally-extreme set; weighting them 2:1 against the interior makes the "share" neither a volume fraction, nor a
+  probability, nor a stable statistic — change `N_RANDOM` or drop one coordinate and the percentage moves. It is
+  honestly *labelled* "a count, not a probability," but it is still **printed as a headline number** and a referee
+  will ask "78% of what measure?" and get no answer. (The derived `sign_status=indeterminate` is fine — it uses only
+  *whether both signs occur*, which is robust to weighting. It is the numbers that are the problem.)
+- **Fix.** Either (a) drop the percentages and report only `sign_status` plus the raw counts with an explicit
+  "corner-weighted grid, not a measure" caption; or (b) if a magnitude of "how often" is wanted, compute it over a
+  **uniform-volume** Monte-Carlo sample of the box (exclude the corner enumeration from the share) and report it as a
+  volume fraction **with a Monte-Carlo standard error**. Do not present a corner-dominated grid count as if it
+  estimates region size.
+
+### 3. The R_α magnitude envelope is an uncertified, under-covering sampled bound — but is printed as a hard interval and stamped `numerical:resolved`
+- **Where.** `envelope()` `scripts/simulation/e4-v5/evidence.mjs:44-58`; each cell is `SWEEP_NW=110` worlds
+  (`contract.mjs:88`); `numerical_status` `evidence.mjs:92` = `enough && dfEnv.enough && (base-CI width < δ)`.
+- **Why it matters.** Three compounding problems. (i) **Coverage:** 64 interior points in a 7-D box is ≈1.9 points
+  per axis — the interior is essentially unexplored (curse of dimensionality), and the DGP is non-monotone in these
+  coordinates, so the true extrema are not guaranteed at corners. The external v5 critique already *found* interior
+  points beating the corner maxima; this design's own comment concedes it "may still under-cover interior extrema."
+  So the reported interval is an **inner** estimate of the range (too narrow), yet is printed as `[lo, hi]` with no
+  "at least this wide" qualifier. (ii) **Endpoint noise:** each of lo/hi is a **single 110-world point estimate**
+  with no error bar; R_.95=[−73.2%, 267.2%] is two noisy points, and `argLo/argHi` are selected by `min/max` over
+  193 noisy draws — a maximization-over-noise bias that pushes the interval *outward* at the same time under-coverage
+  pushes it *inward*. Neither bias is quantified. (iii) **`resolved` is misleading:** `numerical_status` inspects
+  only the base-point CI width, never the envelope's own MC error, so a wildly noisy [−73%,267%] envelope still reads
+  `resolved`.
+- **Fix.** (a) Attach a simultaneous MC enclosure to every envelope endpoint (bootstrap or a per-cell CI) and report
+  the endpoint **± its MC error**; widen the printed interval by that error and label it an **inner bound** on the
+  identified range ("≥ this wide"). (b) Replace corners+64-uniform with a larger Latin-hypercube or adaptive search
+  budget, or state the sampling budget and explicitly frame the result as a lower bound on the range. (c) Redefine
+  `numerical_status=resolved` to require the envelope-endpoint MC error (not just base-CI width) below a frozen
+  tolerance.
+
+### 4. Thesis-defining parameters (visibility shape a_V, b_V) are neither swept nor flip-probed; the fixed×uncertain split assumes untested separability
+- **Where.** `contract.mjs:95-96` — `uncertain=[p,beta,sigma_e,s_exp,b_H_C,w,pi_opp]`,
+  `fixed_check=[sigma,mu_opp,sigma_C,gamma,h,lambda,a,b,zeta,v_p0]`. `a_V, b_V, sigma_v, phi, s_q, a_r, b_r, m_q,
+  c_lo, c_hi` appear in **neither** list — frozen at defaults, not even one-at-a-time probed.
+- **Why it matters.** The paper's thesis is "the aggregate advantage comes from the low-visibility long tail." The
+  **visibility distribution `Beta(a_V,b_V)` is exactly what sets how much mass lives in that long tail**, yet it is
+  held fixed. My one-at-a-time probe over plausible values shows the estimand moves materially:
+  `a_V=3,b_V=1.5 → ros=0.367` vs `a_V=0.1,b_V=8 → ros=0.491` — a ~12-point swing on the headline, entirely outside
+  the reported R_α. It does not flip sign *marginally from base*, but jointly with low `p` (which the external
+  critique showed drives m negative on its own) it is untested. Separately, the fixed-flip probe
+  (`evidence.mjs:62-74`) moves each held coordinate to its endpoint **one at a time at the base of the uncertain
+  box**, so it structurally cannot detect a sign flip that needs a held coord *and* an uncertain coord to move
+  together (e.g. high `gamma` × low `p`). The split silently assumes separability that is never checked.
+- **Fix.** Move `a_V, b_V` (and arguably `sigma_v`) into UNCERTAIN, or at minimum add them to `fixed_check`. Add a
+  handful of **joint** fixed×uncertain probes (e.g. each fixed endpoint crossed with the uncertain-box corners that
+  already flip sign), or state and defend the separability assumption explicitly.
+
+### 5. The relative o_min floor makes π_deg self-referential and the conditioning event non-comparable across the sweep; fail-closed degeneracy is unreachable
+- **Where.** `engine.mjs:152` `o_min = 0.05*median(O)` per cell; evidence runs with `oMinAbs=null`
+  (`evidence.mjs:103`), so **every cell uses its own median**. Degeneracy fail-close fires only at `pi_deg>=1`
+  (`evidence.mjs:91`).
+- **Why it matters.** Because the floor scales with the cell's own median, a genuinely degenerate low-value regime
+  (all O tiny) has a tiny median, a tiny o_min, and therefore **excludes almost nothing** → `pi_deg≈0`,
+  `degeneracy=ok`. π_deg cannot detect the failure it exists to detect, and `pi_deg=1` (the fail-closed trigger) is
+  essentially unreachable under a relative floor. Second, each envelope cell then conditions m on a **different event**
+  `{O > o_min(cell)}`, so the values being min/max'd across the sweep are not the same conditional estimand — a subtle
+  non-comparability that the "scale-robust" comment on `evidence.mjs:101-103` does not address (it defends against
+  ratio explosion, which is a different concern than comparability of the conditioning set).
+- **Fix.** Anchor o_min to a **shared absolute scale** across the sweep — the `oMinAbs` path already exists; pass the
+  base-cell `0.05*median(O)` into every envelope cell so degeneracy is comparable and detectable. Separately, raise a
+  distinct `low_value_regime` flag when a cell's own `median(O)` falls below an absolute oracle-scale floor, so a
+  uniformly-tiny-O cell is not silently reported as healthy.
+
+### 6. The base-point CI advertises a precision that is not the identified object, and the bootstrap freezes the estimated o_min
+- **Where.** `engine.mjs:163-176`. CI is the first and most prominent report line (`adapter.mjs:31`).
+- **Why it matters.** The bootstrap resamples `kept` worlds only — it is **inner Monte-Carlo variability at one
+  arbitrary θ (the defaults)**, and it does **not** recompute o_min or the retained set inside each resample, so it
+  ignores threshold-selection uncertainty. Reporting `46.4% CI=[45.4%,47.4%]` as the headline invites a referee to
+  read ±1 point as "the answer," when the identified set the same run reports is R_.95=[−73%, 267%]. The tight CI is
+  a statement about simulation noise, not about identification.
+- **Fix.** Recompute o_min and the kept set inside each bootstrap replicate. Relabel the m̂/CI line as "illustrative
+  point (registered defaults); interval = inner Monte-Carlo precision only, NOT the identified range," and make the
+  R_α set at least as visually prominent as m̂.
+
+### 7. The analytic theorem drops the paper's central mechanism, and the regression checks only the single-selector lemma on a signal that is normal by construction
+- **Where.** `research/e4-parity-theorem.md:40-45` writes the central signal as `X_C = a + (b−w)S + w·v_p + η` with a
+  single `S`; the engine's actual signal (`engine.mjs:78`) is on **support S⁺** plus a separate **salience-gated harm
+  term −b_H^C·s(V)·H** — the harm-myopia channel, i.e. the thesis, is **absent from the theorem's parity condition**.
+  `theorem-check.mjs` tests only `V` (a single selector), not the parity equality, not the large-K corollary, and on
+  an `X` that is *made* jointly normal (`theorem-check.mjs:28`).
+- **Why it matters.** The lemma and its regression are **correct and honestly scoped in the doc** (the "Honest scope"
+  section is good). But the paper draft (`e4-paper-section-draft.md:40-41`) states "the parity boundary is the
+  equality of the covariance-to-noise ratios" as though it is E4's boundary — it is the boundary of a
+  **linear-Gaussian selection benchmark with no harm channel**, which is not the mechanism being estimated. A referee
+  will note the benchmark validates the *selection algebra*, not the *model*.
+- **Fix.** In the paper, qualify: "the parity boundary **of the linear-Gaussian selection benchmark** (harm channel
+  excluded) is …". Optionally add a regression that measures how far the engine's actual M^C/M^D depart from joint
+  normality (a Mardia or simple skew/kurtosis check on simulated signals), so the "moment-matched reduced-form
+  approximation" caveat is backed by a number rather than asserted.
+
+### 8. Latent bug: the fail-closed abort references a contract field that does not exist
+- **Where.** `evidence.mjs:100` interpolates `NUM.min_kept_worlds.value`; `contract.mjs:64-72` registers only
+  `min_kept_frac` and `min_kept_floor`. There is no `min_kept_worlds`.
+- **Why it matters.** On the *exact* insufficiency path this guard exists to handle, `NUM.min_kept_worlds` is
+  `undefined` and `.value` throws a `TypeError` — so instead of the intended clear fail-closed message the run dies
+  with an opaque property error. The safety valve is broken. (It is masked today only because the base point is never
+  insufficient.)
+- **Fix.** Reference the real threshold, e.g. `NUM.min_kept_floor.value` (or interpolate the computed
+  `Math.max(min_kept_floor, min_kept_frac*n)`), and add a unit test that forces `pt.enough=false`.
+
+### 9. Minor: δ=0.03 and zero_tol=0.005 are asserted in "delivered-value terms," not calibrated
+- `contract.mjs:77-78`. The materiality band and zero-touch tolerance are frozen (good) but justified only by
+  prose. A referee will ask what delivered-value quantity 3% of the oracle corresponds to. Fix: give the one-line
+  anchoring computation, or label them explicitly as declared analyst thresholds subject to the reported R_α being
+  wide relative to them (which it is — so materiality is correctly `uncertain`).
+
+## What fails a hostile referee, specifically
+
+- **"You changed your primary estimand and your own spec still disagrees with your code."** (Issue 1) — the single
+  most damaging line, because the project's whole credibility pitch is the outcome-blind contract.
+- **"78% of what probability measure?"** (Issue 2) — the number has no sampling-theory meaning.
+- **"Your `resolved` flag certifies a [−73%, 267%] interval built from 64 interior points in seven dimensions with no
+  error bars."** (Issue 3) — the identification claim is not certified to the standard its own status field implies.
+- **"The parameters that define your 'long tail' are the ones you froze."** (Issue 4).
+
+Everything else (relative floor, base-CI framing, theorem scope) is defensible with wording and modest code changes;
+the four above need real fixes before the word "pre-registered" is used.
+
+## Single highest-value recommendation
+
+**Certify the identified objects, and stop reporting uncertified numbers as if certified.** Concretely: (a) attach a
+Monte-Carlo enclosure to each R_α envelope endpoint and report the magnitude as an **inner bound with error bars**
+("the identified range is *at least* this wide"), gating `numerical:resolved` on that error; and (b) demote the
+corner-weighted D_F percentages to `sign_status` + raw counts, or replace them with a uniform-volume MC share with an
+SE. This is the smallest change that makes the two headline identification claims — the sign object and the magnitude
+object — say only what the code can actually support, which is exactly where a hostile referee will attack. Pair it
+with the near-free estimand-reconciliation in Issue 1 (update the two spec docs + the stale comment, log the
+deviation, add the both-estimands sign-agreement line) and the artifact becomes defensible.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files=@('"'audits\\2026-07-11-v1.14-design\\review-econ.md','audits\\2026-07-11-v1.14-design\\review-paper.md'); foreach("'$f in $files){Write-Output "`n===== $f ====="; Get-Content -LiteralPath $f -Raw}' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 175ms:
+
+===== audits\2026-07-11-v1.14-design\review-econ.md =====
+# Review — economics / mechanism-design / external-validity (adversarial)
+
+Reviewer role: hostile econ referee. Scope: the v1.14 / E4 design-of-record, the anti-value / admin / leakage legs,
+the value-estimation foundation, the parity theorem, the paper draft, and how the engine operationalizes the thesis.
+Every issue below cites file:line and proposes a concrete fix.
+
+## Overall verdict
+
+**MAJOR REVISIONS.** The architecture is honest in intent and the reporting embargo is genuinely disciplined. The
+central-arm estimation form (linear intercept-shift + directional projection) is defensibly literature-motivated,
+and keeping the estimand to matched-budget selection-only is the *right* call. But three things stand between this
+and an accept:
+
+1. **The empirical result does not test the mechanism's own load-bearing assumptions.** The two levers that
+   manufacture the "long-tail advantage" — the heavy-tailed visibility distribution and the convex salience gate —
+   are either frozen or swept only on the favorable side. The engine's `envelope()` sweeps 19 of 29 parameters and
+   the report literally labels this "the full physically-possible set." That is the strongest objection and it is
+   fixable.
+2. **The anti-value model is single-signed.** Organized/mobilized opposition (NIMBY, minority veto) is documented as
+   a known gap but not built, and its omission is *not* conservative — it biases toward the distributed arm.
+3. **Residual transport overclaims** flagged in the v4 novelty critique are still live in the companion docs, and
+   the prior-art nearest-neighbor deltas are still not written.
+
+Details, ranked by how much they threaten the headline.
+
+---
+
+## Ranked issues
+
+### 1. [CRITICAL] The D_F "sign backbone" is over a 7-D slice, not the physically-possible set — and the frozen dimensions are exactly the mechanism's levers
+
+`scripts/simulation/e4-v5/evidence.mjs:15,105` builds the sign envelope only over `EVIDENCE.uncertain` (7 params:
+`p, beta, sigma_e, s_exp, b_H_C, w, pi_opp`), with a one-at-a-time marginal probe over `EVIDENCE.fixed_check`
+(10 params) at `evidence.mjs:62-74`. That leaves **10 of 29 registered θ frozen at their base values and never
+perturbed in any sweep**: `m_q, s_q, a_V, b_V, c_lo, c_hi, a_r, b_r, phi, sigma_v` (compare
+`contract.mjs:19-57` against `EVIDENCE.uncertain`/`fixed_check` at `contract.mjs:95-96`).
+
+Among the frozen ten are the mechanism's own drivers:
+- **`a_V, b_V` (`contract.mjs:25-26`)** — the visibility Beta shape, i.e. *how heavy the long tail is*. The design
+  says in bold this must be swept: "do NOT hardcode s≡0 or b_H^C=0. The tail heaviness (distribution of V_j) … are
+  all parameters with their own D_M/D_F/R_α. If the tail is less heavy … the boundary moves and we report it"
+  (`ANTIVALUE-MODELING.md:54-57`). The contract gives `a_V,b_V` a `df`/`ralpha`, but the evidence run never moves
+  them. The "capability guardrail … do not gerrymander" (`DESIGN_SKETCH_v5.md:70-72`) is stated but operationally
+  violated: the single lever that most controls the aggregate advantage is pinned at the value that maximizes it
+  (`a_V=0.5<1` ⇒ heaviest tail).
+- **`phi` (`contract.mjs:32`)** — budget share, i.e. the funded fraction / selection regime. Selection performance
+  gaps are budget-dependent; freezing `phi` fixes the regime.
+- **`c_lo,c_hi` (`contract.mjs:28-29`)** — cost dispersion, which drives the `(x−h·c)/c` ranking the engine actually
+  uses (`engine.mjs:105`). Not a nuisance parameter here.
+- **`a_r,b_r` (`contract.mjs:30-31`)** — reach, which sets citizen coverage `n_j`; see issue 2.
+
+**Why it's fatal as labeled:** `evidence.mjs:134` prints "NOT sign-robust across **the full physically-possible
+set**," and the paper draft repeats "the sign over the joint physically-possible set `D_F`"
+(`e4-paper-section-draft.md:35`, `:46`). It is not the physically-possible set; it is a 7-D joint box plus a marginal
+10-D probe, with 10 dimensions held fixed. A referee who notices this discounts every sign/magnitude headline.
+
+Compounding it: even inside the swept set the favorable side is locked in. `s_exp` (the gate convexity) has
+`ralpha:[1.0,4.0]` (`contract.mjs:52`), so the **headline R_α never lets the gate be concave (`s_exp<1`)** — the
+central is never allowed to be *better* than linear at detecting tail harm, only worse. With `a_V,b_V` frozen at the
+heavy-tail base and `s_exp≥1` in the headline, average central harm detection is ≈`b_H_C·E[V^{s_exp}]` ≈ `0.5·0.05`
+≈ 0.024 versus distributed `(1−β)=0.6` — a 25× harm-voice asymmetry baked in before the sweep starts.
+
+**Fix:** (a) Move `a_V, b_V, phi, c_lo, c_hi, a_r, b_r` into `EVIDENCE.uncertain` (or at minimum `fixed_check`) so
+the sign backbone and R_α actually span them; if the joint box gets too large for `2^k` corners, replace the corner
+enumeration with a Latin-hypercube/Sobol sample (the code already adds `N_RANDOM` interior points, so the machinery
+exists). (b) Relabel every "full physically-possible set" string to "the swept UNCERTAIN box (7 of 29 θ jointly;
+10 held fixed — listed)" at `evidence.mjs:134` and `e4-paper-section-draft.md:35,46`. (c) Report the headline result
+at a `s_exp` band that includes `<1` at the widest α, or justify in text why concave gating is physically excluded.
+
+### 2. [MAJOR] The distributed arm's harm voice is visibility-independent by fiat; V and reach are structurally decorrelated
+
+`engine.mjs:55,59` draws visibility `V ~ Beta(a_V,b_V)` and reach `r ~ Beta(a_r,b_r)` as **independent** draws, and
+the distributed conditional mean is `E[M^D|u] = S⁺ − (1−β)H` "independent of V_j" (`ANTIVALUE-MODELING.md:40-42`,
+`DESIGN_SKETCH_v5.md:33-34`). That decoupling is the other half of the advantage: the central loses harm voice on
+the tail, the distributed keeps *full* harm voice everywhere. But in reality a project is often low-visibility
+*because* few people are aware of or affected by it — visibility and citizen reach are positively correlated. If so,
+low-`V` projects also have low `r` ⇒ small `n_j` ⇒ high-variance `M^D` built from a possibly unrepresentative
+handful, precisely on the long tail that supplies the entire aggregate advantage.
+
+**Why it biases the result:** the model grants the distributed arm noise-free systematic harm detection exactly
+where the central is blinded, with no offsetting thinning of citizen coverage. The independence is convenient, not
+argued.
+
+**Fix:** add a correlation channel — e.g. make `V` a monotone function of (reach, category salience) plus noise, or
+draw `(V, r)` from a copula with a swept dependence parameter (the design already contemplates "copula/dependence"
+for `D_F` at `DESIGN_SKETCH_v5.md:64`). Then re-run the tail decomposition and report whether the advantage survives
+when low-visibility ⇒ thin, noisy citizen coverage. State the `corr(V,r)` you assume; do not leave it implicitly 0.
+
+### 3. [MAJOR] Anti-value is single-signed: organized/mobilized opposition is documented but not modeled, and omitting it favors the distributed arm
+
+The contract has one opposition-voice parameter, `beta` = "adverse-voice **suppression** of opponents",
+`df:[0,1]` (`contract.mjs:41`), and the report rule only ever *thins* opponents' reports
+(`engine.mjs:68`, `p·(1−β)` with `β≥0`). The design itself flags this as a real weakness — "Single-signed voice.
+`β≥0` = opponents report *less* … The opposite is equally real (organized opposition is *louder*, NIMBY). One
+parameter can't carry both regimes" (`ANTIVALUE-MODELING.md:16-18`) — and proposes splitting `β` into suppression
+and mobilization (`ANTIVALUE-MODELING.md:70`). That upgrade was **not built**: `θ_all` carries only the suppression
+`β`.
+
+**Why it biases toward the thesis:** with mobilization (`β<0`, opponents *louder*), the distributed arm does not
+simply gain more harm voice — it can *over*-weight a vocal, unrepresentative minority and veto positively-valued
+projects (the classic NIMBY / minority-capture failure of participatory allocation). That is the distributed arm's
+*characteristic downside*, and the current model structurally cannot express it, so every reported region is drawn
+from the half of the opposition-behavior space that flatters coverage.
+
+**Fix:** implement the signed-voice split — either allow `β<0` in the report rule (extend `beta.df` to `[-1,1]` with
+a re-derived `E[M^D|u]`) or add a distinct `beta_mob` parameter with its own `D_F/R_α`, and put it in
+`EVIDENCE.uncertain`. Report whether the distributed advantage survives an organized-opposition regime. This is the
+single most important *substantive* modeling fix.
+
+### 4. [MODERATE] Combining the value leg with the admin-cost leg assumes a separability that the budget constraint breaks
+
+`ADMIN-COST-LEG.md:26-27` proposes `m_total` as delivered-value under central `= f(selection_C)·B(1−κ_C)` vs
+distributed `= f(selection_D)·B(1−κ_D)`. But `f(selection_k)` — the matched-budget selection quality `m` — is itself
+a function of the project budget, because the funded fraction `phi` changes which projects clear and how the parity
+boundary sits (issue 1 notes `phi` is frozen precisely because it moves selection). Multiplying a matched-budget
+selection ratio by a different budget factor treats selection-effect and budget-effect as multiplicatively separable
+when they interact through the budget constraint. This is not double-counting, but it is a spurious-separability
+error that inflates or deflates `m_total` by the unmodeled interaction term.
+
+**Fix:** when combining legs, re-run selection at each arm's *actual* project budget (`phi_k` implied by `κ_k`)
+rather than reusing the matched-budget `m`; report `m_total` as the difference of separately-simulated delivered
+values, with the interaction shown explicitly. Keep the matched-budget `m` as the clean selection leg for the main
+result. The "keep them separate, decompose explicitly" instinct (`ADMIN-COST-LEG.md:8-10`) is right; the arithmetic
+in the combine step needs to honor the interaction.
+
+### 5. [MODERATE] Residual transport overclaims in the companion docs (flagged in v4, still live)
+
+The v4 novelty critique required rewriting these (`critique-v4-novelty-alignment.md:17-23`); they are unchanged:
+- `research/e4-value-estimation-foundation.md:4-5` still opens "an estimation model whose form **and parameter
+  ranges are anchored** to published evidence," directly contradicting its own §4 heading "parameters are
+  PROXY-INFORMED, **not anchored**" (`:55`) and §7 (`:87-89`).
+- `E4-empirical-anchors.md:18` keeps the heading "**anchored ranges**"; `:24` calls the planner bias "**materially
+  non-zero and large**" without the target-domain qualifier in the sentence itself (the caveat only arrives at
+  `:57-68`).
+
+Source political-opinion effects do not establish the sign, nonzero magnitude, or plausible *range* of the target
+value-of-project coefficients. An econ referee reading the foundation abstract will treat the model as calibrated and
+then feel misled by §4.
+
+**Fix (as v4 already specified):** change both openings/headings to "source evidence motivates the mechanism, form,
+and sensitivity scenarios; no target sign, magnitude, or range is identified." Credit where due: the Prelec/
+Surprisingly-Popular overclaim *was* fixed — `e4-value-estimation-foundation.md:84-85` now says it is "**not** a
+measurement of the target structural `w`." Apply the same discipline to the two lines above.
+
+### 6. [MODERATE] Prior-art differentiation names the right neighbors but still states no deltas; the single-rule confound is unaddressed
+
+`e4-paper-section-draft.md:66` lists Böttcher–Klingebiel 2024, Rey–Endriss 2024, Boehmer et al. 2023, Liesiö et al.
+2007, Mollick–Nanda 2016 as "differentiators" but states no operative delta — the exact gap the v4 critique flagged
+and asked to fix with a nearest-neighbor table (`critique-v4-novelty-alignment.md:31-35`). Böttcher–Klingebiel is the
+closest neighbor (budgeted noisy selection) and needs an explicit delta. Separately, Boehmer et al. make the
+*selection rule* load-bearing, and E4's result comes from **one** greedy rule for both arms; without saying so, a
+referee reads "institutional effect" where it could be "greedy-rule effect."
+
+**Fix:** (a) add the compact nearest-neighbor table (prior object | E4 delta | required external benchmark); name the
+surviving delta as *signed-MNAR coverage + transported central projection/credit on an oracle-normalized
+institutional contrast*. (b) Turn the single-rule fact into a *strength*: the engine uses the identical selection
+interface for both arms (`engine.mjs:98-118`, one `fundedValue`), so the contrast isolates the *signal*, not the
+rule — state this explicitly to preempt the confound, and ideally show one robustness run with a second rule.
+
+### 7. [MINOR] The "myopia magnitude" is asserted, and `s(V)=V^{s_exp}` is a strong functional choice
+
+`s(V)=V^{s_exp}` (`engine.mjs:77`) forces `s(0)=0` exactly — the central is *perfectly* blind at zero visibility, not
+merely attenuated. Combined with the heavy-tail base this drives average detection to ≈0.024 (issue 1). The gate
+shape is a modeling convenience; a referee will ask why not `s(V)=V/(V+c)` (bounded away from 0) or a logistic with a
+floor.
+
+**Fix:** add a small detection floor `s(V)=s_min+(1−s_min)·V^{s_exp}` with `s_min` swept from 0, so "near-blind" is a
+measured limit rather than a hardcoded zero; this also makes the `b_H^C=0/s=0 ⇒ harm inert` negative control
+(`DESIGN_SKETCH_v5.md:88`) a genuine corner rather than the default neighborhood.
+
+---
+
+## The strongest objection a hostile referee would raise
+
+**"You assumed the answer."** The aggregate advantage is generated by exactly two assumptions — a heavy-tailed
+visibility distribution (`a_V=0.5`) and a convex, zero-at-zero salience gate (`s_exp≥1`, `s(0)=0`) — and *neither is
+in the joint sweep that produces your headline*: `a_V,b_V` are frozen (`EVIDENCE` omits them, `contract.mjs:95-96`)
+and `s_exp`'s headline band is `[1.0,4.0]` (`contract.mjs:52`), never concave. So when the report says "NOT
+sign-robust across the full physically-possible set" (`evidence.mjs:134`), it has not varied the physics that
+matters; it has varied seven downstream coefficients around a pinned mechanism. The result "distributed wins on the
+long tail" is therefore close to a restatement of "we assumed the planner is blind on the long tail," and the one
+sweep that could rebut that reading was not run. Everything else (transport caveats, embargo, honest limits) is well
+done, which makes this gap more conspicuous, not less.
+
+## Single highest-value recommendation
+
+**Put the mechanism's own levers into the sweep, then relabel.** Add `a_V, b_V, phi, a_r, b_r` (and let `s_exp` reach
+`<1` at the widest α) to `EVIDENCE.uncertain`, switch the corner enumeration to a space-filling design so the joint
+box stays tractable, and re-derive the sign backbone and R_α over that genuinely-joint set. If the distributed
+advantage survives a *lighter* tail, a *concave* gate, and *correlated* visibility/reach, the thesis is real and the
+paper is strong; if it does not, you have found the true boundary and can report it honestly. Either way, correct the
+"full physically-possible set" language to match what is actually swept. This one change converts the headline from
+"assumption-driven" to "robustness-tested" and directly discharges the strongest objection above.
+
+
+===== audits\2026-07-11-v1.14-design\review-paper.md =====
+# Adversarial peer-review — E4 draft paper section (v1.14)
+
+**Referee:** academic-writing / peer-review panelist (hostile-journal simulation)
+**Target:** `research/e4-paper-section-draft.md`
+**Grounding read:** `audits/2026-07-11-v1.14-design/DESIGN_SKETCH_v5.md`, `research/e4-parity-theorem.md`,
+`scripts/simulation/e4-v5/{evidence,controls,theorem-check}.mjs` (executed), `drafts/paper.md` §6.
+**Engine numbers verified by running the code** (`npm run e4:evidence | e4:controls | e4:theorem`), not taken on faith.
+
+---
+
+## Overall verdict: **MAJOR REVISION** (not reject; not minor)
+
+The honest core is defensible and, in places, admirable: it leads with `sign:indeterminate`, it refuses a
+multiplier, its negative controls pass, and its analytic lemma actually checks against simulation (0.17 MC SE). But
+as drafted it would draw a **major-revision-or-reject** from a hostile referee for two reasons that are *fixable but
+currently disqualifying*: (1) an **unreconciled contradiction with the paper's own pre-registered result** in the
+same §6, and (2) a **Result paragraph that reports no numbers** while the engine it cites emits very specific ones.
+Both read, to a suspicious referee, as selective presentation. Fix those two and this becomes a minor-revision
+section.
+
+---
+
+## Ranked issues
+
+### 1. [BLOCKER — integrity] The section silently contradicts the paper's own pre-registered NO-GO result
+**Location:** whole draft vs. `drafts/paper.md:546-566` ("Quantitative status (governing)").
+**Why:** The governing paragraph already in the master paper states the distributed−central selection advantage is
+**"positive in every one of 18 pre-specified cells but small," pooled median Δ = 0.025 / ratio-of-sums Δ = 0.026,
+below the pre-registered 0.05 rebuild gate**, and concludes "the compound multiplier is therefore **not** claimed."
+The new E4 draft, run live, headlines the *same institutional comparison* as: distributed wins **78%** of sampled
+θ-points, central 21%, and delivers a **46.4%-of-oracle** gap (`m̂ = 46.4%`, CI [45.4%, 47.4%]), with the α=0.5
+magnitude box at **[25.8%, 120.6%] of oracle**. A referee — and any careful reader — will see a pre-registered test
+that returned "small, below our own go/no-go threshold," immediately followed by a differently-parameterized model
+that returns a large number, and will read it as **abandoning a pre-registered result the moment it was
+inconvenient**. This is the single most likely ground for rejection, and it is an integrity charge, not a technical
+one.
+**Root cause (verified):** the two objects differ in exactly one thing that the draft never states — the
+**salience-gated harm-myopia mechanism** plus an **asymmetric "illustrative-defaults" world**. The symmetry gate is
+symmetric-by-construction, so it *necessarily zeroes out* the very mechanism this section is about. Control C4 proves
+the point: `m(b_H^C=0)=0.4632 → m(b_H^C=1)=0.1118` — i.e. a central planner that *sees harm* collapses the headline
+from 46% to 11% (~76% of the effect is the harm-visibility assumption).
+**Concrete fix:** add a short, explicit **continuity paragraph** near the top of E4, e.g.:
+
+> *"§6's confirmatory symmetry gate deliberately holds the two arms symmetric except for coverage; by construction it
+> switches **off** the harm-myopia channel that is this section's subject, and correctly returns a small advantage
+> (Δ≈0.026). E4 does **not** revisit that magnitude claim. It asks a different, conditional question — *when the
+> central proxy is myopic to concentrated harm on the low-visibility tail, who wins and by how much* — and reports a
+> sign-map, not a point estimate. The mechanism's load is transparent: a fully harm-aware planner (b_H^C→full)
+> nearly erases the gap (m: 46%→11%, control C4)."*
+
+Without this paragraph the section is, to a hostile eye, result-shopping.
+
+### 2. [BLOCKER — presentation] The "Result" paragraph reports no numbers; the engine reports precise ones
+**Location:** draft lines 45-51 ("Result (illustrative defaults)").
+**Why:** The paragraph says "robustly positive at the 50–80% sensitivity boxes… central-possible only at the widest
+95% box" and "roughly half the advantage" — but omits **every** figure the engine actually produces: `m̂=46.4%`, the
+78/21/2 sign split, and the three R_α intervals ([25.8%,120.6%], [2.5%,191.5%], [−73.2%,267.2%]). A section that goes
+vague exactly where its engine is precise invites the inference that the numbers were withheld because they are
+awkward (the 46% collides with issue #1; the 120–267% upper magnitudes look wild). Hiding them is worse than
+explaining them.
+**Concrete fix:** report them, with interpretation. E.g.:
+
+> *"Over the sampled physically-possible set (193 resolved corners of the D_F box) the distributed arm wins 78% of
+> points, the central proxy 21%, with 2% at parity — so the winner is **not sign-robust**. Restricting to the
+> declared expectable boxes R_α, the (D−C)/O gap is [25.8%, 120.6%] of oracle at α=0.5, [2.5%, 191.5%] at α=0.8, and
+> [−73.2%, 267.2%] at α=0.95 — positive except at the widest box. (Magnitudes above 100% are not a coding error: when
+> the losing arm actively **destroys** value, D−C exceeds the oracle level O; see estimand definition.) At the
+> illustrative operating point m̂=46.4% (CI [45.4, 47.4]), reported as a **locator for the mechanism, not an
+> estimate**."*
+
+### 3. [MAJOR] The estimand `m = Σ(D−C)/ΣO` is under-explained and counter-intuitive
+**Location:** draft lines 31-37; the ">100% means the losing arm destroys value" fact never appears in the draft
+(it is in the engine's own render string, `evidence.mjs:22`).
+**Why:** A referee meeting "fraction of the full-information oracle value" will expect something in [0,1]. This
+quantity divides a **contrast between two arms** (D−C) by a **benchmark level** (O), so it can exceed 1 and go
+negative. That is defensible (scale-free, and the theorem's large-K corollary lands on `(V_D−V_C)/V_O`), but it is
+not self-evidently "a fraction of the oracle," and leaving the >100% behavior unexplained looks like an artifact.
+**Concrete fix:** define it in one sentence as "the delivered-value **gap** between arms, expressed as a share of the
+full-information oracle **level**," explicitly note the range is unbounded when an arm destroys value, and — strongly
+recommended — report the underlying levels (D, C, O in mean-value units) once so the ratio is anchored.
+
+### 4. [MAJOR] "Benchmark theorem" is over-billed relative to your own positioning
+**Location:** draft lines 5, 39-43, 59 (headline object "…+ a benchmark theorem + …"); vs.
+`DESIGN_SKETCH_v5.md:96-97` which calls it "a **proposed** joint-normal benchmark (validation, not novelty)."
+**Why:** The lemma (`V = q·μ_S + φ(z_q)·Cov(S,X)/σ_X`) is the standard truncated-normal selection identity; it is a
+correct and useful **internal check**, not a contribution. Headlining it as "a benchmark theorem" (one of three
+pillars) invites a referee to Google it, find it is textbook, and discount the section's novelty judgment. Your own
+design doc already concedes this.
+**Concrete fix:** demote in the framing to "a closed-form **selection identity** we use to validate the simulator (it
+matches within 0.17 Monte-Carlo SE)"; keep the proof in an appendix; make the three pillars "mechanism model +
+robustness map + measurement plan." Do not sell a textbook identity as a theorem contribution.
+
+### 5. [MAJOR] Assumption vs. result is blurred in the mechanism paragraph
+**Location:** draft lines 15-21.
+**Why:** The prose slides from a modeling **assumption** ("`s(0)≈0`", harm gate increasing in visibility) to an
+apparent **finding** ("the planner is near-blind on the tail… holds for any β<1… the aggregate advantage comes from
+the long tail"). The claim that oversight "reaches only the visible, disputed few" is asserted as fact about how
+central planners behave, unreferenced in-section. A referee will object that the headline mechanism is *assumed into
+existence*, then reported as if demonstrated.
+**Concrete fix:** separate the two explicitly: "We **assume** a salience gate `s(V)` with `s(0)≈0` (motivated by
+[cite]); **given** that assumption, coverage dominates the tail wherever `(1−β) > b_H^C·s(V)`. Whether real planners
+are in fact tail-blind is exactly what the measurement plan (§bridge) is designed to test — it is a premise here, not
+a result." Add at least one citation for the salience-gate premise or flag it as a stylized assumption.
+
+### 6. [MAJOR] Prior-art differentiation is absent from the section body
+**Location:** differentiators live only in the integration checklist (draft lines 64-66), not in the prose.
+**Why:** For a serious venue the section itself must say how it differs from Böttcher–Klingebiel 2024, Rey–Endriss
+2024, Boehmer et al. 2023, Liesiö et al. 2007, Mollick–Nanda 2016. A checklist note is invisible to the referee
+reading the paper.
+**Concrete fix:** add one or two sentences positioning E4 against portfolio-decision-under-uncertainty (Liesiö) and
+axiomatic participatory budgeting (Rey–Endriss / Boehmer): "Unlike axiomatic PB, which fixes preferences and studies
+aggregation rules, E4 fixes the rule (greedy-under-budget) and studies **estimation error under two institutions**;
+unlike robust portfolio selection, the object is a comparative-institutions sign-map, not an optimal portfolio."
+
+### 7. [MINOR] Register/tone mismatch with the master paper
+**Location:** throughout; contrast draft's "proxy-informed, not identified", "measure-free", "sign backbone",
+"physically-possible set" with `paper.md` §6's narrative prose.
+**Why:** The draft reads as an internal build-spec, not journal copy. Terms like "sign backbone," "measure-free,"
+"physically-possible set," and "R_α boxes" are jargon that will slow a referee.
+**Concrete fix:** on integration, translate: "sign backbone" → "the sign of the winner"; "measure-free" → "we report
+the count/fraction of sampled points and make no claim about a probability measure over parameters"; "physically-
+possible set" → "the set of parameter values not ruled out on physical grounds (probabilities in [0,1], variances
+≥0)". Add a compact notation table (S⁺, H, M^C, M^D, v_{p,j}, b_H^C, s(V), β, m, D_F, R_α) — the section introduces
+~a dozen symbols with no glossary.
+
+### 8. [MINOR] MNAR→Gaussian caveat is 15 lines downstream of the claim it qualifies
+**Location:** benchmark paragraph (lines 39-43) states the parity boundary as if it governs the real object; the
+"the distributed signal is not jointly normal → moment-matched approximation" caveat only lands in Honest limits
+(line 53+) and the theorem doc (`e4-parity-theorem.md:56-59`).
+**Why:** The lemma is exact only for a jointly-normal signal, which the actual MNAR distributed estimator is **not**.
+Stating the boundary first and caveating much later reads as burying the limitation.
+**Concrete fix:** attach the caveat inline: "…the parity boundary is the equality of covariance-to-noise ratios (for
+the central signal exactly; for the distributed MNAR signal this is a **moment-matched approximation**, since
+thresholded non-response breaks joint normality — hence the numerical frontier, not the lemma, is the object)."
+
+### 9. [MINOR] "Atlas" over-promises what the artifact delivers
+**Location:** draft lines 5, 59 ("robustness atlas"); realized as a 193-corner sign-share + 3 R_α intervals; Honest
+limit (3) already concedes it is "a sampled bound… which may under-cover interior extrema."
+**Why:** "Atlas" implies a mapped surface; the deliverable is a coarse sampled envelope with no figure. A referee who
+reads "atlas" and finds no map will mark it down.
+**Concrete fix:** either add one real 2-D slice figure (e.g. m over β × b_H^C, which C4 shows is the live axis) — this
+would materially strengthen the paper — or downgrade the word to "sign-and-magnitude robustness **map**."
+
+### 10. [MINOR] "roughly half the advantage" is imprecise and undersells your own control
+**Location:** draft line 49.
+**Why:** The section never says which counterfactual gives "half." The one attribution I can run, C4
+(`b_H^C: 0→full`), collapses m from 46.3% to 11.2% — ~76% of the effect, not half. If "half" refers to a different
+lever (removing opposition, π_opp→0), cite that run's number explicitly; do not leave a vague fraction the reader
+cannot reconcile with the published control.
+**Concrete fix:** replace with the exact figure and lever: "A fully harm-aware central planner nearly erases the gap
+(m: 46%→11%; control C4); removing opposition entirely reduces it by [exact %] — the harm channel is the dominant
+driver." Report the actual attribution number from `controls.mjs`, not a round adjective.
+
+### 11. [HOUSEKEEPING] Strip draft scaffolding on integration
+**Location:** title "DRAFT, pending Codex v6 confirmation" (line 1); "Result (illustrative defaults)" as a heading;
+integration checklist (lines 61-69).
+**Fix:** remove before it lands in `paper.md`; the checklist is workflow, not paper.
+
+---
+
+## The single change most likely to get it past a hostile referee
+
+**Add the continuity paragraph (Issue #1) and put the real numbers in the Result (Issue #2).** The paper already,
+honestly and in the same §6, tells the reader the pre-registered advantage was *small and below the go/no-go gate*.
+Unless E4 explicitly says "different question, mechanism deliberately switched off in that test, and this is a
+conditional sign-map not a magnitude claim — a harm-aware planner takes 46%→11%," a suspicious referee will conclude
+the authors swapped models to manufacture a bigger number after their own pre-registration said stop. That single
+reconciliation converts the section's biggest liability (looks like result-shopping) into its biggest credibility
+asset (a team that pre-registered a NO-GO, honored it, and then transparently studied the mechanism the NO-GO test
+had to exclude).
+
+---
+
+## What's genuinely strong (keep, and lean on it)
+
+- **Leads with `sign:indeterminate`.** Opening the Result with "the winner is *not* sign-robust across the full set"
+  is the opposite of overclaiming — rare and disarming. Preserve it verbatim.
+- **The negative controls actually pass**, including exact world-by-world symmetry (`D=C` when signals are identical)
+  and pathway-inactivation checks. This is a real integrity signal a referee can rerun; cite it in-section.
+- **The analytic lemma is verified, not asserted** (0.17 MC SE against simulation). Even demoted to a check (Issue
+  #4), that it *matches* is a genuine credibility point.
+- **The transport-unidentified honesty + bridge-data measurement plan** is exactly the right register: it says what
+  would falsify/identify the claim and admits it is not yet measured.
+- **The harm-myopia thesis is a crisp, defensible mechanism** clearly distinct from the retired multiplier — the
+  section has a real idea, not just a robustness table.
+- **The embargo** (parity at 0, no ×, no bare D/C, closed output schema) is disciplined and worth one sentence of
+  methods credit.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files=@('"'scripts\\simulation\\e4-v5\\contract.mjs','scripts\\simulation\\e4-v5\\engine.mjs','scripts\\simulation\\e4-v5\\schema.mjs','scripts\\simulation\\e4-v5\\adapter.mjs'); foreach("'$f in $files){Write-Output "`n===== $f ====="; Get-Content -LiteralPath $f -Raw}' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 186ms:
+
+===== scripts\simulation\e4-v5\contract.mjs =====
+// E4 v1.14 — MACHINE-READABLE MODEL CONTRACT (single source of truth)
+// Codex's single sharpest improvement: one versioned, outcome-blind contract that is the ONLY path to evidence.
+// It enumerates theta_all, numerical constants, joint D_F / R_alpha sets, o_min/delta, classification thresholds,
+// and the closed output schema. `validate()` throws on unknown or unused fields. Nothing in the engine may use a
+// literal that is not registered here.
+//
+// Param `kind`:
+//   physical    — a real quantity with a hard physical domain; D_M\D_F is genuine impossibility (prob in [0,1], sd>=0)
+//   directional — a theory-backed sign assumption (w,b,b_H_C,gamma >= 0). NOT a physical law: base case keeps the
+//                 sign, but a sign-reversal RIVAL model is reported as sensitivity (author decision 2026-07-11).
+//   structural  — a shape/location parameter (means, spreads, counts)
+//   numerical   — a solver/Monte-Carlo constant
+//   normative   — a declared normative choice (aggregation A); never randomized
+
+export const CONTRACT_VERSION = 'e4-v5.0.0';
+
+// Each entry: { value, kind, dm:[lo,hi], df:[lo,hi], ralpha:[lo,hi], note }
+// dm = mathematical domain; df = physically-possible (sign backbone); ralpha = expectable band (magnitude headline).
+export const THETA = {
+  // ---- population & projects (structural) ----
+  N:      { value: 4000, kind: 'structural', dm: [1, Infinity],   df: [100, 100000], ralpha: [1000, 20000], note: 'population size' },
+  K:      { value: 200,  kind: 'structural', dm: [2, Infinity],   df: [20, 5000],    ralpha: [80, 800],     note: 'candidate projects' },
+  m_q:    { value: 0.4,  kind: 'structural', dm: [-Infinity, Infinity], df: [-5, 5],  ralpha: [0.0, 1.0],    note: 'mean project quality (mean scale)' },
+  s_q:    { value: 1.0,  kind: 'physical',   dm: [0, Infinity],   df: [0, 10],       ralpha: [0.5, 2.0],    note: 'sd of project quality' },
+  a_V:    { value: 0.5,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [0.3, 1.0],    note: 'visibility Beta a (a<1 => heavy tail toward 0)' },
+  b_V:    { value: 3.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [1.5, 6.0],    note: 'visibility Beta b (mass on low-visibility long tail)' },
+  zeta:   { value: 0.6,  kind: 'physical',   dm: [-1, 1],         df: [0, 1],        ralpha: [0.3, 0.85],   note: 'corr(category signal g, quality q)' },
+  c_lo:   { value: 1.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.01, 1e6],   ralpha: [0.5, 2.0],    note: 'min cost' },
+  c_hi:   { value: 5.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.01, 1e6],   ralpha: [3.0, 10.0],   note: 'max cost' },
+  a_r:    { value: 1.2,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [0.8, 3.0],    note: 'reach Beta a' },
+  b_r:    { value: 8.0,  kind: 'physical',   dm: [0, Infinity],   df: [0.05, 50],    ralpha: [4.0, 20.0],   note: 'reach Beta b (most projects reach a minority)' },
+  phi:    { value: 0.35, kind: 'physical',   dm: [0, 1],          df: [0.01, 0.99],  ralpha: [0.2, 0.6],    note: 'budget share of total cost' },
+
+  // ---- individual value & ANTI-VALUE (opposition != indifference) ----
+  sigma:   { value: 1.0,  kind: 'physical', dm: [0, Infinity], df: [0, 10],   ralpha: [0.5, 2.0],  note: 'sd of idiosyncratic taste eps' },
+  pi_opp:  { value: 0.15, kind: 'physical', dm: [0, 1],        df: [0, 1],    ralpha: [0.03, 0.35], note: 'prevalence of intense opponents' },
+  mu_opp:  { value: 3.0,  kind: 'physical', dm: [0, Infinity], df: [0, 50],   ralpha: [1.0, 6.0],  note: 'mean opposition intensity (Exponential)' },
+
+  // ---- distributed arm (coverage) ----
+  p:       { value: 0.25, kind: 'physical', dm: [0, 1], df: [1e-3, 1], ralpha: [0.05, 0.6], note: 'participation prob (report if support)' },
+  beta:    { value: 0.40, kind: 'physical', dm: [0, 1], df: [0, 1],    ralpha: [0.1, 0.7],  note: 'adverse-voice suppression of opponents' },
+  sigma_e: { value: 0.5,  kind: 'physical', dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of report noise' },
+
+  // ---- central arm (salience-gated harm myopia) ----
+  v_p0:    { value: 0.6,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.5, 1.5], note: "planner's own baseline position" },
+  gamma:   { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 5],  ralpha: [0.2, 1.2],  note: 'loading of planner projection on category signal g' },
+  sigma_v: { value: 0.5,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of projection idiosyncrasy' },
+  a:       { value: 0.2,  kind: 'structural',  dm: [-Infinity, Infinity], df: [-5, 5], ralpha: [-0.3, 0.8], note: 'central intercept / systematic level bias' },
+  b:       { value: 0.9,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.6, 1.1],  note: 'central responsiveness to SUPPORT S+' },
+  w:       { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.2, 1.0],  note: 'directional projection weight' },
+  b_H_C:   { value: 0.5,  kind: 'directional', dm: [-Infinity, Infinity], df: [0, 3], ralpha: [0.1, 1.0],  note: 'central harm-detection coefficient (myopia; salience-gated)' },
+  s_exp:   { value: 2.0,  kind: 'physical',    dm: [0, Infinity], df: [0.2, 10], ralpha: [1.0, 4.0], note: 'harm-gate exponent: s(V)=V^s_exp (>1 => near-blind on long tail)' },
+  sigma_C: { value: 0.5,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0.1, 1.5], note: 'sd of central estimation noise eta' },
+
+  // ---- selection ----
+  h:       { value: 0.0,  kind: 'physical',    dm: [0, Infinity], df: [0, 10], ralpha: [0, 1.0], note: 'opportunity-cost hurdle (shared across arms)' },
+  lambda:  { value: 0.15, kind: 'physical',    dm: [0, 1], df: [0, 1], ralpha: [0, 0.4], note: 'central credit-pressure weight (credit salience P = visibility V; a linear scale on P would cancel under z-scoring, so none is registered)' },
+};
+
+// Aggregation A is NORMATIVE and declared, never randomized into a prior.
+export const AGGREGATION = { primary: 'mean', alternatives: ['harm_weighted'], note: 'A=mean primary; harm-weighted is a SEPARATE declared estimand' };
+
+// ---- numerical / Monte-Carlo constants (nu_all) ----
+export const NUM = {
+  n_worlds:       { value: 1500, note: 'Monte-Carlo worlds per theta' },
+  seed:           { value: 20260711, note: 'base PRNG seed (Date.now/Math.random forbidden)' },
+  bootstrap_reps: { value: 400,  note: 'world-cluster bootstrap replications (inner variability only)' },
+  ci_level:       { value: 0.95, note: 'bootstrap CI level' },
+  z_fallback_sd:  { value: 1.0,  note: 'z-score sd fallback when eligible-set sd=0' },
+  min_kept_frac:  { value: 0.5,  note: 'a cell is sufficient only if kept/(simulated) worlds >= this' },
+  min_kept_floor: { value: 40,   note: 'and kept worlds >= this absolute floor; else numerically-unresolved/degenerate' },
+};
+
+// ---- estimand thresholds (frozen, mean-value units; NOT the retired 0.05) ----
+export const CLASSIFY = {
+  o_min_frac:  { value: 0.05, note: 'o_min = o_min_frac * median(O_W); worlds with O<=o_min excluded from m, counted in pi_deg' },
+  delta:       { value: 0.03, note: 'materiality band on m (fraction-of-oracle units); justified in delivered-value terms, NOT the 0.05 rebuild gate' },
+  zero_tol:    { value: 0.005, note: 'sign_status=zero-touching when |m|<=zero_tol or CI straddles 0 within this' },
+  pi_deg_warn: { value: 0.10, note: 'degeneracy_status=high above this share' },
+};
+
+// alpha coverage family for the magnitude (R_alpha) layer
+export const ALPHA_LEVELS = [0.5, 0.8, 0.95];
+
+// ---- EVIDENCE configuration (single source of truth for the evidence run; hashed into theta_id) ----
+// NOTE (2026-07-11): a v6.1 redesign is planned — report EVERYTHING via a space-filling sweep over the WHOLE
+// uncertain set (incl. thesis levers a_V,b_V,s_exp; NO frozen favourable lever) + ceteris-paribus frontier locators
+// (per axis: frontier location, possible values, central's best case, probable case ± CI). That rewrite is GATED on
+// first anchoring each variable's probable (R_alpha) value to theory/empirics — see research/e4-plausible-anchors.md.
+// Current block is the working v6 config; do not treat the swept set below as the final "everything" sweep.
+export const EVIDENCE = {
+  world:        { N: 1500, K: 150 },   // inside R_alpha for N,K
+  base_nw:      500,                    // Monte-Carlo worlds for the base point
+  sweep_nw:     110,                    // worlds per swept cell
+  n_random:     64,                     // random interior samples added to corners+center per envelope
+  headline_alpha: 0.8,                  // R_alpha level used for the materiality decision
+  uncertain:    ['p', 'beta', 'sigma_e', 's_exp', 'b_H_C', 'w', 'pi_opp'],
+  fixed_check:  ['sigma', 'mu_opp', 'sigma_C', 'gamma', 'h', 'lambda', 'a', 'b', 'zeta', 'v_p0'],
+  // Nested R_alpha SENSITIVITY-WIDTH factors (DECLARED sensitivity widths, NOT verified probability coverage).
+  alpha_width:  { '0.5': 0.6, '0.8': 1.0, '0.95': 1.3 },
+};
+
+// ---- CLOSED output schema (embargo-critical): additionalProperties:false; cannot express D/C or ratio-parity-1 ----
+export const OUTPUT_SCHEMA = {
+  $schema: 'http://json-schema.org/draft-07/schema#',
+  type: 'object',
+  additionalProperties: false,
+  required: ['contract_version', 'theta_id', 'pi_deg', 'm_hat', 'ci', 'df_dist_share', 'df_cent_share', 'sign_status', 'materiality_status', 'degeneracy_status', 'numerical_status'],
+  properties: {
+    contract_version:   { type: 'string' },
+    theta_id:           { type: 'string' },
+    pi_deg:             { type: 'number', minimum: 0, maximum: 1 },
+    m_hat:              { type: 'number' },                 // Σ(D-C)/ΣO over kept worlds, a signed fraction of oracle
+    ci:                 { type: 'array', items: { type: 'number' }, minItems: 2, maxItems: 2 },
+    df_dist_share:      { type: 'number', minimum: 0, maximum: 1 },  // SIGN over D_F: uniform-VOLUME fraction (space-filling
+    df_cent_share:      { type: 'number', minimum: 0, maximum: 1 },  //   MC) where each institution wins — a real volume
+    df_par_share:       { type: 'number', minimum: 0, maximum: 1 },  //   fraction, not a corner count
+    df_dist_share_se:   { type: 'number', minimum: 0, maximum: 1 },  // Monte-Carlo SE of df_dist_share (binomial)
+    m_Ralpha:           { type: 'object' },                 // magnitude by alpha level (measured over joint R_alpha)
+    sign_status:        { enum: ['pos', 'neg', 'zero-touching', 'indeterminate'] },
+    materiality_status: { enum: ['material', 'negligible', 'uncertain'] },
+    degeneracy_status:  { enum: ['ok', 'high', 'degenerate'] },
+    numerical_status:   { enum: ['resolved', 'unresolved'] },
+  },
+  // NOTE: there is deliberately NO field able to carry D/C, a ratio with parity 1, or an institution-performance
+  // multiplier. The render adapter additionally rejects the tokens 'x'/'×'/'D/C' in performance context.
+};
+
+// Tokens the sole render adapter must reject in institution-performance context (ASCII x, Unicode multiplication, ratio).
+export const EMBARGO_TOKENS = ['×', 'D/C', 'C/D'];
+
+// ---------- validation: fail-closed on unknown / unused ----------
+export function knownThetaKeys() { return new Set(Object.keys(THETA)); }
+
+// Throw if a config carries any key not registered in THETA (unknown), or (optionally) if a registered key is
+// missing (unused-required). Engines call this before running.
+export function validateConfig(cfg, { requireAll = true } = {}) {
+  const known = knownThetaKeys();
+  const bad = Object.keys(cfg).filter((k) => !known.has(k));
+  if (bad.length) throw new Error(`[contract] unknown parameter(s) not in THETA: ${bad.join(', ')}`);
+  if (requireAll) {
+    const missing = [...known].filter((k) => !(k in cfg));
+    if (missing.length) throw new Error(`[contract] missing required parameter(s): ${missing.join(', ')}`);
+  }
+  for (const [k, v] of Object.entries(cfg)) {
+    if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`[contract] ${k} must be a finite number, got ${v}`);
+    const { dm } = THETA[k];
+    if (v < dm[0] || v > dm[1]) throw new Error(`[contract] ${k}=${v} outside mathematical domain [${dm[0]}, ${dm[1]}]`);
+  }
+  return true;
+}
+
+// Executable-domain validation (fail closed): the printed DGP is only defined on a subset of the scalar box.
+// validateConfig checks names + scalar bounds; validateDomain checks the constraints that keep the DGP meaningful.
+export function validateDomain(cfg) {
+  const bad = [];
+  const finite = (k) => { if (!Number.isFinite(cfg[k])) bad.push(`${k} not finite`); };
+  for (const k of Object.keys(THETA)) finite(k);
+  const intPos = (k, min) => { if (!Number.isInteger(cfg[k]) || cfg[k] < min) bad.push(`${k} must be integer >= ${min}`); };
+  intPos('N', 1); intPos('K', 2);
+  const pos = (k) => { if (!(cfg[k] > 0)) bad.push(`${k} must be > 0`); };
+  pos('a_V'); pos('b_V'); pos('a_r'); pos('b_r');           // Beta shapes must be positive
+  pos('p');                                                 // engine divides by p
+  if (!(cfg.c_lo > 0)) bad.push('c_lo must be > 0');
+  if (!(cfg.c_hi > cfg.c_lo)) bad.push('c_hi must be > c_lo');
+  if (!(cfg.phi > 0 && cfg.phi < 1)) bad.push('phi must be in (0,1)');
+  const unit = (k) => { if (cfg[k] < 0 || cfg[k] > 1) bad.push(`${k} must be in [0,1]`); };
+  unit('p'); unit('beta'); unit('pi_opp'); unit('lambda');
+  if (cfg.zeta < -1 || cfg.zeta > 1) bad.push('zeta must be in [-1,1]');   // zeta is a correlation, NOT a unit interval
+  const nonneg = (k) => { if (cfg[k] < 0) bad.push(`${k} must be >= 0`); };
+  ['s_q', 'sigma', 'mu_opp', 'sigma_e', 'sigma_v', 'sigma_C', 's_exp', 'h'].forEach(nonneg);
+  if (bad.length) throw new Error(`[contract] executable-domain violation: ${bad.join('; ')}`);
+  return true;
+}
+
+// Is cfg[k] within its declared expectable band R_alpha? (region membership, for manifests/labels — not fatal)
+export function inRalpha(cfg, keys = Object.keys(THETA)) {
+  return keys.every((k) => cfg[k] >= THETA[k].ralpha[0] && cfg[k] <= THETA[k].ralpha[1]);
+}
+
+// FNV-1a hash of an arbitrary JSON-able manifest (no Date/Math.random).
+export function resolvedHash(manifest) {
+  const s = JSON.stringify(manifest);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return 'fnv1a-' + h.toString(16).padStart(8, '0');
+}
+
+// Base config = registered default values.
+export function baseConfig() {
+  const cfg = {};
+  for (const [k, spec] of Object.entries(THETA)) cfg[k] = spec.value;
+  return cfg;
+}
+
+// Deterministic content hash of the frozen sets (so the joint D_F/R_alpha objects and thresholds are pinned before
+// any production run). Simple FNV-1a over a canonical JSON — no Date/Math.random.
+export function contractHash() {
+  const canonical = JSON.stringify({ v: CONTRACT_VERSION, THETA, NUM, CLASSIFY, ALPHA_LEVELS, AGGREGATION, EVIDENCE });
+  let h = 0x811c9dc5;
+  for (let i = 0; i < canonical.length; i++) {
+    h ^= canonical.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return 'fnv1a-' + h.toString(16).padStart(8, '0');
+}
+
+export const directionalKeys = () => Object.entries(THETA).filter(([, s]) => s.kind === 'directional').map(([k]) => k);
+export const physicalKeys    = () => Object.entries(THETA).filter(([, s]) => s.kind === 'physical').map(([k]) => k);
+
+
+===== scripts\simulation\e4-v5\engine.mjs =====
+// E4 v1.14 — fresh mean-scale engine, driven ONLY by the contract.
+// Implements DESIGN_SKETCH_v5 §1-§2: anti-value (S = S+ - H), the behavioral coverage estimator (MNAR mean), and
+// the central salience-gated harm-myopia model. All value quantities are per-interested-person means. Every literal
+// the engine uses comes from the contract; validateConfig() is called before any run (fail-closed).
+
+import { THETA, NUM, CLASSIFY, validateConfig, validateDomain } from './contract.mjs';
+
+// ---------------- seeded PRNG (Date.now / Math.random forbidden for reproducibility) ----------------
+export function makeRng(seed) {
+  let s = seed >>> 0;
+  const u = () => { // mulberry32
+    s |= 0; s = (s + 0x6D2B79F5) | 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  let spare = null;
+  const normal = () => { // Box-Muller with cached spare
+    if (spare !== null) { const v = spare; spare = null; return v; }
+    let a = u(); if (a < 1e-12) a = 1e-12;
+    const b = u();
+    const r = Math.sqrt(-2 * Math.log(a)), th = 2 * Math.PI * b;
+    spare = r * Math.sin(th);
+    return r * Math.cos(th);
+  };
+  const exponential = (mean) => -mean * Math.log(1 - u() + 1e-12);
+  const gamma = (k) => { // Marsaglia-Tsang
+    if (k < 1) return gamma(k + 1) * Math.pow(u() + 1e-12, 1 / k);
+    const d = k - 1 / 3, c = 1 / Math.sqrt(9 * d);
+    for (;;) {
+      let x, v;
+      do { x = normal(); v = 1 + c * x; } while (v <= 0);
+      v = v * v * v;
+      const uu = u();
+      if (uu < 1 - 0.0331 * x * x * x * x) return d * v;
+      if (Math.log(uu + 1e-12) < 0.5 * x * x + d * (1 - v + Math.log(v))) return d * v;
+    }
+  };
+  const beta = (a, b) => { const ga = gamma(a), gb = gamma(b); return ga / (ga + gb); };
+  const binomialApprox = (n, prob) => {
+    if (n <= 0 || prob <= 0) return 0;
+    if (prob >= 1) return n;
+    const m = n * prob, sd = Math.sqrt(n * prob * (1 - prob));
+    return Math.max(0, Math.min(n, Math.round(m + sd * normal())));
+  };
+  return { u, normal, exponential, gamma, beta, binomialApprox };
+}
+
+// ---------------- world generation (one economy of projects) ----------------
+// Returns an array of admissible projects, each with true net value S, cost c, and the three arms' signals.
+export function generateWorld(cfg, rng) {
+  const projects = [];
+  for (let j = 0; j < cfg.K; j++) {
+    const q = cfg.m_q + cfg.s_q * rng.normal();
+    const V = rng.beta(cfg.a_V, cfg.b_V);                       // visibility in [0,1], heavy-tailed toward 0
+    const qStd = cfg.s_q > 0 ? (q - cfg.m_q) / cfg.s_q : 0;
+    const g = cfg.zeta * qStd + Math.sqrt(Math.max(0, 1 - cfg.zeta * cfg.zeta)) * rng.normal();
+    const c = cfg.c_lo + (cfg.c_hi - cfg.c_lo) * rng.u();
+    const r = rng.beta(cfg.a_r, cfg.b_r);
+    const n = rng.binomialApprox(cfg.N, r);
+    if (n === 0) continue;                                      // inadmissible in ALL arms (dropped, counted below)
+
+    let sumPos = 0, sumNeg = 0, sumReport = 0;
+    for (let i = 0; i < n; i++) {
+      let u = q + cfg.sigma * rng.normal();
+      if (rng.u() < cfg.pi_opp) u -= rng.exponential(cfg.mu_opp);   // intense-minority opposition
+      if (u >= 0) sumPos += u; else sumNeg += -u;
+      const reportProb = u >= 0 ? cfg.p : cfg.p * (1 - cfg.beta);
+      if (rng.u() < reportProb) sumReport += (u + cfg.sigma_e * rng.normal()) / cfg.p;
+    }
+    const Splus = sumPos / n;                                   // support (mean of positive parts)
+    const H = sumNeg / n;                                       // harm (mean opposition intensity)
+    const S = Splus - H;                                        // true net value (mean scale)
+    const M_D = sumReport / n;                                  // behavioral coverage estimator; E[M_D|u]=S+ -(1-beta)H
+
+    const v_pj = cfg.v_p0 + cfg.gamma * g + cfg.sigma_v * rng.normal();
+    const sV = Math.pow(Math.max(0, Math.min(1, V)), cfg.s_exp);// harm gate: ~0 on long tail, ~1 when salient
+    const M_C = cfg.a + cfg.b * Splus + cfg.w * (v_pj - Splus) - cfg.b_H_C * sV * H + cfg.sigma_C * rng.normal();
+
+    const P = V;                                               // visible salience -> credit (linear scale would cancel under z)
+    projects.push({ S, c, M_C, M_D, P });
+  }
+  return projects;
+}
+
+// ---------------- selection: one common interface for all three arms ----------------
+function zscore(vals, fallbackSd) {
+  const n = vals.length;
+  if (n === 0) return [];
+  const mean = vals.reduce((s, x) => s + x, 0) / n;
+  let v = 0; for (const x of vals) v += (x - mean) * (x - mean);
+  let sd = Math.sqrt(v / n);
+  if (!(sd > 0)) sd = fallbackSd;
+  return vals.map((x) => (x - mean) / sd);
+}
+
+// Fund greedily by rank score among the arm's own eligible set, under budget, exact residual fill, tie-break lower j.
+function fundedValue(projects, signalKey, cfg, budget, opts = {}) {
+  const idx = [];
+  for (let j = 0; j < projects.length; j++) {
+    const x = projects[j][signalKey];
+    if (x - cfg.h * projects[j].c > 0) idx.push(j);            // own-estimate eligibility gate
+  }
+  if (idx.length === 0) return 0;
+  const rawVal = idx.map((j) => (projects[j][signalKey] - cfg.h * projects[j].c) / projects[j].c);
+  let score = zscore(rawVal, NUM.z_fallback_sd.value);
+  if (opts.creditTilt) {                                        // central credit tilt
+    const zP = zscore(idx.map((j) => projects[j].P / projects[j].c), NUM.z_fallback_sd.value);
+    score = score.map((s, t) => (1 - cfg.lambda) * s + cfg.lambda * zP[t]);
+  }
+  const order = idx.map((j, t) => ({ j, s: score[t] }))
+    .sort((A, B) => (B.s - A.s) || (A.j - B.j));               // desc score, tie-break lower index
+  let spent = 0, delivered = 0;
+  for (const { j } of order) {
+    if (spent + projects[j].c <= budget) { spent += projects[j].c; delivered += projects[j].S; }
+  }
+  return delivered;
+}
+
+export function runWorld(cfg, rng) {
+  const projects = generateWorld(cfg, rng);
+  if (projects.length === 0) return { D: 0, C: 0, O: 0, empty: true };
+  let totalCost = 0; for (const pr of projects) totalCost += pr.c;
+  const budget = cfg.phi * totalCost;
+  const O = fundedValue(projects, 'S',   cfg, budget);
+  const C = fundedValue(projects, 'M_C', cfg, budget, { creditTilt: true });
+  const D = fundedValue(projects, 'M_D', cfg, budget);
+  return { D, C, O, empty: false };
+}
+
+// ---------------- estimand m(theta) = E[(D-C)/O | O>o_min], plus pi_deg ----------------
+function median(arr) {
+  if (arr.length === 0) return 0;
+  const a = [...arr].sort((x, y) => x - y);
+  const mid = a.length >> 1;
+  return a.length % 2 ? a[mid] : 0.5 * (a[mid - 1] + a[mid]);
+}
+
+export function estimand(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, oMinAbs = null } = {}) {
+  validateConfig(cfg);
+  validateDomain(cfg);
+  const rng = makeRng(seed);
+  const worlds = [];
+  for (let wI = 0; wI < nWorlds; wI++) {
+    const { D, C, O, empty } = runWorld(cfg, rng);
+    if (!empty) worlds.push({ D, C, O });
+  }
+  const Os = worlds.map((x) => x.O);
+  // o_min is an ABSOLUTE floor (default from this config's own median). Passing oMinAbs pins ONE floor across a
+  // whole sweep, so degenerate corners (tiny O => exploding (D-C)/O) get most worlds excluded and flagged, rather
+  // than injecting divergent ratios into the envelope (Codex: denominator-weighting divergence).
+  const o_min = oMinAbs !== null ? oMinAbs : CLASSIFY.o_min_frac.value * median(Os);
+  const kept = worlds.filter((x) => x.O > o_min);
+  const degCount = worlds.length - kept.length;
+  const pi_deg = worlds.length ? degCount / worlds.length : 1;
+  // RATIO OF SUMS (robust): m = Σ(D−C)/ΣO over retained worlds. Bounded and stable — a single tiny-O world cannot
+  // dominate (as it would in the per-world-ratio mean, Codex's (1,1)/(−1,100) divergence). Interpretation: total
+  // true value the arm delivers, as a fraction of the total full-information achievable value.
+  const num = kept.reduce((s, x) => s + (x.D - x.C), 0);
+  const den = kept.reduce((s, x) => s + x.O, 0);
+  const m_hat = den > 0 ? num / den : NaN;
+
+  // world-cluster bootstrap CI (inner simulation variability only): resample worlds, recompute the ratio of sums.
+  const B = NUM.bootstrap_reps.value;
+  const bootRng = makeRng((seed ^ 0x9e3779b9) >>> 0);
+  const boots = [];
+  if (kept.length) {
+    for (let bI = 0; bI < B; bI++) {
+      let bn = 0, bd = 0;
+      for (let t = 0; t < kept.length; t++) { const w = kept[Math.floor(bootRng.u() * kept.length)]; bn += (w.D - w.C); bd += w.O; }
+      if (bd > 0) boots.push(bn / bd);
+    }
+    boots.sort((a, b) => a - b);
+  }
+  const lo = boots.length ? boots[Math.floor((1 - NUM.ci_level.value) / 2 * boots.length)] : NaN;
+  const hi = boots.length ? boots[Math.floor((1 + NUM.ci_level.value) / 2 * boots.length) - 1] : NaN;
+
+  const sumD = kept.reduce((s, x) => s + x.D, 0), sumC = kept.reduce((s, x) => s + x.C, 0);
+  const dOverO = den > 0 ? sumD / den : NaN, cOverO = den > 0 ? sumC / den : NaN;  // efficiency of each arm vs oracle
+  const enough = kept.length >= Math.max(NUM.min_kept_floor.value, NUM.min_kept_frac.value * worlds.length);
+  return { m_hat, ci: [lo, hi], pi_deg, n_kept: kept.length, n_worlds: worlds.length, o_min, enough, dOverO, cOverO };
+}
+
+
+===== scripts\simulation\e4-v5\schema.mjs =====
+// E4 v1.14 — minimal closed-schema validator (no external deps). Enforces additionalProperties:false, required
+// fields, and enums from the contract's OUTPUT_SCHEMA. The schema deliberately has NO field able to carry D/C or a
+// ratio-with-parity-1; this validator guarantees no extra field sneaks one in.
+import { OUTPUT_SCHEMA } from './contract.mjs';
+
+export function validateOutput(obj) {
+  const S = OUTPUT_SCHEMA, errs = [];
+  if (typeof obj !== 'object' || obj === null) return ['output is not an object'];
+  for (const k of Object.keys(obj)) {
+    if (!(k in S.properties)) errs.push(`forbidden extra field: ${k}`); // additionalProperties:false
+  }
+  for (const k of S.required) if (!(k in obj)) errs.push(`missing required field: ${k}`);
+  for (const [k, spec] of Object.entries(S.properties)) {
+    if (!(k in obj)) continue;
+    const v = obj[k];
+    if (spec.enum && !spec.enum.includes(v)) errs.push(`${k}=${JSON.stringify(v)} not in enum ${JSON.stringify(spec.enum)}`);
+    if (spec.type === 'number' && typeof v !== 'number') errs.push(`${k} must be number`);
+    if (spec.type === 'string' && typeof v !== 'string') errs.push(`${k} must be string`);
+    if (spec.type === 'array') {
+      if (!Array.isArray(v)) errs.push(`${k} must be array`);
+      else if (spec.minItems && v.length < spec.minItems) errs.push(`${k} too short`);
+      else if (spec.maxItems && v.length > spec.maxItems) errs.push(`${k} too long`);
+    }
+    if (spec.minimum !== undefined && v < spec.minimum) errs.push(`${k} below minimum`);
+    if (spec.maximum !== undefined && v > spec.maximum) errs.push(`${k} above maximum`);
+    // recursive finiteness: no NaN/Infinity may serialize
+    if (spec.type === 'number' && !Number.isFinite(v)) errs.push(`${k} must be finite (got ${v})`);
+    if (spec.type === 'array') for (const el of (Array.isArray(v) ? v : [])) if (!Number.isFinite(el)) errs.push(`${k} has non-finite element`);
+  }
+  // m_Ralpha nested object: each entry must be a [finite, finite] interval with lo<=hi
+  if (obj.m_Ralpha && typeof obj.m_Ralpha === 'object') {
+    for (const [al, iv] of Object.entries(obj.m_Ralpha)) {
+      if (!Array.isArray(iv) || iv.length !== 2 || !iv.every(Number.isFinite)) errs.push(`m_Ralpha[${al}] must be [finite,finite]`);
+      else if (iv[0] > iv[1]) errs.push(`m_Ralpha[${al}] inverted`);
+    }
+  }
+  return errs;
+}
+
+
+===== scripts\simulation\e4-v5\adapter.mjs =====
+// E4 v1.14 — the SOLE render adapter (mechanical embargo). Every official artifact must render through here.
+// It (a) validates against the closed schema, and (b) rejects any institution-performance multiplier notation:
+// ASCII 'x'/'X' as a multiplier suffix on a number, the Unicode multiplication sign, and bare 'D/C'/'C/D' ratios.
+// m_hat is a SIGNED FRACTION of the oracle (parity at 0), never a ratio-with-parity-1 and never suffixed with 'x'.
+import { EMBARGO_TOKENS } from './contract.mjs';
+import { validateOutput } from './schema.mjs';
+
+// reject "2.2x", "2.2X", "×", "D/C", "C/D" appearing in rendered performance text
+const MULT_SUFFIX = /\d\s*[xX×]\b/;              // a number immediately followed by x/X/× (multiplier notation)
+const RATIO_TOKEN = /\b[DC]\s*\/\s*[CD]\b/;      // D/C or C/D
+
+export function assertNoEmbargoedTokens(text) {
+  const hits = [];
+  if (MULT_SUFFIX.test(text)) hits.push('multiplier-suffix (number+x/×)');
+  if (RATIO_TOKEN.test(text)) hits.push('institution ratio (D/C or C/D)');
+  for (const tok of EMBARGO_TOKENS) if (text.includes(tok)) hits.push(`token '${tok}'`);
+  if (hits.length) throw new Error(`[embargo] rendered text contains forbidden performance notation: ${hits.join(', ')}`);
+  return true;
+}
+
+export function renderReport(out) {
+  const errs = validateOutput(out);
+  if (errs.length) throw new Error(`[embargo] output failed closed schema: ${errs.join('; ')}`);
+  const pct = (x) => (100 * x).toFixed(1) + '%';                 // signed fraction of oracle, NOT a multiplier
+  const mag = out.m_Ralpha
+    ? Object.entries(out.m_Ralpha).map(([al, iv]) => `  α=${al}: [${pct(iv[0])}, ${pct(iv[1])}] of oracle`).join('\n')
+    : '  (magnitude layer not computed)';
+  const sh = (x) => (100 * x).toFixed(0) + '%';
+  const text = [
+    `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
+    `  m̂ (signed fraction of full-information oracle, parity at 0): ${pct(out.m_hat)}  CI=[${pct(out.ci[0])}, ${pct(out.ci[1])}]`,
+    `  sign backbone over D_F: Core v0 wins ${sh(out.df_dist_share)} of sampled θ-points · central ${sh(out.df_cent_share)} · parity ${sh(out.df_par_share)}  (a COUNT of resolved points, not a probability)`,
+    `  magnitude over R_α (declared sensitivity boxes; a value >100% means the losing arm destroys value, so the gap exceeds the oracle):`,
+    mag,
+    `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
+    `  π_deg (degenerate-world share): ${pct(out.pi_deg)}`,
+  ].join('\n');
+  assertNoEmbargoedTokens(text);
+  return text;
+}
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files=@('"'scripts\\simulation\\e4-v5\\evidence.mjs','scripts\\simulation\\e4-v5\\controls.mjs','scripts\\simulation\\e4-v5\\test.mjs','scripts\\simulation\\e4-v5\\theorem-check.mjs'); foreach("'$f in $files){Write-Output "`n===== $f ====="; Get-Content -LiteralPath $f -Raw}' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 204ms:
+
+===== scripts\simulation\e4-v5\evidence.mjs =====
+// E4 v1.14 — the exclusive evidence path (`npm run e4:evidence`). v6: replaces the 4-key corners slice with a
+// declared fixed-vs-uncertain split, a joint envelope over the UNCERTAIN set (incl. the coordinates Codex showed
+// flip the sign: p, sigma_e), endpoint Monte-Carlo uncertainty, a fixed-coordinate flip check, a resolved+hashed
+// evidence manifest, and a repaired state machine (set-based materiality, degeneracy/sufficiency aborts). Every
+// output byte is routed through the sole embargo adapter.
+import { fileURLToPath } from 'node:url';
+import { THETA, NUM, CLASSIFY, ALPHA_LEVELS, EVIDENCE, baseConfig, resolvedHash, contractHash, inRalpha, CONTRACT_VERSION } from './contract.mjs';
+import { estimand, makeRng } from './engine.mjs';
+import { renderReport, assertNoEmbargoedTokens } from './adapter.mjs';
+import { validateOutput } from './schema.mjs';
+
+// All evidence-governing settings come from the contract's EVIDENCE block (single source of truth, hashed into theta_id).
+const WORLD = EVIDENCE.world, SWEEP_NW = EVIDENCE.sweep_nw, BASE_NW = EVIDENCE.base_nw, N_RANDOM = EVIDENCE.n_random;
+const SEED = NUM.seed.value;
+const UNCERTAIN = EVIDENCE.uncertain, FIXED_CHECK = EVIDENCE.fixed_check;
+
+const MANIFEST = {
+  contract_version: CONTRACT_VERSION, contract_hash: contractHash(), world: WORLD, seed: SEED,
+  base_nw: BASE_NW, sweep_nw: SWEEP_NW, n_random: N_RANDOM,
+  uncertain: UNCERTAIN, fixed_check: FIXED_CHECK,
+  o_min_frac: CLASSIFY.o_min_frac.value, delta: CLASSIFY.delta.value, zero_tol: CLASSIFY.zero_tol.value,
+  alpha_levels: ALPHA_LEVELS, alpha_width: EVIDENCE.alpha_width, headline_alpha: EVIDENCE.headline_alpha,
+  estimand: 'ratio-of-sums Sum(D-C)/Sum(O) over kept worlds (O>o_min); sign backbone = sign SHARES (count of resolved sample points, NOT a probability) over the joint D_F; magnitude = m over joint R_alpha sensitivity boxes',
+  optimizer: 'joint corners + center + N_RANDOM uniform interior samples over the UNCERTAIN box; one-at-a-time FIXED_CHECK flip probe (a sampled envelope may still under-cover interior extrema)',
+};
+const THETA_ID = 'e4v6+' + resolvedHash(MANIFEST);
+
+// sample points over a box: 2^k corners (k<=8) + center + N_RANDOM uniform interior points (seeded, reproducible).
+function samplePoints(bx, nRandom) {
+  const keys = Object.keys(bx), pts = [], n = 1 << keys.length;
+  for (let m = 0; m < n; m++) { const p = {}; keys.forEach((k, bi) => { p[k] = (m >> bi & 1) ? bx[k][1] : bx[k][0]; }); pts.push(p); }
+  const c = {}; keys.forEach((k) => { c[k] = 0.5 * (bx[k][0] + bx[k][1]); }); pts.push(c);
+  const rng = makeRng((SEED ^ 0x5bd1e995) >>> 0);
+  for (let i = 0; i < nRandom; i++) { const p = {}; keys.forEach((k) => { p[k] = bx[k][0] + (bx[k][1] - bx[k][0]) * rng.u(); }); pts.push(p); }
+  return pts;
+}
+const boxOf = (keys, kind) => Object.fromEntries(keys.map((k) => [k, [...THETA[k][kind]]]));
+function scaleBand([lo, hi], factor, clip) { const c = 0.5 * (lo + hi), h = 0.5 * (hi - lo) * factor; return [Math.max(c - h, clip[0]), Math.min(c + h, clip[1])]; }
+const ralphaBoxOf = (keys, alpha) => Object.fromEntries(keys.map((k) => [k, scaleBand(THETA[k].ralpha, EVIDENCE.alpha_width[String(alpha)], THETA[k].df)]));
+
+// envelope of m over a joint box (min/max across corners+center+random interior). Sample points with too few
+// retained worlds (degenerate: O mostly below the relative floor) are SKIPPED and counted, so exploding ratios
+// cannot set the envelope; if any point is skipped the envelope is flagged not-fully-resolved.
+function envelope(base, bx, nWorlds, oMinAbs) {
+  const zt = CLASSIFY.zero_tol.value;
+  let lo = Infinity, hi = -Infinity, argLo = null, argHi = null, skipped = 0, total = 0, nPos = 0, nNeg = 0, nPar = 0;
+  for (const p of samplePoints(bx, N_RANDOM)) {
+    total++;
+    const r = estimand({ ...base, ...p }, { nWorlds, seed: SEED, oMinAbs });
+    if (!r.enough || !Number.isFinite(r.m_hat)) { skipped++; continue; }
+    if (r.m_hat < lo) { lo = r.m_hat; argLo = { ...p }; }
+    if (r.m_hat > hi) { hi = r.m_hat; argHi = { ...p }; }
+    if (r.m_hat > zt) nPos++; else if (r.m_hat < -zt) nNeg++; else nPar++;
+  }
+  const resolved = total - skipped;
+  return { lo, hi, argLo, argHi, skipped, total, enough: skipped === 0, resolvedCells: resolved,
+    distShare: resolved ? nPos / resolved : NaN, centShare: resolved ? nNeg / resolved : NaN, parShare: resolved ? nPar / resolved : NaN };
+}
+
+// one-at-a-time flip probe over the held FIXED_CHECK coordinates: does any single held coord, moved to a D_F
+// endpoint, flip the base sign? (Codex: omitted coordinates reverse sign.)
+function fixedFlipProbe(base, oMinAbs) {
+  const flips = [];
+  const zt = CLASSIFY.zero_tol.value;
+  const m0 = estimand(base, { nWorlds: SWEEP_NW, seed: SEED, oMinAbs }).m_hat;
+  const s0 = Math.sign(m0);
+  for (const k of FIXED_CHECK) {
+    for (const end of THETA[k].df) {
+      const r = estimand({ ...base, [k]: end }, { nWorlds: SWEEP_NW, seed: SEED, oMinAbs });
+      if (r.enough && Number.isFinite(r.m_hat) && Math.abs(r.m_hat) > zt && Math.sign(r.m_hat) !== s0) flips.push(`${k}=${end}→${(100 * r.m_hat).toFixed(0)}%`);
+    }
+  }
+  return flips;
+}
+
+export function classify({ point, dfEnv, ralphaHeadline, pi_deg, enough }) {
+  const d = CLASSIFY.delta.value;
+  // sign backbone over D_F from the SIGN SHARES of resolved corners (magnitude over D_F is not meaningful —
+  // an arm can deliver large negative value, so (D−C)/O is unbounded there; only the sign pattern is reported).
+  let sign_status;
+  if (dfEnv.distShare > 0 && dfEnv.centShare > 0) sign_status = 'indeterminate';
+  else if (dfEnv.distShare > 0 && dfEnv.centShare === 0) sign_status = 'pos';
+  else if (dfEnv.centShare > 0 && dfEnv.distShare === 0) sign_status = 'neg';
+  else sign_status = 'zero-touching';
+  // set-based materiality over the headline R_alpha interval (NOT the base-point CI)
+  const [rl, rh] = ralphaHeadline;
+  let materiality_status;
+  if (rl > d || rh < -d) materiality_status = 'material';
+  else if (rl > -d && rh < d) materiality_status = 'negligible';
+  else materiality_status = 'uncertain';
+  const degeneracy_status = pi_deg >= 1 ? 'degenerate' : (pi_deg > CLASSIFY.pi_deg_warn.value ? 'high' : 'ok');
+  const numerical_status = (enough && dfEnv.enough && (point.ci[1] - point.ci[0]) < d) ? 'resolved' : 'unresolved';
+  return { sign_status, materiality_status, degeneracy_status, numerical_status };
+}
+
+export function buildEvidence() {
+  const base = { ...baseConfig(), ...WORLD };
+  if (!inRalpha({ ...base }, ['N', 'K'])) throw new Error('[evidence] world N/K outside declared R_alpha');
+  const pt = estimand(base, { nWorlds: BASE_NW, seed: SEED });
+  if (!pt.enough) throw new Error(`[evidence] base point insufficient: only ${pt.n_kept} kept worlds (< max(${NUM.min_kept_floor.value}, ${NUM.min_kept_frac.value}·worlds)) — aborting fail-closed`);
+  // per-corner relative o_min (each cell drops its own O≈0 worlds); the ratio-of-sums estimand is scale-robust, so a
+  // single shared floor is unnecessary and would over-exclude naturally low-value corners.
+  const oMinAbs = null;
+
+  const dfEnv = envelope(base, boxOf(UNCERTAIN, 'df'), SWEEP_NW, oMinAbs);
+  if (dfEnv.resolvedCells === 0) throw new Error('[evidence] D_F envelope has no resolved cells — aborting fail-closed');
+
+  const m_Ralpha = {};
+  for (const al of ALPHA_LEVELS) { const e = envelope(base, ralphaBoxOf(UNCERTAIN, al), SWEEP_NW, oMinAbs); m_Ralpha[String(al)] = [e.lo, e.hi]; }
+  const ralphaHeadline = m_Ralpha[String(MANIFEST.headline_alpha)];
+
+  const flips = fixedFlipProbe(base, oMinAbs);
+  const st = classify({ point: pt, dfEnv, ralphaHeadline, pi_deg: pt.pi_deg, enough: pt.enough });
+
+  const out = {
+    contract_version: CONTRACT_VERSION, theta_id: THETA_ID, pi_deg: pt.pi_deg,
+    m_hat: pt.m_hat, ci: pt.ci,
+    df_dist_share: dfEnv.distShare, df_cent_share: dfEnv.centShare, df_par_share: dfEnv.parShare,
+    m_Ralpha, ...st,
+  };
+  const errs = validateOutput(out);
+  if (errs.length) throw new Error('[evidence] output invalid: ' + errs.join('; '));
+  return { out, dfEnv, flips, manifest: MANIFEST };
+}
+
+// ---- render everything through the sole embargo adapter (no bypassing lines) ----
+function main() {
+  const { out, dfEnv, flips } = buildEvidence();
+  const notRobust = out.df_dist_share > 0 && out.df_cent_share > 0;
+  const extra = [
+    '',
+    `  D_F sign backbone over UNCERTAIN {${MANIFEST.uncertain.join(', ')}}:`,
+    `    resolved corners: ${dfEnv.resolvedCells}/${dfEnv.total} (${dfEnv.skipped} skipped as degenerate)`,
+    `    → the winner is ${notRobust ? 'NOT sign-robust across the full physically-possible set (both institutions win in some corners)' : 'sign-robust across the resolved corners'}`,
+    `  fixed-coordinate flip probe over {${MANIFEST.fixed_check.join(', ')}}: ${flips.length ? 'SIGN FLIPS: ' + flips.join(', ') : 'no held coordinate flips the base sign'}`,
+    `  contract hash: ${MANIFEST.contract_hash}   run (theta_id): ${out.theta_id}`,
+  ];
+  const full = renderReport(out) + '\n' + extra.join('\n');
+  assertNoEmbargoedTokens(full);          // the WHOLE artifact, not just the core report
+  console.log(full);
+}
+// run the (slow) sweep only when executed directly, so importing classify/buildEvidence for tests does not trigger it.
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
+
+
+===== scripts\simulation\e4-v5\controls.mjs =====
+// E4 v1.14 — negative controls. These MUST pass or the model is not trustworthy (DESIGN_SKETCH_v5 §5).
+// Run: node scripts/simulation/e4-v5/controls.mjs
+import { baseConfig } from './contract.mjs';
+import { makeRng, runWorld, estimand } from './engine.mjs';
+
+const SMALL = { N: 900, K: 120 };            // smaller world for fast, still-meaningful controls (both within D_M)
+const NW = 300, SEED = 20260711;
+
+// run NW worlds, return per-world {D,C,O} arrays (common random numbers => aligned across configs)
+function runWorlds(cfg) {
+  const rng = makeRng(SEED);
+  const out = [];
+  for (let i = 0; i < NW; i++) { const r = runWorld(cfg, rng); if (!r.empty) out.push(r); }
+  return out;
+}
+const maxAbsDiff = (a, b, key) => Math.max(...a.map((x, i) => Math.abs(x[key] - b[i][key])));
+const pass = (name, ok, detail) => console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? '  — ' + detail : ''}`);
+
+let allOk = true;
+const check = (name, ok, detail) => { pass(name, ok, detail); allOk = allOk && ok; };
+
+// ---- Control 1: signal recovery + exact joint symmetry ----
+// a=w=0, b=1, sigma_C=0, b_H_C=1, s_exp=0 (gate=1 everywhere) => M_C = S+ - H = S.
+// p=1, beta=0, sigma_e=0 => everyone reports truthfully => M_D = S. All three arms == oracle => D=C=O => m=0.
+{
+  const cfg = { ...baseConfig(), ...SMALL,
+    a: 0, w: 0, b: 1, sigma_C: 0, b_H_C: 1, s_exp: 0, lambda: 0,
+    p: 1, beta: 0, sigma_e: 0 };
+  const worlds = runWorlds(cfg);
+  const maxDC = Math.max(...worlds.map((x) => Math.abs(x.D - x.C)));
+  const maxDO = Math.max(...worlds.map((x) => Math.abs(x.D - x.O)));
+  const { m_hat } = estimand(cfg, { nWorlds: NW });
+  check('C1 signal recovery: M_C=M_D=S => D=C=O', maxDC < 1e-9 && maxDO < 1e-9, `max|D-C|=${maxDC.toExponential(2)}, max|D-O|=${maxDO.toExponential(2)}`);
+  check('C1 estimand m == 0', Math.abs(m_hat) < 1e-9, `m=${m_hat.toExponential(2)}`);
+}
+
+// ---- Control 2: credit channel is ACTIVE (and structurally inert at lambda=0) ----
+// Credit salience P=V feeds the central rank only through lambda; at lambda=0 the term is multiplied by 0 (inert by
+// construction), so the meaningful test is that raising lambda actually changes the central selection.
+{
+  const base = { ...baseConfig(), ...SMALL };
+  const A = runWorlds({ ...base, lambda: 0 });
+  const Bb = runWorlds({ ...base, lambda: 0.4 });
+  const d = maxAbsDiff(A, Bb, 'C');
+  check('C2 credit channel active (C changes with lambda)', d > 1e-9, `max|dC|=${d.toExponential(2)}`);
+}
+
+// ---- Control 3: pathway inactivation — projection (w=0) ----
+// At w=0, the planner position v_p must not affect M_C: varying v_p0 leaves C unchanged world-by-world.
+{
+  const base = { ...baseConfig(), ...SMALL, w: 0 };
+  const A = runWorlds({ ...base, v_p0: 0.6 });
+  const Bb = runWorlds({ ...base, v_p0: 3.0 });
+  check('C3 w=0 => planner position inert', maxAbsDiff(A, Bb, 'C') < 1e-9, `max|dC|=${maxAbsDiff(A, Bb, 'C').toExponential(2)}`);
+}
+
+// ---- Control 4: harm channel is ACTIVE and directional ----
+// At s_exp=0 (gate=1 everywhere), raising central harm-detection b_H_C from 0 -> 1 should move central toward the
+// oracle (it stops overvaluing harmful projects). Expect m(theta)=E[(D-C)/O] to DECREASE (central improves).
+{
+  const base = { ...baseConfig(), ...SMALL, s_exp: 0 };
+  const blind = estimand({ ...base, b_H_C: 0 }, { nWorlds: NW }).m_hat;
+  const sighted = estimand({ ...base, b_H_C: 1 }, { nWorlds: NW }).m_hat;
+  check('C4 harm channel active (m falls as central sees harm)', sighted < blind - 1e-4, `m(b_H_C=0)=${blind.toFixed(4)} -> m(b_H_C=1)=${sighted.toFixed(4)}`);
+}
+
+// ---- Baseline descriptive run (not a pass/fail) ----
+{
+  const cfg = { ...baseConfig(), ...SMALL };
+  const r = estimand(cfg, { nWorlds: NW });
+  console.log(`\nBaseline (defaults, SMALL world): m_hat=${r.m_hat.toFixed(4)}  CI=[${r.ci[0].toFixed(4)}, ${r.ci[1].toFixed(4)}]  pi_deg=${r.pi_deg.toFixed(3)}  kept=${r.n_kept}/${r.n_worlds}`);
+}
+
+console.log(`\n${allOk ? 'ALL CONTROLS PASSED' : 'SOME CONTROLS FAILED'}`);
+process.exit(allOk ? 0 : 1);
+
+
+===== scripts\simulation\e4-v5\test.mjs =====
+// E4 v1.14 — acceptance fixtures (capability criterion) + embargo self-tests. Run: npm run e4:test
+// Proves the pipeline SURFACES a strong distributed win, a strong central win, and a null when each is the ground
+// truth — i.e. results are surfaced, not selected-in or washed out. Plus: the closed schema + embargo reject
+// forbidden multiplier/ratio notation.
+import { execSync } from 'node:child_process';
+import { baseConfig, validateConfig } from './contract.mjs';
+import { estimand } from './engine.mjs';
+import { assertNoEmbargoedTokens } from './adapter.mjs';
+import { validateOutput } from './schema.mjs';
+import { classify } from './evidence.mjs';
+
+const WORLD = { N: 900, K: 120 };
+const NW = 500;
+let ok = true;
+const check = (name, cond, detail) => { console.log(`${cond ? 'PASS' : 'FAIL'}  ${name}${detail ? '  — ' + detail : ''}`); ok = ok && cond; };
+const m = (over) => estimand({ ...baseConfig(), ...WORLD, ...over }, { nWorlds: NW }).m_hat;
+
+// ---- Acceptance fixtures: ground truth known by construction ----
+// STRONG DISTRIBUTED: central near-blind on the long tail (s_exp high), modest voice suppression => distributed wins big.
+{
+  const val = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, lambda: 0.15 });
+  check('FIX strong-distributed => m materially > 0', val > 0.10, `m=${val.toFixed(3)}`);
+}
+// STRONG CENTRAL: central competent (gate=1, sees harm, low noise, no credit tilt), distributed crippled
+// (opponents silenced, low participation, noisy) => central wins.
+{
+  const val = m({ s_exp: 0, b_H_C: 1, a: 0, w: 0, b: 1, sigma_C: 0.05, lambda: 0, beta: 0.9, p: 0.05, sigma_e: 1.5 });
+  check('FIX strong-central => m < 0 (central wins)', val < -0.03, `m=${val.toFixed(3)}`);
+}
+// NULL: both arms near the oracle => negligible gap.
+{
+  const val = m({ s_exp: 0, b_H_C: 1, a: 0, w: 0, b: 1, sigma_C: 0.02, lambda: 0, beta: 0, p: 1, sigma_e: 0 });
+  check('FIX null => |m| negligible', Math.abs(val) < 0.03, `m=${val.toFixed(4)}`);
+}
+// BOUNDARY: partial myopia + moderate voice => small-magnitude, pipeline must run & stay finite.
+{
+  const val = m({ s_exp: 1, b_H_C: 0.5, beta: 0.4, lambda: 0.1 });
+  check('FIX boundary => finite & modest', Number.isFinite(val) && Math.abs(val) < 0.5, `m=${val.toFixed(3)}`);
+}
+
+// ---- Attribution: the distributed advantage must be driven by harm myopia ----
+// Removing opposition (pi_opp=0 => no harm to be blind to) should SHRINK the distributed advantage.
+{
+  const withHarm = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, pi_opp: 0.25 });
+  const noHarm  = m({ s_exp: 4, b_H_C: 0.3, beta: 0.3, pi_opp: 0.0 });
+  check('ATTRIB harm channel drives the advantage (m falls when pi_opp->0)', withHarm > noHarm + 0.02, `m(pi_opp=.25)=${withHarm.toFixed(3)} > m(pi_opp=0)=${noHarm.toFixed(3)}`);
+}
+
+// ---- State machine (classify) tested DIRECTLY, not bypassed ----
+const pt = (ci) => ({ ci });
+check('CLASSIFY both-sign corners => indeterminate', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 0.6, centShare: 0.3 }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: true }).sign_status === 'indeterminate');
+check('CLASSIFY all-distributed corners => pos', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: true }).sign_status === 'pos');
+check('CLASSIFY R_alpha within band => negligible', classify({ point: pt([-0.01, 0.01]), dfEnv: { distShare: 0.5, centShare: 0.5 }, ralphaHeadline: [-0.01, 0.02], pi_deg: 0, enough: true }).materiality_status === 'negligible');
+check('CLASSIFY R_alpha straddling delta => uncertain', classify({ point: pt([0, 0.2]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.01, 0.2], pi_deg: 0, enough: true }).materiality_status === 'uncertain');
+check('CLASSIFY pi_deg=1 => degenerate', classify({ point: pt([0, 0]), dfEnv: { distShare: 1, centShare: 0 }, ralphaHeadline: [0.1, 0.2], pi_deg: 1, enough: false }).degeneracy_status === 'degenerate');
+check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4, 0.5]), dfEnv: { distShare: 1, centShare: 0, enough: false }, ralphaHeadline: [0.1, 0.2], pi_deg: 0, enough: false }).numerical_status === 'unresolved');
+
+// ---- Legacy release guard: the retired engine must refuse to run without the reproduction flag ----
+{
+  let guarded = false;
+  try { execSync('node scripts/simulation/e4-v4-symmetric-frontier.mjs', { stdio: 'pipe' }); }
+  catch (e) { guarded = e.status === 2; }
+  check('LEGACY guard blocks e4-v4 from running (would feed retired D/C)', guarded);
+}
+
+// ---- Embargo: reject multiplier/ratio notation in rendered text ----
+const rejects = (txt) => { try { assertNoEmbargoedTokens(txt); return false; } catch { return true; } };
+check('EMBARGO rejects "2.2x"', rejects('gain of 2.2x'));
+check('EMBARGO rejects Unicode "2.2×"', rejects('gain of 2.2×'));
+check('EMBARGO rejects "D/C"', rejects('ratio D/C = 1.4'));
+check('EMBARGO allows clean percent text', !rejects('m̂ is 45.7% of the oracle, parity at 0'));
+
+// ---- Closed schema: reject an extra field / missing required ----
+const CLEAN = { contract_version: 'x', theta_id: 't', pi_deg: 0, m_hat: 0.1, ci: [0.05, 0.15], df_dist_share: 0.7, df_cent_share: 0.3, sign_status: 'indeterminate', materiality_status: 'material', degeneracy_status: 'ok', numerical_status: 'resolved' };
+check('SCHEMA rejects extra field (ratio smuggling)', validateOutput({ ...CLEAN, ratio_D_over_C: 2.2 }).length > 0);
+check('SCHEMA rejects non-finite m_hat', validateOutput({ ...CLEAN, m_hat: Infinity }).length > 0);
+check('SCHEMA accepts a clean output', validateOutput(CLEAN).length === 0);
+
+// ---- Fail-closed config: unknown parameter throws ----
+{
+  let threw = false;
+  try { validateConfig({ ...baseConfig(), bogus_param: 1 }); } catch { threw = true; }
+  check('CONTRACT fail-closed on unknown parameter', threw);
+}
+
+console.log(`\n${ok ? 'ALL TESTS PASSED' : 'SOME TESTS FAILED'}`);
+process.exit(ok ? 0 : 1);
+
+
+===== scripts\simulation\e4-v5\theorem-check.mjs =====
+// E4 v1.14 — regression test for the analytic BENCHMARK (joint-normal fixed-threshold selection lemma).
+// Lemma: for (S, X) jointly normal and top-fraction-q selection by X at population threshold t = μ_X + σ_X·z_q,
+//   V := E[S·1{X>t}] = q·μ_S + φ(z_q)·Cov(S,X)/sd(X).
+// Parity of two selectors X_C, X_D ⇔ Cov(S,X_D)/sd(X_D) = Cov(S,X_C)/sd(X_C).
+// This checks the analytic identity that underpins the numerical frontier (the full engine adds eligibility, costs,
+// credit — the theorem is the limiting case). Run: node scripts/simulation/e4-v5/theorem-check.mjs
+import { makeRng } from './engine.mjs';
+
+const PHI = (z) => Math.exp(-0.5 * z * z) / Math.sqrt(2 * Math.PI);
+// inverse normal CDF (Acklam) for z_q = Phi^{-1}(1-q)
+function invNorm(p) {
+  const a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02, 1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00];
+  const b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02, 6.680131188771972e+01, -1.328068155288572e+01];
+  const c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00, -2.549732539343734e+00, 4.374664141464968e+00, 2.938163982698783e+00];
+  const d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00, 3.754408661907416e+00];
+  const pl = 0.02425, ph = 1 - pl; let q, r;
+  if (p < pl) { q = Math.sqrt(-2 * Math.log(p)); return (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1); }
+  if (p <= ph) { q = p - 0.5; r = q * q; return (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q / (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1); }
+  q = Math.sqrt(-2 * Math.log(1 - p)); return -(((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1);
+}
+
+const rng = makeRng(4242);
+const N = 400000, q = 0.3;
+const muS = 1.2, sigS = 1.0;
+// X = alpha + b*S + noise  => Cov(S,X)=b*sigS^2, Var(X)=b^2 sigS^2 + sigN^2
+const alpha = 0.5, b = 0.8, sigN = 0.6;
+const S = new Float64Array(N), X = new Float64Array(N);
+for (let i = 0; i < N; i++) { const s = muS + sigS * rng.normal(); S[i] = s; X[i] = alpha + b * s + sigN * rng.normal(); }
+
+const covSX = b * sigS * sigS, sdX = Math.sqrt(b * b * sigS * sigS + sigN * sigN);
+const muX = alpha + b * muS;
+const zq = invNorm(1 - q), t = muX + sdX * zq;
+const analyticV = q * muS + PHI(zq) * covSX / sdX;
+
+// empirical V = mean over ALL candidates of S*1{X>t}
+let sumSel = 0, nSel = 0;
+for (let i = 0; i < N; i++) if (X[i] > t) { sumSel += S[i]; nSel++; }
+const empiricalV = sumSel / N;
+
+// Monte-Carlo SE of empirical V
+let v2 = 0; for (let i = 0; i < N; i++) { const g = X[i] > t ? S[i] : 0; v2 += (g - empiricalV) * (g - empiricalV); }
+const se = Math.sqrt(v2 / N / N);
+const zscore = Math.abs(empiricalV - analyticV) / se;
+
+console.log('E4 analytic benchmark — joint-normal fixed-threshold lemma');
+console.log(`  Cov(S,X)/sd(X) = ${(covSX / sdX).toFixed(4)}   z_q=${zq.toFixed(3)}   selected share=${(nSel / N).toFixed(3)} (target q=${q})`);
+console.log(`  analytic  V = ${analyticV.toFixed(5)}`);
+console.log(`  empirical V = ${empiricalV.toFixed(5)}  (MC SE=${se.toFixed(5)})`);
+console.log(`  |Δ| = ${Math.abs(empiricalV - analyticV).toFixed(5)}  = ${zscore.toFixed(2)} SE`);
+
+const ok = zscore < 3;
+console.log(`\n${ok ? 'PASS' : 'FAIL'}  analytic identity matches simulation within 3 MC SE`);
+process.exit(ok ? 0 : 1);
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files=@('"'scripts\\simulation\\e4-v5\\scenario-configs.mjs','scripts\\simulation\\e4-v5\\scenarios.mjs','scripts\\simulation\\e4-v5\\frontier.mjs'); foreach("'$f in $files){Write-Output "`n===== $f ====="; Get-Content -LiteralPath $f -Raw}' in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 185ms:
+
+===== scripts\simulation\e4-v5\scenario-configs.mjs =====
+// E4 v1.14 — the three anchored scenario configs (single source; used by scenarios.mjs and frontier.mjs).
+// Anchors + justification: research/e4-plausible-anchors.md (MASTER SCENARIO TABLE).
+export const PROBABLE = { a_V: 0.5, b_V: 3.5, p: 0.15, a_r: 1.5, b_r: 8, pi_opp: 0.15, mu_opp: 3.0,
+  s_exp: 2.5, b_H_C: 0.5, w: 0.5, a: 0.2, b: 0.9, beta: 0.35, lambda: 0.15, zeta: 0.6, gamma: 0.5,
+  sigma_e: 0.5, sigma_C: 0.5 };
+// CONTINUITY ANCHOR (central's realistic best case): PROBABLE but harm-myopia OFF + competent central.
+export const PRO_CENTRAL = { ...PROBABLE, s_exp: 0.5, b_H_C: 1.3, w: 0.1, a: 0.0, b: 1.0, lambda: 0.0, zeta: 0.85, sigma_C: 0.35 };
+// PRO-DISTRIBUTED: favourable but not stacked to catastrophe.
+export const PRO_DIST = { a_V: 0.25, b_V: 4.5, p: 0.40, a_r: 2.5, b_r: 6, pi_opp: 0.28, mu_opp: 3.5,
+  s_exp: 4.0, b_H_C: 0.25, w: 1.1, a: 0.4, b: 0.75, beta: 0.12, lambda: 0.30, zeta: 0.4, gamma: 0.8,
+  sigma_e: 0.25, sigma_C: 0.7 };
+export const SCENARIO_WORLD = { N: 1500, K: 150 };
+
+
+===== scripts\simulation\e4-v5\scenarios.mjs =====
+// E4 v1.14 — the THREE anchored scenarios (research/e4-plausible-anchors.md). Each scenario is a full config; we
+// report m ± 95% CI. PRO-CENTRAL is the central's best plausible case AND the continuity anchor (should reproduce
+// the earlier ~0.025 near-parity). PROBABLE is the evidence/theory-anchored expectable case. PRO-DISTRIBUTED is the
+// distributed's favourable case. Run: node scripts/simulation/e4-v5/scenarios.mjs
+import { baseConfig } from './contract.mjs';
+import { estimand } from './engine.mjs';
+import { PRO_CENTRAL, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
+
+const NW = 800;
+const pct = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
+function run(name, over) {
+  const r = estimand({ ...baseConfig(), ...WORLD, ...over }, { nWorlds: NW });
+  console.log(`${name.padEnd(16)} m = ${pct(r.m_hat).padStart(8)}  95% CI [${pct(r.ci[0])}, ${pct(r.ci[1])}]   Core v0 delivers ${pct(r.dOverO)} of oracle · central ${pct(r.cOverO)}`);
+  return r;
+}
+
+console.log('E4 — three anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0)\n');
+run('PRO-CENTRAL', PRO_CENTRAL);
+run('PROBABLE', PROBABLE);
+run('PRO-DISTRIBUTED', PRO_DIST);
+console.log('\nContinuity: PRO-CENTRAL removes harm-myopia → should collapse toward parity (the ~0.025 regime).');
+console.log('Read C/O < 0 as: under that scenario the central funds net-harmful projects (destroys value).');
+
+
+===== scripts\simulation\e4-v5\frontier.mjs =====
+// E4 v1.14 — ceteris-paribus FRONTIER locators. Hold all knobs at the PROBABLE scenario, sweep ONE axis across its
+// physically-possible range, and locate where m = D/O − C/O crosses 0 (the parity frontier). Report the frontier
+// location, the plausible (R_alpha) value marked on the axis, and which side of the frontier the plausible value
+// falls on. Answers "where is the frontier, and does reality sit on the Core-v0 side?". Run: npm run e4:frontier
+import { baseConfig, THETA } from './contract.mjs';
+import { estimand } from './engine.mjs';
+import { PROBABLE, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
+
+const NW = 400, STEPS = 15;
+const pct = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(0) + '%';
+
+// axes to locate, with a plotting range (clipped from D_F to a legible span) and the plausible value + who-wins-which-way
+const AXES = [
+  { k: 's_exp',  lo: 0.2, hi: 8,   plaus: PROBABLE.s_exp,  note: 'central harm myopia (higher = blinder on the long tail)' },
+  { k: 'b_H_C',  lo: 0.0, hi: 2.0, plaus: PROBABLE.b_H_C,  note: 'central harm detection (higher = less myopic)' },
+  { k: 'p',      lo: 0.02, hi: 0.6, plaus: PROBABLE.p,     note: 'citizen participation (higher = denser distributed signal)' },
+  { k: 'beta',   lo: 0.0, hi: 0.95, plaus: PROBABLE.beta,  note: 'silencing of opponents (higher = weaker distributed harm-voice)' },
+  { k: 'a_V',    lo: 0.2, hi: 3.0, plaus: PROBABLE.a_V,    note: 'visibility tail (higher a_V = flatter tail, more projects visible)' },
+];
+
+const base = { ...baseConfig(), ...WORLD, ...PROBABLE };
+console.log('E4 — ceteris-paribus frontiers (others held at the PROBABLE scenario). m = D/O − C/O, parity at 0.\n');
+
+for (const ax of AXES) {
+  const xs = [], ms = [];
+  for (let i = 0; i < STEPS; i++) {
+    const x = ax.lo + (ax.hi - ax.lo) * i / (STEPS - 1);
+    const m = estimand({ ...base, [ax.k]: x }, { nWorlds: NW }).m_hat;
+    xs.push(x); ms.push(m);
+  }
+  // find the frontier: first adjacent pair whose sign changes; linear-interpolate the crossing
+  let frontier = null;
+  for (let i = 0; i < STEPS - 1; i++) {
+    if (Number.isFinite(ms[i]) && Number.isFinite(ms[i + 1]) && (ms[i] > 0) !== (ms[i + 1] > 0)) {
+      frontier = xs[i] + (0 - ms[i]) * (xs[i + 1] - xs[i]) / (ms[i + 1] - ms[i]);
+      break;
+    }
+  }
+  const mAtPlaus = estimand({ ...base, [ax.k]: ax.plaus }, { nWorlds: NW }).m_hat;
+  console.log(`■ ${ax.k}  — ${ax.note}`);
+  if (frontier === null) {
+    const who = ms[Math.floor(STEPS / 2)] > 0 ? 'Core v0 wins across the whole plotted range' : 'central wins across the whole plotted range';
+    console.log(`    frontier: none in [${ax.lo}, ${ax.hi}] — ${who}`);
+  } else {
+    console.log(`    frontier (m=0) at ${ax.k} ≈ ${frontier.toFixed(2)}   |   plausible value = ${ax.plaus}  →  m = ${pct(mAtPlaus)} (Core v0 ${mAtPlaus > 0 ? 'wins' : 'loses'} at the plausible point)`);
+  }
+  // compact curve
+  console.log('    m across axis: ' + xs.map((x, i) => `${x.toFixed(2)}:${pct(ms[i])}`).join('  '));
+  console.log('');
+}
+// ---- combined "central competence" frontier: interpolate PROBABLE -> PRO_CENTRAL and beyond, locate m=0 ----
+// t=0 is the probable central; t=1 is the fully-competent plausible central (harm-myopia off, unbiased, precise);
+// t>1 extrapolates to a central BETTER than plausibly realistic. This locates the frontier on the one axis that
+// matters: how good the central is at seeing anti-value.
+import { PRO_CENTRAL } from './scenario-configs.mjs';
+const compKeys = Object.keys(PRO_CENTRAL).filter((k) => PRO_CENTRAL[k] !== PROBABLE[k]);
+const clampDF = (k, v) => Math.max(THETA[k].df[0], Math.min(THETA[k].df[1], v));
+const lerp = (t) => { const c = { ...base }; for (const k of compKeys) c[k] = clampDF(k, PROBABLE[k] + t * (PRO_CENTRAL[k] - PROBABLE[k])); return c; };
+console.log('■ central competence (combined: harm-detection↑, myopia↓, bias↓, projection↓, noise↓, credit↓)');
+const ts = [], tms = [];
+for (let i = 0; i <= 16; i++) { const t = i / 8; const m = estimand(lerp(t), { nWorlds: NW }).m_hat; ts.push(t); tms.push(m); }
+let tf = null;
+for (let i = 0; i < ts.length - 1; i++) if ((tms[i] > 0) !== (tms[i + 1] > 0)) { tf = ts[i] + (0 - tms[i]) * (ts[i + 1] - ts[i]) / (tms[i + 1] - tms[i]); break; }
+console.log(`    t=0 probable central → t=1 fully-competent plausible central → t>1 better-than-realistic`);
+console.log(`    m across t: ` + ts.filter((_, i) => i % 2 === 0).map((t, i) => `t=${t.toFixed(2)}:${pct(tms[i * 2])}`).join('  '));
+console.log(tf === null
+  ? `    frontier: none — Core v0 wins even for a better-than-realistic central across t∈[0,2]`
+  : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  the central wins ONLY if it is ${tf > 1 ? `BETTER than the fully-competent plausible case (t>1) — i.e. beyond realistic` : `at competence level t=${tf.toFixed(2)} within the plausible range`}`);
+console.log('');
+console.log('Read: no single knob flips the winner from the probable scenario (robust); the frontier lives on the');
+console.log('combined central-competence axis — and sits at/beyond the fully-competent plausible central.');
+
+
+codex
+A high-severity mismatch is now visible directly in the frozen code: the “MASTER SCENARIO TABLE” says PRO-CENTRAL changes every knob, but `PRO_CENTRAL` is implemented as `...PROBABLE` plus only eight overrides. It therefore leaves participation, opponent silencing, report noise, tail shape, reach, opposition prevalence, and several other central-favouring table values at PROBABLE. I’m quantifying how much this under-powers the claimed central best case and shifts the `t≈1.13` frontier.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import {baseConfig} from './scripts/simulation/e4-v5/contract.mjs';
+import {estimand} from './scripts/simulation/e4-v5/engine.mjs';
+import {PRO_CENTRAL,PROBABLE,PRO_DIST,SCENARIO_WORLD} from './scripts/simulation/e4-v5/scenario-configs.mjs';
+const DOC_C={a_V:1,b_V:1.5,p:.05,a_r:.8,b_r:14,pi_opp:.03,mu_opp:1.5,s_exp:.5,b_H_C:1.2,w:.1,a:0,b:1,beta:.8,lambda:0,zeta:.85,gamma:.3,sigma_e:1.2,sigma_C:.2};
+const DOC_D={a_V:.2,b_V:5,p:.45,a_r:3,b_r:5,pi_opp:.35,mu_opp:5,s_exp:5,b_H_C:.2,w:1.3,a:.6,b:.7,beta:.1,lambda:.35,zeta:.35,gamma:.9,sigma_e:.2,sigma_C:.8};
+const run=(name,over,nw=1200,seed=20260711)=>{const x=estimand({...baseConfig(),...SCENARIO_WORLD,...over},{nWorlds:nw,seed}); console.log(JSON.stringify({name,m:x.m_hat,ci:x.ci,dOverO:x.dOverO,cOverO:x.cOverO,kept:x.n_kept}));};
+run('implemented_PRO_CENTRAL',PRO_CENTRAL); run('documented_table_PRO_CENTRAL',DOC_C); run('implemented_PROBABLE',PROBABLE); run('implemented_PRO_DIST',PRO_DIST); run('documented_table_PRO_DIST',DOC_D);
+for(const seed of [20260711,1,42,4242,99991]){run('docC_seed_'+seed,DOC_C,600,seed)}
+'@ | node --input-type=module -" in C:\devel\claude-projects\distributed-governance-research-v7-audit
+ succeeded in 15607ms:
+{"name":"implemented_PRO_CENTRAL","m":0.06138085955456477,"ci":[0.05864109728148828,0.0642352520378955],"dOverO":0.9138424484660138,"cOverO":0.8524615889114486,"kept":1200}
+{"name":"documented_table_PRO_CENTRAL","m":-0.29401655210805916,"ci":[-0.29702184930121994,-0.29068349568338414],"dOverO":0.6823662116153664,"cOverO":0.9763827637234257,"kept":1200}
+{"name":"implemented_PROBABLE","m":0.4672662870916928,"ci":[0.4614173368477138,0.47454555368797313],"dOverO":0.9138424484660138,"cOverO":0.4465761613743197,"kept":1200}
+{"name":"implemented_PRO_DIST","m":2.002452012587522,"ci":[1.9813512997177107,2.024535483201873],"dOverO":0.9571440355595032,"cOverO":-1.045307977028022,"kept":1200}
+{"name":"documented_table_PRO_DIST","m":12.782229216934278,"ci":[12.544826892486773,13.017797731965903],"dOverO":0.8473600701488315,"cOverO":-11.934869146785426,"kept":1200}
+{"name":"docC_seed_20260711","m":-0.2969157590220359,"ci":[-0.3016245872637237,-0.29172273353311273],"dOverO":0.6800622383070819,"cOverO":0.9769779973291177,"kept":600}
+{"name":"docC_seed_1","m":-0.2937003884122273,"ci":[-0.29881703875977117,-0.2882768500914031],"dOverO":0.6827200187354184,"cOverO":0.976420407147647,"kept":600}
+{"name":"docC_seed_42","m":-0.29719725645918205,"ci":[-0.30295137754775625,-0.29242607259883585],"dOverO":0.6798060232518652,"cOverO":0.9770032797110462,"kept":600}
+{"name":"docC_seed_4242","m":-0.2956171111635017,"ci":[-0.30090462341727414,-0.29060989671044085],"dOverO":0.6815016514545996,"cOverO":0.9771187626181018,"kept":600}
+{"name":"docC_seed_99991","m":-0.29183166410607336,"ci":[-0.2967491204844177,-0.2870151632065719],"dOverO":0.684355223229844,"cOverO":0.9761868873359176,"kept":600}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import {baseConfig,THETA} from './scripts/simulation/e4-v5/contract.mjs';
+import {estimand} from './scripts/simulation/e4-v5/engine.mjs';
+import {PROBABLE,SCENARIO_WORLD} from './scripts/simulation/e4-v5/scenario-configs.mjs';
+const DOC_C={a_V:1,b_V:1.5,p:.05,a_r:.8,b_r:14,pi_opp:.03,mu_opp:1.5,s_exp:.5,b_H_C:1.2,w:.1,a:0,b:1,beta:.8,lambda:0,zeta:.85,gamma:.3,sigma_e:1.2,sigma_C:.2};
+const keys=Object.keys(DOC_C).filter(k=>DOC_C[k]"'!==PROBABLE[k]);
+const cfg=t=>{const x={...baseConfig(),...SCENARIO_WORLD,...PROBABLE}; for(const k of keys)x[k]=Math.max(THETA[k].df[0],Math.min(THETA[k].df[1],PROBABLE[k]+t*(DOC_C[k]-PROBABLE[k]))); return x};
+function root(seed,nw){let last={t:0,m:estimand(cfg(0),{nWorlds:nw,seed}).m_hat}; const curve=[[0,last.m]]; for(let i=1;i<=20;i++){const t=i/20,m=estimand(cfg(t),{nWorlds:nw,seed}).m_hat;curve.push([t,m]);if(last.m*m<=0){const rt=last.t+(0-last.m)*(t-last.t)/(m-last.m);return {root:rt,curve}}last={t,m}}return {root:null,curve};}
+for(const seed of [20260711,1,42,4242,99991]){const r=root(seed,500); console.log(JSON.stringify({seed,root:r.root,points:r.curve.filter((_,i)=>i%4===0||i===r.curve.length-1)}));}
+'"'@ | node --input-type=module -" in C:\devel\claude-projects\distributed-governance-research-v7-audit

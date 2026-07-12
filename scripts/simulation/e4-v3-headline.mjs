@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+// LEGACY RUNTIME GUARD (reproduction-only) — pre-v1.14 engine with retired multiplier/ratio framing.
+// NOT the v1.14 evidence path (npm run e4:evidence). Set E4_ALLOW_LEGACY=1 to run for v1.12/v1.13 reproduction.
+if (process.env.E4_ALLOW_LEGACY !== "1") { console.error("[legacy guard] pre-v1.14 engine; NOT v1.14 evidence. Set E4_ALLOW_LEGACY=1 to reproduce v1.12/v1.13 only."); process.exit(2); }
+
 // E4-v3 HEADLINE RANGE — how much better is distributed allocation than the
 // status-quo central, across a DEFENSIBLE parameter box (not a cherry-picked
 // corner). Reports the full distribution of the advantage so the abstract can

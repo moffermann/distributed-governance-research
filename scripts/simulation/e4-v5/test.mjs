@@ -62,11 +62,23 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
   catch (e) { guarded = e.status === 2; }
   check('LEGACY guard blocks e4-v4 from running (would feed retired D/C)', guarded);
 }
+// ---- Universal legacy guard: EVERY retired top-level sim engine must carry the guard (rev-repro H3) ----
+{
+  const { readdirSync, readFileSync } = await import('node:fs');
+  const dir = 'scripts/simulation';
+  const unguarded = readdirSync(dir).filter((f) => f.endsWith('.mjs'))
+    .filter((f) => !readFileSync(`${dir}/${f}`, 'utf8').includes('E4_ALLOW_LEGACY'));
+  check('LEGACY all retired top-level engines are guarded', unguarded.length === 0, unguarded.length ? 'UNGUARDED: ' + unguarded.join(', ') : `${readdirSync(dir).filter((f) => f.endsWith('.mjs')).length} guarded`);
+}
 
 // ---- Embargo: reject multiplier/ratio notation in rendered text ----
 const rejects = (txt) => { try { assertNoEmbargoedTokens(txt); return false; } catch { return true; } };
 check('EMBARGO rejects "2.2x"', rejects('gain of 2.2x'));
 check('EMBARGO rejects Unicode "2.2×"', rejects('gain of 2.2×'));
+check('EMBARGO rejects Cyrillic "2.2х"', rejects('gain of 2.2х'));
+check('EMBARGO rejects "✕" cross', rejects('gain of 2.2✕'));
+check('EMBARGO rejects "2.2-fold"', rejects('a 2.2-fold gain'));
+check('EMBARGO rejects "2.2 times"', rejects('2.2 times more value'));
 check('EMBARGO rejects "D/C"', rejects('ratio D/C = 1.4'));
 check('EMBARGO allows clean percent text', !rejects('m̂ is 45.7% of the oracle, parity at 0'));
 
