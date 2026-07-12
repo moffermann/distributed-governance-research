@@ -1,0 +1,30 @@
+## FINAL VERDICT: YES
+
+E4’s implementation and results at `2b60ab9` are publication-ready. The prior #7 residual is closed, and neither new commit introduces a blocker.
+
+1. **PASS — resolved run hash.** The manifest includes fully merged configs for all scenarios, run/world controls, contract hash, and corrected-reader benchmark. Baseline was `fnv1a-ed7c15aa`; changing only PROBABLE `sigma_e` by `+0.01` changed it to `fnv1a-3bc1f99d`. [scenarios.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/scenarios.mjs:53)
+
+2. **PASS — common-mode hardening.** `sigma_cm` is sampled once per project and applied only to microdelegation/profile signals—not active reports or the central arm. Default and explicit zero were exactly identical; with 100% active participation, `sigma_cm=0` and `1` were also exactly identical. [engine.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/engine.mjs:61)
+
+   Reproduced: `+54.0% → +43.9% → +26.5%`, remaining positive through the declared plausible band; sixth-axis parity occurs near `2.10`. This is an opt-in distributed-side sensitivity, not a headline nerf. [frontier.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/frontier.mjs:25)
+
+3. **PASS — no regression.** The four substantive guards—finite values, ordered intervals, win-share partition, and structured `m_Ralpha`—remain enforced; the signed/locality condition-1 test, `−3.1%` best-competent-central benchmark, executable `EXPLORATORY` labels, and harm-gate anchor are intact. [schema.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/schema.mjs:26), [test.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/test.mjs:89), [evidence.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/evidence.mjs:125), [e4-plausible-anchors.md](C:/devel/claude-projects/distributed-governance-research/research/e4-plausible-anchors.md:26)
+
+4. **PASS — no new blocker or unfair degradation.** The changes are confined to the declared distributed-side correlated-error sensitivity and run provenance. No default scenario arm was selectively weakened. [contract.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/contract.mjs:52)
+
+Separate command results:
+
+- `e4:test`: all tests passed
+- `e4:controls`: all controls passed
+- `e4:theorem`: passed, analytic/empirical difference `0.17 MC SE`
+- `e4:scenarios`, `e4:frontier`, and `e4:evidence`: reproduced the stated results and labels
+
+No files were edited. An unrelated untracked `audits/2026-07-12-e4-validation/DEFENDER-VERDICT.md` appeared during verification; it is outside HEAD and did not affect the verdict.
+tokens used
+92,375
+## FINAL VERDICT: YES
+
+E4’s implementation and results at `2b60ab9` are publication-ready. The prior #7 residual is closed, and neither new commit introduces a blocker.
+
+1. **PASS — resolved run hash.** The manifest includes fully merged configs for all scenarios, run/world controls, contract hash, and corrected-reader benchmark. Baseline was `fnv1a-ed7c15aa`; changing only PROBABLE `sigma_e` by `+0.01` changed it to `fnv1a-3bc1f99d`. [scenarios.mjs](C:/devel/claude-projects/distributed-governance-research/scripts/simulation/e4-v5/scenarios.mjs:53)
+
