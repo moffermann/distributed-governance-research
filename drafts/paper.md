@@ -1,6 +1,6 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Stress-Testing, and a Symmetric Computational Test of Selective Institutional Distribution
 
-**Working paper — v1.13 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered symmetric selection-only stress test returned NO-GO (see §6 and the claim & estimand contract) — and rests on the architecture and the qualitative mechanism. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
+**Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered symmetric selection-only stress test returned NO-GO (see §6 and the claim & estimand contract) — and rests on the architecture and the qualitative mechanism, now sharpened by a four-scenario robustness map (E4 v1.14) that reconciles the conservative gate — its near-parity no-myopia regime — with a realistic case in which the central is myopic to harm on the low-visibility long tail and coverage-routed selection pulls ahead; all such magnitudes are declared reference points, not calibrated impact. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY 4.0 — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
@@ -516,7 +516,7 @@ assumptions of Propositions 1–4— in an agent-based simulation. Each experime
 | E1 | do funding caps raise quality? | Finding 1 |
 | E2 | what carries allocation quality? | Finding 2 |
 | E3 | what buffers participation decay? | Finding 3 |
-| E4 | distributed aggregation vs. central construction (refined by a symmetric-frictions frontier + capture, E4-v4/v5) | Finding 4 |
+| E4 | distributed aggregation vs. central construction (refined by a symmetric-frictions frontier + capture, E4-v4/v5; and a v1.14 harm-myopia four-scenario robustness map, §6) | Finding 4 |
 | E5 | where the architecture gains value (selection and delivery layers) | Finding 5 |
 | E6 | reputational competition and execution standard | Finding 6 |
 | E7 | comparison against an audit-parameterized baseline | Finding 7 |
@@ -1085,10 +1085,16 @@ had imposed: 0.309 emergent against the 0.30 assumed.
 
 **What survives.** Stripped to what the governing test supports: (1) under the
 pre-registered symmetric gate the distributed selection advantage is *positive but
-small* (median Δ = 0.025, below the 0.05 rebuild gate; NO-GO); (2) the load-bearing
-contributions are the architecture and the qualitative credit-versus-coverage
-mechanism — credit-pressured central ranking underweights diffuse value that
-coverage-based distributed selection surfaces; (3) every compound ratio above
+small* (median Δ = 0.025, below the 0.05 rebuild gate; NO-GO); (1b) a v1.14
+four-scenario robustness extension maps where each institution wins once the central
+can be realistically *myopic to harm on the low-visibility long tail*: a competent,
+harm-aware central ties (the gate's no-myopia regime), while a myopic central loses
+to coverage — the same phenomenon under opposite assumptions, with all magnitudes
+reported as declared reference and stress points, not calibrated impact; (2) the
+load-bearing contributions are the architecture and the qualitative
+credit-versus-coverage mechanism — credit-pressured central ranking underweights
+diffuse value that coverage-based distributed selection surfaces; (3) every compound
+ratio above
 (2.19×/2.22×/2.26×, +43%, +53–54%, ~2×–5×) is a conditional, model-internal
 apparatus output, not a calibrated effect; and (4) any calibrated total delivered-
 value effect — selection *and* delivery, on real data — remains future work.
@@ -1474,6 +1480,12 @@ calibration.
 | q, m (detection) | q ≈ 0.5–1%, m in hundreds | complaint / whistleblowing rates | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibratable |
 | λ threshold | central ≈ 0.10 | procurement rents / bribe depth | Olken 2007; WB Enterprise Surveys | calibratable |
 | penalty f | equal both sides | legal sanction scale | held equal (conservative) | scope choice |
+
+The v1.14 four-scenario map (§6) makes the same anchoring explicit for its harm-myopia model: the visibility long
+tail is source-motivated by heavy-tailed public procurement (Skuhrovec et al. 2013), participation by
+participatory-budgeting turnout, and the harm-detection gate by the agenda-setting/salience literature; the
+per-knob anchors and their strength are recorded in `research/e4-plausible-anchors.md`, with the reproducible
+scenarios, frontier, and theorem in `scripts/simulation/e4-v5/` and `research/e4-parity-theorem.md`.
 
 ## References
 

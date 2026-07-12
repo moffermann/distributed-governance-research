@@ -1,6 +1,6 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Pruebas de Estrés Adversariales y una Prueba Computacional Simétrica de la Distribución Institucional Selectiva
 
-**Working paper — v1.13 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo, ahora afinada por un mapa de robustez de cuatro escenarios (E4 v1.14) que reconcilia el gate conservador —su régimen de casi-paridad sin-miopía— con un caso realista en el que el central es miope al daño en la cola larga de baja visibilidad y la selección por cobertura se adelanta; todas esas magnitudes son puntos de referencia declarados, no impacto calibrado. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
 *Traducción al español del working paper v1.13 (drafts/paper.md, versión autoritativa en inglés).*
 
@@ -566,7 +566,7 @@ Cada experimento (E1–E8) corresponde a un hallazgo:
 | E1 | ¿los topes de financiamiento suben la calidad? | Hallazgo 1 |
 | E2 | ¿qué sostiene la calidad de la asignación? | Hallazgo 2 |
 | E3 | ¿qué amortigua el decaimiento de la participación? | Hallazgo 3 |
-| E4 | agregación distribuida vs. construcción central (refinada por una frontera de fricciones simétricas + captura, E4-v4/v5) | Hallazgo 4 |
+| E4 | agregación distribuida vs. construcción central (refinada por una frontera de fricciones simétricas + captura, E4-v4/v5; y un mapa de robustez de cuatro escenarios de miopía al daño v1.14, §6) | Hallazgo 4 |
 | E5 | dónde gana valor la arquitectura (capas de selección y entrega) | Hallazgo 5 |
 | E6 | competencia reputacional y estándar de ejecución | Hallazgo 6 |
 | E7 | comparación contra una línea base parametrizada por auditorías | Hallazgo 7 |
@@ -1173,7 +1173,13 @@ impuesto: 0.309 emergente contra el 0.30 asumido.
 
 **Qué sobrevive.** Reducido a lo que la prueba rectora sostiene: (1) bajo el gate
 simétrico pre-registrado la ventaja de selección distribuida es *positiva pero
-pequeña* (mediana Δ = 0.025, por debajo del umbral de rebuild de 0.05; NO-GO); (2)
+pequeña* (mediana Δ = 0.025, por debajo del umbral de rebuild de 0.05; NO-GO); (1b)
+una extensión de robustez de cuatro escenarios (v1.14) mapea dónde gana cada
+institución una vez que el central puede ser realistamente *miope al daño en la cola
+larga de baja visibilidad*: un central competente y consciente del daño empata (el
+régimen sin-miopía del gate), mientras que un central miope pierde ante la cobertura
+—el mismo fenómeno bajo supuestos opuestos, con todas las magnitudes reportadas como
+puntos de referencia y estrés declarados, no impacto calibrado; (2)
 las contribuciones que cargan el peso son la arquitectura y el mecanismo
 cualitativo de crédito-versus-cobertura —el ordenamiento central presionado por
 crédito subpondera el valor difuso que la selección distribuida basada en cobertura
@@ -1566,6 +1572,13 @@ requiere un puente de constructo explícito**, no una calibración en un paso.
 | q, m (detección) | q ≈ 0.5–1%, m en cientos | tasas de queja / denuncia | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |
 | umbral λ | central ≈ 0.10 | rentas de compras / profundidad de soborno | Olken 2007; WB Enterprise Surveys | calibrable |
 | pena f | igual en ambos lados | escala de sanción legal | mantenida igual (conservador) | elección de alcance |
+
+El mapa de cuatro escenarios v1.14 (§6) hace explícito el mismo anclaje para su modelo de miopía al daño: la cola
+larga de visibilidad está motivada por fuentes en las compras públicas de cola pesada (Skuhrovec et al. 2013), la
+participación por el turnout de presupuestos participativos, y el gate de detección de daño por la literatura de
+agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrados en
+`research/e4-plausible-anchors.md`, con los escenarios, la frontera y el teorema reproducibles en
+`scripts/simulation/e4-v5/` y `research/e4-parity-theorem.md`.
 
 ## Referencias
 
