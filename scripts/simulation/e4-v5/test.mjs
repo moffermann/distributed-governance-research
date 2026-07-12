@@ -71,6 +71,15 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
   check('LEGACY all retired top-level engines are guarded', unguarded.length === 0, unguarded.length ? 'UNGUARDED: ' + unguarded.join(', ') : `${readdirSync(dir).filter((f) => f.endsWith('.mjs')).length} guarded`);
 }
 
+// ---- Scenario integrity: pin the honest signs so scenario-configs.mjs can't silently drift from the doc (Codex v7) ----
+{
+  const { PRO_CENTRAL, NO_MYOPIA, PROBABLE, PRO_DIST } = await import('./scenario-configs.mjs');
+  const sm = (over) => estimand({ ...baseConfig(), N: 800, K: 120, ...over }, { nWorlds: 300 }).m_hat;
+  const mc = sm(PRO_CENTRAL), mn = sm(NO_MYOPIA), mp = sm(PROBABLE), md = sm(PRO_DIST);
+  check('SCENARIO signs pinned (central wins < near-parity < probable < distributed)', mc < -0.05 && mn > 0 && mn < 0.20 && mp > 0.30 && md > mp,
+    `PRO_CENTRAL=${mc.toFixed(2)} NO_MYOPIA=${mn.toFixed(2)} PROBABLE=${mp.toFixed(2)} PRO_DIST=${md.toFixed(2)}`);
+}
+
 // ---- Embargo: reject multiplier/ratio notation in rendered text ----
 const rejects = (txt) => { try { assertNoEmbargoedTokens(txt); return false; } catch { return true; } };
 check('EMBARGO rejects "2.2x"', rejects('gain of 2.2x'));

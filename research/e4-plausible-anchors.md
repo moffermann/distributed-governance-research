@@ -54,27 +54,38 @@ T theory · P proxy-informed (transport gap) · A declared scale.
 
 **Frontier axes (ceteris-paribus, from PROBABLE):** `s_exp, b_H_C, p, beta` (+ `a_V`) — locate where m crosses 0.
 
-### RESULTS — three anchored scenarios (`npm run e4:scenarios`, N=1500,K=150, 800 worlds)
-| scenario | m (gap) | 95% CI | Core v0 delivers | central delivers |
-|---|---|---|---|---|
-| PRO-CENTRAL (myopia OFF, competent central) | **+6.1%** | [5.8, 6.4] | 91% of oracle | 85% |
-| PROBABLE (evidence-anchored) | **+46.6%** | [46.0, 47.4] | 91% | 45% |
-| PRO-DISTRIBUTED (favourable, moderate) | **+199.8%** | [197, 202] | 96% | −104% (destroys value) |
+### RESULTS — anchored scenarios (`npm run e4:scenarios`, N=1500,K=150, 800 worlds)
+> **CORRECTION (Codex v7):** the earlier "PRO-CENTRAL = +6.1%" conflated two distinct scenarios. Fixed. The
+> central's FULL best plausible case (every knob central-favourable) is `PRO_CENTRAL` in `scenario-configs.mjs`
+> (the single source of truth) and the CENTRAL WINS there. The +6.1% is a SEPARATE `NO_MYOPIA` scenario (myopia
+> isolated). Code now matches this table; a regression test pins the signs so they cannot fork again.
 
-- **The story (from D/O vs C/O):** Core v0 is ROBUST — it delivers ~91–96% of the achievable value in all three;
-  the central is FRAGILE — 85% → 45% → −104% depending entirely on whether it sees the anti-value.
-- **Continuity / reconciliation with the NO-GO:** removing harm-myopia collapses the advantage +46.6% → +6.1%
-  (same small regime as the symmetry-gate ~2.5%). The +46% IS the harm-myopia mechanism; remove it and you return
-  to near-parity. The two results are the SAME phenomenon under opposite assumptions — not a contradiction.
+| scenario | m (gap) | 95% CI | Core v0 delivers | central delivers | winner |
+|---|---|---|---|---|---|
+| PRO-CENTRAL (central's full best plausible case) | **−29.5%** | [−29.9, −29.1] | 68% of oracle | 98% | **central** |
+| NO-MYOPIA (probable, but central sees harm — continuity anchor) | **+6.1%** | [5.8, 6.4] | 91% | 85% | ≈ parity |
+| PROBABLE (source-motivated reference) | **+46.6%** | [46.0, 47.4] | 91% | 45% | Core v0 |
+| PRO-DISTRIBUTED (favourable, moderate) | **+199.8%** | [197, 202] | 96% | −104% (destroys value) | Core v0 |
+
+- **Level field (both ways):** the central has a genuine winning region — under its full best plausible case (low
+  participation + competent, harm-aware central) it wins ~30% and delivers 98% of the oracle. Core v0 wins under the
+  probable reference. The story from D/O: Core v0 is fairly robust (68–96%); the central swings 45%→85%→98% (or −104%
+  when myopic + harmful) — it depends on whether it sees the anti-value AND on citizen participation.
+- **Continuity / reconciliation with the NO-GO:** isolating harm-myopia (NO-MYOPIA: probable but central sees harm)
+  gives +6.1%, the same near-parity regime as the symmetry-gate ~2.5%. The +46% is the harm-myopia mechanism; the
+  gate deliberately equips the central with harm-aware appraisal, so the two results are the SAME phenomenon under
+  opposite assumptions — a qualitative reconciliation hypothesis, not a reproduced limit.
 
 ### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
 - **Single-knob robustness:** from the PROBABLE scenario, NO single axis (`s_exp, b_H_C, p, beta, a_V`) crosses the
   parity frontier within its plotted range — Core v0 wins throughout (+25% to +54%). The conclusion is robust to any
   ONE assumption; reaching parity requires COMBINING central-favourable conditions.
-- **Combined central-competence frontier:** interpolating PROBABLE → fully-competent plausible central, m falls
-  +47% → +6%; the **frontier (m=0) is at t ≈ 1.13** — i.e. the central wins ONLY if it is BETTER than the fully-
-  competent plausible central (beyond realistic), and even then by only ~5%. Honest headline: *under any realistic
-  central, Core v0 wins; the central needs better-than-plausible anti-value sight to tie, and it barely wins past that.*
+- **Combined scenario-path frontier (CORRECTED, Codex v7):** interpolating PROBABLE → the central's FULL best
+  plausible case (`PRO_CENTRAL`), m falls +47% → −30%; the **frontier (m=0) is at t ≈ 0.57** — i.e. conditions ~57%
+  of the way from probable toward the central's full best case flip the winner to the central. That is a PLAUSIBLE
+  region, NOT beyond-realistic (the earlier "t≈1.13 / beyond realistic" claim was wrong — it used a partial 8-knob
+  path). Honest headline: *the winner depends on where reality sits between the probable and the central-favourable
+  scenarios; no single knob decides it.* `t` is an illustrative linear mix, not a calibrated competence scale.
 
 ## Fixed variables (details)
 _(populated as we fix each, one at a time)_

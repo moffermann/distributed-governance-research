@@ -48,24 +48,24 @@ for (const ax of AXES) {
   console.log('    m across axis: ' + xs.map((x, i) => `${x.toFixed(2)}:${pct(ms[i])}`).join('  '));
   console.log('');
 }
-// ---- combined "central competence" frontier: interpolate PROBABLE -> PRO_CENTRAL and beyond, locate m=0 ----
-// t=0 is the probable central; t=1 is the fully-competent plausible central (harm-myopia off, unbiased, precise);
-// t>1 extrapolates to a central BETTER than plausibly realistic. This locates the frontier on the one axis that
-// matters: how good the central is at seeing anti-value.
+// ---- combined scenario-path frontier: interpolate PROBABLE -> PRO_CENTRAL (the central's FULL best plausible case),
+// locate m=0. t=0 is the probable scenario; t=1 is the central's full best plausible case (a PLAUSIBLE point, not
+// beyond-realistic). The crossing t* tells how far toward central-favourable conditions parity is reached. ----
 import { PRO_CENTRAL } from './scenario-configs.mjs';
 const compKeys = Object.keys(PRO_CENTRAL).filter((k) => PRO_CENTRAL[k] !== PROBABLE[k]);
 const clampDF = (k, v) => Math.max(THETA[k].df[0], Math.min(THETA[k].df[1], v));
 const lerp = (t) => { const c = { ...base }; for (const k of compKeys) c[k] = clampDF(k, PROBABLE[k] + t * (PRO_CENTRAL[k] - PROBABLE[k])); return c; };
-console.log('■ central competence (combined: harm-detection↑, myopia↓, bias↓, projection↓, noise↓, credit↓)');
+console.log('■ probable → central\'s full best plausible case (combined path; t=1 is a plausible scenario, not extrapolation)');
 const ts = [], tms = [];
 for (let i = 0; i <= 16; i++) { const t = i / 8; const m = estimand(lerp(t), { nWorlds: NW }).m_hat; ts.push(t); tms.push(m); }
 let tf = null;
 for (let i = 0; i < ts.length - 1; i++) if ((tms[i] > 0) !== (tms[i + 1] > 0)) { tf = ts[i] + (0 - tms[i]) * (ts[i + 1] - ts[i]) / (tms[i + 1] - tms[i]); break; }
-console.log(`    t=0 probable central → t=1 fully-competent plausible central → t>1 better-than-realistic`);
+console.log(`    t=0 probable scenario → t=1 central's full best plausible case`);
 console.log(`    m across t: ` + ts.filter((_, i) => i % 2 === 0).map((t, i) => `t=${t.toFixed(2)}:${pct(tms[i * 2])}`).join('  '));
 console.log(tf === null
-  ? `    frontier: none — Core v0 wins even for a better-than-realistic central across t∈[0,2]`
-  : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  the central wins ONLY if it is ${tf > 1 ? `BETTER than the fully-competent plausible case (t>1) — i.e. beyond realistic` : `at competence level t=${tf.toFixed(2)} within the plausible range`}`);
+  ? `    frontier: none in t∈[0,2] — one endpoint does not cross parity`
+  : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  conditions ${tf < 1 ? `~${Math.round(tf * 100)}% of the way from probable to the central's full best case flip the winner to the central (a PLAUSIBLE region, not beyond-realistic)` : `must exceed the central's full best plausible case (t>1)`}`);
 console.log('');
-console.log('Read: no single knob flips the winner from the probable scenario (robust); the frontier lives on the');
-console.log('combined central-competence axis — and sits at/beyond the fully-competent plausible central.');
+console.log('Read: no single knob flips the winner from the probable scenario (robust to any ONE assumption); the');
+console.log('frontier lives on the combined path and is reached WITHIN the plausible range as conditions favour the central.');
+console.log('NOTE: t is a linear mix of heterogeneous knobs, an illustrative path — not a calibrated competence scale.');

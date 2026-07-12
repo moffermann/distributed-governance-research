@@ -30,34 +30,37 @@ corruption/leakage are separate, additive channels, deliberately excluded here.
 is absent). This is the no-myopia Gaussian limiting case (verified against simulation within ~0.2 Monte-Carlo SE);
 the numerical frontier (eligibility, heterogeneous costs, MNAR, credit) is the object.
 
-**Three anchored scenarios.** Each knob's value is justified empirically (public-procurement value is heavy-tailed —
-Skuhrovec et al. 2013, >40k Czech procurements, Zipf/Pareto — so most projects are low-visibility; participatory-
-budgeting turnout ≈1–3% anchors participation), theoretically (agenda-setting/salience for harm myopia), or
-proxy-informed with a stated transport gap (projection/bias). Reporting `m = D/O − C/O` (signed fraction of the
-full-information oracle, parity at 0) and each arm's efficiency `D/O`, `C/O`:
+**Four declared scenarios (level the field both ways).** Each knob's reference value is motivated empirically (public-
+procurement value is heavy-tailed — Skuhrovec et al. 2013, >40k Czech procurements, Zipf/Pareto — so most projects are
+low-visibility; participatory-budgeting turnout ≈1–3% informs participation as a joint moment), theoretically
+(agenda-setting/salience for harm myopia), or proxy-informed with a stated, **not-yet-propagated** transport gap
+(projection/bias). We are explicit that most magnitudes are declared reference/stress points, not target-domain
+calibrated bands (the CIs cover inner Monte-Carlo variability only). Reporting `m = D/O − C/O` (signed fraction of the
+full-information greedy benchmark, parity at 0) and each arm's delivered level `D/O`, `C/O`:
 
-| scenario (assumptions) | m ± 95% CI | Core v0 delivers | central delivers |
-|---|---|---|---|
-| **Central's best case** — competent central that sees anti-value (no myopia, unbiased, precise) | **+6.1%** [5.8, 6.4] | 91% of oracle | 85% |
-| **Probable** — evidence-anchored | **+46.6%** [46.0, 47.4] | 91% | 45% |
-| **Distributed's favourable case** | **+199.8%** [197, 202] | 96% | −104% (destroys value) |
+| scenario (assumptions) | m ± 95% CI | Core v0 | central | winner |
+|---|---|---|---|---|
+| **Central's full best plausible case** — low participation + competent, harm-aware, precise central | **−29.5%** [−29.9, −29.1] | 68% | 98% | **central** |
+| **No-myopia** — probable, but central sees harm (isolates the mechanism) | **+6.1%** [5.8, 6.4] | 91% | 85% | ≈ parity |
+| **Probable** — source-motivated reference | **+46.6%** [46.0, 47.4] | 91% | 45% | Core v0 |
+| **Distributed's favourable case** | **+199.8%** [197, 202] | 96% | −104% | Core v0 |
 
-The decomposition is the finding: **Core v0 is robust — ~91–96% of achievable value in all three; the central is
-fragile — 85% → 45% → −104%, depending entirely on whether it sees the anti-value.**
+The field is genuinely level: **the central has a real winning region** — under its full best plausible case (low
+citizen participation and a competent, harm-aware central) it wins ~30% and delivers 98% of the benchmark. Core v0
+wins under the probable reference. The `D/O`/`C/O` split shows why: the central's delivered level swings 45%→85%→98%
+(and −104% when myopic on harmful projects), depending on whether it sees the anti-value and on participation.
 
 **Reconciliation with the symmetry-gate NO-GO.** A pre-registered symmetry gate elsewhere reports a small pooled
 advantage (Δ≈0.025, below its rebuild threshold). That test **deliberately equips the central with competent,
-harm-aware appraisal** — i.e. it is the "central's best case" row above. Removing harm-myopia in this model collapses
-the advantage +46.6% → +6.1%, the same near-parity regime. **The two results are the same phenomenon under opposite
-assumptions, not a contradiction:** the distributed advantage IS the harm-myopia mechanism; assume it away and you
-return to near-parity.
+harm-aware appraisal** — the **no-myopia** row above (+6.1%, same near-parity regime). Isolating harm-myopia in this
+model collapses the probable advantage +46.6% → +6.1%. The two results are the same phenomenon under opposite
+assumptions — a **qualitative reconciliation hypothesis** (different DGPs), not a reproduced limit.
 
-**Where the frontier is.** From the probable scenario, no single knob flips the winner within its plausible range
-(the conclusion is robust to any one assumption; Core v0 wins +25% to +54% across each single-knob sweep). The parity
-frontier lives on the combined "central competence" axis and sits at **t ≈ 1.13** — the central wins only if it is
-*better* at seeing anti-value than a fully-competent plausible central (beyond realistic), and even then by ~5%.
-Across a uniform sweep of the anchored plausible envelope, Core v0 wins in 100% of random parameter mixtures; parity
-requires the specific, coordinated all-central-favourable corner.
+**Where the frontier is.** No single knob flips the winner from the probable scenario within its plausible range
+(robust to any ONE assumption). Interpolating the full set of conditions from probable toward the central's best
+plausible case, the parity frontier is at **t ≈ 0.57** — reached **within** the plausible range, not beyond it. The
+winner therefore depends on where reality sits between the probable and central-favourable scenarios; `t` is an
+illustrative linear mix, not a calibrated competence scale.
 
 **Honest limits.** (1) Central magnitudes are proxy-informed, not target-identified: the political-opinion→project-
 value transport is an assumption; only target-domain bridge data (planner forecasts, citizen value distributions)
