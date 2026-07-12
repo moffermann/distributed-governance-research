@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+// ============================================================================================================
+// LEGACY (pre-v1.14). This is the v1.13 deposited pre-registered symmetry gate. It is NOT part of the v1.14
+// evidence path and CANNOT feed v1.14 artifacts: v1.14 evidence is the exclusive `npm run e4:evidence`
+// (scripts/simulation/e4-v5/). Kept for provenance/reproduction of the v1.12/v1.13 record.
+// ============================================================================================================
 // SYMMETRY GATE (go/no-go) — pre-registered in audits/2026-07-10/symmetry-gate-preregistration.md.
 // Designed by the independent auditor (Codex) to be adversarial. Selection-only test (delivery at parity).
 //

@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+// ============================================================================================================
+// LEGACY (pre-v1.14). This engine reproduces the v1.12/v1.13 deposited record and uses the RETIRED D/C ratio
+// and 'x' multiplier framing. It is NOT part of the v1.14 evidence path and CANNOT feed v1.14 artifacts: the
+// v1.14 evidence path is the exclusive `npm run e4:evidence` (scripts/simulation/e4-v5/), whose closed output
+// schema + embargo adapter mechanically reject D/C and 'x'. Kept only for provenance/reproduction of v1.13.
+// ============================================================================================================
 // E4-v4 — SYMMETRIC-FRICTIONS rebuild (supersedes E4-v3 after adversarial review).
 // The review showed the ~1.7x headline was an artifact of an asymmetry: the
 // distributed arm was an unbiased truth-oracle on its sample while the central was

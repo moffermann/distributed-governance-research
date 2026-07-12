@@ -5,7 +5,10 @@
   "description": "Local tooling for generated diagram artifacts in the Distributed Governance Research project.",
   "scripts": {
     "check-anchors": "node scripts/check-anchors.mjs",
-    "fix-anchors": "node scripts/check-anchors.mjs --fix"
+    "fix-anchors": "node scripts/check-anchors.mjs --fix",
+    "e4:evidence": "node scripts/simulation/e4-v5/evidence.mjs",
+    "e4:controls": "node scripts/simulation/e4-v5/controls.mjs",
+    "e4:test": "node scripts/simulation/e4-v5/test.mjs"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "11.16.0",
