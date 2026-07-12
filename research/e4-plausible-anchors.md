@@ -27,7 +27,8 @@
 > **AUTHORITATIVE scenario values = `scripts/simulation/e4-v5/scenario-configs.mjs` (single source).** This table
 > gives each knob's anchor TYPE and the qualitative DIRECTION from central-favourable → distributed-favourable; it
 > deliberately does NOT duplicate the numeric points (that duplication forked once — Codex v7). A regression test
-> (`npm run e4:test`) pins the scenario sign ordering so code and this narrative cannot silently diverge.
+> (`npm run e4:test`) pins the scenario sign ORDERING only — it does NOT enforce exact configs, magnitudes, labels,
+> or prose, so it cannot by itself prevent code and this narrative from diverging.
 > Anchor: E empirical · T theory · P proxy-informed (transport gap) · A declared scale.
 
 | knob | anchor | direction: central-favourable → distributed-favourable | justification |
@@ -89,7 +90,7 @@
 _(populated as we fix each, one at a time)_
 
 ## Anchored scenarios (author framing 2026-07-11) — level the field both ways
-Five named scenarios (values in `scenario-configs.mjs`), each a full config → `m ± 95% CI` (inner MC only):
+Four substantive declared scenarios + one diagnostic contrast (values in `scenario-configs.mjs`), each a full config → `m ± 95% CI` (inner MC only):
 - **PRO-CENTRAL** — the central's declared full-favourable endpoint (every knob central-favourable). The central WINS
   (≈ −30%, delivers 98% of the benchmark). This is the honest "central's favourable region", NOT near-parity.
 - **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast

@@ -7,16 +7,19 @@ must-fix is fully implemented: the theorem now gives the exact coefficient condi
 constant gate alone is insufficient. The numerical mechanism, the Gaussian sanity-check limit, the declared-scenario
 design, and the measurement plan are mutually coherent under the paper's expressly limited robustness-result bar.
 
-The overall package is nevertheless not publication-ready because the live anchor and canonical frontier runner still
-contain the same superseded scenario attribution/taxonomy and calibrated-sounding endpoint labels identified in v10.
-These are publication-facing contradictions, not stylistic preferences. No target-domain calibration or impact bar is
-being imposed here.
+The overall package is nevertheless not publication-ready because one live anchor section still calls all five rows
+scenarios and an earlier anchor sentence overstates what the ordering regression binds. The attribution, endpoint,
+interpolation, theorem, and executable labels are now corrected. The two remaining anchor defects are
+publication-facing contradictions, not stylistic preferences. No target-domain calibration or impact bar is being
+imposed here.
 
 ## Baseline and fresh execution
 
-Reviewed `master` at `ecd8018d150005cbd11d6374fa749dd5f5f1b304` (the requested fixes are in the preceding commit; HEAD
-adds the v11 prompt). I read every file in `scripts/simulation/e4-v5/`, the three specified research documents, the
-v10 summary, and all three v10 dimension reports.
+I initially reviewed and ran the suite at `ecd8018d150005cbd11d6374fa749dd5f5f1b304`, then rechecked the live tree at
+`686a25c` after the subsequent wording-only fixes. I read every file in `scripts/simulation/e4-v5/`, the three
+specified research documents, the v10 summary, and all three v10 dimension reports. The full six-command suite also
+passes on the current live state. I did **not** edit any production source file at any point; my only file edits were
+to this audit.
 
 All six requested commands exited 0 in one fresh run:
 
@@ -52,66 +55,34 @@ declared, least-pinned salience proxy (`:20-22,78-84`) and disclaims an impact e
 separates empirical, theoretical, proxy-informed, and declared-scale anchors and states the transport gaps. Those are
 honest ingredients for the claimed measurement plan; incomplete target calibration is not a blocker under this bar.
 
+The live anchor now also gives the correct attribution: `research/e4-plausible-anchors.md:51-55` identifies
+`MYOPIA_OFF` as the two-coordinate diagnostic and `NO_MYOPIA` as the harm-aware/otherwise-competent continuity bundle;
+`:68-72` reports the sequential, path-dependent 40/60 split. Its scenario table and combined-path paragraph now use
+the declared-endpoint and declared-interpolation labels (`:59-64,80-86`). No attribution or endpoint-label blocker
+remains.
+
 ## Remaining publication blockers (ranked)
 
-### 1. HIGH — the canonical anchor still restores the superseded myopia attribution
+### 1. HIGH — the anchor still conflates four scenarios with the diagnostic contrast
 
-- `research/e4-plausible-anchors.md:51-56` still calls the eight-field `NO_MYOPIA` bundle “myopia isolated.” Replace
-  that correction block with:
-
-  > **CORRECTION:** `PRO_CENTRAL` is the central's declared full-favourable endpoint and the central wins there.
-  > `NO_MYOPIA` is the harm-aware and otherwise-competent continuity bundle, not a myopia isolation.
-  > `MYOPIA_OFF` is the two-harm-coordinate diagnostic contrast. Authoritative configs live in
-  > `scenario-configs.mjs`; the regression pins executable outcome ORDERING only, not configs, magnitudes, labels,
-  > or prose.
-
-- `research/e4-plausible-anchors.md:61` labels the bundle merely “probable, but central sees harm.” Replace the cell
-  label with **`NO-MYOPIA (harm-aware and otherwise-competent continuity bundle)`**.
-- `research/e4-plausible-anchors.md:69-72` again says `NO_MYOPIA` isolates harm-myopia and makes the full decline the
-  same harm mechanism. Replace that bullet with:
-
-  > **Continuity / reconciliation with the NO-GO:** in this sequential, path-dependent decomposition,
-  > `MYOPIA_OFF` changes only `s_exp,b_H_C` and reduces the gap `+46.6% -> +30.4%`, or 16.2 of the 40.5-point
-  > decline to `NO_MYOPIA` (~40%). The further move to the harm-aware and otherwise-competent `NO_MYOPIA` bundle
-  > reduces it by 24.3 points (~60%). `NO_MYOPIA` is the continuity anchor to the symmetry-gate near-parity regime;
-  > this is a qualitative reconciliation hypothesis across different DGPs, not a reproduced limit.
-
-### 2. HIGH — scenario taxonomy and regression scope are still false in the anchor
-
-- `research/e4-plausible-anchors.md:29-30` claims the ordering test prevents code/narrative divergence. Replace the
-  second sentence with: **“`npm run e4:test` pins executable outcome ORDERING only; it does not bind exact configs,
-  magnitudes, labels, or prose.”**
 - `research/e4-plausible-anchors.md:91-100` says “Five named scenarios,” conflating the diagnostic with the four
   substantive scenarios. Replace the heading and introduction with:
   **“## Four substantive declared scenarios + one diagnostic contrast — level the field both ways”** and
   **“The four substantive scenarios are `PRO_CENTRAL`, `NO_MYOPIA`, `PROBABLE`, and `PRO_DIST`; `MYOPIA_OFF` is a
-  two-coordinate diagnostic contrast, not a scenario.”** Keep the existing five definitions below after making the
-  `PRO_CENTRAL` label replacement in blocker 3.
+  two-coordinate diagnostic contrast, not a scenario.”** The five definitions below can remain because they already
+  identify `MYOPIA_OFF` as the diagnostic.
 
-### 3. MEDIUM — “best plausible/plausible scenario” survives in canonical source and stdout
+### 2. MEDIUM — the anchor overstates the ordering regression's scope
 
-This directly fails the claimed v10 label purge, and the endpoint includes values outside registered expectable
-bands. Apply these exact replacements:
-
-- `scripts/simulation/e4-v5/frontier.mjs:52-54`: replace “central's FULL best plausible case” / “plausible point”
-  with **“central's declared full-favourable endpoint” / “declared endpoint.”**
-- `scripts/simulation/e4-v5/frontier.mjs:59`: replace the string with
-  **`■ probable -> central's declared full-favourable endpoint (combined path; t=1 is the declared endpoint)`**.
-- `scripts/simulation/e4-v5/frontier.mjs:64`: replace the string with
-  **`t=0 probable scenario -> t=1 central's declared full-favourable endpoint`**.
-- `scripts/simulation/e4-v5/scenario-configs.mjs:19` and `scripts/simulation/e4-v5/scenarios.mjs:19`: replace
-  **“full best plausible case”** with **“declared full-favourable endpoint.”**
-- `research/e4-plausible-anchors.md:52,80-83,93`: replace every endpoint occurrence of **“best plausible case”**
-  and **“plausible scenario/segment”** with **“declared full-favourable endpoint”** and
-  **“declared interpolation segment,”** respectively. The combined-path bullet should use the already-correct paper
-  wording: **“Interpolating from `PROBABLE` toward the declared full-favourable endpoint, parity is at `t ~= 0.57`,
-  within the declared interpolation segment.”**
+- `research/e4-plausible-anchors.md:29-30` says the ordering test means “code and this narrative cannot silently
+  diverge.” Replace that sentence with: **“A regression test (`npm run e4:test`) pins executable outcome ORDERING
+  only; it does not bind exact configurations, magnitudes, labels, or prose.”**
 
 ## Direct answers for this dimension
 
 - **Theorem-nesting fix verified? YES.** No theorem-scope blocker remains.
 - **Mechanism + stylized theorem + measurement-plan design viable under the stated bar? YES.**
 - **Package publication-ready in the live tree? NO — NEEDS CHANGES**, solely because the publication surface still
-  contains the three compact, previously identified attribution/taxonomy/label contradictions above.
+  contains the two compact anchor taxonomy/traceability contradictions above.
 - **Multiplier relapse observed? NO.** The reviewed outputs retain signed parity-zero `m`; this audit found no
   multiplier result.

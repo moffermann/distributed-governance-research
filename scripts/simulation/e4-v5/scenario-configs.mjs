@@ -1,5 +1,6 @@
 // E4 v1.14 — the anchored scenario configs. SINGLE SOURCE OF TRUTH for the scenario points (the docs reference these,
-// they do NOT duplicate the values — this prevents the doc↔code fork Codex v7 caught). Anchors + justification per
+// they do NOT duplicate the values — this reduces the doc↔code fork risk Codex v7 caught; the sign-ordering test
+// pins executable outcome ordering ONLY, not exact configs/labels/prose). Anchors + justification per
 // knob: research/e4-plausible-anchors.md.
 //
 // FOUR substantive declared scenarios + ONE diagnostic contrast (do not conflate):
