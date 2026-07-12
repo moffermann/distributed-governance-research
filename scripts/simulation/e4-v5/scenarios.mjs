@@ -4,7 +4,7 @@
 // win). NO-MYOPIA (bundle) = a competent harm-aware central. MYOPIA-OFF = diagnostic harm-only contrast.
 // PROBABLE = source-motivated reference. PRO-DISTRIBUTED = distributed-favourable. All prose below is COMPUTED
 // from the runs (never hardcoded), so it can never drift from the numbers.
-import { baseConfig, contractHash } from './contract.mjs';
+import { baseConfig, contractHash, resolvedHash } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 import { estimand } from './engine.mjs';
 import { PRO_CENTRAL, NO_MYOPIA, MYOPIA_OFF, PROBABLE, PRO_DIST, SCENARIO_WORLD as WORLD } from './scenario-configs.mjs';
@@ -47,3 +47,11 @@ safeLog(`Balance (condition 1): distributed signal-noise effect ${pts(noiseEff)}
 // NOT average out. The point estimate above is the independent-error reference (sigma_cm=0); here is the stress:
 const cmRun = (s) => estimand({ ...baseConfig(), ...WORLD, ...PROBABLE, sigma_cm: s }, { nWorlds: NW }).m_hat;
 safeLog(`Common-mode robustness (correlated profile/delegate error): PROBABLE ${pct(cmRun(0))} (independent reference) → ${pct(cmRun(0.5))} (modest) → ${pct(cmRun(1.0))} (strong). Coverage still leads across the range; this right-sizes the robustness claim (it does not flip the sign).`);
+// Provenance (Codex #7): a hash of the FULLY-RESOLVED run manifest — merged configs + world + run controls +
+// the corrected-reader benchmark — so the identifier uniquely captures the reported inputs (contractHash above
+// covers only the contract DEFINITIONS/defaults).
+const RESOLVED = { world: WORLD, nWorlds: NW, contract: contractHash(), scenarios: Object.fromEntries(
+  [['PRO_CENTRAL', PRO_CENTRAL], ['PROBABLE', PROBABLE], ['MYOPIA_OFF', MYOPIA_OFF], ['NO_MYOPIA', NO_MYOPIA], ['PRO_DIST', PRO_DIST]]
+    .map(([k, c]) => [k, { ...baseConfig(), ...WORLD, ...c }])),
+  bestCentral: { ...baseConfig(), ...WORLD, ...PRO_CENTRAL, w: 0, a: 0, b: 1, lambda: 0, b_H_C: 1, s_exp: 0.2, sigma_C: 0.2 } };
+safeLog(`\nrun manifest hash (fully-resolved inputs, uniquely identifies this run): ${resolvedHash(RESOLVED)}`);
