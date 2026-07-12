@@ -32,11 +32,12 @@ const m = (over) => estimand({ ...baseConfig(), ...WORLD, ...over }, { nWorlds: 
   const val = m({ s_exp: 0, b_H_C: 1, a: 0, w: 0, b: 1, sigma_C: 0.02, lambda: 0, beta: 0, p: 1, sigma_e: 0 });
   check('FIX null => |m| negligible', Math.abs(val) < 0.03, `m=${val.toFixed(4)}`);
 }
-// BOUNDARY: a genuine near-parity case (the NO_MYOPIA continuity anchor sits near the frontier).
+// BOUNDARY: a genuine near-parity case. Under Core-v0-faithful universal participation the fully-idealized central
+// endpoint (PRO_CENTRAL) is the near-parity/tie point (~ −1.4%), not NO_MYOPIA (which is ~+14%).
 {
-  const { NO_MYOPIA } = await import('./scenario-configs.mjs');
-  const val = m(NO_MYOPIA);
-  check('FIX boundary (near-parity) => |m| small', Number.isFinite(val) && Math.abs(val) < 0.15, `m=${val.toFixed(3)}`);
+  const { PRO_CENTRAL } = await import('./scenario-configs.mjs');
+  const val = m(PRO_CENTRAL);
+  check('FIX boundary (near-parity at idealized central endpoint) => |m| small', Number.isFinite(val) && Math.abs(val) < 0.10, `m=${val.toFixed(3)}`);
 }
 
 // ---- Attribution: the distributed advantage must be driven by harm myopia ----
@@ -77,8 +78,8 @@ check('CLASSIFY insufficient => numerical unresolved', classify({ point: pt([0.4
   const { PRO_CENTRAL, NO_MYOPIA, MYOPIA_OFF, PROBABLE, PRO_DIST } = await import('./scenario-configs.mjs');
   const sm = (over) => estimand({ ...baseConfig(), N: 800, K: 120, ...over }, { nWorlds: 300 }).m_hat;
   const mc = sm(PRO_CENTRAL), mn = sm(NO_MYOPIA), mo = sm(MYOPIA_OFF), mp = sm(PROBABLE), md = sm(PRO_DIST);
-  check('SCENARIO ordering pinned (central < no-myopia < myopia-off < probable < distributed)',
-    mc < -0.05 && mn > 0 && mn < mo && mo < mp && mp > 0.30 && md > mp,
+  check('SCENARIO ordering pinned (central ~parity < no-myopia < myopia-off < probable < distributed)',
+    mc < 0.02 && mc > -0.15 && mc < mn && mn > 0.05 && mn < mo && mo < mp && mp > 0.40 && md > mp,
     `PRO_CENTRAL=${mc.toFixed(2)} NO_MYOPIA=${mn.toFixed(2)} MYOPIA_OFF=${mo.toFixed(2)} PROBABLE=${mp.toFixed(2)} PRO_DIST=${md.toFixed(2)}`);
 }
 

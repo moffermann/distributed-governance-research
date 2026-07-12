@@ -1,6 +1,6 @@
 # Una Arquitectura Funcional para la Gobernanza Distribuida: Diseño de Mecanismos, Pruebas de Estrés Adversariales y una Prueba Computacional Simétrica de la Distribución Institucional Selectiva
 
-**Working paper — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo, ahora afinada por un mapa de robustez de cuatro escenarios (E4 v1.14) que reconcilia el gate conservador —su régimen de casi-paridad sin-miopía— con un caso realista en el que el central es miope al daño en la cola larga de baja visibilidad y la selección por cobertura se adelanta; todas esas magnitudes son puntos de referencia declarados, no impacto calibrado. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Working paper — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de estrés pre-registrada, simétrica y solo-de-selección, dio NO-GO (véase §6 y el contrato de afirmación y estimando)— y se apoya en la arquitectura y el mecanismo cualitativo, ahora afinada por un mapa de robustez de cuatro escenarios (E4 v1.14): bajo la participación universal por arquitectura de Core v0, un central realistamente miope al daño en la cola larga de baja visibilidad es superado por la selección por cobertura, y hasta un central plenamente idealizado alcanza a lo sumo un empate apenas —consistente en dirección con la casi-paridad del gate conservador; todas esas magnitudes son puntos de referencia declarados, no impacto calibrado. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la curva de transición semi-abierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
 *Traducción al español del working paper v1.14 (drafts/paper.md, versión autoritativa en inglés).*
 
@@ -12,7 +12,7 @@ Los recursos públicos se asignan y controlan en instituciones que fusionan tres
 
 Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado consecuente es pública.
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios examina luego el caso probable: un central realistamente miope al daño concentrado en la cola larga de baja visibilidad es superado por la selección basada en cobertura —un punto de referencia declarado y motivado por fuentes, no un efecto calibrado, que se apoya sobre todo en ese supuesto de miopía al daño. Esto es consistente con, no contrario a, el gate pre-registrado: dótese al central de una tasación competente y consciente del daño y los brazos vuelven a la casi-paridad, de modo que el resultado refleja el supuesto de competencia del central y no la arquitectura por sí sola. El mapa comparativo completo —incluido un empate de casi-paridad y un endpoint favorable al central— se reporta en un apéndice, con todas las magnitudes como puntos de referencia declarados y no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación pre-registrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas pre-especificadas pero pequeña (mediana agrupada Δ = 0.025 de un benchmark voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios examina luego el caso probable: un central realistamente miope al daño concentrado en la cola larga de baja visibilidad es superado por la selección basada en cobertura —un punto de referencia declarado y motivado por fuentes, no un efecto calibrado, que se apoya sobre todo en ese supuesto de miopía al daño. Como la participación de Core v0 es universal por arquitectura, hasta un central plenamente idealizado —competente, consciente del daño, insesgado y sin crédito— alcanza a lo sumo un empate estadístico apenas; esto es consistente en dirección con la casi-paridad del gate pre-registrado, de modo que el resultado refleja el supuesto de competencia del central y no la arquitectura por sí sola. El mapa comparativo completo se reporta en un apéndice, con todas las magnitudes como puntos de referencia declarados y no como impacto calibrado. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
 Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las unidades de la simulación no están calibradas, son de equilibrio parcial y no identifican efectos de entrega; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
@@ -625,21 +625,26 @@ miopía y con miopía al daño, no un multiplicador puntual ni impacto calibrado
 referencia **probable** motivado por fuentes —un tasador central que lee el valor
 visible y portador de crédito pero se *supone* miope al daño concentrado en la cola
 larga de baja visibilidad, distorsionado por crédito y menos preciso— la selección
-distribuida basada en cobertura entrega cerca del **91%** del benchmark voraz de
-información completa frente al **~45%** del central (una **brecha de +46,6 puntos**).
+distribuida basada en cobertura entrega cerca del **99%** del benchmark voraz de
+información completa frente al **~44%** del central (una **brecha de +54,6 puntos**).
 Esta magnitud es un **punto de referencia declarado y motivado por fuentes, no un
 efecto calibrado**: se apoya sobre todo en la fuerza de la miopía al daño —la perilla
 **de mayor peso y menos anclada empíricamente** del modelo, a la que un contraste
 diagnóstico atribuye cerca del **40%** de la brecha—, los insumos del central cargan
 una brecha de transporte opinión-política→valor-de-proyecto no propagada, y los
 intervalos reportados cubren solo la variabilidad Monte-Carlo interna. Este resultado
-es **consistente con, no contrario a**, nuestro gate de simetría pre-registrado, que
-devolvió casi-paridad (mediana Δ ≈ 0.025, el régimen NO-GO): ese gate por construcción
-dota al central de una tasación competente y consciente del daño, de modo que la
-diferencia refleja el **supuesto de competencia del central**, no la arquitectura por
-sí sola. Los escenarios declarados abarcan un mapa comparativo completo —incluido un
-empate de casi-paridad y un endpoint favorable al central en el que el brazo de
-tasación rinde mejor— reportado íntegramente en el **Apéndice E4**.
+es **consistente en dirección con** nuestro gate de simetría pre-registrado, que
+devolvió casi-paridad (mediana Δ ≈ 0.025, el régimen NO-GO): ese gate dota al central
+de una tasación competente y consciente del daño pero bajo un régimen de *participación
+muestreada conservadora*. Como la participación de asignación neta de Core v0 es
+**universal por arquitectura** (perfiles y delegados cubren a los pasivos, así que es un
+hecho, no un turnout bajo que anclar), la ventaja de cobertura es mayor aquí, y hasta un
+central plenamente idealizado —competente, consciente del daño, insesgado y sin
+crédito— alcanza a lo sumo un **empate estadístico apenas**. El resultado por tanto
+refleja el supuesto de **competencia del central**, no la arquitectura por sí sola. Los
+escenarios declarados abarcan un mapa comparativo completo —incluido ese endpoint del
+central plenamente idealizado, en el que los dos brazos a lo sumo empatan, y un caso
+favorable al distribuido— reportado íntegramente en el **Apéndice E4**.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
@@ -1101,12 +1106,14 @@ impuesto: 0.309 emergente contra el 0.30 asumido.
 **Qué sobrevive.** Reducido a lo que la prueba rectora sostiene: (1) bajo el gate
 simétrico pre-registrado la ventaja de selección distribuida es *positiva pero
 pequeña* (mediana Δ = 0.025, por debajo del umbral de rebuild de 0.05; NO-GO); (1b)
-una extensión de robustez de cuatro escenarios (v1.14) mapea dónde gana cada
+una extensión de robustez de cuatro escenarios (v1.14) mapea dónde queda cada
 institución una vez que el central puede ser realistamente *miope al daño en la cola
-larga de baja visibilidad*: un central competente y consciente del daño empata (el
-régimen sin-miopía del gate), mientras que un central miope pierde ante la cobertura
-—el mismo fenómeno bajo supuestos opuestos, con todas las magnitudes reportadas como
-puntos de referencia y estrés declarados, no impacto calibrado; (2)
+larga de baja visibilidad*: bajo la participación universal por arquitectura de Core v0,
+la selección por cobertura lidera en todo el espacio, y hasta un central plenamente
+idealizado —competente, consciente del daño, insesgado y sin crédito— alcanza a lo sumo
+un empate apenas (consistente en dirección con la casi-paridad del gate), mientras que
+un central miope pierde decisivamente ante la cobertura, con todas las magnitudes
+reportadas como puntos de referencia y estrés declarados, no impacto calibrado; (2)
 las contribuciones que cargan el peso son la arquitectura y el mecanismo
 cualitativo de crédito-versus-cobertura —el ordenamiento central presionado por
 crédito subpondera el valor difuso que la selección distribuida basada en cobertura
@@ -1440,9 +1447,11 @@ dureza: un gate pre-registrado, simétrico y solo-de-selección encuentra la
 ventaja distribuido-menos-central positiva en todas las celdas pero pequeña (una
 mediana agrupada pre-registrada Δ = 0.025 de un benchmark de información completa,
 por debajo de su umbral prefijado de 0.05 de reconstrucción del programa de
-investigación). El mapa de robustez v1.14 trata ese resultado como el ancla de
-casi paridad sin miopía y mapea dónde gana cada institución entre escenarios
-declarados de miopía al daño, incluido un endpoint favorable al central. Por lo
+investigación). El mapa de robustez v1.14 es consistente en dirección con
+ese gate de casi-paridad y mapea dónde queda cada institución entre escenarios
+declarados de miopía al daño: bajo la participación universal por arquitectura de Core
+v0, la selección por cobertura lidera en todo el espacio y un central plenamente
+idealizado alcanza a lo sumo un empate apenas en el extremo. Por lo
 tanto retiramos el multiplicador compuesto que reportó una versión anterior y nos
 apoyamos en la arquitectura, el mecanismo cualitativo y este mapa comparativo
 condicional; sus magnitudes son puntos de referencia y estrés declarados, no
@@ -1560,42 +1569,55 @@ sobre todo a los pocos proyectos visibles y disputados. Separa el valor real en 
 y daño, S = S⁺ − H, y le da al central un término de daño gobernado por saliencia,
 M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, cuya detección de daño s(V) crece con
 la visibilidad del proyecto; el brazo distribuido registra el daño en toda la
-distribución. Con el presupuesto igualado y la entrega puntuada sobre el valor real,
-cuatro escenarios declarados (más un contraste diagnóstico) nivelan la cancha para
-ambas instituciones, reportados como la fracción con signo del benchmark voraz de
-información completa, paridad en cero (`npm run e4:scenarios`).
+distribución. **La participación de asignación neta se mantiene en su valor
+arquitectónico —universal (p = 1)—** porque en Core v0 los perfiles y delegados asignan
+en nombre de los pasivos, así que la participación es un *hecho*, no un turnout bajo de
+presupuesto participativo que anclar y usar contra la cobertura (una versión anterior lo
+ancló por error al turnout de PB, lo que hambreaba al brazo distribuido). Con el
+presupuesto de tasación igualado y la entrega puntuada sobre el valor real, cuatro
+escenarios declarados (más un contraste diagnóstico) mapean dónde queda cada
+institución, reportados como la fracción con signo del benchmark voraz de información
+completa, paridad en cero (`npm run e4:scenarios`).
 
 | escenario (supuestos) | m ± IC 95% | Core v0 | central | ganador |
 |---|---|---|---|---|
-| **Endpoint declarado plenamente favorable al central** — baja participación + central competente, consciente del daño y preciso (algunas perillas quedan fuera de las bandas esperables registradas) | **−29,5%** [−29,9, −29,1] | 68% | 98% | **central** |
-| **Paquete sin miopía** — probable + visión del daño + insesgado + preciso + sin crédito (NO es un aislamiento de la miopía) | **+6,1%** [5,8, 6,4] | 91% | 85% | ≈ paridad |
-| **Solo miopía al daño** (contraste diagnóstico, no un escenario) — probable, cambiando SOLO las dos coordenadas del gate de daño | **+30,4%** [29,9, 31,0] | 91% | 61% | Core v0 |
-| **Probable** — referencia motivada por fuentes | **+46,6%** [46,0, 47,4] | 91% | 45% | Core v0 |
-| **Caso favorable al distribuido** | **+199,8%** [197, 202] | 96% | −104% | Core v0 |
+| **Endpoint declarado plenamente favorable al central** — central competente, consciente del daño, preciso y sin crédito + poco daño (algunas perillas quedan fuera de las bandas esperables registradas) | **−1,4%** [−1,5, −1,3] | 96,3% | 97,7% | ≈ empate (central +1,4 pts) |
+| **Paquete sin miopía** — probable + visión del daño + insesgado + preciso + sin crédito (NO es un aislamiento de la miopía) | **+13,9%** [+13,6, +14,2] | 98,9% | 85,0% | Core v0 |
+| **Solo miopía al daño** (contraste diagnóstico, no un escenario) — probable, cambiando SOLO las dos coordenadas del gate de daño | **+38,4%** [+37,8, +39,0] | 98,9% | 60,5% | Core v0 |
+| **Probable** — referencia motivada por fuentes | **+54,6%** [+53,8, +55,4] | 98,9% | 44,3% | Core v0 |
+| **Caso favorable al distribuido** | **+205,7%** [+203,0, +208,7] | 98,9% | −106,8% | Core v0 |
 
-En el **endpoint declarado favorable al central** —baja participación y un central
-competente y consciente del daño— *gana el central*, entregando ≈ 98% del benchmark
-frente a ≈ 68% del brazo distribuido. Bajo la referencia **probable**, el brazo
-distribuido entrega ≈ 91% y el central ≈ 45%. En el caso **favorable al distribuido**,
-el central miope financia proyectos de daño neto y entrega valor *negativo*, mientras
-el brazo distribuido entrega ≈ 96%. Un contraste diagnóstico que apaga la miopía al
-daño *sola* (solo las dos coordenadas del gate de daño) explica cerca del 40% del
-movimiento secuencial desde la brecha probable; el paso siguiente hacia un **paquete
-sin-miopía** plenamente consciente del daño y competente devuelve los brazos a la
-casi-paridad —el mismo régimen que el Δ ≈ 0.025 del gate pre-registrado, que por
-construcción dotó al central de tasación consciente del daño. Los dos resultados son
-por tanto el mismo fenómeno bajo supuestos opuestos, no una contradicción: si el
-central ve el daño la ventaja colapsa a la casi-paridad del gate; si es realistamente
-miope, el brazo de cobertura se adelanta. Un benchmark estilizado normal-conjunto de
-umbral fijo (`research/e4-parity-theorem.md`) ubica la frontera de paridad en la
-igualdad de las razones señal-a-ruido de covarianza de los dos selectores, y un
-sendero ceteris-paribus desde el escenario probable hacia el favorable al central
-cruza la paridad en t ≈ 0.57 del segmento declarado. Estas magnitudes son **puntos de
-referencia y estrés declarados y motivados por fuentes, no bandas calibradas al
-dominio objetivo** (los intervalos cubren solo la variabilidad Monte-Carlo interna, y
-la fuerza de la miopía al daño es el supuesto de mayor peso y menos anclado
-empíricamente); el objeto honesto es dónde gana cada institución y cuánto depende la
-respuesta de ese supuesto, no un número único. Los cuatro límites vigentes son: (i) la
+En el **endpoint declarado plenamente favorable al central** —un central competente,
+consciente del daño, preciso y sin crédito, enfrentando poco daño— los brazos **a lo
+sumo empatan**: el central entrega ≈ 97,7% del benchmark frente a ≈ 96,3% del brazo
+distribuido (m ≈ −1,4%), y aun 20% adentro de ese endpoint el brazo de cobertura gana
+todos los sorteos, de modo que el conjunto donde gana el central se ha colapsado a una
+astilla de medida casi nula en el rincón idealizado exacto. Bajo la referencia
+**probable**, el brazo distribuido entrega ≈ 98,9% y el central ≈ 44,3%. En el caso
+**favorable al distribuido**, el central miope financia proyectos de daño neto y entrega
+valor *negativo* (≈ −106,8%), mientras el brazo distribuido entrega ≈ 98,9%. Un
+contraste diagnóstico que apaga la miopía al daño *sola* (solo las dos coordenadas del
+gate de daño) explica cerca del **40%** del movimiento secuencial desde la brecha
+probable (16,3 de un declive de 40,8 puntos); el paso siguiente hacia un **paquete
+sin-miopía** plenamente consciente del daño y competente explica el ≈ 60% restante y aun
+así deja al brazo de cobertura adelante (≈ +13,9%). Esto es **consistente en dirección
+con** la casi-paridad del gate pre-registrado (Δ ≈ 0.025): ese gate dotó al central de
+tasación consciente del daño pero bajo un régimen de *participación muestreada
+conservadora*; bajo la participación universal de Core v0 la ventaja de cobertura es
+mayor, y un central competente alcanza la paridad solo en el endpoint plenamente
+idealizado. Un benchmark estilizado normal-conjunto de umbral fijo
+(`research/e4-parity-theorem.md`) ubica la frontera de paridad en la igualdad de las
+razones señal-a-ruido de covarianza de los dos selectores; ninguna de las cinco
+rebanadas de un-solo-factor voltea al ganador desde el escenario probable sobre su
+rango, y el sendero ceteris-paribus combinado desde el probable hacia el endpoint del
+central plenamente idealizado cruza la paridad solo en **t ≈ 0.94 del segmento
+declarado** —la cancha *no* está nivelada: la cobertura gana en esencialmente todo el
+espacio, y el central alcanza a lo sumo un empate solo en el rincón idealizado extremo.
+Estas magnitudes son **puntos de referencia y estrés declarados y motivados por fuentes,
+no bandas calibradas al dominio objetivo** (los intervalos cubren solo la variabilidad
+Monte-Carlo interna, y la fuerza de la miopía al daño es el supuesto de mayor peso y
+menos anclado empíricamente); el objeto honesto es dónde queda cada institución y cuánto
+depende la respuesta de ese supuesto, no un número único. Los cuatro límites vigentes son: (i) la
 fuerza de la miopía al daño del central es la perilla de mayor peso y menos anclada
 empíricamente; (ii) los insumos del central cargan una brecha de transporte
 opinión-política→valor-de-proyecto no propagada; (iii) los intervalos cubren solo la

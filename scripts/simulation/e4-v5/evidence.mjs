@@ -95,8 +95,10 @@ export function buildEvidence() {
   const centralRegion = centralRegionProbe(EVIDENCE.sweep_nw, 40, 0.2);   // 20%-inward neighbourhood of PRO_CENTRAL
 
   const st = classify({ point: pt, dfEnv: env, ralphaHeadline: pt.ci, pi_deg: pt.pi_deg, enough: pt.enough });
-  // the product-box sampler is Core-v0-heavy, but a coordinated central-favourable region exists (targeted probe) —
-  // so the GLOBAL sign is region-dependent (indeterminate), not the box sampler's one-sided result.
+  // the product-box sampler is Core-v0-heavy; the targeted probe checks whether a coordinated central-favourable
+  // region survives near the endpoint. If it does, the GLOBAL sign is region-dependent (indeterminate); if the probe
+  // finds NO central win even 20% inward, the central-winning set has collapsed to a measure-near-zero sliver at the
+  // exact idealized endpoint and the global sign stays one-sided (pos).
   if (centralRegion.cenFrac > 0 && env.distShare > 0) st.sign_status = 'indeterminate';
   const out = {
     contract_version: CONTRACT_VERSION, theta_id: THETA_ID, pi_deg: pt.pi_deg,
@@ -114,6 +116,11 @@ function main() {
   const P = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
   const sh = (x) => (100 * x).toFixed(0) + '%';
   const ruleOf3 = env.centShare === 0 ? (3 / env.resolved) : NaN;   // one-sided 95% upper bound when 0 observed
+  const regionExists = centralRegion.cen > 0;
+  const regionLine = regionExists
+    ? '    ⇒ a central-winning region EXISTS off the independent-box sample; the GLOBAL winner is region-dependent, not one-sided'
+    : '    ⇒ NO central-winning draw even 20% inward of the endpoint; the central reaches at most a bare tie at the exact fully-idealized PRO-CENTRAL endpoint — the central-winning set has collapsed to a measure-near-zero sliver';
+  const regionTag = regionExists ? ' (region-dependent)' : '';
   const text = [
     `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
     `  PROBABLE scenario (source-motivated declared reference) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
@@ -122,8 +129,8 @@ function main() {
     `    Core v0 wins ${env.resolved - Math.round(env.centShare * env.resolved) - Math.round(env.parShare * env.resolved)}/${env.resolved} draws · central ${Math.round(env.centShare * env.resolved)} · parity ${Math.round(env.parShare * env.resolved)}` +
       (Number.isFinite(ruleOf3) ? `   (0 central: one-sided 95% upper bound on central-win prob ≈ ${sh(ruleOf3)}, rule of three — NOT zero)` : ''),
     `  targeted probe of the coordinated central-favourable region (20% inward of PRO-CENTRAL): central wins ${centralRegion.cen}/${centralRegion.ok} draws`,
-    `    ⇒ a real central-winning region EXISTS off the independent-box sample; the GLOBAL winner is region-dependent, not one-sided`,
-    `  status → sign:${out.sign_status} (region-dependent)  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
+    regionLine,
+    `  status → sign:${out.sign_status}${regionTag}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
     `  π_deg: ${sh(out.pi_deg)}   contract hash: ${MANIFEST.contract_hash}`,
     `  (named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)`,
   ].join('\n');

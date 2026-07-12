@@ -1,7 +1,9 @@
 // E4 v1.14 — FOUR declared scenarios + ONE diagnostic contrast (research/e4-plausible-anchors.md; values in
 // scenario-configs.mjs). Each is a full config; we report m ± 95% CI. PRO-CENTRAL = declared central-favourable
-// endpoint (central wins). NO-MYOPIA (bundle) = continuity anchor to the ~0.025 gate. MYOPIA-OFF = diagnostic
-// harm-only contrast. PROBABLE = source-motivated reference. PRO-DISTRIBUTED = distributed-favourable.
+// endpoint (at Core-v0-faithful universal participation, this fully-idealized endpoint is at most a bare tie, not a
+// win). NO-MYOPIA (bundle) = a competent harm-aware central. MYOPIA-OFF = diagnostic harm-only contrast.
+// PROBABLE = source-motivated reference. PRO-DISTRIBUTED = distributed-favourable. All prose below is COMPUTED
+// from the runs (never hardcoded), so it can never drift from the numbers.
 import { baseConfig } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 import { estimand } from './engine.mjs';
@@ -16,12 +18,16 @@ function run(name, over) {
 }
 
 safeLog('E4 — anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0)\n');
-run('PRO-CENTRAL', PRO_CENTRAL);      // declared central-favourable endpoint — central WINS
-run('PROBABLE', PROBABLE);           // source-motivated declared reference
-run('MYOPIA-OFF', MYOPIA_OFF);       // GENUINE myopia-only contrast (only s_exp,b_H_C change) — attributes the harm channel ALONE
-run('NO-MYOPIA', NO_MYOPIA);         // harm-aware AND competent bundle — continuity anchor to the ~0.025 gate
+const rc = run('PRO-CENTRAL', PRO_CENTRAL);      // declared central-favourable endpoint — at faithful participation, ~parity
+const rp = run('PROBABLE', PROBABLE);            // source-motivated declared reference
+const ro = run('MYOPIA-OFF', MYOPIA_OFF);        // GENUINE myopia-only contrast (only s_exp,b_H_C change) — harm channel ALONE
+const rn = run('NO-MYOPIA', NO_MYOPIA);          // harm-aware AND competent central bundle
 run('PRO-DISTRIBUTED', PRO_DIST);
-safeLog('\nPRO-CENTRAL = a declared central-favourable endpoint (every knob central-favourable) → the central wins.');
+const pts = (x) => (100 * x).toFixed(1);
+const mp = rp.m_hat, mo = ro.m_hat, mn = rn.m_hat;
+const declineTot = mp - mn, myopiaAlone = mp - mo, further = mo - mn;
+const outcome = (m) => (m < -0.02 ? 'the central wins' : m > 0.02 ? 'Core v0 wins' : 'the arms roughly tie');
+safeLog(`\nPRO-CENTRAL = a declared central-favourable endpoint (every knob central-favourable): ${outcome(rc.m_hat)} (m = ${pct(rc.m_hat)}). Under Core-v0-faithful universal participation this fully-idealized endpoint is at most a bare tie, not a win.`);
 safeLog('Sequential attribution (path-dependent, nonlinear model): harm-myopia ALONE (MYOPIA-OFF, only s_exp,b_H_C)');
-safeLog('reduces the probable gap +46.6% → +30.4%, i.e. 16.2 of the 40.5-pt decline to +6.1% (~40%); the further step to');
-safeLog('the NO-MYOPIA bundle (unbiased/precise/no-credit) reduces it 24.3 pts (~60%). Read C/O < 0 as the central destroying value.');
+safeLog(`reduces the probable gap ${pct(mp)} → ${pct(mo)}, i.e. ${pts(myopiaAlone)} of the ${pts(declineTot)}-pt decline to ${pct(mn)} (~${Math.round(100 * myopiaAlone / declineTot)}%); the further step to`);
+safeLog(`the NO-MYOPIA bundle (unbiased/precise/no-credit) reduces it ${pts(further)} pts (~${Math.round(100 * further / declineTot)}%). Read C/O < 0 as the central destroying value.`);

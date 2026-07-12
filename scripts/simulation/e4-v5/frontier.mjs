@@ -15,7 +15,8 @@ const pct = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(0) + '%';
 const AXES = [
   { k: 's_exp',  lo: 0.2, hi: 8,   plaus: PROBABLE.s_exp,  note: 'central harm myopia (higher = blinder on the long tail)' },
   { k: 'b_H_C',  lo: 0.0, hi: 2.0, plaus: PROBABLE.b_H_C,  note: 'central harm detection (higher = less myopic)' },
-  { k: 'p',      lo: 0.02, hi: 0.6, plaus: PROBABLE.p,     note: 'citizen participation (higher = denser distributed signal)' },
+  // NOTE: participation p is NOT a frontier axis — in Core v0 net-allocation participation is universal by
+  // architecture (a facto, p=1), not a ceteris-paribus knob. Sweeping it would model a turnout Core v0 does not have.
   { k: 'beta',   lo: 0.0, hi: 0.95, plaus: PROBABLE.beta,  note: 'silencing of opponents (higher = weaker distributed harm-voice)' },
   { k: 'a_V',    lo: 0.2, hi: 3.0, plaus: PROBABLE.a_V,    note: 'visibility tail (higher a_V = flatter tail, more projects visible)' },
 ];
@@ -68,7 +69,7 @@ safeLog(tf === null
   ? `    frontier: none in t∈[0,2] — one endpoint does not cross parity`
   : `    frontier (m=0) at t ≈ ${tf.toFixed(2)}  →  conditions ${tf < 1 ? `~${Math.round(tf * 100)}% of the way from probable to the declared central-favourable endpoint flip the winner to the central (within the declared interpolation segment)` : `must exceed the declared central-favourable endpoint (t>1)`}`);
 safeLog('');
-safeLog('Read: none of the FIVE plotted one-factor slices flips the winner from the probable scenario over its plotted');
-safeLog('range (a limited robustness statement over those five slices, NOT over all parameters). The frontier is reached');
+safeLog('Read: none of the FOUR plotted one-factor slices flips the winner from the probable scenario over its plotted');
+safeLog('range (a limited robustness statement over those four slices, NOT over all parameters). The frontier is reached');
 safeLog('on the combined path within the declared interpolation segment. NOTE: t is a linear mix of heterogeneous knobs,');
 safeLog('an illustrative path — not a calibrated competence scale.');
