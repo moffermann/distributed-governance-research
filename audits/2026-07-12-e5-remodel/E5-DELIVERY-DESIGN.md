@@ -170,7 +170,10 @@ not executor share; severe sweep row = declared stress ~69% loss, not the Uganda
 the guarantee→`gamma` mapping, the `p_det/a/r` decomposition, `mon_detect`/recovery mappings, `val_risk`, `U(0,1)`
 temptation, `c ⟂ S`, uniform-independent LHS weighting.
 
-**Status: E5 is PUBLICATION-READY.**
+**Status (post friendly rounds): CODE/TEST-READY.** (Downgraded from "publication-ready" per Adversarial R1: the
+empirical interpretation is still pending model-form + calibration review — the calibration is an identified-set
+reference not a field estimate, the intervals are conditional-MC only, and the robustness sweep is conditional on
+PROBABLE. The mechanism and the PROBABLE arithmetic are sound; the empirical claim is not yet fully identified.)
 
 ## Next
 

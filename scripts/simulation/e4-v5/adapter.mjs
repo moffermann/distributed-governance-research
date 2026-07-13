@@ -19,6 +19,7 @@ const MULT_SUFFIX = /\d\s*x/i;                 // a number followed by x (after 
 const NUM_FOLD    = new RegExp(`(\\d(\\.\\d+)?|\\b(${NUMWORD}))[\\s-]*(fold|times)\\b`, 'i');   // "2.2-fold","two times","fourfold"
 const WORD_MULT   = /\b(twice|thrice|double|triple|quadruple)\b/i;   // bare word multipliers
 const RATIO_TOKEN = /\b[dc]\s*\/\s*[cd]\b/i;   // D/C or C/D, any case
+const RATIO_PHRASE = /\b(value|performance|institution\w*)\s+ratio\b|\bratio\s*\(?~?\s*\d/i;  // "value ratio (~2.7)" semantic multiplier (Adversarial R1 #4/#5)
 
 // NOTE: this rejects the TESTED token classes (ASCII/Unicode/confusable/HTML-entity 'x' after a number;
 // numeric or number-word N-fold / N-times; bare twice/double/triple/quadruple; D/C or C/D any case; zero-width
@@ -30,6 +31,7 @@ export function assertNoEmbargoedTokens(text) {
   if (NUM_FOLD.test(norm)) hits.push('N-fold / N-times multiplier phrasing (numeric or word)');
   if (WORD_MULT.test(norm)) hits.push('word multiplier (twice/thrice/double/triple/quadruple)');
   if (RATIO_TOKEN.test(norm)) hits.push('institution ratio (D/C or C/D, any case)');
+  if (RATIO_PHRASE.test(norm)) hits.push('semantic performance-ratio phrasing (value/performance ratio, ratio(~N))');
   for (const tok of EMBARGO_TOKENS) if (text.includes(tok)) hits.push(`token '${tok}'`);
   if (hits.length) throw new Error(`[embargo] rendered text contains forbidden performance notation: ${hits.join(', ')}`);
   return true;

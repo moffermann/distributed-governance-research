@@ -102,7 +102,8 @@ effect size depends on how strongly categories are stratified on the dimension t
 tested + anchored in E9's friendly Codex round (do not gerrymander it up).
 
 **Tests (11/11):** nCat=1 reduces to E5 (status-quo cell == E5 S, Core-v0 cell == E5 A2, planning effect ~0); planning
-effect positive; hard exclusion widens it; Core v0 > status quo; no cell exceeds the oracle; all three layer effects
+effect positive; hard exclusion widens it; Core v0 > status quo; cells are in a sane range (the oracle is a greedy
+REFERENCE, NOT an upper bound — cells MAY exceed it, so this is a regression check, not an invariant); all three layer effects
 positive; selection dominant; fail-closed delivery validation reused.
 
 **Open for the friendly round:** is the visibility-stratified category construction the right/most-defensible one, or
