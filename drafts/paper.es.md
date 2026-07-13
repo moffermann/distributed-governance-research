@@ -1608,19 +1608,19 @@ voraz de información completa, paridad en cero (`npm run e4:scenarios`):
 
 | escenario (supuestos) | m ± IC 95% | Core v0 | central | ganador |
 |---|---|---|---|---|
-| **Probable — el caso empíricamente anclado** (central miope al daño difuso, proyectando, credit-tilted; distribuido en su composición de cobertura anclada) | **+54,0%** [+53,2, +54,9] | 98,2% | 44,1% | **Core v0 (decisivo)** |
-| **Solo miopía al daño** (contraste diagnóstico: probable, cambiando SOLO las dos coordenadas del gate de daño) | **+37,5%** [+36,8, +38,1] | 98,2% | 60,7% | Core v0 |
-| **Paquete sin miopía** — probable, pero al central se le otorga visión del daño + insesgamiento + precisión + sin crédito | **+13,4%** [+13,1, +13,7] | 98,5% | 85,1% | Core v0 |
-| **Caso favorable al distribuido** | **+201,3%** [+198,9, +204,2] | 95,7% | −105,7% | Core v0 |
-| **Endpoint declarado favorable al central** (un lector residualmente imperfecto en un mundo casi sin daño) | **−2,4%** [−2,5, −2,2] | 95,4% | 97,7% | central (inmaterial) |
+| **Probable — el escenario de referencia declarado** (central miope al daño difuso, proyectando, credit-tilted; distribuido en su composición de cobertura anclada) | **+54,0%** [+53,2, +54,8] | 98,2% | 44,2% | **Core v0 (decisivo)** |
+| **Solo miopía al daño** (contraste diagnóstico: probable, cambiando SOLO las dos coordenadas del gate de daño) | **+37,6%** [+37,0, +38,2] | 98,2% | 60,6% | Core v0 |
+| **Paquete sin miopía** — probable, pero al central se le otorga visión del daño + insesgamiento + precisión + sin crédito | **+13,8%** [+13,5, +14,1] | 98,6% | 84,8% | Core v0 |
+| **Caso favorable al distribuido** | **+205,2%** [+202,9, +208,1] | 95,6% | −109,6% | Core v0 |
+| **Endpoint declarado favorable al central** (un lector residualmente imperfecto en un mundo casi sin daño) | **−2,3%** [−2,5, −2,2] | 95,3% | 97,6% | central (inmaterial) |
 
-**El resultado anclado es decisivo y robusto.** Bajo el caso **probable**
-(empíricamente anclado) el brazo distribuido entrega ≈ 98,2% del benchmark y el central
-≈ 44,1% —una brecha de +54 puntos— y la cobertura gana en esencialmente todo el espacio
+**El resultado anclado es decisivo y robusto.** Bajo el escenario de **referencia
+declarado** el brazo distribuido entrega ≈ 98,2% del benchmark y el central
+≈ 44,2% —una brecha de +54 puntos— y la cobertura gana en esencialmente todo el espacio
 de parámetros anclado. Apagar la miopía al daño *sola* (las dos coordenadas del gate)
-recupera cerca del **40%** de la brecha (16,5 de un declive de 40,6 puntos); otorgar al
+recupera cerca del **41%** de la brecha (16,4 de un declive de 40,2 puntos); otorgar al
 central el paquete *completo* competente-y-consciente-del-daño recupera el resto y aun
-así deja a la cobertura adelante (**≈ +13,4%**) —de modo que hasta un central idealizado
+así deja a la cobertura adelante (**≈ +13,8%**) —de modo que hasta un central idealizado
 en todo *salvo* la visión del daño que la literatura le niega igual pierde. El central
 se pone apenas adelante solo **abandonando los supuestos declarados**: un lector corregido
 (sin miopía — contra Hayek/Scott/Olson/Bandiera; sin proyección — contra Broockman y
@@ -1628,7 +1628,7 @@ Skovron 2018) en un mundo casi sin daño alcanza apenas ≈ −3%, un rincón ma
 anti-empírico. Ese rincón se reporta **simétricamente** con el rincón *igualmente
 idealizado* del brazo distribuido —construido para reflejar la misma receta: señal
 distribuida perfecta en un mundo con daño con el central en su miopía *anclada*—, que
-alcanza **≈ +118%** (el escenario más amplio `PRO-DIST` de la tabla, +201%, es aún más
+alcanza **≈ +118%** (el escenario más amplio `PRO-DIST` de la tabla, +205%, es aún más
 favorable porque *además* degrada al central por debajo de su nivel anclado). La
 idealización es salvajemente asimétrica, y ninguno de los dos rincones está empíricamente
 fundado. La única sensibilidad que reduce materialmente la

@@ -1523,19 +1523,19 @@ stands, as the signed fraction of the full-information greedy benchmark, parity 
 
 | scenario (assumptions) | m ± 95% CI | Core v0 | central | winner |
 |---|---|---|---|---|
-| **Probable — the empirically-anchored case** (central myopic to diffuse harm, projecting, credit-tilted; distributed on its anchored coverage composition) | **+54.0%** [+53.2, +54.9] | 98.2% | 44.1% | **Core v0 (decisive)** |
-| **Harm-myopia only** (diagnostic contrast: probable, changing ONLY the two harm-gate coordinates) | **+37.5%** [+36.8, +38.1] | 98.2% | 60.7% | Core v0 |
-| **No-myopia bundle** — probable, but the central is granted harm-sight + unbiasedness + precision + no credit | **+13.4%** [+13.1, +13.7] | 98.5% | 85.1% | Core v0 |
-| **Distributed's favourable case** | **+201.3%** [+198.9, +204.2] | 95.7% | −105.7% | Core v0 |
-| **Central's declared favourable endpoint** (a residually-imperfect reader on a near-harmless world) | **−2.4%** [−2.5, −2.2] | 95.4% | 97.7% | central (immaterial) |
+| **Probable — the declared reference scenario** (central myopic to diffuse harm, projecting, credit-tilted; distributed on its anchored coverage composition) | **+54.0%** [+53.2, +54.8] | 98.2% | 44.2% | **Core v0 (decisive)** |
+| **Harm-myopia only** (diagnostic contrast: probable, changing ONLY the two harm-gate coordinates) | **+37.6%** [+37.0, +38.2] | 98.2% | 60.6% | Core v0 |
+| **No-myopia bundle** — probable, but the central is granted harm-sight + unbiasedness + precision + no credit | **+13.8%** [+13.5, +14.1] | 98.6% | 84.8% | Core v0 |
+| **Distributed's favourable case** | **+205.2%** [+202.9, +208.1] | 95.6% | −109.6% | Core v0 |
+| **Central's declared favourable endpoint** (a residually-imperfect reader on a near-harmless world) | **−2.3%** [−2.5, −2.2] | 95.3% | 97.6% | central (immaterial) |
 
-**The anchored result is decisive and robust.** Under the **probable** (empirically-
-anchored) case the distributed arm delivers ≈ 98.2% of the benchmark and the central
-≈ 44.1% — a +54-point gap — and coverage wins across essentially the whole anchored
+**The anchored result is decisive and robust.** Under the **declared reference
+scenario** the distributed arm delivers ≈ 98.2% of the benchmark and the central
+≈ 44.2% — a +54-point gap — and coverage wins across essentially the whole anchored
 parameter space. Turning off harm-myopia *alone* (the two harm-gate coordinates)
-recovers about **40%** of the gap (16.5 of a 40.6-point decline); granting the central
+recovers about **41%** of the gap (16.4 of a 40.2-point decline); granting the central
 the *full* competent-but-harm-aware bundle recovers the rest yet still leaves coverage
-ahead (**≈ +13.4%**) — so even a central idealized in every way *except* the harm-sight
+ahead (**≈ +13.8%**) — so even a central idealized in every way *except* the harm-sight
 the literature denies it still loses. The central pulls narrowly ahead only by
 **abandoning the declared premises**: a corrected reader (no myopia — against
 Hayek/Scott/Olson/Bandiera; no projection — against Broockman and Skovron 2018) on a
@@ -1543,7 +1543,7 @@ near-harmless world reaches only ≈ −3%, a marginal, anti-empirical corner. T
 is reported **symmetrically** with the distributed arm's *equally-idealized* corner —
 built to mirror the same recipe: perfect distributed signal on a harm-rich world with
 the central kept at its *anchored* myopia — which reaches **≈ +118%** (the broader
-`PRO-DIST` scenario in the table, +201%, is more favourable still because it *also*
+`PRO-DIST` scenario in the table, +205%, is more favourable still because it *also*
 degrades the central below its anchored level). Idealization is wildly asymmetric, and
 neither corner is empirically grounded. The one
 sensitivity that materially shrinks the anchored gap is **correlated / common-mode
