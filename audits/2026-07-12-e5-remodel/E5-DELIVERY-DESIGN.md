@@ -53,16 +53,22 @@ condition statically, which is exactly the corpus finding that **deterrence pre-
 `pi_hon = 0.70`, `loss_hon = 0.05`. These live in the module's `DELIVERY` object (module-local, **not** E4 `THETA`), so
 the frozen E4 contract/hash is untouched.
 
-## Result (PROBABLE world, 1200 worlds; anchored calibration pi_hon=0.76)
+## Result (PROBABLE world, 1200 worlds; post-Codex calibration pi_hon=0.78, separate RNG streams)
 
-- Selection efficiency (perfect delivery) = **the E4 numbers**: central +44.2%, distributed +98.2%.
-- Delivery efficiency: opaque +73.4% (leak ~26%, Olken/IMF band), verified +95.0%.
-- Four cells (fraction of oracle reference): S +32.5% · A1 +42.0% · A3 +72.0% · A2 +93.3%.
-- Main effects (pp of oracle): **delivery** +9.6% (at central) / +21.3% (at distributed); **selection** +39.5% (at
-  opaque) / +51.2% (at verified). **Interaction +11.7%** (positive). Full architecture (A2 − S) **+60.8%**.
-- Monitoring coupling (anchored 0.0–0.20, headline 0.15): opaque dividend +4.0 pp (A3 +72.0% → +76.0%), ~0 in the
-  saturated verified regime; sweep monotone 0 → +5.1 pp.
-- **Composition: multiplicative.** Actual A2 +93.3% equals the multiplicative prediction σ_D·δ_verified +93.3%
+- Selection efficiency (perfect delivery) = **the E4 numbers**: central +44.1%, distributed +98.2% (**exact** now —
+  worlds share the E4 estimand's PRNG stream, executors use a separate one).
+- Delivery efficiency: opaque +77.5% (leak 22.5%, Olken value-loss moment), verified +95.0%. Diversion incidence:
+  opaque 21.7%, verified 0.0% (ex-ante deterrence).
+- Four cells (fraction of oracle reference): S +34.2% · A1 +41.9% · A3 +76.1% · A2 +93.3%.
+- Main effects (pp of oracle): **delivery** +7.7% (at central) / +17.2% (at distributed); **selection** +41.9% (at
+  opaque) / +51.4% (at verified). **Interaction +9.4%** (positive). **Full architecture (A2 − S) +59.1% [95% CI
+  +58.5, +59.7].**
+- **Monitoring coupling (SPLIT, post-Codex):** community coverage lifts DETECTION only (mon_detect 0.05, band 0.0–0.10)
+  → opaque dividend just **+0.2–0.5 pp** — community eyeballs without institutional recovery barely help a weak-control
+  regime. With institutional recovery linkage (mon_recovery 0.20) the dividend is **+3.9 pp**. Honest finding: the
+  delivery gain needs the **formal recovery channel** (the verified regime / Core v0's evidence layer), not monitoring
+  alone. This replaced the earlier single `mon_coupling=0.35` (recovery was doing most of the work, unanchored).
+- **Composition: multiplicative (an accounting identity).** Actual A2 +93.3% equals σ_D·δ_verified +93.3%
   exactly; the additive prediction (+78.6%) is short by the interaction. The two layers **multiply**; the positive
   interaction is the level-effect signature of that composition.
 
@@ -140,10 +146,23 @@ sweep it; keep opaque central near Olken's ~24% divert; keep verified ~0 diversi
 milestone magnitude and reputational stake as declared. Do NOT map the 33% mortality or 87% capture figures onto the
 monitoring lift.
 
+## Friendly Codex round — applied vs deferred (full verdict: `CODEX-E5-FRIENDLY-VERDICT.md`)
+
+**Applied (commit 6c0a12c):** split coupling into detection/recovery with community-only recovery = 0; added the
+`gamma` guarantee term to the Model-1 incentive condition (verified 0.10, World Bank standard); separate world/executor
+PRNG streams (E5 reduces to E4 exactly); reframed opaque as the Olken value-loss moment (pi_hon 0.78); report diversion
+incidence + value leakage + a bootstrap CI on the full gain; named the multiplicativity an accounting identity; labelled
+verified ~0 diversion as conditional ex-ante deterrence and the whole calibration an identified-set reference.
+
+**Deferred (robustness — for the next friendly pass / the adversarial round):** joint/global sensitivity (Sobol /
+Latin-hypercube) instead of the 1-D opaque sweep; 20-seed replication of the headline; value-/complexity-correlated
+delivery risk and alternative (Beta) cost distributions near the verified threshold; explicit delivery-parameter
+validation + analytical boundary tests; separate reporting of protected-vs-recovered funds.
+
 ## Next
 
-- Friendly Codex/agent round: correct/improve the model and supply the calibration anchors above; then E5 → perfect /
-  publication-ready.
+- Second friendly pass (deferred robustness items above) → then E5 perfect / publication-ready → integrate into the
+  paper's Finding 5.
 - E9 (full-stack: planning + selection + delivery, central vs Core v0) and E10 (+costs) per
   `docs/EXPERIMENT-INVENTORY.md`.
 - Re-label `e5-layers.mjs` as the E10 cost scaffolding; wire E5 delivery into the paper's Finding 5 with the
