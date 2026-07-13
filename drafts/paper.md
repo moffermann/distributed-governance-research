@@ -10,9 +10,9 @@ Public spending routinely asks one hierarchy to choose projects, execute them, a
 
 We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
 
-Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; the pre-registered gate remains the separate confirmatory result (a NO-GO under a different data-generating process), and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
+Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; the pre-registered gate remains the separate confirmatory result (a NO-GO under a different data-generating process), and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its magnitude is deferred. Symmetric net-budget accounting makes administrative cost roughly neutral: the modeled advantage lies in selection and delivery, not overhead. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
 
-This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulation's units are uncalibrated and partial-equilibrium and do not identify delivery effects; and claims are scoped to infrastructure-like public investment. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
+This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulations provide conditional model contrasts for selection, delivery, and administrative cost, but their units are uncalibrated and partial-equilibrium and do not identify target-domain treatment effects; and claims are scoped to infrastructure-like public investment. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
 
 ## 1. Introduction
 
@@ -117,10 +117,14 @@ both directions (Demsetz 1969; Section 2). Our contributions are:
    construction of it, and carry the comparison end to end: from allocation to
    delivered social value per unit of budget — one relevant criterion for this
    bounded slice of public spending (alongside distributional and rights
-   constraints the model does not represent). In the model, verified delivery and social prioritization
-   interact rather than merely add; the earlier agent-based apparatus produced a
-   compound value-per-budget ratio against a status-quo baseline parameterized from
-   published audit-institution findings (only near-parity at municipal pilot scale). We
+   constraints the model does not represent). In the model, selection and
+   verified delivery compose multiplicatively (an accounting identity, not an
+   independent finding); a matched selection-and-delivery extension gains
+   ≈ +58.6 points of a greedy reference in the declared world; a conditional
+   three-layer attribution keeps the full Core v0 diagonal positive in every
+   named world while planning's magnitude is left unquantified; and symmetric
+   net-budget accounting leaves administrative cost roughly neutral. The earlier
+   agent-based apparatus produced a single compound value-per-budget ratio; we
    **retire that compound as a calibrated effect**: a pre-registered, symmetric,
    selection-only stress test shrinks the distributed-minus-central selection
    advantage to a pre-registered pooled median Δ = 0.025 of a full-information
@@ -524,7 +528,7 @@ assumptions of Propositions 1–4— in an agent-based simulation. Each experime
 | E5 | delivered value: selection × delivery, at matched budget | Finding 5 |
 | E6 | reputational competition and execution standard | Finding 6 |
 | E7 | comparison against an audit-parameterized baseline | Finding 7 |
-| E8 | robustness under endogenous behavioral participation | close of §6 |
+| E8 | robustness under endogenous behavioral participation | Finding 8 |
 | E9 | the full stack: planning × selection × delivery (Shapley attribution) | Finding 9 |
 | E10 | the administrative-cost layer (net-budget, symmetric) | Finding 10 |
 
@@ -542,17 +546,14 @@ seeded runs per condition; the code is dependency-free and deterministic
 (`scripts/simulation/allocation-sim.mjs`; full tables in
 [simulation-results](../research/simulation-results.md)).
 
-**Status of the earlier compound ratios (retired).** An earlier version reported a
-single compound value-per-budget ratio against three baselines (a zero control, E5; an
-audit-parameterized status quo, E7; behavioral adoption, E8). That single number
-**conflated three distinct channels** — selection quality, administrative-machinery
-cost, and leakage/diversion — and is **retired as a calibrated effect**. E5 is now
-formalized as a transparent multi-layer stack: selection quality at *matched* project
-budget (the E4 result above), with administrative cost and leakage as **separate,
-declared, parametric channels** — default off, so the central is granted zero cost and
-zero leakage, and E5 then reduces exactly to the selection result — each reported
-without conflation and, in the cost-and-corruption extension, anchored to real
-public-budget and procurement-corruption data (`scripts/simulation/e4-v5/e5-layers.mjs`).
+**Status of the earlier compound ratios (retired).** The earlier single value-per-budget
+ratio conflated selection quality, delivery leakage, and administrative cost and is
+**retired as a calibrated effect**. The rebuilt program separates the channels: E4
+measures selection; E5 crosses selection with delivery at matched budget; E9 supplies a
+conditional three-layer attribution while leaving planning magnitude unquantified; and
+E10 applies each arm's administrative cost symmetrically as a net-budget reduction before
+selection. Results are percentages or reference-point differences, with parity at zero;
+no institution-performance multiplier is retained.
 
 **Quantitative status (governing).** A pre-registered, symmetric, selection-only
 stress test — both arms with matched expected appraisal-report budgets, the same
@@ -933,8 +934,9 @@ distributed; the selection layer adds ≈ 42 points under opaque delivery and
 multiplicatively** — an accounting identity (delivered value = selected
 value × delivered fraction, applied per project), of which the positive
 interaction is the level-effect signature, not an independent discovery.
-The full architecture beats the status quo by ≈ +58.6 points of the
-reference (95% conditional Monte-Carlo interval [+58.0, +59.2], reflecting
+The full **selection-and-delivery** architecture beats the status quo by
+≈ +58.6 points of the reference (95% conditional Monte-Carlo interval
+[+58.0, +59.2], reflecting
 inner simulation variability only — world, model-form, and calibration
 uncertainty are not included). An earlier version summarized this as a
 single compound value-per-budget multiplier; that compound is **retired**,
@@ -952,11 +954,11 @@ regime's diversion is **low but nonzero** (≈ 2% incidence, ≈ 7% without the
 reputational stake): a grand-corruption temptation tail keeps a residual
 that strong control does not eliminate, matching Olken's finding that audits
 cut leakage without erasing it (2007; Avis, Ferraz, and Finan 2018; Becker
-1968) — ex-ante deterrence, not an empirical zero. The result is robust to
-value/complexity-correlated delivery risk (the distributed arm funds
-higher-*value*, not higher-*cost*, projects) and stable across seeds; a
-joint delivery-parameter sweep, conditional on the declared world, keeps
-coverage ahead across the sampled space. Delivered value here is measured
+1968) — ex-ante deterrence, not an empirical zero. Within the PROBABLE world, the
+result is stable across seeds and under **cost/size-correlated** delivery
+risk (project cost independent of modeled value), and a joint
+delivery-parameter sweep, conditional on the declared world, keeps coverage
+ahead across the sampled space. Delivered value here is measured
 at *equal budget*; the administrative *cost* of running each institution is
 a separate layer (Finding 10).
 
@@ -1036,7 +1038,8 @@ crosses below a competent full-coverage municipal planner only at
 roughly a thirty percent coordinated share — it degrades, never
 collapses, and remains superior everywhere below ten percent.
 
-A pre-registered eighth experiment (E8,
+**Finding 8: the architecture ranking survives endogenous behavioral
+participation.** A pre-registered eighth experiment (E8,
 `research/e8-behavioral-participation-design.md`) then replaced the
 participation side of these arms — the default share and informed share
 the architecture arms had imposed — with adoption trajectories generated
@@ -1044,13 +1047,13 @@ by a companion behavioral study: a Core v0-conformant agent-based model
 of awareness, registration, participation modes, and trusted
 microdelegation, calibrated with LLM-elicited synthetic priors
 (replication package: the distributed-governance-experiments
-repository). The earlier apparatus produced a compound at scale under its
-synthetic adoption assumptions that varied across three populations and all
-scales, including a launch trajectory that begins near zero
-participation — which costs 1.7% of the ratio, because the default layer
-anchors the thin early cycles by construction. The behavioral study also
-independently reproduces the informed-share assumption these experiments
-had imposed: 0.309 emergent against the 0.30 assumed.
+repository). The architecture ranking is invariant across the three
+synthetic populations and all scales, including a launch trajectory that
+begins near zero participation — where the default layer anchors the thin
+early cycles by construction (the retired compound magnitude itself is not
+carried forward). The behavioral study also independently reproduces the
+informed-share assumption these experiments had imposed: 0.309 emergent
+against the 0.30 assumed.
 
 **Finding 9: the full stack — planning, selection, and delivery — and an
 honest accounting of what each layer contributes.** A ninth experiment
@@ -1064,13 +1067,12 @@ govern the reading. First, the attribution is *conditional*: every layer
 value is computed through the declared planning sector generator, so the
 standalone, quantified **selection** and **delivery** figures are the E5
 ones (no planning layer); E9 contributes the three-layer *structure* and
-the attribution *method*. Second, the layer contributions are *large in the
-declared world, not uniformly robust*: the full Core v0 advantage stays
-positive in every named world (a modest central-favourable world through a
-strongly distributed-favourable one), but the individual selection and
-delivery contributions reverse sign in the extreme corners (selection where
-central selection is near-random, delivery where a harmful portfolio is
-delivered more faithfully) — a fact the paper reports rather than hides.
+the attribution *method*. Second, **selection and delivery are large in
+PROBABLE but not robust across the named worlds**: selection turns negative in
+PRO_CENTRAL, and delivery turns negative in PRO_DIST because stronger delivery
+magnifies a harmful portfolio. Despite those component reversals, the full
+Core v0 diagonal remains positive in all four named worlds — a fact the paper
+reports rather than hides.
 The **planning** layer's value operates chiefly through **agenda capture**
 — the central keeping whole high-need, low-visibility functions off the
 menu (the second face of power; Bachrach and Baratz 1962; Schattschneider
@@ -1080,30 +1082,33 @@ taxonomy; the pre-election shift toward visible spending, Drazen and Eslava
 but its *magnitude* cannot be identified without country-specific budget
 data. We therefore **do not report a planning-layer figure**: quantifying
 it with the mechanism switched off would understate it, and switched on it
-is not yet anchorable. A country-grounded illustration — Chile's
-mental-health budget held near 2% against an OECD average of 6.7%, despite
-mental disorders being the country's leading cause of disability — shows the
-visibility bias has a real footprint, and is offered qualitatively, not as
-a calibration.
+is not yet anchorable. Chile provides a qualitative illustration only:
+mental-health spending remained near 2% of health spending over 2007–2015
+(and about 4.5% of the health ministry's budget by 2025), despite mental
+disorders being the country's leading cause of disability. That pattern is
+consistent with low-salience under-provision, but it neither identifies
+agenda capture nor calibrates its magnitude; mental health is a funded
+subfunction, not an excluded top-level COFOG function.
 
 **Finding 10: administrative cost is roughly neutral once accounted
 symmetrically — the advantage is delivered value, not overhead.** A tenth
-layer (`scripts/simulation/e4-v5/e10-costs.mjs`) adds the administrative and
-machinery cost each institution runs and Core v0 largely replaces — the
+experiment (`scripts/simulation/e4-v5/e10-costs.mjs`) adds the administrative
+and machinery cost each institution runs and Core v0 largely replaces — the
 value-proxy studies, allocation and prioritization apparatus, and licensing
 the central carries, against Core v0's own platform and control machinery.
 Modelled honestly — the cost reduces each arm's *budget* before selection
 (so the value loss is sub-proportional, because greedy funding cuts the
 marginal projects first), charged symmetrically (Core v0's verification and
 recovery machinery is costed, not free), and de-overlapped from the delivery
-leakage E5 already removes — the administrative layer is **roughly neutral**
-(within a point of zero either way at declared cost shares). The Core v0
+leakage E5 already removes. At the declared shares κ_C = 0.08 and κ_D = 0.05,
+administrative cost changes the modeled gap from +58.6 to +57.7 reference
+points — a −0.9-point contribution: **roughly neutral**. The Core v0
 advantage comes from **selection and delivery**, not from an
 administrative-cost saving; a decisive cost advantage would require the
 central's overhead to exceed the platform's by more than symmetric
-accounting supports. The cost shares are declared, with directions anchored
-(IDB 2018; the low operating cost of e-government platforms — KONEPS,
-ChileCompra, ProZorro).
+accounting supports. The cost shares are declared scenario inputs, not
+measured arm-specific costs, with directions anchored (IDB 2018; the low
+operating cost of e-government platforms — KONEPS, ChileCompra, ProZorro).
 
 **What survives.** Stripped to what the governing test supports: (1) under the
 pre-registered symmetric gate the distributed selection advantage is *positive but
@@ -1123,9 +1128,14 @@ credit-versus-coverage mechanism — credit-pressured central ranking underweigh
 diffuse value that coverage-based distributed selection surfaces; (3) every compound
 value-per-budget ratio an earlier version reported is retired here as a calibrated
 effect — it was a conditional, model-internal apparatus output, not a calibrated field
-effect; and (4) any calibrated total delivered-value effect — selection *and* delivery
-(administrative cost and leakage), on real data — is future work, developed as separate
-declared channels rather than a single conflated number.
+effect; and (4) taken together, E5–E10 locate the conditional advantage in selection and
+verified delivery, not overhead: E5 measures those margins separately on matched
+portfolios; E9 supplies a conditional full-stack attribution whose component signs vary
+by world while the full diagonal stays positive; and E10 leaves administrative cost
+roughly neutral. Planning remains unresolved quantitatively — its agenda-capture
+mechanism is directionally grounded, but its magnitude is deliberately deferred rather
+than manufactured from an unanchored scenario. Any calibrated total delivered-value
+effect on real data remains future work.
 
 ## 7. Adversarial review as method
 
@@ -1317,11 +1327,11 @@ open-mode deployment are deliberately not. Open-mode deployment is gated on
 resolving them.
 
 **Adoption selects, and the thesis does not depend on it.** This paper
-addresses whether the architecture can be built and how its *selection*
-mechanism behaves under a symmetric, delivery-at-parity test — not whether it
-delivers more value in the world (a total delivered-value effect is a separately
-identified future estimand, not claimed here), and not whether any authority
-wants it. The corpus supplies the
+addresses whether the architecture can be built and reports conditional model
+contrasts for both selection and delivery — not whether Core v0 delivers more
+value in the world (a target-domain total delivered-value effect remains a
+separately identified future estimand, not claimed here), and not whether any
+authority wants it. The corpus supplies the
 deployment layer for an authority that has decided (prospective
 baselines measured from instrumentation onset, credit attribution on
 verified delivery, institutional rather than personal timeout attribution
@@ -1331,6 +1341,20 @@ the post-scandal challenger, the mandating higher government, the
 conditioned external funder. The honest selection effect stands: the
 architecture will plausibly be adopted first by relatively clean or newly
 arrived sponsors, in the places that need it least.
+
+**The layered magnitudes are conditional, not portable.** E5's ≈ +58.6-point
+selection-and-delivery interval holds the declared world, model form, and
+calibration fixed; the interval reflects Monte-Carlo variation over simulated
+worlds, not uncertainty about the data-generating process, calibration,
+functional form, literature transport, or field implementation, and the greedy
+reference is a heuristic normalizer, not an optimum. E9's Shapley values are
+conditional attributions through the declared sector generator, not standalone
+estimates; individual layer signs reverse in extreme worlds even though the full
+Core v0 diagonal remains positive in all four named worlds. Planning's
+agenda-capture direction is anchored but its magnitude is unquantified. E10's
+roughly neutral result rests on declared symmetric net-budget shares, which are
+scenario inputs, not measured arm-specific costs. None of these is a field-effect
+estimate.
 
 **The outcome measure is a bounded, non-distributional aggregate.** The value
 the model scores is a cardinal utilitarian-style sum over affected parties on a
@@ -1453,11 +1477,19 @@ take the same projects, designed identically, and change only who
 executes and how they are watched — does the visibly audited regime with
 reputational consequences deliver more than the one without them? Second:
 hold the control layer fixed and change only which projects get funded,
-centrally planned or socially prioritized? In the exploratory simulation
-apparatus the answer to both is yes — a verified-delivery gain and a
-selection gain that interact rather than merely add — but those
-magnitudes are model-internal factorial contrasts, not calibrated
-effects, and we do not build the paper on them. The claim the paper
+centrally planned or socially prioritized? In the simulation the answer to
+both is yes — a verified-delivery gain and a selection gain that compose
+multiplicatively (an accounting identity, not an independent finding), the
+full selection-and-delivery architecture ≈ +58.6 points of the greedy
+reference in the declared world [+58.0, +59.2]. E9 and E10 then sharpen where
+the modeled advantage comes from: the full-stack diagonal stays positive
+across the named worlds even when individual Shapley contributions reverse in
+extreme corners; planning's dominant mechanism is identified but its magnitude
+left unquantified; and symmetric net-budget accounting leaves administrative
+cost roughly neutral. In this model, the architecture's advantage is delivered
+value, not cheap administration. But those magnitudes are conditional
+model-internal contrasts, not calibrated field effects, and we do not build the
+paper on them. The claim the paper
 actually stands on is narrower and was tested harder: a pre-registered,
 symmetric, selection-only gate finds the distributed-minus-central
 advantage positive in every cell but small (a pre-registered pooled median
@@ -1651,9 +1683,9 @@ reported intervals are 95% conditional world-bootstrap intervals at *fixed* scen
 inputs — finite-world simulation uncertainty only, excluding uncertainty in parameter
 values, literature transport, functional form, and field implementation; the distributed
 arm's independent-plus-common-mode error is its one structural sensitivity (above); and
-(iv) administrative cost and leakage are separate *multiplicative* value-preservation
-channels (with their interaction reported explicitly), deliberately off here — E5 (the
-companion layered framework) turns them on. The
+(iv) delivery and administrative cost are handled in separate experiments — E5 adds
+delivery (leakage) at *matched budget*, and E10 adds administrative cost as a *net-budget*
+reduction before selection — not folded into this selection map. The
 reproducible scenarios, frontier, evidence, theorem, and full literature anchoring are
 in `scripts/simulation/e4-v5/`, `research/e4-parity-theorem.md`, and
 `research/e4-calibration-literature-anchors.md`.
