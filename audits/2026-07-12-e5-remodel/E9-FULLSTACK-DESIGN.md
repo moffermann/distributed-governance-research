@@ -238,12 +238,14 @@ Therefore the E9 write-up should:
   lower slice that omits the dominant mechanism — not as a headline result.
 
 Two concrete continuation items the author wants (agenda capture is the needle-mover, presented as continuation):
-1. **A CHILE worked example** — find Chilean budget data (e.g. COFOG/DIPRES functional classification, deferred-
-   maintenance / low-visibility-function under-provision) and present the resulting agenda-capture severity as an
-   **illustrative example, explicitly NOT a conclusive calibration**. It shows the mechanism concretely for one country.
-2. **A country selector in the interactive explorer** — when the panel-calculation page is improved, let the user
-   **choose a country** and set the agenda-capture (and related planning) values to that country's budget structure, so
-   the planning contribution is shown per-country rather than as one universal number.
+1. **A country-grounded worked example (COUNTRY-AGNOSTIC).** Find real functional-budget data for SOME country with
+   accessible data (Chile is a good place to look given the author's context, but the example is NOT tied to Chile — an
+   implementer would run it for whatever country they choose) showing structural under-provision / near-exclusion of
+   specific COFOG functions (deferred maintenance, environment, prevention, etc.), and present the resulting
+   agenda-capture severity as an **ILLUSTRATIVE example, explicitly NOT a conclusive calibration**.
+2. **A country selector in the interactive explorer** — country-agnostic: let the user **choose any country** and set the
+   agenda-capture (and related planning) values to that country's budget structure, so the planning contribution is shown
+   per-country rather than as one universal number.
 
 ## Panel modifications noted as FUTURE WORK (a country-specific, fully-anchored v3): softmax baseline-plus-flexible-
 reallocation share form (credit as a share semi-elasticity, not an additive coefficient on the arbitrary `M_C` scale);
