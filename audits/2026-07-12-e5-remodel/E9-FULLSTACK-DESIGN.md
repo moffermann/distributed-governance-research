@@ -151,19 +151,16 @@ same mechanism is documented separately (Keefer & Khemani 2005, *WB Research Obs
 broad public goods like preventive health"; Ban, Jha & Rao on India's "asphalt over sewers"), but without a cleanly
 verified single budget-share number — so we cite it as mechanism, not calibration.
 
-**Illustrative severity: 1 function off the menu** (mental health at ~2% vs the OECD 6.7% benchmark). Plugged into E9 on
-the anchored params:
-
-| illustrative severity | planning Shapley (strict) | planning Shapley (recycled) | planning\|distributed-sel (recycled) |
-|---|---|---|---|
-| **1** (mental health at the floor) | +2.2% [+1.8,+2.5] | **+3.9% [+3.6,+4.2]** | +1.0% |
-
-**Honest caveats:** (a) a small share alone is not proof of capture, but here the need benchmark (OECD 6.7%, #1 disability
-cause, 20% coverage) makes the under-provision a documented gap, not efficiency; (b) the mechanism is visibility/salience
-bias, which IS the model's mechanism, though not the clientelist sub-case; (c) I could not verify a credible SECOND
-starved function this pass, so severity stays at 1 (not inflated). → The anchored HEADLINE still reports NO planning
-figure (agendaCapture=0); this is a labelled illustrative example showing the mechanism concretely for one real budget
-(~+2–4% of the reference at one function off the menu).
+**QUALITATIVE only — NO numeric mapping (Adversarial R1 #17).** The adversary correctly flagged a **taxonomic
+mismatch**: mental health is a *funded health SUBfunction*, not a zero-funded TOP-LEVEL COFOG function, so mapping it to
+`agendaCapture=1` (a whole function off the menu) and reporting a simulated "+2–4pp" would over-transport. **We therefore
+do NOT attach a simulated planning number to the Chile example.** It stands as a **qualitative illustration** that the
+model's visibility-bias mechanism has a real footprint: a high-need (Chile's #1 disability cause, ~20% treatment
+coverage), low-visibility function chronically under-provided (~2% of the health budget vs the OECD 6.7% average),
+documented as "una deuda pendiente." A quantitative version would require a **partial-share sub-function model** matched
+to the COFOG taxonomy — future work. Honest caveats: the mechanism is visibility/salience bias (the model's mechanism),
+not documented clientelist vote-buying; and a small share alone is not proof of capture — the need benchmark makes it a
+documented gap here, but the illustration is directional, not a calibration.
 
 ## Planning REDESIGN v2 (Codex round-1 + author decision, commit 301d7cc)
 

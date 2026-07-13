@@ -267,27 +267,37 @@ export function validatePlanning(plan) {
 
 function main() {
   const pct = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
-  import('./scenario-configs.mjs').then(({ SCENARIO_WORLD: W, PROBABLE }) => {
+  import('./scenario-configs.mjs').then((SC) => {
+    const { SCENARIO_WORLD: W, PROBABLE } = SC;
     const cfg = { ...baseConfig(), ...W, ...PROBABLE };
-    const r = fullStack(cfg, { nWorlds: 1000 });
-    safeLog('E9 — FULL STACK: PLANNING, SELECTION and DELIVERY (built on E5, PROBABLE world). Parity at the oracle');
-    safeLog('(a global full-information greedy REFERENCE, not a guaranteed optimum). No compound multiplier.\n');
+    // Recycle residual is the PRIMARY reporting mode (removes the utilization confound; strict mixes planning with
+    // unspent budget — Adversarial R1 #7).
+    const r = fullStack(cfg, { nWorlds: 1000, planning: { ...PLANNING, residualMode: 'recycle' } });
+    safeLog('E9 — FULL STACK: PLANNING, SELECTION and DELIVERY (built on E5, PROBABLE world). Percentages of a global');
+    safeLog('full-information greedy REFERENCE (a heuristic, not a guaranteed optimum). Recycle residual (primary).\n');
     const civ = (iv) => `[${pct(iv[0])}, ${pct(iv[1])}]`;
-    safeLog(`worlds kept: ${r.n}   (${PLANNING.nSec} COFOG sectors; assoc=${PLANNING.assoc}, secValSpread=${PLANNING.secValSpread}, creditCoef=${PLANNING.creditCoef}, agendaCapture=${PLANNING.agendaCapture}, strict residual)`);
-    safeLog(`STATUS QUO (all-central: central planning + selection + opaque delivery):     ${pct(r.statusQuo)} of reference`);
-    safeLog(`CORE v0 FULL (all-distributed: distributed planning + selection + verified):   ${pct(r.coreV0)} of reference`);
-    safeLog(`FULL-STACK gain (Core v0 − status quo): ${pct(r.fullStackGain)}  95% CI ${civ(r.fullStackCI)}\n`);
-    safeLog('SHAPLEY attribution of the full-stack gain to each layer (sums exactly to the gain) with 95% CIs:');
-    safeLog(`  planning ${pct(r.attribution.planning)} ${civ(r.attributionCI.planning)} · selection ${pct(r.attribution.selection)} ${civ(r.attributionCI.selection)} · delivery ${pct(r.attribution.delivery)} ${civ(r.attributionCI.delivery)}`);
-    safeLog('Planning as a CONDITIONAL simple effect (distributed − central planning), context-dependent:');
-    safeLog(`  under central selection:     ${pct(r.planningUnderCentralSel)} ${civ(r.planningCI.central)}`);
-    safeLog(`  under distributed selection: ${pct(r.planningUnderDistributedSel)} ${civ(r.planningCI.distributed)}   (the Core v0 context)`);
-    safeLog(`budget utilization by cell (strict residual): status quo ${pct(r.utilization.c_c_op)} · Core v0 ${pct(r.utilization.d_d_ve)}\n`);
+    safeLog(`worlds kept: ${r.n}   (${PLANNING.nSec} COFOG sectors; assoc=${PLANNING.assoc}, secValSpread=${PLANNING.secValSpread}, creditCoef=${PLANNING.creditCoef}, agendaCapture=${PLANNING.agendaCapture})`);
+    safeLog(`STATUS QUO (all-central):   ${pct(r.statusQuo)} of reference   ·   CORE v0 FULL (all-distributed): ${pct(r.coreV0)}`);
+    safeLog(`FULL-STACK gain (Core v0 − status quo): ${pct(r.fullStackGain)}  95% conditional-MC CI ${civ(r.fullStackCI)}\n`);
+    safeLog('SHAPLEY attribution — CONDITIONAL: every layer value is computed through the (declared) planning sector');
+    safeLog('generator, so these are NOT the standalone quantified layers. The standalone SELECTION and DELIVERY figures');
+    safeLog('come from E5 (no planning layer); E9 supplies the 3-layer STRUCTURE + attribution METHOD, planning qualitative:');
+    safeLog(`  planning ${pct(r.attribution.planning)} ${civ(r.attributionCI.planning)} · selection ${pct(r.attribution.selection)} ${civ(r.attributionCI.selection)} · delivery ${pct(r.attribution.delivery)} ${civ(r.attributionCI.delivery)}  (sums to the gain)\n`);
 
-    // Recycle mode removes the utilization confound (Codex round-2): unspent budget makes a second global pass.
-    const rr = fullStack(cfg, { nWorlds: 1000, planning: { ...PLANNING, residualMode: 'recycle' } });
-    safeLog(`With residual RECYCLING (removes the utilization confound): planning Shapley ${pct(rr.attribution.planning)} ${civ(rr.attributionCI.planning)},`);
-    safeLog(`  planning|distributed-sel ${pct(rr.planningUnderDistributedSel)}, full-stack gain ${pct(rr.fullStackGain)} (utilization → ~100% both cells).\n`);
+    // Adversarial R1 #3: the layer values are LARGE IN PROBABLE, not "robust" — individual Shapley components reverse
+    // sign in extreme worlds (even though the FULL diagonal stays positive in every one). Publish the named-world table.
+    safeLog('Named-world decomposition (the full diagonal stays positive everywhere; individual layers can reverse):');
+    safeLog('   world         full gain   planning   selection   delivery');
+    for (const nm of ['PROBABLE', 'PRO_CENTRAL', 'MYOPIA_OFF', 'PRO_DIST']) {
+      const rw = fullStack({ ...baseConfig(), ...W, ...SC[nm] }, { nWorlds: 700, planning: { ...PLANNING, residualMode: 'recycle' } });
+      safeLog(`   ${nm.padEnd(12)}  ${pct(rw.fullStackGain).padStart(8)}  ${pct(rw.attribution.planning).padStart(8)}  ${pct(rw.attribution.selection).padStart(9)}  ${pct(rw.attribution.delivery).padStart(8)}`);
+    }
+    safeLog('   → SELECTION and DELIVERY are LARGE in PROBABLE; selection reverses in PRO_CENTRAL and delivery in PRO_DIST');
+    safeLog('     (stronger delivery magnifies harmful portfolios there). The full Core v0 advantage holds in ALL worlds.\n');
+
+    safeLog('Planning as a CONDITIONAL simple effect (distributed − central planning), context-dependent:');
+    safeLog(`  under central selection: ${pct(r.planningUnderCentralSel)} ${civ(r.planningCI.central)} · under distributed selection: ${pct(r.planningUnderDistributedSel)} ${civ(r.planningCI.distributed)} (Core v0 context)\n`);
+    const rr = r;
 
     // The planning magnitude is DECLARED and SENSITIVE to two declared assumptions. Present both, honestly.
     safeLog('Planning Shapley over the DECLARED sector-value dispersion by need↔visibility association (the effect is');
@@ -313,10 +323,11 @@ function main() {
 
     safeLog('FRAMING (author decision): DO NOT report a planning-layer FIGURE. The soft-only slice above (~0–3%) omits');
     safeLog('agenda capture — the mechanism that moves the needle — so it UNDERSTATES the layer; headlining it would read');
-    safeLog('as "planning is small," which is not what it means. Report SELECTION and DELIVERY quantitatively (the large,');
-    safeLog('robust, anchored layers); present PLANNING QUALITATIVELY — mechanism identified (agenda capture / second');
-    safeLog('face of power), DIRECTION anchored (COFOG; election visible-spending shift; maintenance neglect), MAGNITUDE');
-    safeLog('deferred to country-specific continuation (e.g. a Chile example — illustrative, not conclusive).');
+    safeLog('as "planning is small," which is not what it means. Quantify SELECTION and DELIVERY from E5 (they are LARGE');
+    safeLog('IN PROBABLE — not "robust": each reverses sign in an extreme world, see the named-world table above, though');
+    safeLog('the full Core v0 advantage holds in every world); present PLANNING QUALITATIVELY — mechanism identified');
+    safeLog('(agenda capture / second face of power), DIRECTION anchored (COFOG; election visible-spending shift;');
+    safeLog('maintenance neglect), MAGNITUDE deferred to country-specific continuation (illustrative, not conclusive).');
   });
 }
 import { fileURLToPath } from 'node:url';
