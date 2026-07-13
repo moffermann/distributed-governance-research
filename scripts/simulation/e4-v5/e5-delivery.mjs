@@ -53,7 +53,7 @@ export const DELIVERY = {
   loss_hon: 0.05,   // ordinary execution loss (Rasul–Rogger supports a substantial upper tail; the scalar is DECLARED)
   //                p_det  a(advance) r(recovery) gamma(guarantee) rep(reputation)
   opaque:   { p_det: 0.04, a: 0.80, r: 0.00, gamma: 0.00, rep: 0.00, note: 'weak control: announced-audit-level exposure, unprotected advances, no recovery/guarantee/reputation' },
-  verified: { p_det: 0.75, a: 0.20, r: 0.50, gamma: 0.10, rep: 0.40, note: 'architecture: 10% advance + 10% guarantee + recovery + reputational stake (magnitudes DECLARED)' },
+  verified: { p_det: 0.75, a: 0.20, r: 0.50, gamma: 0.10, rep: 0.40, note: 'architecture: 20% advance exposure (DECLARED reference; World Bank normal advance ~10%) + ~10% performance guarantee + recovery + reputational stake (magnitudes DECLARED)' },
   // MONITORING COUPLING (step 2), SPLIT into two channels (Codex + agent): Core v0's distributed coverage observes
   // delivery, but community coverage credibly lifts only DETECTION (deterrence), not RECOVERY (clawback needs
   // institutional follow-up). p_det_eff = p_det + mon_detect·(1−p_det); r_eff = r + mon_recovery·(1−r).
@@ -157,12 +157,20 @@ export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.see
   const dDop = t.selD ? t.A3v / t.selD : NaN, dDvr = t.selD ? t.A2v / t.selD : NaN;
   const inc = (c) => t[c + 'fund'] ? t[c + 'div'] / t[c + 'fund'] : NaN;             // diversion incidence per cell
   const lk  = (c) => (t[c + 'v'] + t[c + 'lost']) > 0 ? t[c + 'lost'] / (t[c + 'v'] + t[c + 'lost']) : NaN;  // value leakage
-  // world-cluster bootstrap CI on the full-architecture gain Σ(A2−S)/ΣO (inner MC variability only).
-  const B = NUM.bootstrap_reps.value, bRng = makeRng((seed ^ 0x9e3779b9) >>> 0), boots = [];
-  if (W.length) for (let b = 0; b < B; b++) { let n = 0, d = 0; for (let k = 0; k < W.length; k++) { const ww = W[Math.floor(bRng.u() * W.length)]; n += (ww.A2v - ww.Sv); d += ww.O; } if (d > 0) boots.push(n / d); }
-  boots.sort((x, y) => x - y);
-  const quant = (p) => boots.length ? boots[Math.max(0, Math.min(boots.length - 1, Math.floor(p * boots.length)))] : NaN;
-  const fullCI = [quant((1 - NUM.ci_level.value) / 2), quant((1 + NUM.ci_level.value) / 2)];
+  // world-cluster bootstrap CIs (inner MC variability only) for the reported cells AND effects, not just the full gain.
+  const B = NUM.bootstrap_reps.value, bRng = makeRng((seed ^ 0x9e3779b9) >>> 0);
+  const bs = { S: [], A1: [], A3: [], A2: [], full: [], dEffC: [], dEffD: [], sEffO: [], sEffV: [], inter: [] };
+  if (W.length) for (let b = 0; b < B; b++) {
+    let o = 0, s = 0, a1 = 0, a3 = 0, a2 = 0;
+    for (let k = 0; k < W.length; k++) { const ww = W[Math.floor(bRng.u() * W.length)]; o += ww.O; s += ww.Sv; a1 += ww.A1v; a3 += ww.A3v; a2 += ww.A2v; }
+    if (o <= 0) continue;
+    const bS = s / o, bA1 = a1 / o, bA3 = a3 / o, bA2 = a2 / o;
+    bs.S.push(bS); bs.A1.push(bA1); bs.A3.push(bA3); bs.A2.push(bA2);
+    bs.full.push(bA2 - bS); bs.dEffC.push(bA1 - bS); bs.dEffD.push(bA2 - bA3);
+    bs.sEffO.push(bA3 - bS); bs.sEffV.push(bA2 - bA1); bs.inter.push(bA2 - bA1 - bA3 + bS);
+  }
+  const ci = (arr) => { if (!arr.length) return [NaN, NaN]; const a = [...arr].sort((x, y) => x - y); const q = (p) => a[Math.max(0, Math.min(a.length - 1, Math.floor(p * a.length)))]; return [q((1 - NUM.ci_level.value) / 2), q((1 + NUM.ci_level.value) / 2)]; };
+  const fullCI = ci(bs.full);
   return {
     n: W.length,
     selection: { central: sC, distributed: sD },
@@ -175,6 +183,12 @@ export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.see
     selectionEffect: { atOpaque:  A3 - S,  atVerified:    A2 - A1 },
     interaction: (A2 - A1 - A3 + S),                         // >0 ⇒ verified delivery AMPLIFIES the selection gain
     full: A2 - S, fullCI,                                    // full architecture vs status quo (pp of oracle) + bootstrap CI
+    ci: {                                                    // 95% bootstrap CIs for every reported quantity
+      cells: { S: ci(bs.S), A1: ci(bs.A1), A3: ci(bs.A3), A2: ci(bs.A2) },
+      deliveryEffect:  { atCentral: ci(bs.dEffC), atDistributed: ci(bs.dEffD) },
+      selectionEffect: { atOpaque: ci(bs.sEffO),  atVerified: ci(bs.sEffV) },
+      interaction: ci(bs.inter),
+    },
     // composition: each cell equals its own selection efficiency times its own delivered fraction (an accounting
     // identity, EXACT by construction — delivery is applied per project). The additive prediction misses by the interaction.
     multiplicativeIdentityA2: sD * dDvr,
@@ -190,8 +204,8 @@ export function sweepOpaque(cfg, { nWorlds = 800, points = null } = {}) {
     { p_det: 0.12, pi_hon: 0.75 },   // mild  (~IMF PIE-X 20-25% loss)
     { p_det: 0.10, pi_hon: 0.70 },   // base  (~30% loss; Olken 24% divert)
     { p_det: 0.06, pi_hon: 0.55 },   // heavy (~50% loss)
-    { p_det: 0.03, pi_hon: 0.35 },   // severe
-    { p_det: 0.01, pi_hon: 0.20 },   // Uganda-extreme (~85%+ loss)
+    { p_det: 0.03, pi_hon: 0.35 },   // severe declared stress
+    { p_det: 0.01, pi_hon: 0.20 },   // very severe declared stress (~69% loss; the Uganda ~87% capture is contextual, not this row)
   ];
   const rows = [];
   for (const g of grid) {
@@ -202,18 +216,19 @@ export function sweepOpaque(cfg, { nWorlds = 800, points = null } = {}) {
   return rows;
 }
 
-// Fail-closed validation of a delivery config (Codex robustness item).
+// Genuinely fail-closed validation of a delivery config (Codex round-2: NaN/Infinity and a MISSING `rep` previously
+// slipped through, and a missing rep silently makes the deterrent NaN — classifying every opportunist as deterred).
 export function validateDelivery(del) {
   const bad = [];
-  const unit = (k, v) => { if (!(v >= 0 && v <= 1)) bad.push(`${k}=${v} must be in [0,1]`); };
+  const fin  = (k, v) => { if (typeof v !== 'number' || !Number.isFinite(v)) { bad.push(`${k}=${v} must be a finite number`); return false; } return true; };
+  const unit = (k, v) => { if (fin(k, v) && (v < 0 || v > 1)) bad.push(`${k}=${v} must be in [0,1]`); };
   unit('pi_hon', del.pi_hon); unit('loss_hon', del.loss_hon);
-  unit('mon_detect', del.mon_detect || 0); unit('mon_recovery', del.mon_recovery || 0); unit('val_risk', del.val_risk || 0);
+  unit('mon_detect', del.mon_detect ?? 0); unit('mon_recovery', del.mon_recovery ?? 0); unit('val_risk', del.val_risk ?? 0);
   for (const name of ['opaque', 'verified']) {
     const reg = del[name];
-    if (!reg) { bad.push(`${name} regime missing`); continue; }
-    for (const k of ['p_det', 'a', 'r']) unit(`${name}.${k}`, reg[k]);
-    if ((reg.gamma || 0) < 0) bad.push(`${name}.gamma must be >= 0`);
-    if (reg.rep < 0) bad.push(`${name}.rep must be >= 0`);
+    if (!reg || typeof reg !== 'object') { bad.push(`${name} regime missing`); continue; }
+    for (const k of ['p_det', 'a', 'r', 'rep']) unit(`${name}.${k}`, reg[k]);   // rep is REQUIRED + finite (deterrent uses it)
+    if (fin(`${name}.gamma`, reg.gamma ?? 0) && (reg.gamma ?? 0) < 0) bad.push(`${name}.gamma must be >= 0`);
   }
   if (bad.length) throw new Error(`[e5-delivery] invalid delivery config: ${bad.join('; ')}`);
   return true;
@@ -244,7 +259,7 @@ export function jointSweep(cfg, { nSamples = 64, nWorlds = 300 } = {}) {
     for (let i = col.length - 1; i > 0; i--) { const j = Math.floor(rng.u() * (i + 1)); [col[i], col[j]] = [col[j], col[i]]; }
     cols[k] = col;
   }
-  const lerp = (r, u) => r[0] + (r[1] - r[0]) * u, fulls = [];
+  const lerp = (r, u) => r[0] + (r[1] - r[0]) * u, fulls = [], selEff = [];
   for (let i = 0; i < nSamples; i++) {
     const s = {}; for (const k of keys) s[k] = lerp(ranges[k], cols[k][i]);
     const del = {
@@ -253,11 +268,16 @@ export function jointSweep(cfg, { nSamples = 64, nWorlds = 300 } = {}) {
       verified: { p_det: s.ve_pdet, a: s.ve_a, r: s.ve_r, gamma: 0.10, rep: s.ve_rep },
       mon_detect: s.mon_detect, mon_recovery: s.mon_recovery, val_risk: s.val_risk,
     };
-    fulls.push(delivered2x2(cfg, { nWorlds, delivery: del }).full);
+    const rr = delivered2x2(cfg, { nWorlds, delivery: del });
+    fulls.push(rr.full);                       // A2 − S : the FULL architecture vs the status quo
+    selEff.push(rr.selectionEffect.atOpaque);  // A3 − S : the COVERAGE (selection) effect alone, at opaque delivery
   }
   fulls.sort((a, b) => a - b);
+  // NOTE: shares are over these 64 LHS draws across the DECLARED ranges (gamma, opaque recovery, temptation held fixed),
+  // NOT a global identified-set guarantee. shareArchitectureWins = A2−S>0 (full stack); shareCoverageWins = A3−S>0.
   return { n: fulls.length, min: fulls[0], max: fulls[fulls.length - 1], median: fulls[fulls.length >> 1],
-    shareCoverageWins: fulls.filter((x) => x > 0).length / fulls.length };
+    shareArchitectureWins: fulls.filter((x) => x > 0).length / fulls.length,
+    shareCoverageWins: selEff.filter((x) => x > 0).length / selEff.length };
 }
 
 function main() {
@@ -278,13 +298,16 @@ function main() {
     safeLog(`                       opaque delivery     verified delivery`);
     safeLog(`  central selection    S  ${pct(r.cells.S).padStart(7)}          A1 ${pct(r.cells.A1).padStart(7)}`);
     safeLog(`  distributed sel.     A3 ${pct(r.cells.A3).padStart(7)}          A2 ${pct(r.cells.A2).padStart(7)}\n`);
-    safeLog(`diversion incidence (funded projects whose executor diverts):  opaque ${pct(r.diversionIncidence.S)} · verified ${pct(r.diversionIncidence.A1)}`);
-    safeLog(`value leakage (selected value not delivered):                  opaque ${pct(r.leakage.S)} · verified ${pct(r.leakage.A1)}\n`);
-    safeLog('Main effects (percentage points of the oracle reference), read SEPARATELY:');
-    safeLog(`  DELIVERY effect:   at central ${pct(r.deliveryEffect.atCentral)} · at distributed ${pct(r.deliveryEffect.atDistributed)}`);
-    safeLog(`  SELECTION effect:  at opaque ${pct(r.selectionEffect.atOpaque)} · at verified ${pct(r.selectionEffect.atVerified)}`);
-    safeLog(`  INTERACTION:       ${pct(r.interaction)}  (>0 ⇒ verified delivery amplifies the selection gain)`);
-    safeLog(`  FULL architecture (A2 − S): ${pct(r.full)}  95% CI [${pct(r.fullCI[0])}, ${pct(r.fullCI[1])}]\n`);
+    // diversion INCIDENCE = unweighted share of funded projects whose executor diverts; value LEAKAGE = S-weighted
+    // undelivered social value. Olken 2007 measured missing EXPENDITURE (closest to value leakage), not executor prevalence.
+    safeLog(`diversion incidence (unweighted share of funded projects):     opaque ${pct(r.diversionIncidence.S)} · verified ${pct(r.diversionIncidence.A1)}`);
+    safeLog(`value leakage (S-weighted undelivered value; ~Olken moment):   opaque ${pct(r.leakage.S)} · verified ${pct(r.leakage.A1)}\n`);
+    const civ = (iv) => `[${pct(iv[0])}, ${pct(iv[1])}]`;
+    safeLog('Main effects (percentage points of the oracle reference) with 95% bootstrap CIs, read SEPARATELY:');
+    safeLog(`  DELIVERY effect:   at central ${pct(r.deliveryEffect.atCentral)} ${civ(r.ci.deliveryEffect.atCentral)} · at distributed ${pct(r.deliveryEffect.atDistributed)} ${civ(r.ci.deliveryEffect.atDistributed)}`);
+    safeLog(`  SELECTION effect:  at opaque ${pct(r.selectionEffect.atOpaque)} ${civ(r.ci.selectionEffect.atOpaque)} · at verified ${pct(r.selectionEffect.atVerified)} ${civ(r.ci.selectionEffect.atVerified)}`);
+    safeLog(`  INTERACTION:       ${pct(r.interaction)} ${civ(r.ci.interaction)}  (>0 ⇒ verified delivery amplifies the selection gain)`);
+    safeLog(`  FULL architecture (A2 − S): ${pct(r.full)}  95% CI ${civ(r.fullCI)}\n`);
     safeLog('Composition — the two layers compose MULTIPLICATIVELY (an accounting identity, delivery applied per project):');
     safeLog(`  actual A2 = ${pct(r.cells.A2)}  ·  identity (selection · delivery) = ${pct(r.multiplicativeIdentityA2)}`);
     safeLog(`  additive prediction (sum of main effects) = ${pct(r.additivePredictionA2)}  → short by the interaction.`);
@@ -305,6 +328,11 @@ function main() {
     const rr2 = delivered2x2(cfg, { nWorlds: 700, delivery: { ...DELIVERY, mon_detect: 0.05, mon_recovery: 0.20 } });
     safeLog(`  with institutional recovery linkage (mon_recovery=0.20): opaque dividend ${pct(rr2.monitoringDividend.opaque)} — the delivery gain needs the FORMAL recovery channel, not eyeballs alone.\n`);
 
+    // Favorable R=0 robustness (Codex): drop the reputational stake entirely — the verified regime then admits SOME
+    // diversion, and the full gain still holds. This is the honest less-favorable-to-Core-v0 disclosure.
+    const r0 = delivered2x2(cfg, { nWorlds: 1200, delivery: { ...DELIVERY, verified: { ...DELIVERY.verified, rep: 0.0 } } });
+    safeLog(`R=0 robustness (no reputational stake): verified delivery ${pct(r0.delivery.centralVerified)}, verified diversion incidence ${pct(r0.diversionIncidence.A1)}, full ${pct(r0.full)} 95% CI [${pct(r0.fullCI[0])}, ${pct(r0.fullCI[1])}] — the gain survives without the (unanchored) reputation term.\n`);
+
     // (iii) Step 1 — opaque-band sensitivity, coupling OFF so the delivery effect is read cleanly.
     safeLog('Opaque-band sensitivity (delivery effect and full-architecture gain as the status-quo leak worsens):');
     safeLog('   leak(opaque)   delivery-effect@distributed   full (A2−S)');
@@ -313,23 +341,24 @@ function main() {
     }
     safeLog('   → coverage still wins across the whole band; a worse status quo only widens the delivery gain.\n');
 
-    // (iv) VALUE/COMPLEXITY-correlated delivery risk (robustness): bigger projects harder to monitor. Does it break the
-    // per-arm delivery equality (a genuine selection↔delivery interaction beyond the accounting identity)?
-    safeLog('Value/complexity-correlated delivery risk (bigger projects harder to monitor):');
+    // (iv) COST/COMPLEXITY-correlated delivery risk (robustness). NOTE: the risk is tied to project COST, and cost is
+    // drawn INDEPENDENTLY of true value S in the engine (c ⟂ S), so this bounds cost/size risk, not a value↔delivery
+    // correlation. Does it break the per-arm delivery equality (a real selection↔delivery interaction)?
+    safeLog('Cost/complexity-correlated delivery risk (bigger projects harder to monitor; cost ⟂ value S in the engine):');
     for (const vr of [0.0, 0.3, 0.6]) {
       const rv = delivered2x2(cfg, { nWorlds: 800, delivery: { ...DELIVERY, val_risk: vr } });
       const armGap = rv.delivery.distributedOpaque - rv.delivery.centralOpaque;   // delivery efficiency difference by arm
       safeLog(`   val_risk ${vr.toFixed(1)}  →  opaque delivery central ${pct(rv.delivery.centralOpaque)} · distributed ${pct(rv.delivery.distributedOpaque)} (arm gap ${pct(armGap)})  ·  full ${pct(rv.full)}`);
     }
-    safeLog('   → the distributed arm funds higher-value (not necessarily bigger) projects; the arm gap stays small, so');
-    safeLog('     coverage does NOT get systematically undone by delivery risk — the full gain is robust.\n');
+    safeLog('   → under c ⟂ S the arm gap stays ~0, so coverage is NOT systematically undone by cost/size delivery risk.\n');
 
-    // (v) 20-seed replication + a joint Latin-hypercube global sweep — a global robustness statement, not a 1-D slice.
+    // (v) 20-seed replication + a joint Latin-hypercube sweep over the DECLARED ranges (a sampled-space statement, not a
+    // global identified-set guarantee: gamma, opaque recovery and uniform temptation are held fixed).
     const rep = replicateSeeds(cfg, { nSeeds: 20, nWorlds: 400 });
     safeLog(`20-seed replication of the full gain: mean ${pct(rep.mean)} · sd ${pct(rep.sd)} · range [${pct(rep.min)}, ${pct(rep.max)}].`);
     const js = jointSweep(cfg, { nSamples: 64, nWorlds: 300 });
-    safeLog(`Joint LHS sweep (${js.n} draws over 11 delivery params): full gain median ${pct(js.median)}, range [${pct(js.min)}, ${pct(js.max)}];`);
-    safeLog(`   coverage wins (full > 0) in ${(100 * js.shareCoverageWins).toFixed(0)}% of the sampled delivery space.`);
+    safeLog(`Joint LHS sweep (${js.n} draws over the declared delivery ranges): full gain median ${pct(js.median)}, range [${pct(js.min)}, ${pct(js.max)}];`);
+    safeLog(`   full architecture wins in ${(100 * js.shareArchitectureWins).toFixed(0)}% and the coverage/selection effect (A3−S) is positive in ${(100 * js.shareCoverageWins).toFixed(0)}% of the sampled draws.`);
   });
 }
 import { fileURLToPath } from 'node:url';

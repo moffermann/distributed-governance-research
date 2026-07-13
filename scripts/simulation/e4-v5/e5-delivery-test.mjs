@@ -86,6 +86,9 @@ const NW = 1200;
   check('validateDelivery accepts the default config', validateDelivery(DELIVERY) === true);
   check('validateDelivery rejects pi_hon > 1', throws({ ...DELIVERY, pi_hon: 1.4 }));
   check('validateDelivery rejects negative val_risk', throws({ ...DELIVERY, val_risk: -0.1 }));
+  check('validateDelivery rejects NaN val_risk', throws({ ...DELIVERY, val_risk: NaN }));
+  check('validateDelivery rejects NaN gamma in a regime', throws({ ...DELIVERY, verified: { ...DELIVERY.verified, gamma: NaN } }));
+  check('validateDelivery rejects a MISSING rep (would make the deterrent NaN)', throws({ ...DELIVERY, verified: { p_det: 0.75, a: 0.2, r: 0.5, gamma: 0.1 } }));
   check('validateDelivery rejects a missing regime', throws({ ...DELIVERY, opaque: undefined }));
   check('delivered2x2 validates its delivery arg', (() => { try { delivered2x2(cfg, { nWorlds: 10, delivery: { ...DELIVERY, mon_detect: 2 } }); return false; } catch { return true; } })());
 }
@@ -106,8 +109,9 @@ const NW = 1200;
   check('20-seed replication: between-seed sd is small', rep.sd < 0.03, `sd ${rep.sd}`);
   check('20-seed replication: mean full gain is materially positive', rep.mean > 0.4, `mean ${rep.mean}`);
   const js = jointSweep(cfg, { nSamples: 24, nWorlds: 150 });
-  check('joint LHS sweep: coverage wins in the large majority of the delivery space', js.shareCoverageWins > 0.9, `share ${js.shareCoverageWins}`);
-  check('joint LHS sweep: even the worst sampled cell keeps coverage ahead or near parity', js.min > -0.1, `min ${js.min}`);
+  check('joint LHS sweep: full architecture wins in the large majority of sampled draws', js.shareArchitectureWins > 0.9, `share ${js.shareArchitectureWins}`);
+  check('joint LHS sweep: coverage/selection effect (A3−S) positive in the large majority', js.shareCoverageWins > 0.9, `share ${js.shareCoverageWins}`);
+  check('joint LHS sweep: even the worst sampled draw keeps the full gain near/above parity', js.min > -0.1, `min ${js.min}`);
 }
 
 console.log(`\nE5 delivery: ${pass} passed, ${fail} failed.`);
