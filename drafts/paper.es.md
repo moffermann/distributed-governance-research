@@ -560,7 +560,7 @@ se degrada con gracia solo con valores por defecto (predicción 3)— evaluadas 
 
 Ponemos a prueba las tres predicciones de §5.3 —y, en experimentos sucesivos,
 los supuestos de las Proposiciones 1–4— en una simulación basada en agentes.
-Cada experimento (E1–E8) corresponde a un hallazgo:
+Cada experimento (E1–E10) corresponde a un hallazgo:
 
 | Exp | Qué pone a prueba | |
 |---|---|---|
@@ -568,10 +568,12 @@ Cada experimento (E1–E8) corresponde a un hallazgo:
 | E2 | ¿qué sostiene la calidad de la asignación? | Hallazgo 2 |
 | E3 | ¿qué amortigua el decaimiento de la participación? | Hallazgo 3 |
 | E4 | agregación distribuida vs. construcción central (refinada por una frontera de fricciones simétricas + captura, E4-v4/v5; y un mapa de robustez de cuatro escenarios de miopía al daño v1.14, §6) | Hallazgo 4 |
-| E5 | dónde gana valor la arquitectura (capas de selección y entrega) | Hallazgo 5 |
+| E5 | valor entregado: selección × entrega, a presupuesto igualado | Hallazgo 5 |
 | E6 | competencia reputacional y estándar de ejecución | Hallazgo 6 |
 | E7 | comparación contra una línea base parametrizada por auditorías | Hallazgo 7 |
 | E8 | robustez bajo participación conductual endógena | cierre de §6 |
+| E9 | el stack completo: planificación × selección × entrega (atribución de Shapley) | Hallazgo 9 |
+| E10 | la capa de costo administrativo (presupuesto neto, simétrica) | Hallazgo 10 |
 
 Simulamos 10.000 ciudadanos a lo largo de 24 ciclos mensuales asignando sobre un
 conjunto permanente de 40 proyectos con calidad *θ*, saliencia *s* (medida
@@ -971,52 +973,66 @@ separable de cualquier magnitud que el modelo reporte. El apéndice de objetivos
 calibración vuelve visible la línea entre lo interno al modelo y lo anclado en datos.
 
 **Hallazgo 5: el valor entregado, no la asignación, es donde la arquitectura
-justifica su valía —y la selección y la entrega interactúan.** Un quinto
-experimento preregistrado (`research/e5-value-delivery-design.md`) añade la
-etapa de ejecución que los primeros cuatro omitieron: ejecutores con tipos
-ocultos cuya decisión de desvío sigue la condición de incentivos de la
-Proposición 1, bajo un régimen de entrega opaco —una cota inferior de
-cero-control (baja detección, adelantos no protegidos, sin recuperación, sin
-memoria reputacional), con parámetros dentro de la banda de fuga documentada
-empíricamente: 87% en las subvenciones por capitación de Uganda (Reinikka y Svensson 2004), 24% en los caminos indonesios (Olken 2007)— frente al régimen
-verificado construido a partir de las Proposiciones 1-4 (condicionamiento por
-hitos, retención, recuperación, detección en la capa de evidencia, y un capital
-reputacional en juego: un registro visible de desvío confirmado que cuesta
-selección futura por parte de los financiadores). Cruzar la entrega con
-los dos regímenes de selección de E4 arroja un 2×2 cuyos efectos principales son
-dos preguntas sencillas. Los mismos proyectos, distinta capa de control: el
-régimen verificado entrega un +43% sobre carteras idénticas (ΔV emparejado =
-0.168 [0.143, 0.193]), y la finalización oficial del régimen de cero-control
-sobreestima su entrega real en veintinueve puntos porcentuales. La misma capa de
-control, distintos proyectos: la priorización social entrega un +53-54% bajo
-cualquiera de los dos regímenes. La interacción es positiva y significativa
-(+0.085 [0.053, 0.117]): las dos capas **interactúan en lugar de solo sumarse**. Una
-versión anterior resumía esto como una única salida compuesta de valor por unidad de
-presupuesto; ese compuesto se **retira** como contraste factorial interno del modelo,
-no un efecto calibrado — E5 ahora reporta selección, costo administrativo y fuga como
-**canales declarados separados** (Sección 6). Dos predicciones preregistradas fallaron
-honestamente. El predominio esperado de la entrega sobre la selección no se
-sostuvo a esta escala —la selección central con doscientos proyectos es casi
-aleatoria (E4), inflando el margen de selección—, de modo que dentro de este
-aparato el patrón robusto es la *interacción* de las dos capas, no su ordenamiento
-(la magnitud compuesta en sí se retira como efecto calibrado; véase la Sección 6).
-Y la esperada depuración
-reputacional nunca se activó bajo los parámetros de verificación fuerte, por la
-mejor razón posible: la condición de incentivos se cumple para todo ejecutor, de
-modo que nadie se desvía y no hay a quién excluir —la disuasión se anticipa al
-castigo, la aplicación de Becker operando ex ante. Un análisis de sensibilidad
-post-hoc etiquetado con verificación debilitada muestra la segunda línea de
-defensa: disuasión parcial, detección activa, y un conjunto de ejecutores que
-mejora de manera medible a medida que los financiadores dejan de seleccionar a
-los desviadores confirmados, cuyos registros son visibles (cuota de oportunistas
-0.28 → 0.21 a lo largo de veinticuatro ciclos) —salida del conjunto por
-preferencia perdida, no por poder alguno de exclusión de la plataforma; la
-reputación informa las elecciones, nunca excluye. Un barrido
-acompañante de las categorías de descubrimiento por defecto muestra que cada una
-porta una firma distributiva amplia y medible —"cerca de mí" concentra el 71% del
-presupuesto en el quintil más denso, "rural" lo invierte— de modo que el valor
-por defecto es una palanca de política distributiva visible y configurable, no un
-sesgo inherente del planificador.
+justifica su valía —y la selección y la entrega se componen de forma
+multiplicativa.** Un quinto experimento
+(`scripts/simulation/e4-v5/e5-delivery.mjs`, reconstruido sobre el motor
+limpio de E4) añade la etapa de ejecución que los primeros cuatro omitieron,
+como un régimen de entrega **independiente** cruzado con los dos regímenes de
+selección —un diseño de cuatro celdas para leer cada capa por separado y en
+conjunto sobre las *mismas* carteras financiadas. Los ejecutores tienen
+tipos ocultos: una cuota intrínsecamente honesta entrega; el resto se desvía
+cuando una tentación supera el disuasor del régimen `p·[(1−a(1−r)) + γ + R]`
+(detección *p*, exposición del adelanto *a*, recuperación *r*, garantía *γ*,
+capital reputacional *R*) —el balde con fugas de Okun (1975). La pérdida de
+valor del régimen **opaco** de statu quo se ajusta por momento a la cifra de
+~24% de gasto faltante de Olken (2007) (no identificada como bienestar); el
+~30% de ineficiencia de la inversión pública del IMF (2015) es una pérdida de
+proceso más amplia, y el ~87% de captura ugandesa de Reinikka y Svensson
+(2004) es una cola, no el caso central. El régimen **verificado** es la
+arquitectura: adelanto condicionado por hitos más garantía de desempeño,
+retención, recuperación y capital reputacional —magnitudes declaradas,
+direcciones de las Proposiciones 1–4.
+
+Cada celda es un porcentaje de la misma referencia voraz de información
+completa a entrega perfecta (un normalizador heurístico, no un óptimo), de
+modo que no se reporta multiplicador compuesto. La eficiencia de selección
+reproduce E4 (distribuido ≈ 98%, central ≈ 44% de la referencia); la
+eficiencia de entrega es ≈ 78% opaca frente a ≈ 95% verificada. Leído como
+dos efectos principales en el mundo declarado, la capa de entrega añade ≈ 8
+puntos bajo selección central y ≈ 17 bajo distribuida; la capa de selección
+añade ≈ 42 puntos bajo entrega opaca y ≈ 51 bajo verificada. La interacción
+es positiva: las dos capas **se componen de forma multiplicativa** —una
+identidad contable (valor entregado = valor seleccionado × fracción
+entregada, aplicada por proyecto), de la cual la interacción positiva es la
+firma del efecto de nivel, no un hallazgo independiente. La arquitectura
+completa supera al statu quo en ≈ +58.6 puntos de la referencia (intervalo
+Monte-Carlo condicional al 95% [+58.0, +59.2], que refleja solo la
+variabilidad de simulación interna —la incertidumbre de mundo, forma
+funcional y calibración no está incluida). Una versión anterior resumía esto
+como un único multiplicador compuesto de valor por presupuesto; ese compuesto
+se **retira**, y E5 reporta las capas como porcentajes separados.
+
+Dos refinamientos sobreviven al escrutinio. Primero, la cobertura distribuida
+de Core v0 no es solo una señal de selección: los ciudadanos que rutearon el
+presupuesto también observan la entrega. Pero la cobertura comunitaria eleva
+de forma creíble la *detección*, no la *recuperación* (el clawback exige
+enganche institucional), de modo que el dividendo de entrega solo-comunitario
+es pequeño (una fracción de punto en el régimen de control débil;
+Björkman y Svensson 2009, con réplicas fallidas; Molina et al. 2016); la
+ganancia de entrega considerable viene del canal **formal** de recuperación
+—el régimen verificado—, no de los ojos por sí solos. Segundo, el desvío del
+régimen verificado es **bajo pero no nulo** (≈ 2% de incidencia, ≈ 7% sin el
+capital reputacional): una cola de gran corrupción deja un residual que el
+control fuerte no elimina, coincidiendo con el hallazgo de Olken de que las
+auditorías reducen la fuga sin borrarla (2007; Avis, Ferraz y Finan 2018;
+Becker 1968) —disuasión ex ante, no un cero empírico. El resultado es robusto
+al riesgo de entrega correlacionado con valor/complejidad (el brazo
+distribuido financia proyectos de mayor *valor*, no de mayor *costo*) y
+estable entre semillas; un barrido conjunto de parámetros de entrega,
+condicional al mundo declarado, mantiene a la cobertura adelante en todo el
+espacio muestreado. El valor entregado aquí se mide a *presupuesto igual*; el
+*costo* administrativo de operar cada institución es una capa separada
+(Hallazgo 10).
 
 **Hallazgo 6: la visibilidad sostiene el estándar; los mercados reputacionales
 ingenuos concentran más rápido de lo que seleccionan.** Un sexto experimento
@@ -1113,6 +1129,63 @@ del cociente, porque la capa por defecto ancla por construcción los ciclos
 tempranos delgados. El estudio conductual también reproduce de forma
 independiente el supuesto de cuota informada que estos experimentos habían
 impuesto: 0.309 emergente contra el 0.30 asumido.
+
+**Hallazgo 9: el stack completo —planificación, selección y entrega— y una
+contabilidad honesta de lo que aporta cada capa.** Un noveno experimento
+(`scripts/simulation/e4-v5/e9-fullstack.mjs`, construido sobre E5) añade la
+tercera capa arquitectónica, la **planificación** (construir el marco de
+elegibilidad y las cuotas de presupuesto por sector), de modo que las tres
+capas se comparan central versus distribuido en un 2×2×2 de sectores
+persistentes (diez, el número de COFOG). Una atribución de Shapley descompone
+la brecha todo-distribuido-versus-statu-quo en contribuciones por capa que
+suman exactamente a ella. Dos salvedades honestas rigen la lectura. Primero,
+la atribución es *condicional*: cada valor de capa se computa a través del
+generador de sectores de planificación declarado, así que las cifras
+autónomas y cuantificadas de **selección** y **entrega** son las de E5 (sin
+capa de planificación); E9 aporta la *estructura* de tres capas y el *método*
+de atribución. Segundo, las contribuciones por capa son *grandes en el mundo
+declarado, no uniformemente robustas*: la ventaja completa de Core v0
+permanece positiva en todos los mundos nombrados (desde uno moderadamente
+favorable al central hasta uno fuertemente favorable al distribuido), pero
+las contribuciones individuales de selección y entrega invierten su signo en
+los rincones extremos (selección donde la selección central es casi
+aleatoria, entrega donde una cartera dañina se entrega con más fidelidad) —un
+hecho que el paper reporta en lugar de ocultar. El valor de la capa de
+**planificación** opera principalmente a través de la **captura de agenda**
+—el central manteniendo funciones enteras de alta necesidad y baja
+visibilidad fuera del menú (la segunda cara del poder; Bachrach y Baratz
+1962; Schattschneider 1960). Ese mecanismo es real y su *dirección* está
+anclada (la taxonomía COFOG; el giro pre-electoral hacia el gasto visible,
+Drazen y Eslava 2010; el descuido sistemático del mantenimiento y la
+prevención, Rioja 2003), pero su *magnitud* no puede identificarse sin datos
+presupuestarios de un país concreto. Por eso **no reportamos una cifra para
+la capa de planificación**: cuantificarla con el mecanismo apagado la
+subestimaría, y encendido aún no es anclable. Una ilustración con datos de un
+país —el presupuesto de salud mental de Chile mantenido cerca del 2% frente a
+un promedio OCDE del 6.7%, pese a ser los trastornos mentales la principal
+causa de discapacidad del país— muestra que el sesgo de visibilidad tiene un
+footprint real, y se ofrece cualitativamente, no como calibración.
+
+**Hallazgo 10: el costo administrativo es aproximadamente neutro una vez
+contabilizado de forma simétrica —la ventaja es el valor entregado, no el
+overhead.** Una décima capa (`scripts/simulation/e4-v5/e10-costs.mjs`) añade
+el costo administrativo y de maquinaria que cada institución opera y que Core
+v0 reemplaza en gran medida —los estudios de valor-proxy, el aparato de
+asignación y priorización, y las licencias que carga el central, frente a la
+propia plataforma y maquinaria de control de Core v0. Modelado honestamente
+—el costo reduce el *presupuesto* de cada brazo antes de seleccionar (así la
+pérdida de valor es sub-proporcional, porque la financiación voraz corta
+primero los proyectos marginales), cobrado simétricamente (la maquinaria de
+verificación y recuperación de Core v0 se cobra, no es gratis) y
+des-solapado de la fuga de entrega que E5 ya descuenta— la capa
+administrativa es **aproximadamente neutra** (dentro de un punto de cero en
+cualquier dirección a las cuotas de costo declaradas). La ventaja de Core v0
+viene de la **selección y la entrega**, no de un ahorro de costo
+administrativo; una ventaja de costo decisiva exigiría que el overhead del
+central superara al de la plataforma por más de lo que la contabilidad
+simétrica sostiene. Las cuotas de costo son declaradas, con direcciones
+ancladas (IDB 2018; el bajo costo operativo de las plataformas de gobierno
+digital —KONEPS, ChileCompra, ProZorro).
 
 **Qué sobrevive.** Reducido a lo que la prueba rectora sostiene: (1) bajo el gate
 simétrico pre-registrado la ventaja de selección distribuida es *positiva pero
