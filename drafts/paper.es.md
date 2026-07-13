@@ -1658,7 +1658,11 @@ super-delegados — Kling et al. 2015): lleva ≈ +54% a ≈ +44% (modesto) y �
 cruzando la paridad solo a un nivel grande de error compartido (σ_cm ≈ 2,1). Ninguna
 rebanada de un-solo-factor voltea al ganador sobre su rango plausible; el sendero
 ceteris-paribus combinado desde la referencia declarada hacia el endpoint del central
-plenamente idealizado cruza la paridad solo en **t ≈ 0,92 del segmento declarado**. Estas
+plenamente idealizado cruza la paridad solo en **t ≈ 0,92 del segmento declarado**. Esto
+es evidencia de curva local, ceteris-paribus —seis rebanadas de un-solo-factor más un
+sendero combinado declarado— no una frontera global exhaustiva; un barrido conjunto
+Sobol / hipercubo latino de todo el espacio de parámetros queda diferido a trabajo
+futuro. Estas
 magnitudes son **puntos de referencia declarados y motivados por fuentes, de un modelo
 estilizado de instituciones comparadas —un contraste de modelo condicional, no efectos
 de campo calibrados al dominio objetivo**. Los límites vigentes son: (i) la *magnitud*

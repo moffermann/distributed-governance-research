@@ -1569,7 +1569,10 @@ delegation concentrated on super-delegates — Kling et al. 2015): it takes ≈ 
 to ≈ +44% (modest) and ≈ +26% (strong), crossing parity only at a large shared-error
 level (σ_cm ≈ 2.1). No single-factor slice flips the winner over its plausible range;
 the combined ceteris-paribus path from the declared reference to the fully-idealized
-central endpoint crosses parity only at **t ≈ 0.92 of the declared segment**. These magnitudes
+central endpoint crosses parity only at **t ≈ 0.92 of the declared segment**. This is
+local, ceteris-paribus curve evidence — six one-factor slices plus one declared combined
+path — not an exhaustive global frontier; a joint Sobol / Latin-hypercube sweep of the
+full parameter space is deferred to future work. These magnitudes
 are **declared, source-motivated reference points from a stylized comparative-
 institutions model — a conditional model contrast, not target-domain calibrated field
 effects**. The standing limits are: (i) the harm-gate's exact *magnitude* is a stylized
