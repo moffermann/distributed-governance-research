@@ -1167,7 +1167,7 @@ subestimaría, y encendido aún no es anclable. Chile aporta una ilustración so
 cualitativa: el gasto en salud mental se mantuvo cerca del 2% del gasto en salud
 durante 2007–2015 (y cerca del 4.5% del presupuesto del ministerio de salud
 hacia 2025), pese a ser los trastornos mentales la principal causa de
-discapacidad del país. Ese patrón es consistente con una subprovisión de baja
+discapacidad del país (Errázuriz et al. 2015). Ese patrón es consistente con una subprovisión de baja
 saliencia, pero ni identifica la captura de agenda ni calibra su magnitud; la
 salud mental es una subfunción financiada, no una función COFOG de primer nivel
 excluida.

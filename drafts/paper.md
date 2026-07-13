@@ -1085,7 +1085,8 @@ it with the mechanism switched off would understate it, and switched on it
 is not yet anchorable. Chile provides a qualitative illustration only:
 mental-health spending remained near 2% of health spending over 2007–2015
 (and about 4.5% of the health ministry's budget by 2025), despite mental
-disorders being the country's leading cause of disability. That pattern is
+disorders being the country's leading cause of disability (Errázuriz et al.
+2015). That pattern is
 consistent with low-salience under-provision, but it neither identifies
 agenda capture nor calibrates its magnitude; mental health is a funded
 subfunction, not an excluded top-level COFOG function.
