@@ -200,8 +200,31 @@ is **~+7.0% [+6.6,+7.5]** (vs +3.8% and sign-ambiguous under soft distortion alo
 but are a **declared stress, NOT data-supported** (wholesale exclusion of many functions contradicts the single-digit
 measured shifts).
 
-**Honest anchored conclusion:** the planning layer is a **modest, robustly-positive third layer (~+7%)**, its DIRECTION
-anchored (COFOG structure; the second face of power; political budget cycles; maintenance neglect) and its MAGNITUDE
-declared-and-conservative. **SELECTION (+36%) and DELIVERY (+10%) remain the large, robust layers.** Full-stack gain
-~+53% [+52.6,+54.0]. This is the data-anchored, non-gerrymandered result. 26/26 tests. → Codex pro-anchor panel synthesis
-to be folded in next.
+## Codex pro-anchor panel (4 profiles) — CONVERGES with the data agent; applied (commit 3033c2b)
+
+The panel (PFM / development / political-economy / methodology) verified sources and mapped E9's parameters onto
+observable moments, plus found a real BUG. Applied:
+
+- **BUG FIX (blocker):** distributed sector perception multiplied `secValSpread` twice (`valTilt` already carries it).
+- **Provisional moment maps:** `creditCoef` 0.6→**0.076** (Drazen–Eslava election log-visible-share shift 0.024,
+  SE 0.008); `secValSpread` 0.3→**0.184** (World Bank OED between-sector return-per-cost SD); `nSec`=10 (COFOG);
+  **`agendaCapture` default 1→0** — no cited evidence for universal whole-function exclusion, so it stays a DECLARED
+  STRESS, not the anchored headline.
+- **Result reproduces the panel's independent diagnostic exactly:** planning Shapley **+0.61% strict / +3.21%
+  [+2.93,+3.47] recycled**. (My earlier +7% used the unanchored creditCoef=0.6 + agendaCapture=1 + the double-count.)
+
+**FINAL honest anchored conclusion:** the planning layer is a **small, positive-or-near-zero third layer** — **~+0.6%
+(strict) to +3.2% (recycled)**, in the **0–3% data-assisted range** both reviewers converged on. Its DIRECTION is
+anchored (COFOG taxonomy; the election-period shift to visible spending; maintenance neglect); the point MAGNITUDE is a
+**provisional moment map** (an old WB return portfolio + a Colombian election moment), **NOT one transported empirical
+calibration — no fully anchored band is claimed**. This coheres with the project's symmetry-gate NO-GO (~0.026): the
+architecture + mechanism is the contribution; the honest calibrated planning magnitude is small. **SELECTION (+37–43%)
+and DELIVERY (+11%) remain the large, robust layers.** 26/26 tests.
+
+**Panel modifications noted as FUTURE WORK (a country-specific, fully-anchored v3):** softmax baseline-plus-flexible-
+reallocation share form (credit as a share semi-elasticity, not an additive coefficient on the arbitrary `M_C` scale);
+return-per-cost value tilt (`Sadj = S + cost·returnTilt`); a per-sector DATA INPUT TABLE (COFOG code, counts, cost/
+return distributions, baseline capital share, visibility, need, maintenance share); an inverse-calibration harness that
+root-solves the observable moments with held-out validation; a genuine value-maximizing comparator (diminishing returns)
+to replace the greedy reference if an actual-vs-optimal allocation gap is the target; and an exclusion HURDLE model
+(first whether viable projects exist, then whether the central zero-funds them).
