@@ -33,22 +33,23 @@ const NW = 800;
   check('planning on switches the value base to E9', r.planningOn === true && r.via.startsWith('E9'));
 }
 
-// 4) The κ haircut is applied per arm exactly: V_arm = valueOnly_arm · (1 − κ_arm).
+// 4) NET-BUDGET accounting: the value loss from admin cost is SUB-proportional to κ (greedy cuts marginal low-value
+//    projects first), so the arm's value at net budget is ABOVE the naive value·(1−κ) haircut.
 {
   const r = e10(cfg, { nWorlds: NW });
-  check('central value haircut = (1 − κ_C)', approx(r.withCosts.statusQuo, r.valueOnly.statusQuo * (1 - r.kappa_C), 1e-12));
-  check('Core v0 value haircut = (1 − κ_D)', approx(r.withCosts.coreV0, r.valueOnly.coreV0 * (1 - r.kappa_D), 1e-12));
+  check('central net-budget value ≥ naive haircut (sub-proportional)', r.withCosts.statusQuo >= r.valueOnly.statusQuo * (1 - r.kappa_C) - 1e-9, `${r.withCosts.statusQuo} vs ${r.valueOnly.statusQuo * (1 - r.kappa_C)}`);
+  check('Core v0 net-budget value ≥ naive haircut (sub-proportional)', r.withCosts.coreV0 >= r.valueOnly.coreV0 * (1 - r.kappa_D) - 1e-9);
+  check('costs reduce each arm below its full-budget value', r.withCosts.statusQuo < r.valueOnly.statusQuo && r.withCosts.coreV0 < r.valueOnly.coreV0);
 }
 
-// 5) COST DIRECTION: with a κ_C/κ_D ratio above the value ratio, admin costs WIDEN the gap; below it, they narrow it
-//    (an honest subtlety — Core v0 delivers more, so a proportional cost removes more absolute value from its base).
+// 5) COST DIRECTION under net-budget accounting: the admin-cost effect on the gap is SMALL at the anchored κ and grows
+//    (turns clearly positive) only at large κ_C. Monotone in κ_C.
 {
-  const valueRatio = (() => { const v = e10(cfg, { nWorlds: NW }).valueOnly; return v.coreV0 / v.statusQuo; })();
-  const wide = e10(cfg, { nWorlds: NW, costs: { ...COSTS, kappa_C: 0.30, kappa_D: 0.05 } }); // ratio 6 > valueRatio
-  const narrow = e10(cfg, { nWorlds: NW, costs: { ...COSTS, kappa_C: 0.06, kappa_D: 0.05 } }); // ratio ~1.2 < valueRatio
-  check('high κ_C/κ_D ratio widens the gap', wide.adminCostContribution > 0, `contrib ${wide.adminCostContribution}`);
-  check('low κ_C/κ_D ratio narrows the gap', narrow.adminCostContribution < 0, `contrib ${narrow.adminCostContribution}`);
-  check('the crossover is at κ_C/κ_D ≈ the value ratio', valueRatio > 2 && valueRatio < 4, `valueRatio ${valueRatio}`);
+  const base  = e10(cfg, { nWorlds: NW });
+  const large = e10(cfg, { nWorlds: NW, costs: { ...COSTS, kappa_C: 0.30 } });
+  check('admin-cost effect is small at the anchored κ (|·| < 3pp)', Math.abs(base.adminCostContribution) < 0.03, `contrib ${base.adminCostContribution}`);
+  check('a much larger κ_C makes the admin-cost effect more positive', large.adminCostContribution > base.adminCostContribution);
+  check('the core value advantage survives the cost layer (with-costs gain > 0.4)', base.withCosts.gain > 0.4, `gain ${base.withCosts.gain}`);
 }
 
 console.log(`\nE10 costs: ${pass} passed, ${fail} failed.`);

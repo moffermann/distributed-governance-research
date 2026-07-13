@@ -234,7 +234,7 @@ export function fullStack(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.v
   }
   const ci = (arr) => { if (!arr.length) return [NaN, NaN]; const a = [...arr].sort((x, y) => x - y); const q = (p) => a[Math.max(0, Math.min(a.length - 1, Math.floor(p * a.length)))]; return [q((1 - NUM.ci_level.value) / 2), q((1 + NUM.ci_level.value) / 2)]; };
   return {
-    n: W.length, statusQuo: point.statusQuo, coreV0: point.coreV0,
+    n: W.length, sumO, statusQuo: point.statusQuo, coreV0: point.coreV0,
     fullStackGain: point.gain, fullStackCI: ci(bs.gain),
     attribution: point.shapley,
     attributionCI: { planning: ci(bs.planning), selection: ci(bs.selection), delivery: ci(bs.delivery) },

@@ -174,6 +174,7 @@ export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.see
   const fullCI = ci(bs.full);
   return {
     n: W.length,
+    sumO: O,                                                  // raw oracle sum (for E10 net-budget accounting vs a common full-budget oracle)
     selection: { central: sC, distributed: sD },
     delivery:  { centralOpaque: dCol, centralVerified: dCvr, distributedOpaque: dDop, distributedVerified: dDvr },
     monitoringDividend: { verified: dDvr - dCvr, opaque: dDop - dCol },
