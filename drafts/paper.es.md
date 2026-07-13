@@ -1843,18 +1843,18 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - Austen-Smith, D., and J. Banks (1996). "Information Aggregation, Rationality, and the Condorcet Jury Theorem." *American Political Science Review* 90(1).
 - Avis, E., C. Ferraz, and F. Finan (2018). "Do Government Audits Reduce Corruption? Estimating the Impacts of Exposing Corrupt Politicians." *Journal of Political Economy* 126(5).
 - Bachrach, P., and M. Baratz (1962). "Two Faces of Power." *American Political Science Review* 56(4).
-- Besley, T., and S. Coate (2003). "Centralized versus Decentralized Provision of Local Public Goods: A Political Economy Approach." *Journal of Public Economics* 87(12).
 - Baiocchi, G., and E. Ganuza (2017). *Popular Democracy: The Paradox of Participation*. Stanford University Press.
 - Bandiera, O., A. Prat, and T. Valletti (2009). "Active and Passive Waste in Government Spending: Evidence from a Policy Experiment." *American Economic Review* 99(4).
-- Björkman, M., and J. Svensson (2009). "Power to the People: Evidence from a Randomized Field Experiment on Community-Based Monitoring in Uganda." *Quarterly Journal of Economics* 124(2).
 - Bastiat, F. (1850). *Ce qu'on voit et ce qu'on ne voit pas* [What Is Seen and What Is Not Seen]. Paris.
 - Becker, G. (1968). "Crime and Punishment: An Economic Approach." *Journal of Political Economy* 76(2).
 - Becker, G., and G. Stigler (1974). "Law Enforcement, Malfeasance, and Compensation of Enforcers." *Journal of Legal Studies* 3(1).
+- Besley, T., and S. Coate (2003). "Centralized versus Decentralized Provision of Local Public Goods: A Political Economy Approach." *Journal of Public Economics* 87(12).
 - Bikhchandani, S., D. Hirshleifer, and I. Welch (1992). "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." *Journal of Political Economy* 100(5).
-- Brennan, J. (2016). *Against Democracy*. Princeton University Press.
-- Broockman, D., and C. Skovron (2018). "Bias in Perceptions of Public Opinion among Political Elites." *American Political Science Review* 112(3).
+- Björkman, M., and J. Svensson (2009). "Power to the People: Evidence from a Randomized Field Experiment on Community-Based Monitoring in Uganda." *Quarterly Journal of Economics* 124(2).
 - Blum, C., and C. I. Zuber (2016). "Liquid Democracy: Potentials, Problems, and Perspectives." *Journal of Political Philosophy* 24(2).
 - Bovens, M. (2007). "Analysing and Assessing Accountability: A Conceptual Framework." *European Law Journal* 13(4).
+- Brennan, J. (2016). *Against Democracy*. Princeton University Press.
+- Broockman, D., and C. Skovron (2018). "Bias in Perceptions of Public Opinion among Political Elites." *American Political Science Review* 112(3).
 - Buchanan, J., and G. Tullock (1962). *The Calculus of Consent*. University of Michigan Press.
 - Buterin, V., Z. Hitzig, and E. G. Weyl (2019). "A Flexible Design for Funding Public Goods." *Management Science* 65(11).
 - Campbell, D. (1976). "Assessing the Impact of Planned Social Change." Occasional Paper 8, Dartmouth College.
@@ -1888,26 +1888,26 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - IMF (International Monetary Fund) (2015). *Making Public Investment More Efficient.* IMF Policy Paper.
 - Jensen, M., and W. Meckling (1976). "Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure." *Journal of Financial Economics* 3(4).
 - Kahng, A., S. Mackenzie, and A. Procaccia (2018). "Liquid Democracy: An Algorithmic Perspective." *AAAI*.
-- Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
 - Kling, C. C., J. Kunegis, H. Hartmann, M. Strohmaier, and S. Staab (2015). "Voting Behaviour and Power in Online Democracy: A Study of LiquidFeedback in Germany's Pirate Party." arXiv:1503.07723.
+- Kydland, F., and E. Prescott (1977). "Rules Rather than Discretion: The Inconsistency of Optimal Plans." *Journal of Political Economy* 85(3).
 - Laffont, J.-J., and J. Tirole (1991). "The Politics of Government Decision-Making: A Theory of Regulatory Capture." *Quarterly Journal of Economics* 106(4).
 - Lalley, S., and E. G. Weyl (2018). "Quadratic Voting: How Mechanism Design Can Radicalize Democracy." *AEA Papers and Proceedings* 108.
 - Landemore, H. (2020). *Open Democracy: Reinventing Popular Rule for the Twenty-First Century*. Princeton University Press.
-- Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale University Press.
-- Molina, E., L. Carella, A. Pacheco, G. Cruces, and L. Gasparini (2016). "Community Monitoring Interventions to Curb Corruption and Increase Access and Quality of Service Delivery in Low- and Middle-Income Countries." *Campbell Systematic Reviews* 12.
 - Lipsey, R., and K. Lancaster (1956). "The General Theory of Second Best." *Review of Economic Studies* 24(1).
 - Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
-- Musgrave, R. (1959). *The Theory of Public Finance*. McGraw-Hill.
+- Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale University Press.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
+- Molina, E., L. Carella, A. Pacheco, G. Cruces, and L. Gasparini (2016). "Community Monitoring Interventions to Curb Corruption and Increase Access and Quality of Service Delivery in Low- and Middle-Income Countries." *Campbell Systematic Reviews* 12.
+- Musgrave, R. (1959). *The Theory of Public Finance*. McGraw-Hill.
 - Noelle-Neumann, E. (1974). "The Spiral of Silence: A Theory of Public Opinion." *Journal of Communication* 24(2).
+- North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
 - Nozick, R. (1974). *Anarchy, State, and Utopia*. Basic Books.
 - Oates, W. (1972). *Fiscal Federalism*. Harcourt Brace Jovanovich.
 - Offermann, M. (2026b). "Stress-Testing a Distributed Public-Resource Governance Architecture: Adversarial and Behavioral Agent-Based Evidence." Companion computational-experiments paper and repository, concept doi:10.5281/zenodo.21246088 (always resolves to the latest version).
 - Okun, A. (1975). *Equality and Efficiency: The Big Tradeoff*. Brookings Institution.
 - Olken, B. (2007). "Monitoring Corruption: Evidence from a Field Experiment in Indonesia." *Journal of Political Economy* 115(2).
-- North, D., and B. Weingast (1989). "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *Journal of Economic History* 49(4).
 - Olson, M. (1965). *The Logic of Collective Action*. Harvard University Press.
 - Olson, M. (1982). *The Rise and Decline of Nations*. Yale University Press.
 - Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.
@@ -1923,8 +1923,8 @@ agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrado
 - Schattschneider, E. E. (1960). *The Semisovereign People*. Holt, Rinehart and Winston.
 - Scott, J. (1998). *Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed*. Yale University Press.
 - Sen, A. (1999). *Development as Freedom*. Oxford University Press.
-- Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
 - Skuhrovec, J., et al. (2013). "Exponential and power laws in public procurement markets." arXiv:1309.0218.
+- Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
 - Stokes, S. (2005). "Perverse Accountability: A Formal Model of Machine Politics with Evidence from Argentina." *American Political Science Review* 99(3).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
