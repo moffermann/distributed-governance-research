@@ -87,8 +87,9 @@ function deliveredFraction(reg, honest, tempt, del, detMult) {
 
 // Delivered value + robustness diagnostics for a funded set under a regime, reusing per-project executor draws (shared
 // across all four cells — the design's matched seeds). mDet/mRec = monitoring lifts; cfg gives the cost range for the
-// value/complexity risk (bigger projects harder to monitor).
-function deliveredCell(projects, funded, reg, exec, del, mDet, mRec, cfg) {
+// value/complexity risk (bigger projects harder to monitor). Exported so E9 (the full stack) reuses the SAME delivery
+// machinery on top of a planning layer — E9 = planning × E5.
+export function deliveredCell(projects, funded, reg, exec, del, mDet, mRec, cfg) {
   const eff = coupledRegime(reg, mDet, mRec);
   const vr = del.val_risk || 0, span = cfg.c_hi - cfg.c_lo;
   let v = 0, lost = 0, nDiv = 0;

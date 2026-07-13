@@ -14,7 +14,9 @@
     "e4:frontier": "node scripts/simulation/e4-v5/frontier.mjs",
     "e5:layers": "node scripts/simulation/e4-v5/e5-layers.mjs",
     "e5:delivery": "node scripts/simulation/e4-v5/e5-delivery.mjs",
-    "e5:delivery:test": "node scripts/simulation/e4-v5/e5-delivery-test.mjs"
+    "e5:delivery:test": "node scripts/simulation/e4-v5/e5-delivery-test.mjs",
+    "e9:fullstack": "node scripts/simulation/e4-v5/e9-fullstack.mjs",
+    "e9:fullstack:test": "node scripts/simulation/e4-v5/e9-fullstack-test.mjs"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "11.16.0",
