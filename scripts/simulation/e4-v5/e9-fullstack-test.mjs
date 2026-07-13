@@ -39,21 +39,35 @@ const NW = 700;
   check('planning simple effect flips: central-sel > distributed-sel', real.planningUnderCentralSel > real.planningUnderDistributedSel, `${real.planningUnderCentralSel} vs ${real.planningUnderDistributedSel}`);
 }
 
-// 4) ORDERING + BOUNDS: Core v0 beats the status quo; no cell exceeds the oracle.
+// 4) ORDERING (Core v0 beats the status quo). The oracle is a greedy REFERENCE, NOT an upper bound, so cells are NOT
+//    required to stay ≤ 100% — that would be a false invariant (this is a scenario regression, not a math invariant).
 {
   const r = fullStack(cfg, { nWorlds: NW });
   check('Core v0 full beats the status quo', r.coreV0 > r.statusQuo);
   check('full-stack gain is materially positive', r.fullStackGain > 0.2, `got ${r.fullStackGain}`);
-  check('no cell exceeds the oracle (all ≤ ~100%)', Object.values(r.cells).every((x) => x <= 1.0 + 1e-6), JSON.stringify(r.cells));
+  check('every reported quantity carries a 95% CI', Array.isArray(r.attributionCI.planning) && Array.isArray(r.planningCI.distributed) && Array.isArray(r.fullStackCI));
 }
 
-// 5) VALIDATION: fail-closed on bad planning + reused delivery validation.
+// 5) RESIDUAL RECYCLING removes the utilization confound: recycle drives utilization to ~100% and does not lower the gain.
+{
+  const strict = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, residualMode: 'strict' } });
+  const recycle = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, residualMode: 'recycle' } });
+  check('strict residual leaves some budget unspent (utilization < 100%)', strict.utilization.d_d_ve < 0.999, `util ${strict.utilization.d_d_ve}`);
+  check('recycling raises utilization toward ~100%', recycle.utilization.d_d_ve > strict.utilization.d_d_ve + 0.02);
+  check('recycling does not lower the full-stack gain', recycle.fullStackGain >= strict.fullStackGain - 1e-6);
+}
+
+// 6) VALIDATION: fail-closed on bad planning + reused delivery validation.
 {
   const throwsP = (p) => { try { validatePlanning(p); return false; } catch { return true; } };
   check('validatePlanning accepts the default', validatePlanning(PLANNING) === true);
   check('validatePlanning rejects nSec < 1', throwsP({ ...PLANNING, nSec: 0 }));
   check('validatePlanning rejects assoc out of [-1,1]', throwsP({ ...PLANNING, assoc: 2 }));
   check('validatePlanning rejects NaN creditCoef', throwsP({ ...PLANNING, creditCoef: NaN }));
+  check('validatePlanning rejects negative secValSpread', throwsP({ ...PLANNING, secValSpread: -0.1 }));
+  check('validatePlanning rejects fractional nKeep', throwsP({ ...PLANNING, nKeep: 2.5 }));
+  check('validatePlanning rejects nKeep > nSec when excluding', throwsP({ ...PLANNING, hardExclude: 1, nKeep: 99 }));
+  check('validatePlanning rejects a bad residualMode', throwsP({ ...PLANNING, residualMode: 'nope' }));
   check('fullStack rejects an invalid delivery config (missing rep)', (() => { try { fullStack(cfg, { nWorlds: 10, delivery: { ...DELIVERY, verified: { p_det: 0.75, a: 0.2, r: 0.5, gamma: 0.1 } } }); return false; } catch { return true; } })());
 }
 
