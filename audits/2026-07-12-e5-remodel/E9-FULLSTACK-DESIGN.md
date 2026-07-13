@@ -108,3 +108,25 @@ positive; selection dominant; fail-closed delivery validation reused.
 **Open for the friendly round:** is the visibility-stratified category construction the right/most-defensible one, or
 should categories be typed by harm/need directly? Anchor the planning-layer magnitude (sectoral misallocation of public
 investment). Confirm the global-oracle normalization and the main-effect decomposition are sound.
+
+## Planning-layer calibration (friendly round — calibration agent, 2026-07-13, all web-verified)
+
+**Direction is strongly anchored; the magnitude is DECLARED-but-conservative.** No published source cleanly isolates
+"value lost from allocating the budget across the wrong sectors," so the planning effect is a declared modeling
+parameter *consistent with, and conservative relative to,* the published efficiency-loss envelope — not a transported
+point estimate.
+
+| quantity | anchored band / direction | best citation | status |
+|---|---|---|---|
+| total public-investment inefficiency | ~30% of returns lost (13% adv / 27% EM / 40% LIC); strong PIM closes ~2/3 | IMF, *Making Public Investment More Efficient* 2015 | ANCHORED (total loss, broader than cross-sector) |
+| **pure cross-sector allocative loss** | no canonical scalar exists | World Bank PERs (diagnostic, no scalar) | **DECLARED** (the quantity E9 most needs) |
+| political budget cycle → visible spending | pre-election composition shift to visible capital (~0.5–1% of GDP/category) | Drazen & Eslava 2010, *JDE* 92(1) | ANCHORED (direction; composition shift, not value-loss %) |
+| pork-barrel / particularistic targeting | allocations follow electoral usefulness, not marginal value (150+ studies) | Golden & Min 2013, *ARPS* 16 | ANCHORED (direction/pervasiveness, qualitative) |
+| maintenance / diffuse-cost underinvestment | LatAm ~2/3 new vs ~1/3 maintenance; +20% to maintenance → ~15% long-run GDP | Rioja 2003, *JPE* 87(9–10) | ANCHORED (cleanest sector number; model-based, infra-only) |
+
+Supporting (direction only): Rogoff & Sibert 1988; Rogoff 1990 *AER*; Khemani 2004 *JDE*.
+
+**Agent's read:** the +3–7% planning contrast sits **comfortably inside** the envelope (well below IMF's ~30% total and
+Rioja's ~15% single-margin), so it does **not** overclaim — if anything it is conservative. Honest framing to apply:
+call it "consistent with and conservative relative to" the IMF/Rioja evidence, NOT "anchored" to a cross-sector estimate
+(none exists at that granularity). Flag the pure cross-sector allocative-loss magnitude explicitly DECLARED to reviewers.
