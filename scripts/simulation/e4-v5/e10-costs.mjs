@@ -23,13 +23,18 @@ import { baseConfig, NUM } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 
 export const COSTS = {
-  // DIRECTION anchored, MAGNITUDE declared-and-conservative (author-set, 2026-07-13; citations being verified).
+  // DIRECTION robustly anchored (verified sources), POINT magnitude DECLARED-and-conservative (author-set 2026-07-13).
   kappa_C:    0.15,   // central admin/machinery cost share Core v0 ELIMINATES (value-proxy studies, allocation,
-                      //     prioritization, AI-fiscalization machinery, delivery mgmt, licenses, travel). Direction
-                      //     anchored: public-program administrative overhead ~10–20% + substantial documented waste
-                      //     (IDB, Better Spending for Better Lives, 2018). Conservative midpoint 0.15; magnitude DECLARED.
-  kappa_D:    0.03,   // Core v0's OWN operating cost (platform + AI). Direction anchored: e-government / e-procurement
-                      //     platforms run at low cost relative to spend managed (~1–5%). Low-mid 0.03; base κ_D < κ_C.
+                      //     prioritization, AI-fiscalization machinery, delivery mgmt, licenses, travel). ANCHOR: IDB
+                      //     *Better Spending for Better Lives* 2018 — LAC public-spending waste = 4.4% of GDP ≈ **16% of
+                      //     government expenditure** (procurement + payroll + transfers). 0.15 is a round-down of that
+                      //     16%; band 0.10–0.16. (Narrow pure-admin overhead is 1–10% — CBPP/SSA/CBO — a lower floor,
+                      //     since κ_C is broader.) The exact point is DECLARED (no source maps "waste"→"budget share removed").
+  kappa_D:    0.03,   // Core v0's OWN operating cost (platform + AI). ANCHOR: verified e-procurement platform run-costs
+                      //     are an ORDER OF MAGNITUDE below this (~0.005–1% of spend managed — JBCA 2023 e-GP CBA; KONEPS;
+                      //     GeM; ProZorro), so 0.03 deliberately OVER-charges the platform = conservative ceiling (band
+                      //     0.005–0.03). base κ_D ≪ κ_C: verified central-machinery cost is ≥10–30× platform run cost,
+                      //     so the modeled ratio ~5 UNDERSTATES the structural gap. Magnitude DECLARED.
   planningOn: false,  // author requirement: PLANNING OFF by default (its magnitude is deferred; do not fold into costs)
 };
 
