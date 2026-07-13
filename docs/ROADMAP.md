@@ -5,8 +5,21 @@ agree on the code (`scripts/simulation/e4-v5/`), the section draft, AND its inte
 `drafts/paper.es.md`. The manuscript is deposited as an **unpublished Zenodo draft** (record 21311851; concept DOI
 10.5281/zenodo.21193846); latest published = v1.12 (21252911). v1.14 will update that draft slot.
 
-**Chosen strategy (author, 2026-07-12): STRENGTHEN FIRST.** Make the paper coherent, add the administrative-cost leg
-(the strongest, best-identified number), then deposit a stronger v1.14 — before the incremental legs.
+**Re-sequenced (author, 2026-07-12): CLOSE THE EXPERIMENT PROGRAM FIRST, costs LAST.** The layered value program is
+now ordered **E4 → E5 → E9 → E10**, with the administrative-cost dimension deferred to E10 (after E9), NOT the
+immediate next track. Canonical map + rationale: `docs/EXPERIMENT-INVENTORY.md`. Each stage is validated by a friendly
+Codex/agent round (correct + anchor the model) before the adversarial pass.
+
+- **E4** = selection at matched budget. CLOSED, publication-ready v1.14.
+- **E5** = selection × delivery (delivered value), rebuilt on the E4 base. Steps 1+2 done (opaque-band sweep +
+  monitoring coupling); `scripts/simulation/e4-v5/e5-delivery.mjs`. IN PROGRESS: friendly round → anchors → perfect /
+  publication-ready → integrate into the paper's Finding 5.
+- **E9** = full-stack comparison (planning + selection + delivery, central vs Core v0 distributed). NOT built. This is
+  where the planning layer finally gets its honest measurement (the ≈1.05× was a mis-comparison — see inventory).
+- **E10** = E9 + costs (admin `κ` / leakage). Absorbs `e5-layers.mjs`, `ADMIN-COST-LEG.md`, `LEAKAGE-CORRUPTION-LEG.md`.
+- **THEN** headlines + paper propagation; deposit.
+
+The tracks below are the PRE-re-sequencing plan, kept for reference; the cost leg (Track 2) now maps to E10.
 
 ROI = impact ÷ effort, with dependencies. Ranked:
 
