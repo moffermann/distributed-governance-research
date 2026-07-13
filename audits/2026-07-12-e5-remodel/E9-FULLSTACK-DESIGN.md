@@ -131,6 +131,33 @@ Rioja's ~15% single-margin), so it does **not** overclaim — if anything it is 
 call it "consistent with and conservative relative to" the IMF/Rioja evidence, NOT "anchored" to a cross-sector estimate
 (none exists at that granularity). Flag the pure cross-sector allocative-loss magnitude explicitly DECLARED to reviewers.
 
+## Country-grounded ILLUSTRATIVE example of agenda capture (data agent, 2026-07-13 — Eurostat-verified)
+
+**Not a conclusion — an illustrative footprint.** Searched real functional-budget (COFOG) data for a concrete
+agenda-capture severity. Finding: the data does NOT support "many functions off the menu." Across EU/OECD COFOG budgets
+the same pattern holds — **environmental protection is the single structurally smallest function** (EU-27 2023: **0.8%
+of GDP ≈ 1.7% of total government expenditure**; country floor **0.2% of GDP in Finland**, next to its EU-highest social
+protection 25.7% of GDP). A soft second case is **housing & community amenities** (EU 1.2%/2.4%; 0.2% of GDP floor in
+Denmark/Switzerland). Source: Eurostat, *Government expenditure by function — COFOG* / *…on environmental protection* /
+*…on housing* (2022 & 2023); Statistics Finland 2023. **Chile (the first-choice country) had image-encoded DIPRES/BCCh
+PDFs unparseable this pass** — switched to Eurostat for cleaner verification; the example is **country-agnostic**.
+
+**Defensible illustrative severity: 1 function off the menu (environmental protection), range 1–2.** Plugged into E9 on
+the anchored params:
+
+| illustrative severity | planning Shapley (strict) | planning Shapley (recycled) | planning\|distributed-sel (recycled) |
+|---|---|---|---|
+| **1** (environment at the floor) | +2.2% [+1.8,+2.5] | **+3.9% [+3.6,+4.2]** | +1.0% |
+| 2 (+ housing, low-spend countries) | — | +5.0% | +2.9% |
+
+**Honest caveats (why illustrative, not conclusive):** (a) a small budget share is not proof of under-provision —
+environmental protection is genuinely capital-light and delivered heavily through regulation/mandates and supra-national
+(EU) funds, so its floor is *consistent with* agenda capture but does not *prove* it; (b) deferred maintenance (a
+stronger agenda-capture story in principle) is NOT a COFOG line and is not cleanly extractable — left unverified;
+(c) defence/recreation being small are policy/technology choices, NOT capture, and are deliberately excluded from the
+count. → The anchored HEADLINE still reports NO planning figure (agendaCapture=0); this is a labelled illustrative
+example showing the mechanism concretely for a real budget pattern (~+2–4% of the reference, one function off the menu).
+
 ## Planning REDESIGN v2 (Codex round-1 + author decision, commit 301d7cc)
 
 Codex round-1: skeleton sound; planning layer NOT publication-ready (the standalone +3.2/+7.1 were one-at-a-time
