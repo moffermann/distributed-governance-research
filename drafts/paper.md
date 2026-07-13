@@ -304,8 +304,13 @@ And two further contributions concern measurement and method:
 
 - **(vi)** an end-to-end institutional comparison, within a bounded
   public-investment slice, on delivered social value per unit of budget,
-  decomposing selection from delivery on matched portfolios (the two layers
-  interact within the exploratory apparatus). Separately, a later
+  decomposing selection from delivery on matched portfolios: in the model,
+  selection and delivery compose multiplicatively (an accounting identity, not
+  an independent finding); a matched selection-and-delivery extension gains
+  ≈ +58.6 points of a greedy reference in the declared world; a conditional
+  three-layer attribution keeps the full Core v0 diagonal positive in every
+  named world while planning's magnitude remains unquantified; and symmetric
+  net-budget accounting leaves administrative cost roughly neutral. Separately, a later
   pre-registered symmetric gate — a **selection-only** test with delivery held
   at parity — finds the *selection* advantage positive but small (Section 6);
   it does not test the delivery interaction. This work also introduces the
@@ -507,7 +512,7 @@ Citizens allocate small individual budgets; the pivotal return to evaluating
 projects is negligible, so rational ignorance is the equilibrium (Downs
 1957), and the design question is where the *inattentive* majority's weight
 flows: to salience amplified by social proof (Bikhchandani, Hirshleifer and
-Welch 1992; Salganik, Dodds and Watts 2006), or to the architecture's own
+Welch 1992; Noelle-Neumann 1974; Salganik, Dodds and Watts 2006), or to the architecture's own
 default layer, whose routing follows the distributed project prioritization
 — the aggregated allocation profiles — not a central plan. The model yields three testable
 predictions — caps tame cascades (prediction 1), defaults anchor quality (prediction 2), decay
@@ -818,8 +823,9 @@ it is ruled out. This ties Finding
 arrive is what keeps the allocation advantage from being bought back by
 organized rents, so the two are a layer and its safeguard rather than
 independent multipliers. Every magnitude here is model-internal; the literature
-(Olson, Wilson, Scott, Bastiat; Becker, Becker and Stigler, Stokes,
-Dyck-Morse-Zingales; Ostrom's self-monitoring commons) defends the direction,
+(Olson 1965; Wilson 1973; Scott 1998; Bastiat 1850; Becker 1968; Becker and
+Stigler 1974; Stokes 2005; Dyck, Morse, and Zingales 2010; Ostrom's 1990
+self-monitoring commons) defends the direction,
 the mechanism, and the sign of the asymmetry — not the numbers.
 
 *Analytical backbone.* Three closed forms carry the weight, each verified against
@@ -869,8 +875,8 @@ the capture frictions make its revealed signal a biased, contestable estimate of
 that value rather than a definitional one.
 
 *Positioning.* The first-best preference-aggregation mechanism —
-Vickrey–Clarke–Groves — is infeasible for public budgets (it is not
-budget-balanced; Green and Laffont 1979), so both the central planner and Core v0
+Vickrey–Clarke–Groves (Vickrey 1961; Green and Laffont 1979) — is infeasible for
+public budgets (it is not budget-balanced), so both the central planner and Core v0
 are *second-best* institutions (Lipsey and Lancaster 1956); the comparison asks
 which second-best delivers more, not whether either is optimal. Core v0
 accordingly claims not strategy-proofness — impossible for any non-dictatorial
@@ -884,19 +890,21 @@ Finally, the aggregation advantage is the Condorcet (1785) jury logic and dies
 under its independence condition (Austen-Smith and Banks 1996): organized capture
 is the correlated-error violation of that independence, so the integrity layer
 exists precisely to defend the assumption on which distributed aggregation rests.
-The value primitive follows Sen's capabilities for *what* is aggregated —
+The value primitive follows Sen's (1999) capabilities for *what* is aggregated —
 freedoms, not money-utility — while the *summation* rests on Samuelson (1954), an
 aggregation Sen himself resists; we invoke each only where it applies.
 
-*Calibration.* The magnitudes are model-internal, but the gap to data is a
-roadmap, not an apology. The central's 44–85% of benchmark-achievable value is a
+*Calibration.* The magnitudes are model-internal, and the gap to data defines
+calibration targets rather than field estimates. The central's 44–85% of benchmark-achievable value is a
 **candidate validation target requiring an explicit construct mapping** — not a
 direct check: the ex-post realized-to-appraised ratio (the World Bank's Independent
 Evaluation Group ratings; Flyvbjerg, Bruzelius and Rothengatter 2003) is a
 *different construct* from central selection relative to a full-information
 benchmark, so bridging them needs a stated mapping before either can calibrate the
 other; the voice bias β can likewise be anchored to measured
-participatory-budgeting demographics rather than assumed. And independent field
+participatory-budgeting demographics, and to the documented over-representation
+of motivated, unrepresentative participants in open processes (Einstein, Palmer
+and Glick 2019), rather than assumed. And independent field
 evidence points the direction the model does: participatory budgeting in Brazil
 shifted spending toward sanitation and health and lowered infant mortality at
 constant per-capita budget (Gonçalves 2014) — a real-world instance of
@@ -904,8 +912,8 @@ citizen-directed allocation delivering more real value, cleanly separable from
 any magnitude the model reports. The calibration-targets appendix makes the
 model-internal / data boundary a visible line.
 
-**Finding 5: delivered value, not allocation, is where the architecture
-earns its keep — and selection and delivery compose multiplicatively.** A
+**Finding 5: selection and delivery compose multiplicatively — the
+architecture's advantage is delivered value, not selection alone.** A
 fifth experiment (`scripts/simulation/e4-v5/e5-delivery.mjs`, rebuilt on
 the clean E4 engine) adds the execution stage the first four omitted, as
 an **independent** delivery regime crossed with the two selection regimes —
@@ -1059,8 +1067,9 @@ against the 0.30 assumed.
 honest accounting of what each layer contributes.** A ninth experiment
 (`scripts/simulation/e4-v5/e9-fullstack.mjs`, built on E5) adds the third
 architectural layer, **planning** (constructing the eligibility frame and
-per-sector budget shares), so all three layers are compared central versus
-distributed across a 2×2×2 of persistent sectors (ten, the COFOG count). A
+per-sector budget shares): E9 compares central and distributed versions of all
+three layers in a 2×2×2 factorial applied across ten persistent sectors, the
+COFOG count (United Nations 1999). A
 Shapley attribution decomposes the all-distributed-versus-status-quo gap
 into layer contributions that sum exactly to it. Two honest qualifications
 govern the reading. First, the attribution is *conditional*: every layer
@@ -1068,10 +1077,11 @@ value is computed through the declared planning sector generator, so the
 standalone, quantified **selection** and **delivery** figures are the E5
 ones (no planning layer); E9 contributes the three-layer *structure* and
 the attribution *method*. Second, **selection and delivery are large in
-PROBABLE but not robust across the named worlds**: selection turns negative in
+PROBABLE but not robust across the four named worlds** (PROBABLE, PRO_CENTRAL,
+MYOPIA_OFF, and PRO_DIST): selection turns negative in
 PRO_CENTRAL, and delivery turns negative in PRO_DIST because stronger delivery
 magnifies a harmful portfolio. Despite those component reversals, the full
-Core v0 diagonal remains positive in all four named worlds — a fact the paper
+Core v0 diagonal remains positive in all four — a fact the paper
 reports rather than hides.
 The **planning** layer's value operates chiefly through **agenda capture**
 — the central keeping whole high-need, low-visibility functions off the
@@ -1083,10 +1093,9 @@ but its *magnitude* cannot be identified without country-specific budget
 data. We therefore **do not report a planning-layer figure**: quantifying
 it with the mechanism switched off would understate it, and switched on it
 is not yet anchorable. Chile provides a qualitative illustration only:
-mental-health spending remained near 2% of health spending over 2007–2015
-(and about 4.5% of the health ministry's budget by 2025), despite mental
-disorders being the country's leading cause of disability (Errázuriz et al.
-2015). That pattern is
+mental-health spending remained near 2% of health spending over 2007–2015,
+despite mental disorders being the country's leading cause of disability
+(Errázuriz et al. 2015). That pattern is
 consistent with low-salience under-provision, but it neither identifies
 agenda capture nor calibrates its magnitude; mental health is a funded
 subfunction, not an excluded top-level COFOG function.
@@ -1097,19 +1106,22 @@ experiment (`scripts/simulation/e4-v5/e10-costs.mjs`) adds the administrative
 and machinery cost each institution runs and Core v0 largely replaces — the
 value-proxy studies, allocation and prioritization apparatus, and licensing
 the central carries, against Core v0's own platform and control machinery.
-Modelled honestly — the cost reduces each arm's *budget* before selection
-(so the value loss is sub-proportional, because greedy funding cuts the
-marginal projects first), charged symmetrically (Core v0's verification and
-recovery machinery is costed, not free), and de-overlapped from the delivery
-leakage E5 already removes. At the declared shares κ_C = 0.08 and κ_D = 0.05,
+The model handles these costs in three ways. It subtracts them from each
+arm's *budget* before selection, so the value loss is sub-proportional
+because greedy funding cuts the marginal projects first; it charges Core v0's
+own verification and recovery machinery rather than treating it as free; and
+it avoids double-counting the delivery leakage already modeled in E5. At the declared shares κ_C = 0.08 and κ_D = 0.05,
 administrative cost changes the modeled gap from +58.6 to +57.7 reference
 points — a −0.9-point contribution: **roughly neutral**. The Core v0
 advantage comes from **selection and delivery**, not from an
 administrative-cost saving; a decisive cost advantage would require the
 central's overhead to exceed the platform's by more than symmetric
 accounting supports. The cost shares are declared scenario inputs, not
-measured arm-specific costs, with directions anchored (IDB 2018; the low
-operating cost of e-government platforms — KONEPS, ChileCompra, ProZorro).
+measured arm-specific costs: the central-machinery direction is anchored to
+documented public-spending waste (IDB 2018), while the platform side is
+illustrated — directionally, not as a measured input — by established public
+e-procurement systems whose operating cost runs low (KONEPS, ChileCompra,
+ProZorro).
 
 **What survives.** Stripped to what the governing test supports: (1) under the
 pre-registered symmetric gate the distributed selection advantage is *positive but
@@ -1478,15 +1490,16 @@ take the same projects, designed identically, and change only who
 executes and how they are watched — does the visibly audited regime with
 reputational consequences deliver more than the one without them? Second:
 hold the control layer fixed and change only which projects get funded,
-centrally planned or socially prioritized? In the simulation the answer to
-both is yes — a verified-delivery gain and a selection gain that compose
+centrally planned or socially prioritized? In E5's declared PROBABLE world, the
+answer to both is yes — a verified-delivery gain and a selection gain that compose
 multiplicatively (an accounting identity, not an independent finding), the
 full selection-and-delivery architecture ≈ +58.6 points of the greedy
 reference in the declared world [+58.0, +59.2]. E9 and E10 then sharpen where
 the modeled advantage comes from: the full-stack diagonal stays positive
 across the named worlds even when individual Shapley contributions reverse in
-extreme corners; planning's dominant mechanism is identified but its magnitude
-left unquantified; and symmetric net-budget accounting leaves administrative
+extreme corners; agenda capture is represented as planning's principal
+mechanism, its direction anchored but its magnitude left unquantified; and
+symmetric net-budget accounting leaves administrative
 cost roughly neutral. In this model, the architecture's advantage is delivered
 value, not cheap administration. But those magnitudes are conditional
 model-internal contrasts, not calibrated field effects, and we do not build the
@@ -1520,8 +1533,9 @@ The deeper point is Friedman's: a central administration spends other
 people's money on other people, the spending category with the least care
 for both cost and value (Friedman and Friedman 1980). This architecture
 does not answer that problem with exhortation; it re-plumbs the bucket.
-Planning remains — as the guiding thread that sets scopes, floors, and
-mandates — but the engine of value is the conversion layer: measurable
+Planning remains — the guiding thread that sets scopes, floors, and
+mandates — but within those bounds value comes from joining dispersed
+selection to consequence-bearing delivery: measurable
 promises, conditional release, independent verification, consequences that
 compound into reputation, and a meter on every leak. The question this
 paper answers is therefore not whether states should be bigger or smaller,
@@ -1810,6 +1824,7 @@ scenarios, frontier, and theorem in `scripts/simulation/e4-v5/` and `research/e4
 - Stokes, S. (2005). "Perverse Accountability: A Formal Model of Machine Politics with Evidence from Argentina." *American Political Science Review* 99(3).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
 - Tiebout, C. (1956). "A Pure Theory of Local Expenditures." *Journal of Political Economy* 64(5).
+- United Nations (1999). *Classification of the Functions of Government (COFOG)*. Statistical Papers Series M No. 84, Department of Economic and Social Affairs, Statistics Division.
 - Urbinati, N. (2014). *Democracy Disfigured: Opinion, Truth, and the People*. Harvard University Press.
 - Vickrey, W. (1961). "Counterspeculation, Auctions, and Competitive Sealed Tenders." *Journal of Finance* 16(1).
 - Wampler, B. (2007). *Participatory Budgeting in Brazil: Contestation, Cooperation, and Accountability*. Penn State University Press.

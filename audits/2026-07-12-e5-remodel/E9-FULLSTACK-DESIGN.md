@@ -17,8 +17,9 @@ planning). E9 runs the honest full-stack contrast:
 > **central planning + central selection + central delivery**  vs  **Core v0: distributed planning + distributed
 > allocation + distributed delivery.**
 
-This is the comparison whose absence the inventory flagged (`docs/EXPERIMENT-INVENTORY.md`). It is where the planning
-layer finally gets measured correctly.
+This is the comparison whose absence the inventory flagged (`docs/EXPERIMENT-INVENTORY.md`). ~~It is where the planning
+layer finally gets measured correctly.~~ **[Superseded — see the banner: the planning layer is *structured* here but its
+magnitude is left unquantified; agenda capture is directionally anchored only.]**
 
 ## The planning layer — what makes it a genuine value contrast (not ≈1×)
 
