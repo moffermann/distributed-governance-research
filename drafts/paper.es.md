@@ -650,11 +650,17 @@ receta reflejada: señal perfecta, mundo con daño, central en su miopía declar
 por goleada (~+118%). La única sensibilidad que reduce materialmente la brecha —sin
 voltear su signo en el rango declarado— es el error correlado/de modo común en el brazo
 de cobertura (una plataforma/recomendador compartido o delegación concentrada), que lleva
-~+54% a ~+26% con correlación fuerte. El gate de simetría pre-registrado sigue siendo la
+~+54% a ~+26% con correlación fuerte. Esta es la única condición *arquitectónica* del
+mecanismo, no un mero parámetro barrido: **la cobertura sin diversidad de fuentes puede
+reproducir el cuello de botella epistémico que pretende reemplazar.** Core v0 trata por
+tanto la concentración de delegados, proveedores de perfil y recomendadores como
+cantidades observables con umbrales de diversificación (§8), en vez de suponer
+independencia por decreto. El gate de simetría pre-registrado sigue siendo la
 computación **confirmatoria** separada del artículo (un NO-GO de casi-paridad bajo un
 proceso generador distinto); este mapa es un análisis de escenarios posterior, no una
 reclasificación de aquel. El mapa completo de cuatro escenarios, el anclaje literario, los
-rincones idealizados espejo y la frontera de modo común están en el **Apéndice E4**.
+rincones idealizados espejo y la frontera de modo común están en el **Apéndice E4**. El
+modelo localiza una frontera; no estima un efecto de campo.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
@@ -1293,6 +1299,20 @@ es inobservable para el comprador (Akerlof 1970; Dulleck y Kerschbamer
 márgenes compensatorios son los términos financieros y la verificación importada
 (remota o transterritorial). La arquitectura tasa la verificación débil; no puede
 conjurar verificadores.
+
+**La cobertura supone una diversidad de fuentes que luego debe garantizar.** La
+ventaja del brazo distribuido descansa en muchas señales parcialmente
+independientes; cuando los proveedores de perfil, los delegados y los
+recomendadores se concentran en una plataforma compartida o en unos pocos
+super-delegados (Kling et al. 2015), sus errores se correlacionan y el canal de
+modo común —la única sensibilidad que reduce materialmente la brecha anclada
+(§6, Apéndice E4)— recaptura el mismo cuello de botella epistémico que la
+cobertura pretende reemplazar. La independencia no es, por tanto, una
+conveniencia de modelado sino una obligación arquitectónica: Core v0 debe
+publicar la concentración de delegados, proveedores de perfil y recomendadores
+como cantidades observables y activar umbrales de diversificación cuando
+suban. El riesgo residual es que un mercado converja hacia un solo recomendador
+más rápido de lo que muerden los umbrales.
 
 **El realismo conductual corta en ambos sentidos.** La simulación reivindica
 diseñar para ciudadanos desatentos, pero igualmente muestra que un despliegue

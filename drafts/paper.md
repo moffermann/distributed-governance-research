@@ -598,12 +598,17 @@ distributed arm (its own recipe reflected: perfect signal, harm-rich world, cent
 at its declared myopia) wins by a landslide (~+118%). The single sensitivity that
 materially shrinks the gap — without reversing its sign in the declared range — is
 correlated/common-mode error in the coverage arm (a shared platform/recommender or
-concentrated delegation), which brings ~+54% to ~+26% at a strong correlation. The
+concentrated delegation), which brings ~+54% to ~+26% at a strong correlation. This is
+the mechanism's one architectural condition, not merely a swept parameter: **coverage
+without source diversity can reproduce the epistemic bottleneck it is meant to replace.**
+Core v0 therefore treats delegate, profile-provider, and recommender concentration as
+observable quantities with diversification thresholds (§8), rather than assuming
+independence by fiat. The
 pre-registered symmetry gate remains the paper's separate **confirmatory** computation (a
 NO-GO near-parity under a different data-generating process); this map is a subsequent
 scenario analysis, not a reclassification of it. The full four-scenario map, the
 literature anchoring, the mirror idealized corners, and the common-mode frontier are in
-**Appendix E4**.
+**Appendix E4**. The model locates a frontier; it does not estimate a field effect.
 
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
@@ -1218,6 +1223,18 @@ markets — credence-good markets where quality is unobservable to the buyer
 simultaneously, and the only compensating margins are
 financial terms and imported (remote or cross-territory) verification. The
 architecture prices weak verification; it cannot conjure verifiers.
+
+**Coverage assumes source diversity it must then guarantee.** The distributed
+arm's advantage rests on many partly-independent signals; when profile
+providers, delegates, and recommenders concentrate onto a shared platform or a
+few super-delegates (Kling et al. 2015), their errors correlate and the
+common-mode channel — the single sensitivity that materially shrinks the
+anchored gap (§6, Appendix E4) — recaptures the very epistemic bottleneck
+coverage is meant to replace. Independence is therefore not a modeling
+convenience but an architectural obligation: Core v0 must publish delegate,
+profile-provider, and recommender concentration as observable quantities and
+trigger diversification thresholds when they climb. The residual risk is that a
+market converges on one recommender faster than the thresholds bite.
 
 **Behavioral realism cuts both ways.** The simulation vindicates designing
 for inattentive citizens, but it equally shows that a defaults-weak
