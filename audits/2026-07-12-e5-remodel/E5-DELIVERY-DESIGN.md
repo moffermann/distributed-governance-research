@@ -79,9 +79,42 @@ the frozen E4 contract/hash is untouched.
    fitted to a target domain; the delivered fractions are reference points, not field effects.
 4. **No costs.** Administrative machinery cost (the `κ` that breaks equal-budget) is deliberately absent — that is E10.
 
+## Steps 1 + 2 (added 2026-07-12, commit after 1676e77)
+
+**Step 1 — opaque-band sensitivity (`sweepOpaque`).** The status-quo leak is swept from the IMF/Olken central band
+(~27%) to the Uganda pessimistic extreme (~77%). Result: the delivery effect at the distributed arm and the
+full-architecture gain (A2 − S) grow **monotonically** (+61.6% → +83.3%) and coverage wins across the whole band — a
+worse status quo only widens the gain. This resolves the "opaque calibration is a single stipulated number" objection.
+
+**Step 2 — monitoring coupling (`mon_coupling`).** Breaks the structural multiplicativity: Core v0's distributed
+coverage is not only a selection signal, the same citizens also **observe delivery**, lifting the distributed arm's
+effective detection AND recovery (`p_det_eff = p_det + c(1−p_det)`, `r_eff = r + c(1−r)`). With `c = 0.35` the
+distributed arm delivers **+12.3 pp** more than central in the OPAQUE regime (68% → 80%) — coverage **substitutes for
+a missing formal control layer** — and ~0 in the verified regime (already saturated: deterrence holds ex ante). So the
+super-multiplicative dividend is **genuine** (delivery depends on the selecting arm) and **largest where formal control
+is weakest**. At `c = 0` the model reduces to the exact multiplicative baseline.
+
+This turns the honest-limit #1 (multiplicativity is structural) into a **modeled, switchable mechanism**: the
+experiment now shows both the pure multiplicative composition (c=0) and the genuine super-multiplicative dividend
+(c>0), and localizes it (weak-control regimes).
+
+## Magnitudes that need literature anchors (for the friendly calibration round)
+
+Declared/plausible today; to be anchored to published sources (no field/paid data), directions already fixed:
+
+- `mon_coupling` (community-monitoring detection + recovery lift): social-audit / community-monitoring impact evidence
+  (e.g. Björkman & Svensson 2009 Uganda community monitoring; Olken 2007 audits vs grassroots monitoring; India social
+  audits). Currently 0.35, illustrative.
+- opaque regime `{p_det, a, r, rep}` and `pi_hon`: the leak-band anchors (IMF PIE-X 0.20–0.30; Olken 2007 24%;
+  Reinikka & Svensson 2004 87%) constrain the emergent delivered fraction, but the split into detection vs advance vs
+  honest-share is a modeling choice needing tighter anchoring.
+- verified regime `{p_det, a, r, rep}`: milestone-gating / retention / clawback effectiveness; capture-resistance from
+  the E4-v5 block. `loss_hon` (honest production loss).
+
 ## Next
 
-- Optionally sweep the opaque band toward the Uganda 87% pessimistic end and report sensitivity.
+- Friendly Codex/agent round: correct/improve the model and supply the calibration anchors above; then E5 → perfect /
+  publication-ready.
 - E9 (full-stack: planning + selection + delivery, central vs Core v0) and E10 (+costs) per
   `docs/EXPERIMENT-INVENTORY.md`.
 - Re-label `e5-layers.mjs` as the E10 cost scaffolding; wire E5 delivery into the paper's Finding 5 with the
