@@ -151,3 +151,25 @@ selection +38.3% / delivery +10.8%. Under the **realistic** association (assoc<0
 Shapley rises to **+1.9% → +6.2%**; at assoc≥0 it is ~0 — the planning layer's value is **real but modest and
 context-dependent**, honestly emerging from the predeclared assumption, not gerrymandered. Magnitude DECLARED,
 conservative vs the IMF/Rioja envelope. → sent to Codex round-2 for verification.
+
+## Codex round-2 verdict + bounded pass (commit 0749b2d) — architecture sound
+
+Round-2: the factorial/Shapley **architecture is correct and publication-worthy**; verdict NOT-YET pending a bounded
+pass, now applied:
+
+- **Genuine fixed-dispersion association** (`need = assoc·z(vis) + √(1−assoc²)·shock`) — the old `assoc` also scaled
+  dispersion and `assoc=0` erased it. This exposed that the planning magnitude is driven by the DECLARED
+  `secValSpread` (~0 at 0.1, **+3.8% Shapley at 0.3**, +17% at 0.6) — set a moderate declared reference (0.3) and
+  report the full **dispersion × association** grid.
+- **Residual recycling** mode removes the utilization confound (strict left Core v0 at 90% utilization vs status quo
+  96%): planning|distributed-sel goes **−1.2% → +2.1%** with recycling.
+- bootstrap **CIs on the gain + all three Shapley values + both planning simple effects**; complete fail-closed
+  `validatePlanning`; oracle relabelled a **greedy REFERENCE** (not an upper bound; false invariant dropped).
+
+**Honest final result (PROBABLE, secValSpread=0.3, assoc=−0.6):** full-stack gain **+52.5% [+51.8,+53.1]**.
+Shapley: **planning +3.8% [+3.3,+4.2] · selection +37.9% [+37.4,+38.5] · delivery +10.8% [+10.5,+11.1]** (with
+recycling, planning +4.8%). **Conclusion: SELECTION and DELIVERY are the robust, large layers; PLANNING is a MODEST,
+CONDITIONAL third layer** — positive only under substantial declared sector heterogeneity AND the realistic negative
+need↔visibility association, near-zero/negative otherwise. Magnitude DECLARED and numerically modest; **not in obvious
+tension with the broader, non-commensurate IMF/Rioja evidence, but NOT anchored to a cross-sector point estimate**.
+22/22 tests. → ready for a round-3 confirmation.
