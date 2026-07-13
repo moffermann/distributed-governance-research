@@ -12,8 +12,10 @@
 //   V_arm / O = (delivered value_arm / O) · (1 − κ_arm)      [κ = admin/machinery cost share; base κ_D < κ_C]
 //   m10 = V_D/O − V_C/O
 //
-// κ_C, κ_D are DECLARED placeholders here — to be ANCHORED to published data (IDB *Better Spending for Better Lives*
-// 2018; country procurement/administration-cost figures) in E10's own friendly round. Run: npm run e10:costs
+// κ_C, κ_D are set with DIRECTION anchored and MAGNITUDE declared-and-conservative (κ_C=0.15 central machinery Core v0
+// eliminates, informed by IDB *Better Spending for Better Lives* 2018 + ~10–20% program admin overhead; κ_D=0.03 Core v0
+// platform/AI, informed by low e-government/e-procurement operating costs). Not a transported point calibration.
+// Run: npm run e10:costs
 
 import { delivered2x2, DELIVERY } from './e5-delivery.mjs';
 import { fullStack, PLANNING } from './e9-fullstack.mjs';
@@ -21,8 +23,13 @@ import { baseConfig, NUM } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 
 export const COSTS = {
-  kappa_C:    0.20,   // central admin/machinery cost share (DECLARED placeholder — anchor to IDB / procurement figures)
-  kappa_D:    0.05,   // Core v0's OWN operating cost share (platform + AI). base: κ_D < κ_C (DECLARED placeholder)
+  // DIRECTION anchored, MAGNITUDE declared-and-conservative (author-set, 2026-07-13; citations being verified).
+  kappa_C:    0.15,   // central admin/machinery cost share Core v0 ELIMINATES (value-proxy studies, allocation,
+                      //     prioritization, AI-fiscalization machinery, delivery mgmt, licenses, travel). Direction
+                      //     anchored: public-program administrative overhead ~10–20% + substantial documented waste
+                      //     (IDB, Better Spending for Better Lives, 2018). Conservative midpoint 0.15; magnitude DECLARED.
+  kappa_D:    0.03,   // Core v0's OWN operating cost (platform + AI). Direction anchored: e-government / e-procurement
+                      //     platforms run at low cost relative to spend managed (~1–5%). Low-mid 0.03; base κ_D < κ_C.
   planningOn: false,  // author requirement: PLANNING OFF by default (its magnitude is deferred; do not fold into costs)
 };
 
@@ -58,7 +65,7 @@ function main() {
     const r = e10(cfg, { nWorlds: 1200 });
     safeLog('E10 — the COST layer on the delivered-value stack (PROBABLE world). Parity at the oracle reference.');
     safeLog('PLANNING is OFF by default (its magnitude is deferred); COSTS are administrative/machinery (κ).\n');
-    safeLog(`value base: ${r.via}   ·   κ_C=${r.kappa_C} (central machinery) · κ_D=${r.kappa_D} (Core v0 platform)  [DECLARED — to be anchored]`);
+    safeLog(`value base: ${r.via}   ·   κ_C=${r.kappa_C} (central machinery) · κ_D=${r.kappa_D} (Core v0 platform)  [direction anchored, magnitude declared-conservative]`);
     safeLog(`VALUE ONLY (costs off):   status quo ${pct(r.valueOnly.statusQuo)} · Core v0 ${pct(r.valueOnly.coreV0)}  → gain ${pct(r.valueOnly.gain)}`);
     safeLog(`WITH ADMIN COSTS:         status quo ${pct(r.withCosts.statusQuo)} · Core v0 ${pct(r.withCosts.coreV0)}  → gain ${pct(r.withCosts.gain)}`);
     safeLog(`  the admin-cost layer adds ${pct(r.adminCostContribution)} to the gap (the central's heavier machinery costs more).\n`);
@@ -68,14 +75,15 @@ function main() {
     safeLog(`switch check — costs OFF (κ=0): with-costs gain ${pct(off.withCosts.gain)} == value-only gain ${pct(off.valueOnly.gain)} (reduces to the value stack).`);
 
     // κ sensitivity (DECLARED until anchored): how the gap responds to the central's machinery cost.
-    safeLog('\nAdmin-cost sensitivity (κ_D=0.05 fixed; κ_C swept — DECLARED pending anchoring to IDB/procurement data):');
+    safeLog('\nAdmin-cost sensitivity (κ_D=0.03 fixed; κ_C swept — magnitude declared, direction anchored):');
     safeLog('   κ_C     with-costs gain     admin-cost contribution');
-    for (const kc of [0.10, 0.20, 0.30, 0.40]) {
+    for (const kc of [0.05, 0.10, 0.15, 0.25]) {
       const rk = e10(cfg, { nWorlds: 800, costs: { ...COSTS, kappa_C: kc } });
       safeLog(`   ${kc.toFixed(2)}      ${pct(rk.withCosts.gain).padStart(7)}              ${pct(rk.adminCostContribution).padStart(7)}`);
     }
     safeLog('   → the central runs the value-proxy / allocation / prioritization / AI-fiscalization machinery Core v0');
-    safeLog('     eliminates, so κ_C > κ_D widens the gap. Magnitudes DECLARED until anchored (IDB Better Spending 2018).');
+    safeLog('     eliminates, so κ_C > κ_D widens the gap once the ratio clears the value ratio (~2.7). Direction anchored');
+    safeLog('     (IDB Better Spending 2018; low e-government platform costs); point magnitudes declared-and-conservative.');
   });
 }
 import { fileURLToPath } from 'node:url';
