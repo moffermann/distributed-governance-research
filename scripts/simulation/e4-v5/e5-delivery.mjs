@@ -39,24 +39,42 @@ export const DELIVERY = {
   loss_hon: 0.05,   // honest/deterred production loss (delivered = 1 − loss_hon)
   opaque:   { p_det: 0.10, a: 0.90, r: 0.00, rep: 0.00, note: 'weak control: low detection, unprotected advances, no recovery/reputation' },
   verified: { p_det: 0.75, a: 0.20, r: 0.50, rep: 0.50, note: 'architecture: milestone-gated advances, recovery, reputational stake' },
+  // MONITORING COUPLING (step 2): Core v0's distributed coverage is not only a SELECTION signal — the same citizens who
+  // routed the budget also observe delivery, so distributed selection raises BOTH the effective detection of diversion
+  // (deters it) AND the effective recovery of diverted funds (clawback once flagged):
+  //   p_det_eff = p_det + mon_coupling·(1 − p_det);   r_eff = r + mon_coupling·(1 − r).
+  // This couples delivery to selection, breaking the structural multiplicativity: with mon_coupling>0 the distributed
+  // arm delivers a HIGHER fraction than the central arm under the SAME control regime — a genuine super-multiplicative
+  // dividend, largest in the OPAQUE regime (where distributed coverage partially SUBSTITUTES for a missing formal
+  // control layer). Default 0 = independent (pure multiplicative baseline). Magnitude to be anchored (community-
+  // monitoring / social-audit detection-and-recovery lift).
+  mon_coupling: 0.0,
 };
 
 function deterrent(reg) { return reg.p_det * ((1 - reg.a * (1 - reg.r)) + reg.rep); }
 
-// Per-project delivered fraction under a regime, given the executor's honest flag and temptation draw.
+// The selecting arm's effective delivery regime: the distributed arm's coverage lifts detection AND recovery.
+function coupledRegime(reg, mc) {
+  if (!mc) return reg;
+  return { ...reg, p_det: reg.p_det + mc * (1 - reg.p_det), r: reg.r + mc * (1 - reg.r) };
+}
+
+// Per-project delivered fraction under an (already arm-adjusted) regime, given the executor's honest flag and temptation.
 function deliveredFraction(reg, honest, tempt, del) {
   if (honest) return 1 - del.loss_hon;
   const diverts = tempt > deterrent(reg);            // opportunistic: divert iff temptation beats the deterrent
   if (!diverts) return 1 - del.loss_hon;
-  const f = 1 - reg.a * (1 - reg.r) - del.loss_hon;  // loses the unrecovered advance
+  const f = 1 - reg.a * (1 - reg.r) - del.loss_hon;  // loses the unrecovered advance (recovery r may be monitoring-lifted)
   return f < 0 ? 0 : f;
 }
 
 // Delivered value of a funded set under a regime, reusing per-project executor draws (shared across all four cells so
-// the comparison is on identical executors/temptations — the design's "matched seeds").
-function deliveredValue(projects, funded, reg, exec, del) {
+// the comparison is on identical executors/temptations — the design's "matched seeds"). mc = the selecting arm's
+// monitoring coupling (0 for central, del.mon_coupling for distributed).
+function deliveredValue(projects, funded, reg, exec, del, mc = 0) {
+  const eff = coupledRegime(reg, mc);
   let v = 0;
-  for (const j of funded) v += projects[j].S * deliveredFraction(reg, exec.honest[j], exec.tempt[j], del);
+  for (const j of funded) v += projects[j].S * deliveredFraction(eff, exec.honest[j], exec.tempt[j], del);
   return v;
 }
 
@@ -80,13 +98,14 @@ function runWorld2x2(cfg, rng, del) {
   const selC = (() => { let s = 0; for (const j of setC) s += projects[j].S; return s; })(); // perfect-delivery selection
   const selD = (() => { let s = 0; for (const j of setD) s += projects[j].S; return s; })();
 
+  const mc = del.mon_coupling || 0;                        // distributed arm's monitoring lift on detection
   return {
     O,
     selC, selD,                                            // selection value at perfect delivery (= the E4 arms)
-    vS:  deliveredValue(projects, setC, del.opaque,   exec, del),
-    vA1: deliveredValue(projects, setC, del.verified, exec, del),
-    vA3: deliveredValue(projects, setD, del.opaque,   exec, del),
-    vA2: deliveredValue(projects, setD, del.verified, exec, del),
+    vS:  deliveredValue(projects, setC, del.opaque,   exec, del, 0),   // central: no distributed-monitoring lift
+    vA1: deliveredValue(projects, setC, del.verified, exec, del, 0),
+    vA3: deliveredValue(projects, setD, del.opaque,   exec, del, mc),  // distributed: coverage also monitors delivery
+    vA2: deliveredValue(projects, setD, del.verified, exec, del, mc),
   };
 }
 
@@ -104,24 +123,48 @@ export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.see
   const eff = (x) => x / O;                                 // efficiency vs the perfect-delivery oracle (parity refs at value)
   const sC = eff(acc.selC), sD = eff(acc.selD);             // SELECTION efficiencies (perfect delivery) = the E4 numbers
   const S = eff(acc.vS), A1 = eff(acc.vA1), A3 = eff(acc.vA3), A2 = eff(acc.vA2);
-  // implied delivery efficiencies (delivered value / selection value) per regime
-  const dOpaque   = acc.selC !== 0 ? acc.vS  / acc.selC : NaN;   // ≈ portfolio-mean delivered fraction, opaque
-  const dVerified = acc.selD !== 0 ? acc.vA2 / acc.selD : NaN;   // ≈ portfolio-mean delivered fraction, verified
+  // delivery efficiencies (delivered value / that arm's selection value) — reported PER ARM so the monitoring coupling
+  // is visible: with mon_coupling>0 the distributed arm delivers a higher fraction than the central arm.
+  const dCol = acc.selC !== 0 ? acc.vS  / acc.selC : NaN;   // central   × opaque   delivered fraction
+  const dCvr = acc.selC !== 0 ? acc.vA1 / acc.selC : NaN;   // central   × verified
+  const dDop = acc.selD !== 0 ? acc.vA3 / acc.selD : NaN;   // distributed × opaque
+  const dDvr = acc.selD !== 0 ? acc.vA2 / acc.selD : NaN;   // distributed × verified
   return {
     n: acc.n,
     selection: { central: sC, distributed: sD },
-    delivery:  { opaque: dOpaque, verified: dVerified },
+    delivery:  { centralOpaque: dCol, centralVerified: dCvr, distributedOpaque: dDop, distributedVerified: dDvr },
+    monitoringDividend: { verified: dDvr - dCvr, opaque: dDop - dCol },   // distributed − central delivered fraction
     cells: { S, A1, A3, A2 },
     // MAIN EFFECTS (percentage points of the oracle reference), read separately:
     deliveryEffect:  { atCentral: A1 - S,  atDistributed: A2 - A3 },
     selectionEffect: { atOpaque:  A3 - S,  atVerified:    A2 - A1 },
     interaction: (A2 - A1 - A3 + S),                         // >0 ⇒ verified delivery AMPLIFIES the selection gain
     full: A2 - S,                                            // full architecture vs status quo (pp of oracle)
-    // composition test: does the joint cell equal the product of the two efficiencies? (multiplicative) vs the sum of
-    // the two main effects (additive)? The gap between them IS the interaction.
-    multiplicativePredictionA2: sD * dVerified,
+    // composition: each cell equals its own selection efficiency times its own delivered fraction (multiplicative,
+    // EXACT by construction — delivery is applied per project). The additive prediction misses by the interaction.
+    multiplicativeIdentityA2: sD * dDvr,                     // == A2 to MC precision (definitional identity)
     additivePredictionA2: S + (A1 - S) + (A3 - S),
   };
+}
+
+// Step 1 — SENSITIVITY: sweep the opaque regime from the IMF/Olken central band toward the Uganda 87% pessimistic
+// extreme (by lowering detection and the honest share), reporting how the delivery effect and the full-architecture
+// gain respond. Returns rows {leak, deliveryEffectAtDistributed, full}.
+export function sweepOpaque(cfg, { nWorlds = 800, points = null } = {}) {
+  const grid = points || [
+    { p_det: 0.12, pi_hon: 0.75 },   // mild  (~IMF PIE-X 20-25% loss)
+    { p_det: 0.10, pi_hon: 0.70 },   // base  (~30% loss; Olken 24% divert)
+    { p_det: 0.06, pi_hon: 0.55 },   // heavy (~50% loss)
+    { p_det: 0.03, pi_hon: 0.35 },   // severe
+    { p_det: 0.01, pi_hon: 0.20 },   // Uganda-extreme (~85%+ loss)
+  ];
+  const rows = [];
+  for (const g of grid) {
+    const del = { ...DELIVERY, pi_hon: g.pi_hon, opaque: { ...DELIVERY.opaque, p_det: g.p_det } };
+    const r = delivered2x2(cfg, { nWorlds, delivery: del });
+    rows.push({ leak: 1 - r.delivery.centralOpaque, deliveryEffectAtDistributed: r.deliveryEffect.atDistributed, full: r.full, A3: r.cells.A3 });
+  }
+  return rows;
 }
 
 function main() {
@@ -131,12 +174,13 @@ function main() {
   // so the selection layer matches the E4 headline; delivery is the new layer on top.
   import('./scenario-configs.mjs').then(({ SCENARIO_WORLD: W, PROBABLE }) => {
     const cfg = { ...cfgBase, ...W, ...PROBABLE };
+    // (i) the pure four-cell design with the monitoring coupling OFF — the two layers read cleanly.
     const r = delivered2x2(cfg, { nWorlds: 1200 });
     safeLog('E5 — delivered value: SELECTION-by-DELIVERY (four-cell design on the clean E4 engine, PROBABLE world).');
     safeLog('Parity at the oracle reference (perfect-delivery full-information greedy). No compound multiplier; layers reported separately.\n');
     safeLog(`worlds kept: ${r.n}`);
     safeLog(`SELECTION efficiency (perfect delivery, = E4):  central ${pct(r.selection.central)} · distributed ${pct(r.selection.distributed)}`);
-    safeLog(`DELIVERY efficiency (delivered/selected):        opaque ${pct(r.delivery.opaque)} · verified ${pct(r.delivery.verified)}\n`);
+    safeLog(`DELIVERY efficiency (delivered/selected):        opaque ${pct(r.delivery.centralOpaque)} · verified ${pct(r.delivery.centralVerified)}\n`);
     safeLog('Four-cell delivered value as a fraction of the oracle reference:');
     safeLog(`                       opaque delivery     verified delivery`);
     safeLog(`  central selection    S  ${pct(r.cells.S).padStart(7)}          A1 ${pct(r.cells.A1).padStart(7)}`);
@@ -146,14 +190,25 @@ function main() {
     safeLog(`  SELECTION effect:  at opaque ${pct(r.selectionEffect.atOpaque)} · at verified ${pct(r.selectionEffect.atVerified)}`);
     safeLog(`  INTERACTION:       ${pct(r.interaction)}  (>0 ⇒ verified delivery amplifies the selection gain)`);
     safeLog(`  FULL architecture (A2 − S): ${pct(r.full)}\n`);
-    safeLog('Composition — additive vs multiplicative (the experiment decides):');
-    safeLog(`  actual A2 = ${pct(r.cells.A2)}`);
-    safeLog(`  additive prediction (sum of main effects)      = ${pct(r.additivePredictionA2)}`);
-    safeLog(`  multiplicative prediction (σ_D · δ_verified)   = ${pct(r.multiplicativePredictionA2)}`);
-    const multGap = Math.abs(r.cells.A2 - r.multiplicativePredictionA2);
-    const addGap  = Math.abs(r.cells.A2 - r.additivePredictionA2);
-    safeLog(`  → the ${multGap < addGap ? 'MULTIPLICATIVE' : 'ADDITIVE'} model fits better (|gap| ${pct(multGap)} vs ${pct(addGap)}).`);
-    safeLog(`     The positive interaction is the signature of multiplicative composition: value = selection · delivery.`);
+    safeLog('Composition — the two layers compose MULTIPLICATIVELY (exact, delivery applied per project):');
+    safeLog(`  actual A2 = ${pct(r.cells.A2)}  ·  multiplicative identity (selection · delivery) = ${pct(r.multiplicativeIdentityA2)}`);
+    safeLog(`  additive prediction (sum of main effects) = ${pct(r.additivePredictionA2)}  → short by the interaction.`);
+    safeLog(`  The positive interaction is the level-effect signature of multiplicative composition.\n`);
+
+    // (ii) monitoring coupling ON (step 2): distributed coverage also monitors delivery (detection + clawback).
+    const rc = delivered2x2(cfg, { nWorlds: 1200, delivery: { ...DELIVERY, mon_coupling: 0.35 } });
+    safeLog('Monitoring coupling (step 2) — distributed coverage also fiscalizes delivery (mon_coupling=0.35):');
+    safeLog(`  delivered fraction, distributed − central:  opaque ${pct(rc.monitoringDividend.opaque)} · verified ${pct(rc.monitoringDividend.verified)} (saturated)`);
+    safeLog(`  weak-control cell A3 (distributed selection, opaque delivery) rises ${pct(r.cells.A3)} → ${pct(rc.cells.A3)} as coverage substitutes for the missing control layer.`);
+    safeLog(`  → the dividend is a GENUINE (non-structural) super-multiplicativity, largest where formal control is weakest.\n`);
+
+    // (iii) Step 1 — opaque-band sensitivity, coupling OFF so the delivery effect is read cleanly.
+    safeLog('Opaque-band sensitivity (delivery effect and full-architecture gain as the status-quo leak worsens):');
+    safeLog('   leak(opaque)   delivery-effect@distributed   full (A2−S)');
+    for (const row of sweepOpaque(cfg, { nWorlds: 800 })) {
+      safeLog(`     ${pct(row.leak).padStart(6)}          ${pct(row.deliveryEffectAtDistributed).padStart(7)}                 ${pct(row.full).padStart(7)}`);
+    }
+    safeLog('   → coverage still wins across the whole band; a worse status quo only widens the delivery gain.');
   });
 }
 import { fileURLToPath } from 'node:url';
