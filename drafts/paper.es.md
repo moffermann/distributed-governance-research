@@ -127,7 +127,8 @@ ambas direcciones (Demsetz 1969; Sección 2). Nuestras contribuciones son:
    que el modelo no representa). En el modelo, la selección y la entrega
    verificada se componen multiplicativamente (una identidad contable, no un
    hallazgo independiente); una extensión pareada de selección-y-entrega gana
-   ≈ +58.6 puntos de una referencia voraz en el mundo declarado; una atribución
+   ≈ +58.6 puntos de una referencia voraz en el mundo declarado [intervalo
+   Monte-Carlo condicional al 95% +58.0, +59.2]; una atribución
    condicional de tres capas mantiene positiva la diagonal completa de Core v0
    en todos los mundos nombrados mientras deja sin cuantificar la magnitud de la
    planificación; y la contabilidad simétrica de presupuesto neto deja el costo
@@ -333,7 +334,8 @@ Y dos contribuciones adicionales conciernen a la medición y al método:
   apareadas: en el modelo, la selección y la entrega verificada se componen
   multiplicativamente (una identidad contable, no un hallazgo independiente);
   una extensión pareada de selección-y-entrega gana ≈ +58.6 puntos de una
-  referencia voraz en el mundo declarado; una atribución condicional de tres
+  referencia voraz en el mundo declarado [intervalo Monte-Carlo condicional al
+  95% +58.0, +59.2]; una atribución condicional de tres
   capas mantiene la diagonal completa de Core v0 positiva en todos los mundos
   nombrados mientras la magnitud de la planificación queda sin cuantificar; y una
   contabilidad simétrica de presupuesto neto deja el costo administrativo
@@ -494,8 +496,8 @@ programa de ablación pre-registrado sobre los experimentos complementarios
 desigualdad se sostiene con holgura, de modo que quitar cualquier término
 individual cuesta casi nada — y un despliegue negociado concesión defendible por
 concesión puede cruzar el umbral de forma invisible, terminando por debajo del
-status quo que reemplazó (entregando cerca del 87% del valor verificado del status
-quo, con la calidad de selección intacta) mientras luce plenamente instrumentado. El corpus exige por ello que
+status quo que reemplazó (un déficit material de valor verificado, con la calidad
+de selección intacta) mientras luce plenamente instrumentado. El corpus exige por ello que
 cada ámbito publique su margen de la desigualdad de disuasión en su configuración
 operativa, recomputado ante cada cambio de término, con las reducciones de
 términos clasificadas como cambios de regla materiales (docs/111). La misma
@@ -652,10 +654,11 @@ bienestar). Esto no es un filo de cuchillo: es robusto en todo el espacio declar
 sobrevive a la degradación realista de señal del *ruteo* presupuestario universal de Core
 v0 (una composición ~5% reportes activos / ~35% microdelegación / ~60% reglas de perfil
 — el *ruteo* universal es arquitectónico, la *información* independiente efectiva no lo
-es); y se mantiene incluso otorgándole al central toda competencia *salvo* la visión del
-daño (~+14%). El central solo supera a la cobertura **abandonando los supuestos
-declarados** —otorgándole la visión del daño que la literatura le niega— y aun así solo
-en un mundo casi sin daño; la idealización *espejo* del brazo distribuido (su propia
+es); y se mantiene incluso otorgándole al central el paquete competente completo y
+consciente del daño que la literatura le negaría —visión del daño, insesgamiento,
+precisión y sin crédito (~+14%). El central solo supera a la cobertura **abandonando aún
+más los supuestos declarados** —moviéndose también a un mundo casi sin daño donde el daño
+difuso que la literatura documenta apenas existe; la idealización *espejo* del brazo distribuido (su propia
 receta reflejada: señal perfecta, mundo con daño, central en su miopía declarada) gana
 por goleada (~+118%). La única sensibilidad que reduce materialmente la brecha —sin
 voltear su signo en el rango declarado— es el error correlado/de modo común en el brazo
@@ -855,8 +858,8 @@ debajo de ella (β > 1 − η) —lo que absorbe la objeción del sesgo de parti
 dentro del propio eje β del modelo en vez de dejarla externa.
 Ningún extremo se asume: η se *barre*, no se fija, y un η bajo pero no nulo es un
 régimen defendido, no una premisa. La literatura del daño difuso (los costos no
-vistos de Bastiat; la organización asimétrica de Olson en temas disputados; el
-cuadrante de política clientelar de Wilson; la legibilidad de Scott) describe
+vistos de Bastiat 1850; la organización asimétrica de Olson 1965 en temas disputados; el
+cuadrante de política clientelar de Wilson 1973; la legibilidad de Scott 1998) describe
 *cuándo* los costos difusos quedan sin representar —cada una leída en su alcance
 propio, no como un reclamo de ceguera global—, mientras la tesis opuesta de que
 la competencia política disciplina al centro hacia la eficiencia (Wittman 1989)
@@ -906,7 +909,7 @@ cancela, gana el estimador de menor varianza —el ruido de revelación del
 distribuido es cero (cada quien conoce su propio valor), el ruido de proxy del
 central no—. La simulación implementada **no** lo confirma en el rincón
 responsable: en (η = 1, β = 0) el resultado medido es una leve **victoria del
-central** (el distribuido entrega cerca del 89% del valor del central allí), así que la lectura honesta es la ley de paridad sin ruido
+central** (el distribuido queda apenas por debajo del central allí), así que la lectura honesta es la ley de paridad sin ruido
 β = 1 − η, y el ladeo sesgo-varianza hacia el distribuido no se sostiene allí.
 **(ii) El umbral de captura.** De renta >
 adquisición + P(detección)·pena, el umbral del central λ\*_C = (k_c + p_c·f)/C
@@ -1213,8 +1216,8 @@ modela al central como lo describe *direccionalmente* la evidencia —*casi cieg
 difuso en la cola larga de baja visibilidad* (Hayek 1945; Scott 1998; Olson 1965;
 Bandiera–Prat–Valletti 2009): en ese escenario de referencia declarado y motivado por
 fuentes la selección por cobertura recupera *decisivamente* más de la referencia voraz
-del modelo (≈ 98% frente a ≈ 44%), hasta un central al que se le otorga toda competencia
-salvo la visión del daño igual pierde (≈ +14%), y el central se pone apenas adelante solo
+del modelo (≈ 98% frente a ≈ 44%), hasta un central al que se le otorga el paquete
+competente completo y consciente del daño igual pierde (≈ +14%), y el central se pone apenas adelante solo
 abandonando los supuestos declarados —en un mundo casi sin daño— mientras la idealización
 *espejo* del brazo distribuido gana por goleada, todo un contraste de modelo condicional
 reportado como puntos de referencia declarados, no impacto calibrado; (2)
@@ -1357,7 +1360,7 @@ ambas, es el tema natural de un estudio de seguimiento y un piloto dedicados.
 aún no existe.** La plataforma registra la autorización externa para la migración
 presupuestaria y las fórmulas de asignación (el Allocation Mandate); no puede
 fabricar una autorización que la ley nunca otorgó. En la tradición continental de
-las jurisdicciones de referencia, la asignación ciudadana vinculante requiere un
+las jurisdicciones de referencia, la asignación ciudadana vinculante requiere una
 norma habilitante de rango suficiente que ningún estatuto actual provee
 —los precedentes regionales (el estatuto de presupuesto participativo del Perú,
 el marco del estatuto de la ciudad de Brasil) prueban que el instrumento es
@@ -1441,8 +1444,9 @@ condiciona. El efecto de selección honesto se mantiene: la arquitectura será
 plausiblemente adoptada primero por patrocinadores relativamente limpios o recién
 llegados, en los lugares que menos la necesitan.
 
-**Las magnitudes por capas son condicionales, no portables.** El intervalo de
-selección-y-entrega de E5 (≈ +58.6 puntos) mantiene fijos el mundo declarado, la
+**Las magnitudes por capas son condicionales, no portables.** El estimado de
+selección-y-entrega de E5 (≈ +58.6 puntos [intervalo Monte-Carlo condicional al
+95% +58.0, +59.2]) mantiene fijos el mundo declarado, la
 forma del modelo y la calibración; el intervalo refleja variación Monte-Carlo
 sobre mundos simulados, no incertidumbre sobre el proceso generador de datos, la
 calibración, la forma funcional, el transporte desde la literatura o la
@@ -1753,7 +1757,7 @@ voraz de información completa, paridad en cero (`npm run e4:scenarios`):
 | escenario (supuestos) | m ± IC 95% | Core v0 | central | ganador |
 |---|---|---|---|---|
 | **Probable — el escenario de referencia declarado** (central miope al daño difuso, proyectando, credit-tilted; distribuido en su composición de cobertura anclada) | **+54,0%** [+53,2, +54,8] | 98,2% | 44,2% | **Core v0 (decisivo)** |
-| **Solo miopía al daño** (contraste diagnóstico: probable, cambiando SOLO las dos coordenadas del gate de daño) | **+37,6%** [+37,0, +38,2] | 98,2% | 60,6% | Core v0 |
+| **Solo miopía al daño apagada** (`MYOPIA_OFF`; contraste diagnóstico: probable, cambiando SOLO las dos coordenadas del gate de daño) | **+37,6%** [+37,0, +38,2] | 98,2% | 60,6% | Core v0 |
 | **Paquete sin miopía** — probable, pero al central se le otorga visión del daño + insesgamiento + precisión + sin crédito | **+13,8%** [+13,5, +14,1] | 98,6% | 84,8% | Core v0 |
 | **Caso favorable al distribuido** | **+205,2%** [+202,9, +208,1] | 95,6% | −109,6% | Core v0 |
 | **Endpoint declarado favorable al central** (un lector residualmente imperfecto en un mundo casi sin daño) | **−2,3%** [−2,5, −2,2] | 95,3% | 97,6% | central (inmaterial) |
@@ -1765,14 +1769,14 @@ de parámetros anclado. Apagar la miopía al daño *sola* (las dos coordenadas d
 recupera cerca del **41%** de la brecha (16,4 de un declive de 40,2 puntos); otorgar al
 central el paquete *completo* competente-y-consciente-del-daño recupera el resto y aun
 así deja a la cobertura adelante (**≈ +13,8%**) —de modo que hasta un central idealizado
-en todo *salvo* la visión del daño que la literatura le niega igual pierde. El central
+en todo, **incluida la visión del daño**, igual pierde. El central
 se pone apenas adelante solo **abandonando los supuestos declarados**: un lector corregido
 (sin miopía — contra Hayek/Scott/Olson/Bandiera; sin proyección — contra Broockman y
 Skovron 2018) en un mundo casi sin daño alcanza apenas ≈ −3%, un rincón marginal y
 anti-empírico. Ese rincón se reporta **simétricamente** con el rincón *igualmente
 idealizado* del brazo distribuido —construido para reflejar la misma receta: señal
 distribuida perfecta en un mundo con daño con el central en su miopía *anclada*—, que
-alcanza **≈ +118%** (el escenario más amplio `PRO-DIST` de la tabla, +205%, es aún más
+alcanza **≈ +118%** (el escenario más amplio `PRO_DIST` de la tabla, +205%, es aún más
 favorable porque *además* degrada al central por debajo de su nivel anclado). La
 idealización es salvajemente asimétrica, y ninguno de los dos rincones está empíricamente
 fundado. La única sensibilidad que reduce materialmente la

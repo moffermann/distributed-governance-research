@@ -120,7 +120,8 @@ both directions (Demsetz 1969; Section 2). Our contributions are:
    constraints the model does not represent). In the model, selection and
    verified delivery compose multiplicatively (an accounting identity, not an
    independent finding); a matched selection-and-delivery extension gains
-   ≈ +58.6 points of a greedy reference in the declared world; a conditional
+   ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC
+   interval +58.0, +59.2]; a conditional
    three-layer attribution keeps the full Core v0 diagonal positive in every
    named world while planning's magnitude is left unquantified; and symmetric
    net-budget accounting leaves administrative cost roughly neutral. The earlier
@@ -305,9 +306,9 @@ And two further contributions concern measurement and method:
 - **(vi)** an end-to-end institutional comparison, within a bounded
   public-investment slice, on delivered social value per unit of budget,
   decomposing selection from delivery on matched portfolios: in the model,
-  selection and delivery compose multiplicatively (an accounting identity, not
+  selection and verified delivery compose multiplicatively (an accounting identity, not
   an independent finding); a matched selection-and-delivery extension gains
-  ≈ +58.6 points of a greedy reference in the declared world; a conditional
+  ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC interval +58.0, +59.2]; a conditional
   three-layer attribution keeps the full Core v0 diagonal positive in every
   named world while planning's magnitude remains unquantified; and symmetric
   net-budget accounting leaves administrative cost roughly neutral. Separately, a later
@@ -451,8 +452,8 @@ pre-registered ablation on the companion experiments (Offermann 2026b)
 measured the consequence: at the designed operating point the inequality
 holds with slack, so removing any single term costs almost nothing — and a
 deployment negotiated one defensible concession at a time can cross the
-threshold invisibly, ending below the status quo it replaced (delivering about
-87% of the status quo's verified value, with selection quality intact) while
+threshold invisibly, ending below the status quo it replaced (a material
+shortfall in verified value, with selection quality intact) while
 looking fully instrumented. The
 corpus therefore requires every scope to publish its deterrence-inequality
 margin in its operating configuration, recomputed on every term change, with
@@ -599,9 +600,10 @@ knife-edge: it holds across the declared parameter space; it survives the realis
 signal degradation of Core v0's universal budget *routing* (a ~5% active-report / ~35%
 microdelegation / ~60% profile-rule composition — universal *routing* is architectural,
 effective independent *information* is not); and it holds even when the central is
-granted every competence *except* harm-sight (~+14%). The central overtakes coverage only
-by **abandoning the declared premises** — granting it the harm-sight the literature
-denies it — and even then only on a near-harmless world; the *mirror* idealization of the
+granted the full harm-aware competent bundle the literature would deny it — harm-sight,
+unbiasedness, precision, and no credit (~+14%). The central overtakes coverage only
+by **further abandoning the declared premises** — also moving to a near-harmless world
+where the diffuse harm the literature documents barely exists; the *mirror* idealization of the
 distributed arm (its own recipe reflected: perfect signal, harm-rich world, central kept
 at its declared myopia) wins by a landslide (~+118%). The single sensitivity that
 materially shrinks the gap — without reversing its sign in the declared range — is
@@ -791,9 +793,9 @@ parity along the anti-diagonal β = 1 − η and turns into a central win below 
 (β > 1 − η) — which absorbs the participation-bias objection into the model's own
 β axis rather than leaving it external. Neither
 extreme is assumed: η is *swept*, not fixed, and a low but non-zero η is a
-defended regime, not a premise. The diffuse-harm literature (Bastiat's unseen
-costs; Olson's asymmetric organization on contested issues; Wilson's
-client-politics quadrant; Scott's legibility) describes *when* diffuse costs go
+defended regime, not a premise. The diffuse-harm literature (Bastiat's (1850) unseen
+costs; Olson's (1965) asymmetric organization on contested issues; Wilson's (1973)
+client-politics quadrant; Scott's (1998) legibility) describes *when* diffuse costs go
 unrepresented — each read at its proper scope, not as a claim of global
 blindness — while the opposing thesis that political competition disciplines the
 centre toward efficiency (Wittman 1989) holds weakest in exactly that
@@ -840,7 +842,7 @@ that on the parity line, where the bias cancels, the lower-variance estimator wi
 the distributed's revelation noise is zero (a funder knows her own value), the
 central's proxy noise is not. The implemented simulation does **not** bear this out
 at the accountable corner: at (η = 1, β = 0) the measured outcome is a slight
-**central win** (the distributed delivers about 89% of the central's value there) — so
+**central win** (the distributed falls just short of the central there) — so
 the honest reading is the noise-free parity law β = 1 − η, and the bias–variance tilt
 toward the distributed is not supported there.
 **(ii) The capture
@@ -1132,7 +1134,7 @@ evidence *directionally* describes it — *near-blind to diffuse harm on the low
 long tail* (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009): in that
 source-motivated declared reference scenario coverage-routed selection recovers
 *decisively* more of the model's greedy reference (≈ 98% vs ≈ 44%), even a central granted
-every competence except harm-sight still loses (≈ +14%), and the central pulls narrowly
+the full harm-aware competent bundle still loses (≈ +14%), and the central pulls narrowly
 ahead only by abandoning the declared premises — on a near-harmless world — while the
 *mirror* idealization of the distributed arm wins by a landslide, all a conditional model
 contrast reported as declared reference points, not calibrated impact; (2) the
@@ -1356,7 +1358,8 @@ architecture will plausibly be adopted first by relatively clean or newly
 arrived sponsors, in the places that need it least.
 
 **The layered magnitudes are conditional, not portable.** E5's ≈ +58.6-point
-selection-and-delivery interval holds the declared world, model form, and
+selection-and-delivery estimate [95% conditional Monte-Carlo interval +58.0,
++59.2] holds the declared world, model form, and
 calibration fixed; the interval reflects Monte-Carlo variation over simulated
 worlds, not uncertainty about the data-generating process, calibration,
 functional form, literature transport, or field implementation, and the greedy
@@ -1653,7 +1656,7 @@ stands, as the signed fraction of the full-information greedy benchmark, parity 
 | scenario (assumptions) | m ± 95% CI | Core v0 | central | winner |
 |---|---|---|---|---|
 | **Probable — the declared reference scenario** (central myopic to diffuse harm, projecting, credit-tilted; distributed on its anchored coverage composition) | **+54.0%** [+53.2, +54.8] | 98.2% | 44.2% | **Core v0 (decisive)** |
-| **Harm-myopia only** (diagnostic contrast: probable, changing ONLY the two harm-gate coordinates) | **+37.6%** [+37.0, +38.2] | 98.2% | 60.6% | Core v0 |
+| **Only harm-myopia switched off** (`MYOPIA_OFF`; diagnostic contrast: probable, changing ONLY the two harm-gate coordinates) | **+37.6%** [+37.0, +38.2] | 98.2% | 60.6% | Core v0 |
 | **No-myopia bundle** — probable, but the central is granted harm-sight + unbiasedness + precision + no credit | **+13.8%** [+13.5, +14.1] | 98.6% | 84.8% | Core v0 |
 | **Distributed's favourable case** | **+205.2%** [+202.9, +208.1] | 95.6% | −109.6% | Core v0 |
 | **Central's declared favourable endpoint** (a residually-imperfect reader on a near-harmless world) | **−2.3%** [−2.5, −2.2] | 95.3% | 97.6% | central (immaterial) |
@@ -1664,15 +1667,15 @@ scenario** the distributed arm delivers ≈ 98.2% of the benchmark and the centr
 parameter space. Turning off harm-myopia *alone* (the two harm-gate coordinates)
 recovers about **41%** of the gap (16.4 of a 40.2-point decline); granting the central
 the *full* competent-but-harm-aware bundle recovers the rest yet still leaves coverage
-ahead (**≈ +13.8%**) — so even a central idealized in every way *except* the harm-sight
-the literature denies it still loses. The central pulls narrowly ahead only by
+ahead (**≈ +13.8%**) — so even a central idealized in every way, **harm-sight included**,
+still loses. The central pulls narrowly ahead only by
 **abandoning the declared premises**: a corrected reader (no myopia — against
 Hayek/Scott/Olson/Bandiera; no projection — against Broockman and Skovron 2018) on a
 near-harmless world reaches only ≈ −3%, a marginal, anti-empirical corner. That corner
 is reported **symmetrically** with the distributed arm's *equally-idealized* corner —
 built to mirror the same recipe: perfect distributed signal on a harm-rich world with
 the central kept at its *anchored* myopia — which reaches **≈ +118%** (the broader
-`PRO-DIST` scenario in the table, +205%, is more favourable still because it *also*
+`PRO_DIST` scenario in the table, +205%, is more favourable still because it *also*
 degrades the central below its anchored level). Idealization is wildly asymmetric, and
 neither corner is empirically grounded. The one
 sensitivity that materially shrinks the anchored gap is **correlated / common-mode
