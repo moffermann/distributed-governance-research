@@ -26,7 +26,7 @@ import { safeLog } from './adapter.mjs';
 
 export const PLANNING = {
   nSec: 10,           // number of persistent SECTORS (anchored: UN COFOG has 10 top-level functions)
-  agendaCapture: 1,   // AGENDA CAPTURE (second face of power, Bachrach–Baratz 1962 / Schattschneider): the number of
+  agendaCapture: 0,   // AGENDA CAPTURE (second face of power, Bachrach–Baratz 1962 / Schattschneider): the number of
                       //     its LOWEST-perceived sectors the CENTRAL keeps entirely OFF the menu (share 0; budget
                       //     reallocated to the sectors it does fund). Anchored in DIRECTION (central structurally
                       //     under-provides low-visibility functions — political budget cycles, maintenance neglect);
@@ -35,12 +35,12 @@ export const PLANNING = {
                       //     exclusion of many functions is NOT data-supported. 0 = pure soft credit distortion.
   assoc: -0.6,        // need↔visibility association: <0 = high-need sectors are LOW-visibility (the realistic case per
                       //     Rioja's maintenance-vs-new bias); swept over {-1..+1}. This is the PREDECLARED lever.
-  secValSpread: 0.3,  // cross-sector TRUE-value dispersion, in units of project value (DECLARED). The planning
-                      //     contribution scales strongly with this: ~0 at 0.1, ~+4% Shapley at 0.3; it is NOT a robust
-                      //     large effect. 0.3 is a moderate declared reference, conservative vs the IMF/Rioja envelope.
-  creditCoef: 0.6,    // central planner's POLITICAL-CREDIT weight on sector visibility (over-funds visible sectors).
-                      //     Direction anchored (political budget cycles: Drazen–Eslava 2010; distributive politics:
-                      //     Golden–Min 2013); magnitude DECLARED.
+  secValSpread: 0.184, // cross-sector TRUE-value dispersion, in units of project value. PROVISIONALLY ANCHORED to the
+                      //     between-sector return-per-cost SD (World Bank OED portfolio ≈0.184; anchor round). The
+                      //     planning contribution scales with this; NOT a robust large effect. (0.3 is a declared stress.)
+  creditCoef: 0.076,  // central planner's POLITICAL-CREDIT weight on sector visibility. PROVISIONALLY ANCHORED to the
+                      //     election change in the log visible budget share (Drazen–Eslava 2010: 0.024, SE 0.008 →
+                      //     ≈0.076). Direction anchored; the point value is a provisional moment map, not transported.
   covSees: 0.7,       // fraction of the cross-sector value tilt that distributed COVERAGE perceives (central sees 0 —
                       //     it is blind to low-visibility sector value and reads visibility as credit). DECLARED.
   hardExclude: 0,     // 0 = positive-part proportional shares; 1 = fund only the top nKeep sectors (hard exclusion —
@@ -84,7 +84,7 @@ function sectorPerceived(projects, sec, plan, who) {
   const key = who === 'C' ? 'M_C' : 'M_D';
   for (let j = 0; j < projects.length; j++) per[sec.sectorOf[j]] += projects[j][key];    // engine signal (blind to the sector tilt)
   if (who === 'C') for (let s = 0; s < nSec; s++) per[s] += plan.creditCoef * sec.vis[s] * sec.cnt[s];         // political credit on visibility
-  else             for (let s = 0; s < nSec; s++) per[s] += plan.covSees * plan.secValSpread * sec.valTilt[s] * sec.cnt[s]; // coverage sees the tilt
+  else             for (let s = 0; s < nSec; s++) per[s] += plan.covSees * sec.valTilt[s] * sec.cnt[s]; // coverage sees a fraction covSees of the tilt (valTilt already carries secValSpread — no double-count)
   return per;
 }
 
@@ -273,7 +273,7 @@ function main() {
     safeLog('E9 — FULL STACK: PLANNING, SELECTION and DELIVERY (built on E5, PROBABLE world). Parity at the oracle');
     safeLog('(a global full-information greedy REFERENCE, not a guaranteed optimum). No compound multiplier.\n');
     const civ = (iv) => `[${pct(iv[0])}, ${pct(iv[1])}]`;
-    safeLog(`worlds kept: ${r.n}   (${PLANNING.nSec} COFOG sectors; assoc=${PLANNING.assoc}, secValSpread=${PLANNING.secValSpread}, agendaCapture=${PLANNING.agendaCapture}/${PLANNING.nSec}, strict residual)`);
+    safeLog(`worlds kept: ${r.n}   (${PLANNING.nSec} COFOG sectors; assoc=${PLANNING.assoc}, secValSpread=${PLANNING.secValSpread}, creditCoef=${PLANNING.creditCoef}, agendaCapture=${PLANNING.agendaCapture}, strict residual)`);
     safeLog(`STATUS QUO (all-central: central planning + selection + opaque delivery):     ${pct(r.statusQuo)} of reference`);
     safeLog(`CORE v0 FULL (all-distributed: distributed planning + selection + verified):   ${pct(r.coreV0)} of reference`);
     safeLog(`FULL-STACK gain (Core v0 − status quo): ${pct(r.fullStackGain)}  95% CI ${civ(r.fullStackCI)}\n`);
@@ -308,11 +308,16 @@ function main() {
       const ra = fullStack(cfg, { nWorlds: 600, planning: { ...PLANNING, agendaCapture: ac } });
       safeLog(`   ${String(ac).padStart(2)}/${PLANNING.nSec}              ${pct(ra.attribution.planning).padStart(7)}           ${pct(ra.planningUnderDistributedSel).padStart(7)}            ${pct(ra.fullStackGain).padStart(7)}`);
     }
-    safeLog('   → agenda capture makes PLANNING a robustly POSITIVE layer (no sign flip). At the DEFAULT modest, data-');
-    safeLog('     consistent severity (1 of 10 COFOG functions off the menu) planning Shapley is ~+7%; larger values are');
-    safeLog('     a declared stress, NOT data-supported (measured pre-election composition shifts are single-digit).');
-    safeLog('   Anchored in DIRECTION (Bachrach–Baratz second face of power; political budget cycles; maintenance');
-    safeLog('   neglect); MAGNITUDE declared-and-conservative. SELECTION and DELIVERY remain the largest layers.');
+    safeLog('   → agenda capture (a DECLARED STRESS — no cited evidence for universal whole-function exclusion) would');
+    safeLog('     raise planning further, but is NOT the anchored headline (default agendaCapture=0).\n');
+
+    safeLog('ANCHORED READ (anchor round; params provisionally moment-mapped): creditCoef≈0.076 (Drazen–Eslava election');
+    safeLog('log-visible-share shift 0.024), secValSpread≈0.184 (World Bank OED between-sector return-per-cost SD),');
+    safeLog('nSec=10 (COFOG), agendaCapture=0. The PLANNING contribution is then LOW SINGLE DIGITS: ~+0.6% strict,');
+    safeLog(`~+3.2% recycled (this run: ${pct(r.attribution.planning)}). Direction anchored (COFOG; election visible-spending shift;`);
+    safeLog('maintenance neglect); the point MAGNITUDE is a provisional moment map (an old WB return portfolio + a');
+    safeLog('Colombian election moment), NOT one transported empirical calibration — no fully anchored band is claimed.');
+    safeLog('SELECTION and DELIVERY remain the large, robust layers; PLANNING is a small, positive-or-near-zero third layer.');
   });
 }
 import { fileURLToPath } from 'node:url';
