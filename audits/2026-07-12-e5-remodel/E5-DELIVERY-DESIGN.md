@@ -37,8 +37,8 @@ the one-shot E4 world (no time dimension, so no endogenous pool cycling — the 
 condition statically, which is exactly the corpus finding that **deterrence pre-empts punishment**):
 
 - A share `pi_hon` of executors are **intrinsically honest** (deliver `1 − loss_hon`). The rest are opportunistic and
-  **divert iff** temptation `t ~ U(0,1)` exceeds the regime deterrent `det = p_det · [(1 − a(1 − r)) + rep]`
-  (`a` = up-front advance exposure, `r` = recovery, `rep` = reputational stake).
+  **divert iff** temptation `t ~ U(0,1)` exceeds the regime deterrent `det = p_det · [(1 − a(1 − r)) + gamma + rep]`
+  (`a` = up-front advance exposure, `r` = recovery, `gamma` = performance guarantee, `rep` = reputational stake).
 - A diverting executor loses `a(1 − r)` of the budget (the unrecovered advance) → delivers `1 − a(1 − r) − loss_hon`.
 - Delivered value `V = Σ_{j∈funded} S_j · f_j`. (A half-built harmful project does half its harm — consistent; the
   **stolen funds' cost is 0 social value here and belongs to E10**, not this value layer.)
@@ -69,7 +69,7 @@ the frozen E4 contract/hash is untouched.
   delivery gain needs the **formal recovery channel** (the verified regime / Core v0's evidence layer), not monitoring
   alone. This replaced the earlier single `mon_coupling=0.35` (recovery was doing most of the work, unanchored).
 - **Composition: multiplicative (an accounting identity).** Actual A2 +93.3% equals σ_D·δ_verified +93.3%
-  exactly; the additive prediction (+78.6%) is short by the interaction. The two layers **multiply**; the positive
+  exactly; the additive prediction (+83.8%) is short by the interaction. The two layers **multiply**; the positive
   interaction is the level-effect signature of that composition.
 
 ## Honest limits (for the adversarial pass)
@@ -154,15 +154,27 @@ PRNG streams (E5 reduces to E4 exactly); reframed opaque as the Olken value-loss
 incidence + value leakage + a bootstrap CI on the full gain; named the multiplicativity an accounting identity; labelled
 verified ~0 diversion as conditional ex-ante deterrence and the whole calibration an identified-set reference.
 
-**Deferred (robustness — for the next friendly pass / the adversarial round):** joint/global sensitivity (Sobol /
-Latin-hypercube) instead of the 1-D opaque sweep; 20-seed replication of the headline; value-/complexity-correlated
-delivery risk and alternative (Beta) cost distributions near the verified threshold; explicit delivery-parameter
-validation + analytical boundary tests; separate reporting of protected-vs-recovered funds.
+**Second robustness pass — DONE (commit 418c7cd):** value/complexity-correlated delivery risk (`val_risk`); 20-seed
+replication; joint Latin-hypercube sweep over the declared delivery ranges (replaces the 1-D sweep); `validateDelivery`
+fail-closed. Result: full gain robust — 20-seed sd 0.5 pp; LHS full-architecture wins 100%, coverage effect 100%.
+
+## Friendly Codex round-2 — verification, bounded pass (verdict: `CODEX-E5-FRIENDLY2-VERDICT.md`)
+
+Round-2 verified the model + result reproduce (full +59.1 pp [+58.5,+59.7], 36→40 tests) and returned
+**PUBLICATION-READY: YES after a bounded pass**, now applied (commit 84332e1): validation genuinely fail-closed
+(`Number.isFinite`; `rep` required — a missing rep silently made the deterrent NaN); bootstrap CIs on ALL reported
+cells/effects; favorable **R=0 disclosure** (verified delivery 94.4%, verified diversion 5.5%, full +58.6%);
+`shareCoverageWins`→`shareArchitectureWins` + a real coverage share; label fixes (Olken = value-weighted non-delivery
+not executor share; severe sweep row = declared stress ~69% loss, not the Uganda 87% tail; `val_risk` = cost/size under
+`c ⟂ S`; verified `a=0.20` declared). Quantities kept explicitly DECLARED: `loss_hon`, `rep`, milestone effectiveness,
+the guarantee→`gamma` mapping, the `p_det/a/r` decomposition, `mon_detect`/recovery mappings, `val_risk`, `U(0,1)`
+temptation, `c ⟂ S`, uniform-independent LHS weighting.
+
+**Status: E5 is PUBLICATION-READY.**
 
 ## Next
 
-- Second friendly pass (deferred robustness items above) → then E5 perfect / publication-ready → integrate into the
-  paper's Finding 5.
+- Integrate E5 into the paper's Finding 5 (EN+ES) using `FINDING5-DRAFT.md`.
 - E9 (full-stack: planning + selection + delivery, central vs Core v0) and E10 (+costs) per
   `docs/EXPERIMENT-INVENTORY.md`.
 - Re-label `e5-layers.mjs` as the E10 cost scaffolding; wire E5 delivery into the paper's Finding 5 with the
