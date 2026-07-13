@@ -173,3 +173,35 @@ CONDITIONAL third layer** — positive only under substantial declared sector he
 need↔visibility association, near-zero/negative otherwise. Magnitude DECLARED and numerically modest; **not in obvious
 tension with the broader, non-commensurate IMF/Rioja evidence, but NOT anchored to a cross-sector point estimate**.
 22/22 tests. → ready for a round-3 confirmation.
+
+## Anchoring round (author: "anclar mejor los parámetros a datos") — data-anchor agent (verified) + AGENDA CAPTURE
+
+**Author question:** was agenda capture modeled in the status-quo category selection? **Answer: no** — only the SOFT
+credit distortion was in the headline; hard exclusion was a non-default variant. The author chose to incorporate agenda
+capture. Data-anchor agent (all web-verified) mapped E9's declared parameters onto observable moments:
+
+| parameter | observable moment | anchor | status |
+|---|---|---|---|
+| `nSec` | UN COFOG top-level functions = **10** | UN/Eurostat/OECD COFOG | **ANCHORED** (nSec=10) |
+| `creditCoef` (over-fund visible) | pre-election composition shift to visible spending | Drazen–Eslava 2010 *JDE* 92(1); Vergne 2009 *EJPE* 25(1); Katsimi–Sarantides 2012 *Public Choice* 151 | direction ANCHORED, **magnitude modest/single-digit → declared-with-band** |
+| `assoc` sign (high-need = low-visibility) | maintenance/prevention underfunded vs new visible capital | Rioja 2003 *JPE* 87(9–10) + WB AICD (optimal maintenance ~2% GDP; new-build bias) | **SIGN anchored**, strength declared |
+| `secValSpread` (cross-sector value dispersion) | COFOG share dispersion / sector-return spread / allocative gap | Eurostat COFOG 2023; IMF/CEPR ~11% GDP + 30–40% efficiency-gap **ceiling** | loose/confounded → **upper-bounded, not point-anchored** |
+
+**Data-agent's read:** the honest anchored planning contribution is **SMALL (a few %)** — measured composition shifts are
+single-digit, the ~11%/30–40% figures are ceilings bundling far more than cross-sector visibility bias, and the
+need↔visibility link is directionally real but weakly measured. This **coheres with the project's own symmetry-gate
+NO-GO (~0.026)**: the architecture + mechanism is the contribution; the honest calibrated planning magnitude is small.
+
+**AGENDA CAPTURE mechanism added (commit 790cdc1):** `agendaCapture` = the number of its lowest-perceived COFOG sectors
+the central keeps OFF the menu (second face of power, Bachrach–Baratz 1962 / Schattschneider; political budget cycles).
+Budget reallocated to funded sectors. This is the mechanism that makes the planning layer **robustly POSITIVE (no sign
+flip)**. At the DEFAULT modest, data-consistent severity (**1 of 10** COFOG functions off the menu) the planning Shapley
+is **~+7.0% [+6.6,+7.5]** (vs +3.8% and sign-ambiguous under soft distortion alone); severities of 2–3/10 give +10–15%
+but are a **declared stress, NOT data-supported** (wholesale exclusion of many functions contradicts the single-digit
+measured shifts).
+
+**Honest anchored conclusion:** the planning layer is a **modest, robustly-positive third layer (~+7%)**, its DIRECTION
+anchored (COFOG structure; the second face of power; political budget cycles; maintenance neglect) and its MAGNITUDE
+declared-and-conservative. **SELECTION (+36%) and DELIVERY (+10%) remain the large, robust layers.** Full-stack gain
+~+53% [+52.6,+54.0]. This is the data-anchored, non-gerrymandered result. 26/26 tests. → Codex pro-anchor panel synthesis
+to be folded in next.
