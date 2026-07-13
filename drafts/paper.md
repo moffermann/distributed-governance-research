@@ -1381,13 +1381,15 @@ symmetric, selection-only gate finds the distributed-minus-central
 advantage positive in every cell but small (a pre-registered pooled median
 Δ = 0.025 of a full-information benchmark, below its pre-set 0.05
 research-program rebuild gate). The v1.14 robustness map then models the central as the evidence
-describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek 1945;
-Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg et al. 2003) — and in that
-empirically-anchored case coverage-routed selection wins *decisively* (≈ 99% of the
-benchmark against ≈ 44%) and robustly. The two are consistent: the pre-registered
-gate's near-parity is a conservative floor — it *granted* the central harm-sight, under
-sampled participation — and the central overtakes coverage only by abandoning the
-anchored premises the gate assumed. We therefore retire the compound multiplier an earlier version
+*directionally* describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek 1945;
+Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009) — and in that source-motivated
+declared reference scenario coverage-routed selection recovers *decisively* more of the
+model's greedy reference (≈ 98% against ≈ 44%) and robustly. The two are epistemically
+distinct, not a reclassification: the pre-registered gate is the sole *confirmatory*
+computation (a NO-GO near-parity, granting the central harm-sight under sampled
+participation), while the v1.14 map is a subsequent *exploratory* scenario analysis under
+a different data-generating process; the central overtakes coverage only by abandoning
+the declared premises. We therefore retire the compound multiplier an earlier version
 reported and rest on the architecture, the qualitative mechanism, and this conditional
 comparative map; its magnitudes are declared reference and stress points, not
 calibrated impact. One model-internal result is worth carrying because it is
