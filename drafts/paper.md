@@ -1,16 +1,16 @@
 # A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Stress-Testing, and a Symmetric Computational Test of Selective Institutional Distribution
 
-**Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered symmetric selection-only stress test returned NO-GO (see §6 and the claim & estimand contract) — and rests on the architecture and the qualitative mechanism, now sharpened by a four-scenario robustness map (E4 v1.14): modelling the central as the evidence describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek, Scott, Olson, Bandiera–Prat–Valletti, Flyvbjerg) — coverage-routed selection wins decisively (~99% of benchmark vs ~44%) and robustly; the pre-registered gate's near-parity is the conservative floor, and the central overtakes coverage only by abandoning the anchored premises, while the symmetric idealization of the distributed arm wins by a landslide; all such magnitudes are declared reference points from a stylized comparative-institutions model, not calibrated impact. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
+**Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered symmetric selection-only stress test returned NO-GO (see §6 and the claim & estimand contract) — and rests on the architecture and the qualitative mechanism, now sharpened by a four-scenario robustness map (E4 v1.14): modelling the central as the evidence *directionally* describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek, Scott, Olson, Bandiera–Prat–Valletti) — coverage-routed selection recovers decisively more of the model's full-information reference (~98% vs ~44%) and robustly; the pre-registered gate remains the separate confirmatory result (a NO-GO under a different data-generating process), the central overtakes coverage only by abandoning the declared premises, and the mirror idealization of the distributed arm wins by a landslide; all such magnitudes are declared reference points from a stylized comparative-institutions model, a conditional model contrast, not calibrated impact. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY 4.0 — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
 ## Abstract
 
-Public resources are allocated and controlled by institutions that fuse three functions — who selects projects, who executes them, and who judges whether they delivered. That fusion is where waste, capture, and unaccountable failure concentrate. This paper asks whether a bounded share of that machinery can separate those functions — and the information that drives them — while preserving legal authorization and public auditability.
+Public spending routinely asks one hierarchy to choose projects, execute them, and certify its own performance — the fusion where waste, capture, and unaccountable failure concentrate. This paper asks whether a bounded, legally authorized share of that machinery can separate those functions — the hand that chooses, the hand that spends, and the hand that certifies — and the information that drives them, while preserving legal authorization and public auditability.
 
 We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
 
-Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then models the central selector as the evidence describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg et al. 2003), projecting its own priors onto constituents (Broockman–Skovron 2018), and credit-tilted (Mayhew 1974; Arnold 1990). In that empirically-anchored case coverage-routed distributed selection wins decisively — about 99% of the full-information benchmark against the central's ~44% — robustly across the anchored space and the realistic signal degradation of Core v0's universal coverage. The central overtakes coverage only by abandoning the anchored premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the symmetric idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; the one sensitivity that materially shrinks the gap — never its sign in the plausible range — is correlated/common-mode error in the coverage arm. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
+Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; the pre-registered gate remains the separate confirmatory result (a NO-GO under a different data-generating process), and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
 
 This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulation's units are uncalibrated and partial-equilibrium and do not identify delivery effects; and claims are scoped to infrastructure-like public investment. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
 
@@ -573,30 +573,35 @@ The load-bearing contributions are the architecture, the mechanism direction, an
 the v1.14 comparative robustness map across declared no-myopia and harm-myopia
 regimes—not a point multiplier or calibrated impact.
 
-**The anchored case is decisive (E4 v1.14).** When the central selector is modelled as
-the evidence describes it — near-blind to *diffuse harm on the low-visibility long
-tail* (Hayek 1945; Scott 1998; Olson 1965; Bandiera, Prat and Valletti 2009, where
-**83% of government waste is passive**; Flyvbjerg et al. 2003, where **nine in ten**
-megaprojects overrun and benefits are over-rated), projecting its own priors onto
-constituents (Broockman and Skovron 2018), and tilted toward claimable credit (Mayhew
-1974; Arnold 1990), in a heavy-tailed low-visibility project space (Skuhrovec et al.
-2013) — **coverage-routed distributed selection delivers about 99% of the
-full-information greedy benchmark to the central's ~44%: a +54-point gap.** This is
-not a knife-edge. It is robust across the anchored parameter space; it survives the
-realistic signal degradation of Core v0's universal coverage (a ~5% active-report /
-~35% microdelegation / ~60% profile-rule composition, each channel anchored); and it
-holds even when the central is granted every competence *except* harm-sight (~+14%).
-The central overtakes coverage only by **abandoning the anchored premises** — granting
-it the harm-sight the literature says it lacks — and even then only on a near-harmless
-world; the *symmetric* idealization of the distributed arm (perfect signal, harm-rich
-world, central kept at its anchored myopia) wins by a landslide (~+118%). These are
-declared, source-motivated reference points from a stylized comparative-institutions
-model, not calibrated field effects; the single sensitivity that materially shrinks the
-gap — without flipping its sign in the plausible range — is correlated/common-mode
-error in the coverage arm (a shared platform/recommender or concentrated delegation),
-which brings ~+54% down to ~+26% at a strong correlation. The full four-scenario map,
-the literature anchoring, the symmetric idealized corners, and the common-mode frontier
-are in **Appendix E4**.
+**The declared reference scenario is decisive (E4 v1.14).** When the central selector is
+modelled as the evidence describes it — its *direction* on every axis grounded in the
+literature (not its magnitude fitted): near-blind to *diffuse harm on the low-visibility
+long tail* (Hayek 1945; Scott 1998; Olson 1965; Bandiera, Prat and Valletti 2009, whose
+**83% passive waste** in standardized-goods procurement shows most public loss is not
+chosen), projecting its own priors and over-rating visible, appraisable benefits
+(Broockman and Skovron 2018; Flyvbjerg et al. 2003), and tilted toward claimable credit
+(Mayhew 1974; Arnold 1990), in a heavy-tailed low-visibility project space (Skuhrovec et
+al. 2013) — **coverage-routed distributed selection recovers about 98% of the model's
+full-information greedy reference against the central's ~44%: a 54-point conditional
+model contrast**, not an empirical calibration or a field effect (the reference is a
+greedy normalization, not a feasible institution or a welfare optimum). It is not a
+knife-edge: it holds across the declared parameter space; it survives the realistic
+signal degradation of Core v0's universal budget *routing* (a ~5% active-report / ~35%
+microdelegation / ~60% profile-rule composition — universal *routing* is architectural,
+effective independent *information* is not); and it holds even when the central is
+granted every competence *except* harm-sight (~+14%). The central overtakes coverage only
+by **abandoning the declared premises** — granting it the harm-sight the literature
+denies it — and even then only on a near-harmless world; the *mirror* idealization of the
+distributed arm (its own recipe reflected: perfect signal, harm-rich world, central kept
+at its declared myopia) wins by a landslide (~+118%). The single sensitivity that
+materially shrinks the gap — without reversing its sign in the declared range — is
+correlated/common-mode error in the coverage arm (a shared platform/recommender or
+concentrated delegation), which brings ~+54% to ~+26% at a strong correlation. The
+pre-registered symmetry gate remains the paper's separate **confirmatory** computation (a
+NO-GO near-parity under a different data-generating process); this map is a subsequent
+scenario analysis, not a reclassification of it. The full four-scenario map, the
+literature anchoring, the mirror idealized corners, and the common-mode frontier are in
+**Appendix E4**.
 
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
@@ -1031,15 +1036,16 @@ had imposed: 0.309 emergent against the 0.30 assumed.
 **What survives.** Stripped to what the governing test supports: (1) under the
 pre-registered symmetric gate the distributed selection advantage is *positive but
 small* (median Δ = 0.025, below the 0.05 rebuild gate; NO-GO); (1b) a v1.14
-four-scenario robustness extension models the central as the evidence describes it —
-*near-blind to diffuse harm on the low-visibility long tail* (Hayek 1945; Scott 1998;
-Olson 1965; Bandiera–Prat–Valletti 2009; Flyvbjerg et al. 2003): in that empirically-anchored
-case coverage-routed selection wins *decisively* (≈ 99% of benchmark vs ≈ 44%) and
-robustly, even a central granted every competence except harm-sight still loses
-(≈ +14%), and the central pulls narrowly ahead only by abandoning the anchored premises
-— on a near-harmless world — while the symmetric idealization of the *distributed* arm wins by
-a landslide, with all magnitudes reported as declared reference points from a stylized
-model, not calibrated impact; (2) the
+four-scenario robustness extension (a *separate, exploratory* analysis under a different
+data-generating process, not a reclassification of the NO-GO) models the central as the
+evidence *directionally* describes it — *near-blind to diffuse harm on the low-visibility
+long tail* (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009): in that
+source-motivated declared reference scenario coverage-routed selection recovers
+*decisively* more of the model's greedy reference (≈ 98% vs ≈ 44%), even a central granted
+every competence except harm-sight still loses (≈ +14%), and the central pulls narrowly
+ahead only by abandoning the declared premises — on a near-harmless world — while the
+*mirror* idealization of the distributed arm wins by a landslide, all a conditional model
+contrast reported as declared reference points, not calibrated impact; (2) the
 load-bearing contributions are the architecture and the qualitative
 credit-versus-coverage mechanism — credit-pressured central ranking underweights
 diffuse value that coverage-based distributed selection surfaces; (3) every compound
