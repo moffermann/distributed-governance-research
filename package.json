@@ -12,7 +12,9 @@
     "e4:theorem": "node scripts/simulation/e4-v5/theorem-check.mjs",
     "e4:scenarios": "node scripts/simulation/e4-v5/scenarios.mjs",
     "e4:frontier": "node scripts/simulation/e4-v5/frontier.mjs",
-    "e5:layers": "node scripts/simulation/e4-v5/e5-layers.mjs"
+    "e5:layers": "node scripts/simulation/e4-v5/e5-layers.mjs",
+    "e5:delivery": "node scripts/simulation/e4-v5/e5-delivery.mjs",
+    "e5:delivery:test": "node scripts/simulation/e4-v5/e5-delivery-test.mjs"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "11.16.0",

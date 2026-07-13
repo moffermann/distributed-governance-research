@@ -114,13 +114,15 @@ function zscore(vals, fallbackSd) {
 }
 
 // Fund greedily by rank score among the arm's own eligible set, under budget, exact residual fill, tie-break lower j.
-function fundedValue(projects, signalKey, cfg, budget, opts = {}) {
+// Returns the FUNDED INDEX SET (in funding order). fundedValue sums S over it — E5 (delivery) reuses the set to apply
+// per-project delivered fractions, so selection and delivery stay separable on the identical funded portfolio.
+export function fundedSet(projects, signalKey, cfg, budget, opts = {}) {
   const idx = [];
   for (let j = 0; j < projects.length; j++) {
     const x = projects[j][signalKey];
     if (x - cfg.h * projects[j].c > 0) idx.push(j);            // own-estimate eligibility gate
   }
-  if (idx.length === 0) return 0;
+  if (idx.length === 0) return [];
   const rawVal = idx.map((j) => (projects[j][signalKey] - cfg.h * projects[j].c) / projects[j].c);
   let score = zscore(rawVal, NUM.z_fallback_sd.value);
   if (opts.creditTilt) {                                        // central credit tilt
@@ -129,10 +131,16 @@ function fundedValue(projects, signalKey, cfg, budget, opts = {}) {
   }
   const order = idx.map((j, t) => ({ j, s: score[t] }))
     .sort((A, B) => (B.s - A.s) || (A.j - B.j));               // desc score, tie-break lower index
-  let spent = 0, delivered = 0;
+  let spent = 0; const funded = [];
   for (const { j } of order) {
-    if (spent + projects[j].c <= budget) { spent += projects[j].c; delivered += projects[j].S; }
+    if (spent + projects[j].c <= budget) { spent += projects[j].c; funded.push(j); }
   }
+  return funded;
+}
+
+function fundedValue(projects, signalKey, cfg, budget, opts = {}) {
+  let delivered = 0;
+  for (const j of fundedSet(projects, signalKey, cfg, budget, opts)) delivered += projects[j].S;
   return delivered;
 }
 
