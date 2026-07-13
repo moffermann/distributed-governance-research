@@ -308,16 +308,15 @@ function main() {
       const ra = fullStack(cfg, { nWorlds: 600, planning: { ...PLANNING, agendaCapture: ac } });
       safeLog(`   ${String(ac).padStart(2)}/${PLANNING.nSec}              ${pct(ra.attribution.planning).padStart(7)}           ${pct(ra.planningUnderDistributedSel).padStart(7)}            ${pct(ra.fullStackGain).padStart(7)}`);
     }
-    safeLog('   → agenda capture (a DECLARED STRESS — no cited evidence for universal whole-function exclusion) would');
-    safeLog('     raise planning further, but is NOT the anchored headline (default agendaCapture=0).\n');
+    safeLog('   → agenda capture is the DOMINANT planning mechanism, and it is NOT anchorable today (no cited universal');
+    safeLog('     whole-function-exclusion moment, no worked country example yet), so it is PROPOSED CONTINUATION WORK.\n');
 
-    safeLog('ANCHORED READ (anchor round; params provisionally moment-mapped): creditCoef≈0.076 (Drazen–Eslava election');
-    safeLog('log-visible-share shift 0.024), secValSpread≈0.184 (World Bank OED between-sector return-per-cost SD),');
-    safeLog('nSec=10 (COFOG), agendaCapture=0. The PLANNING contribution is then LOW SINGLE DIGITS: ~+0.6% strict,');
-    safeLog(`~+3.2% recycled (this run: ${pct(r.attribution.planning)}). Direction anchored (COFOG; election visible-spending shift;`);
-    safeLog('maintenance neglect); the point MAGNITUDE is a provisional moment map (an old WB return portfolio + a');
-    safeLog('Colombian election moment), NOT one transported empirical calibration — no fully anchored band is claimed.');
-    safeLog('SELECTION and DELIVERY remain the large, robust layers; PLANNING is a small, positive-or-near-zero third layer.');
+    safeLog('FRAMING (author decision): DO NOT report a planning-layer FIGURE. The soft-only slice above (~0–3%) omits');
+    safeLog('agenda capture — the mechanism that moves the needle — so it UNDERSTATES the layer; headlining it would read');
+    safeLog('as "planning is small," which is not what it means. Report SELECTION and DELIVERY quantitatively (the large,');
+    safeLog('robust, anchored layers); present PLANNING QUALITATIVELY — mechanism identified (agenda capture / second');
+    safeLog('face of power), DIRECTION anchored (COFOG; election visible-spending shift; maintenance neglect), MAGNITUDE');
+    safeLog('deferred to country-specific continuation (e.g. a Chile example — illustrative, not conclusive).');
   });
 }
 import { fileURLToPath } from 'node:url';

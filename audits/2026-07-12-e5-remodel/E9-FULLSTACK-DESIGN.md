@@ -213,15 +213,39 @@ observable moments, plus found a real BUG. Applied:
 - **Result reproduces the panel's independent diagnostic exactly:** planning Shapley **+0.61% strict / +3.21%
   [+2.93,+3.47] recycled**. (My earlier +7% used the unanchored creditCoef=0.6 + agendaCapture=1 + the double-count.)
 
-**FINAL honest anchored conclusion:** the planning layer is a **small, positive-or-near-zero third layer** — **~+0.6%
-(strict) to +3.2% (recycled)**, in the **0–3% data-assisted range** both reviewers converged on. Its DIRECTION is
-anchored (COFOG taxonomy; the election-period shift to visible spending; maintenance neglect); the point MAGNITUDE is a
-**provisional moment map** (an old WB return portfolio + a Colombian election moment), **NOT one transported empirical
-calibration — no fully anchored band is claimed**. This coheres with the project's symmetry-gate NO-GO (~0.026): the
-architecture + mechanism is the contribution; the honest calibrated planning magnitude is small. **SELECTION (+37–43%)
-and DELIVERY (+11%) remain the large, robust layers.** 26/26 tests.
+**What the anchoring round found (the SOFT-only slice, mechanism absent):** with `agendaCapture=0` and the moment-mapped
+params, the planning contribution is ~+0.6% (strict) to +3.2% (recycled) — the 0–3% range both reviewers converged on.
+**But this slice omits agenda capture, the layer's dominant mechanism, so it is NOT the planning result** (see the
+framing decision below — do not headline a planning figure). **SELECTION (+37–43%) and DELIVERY (+11%) remain the large,
+robust, quantified layers.** 26/26 tests.
 
-**Panel modifications noted as FUTURE WORK (a country-specific, fully-anchored v3):** softmax baseline-plus-flexible-
+## Planning-layer framing — DO NOT report a figure (author decision, 2026-07-13)
+
+**Key methodological point (author):** it is misleading to headline a "neutral" small planning number (~0–3%), because
+that number is measured with the layer's DOMINANT mechanism — **agenda capture** (the central keeping whole high-need/
+low-visibility functions off the menu; the second face of power) — SWITCHED OFF. Reporting it as "the" planning
+contribution would falsely read as "we measured planning and it is small," when the honest statement is: **the planning
+layer's magnitude hinges on agenda capture, which cannot be anchored today, so we do NOT quantify it.**
+
+Therefore the E9 write-up should:
+- **Quantify only SELECTION and DELIVERY** (anchored, robust, large layers).
+- Present **PLANNING qualitatively**: the mechanism (agenda capture / second face of power) is IDENTIFIED and its
+  DIRECTION anchored (COFOG structure; the election-period shift to visible spending; maintenance neglect), but its
+  MAGNITUDE requires country-specific budget data (which whole functions a given central actually excludes) and is left
+  as **proposed continuation work**. **Do NOT report a planning-layer figure** — not even the 0–3% soft-distortion slice,
+  which understates the layer by omitting its dominant mechanism.
+- The internal `agendaCapture` sweep and the 0–3% soft-only slice remain in the CODE as analysis, clearly labelled as a
+  lower slice that omits the dominant mechanism — not as a headline result.
+
+Two concrete continuation items the author wants (agenda capture is the needle-mover, presented as continuation):
+1. **A CHILE worked example** — find Chilean budget data (e.g. COFOG/DIPRES functional classification, deferred-
+   maintenance / low-visibility-function under-provision) and present the resulting agenda-capture severity as an
+   **illustrative example, explicitly NOT a conclusive calibration**. It shows the mechanism concretely for one country.
+2. **A country selector in the interactive explorer** — when the panel-calculation page is improved, let the user
+   **choose a country** and set the agenda-capture (and related planning) values to that country's budget structure, so
+   the planning contribution is shown per-country rather than as one universal number.
+
+## Panel modifications noted as FUTURE WORK (a country-specific, fully-anchored v3): softmax baseline-plus-flexible-
 reallocation share form (credit as a share semi-elasticity, not an additive coefficient on the arbitrary `M_C` scale);
 return-per-cost value tilt (`Sadj = S + cost·returnTilt`); a per-sector DATA INPUT TABLE (COFOG code, counts, cost/
 return distributions, baseline capital share, visibility, need, maintenance share); an inverse-calibration harness that
