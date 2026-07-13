@@ -1,4 +1,4 @@
-# A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Stress-Testing, and a Symmetric Computational Test of Selective Institutional Distribution
+# Who Chooses, Who Delivers, Who Judges? A Functional Architecture for Distributed Public Spending
 
 **Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered symmetric selection-only stress test returned NO-GO (see §6 and the claim & estimand contract) — and rests on the architecture and the qualitative mechanism, now sharpened by a four-scenario robustness map (E4 v1.14): modelling the central as the evidence *directionally* describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek, Scott, Olson, Bandiera–Prat–Valletti) — coverage-routed selection recovers decisively more of the model's full-information reference (~98% vs ~44%) and robustly; the pre-registered gate remains the separate confirmatory result (a NO-GO under a different data-generating process), the central overtakes coverage only by abandoning the declared premises, and the mirror idealization of the distributed arm wins by a landslide; all such magnitudes are declared reference points from a stylized comparative-institutions model, a conditional model contrast, not calibrated impact. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
 
@@ -87,8 +87,10 @@ a verifier it did not choose confirms the help arrived; and every step is
 public and auditable.
 
 What makes a design exercise count as research is the rigor it is put through,
-under one transversal discipline: every claim is evaluated against how the
-current institution solves the same problem, not against an ideal — blocking the nirvana fallacy —comparing the real institution against an unattainable ideal rather than the available alternative— in both directions (Section 2). Our contributions are:
+under one transversal discipline: we evaluate every objection comparatively —
+feasible Core v0 against the institution that presently performs the same function,
+never against an omniscient, benevolent ideal. This blocks the nirvana fallacy in
+both directions (Demsetz 1969; Section 2). Our contributions are:
 
 1. **Distributing the allocation layer.** The core design contribution:
    applying the functional-distribution principle to resource allocation —
@@ -1425,6 +1427,13 @@ named objects — which is, we argue, what it looks like when institutional
 design is treated as an engineering discipline rather than an ideological
 one.
 
+The comparison is conditional, not ontological. A center with credible
+local-information channels, organized representation of diffuse losers, and low
+credit pressure can approach parity. Core v0's claim is that those capacities are
+institutional accomplishments to be *demonstrated*, not virtues to be presumed —
+and that a state less dependent on what its center can see, and less able to
+certify its own mistakes, is worth the attempt.
+
 ## Appendix E4: the symmetric gate and the four-scenario robustness map
 
 This appendix gives the full design of the pre-registered symmetric gate (summarized
@@ -1526,7 +1535,7 @@ recovers about **40%** of the gap (16.5 of a 40.6-point decline); granting the c
 the *full* competent-but-harm-aware bundle recovers the rest yet still leaves coverage
 ahead (**≈ +13.4%**) — so even a central idealized in every way *except* the harm-sight
 the literature denies it still loses. The central pulls narrowly ahead only by
-**abandoning the anchored premises**: a corrected reader (no myopia — against
+**abandoning the declared premises**: a corrected reader (no myopia — against
 Hayek/Scott/Olson/Bandiera; no projection — against Broockman and Skovron 2018) on a
 near-harmless world reaches only ≈ −3%, a marginal, anti-empirical corner. That corner
 is reported **symmetrically** with the distributed arm's *equally-idealized* corner —
@@ -1540,17 +1549,24 @@ error** on the profile-and-delegation share (a shared platform/recommender, or
 delegation concentrated on super-delegates — Kling et al. 2015): it takes ≈ +54% down
 to ≈ +44% (modest) and ≈ +26% (strong), crossing parity only at a large shared-error
 level (σ_cm ≈ 2.1). No single-factor slice flips the winner over its plausible range;
-the combined ceteris-paribus path from the probable to the fully-idealized central
-endpoint crosses parity only at **t ≈ 0.91 of the declared segment**. These magnitudes
+the combined ceteris-paribus path from the declared reference to the fully-idealized
+central endpoint crosses parity only at **t ≈ 0.92 of the declared segment**. These magnitudes
 are **declared, source-motivated reference points from a stylized comparative-
-institutions model, not target-domain calibrated field effects** (the intervals cover
-inner Monte-Carlo variability only). The four standing limits are: (i) the harm-gate's
-exact *magnitude* is a stylized functional form — its *direction* is strongly anchored,
-and the result is robust across the s_exp ∈ [1, 2.5] band (≈ +48% to ≈ +54%); (ii) the
-central inputs carry an unpropagated political-opinion→project-value transport gap;
-(iii) the distributed arm is modelled with independent errors plus a common-mode term,
-the latter its one structural sensitivity; and (iv) administrative-cost savings and
-corruption/leakage are separate, additive channels, deliberately excluded here. The
+institutions model — a conditional model contrast, not target-domain calibrated field
+effects**. The standing limits are: (i) the harm-gate's exact *magnitude* is a stylized
+functional form — its *direction* is strongly anchored, and the result is robust across
+the s_exp ∈ [1, 2.5] band (≈ +48% to ≈ +54%); (ii) the central inputs carry an
+unpropagated transport gap — the political-opinion evidence identifies elite–constituent
+*perception* error, and mapping it to project-level welfare error requires three
+unestimated links (opinion misperception → project scoring → portfolio choice → realized
+affected-party value), so those inputs are proxy-informed, not calibrated; (iii) the
+reported intervals are 95% conditional world-bootstrap intervals at *fixed* scenario
+inputs — finite-world simulation uncertainty only, excluding uncertainty in parameter
+values, literature transport, functional form, and field implementation; the distributed
+arm's independent-plus-common-mode error is its one structural sensitivity (above); and
+(iv) administrative cost and leakage are separate *multiplicative* value-preservation
+channels (with their interaction reported explicitly), deliberately off here — E5 (the
+companion layered framework) turns them on. The
 reproducible scenarios, frontier, evidence, theorem, and full literature anchoring are
 in `scripts/simulation/e4-v5/`, `research/e4-parity-theorem.md`, and
 `research/e4-calibration-literature-anchors.md`.
@@ -1605,6 +1621,7 @@ scenarios, frontier, and theorem in `scripts/simulation/e4-v5/` and `research/e4
 - Coase, R. (1937). "The Nature of the Firm." *Economica* 4(16).
 - Condorcet, M. de (1785). *Essai sur l'application de l'analyse à la probabilité des décisions rendues à la pluralité des voix*. Imprimerie Royale.
 - De Filippi, P., and A. Wright (2018). *Blockchain and the Law: The Rule of Code*. Harvard University Press.
+- Demsetz, H. (1969). "Information and Efficiency: Another Viewpoint." *Journal of Law and Economics* 12(1).
 - Downs, A. (1957). *An Economic Theory of Democracy*. Harper.
 - Dulleck, U., and R. Kerschbamer (2006). "On Doctors, Mechanics, and Computer Specialists: The Economics of Credence Goods." *Journal of Economic Literature* 44(1).
 - Dyck, A., A. Morse, and L. Zingales (2010). "Who Blows the Whistle on Corporate Fraud?" *Journal of Finance* 65(6).
