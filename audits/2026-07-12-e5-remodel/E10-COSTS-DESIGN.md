@@ -1,5 +1,19 @@
 # E10 design — the administrative-cost layer (built 2026-07-13)
 
+> **SUPERSEDED IN PART (2026-07-13, post-Adversarial-R1).** The estimand and the point
+> figures below are retired. The final model does **not** apply a proportional value
+> haircut `(1 − κ)`; it uses a **net-budget** estimand — the admin cost scales each arm's
+> *budget before selection* (`φ·(1 − κ)`), so the value loss is sub-proportional (greedy
+> funding cuts the marginal projects first), against a common full-budget oracle. The
+> declared shares are **κ_C = 0.08** (pure admin overhead, de-overlapped from the delivery
+> leakage E5 already removes) and **κ_D = 0.05** (platform **plus** Core v0's own control
+> machinery, charged symmetrically) — **not** κ_C = 0.15 / κ_D = 0.03. The result is
+> **roughly neutral**: administrative cost moves the modeled gap from +58.6 to +57.7
+> reference points, a **−0.9-point** contribution — the advantage is delivered value, not
+> overhead, and the old "+2.3-point widening" claim (and the crossover argument that
+> depended on a proportional haircut) no longer applies. Authoritative source: the code
+> (`scripts/simulation/e4-v5/e10-costs.mjs`) and manuscript Finding 10.
+
 **Code:** `scripts/simulation/e4-v5/e10-costs.mjs` (+ `-test.mjs`). **Runs:** `npm run e10:costs`, `e10:costs:test`.
 
 E10 adds the cost dimension E5 (delivered value at equal budget) and E9 (the full stack) left out: the **administrative
@@ -32,10 +46,10 @@ procurement/payroll/transfers split; procurement transaction cost as a share of 
 Value-only gap **+59.1%** (status quo +34.2% vs Core v0 +93.3%) → **with admin costs +61.4%** (the cost layer adds
 **+2.3%** to the gap). Costs OFF reduces exactly to the value stack.
 
-**Honest subtlety (tested):** admin costs WIDEN the Core-v0 gap only when `κ_C/κ_D` exceeds the **value ratio (~2.7)** —
-Core v0 delivers more, so a proportional cost removes more absolute value from its base. At the anchored 5× ratio, costs
-widen the gap; below ~2.7× they narrow it. The verified evidence (ratio ≥10–30×) sits well above the crossover, so the
-widening is robust.
+**Honest subtlety (RETIRED — depended on the proportional-haircut estimand; see the banner):** under the old
+proportional `(1 − κ)` model, admin costs widened the Core-v0 gap only when the arms' cost ratio exceeded the
+delivered-value level gap between them. The final **net-budget** estimand replaces this: cost reduces the *budget*
+before selection, the value loss is sub-proportional, and the net effect is **roughly neutral** at the declared shares.
 
 ## Not double-counting E5's leakage
 

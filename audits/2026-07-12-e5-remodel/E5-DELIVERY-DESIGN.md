@@ -1,5 +1,15 @@
 # E5 re-model — Selection × Delivery on the clean E4 engine
 
+> **SUPERSEDED IN PART (2026-07-13).** This is the original design record. The point
+> figures in the "Result" section below predate the Adversarial-R1 fixes and are
+> retired: verified-regime diversion is **low-but-nonzero** (≈ 2% incidence via the
+> grand-corruption temptation tail `tempt_tail`), **not** the 0.0% shown here, and the
+> full **selection-and-delivery** architecture beats the status quo by **≈ +58.6 points
+> of the greedy reference [95% conditional-MC +58.0, +59.2]** (not +59.1 with a
+> mechanically-zero verified cell). The authoritative model, numbers, and limits are the
+> code (`scripts/simulation/e4-v5/e5-delivery.mjs`) and the manuscript Finding 5. The
+> design rationale and anchors below stand.
+
 **Date:** 2026-07-12. **Code:** `scripts/simulation/e4-v5/e5-delivery.mjs` (+ `-test.mjs`). **Runs:**
 `npm run e5:delivery`, `npm run e5:delivery:test`. Author intent this cycle: re-model E5 as the delivered-value
 experiment on the E4 base + a delivery layer, well-modeled (it was heavily questioned), **no costs** (costs are the

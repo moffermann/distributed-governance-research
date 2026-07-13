@@ -1,8 +1,11 @@
 # E9 design sketch — the full-stack comparison (planning × selection × delivery)
 
-**Status:** design sketch, written 2026-07-12 while the E5 friendly round runs. **Not** to be built until E5 is
-locked (E9 reuses E5's final delivery model). Delivery-layer specifics inherit from `e5-delivery.mjs` after the
-friendly-round anchoring.
+**Status:** ~~design sketch~~ **BUILT AND VALIDATED (2026-07-13).** This pre-build sketch is superseded by the
+implemented experiment `scripts/simulation/e4-v5/e9-fullstack.mjs` (+ `-test.mjs`) and the manuscript Finding 9. The
+authoritative results are the code and the named-world decomposition table it prints: the full Core v0 diagonal is
+positive in all four named worlds, individual selection/delivery Shapley contributions reverse sign in the extreme
+corners (selection in PRO_CENTRAL, delivery in PRO_DIST), and planning's magnitude is left **unquantified** (agenda
+capture directionally anchored only). The design rationale below stands; any pre-build number is illustrative.
 
 ## Why E9 exists
 
