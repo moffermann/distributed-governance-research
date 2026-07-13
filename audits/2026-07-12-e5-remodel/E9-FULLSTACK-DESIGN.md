@@ -131,32 +131,39 @@ Rioja's ~15% single-margin), so it does **not** overclaim — if anything it is 
 call it "consistent with and conservative relative to" the IMF/Rioja evidence, NOT "anchored" to a cross-sector estimate
 (none exists at that granularity). Flag the pure cross-sector allocative-loss magnitude explicitly DECLARED to reviewers.
 
-## Country-grounded ILLUSTRATIVE example of agenda capture (data agent, 2026-07-13 — Eurostat-verified)
+## Country-grounded ILLUSTRATIVE example of agenda capture — CHILE, mental health (data agent, 2026-07-13, verified)
 
-**Not a conclusion — an illustrative footprint.** Searched real functional-budget (COFOG) data for a concrete
-agenda-capture severity. Finding: the data does NOT support "many functions off the menu." Across EU/OECD COFOG budgets
-the same pattern holds — **environmental protection is the single structurally smallest function** (EU-27 2023: **0.8%
-of GDP ≈ 1.7% of total government expenditure**; country floor **0.2% of GDP in Finland**, next to its EU-highest social
-protection 25.7% of GDP). A soft second case is **housing & community amenities** (EU 1.2%/2.4%; 0.2% of GDP floor in
-Denmark/Switzerland). Source: Eurostat, *Government expenditure by function — COFOG* / *…on environmental protection* /
-*…on housing* (2022 & 2023); Statistics Finland 2023. **Chile (the first-choice country) had image-encoded DIPRES/BCCh
-PDFs unparseable this pass** — switched to Eurostat for cleaner verification; the example is **country-agnostic**.
+**Not a conclusion — an illustrative footprint of the model's visibility-bias mechanism in one real budget.**
 
-**Defensible illustrative severity: 1 function off the menu (environmental protection), range 1–2.** Plugged into E9 on
+**Chile — mental health.** The public mental-health budget is ~**2% of the health budget** (1.45–2.16% across 2007–2015;
+~4.5% of the health ministry's budget by 2025) against an **OECD average of 6.7%** — despite mental/behavioural
+disorders being the **leading cause of disability in Chile** (PAHO), with treatment coverage ~20% vs ~50% typical for
+middle-income countries. It is documented as a genuine unmet need, "**una deuda pendiente**": funding never rose to meet
+the 2000 National Mental Health Plan's own targets. Sources (verified/triangulated): Errázuriz, Valdés, Vöhringer & Calvo
+(2015), *Rev Med Chile* 143(9):1179–1186; IPSUSS; OECD 2025 (via Fact Checking UC); DIPRES sectoral evaluation (2025).
+
+**Why this is on-point (and honest about the mechanism):** mental health is a **high-need, LOW-VISIBILITY** function —
+diffuse constituency, stigma, no ribbon-cuttings — kept near the floor. That is exactly E9's central mechanism (the
+planner reads visibility as credit and starves low-visibility functions). The driver here is **low salience/visibility**,
+NOT documented clientelist vote-buying — and Chile is a relatively well-governed OECD country, so the point is if EVEN
+Chile floors mental health, the visibility bias is pervasive, not a basket-case artefact. The clientelist variant of the
+same mechanism is documented separately (Keefer & Khemani 2005, *WB Research Observer*, "clientelism under-provides
+broad public goods like preventive health"; Ban, Jha & Rao on India's "asphalt over sewers"), but without a cleanly
+verified single budget-share number — so we cite it as mechanism, not calibration.
+
+**Illustrative severity: 1 function off the menu** (mental health at ~2% vs the OECD 6.7% benchmark). Plugged into E9 on
 the anchored params:
 
 | illustrative severity | planning Shapley (strict) | planning Shapley (recycled) | planning\|distributed-sel (recycled) |
 |---|---|---|---|
-| **1** (environment at the floor) | +2.2% [+1.8,+2.5] | **+3.9% [+3.6,+4.2]** | +1.0% |
-| 2 (+ housing, low-spend countries) | — | +5.0% | +2.9% |
+| **1** (mental health at the floor) | +2.2% [+1.8,+2.5] | **+3.9% [+3.6,+4.2]** | +1.0% |
 
-**Honest caveats (why illustrative, not conclusive):** (a) a small budget share is not proof of under-provision —
-environmental protection is genuinely capital-light and delivered heavily through regulation/mandates and supra-national
-(EU) funds, so its floor is *consistent with* agenda capture but does not *prove* it; (b) deferred maintenance (a
-stronger agenda-capture story in principle) is NOT a COFOG line and is not cleanly extractable — left unverified;
-(c) defence/recreation being small are policy/technology choices, NOT capture, and are deliberately excluded from the
-count. → The anchored HEADLINE still reports NO planning figure (agendaCapture=0); this is a labelled illustrative
-example showing the mechanism concretely for a real budget pattern (~+2–4% of the reference, one function off the menu).
+**Honest caveats:** (a) a small share alone is not proof of capture, but here the need benchmark (OECD 6.7%, #1 disability
+cause, 20% coverage) makes the under-provision a documented gap, not efficiency; (b) the mechanism is visibility/salience
+bias, which IS the model's mechanism, though not the clientelist sub-case; (c) I could not verify a credible SECOND
+starved function this pass, so severity stays at 1 (not inflated). → The anchored HEADLINE still reports NO planning
+figure (agendaCapture=0); this is a labelled illustrative example showing the mechanism concretely for one real budget
+(~+2–4% of the reference at one function off the menu).
 
 ## Planning REDESIGN v2 (Codex round-1 + author decision, commit 301d7cc)
 
