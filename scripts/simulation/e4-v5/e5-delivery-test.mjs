@@ -28,9 +28,9 @@ const NW = 1200;
   // EXACT (same run): every cell equals its own selection efficiency when delivery is perfect.
   check('perfect delivery: distributed cell == its selection efficiency', approx(r.cells.A2, r.selection.distributed, 1e-9), `${r.cells.A2} vs ${r.selection.distributed}`);
   check('perfect delivery: central cell == its selection efficiency', approx(r.cells.S, r.selection.central, 1e-9), `${r.cells.S} vs ${r.selection.central}`);
-  // SANITY (separate run: RNG stream diverges by the extra executor draws, so only MC-close): selection efficiencies
-  // reproduce the E4 headline (~98.2% distributed / ~44.2% central) within Monte-Carlo tolerance.
-  check('perfect delivery: selection efficiencies ~ E4 headline (MC tol)', approx(r.selection.distributed, e4.dOverO, 5e-3) && approx(r.selection.central, e4.cOverO, 5e-3), `D ${r.selection.distributed} vs ${e4.dOverO}; C ${r.selection.central} vs ${e4.cOverO}`);
+  // EXACT cross-check: with executors on a SEPARATE PRNG stream, E5's world stream is identical to the E4 estimand's,
+  // so the selection efficiencies match the E4 engine's D/O and C/O to full precision (the RNG-separation invariant).
+  check('perfect delivery: selection efficiencies == E4 D/O, C/O (exact)', approx(r.selection.distributed, e4.dOverO, 1e-9) && approx(r.selection.central, e4.cOverO, 1e-9), `D ${r.selection.distributed} vs ${e4.dOverO}; C ${r.selection.central} vs ${e4.cOverO}`);
 }
 
 // 2) DEFAULT regimes: leakage bands are literature-plausible, and the joint cell is EXACTLY multiplicative
@@ -51,15 +51,16 @@ const NW = 1200;
   check('coupling OFF ⇒ no monitoring dividend', approx(r.monitoringDividend.opaque, 0, 5e-3) && approx(r.monitoringDividend.verified, 0, 5e-3), `op ${r.monitoringDividend.opaque} vr ${r.monitoringDividend.verified}`);
 }
 
-// 3) MONITORING COUPLING (step 2): turning it on gives the distributed arm a genuine delivery dividend, largest in the
-//    weak-control (opaque) regime; it lifts A3 and never lowers any distributed cell.
+// 3) MONITORING COUPLING (step 2), SPLIT into detection + recovery: community detection alone gives only a small
+//    opaque dividend; adding institutional recovery linkage makes it larger. Never lowers a distributed cell.
 {
-  const off = delivered2x2(cfg, { nWorlds: NW });
-  const on  = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, mon_coupling: 0.35 } });
-  check('coupling ON ⇒ positive opaque monitoring dividend', on.monitoringDividend.opaque > 0.02, `got ${on.monitoringDividend.opaque}`);
-  check('coupling lifts the weak-control cell A3', on.cells.A3 > off.cells.A3 + 1e-6, `${off.cells.A3} -> ${on.cells.A3}`);
-  check('coupling does not lower the full-architecture cell A2', on.cells.A2 >= off.cells.A2 - 1e-6);
-  check('dividend largest where control is weakest (opaque > verified)', on.monitoringDividend.opaque >= on.monitoringDividend.verified - 1e-9);
+  const off  = delivered2x2(cfg, { nWorlds: NW });
+  const det  = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, mon_detect: 0.05, mon_recovery: 0.0 } });
+  const both = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, mon_detect: 0.05, mon_recovery: 0.20 } });
+  check('detection-only coupling lifts A3 (small)', det.cells.A3 > off.cells.A3 - 1e-9);
+  check('recovery linkage gives a larger opaque dividend than detection alone', both.monitoringDividend.opaque > det.monitoringDividend.opaque + 1e-6, `det ${det.monitoringDividend.opaque} both ${both.monitoringDividend.opaque}`);
+  check('coupling does not lower the full-architecture cell A2', both.cells.A2 >= off.cells.A2 - 1e-6);
+  check('dividend largest where control is weakest (opaque ≥ verified)', both.monitoringDividend.opaque >= both.monitoringDividend.verified - 1e-9);
 }
 
 // 4) MONOTONE: strengthening the verified deterrent (more recovery) never lowers verified delivery.

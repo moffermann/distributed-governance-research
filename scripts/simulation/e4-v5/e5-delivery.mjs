@@ -41,63 +41,68 @@ import { safeLog } from './adapter.mjs';
 //   (Making Public Investment More Efficient 2015) is PROCESS inefficiency, not theft; Reinikka & Svensson 2004 QJE
 //   119(2) ~87% is a TAIL, not the central case; monitoring effect sizes are from service-delivery RCTs, not fund
 //   tracing (out-of-domain lift).
+// Calibration is an IDENTIFIED-SET reference, NOT a field estimate (friendly round convergent view, Codex + agent):
+// the opaque case reproduces an Olken-2007-centered ~24–28% VALUE-loss moment (not a claim about executor incidence);
+// verified advances/guarantees follow World Bank standard procurement (10% advance, ~10% performance guarantee); the
+// verified regime's near-zero diversion is a CONDITIONAL ex-ante-deterrence result (Olken 2007; Avis-Ferraz-Finan
+// 2018; Becker 1968), not an empirical zero. Community coverage lifts DETECTION only (mon_detect, small/fragile:
+// Björkman-Svensson 2009 QJE with failed replications; Molina et al. 2016); RECOVERY needs institutional follow-up, so
+// mon_recovery=0 for community-only coverage (Afridi-Iversen 2014 MGNREGA). Report R=0 robustness always.
 export const DELIVERY = {
-  pi_hon:   0.76,   // intrinsically-honest share (tuned so the opaque central case lands at the Olken ~24% divert band)
-  loss_hon: 0.05,   // honest/deterred production loss (delivered = 1 − loss_hon)
-  opaque:   { p_det: 0.10, a: 0.90, r: 0.00, rep: 0.00, note: 'weak control: low detection, unprotected advances, no recovery/reputation' },
-  verified: { p_det: 0.75, a: 0.20, r: 0.50, rep: 0.50, note: 'architecture: milestone-gated advances, recovery, reputational stake (magnitude DECLARED, not anchored)' },
-  // MONITORING COUPLING (step 2): Core v0's distributed coverage is not only a SELECTION signal — the same citizens who
-  // routed the budget also observe delivery, so distributed selection raises BOTH the effective detection of diversion
-  // (deters it) AND the effective recovery of diverted funds (clawback once flagged):
-  //   p_det_eff = p_det + mon_coupling·(1 − p_det);   r_eff = r + mon_coupling·(1 − r).
-  // This couples delivery to selection, breaking the structural multiplicativity: with mon_coupling>0 the distributed
-  // arm delivers a HIGHER fraction than the central arm under the SAME control regime — a genuine super-multiplicative
-  // dividend, largest in the OPAQUE regime (where distributed coverage partially SUBSTITUTES for a missing formal
-  // control layer). Default 0 = independent (pure multiplicative baseline). Magnitude to be anchored (community-
-  // monitoring / social-audit detection-and-recovery lift). ANCHORED band for coverage-only monitoring is ~0.0–0.20
-  // (Björkman-Svensson 2009 QJE — health, with FAILED replications; Molina et al. 2016 Campbell — small/heterogeneous;
-  // Afridi-Iversen 2014 MGNREGA — supports the recovery channel). The stronger ~1/3 audit effect (Olken 2007) is the
-  // VERIFIED regime's own detection, NOT this coverage coupling. Headline uses 0.15; swept across the band.
-  mon_coupling: 0.0,
+  pi_hon:   0.78,   // honest share; identified so the opaque case hits the Olken-centered value-loss moment (not observed prevalence)
+  loss_hon: 0.05,   // ordinary execution loss (Rasul–Rogger supports a substantial upper tail; the scalar is DECLARED)
+  //                p_det  a(advance) r(recovery) gamma(guarantee) rep(reputation)
+  opaque:   { p_det: 0.04, a: 0.80, r: 0.00, gamma: 0.00, rep: 0.00, note: 'weak control: announced-audit-level exposure, unprotected advances, no recovery/guarantee/reputation' },
+  verified: { p_det: 0.75, a: 0.20, r: 0.50, gamma: 0.10, rep: 0.40, note: 'architecture: 10% advance + 10% guarantee + recovery + reputational stake (magnitudes DECLARED)' },
+  // MONITORING COUPLING (step 2), SPLIT into two channels (Codex + agent): Core v0's distributed coverage observes
+  // delivery, but community coverage credibly lifts only DETECTION (deterrence), not RECOVERY (clawback needs
+  // institutional follow-up). p_det_eff = p_det + mon_detect·(1−p_det); r_eff = r + mon_recovery·(1−r).
+  mon_detect:   0.0,   // coverage-only detection lift; anchored band 0.0–0.10 (ref 0.05); small + fragile
+  mon_recovery: 0.0,   // coverage-only recovery lift; 0 for community-only (formal linkage 0.09–0.36 = the verified regime)
 };
 
-function deterrent(reg) { return reg.p_det * ((1 - reg.a * (1 - reg.r)) + reg.rep); }
+function deterrent(reg) { return reg.p_det * ((1 - reg.a * (1 - reg.r)) + (reg.gamma || 0) + reg.rep); }
 
-// The selecting arm's effective delivery regime: the distributed arm's coverage lifts detection AND recovery.
-function coupledRegime(reg, mc) {
-  if (!mc) return reg;
-  return { ...reg, p_det: reg.p_det + mc * (1 - reg.p_det), r: reg.r + mc * (1 - reg.r) };
+// The selecting arm's effective delivery regime: distributed coverage lifts detection (and, only with institutional
+// linkage, recovery). mDet/mRec are the coverage lifts (0 for the central arm).
+function coupledRegime(reg, mDet, mRec) {
+  if (!mDet && !mRec) return reg;
+  return { ...reg, p_det: reg.p_det + mDet * (1 - reg.p_det), r: reg.r + mRec * (1 - reg.r) };
 }
 
-// Per-project delivered fraction under an (already arm-adjusted) regime, given the executor's honest flag and temptation.
+// Per-project delivered fraction + diversion flag under an (already arm-adjusted) regime.
 function deliveredFraction(reg, honest, tempt, del) {
-  if (honest) return 1 - del.loss_hon;
+  if (honest) return { f: 1 - del.loss_hon, diverts: false };
   const diverts = tempt > deterrent(reg);            // opportunistic: divert iff temptation beats the deterrent
-  if (!diverts) return 1 - del.loss_hon;
+  if (!diverts) return { f: 1 - del.loss_hon, diverts: false };
   const f = 1 - reg.a * (1 - reg.r) - del.loss_hon;  // loses the unrecovered advance (recovery r may be monitoring-lifted)
-  return f < 0 ? 0 : f;
+  return { f: f < 0 ? 0 : f, diverts: true };
 }
 
-// Delivered value of a funded set under a regime, reusing per-project executor draws (shared across all four cells so
-// the comparison is on identical executors/temptations — the design's "matched seeds"). mc = the selecting arm's
-// monitoring coupling (0 for central, del.mon_coupling for distributed).
-function deliveredValue(projects, funded, reg, exec, del, mc = 0) {
-  const eff = coupledRegime(reg, mc);
-  let v = 0;
-  for (const j of funded) v += projects[j].S * deliveredFraction(eff, exec.honest[j], exec.tempt[j], del);
-  return v;
+// Delivered value + robustness diagnostics for a funded set under a regime, reusing per-project executor draws (shared
+// across all four cells — the design's matched seeds). mDet/mRec = the selecting arm's monitoring lifts.
+function deliveredCell(projects, funded, reg, exec, del, mDet, mRec) {
+  const eff = coupledRegime(reg, mDet, mRec);
+  let v = 0, lost = 0, nDiv = 0;
+  for (const j of funded) {
+    const { f, diverts } = deliveredFraction(eff, exec.honest[j], exec.tempt[j], del);
+    v += projects[j].S * f;
+    lost += projects[j].S * (1 - f);                 // value not delivered (diversion + ordinary loss)
+    if (diverts) nDiv++;
+  }
+  return { v, lost, nDiv, nFund: funded.length };
 }
 
-// One world: draw executors once, then evaluate the oracle (perfect delivery) and the four selection-by-delivery cells.
-function runWorld2x2(cfg, rng, del) {
+// One world: worlds are drawn from `rng` (identical to the E4 estimand's stream), executors from a SEPARATE `execRng`
+// so E5 reduces to E4 EXACTLY on the same seed. Evaluate the oracle (perfect delivery) and the four cells.
+function runWorld2x2(cfg, rng, execRng, del) {
   const projects = generateWorld(cfg, rng);
   if (projects.length === 0) return null;
   let totalCost = 0; for (const pr of projects) totalCost += pr.c;
   const budget = cfg.phi * totalCost;
 
-  // executor draws, one per project, shared across cells
   const honest = new Array(projects.length), tempt = new Array(projects.length);
-  for (let j = 0; j < projects.length; j++) { honest[j] = rng.u() < del.pi_hon; tempt[j] = rng.u(); }
+  for (let j = 0; j < projects.length; j++) { honest[j] = execRng.u() < del.pi_hon; tempt[j] = execRng.u(); }
   const exec = { honest, tempt };
 
   const setC = fundedSet(projects, 'M_C', cfg, budget, { creditTilt: true });
@@ -105,54 +110,63 @@ function runWorld2x2(cfg, rng, del) {
   const setO = fundedSet(projects, 'S',   cfg, budget);
 
   let O = 0; for (const j of setO) O += projects[j].S;      // oracle at PERFECT delivery = the E4 reference
-  const selC = (() => { let s = 0; for (const j of setC) s += projects[j].S; return s; })(); // perfect-delivery selection
+  const selC = (() => { let s = 0; for (const j of setC) s += projects[j].S; return s; })();
   const selD = (() => { let s = 0; for (const j of setD) s += projects[j].S; return s; })();
 
-  const mc = del.mon_coupling || 0;                        // distributed arm's monitoring lift on detection
+  const mD = del.mon_detect || 0, mR = del.mon_recovery || 0;   // distributed arm's monitoring lifts
   return {
-    O,
-    selC, selD,                                            // selection value at perfect delivery (= the E4 arms)
-    vS:  deliveredValue(projects, setC, del.opaque,   exec, del, 0),   // central: no distributed-monitoring lift
-    vA1: deliveredValue(projects, setC, del.verified, exec, del, 0),
-    vA3: deliveredValue(projects, setD, del.opaque,   exec, del, mc),  // distributed: coverage also monitors delivery
-    vA2: deliveredValue(projects, setD, del.verified, exec, del, mc),
+    O, selC, selD,
+    S:  deliveredCell(projects, setC, del.opaque,   exec, del, 0,  0),    // central: no coverage lift
+    A1: deliveredCell(projects, setC, del.verified, exec, del, 0,  0),
+    A3: deliveredCell(projects, setD, del.opaque,   exec, del, mD, mR),   // distributed: coverage lifts detection (+recovery if linked)
+    A2: deliveredCell(projects, setD, del.verified, exec, del, mD, mR),
   };
 }
 
-// Ratio-of-sums estimand over worlds (robust; a tiny-O world cannot dominate). Everything normalized by ΣO.
+// Ratio-of-sums estimand over worlds (robust; a tiny-O world cannot dominate). Everything normalized by ΣO. Worlds and
+// executors use SEPARATE PRNG streams, so the world stream is identical to the E4 estimand's (exact reduction). Also
+// returns diversion incidence, leakage, and a world-cluster bootstrap CI on the full-architecture gain.
 export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY } = {}) {
   const rng = makeRng(seed);
-  const acc = { O: 0, selC: 0, selD: 0, vS: 0, vA1: 0, vA3: 0, vA2: 0, n: 0 };
+  const execRng = makeRng((seed ^ 0x5bd1e995) >>> 0);      // separate stream ⇒ worlds match the E4 estimand exactly
+  const W = [];
+  const t = { O: 0, selC: 0, selD: 0 };
+  for (const c of ['S', 'A1', 'A3', 'A2']) { t[c + 'v'] = 0; t[c + 'lost'] = 0; t[c + 'div'] = 0; t[c + 'fund'] = 0; }
   for (let w = 0; w < nWorlds; w++) {
-    const r = runWorld2x2(cfg, rng, delivery);
+    const r = runWorld2x2(cfg, rng, execRng, delivery);
     if (!r || !(r.O > 0)) continue;
-    for (const k of ['O', 'selC', 'selD', 'vS', 'vA1', 'vA3', 'vA2']) acc[k] += r[k];
-    acc.n++;
+    W.push({ O: r.O, Sv: r.S.v, A1v: r.A1.v, A3v: r.A3.v, A2v: r.A2.v });
+    t.O += r.O; t.selC += r.selC; t.selD += r.selD;
+    for (const c of ['S', 'A1', 'A3', 'A2']) { t[c + 'v'] += r[c].v; t[c + 'lost'] += r[c].lost; t[c + 'div'] += r[c].nDiv; t[c + 'fund'] += r[c].nFund; }
   }
-  const O = acc.O;
-  const eff = (x) => x / O;                                 // efficiency vs the perfect-delivery oracle (parity refs at value)
-  const sC = eff(acc.selC), sD = eff(acc.selD);             // SELECTION efficiencies (perfect delivery) = the E4 numbers
-  const S = eff(acc.vS), A1 = eff(acc.vA1), A3 = eff(acc.vA3), A2 = eff(acc.vA2);
-  // delivery efficiencies (delivered value / that arm's selection value) — reported PER ARM so the monitoring coupling
-  // is visible: with mon_coupling>0 the distributed arm delivers a higher fraction than the central arm.
-  const dCol = acc.selC !== 0 ? acc.vS  / acc.selC : NaN;   // central   × opaque   delivered fraction
-  const dCvr = acc.selC !== 0 ? acc.vA1 / acc.selC : NaN;   // central   × verified
-  const dDop = acc.selD !== 0 ? acc.vA3 / acc.selD : NaN;   // distributed × opaque
-  const dDvr = acc.selD !== 0 ? acc.vA2 / acc.selD : NaN;   // distributed × verified
+  const O = t.O, eff = (x) => x / O;
+  const sC = eff(t.selC), sD = eff(t.selD);                 // SELECTION efficiencies (perfect delivery) = the E4 numbers
+  const S = eff(t.Sv), A1 = eff(t.A1v), A3 = eff(t.A3v), A2 = eff(t.A2v);
+  const dCol = t.selC ? t.Sv / t.selC : NaN, dCvr = t.selC ? t.A1v / t.selC : NaN;   // per-arm delivered fractions
+  const dDop = t.selD ? t.A3v / t.selD : NaN, dDvr = t.selD ? t.A2v / t.selD : NaN;
+  const inc = (c) => t[c + 'fund'] ? t[c + 'div'] / t[c + 'fund'] : NaN;             // diversion incidence per cell
+  const lk  = (c) => (t[c + 'v'] + t[c + 'lost']) > 0 ? t[c + 'lost'] / (t[c + 'v'] + t[c + 'lost']) : NaN;  // value leakage
+  // world-cluster bootstrap CI on the full-architecture gain Σ(A2−S)/ΣO (inner MC variability only).
+  const B = NUM.bootstrap_reps.value, bRng = makeRng((seed ^ 0x9e3779b9) >>> 0), boots = [];
+  if (W.length) for (let b = 0; b < B; b++) { let n = 0, d = 0; for (let k = 0; k < W.length; k++) { const ww = W[Math.floor(bRng.u() * W.length)]; n += (ww.A2v - ww.Sv); d += ww.O; } if (d > 0) boots.push(n / d); }
+  boots.sort((x, y) => x - y);
+  const quant = (p) => boots.length ? boots[Math.max(0, Math.min(boots.length - 1, Math.floor(p * boots.length)))] : NaN;
+  const fullCI = [quant((1 - NUM.ci_level.value) / 2), quant((1 + NUM.ci_level.value) / 2)];
   return {
-    n: acc.n,
+    n: W.length,
     selection: { central: sC, distributed: sD },
     delivery:  { centralOpaque: dCol, centralVerified: dCvr, distributedOpaque: dDop, distributedVerified: dDvr },
-    monitoringDividend: { verified: dDvr - dCvr, opaque: dDop - dCol },   // distributed − central delivered fraction
+    monitoringDividend: { verified: dDvr - dCvr, opaque: dDop - dCol },
     cells: { S, A1, A3, A2 },
-    // MAIN EFFECTS (percentage points of the oracle reference), read separately:
+    diversionIncidence: { S: inc('S'), A1: inc('A1'), A3: inc('A3'), A2: inc('A2') },
+    leakage:            { S: lk('S'),  A1: lk('A1'),  A3: lk('A3'),  A2: lk('A2') },
     deliveryEffect:  { atCentral: A1 - S,  atDistributed: A2 - A3 },
     selectionEffect: { atOpaque:  A3 - S,  atVerified:    A2 - A1 },
     interaction: (A2 - A1 - A3 + S),                         // >0 ⇒ verified delivery AMPLIFIES the selection gain
-    full: A2 - S,                                            // full architecture vs status quo (pp of oracle)
-    // composition: each cell equals its own selection efficiency times its own delivered fraction (multiplicative,
-    // EXACT by construction — delivery is applied per project). The additive prediction misses by the interaction.
-    multiplicativeIdentityA2: sD * dDvr,                     // == A2 to MC precision (definitional identity)
+    full: A2 - S, fullCI,                                    // full architecture vs status quo (pp of oracle) + bootstrap CI
+    // composition: each cell equals its own selection efficiency times its own delivered fraction (an accounting
+    // identity, EXACT by construction — delivery is applied per project). The additive prediction misses by the interaction.
+    multiplicativeIdentityA2: sD * dDvr,
     additivePredictionA2: S + (A1 - S) + (A3 - S),
   };
 }
@@ -195,28 +209,32 @@ function main() {
     safeLog(`                       opaque delivery     verified delivery`);
     safeLog(`  central selection    S  ${pct(r.cells.S).padStart(7)}          A1 ${pct(r.cells.A1).padStart(7)}`);
     safeLog(`  distributed sel.     A3 ${pct(r.cells.A3).padStart(7)}          A2 ${pct(r.cells.A2).padStart(7)}\n`);
+    safeLog(`diversion incidence (funded projects whose executor diverts):  opaque ${pct(r.diversionIncidence.S)} · verified ${pct(r.diversionIncidence.A1)}`);
+    safeLog(`value leakage (selected value not delivered):                  opaque ${pct(r.leakage.S)} · verified ${pct(r.leakage.A1)}\n`);
     safeLog('Main effects (percentage points of the oracle reference), read SEPARATELY:');
     safeLog(`  DELIVERY effect:   at central ${pct(r.deliveryEffect.atCentral)} · at distributed ${pct(r.deliveryEffect.atDistributed)}`);
     safeLog(`  SELECTION effect:  at opaque ${pct(r.selectionEffect.atOpaque)} · at verified ${pct(r.selectionEffect.atVerified)}`);
     safeLog(`  INTERACTION:       ${pct(r.interaction)}  (>0 ⇒ verified delivery amplifies the selection gain)`);
-    safeLog(`  FULL architecture (A2 − S): ${pct(r.full)}\n`);
-    safeLog('Composition — the two layers compose MULTIPLICATIVELY (exact, delivery applied per project):');
-    safeLog(`  actual A2 = ${pct(r.cells.A2)}  ·  multiplicative identity (selection · delivery) = ${pct(r.multiplicativeIdentityA2)}`);
+    safeLog(`  FULL architecture (A2 − S): ${pct(r.full)}  95% CI [${pct(r.fullCI[0])}, ${pct(r.fullCI[1])}]\n`);
+    safeLog('Composition — the two layers compose MULTIPLICATIVELY (an accounting identity, delivery applied per project):');
+    safeLog(`  actual A2 = ${pct(r.cells.A2)}  ·  identity (selection · delivery) = ${pct(r.multiplicativeIdentityA2)}`);
     safeLog(`  additive prediction (sum of main effects) = ${pct(r.additivePredictionA2)}  → short by the interaction.`);
     safeLog(`  The positive interaction is the level-effect signature of multiplicative composition.\n`);
 
-    // (ii) monitoring coupling ON (step 2): distributed coverage also monitors delivery (detection + clawback).
-    // Anchored coverage-only band 0.0–0.20 (fragile evidence); headline 0.15.
-    const rc = delivered2x2(cfg, { nWorlds: 1200, delivery: { ...DELIVERY, mon_coupling: 0.15 } });
-    safeLog('Monitoring coupling (step 2) — distributed coverage also fiscalizes delivery (mon_coupling=0.15, anchored band 0.0–0.20):');
+    // (ii) monitoring coupling ON (step 2): distributed coverage lifts DETECTION only (community-only recovery=0).
+    // Anchored coverage-only detection band 0.0–0.10 (fragile evidence); headline 0.05.
+    const rc = delivered2x2(cfg, { nWorlds: 1200, delivery: { ...DELIVERY, mon_detect: 0.05, mon_recovery: 0.0 } });
+    safeLog('Monitoring coupling (step 2) — distributed coverage fiscalizes delivery via DETECTION only (mon_detect=0.05, recovery=0 community-only):');
     safeLog(`  delivered fraction, distributed − central:  opaque ${pct(rc.monitoringDividend.opaque)} · verified ${pct(rc.monitoringDividend.verified)} (saturated)`);
-    safeLog(`  weak-control cell A3 (distributed selection, opaque delivery) rises ${pct(r.cells.A3)} → ${pct(rc.cells.A3)} as coverage substitutes for the missing control layer.`);
-    safeLog(`  coupling sweep across the anchored band (opaque monitoring dividend):`);
-    for (const c of [0.0, 0.05, 0.10, 0.15, 0.20]) {
-      const rr = delivered2x2(cfg, { nWorlds: 700, delivery: { ...DELIVERY, mon_coupling: c } });
-      safeLog(`     mon_coupling ${c.toFixed(2)}  →  dividend(opaque) ${pct(rr.monitoringDividend.opaque)}  ·  A3 ${pct(rr.cells.A3)}`);
+    safeLog(`  weak-control cell A3 rises ${pct(r.cells.A3)} → ${pct(rc.cells.A3)} — SMALL: community detection without institutional recovery barely helps a weak-control regime.`);
+    safeLog(`  detection-band sweep (opaque monitoring dividend):`);
+    for (const c of [0.0, 0.05, 0.10]) {
+      const rr = delivered2x2(cfg, { nWorlds: 700, delivery: { ...DELIVERY, mon_detect: c, mon_recovery: 0.0 } });
+      safeLog(`     mon_detect ${c.toFixed(2)}  →  dividend(opaque) ${pct(rr.monitoringDividend.opaque)}  ·  A3 ${pct(rr.cells.A3)}`);
     }
-    safeLog(`  → the dividend is a GENUINE (non-structural) super-multiplicativity, largest where formal control is weakest.\n`);
+    // with institutional recovery linkage (Core v0's evidence layer), the dividend is larger — reported as a scenario, not the community-only default.
+    const rr2 = delivered2x2(cfg, { nWorlds: 700, delivery: { ...DELIVERY, mon_detect: 0.05, mon_recovery: 0.20 } });
+    safeLog(`  with institutional recovery linkage (mon_recovery=0.20): opaque dividend ${pct(rr2.monitoringDividend.opaque)} — the delivery gain needs the FORMAL recovery channel, not eyeballs alone.\n`);
 
     // (iii) Step 1 — opaque-band sensitivity, coupling OFF so the delivery effect is read cleanly.
     safeLog('Opaque-band sensitivity (delivery effect and full-architecture gain as the status-quo leak worsens):');
