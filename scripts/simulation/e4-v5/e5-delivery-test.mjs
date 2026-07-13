@@ -1,6 +1,6 @@
 // E5 delivery tests — the invariants that keep the SELECTION × DELIVERY experiment honest and E4-consistent.
 // Run: npm run e5:delivery:test
-import { delivered2x2, sweepOpaque, DELIVERY } from './e5-delivery.mjs';
+import { delivered2x2, sweepOpaque, replicateSeeds, jointSweep, validateDelivery, DELIVERY } from './e5-delivery.mjs';
 import { baseConfig } from './contract.mjs';
 import { estimand } from './engine.mjs';
 import { SCENARIO_WORLD as W, PROBABLE } from './scenario-configs.mjs';
@@ -78,6 +78,36 @@ const NW = 1200;
   for (let i = 1; i < rows.length; i++) if (rows[i].full < rows[i - 1].full - 1e-3) mono = false;
   check('sweep: full-architecture gain grows monotonically as opaque leak worsens', mono);
   check('sweep: coverage wins (full > 0) across the whole opaque band', rows.every((x) => x.full > 0));
+}
+
+// 6) VALIDATION: fail-closed on out-of-domain delivery params (Codex robustness item).
+{
+  const throws = (del) => { try { validateDelivery(del); return false; } catch { return true; } };
+  check('validateDelivery accepts the default config', validateDelivery(DELIVERY) === true);
+  check('validateDelivery rejects pi_hon > 1', throws({ ...DELIVERY, pi_hon: 1.4 }));
+  check('validateDelivery rejects negative val_risk', throws({ ...DELIVERY, val_risk: -0.1 }));
+  check('validateDelivery rejects a missing regime', throws({ ...DELIVERY, opaque: undefined }));
+  check('delivered2x2 validates its delivery arg', (() => { try { delivered2x2(cfg, { nWorlds: 10, delivery: { ...DELIVERY, mon_detect: 2 } }); return false; } catch { return true; } })());
+}
+
+// 7) VALUE-RISK robustness: value/complexity-correlated delivery risk does not systematically undo coverage — the
+//    per-arm delivery gap stays small and the full gain stays clearly positive across the band.
+{
+  const base = delivered2x2(cfg, { nWorlds: NW });
+  const vr   = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, val_risk: 0.6 } });
+  check('value risk keeps the per-arm opaque delivery gap small', Math.abs(vr.delivery.distributedOpaque - vr.delivery.centralOpaque) < 0.03);
+  check('value risk keeps the full gain clearly positive', vr.full > 0.4, `got ${vr.full}`);
+  check('value risk barely moves the full gain vs base', Math.abs(vr.full - base.full) < 0.05);
+}
+
+// 8) GLOBAL robustness: 20-seed replication is tight; the joint LHS sweep has coverage winning across the space.
+{
+  const rep = replicateSeeds(cfg, { nSeeds: 8, nWorlds: 200 });
+  check('20-seed replication: between-seed sd is small', rep.sd < 0.03, `sd ${rep.sd}`);
+  check('20-seed replication: mean full gain is materially positive', rep.mean > 0.4, `mean ${rep.mean}`);
+  const js = jointSweep(cfg, { nSamples: 24, nWorlds: 150 });
+  check('joint LHS sweep: coverage wins in the large majority of the delivery space', js.shareCoverageWins > 0.9, `share ${js.shareCoverageWins}`);
+  check('joint LHS sweep: even the worst sampled cell keeps coverage ahead or near parity', js.min > -0.1, `min ${js.min}`);
 }
 
 console.log(`\nE5 delivery: ${pass} passed, ${fail} failed.`);

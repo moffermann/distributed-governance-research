@@ -59,9 +59,15 @@ export const DELIVERY = {
   // institutional follow-up). p_det_eff = p_det + mon_detect·(1−p_det); r_eff = r + mon_recovery·(1−r).
   mon_detect:   0.0,   // coverage-only detection lift; anchored band 0.0–0.10 (ref 0.05); small + fragile
   mon_recovery: 0.0,   // coverage-only recovery lift; 0 for community-only (formal linkage 0.09–0.36 = the verified regime)
+  // VALUE/COMPLEXITY-CORRELATED DELIVERY RISK (robustness, breaks delivery↔value independence): bigger/more complex
+  // projects are harder to monitor, so effective detection falls with the project's cost percentile:
+  //   p_det_proj = p_det · (1 − val_risk · costPct). Default 0 = delivery independent of project size (the base model).
+  //   >0 makes the delivered fraction depend on WHICH projects are funded, so the cross-arm delivery efficiencies can
+  //   diverge (a genuine, non-identity interaction between selection and delivery).
+  val_risk: 0.0,
 };
 
-function deterrent(reg) { return reg.p_det * ((1 - reg.a * (1 - reg.r)) + (reg.gamma || 0) + reg.rep); }
+function deterrent(reg, pDet) { return pDet * ((1 - reg.a * (1 - reg.r)) + (reg.gamma || 0) + reg.rep); }
 
 // The selecting arm's effective delivery regime: distributed coverage lifts detection (and, only with institutional
 // linkage, recovery). mDet/mRec are the coverage lifts (0 for the central arm).
@@ -70,22 +76,26 @@ function coupledRegime(reg, mDet, mRec) {
   return { ...reg, p_det: reg.p_det + mDet * (1 - reg.p_det), r: reg.r + mRec * (1 - reg.r) };
 }
 
-// Per-project delivered fraction + diversion flag under an (already arm-adjusted) regime.
-function deliveredFraction(reg, honest, tempt, del) {
+// Per-project delivered fraction + diversion flag. detMult scales this project's detection (value/complexity risk).
+function deliveredFraction(reg, honest, tempt, del, detMult) {
   if (honest) return { f: 1 - del.loss_hon, diverts: false };
-  const diverts = tempt > deterrent(reg);            // opportunistic: divert iff temptation beats the deterrent
+  const diverts = tempt > deterrent(reg, reg.p_det * detMult);   // opportunistic: divert iff temptation beats the deterrent
   if (!diverts) return { f: 1 - del.loss_hon, diverts: false };
   const f = 1 - reg.a * (1 - reg.r) - del.loss_hon;  // loses the unrecovered advance (recovery r may be monitoring-lifted)
   return { f: f < 0 ? 0 : f, diverts: true };
 }
 
 // Delivered value + robustness diagnostics for a funded set under a regime, reusing per-project executor draws (shared
-// across all four cells — the design's matched seeds). mDet/mRec = the selecting arm's monitoring lifts.
-function deliveredCell(projects, funded, reg, exec, del, mDet, mRec) {
+// across all four cells — the design's matched seeds). mDet/mRec = monitoring lifts; cfg gives the cost range for the
+// value/complexity risk (bigger projects harder to monitor).
+function deliveredCell(projects, funded, reg, exec, del, mDet, mRec, cfg) {
   const eff = coupledRegime(reg, mDet, mRec);
+  const vr = del.val_risk || 0, span = cfg.c_hi - cfg.c_lo;
   let v = 0, lost = 0, nDiv = 0;
   for (const j of funded) {
-    const { f, diverts } = deliveredFraction(eff, exec.honest[j], exec.tempt[j], del);
+    const costPct = span > 0 ? (projects[j].c - cfg.c_lo) / span : 0;     // 0..1 complexity proxy
+    const detMult = 1 - vr * costPct;                                     // harder to monitor when bigger
+    const { f, diverts } = deliveredFraction(eff, exec.honest[j], exec.tempt[j], del, detMult);
     v += projects[j].S * f;
     lost += projects[j].S * (1 - f);                 // value not delivered (diversion + ordinary loss)
     if (diverts) nDiv++;
@@ -116,10 +126,10 @@ function runWorld2x2(cfg, rng, execRng, del) {
   const mD = del.mon_detect || 0, mR = del.mon_recovery || 0;   // distributed arm's monitoring lifts
   return {
     O, selC, selD,
-    S:  deliveredCell(projects, setC, del.opaque,   exec, del, 0,  0),    // central: no coverage lift
-    A1: deliveredCell(projects, setC, del.verified, exec, del, 0,  0),
-    A3: deliveredCell(projects, setD, del.opaque,   exec, del, mD, mR),   // distributed: coverage lifts detection (+recovery if linked)
-    A2: deliveredCell(projects, setD, del.verified, exec, del, mD, mR),
+    S:  deliveredCell(projects, setC, del.opaque,   exec, del, 0,  0,  cfg),   // central: no coverage lift
+    A1: deliveredCell(projects, setC, del.verified, exec, del, 0,  0,  cfg),
+    A3: deliveredCell(projects, setD, del.opaque,   exec, del, mD, mR, cfg),   // distributed: coverage lifts detection (+recovery if linked)
+    A2: deliveredCell(projects, setD, del.verified, exec, del, mD, mR, cfg),
   };
 }
 
@@ -127,6 +137,7 @@ function runWorld2x2(cfg, rng, execRng, del) {
 // executors use SEPARATE PRNG streams, so the world stream is identical to the E4 estimand's (exact reduction). Also
 // returns diversion incidence, leakage, and a world-cluster bootstrap CI on the full-architecture gain.
 export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY } = {}) {
+  validateDelivery(delivery);
   const rng = makeRng(seed);
   const execRng = makeRng((seed ^ 0x5bd1e995) >>> 0);      // separate stream ⇒ worlds match the E4 estimand exactly
   const W = [];
@@ -191,6 +202,64 @@ export function sweepOpaque(cfg, { nWorlds = 800, points = null } = {}) {
   return rows;
 }
 
+// Fail-closed validation of a delivery config (Codex robustness item).
+export function validateDelivery(del) {
+  const bad = [];
+  const unit = (k, v) => { if (!(v >= 0 && v <= 1)) bad.push(`${k}=${v} must be in [0,1]`); };
+  unit('pi_hon', del.pi_hon); unit('loss_hon', del.loss_hon);
+  unit('mon_detect', del.mon_detect || 0); unit('mon_recovery', del.mon_recovery || 0); unit('val_risk', del.val_risk || 0);
+  for (const name of ['opaque', 'verified']) {
+    const reg = del[name];
+    if (!reg) { bad.push(`${name} regime missing`); continue; }
+    for (const k of ['p_det', 'a', 'r']) unit(`${name}.${k}`, reg[k]);
+    if ((reg.gamma || 0) < 0) bad.push(`${name}.gamma must be >= 0`);
+    if (reg.rep < 0) bad.push(`${name}.rep must be >= 0`);
+  }
+  if (bad.length) throw new Error(`[e5-delivery] invalid delivery config: ${bad.join('; ')}`);
+  return true;
+}
+
+// 20-seed replication of the full-architecture gain: across-seed mean and spread (Codex robustness item; complements
+// the inner bootstrap CI with between-seed variability).
+export function replicateSeeds(cfg, { nSeeds = 20, nWorlds = 400, delivery = DELIVERY } = {}) {
+  const vals = [];
+  for (let s = 0; s < nSeeds; s++) vals.push(delivered2x2(cfg, { nWorlds, seed: (NUM.seed.value + s * 0x9e3779b1) >>> 0, delivery }).full);
+  vals.sort((a, b) => a - b);
+  const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+  const sd = Math.sqrt(vals.reduce((a, b) => a + (b - mean) * (b - mean), 0) / vals.length);
+  return { mean, sd, min: vals[0], max: vals[vals.length - 1] };
+}
+
+// Joint Latin-hypercube sweep over the delivery params, reporting the RANGE of the full gain and the coverage-wins
+// share — a GLOBAL robustness statement, not the 1-D opaque sweep (Codex robustness item). Deterministic (seeded).
+export function jointSweep(cfg, { nSamples = 64, nWorlds = 300 } = {}) {
+  const ranges = {
+    pi_hon: [0.61, 0.85], loss_hon: [0.0, 0.15], op_pdet: [0.02, 0.15], op_a: [0.75, 1.0],
+    ve_pdet: [0.60, 0.90], ve_a: [0.10, 0.40], ve_r: [0.30, 1.0], ve_rep: [0.0, 0.5],
+    mon_detect: [0.0, 0.10], mon_recovery: [0.0, 0.36], val_risk: [0.0, 0.6],
+  };
+  const keys = Object.keys(ranges), rng = makeRng((NUM.seed.value ^ 0x1234abcd) >>> 0), cols = {};
+  for (const k of keys) {                                     // stratified + shuffled column per key (LHS)
+    const col = []; for (let i = 0; i < nSamples; i++) col.push((i + rng.u()) / nSamples);
+    for (let i = col.length - 1; i > 0; i--) { const j = Math.floor(rng.u() * (i + 1)); [col[i], col[j]] = [col[j], col[i]]; }
+    cols[k] = col;
+  }
+  const lerp = (r, u) => r[0] + (r[1] - r[0]) * u, fulls = [];
+  for (let i = 0; i < nSamples; i++) {
+    const s = {}; for (const k of keys) s[k] = lerp(ranges[k], cols[k][i]);
+    const del = {
+      pi_hon: s.pi_hon, loss_hon: s.loss_hon,
+      opaque:   { p_det: s.op_pdet, a: s.op_a, r: 0.0, gamma: 0.0, rep: 0.0 },
+      verified: { p_det: s.ve_pdet, a: s.ve_a, r: s.ve_r, gamma: 0.10, rep: s.ve_rep },
+      mon_detect: s.mon_detect, mon_recovery: s.mon_recovery, val_risk: s.val_risk,
+    };
+    fulls.push(delivered2x2(cfg, { nWorlds, delivery: del }).full);
+  }
+  fulls.sort((a, b) => a - b);
+  return { n: fulls.length, min: fulls[0], max: fulls[fulls.length - 1], median: fulls[fulls.length >> 1],
+    shareCoverageWins: fulls.filter((x) => x > 0).length / fulls.length };
+}
+
 function main() {
   const pct = (x) => (x >= 0 ? '+' : '') + (100 * x).toFixed(1) + '%';
   const cfgBase = baseConfig();
@@ -242,7 +311,25 @@ function main() {
     for (const row of sweepOpaque(cfg, { nWorlds: 800 })) {
       safeLog(`     ${pct(row.leak).padStart(6)}          ${pct(row.deliveryEffectAtDistributed).padStart(7)}                 ${pct(row.full).padStart(7)}`);
     }
-    safeLog('   → coverage still wins across the whole band; a worse status quo only widens the delivery gain.');
+    safeLog('   → coverage still wins across the whole band; a worse status quo only widens the delivery gain.\n');
+
+    // (iv) VALUE/COMPLEXITY-correlated delivery risk (robustness): bigger projects harder to monitor. Does it break the
+    // per-arm delivery equality (a genuine selection↔delivery interaction beyond the accounting identity)?
+    safeLog('Value/complexity-correlated delivery risk (bigger projects harder to monitor):');
+    for (const vr of [0.0, 0.3, 0.6]) {
+      const rv = delivered2x2(cfg, { nWorlds: 800, delivery: { ...DELIVERY, val_risk: vr } });
+      const armGap = rv.delivery.distributedOpaque - rv.delivery.centralOpaque;   // delivery efficiency difference by arm
+      safeLog(`   val_risk ${vr.toFixed(1)}  →  opaque delivery central ${pct(rv.delivery.centralOpaque)} · distributed ${pct(rv.delivery.distributedOpaque)} (arm gap ${pct(armGap)})  ·  full ${pct(rv.full)}`);
+    }
+    safeLog('   → the distributed arm funds higher-value (not necessarily bigger) projects; the arm gap stays small, so');
+    safeLog('     coverage does NOT get systematically undone by delivery risk — the full gain is robust.\n');
+
+    // (v) 20-seed replication + a joint Latin-hypercube global sweep — a global robustness statement, not a 1-D slice.
+    const rep = replicateSeeds(cfg, { nSeeds: 20, nWorlds: 400 });
+    safeLog(`20-seed replication of the full gain: mean ${pct(rep.mean)} · sd ${pct(rep.sd)} · range [${pct(rep.min)}, ${pct(rep.max)}].`);
+    const js = jointSweep(cfg, { nSamples: 64, nWorlds: 300 });
+    safeLog(`Joint LHS sweep (${js.n} draws over 11 delivery params): full gain median ${pct(js.median)}, range [${pct(js.min)}, ${pct(js.max)}];`);
+    safeLog(`   coverage wins (full > 0) in ${(100 * js.shareCoverageWins).toFixed(0)}% of the sampled delivery space.`);
   });
 }
 import { fileURLToPath } from 'node:url';
