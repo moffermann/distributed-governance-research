@@ -20,7 +20,7 @@
 // Run: npm run e9:fullstack
 
 import { generateWorld, makeRng, fundedSet } from './engine.mjs';
-import { DELIVERY, deliveredCell, validateDelivery } from './e5-delivery.mjs';
+import { DELIVERY, deliveredCell, validateDelivery, sampleTempt } from './e5-delivery.mjs';
 import { baseConfig, NUM } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 
@@ -145,7 +145,7 @@ function runWorldStack(cfg, rng, execRng, pRng, del, plan) {
   const budget = cfg.phi * totalCost;
 
   const honest = new Array(projects.length), tempt = new Array(projects.length);
-  for (let j = 0; j < projects.length; j++) { honest[j] = execRng.u() < del.pi_hon; tempt[j] = execRng.u(); }
+  for (let j = 0; j < projects.length; j++) { honest[j] = execRng.u() < del.pi_hon; tempt[j] = sampleTempt(execRng, del); }
   const exec = { honest, tempt };
 
   const sec = buildSectors(projects, plan, pRng);

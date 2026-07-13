@@ -16,7 +16,7 @@
 //
 // Delivery model (micro-founded, one-shot, Okun's leaky bucket; Model-1 incentive condition, deterrence ex ante):
 // each funded project draws an executor. A share pi_hon are intrinsically honest (deliver 1−loss). The rest are
-// opportunistic and DIVERT iff temptation t~U(0,1) exceeds the regime deterrent  det = p_det·[(1−a(1−r)) + rep],
+// opportunistic and DIVERT iff temptation (mostly U(0,1), plus a grand-corruption tail) exceeds the regime deterrent  det = p_det·[(1−a(1−r)) + rep],
 // where a=up-front advance exposure, r=recovery, rep=reputational stake. A diverting executor loses a·(1−r) of the
 // budget (the unrecovered advance) → delivers 1 − a(1−r) − loss; an honest/deterred one delivers 1 − loss.
 // Delivered value V = Σ_{j∈funded} S_j · f_j. Leakage bands are literature-anchored (see DELIVERY notes).
@@ -33,7 +33,7 @@ import { safeLog } from './adapter.mjs';
 //           diverting (Olken 2007 Indonesian roads: 24% missing); pessimistic end reaches the Uganda 87% (Reinikka &
 //           Svensson 2004) extreme by raising temptation / lowering pi_hon.
 //   verified ~2.5% loss: milestone-gating + retention + recovery + a reputational stake make the deterrent bind ex
-//           ante, so no opportunistic executor diverts (matches the corpus finding: deterrence pre-empts punishment).
+//           ante, so few opportunistic executors divert; a grand-corruption tail leaves a small RESIDUAL (not a mechanical zero).
 // Calibration (friendly round, 2026-07-12; anchors in audits/2026-07-12-e5-remodel/E5-DELIVERY-DESIGN.md).
 // ANCHORED: opaque central divert ~24% (Olken 2007 JPE 115(2), Indonesia roads); ex-ante deterrence ⇒ verified ~0
 //   diversion (Olken 2007; Avis-Ferraz-Finan 2018 JPE 126(5); Becker 1968). DECLARED (mechanism sound, no citable
@@ -44,13 +44,17 @@ import { safeLog } from './adapter.mjs';
 // Calibration is an IDENTIFIED-SET reference, NOT a field estimate (friendly round convergent view, Codex + agent):
 // the opaque case reproduces an Olken-2007-centered ~24–28% VALUE-loss moment (not a claim about executor incidence);
 // verified advances/guarantees follow World Bank standard procurement (10% advance, ~10% performance guarantee); the
-// verified regime's near-zero diversion is a CONDITIONAL ex-ante-deterrence result (Olken 2007; Avis-Ferraz-Finan
+// verified regime's LOW-but-nonzero residual diversion is a CONDITIONAL ex-ante-deterrence result (Olken 2007; Avis-Ferraz-Finan
 // 2018; Becker 1968), not an empirical zero. Community coverage lifts DETECTION only (mon_detect, small/fragile:
 // Björkman-Svensson 2009 QJE with failed replications; Molina et al. 2016); RECOVERY needs institutional follow-up, so
 // mon_recovery=0 for community-only coverage (Afridi-Iversen 2014 MGNREGA). Report R=0 robustness always.
 export const DELIVERY = {
   pi_hon:   0.78,   // honest share; identified so the opaque case hits the Olken-centered value-loss moment (not observed prevalence)
   loss_hon: 0.05,   // ordinary execution loss (Rasul–Rogger supports a substantial upper tail; the scalar is DECLARED)
+  tempt_tail: 0.10, // GRAND-CORRUPTION TAIL (Adversarial R1 #8): a fraction of opportunistic executors face temptation
+                    //     ABOVE any feasible deterrent, so even the strong verified regime keeps a RESIDUAL diversion —
+                    //     it is NOT a mechanical zero. Olken 2007: audits cut missing expenditure ~8pp but did not
+                    //     eliminate it. With this tail, verified diversion incidence is small but nonzero (~a few %).
   //                p_det  a(advance) r(recovery) gamma(guarantee) rep(reputation)
   opaque:   { p_det: 0.04, a: 0.80, r: 0.00, gamma: 0.00, rep: 0.00, note: 'weak control: announced-audit-level exposure, unprotected advances, no recovery/guarantee/reputation' },
   verified: { p_det: 0.75, a: 0.20, r: 0.50, gamma: 0.10, rep: 0.40, note: 'architecture: 20% advance exposure (DECLARED reference; World Bank normal advance ~10%) + ~10% performance guarantee + recovery + reputational stake (magnitudes DECLARED)' },
@@ -68,6 +72,10 @@ export const DELIVERY = {
 };
 
 function deterrent(reg, pDet) { return pDet * ((1 - reg.a * (1 - reg.r)) + (reg.gamma || 0) + reg.rep); }
+
+// Temptation draw: mostly U(0,1), plus a grand-corruption TAIL in [1,2] with probability tempt_tail — so a strong
+// (deterrent>1) verified regime still leaves a residual diversion instead of a mechanical zero (Adversarial R1 #8).
+export function sampleTempt(rng, del) { return rng.u() < (del.tempt_tail || 0) ? 1 + rng.u() : rng.u(); }
 
 // The selecting arm's effective delivery regime: distributed coverage lifts detection (and, only with institutional
 // linkage, recovery). mDet/mRec are the coverage lifts (0 for the central arm).
@@ -113,7 +121,7 @@ function runWorld2x2(cfg, rng, execRng, del) {
   const budget = cfg.phi * totalCost;
 
   const honest = new Array(projects.length), tempt = new Array(projects.length);
-  for (let j = 0; j < projects.length; j++) { honest[j] = execRng.u() < del.pi_hon; tempt[j] = execRng.u(); }
+  for (let j = 0; j < projects.length; j++) { honest[j] = execRng.u() < del.pi_hon; tempt[j] = sampleTempt(execRng, del); }
   const exec = { honest, tempt };
 
   const setC = fundedSet(projects, 'M_C', cfg, budget, { creditTilt: true });
@@ -303,13 +311,14 @@ function main() {
     // diversion INCIDENCE = unweighted share of funded projects whose executor diverts; value LEAKAGE = S-weighted
     // undelivered social value. Olken 2007 measured missing EXPENDITURE (closest to value leakage), not executor prevalence.
     safeLog(`diversion incidence (unweighted share of funded projects):     opaque ${pct(r.diversionIncidence.S)} · verified ${pct(r.diversionIncidence.A1)}`);
-    safeLog(`value leakage (S-weighted undelivered value; ~Olken moment):   opaque ${pct(r.leakage.S)} · verified ${pct(r.leakage.A1)}\n`);
+    safeLog(`value leakage (S-weighted undelivered value; MOMENT-MATCHED to Olken's expenditure loss, NOT identified as welfare):   opaque ${pct(r.leakage.S)} · verified ${pct(r.leakage.A1)}\n`);
     const civ = (iv) => `[${pct(iv[0])}, ${pct(iv[1])}]`;
-    safeLog('Main effects (percentage points of the oracle reference) with 95% bootstrap CIs, read SEPARATELY:');
+    safeLog('Main effects (pp of the oracle reference) with 95% CONDITIONAL Monte-Carlo intervals (inner simulation');
+    safeLog('variability only — world, model-form and calibration uncertainty are NOT included), read SEPARATELY:');
     safeLog(`  DELIVERY effect:   at central ${pct(r.deliveryEffect.atCentral)} ${civ(r.ci.deliveryEffect.atCentral)} · at distributed ${pct(r.deliveryEffect.atDistributed)} ${civ(r.ci.deliveryEffect.atDistributed)}`);
     safeLog(`  SELECTION effect:  at opaque ${pct(r.selectionEffect.atOpaque)} ${civ(r.ci.selectionEffect.atOpaque)} · at verified ${pct(r.selectionEffect.atVerified)} ${civ(r.ci.selectionEffect.atVerified)}`);
     safeLog(`  INTERACTION:       ${pct(r.interaction)} ${civ(r.ci.interaction)}  (>0 ⇒ verified delivery amplifies the selection gain)`);
-    safeLog(`  FULL architecture (A2 − S): ${pct(r.full)}  95% CI ${civ(r.fullCI)}\n`);
+    safeLog(`  FULL architecture (A2 − S): ${pct(r.full)}  95% conditional-MC CI ${civ(r.fullCI)}\n`);
     safeLog('Composition — the two layers compose MULTIPLICATIVELY (an accounting identity, delivery applied per project):');
     safeLog(`  actual A2 = ${pct(r.cells.A2)}  ·  identity (selection · delivery) = ${pct(r.multiplicativeIdentityA2)}`);
     safeLog(`  additive prediction (sum of main effects) = ${pct(r.additivePredictionA2)}  → short by the interaction.`);
@@ -359,7 +368,7 @@ function main() {
     const rep = replicateSeeds(cfg, { nSeeds: 20, nWorlds: 400 });
     safeLog(`20-seed replication of the full gain: mean ${pct(rep.mean)} · sd ${pct(rep.sd)} · range [${pct(rep.min)}, ${pct(rep.max)}].`);
     const js = jointSweep(cfg, { nSamples: 64, nWorlds: 300 });
-    safeLog(`Joint LHS sweep (${js.n} draws over the declared delivery ranges): full gain median ${pct(js.median)}, range [${pct(js.min)}, ${pct(js.max)}];`);
+    safeLog(`Joint LHS sweep (${js.n} draws, CONDITIONAL on the PROBABLE world; non-overlapping regime ranges): full gain median ${pct(js.median)}, range [${pct(js.min)}, ${pct(js.max)}];`);
     safeLog(`   full architecture wins in ${(100 * js.shareArchitectureWins).toFixed(0)}% and the coverage/selection effect (A3−S) is positive in ${(100 * js.shareCoverageWins).toFixed(0)}% of the sampled draws.`);
   });
 }

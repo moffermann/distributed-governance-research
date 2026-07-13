@@ -106,8 +106,8 @@ const NW = 1200;
 // 8) GLOBAL robustness: 20-seed replication is tight; the joint LHS sweep has coverage winning across the space.
 {
   const rep = replicateSeeds(cfg, { nSeeds: 8, nWorlds: 200 });
-  check('20-seed replication: between-seed sd is small', rep.sd < 0.03, `sd ${rep.sd}`);
-  check('20-seed replication: mean full gain is materially positive', rep.mean > 0.4, `mean ${rep.mean}`);
+  check('multi-seed replication (8 seeds): between-seed sd is small', rep.sd < 0.03, `sd ${rep.sd}`);
+  check('multi-seed replication: mean full gain is materially positive', rep.mean > 0.4, `mean ${rep.mean}`);
   const js = jointSweep(cfg, { nSamples: 24, nWorlds: 150 });
   check('joint LHS sweep: full architecture wins in the large majority of sampled draws', js.shareArchitectureWins > 0.9, `share ${js.shareArchitectureWins}`);
   check('joint LHS sweep: coverage/selection effect (A3−S) positive in the large majority', js.shareCoverageWins > 0.9, `share ${js.shareCoverageWins}`);
