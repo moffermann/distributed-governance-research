@@ -130,3 +130,24 @@ Supporting (direction only): Rogoff & Sibert 1988; Rogoff 1990 *AER*; Khemani 20
 Rioja's ~15% single-margin), so it does **not** overclaim — if anything it is conservative. Honest framing to apply:
 call it "consistent with and conservative relative to" the IMF/Rioja evidence, NOT "anchored" to a cross-sector estimate
 (none exists at that granularity). Flag the pure cross-sector allocative-loss magnitude explicitly DECLARED to reviewers.
+
+## Planning REDESIGN v2 (Codex round-1 + author decision, commit 301d7cc)
+
+Codex round-1: skeleton sound; planning layer NOT publication-ready (the standalone +3.2/+7.1 were one-at-a-time
+conditional effects; planning under distributed selection runs the other way). Author decision: **predeclare + sweep**
+the need↔visibility association. Redesigned:
+
+- **Persistent sectors with intrinsic visibility** (not visibility bins of project P — homogeneous under random
+  membership). **Category-level political credit**: central over-funds visible sectors (`creditCoef`) and is blind to
+  the low-visibility sector value tilt; distributed coverage sees a fraction (`covSees`). `assoc` = the predeclared
+  need↔visibility lever, swept −1..+1.
+- **8-cell factorial + Shapley attribution** that sums exactly to the diagonal gain; plus the conditional simple
+  effects that expose the sign flip.
+- `validatePlanning` fail-closed; hard exclusion by integer `nKeep` (central/symmetric); oracle relabelled a REFERENCE.
+- `nSec=1` reduces to E5 exactly (1e-9). 15/15 tests.
+
+**Honest result (PROBABLE):** full-stack gain ~+49% [+48.3,+49.6]. Shapley attribution (assoc=−0.6): planning +2.1% /
+selection +38.3% / delivery +10.8%. Under the **realistic** association (assoc<0, Rioja maintenance bias) planning
+Shapley rises to **+1.9% → +6.2%**; at assoc≥0 it is ~0 — the planning layer's value is **real but modest and
+context-dependent**, honestly emerging from the predeclared assumption, not gerrymandered. Magnitude DECLARED,
+conservative vs the IMF/Rioja envelope. → sent to Codex round-2 for verification.
