@@ -513,7 +513,7 @@ degrades gracefully only with defaults (prediction 3) — evaluated next.
 
 We test the three predictions of §5.3 —and, in successive experiments, the
 assumptions of Propositions 1–4— in an agent-based simulation. Each experiment
-(E1–E8) corresponds to a finding:
+(E1–E10) corresponds to a finding:
 
 | Exp | What it tests | |
 |---|---|---|
@@ -521,10 +521,12 @@ assumptions of Propositions 1–4— in an agent-based simulation. Each experime
 | E2 | what carries allocation quality? | Finding 2 |
 | E3 | what buffers participation decay? | Finding 3 |
 | E4 | distributed aggregation vs. central construction (refined by a symmetric-frictions frontier + capture, E4-v4/v5; and a v1.14 harm-myopia four-scenario robustness map, §6) | Finding 4 |
-| E5 | where the architecture gains value (selection and delivery layers) | Finding 5 |
+| E5 | delivered value: selection × delivery, at matched budget | Finding 5 |
 | E6 | reputational competition and execution standard | Finding 6 |
 | E7 | comparison against an audit-parameterized baseline | Finding 7 |
 | E8 | robustness under endogenous behavioral participation | close of §6 |
+| E9 | the full stack: planning × selection × delivery (Shapley attribution) | Finding 9 |
+| E10 | the administrative-cost layer (net-budget, symmetric) | Finding 10 |
 
 We simulate 10,000 citizens over 24 monthly cycles allocating across a
 standing pool of 40 projects with quality *θ*, salience *s* (measured
@@ -902,51 +904,61 @@ any magnitude the model reports. The calibration-targets appendix makes the
 model-internal / data boundary a visible line.
 
 **Finding 5: delivered value, not allocation, is where the architecture
-earns its keep — and selection and delivery interact.** A fifth,
-pre-registered experiment (`research/e5-value-delivery-design.md`) adds
-the execution stage the first four omitted: executors with hidden types
-whose diversion decision follows Proposition 1's incentive condition,
-under an opaque delivery regime — a zero-control lower bound (low
-detection, unprotected advances, no recovery, no reputational memory),
-with parameters inside the empirically documented leakage band: 87% in
-Uganda's capitation grants (Reinikka and Svensson 2004), 24% in
-Indonesian roads (Olken 2007) — versus the verified regime built from
-Propositions 1-4 (milestone gating, retention, recovery, evidence-layer
-detection, and a reputational stake: a visible confirmed-diversion record
-that costs future selection by funders).
-Crossing delivery with the two E4 selection regimes yields a 2×2 whose
-main effects are two plain questions. Same projects, different control
-layer: the verified (milestone-gated) regime delivers +43% on identical
-portfolios (paired ΔV = 0.168 [0.143, 0.193]) over a zero-control regime
-whose official completion overstates its real delivery by twenty-nine
-percentage points. Same control layer, different projects: social
-prioritization delivers +53-54% under either regime. The interaction is
-positive and significant (+0.085 [0.053, 0.117]): the two layers **interact
-rather than merely add**. An earlier version summarized this as a single
-compound value-per-budget output; that compound is **retired** as a
-model-internal factorial contrast, not a calibrated effect — E5 now reports
-selection, administrative cost, and leakage as **separate declared channels**
-(Section 6). Two pre-registered predictions failed honestly.
-The expected dominance of delivery over selection did not hold at this
-scale — central selection at two hundred projects is near-random (E4),
-inflating the selection margin — so within this apparatus the robust pattern is
-the *interaction* of the two layers, not their ranking (the compound magnitude
-itself is retired as a calibrated effect; see Section 6). And the expected
-reputational cleansing never fired
-under the strong verification parameters, for the best possible reason:
-the incentive condition holds for every executor, so no one diverts and
-there is no one to exclude — deterrence pre-empts punishment, Becker's
-enforcement working ex ante. A labeled post-hoc sensitivity with weakened
-verification shows the second line of defense: partial deterrence,
-active detection, and an executor pool that measurably improves as
-funders stop selecting confirmed diverters, whose records are visible
-(opportunist share 0.28 → 0.21 over twenty-four cycles) — pool exit by
-lost preference, not by any platform exclusion power; reputation informs
-choices, it never excludes. A companion sweep of default discovery categories
-shows each carries a large, measurable distributional signature —
-near-me concentrates 71% of budget in the densest quintile, rural
-inverts it — so the default is a visible, configurable distributional
-policy lever, not an inherent planner bias.
+earns its keep — and selection and delivery compose multiplicatively.** A
+fifth experiment (`scripts/simulation/e4-v5/e5-delivery.mjs`, rebuilt on
+the clean E4 engine) adds the execution stage the first four omitted, as
+an **independent** delivery regime crossed with the two selection regimes —
+a four-cell design so each layer reads separately and jointly on the *same*
+funded portfolios. Executors have hidden types: an intrinsically honest
+share deliver; the rest divert whenever a temptation draw beats the
+regime's deterrent `p·[(1−a(1−r)) + γ + R]` (detection *p*, advance
+exposure *a*, recovery *r*, guarantee *γ*, reputational stake *R*) —
+Okun's (1975) leaky bucket. The **opaque** status-quo regime's emergent
+value loss is moment-matched to Olken's (2007) ~24% missing-expenditure
+figure (not identified as welfare); IMF's (2015) ~30% public-investment
+inefficiency is a broader process loss, and Reinikka and Svensson's (2004)
+~87% Ugandan capture is a tail, not the central case. The **verified**
+regime is the architecture: a milestone-gated advance plus a performance
+guarantee, retention, recovery, and a reputational stake — magnitudes
+declared, directions from Propositions 1–4.
+
+Every cell is a percentage of the same full-information greedy reference at
+perfect delivery (a heuristic normalizer, not an optimum), so no compound
+multiplier is reported. Selection efficiency reproduces E4 (distributed
+≈ 98%, central ≈ 44% of the reference); delivery efficiency is ≈ 78% opaque
+versus ≈ 95% verified. Read as two main effects at the declared world, the
+delivery layer adds ≈ 8 points under central selection and ≈ 17 under
+distributed; the selection layer adds ≈ 42 points under opaque delivery and
+≈ 51 under verified. The interaction is positive: the two layers **compose
+multiplicatively** — an accounting identity (delivered value = selected
+value × delivered fraction, applied per project), of which the positive
+interaction is the level-effect signature, not an independent discovery.
+The full architecture beats the status quo by ≈ +58.6 points of the
+reference (95% conditional Monte-Carlo interval [+58.0, +59.2], reflecting
+inner simulation variability only — world, model-form, and calibration
+uncertainty are not included). An earlier version summarized this as a
+single compound value-per-budget multiplier; that compound is **retired**,
+and E5 reports the layers as separate percentages.
+
+Two refinements survive scrutiny. First, Core v0's distributed coverage is
+not only a selection signal: the citizens who routed the budget also
+observe delivery. But community coverage credibly lifts *detection*, not
+*recovery* (clawback needs institutional follow-up), so the coverage-only
+delivery dividend is small (a fraction of a point in the weak-control
+regime; Björkman and Svensson 2009, with failed replications; Molina et al.
+2016); the sizeable delivery gain comes from the **formal** recovery
+channel — the verified regime — not eyeballs alone. Second, the verified
+regime's diversion is **low but nonzero** (≈ 2% incidence, ≈ 7% without the
+reputational stake): a grand-corruption temptation tail keeps a residual
+that strong control does not eliminate, matching Olken's finding that audits
+cut leakage without erasing it (2007; Avis, Ferraz, and Finan 2018; Becker
+1968) — ex-ante deterrence, not an empirical zero. The result is robust to
+value/complexity-correlated delivery risk (the distributed arm funds
+higher-*value*, not higher-*cost*, projects) and stable across seeds; a
+joint delivery-parameter sweep, conditional on the declared world, keeps
+coverage ahead across the sampled space. Delivered value here is measured
+at *equal budget*; the administrative *cost* of running each institution is
+a separate layer (Finding 10).
 
 **Finding 6: visibility sustains the standard; naive reputation markets
 concentrate faster than they select.** A sixth pre-registered experiment
@@ -1039,6 +1051,59 @@ participation — which costs 1.7% of the ratio, because the default layer
 anchors the thin early cycles by construction. The behavioral study also
 independently reproduces the informed-share assumption these experiments
 had imposed: 0.309 emergent against the 0.30 assumed.
+
+**Finding 9: the full stack — planning, selection, and delivery — and an
+honest accounting of what each layer contributes.** A ninth experiment
+(`scripts/simulation/e4-v5/e9-fullstack.mjs`, built on E5) adds the third
+architectural layer, **planning** (constructing the eligibility frame and
+per-sector budget shares), so all three layers are compared central versus
+distributed across a 2×2×2 of persistent sectors (ten, the COFOG count). A
+Shapley attribution decomposes the all-distributed-versus-status-quo gap
+into layer contributions that sum exactly to it. Two honest qualifications
+govern the reading. First, the attribution is *conditional*: every layer
+value is computed through the declared planning sector generator, so the
+standalone, quantified **selection** and **delivery** figures are the E5
+ones (no planning layer); E9 contributes the three-layer *structure* and
+the attribution *method*. Second, the layer contributions are *large in the
+declared world, not uniformly robust*: the full Core v0 advantage stays
+positive in every named world (a modest central-favourable world through a
+strongly distributed-favourable one), but the individual selection and
+delivery contributions reverse sign in the extreme corners (selection where
+central selection is near-random, delivery where a harmful portfolio is
+delivered more faithfully) — a fact the paper reports rather than hides.
+The **planning** layer's value operates chiefly through **agenda capture**
+— the central keeping whole high-need, low-visibility functions off the
+menu (the second face of power; Bachrach and Baratz 1962; Schattschneider
+1960). That mechanism is real and its *direction* is anchored (the COFOG
+taxonomy; the pre-election shift toward visible spending, Drazen and Eslava
+2010; the systematic neglect of maintenance and prevention, Rioja 2003),
+but its *magnitude* cannot be identified without country-specific budget
+data. We therefore **do not report a planning-layer figure**: quantifying
+it with the mechanism switched off would understate it, and switched on it
+is not yet anchorable. A country-grounded illustration — Chile's
+mental-health budget held near 2% against an OECD average of 6.7%, despite
+mental disorders being the country's leading cause of disability — shows the
+visibility bias has a real footprint, and is offered qualitatively, not as
+a calibration.
+
+**Finding 10: administrative cost is roughly neutral once accounted
+symmetrically — the advantage is delivered value, not overhead.** A tenth
+layer (`scripts/simulation/e4-v5/e10-costs.mjs`) adds the administrative and
+machinery cost each institution runs and Core v0 largely replaces — the
+value-proxy studies, allocation and prioritization apparatus, and licensing
+the central carries, against Core v0's own platform and control machinery.
+Modelled honestly — the cost reduces each arm's *budget* before selection
+(so the value loss is sub-proportional, because greedy funding cuts the
+marginal projects first), charged symmetrically (Core v0's verification and
+recovery machinery is costed, not free), and de-overlapped from the delivery
+leakage E5 already removes — the administrative layer is **roughly neutral**
+(within a point of zero either way at declared cost shares). The Core v0
+advantage comes from **selection and delivery**, not from an
+administrative-cost saving; a decisive cost advantage would require the
+central's overhead to exceed the platform's by more than symmetric
+accounting supports. The cost shares are declared, with directions anchored
+(IDB 2018; the low operating cost of e-government platforms — KONEPS,
+ChileCompra, ProZorro).
 
 **What survives.** Stripped to what the governing test supports: (1) under the
 pre-registered symmetric gate the distributed selection advantage is *positive but
