@@ -75,3 +75,36 @@ perfect too, E9 reduces to E4. These are the invariants the test asserts.
 
 Build only after E5 is publication-ready. Then: contract/params → engine stage → tests (reduces-to-E5/E4) → friendly
 Codex round (correct + anchor) → results → paper. Then E10 adds costs on top of E9.
+
+---
+
+## AS-BUILT (2026-07-13, commit 0cf22f9) — `scripts/simulation/e4-v5/e9-fullstack.mjs`
+
+**Built ON E5** (author correction): E9 = planning + E5. It reuses E5's delivery machinery (`deliveredCell`, now
+exported) and the E4 selection engine; it adds a planning stage.
+
+- **Categories = visibility strata.** Projects are binned by `P` (visibility) into `nCat` categories, so categories
+  differ systematically in the dimension the central planner mis-sees. Planning sets per-category budget shares from a
+  planner's *perceived* category value: central = Σ`M_C` (harm-myopic + projecting + credit) → **starves** harm-heavy /
+  low-visibility categories; distributed = Σ`M_D` (coverage); shares are proportional (base) or **hard-exclusion**
+  (fund only the top `keepFrac` — the second face of power).
+- **Oracle = the GLOBAL greedy benchmark** (perfect knowledge ignores category boundaries). Every category-constrained
+  cell ≤ oracle; **`nCat=1` reduces to E5 exactly** (tested to 1e-9).
+- **Selection + delivery** run within each category via `fundedSet` then `deliveredCell` — identical to E5.
+
+**Results (PROBABLE, 1000 worlds, 8 categories, proportional shares):** status quo (all-central) +30.1% of oracle;
+Core v0 full (all-distributed) +79.6%; **full-stack gain +49.5% [95% CI +48.8, +50.1]**. Layer main effects:
+**planning +3.2%**, selection +50.6%, delivery +6.7%. Hard-exclusion widens planning to **+7.1%**.
+
+**The planning layer is a genuine, positive value contrast** — not the retired ≈1.05× macro factor's near-parity. It
+is modest in magnitude here (visibility-stratified categories, soft shares); hard exclusion sharpens it. Honest: the
+effect size depends on how strongly categories are stratified on the dimension the central mis-sees — to be pressure-
+tested + anchored in E9's friendly Codex round (do not gerrymander it up).
+
+**Tests (11/11):** nCat=1 reduces to E5 (status-quo cell == E5 S, Core-v0 cell == E5 A2, planning effect ~0); planning
+effect positive; hard exclusion widens it; Core v0 > status quo; no cell exceeds the oracle; all three layer effects
+positive; selection dominant; fail-closed delivery validation reused.
+
+**Open for the friendly round:** is the visibility-stratified category construction the right/most-defensible one, or
+should categories be typed by harm/need directly? Anchor the planning-layer magnitude (sectoral misallocation of public
+investment). Confirm the global-oracle normalization and the main-effect decomposition are sound.
