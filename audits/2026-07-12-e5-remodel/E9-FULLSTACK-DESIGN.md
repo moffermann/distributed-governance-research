@@ -122,7 +122,7 @@ point estimate.
 | **pure cross-sector allocative loss** | no canonical scalar exists | World Bank PERs (diagnostic, no scalar) | **DECLARED** (the quantity E9 most needs) |
 | political budget cycle → visible spending | pre-election composition shift to visible capital (~0.5–1% of GDP/category) | Drazen & Eslava 2010, *JDE* 92(1) | ANCHORED (direction; composition shift, not value-loss %) |
 | pork-barrel / particularistic targeting | allocations follow electoral usefulness, not marginal value (150+ studies) | Golden & Min 2013, *ARPS* 16 | ANCHORED (direction/pervasiveness, qualitative) |
-| maintenance / diffuse-cost underinvestment | LatAm ~2/3 new vs ~1/3 maintenance; +20% to maintenance → ~15% long-run GDP | Rioja 2003, *JPE* 87(9–10) | ANCHORED (cleanest sector number; model-based, infra-only) |
+| maintenance / diffuse-cost underinvestment | new-build bias; optimal maintenance ~2% of GDP; deferred maintenance multiplies later cost | Rioja 2003, *JPE* 87(9–10) + World Bank AICD maintenance briefs | ANCHORED for the SIGN (undervisible = underfunded). NB: the "~2/3 new vs 1/3 maintenance" split is NOT in Rioja 2003 — do not attribute it (calibration agent flag) |
 
 Supporting (direction only): Rogoff & Sibert 1988; Rogoff 1990 *AER*; Khemani 2004 *JDE*.
 

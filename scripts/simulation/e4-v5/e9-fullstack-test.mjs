@@ -14,7 +14,7 @@ const NW = 700;
 
 // 1) REDUCES TO E5: one sector ⇒ zero value tilt ⇒ planning is a no-op ⇒ the stack collapses to E5 selection×delivery.
 {
-  const e9 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, nSec: 1 } });
+  const e9 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, nSec: 1, agendaCapture: 0 } });
   const e5 = delivered2x2(cfg, { nWorlds: NW });
   check('nSec=1: status-quo cell == E5 S cell', approx(e9.cells.c_c_op, e5.cells.S, 1e-9), `${e9.cells.c_c_op} vs ${e5.cells.S}`);
   check('nSec=1: Core-v0 cell == E5 A2 cell', approx(e9.cells.d_d_ve, e5.cells.A2, 1e-9), `${e9.cells.d_d_ve} vs ${e5.cells.A2}`);
@@ -37,6 +37,18 @@ const NW = 700;
   check('planning Shapley is larger under the realistic (assoc<0) association', real.attribution.planning > anti.attribution.planning, `real ${real.attribution.planning} anti ${anti.attribution.planning}`);
   check('realistic association gives a positive planning Shapley', real.attribution.planning > 0, `got ${real.attribution.planning}`);
   check('planning simple effect flips: central-sel > distributed-sel', real.planningUnderCentralSel > real.planningUnderDistributedSel, `${real.planningUnderCentralSel} vs ${real.planningUnderDistributedSel}`);
+}
+
+// 3b) AGENDA CAPTURE (second face of power): the central keeping sectors off the menu raises the planning
+//     contribution monotonically and removes the sign flip (planning becomes positive under distributed selection).
+{
+  const soft = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, agendaCapture: 0 } });
+  const cap1 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, agendaCapture: 1 } });
+  const cap3 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, agendaCapture: 3 } });
+  check('agenda capture raises the planning Shapley vs soft distortion', cap1.attribution.planning > soft.attribution.planning);
+  check('more agenda capture raises planning further', cap3.attribution.planning > cap1.attribution.planning);
+  check('agenda capture turns planning positive under distributed selection', cap1.planningUnderDistributedSel > 0, `got ${cap1.planningUnderDistributedSel}`);
+  check('validatePlanning rejects agendaCapture >= nSec', (() => { try { validatePlanning({ ...PLANNING, agendaCapture: 10 }); return false; } catch { return true; } })());
 }
 
 // 4) ORDERING (Core v0 beats the status quo). The oracle is a greedy REFERENCE, NOT an upper bound, so cells are NOT
