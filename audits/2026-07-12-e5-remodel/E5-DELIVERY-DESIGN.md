@@ -53,13 +53,15 @@ condition statically, which is exactly the corpus finding that **deterrence pre-
 `pi_hon = 0.70`, `loss_hon = 0.05`. These live in the module's `DELIVERY` object (module-local, **not** E4 `THETA`), so
 the frozen E4 contract/hash is untouched.
 
-## Result (PROBABLE world, 1200 worlds)
+## Result (PROBABLE world, 1200 worlds; anchored calibration pi_hon=0.76)
 
 - Selection efficiency (perfect delivery) = **the E4 numbers**: central +44.2%, distributed +98.2%.
-- Delivery efficiency: opaque +68.0%, verified +95.0%.
-- Four cells (fraction of oracle reference): S +30.1% · A1 +42.0% · A3 +66.7% · A2 +93.3%.
-- Main effects (pp of oracle): **delivery** +11.9% (at central) / +26.6% (at distributed); **selection** +36.6% (at
-  opaque) / +51.2% (at verified). **Interaction +14.6%** (positive). Full architecture (A2 − S) **+63.2%**.
+- Delivery efficiency: opaque +73.4% (leak ~26%, Olken/IMF band), verified +95.0%.
+- Four cells (fraction of oracle reference): S +32.5% · A1 +42.0% · A3 +72.0% · A2 +93.3%.
+- Main effects (pp of oracle): **delivery** +9.6% (at central) / +21.3% (at distributed); **selection** +39.5% (at
+  opaque) / +51.2% (at verified). **Interaction +11.7%** (positive). Full architecture (A2 − S) **+60.8%**.
+- Monitoring coupling (anchored 0.0–0.20, headline 0.15): opaque dividend +4.0 pp (A3 +72.0% → +76.0%), ~0 in the
+  saturated verified regime; sweep monotone 0 → +5.1 pp.
 - **Composition: multiplicative.** Actual A2 +93.3% equals the multiplicative prediction σ_D·δ_verified +93.3%
   exactly; the additive prediction (+78.6%) is short by the interaction. The two layers **multiply**; the positive
   interaction is the level-effect signature of that composition.
@@ -88,11 +90,13 @@ worse status quo only widens the gain. This resolves the "opaque calibration is 
 
 **Step 2 — monitoring coupling (`mon_coupling`).** Breaks the structural multiplicativity: Core v0's distributed
 coverage is not only a selection signal, the same citizens also **observe delivery**, lifting the distributed arm's
-effective detection AND recovery (`p_det_eff = p_det + c(1−p_det)`, `r_eff = r + c(1−r)`). With `c = 0.35` the
-distributed arm delivers **+12.3 pp** more than central in the OPAQUE regime (68% → 80%) — coverage **substitutes for
-a missing formal control layer** — and ~0 in the verified regime (already saturated: deterrence holds ex ante). So the
+effective detection AND recovery (`p_det_eff = p_det + c(1−p_det)`, `r_eff = r + c(1−r)`). At the anchored coverage-only
+band (`c = 0.15`, band 0.0–0.20 per Björkman-Svensson / Molina / MGNREGA — small and fragile) the distributed arm
+delivers **+4.0 pp** more than central in the OPAQUE regime (A3 +72.0% → +76.0%) — coverage **substitutes for a missing
+formal control layer** — and ~0 in the verified regime (already saturated: deterrence holds ex ante). So the
 super-multiplicative dividend is **genuine** (delivery depends on the selecting arm) and **largest where formal control
-is weakest**. At `c = 0` the model reduces to the exact multiplicative baseline.
+is weakest**. At `c = 0` the model reduces to the exact multiplicative baseline. (Earlier draft used c=0.35, above the
+anchored band — corrected in the calibration round.)
 
 This turns the honest-limit #1 (multiplicativity is structural) into a **modeled, switchable mechanism**: the
 experiment now shows both the pure multiplicative composition (c=0) and the genuine super-multiplicative dividend
@@ -110,6 +114,31 @@ Declared/plausible today; to be anchored to published sources (no field/paid dat
   honest-share is a modeling choice needing tighter anchoring.
 - verified regime `{p_det, a, r, rep}`: milestone-gating / retention / clawback effectiveness; capture-resistance from
   the E4-v5 block. `loss_hon` (honest production loss).
+
+## Verified calibration table (friendly round — calibration agent, 2026-07-12)
+
+All citations web-verified by the agent unless marked. **Transport rules to state in the paper:** (1) IMF ~30% is
+*process inefficiency*, not diversion — do not equate with theft; (2) monitoring effect sizes are from
+health/education/workfare service-delivery RCTs, not capital-project fund tracing — any lift on a construction leaky
+bucket is an out-of-domain extrapolation.
+
+| model quantity | anchored band | best citation | status |
+|---|---|---|---|
+| opaque divert share (central case) | **~24%** missing (works theft) | Olken 2007, *JPE* 115(2) — Indonesia roads | **ANCHORED** |
+| opaque process loss (broad) | ~30% avg (40% low-income / 27% emerging / 13% advanced) | IMF, *Making Public Investment More Efficient*, 2015 (PIMA/PIE-X) | ANCHORED (process, not theft) |
+| opaque tail (worst case) | ~87% leakage (schools got ~13% of grants) | Reinikka & Svensson 2004, **QJE 119(2)** "Local Capture" | ANCHORED as **tail**, not central |
+| monitoring lift `mon_coupling` (community-coverage only) | **~0.0–0.20** relative leakage cut (small, fragile) | Björkman & Svensson 2009 QJE (health, **failed replications**); Molina et al. 2016 Campbell (heterogeneous) | ANCHORED but FRAGILE — **widen bands; 0.35 was too high** |
+| top-down audit detection/deterrence | ~⅓ relative cut (8pp on 24%) | Olken 2007; Avis, Ferraz & Finan 2018 *JPE* 126(5) (~8% future) | ANCHORED (this is the verified regime's detection, not the coupling) |
+| social-audit recovery/clawback | detection + recovery > deterrence | Afridi & Iversen 2014, IZA DP 8095 (MGNREGA, Andhra Pradesh) | ANCHORED (supports coupling recovery channel) |
+| ex-ante deterrence ⇒ verified ~0 diversion | announced audit deters before the act | Olken 2007 (ex-ante 4%→100%); Becker 1968 | ANCHORED — validates the "deterrence ex ante" simplification |
+| milestone-gating effectiveness magnitude | mechanism sound, **no citable effect size** | World Bank PforR 2012 / OBA; CGD | **DECLARED, not anchored** |
+| reputational-exclusion stake | — | none | **DECLARED, no anchor** |
+| share of projects net-unsatisfactory | ~25–30% (plausible, unconfirmed) | World Bank IEG / PEFA | **UNVERIFIED — label declared** |
+
+**Implied code recalibration:** lower `mon_coupling` default from 0.35 to ~0.15 (coverage-only band 0.0–0.20) and
+sweep it; keep opaque central near Olken's ~24% divert; keep verified ~0 diversion (anchored deterrence); label
+milestone magnitude and reputational stake as declared. Do NOT map the 33% mortality or 87% capture figures onto the
+monitoring lift.
 
 ## Next
 

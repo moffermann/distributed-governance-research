@@ -34,11 +34,18 @@ import { safeLog } from './adapter.mjs';
 //           Svensson 2004) extreme by raising temptation / lowering pi_hon.
 //   verified ~2.5% loss: milestone-gating + retention + recovery + a reputational stake make the deterrent bind ex
 //           ante, so no opportunistic executor diverts (matches the corpus finding: deterrence pre-empts punishment).
+// Calibration (friendly round, 2026-07-12; anchors in audits/2026-07-12-e5-remodel/E5-DELIVERY-DESIGN.md).
+// ANCHORED: opaque central divert ~24% (Olken 2007 JPE 115(2), Indonesia roads); ex-ante deterrence ⇒ verified ~0
+//   diversion (Olken 2007; Avis-Ferraz-Finan 2018 JPE 126(5); Becker 1968). DECLARED (mechanism sound, no citable
+//   magnitude): milestone-gating effectiveness, the reputational stake `rep`. Transport rules for the paper: IMF ~30%
+//   (Making Public Investment More Efficient 2015) is PROCESS inefficiency, not theft; Reinikka & Svensson 2004 QJE
+//   119(2) ~87% is a TAIL, not the central case; monitoring effect sizes are from service-delivery RCTs, not fund
+//   tracing (out-of-domain lift).
 export const DELIVERY = {
-  pi_hon:   0.70,   // intrinsically-honest share of executors (structural prior; the rest face the incentive condition)
+  pi_hon:   0.76,   // intrinsically-honest share (tuned so the opaque central case lands at the Olken ~24% divert band)
   loss_hon: 0.05,   // honest/deterred production loss (delivered = 1 − loss_hon)
   opaque:   { p_det: 0.10, a: 0.90, r: 0.00, rep: 0.00, note: 'weak control: low detection, unprotected advances, no recovery/reputation' },
-  verified: { p_det: 0.75, a: 0.20, r: 0.50, rep: 0.50, note: 'architecture: milestone-gated advances, recovery, reputational stake' },
+  verified: { p_det: 0.75, a: 0.20, r: 0.50, rep: 0.50, note: 'architecture: milestone-gated advances, recovery, reputational stake (magnitude DECLARED, not anchored)' },
   // MONITORING COUPLING (step 2): Core v0's distributed coverage is not only a SELECTION signal — the same citizens who
   // routed the budget also observe delivery, so distributed selection raises BOTH the effective detection of diversion
   // (deters it) AND the effective recovery of diverted funds (clawback once flagged):
@@ -47,7 +54,10 @@ export const DELIVERY = {
   // arm delivers a HIGHER fraction than the central arm under the SAME control regime — a genuine super-multiplicative
   // dividend, largest in the OPAQUE regime (where distributed coverage partially SUBSTITUTES for a missing formal
   // control layer). Default 0 = independent (pure multiplicative baseline). Magnitude to be anchored (community-
-  // monitoring / social-audit detection-and-recovery lift).
+  // monitoring / social-audit detection-and-recovery lift). ANCHORED band for coverage-only monitoring is ~0.0–0.20
+  // (Björkman-Svensson 2009 QJE — health, with FAILED replications; Molina et al. 2016 Campbell — small/heterogeneous;
+  // Afridi-Iversen 2014 MGNREGA — supports the recovery channel). The stronger ~1/3 audit effect (Olken 2007) is the
+  // VERIFIED regime's own detection, NOT this coverage coupling. Headline uses 0.15; swept across the band.
   mon_coupling: 0.0,
 };
 
@@ -196,10 +206,16 @@ function main() {
     safeLog(`  The positive interaction is the level-effect signature of multiplicative composition.\n`);
 
     // (ii) monitoring coupling ON (step 2): distributed coverage also monitors delivery (detection + clawback).
-    const rc = delivered2x2(cfg, { nWorlds: 1200, delivery: { ...DELIVERY, mon_coupling: 0.35 } });
-    safeLog('Monitoring coupling (step 2) — distributed coverage also fiscalizes delivery (mon_coupling=0.35):');
+    // Anchored coverage-only band 0.0–0.20 (fragile evidence); headline 0.15.
+    const rc = delivered2x2(cfg, { nWorlds: 1200, delivery: { ...DELIVERY, mon_coupling: 0.15 } });
+    safeLog('Monitoring coupling (step 2) — distributed coverage also fiscalizes delivery (mon_coupling=0.15, anchored band 0.0–0.20):');
     safeLog(`  delivered fraction, distributed − central:  opaque ${pct(rc.monitoringDividend.opaque)} · verified ${pct(rc.monitoringDividend.verified)} (saturated)`);
     safeLog(`  weak-control cell A3 (distributed selection, opaque delivery) rises ${pct(r.cells.A3)} → ${pct(rc.cells.A3)} as coverage substitutes for the missing control layer.`);
+    safeLog(`  coupling sweep across the anchored band (opaque monitoring dividend):`);
+    for (const c of [0.0, 0.05, 0.10, 0.15, 0.20]) {
+      const rr = delivered2x2(cfg, { nWorlds: 700, delivery: { ...DELIVERY, mon_coupling: c } });
+      safeLog(`     mon_coupling ${c.toFixed(2)}  →  dividend(opaque) ${pct(rr.monitoringDividend.opaque)}  ·  A3 ${pct(rr.cells.A3)}`);
+    }
     safeLog(`  → the dividend is a GENUINE (non-structural) super-multiplicativity, largest where formal control is weakest.\n`);
 
     // (iii) Step 1 — opaque-band sensitivity, coupling OFF so the delivery effect is read cleanly.
