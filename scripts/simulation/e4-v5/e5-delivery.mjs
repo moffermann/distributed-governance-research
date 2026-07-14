@@ -349,7 +349,7 @@ function main() {
     // Favorable R=0 robustness (Codex): drop the reputational stake entirely — the verified regime then admits SOME
     // diversion, and the full gain still holds. This is the honest less-favorable-to-Core-v0 disclosure.
     const r0 = delivered2x2(cfg, { nWorlds: 1200, delivery: { ...DELIVERY, verified: { ...DELIVERY.verified, rep: 0.0 } } });
-    safeLog(`R=0 robustness (no reputational stake): verified delivery ${pct(r0.delivery.centralVerified)}, verified diversion incidence ${pct(r0.diversionIncidence.A1)}, full ${pct(r0.full)} 95% CI [${pct(r0.fullCI[0])}, ${pct(r0.fullCI[1])}] — the gain survives without the (unanchored) reputation term.\n`);
+    safeLog(`R=0 robustness (no reputational stake): verified delivery ${pct(r0.delivery.centralVerified)}, verified diversion incidence ${pct(r0.diversionIncidence.A1)}, full ${pct(r0.full)} 95% CONDITIONAL-MC CI [${pct(r0.fullCI[0])}, ${pct(r0.fullCI[1])}] — the gain survives without the (unanchored) reputation term.\n`);
 
     // (iii) Step 1 — opaque-band sensitivity, coupling OFF so the delivery effect is read cleanly.
     safeLog('Opaque-band sensitivity (delivery effect and full-architecture gain as the status-quo leak worsens):');

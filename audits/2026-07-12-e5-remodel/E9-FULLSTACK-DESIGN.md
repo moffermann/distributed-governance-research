@@ -204,7 +204,9 @@ pass, now applied:
 
 **Honest final result (PROBABLE, secValSpread=0.3, assoc=−0.6):** full-stack gain **+52.5% [+51.8,+53.1]**.
 Shapley: **planning +3.8% [+3.3,+4.2] · selection +37.9% [+37.4,+38.5] · delivery +10.8% [+10.5,+11.1]** (with
-recycling, planning +4.8%). **Conclusion: SELECTION and DELIVERY are the robust, large layers; PLANNING is a MODEST,
+recycling, planning +4.8%). **Conclusion: SELECTION and DELIVERY are the large layers in PROBABLE (NOT "robust" — each
+reverses sign in an extreme named world, though the full Core v0 diagonal stays positive everywhere; see the code's
+named-world table and the banner); PLANNING is a MODEST,
 CONDITIONAL third layer** — positive only under substantial declared sector heterogeneity AND the realistic negative
 need↔visibility association, near-zero/negative otherwise. Magnitude DECLARED and numerically modest; **not in obvious
 tension with the broader, non-commensurate IMF/Rioja evidence, but NOT anchored to a cross-sector point estimate**.
@@ -252,8 +254,8 @@ observable moments, plus found a real BUG. Applied:
 **What the anchoring round found (the SOFT-only slice, mechanism absent):** with `agendaCapture=0` and the moment-mapped
 params, the planning contribution is ~+0.6% (strict) to +3.2% (recycled) — the 0–3% range both reviewers converged on.
 **But this slice omits agenda capture, the layer's dominant mechanism, so it is NOT the planning result** (see the
-framing decision below — do not headline a planning figure). **SELECTION (+37–43%) and DELIVERY (+11%) remain the large,
-robust, quantified layers.** 26/26 tests.
+framing decision below — do not headline a planning figure). **SELECTION (+37–43%) and DELIVERY (+11%) remain the
+large-in-PROBABLE, quantified layers.** 26/26 tests.
 
 ## Planning-layer framing — DO NOT report a figure (author decision, 2026-07-13)
 
@@ -264,7 +266,7 @@ contribution would falsely read as "we measured planning and it is small," when 
 layer's magnitude hinges on agenda capture, which cannot be anchored today, so we do NOT quantify it.**
 
 Therefore the E9 write-up should:
-- **Quantify only SELECTION and DELIVERY** (anchored, robust, large layers).
+- **Quantify only SELECTION and DELIVERY** (anchored, large-in-PROBABLE layers; not robust across the named worlds).
 - Present **PLANNING qualitatively**: the mechanism (agenda capture / second face of power) is IDENTIFIED and its
   DIRECTION anchored (COFOG structure; the election-period shift to visible spending; maintenance neglect), but its
   MAGNITUDE requires country-specific budget data (which whole functions a given central actually excludes) and is left

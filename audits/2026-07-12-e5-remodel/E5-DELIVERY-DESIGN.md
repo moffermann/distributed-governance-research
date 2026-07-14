@@ -47,11 +47,14 @@ the one-shot E4 world (no time dimension, so no endogenous pool cycling — the 
 condition statically, which is exactly the corpus finding that **deterrence pre-empts punishment**):
 
 - A share `pi_hon` of executors are **intrinsically honest** (deliver `1 − loss_hon`). The rest are opportunistic and
-  **divert iff** temptation `t ~ U(0,1)` exceeds the regime deterrent `det = p_det · [(1 − a(1 − r)) + gamma + rep]`
+  **divert iff** temptation `t` exceeds the regime deterrent `det = p_det · [(1 − a(1 − r)) + gamma + rep]`
   (`a` = up-front advance exposure, `r` = recovery, `gamma` = performance guarantee, `rep` = reputational stake).
+  Temptation is `t ~ U(0,1)` for most opportunists **plus a grand-corruption TAIL** (`tempt_tail`, `t ∈ [1,2]`) so even
+  a strong (`det>1`) verified regime keeps a LOW-but-nonzero residual diversion (Adversarial R1 #8 — see the banner).
 - A diverting executor loses `a(1 − r)` of the budget (the unrecovered advance) → delivers `1 − a(1 − r) − loss_hon`.
-- Delivered value `V = Σ_{j∈funded} S_j · f_j`. (A half-built harmful project does half its harm — consistent; the
-  **stolen funds' cost is 0 social value here and belongs to E10**, not this value layer.)
+- Delivered value `V = Σ_{j∈funded} S_j · f_j`. (A half-built harmful project does half its harm — consistent. The
+  diverted portion is delivered value NOT produced, so it is **already charged here** as the lost `S_j·(1 − f_j)`; E10
+  does NOT re-charge it — E10's `κ` is pure ADMINISTRATIVE machinery cost, de-overlapped from this delivery leakage.)
 
 ### Calibration (declared, not fitted; magnitudes anchored, directions from the corpus)
 
@@ -146,13 +149,13 @@ bucket is an out-of-domain extrapolation.
 | monitoring lift `mon_coupling` (community-coverage only) | **~0.0–0.20** relative leakage cut (small, fragile) | Björkman & Svensson 2009 QJE (health, **failed replications**); Molina et al. 2016 Campbell (heterogeneous) | ANCHORED but FRAGILE — **widen bands; 0.35 was too high** |
 | top-down audit detection/deterrence | ~⅓ relative cut (8pp on 24%) | Olken 2007; Avis, Ferraz & Finan 2018 *JPE* 126(5) (~8% future) | ANCHORED (this is the verified regime's detection, not the coupling) |
 | social-audit recovery/clawback | detection + recovery > deterrence | Afridi & Iversen 2014, IZA DP 8095 (MGNREGA, Andhra Pradesh) | ANCHORED (supports coupling recovery channel) |
-| ex-ante deterrence ⇒ verified ~0 diversion | announced audit deters before the act | Olken 2007 (ex-ante 4%→100%); Becker 1968 | ANCHORED — validates the "deterrence ex ante" simplification |
+| ex-ante deterrence ⇒ verified ~near-zero (low-but-nonzero, grand-corruption tail) diversion | announced audit deters before the act | Olken 2007 (ex-ante 4%→100%); Becker 1968 | ANCHORED — validates the "deterrence ex ante" simplification |
 | milestone-gating effectiveness magnitude | mechanism sound, **no citable effect size** | World Bank PforR 2012 / OBA; CGD | **DECLARED, not anchored** |
 | reputational-exclusion stake | — | none | **DECLARED, no anchor** |
 | share of projects net-unsatisfactory | ~25–30% (plausible, unconfirmed) | World Bank IEG / PEFA | **UNVERIFIED — label declared** |
 
 **Implied code recalibration:** lower `mon_coupling` default from 0.35 to ~0.15 (coverage-only band 0.0–0.20) and
-sweep it; keep opaque central near Olken's ~24% divert; keep verified ~0 diversion (anchored deterrence); label
+sweep it; keep opaque central near Olken's ~24% divert; keep verified ~near-zero (low-but-nonzero, grand-corruption tail) diversion (anchored deterrence); label
 milestone magnitude and reputational stake as declared. Do NOT map the 33% mortality or 87% capture figures onto the
 monitoring lift.
 
@@ -162,7 +165,7 @@ monitoring lift.
 `gamma` guarantee term to the Model-1 incentive condition (verified 0.10, World Bank standard); separate world/executor
 PRNG streams (E5 reduces to E4 exactly); reframed opaque as the Olken value-loss moment (pi_hon 0.78); report diversion
 incidence + value leakage + a bootstrap CI on the full gain; named the multiplicativity an accounting identity; labelled
-verified ~0 diversion as conditional ex-ante deterrence and the whole calibration an identified-set reference.
+verified ~near-zero (low-but-nonzero, grand-corruption tail) diversion as conditional ex-ante deterrence and the whole calibration an identified-set reference.
 
 **Second robustness pass — DONE (commit 418c7cd):** value/complexity-correlated delivery risk (`val_risk`); 20-seed
 replication; joint Latin-hypercube sweep over the declared delivery ranges (replaces the 1-D sweep); `validateDelivery`

@@ -302,7 +302,7 @@ function main() {
       safeLog(`   ${nm.padEnd(12)}  ${pct(rw.fullStackGain).padStart(8)}  ${pct(rw.attribution.planning).padStart(8)}  ${pct(rw.attribution.selection).padStart(9)}  ${pct(rw.attribution.delivery).padStart(8)}`);
     }
     safeLog('   → SELECTION and DELIVERY are LARGE in PROBABLE; selection reverses in PRO_CENTRAL and delivery in PRO_DIST');
-    safeLog('     (stronger delivery magnifies harmful portfolios there). The full Core v0 advantage holds in ALL worlds.\n');
+    safeLog('     (stronger delivery magnifies harmful portfolios there). The full Core v0 advantage holds in ALL FOUR named worlds.\n');
 
     safeLog('Planning as a CONDITIONAL simple effect (distributed − central planning), context-dependent:');
     safeLog(`  under central selection: ${pct(r.planningUnderCentralSel)} ${civ(r.planningCI.central)} · under distributed selection: ${pct(r.planningUnderDistributedSel)} ${civ(r.planningCI.distributed)} (Core v0 context)\n`);
