@@ -76,10 +76,12 @@ const NW = 800;
   // shared retention holds here too (the estimand is world-consistent in every scenario, not just PROBABLE).
   const fullPD = delivered2x2(cfgPD, { nWorlds: NW });
   const runCPD = delivered2x2(cfgPD, { nWorlds: NW, budgetScale: 1 - r.kappa_C });
+  const runDPD = delivered2x2(cfgPD, { nWorlds: NW, budgetScale: 1 - r.kappa_D });
   check('PRO_DIST: signed net-budget estimand is finite and coherent', Number.isFinite(r.valueOnly.gain) && Number.isFinite(r.withCosts.gain) && Number.isFinite(r.adminCostContribution));
   check('PRO_DIST: value-only gain is strongly positive (distributed-favourable world)', r.valueOnly.gain > 0.5, `gain ${r.valueOnly.gain}`);
-  check('PRO_DIST: shared retention holds (scaled run keeps the same worlds/oracle)', fullPD.n === runCPD.n && approx(fullPD.sumO, runCPD.sumO, 1e-6), `n ${fullPD.n}/${runCPD.n}`);
+  check('PRO_DIST: shared retention holds for BOTH arms (same worlds/oracle at scale 1, 1−κ_C, 1−κ_D)', fullPD.n === runCPD.n && fullPD.n === runDPD.n && approx(fullPD.sumO, runCPD.sumO, 1e-6) && approx(fullPD.sumO, runDPD.sumO, 1e-6), `n ${fullPD.n}/${runCPD.n}/${runDPD.n}`);
   check('PRO_DIST: E10 central with-cost value == shared-world net cell (signed, over the full oracle)', approx(r.withCosts.statusQuo, runCPD.cells.S, 1e-12), `${r.withCosts.statusQuo} vs ${runCPD.cells.S}`);
+  check('PRO_DIST: E10 Core v0 with-cost value == shared-world net cell (signed, over the full oracle)', approx(r.withCosts.coreV0, runDPD.cells.A2, 1e-12), `${r.withCosts.coreV0} vs ${runDPD.cells.A2}`);
 }
 
 // 7) VALIDATION (Adversarial R2 #5): fail-closed on invalid cost configs.

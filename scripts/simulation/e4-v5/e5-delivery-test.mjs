@@ -96,7 +96,8 @@ const NW = 1200;
   check('validateDelivery rejects negative tempt_tail', throws({ ...DELIVERY, tempt_tail: -0.1 }));
   check('validateDelivery rejects tempt_tail > 1', throws({ ...DELIVERY, tempt_tail: 1.5 }));
   check('validateDelivery rejects NaN tempt_tail', throws({ ...DELIVERY, tempt_tail: NaN }));
-  check('validateDelivery rejects a MISSING tempt_tail (would silently run the zero-tail DGP)', throws({ ...DELIVERY, tempt_tail: undefined }));
+  check('validateDelivery rejects a truly-OMITTED tempt_tail (would silently run the zero-tail DGP)', (() => { const { tempt_tail, ...noTail } = DELIVERY; return throws(noTail); })());
+  check('validateDelivery rejects an explicit undefined tempt_tail', throws({ ...DELIVERY, tempt_tail: undefined }));
   // Adversarial R2 verify #3: budgetScale is a validated primitive in [0,1].
   check('delivered2x2 rejects budgetScale > 1 (overfunding)', (() => { try { delivered2x2(cfg, { nWorlds: 10, budgetScale: 1.2 }); return false; } catch { return true; } })());
   check('delivered2x2 rejects negative budgetScale', (() => { try { delivered2x2(cfg, { nWorlds: 10, budgetScale: -0.1 }); return false; } catch { return true; } })());
@@ -112,7 +113,7 @@ const NW = 1200;
   const noTail = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, tempt_tail: 0.0 } });
   check('default: verified diversion is nonzero but small (grand-corruption tail residual)', r.diversionIncidence.A1 > 0 && r.diversionIncidence.A1 < 0.10, `got ${r.diversionIncidence.A1}`);
   check('R=0 stress: verified diversion stays nonzero (deterrent weaker, tail still bites)', r0.diversionIncidence.A1 > r.diversionIncidence.A1, `r0 ${r0.diversionIncidence.A1} vs r ${r.diversionIncidence.A1}`);
-  check('removing the tail (tempt_tail=0) collapses verified diversion to EXACTLY zero (det>1 ⇒ U(0,1) never diverts)', approx(noTail.diversionIncidence.A1, 0, 1e-12), `noTail ${noTail.diversionIncidence.A1}`);
+  check('removing the tail (tempt_tail=0) collapses verified diversion to EXACTLY zero (det>1 ⇒ U(0,1) never diverts)', noTail.diversionIncidence.A1 === 0, `noTail ${noTail.diversionIncidence.A1}`);
   check('the full-architecture gain is robust to whether the tail is on', Math.abs(r.full - noTail.full) < 0.03);
 }
 

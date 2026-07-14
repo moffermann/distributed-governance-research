@@ -323,10 +323,10 @@ function main() {
       const row = [-1.0, -0.6, 0.0, 0.6].map((a) => pct(fullStack(cfg, { nWorlds: 500, planning: { ...PRIMARY, secValSpread: sv, assoc: a } }).attribution.planning).padStart(7));
       safeLog(`     ${sv.toFixed(1).padStart(4)}                 ${row.join('  ')}`);
     }
-    safeLog('   → the soft credit distortion makes planning a small-to-moderate POSITIVE contribution in PROBABLE that');
-    safeLog('     GROWS with the DECLARED sector-value dispersion (≈+2% at the low spread → ≈+15% at a high declared');
-    safeLog('     stress); its magnitude rides entirely on secValSpread, which is not robustly anchored. (Planning\'s SIGN');
-    safeLog('     reverses across the NAMED WORLDS above — not across this all-PROBABLE grid.)\n');
+    safeLog('   → the soft credit distortion makes planning a small-to-moderate POSITIVE contribution that GROWS with the');
+    safeLog('     DECLARED sector-value dispersion (≈+2% at the low spread → ≈+15% at a high declared stress). Planning');
+    safeLog('     stays POSITIVE across the named worlds above (it does not reverse — SELECTION and DELIVERY are the layers');
+    safeLog('     that reverse); its MAGNITUDE, not its sign, is what rides on the not-robustly-anchored secValSpread.\n');
 
     // AGENDA CAPTURE (the second face of power) is the mechanism that makes planning a robust positive layer: the
     // central keeps its lowest-perceived sectors OFF the menu. Direction anchored (Bachrach–Baratz 1962; political
@@ -337,9 +337,9 @@ function main() {
       const ra = fullStack(cfg, { nWorlds: 600, planning: { ...PRIMARY, agendaCapture: ac } });
       safeLog(`   ${String(ac).padStart(2)}/${PLANNING.nSec}              ${pct(ra.attribution.planning).padStart(7)}           ${pct(ra.planningUnderDistributedSel).padStart(7)}            ${pct(ra.fullStackGain).padStart(7)}`);
     }
-    safeLog('   → agenda capture is the mechanism that makes planning a ROBUST positive layer (it raises the planning');
-    safeLog('     Shapley and turns it positive even under DISTRIBUTED selection, removing the soft-distortion sign');
-    safeLog('     dependence), but it is NOT anchorable today (no cited universal whole-function-exclusion moment, no');
+    safeLog('   → agenda capture strengthens planning: it raises the planning Shapley and lifts the near-zero,');
+    safeLog('     CI-unresolved distributed-selection effect (≈+0.2% at 0 captured) into a materially positive one');
+    safeLog('     (≈+5.6% at 3 captured), but it is NOT anchorable today (no cited universal whole-function-exclusion moment, no');
     safeLog('     worked country example yet), so it is PROPOSED CONTINUATION WORK.\n');
 
     safeLog('FRAMING (author decision): DO NOT report a planning-layer FIGURE. The soft-only slice above (≈+2–6% at the');

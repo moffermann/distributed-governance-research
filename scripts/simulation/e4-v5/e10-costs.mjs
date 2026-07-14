@@ -5,7 +5,7 @@
 //
 // TWO SWITCHES (author requirement):
 //   • PLANNING is switchable OFF (default OFF). Its magnitude is deferred/qualitative (see e9-fullstack.mjs — agenda
-//     capture is the dominant, not-yet-anchorable mechanism), so it must NOT be folded quantitatively into the cost
+//     capture is a proposed, not-yet-anchorable mechanism), so it must NOT be folded quantitatively into the cost
 //     result. Planning OFF ⇒ the value base is E5 (selection × delivery). Planning ON ⇒ the value base is E9.
 //   • COSTS are switchable OFF (κ_C = κ_D = 0 ⇒ E10 reduces to the value stack).
 //

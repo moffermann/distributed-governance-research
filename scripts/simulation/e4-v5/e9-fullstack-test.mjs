@@ -89,6 +89,11 @@ const PRIMARY = { ...PLANNING, residualMode: 'recycle' };
   check('validatePlanning rejects nKeep > nSec when excluding', throwsP({ ...PLANNING, hardExclude: 1, nKeep: 99 }));
   check('validatePlanning rejects a bad residualMode', throwsP({ ...PLANNING, residualMode: 'nope' }));
   check('fullStack rejects an invalid delivery config (missing rep)', (() => { try { fullStack(cfg, { nWorlds: 10, delivery: { ...DELIVERY, verified: { p_det: 0.75, a: 0.2, r: 0.5, gamma: 0.1 } } }); return false; } catch { return true; } })());
+  // Adversarial R2 verify #5: budgetScale is a validated primitive in [0,1] in fullStack too.
+  const throwsBS = (bs) => { try { fullStack(cfg, { nWorlds: 10, budgetScale: bs }); return false; } catch { return true; } };
+  check('fullStack rejects budgetScale > 1 (overfunding)', throwsBS(1.2));
+  check('fullStack rejects negative budgetScale', throwsBS(-0.1));
+  check('fullStack rejects NaN budgetScale', throwsBS(NaN));
 }
 
 console.log(`\nE9 full stack: ${pass} passed, ${fail} failed.`);
