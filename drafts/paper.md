@@ -10,9 +10,9 @@ Public spending routinely asks one hierarchy to choose projects, execute them, a
 
 We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
 
-Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a public adversarial review of 43 attacks across five rounds — each integrated into the design or recorded as a bounded limitation — and to a deliberately hostile symmetric benchmark. We retire the large value-per-budget multiplier an earlier version reported: it does not survive that symmetric benchmark, so we do not claim it as a calibrated effect, and we rest instead on the architecture and the mechanism's anchored direction. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its standalone magnitude is deferred. Symmetric net-budget accounting makes administrative cost roughly neutral: the modeled advantage lies in selection and delivery, not overhead. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
+Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a public adversarial review of 43 attacks across five rounds — each integrated into the design or recorded as a bounded limitation — and to a deliberately hostile symmetric benchmark. We retire the large value-per-budget multiplier an earlier version reported: it does not survive that symmetric benchmark, so we do not claim it as a calibrated effect, and we rest instead on the architecture and the mechanism's anchored direction. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its standalone magnitude is deferred. Administrative cost does not run against the distributed arm: net-budget accounting leaves it roughly neutral under a conservative symmetric floor, and a genuine, if modest, advantage once the realistic asymmetry (the central's appraisal/prioritization bureaucracy ≫ a platform with near-marginal-zero fiscalization) is allowed. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
 
-This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulations provide conditional model contrasts for selection, delivery, and administrative cost, but their units are uncalibrated and partial-equilibrium and do not identify target-domain treatment effects; and claims are scoped to infrastructure-like public investment. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
+This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulations provide conditional model contrasts for selection, delivery, and administrative cost, but their units are uncalibrated and partial-equilibrium and do not identify target-domain treatment effects; and the empirical claims are demonstrated on project-shaped, milestone-verifiable public investment (infrastructure is the clearest case) — the architecture itself is general across that project-shaped, discretionary domain, not limited to infrastructure. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
 
 ## 1. Introduction
 
@@ -123,8 +123,9 @@ both directions (Demsetz 1969; Section 2). Our contributions are:
    ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC
    interval +58.0, +59.2]; a conditional
    three-layer attribution keeps the full Core v0 diagonal positive in every
-   named world while planning's standalone magnitude is left unquantified; and symmetric
-   net-budget accounting leaves administrative cost roughly neutral. The earlier
+   named world while planning's standalone magnitude is left unquantified; and net-budget
+   accounting leaves administrative cost roughly neutral under a conservative symmetric
+   floor, with a modest Core v0 advantage in the realistic asymmetric case. The earlier
    agent-based apparatus produced a single compound value-per-budget ratio; we
    **retire that compound as a calibrated effect**: it does not survive a
    pre-registered, symmetric stress test that strips the central of its real-world
@@ -310,8 +311,9 @@ And two further contributions concern measurement and method:
   an independent finding); a matched selection-and-delivery extension gains
   ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC interval +58.0, +59.2]; a conditional
   three-layer attribution keeps the full Core v0 diagonal positive in every
-  named world while planning's standalone magnitude remains unquantified; and symmetric
-  net-budget accounting leaves administrative cost roughly neutral. Separately, a later
+  named world while planning's standalone magnitude remains unquantified; and net-budget
+  accounting leaves administrative cost roughly neutral under a conservative symmetric floor,
+  with a modest Core v0 advantage in the realistic asymmetric case. Separately, a later
   pre-registered symmetric gate — a **selection-only** test with delivery held
   at parity — finds the *selection* advantage positive but small (Section 6);
   it does not test the delivery interaction. This work also introduces the
@@ -1123,8 +1125,8 @@ consistent with low-salience under-provision, but it neither identifies
 agenda capture nor calibrates its magnitude; mental health is a funded
 subfunction, not an excluded top-level COFOG function.
 
-**Finding 10: administrative cost is roughly neutral once accounted
-symmetrically — the advantage is delivered value, not overhead.** A tenth
+**Finding 10: administrative cost favors Core v0 — roughly neutral only under a
+conservative symmetric floor, a genuine advantage in the realistic asymmetric case.** A tenth
 experiment (`scripts/simulation/e4-v5/e10-costs.mjs`) adds the administrative
 and machinery cost each institution runs and Core v0 largely replaces — the
 value-proxy studies, allocation and prioritization apparatus, and licensing
@@ -1133,18 +1135,29 @@ The model handles these costs in three ways. It subtracts them from each
 arm's *budget* before selection, so the value loss is sub-proportional
 because greedy funding cuts the marginal projects first; it charges Core v0's
 own verification and recovery machinery rather than treating it as free; and
-it avoids double-counting the delivery leakage already modeled in E5. At the declared shares κ_C = 0.08 and κ_D = 0.05,
-administrative cost changes the modeled gap from +58.6 to +57.7 reference
-points — a −0.9-point contribution: **roughly neutral**. The Core v0
-advantage comes from **selection and delivery**, not from an
-administrative-cost saving; a decisive cost advantage would require the
-central's overhead to exceed the platform's by more than symmetric
-accounting supports. The cost shares are declared scenario inputs, not
-measured arm-specific costs: the central-machinery direction is anchored to
-documented public-spending waste (IDB 2018), while the platform side is
-illustrated — directionally, not as a measured input — by established public
-e-procurement systems whose operating cost runs low (KONEPS, ChileCompra,
-ProZorro).
+it avoids double-counting the delivery leakage already modeled in E5. We report
+two **declared** scenarios (régime costs only — one-time implementation is excluded
+as amortized). Under a **conservative symmetric floor** (κ_C = 0.08, κ_D = 0.05) the
+layer is roughly neutral: administrative cost moves the modeled gap from +58.6 to +57.7
+reference points, a −0.9-point contribution. But that symmetry is a deliberate floor,
+not the realistic case. In steady state the central's machinery — appraisal and
+value-proxy studies, the prioritization and allocation bureaucracy, approvals, and the
+salaries that run them — is a large recurring overhead, while Core v0 runs on a digital
+platform plus AI-assisted and citizen-sourced fiscalization at near-marginal-zero cost.
+The realistic case is therefore **asymmetric** (κ_C ≫ κ_D), and it splits into two honest
+statements. First, a **direct fiscal saving**: at a declared κ_C = 0.12 versus κ_D = 0.02,
+Core v0 frees about a tenth of the budget from pure administrative overhead — a large,
+directionally-anchored cost advantage. Second, its **delivered-value effect** is smaller
+(about +0.4 reference points on the gap) because that freed budget funds marginal,
+low-value projects (the net-budget sub-proportionality). So the honest reading is not "no
+cost difference": the **direction favors Core v0**; "roughly neutral" holds only under the
+conservative symmetric floor; and the realistic asymmetric case is a genuine — though
+welfare-modest and unquantified — cost advantage. The cost shares are declared scenario
+inputs, not measured arm-specific costs: the central-machinery direction is anchored to
+documented public-spending waste (IDB 2018) and to the large, recurring
+appraisal/prioritization bureaucracy; the platform side to the low operating cost of
+established public e-procurement systems (KONEPS, ChileCompra, ProZorro) and near-zero
+marginal AI/citizen fiscalization.
 
 **What survives.** Stripped to essentials: (1) a pre-registered symmetric gate that
 strips the central of its real-world pathologies — its best case — leaves the distributed
@@ -1169,7 +1182,8 @@ effect; and (4) taken together, E5–E10 locate the conditional advantage in sel
 verified delivery, not overhead: E5 measures those margins separately on matched
 portfolios; E9 supplies a conditional full-stack attribution whose component signs vary
 by world while the full diagonal stays positive; and E10 leaves administrative cost
-roughly neutral. Planning remains unresolved quantitatively — its agenda-capture
+roughly neutral under a conservative symmetric floor, with the direction favoring Core v0
+(a modest advantage in the realistic asymmetric case). Planning remains unresolved quantitatively — its agenda-capture
 mechanism is directionally grounded, but its standalone magnitude is deliberately deferred rather
 than manufactured from an unanchored scenario. Any calibrated total delivered-value
 effect on real data remains future work.
@@ -1390,13 +1404,15 @@ conditional attributions through the declared sector generator, not standalone
 estimates; individual layer signs reverse in extreme worlds even though the full
 Core v0 diagonal remains positive in all four named worlds. Planning's
 agenda-capture direction is anchored but its magnitude is unquantified. E10's
-roughly neutral result rests on declared symmetric net-budget shares, which are
-scenario inputs, not measured arm-specific costs. None of these is a field-effect
+cost result rests on declared net-budget shares (scenario inputs, not measured
+arm-specific costs): roughly neutral under a conservative symmetric floor, and a modest
+Core v0 advantage under the realistic asymmetry (κ_C ≫ κ_D). None of these is a field-effect
 estimate.
 
 **The outcome measure is a bounded, non-distributional aggregate.** The value
 the model scores is a cardinal utilitarian-style sum over affected parties on a
-bounded, infrastructure-like public-investment slice; it is not distributionally
+bounded slice of project-shaped, milestone-verifiable public investment (infrastructure
+is the clearest case, but the architecture is not limited to it); it is not distributionally
 weighted and says nothing about redistribution, equity, or who bears benefits and
 harms. A portfolio can score well on this measure while distributing badly.
 Applying the criterion across groups, or to the whole budget or the purpose of
@@ -1524,9 +1540,10 @@ the modeled advantage comes from: the full-stack diagonal stays positive
 across the named worlds even when individual Shapley contributions reverse in
 extreme corners; agenda capture is represented as planning's principal
 mechanism, its direction anchored but its standalone magnitude left unquantified; and
-symmetric net-budget accounting leaves administrative
-cost roughly neutral. In this model, the architecture's advantage is delivered
-value, not cheap administration. But those magnitudes are conditional
+net-budget accounting leaves administrative
+cost roughly neutral under a conservative symmetric floor, and a modest Core v0 advantage
+under the realistic asymmetry. In this model, the architecture's advantage is delivered
+value, and administrative cost adds to it rather than against it. But those magnitudes are conditional
 model-internal contrasts, not calibrated field effects, and we do not build the
 paper on them. What the paper actually stands on is the architecture and the
 mechanism's anchored direction, not a calibrated number. Its hardest check — a

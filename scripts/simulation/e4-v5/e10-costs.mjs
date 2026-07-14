@@ -38,6 +38,15 @@ export const COSTS = {
   planningOn: false,  // author requirement: PLANNING OFF by default (its magnitude is deferred; do not fold into costs)
 };
 
+// A REALISTIC ASYMMETRIC scenario (DECLARED, not measured). The symmetric COSTS above is a deliberately CONSERVATIVE
+// floor; it is NOT the realistic case. In steady state (régime) the central's machinery — appraisal / value-proxy
+// studies, prioritization and allocation bureaucracy, approvals, and the SALARIES that run them — is a large recurring
+// overhead, while Core v0's operating cost is a digital platform + maintenance + AI-assisted and citizen-sourced
+// fiscalization at NEAR-MARGINAL-ZERO cost. So the realistic κ_C ≫ κ_D. DIRECTION anchored (central admin bureaucracy
+// is large and recurring; e-GP run-costs <1% of spend; AI/citizen verification marginal ≈ 0); MAGNITUDE DECLARED, not
+// calibrated. Steady-state costs ONLY — one-time implementation CAPEX is excluded (amortized), so it is not the régime cost.
+export const COSTS_ASYMMETRIC = { kappa_C: 0.12, kappa_D: 0.02, planningOn: false };
+
 // Fail-closed validation of the cost config (Adversarial R2 #5): κ must be a finite fraction in the SUPPORTED domain
 // [0,1) — a negative κ would ADD budget, κ≥1 / NaN produce degenerate/NaN funding — and planningOn must be a strict boolean.
 export function validateCosts(costs) {
@@ -97,15 +106,16 @@ function main() {
     const r = e10(cfg, { nWorlds: 1200 });
     safeLog('E10 — the ADMINISTRATIVE-COST layer on the delivered-value stack (PROBABLE world). Percentages of the');
     safeLog('full-information greedy REFERENCE. PLANNING is OFF by default; admin cost reduces the BUDGET (net-budget');
-    safeLog('accounting), charged SYMMETRICALLY across arms.\n');
+    safeLog('accounting). Reported under two DECLARED cost scenarios: a conservative symmetric floor and a realistic asymmetric case.\n');
     safeLog(`value base: ${r.via}   ·   κ_C=${r.kappa_C} (central allocation/prioritization/study machinery) · κ_D=${r.kappa_D} (Core v0 platform + its control machinery)  [magnitude DECLARED]`);
     safeLog(`VALUE ONLY (costs off):   status quo ${pct(r.valueOnly.statusQuo)} · Core v0 ${pct(r.valueOnly.coreV0)}  → gain ${pct(r.valueOnly.gain)}`);
     safeLog(`WITH ADMIN COSTS (net budget): status quo ${pct(r.withCosts.statusQuo)} · Core v0 ${pct(r.withCosts.coreV0)}  → gain ${pct(r.withCosts.gain)}`);
     safeLog(`  admin-cost effect on the gap: ${pct(r.adminCostContribution)} (points of the reference).\n`);
-    safeLog('  → Under symmetric net-budget accounting the admin-cost layer is roughly NEUTRAL (small, and can go either');
-    safeLog('    way): because greedy funding cuts marginal low-value projects first, the value loss is sub-proportional,');
-    safeLog('    and Core v0 delivers on a larger base. The Core v0 advantage comes from SELECTION and DELIVERY, NOT from');
-    safeLog('    an admin-cost saving. A decisive cost advantage would need κ_C ≫ κ_D beyond what symmetric accounting supports.\n');
+    safeLog('  → Under the deliberately CONSERVATIVE symmetric assumption the admin-cost layer is roughly NEUTRAL (greedy');
+    safeLog('    funding cuts marginal low-value projects first, so the value loss is sub-proportional). But that symmetry');
+    safeLog('    is a conservative FLOOR, not the realistic case: the central\'s steady-state appraisal / prioritization /');
+    safeLog('    salaried machinery is a large recurring overhead, while Core v0 runs on a platform + AI/citizen fiscalization');
+    safeLog('    at near-marginal-zero cost — so the DIRECTION favors Core v0 (κ_C ≫ κ_D). See the scenarios below.\n');
 
     const off = e10(cfg, { nWorlds: 1200, costs: { ...COSTS, kappa_C: 0, kappa_D: 0 } });
     safeLog(`switch check — costs OFF (κ=0): with-costs gain ${pct(off.withCosts.gain)} == value-only gain ${pct(off.valueOnly.gain)} (reduces to the value stack).`);
@@ -118,6 +128,21 @@ function main() {
     }
     safeLog('   → the admin-cost effect is small and only turns clearly positive at large κ_C; magnitudes DECLARED,');
     safeLog('     direction only (central allocation machinery cost > platform cost — IDB / low e-government platform costs).');
+
+    // TWO DECLARED SCENARIOS (régime costs only; implementation CAPEX excluded): the conservative symmetric FLOOR vs the
+    // realistic ASYMMETRIC case. Direction anchored, magnitude declared — NOT a calibrated figure (Adversarial R2 authors' pass).
+    safeLog('\nDeclared cost scenarios (régime costs only — one-time implementation CAPEX excluded as amortized):');
+    const sym  = e10(cfg, { nWorlds: 1200, costs: COSTS });
+    const asym = e10(cfg, { nWorlds: 1200, costs: COSTS_ASYMMETRIC });
+    safeLog(`  conservative SYMMETRIC floor (κ_C=${COSTS.kappa_C}, κ_D=${COSTS.kappa_D}):   admin-cost effect ${pct(sym.adminCostContribution)}   → roughly neutral`);
+    safeLog(`  realistic ASYMMETRIC (κ_C=${COSTS_ASYMMETRIC.kappa_C} central appraisal+prioritization+salaried bureaucracy ·`);
+    safeLog(`                        κ_D=${COSTS_ASYMMETRIC.kappa_D} platform + AI/citizen fiscalization ≈ marginal-zero):   admin-cost effect ${pct(asym.adminCostContribution)}   → a genuine Core v0 advantage`);
+    const freed = COSTS_ASYMMETRIC.kappa_C - COSTS_ASYMMETRIC.kappa_D;
+    safeLog(`  → TWO distinct statements: (i) DIRECT fiscal saving — Core v0 frees κ_C−κ_D ≈ ${(100 * freed).toFixed(0)}% of the budget from`);
+    safeLog('    pure administrative overhead (a large, directionally-anchored cost advantage); (ii) its DELIVERED-VALUE effect');
+    safeLog(`    is smaller (${pct(asym.adminCostContribution)} on the reference gap) because the freed budget funds marginal, low-value projects`);
+    safeLog('    (net-budget sub-proportionality). "Roughly neutral" describes only (ii) under the conservative symmetric floor;');
+    safeLog('    the realistic case is a genuine cost advantage for Core v0 — direction anchored, magnitude declared, not calibrated.');
   });
 }
 import { fileURLToPath } from 'node:url';

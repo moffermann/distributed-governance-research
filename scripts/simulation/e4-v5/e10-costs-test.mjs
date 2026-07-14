@@ -1,6 +1,6 @@
 // E10 cost-layer tests — the switches (planning OFF/ON, costs OFF/ON) and the cost composition.
 // Run: npm run e10:costs:test
-import { e10, COSTS, validateCosts } from './e10-costs.mjs';
+import { e10, COSTS, COSTS_ASYMMETRIC, validateCosts } from './e10-costs.mjs';
 import { delivered2x2 } from './e5-delivery.mjs';
 import { fullStack, PLANNING_PRIMARY } from './e9-fullstack.mjs';
 import { baseConfig } from './contract.mjs';
@@ -82,6 +82,17 @@ const NW = 800;
   check('PRO_DIST: shared retention holds for BOTH arms (same worlds/oracle at scale 1, 1−κ_C, 1−κ_D)', fullPD.n === runCPD.n && fullPD.n === runDPD.n && approx(fullPD.sumO, runCPD.sumO, 1e-6) && approx(fullPD.sumO, runDPD.sumO, 1e-6), `n ${fullPD.n}/${runCPD.n}/${runDPD.n}`);
   check('PRO_DIST: E10 central with-cost value == shared-world net cell (signed, over the full oracle)', approx(r.withCosts.statusQuo, runCPD.cells.S, 1e-12), `${r.withCosts.statusQuo} vs ${runCPD.cells.S}`);
   check('PRO_DIST: E10 Core v0 with-cost value == shared-world net cell (signed, over the full oracle)', approx(r.withCosts.coreV0, runDPD.cells.A2, 1e-12), `${r.withCosts.coreV0} vs ${runDPD.cells.A2}`);
+}
+
+// 6b) REALISTIC ASYMMETRIC scenario (declared): the symmetric floor is roughly neutral, but with κ_C ≫ κ_D (central
+//     appraisal/prioritization/salaried bureaucracy vs Core v0 platform + near-zero-marginal fiscalization) the
+//     admin-cost layer becomes a genuine Core v0 advantage. Direction favors Core v0; a valid declared config.
+{
+  const sym  = e10(cfg, { nWorlds: NW, costs: COSTS });
+  const asym = e10(cfg, { nWorlds: NW, costs: COSTS_ASYMMETRIC });
+  check('asymmetric scenario is a valid declared config (κ_C > κ_D in [0,1))', validateCosts(COSTS_ASYMMETRIC) === true && COSTS_ASYMMETRIC.kappa_C > COSTS_ASYMMETRIC.kappa_D);
+  check('asymmetric admin-cost effect favors Core v0 more than the symmetric floor', asym.adminCostContribution > sym.adminCostContribution, `asym ${asym.adminCostContribution} vs sym ${sym.adminCostContribution}`);
+  check('asymmetric frees a materially larger budget fraction from the central than from Core v0', (COSTS_ASYMMETRIC.kappa_C - COSTS_ASYMMETRIC.kappa_D) >= 0.05);
 }
 
 // 7) VALIDATION (Adversarial R2 #5): fail-closed on invalid cost configs.

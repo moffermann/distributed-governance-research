@@ -12,9 +12,9 @@ El gasto público rutinariamente le pide a una sola jerarquía elegir proyectos,
 
 Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado con consecuencias es pública.
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a una revisión adversarial pública de 43 ataques a lo largo de cinco rondas —cada uno integrado al diseño o registrado como una limitación acotada— y a un benchmark simétrico deliberadamente hostil. Retiramos el gran multiplicador de valor por peso que reportó una versión anterior: no sobrevive a ese benchmark simétrico, así que no lo afirmamos como efecto calibrado, y nos apoyamos en cambio en la arquitectura y la dirección anclada del mecanismo. Una extensión de robustez de cuatro escenarios modela luego al selector central tal como lo describe la evidencia. La dirección de cada eje está anclada en la literatura; su magnitud no se ajustó a los datos. El selector es casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), proyecta sus propias creencias previas y sobreestima los beneficios visibles (Broockman–Skovron 2018; Flyvbjerg et al. 2003), y está sesgado hacia el crédito político (Mayhew 1974; Arnold 1990). En ese **escenario de referencia declarado y motivado por fuentes** —no una calibración empírica—, la selección distribuida basada en cobertura recupera cerca del 98% de la referencia voraz de información completa del modelo, frente a cerca del 44% del central. La diferencia es un contraste de modelo condicional de 54 puntos, robusto en todo el espacio declarado y ante la degradación realista del *enrutamiento* presupuestario universal de Core v0 (el enrutamiento es arquitectónico; la información independiente efectiva no lo es). El central supera a la cobertura solo abandonando los supuestos declarados (otorgándole la visión del daño que la literatura le niega) en un mundo casi sin daño, mientras la idealización *espejo* del brazo distribuido gana por goleada. Estas son magnitudes de referencia declaradas de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; y la única sensibilidad que reduce materialmente la brecha —nunca su signo en el rango declarado— es el error correlacionado o de modo común en el brazo de cobertura. Una extensión pareada de cuatro celdas cruza luego selección con entrega: en el mundo declarado PROBABLE, la arquitectura completa de selección y entrega supera al statu quo en cerca de 58.6 puntos de la misma referencia voraz [intervalo Monte Carlo condicional al 95% +58.0, +59.2]. Un factorial de tres capas deja la diagonal completa de Core v0 positiva en todos los mundos nombrados, aunque las atribuciones de capas individuales invierten su signo en mundos extremos; la dirección de la planificación está anclada pero su magnitud independiente queda diferida. Una contabilidad simétrica de presupuesto neto hace que el costo administrativo sea aproximadamente neutro: la ventaja modelada reside en la selección y la entrega, no en los gastos generales. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a una revisión adversarial pública de 43 ataques a lo largo de cinco rondas —cada uno integrado al diseño o registrado como una limitación acotada— y a un benchmark simétrico deliberadamente hostil. Retiramos el gran multiplicador de valor por peso que reportó una versión anterior: no sobrevive a ese benchmark simétrico, así que no lo afirmamos como efecto calibrado, y nos apoyamos en cambio en la arquitectura y la dirección anclada del mecanismo. Una extensión de robustez de cuatro escenarios modela luego al selector central tal como lo describe la evidencia. La dirección de cada eje está anclada en la literatura; su magnitud no se ajustó a los datos. El selector es casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), proyecta sus propias creencias previas y sobreestima los beneficios visibles (Broockman–Skovron 2018; Flyvbjerg et al. 2003), y está sesgado hacia el crédito político (Mayhew 1974; Arnold 1990). En ese **escenario de referencia declarado y motivado por fuentes** —no una calibración empírica—, la selección distribuida basada en cobertura recupera cerca del 98% de la referencia voraz de información completa del modelo, frente a cerca del 44% del central. La diferencia es un contraste de modelo condicional de 54 puntos, robusto en todo el espacio declarado y ante la degradación realista del *enrutamiento* presupuestario universal de Core v0 (el enrutamiento es arquitectónico; la información independiente efectiva no lo es). El central supera a la cobertura solo abandonando los supuestos declarados (otorgándole la visión del daño que la literatura le niega) en un mundo casi sin daño, mientras la idealización *espejo* del brazo distribuido gana por goleada. Estas son magnitudes de referencia declaradas de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; y la única sensibilidad que reduce materialmente la brecha —nunca su signo en el rango declarado— es el error correlacionado o de modo común en el brazo de cobertura. Una extensión pareada de cuatro celdas cruza luego selección con entrega: en el mundo declarado PROBABLE, la arquitectura completa de selección y entrega supera al statu quo en cerca de 58.6 puntos de la misma referencia voraz [intervalo Monte Carlo condicional al 95% +58.0, +59.2]. Un factorial de tres capas deja la diagonal completa de Core v0 positiva en todos los mundos nombrados, aunque las atribuciones de capas individuales invierten su signo en mundos extremos; la dirección de la planificación está anclada pero su magnitud independiente queda diferida. El costo administrativo no juega en contra del brazo distribuido: la contabilidad de presupuesto neto lo deja aproximadamente neutro bajo un piso simétrico conservador, y una ventaja genuina aunque modesta una vez que se admite la asimetría realista (la burocracia central de tasación/priorización ≫ una plataforma con fiscalización de costo marginal casi nulo). Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
-Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las simulaciones aportan contrastes de modelo condicionales para la selección, la entrega y el costo administrativo, pero sus unidades no están calibradas; los modelos son de equilibrio parcial y no identifican efectos de tratamiento en el dominio objetivo; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
+Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las simulaciones aportan contrastes de modelo condicionales para la selección, la entrega y el costo administrativo, pero sus unidades no están calibradas; los modelos son de equilibrio parcial y no identifican efectos de tratamiento en el dominio objetivo; y las afirmaciones empíricas se demuestran sobre inversión pública con forma de proyecto y entrega verificable por hitos (la infraestructura es el caso más claro) —la arquitectura en sí es general en ese dominio discrecional con forma de proyecto, no se limita a la infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
 ## 1. Introducción
 
@@ -131,8 +131,8 @@ ambas direcciones (Demsetz 1969; Sección 2). Nuestras contribuciones son:
    Monte Carlo condicional al 95% +58.0, +59.2]; una atribución
    condicional de tres capas mantiene positiva la diagonal completa de Core v0
    en todos los mundos nombrados mientras deja sin cuantificar la magnitud independiente de la
-   planificación; y la contabilidad simétrica de presupuesto neto deja el costo
-   administrativo aproximadamente neutro. El aparato basado en agentes anterior
+   planificación; y la contabilidad de presupuesto neto deja el costo
+   administrativo aproximadamente neutro bajo un piso simétrico conservador, con una modesta ventaja para Core v0 en el caso asimétrico realista. El aparato basado en agentes anterior
    produjo un único cociente compuesto de valor por unidad de presupuesto;
    **retiramos ese compuesto como efecto calibrado**: no sobrevive a una prueba de estrés
    prerregistrada y simétrica que elimina del central sus patologías reales (§6 —contra
@@ -337,8 +337,8 @@ Y dos contribuciones adicionales conciernen a la medición y al método:
   95% +58.0, +59.2]; una atribución condicional de tres
   capas mantiene la diagonal completa de Core v0 positiva en todos los mundos
   nombrados mientras la magnitud independiente de la planificación queda sin cuantificar; y una
-  contabilidad simétrica de presupuesto neto deja el costo administrativo
-  aproximadamente neutro. Por
+  contabilidad de presupuesto neto deja el costo administrativo
+  aproximadamente neutro bajo un piso simétrico conservador, con una modesta ventaja para Core v0 en el caso asimétrico realista. Por
   separado, un gate simétrico prerregistrado posterior —una prueba **solo-de-
   selección** con la entrega mantenida en paridad— encuentra la ventaja de
   *selección* positiva pero pequeña (Sección 6); no pone a prueba la interacción de
@@ -1203,9 +1203,9 @@ saliencia, pero ni identifica la captura de agenda ni calibra su magnitud; la
 salud mental es una subfunción financiada, no una función COFOG de primer nivel
 excluida.
 
-**Hallazgo 10: el costo administrativo es aproximadamente neutro una vez
-contabilizado de forma simétrica —la ventaja es el valor entregado, no la
-carga administrativa.** Un décimo experimento (`scripts/simulation/e4-v5/e10-costs.mjs`) añade
+**Hallazgo 10: el costo administrativo favorece a Core v0 —aproximadamente neutro
+solo bajo un piso simétrico conservador, una ventaja genuina en el caso asimétrico
+realista.** Un décimo experimento (`scripts/simulation/e4-v5/e10-costs.mjs`) añade
 el costo administrativo y de maquinaria que cada institución opera y que Core
 v0 reemplaza en gran medida —los estudios que aproximan el valor mediante indicadores indirectos, el aparato de
 asignación y priorización, y las licencias que carga el central, frente a la
@@ -1214,19 +1214,31 @@ costos de tres maneras. Los resta del *presupuesto* de cada brazo antes de
 seleccionar, así la pérdida de valor es menos que proporcional porque la financiación
 voraz corta primero los proyectos marginales; cobra la propia maquinaria de
 verificación y recuperación de Core v0 en lugar de tratarla como gratuita; y
-evita duplicar la fuga de entrega ya contabilizada en E5. A las cuotas
-declaradas κ_C = 0.08 y κ_D = 0.05, el costo administrativo cambia la brecha
-modelada de +58.6 a +57.7 puntos de referencia —una contribución de −0.9
-puntos: **aproximadamente neutro**. La ventaja de Core v0
-viene de la **selección y la entrega**, no de un ahorro de costo
-administrativo; una ventaja de costo decisiva exigiría que la carga administrativa del
-central superara la de la plataforma por más de lo que la contabilidad
-simétrica sostiene. Las cuotas de costo son insumos de escenario declarados, no
-costos medidos específicos por brazo: la dirección de la maquinaria central está
-anclada al desperdicio documentado del gasto público (IDB 2018), mientras que el
-lado de la plataforma se ilustra —direccionalmente, no como insumo medido— con
-sistemas públicos de compras electrónicas establecidos cuyo costo operativo es
-bajo (KONEPS, ChileCompra, ProZorro).
+evita duplicar la fuga de entrega ya contabilizada en E5. Reportamos dos escenarios
+**declarados** (solo costos de régimen —la implementación de una sola vez se excluye por
+amortizada). Bajo un **piso simétrico conservador** (κ_C = 0.08, κ_D = 0.05) la capa es
+aproximadamente neutra: el costo administrativo mueve la brecha modelada de +58.6 a +57.7
+puntos de referencia, una contribución de −0.9 puntos. Pero esa simetría es un piso
+deliberado, no el caso realista. En régimen, la maquinaria del central —estudios de
+tasación y valor-proxy, la burocracia de priorización y asignación, las aprobaciones, y
+los sueldos que la operan— es un gran overhead recurrente, mientras que Core v0 corre
+sobre una plataforma digital más fiscalización asistida por IA y aportada por ciudadanos a
+costo marginal casi nulo. El caso realista es por lo tanto **asimétrico** (κ_C ≫ κ_D), y
+se separa en dos afirmaciones honestas. Primero, un **ahorro fiscal directo**: a unas
+cuotas declaradas κ_C = 0.12 frente a κ_D = 0.02, Core v0 libera cerca de una décima parte
+del presupuesto del overhead administrativo puro —una ventaja de costo grande y anclada en
+dirección. Segundo, su **efecto sobre el valor entregado** es menor (cerca de +0.4 puntos
+de referencia sobre la brecha) porque ese presupuesto liberado financia proyectos
+marginales de bajo valor (la sub-proporcionalidad del presupuesto neto). Así que la
+lectura honesta no es "sin diferencia de costos": la **dirección favorece a Core v0**;
+"aproximadamente neutro" solo se sostiene bajo el piso simétrico conservador; y el caso
+asimétrico realista es una ventaja de costo genuina —aunque modesta en bienestar y no
+cuantificada. Las cuotas de costo son insumos de escenario declarados, no costos medidos
+específicos por brazo: la dirección de la maquinaria central está anclada al desperdicio
+documentado del gasto público (IDB 2018) y a la gran burocracia recurrente de
+tasación/priorización; el lado de la plataforma, al bajo costo operativo de sistemas
+públicos de compras electrónicas establecidos (KONEPS, ChileCompra, ProZorro) y a la
+fiscalización IA/ciudadana de costo marginal casi nulo.
 
 **Qué sobrevive.** Reducido a lo esencial. **(1)** Un gate simétrico prerregistrado que
 elimina del central sus patologías reales —su mejor caso— deja la ventaja de selección
@@ -1253,7 +1265,8 @@ la ventaja condicional en la selección y la entrega verificada, no en la carga 
 mide esos márgenes por separado sobre carteras apareadas; E9 aporta una atribución
 condicional de stack completo cuyos signos de componente varían por mundo mientras la
 diagonal completa se mantiene positiva; y E10 deja el costo administrativo
-aproximadamente neutro. La planificación queda sin resolver cuantitativamente —su
+aproximadamente neutro bajo un piso simétrico conservador, con la dirección a favor de
+Core v0 (una modesta ventaja en el caso asimétrico realista). La planificación queda sin resolver cuantitativamente —su
 mecanismo de captura de agenda está direccionalmente anclado, pero su magnitud independiente se
 difiere deliberadamente en vez de fabricarse a partir de un escenario no anclado.
 Cualquier efecto calibrado de valor total entregado sobre datos reales sigue siendo
@@ -1478,15 +1491,17 @@ del generador de sectores declarado, no estimaciones autónomas; los signos de
 capas individuales se invierten en mundos extremos aunque la diagonal completa de
 Core v0 permanezca positiva en los cuatro mundos nombrados. La dirección de
 captura de agenda de la planificación está anclada, pero su magnitud queda sin
-cuantificar. El resultado aproximadamente neutro de E10 se apoya en cuotas
-simétricas de presupuesto neto declaradas, que son insumos de escenario, no
-costos medidos específicos por brazo. Ninguna de estas es una estimación de
+cuantificar. El resultado de costo de E10 se apoya en cuotas de presupuesto neto
+declaradas (insumos de escenario, no costos medidos específicos por brazo):
+aproximadamente neutro bajo un piso simétrico conservador, y una modesta ventaja para
+Core v0 bajo la asimetría realista (κ_C ≫ κ_D). Ninguna de estas es una estimación de
 efecto de campo.
 
 **La medida de resultado es un agregado acotado y no distribucional.** El valor
 que el modelo puntúa es una suma cardinal de estilo utilitarista sobre las partes
-afectadas en una porción acotada de inversión pública tipo infraestructura; no
-está ponderada distribucionalmente y no dice nada sobre redistribución, equidad, o
+afectadas en una porción acotada de inversión pública con forma de proyecto y entrega
+verificable por hitos (la infraestructura es el caso más claro, pero la arquitectura no
+se limita a ella); no está ponderada distribucionalmente y no dice nada sobre redistribución, equidad, o
 quién soporta beneficios y daños. Una cartera puede puntuar bien en esta medida y
 distribuir mal. Aplicar el criterio entre grupos, o a todo el presupuesto o al
 propósito de la tributación, requeriría una especificación separada de
@@ -1618,8 +1633,8 @@ incluso cuando contribuciones de Shapley individuales se invierten en rincones
 extremos; la captura de agenda se representa como el mecanismo principal de la
 planificación, con su dirección anclada pero su magnitud independiente sin cuantificar; y una
 contabilidad simétrica de presupuesto neto
-deja el costo administrativo aproximadamente neutro. En este modelo, la ventaja
-de la arquitectura es el valor entregado, no una administración barata. Pero esas
+deja el costo administrativo aproximadamente neutro bajo un piso simétrico conservador, y una modesta ventaja para Core v0 bajo la asimetría realista. En este modelo, la ventaja
+de la arquitectura es el valor entregado, y el costo administrativo se suma a ella en vez de restarle. Pero esas
 magnitudes son contrastes condicionales internos al modelo, no efectos de campo
 calibrados, y no construimos el artículo sobre ellas. Lo que el artículo realmente
 sostiene es la arquitectura y la dirección anclada del mecanismo, no una cifra calibrada.
