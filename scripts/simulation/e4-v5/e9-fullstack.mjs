@@ -138,11 +138,12 @@ function stackCell(projectsAdj, cats, shares, selKey, selOpts, cfg, budget, exec
 
 // One world: executors (separate stream), persistent sectors (planning stream), then the FULL 2×2×2 = 8 cells over the
 // TRUE adjusted value Sadj. Cell key = planning(c/d) _ selection(c/d) _ delivery(op/ve).
-function runWorldStack(cfg, rng, execRng, pRng, del, plan) {
+function runWorldStack(cfg, rng, execRng, pRng, del, plan, budgetScale = 1) {
   const projects = generateWorld(cfg, rng);
   if (projects.length === 0) return null;
   let totalCost = 0; for (const pr of projects) totalCost += pr.c;
-  const budget = cfg.phi * totalCost;
+  const fullBudget = cfg.phi * totalCost;   // oracle + world-retention ALWAYS use the full budget (Adversarial R2 #2)
+  const budget = fullBudget * budgetScale;  // ARM funding budget (net-budget accounting when budgetScale<1)
 
   const honest = new Array(projects.length), tempt = new Array(projects.length);
   for (let j = 0; j < projects.length; j++) { honest[j] = execRng.u() < del.pi_hon; tempt[j] = sampleTempt(execRng, del); }
@@ -167,8 +168,8 @@ function runWorldStack(cfg, rng, execRng, pRng, del, plan) {
   const shD = sectorShares(sectorPerceived(projects, sec, plan, 'D'), plan, doExD);   // distributed planning
 
   // Oracle = GLOBAL greedy REFERENCE on the true adjusted value (a heuristic knapsack, NOT a guaranteed optimum, so a
-  // feasible cell can exceed it; used as a common normalizer, not an upper bound).
-  let O = 0; for (const j of fundedSet(projectsAdj, 'S', cfg, budget)) O += projectsAdj[j].S;
+  // feasible cell can exceed it; used as a common normalizer, not an upper bound). ALWAYS at the FULL budget.
+  let O = 0; for (const j of fundedSet(projectsAdj, 'S', cfg, fullBudget)) O += projectsAdj[j].S;
 
   const CT = { creditTilt: true };
   const planShares = { c: shC, d: shD };
@@ -202,7 +203,7 @@ function quantities(sumV, sumO) {
   };
 }
 
-export function fullStack(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, planning = PLANNING } = {}) {
+export function fullStack(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, planning = PLANNING, budgetScale = 1 } = {}) {
   validateDelivery(delivery);
   validatePlanning(planning);
   const rng = makeRng(seed), execRng = makeRng((seed ^ 0x5bd1e995) >>> 0), pRng = makeRng((seed ^ 0x27d4eb2f) >>> 0);
@@ -212,7 +213,7 @@ export function fullStack(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.v
   let sumO = 0, sumBudget = 0;
   const W = [];
   for (let w = 0; w < nWorlds; w++) {
-    const r = runWorldStack(cfg, rng, execRng, pRng, delivery, planning);
+    const r = runWorldStack(cfg, rng, execRng, pRng, delivery, planning, budgetScale);   // budgetScale scales ARM funding only
     if (!r || !(r.O > 0)) continue;
     sumO += r.O; sumBudget += r.budget;
     const wv = {};

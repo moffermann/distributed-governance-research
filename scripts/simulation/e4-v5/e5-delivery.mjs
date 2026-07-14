@@ -114,21 +114,25 @@ export function deliveredCell(projects, funded, reg, exec, del, mDet, mRec, cfg)
 
 // One world: worlds are drawn from `rng` (identical to the E4 estimand's stream), executors from a SEPARATE `execRng`
 // so E5 reduces to E4 EXACTLY on the same seed. Evaluate the oracle (perfect delivery) and the four cells.
-function runWorld2x2(cfg, rng, execRng, del) {
+// budgetScale (default 1) scales the ARM funding budget only (E10 net-budget accounting); the ORACLE and the
+// world-retention decision ALWAYS use the FULL budget, so scaled runs retain the SAME worlds and share the SAME
+// full-budget normalizer (Adversarial R2 #2 — no per-arm retained-world drift).
+function runWorld2x2(cfg, rng, execRng, del, budgetScale = 1) {
   const projects = generateWorld(cfg, rng);
   if (projects.length === 0) return null;
   let totalCost = 0; for (const pr of projects) totalCost += pr.c;
-  const budget = cfg.phi * totalCost;
+  const fullBudget = cfg.phi * totalCost;
+  const armBudget = fullBudget * budgetScale;
 
   const honest = new Array(projects.length), tempt = new Array(projects.length);
   for (let j = 0; j < projects.length; j++) { honest[j] = execRng.u() < del.pi_hon; tempt[j] = sampleTempt(execRng, del); }
   const exec = { honest, tempt };
 
-  const setC = fundedSet(projects, 'M_C', cfg, budget, { creditTilt: true });
-  const setD = fundedSet(projects, 'M_D', cfg, budget);
-  const setO = fundedSet(projects, 'S',   cfg, budget);
+  const setC = fundedSet(projects, 'M_C', cfg, armBudget, { creditTilt: true });
+  const setD = fundedSet(projects, 'M_D', cfg, armBudget);
+  const setO = fundedSet(projects, 'S',   cfg, fullBudget);   // oracle ALWAYS at the full budget (common normalizer)
 
-  let O = 0; for (const j of setO) O += projects[j].S;      // oracle at PERFECT delivery = the E4 reference
+  let O = 0; for (const j of setO) O += projects[j].S;      // oracle at PERFECT delivery, FULL budget = the E4 reference
   const selC = (() => { let s = 0; for (const j of setC) s += projects[j].S; return s; })();
   const selD = (() => { let s = 0; for (const j of setD) s += projects[j].S; return s; })();
 
@@ -145,7 +149,7 @@ function runWorld2x2(cfg, rng, execRng, del) {
 // Ratio-of-sums estimand over worlds (robust; a tiny-O world cannot dominate). Everything normalized by ΣO. Worlds and
 // executors use SEPARATE PRNG streams, so the world stream is identical to the E4 estimand's (exact reduction). Also
 // returns diversion incidence, leakage, and a world-cluster bootstrap CI on the full-architecture gain.
-export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY } = {}) {
+export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, budgetScale = 1 } = {}) {
   validateDelivery(delivery);
   const rng = makeRng(seed);
   const execRng = makeRng((seed ^ 0x5bd1e995) >>> 0);      // separate stream ⇒ worlds match the E4 estimand exactly
@@ -153,7 +157,7 @@ export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.see
   const t = { O: 0, selC: 0, selD: 0 };
   for (const c of ['S', 'A1', 'A3', 'A2']) { t[c + 'v'] = 0; t[c + 'lost'] = 0; t[c + 'div'] = 0; t[c + 'fund'] = 0; }
   for (let w = 0; w < nWorlds; w++) {
-    const r = runWorld2x2(cfg, rng, execRng, delivery);
+    const r = runWorld2x2(cfg, rng, execRng, delivery, budgetScale);   // budgetScale scales ARM funding only; O/retention stay full-budget
     if (!r || !(r.O > 0)) continue;
     W.push({ O: r.O, Sv: r.S.v, A1v: r.A1.v, A3v: r.A3.v, A2v: r.A2.v });
     t.O += r.O; t.selC += r.selC; t.selD += r.selD;

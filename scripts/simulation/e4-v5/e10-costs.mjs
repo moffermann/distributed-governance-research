@@ -38,31 +38,48 @@ export const COSTS = {
   planningOn: false,  // author requirement: PLANNING OFF by default (its magnitude is deferred; do not fold into costs)
 };
 
-// Raw delivered value of one arm's cell at a NET budget (phi scaled by 1−κ), and the full-budget oracle sum, sharing the
-// same worlds/seed. Admin cost reduces the BUDGET (fewer projects funded), not the delivered value directly — because
-// the greedy funds highest-value projects first, cutting budget removes the MARGINAL (lowest-value) funded projects, so
-// the value loss is SUB-proportional to κ (Adversarial R1 #1/#13).
-function armValueNet(cfg, opts, costs, delivery, planning, arm, kappa) {
-  const cNet = { ...cfg, phi: cfg.phi * (1 - kappa) };
-  if (costs.planningOn) {
-    const v = fullStack(cNet, { ...opts, delivery, planning });
-    return (arm === 'C' ? v.statusQuo : v.coreV0) * v.sumO;   // raw arm value at net budget
+// Fail-closed validation of the cost config (Adversarial R2 #5): κ must be a finite fraction in the SUPPORTED domain
+// [0,1) — a negative κ would ADD budget, κ≥1 / NaN produce degenerate/NaN funding — and planningOn must be a strict boolean.
+export function validateCosts(costs) {
+  const bad = [];
+  for (const k of ['kappa_C', 'kappa_D']) {
+    const v = costs[k];
+    if (typeof v !== 'number' || !Number.isFinite(v)) bad.push(`${k}=${v} must be a finite number`);
+    else if (v < 0 || v >= 1) bad.push(`${k}=${v} must be in [0,1)`);
   }
-  const v = delivered2x2(cNet, { ...opts, delivery });
-  return (arm === 'C' ? v.cells.S : v.cells.A2) * v.sumO;
+  if (typeof costs.planningOn !== 'boolean') bad.push(`planningOn=${costs.planningOn} must be a boolean`);
+  if (bad.length) throw new Error(`[e10-costs] invalid cost config: ${bad.join('; ')}`);
+  return true;
+}
+
+// Delivered value of one arm's cell at a NET budget, via the SHARED-WORLD net-budget estimand: budgetScale=1−κ scales
+// ONLY the arm funding, while the oracle and world-retention stay at the FULL budget (Adversarial R2 #2). So the scale=1,
+// scale=1−κ_C and scale=1−κ_D runs (same seed) retain the SAME worlds and are all normalized by the SAME full-budget
+// oracle — even when a net-budget arm funds nothing (that world is still retained, contributing 0 for the arm). Admin cost
+// reduces the BUDGET (fewer projects funded), not delivered value directly; greedy funding cuts the MARGINAL (lowest-value)
+// projects first, so the value loss is SUB-proportional to κ (Adversarial R1 #1/#13). The returned cell is ALREADY
+// normalized by the common full-budget ΣO.
+function armValueNet(cfg, opts, costs, delivery, planning, arm, kappa) {
+  const budgetScale = 1 - kappa;
+  if (costs.planningOn) {
+    const v = fullStack(cfg, { ...opts, delivery, planning, budgetScale });
+    return arm === 'C' ? v.statusQuo : v.coreV0;   // normalized by the COMMON full-budget oracle
+  }
+  const v = delivered2x2(cfg, { ...opts, delivery, budgetScale });
+  return arm === 'C' ? v.cells.S : v.cells.A2;      // normalized by the COMMON full-budget oracle
 }
 
 export function e10(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, planning = PLANNING, costs = COSTS } = {}) {
+  validateCosts(costs);
   const kC = costs.kappa_C, kD = costs.kappa_D;
   const via = costs.planningOn ? 'E9 (planning ON)' : 'E5 (planning OFF)';
-  // full-budget value base (both arms, for value-only) and its oracle — the COMMON normalizer.
+  // full-budget value base (both arms, for value-only) — same seed/worlds as the net-budget arms (shared retention).
   const full = costs.planningOn ? fullStack(cfg, { nWorlds, seed, delivery, planning }) : delivered2x2(cfg, { nWorlds, seed, delivery });
-  const Ofull = full.sumO;
   const sq = costs.planningOn ? full.statusQuo : full.cells.S;
   const cv = costs.planningOn ? full.coreV0 : full.cells.A2;
-  // NET-budget delivered value of each arm, normalized by the COMMON full-budget oracle.
-  const V_C = armValueNet(cfg, { nWorlds, seed }, costs, delivery, planning, 'C', kC) / Ofull;
-  const V_D = armValueNet(cfg, { nWorlds, seed }, costs, delivery, planning, 'D', kD) / Ofull;
+  // NET-budget delivered value of each arm, ALREADY normalized by the COMMON full-budget oracle (shared retained worlds).
+  const V_C = armValueNet(cfg, { nWorlds, seed }, costs, delivery, planning, 'C', kC);
+  const V_D = armValueNet(cfg, { nWorlds, seed }, costs, delivery, planning, 'D', kD);
   const valueGain = cv - sq;
   const costGain = V_D - V_C;
   return {
