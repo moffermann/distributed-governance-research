@@ -11,10 +11,16 @@ function check(name, cond, detail = '') { if (cond) { pass++; console.log(`  ok 
 
 const cfg = { ...baseConfig(), ...W, ...PROBABLE };
 const NW = 700;
+// ONE primary planning object (Adversarial R2 #1): recycle residual is the primary reporting/test mode (no utilization
+// confound). Strict is used ONLY where it is the point of the test — the nSec=1→E5 structural reduction (block 1) and
+// the labelled strict-vs-recycle diagnostic (block 5).
+const PRIMARY = { ...PLANNING, residualMode: 'recycle' };
 
 // 1) REDUCES TO E5: one sector ⇒ zero value tilt ⇒ planning is a no-op ⇒ the stack collapses to E5 selection×delivery.
+//    STRICT residual on purpose: with a single category there is no cross-category residual, and E5 does no recycling,
+//    so strict is the exact structural match (recycle would fund the E5-unfunded knapsack residual and diverge).
 {
-  const e9 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, nSec: 1, agendaCapture: 0 } });
+  const e9 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, nSec: 1, agendaCapture: 0, residualMode: 'strict' } });
   const e5 = delivered2x2(cfg, { nWorlds: NW });
   check('nSec=1: status-quo cell == E5 S cell', approx(e9.cells.c_c_op, e5.cells.S, 1e-9), `${e9.cells.c_c_op} vs ${e5.cells.S}`);
   check('nSec=1: Core-v0 cell == E5 A2 cell', approx(e9.cells.d_d_ve, e5.cells.A2, 1e-9), `${e9.cells.d_d_ve} vs ${e5.cells.A2}`);
@@ -23,7 +29,7 @@ const NW = 700;
 
 // 2) SHAPLEY attribution is exact: the three layer values sum to the full-stack gain.
 {
-  const r = fullStack(cfg, { nWorlds: NW });
+  const r = fullStack(cfg, { nWorlds: NW, planning: PRIMARY });
   const sum = r.attribution.planning + r.attribution.selection + r.attribution.delivery;
   check('Shapley attribution sums exactly to the full-stack gain', approx(sum, r.fullStackGain, 1e-9), `sum ${sum} vs gain ${r.fullStackGain}`);
 }
@@ -32,8 +38,8 @@ const NW = 700;
 //    (a) the realistic association (high-need = low-visibility) gives a larger planning contribution than the
 //        anti-realistic one; (b) the conditional simple effect flips sign between central and distributed selection.
 {
-  const real = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, assoc: -1.0 } });
-  const anti = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, assoc: +1.0 } });
+  const real = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, assoc: -1.0 } });
+  const anti = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, assoc: +1.0 } });
   check('planning Shapley is larger under the realistic (assoc<0) association', real.attribution.planning > anti.attribution.planning, `real ${real.attribution.planning} anti ${anti.attribution.planning}`);
   check('realistic association gives a positive planning Shapley', real.attribution.planning > 0, `got ${real.attribution.planning}`);
   check('planning simple effect flips: central-sel > distributed-sel', real.planningUnderCentralSel > real.planningUnderDistributedSel, `${real.planningUnderCentralSel} vs ${real.planningUnderDistributedSel}`);
@@ -42,9 +48,9 @@ const NW = 700;
 // 3b) AGENDA CAPTURE (second face of power): the central keeping sectors off the menu raises the planning
 //     contribution monotonically and removes the sign flip (planning becomes positive under distributed selection).
 {
-  const soft = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, agendaCapture: 0 } });
-  const cap1 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, agendaCapture: 1 } });
-  const cap3 = fullStack(cfg, { nWorlds: NW, planning: { ...PLANNING, agendaCapture: 3 } });
+  const soft = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, agendaCapture: 0 } });
+  const cap1 = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, agendaCapture: 1 } });
+  const cap3 = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, agendaCapture: 3 } });
   check('agenda capture raises the planning Shapley vs soft distortion', cap1.attribution.planning > soft.attribution.planning);
   check('more agenda capture raises planning further', cap3.attribution.planning > cap1.attribution.planning);
   // more capture monotonically raises the planning contribution under distributed selection (it turns positive under
@@ -56,7 +62,7 @@ const NW = 700;
 // 4) ORDERING (Core v0 beats the status quo). The oracle is a greedy REFERENCE, NOT an upper bound, so cells are NOT
 //    required to stay ≤ 100% — that would be a false invariant (this is a scenario regression, not a math invariant).
 {
-  const r = fullStack(cfg, { nWorlds: NW });
+  const r = fullStack(cfg, { nWorlds: NW, planning: PRIMARY });
   check('Core v0 full beats the status quo', r.coreV0 > r.statusQuo);
   check('full-stack gain is materially positive', r.fullStackGain > 0.2, `got ${r.fullStackGain}`);
   check('every reported quantity carries a 95% CI', Array.isArray(r.attributionCI.planning) && Array.isArray(r.planningCI.distributed) && Array.isArray(r.fullStackCI));

@@ -271,14 +271,22 @@ function main() {
     const { SCENARIO_WORLD: W, PROBABLE } = SC;
     const cfg = { ...baseConfig(), ...W, ...PROBABLE };
     // Recycle residual is the PRIMARY reporting mode (removes the utilization confound; strict mixes planning with
-    // unspent budget — Adversarial R1 #7).
-    const r = fullStack(cfg, { nWorlds: 1000, planning: { ...PLANNING, residualMode: 'recycle' } });
+    // unspent budget — Adversarial R1 #7). ONE primary planning object (Adversarial R2 #1) — every emitted primary
+    // table below (headline, named worlds, dispersion, agenda capture) reuses it, so planning/full never silently
+    // switch between recycle and strict. Strict is retained ONLY as the labelled utilization-confound diagnostic and
+    // as the nSec=1→E5 structural reduction (both explicitly flagged).
+    const PRIMARY = { ...PLANNING, residualMode: 'recycle' };
+    const r = fullStack(cfg, { nWorlds: 1000, planning: PRIMARY });
     safeLog('E9 — FULL STACK: PLANNING, SELECTION and DELIVERY (built on E5, PROBABLE world). Percentages of a global');
     safeLog('full-information greedy REFERENCE (a heuristic, not a guaranteed optimum). Recycle residual (primary).\n');
     const civ = (iv) => `[${pct(iv[0])}, ${pct(iv[1])}]`;
     safeLog(`worlds kept: ${r.n}   (${PLANNING.nSec} COFOG sectors; assoc=${PLANNING.assoc}, secValSpread=${PLANNING.secValSpread}, creditCoef=${PLANNING.creditCoef}, agendaCapture=${PLANNING.agendaCapture})`);
     safeLog(`STATUS QUO (all-central):   ${pct(r.statusQuo)} of reference   ·   CORE v0 FULL (all-distributed): ${pct(r.coreV0)}`);
     safeLog(`FULL-STACK gain (Core v0 − status quo): ${pct(r.fullStackGain)}  95% conditional-MC CI ${civ(r.fullStackCI)}\n`);
+    // DIAGNOSTIC ONLY (Adversarial R2 #1): strict-residual leaves unspent sector budget on the table, so it CONFLATES
+    // planning quality with utilization. Every primary table above/below uses RECYCLE; strict is shown here once, labelled.
+    const rStrict = fullStack(cfg, { nWorlds: 1000, planning: { ...PLANNING, residualMode: 'strict' } });
+    safeLog(`  [diagnostic] strict-residual (utilization confound, NOT primary): full ${pct(rStrict.fullStackGain)} · planning Shapley ${pct(rStrict.attribution.planning)} — recycle is the primary mode.\n`);
     safeLog('SHAPLEY attribution — CONDITIONAL: every layer value is computed through the (declared) planning sector');
     safeLog('generator, so these are NOT the standalone quantified layers. The standalone SELECTION and DELIVERY figures');
     safeLog('come from E5 (no planning layer); E9 supplies the 3-layer STRUCTURE + attribution METHOD, planning qualitative:');
@@ -289,7 +297,7 @@ function main() {
     safeLog('Named-world decomposition (the full diagonal stays positive everywhere; individual layers can reverse):');
     safeLog('   world         full gain   planning   selection   delivery');
     for (const nm of ['PROBABLE', 'PRO_CENTRAL', 'MYOPIA_OFF', 'PRO_DIST']) {
-      const rw = fullStack({ ...baseConfig(), ...W, ...SC[nm] }, { nWorlds: 700, planning: { ...PLANNING, residualMode: 'recycle' } });
+      const rw = fullStack({ ...baseConfig(), ...W, ...SC[nm] }, { nWorlds: 700, planning: PRIMARY });
       safeLog(`   ${nm.padEnd(12)}  ${pct(rw.fullStackGain).padStart(8)}  ${pct(rw.attribution.planning).padStart(8)}  ${pct(rw.attribution.selection).padStart(9)}  ${pct(rw.attribution.delivery).padStart(8)}`);
     }
     safeLog('   → SELECTION and DELIVERY are LARGE in PROBABLE; selection reverses in PRO_CENTRAL and delivery in PRO_DIST');
@@ -304,7 +312,7 @@ function main() {
     safeLog('modest and CONDITIONAL — not a robust large positive layer):');
     safeLog('   secValSpread \\ assoc   -1.0     -0.6      0.0     +0.6');
     for (const sv of [0.1, 0.3, 0.6]) {
-      const row = [-1.0, -0.6, 0.0, 0.6].map((a) => pct(fullStack(cfg, { nWorlds: 500, planning: { ...PLANNING, secValSpread: sv, assoc: a } }).attribution.planning).padStart(7));
+      const row = [-1.0, -0.6, 0.0, 0.6].map((a) => pct(fullStack(cfg, { nWorlds: 500, planning: { ...PRIMARY, secValSpread: sv, assoc: a } }).attribution.planning).padStart(7));
       safeLog(`     ${sv.toFixed(1).padStart(4)}                 ${row.join('  ')}`);
     }
     safeLog('   → the SOFT credit distortion alone makes planning a small, sign-ambiguous contribution.\n');
@@ -315,7 +323,7 @@ function main() {
     safeLog('Agenda capture (second face of power — central keeps its lowest-perceived COFOG sectors OFF the menu):');
     safeLog('   sectors captured   planning Shapley   planning|distributed-sel   full-stack gain');
     for (const ac of [0, 1, 2, 3]) {
-      const ra = fullStack(cfg, { nWorlds: 600, planning: { ...PLANNING, agendaCapture: ac } });
+      const ra = fullStack(cfg, { nWorlds: 600, planning: { ...PRIMARY, agendaCapture: ac } });
       safeLog(`   ${String(ac).padStart(2)}/${PLANNING.nSec}              ${pct(ra.attribution.planning).padStart(7)}           ${pct(ra.planningUnderDistributedSel).padStart(7)}            ${pct(ra.fullStackGain).padStart(7)}`);
     }
     safeLog('   → agenda capture is the DOMINANT planning mechanism, and it is NOT anchorable today (no cited universal');
