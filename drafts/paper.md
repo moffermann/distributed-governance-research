@@ -984,8 +984,8 @@ effort collapses toward cost-minimization (0.49 → 0.24 over twenty-four
 cycles) — not through malice, but because effort has no return and no
 visible standard exists to imitate. Making verified quality visible
 sustains effort near its starting level, and the visible-competitive
-regime delivers +11% over the opaque baseline — a pure incentive gain
-with zero diversion in the model. Two pre-registered predictions failed
+regime produces a material visibility-driven delivery gain over the opaque
+baseline — a pure incentive gain with zero diversion in the model. Two pre-registered predictions failed
 informatively. Visibility alone carries most of the effect: the mirror
 precedes the market (the behavioral rule ties imitation to visibility, so
 part of this is by construction — but the construction encodes the claim

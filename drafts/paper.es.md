@@ -1061,7 +1061,8 @@ costos
 (0.49 → 0.24 a lo largo de veinticuatro ciclos) —no por malicia, sino porque el
 esfuerzo no tiene retorno y no existe un estándar visible que imitar. Hacer
 visible la calidad verificada sostiene el esfuerzo cerca de su nivel inicial, y
-el régimen visible-competitivo entrega un +11% sobre la línea base opaca —una
+el régimen visible-competitivo produce una ganancia material de entrega impulsada
+por la visibilidad frente a la línea base opaca —una
 ganancia de incentivo pura con cero desvío en el modelo. Dos predicciones
 preregistradas fallaron de manera informativa. La visibilidad por sí sola porta
 la mayor parte del efecto: el espejo precede al mercado (la regla conductual liga
