@@ -10,7 +10,7 @@ Public spending routinely asks one hierarchy to choose projects, execute them, a
 
 We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
 
-Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; the pre-registered gate remains the separate confirmatory result (a NO-GO under a different data-generating process), and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its magnitude is deferred. Symmetric net-budget accounting makes administrative cost roughly neutral: the modeled advantage lies in selection and delivery, not overhead. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
+Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a deliberately hostile test — a pre-registered, symmetric simulation that stripped out the favorable asymmetries an earlier version had relied on, plus a public adversarial review of 43 attacks across five rounds, each integrated into the design or recorded as a bounded limitation. The distributed advantage was positive in all 18 pre-specified cells but small (pooled median Δ = 0.025 of a full-information greedy benchmark, below our pre-set 0.05 threshold); we therefore retire the large multiplier an earlier version reported and state the modest, conditional result plainly. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; the pre-registered gate remains the separate confirmatory result (a NO-GO under a different data-generating process), and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its standalone magnitude is deferred. Symmetric net-budget accounting makes administrative cost roughly neutral: the modeled advantage lies in selection and delivery, not overhead. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
 
 This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulations provide conditional model contrasts for selection, delivery, and administrative cost, but their units are uncalibrated and partial-equilibrium and do not identify target-domain treatment effects; and claims are scoped to infrastructure-like public investment. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
 
@@ -123,7 +123,7 @@ both directions (Demsetz 1969; Section 2). Our contributions are:
    ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC
    interval +58.0, +59.2]; a conditional
    three-layer attribution keeps the full Core v0 diagonal positive in every
-   named world while planning's magnitude is left unquantified; and symmetric
+   named world while planning's standalone magnitude is left unquantified; and symmetric
    net-budget accounting leaves administrative cost roughly neutral. The earlier
    agent-based apparatus produced a single compound value-per-budget ratio; we
    **retire that compound as a calibrated effect**: a pre-registered, symmetric,
@@ -310,7 +310,7 @@ And two further contributions concern measurement and method:
   an independent finding); a matched selection-and-delivery extension gains
   ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC interval +58.0, +59.2]; a conditional
   three-layer attribution keeps the full Core v0 diagonal positive in every
-  named world while planning's magnitude remains unquantified; and symmetric
+  named world while planning's standalone magnitude remains unquantified; and symmetric
   net-budget accounting leaves administrative cost roughly neutral. Separately, a later
   pre-registered symmetric gate — a **selection-only** test with delivery held
   at parity — finds the *selection* advantage positive but small (Section 6);
@@ -556,7 +556,7 @@ seeded runs per condition; the code is dependency-free and deterministic
 ratio conflated selection quality, delivery leakage, and administrative cost and is
 **retired as a calibrated effect**. The rebuilt program separates the channels: E4
 measures selection; E5 crosses selection with delivery at matched budget; E9 supplies a
-conditional three-layer attribution while leaving planning magnitude unquantified; and
+conditional three-layer attribution while leaving planning’s standalone magnitude unquantified; and
 E10 applies each arm's administrative cost symmetrically as a net-budget reduction before
 selection. Results are percentages or reference-point differences, with parity at zero;
 no institution-performance multiplier is retained.
@@ -1074,8 +1074,11 @@ per-sector budget shares): E9 compares central and distributed versions of all
 three layers in a 2×2×2 factorial applied across ten persistent sectors, the
 COFOG count (United Nations 1999). A
 Shapley attribution decomposes the all-distributed-versus-status-quo gap
-into layer contributions that sum exactly to it. Two honest qualifications
-govern the reading. First, the attribution is *conditional*: every layer
+into layer contributions that sum exactly to it. In the declared PROBABLE
+world the full stack beats the status quo by ≈ +57 points of the reference
+[95% conditional Monte-Carlo interval +56.8, +58.1], and the conditional
+Shapley split is planning ≈ +3, selection ≈ +43, and delivery ≈ +11 points.
+Two honest qualifications govern the reading. First, the attribution is *conditional*: every layer
 value is computed through the declared planning sector generator, so the
 standalone, quantified **selection** and **delivery** figures are the E5
 ones (no planning layer); E9 contributes the three-layer *structure* and
@@ -1085,7 +1088,15 @@ MYOPIA_OFF, and PRO_DIST): selection turns negative in
 PRO_CENTRAL, and delivery turns negative in PRO_DIST because stronger delivery
 magnifies a harmful portfolio. Despite those component reversals, the full
 Core v0 diagonal remains positive in all four — a fact the paper
-reports rather than hides.
+reports rather than hides. The named-world decomposition (conditional Shapley
+attributions through the declared sector generator, points of the reference):
+
+| world | full-stack gain | planning | selection | delivery |
+|---|---|---|---|---|
+| PROBABLE | +57.1% | +3.1% | +42.7% | +11.3% |
+| PRO_CENTRAL | +14.7% | +1.5% | −2.8% | +16.0% |
+| MYOPIA_OFF | +44.7% | +2.5% | +29.5% | +12.6% |
+| PRO_DIST | +172.6% | +4.8% | +169.1% | −1.4% |
 The **planning** layer's value operates chiefly through **agenda capture**
 — the central keeping whole high-need, low-visibility functions off the
 menu (the second face of power; Bachrach and Baratz 1962; Schattschneider
@@ -1093,9 +1104,11 @@ menu (the second face of power; Bachrach and Baratz 1962; Schattschneider
 taxonomy; the pre-election shift toward visible spending, Drazen and Eslava
 2010; the systematic neglect of maintenance and prevention, Rioja 2003),
 but its *magnitude* cannot be identified without country-specific budget
-data. We therefore **do not report a planning-layer figure**: quantifying
-it with the mechanism switched off would understate it, and switched on it
-is not yet anchorable. Chile provides a qualitative illustration only:
+data. We therefore report planning only as the **conditional** Shapley
+contribution in the table above (≈ +3 points, small and positive across the
+named worlds), **not as a standalone anchored figure**: quantifying it as a
+standalone effect with the mechanism switched off would understate it, and
+switched on it is not yet anchorable. Chile provides a qualitative illustration only:
 mental-health spending remained near 2% of health spending over 2007–2015,
 despite mental disorders being the country's leading cause of disability
 (Errázuriz et al. 2015). That pattern is
@@ -1149,7 +1162,7 @@ verified delivery, not overhead: E5 measures those margins separately on matched
 portfolios; E9 supplies a conditional full-stack attribution whose component signs vary
 by world while the full diagonal stays positive; and E10 leaves administrative cost
 roughly neutral. Planning remains unresolved quantitatively — its agenda-capture
-mechanism is directionally grounded, but its magnitude is deliberately deferred rather
+mechanism is directionally grounded, but its standalone magnitude is deliberately deferred rather
 than manufactured from an unanchored scenario. Any calibrated total delivered-value
 effect on real data remains future work.
 
@@ -1502,7 +1515,7 @@ reference in the declared world [+58.0, +59.2]. E9 and E10 then sharpen where
 the modeled advantage comes from: the full-stack diagonal stays positive
 across the named worlds even when individual Shapley contributions reverse in
 extreme corners; agenda capture is represented as planning's principal
-mechanism, its direction anchored but its magnitude left unquantified; and
+mechanism, its direction anchored but its standalone magnitude left unquantified; and
 symmetric net-budget accounting leaves administrative
 cost roughly neutral. In this model, the architecture's advantage is delivered
 value, not cheap administration. But those magnitudes are conditional
