@@ -36,25 +36,27 @@ const PRIMARY = { ...PLANNING, residualMode: 'recycle' };
 
 // 3) PLANNING is a genuine, honest, CONTEXT-DEPENDENT layer:
 //    (a) the realistic association (high-need = low-visibility) gives a larger planning contribution than the
-//        anti-realistic one; (b) the conditional simple effect flips sign between central and distributed selection.
+//        anti-realistic one; (b) the conditional simple effect is strongly ATTENUATED under distributed selection
+//        (both effects positive at these anchored params; central-selection > distributed-selection).
 {
   const real = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, assoc: -1.0 } });
   const anti = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, assoc: +1.0 } });
   check('planning Shapley is larger under the realistic (assoc<0) association', real.attribution.planning > anti.attribution.planning, `real ${real.attribution.planning} anti ${anti.attribution.planning}`);
   check('realistic association gives a positive planning Shapley', real.attribution.planning > 0, `got ${real.attribution.planning}`);
-  check('planning simple effect flips: central-sel > distributed-sel', real.planningUnderCentralSel > real.planningUnderDistributedSel, `${real.planningUnderCentralSel} vs ${real.planningUnderDistributedSel}`);
+  check('planning simple effect is strongly attenuated under distributed selection (central-sel > distributed-sel)', real.planningUnderCentralSel > real.planningUnderDistributedSel, `${real.planningUnderCentralSel} vs ${real.planningUnderDistributedSel}`);
 }
 
 // 3b) AGENDA CAPTURE (second face of power): the central keeping sectors off the menu raises the planning
-//     contribution monotonically and removes the sign flip (planning becomes positive under distributed selection).
+//     contribution monotonically and strengthens the near-zero distributed-selection effect (already positive but
+//     CI-unresolved at the anchored params) into a materially positive one.
 {
   const soft = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, agendaCapture: 0 } });
   const cap1 = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, agendaCapture: 1 } });
   const cap3 = fullStack(cfg, { nWorlds: NW, planning: { ...PRIMARY, agendaCapture: 3 } });
   check('agenda capture raises the planning Shapley vs soft distortion', cap1.attribution.planning > soft.attribution.planning);
   check('more agenda capture raises planning further', cap3.attribution.planning > cap1.attribution.planning);
-  // more capture monotonically raises the planning contribution under distributed selection (it turns positive under
-  // heavier capture; at the small ANCHORED default params, modest capture alone does not flip it — an honest result).
+  // more capture monotonically raises the planning contribution under distributed selection (the baseline is already
+  // positive but near-zero/CI-unresolved; heavier capture lifts it to a materially positive effect — an honest result).
   check('more agenda capture raises the distributed-selection planning effect', cap3.planningUnderDistributedSel > soft.planningUnderDistributedSel);
   check('validatePlanning rejects agendaCapture >= nSec', (() => { try { validatePlanning({ ...PLANNING, agendaCapture: 10 }); return false; } catch { return true; } })());
 }

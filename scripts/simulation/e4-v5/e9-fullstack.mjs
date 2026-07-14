@@ -328,7 +328,7 @@ function main() {
     safeLog('     stays POSITIVE across the named worlds above (it does not reverse — SELECTION and DELIVERY are the layers');
     safeLog('     that reverse); its MAGNITUDE, not its sign, is what rides on the not-robustly-anchored secValSpread.\n');
 
-    // AGENDA CAPTURE (the second face of power) is the mechanism that makes planning a robust positive layer: the
+    // AGENDA CAPTURE (the second face of power) is the mechanism that strengthens planning: the
     // central keeps its lowest-perceived sectors OFF the menu. Direction anchored (Bachrach–Baratz 1962; political
     // budget cycles Drazen–Eslava 2010); SEVERITY kept MODEST (measured composition shifts are single-digit).
     safeLog('Agenda capture (second face of power — central keeps its lowest-perceived COFOG sectors OFF the menu):');
@@ -342,12 +342,12 @@ function main() {
     safeLog('     (≈+5.6% at 3 captured), but it is NOT anchorable today (no cited universal whole-function-exclusion moment, no');
     safeLog('     worked country example yet), so it is PROPOSED CONTINUATION WORK.\n');
 
-    safeLog('FRAMING (author decision): DO NOT report a planning-layer FIGURE. The soft-only slice above (≈+2–6% at the');
-    safeLog('anchored dispersion, larger only under a high DECLARED secValSpread) omits');
+    safeLog('FRAMING (author decision): DO NOT report a planning-layer FIGURE. The soft-only slice above (≈+3–4% across');
+    safeLog('the association grid at the anchored dispersion, larger only under a high DECLARED secValSpread) omits');
     safeLog('agenda capture — the mechanism that moves the needle — so it UNDERSTATES the layer; headlining it would read');
     safeLog('as "planning is small," which is not what it means. Quantify SELECTION and DELIVERY from E5 (they are LARGE');
     safeLog('IN PROBABLE — not "robust": each reverses sign in an extreme world, see the named-world table above, though');
-    safeLog('the full Core v0 advantage holds in every world); present PLANNING QUALITATIVELY — mechanism identified');
+    safeLog('the full Core v0 advantage holds in every named world); present PLANNING QUALITATIVELY — mechanism identified');
     safeLog('(agenda capture / second face of power), DIRECTION anchored (COFOG; election visible-spending shift;');
     safeLog('maintenance neglect), MAGNITUDE deferred to country-specific continuation (illustrative, not conclusive).');
   });
