@@ -93,7 +93,7 @@ que se atrincheran en los sistemas políticos estables (Olson 1982).</p>
 <p>Estas fallas no son abstractas: son la razón por la que el valor no llega a
 las personas para quienes se recaudó. Para el dinero público que financia obras
 concretas —infraestructura, obras, programas locales— lo que en último término
-importa no importa cuánto se asigna en el presupuesto sino cuánto valor efectivo llega a la gente por
+importa no es cuánto se asigna en el presupuesto sino cuánto valor efectivo llega a la gente por
 peso gastado: un proyecto que no se construye, o se construye mal, no ayuda a nadie,
 por bien intencionada que sea la asignación (el balde agujereado de Okun (1975)
 cargó agua que nunca llegó). Este es un criterio acotado para la inversión pública
@@ -128,7 +128,7 @@ los proyectos atraviesan un ciclo de vida de cierre paralelo, en el que
 financiamiento, fiscalización independiente, compromisos de evidencia y
 confirmación de beneficiarios deben cerrar todos antes de la ejecución; el
 ejecutor nunca elige ni paga a sus propios auditores —lo que elimina el costo
-de agencia del cumplimiento auto-supervisado (Jensen y Meckling 1976)—; el
+de agencia del cumplimiento auto-supervisado (Jensen y Meckling 1976); el
 dinero solo se mueve sobre hitos revisados, con retención y garantías
 materializadas externamente; y toda transición de estado relevante queda
 registrada en un rastro legible por la ciudadanía y auditable por expertos.</p>
@@ -365,7 +365,7 @@ esa arquitectura;</p>
 en simulación, de la construcción abierta de las prioridades de asignación a
 partir de señales ciudadanas agregadas contra la construcción central de ancho
 de banda finito (una prueba simétrica prerregistrada posterior encuentra la
-ventaja distribuida consistente pero pequeña; Sección 6)—;</p>
+ventaja distribuida consistente pero pequeña; Sección 6);</p>
 </li>
 <li><p><strong>(v)</strong> un método documentado de revisión adversarial con una regla de
 detención explícita.</p>
@@ -385,7 +385,7 @@ capas mantiene la diagonal completa de Core v0 positiva en todos los mundos
 nombrados mientras la magnitud independiente de la planificación queda sin cuantificar; y una
 contabilidad de presupuesto neto deja el costo administrativo
 aproximadamente neutro bajo un piso conservador de baja dispersión, con una ventaja declarada para Core v0 bajo un escenario de costos asimétrico. Por
-separado, una prueba de decisión prerregistrada posterior —una prueba <strong>solo-de-
+separado, una prueba de decisión prerregistrada posterior —una prueba <strong>limitada a la
 selección</strong> con la entrega mantenida en paridad— encuentra la ventaja de
 <em>selección</em> positiva pero pequeña (Sección 6); no pone a prueba la interacción de
 entrega. Este trabajo también introduce la brecha de
@@ -683,7 +683,7 @@ selección. Los resultados son porcentajes o diferencias de puntos de referencia
 paridad en cero; no se retiene ningún multiplicador de rendimiento institucional.</p>
 <p><strong>La prueba de decisión prerregistrada.</strong> Para comprobar si la ventaja distribuida era un
 artefacto de las asimetrías favorables en que se apoyaba una versión anterior, una prueba
-de estrés prerregistrada, simétrica y solo de selección <strong>retira esas asimetrías</strong> —la
+de estrés prerregistrada, simétrica y limitada a la selección <strong>retira esas asimetrías</strong> —la
 señal de oráculo del brazo distribuido, el objetivo central de crédito puro de la versión
 anterior y la superioridad de entrega estipulada—, dejando ambos brazos con presupuestos
 esperados de reportes de tasación igualados, el mismo conjunto de proyectos, costos y
@@ -1230,7 +1230,7 @@ declarado, puntos de la referencia):</p>
 <thead>
 <tr>
 <th>mundo</th>
-<th>ganancia full-stack</th>
+<th>ganancia del conjunto completo</th>
 <th>planificación</th>
 <th>selección</th>
 <th>entrega</th>
@@ -1930,7 +1930,7 @@ fuertemente anclada, y el resultado es robusto en la banda s_exp ∈ [1, 2,5] (�
 evidencia de opinión política identifica error de <em>percepción</em> élite–constituyente, y
 mapearlo a error de bienestar a nivel de proyecto requiere tres enlaces no estimados
 (percepción → puntaje del proyecto → elección de cartera → valor realizado del afectado),
-así que esos insumos son informados-por-proxy, no calibrados; (iii) los intervalos
+así que esos insumos están basados en indicadores indirectos, no calibrados; (iii) los intervalos
 reportados son intervalos de bootstrap por mundo condicionales al 95% con insumos de
 escenario <em>fijos</em> —solo incertidumbre de simulación de mundos finitos, excluyendo la
 incertidumbre en valores de parámetros, transporte literario, forma funcional e
@@ -1945,7 +1945,7 @@ reproducibles están en <code>scripts/simulation/e4-v5/</code>, <code>research/e
 <h3 id="objetivos-de-calibración-de-e4">Objetivos de calibración de E4</h3>
 <p>Las magnitudes de E4-v4/v5 son internas al modelo; la tabla nombra, para cada
 parámetro, el dato real que <em>podría</em> informarlo —volviendo la frontera entre lo
-interno al modelo y lo anclado empíricamente una línea visible y no un caveat
+interno al modelo y lo anclado empíricamente una línea visible y no una salvedad
 enterrado en prosa (detalles en <code>research/e4-calibration-targets.md</code>). El
 porcentaje de la referencia alcanzado por el central es un <em>resultado</em> que el modelo computa, pero mapearlo a los
 cocientes entre el valor realizado y el tasado <strong>no es una superposición directa</strong>: son
@@ -2007,7 +2007,7 @@ requiere una correspondencia explícita entre constructos</strong>, no una calib
 <p>El mapa de cuatro escenarios v1.14 (arriba; destacado en §6) hace explícito el mismo anclaje para su modelo de miopía al daño: la cola
 larga de visibilidad está motivada por fuentes en las compras públicas de cola pesada (Skuhrovec et al. 2013), la
 participación por la tasa de participación en presupuestos participativos, y el umbral de detección de daño por la literatura de
-agenda-setting/saliencia; los anclajes por-perilla y su fuerza están registrados en
+agenda-setting/saliencia; los anclajes de cada parámetro y su fuerza están registrados en
 <code>research/e4-plausible-anchors.md</code>, con los escenarios, la frontera y el teorema reproducibles en
 <code>scripts/simulation/e4-v5/</code> y <code>research/e4-parity-theorem.md</code>.</p>
 <h2 id="referencias">Referencias</h2>
