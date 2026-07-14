@@ -2,6 +2,7 @@
 // Run: npm run e10:costs:test
 import { e10, COSTS, validateCosts } from './e10-costs.mjs';
 import { delivered2x2 } from './e5-delivery.mjs';
+import { fullStack, PLANNING_PRIMARY } from './e9-fullstack.mjs';
 import { baseConfig } from './contract.mjs';
 import { SCENARIO_WORLD as W, PROBABLE, PRO_DIST } from './scenario-configs.mjs';
 
@@ -27,10 +28,13 @@ const NW = 800;
   check('planning-off value base == E5 S/A2 exactly', approx(r.valueOnly.statusQuo, e5.cells.S, 1e-12) && approx(r.valueOnly.coreV0, e5.cells.A2, 1e-12), `${r.valueOnly.statusQuo} vs ${e5.cells.S}`);
 }
 
-// 3) PLANNING ON switches the value base to E9 (the full stack).
+// 3) PLANNING ON switches the value base to E9 (the full stack) — and uses the RECYCLED primary, not strict
+//    (Adversarial R2 verify #2: E10 planning-on previously inherited the strict default silently).
 {
   const r = e10(cfg, { nWorlds: NW, costs: { ...COSTS, planningOn: true } });
+  const e9primary = fullStack(cfg, { nWorlds: NW, planning: PLANNING_PRIMARY });
   check('planning on switches the value base to E9', r.planningOn === true && r.via.startsWith('E9'));
+  check('planning-on value base == E9 RECYCLED primary (statusQuo/coreV0), not strict', approx(r.valueOnly.statusQuo, e9primary.statusQuo, 1e-12) && approx(r.valueOnly.coreV0, e9primary.coreV0, 1e-12), `${r.valueOnly.coreV0} vs ${e9primary.coreV0}`);
 }
 
 // 4) SHARED-WORLD NET-BUDGET ESTIMAND (Adversarial R2 #2/#3): the with-cost arm value IS delivered2x2 at budgetScale=1−κ,
@@ -39,10 +43,15 @@ const NW = 800;
 //    pass the old haircut implementation.
 {
   const r = e10(cfg, { nWorlds: NW });
-  const netC = delivered2x2(cfg, { nWorlds: NW, budgetScale: 1 - r.kappa_C }).cells.S;   // arm C at net budget, over the FULL oracle
-  const netD = delivered2x2(cfg, { nWorlds: NW, budgetScale: 1 - r.kappa_D }).cells.A2;   // arm D at net budget, over the FULL oracle
-  check('central with-cost value == shared-world net-budget cell (S at 1−κ_C, full oracle)', approx(r.withCosts.statusQuo, netC, 1e-12), `${r.withCosts.statusQuo} vs ${netC}`);
-  check('Core v0 with-cost value == shared-world net-budget cell (A2 at 1−κ_D, full oracle)', approx(r.withCosts.coreV0, netD, 1e-12), `${r.withCosts.coreV0} vs ${netD}`);
+  const full = delivered2x2(cfg, { nWorlds: NW });
+  const runC = delivered2x2(cfg, { nWorlds: NW, budgetScale: 1 - r.kappa_C });   // arm C at net budget, over the FULL oracle
+  const runD = delivered2x2(cfg, { nWorlds: NW, budgetScale: 1 - r.kappa_D });   // arm D at net budget, over the FULL oracle
+  check('central with-cost value == shared-world net-budget cell (S at 1−κ_C, full oracle)', approx(r.withCosts.statusQuo, runC.cells.S, 1e-12), `${r.withCosts.statusQuo} vs ${runC.cells.S}`);
+  check('Core v0 with-cost value == shared-world net-budget cell (A2 at 1−κ_D, full oracle)', approx(r.withCosts.coreV0, runD.cells.A2, 1e-12), `${r.withCosts.coreV0} vs ${runD.cells.A2}`);
+  // SHARED RETENTION (Adversarial R2 verify #3): the scale=1 / 1−κ_C / 1−κ_D runs must retain the SAME worlds and share
+  // the SAME full-budget oracle — a regression that made the oracle/retention depend on the scaled budget would break this.
+  check('scaled runs retain the SAME number of worlds as the full-budget run', full.n === runC.n && full.n === runD.n, `full ${full.n} C ${runC.n} D ${runD.n}`);
+  check('scaled runs share the SAME full-budget oracle sum (common normalizer)', approx(full.sumO, runC.sumO, 1e-6) && approx(full.sumO, runD.sumO, 1e-6), `full ${full.sumO} C ${runC.sumO} D ${runD.sumO}`);
   check('central net value STRICTLY exceeds the naive value·(1−κ) haircut (sub-proportional, NOT a haircut)', r.withCosts.statusQuo > r.valueOnly.statusQuo * (1 - r.kappa_C) + 1e-4, `${r.withCosts.statusQuo} vs haircut ${r.valueOnly.statusQuo * (1 - r.kappa_C)}`);
   check('Core v0 net value STRICTLY exceeds the naive value·(1−κ) haircut', r.withCosts.coreV0 > r.valueOnly.coreV0 * (1 - r.kappa_D) + 1e-4);
   check('in PROBABLE, costs reduce each arm below its full-budget value', r.withCosts.statusQuo < r.valueOnly.statusQuo && r.withCosts.coreV0 < r.valueOnly.coreV0);
@@ -64,8 +73,13 @@ const NW = 800;
 {
   const cfgPD = { ...baseConfig(), ...W, ...PRO_DIST };
   const r = e10(cfgPD, { nWorlds: NW });
+  // shared retention holds here too (the estimand is world-consistent in every scenario, not just PROBABLE).
+  const fullPD = delivered2x2(cfgPD, { nWorlds: NW });
+  const runCPD = delivered2x2(cfgPD, { nWorlds: NW, budgetScale: 1 - r.kappa_C });
   check('PRO_DIST: signed net-budget estimand is finite and coherent', Number.isFinite(r.valueOnly.gain) && Number.isFinite(r.withCosts.gain) && Number.isFinite(r.adminCostContribution));
   check('PRO_DIST: value-only gain is strongly positive (distributed-favourable world)', r.valueOnly.gain > 0.5, `gain ${r.valueOnly.gain}`);
+  check('PRO_DIST: shared retention holds (scaled run keeps the same worlds/oracle)', fullPD.n === runCPD.n && approx(fullPD.sumO, runCPD.sumO, 1e-6), `n ${fullPD.n}/${runCPD.n}`);
+  check('PRO_DIST: E10 central with-cost value == shared-world net cell (signed, over the full oracle)', approx(r.withCosts.statusQuo, runCPD.cells.S, 1e-12), `${r.withCosts.statusQuo} vs ${runCPD.cells.S}`);
 }
 
 // 7) VALIDATION (Adversarial R2 #5): fail-closed on invalid cost configs.

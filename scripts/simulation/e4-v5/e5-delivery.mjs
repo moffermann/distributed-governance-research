@@ -151,6 +151,7 @@ function runWorld2x2(cfg, rng, execRng, del, budgetScale = 1) {
 // returns diversion incidence, leakage, and a world-cluster bootstrap CI on the full-architecture gain.
 export function delivered2x2(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, budgetScale = 1 } = {}) {
   validateDelivery(delivery);
+  if (typeof budgetScale !== 'number' || !Number.isFinite(budgetScale) || budgetScale < 0 || budgetScale > 1) throw new Error(`[e5-delivery] budgetScale=${budgetScale} must be a finite number in [0,1]`);   // Adversarial R2 verify #3
   const rng = makeRng(seed);
   const execRng = makeRng((seed ^ 0x5bd1e995) >>> 0);      // separate stream ⇒ worlds match the E4 estimand exactly
   const W = [];
@@ -238,7 +239,9 @@ export function validateDelivery(del) {
   const unit = (k, v) => { if (fin(k, v) && (v < 0 || v > 1)) bad.push(`${k}=${v} must be in [0,1]`); };
   unit('pi_hon', del.pi_hon); unit('loss_hon', del.loss_hon);
   unit('mon_detect', del.mon_detect ?? 0); unit('mon_recovery', del.mon_recovery ?? 0); unit('val_risk', del.val_risk ?? 0);
-  unit('tempt_tail', del.tempt_tail ?? 0);   // grand-corruption tail is part of the contract (Adversarial R2 #4): finite ∈ [0,1], never missing/NaN
+  unit('tempt_tail', del.tempt_tail);   // REQUIRED, not defaulted (Adversarial R2 #4 verify): a config that OMITS the
+                                        //     grand-corruption tail silently ran the old zero-tail DGP — so, like pi_hon,
+                                        //     tempt_tail must be present + finite ∈ [0,1]. "No tail" must be an EXPLICIT 0.
   for (const name of ['opaque', 'verified']) {
     const reg = del[name];
     if (!reg || typeof reg !== 'object') { bad.push(`${name} regime missing`); continue; }

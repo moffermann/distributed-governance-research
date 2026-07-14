@@ -15,7 +15,7 @@ const NW = 1200;
 // 1) PERFECT DELIVERY reduces E5 to E4 selection: both regimes deliver 1.0 (pi_hon=1, loss=0) => every cell equals its
 //    selection efficiency, delivery effects and interaction vanish, and the cells match the E4 engine's own D/O, C/O.
 {
-  const perfect = { pi_hon: 1, loss_hon: 0,
+  const perfect = { pi_hon: 1, loss_hon: 0, tempt_tail: 0,   // tempt_tail is now REQUIRED — state "no tail" explicitly
     opaque:   { p_det: 0, a: 0, r: 0, rep: 0 },
     verified: { p_det: 0, a: 0, r: 0, rep: 0 } };
   const r = delivered2x2(cfg, { nWorlds: NW, delivery: perfect });
@@ -91,10 +91,16 @@ const NW = 1200;
   check('validateDelivery rejects a MISSING rep (would make the deterrent NaN)', throws({ ...DELIVERY, verified: { p_det: 0.75, a: 0.2, r: 0.5, gamma: 0.1 } }));
   check('validateDelivery rejects a missing regime', throws({ ...DELIVERY, opaque: undefined }));
   check('delivered2x2 validates its delivery arg', (() => { try { delivered2x2(cfg, { nWorlds: 10, delivery: { ...DELIVERY, mon_detect: 2 } }); return false; } catch { return true; } })());
-  // Adversarial R2 #4: the grand-corruption tail is part of the validated contract — negative/oversized/NaN are rejected.
+  // Adversarial R2 #4: the grand-corruption tail is part of the validated contract — negative/oversized/NaN AND a
+  // MISSING tail are rejected (a config that omits it silently ran the old zero-tail DGP).
   check('validateDelivery rejects negative tempt_tail', throws({ ...DELIVERY, tempt_tail: -0.1 }));
   check('validateDelivery rejects tempt_tail > 1', throws({ ...DELIVERY, tempt_tail: 1.5 }));
   check('validateDelivery rejects NaN tempt_tail', throws({ ...DELIVERY, tempt_tail: NaN }));
+  check('validateDelivery rejects a MISSING tempt_tail (would silently run the zero-tail DGP)', throws({ ...DELIVERY, tempt_tail: undefined }));
+  // Adversarial R2 verify #3: budgetScale is a validated primitive in [0,1].
+  check('delivered2x2 rejects budgetScale > 1 (overfunding)', (() => { try { delivered2x2(cfg, { nWorlds: 10, budgetScale: 1.2 }); return false; } catch { return true; } })());
+  check('delivered2x2 rejects negative budgetScale', (() => { try { delivered2x2(cfg, { nWorlds: 10, budgetScale: -0.1 }); return false; } catch { return true; } })());
+  check('delivered2x2 rejects NaN budgetScale', (() => { try { delivered2x2(cfg, { nWorlds: 10, budgetScale: NaN }); return false; } catch { return true; } })());
 }
 
 // 6b) TEMPTATION-TAIL CONTRACT (Adversarial R2 #4): the verified regime's diversion is LOW-but-NONZERO by construction —
@@ -106,7 +112,7 @@ const NW = 1200;
   const noTail = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, tempt_tail: 0.0 } });
   check('default: verified diversion is nonzero but small (grand-corruption tail residual)', r.diversionIncidence.A1 > 0 && r.diversionIncidence.A1 < 0.10, `got ${r.diversionIncidence.A1}`);
   check('R=0 stress: verified diversion stays nonzero (deterrent weaker, tail still bites)', r0.diversionIncidence.A1 > r.diversionIncidence.A1, `r0 ${r0.diversionIncidence.A1} vs r ${r.diversionIncidence.A1}`);
-  check('removing the tail (tempt_tail=0) collapses verified diversion toward the mechanical zero', noTail.diversionIncidence.A1 < r.diversionIncidence.A1 - 1e-6, `noTail ${noTail.diversionIncidence.A1} vs r ${r.diversionIncidence.A1}`);
+  check('removing the tail (tempt_tail=0) collapses verified diversion to EXACTLY zero (det>1 ⇒ U(0,1) never diverts)', approx(noTail.diversionIncidence.A1, 0, 1e-12), `noTail ${noTail.diversionIncidence.A1}`);
   check('the full-architecture gain is robust to whether the tail is on', Math.abs(r.full - noTail.full) < 0.03);
 }
 

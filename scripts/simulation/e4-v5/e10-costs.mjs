@@ -18,7 +18,7 @@
 // v0's own control machinery is costed, not free). Magnitudes DECLARED (see COSTS). Run: npm run e10:costs
 
 import { delivered2x2, DELIVERY } from './e5-delivery.mjs';
-import { fullStack, PLANNING } from './e9-fullstack.mjs';
+import { fullStack, PLANNING_PRIMARY } from './e9-fullstack.mjs';   // planning-on uses the RECYCLED primary, not strict (Adversarial R2 verify #2)
 import { baseConfig, NUM } from './contract.mjs';
 import { safeLog } from './adapter.mjs';
 
@@ -69,7 +69,7 @@ function armValueNet(cfg, opts, costs, delivery, planning, arm, kappa) {
   return arm === 'C' ? v.cells.S : v.cells.A2;      // normalized by the COMMON full-budget oracle
 }
 
-export function e10(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, planning = PLANNING, costs = COSTS } = {}) {
+export function e10(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, planning = PLANNING_PRIMARY, costs = COSTS } = {}) {
   validateCosts(costs);
   const kC = costs.kappa_C, kD = costs.kappa_D;
   const via = costs.planningOn ? 'E9 (planning ON)' : 'E5 (planning OFF)';

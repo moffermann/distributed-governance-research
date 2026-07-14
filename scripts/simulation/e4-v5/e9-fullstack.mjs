@@ -48,8 +48,14 @@ export const PLANNING = {
   nKeep: 5,           // integer count of sectors kept under hard exclusion (report the realized count; NOT a fraction)
   excludeMode: 'central', // which arm hard-excludes: 'central' | 'symmetric'
   residualMode: 'strict', // 'strict' = unspent sector budget is lost; 'recycle' = a second global pass funds the
-                      //     residual with the same arm rule (removes the utilization confound — Codex round-2)
+                      //     residual with the same arm rule (removes the utilization confound — Codex round-2). Default
+                      //     stays 'strict' ONLY so the nSec=1→E5 structural reduction is exact (E5 does no recycling);
+                      //     every PRIMARY report/consumer uses PLANNING_PRIMARY below.
 };
+
+// The PRIMARY planning object (Adversarial R2 verify #2): recycle residual, no utilization confound. This is what every
+// downstream consumer (E10 planning-on, any headline reporting) should use — NOT the strict structural default above.
+export const PLANNING_PRIMARY = { ...PLANNING, residualMode: 'recycle' };
 
 // Assign projects to nSec PERSISTENT sectors (drawn once per world), impose a controlled need↔visibility association,
 // and return per-project TRUE adjusted value + sector membership + per-sector visibility. nSec<=1 ⇒ a single sector
@@ -206,6 +212,7 @@ function quantities(sumV, sumO) {
 export function fullStack(cfg, { nWorlds = NUM.n_worlds.value, seed = NUM.seed.value, delivery = DELIVERY, planning = PLANNING, budgetScale = 1 } = {}) {
   validateDelivery(delivery);
   validatePlanning(planning);
+  if (typeof budgetScale !== 'number' || !Number.isFinite(budgetScale) || budgetScale < 0 || budgetScale > 1) throw new Error(`[e9] budgetScale=${budgetScale} must be a finite number in [0,1]`);   // Adversarial R2 verify #3
   const rng = makeRng(seed), execRng = makeRng((seed ^ 0x5bd1e995) >>> 0), pRng = makeRng((seed ^ 0x27d4eb2f) >>> 0);
   const keys = [];
   for (const p of ['c', 'd']) for (const s of ['c', 'd']) for (const d of ['op', 've']) keys.push(`${p}_${s}_${d}`);
@@ -316,7 +323,10 @@ function main() {
       const row = [-1.0, -0.6, 0.0, 0.6].map((a) => pct(fullStack(cfg, { nWorlds: 500, planning: { ...PRIMARY, secValSpread: sv, assoc: a } }).attribution.planning).padStart(7));
       safeLog(`     ${sv.toFixed(1).padStart(4)}                 ${row.join('  ')}`);
     }
-    safeLog('   → the SOFT credit distortion alone makes planning a small, sign-ambiguous contribution.\n');
+    safeLog('   → the soft credit distortion makes planning a small-to-moderate POSITIVE contribution in PROBABLE that');
+    safeLog('     GROWS with the DECLARED sector-value dispersion (≈+2% at the low spread → ≈+15% at a high declared');
+    safeLog('     stress); its magnitude rides entirely on secValSpread, which is not robustly anchored. (Planning\'s SIGN');
+    safeLog('     reverses across the NAMED WORLDS above — not across this all-PROBABLE grid.)\n');
 
     // AGENDA CAPTURE (the second face of power) is the mechanism that makes planning a robust positive layer: the
     // central keeps its lowest-perceived sectors OFF the menu. Direction anchored (Bachrach–Baratz 1962; political
@@ -327,10 +337,13 @@ function main() {
       const ra = fullStack(cfg, { nWorlds: 600, planning: { ...PRIMARY, agendaCapture: ac } });
       safeLog(`   ${String(ac).padStart(2)}/${PLANNING.nSec}              ${pct(ra.attribution.planning).padStart(7)}           ${pct(ra.planningUnderDistributedSel).padStart(7)}            ${pct(ra.fullStackGain).padStart(7)}`);
     }
-    safeLog('   → agenda capture is the DOMINANT planning mechanism, and it is NOT anchorable today (no cited universal');
-    safeLog('     whole-function-exclusion moment, no worked country example yet), so it is PROPOSED CONTINUATION WORK.\n');
+    safeLog('   → agenda capture is the mechanism that makes planning a ROBUST positive layer (it raises the planning');
+    safeLog('     Shapley and turns it positive even under DISTRIBUTED selection, removing the soft-distortion sign');
+    safeLog('     dependence), but it is NOT anchorable today (no cited universal whole-function-exclusion moment, no');
+    safeLog('     worked country example yet), so it is PROPOSED CONTINUATION WORK.\n');
 
-    safeLog('FRAMING (author decision): DO NOT report a planning-layer FIGURE. The soft-only slice above (~0–3%) omits');
+    safeLog('FRAMING (author decision): DO NOT report a planning-layer FIGURE. The soft-only slice above (≈+2–6% at the');
+    safeLog('anchored dispersion, larger only under a high DECLARED secValSpread) omits');
     safeLog('agenda capture — the mechanism that moves the needle — so it UNDERSTATES the layer; headlining it would read');
     safeLog('as "planning is small," which is not what it means. Quantify SELECTION and DELIVERY from E5 (they are LARGE');
     safeLog('IN PROBABLE — not "robust": each reverses sign in an extreme world, see the named-world table above, though');
