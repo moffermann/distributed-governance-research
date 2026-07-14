@@ -112,7 +112,7 @@ const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8">
 <style>${css}</style></head>
 <body><div class="doc">${titleHtml}${bodyHtml}</div></body></html>`;
 
-const htmlPath = outFile.replace(/\.pdf$/i, '.tmp.html');
+const htmlPath = outFile.replace(/\.pdf$/i, '.html');   // keep a self-contained HTML render alongside the PDF (renders/ convention)
 mkdirSync(dirname(outFile), { recursive: true });
 writeFileSync(htmlPath, html);
 

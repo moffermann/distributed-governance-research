@@ -1,0 +1,116 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>Resumen ejecutivo — v1.14</title>
+<style>
+:root{
+  --ink:#161616; --muted:#5b5b5b; --accent:#1f3d5c; --accent2:#7a5c2e;
+  --rule:#d9d9d9; --tableHead:#eef2f6; --codebg:#f4f5f7;
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Cascadia Code", "Consolas", "SFMono-Regular", monospace;
+}
+*{ box-sizing:border-box; }
+html,body{ background:#ffffff; }
+html{ font-size:10.7pt; }
+body{
+  font-family:var(--serif); color:var(--ink); line-height:1.52;
+  margin:0; -webkit-font-feature-settings:"liga","kern"; font-feature-settings:"liga","kern";
+  text-rendering:optimizeLegibility;
+}
+p{ margin:0 0 .62em; text-align:justify; hyphens:auto; -webkit-hyphens:auto; }
+h1,h2,h3,h4{ font-family:var(--sans); color:var(--accent); line-height:1.22; font-weight:600; text-wrap:balance; }
+h1{ font-size:1.95rem; margin:0 0 .35em; letter-spacing:-.01em; }
+h2{ font-size:1.28rem; margin:1.5em 0 .5em; padding-bottom:.18em; border-bottom:1.5px solid var(--rule); break-after:avoid; }
+h3{ font-size:1.06rem; margin:1.15em 0 .35em; color:#26476a; break-after:avoid; }
+h4{ font-size:.98rem; margin:1em 0 .3em; color:#2f2f2f; break-after:avoid; }
+h2+p, h3+p, h4+p{ break-before:avoid; }
+strong{ font-weight:700; color:#0f0f0f; }
+em{ font-style:italic; }
+a{ color:var(--accent); text-decoration:none; }
+ul,ol{ margin:.2em 0 .7em; padding-left:1.35em; }
+li{ margin:.22em 0; text-align:justify; hyphens:auto; }
+li::marker{ color:var(--accent); }
+blockquote{
+  margin:.8em 0; padding:.5em .9em; border-left:3px solid var(--accent2);
+  background:#faf7f1; color:#3a3a3a; font-size:.96em;
+}
+blockquote p:last-child{ margin-bottom:0; }
+code{ font-family:var(--mono); font-size:.86em; background:var(--codebg); padding:.05em .32em; border-radius:3px; color:#243b53; }
+pre{ background:var(--codebg); padding:.7em .9em; border-radius:6px; overflow-x:auto; font-size:.82em; line-height:1.4; }
+pre code{ background:none; padding:0; }
+hr{ border:0; border-top:1px solid var(--rule); margin:1.6em 0; }
+sup,sub{ line-height:0; }
+
+/* Tables */
+table{ border-collapse:collapse; width:100%; margin:.9em 0 1.1em; font-size:.9em;
+  font-variant-numeric:tabular-nums; break-inside:avoid; }
+thead th{ background:var(--tableHead); color:#12314e; font-family:var(--sans); font-weight:600;
+  text-align:left; }
+th,td{ border:1px solid var(--rule); padding:.4em .6em; vertical-align:top; }
+tbody tr:nth-child(even){ background:#fafbfc; }
+
+/* Lead / metadata paragraph right after H1 (bold blurb + copyright) */
+h1 + p strong, h1 + p{ }
+/* The bold "Working paper ..." blurb and the italic copyright line */
+p em:only-child{ color:var(--muted); }
+
+/* Title page */
+.titlepage{ break-after:page; display:flex; flex-direction:column; justify-content:center;
+  min-height: 86vh; text-align:left; }
+.titlepage h1{ font-size:2.5rem; line-height:1.15; margin-bottom:.6em; }
+.titlepage p{ text-align:left; }
+.titlepage > p:first-of-type{ /* the bold blurb */ font-size:.95rem; color:#333;
+  border-top:2px solid var(--accent); border-bottom:1px solid var(--rule);
+  padding:.9em 0; margin:.4em 0 1.1em; }
+.titlepage em{ color:var(--muted); }
+
+/* Simple header block for short docs (no title page): make the H1 area prettier */
+.doc > h1:first-child{ border-bottom:2px solid var(--accent); padding-bottom:.25em; }
+
+/* Avoid orphan/widow-ish breaks */
+h1,h2,h3,h4{ break-inside:avoid; }
+img{ max-width:100%; }
+</style></head>
+<body><div class="doc"><h1 id="gobernanza-distribuida-de-recursos-públicos">Gobernanza Distribuida de Recursos Públicos</h1>
+<h3 id="una-arquitectura-para-que-el-gasto-público-entregue-valor-real-verificable-y-difícil-de-corromper">Una arquitectura para que el gasto público entregue valor real, verificable y difícil de corromper</h3>
+<p><strong>Mauricio Offermann — julio de 2026.</strong> Resumen de dos papers de trabajo: la <em>arquitectura</em> (doi:10.5281/zenodo.21193846) y la <em>evidencia</em> que la somete a prueba (doi:10.5281/zenodo.21246088).</p>
+<h2 id="la-idea-en-una-frase">La idea en una frase</h2>
+<p>Los Estados no recaudan impuestos para <em>gastar presupuestos</em>; los recaudan para mejorar la vida de la sociedad que los financió (Musgrave, 1959). Sin embargo, la institución presupuestaria que usamos —de doscientos años— se juzga a sí misma por cuán fielmente ejecuta un plan, no por cuánto valor efectivamente <em>llega</em> a la gente. Entre el peso que se asigna y la plaza que se construye se abre una brecha silenciosa donde viven la corrupción, la obra de mala calidad y la mala elección de prioridades. Este trabajo propone —y pone a prueba con dureza— una arquitectura que cambia la vara: mide, y optimiza, el <strong>valor entregado y verificado por cada peso público</strong>. El aporte central es la arquitectura misma; y cuando sometimos su mecanismo de selección distribuida a una prueba pre-registrada y simétrica, la ventaja resultó real pero pequeña —un resultado que reportamos con la misma franqueza con que proponemos el diseño.</p>
+<h2 id="cómo-funciona">Cómo funciona</h2>
+<p>La arquitectura, llamada <em>Core v0</em>, se apoya en tres ideas simples que se refuerzan entre sí.</p>
+<p><strong>Los ciudadanos deciden hacia dónde va el dinero, sin que nadie tenga que estar pendiente.</strong> Cada persona puede dirigir su parte del presupuesto discrecional hacia proyectos concretos —una vereda, una plaza, un techo—; o delegar esa decisión en alguien de su confianza, revocable en cualquier momento; o dejar que su parte fluya según una <strong>regla de asignación</strong> que ella misma define. Conviene deshacer un malentendido: no hablamos de un <em>vector de planificación</em> —el clásico reparto fijo por grandes categorías, &quot;tanto para Cultura, tanto para Salud&quot;—, ni de una regla estática dictada por la autoridad. Hablamos de las <em>reglas</em> con que el propio ciudadano asigna su parte, construidas con los criterios que quiera entre miles posibles: personales y contextuales —&quot;proyectos cerca de mi hogar&quot;, &quot;proyectos rurales&quot;, &quot;de zonas extremas&quot;, &quot;los que están por financiarse&quot;— o temáticos —&quot;escuelas rurales&quot;, &quot;salud para adultos mayores&quot;—. Quien no define nada usa una regla por omisión sensata, y esa regla es privada, no un plan impuesto a todos. Lo esencial es que la asignación de quienes no participan activamente se rige por reglas distribuidas y personales, en vez de perderse o ser capturada por un planificador central; esta pieza, la más humilde, es a la vez la más importante: hace que el sistema funcione aunque la gran mayoría no participe activamente, que es lo que siempre ocurre en la vida real.</p>
+<p><strong>El dinero se paga contra resultados verificados, no contra promesas.</strong> En vez de entregar los fondos por adelantado, se liberan por tramos a medida que un tercero verifica que cada hito se cumplió. Retenciones, garantías y una memoria reputacional que acompaña al ejecutor hacen que desviar fondos sea, para quien lo intente, un mal negocio: se arriesga a perder más de lo que podría robar.</p>
+<p><strong>Todo queda a la vista.</strong> Cada decisión, cada demora, cada incumplimiento es público por construcción. Lo que hoy es invisible —la brecha entre lo que se declaró entregar y lo que realmente se entregó— se vuelve un hecho medible, atribuible y corregible.</p>
+<p>Una observación conceptual guía el diseño: quien construye la lista de prioridades ejerce una forma sutil pero decisiva de poder —decide qué entra siquiera en la conversación (Bachrach y Baratz, 1962)—, y por eso la arquitectura hace que esa construcción sea observable y, en su forma plena, distribuida entre los ciudadanos en lugar de concentrada.</p>
+<h2 id="los-hallazgos-que-importan">Los hallazgos que importan</h2>
+<ul>
+<li><p><strong>La arquitectura es el aporte; la ventaja medida es real pero modesta.</strong> Cuando sometimos el mecanismo de selección distribuida a una prueba pre-registrada y simétrica —igualando en esperanza el presupuesto de tasación de ambos brazos (aunque el ruteo de esa información difiere a propósito entre ellos), sin ventajas de partida—, la ventaja fue positiva en todas las celdas pero pequeña, por debajo del umbral de reconstrucción (rebuild) que nos habíamos fijado <em>de antemano</em> —un umbral de decisión de investigación sobre una escala no calibrada, no un umbral de materialidad de política. Por eso retiramos el multiplicador grande que una versión anterior había reportado y nos apoyamos en el diseño y en la <em>dirección</em> del mecanismo, no en un número. La honestidad sobre ese límite es parte del aporte, no una nota al pie.</p>
+</li>
+<li><p><strong>Lo que más rinde es la entrega verificada, no solo la selección.</strong> Al modelar juntas las dos capas —<em>quién elige</em> los proyectos y <em>cómo se entregan</em> (el control opaco del statu quo frente a la verificación de Core v0)—, ambas se <strong>componen multiplicativamente</strong>: la entrega verificada amplifica la ganancia de una buena selección, en lugar de simplemente sumarse a ella. En el mundo declarado del modelo, la arquitectura completa de selección y entrega supera al statu quo por un margen amplio —cerca de +58,6 puntos de la referencia interna del modelo, con un intervalo estrecho [+58,0, +59,2]—. Es un contraste condicional del modelo, no un efecto de campo calibrado; pero ubica la ventaja con nitidez en el <strong>valor entregado</strong>, no en la selección por sí sola.</p>
+</li>
+<li><p><strong>La ventaja es el valor entregado, no un ahorro administrativo.</strong> Al contabilizar de forma simétrica el costo de la maquinaria que cada institución opera —la central en estudios de valor, asignación, priorización y licencias; Core v0 en su propia plataforma y su control—, el costo administrativo resulta <strong>aproximadamente neutro</strong>. La eficiencia no proviene de recortar gastos generales, sino de que, a igual presupuesto, llega más valor por cada peso.</p>
+</li>
+<li><p><strong>Está diseñada para funcionar aunque participe poca gente.</strong> No exige movilizar a las masas: quien no participa activamente cae en reglas de asignación distribuidas y personales —o una por omisión sensata—, no en manos de un planificador central. Es una propiedad del <em>diseño</em>; no afirmamos que el sistema rinda <em>más</em> cuando baja la participación —nuestra prueba actual no puede sostener eso (al bajar la participación también cae la información disponible para ambos brazos).</p>
+</li>
+<li><p><strong>Es un resguardo contra el error de planificación.</strong> El sistema separa dos cosas que suelen confundirse: qué <em>categorías</em> de proyecto son elegibles (la planificación macro) y a qué <em>proyectos concretos</em> va la plata (las reglas de asignación de cada ciudadano). Si la autoridad traza buenas categorías, da igual quién lo haga; pero si las traza mal, el brazo distribuido todavía encuentra valor, mientras el central queda atrapado en sus malas categorías. En el modelo, esa ventaja relativa es mayor cuanto peor es la planificación central —una dirección del mecanismo, no un multiplicador calibrado.</p>
+</li>
+<li><p><strong>El control es robusto porque sus piezas se refuerzan.</strong> El conjunto de salvaguardas —verificación, retención, garantías, reputación— disuade el desvío incluso cuando cada pieza individual es modesta, porque actúan juntas. Y en el modelo su valor <em>crece</em> a medida que el entorno se ensucia: mientras más oportunistas hay entre los ejecutores, más rinde el control. Es una arquitectura pensada para operar en el mundo real, no en uno idealizado.</p>
+</li>
+<li><p><strong>La adopción es una perilla, no un salto.</strong> Se puede empezar migrando una fracción pequeña del presupuesto y subir gradualmente; en el modelo, cada incremento paga, sin valles ni umbrales. Esto responde la objeción política más común: no pide un salto de fe, sino un piloto que se amplía si —y solo si— sus resultados lo justifican.</p>
+</li>
+<li><p><strong>La tecnología permite abaratar y escalar el control.</strong> La verificación asistida por inteligencia artificial puede multiplicar la capacidad de fiscalización a costo casi nulo, liberando a los fiscalizadores humanos para el rol más valioso: auditar al sistema en vez de revisar rutina. Y la evidencia aportada por ciudadanos comunes —con intereses opuestos a los del contratista— puede volverse un control vivo y distribuido: el vecino que quiere su plaza terminada puede vigilar, sin costo, lo que un inspector no alcanza a cubrir. El límite honesto: hay fraudes —la colusión previa al contrato, la obra de calidad inferior que &quot;fotografía bien&quot;— que ninguna máquina ni evidencia documental detecta, y que seguirán requiriendo al ojo humano experto. La IA es un multiplicador de capacidad, no un reemplazo del juicio.</p>
+</li>
+</ul>
+<h2 id="por-qué-merece-atención">Por qué merece atención</h2>
+<p>Si aceptamos que el gasto público debe juzgarse por el valor que efectivamente llega, entonces la pregunta —¿puede mejorarse la arquitectura bicentenaria con la tecnología de hoy?— deja de ser retórica. Este trabajo responde con un diseño concreto: corrupción disuadida por diseño y no por vigilancia heroica, adopción gradual de bajo riesgo, ciudadanos con injerencia real sin necesidad de que todos participen, y una ventaja de selección que —puesta a prueba con dureza— resultó real pero pequeña, reportada como tal. No es una utopía participativa ni una promesa de transparencia; es una arquitectura concreta, contrastada dentro de un mundo simulado estilizado y no calibrado (no medida contra el sistema real), cuyos beneficios y cuyos límites se declaran con la misma franqueza.</p>
+<p>Los papers largos desarrollan cada afirmación con su evidencia. Este resumen es una invitación a leerlos.</p>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li>Bachrach, P., y M. Baratz (1962). &quot;Two Faces of Power.&quot; <em>American Political Science Review</em> 56(4).</li>
+<li>Musgrave, R. (1959). <em>The Theory of Public Finance</em>. McGraw-Hill.</li>
+<li>Okun, A. (1975). <em>Equality and Efficiency: The Big Tradeoff</em>. Brookings Institution.</li>
+<li>Ostrom, E. (1990). <em>Governing the Commons</em>. Cambridge University Press.</li>
+<li>Wampler, B. (2007). <em>Participatory Budgeting in Brazil</em>. Penn State University Press.</li>
+<li>Offermann, M. (2026a). <em>A Functional Architecture for Distributed Governance: Mechanism Design, Adversarial Stress-Testing, and a Symmetric Computational Test of Selective Institutional Distribution</em>. doi:10.5281/zenodo.21193846.</li>
+<li>Offermann, M. (2026b). <em>Stress-Testing a Distributed Public-Resource Governance Architecture</em>. doi:10.5281/zenodo.21246088.</li>
+</ul>
+</div></body></html>

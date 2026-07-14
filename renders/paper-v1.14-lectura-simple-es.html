@@ -1,0 +1,107 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>El paper, en simple — v1.14</title>
+<style>
+:root{
+  --ink:#161616; --muted:#5b5b5b; --accent:#1f3d5c; --accent2:#7a5c2e;
+  --rule:#d9d9d9; --tableHead:#eef2f6; --codebg:#f4f5f7;
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Cascadia Code", "Consolas", "SFMono-Regular", monospace;
+}
+*{ box-sizing:border-box; }
+html,body{ background:#ffffff; }
+html{ font-size:10.7pt; }
+body{
+  font-family:var(--serif); color:var(--ink); line-height:1.52;
+  margin:0; -webkit-font-feature-settings:"liga","kern"; font-feature-settings:"liga","kern";
+  text-rendering:optimizeLegibility;
+}
+p{ margin:0 0 .62em; text-align:justify; hyphens:auto; -webkit-hyphens:auto; }
+h1,h2,h3,h4{ font-family:var(--sans); color:var(--accent); line-height:1.22; font-weight:600; text-wrap:balance; }
+h1{ font-size:1.95rem; margin:0 0 .35em; letter-spacing:-.01em; }
+h2{ font-size:1.28rem; margin:1.5em 0 .5em; padding-bottom:.18em; border-bottom:1.5px solid var(--rule); break-after:avoid; }
+h3{ font-size:1.06rem; margin:1.15em 0 .35em; color:#26476a; break-after:avoid; }
+h4{ font-size:.98rem; margin:1em 0 .3em; color:#2f2f2f; break-after:avoid; }
+h2+p, h3+p, h4+p{ break-before:avoid; }
+strong{ font-weight:700; color:#0f0f0f; }
+em{ font-style:italic; }
+a{ color:var(--accent); text-decoration:none; }
+ul,ol{ margin:.2em 0 .7em; padding-left:1.35em; }
+li{ margin:.22em 0; text-align:justify; hyphens:auto; }
+li::marker{ color:var(--accent); }
+blockquote{
+  margin:.8em 0; padding:.5em .9em; border-left:3px solid var(--accent2);
+  background:#faf7f1; color:#3a3a3a; font-size:.96em;
+}
+blockquote p:last-child{ margin-bottom:0; }
+code{ font-family:var(--mono); font-size:.86em; background:var(--codebg); padding:.05em .32em; border-radius:3px; color:#243b53; }
+pre{ background:var(--codebg); padding:.7em .9em; border-radius:6px; overflow-x:auto; font-size:.82em; line-height:1.4; }
+pre code{ background:none; padding:0; }
+hr{ border:0; border-top:1px solid var(--rule); margin:1.6em 0; }
+sup,sub{ line-height:0; }
+
+/* Tables */
+table{ border-collapse:collapse; width:100%; margin:.9em 0 1.1em; font-size:.9em;
+  font-variant-numeric:tabular-nums; break-inside:avoid; }
+thead th{ background:var(--tableHead); color:#12314e; font-family:var(--sans); font-weight:600;
+  text-align:left; }
+th,td{ border:1px solid var(--rule); padding:.4em .6em; vertical-align:top; }
+tbody tr:nth-child(even){ background:#fafbfc; }
+
+/* Lead / metadata paragraph right after H1 (bold blurb + copyright) */
+h1 + p strong, h1 + p{ }
+/* The bold "Working paper ..." blurb and the italic copyright line */
+p em:only-child{ color:var(--muted); }
+
+/* Title page */
+.titlepage{ break-after:page; display:flex; flex-direction:column; justify-content:center;
+  min-height: 86vh; text-align:left; }
+.titlepage h1{ font-size:2.5rem; line-height:1.15; margin-bottom:.6em; }
+.titlepage p{ text-align:left; }
+.titlepage > p:first-of-type{ /* the bold blurb */ font-size:.95rem; color:#333;
+  border-top:2px solid var(--accent); border-bottom:1px solid var(--rule);
+  padding:.9em 0; margin:.4em 0 1.1em; }
+.titlepage em{ color:var(--muted); }
+
+/* Simple header block for short docs (no title page): make the H1 area prettier */
+.doc > h1:first-child{ border-bottom:2px solid var(--accent); padding-bottom:.25em; }
+
+/* Avoid orphan/widow-ish breaks */
+h1,h2,h3,h4{ break-inside:avoid; }
+img{ max-width:100%; }
+</style></head>
+<body><div class="doc"><h1 id="el-paper-de-arquitectura-contado-en-simple">El paper de arquitectura, contado en simple</h1>
+<p>Versión de lectura fácil del working paper (<code>paper.md</code> / <code>paper.es.md</code>). Mismas ideas, sin jerga. Es el paper que <em>propone</em> la arquitectura; el paper complementario la <em>pone a prueba</em> con simulaciones (ese tiene su propia lectura simple).</p>
+<h2 id="la-idea-de-fondo">La idea de fondo</h2>
+<p>Los Estados no recaudan impuestos para <em>gastar presupuestos</em>; los recaudan para mejorar la vida de la gente. Pero el sistema presupuestario que usamos —de doscientos años— se mide por cuán fielmente ejecuta un plan, no por cuánto valor efectivamente <em>llega</em>. Entre el peso que se asigna y la plaza que se construye hay una brecha donde viven la corrupción, la obra mala y la mala elección de prioridades. Este trabajo propone una arquitectura —<em>Core v0</em>— que cambia la vara: mide y optimiza el <strong>valor entregado y verificado por cada peso público</strong>. El aporte central es la arquitectura misma; y cuando pusimos su mecanismo de selección distribuida a una prueba dura y justa, la ventaja resultó real pero pequeña —y lo decimos con todas sus letras.</p>
+<h2 id="cómo-funciona-en-tres-piezas">Cómo funciona, en tres piezas</h2>
+<ol>
+<li><p><strong>Los ciudadanos deciden hacia dónde va el dinero, sin tener que estar pendientes.</strong> Cada persona puede dirigir su parte del presupuesto discrecional a proyectos concretos, delegar en alguien de confianza (revocable), o dejar que su parte fluya según una <strong>regla de asignación</strong> que ella misma define (&quot;proyectos cerca de mí&quot;, &quot;por financiarse&quot;, &quot;escuelas rurales&quot;). No es un porcentaje fijo dictado por la autoridad: es un perfil personal y privado. Incluso quien no hace nada participa a través de una regla por omisión sensata.</p>
+</li>
+<li><p><strong>El dinero se paga contra resultados verificados, no contra promesas.</strong> Se libera por tramos a medida que un tercero verifica cada hito. Retenciones, garantías y una memoria reputacional hacen que desviar fondos sea un mal negocio: se arriesga más de lo que se podría robar.</p>
+</li>
+<li><p><strong>Todo queda a la vista.</strong> Cada decisión, demora e incumplimiento es público por construcción. Lo que hoy es invisible —la brecha entre lo declarado y lo entregado— se vuelve un hecho medible y corregible.</p>
+</li>
+</ol>
+<h2 id="una-distinción-clave-dos-capas-no-una">Una distinción clave: dos capas, no una</h2>
+<p>Conviene separar dos cosas que suenan parecido pero son distintas:</p>
+<ul>
+<li><strong>La planificación macro</strong> = qué <em>categorías</em> de proyecto son elegibles (&quot;salud&quot;, &quot;educación rural&quot;). Define las casillas; no reparte plata. La puede trazar la autoridad (central) o la sociedad (distribuida).</li>
+<li><strong>Las reglas de asignación</strong> = a qué <em>proyectos concretos</em> dentro de esas casillas va la plata de cada ciudadano. Esto es lo que gobierna la entrega día a día, y es distribuido por diseño.</li>
+</ul>
+<p>Por qué importa: si la planificación macro central está mal trazada (casillas que la sociedad no valora), el sistema <strong>distribuido re-categoriza hacia el valor y no se cae</strong>, mientras el central queda atrapado. Es robusto a una mala planificación; el central es frágil a ella.</p>
+<h2 id="los-hallazgos-que-importan">Los hallazgos que importan</h2>
+<ul>
+<li><strong>El aporte es la arquitectura; la ventaja medida es real pero modesta:</strong> en una prueba pre-registrada y <em>simétrica</em> (igualando en esperanza el presupuesto de tasación; el enrutamiento de la información difiere a propósito entre los brazos), la ventaja de selección distribuida fue positiva en todas las celdas pero pequeña, por debajo del umbral que fijamos de antemano. Por eso retiramos el multiplicador grande que reportó una versión anterior y nos quedamos con el diseño y la <em>dirección</em> del mecanismo, no con un número.</li>
+<li><strong>La aguja la mueve la ENTREGA, no solo la elección:</strong> cuando al <em>quién elige</em> le sumamos <em>cómo se entrega</em> (control opaco del statu quo frente a control verificado de Core v0), las dos capas se <strong>multiplican</strong> —entregar bien lo bien elegido rinde más que la suma de sus partes—. En el mundo declarado del modelo, la arquitectura completa —selección distribuida <strong>más</strong> entrega verificada— supera al statu quo por un margen amplio (cerca de +58,6 puntos de la referencia interna del modelo, con un intervalo estrecho). Es un <strong>contraste condicional del modelo</strong>, no un efecto medido en el mundo real; pero deja claro dónde está la ventaja: en el <strong>valor entregado</strong>, no en la selección por sí sola.</li>
+<li><strong>El ahorro no viene de la administración, sino de la entrega:</strong> contabilizando de forma simétrica lo que cada institución gasta en su propia maquinaria (la central en estudios de valor, asignación y licencias; Core v0 en su plataforma y su control), el costo administrativo sale <strong>aproximadamente neutro</strong>. La ventaja de Core v0 es el valor que entrega, no un recorte de gastos generales.</li>
+<li><strong>La planificación importa, pero su tamaño no se afirma:</strong> el mecanismo por el que la planificación central hace daño es la <em>captura de agenda</em> —dejar funciones enteras de alta necesidad y baja visibilidad fuera del menú—. Su dirección está anclada en la evidencia, pero su magnitud no se puede fijar sin datos presupuestarios de un país concreto, así que la dejamos como trabajo de continuación, no como una cifra.</li>
+<li><strong>La pieza aburrida es la existencial:</strong> sin una regla por defecto que absorba a quien no participa, el sistema no entrega <em>nada</em> (con 3–5% de participación real, ningún proyecto junta fondos). Lo que hace institución a la participación es el default, no el entusiasmo.</li>
+<li><strong>Protege el valor aunque el planificador se equivoque:</strong> por la distinción de dos capas, si la planificación central está mal trazada el brazo distribuido todavía encuentra valor donde el central queda atrapado. En el modelo esa ventaja relativa es mayor cuanto peor es la planificación central —una dirección del mecanismo, no un multiplicador calibrado.</li>
+<li><strong>Las protecciones anti-corrupción funcionan juntas o no funcionan:</strong> quitar cualquiera cuesta casi nada; quitarlas todas hunde el sistema por debajo del status quo. Son complementos, no sustitutos.</li>
+<li><strong>La adopción es una perilla, no un salto:</strong> se puede migrar el 10% del presupuesto y subir gradualmente; en el modelo, cada incremento paga.</li>
+<li><strong>La tecnología abarata el control, con límites:</strong> la IA multiplica la capacidad de fiscalización (con humanos auditando a las máquinas y evidencia ciudadana contrapuesta), pero hay fraudes —colusión previa al contrato, obra mala que &quot;fotografía bien&quot;— que ningún papel ni máquina detecta y siguen necesitando al ojo humano.</li>
+</ul>
+<h2 id="lo-que-este-trabajo-no-afirma">Lo que este trabajo NO afirma</h2>
+<p>No es prueba institucional, ni autorización legal, ni un piloto real: es una arquitectura concreta, contrastada dentro de un mundo simulado estilizado y no calibrado, no medida contra el sistema real. El objeto que gobierna es la porción <em>discrecional y con forma de proyecto</em> del presupuesto (obras, subsidios, programas locales), no el gasto recurrente. La capa legal (compras públicas, anualidad, contraloría) vive <em>debajo</em> del modelo. Y la validación independiente —revisores externos, un piloto humano— es el paso siguiente, no este paper.</p>
+</div></body></html>
