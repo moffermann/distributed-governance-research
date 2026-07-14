@@ -617,7 +617,11 @@ paridad en cero; no se retiene ningún multiplicador de rendimiento instituciona
 artefacto de las asimetrías favorables en que se apoyaba una versión anterior, una prueba
 de estrés prerregistrada, simétrica y limitada a la selección **retira esas asimetrías** —la
 señal de oráculo del brazo distribuido, el objetivo central de crédito puro de la versión
-anterior y la superioridad de entrega estipulada—, dejando ambos brazos con presupuestos
+anterior y la superioridad de entrega estipulada— y, sobre todo, **apaga la ceguera
+al daño del central**, modelándolo como un *lector de valor competente* en vez del selector
+miope al daño que documenta la literatura (el parámetro de miopía al daño se deja de lado;
+el central aquí es mucho más benévolo con el daño difuso de lo que describe la evidencia).
+Eso deja ambos brazos con presupuestos
 esperados de reportes de tasación igualados, el mismo conjunto de proyectos, costos y
 ruido, entrega en paridad, cada uno actuando sobre su propia estimación ruidosa y no sobre
 la verdad. El central **conserva aún una presión de crédito acotada** en las celdas
@@ -631,7 +635,13 @@ prerregistrada congelada el veredicto fue negativo (no continuar)** —la median
 0.05— y su consecuencia registrada fue **retirar el multiplicador cuantitativo y tratar la
 simulación como una frontera ilustrativa** (una estimación post hoc de cociente de sumas
 es Δ = 0.026 [0.023, 0.029]; el prerregistro completo, la regla de decisión y los
-diagnósticos están en el Apéndice E4 y el contrato de afirmación y estimando). Esta es la
+diagnósticos están en el Apéndice E4 y el contrato de afirmación y estimando). Como la
+prueba, por diseño, le quita al central su ceguera al daño, el 0.025 es un **piso de
+robustez de la magnitud** —la ventaja que sobrevive una vez que se apaga la patología
+definitoria del central— **y no una estimación de la brecha real**, que depende justamente
+de esa asimetría. El resultado negativo autoriza retirar una *magnitud calibrada*; no
+autoriza afirmar que el efecto del mecanismo sea pequeño —su **dirección** está anclada en
+la literatura (el mapa de abajo), su magnitud simplemente no es calibrable. Esta es la
 **única computación confirmatoria** del artículo; el mapa de cuatro escenarios motivado
 por fuentes de más abajo es un análisis de escenarios separado y **exploratorio** bajo un
 proceso generador distinto, y no revisa este veredicto. Esta es una prueba estilizada de
