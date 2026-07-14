@@ -339,11 +339,8 @@ Y dos contribuciones adicionales conciernen a la medición y al método:
   capas mantiene la diagonal completa de Core v0 positiva en todos los mundos
   nombrados mientras la magnitud independiente de la planificación queda sin cuantificar; y una
   contabilidad de presupuesto neto deja el costo administrativo
-  aproximadamente neutro bajo un piso conservador de baja dispersión, con una ventaja declarada para Core v0 bajo un escenario de costos asimétrico. Por
-  separado, una prueba de decisión prerregistrada posterior —una prueba **limitada a la
-  selección** con la entrega mantenida en paridad— encuentra la ventaja de
-  *selección* positiva pero pequeña (Sección 6); no pone a prueba la interacción de
-  entrega. Este trabajo también introduce la brecha de
+  aproximadamente neutro bajo un piso conservador de baja dispersión, con una ventaja declarada para Core v0 bajo un escenario de costos asimétrico (el canal de
+  selección se examina por separado bajo una prueba prerregistrada; §6). Este trabajo también introduce la brecha de
   visibilidad (entrega oficialmente reportada menos entrega real) como un déficit
   de rendición de cuentas medible del statu quo;
 
@@ -640,8 +637,8 @@ establece que sea pequeño fuera de esta prueba. El umbral de 0.05 es una regla 
 del programa de investigación, **no** un umbral calibrado de materialidad de política
 pública. La asimetría hipotetizada de detección del daño está motivada por la literatura;
 este estudio no calibra su prevalencia ni su magnitud. El mapa posterior de cuatro
-escenarios utiliza un proceso generador distinto, es **exploratorio** y no revisa este
-resultado registrado. La prueba es estilizada: sus variables de valor y crédito son puntajes abstractos, no
+escenarios utiliza un proceso generador distinto, es **exploratorio** y no modifica ni
+revierte este resultado registrado. La prueba es estilizada: sus variables de valor y crédito son puntajes abstractos, no
 visibilidad, trazabilidad, permanencia o valor público medidos. Su prerregistro congelado,
 la regla de decisión, resultados y diagnósticos están en el Apéndice E4, el
 [contrato de afirmación y estimando](../research/claim-and-estimand-contract.md) y
@@ -679,12 +676,10 @@ mecanismo, no un mero parámetro barrido: **la cobertura sin diversidad de fuent
 reproducir el cuello de botella epistémico que pretende reemplazar.** Core v0 trata por
 tanto la concentración de delegados, proveedores de perfil y recomendadores como
 cantidades observables con umbrales de diversificación (§8), en vez de suponer
-independencia por decreto. La prueba de decisión prerregistrada sigue siendo la
-computación **confirmatoria** separada del artículo (un resultado negativo (no continuar),
-próximo a la paridad, en un contraste simétrico, bajo un proceso generador distinto); este mapa es un
-análisis de escenarios posterior y exploratorio, no una reclasificación de aquel. El mapa completo de cuatro escenarios, el anclaje literario, los
-rincones idealizados espejo y la frontera de modo común están en el **Apéndice E4**. El
-modelo localiza una frontera; no estima un efecto de campo.
+independencia por decreto. El mapa completo de cuatro escenarios, el anclaje literario, los
+rincones idealizados espejo y la frontera de modo común están en el **Apéndice E4**. Este
+mapa exploratorio no modifica el resultado registrado de la prueba; el modelo localiza una
+frontera, no estima un efecto de campo.
 
 **Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
 no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
@@ -1114,8 +1109,8 @@ parametrizada por auditorías el compuesto anterior fue sustancial a escala pero
 casi-paridad a escala de piloto municipal (10-40 proyectos), donde la selección central
 con cobertura plena es competitiva y el caso descansa en la entrega y la medición. Pero la evidencia de auditoría *parametriza la fuga de la
 línea base*; **no** calibra el efecto de tratamiento institucional de Core v0, que
-está gobernado por la prueba simétrica prerregistrada posterior (Sección 6), cuyo
-veredicto fue negativo (no continuar) —así que estas cifras de E7 se conservan como
+la prueba prerregistrada de selección posterior no respaldó recalibrar (Sección 6)
+—así que estas cifras de E7 se conservan como
 salidas condicionales del aparato, no como un resultado principal aún vigente.
 Dentro de este aparato, y condicional a su distribución estipulada de costos de
 oportunistas y a su línea base sin memoria, un resultado cualitativo es
@@ -1249,36 +1244,28 @@ de la plataforma refleja el bajo costo operativo de sistemas públicos de compra
 electrónicas establecidos (KONEPS, ChileCompra, ProZorro) y la fiscalización IA/ciudadana
 de costo marginal casi nulo.
 
-**Qué sobrevive.** Reducido a lo esencial. **(1)** Una prueba de decisión prerregistrada
-(§6, Apéndice E4) arrojó un resultado negativo (no continuar) —en un contraste simétrico
-la ventaja de selección distribuida fue *positiva pero pequeña* (mediana Δ = 0.025, por
-debajo de la regla de reconstrucción de 0.05), y su consecuencia registrada fue retirar el
-multiplicador cuantitativo y tratar la simulación como una frontera ilustrativa. **(1b)**
-Una extensión de robustez de cuatro escenarios (v1.14) —un análisis *separado y
-exploratorio* bajo un proceso generador distinto, no una reclasificación de esa prueba—
-modela al central como lo describe *direccionalmente* la evidencia (*casi ciego al daño
-difuso en la cola larga de baja visibilidad*: Hayek 1945; Scott 1998; Olson 1965;
-Bandiera–Prat–Valletti 2009). En ese escenario de referencia declarado y motivado por
-fuentes, la selección por cobertura recupera *sustancialmente* más de la referencia voraz
-del modelo (≈ 98% frente a ≈ 44%); incluso un central al que se le otorga el paquete
-competente completo y consciente del daño aun así pierde (≈ +14%), y el central se pone apenas adelante solo
-abandonando los supuestos declarados —en un mundo casi sin daño—, mientras la idealización
-*espejo* del brazo distribuido gana por goleada. Todo ello es un contraste de modelo condicional
-reportado como puntos de referencia declarados, no impacto calibrado. **(2)**
-Las contribuciones fundamentales son la arquitectura y el mecanismo
-cualitativo de crédito versus cobertura: el ordenamiento central presionado por
-crédito subpondera el valor difuso que la selección distribuida basada en cobertura
-sí visibiliza. **(3)** Todo cociente compuesto de valor por presupuesto que reportó una
-versión anterior se retira aquí como efecto calibrado —fue una salida condicional
-interna al modelo, no un efecto de campo calibrado. **(4)** En conjunto, E5–E10 ubican
-la ventaja condicional en la selección y la entrega verificada, no en la carga administrativa: E5
-mide esos márgenes por separado sobre carteras apareadas; E9 aporta una atribución
-condicional de conjunto completo de capas cuyos signos de componente varían por mundo mientras la
-diagonal completa se mantiene positiva; y E10 deja el costo administrativo
-aproximadamente neutro bajo un piso conservador de baja dispersión, con la dirección a favor de
-Core v0 (una ventaja declarada, aunque modesta, bajo un escenario de costos asimétrico). La planificación queda sin resolver cuantitativamente —su
-mecanismo de captura de agenda está direccionalmente anclado, pero su magnitud independiente se
-difiere deliberadamente en vez de fabricarse a partir de un escenario no anclado.
+**Qué establece el programa computacional.** Reducido a lo esencial. **(1)** Las
+contribuciones fundamentales son la arquitectura y el mecanismo cualitativo de crédito
+versus cobertura: el ordenamiento central presionado por crédito subpondera el valor difuso
+que la selección distribuida basada en cobertura sí visibiliza. **(2)** En conjunto, E5–E10
+ubican la ventaja condicional en la selección y la entrega verificada, no en la carga
+administrativa: E5 mide esos márgenes por separado sobre carteras apareadas; E9 aporta una
+atribución condicional de conjunto completo de capas cuyos signos de componente varían por
+mundo mientras la diagonal completa se mantiene positiva; y E10 deja el costo administrativo
+aproximadamente neutro bajo un piso conservador de baja dispersión, con la dirección a favor
+de Core v0 (una ventaja declarada, aunque modesta, bajo un escenario de costos asimétrico).
+**(3)** Una extensión de robustez de cuatro escenarios (v1.14) —un análisis *separado y
+exploratorio* bajo un proceso generador distinto— modela al central como lo describe
+*direccionalmente* la evidencia (*casi ciego al daño difuso en la cola larga de baja
+visibilidad*: Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009): la selección
+por cobertura recupera ≈ 98% de la referencia voraz del modelo frente al ≈ 44% del central,
+un contraste de modelo condicional reportado como puntos de referencia declarados, no
+impacto calibrado. **(4)** El multiplicador compuesto de valor por presupuesto de una
+versión anterior se retira aquí como efecto calibrado —bajo la regla prerregistrada
+congelada, la única prueba confirmatoria de selección no superó el umbral de reconstrucción
+de 0.05 (§6, Apéndice E4). La planificación queda sin resolver cuantitativamente —su
+mecanismo de captura de agenda está direccionalmente anclado, pero su magnitud independiente
+se difiere deliberadamente en vez de fabricarse a partir de un escenario no anclado.
 Cualquier efecto calibrado de valor total entregado sobre datos reales sigue siendo
 trabajo futuro.
 
@@ -1767,8 +1754,9 @@ Una estimación **post hoc** de cociente de sumas agrupado por mundos fue
 Δ = 0.026 [0.023, 0.029] (incertidumbre Monte Carlo sobre el proceso generador
 simulado, reportada por separado de la mediana). La ventaja crece con la presión de
 crédito λ y cae a medida que el crédito se alinea con el valor —el mecanismo de
-crédito versus cobertura— pero es pequeña, razón por la cual el multiplicador
-calibrado se retira y la simulación se trata como una frontera ilustrativa, y el artículo
+crédito versus cobertura—. Es pequeña para este estimando, y la mediana agrupada no superó
+el umbral registrado de 0.05; conforme a la regla congelada, el multiplicador calibrado se
+retira y la simulación se trata como una frontera ilustrativa, y el artículo
 se apoya en la arquitectura y la dirección del
 mecanismo, ahora afinada por el mapa de robustez a continuación.
 

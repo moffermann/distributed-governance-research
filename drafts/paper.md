@@ -313,10 +313,8 @@ And two further contributions concern measurement and method:
   three-layer attribution keeps the full Core v0 diagonal positive in every
   named world while planning's standalone magnitude remains unquantified; and net-budget
   accounting leaves administrative cost roughly neutral under a conservative low-spread floor,
-  with a declared Core v0 advantage under an asymmetric-cost scenario. Separately, a later
-  pre-registered symmetric gate — a **selection-only** test with delivery held
-  at parity — finds the *selection* advantage positive but small (Section 6);
-  it does not test the delivery interaction. This work also introduces the
+  with a declared Core v0 advantage under an asymmetric-cost scenario (the selection
+  channel is examined separately under a pre-registered gate; §6). This work also introduces the
   visibility gap (officially reported minus real delivery) as a
   measurable accountability deficit of the status quo;
 
@@ -624,12 +622,10 @@ the mechanism's one architectural condition, not merely a swept parameter: **cov
 without source diversity can reproduce the epistemic bottleneck it is meant to replace.**
 Core v0 therefore treats delegate, profile-provider, and recommender concentration as
 observable quantities with diversification thresholds (§8), rather than assuming
-independence by fiat. The
-pre-registered symmetry test remains the paper's separate **confirmatory** computation (a
-NO-GO near-parity on a symmetric benchmark, under a different
-data-generating process); this map is a subsequent exploratory scenario analysis, not a reclassification of it. The full four-scenario map, the
+independence by fiat. The full four-scenario map, the
 literature anchoring, the mirror idealized corners, and the common-mode frontier are in
-**Appendix E4**. The model locates a frontier; it does not estimate a field effect.
+**Appendix E4**. This exploratory map does not revise the registered gate result; the
+model locates a frontier, it does not estimate a field effect.
 
 **Finding 1: funding caps are an anti-concentration device, not a quality
 device.** With closure ON, concentration falls (funding Gini 0.732 vs
@@ -1038,8 +1034,8 @@ pilot scale (10-40 projects), where central selection with full coverage is
 competitive and the case rests on
 delivery and metering. But the audit evidence *parameterizes the baseline's
 leak*; it does **not** calibrate the Core v0 institutional treatment effect,
-which is governed by the later pre-registered symmetric test (Section 6), whose
-verdict was NO-GO — so these E7 figures are retained as conditional
+which the later pre-registered selection gate did not support recalibrating (Section 6)
+— so these E7 figures are retained as conditional
 apparatus outputs, not a surviving headline. Within this apparatus, and
 conditional on its stipulated opportunist-cost distribution and no-memory
 baseline, one qualitative result is instructive: at the model's audit-reported
@@ -1163,35 +1159,27 @@ bureaucracy documented in public-administration cost accounts; the platform side
 the low operating cost of established public e-procurement systems (KONEPS, ChileCompra,
 ProZorro) and near-zero marginal AI/citizen fiscalization.
 
-**What survives.** Stripped to essentials: (1) a pre-registered decision test (§6,
-Appendix E4) returned NO-GO — on a symmetric benchmark the distributed selection
-advantage was *positive but small* (median Δ = 0.025, below the 0.05 rebuild rule), and
-its registered consequence was to retire the quantitative multiplier and treat the
-simulation as an illustrative frontier; (1b) a v1.14
-four-scenario robustness extension (a *separate, exploratory* analysis under a different
-data-generating process, not a reclassification of that gate) models the central as the
-evidence *directionally* describes it — *near-blind to diffuse harm on the low-visibility
-long tail* (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009): in that
-source-motivated declared reference scenario coverage-routed selection recovers
-*substantially* more of the model's greedy reference (≈ 98% vs ≈ 44%); even a central granted
-the full harm-aware competent bundle still loses (≈ +14%), and the central pulls narrowly
-ahead only by abandoning the declared premises — on a near-harmless world — while the
-*mirror* idealization of the distributed arm wins by a landslide, all a conditional model
-contrast reported as declared reference points, not calibrated impact; (2) the
-load-bearing contributions are the architecture and the qualitative
-credit-versus-coverage mechanism — credit-pressured central ranking underweights
-diffuse value that coverage-based distributed selection surfaces; (3) every compound
-value-per-budget ratio an earlier version reported is retired here as a calibrated
-effect — it was a conditional, model-internal apparatus output, not a calibrated field
-effect; and (4) taken together, E5–E10 locate the conditional advantage in selection and
-verified delivery, not overhead: E5 measures those margins separately on matched
-portfolios; E9 supplies a conditional full-stack attribution whose component signs vary
-by world while the full diagonal stays positive; and E10 leaves administrative cost
-roughly neutral under a conservative low-spread floor, with the direction favoring Core v0
-(a declared advantage under an asymmetric-cost scenario). Planning remains unresolved quantitatively — its agenda-capture
-mechanism is directionally grounded, but its standalone magnitude is deliberately deferred rather
-than manufactured from an unanchored scenario. Any calibrated total delivered-value
-effect on real data remains future work.
+**What the computational program establishes.** Stripped to essentials: (1) the
+load-bearing contributions are the architecture and the qualitative credit-versus-coverage
+mechanism — credit-pressured central ranking underweights diffuse value that
+coverage-based distributed selection surfaces; (2) taken together, E5–E10 locate the
+conditional advantage in selection and verified delivery, not overhead: E5 measures those
+margins separately on matched portfolios; E9 supplies a conditional full-stack attribution
+whose component signs vary by world while the full diagonal stays positive; and E10 leaves
+administrative cost roughly neutral under a conservative low-spread floor, with the
+direction favoring Core v0 (a declared advantage under an asymmetric-cost scenario); (3) a
+v1.14 four-scenario robustness extension (a *separate, exploratory* analysis under a
+different data-generating process) models the central as the evidence *directionally*
+describes it — *near-blind to diffuse harm on the low-visibility long tail* (Hayek 1945;
+Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009): coverage-routed selection recovers
+≈ 98% of the model's greedy reference against the central's ≈ 44%, a conditional model
+contrast reported as declared reference points, not calibrated impact; and (4) the earlier
+compound value-per-budget multiplier is retired here as a calibrated effect — under the
+frozen pre-registered rule the sole confirmatory selection gate did not clear the 0.05
+rebuild bar (§6, Appendix E4). Planning remains unresolved quantitatively — its
+agenda-capture mechanism is directionally grounded, but its standalone magnitude is
+deliberately deferred rather than manufactured from an unanchored scenario. Any calibrated
+total delivered-value effect on real data remains future work.
 
 ## 7. Adversarial review as method
 
@@ -1662,8 +1650,9 @@ pause guard (no hidden asymmetry flagged). A **post-hoc** world-cluster
 ratio-of-sums estimate was Δ = 0.026 [0.023, 0.029] (Monte-Carlo uncertainty on the
 simulated data-generating process, reported separately from the median). The
 advantage rises with credit pressure λ and falls as credit aligns with value — the
-credit-versus-coverage mechanism — but it is small, which is why the calibrated
-multiplier is retired and the simulation treated as an illustrative frontier, and the
+credit-versus-coverage mechanism. It is small for this estimand, and its pooled median
+missed the registered 0.05 bar; under the frozen rule the calibrated multiplier is
+therefore retired and the simulation treated as an illustrative frontier, and the
 paper rests on the architecture and the mechanism direction, now sharpened by the
 robustness map below.
 
