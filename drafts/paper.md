@@ -811,8 +811,8 @@ expected sanction (Becker 1968); with the deterrence asymmetry carried entirely
 by detection probability and acquisition scaling (the penalty held equal,
 conservatively), the status quo turns net-harmful at rents near 10% of project
 cost while the distributed threshold — floored by the equal-per-citizen wallet,
-which money can persuade but cannot buy — sits roughly ten times higher (closed
-form ρ(C) in the backbone note). Detection is a snowball p = 1 − (1 − q)^m, so
+which money can persuade but cannot buy — sits substantially higher (closed
+form in the backbone note). Detection is a snowball p = 1 − (1 − q)^m, so
 its floor is an expected m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters drawn from the
 transparent affected public — low, but this is a model-internal statement whose
 force depends entirely on the stipulated detection gap (central ~0.10 vs
@@ -849,8 +849,9 @@ toward the distributed is not supported there.
 threshold.** From rent > acquisition + P(detect)·penalty, the central's threshold
 λ\*_C = (k_c + p_c·f)/C falls toward zero as its detection shrinks, while the
 distributed's λ\*_D = k_d + p_d·f/C is *floored* by the equal-wallet acquisition
-term k_d; the resistance ratio ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6 to 10 in the
-plausible range, rising in project cost. **(iii) The detection floor.** With snowball detection
+term k_d; the signed threshold gap δ(C) = λ\*_D − λ\*_C therefore stays positive
+across the plausible range, widening as the wallet floor k_d comes to dominate at
+higher project cost. **(iii) The detection floor.** With snowball detection
 P = 1 − (1 − q)^m, beating a central rate p_c needs, in the small-*q* (Poisson)
 approximation (1 − q)^m ≈ e^{−m·q}, only an expected m·q ≥ −ln(1 − p_c) ≈ 0.1
 reporters — the exact Bernoulli condition is m ≥ ln(1 − p_c)/ln(1 − q), which

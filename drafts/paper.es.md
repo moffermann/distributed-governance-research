@@ -876,8 +876,8 @@ con la asimetría de disuasión cargada enteramente por la probabilidad de
 detección y el escalamiento de la adquisición (la pena mantenida igual, de forma
 conservadora), el status quo se vuelve net-dañino con rentas cercanas al 10% del
 costo del proyecto mientras el umbral distribuido —con piso en el wallet
-igual-por-ciudadano, que el dinero puede persuadir pero no comprar— queda cerca
-de diez veces más alto (forma cerrada ρ(C) en la nota del backbone). La
+igual-por-ciudadano, que el dinero puede persuadir pero no comprar— queda
+sustancialmente más alto (forma cerrada en la nota del backbone). La
 detección es una bola de nieve p = 1 − (1 − q)^m, así que su piso es un valor
 esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes del público afectado y
 transparente —baja, pero esto es una afirmación interna al modelo cuya fuerza
@@ -914,9 +914,10 @@ central** (el distribuido queda apenas por debajo del central allí), así que l
 **(ii) El umbral de captura.** De renta >
 adquisición + P(detección)·pena, el umbral del central λ\*_C = (k_c + p_c·f)/C
 tiende a cero al reducirse su detección, mientras el del distribuido λ\*_D = k_d +
-p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la razón
-de resistencia ρ(C) = (k_d·C + p_d·f)/(k_c + p_c·f) ≈ 6 a 10 en el rango plausible, creciente en el
-costo del proyecto. **(iii) El piso de detección.** Con detección de bola de
+p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la brecha
+de umbral con signo δ(C) = λ\*_D − λ\*_C se mantiene por ello positiva en todo el
+rango plausible, ensanchándose a medida que el piso del wallet k_d pasa a dominar a
+mayor costo del proyecto. **(iii) El piso de detección.** Con detección de bola de
 nieve P = 1 − (1 − q)^m, superar una tasa central p_c requiere, en la aproximación
 de *q* pequeño (Poisson) (1 − q)^m ≈ e^{−m·q}, un valor esperado
 m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes —la condición Bernoulli exacta es
