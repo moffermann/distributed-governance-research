@@ -234,6 +234,7 @@ export function validateDelivery(del) {
   const unit = (k, v) => { if (fin(k, v) && (v < 0 || v > 1)) bad.push(`${k}=${v} must be in [0,1]`); };
   unit('pi_hon', del.pi_hon); unit('loss_hon', del.loss_hon);
   unit('mon_detect', del.mon_detect ?? 0); unit('mon_recovery', del.mon_recovery ?? 0); unit('val_risk', del.val_risk ?? 0);
+  unit('tempt_tail', del.tempt_tail ?? 0);   // grand-corruption tail is part of the contract (Adversarial R2 #4): finite ∈ [0,1], never missing/NaN
   for (const name of ['opaque', 'verified']) {
     const reg = del[name];
     if (!reg || typeof reg !== 'object') { bad.push(`${name} regime missing`); continue; }
@@ -262,6 +263,7 @@ export function jointSweep(cfg, { nSamples = 64, nWorlds = 300 } = {}) {
     pi_hon: [0.61, 0.85], loss_hon: [0.0, 0.15], op_pdet: [0.02, 0.15], op_a: [0.75, 1.0],
     ve_pdet: [0.60, 0.90], ve_a: [0.10, 0.40], ve_r: [0.30, 1.0], ve_rep: [0.0, 0.5],
     mon_detect: [0.0, 0.10], mon_recovery: [0.0, 0.36], val_risk: [0.0, 0.6],
+    tempt_tail: [0.0, 0.20],   // Adversarial R2 #4: SWEEP the grand-corruption tail too, so the robustness result is NOT the pre-fix zero-tail DGP
   };
   const keys = Object.keys(ranges), rng = makeRng((NUM.seed.value ^ 0x1234abcd) >>> 0), cols = {};
   for (const k of keys) {                                     // stratified + shuffled column per key (LHS)
@@ -273,7 +275,7 @@ export function jointSweep(cfg, { nSamples = 64, nWorlds = 300 } = {}) {
   for (let i = 0; i < nSamples; i++) {
     const s = {}; for (const k of keys) s[k] = lerp(ranges[k], cols[k][i]);
     const del = {
-      pi_hon: s.pi_hon, loss_hon: s.loss_hon,
+      pi_hon: s.pi_hon, loss_hon: s.loss_hon, tempt_tail: s.tempt_tail,   // carry the swept grand-corruption tail (Adversarial R2 #4)
       opaque:   { p_det: s.op_pdet, a: s.op_a, r: 0.0, gamma: 0.0, rep: 0.0 },
       verified: { p_det: s.ve_pdet, a: s.ve_a, r: s.ve_r, gamma: 0.10, rep: s.ve_rep },
       mon_detect: s.mon_detect, mon_recovery: s.mon_recovery, val_risk: s.val_risk,
@@ -283,8 +285,9 @@ export function jointSweep(cfg, { nSamples = 64, nWorlds = 300 } = {}) {
     selEff.push(rr.selectionEffect.atOpaque);  // A3 − S : the COVERAGE (selection) effect alone, at opaque delivery
   }
   fulls.sort((a, b) => a - b);
-  // NOTE: shares are over these 64 LHS draws across the DECLARED ranges (gamma, opaque recovery, temptation held fixed),
-  // NOT a global identified-set guarantee. shareArchitectureWins = A2−S>0 (full stack); shareCoverageWins = A3−S>0.
+  // NOTE: shares are over these 64 LHS draws across the DECLARED ranges (gamma and opaque recovery held fixed; the
+  // grand-corruption temptation tail IS swept — Adversarial R2 #4), NOT a global identified-set guarantee.
+  // shareArchitectureWins = A2−S>0 (full stack); shareCoverageWins = A3−S>0.
   return { n: fulls.length, min: fulls[0], max: fulls[fulls.length - 1], median: fulls[fulls.length >> 1],
     shareArchitectureWins: fulls.filter((x) => x > 0).length / fulls.length,
     shareCoverageWins: selEff.filter((x) => x > 0).length / selEff.length };

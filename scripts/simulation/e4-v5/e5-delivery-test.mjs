@@ -91,6 +91,23 @@ const NW = 1200;
   check('validateDelivery rejects a MISSING rep (would make the deterrent NaN)', throws({ ...DELIVERY, verified: { p_det: 0.75, a: 0.2, r: 0.5, gamma: 0.1 } }));
   check('validateDelivery rejects a missing regime', throws({ ...DELIVERY, opaque: undefined }));
   check('delivered2x2 validates its delivery arg', (() => { try { delivered2x2(cfg, { nWorlds: 10, delivery: { ...DELIVERY, mon_detect: 2 } }); return false; } catch { return true; } })());
+  // Adversarial R2 #4: the grand-corruption tail is part of the validated contract — negative/oversized/NaN are rejected.
+  check('validateDelivery rejects negative tempt_tail', throws({ ...DELIVERY, tempt_tail: -0.1 }));
+  check('validateDelivery rejects tempt_tail > 1', throws({ ...DELIVERY, tempt_tail: 1.5 }));
+  check('validateDelivery rejects NaN tempt_tail', throws({ ...DELIVERY, tempt_tail: NaN }));
+}
+
+// 6b) TEMPTATION-TAIL CONTRACT (Adversarial R2 #4): the verified regime's diversion is LOW-but-NONZERO by construction —
+//     the grand-corruption tail keeps a residual that strong control does not erase, and this must NOT silently return
+//     to zero. Pin nonzero verified incidence at the DEFAULT and at the R=0 stress; pin that removing the tail zeroes it.
+{
+  const r  = delivered2x2(cfg, { nWorlds: NW });
+  const r0 = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, verified: { ...DELIVERY.verified, rep: 0.0 } } });
+  const noTail = delivered2x2(cfg, { nWorlds: NW, delivery: { ...DELIVERY, tempt_tail: 0.0 } });
+  check('default: verified diversion is nonzero but small (grand-corruption tail residual)', r.diversionIncidence.A1 > 0 && r.diversionIncidence.A1 < 0.10, `got ${r.diversionIncidence.A1}`);
+  check('R=0 stress: verified diversion stays nonzero (deterrent weaker, tail still bites)', r0.diversionIncidence.A1 > r.diversionIncidence.A1, `r0 ${r0.diversionIncidence.A1} vs r ${r.diversionIncidence.A1}`);
+  check('removing the tail (tempt_tail=0) collapses verified diversion toward the mechanical zero', noTail.diversionIncidence.A1 < r.diversionIncidence.A1 - 1e-6, `noTail ${noTail.diversionIncidence.A1} vs r ${r.diversionIncidence.A1}`);
+  check('the full-architecture gain is robust to whether the tail is on', Math.abs(r.full - noTail.full) < 0.03);
 }
 
 // 7) VALUE-RISK robustness: value/complexity-correlated delivery risk does not systematically undo coverage — the
