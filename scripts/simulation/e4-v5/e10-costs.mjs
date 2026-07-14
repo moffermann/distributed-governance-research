@@ -42,9 +42,11 @@ export const COSTS = {
 // floor; it is NOT the realistic case. In steady state (régime) the central's machinery — appraisal / value-proxy
 // studies, prioritization and allocation bureaucracy, approvals, and the SALARIES that run them — is a large recurring
 // overhead, while Core v0's operating cost is a digital platform + maintenance + AI-assisted and citizen-sourced
-// fiscalization at NEAR-MARGINAL-ZERO cost. So the realistic κ_C ≫ κ_D. DIRECTION anchored (central admin bureaucracy
-// is large and recurring; e-GP run-costs <1% of spend; AI/citizen verification marginal ≈ 0); MAGNITUDE DECLARED, not
-// calibrated. Steady-state costs ONLY — one-time implementation CAPEX is excluded (amortized), so it is not the régime cost.
+// fiscalization at NEAR-MARGINAL-ZERO cost. So the declared asymmetric-cost scenario has κ_C ≫ κ_D. DIRECTION anchored
+// (central admin bureaucracy is large and recurring; e-GP run-costs <1% of spend; AI/citizen verification marginal ≈ 0);
+// MAGNITUDE DECLARED, not calibrated. NOTE κ_C = 0.12 sits JUST ABOVE the 1–10% pure-overhead band, so read it as
+// steady-state recurring OPERATING cost broadly (appraisal + prioritization + salaried bureaucracy), not pure overhead
+// alone. Steady-state costs ONLY — one-time implementation CAPEX is EXCLUDED (not amortized), so it is not a régime cost.
 export const COSTS_ASYMMETRIC = { kappa_C: 0.12, kappa_D: 0.02, planningOn: false };
 
 // Fail-closed validation of the cost config (Adversarial R2 #5): κ must be a finite fraction in the SUPPORTED domain
@@ -131,15 +133,15 @@ function main() {
 
     // TWO DECLARED SCENARIOS (régime costs only; implementation CAPEX excluded): the conservative symmetric FLOOR vs the
     // realistic ASYMMETRIC case. Direction anchored, magnitude declared — NOT a calibrated figure (Adversarial R2 authors' pass).
-    safeLog('\nDeclared cost scenarios (régime costs only — one-time implementation CAPEX excluded as amortized):');
+    safeLog('\nDeclared cost scenarios over identical perimeters (régime costs only — one-time implementation CAPEX excluded, not amortized):');
     const sym  = e10(cfg, { nWorlds: 1200, costs: COSTS });
     const asym = e10(cfg, { nWorlds: 1200, costs: COSTS_ASYMMETRIC });
-    safeLog(`  conservative SYMMETRIC floor (κ_C=${COSTS.kappa_C}, κ_D=${COSTS.kappa_D}):   admin-cost effect ${pct(sym.adminCostContribution)}   → roughly neutral`);
-    safeLog(`  realistic ASYMMETRIC (κ_C=${COSTS_ASYMMETRIC.kappa_C} central appraisal+prioritization+salaried bureaucracy ·`);
-    safeLog(`                        κ_D=${COSTS_ASYMMETRIC.kappa_D} platform + AI/citizen fiscalization ≈ marginal-zero):   admin-cost effect ${pct(asym.adminCostContribution)}   → a genuine Core v0 advantage`);
+    safeLog(`  conservative LOW-SPREAD floor (κ_C=${COSTS.kappa_C}, κ_D=${COSTS.kappa_D}):   admin-cost effect ${pct(sym.adminCostContribution)}   → roughly neutral`);
+    safeLog(`  declared ASYMMETRIC-cost scenario (κ_C=${COSTS_ASYMMETRIC.kappa_C} central appraisal+prioritization+salaried bureaucracy ·`);
+    safeLog(`                        κ_D=${COSTS_ASYMMETRIC.kappa_D} platform + AI/citizen fiscalization ≈ marginal-zero):   admin-cost effect ${pct(asym.adminCostContribution)}   → a declared Core v0 advantage`);
     const freed = COSTS_ASYMMETRIC.kappa_C - COSTS_ASYMMETRIC.kappa_D;
-    safeLog(`  → TWO distinct statements: (i) DIRECT fiscal saving — Core v0 frees κ_C−κ_D ≈ ${(100 * freed).toFixed(0)}% of the budget from`);
-    safeLog('    pure administrative overhead (a large, directionally-anchored cost advantage); (ii) its DELIVERED-VALUE effect');
+    safeLog(`  → TWO distinct statements: (i) ASSUMED net-budget difference — the declared κ_C−κ_D ≈ ${(100 * freed).toFixed(0)}% of the budget is a`);
+    safeLog('    declared scenario input, not a measured saving (κ_C=0.12 = recurring operating cost broadly, not pure overhead); (ii) its DELIVERED-VALUE effect');
     safeLog(`    is smaller (${pct(asym.adminCostContribution)} on the reference gap) because the freed budget funds marginal, low-value projects`);
     safeLog('    (net-budget sub-proportionality). "Roughly neutral" describes only (ii) under the conservative symmetric floor;');
     safeLog('    the realistic case is a genuine cost advantage for Core v0 — direction anchored, magnitude declared, not calibrated.');

@@ -1,6 +1,6 @@
 # Who Chooses, Who Delivers, Who Judges? A Functional Architecture for Distributed Public Spending
 
-**Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — it does not survive a symmetric stress test that strips the favorable asymmetries (see §6) — and rests on the architecture and the qualitative mechanism, now sharpened by a four-scenario robustness map (E4 v1.14): modelling the central as the evidence *directionally* describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek, Scott, Olson, Bandiera–Prat–Valletti) — coverage-routed selection recovers decisively more of the model's full-information reference (~98% vs ~44%) and robustly; the symmetric stress test remains a separate, conservative check, the central overtakes coverage only by abandoning the declared premises, and the mirror idealization of the distributed arm wins by a landslide; all such magnitudes are declared reference points from a stylized comparative-institutions model, a conditional model contrast, not calibrated impact. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
+**Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version retires the earlier compound value-per-budget multiplier as a calibrated effect — a pre-registered decision test returned NO-GO, so we retire it (see §6 and Appendix E4) — and rests on the architecture and the qualitative mechanism, now sharpened by an *exploratory* four-scenario robustness map (E4 v1.14): modelling the central as the evidence *directionally* describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek, Scott, Olson, Bandiera–Prat–Valletti) — coverage-routed selection recovers decisively more of the model's full-information reference (~98% vs ~44%) and robustly; the pre-registered test remains the paper's separate confirmatory result and this map is exploratory (it does not revise it), the central overtakes coverage only by abandoning the declared premises, and the mirror idealization of the distributed arm wins by a landslide; all such magnitudes are declared reference points from a stylized comparative-institutions model, a conditional model contrast, not calibrated impact. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
 
 *© 2026 Mauricio Offermann. Licensed CC BY 4.0 — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
@@ -10,9 +10,9 @@ Public spending routinely asks one hierarchy to choose projects, execute them, a
 
 We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
 
-Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a public adversarial review of 43 attacks across five rounds — each integrated into the design or recorded as a bounded limitation — and to a deliberately hostile symmetric benchmark. We retire the large value-per-budget multiplier an earlier version reported: it does not survive that symmetric benchmark, so we do not claim it as a calibrated effect, and we rest instead on the architecture and the mechanism's anchored direction. A four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its standalone magnitude is deferred. Administrative cost does not run against the distributed arm: net-budget accounting leaves it roughly neutral under a conservative symmetric floor, and a genuine, if modest, advantage once the realistic asymmetry (the central's appraisal/prioritization bureaucracy ≫ a platform with near-marginal-zero fiscalization) is allowed. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
+Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a public adversarial review of 43 attacks across five rounds — each integrated into the design or recorded as a bounded limitation — and to a deliberately hostile symmetric benchmark. We retire the large value-per-budget multiplier an earlier version reported: a pre-registered decision test returned NO-GO (§6), so we do not claim it as a calibrated effect, and we rest instead on the architecture and the mechanism's anchored direction. A separate, **exploratory** four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while the *mirror* idealization of the distributed arm wins by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its standalone magnitude is deferred. Administrative cost does not run against the distributed arm: net-budget accounting leaves it roughly neutral under a conservative low-spread floor, and a declared, if modest, advantage once an asymmetric-cost scenario (the central's appraisal/prioritization bureaucracy ≫ a platform with near-marginal-zero fiscalization) is allowed. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
 
-This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulations provide conditional model contrasts for selection, delivery, and administrative cost, but their units are uncalibrated and partial-equilibrium and do not identify target-domain treatment effects; and the empirical claims are demonstrated on project-shaped, milestone-verifiable public investment (infrastructure is the clearest case) — the architecture itself is general across that project-shaped, discretionary domain, not limited to infrastructure. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
+This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulations provide conditional model contrasts for selection, delivery, and administrative cost, but their units are uncalibrated and partial-equilibrium and do not identify target-domain treatment effects; and the empirical anchors are predominantly infrastructure and procurement — the milestone-verifiable, project-shaped cases where the evidence is clearest — while the architecture itself is general across the broader project-shaped, discretionary domain, not limited to infrastructure; that broader generality is a design claim, not yet empirically validated. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
 
 ## 1. Introduction
 
@@ -125,12 +125,11 @@ both directions (Demsetz 1969; Section 2). Our contributions are:
    three-layer attribution keeps the full Core v0 diagonal positive in every
    named world while planning's standalone magnitude is left unquantified; and net-budget
    accounting leaves administrative cost roughly neutral under a conservative symmetric
-   floor, with a modest Core v0 advantage in the realistic asymmetric case. The earlier
+   floor, with a declared Core v0 advantage under an asymmetric-cost scenario. The earlier
    agent-based apparatus produced a single compound value-per-budget ratio; we
-   **retire that compound as a calibrated effect**: it does not survive a
-   pre-registered, symmetric stress test that strips the central of its real-world
-   pathologies (§6 — against that idealized central the advantage stays positive but
-   small, its best case). The
+   **retire that compound as a calibrated effect**: a pre-registered decision test
+   returned NO-GO (§6 and Appendix E4 — on that symmetric benchmark the distributed
+   advantage stays positive but small, below the rebuild threshold). The
    load-bearing contribution is the architecture and the qualitative mechanism,
    whose comparative scope the v1.14 robustness map delimits across the no-myopia
    and harm-myopia regimes—not the multiplier.
@@ -312,8 +311,8 @@ And two further contributions concern measurement and method:
   ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC interval +58.0, +59.2]; a conditional
   three-layer attribution keeps the full Core v0 diagonal positive in every
   named world while planning's standalone magnitude remains unquantified; and net-budget
-  accounting leaves administrative cost roughly neutral under a conservative symmetric floor,
-  with a modest Core v0 advantage in the realistic asymmetric case. Separately, a later
+  accounting leaves administrative cost roughly neutral under a conservative low-spread floor,
+  with a declared Core v0 advantage under an asymmetric-cost scenario. Separately, a later
   pre-registered symmetric gate — a **selection-only** test with delivery held
   at parity — finds the *selection* advantage positive but small (Section 6);
   it does not test the delivery interaction. This work also introduces the
@@ -563,24 +562,26 @@ E10 applies each arm's administrative cost symmetrically as a net-budget reducti
 selection. Results are percentages or reference-point differences, with parity at zero;
 no institution-performance multiplier is retained.
 
-**The symmetric stress test: a conservative lower bound.** To check whether the
-distributed advantage was an artifact of the favorable asymmetries an earlier version
-relied on, a pre-registered, symmetric, selection-only stress test **strips the central
-of its real-world pathologies** — no harm-myopia, no agenda capture, no political or
-credit bias, no corruption — leaving a clean symmetric estimator: both arms with matched
-expected appraisal-report budgets, the same candidate pool, costs and noise, delivery at
-parity, each acting on its own noisy estimate rather than ground truth. That is the
-central's **best case**, and even there the distributed-minus-central advantage is
-**positive in every one of 18 pre-specified cells** — the idealized central's best
-outcome is a near-tie it still loses. It is, however, *small*: the pre-registered pooled
-median Δ = 0.025, below the pre-registered **0.05 research-program rebuild gate** (a
-post-hoc ratio-of-sums estimate is Δ = 0.026 [0.023, 0.029] on the simulated
-data-generating process). The reading is **not** that Core v0 barely helps; it is that
-**the advantage comes from the central's pathologies** — remove them and it nearly
-vanishes, which is exactly the credit-versus-coverage thesis. We therefore treat this
-symmetric gate as a **conservative lower bound and an artifact check**, not the governing
-verdict, and we do **not** claim the compound multiplier as a calibrated effect; the
-informative comparison is the source-motivated realistic scenario below. This is a stylized
+**The pre-registered decision test.** To check whether the distributed advantage was an
+artifact of the favorable asymmetries an earlier version relied on, a pre-registered,
+symmetric, selection-only stress test **strips those asymmetries** — the distributed
+arm's oracle signal, the earlier pure-credit central objective, and the stipulated
+delivery superiority — leaving both arms with matched expected appraisal-report budgets,
+the same candidate pool, costs and noise, delivery at parity, each acting on its own noisy
+estimate rather than ground truth. The central still **retains bounded credit pressure**
+in the primary cells (λ ∈ {0.1, 0.2, 0.3}); only the separate λ = 0 control is credit-free,
+and its advantage is even smaller (median ≈ 0.016) — the advantage tracks the central's
+credit pressure, consistent with credit-versus-coverage. The distributed-minus-central
+advantage is **positive in every one of 18 pre-specified cells but small**: the
+pre-registered pooled median Δ = 0.025, below the pre-registered **0.05 rebuild
+threshold**. **Under the frozen pre-registered rule the verdict was NO-GO** — the median
+did not clear 0.05 — and its registered consequence was to **retire the quantitative
+multiplier and treat the simulation as an illustrative frontier** (a post-hoc
+ratio-of-sums estimate is Δ = 0.026 [0.023, 0.029]; the full pre-registration, decision
+rule, and diagnostics are in Appendix E4 and the claim-and-estimand contract). This is the
+paper's **sole confirmatory** computation; the source-motivated four-scenario map below is
+a separate, **exploratory** scenario analysis under a different data-generating process
+and does not revise this verdict. This is a stylized
 test of a *selection mechanism*, not a validated implementation of Core v0: its
 value and credit variables are abstract scores, not measured visibility,
 traceability, permanence, or public value. The **0.05** figure is a
@@ -594,7 +595,7 @@ The load-bearing contributions are the architecture, the mechanism direction, an
 the v1.14 comparative robustness map across declared no-myopia and harm-myopia
 regimes—not a point multiplier or calibrated impact.
 
-**The declared reference scenario is decisive (E4 v1.14).** When the central selector is
+**The declared reference scenario (E4 v1.14) — an exploratory robustness map.** When the central selector is
 modelled as the evidence describes it — its *direction* on every axis grounded in the
 literature (not its magnitude fitted): near-blind to *diffuse harm on the low-visibility
 long tail* (Hayek 1945; Scott 1998; Olson 1965; Bandiera, Prat and Valletti 2009, whose
@@ -624,9 +625,9 @@ without source diversity can reproduce the epistemic bottleneck it is meant to r
 Core v0 therefore treats delegate, profile-provider, and recommender concentration as
 observable quantities with diversification thresholds (§8), rather than assuming
 independence by fiat. The
-pre-registered symmetry gate remains a separate, **conservative** computation (a
-near-parity lower bound against a de-pathologized central, under a different
-data-generating process); this map is a subsequent scenario analysis, not a reclassification of it. The full four-scenario map, the
+pre-registered symmetry test remains the paper's separate **confirmatory** computation (a
+NO-GO near-parity on a symmetric benchmark, under a different
+data-generating process); this map is a subsequent exploratory scenario analysis, not a reclassification of it. The full four-scenario map, the
 literature anchoring, the mirror idealized corners, and the common-mode frontier are in
 **Appendix E4**. The model locates a frontier; it does not estimate a field effect.
 
@@ -1037,8 +1038,8 @@ pilot scale (10-40 projects), where central selection with full coverage is
 competitive and the case rests on
 delivery and metering. But the audit evidence *parameterizes the baseline's
 leak*; it does **not** calibrate the Core v0 institutional treatment effect,
-which is governed by the later pre-registered symmetric test (Section 6) — a
-conservative lower bound against an idealized central — so these E7 figures are retained as conditional
+which is governed by the later pre-registered symmetric test (Section 6), whose
+verdict was NO-GO — so these E7 figures are retained as conditional
 apparatus outputs, not a surviving headline. Within this apparatus, and
 conditional on its stipulated opportunist-cost distribution and no-memory
 baseline, one qualitative result is instructive: at the model's audit-reported
@@ -1126,7 +1127,7 @@ agenda capture nor calibrates its magnitude; mental health is a funded
 subfunction, not an excluded top-level COFOG function.
 
 **Finding 10: administrative cost favors Core v0 — roughly neutral only under a
-conservative symmetric floor, a genuine advantage in the realistic asymmetric case.** A tenth
+conservative low-spread floor, a declared advantage under an asymmetric-cost scenario.** A tenth
 experiment (`scripts/simulation/e4-v5/e10-costs.mjs`) adds the administrative
 and machinery cost each institution runs and Core v0 largely replaces — the
 value-proxy studies, allocation and prioritization apparatus, and licensing
@@ -1136,33 +1137,37 @@ arm's *budget* before selection, so the value loss is sub-proportional
 because greedy funding cuts the marginal projects first; it charges Core v0's
 own verification and recovery machinery rather than treating it as free; and
 it avoids double-counting the delivery leakage already modeled in E5. We report
-two **declared** scenarios (régime costs only — one-time implementation is excluded
-as amortized). Under a **conservative symmetric floor** (κ_C = 0.08, κ_D = 0.05) the
-layer is roughly neutral: administrative cost moves the modeled gap from +58.6 to +57.7
-reference points, a −0.9-point contribution. But that symmetry is a deliberate floor,
-not the realistic case. In steady state the central's machinery — appraisal and
-value-proxy studies, the prioritization and allocation bureaucracy, approvals, and the
-salaries that run them — is a large recurring overhead, while Core v0 runs on a digital
-platform plus AI-assisted and citizen-sourced fiscalization at near-marginal-zero cost.
-The realistic case is therefore **asymmetric** (κ_C ≫ κ_D), and it splits into two honest
-statements. First, a **direct fiscal saving**: at a declared κ_C = 0.12 versus κ_D = 0.02,
-Core v0 frees about a tenth of the budget from pure administrative overhead — a large,
-directionally-anchored cost advantage. Second, its **delivered-value effect** is smaller
-(about +0.4 reference points on the gap) because that freed budget funds marginal,
-low-value projects (the net-budget sub-proportionality). So the honest reading is not "no
-cost difference": the **direction favors Core v0**; "roughly neutral" holds only under the
-conservative symmetric floor; and the realistic asymmetric case is a genuine — though
-welfare-modest and unquantified — cost advantage. The cost shares are declared scenario
-inputs, not measured arm-specific costs: the central-machinery direction is anchored to
-documented public-spending waste (IDB 2018) and to the large, recurring
-appraisal/prioritization bureaucracy; the platform side to the low operating cost of
-established public e-procurement systems (KONEPS, ChileCompra, ProZorro) and near-zero
-marginal AI/citizen fiscalization.
+two **declared** scenarios over identical cost perimeters (steady-state régime costs
+only — one-time implementation is **CAPEX-excluded, not amortized**). Under a
+**conservative low-spread floor** (κ_C = 0.08, κ_D = 0.05, both inside a 1–10%
+administrative-overhead band) the layer is roughly neutral: administrative cost moves the
+modeled gap from +58.6 to +57.7 reference points, a −0.9-point contribution. But that
+low spread is a deliberate floor, not the only defensible case. In steady state the
+central's machinery — appraisal and value-proxy studies, the prioritization and
+allocation bureaucracy, approvals, and the salaries that run them — is plausibly a large
+recurring overhead, while Core v0 runs on a digital platform plus AI-assisted and
+citizen-sourced fiscalization at near-marginal-zero cost. A second, **asymmetric-cost
+scenario** (κ_C ≫ κ_D) is therefore declared, and it splits into two statements. First,
+an **assumed net-budget difference**: under a declared κ_C = 0.12 versus κ_D = 0.02 the
+central's modeled steady-state operating cost exceeds Core v0's by about a tenth of the
+budget — a declared scenario input, not a measured saving (and κ_C = 0.12 reads as
+recurring operating cost broadly — appraisal, prioritization, salaried bureaucracy — not
+pure overhead, since it sits just above that 1–10% band). Second, its **delivered-value
+effect** is smaller (about +0.4 reference points on the gap) because that freed budget
+funds marginal, low-value projects (the net-budget sub-proportionality). So the honest
+reading is not "no cost difference": the **direction favors Core v0**; "roughly neutral"
+holds only under the conservative low-spread floor; and the declared asymmetric-cost
+scenario is a declared — though welfare-modest and unquantified — cost advantage. The
+cost shares are declared scenario inputs, not measured arm-specific costs: the
+central-machinery direction reflects the large, recurring appraisal/prioritization
+bureaucracy documented in public-administration cost accounts; the platform side reflects
+the low operating cost of established public e-procurement systems (KONEPS, ChileCompra,
+ProZorro) and near-zero marginal AI/citizen fiscalization.
 
-**What survives.** Stripped to essentials: (1) a pre-registered symmetric gate that
-strips the central of its real-world pathologies — its best case — leaves the distributed
-selection advantage *positive but small* (median Δ = 0.025), a conservative lower bound
-rather than the primary comparison; (1b) a v1.14
+**What survives.** Stripped to essentials: (1) a pre-registered decision test (§6,
+Appendix E4) returned NO-GO — on a symmetric benchmark the distributed selection
+advantage was *positive but small* (median Δ = 0.025, below the 0.05 rebuild rule), and
+its registered consequence was to retire the quantitative multiplier; (1b) a v1.14
 four-scenario robustness extension (a *separate, exploratory* analysis under a different
 data-generating process, not a reclassification of that gate) models the central as the
 evidence *directionally* describes it — *near-blind to diffuse harm on the low-visibility
@@ -1182,8 +1187,8 @@ effect; and (4) taken together, E5–E10 locate the conditional advantage in sel
 verified delivery, not overhead: E5 measures those margins separately on matched
 portfolios; E9 supplies a conditional full-stack attribution whose component signs vary
 by world while the full diagonal stays positive; and E10 leaves administrative cost
-roughly neutral under a conservative symmetric floor, with the direction favoring Core v0
-(a modest advantage in the realistic asymmetric case). Planning remains unresolved quantitatively — its agenda-capture
+roughly neutral under a conservative low-spread floor, with the direction favoring Core v0
+(a declared advantage under an asymmetric-cost scenario). Planning remains unresolved quantitatively — its agenda-capture
 mechanism is directionally grounded, but its standalone magnitude is deliberately deferred rather
 than manufactured from an unanchored scenario. Any calibrated total delivered-value
 effect on real data remains future work.
@@ -1405,8 +1410,8 @@ estimates; individual layer signs reverse in extreme worlds even though the full
 Core v0 diagonal remains positive in all four named worlds. Planning's
 agenda-capture direction is anchored but its magnitude is unquantified. E10's
 cost result rests on declared net-budget shares (scenario inputs, not measured
-arm-specific costs): roughly neutral under a conservative symmetric floor, and a modest
-Core v0 advantage under the realistic asymmetry (κ_C ≫ κ_D). None of these is a field-effect
+arm-specific costs): roughly neutral under a conservative low-spread floor, and a modest
+Core v0 advantage under a declared asymmetric-cost scenario (κ_C ≫ κ_D). None of these is a field-effect
 estimate.
 
 **The outcome measure is a bounded, non-distributional aggregate.** The value
@@ -1541,22 +1546,22 @@ across the named worlds even when individual Shapley contributions reverse in
 extreme corners; agenda capture is represented as planning's principal
 mechanism, its direction anchored but its standalone magnitude left unquantified; and
 net-budget accounting leaves administrative
-cost roughly neutral under a conservative symmetric floor, and a modest Core v0 advantage
-under the realistic asymmetry. In this model, the architecture's advantage is delivered
+cost roughly neutral under a conservative low-spread floor, and a modest Core v0 advantage
+under a declared asymmetric-cost scenario. In this model, the architecture's advantage is delivered
 value, and administrative cost adds to it rather than against it. But those magnitudes are conditional
 model-internal contrasts, not calibrated field effects, and we do not build the
 paper on them. What the paper actually stands on is the architecture and the
-mechanism's anchored direction, not a calibrated number. Its hardest check — a
-pre-registered, symmetric gate that strips the central of its real-world
-pathologies (the central's best case) — leaves the distributed-minus-central
-advantage positive in every cell but small; the informative comparison is the
-realistic, source-motivated map. The v1.14 robustness map then models the central as the evidence
+mechanism's anchored direction, not a calibrated number. Its hardest, pre-registered
+check returned NO-GO — on a symmetric benchmark the distributed-minus-central
+advantage was positive in every cell but small — and its registered consequence was to
+retire the quantitative multiplier. The later, source-motivated map is a separate
+exploratory analysis. The v1.14 robustness map then models the central as the evidence
 *directionally* describes it — near-blind to diffuse harm on the low-visibility long tail (Hayek 1945;
 Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009) — and in that source-motivated
 declared reference scenario coverage-routed selection recovers *decisively* more of the
 model's greedy reference (≈ 98% against ≈ 44%) and robustly. The two are epistemically
-distinct, not a reclassification: the pre-registered gate is a separate, *conservative*
-computation (a near-parity lower bound against a de-pathologized central), while the
+distinct, not a reclassification: the pre-registered test is the sole *confirmatory*
+computation (a NO-GO near-parity on a symmetric benchmark), while the
 v1.14 map is a subsequent *exploratory* scenario analysis under
 a different data-generating process; the central overtakes coverage only by abandoning
 the declared premises. We therefore retire the compound multiplier an earlier version
@@ -1700,7 +1705,7 @@ stands, as the signed fraction of the full-information greedy benchmark, parity 
 | **Distributed's favourable case** | **+205.2%** [+202.9, +208.1] | 95.6% | −109.6% | Core v0 |
 | **Central's declared favourable endpoint** (a residually-imperfect reader on a near-harmless world) | **−2.3%** [−2.5, −2.2] | 95.3% | 97.6% | central (immaterial) |
 
-**The anchored result is decisive and robust.** Under the **declared reference
+**The anchored result is large and robust across the declared space (exploratory).** Under the **declared reference
 scenario** the distributed arm delivers ≈ 98.2% of the benchmark and the central
 ≈ 44.2% — a +54-point gap — and coverage wins across essentially the whole anchored
 parameter space. Turning off harm-myopia *alone* (the two harm-gate coordinates)
