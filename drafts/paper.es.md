@@ -1,6 +1,6 @@
 # ¿Quién elige, quién ejecuta, quién juzga? Una arquitectura funcional para el gasto público distribuido
 
-**Documento de trabajo — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión retira el multiplicador compuesto de valor por peso como efecto calibrado —una prueba de decisión prerregistrada arrojó un resultado negativo (no continuar), así que lo retiramos (véase §6 y el Apéndice E4)— y se apoya en la arquitectura y el mecanismo cualitativo, ahora afinada por un mapa *exploratorio* de robustez de cuatro escenarios (E4 v1.14): modelando al central como lo describe *direccionalmente* la evidencia —casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek, Scott, Olson, Bandiera–Prat–Valletti)— la selección por cobertura recupera sustancialmente más de la referencia de información completa del modelo (~98% frente a ~44%), y el resultado es robusto; la prueba de decisión prerregistrada sigue siendo el resultado confirmatorio separado del artículo y este mapa es exploratorio (no lo revisa), el central apenas supera a la cobertura, y solo abandonando los supuestos declarados, y la idealización espejo del brazo distribuido gana por goleada; todas esas magnitudes son puntos de referencia declarados de un modelo estilizado de instituciones comparadas, un contraste de modelo condicional, no impacto calibrado. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la trayectoria de transición semiabierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Documento de trabajo — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión reporta contrastes de simulación condicionales y separados por canal, y retira el multiplicador compuesto de valor por peso como efecto calibrado (véase §6 y el Apéndice E4); se apoya en la arquitectura y el mecanismo cualitativo de crédito versus cobertura. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la trayectoria de transición semiabierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
 
 *Traducción al español del documento de trabajo v1.14 (drafts/paper.md, versión autoritativa en inglés).*
 
@@ -12,7 +12,7 @@ El gasto público rutinariamente le pide a una sola jerarquía elegir proyectos,
 
 Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado con consecuencias es pública.
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a una revisión adversarial pública de 43 ataques a lo largo de cinco rondas —cada uno integrado al diseño o registrado como una limitación acotada. No afirmamos el gran multiplicador de valor por peso que reportó una versión anterior: una prueba prerregistrada contra un central idealizado —sin la ceguera al daño ni la captura de agenda que documenta la literatura, con la entrega en paridad— no respaldó recalibrarlo (§6); nos apoyamos en la arquitectura y la dirección anclada del mecanismo. Una extensión de robustez de cuatro escenarios, separada y **exploratoria**, modela luego al selector central tal como lo describe la evidencia. La dirección de cada eje está anclada en la literatura; su magnitud no se ajustó a los datos. El selector es casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), proyecta sus propias creencias previas y sobreestima los beneficios visibles (Broockman–Skovron 2018; Flyvbjerg et al. 2003), y está sesgado hacia el crédito político (Mayhew 1974; Arnold 1990). En ese **escenario de referencia declarado y motivado por fuentes** —no una calibración empírica—, la selección distribuida basada en cobertura recupera cerca del 98% de la referencia voraz de información completa del modelo, frente a cerca del 44% del central. La diferencia es un contraste de modelo condicional de 54 puntos, robusto en todo el espacio declarado y ante la degradación realista del *enrutamiento* presupuestario universal de Core v0 (el enrutamiento es arquitectónico; la información independiente efectiva no lo es). El central apenas supera a la cobertura, y solo abandonando los supuestos declarados (otorgándole la visión del daño que la literatura le niega) en un mundo casi sin daño, mientras la idealización *espejo* del brazo distribuido gana por goleada. Estas son magnitudes de referencia declaradas de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; y la única sensibilidad que reduce materialmente la brecha —nunca su signo en el rango declarado— es el error correlacionado o de modo común en el brazo de cobertura. Una extensión pareada de cuatro celdas cruza luego selección con entrega: en el mundo declarado PROBABLE, la arquitectura completa de selección y entrega supera al statu quo en cerca de 58.6 puntos de la misma referencia voraz [intervalo Monte Carlo condicional al 95% +58.0, +59.2]. Un factorial de tres capas deja la diagonal completa de Core v0 positiva en todos los mundos nombrados, aunque las atribuciones de capas individuales invierten su signo en mundos extremos; la dirección de la planificación está anclada pero su magnitud independiente queda diferida. El costo administrativo no juega en contra del brazo distribuido: la contabilidad de presupuesto neto lo deja aproximadamente neutro bajo un piso conservador de baja dispersión, y arroja una ventaja declarada, aunque modesta, una vez que se admite un escenario de costos asimétrico (la burocracia central de tasación/priorización ≫ una plataforma con fiscalización de costo marginal casi nulo). Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a una revisión adversarial pública de 43 ataques a lo largo de cinco rondas —cada uno integrado al diseño o registrado como una limitación acotada. El aporte probatorio es la arquitectura, el mecanismo de crédito versus cobertura y hallazgos condicionales separados sobre selección, entrega verificada y costo administrativo —no el gran multiplicador de valor por peso que reportó una versión anterior. En la única computación confirmatoria del artículo, una prueba prerregistrada y limitada a la selección dio al central una tasación competente y consciente del daño, con entrega en paridad; el contraste distribuido permaneció positivo pero no superó el umbral registrado de reconstrucción, así que, bajo la regla congelada, retiramos el multiplicador (§6). Como ese comparador apaga la ceguera al daño modelada del central y no pone a prueba la entrega ni la construcción de agenda, acota la calibración bajo la construcción ensayada, no el valor de Core v0 como arquitectura completa. Una extensión de robustez de cuatro escenarios, separada y **exploratoria**, modela luego al selector central tal como lo describe la evidencia. La dirección de cada eje está anclada en la literatura; su magnitud no se ajustó a los datos. El selector es casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), proyecta sus propias creencias previas y sobreestima los beneficios visibles (Broockman–Skovron 2018; Flyvbjerg et al. 2003), y está sesgado hacia el crédito político (Mayhew 1974; Arnold 1990). En ese **escenario de referencia declarado y motivado por fuentes** —no una calibración empírica—, la selección distribuida basada en cobertura recupera cerca del 98% de la referencia voraz de información completa del modelo, frente a cerca del 44% del central. La diferencia es un contraste de modelo condicional de 54 puntos, robusto en todo el espacio declarado y ante la degradación realista del *enrutamiento* presupuestario universal de Core v0 (el enrutamiento es arquitectónico; la información independiente efectiva no lo es). El central apenas supera a la cobertura, y solo abandonando los supuestos declarados (otorgándole la visión del daño que la literatura le niega) en un mundo casi sin daño, mientras la idealización *espejo* del brazo distribuido gana por goleada. Estas son magnitudes de referencia declaradas de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; y la única sensibilidad que reduce materialmente la brecha —nunca su signo en el rango declarado— es el error correlacionado o de modo común en el brazo de cobertura. Una extensión pareada de cuatro celdas cruza luego selección con entrega: en el mundo declarado PROBABLE, la arquitectura completa de selección y entrega supera al statu quo en cerca de 58.6 puntos de la misma referencia voraz [intervalo Monte Carlo condicional al 95% +58.0, +59.2]. Un factorial de tres capas deja la diagonal completa de Core v0 positiva en todos los mundos nombrados, aunque las atribuciones de capas individuales invierten su signo en mundos extremos; la dirección de la planificación está anclada pero su magnitud independiente queda diferida. El costo administrativo no juega en contra del brazo distribuido: la contabilidad de presupuesto neto lo deja aproximadamente neutro bajo un piso conservador de baja dispersión, y arroja una ventaja declarada, aunque modesta, una vez que se admite un escenario de costos asimétrico (la burocracia central de tasación/priorización ≫ una plataforma con fiscalización de costo marginal casi nulo). Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
 Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las simulaciones aportan contrastes de modelo condicionales para la selección, la entrega y el costo administrativo, pero sus unidades no están calibradas; los modelos son de equilibrio parcial y no identifican efectos de tratamiento en el dominio objetivo; y las anclas empíricas son predominantemente de infraestructura y compras públicas —los casos con forma de proyecto y verificables por hitos donde la evidencia es más clara—, mientras que la arquitectura en sí es general en el dominio discrecional con forma de proyecto en sentido amplio, no se limita a la infraestructura; esa generalidad más amplia es una afirmación de diseño, todavía no validada empíricamente. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
@@ -132,16 +132,17 @@ ambas direcciones (Demsetz 1969; Sección 2). Nuestras contribuciones son:
    condicional de tres capas mantiene positiva la diagonal completa de Core v0
    en todos los mundos nombrados mientras deja sin cuantificar la magnitud independiente de la
    planificación; y la contabilidad de presupuesto neto deja el costo
-   administrativo aproximadamente neutro bajo un piso conservador de baja dispersión, con una ventaja declarada para Core v0 bajo un escenario de costos asimétrico. El aparato basado en agentes anterior
-   produjo un único cociente compuesto de valor por unidad de presupuesto;
-   **retiramos ese compuesto como efecto calibrado**: una prueba de decisión
-   prerregistrada arrojó un resultado negativo (no continuar) (§6 y Apéndice E4 —en ese
-   contraste simétrico la ventaja distribuida se mantiene positiva pero pequeña, por
-   debajo del umbral de reconstrucción), así que retiramos el multiplicador y tratamos la
-   simulación como una frontera ilustrativa. La contribución fundamental es la
-   arquitectura y el mecanismo cualitativo, cuyo alcance comparativo el mapa de
-   robustez v1.14 delimita entre los regímenes sin miopía y con miopía al daño,
-   no el multiplicador.
+   administrativo aproximadamente neutro bajo un piso conservador de baja dispersión, con una ventaja declarada para Core v0 bajo un escenario de costos asimétrico. Estos son
+   contrastes condicionales del modelo, separados por canal, no un multiplicador calibrado
+   del desempeño institucional completo. Bajo la regla prerregistrada congelada, un contraste
+   limitado a la selección que otorgó al central una tasación competente y consciente del
+   daño, con entrega en paridad, dejó positivo el contraste distribuido, pero por debajo del
+   umbral de reconstrucción de 0.05; por tanto, se retira el multiplicador anterior (§6;
+   Apéndice E4). Como ese contraste apaga la ceguera al daño modelada del central y no pone
+   a prueba la entrega ni la construcción de agenda, la decisión rige la calibración bajo la
+   construcción ensayada, no el valor de Core v0 como arquitectura completa. La contribución
+   fundamental es la arquitectura, el mecanismo cualitativo de crédito versus cobertura y la
+   separación de la selección, la entrega y el costo.
 
 4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
    atacada sistemáticamente: cuarenta y tres resúmenes de ataque anclados en las
@@ -320,8 +321,7 @@ conocimiento de trabajo previo que combine:
   —incluido lo que creemos es una comparación temprana de conocimiento simétrico,
   en simulación, de la construcción abierta de las prioridades de asignación a
   partir de señales ciudadanas agregadas contra la construcción central de ancho
-  de banda finito (una prueba simétrica prerregistrada posterior encuentra la
-  ventaja distribuida consistente pero pequeña; Sección 6);
+  de banda finito (véase la Sección 6);
 
 - **(v)** un método documentado de revisión adversarial con una regla de
   detención explícita.
@@ -603,62 +603,50 @@ que puede activarse o desactivarse. Veinte corridas con semilla por condición; 
 dependencias y determinista (`scripts/simulation/allocation-sim.mjs`; tablas
 completas en [simulation-results](../research/simulation-results.md)).
 
-**Estado de los cocientes compuestos anteriores (retirados).** El único cociente
-anterior de valor por unidad de presupuesto conflacionaba calidad de selección, fuga de
-entrega y costo administrativo, y se **retira como efecto calibrado**. El programa
-reconstruido separa los canales: E4 mide la selección; E5 cruza selección con entrega a
-presupuesto igualado; E9 aporta una atribución condicional de tres capas dejando sin
-cuantificar la magnitud independiente de la planificación; y E10 aplica el costo administrativo de
-cada brazo de forma simétrica como una reducción de presupuesto neto antes de la
-selección. Los resultados son porcentajes o diferencias de puntos de referencia, con
-paridad en cero; no se retiene ningún multiplicador de rendimiento institucional.
+**Estado cuantitativo: resultados separados por canal, ningún multiplicador calibrado.** El
+único cociente anterior de valor por unidad de presupuesto conflacionaba calidad de
+selección, fuga de entrega y costo administrativo, y se **retira como efecto calibrado**.
+El programa reconstruido reporta los canales por separado: selección (E4), entrega con
+presupuesto igualado (E5), una atribución condicional de tres capas (E9, dejando sin
+cuantificar la magnitud independiente de la planificación) y costo administrativo (E10).
+Todos son diferencias de puntos de referencia con paridad en cero; no se conserva ningún
+multiplicador de desempeño institucional.
 
-**La prueba de decisión prerregistrada.** Para comprobar si la ventaja distribuida era un
-artefacto de las asimetrías favorables en que se apoyaba una versión anterior, una prueba
-de estrés prerregistrada, simétrica y limitada a la selección **retira esas asimetrías** —la
-señal de oráculo del brazo distribuido, el objetivo central de crédito puro de la versión
-anterior y la superioridad de entrega estipulada— y, sobre todo, **apaga la ceguera
-al daño del central**, modelándolo como un *lector de valor competente* en vez del selector
-miope al daño que documenta la literatura (el parámetro de miopía al daño se deja de lado;
-el central aquí tiene mucho más en cuenta el daño difuso de lo que describe la evidencia
-—un central idealizado salvo por un sesgo de crédito acotado).
-Eso deja ambos brazos con presupuestos
-esperados de reportes de tasación igualados, el mismo conjunto de proyectos, costos y
-ruido, entrega en paridad, cada uno actuando sobre su propia estimación ruidosa y no sobre
-la verdad. El central **conserva aún una presión de crédito acotada** en las celdas
-primarias (λ ∈ {0.1, 0.2, 0.3}); solo el control separado con λ = 0 está libre de crédito,
-y ahí su ventaja es todavía menor (mediana ≈ 0.016) —la ventaja sigue a la presión de
-crédito del central, coherente con crédito-versus-cobertura—. La ventaja de la selección
-distribuida frente a la central es **positiva en cada una de las 18 celdas
-preespecificadas, pero pequeña**: la mediana agrupada prerregistrada Δ = 0.025, por debajo
-del **umbral de reconstrucción** prerregistrado de **0.05**. **Bajo la regla
-prerregistrada congelada el veredicto fue negativo (no continuar)** —la mediana no superó
-0.05— y su consecuencia registrada fue **retirar el multiplicador cuantitativo y tratar la
-simulación como una frontera ilustrativa** (una estimación post hoc de cociente de sumas
-es Δ = 0.026 [0.023, 0.029]; el prerregistro completo, la regla de decisión y los
-diagnósticos están en el Apéndice E4 y el contrato de afirmación y estimando). Como la
-prueba, por diseño, le quita al central su ceguera al daño, el 0.025 es un **residuo
-interno al modelo bajo esta prueba de estrés simétrica** —la ventaja que sobrevive una vez
-que se apaga la patología definitoria del central— **y no una estimación ni una cota
-inferior de la brecha real**, que puede depender de esa asimetría que la prueba deja de
-lado, cuya prevalencia y magnitud reales siguen sin calibrar. El resultado negativo autoriza retirar una *magnitud calibrada*; no
-autoriza afirmar que el efecto del mecanismo sea pequeño —su **dirección** está anclada en
-la literatura (el mapa de abajo), su magnitud simplemente no es calibrable. Esta es la
-**única computación confirmatoria** del artículo; el mapa de cuatro escenarios motivado
-por fuentes de más abajo es un análisis de escenarios separado y **exploratorio** bajo un
-proceso generador distinto, y no revisa este veredicto. Esta es una prueba estilizada de
-un *mecanismo de selección*, no una implementación validada de Core v0: sus variables de
-valor y crédito son puntajes abstractos, no visibilidad, trazabilidad, permanencia o valor
-público medidos. El **0.05** es un **umbral de reconstrucción** del programa de
-investigación sobre esta escala no calibrada (una regla de continuar o abandonar sobre si
-perseguir una reconstrucción cuantitativa), **no** un umbral de materialidad de política
-calibrado. La especificación rectora es
-[claim-and-estimand-contract](../research/claim-and-estimand-contract.md); la prueba,
-su prerregistro congelado, resultados y diagnósticos están en
-`scripts/simulation/e5-sp-symmetry-gate.mjs` y `audits/2026-07-10/symmetry-gate-*`.
-Las contribuciones fundamentales son la arquitectura y la dirección del
-mecanismo; el mapa de robustez comparativa v1.14 solo delimita su alcance condicional entre
-regímenes declarados sin miopía y con miopía al daño, no es un multiplicador puntual ni impacto calibrado.
+**La decisión prerregistrada rectora.** La **única computación confirmatoria** del artículo
+fue una prueba de estrés limitada a la selección y con simetría restringida —no una prueba
+de la arquitectura completa—. Igualó el conjunto de candidatos, los costos, el presupuesto,
+el modelo de ruido de los reportes, la elegibilidad según la estimación propia, los
+presupuestos esperados de reportes de tasación y la entrega en paridad. El brazo
+distribuido conservó la cobertura endógena y su sesgo adverso de voz β; la tasación central
+se distribuyó uniformemente y su ordenamiento conservó una presión de crédito acotada
+λ ∈ {0.1, 0.2, 0.3} (el control separado con λ = 0 es todavía menor, mediana ≈ 0.016 —el
+contraste sigue a la presión de crédito del central, coherente con crédito-versus-cobertura).
+El central implementado fue un **lector de valor competente y consciente del daño** cuya
+señal de valor muestreado era insesgada pero ruidosa: el parámetro de miopía al daño está
+definido entre los parámetros del mundo, pero **el estimador central no lo utiliza**. La
+prueba apaga así la ceguera al daño modelada del central y deja la construcción de agenda
+fuera de su estimando con conjunto de candidatos fijo.
+
+El contraste distribuido fue **positivo en las 18 celdas primarias**. Tres de los cuatro
+criterios conjuntivos se cumplieron, incluido el criterio del límite inferior del bootstrap;
+solo falló C2, porque la mediana agrupada Δ = 0.025 no superó el **umbral registrado de
+reconstrucción de 0.05**. Bajo la regla congelada, el veredicto formal fue **negativo (no
+continuar)**, con la consecuencia registrada de retirar el multiplicador cuantitativo y
+tratar la simulación como una frontera condicional ilustrativa. **La falta de superación
+del umbral activó la decisión registrada; la construcción determina su alcance.** El 0.025
+es pequeño para el estimando de selección ensayado, pero no es una estimación ni una cota
+inferior del efecto de Core v0 como arquitectura completa o en el dominio objetivo, y no
+establece que sea pequeño fuera de esta prueba. El umbral de 0.05 es una regla de decisión
+del programa de investigación, **no** un umbral calibrado de materialidad de política
+pública. La asimetría hipotetizada de detección del daño está motivada por la literatura;
+este estudio no calibra su prevalencia ni su magnitud. El mapa posterior de cuatro
+escenarios utiliza un proceso generador distinto, es **exploratorio** y no revisa este
+resultado registrado. La prueba es estilizada: sus variables de valor y crédito son puntajes abstractos, no
+visibilidad, trazabilidad, permanencia o valor público medidos. Su prerregistro congelado,
+la regla de decisión, resultados y diagnósticos están en el Apéndice E4, el
+[contrato de afirmación y estimando](../research/claim-and-estimand-contract.md) y
+`scripts/simulation/e5-sp-symmetry-gate.mjs`. Las contribuciones fundamentales son la
+arquitectura y el mecanismo cualitativo de crédito versus cobertura.
 
 **El escenario de referencia declarado (E4 v1.14): un mapa de robustez exploratorio.** Cuando el selector
 central se modela como lo describe la evidencia —su *dirección* en cada eje anclada en la
@@ -1161,8 +1149,7 @@ el repositorio distributed-governance-experiments). El ordenamiento de
 arquitecturas se mantiene invariable en las tres poblaciones sintéticas y todas
 las escalas, incluida una trayectoria de lanzamiento que comienza con
 participación cercana a cero —donde la capa por defecto ancla por construcción
-los primeros ciclos con pocos participantes (la magnitud del compuesto retirado no se arrastra
-en sí misma). El estudio conductual también reproduce de forma
+los primeros ciclos con pocos participantes. El estudio conductual también reproduce de forma
 independiente el supuesto de cuota informada que estos experimentos habían
 impuesto: 0.309 emergente contra el 0.30 asumido.
 
@@ -1657,28 +1644,22 @@ extremos; la captura de agenda se representa como el mecanismo principal de la
 planificación, con su dirección anclada pero su magnitud independiente sin cuantificar; y una
 contabilidad de presupuesto neto
 deja el costo administrativo aproximadamente neutro bajo un piso conservador de baja dispersión, y otorga una modesta ventaja para Core v0 bajo un escenario declarado de costos asimétricos. En este modelo, la ventaja
-de la arquitectura es el valor entregado, y el costo administrativo se suma a ella en vez de restarle. Pero esas
-magnitudes son contrastes condicionales internos al modelo, no efectos de campo
-calibrados, y no construimos el artículo sobre ellas. Lo que el artículo realmente
-sostiene es la arquitectura y la dirección anclada del mecanismo, no una cifra calibrada.
-Su chequeo más duro, prerregistrado, arrojó un resultado negativo (no continuar) —en un
-contraste simétrico la ventaja de la selección distribuida frente a la central fue
-positiva en todas las celdas pero pequeña— y su consecuencia registrada fue retirar el
-multiplicador cuantitativo y tratar la simulación como una frontera ilustrativa. El mapa posterior motivado por fuentes es un análisis
-separado y exploratorio. El mapa de robustez v1.14 modela luego al central como lo
-describe *direccionalmente* la evidencia —casi ciego al daño difuso en la cola larga de
-baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009)— y en
-ese escenario de referencia declarado y motivado por fuentes la selección por cobertura
-recupera *sustancialmente* más de la referencia voraz del modelo (≈ 98% frente a ≈ 44%), y
-el resultado es robusto. Los dos son epistémicamente distintos, no una reclasificación: la prueba
-prerregistrada es la única computación *confirmatoria* (un resultado negativo (no continuar),
-próximo a la paridad, en un contraste simétrico), mientras el mapa
-v1.14 es un análisis de escenarios *exploratorio* posterior bajo un proceso generador
-distinto; el central apenas supera a la cobertura, y solo abandonando los supuestos declarados. Por lo
-tanto retiramos el multiplicador compuesto que reportó una versión anterior y nos
-apoyamos en la arquitectura y el mecanismo cualitativo, con este mapa comparativo
-condicional delimitando su alcance; sus magnitudes son puntos de referencia y estrés declarados, no
-impacto calibrado. Un resultado interno al modelo vale la pena conservar
+de la arquitectura es el valor entregado, y el costo administrativo se suma a ella en vez de restarle. Esas
+magnitudes son contrastes condicionales internos al modelo, no efectos de campo calibrados.
+El artículo descansa, por tanto, en la arquitectura plenamente especificada, el mecanismo
+de crédito versus cobertura y los hallazgos separados por canal sobre selección, entrega
+verificada y costo administrativo, no en un multiplicador del desempeño institucional
+completo. La prueba prerregistrada de selección arrojó un resultado negativo porque su
+mediana positiva Δ = 0.025 no superó el umbral de reconstrucción de 0.05; conforme a lo
+registrado, retiramos el multiplicador anterior (§6; Apéndice E4). El central competente y
+consciente del daño, junto con la entrega en paridad, determina el alcance del resultado:
+se trata de una decisión de calibración bajo ese comparador, no de un hallazgo de que Core
+v0 haya fracasado. El mapa exploratorio separado pregunta qué ocurre bajo las asimetrías
+institucionales motivadas por fuentes que la prueba deja de lado; en su escenario de
+referencia declarado, la cobertura recupera cerca del 98% de la referencia voraz del modelo
+frente al ~44% del central, mientras que la estrecha ventaja de 2.3 puntos del central
+aparece solo en su extremo favorable y casi sin daño. Estos son resultados condicionales de
+escenarios, no una recalibración ni una estimación de efectos de campo. Un resultado interno al modelo vale la pena conservar
 porque trata de la capa de entrega, no del multiplicador: en el modelo, a la
 intensidad de detección informada por auditorías de E7 (aún no plenamente
 verificada en sus fuentes), la detección sin consecuencias
@@ -1822,7 +1803,7 @@ voraz de información completa, paridad en cero (`npm run e4:scenarios`):
 | **Solo la miopía al daño desactivada** (`MYOPIA_OFF`; contraste diagnóstico: probable, cambiando SOLO las dos coordenadas del umbral de daño) | **+37,6%** [+37,0, +38,2] | 98,2% | 60,6% | Core v0 |
 | **Paquete sin miopía** — probable, pero al central se le otorga visión del daño + ausencia de sesgo + precisión + sin crédito | **+13,8%** [+13,5, +14,1] | 98,6% | 84,8% | Core v0 |
 | **Caso favorable al distribuido** | **+205,2%** [+202,9, +208,1] | 95,6% | −109,6% | Core v0 |
-| **Extremo declarado favorable al central** (un lector residualmente imperfecto en un mundo casi sin daño) | **−2,3%** [−2,5, −2,2] | 95,3% | 97,6% | central (inmaterial) |
+| **Extremo declarado favorable al central** (un lector residualmente imperfecto en un mundo casi sin daño) | **−2,3%** [−2,5, −2,2] | 95,3% | 97,6% | central (ventaja estrecha interna al modelo) |
 
 **El resultado anclado es grande y robusto en todo el espacio declarado (exploratorio).** Bajo el escenario de **referencia
 declarado** el brazo distribuido entrega ≈ 98,2% de la referencia y el central
