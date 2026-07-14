@@ -38,8 +38,8 @@ export const COSTS = {
   planningOn: false,  // author requirement: PLANNING OFF by default (its magnitude is deferred; do not fold into costs)
 };
 
-// A REALISTIC ASYMMETRIC scenario (DECLARED, not measured). The symmetric COSTS above is a deliberately CONSERVATIVE
-// floor; it is NOT the realistic case. In steady state (régime) the central's machinery — appraisal / value-proxy
+// A DECLARED ASYMMETRIC-COST scenario (declared, not measured). The LOW-SPREAD COSTS above are a deliberately CONSERVATIVE
+// floor; they are NOT the only defensible case. In steady state (régime) the central's machinery — appraisal / value-proxy
 // studies, prioritization and allocation bureaucracy, approvals, and the SALARIES that run them — is a large recurring
 // overhead, while Core v0's operating cost is a digital platform + maintenance + AI-assisted and citizen-sourced
 // fiscalization at NEAR-MARGINAL-ZERO cost. So the declared asymmetric-cost scenario has κ_C ≫ κ_D. DIRECTION anchored
@@ -108,14 +108,14 @@ function main() {
     const r = e10(cfg, { nWorlds: 1200 });
     safeLog('E10 — the ADMINISTRATIVE-COST layer on the delivered-value stack (PROBABLE world). Percentages of the');
     safeLog('full-information greedy REFERENCE. PLANNING is OFF by default; admin cost reduces the BUDGET (net-budget');
-    safeLog('accounting). Reported under two DECLARED cost scenarios: a conservative symmetric floor and a realistic asymmetric case.\n');
+    safeLog('accounting). Reported under two DECLARED cost scenarios: a conservative low-spread floor and a declared asymmetric-cost scenario.\n');
     safeLog(`value base: ${r.via}   ·   κ_C=${r.kappa_C} (central allocation/prioritization/study machinery) · κ_D=${r.kappa_D} (Core v0 platform + its control machinery)  [magnitude DECLARED]`);
     safeLog(`VALUE ONLY (costs off):   status quo ${pct(r.valueOnly.statusQuo)} · Core v0 ${pct(r.valueOnly.coreV0)}  → gain ${pct(r.valueOnly.gain)}`);
     safeLog(`WITH ADMIN COSTS (net budget): status quo ${pct(r.withCosts.statusQuo)} · Core v0 ${pct(r.withCosts.coreV0)}  → gain ${pct(r.withCosts.gain)}`);
     safeLog(`  admin-cost effect on the gap: ${pct(r.adminCostContribution)} (points of the reference).\n`);
-    safeLog('  → Under the deliberately CONSERVATIVE symmetric assumption the admin-cost layer is roughly NEUTRAL (greedy');
-    safeLog('    funding cuts marginal low-value projects first, so the value loss is sub-proportional). But that symmetry');
-    safeLog('    is a conservative FLOOR, not the realistic case: the central\'s steady-state appraisal / prioritization /');
+    safeLog('  → Under the deliberately CONSERVATIVE low-spread assumption the admin-cost layer is roughly NEUTRAL (greedy');
+    safeLog('    funding cuts marginal low-value projects first, so the value loss is sub-proportional). But that low spread');
+    safeLog('    is a conservative FLOOR, not the only defensible case: the central\'s steady-state appraisal / prioritization /');
     safeLog('    salaried machinery is a large recurring overhead, while Core v0 runs on a platform + AI/citizen fiscalization');
     safeLog('    at near-marginal-zero cost — so the DIRECTION favors Core v0 (κ_C ≫ κ_D). See the scenarios below.\n');
 
@@ -129,22 +129,22 @@ function main() {
       safeLog(`   ${kc.toFixed(2)}      ${pct(rk.adminCostContribution).padStart(7)}`);
     }
     safeLog('   → the admin-cost effect is small and only turns clearly positive at large κ_C; magnitudes DECLARED,');
-    safeLog('     direction only (central allocation machinery cost > platform cost — IDB / low e-government platform costs).');
+    safeLog('     direction only (central allocation machinery cost > platform cost — public-administration cost accounts / low e-government platform costs).');
 
-    // TWO DECLARED SCENARIOS (régime costs only; implementation CAPEX excluded): the conservative symmetric FLOOR vs the
-    // realistic ASYMMETRIC case. Direction anchored, magnitude declared — NOT a calibrated figure (Adversarial R2 authors' pass).
+    // TWO DECLARED SCENARIOS (régime costs only; implementation CAPEX excluded): the conservative LOW-SPREAD FLOOR vs the
+    // declared ASYMMETRIC-COST scenario. Direction anchored, magnitude declared — NOT a calibrated figure (Adversarial R2 authors' pass).
     safeLog('\nDeclared cost scenarios over identical perimeters (régime costs only — one-time implementation CAPEX excluded, not amortized):');
-    const sym  = e10(cfg, { nWorlds: 1200, costs: COSTS });
+    const lowSpread = e10(cfg, { nWorlds: 1200, costs: COSTS });
     const asym = e10(cfg, { nWorlds: 1200, costs: COSTS_ASYMMETRIC });
-    safeLog(`  conservative LOW-SPREAD floor (κ_C=${COSTS.kappa_C}, κ_D=${COSTS.kappa_D}):   admin-cost effect ${pct(sym.adminCostContribution)}   → roughly neutral`);
+    safeLog(`  conservative LOW-SPREAD floor (κ_C=${COSTS.kappa_C}, κ_D=${COSTS.kappa_D}):   admin-cost effect ${pct(lowSpread.adminCostContribution)}   → roughly neutral`);
     safeLog(`  declared ASYMMETRIC-cost scenario (κ_C=${COSTS_ASYMMETRIC.kappa_C} central appraisal+prioritization+salaried bureaucracy ·`);
     safeLog(`                        κ_D=${COSTS_ASYMMETRIC.kappa_D} platform + AI/citizen fiscalization ≈ marginal-zero):   admin-cost effect ${pct(asym.adminCostContribution)}   → a declared Core v0 advantage`);
     const freed = COSTS_ASYMMETRIC.kappa_C - COSTS_ASYMMETRIC.kappa_D;
     safeLog(`  → TWO distinct statements: (i) ASSUMED net-budget difference — the declared κ_C−κ_D ≈ ${(100 * freed).toFixed(0)}% of the budget is a`);
     safeLog('    declared scenario input, not a measured saving (κ_C=0.12 = recurring operating cost broadly, not pure overhead); (ii) its DELIVERED-VALUE effect');
     safeLog(`    is smaller (${pct(asym.adminCostContribution)} on the reference gap) because the freed budget funds marginal, low-value projects`);
-    safeLog('    (net-budget sub-proportionality). "Roughly neutral" describes only (ii) under the conservative symmetric floor;');
-    safeLog('    the realistic case is a genuine cost advantage for Core v0 — direction anchored, magnitude declared, not calibrated.');
+    safeLog('    (net-budget sub-proportionality). "Roughly neutral" describes only (ii) under the conservative low-spread floor;');
+    safeLog('    the declared asymmetric-cost scenario is a declared cost advantage for Core v0 — direction anchored, magnitude declared, not calibrated.');
   });
 }
 import { fileURLToPath } from 'node:url';
