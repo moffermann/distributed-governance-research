@@ -14,7 +14,7 @@ Presentamos **Core v0**, una arquitectura a nivel de objetos completamente espec
 
 Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a un test deliberadamente hostil: una simulación prerregistrada y simétrica que eliminó las asimetrías favorables en que se había apoyado una versión anterior, más una revisión adversarial pública de 43 ataques a lo largo de cinco rondas, cada uno integrado al diseño o registrado como una limitación acotada. La ventaja distribuida fue positiva en las 18 celdas preespecificadas pero pequeña (mediana agrupada Δ = 0.025 de una referencia voraz de información completa, por debajo de nuestro umbral prefijado de 0.05); por lo tanto retiramos el gran multiplicador que reportó una versión anterior y enunciamos el resultado modesto y condicional con franqueza. Una extensión de robustez de cuatro escenarios modela luego al selector central tal como lo describe la evidencia. La dirección de cada eje está anclada en la literatura; su magnitud no se ajustó a los datos. El selector es casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), proyecta sus propias creencias previas y sobreestima los beneficios visibles (Broockman–Skovron 2018; Flyvbjerg et al. 2003), y está sesgado hacia el crédito político (Mayhew 1974; Arnold 1990). En ese **escenario de referencia declarado y motivado por fuentes** —no una calibración empírica—, la selección distribuida basada en cobertura recupera cerca del 98% de la referencia voraz de información completa del modelo, frente a cerca del 44% del central. La diferencia es un contraste de modelo condicional de 54 puntos, robusto en todo el espacio declarado y ante la degradación realista del *enrutamiento* presupuestario universal de Core v0 (el enrutamiento es arquitectónico; la información independiente efectiva no lo es). El central supera a la cobertura solo abandonando los supuestos declarados (otorgándole la visión del daño que la literatura le niega) en un mundo casi sin daño, mientras la idealización *espejo* del brazo distribuido gana por goleada. Estas son magnitudes de referencia declaradas de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; el gate prerregistrado sigue siendo el resultado confirmatorio separado (un NO-GO bajo un proceso generador distinto), y la única sensibilidad que reduce materialmente la brecha —nunca su signo en el rango declarado— es el error correlacionado o de modo común en el brazo de cobertura. Una extensión pareada de cuatro celdas cruza luego selección con entrega: en el mundo declarado PROBABLE, la arquitectura completa de selección y entrega supera al statu quo en cerca de 58.6 puntos de la misma referencia voraz [intervalo Monte Carlo condicional al 95% +58.0, +59.2]. Un factorial de tres capas deja la diagonal completa de Core v0 positiva en todos los mundos nombrados, aunque las atribuciones de capas individuales invierten su signo en mundos extremos; la dirección de la planificación está anclada pero su magnitud independiente queda diferida. Una contabilidad simétrica de presupuesto neto hace que el costo administrativo sea aproximadamente neutro: la ventaja modelada reside en la selección y la entrega, no en los gastos generales. Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
 
-Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las simulaciones aportan contrastes de modelo condicionales para la selección, la entrega y el costo administrativo, pero sus unidades no están calibradas, son de equilibrio parcial y no identifican efectos de tratamiento en el dominio objetivo; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
+Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las simulaciones aportan contrastes de modelo condicionales para la selección, la entrega y el costo administrativo, pero sus unidades no están calibradas; los modelos son de equilibrio parcial y no identifican efectos de tratamiento en el dominio objetivo; y las afirmaciones se acotan a inversión pública tipo infraestructura. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
 
 ## 1. Introducción
 
@@ -373,7 +373,7 @@ estatuto o instrumento que autorizó la migración, su rango legal, el órgano a
 que se imputan las asignaciones y la fórmula de asignación. La plataforma
 registra esa autorización externa; no la fabrica. La operación en modo
 vinculante está supeditada a que se haya registrado una norma habilitante de
-rango suficiente; en caso contrario, el modo predeterminado admisible es la
+rango suficiente; en caso contrario, la opción predeterminada legal y expresamente declarada es la
 operación consultiva o tutelada. El acto de asignación se diseña para replicar
 dos garantías propias del sufragio: el secreto de la preferencia y la
 resistencia a la coacción (receipt-freeness). En la medida en que una norma
@@ -464,7 +464,7 @@ las predicciones conductuales de §5.3.
 
 ### 5.1 Desembolso supeditado a hitos
 
-Un ejecutor elige entregar un hito a costo privado *c* ∈ (0, 1) o desviar. El
+Un ejecutor elige entre entregar un hito a costo privado *c* ∈ (0, 1) y desviar los fondos. El
 mecanismo libera un adelanto *a*, retiene el remanente para la aceptación
 revisada, recupera una fracción *r* del adelanto ante la no entrega confirmada,
 incauta una garantía depositada *γ* (con costo de mantenimiento *κ* por unidad),
@@ -590,7 +590,7 @@ Cada experimento (E1–E10) corresponde a un hallazgo:
 
 Simulamos 10.000 ciudadanos a lo largo de 24 ciclos mensuales asignando sobre un
 conjunto permanente de 40 proyectos con calidad *θ*, saliencia *s* (medida
-corr(*θ*, *s*) ≈ 0.24), pesos-necesidad del planificador *w* = λ*θ* + (1 − λ)*u*
+corr(*θ*, *s*) ≈ 0.24), ponderaciones de necesidad para la priorización *w* = λ*θ* + (1 − λ)*u*
 (donde *u* es un componente idiosincrático de necesidad independiente de la calidad)
 con peso de mezcla λ ∈ {0.4, 0.8} —medida corr(*θ*, *w*) ≈ 0.55 y ≈ 0.97
 respectivamente— y escasez de 3× (solo una minoría de proyectos puede
@@ -994,8 +994,8 @@ limpio de E4) añade la etapa de ejecución que los primeros cuatro omitieron,
 como un régimen de entrega **independiente** cruzado con los dos regímenes de
 selección —un diseño de cuatro celdas para evaluar cada capa por separado y en
 conjunto sobre las *mismas* carteras financiadas. Los ejecutores tienen
-tipos ocultos: una cuota intrínsecamente honesta entrega; el resto se desvía
-cuando una tentación supera el disuasor del régimen `p·[(1−a(1−r)) + γ + R]`
+tipos ocultos: una proporción de los ejecutores, intrínsecamente honesta, cumple con la entrega; los demás desvían
+recursos cuando un valor de tentación extraído al azar supera el poder disuasorio del régimen `p·[(1−a(1−r)) + γ + R]`
 (detección *p*, exposición del adelanto *a*, recuperación *r*, garantía *γ*,
 capital reputacional *R*) —el balde con fugas de Okun (1975). La pérdida de
 valor del régimen **opaco** de statu quo se ajusta por momento a la cifra de
@@ -1571,17 +1571,17 @@ débiles, y los contratos de evidencia que incluyen referencias objetivas de
 comparación (precios de mercado, bandas de duración, umbrales) permiten al
 verificador estricto juzgar en vez de adivinar. La capa máquina alcanza solo
 el fraude legible en documentos de la fase de entrega —la calidad por debajo de la especificación física y el robo previo al contrato quedan enteramente en manos humanas, de modo que
-la atestación de procedencia es evidencia de manipulación en la captura, no
-prueba de grado judicial, y la admisibilidad probatoria aún requiere custodia, contradicción y
+la atestación de procedencia permite detectar manipulaciones desde el momento de
+captura, pero no constituye una prueba con validez judicial, y la admisibilidad probatoria aún requiere custodia, contradicción y
 peritaje. La evidencia ciudadana contrapuesta —productores independientes con
 intereses opuestos al ejecutor, cuya existencia anticipada disuade el desvío—
 mantiene la vigilancia distribuida incluso cuando el trabajo rutinario de
 verificación documental se reduce; pero su fuerza equivale a la *independencia*
-de la capa de contribuyentes, y un anillo colusivo que la capture o silencie
+de la capa de aportantes de evidencia, y un anillo colusivo que la capture o silencie
 borra el efecto. La colusión entre capas es, de hecho, el único adversario que
-sortea la disuasión por hito y mueve la fuga un orden de magnitud (mientras la
+sortea la disuasión por hito y modifica la fuga en un orden de magnitud (mientras la
 ventaja de valor entregado sobrevive), así que la resistencia a la colusión
-—propiedad efectiva verificada, resistencia Sybil de los contribuyentes y
+—titularidad real verificada y resistencia a identidades Sybil entre los aportantes de evidencia, y
 descentralización del asignador y del piso de presupuesto de auditoría— es un
 requisito de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)), no una salvedad residual.
 
@@ -1691,7 +1691,7 @@ daño, la frontera, el teorema de paridad y los cuatro límites.
 Como esta es la única computación confirmatoria del artículo, su diseño se enuncia aquí
 por completo y no solo por referencia. Cada mundo contiene K = 500 proyectos
 candidatos; para cada uno se consideran N = 5000 participantes potenciales, cada
-uno interesado con una probabilidad específica del proyecto, de modo que el alcance
+cada participante tiene una probabilidad, específica de cada proyecto, de estar interesado, de modo que el alcance
 de interesados es a lo sumo N y endógeno. Ambos brazos ven entonces el mismo conjunto de candidatos, los
 mismos costos exactos, la misma verdad net[j] = S[j] − h·cost[j], la entrega en
 **paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada uno
@@ -1793,11 +1793,11 @@ idealizado* del brazo distribuido —construido para reflejar la misma receta: s
 distribuida perfecta en un mundo con daño con el central en su miopía *anclada*—, que
 alcanza **≈ +118%** (el escenario más amplio `PRO_DIST` de la tabla, +205%, es aún más
 favorable porque *además* degrada al central por debajo de su nivel anclado). La
-idealización es salvajemente asimétrica, y ninguno de los dos rincones está empíricamente
+idealización es marcadamente asimétrica, y ninguno de los dos rincones está empíricamente
 fundado. La única sensibilidad que reduce materialmente la
-brecha anclada es el **error correlacionado o de modo común** sobre el tramo de
+brecha anclada es el **error correlacionado o de modo común** en la proporción asignada mediante
 perfiles y delegación (una plataforma/recomendador compartido, o delegación concentrada en
-super-delegados — Kling et al. 2015): lleva ≈ +54% a ≈ +44% (modesto) y ≈ +26% (fuerte),
+super-delegados — Kling et al. 2015): reduce la brecha de aproximadamente +54% a +44% (modesto) y ≈ +26% (fuerte),
 cruzando la paridad solo a un nivel grande de error compartido (σ_cm ≈ 2,1). Ninguna
 rebanada de un-solo-factor voltea al ganador sobre su rango plausible; el sendero
 ceteris-paribus combinado desde la referencia declarada hacia el extremo del central
@@ -1834,19 +1834,19 @@ Las magnitudes de E4-v4/v5 son internas al modelo; la tabla nombra, para cada
 parámetro, el dato real que *podría* informarlo —volviendo la frontera entre lo
 interno al modelo y lo anclado empíricamente una línea visible y no un caveat
 enterrado en prosa (detalles en `research/e4-calibration-targets.md`). El
-porcentaje de la referencia alcanzado por el central es un *resultado* que el modelo computa, pero mapearlo a las
-razones observadas realizado/tasado **no es una superposición directa**: son
+porcentaje de la referencia alcanzado por el central es un *resultado* que el modelo computa, pero mapearlo a los
+cocientes entre el valor realizado y el tasado **no es una superposición directa**: son
 constructos distintos (§6), así que es un **objetivo de validación candidato que
-requiere un puente de constructo explícito**, no una calibración en un paso.
+requiere una correspondencia explícita entre constructos**, no una calibración en un paso.
 
-| Cantidad del modelo | Valor modelo | Proxy real | Dataset(s) candidato | Estado |
+| Cantidad del modelo | Valor modelo | Indicador indirecto en el mundo real | Conjunto de datos candidato | Estado |
 |---|---|---|---|---|
-| porcentaje de la referencia alcanzado por el central | 44–85% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | objetivo candidato; requiere mapeo de constructo explícito |
+| porcentaje de la referencia alcanzado por el central | 44–85% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | objetivo candidato; requiere una correspondencia explícita entre constructos |
 | η (ceguera al daño) | 0–0.5 | desperdicio pasivo vs activo | Bandiera-Prat-Valletti 2009 (83% pasivo, específico del contexto: compras de bienes estandarizados en Italia) | dirección anclada |
 | β (desigualdad de voz) | 0.2–0.5 | sesgo de participación en PP | NYC / París / Porto Alegre; Decidim / Consul | calibrable |
 | q, m (detección) | q ≈ 0.5–1%, m en cientos | tasas de queja / denuncia | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |
 | umbral λ | central ≈ 0.10 | rentas de la contratación pública / magnitud de los sobornos | Olken 2007; WB Enterprise Surveys | calibrable |
-| pena f | igual en ambos lados | escala de sanción legal | mantenida igual (conservador) | elección de alcance |
+| pena f | igual en ambos brazos | escala de sanción legal | mantenida igual (conservador) | elección de alcance |
 
 El mapa de cuatro escenarios v1.14 (arriba; destacado en §6) hace explícito el mismo anclaje para su modelo de miopía al daño: la cola
 larga de visibilidad está motivada por fuentes en las compras públicas de cola pesada (Skuhrovec et al. 2013), la
