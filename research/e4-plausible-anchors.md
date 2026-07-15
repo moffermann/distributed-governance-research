@@ -1,7 +1,7 @@
 # E4 — plausible-value anchors (the "probable case", justified per variable) — LIVING DOC
 
 > **v1.15 (2026-07-15).** The engine and the recorded run (`research/e4-evidence-run-2026-07-15.txt`) find the
-> declared central-favourable endpoint `PRO_CENTRAL` a **narrow central win** (coverage m ≈ −1.4%), with a
+> declared central-favourable endpoint `PRO_CENTRAL` a **narrow central win** (coverage m ≈ −2.3%), with a
 > **central-winning region ~20% inward (≈9/40 draws)** — the winner near that endpoint is region-dependent.
 
 > Author framing (2026-07-11): report EVERYTHING (space-filling sweep), then LOCATE the frontier ceteris-paribus and
@@ -76,21 +76,21 @@ facto, p=1), not a ceteris-paribus knob.
 > **PARTICIPATION IS A FACTO (not a knob):** Core v0 net-allocation participation is universal by architecture
 > (profiles + delegates cover the passive), so `p = 1.0` in every scenario — NOT anchored to (low) PB turnout (that
 > conflation understated coverage). Under faithful participation the central's declared full-favourable endpoint
-> (`PRO_CENTRAL`) is **a narrow central win (coverage ~-1.4%)**; a central-winning region exists (~9/40 draws 20% inward).
+> (`PRO_CENTRAL`) is **a narrow central win (coverage ~-2.3%)**; a central-winning region exists (~9/40 draws 20% inward).
 > `NO_MYOPIA` (harm-aware + otherwise-competent bundle) is +13.9% (still Core v0), `MYOPIA_OFF` (two-harm-coordinate
 > diagnostic) +38.4%. Authoritative configs live in `scenario-configs.mjs`; the regression pins executable outcome
 > ORDERING only, not exact configs, magnitudes, labels, or prose.
 
 | scenario | m (gap) | 95% CI | Core v0 delivers | central delivers | winner |
 |---|---|---|---|---|---|
-| PRO-CENTRAL (central's declared full-favourable endpoint) | **−1.4%** | [−1.5, −1.3] | 96.3% of the reference | 97.7% | narrow central win |
+| PRO-CENTRAL (central's declared full-favourable endpoint) | **−2.3%** | [−2.5, −2.2] | 95.3% of the reference | 97.6% | narrow central win |
 | NO-MYOPIA (harm-aware and otherwise-competent bundle) | **+13.9%** | [+13.6, +14.2] | 98.9% | 85.0% | Core v0 |
 | PROBABLE (source-motivated reference) | **+54.6%** | [+53.8, +55.4] | 98.9% | 44.3% | Core v0 |
 | PRO-DISTRIBUTED (favourable, moderate) | **+205.7%** | [+203.0, +208.7] | 98.9% | −106.8% (destroys value) | Core v0 |
 
 - **Where each stands (faithful participation):** coverage wins across the anchored region. The central's
   best case — its fully-idealized declared endpoint (competent, harm-aware, precise, credit-free + little harm) — is
-  a narrow central win (~−1.4%), and a central-winning region exists ~20% inward (≈9/40 draws). The story from D/O: Core v0 is robust
+  a narrow central win (~−2.3%), and a central-winning region exists ~20% inward (≈9/40 draws). The story from D/O: Core v0 is robust
   (96–99%); the central swings 44%→85%→98% (or −107% when myopic + harmful) — it depends on whether it sees the
   anti-value. Net-allocation participation is NOT a lever here (universal by architecture, p=1).
 - **Continuity / reconciliation with the NO-GO:** in this sequential, path-dependent decomposition, `MYOPIA_OFF`
@@ -98,7 +98,7 @@ facto, p=1), not a ceteris-paribus knob.
   (~40%). The further move to the harm-aware and otherwise-competent `NO_MYOPIA` bundle reduces it by 24.5 points
   (~60%) yet still leaves coverage ahead (+13.9%). This is consistent in DIRECTION with the frozen symmetry-gate
   near-parity (that gate used a conservative sampled-participation regime); under Core v0's universal participation a
-  competent central reaches parity only at the fully-idealized endpoint. Qualitative reconciliation across DGPs, not
+  competent central narrowly leads only at the fully-idealized endpoint. Qualitative reconciliation across DGPs, not
   a reproduced limit.
 
 ### RESULTS — ceteris-paribus frontiers (`npm run e4:frontier`)
@@ -109,7 +109,7 @@ facto, p=1), not a ceteris-paribus knob.
 - **Combined scenario-path frontier:** interpolating PROBABLE → the declared central-favourable endpoint
   (`PRO_CENTRAL`), m falls +55% → −1% at the endpoint; the **frontier (m=0) is at t ≈ 0.94** — i.e. conditions ~94%
   of the way from probable toward the fully-idealized central endpoint are needed to flip the winner. The field is
-  **NOT level**: coverage wins across essentially the whole space, and the central reaches at most a tie only at the
+  **NOT level**: coverage wins across essentially the anchored region, and the central narrowly leads only at the
   extreme idealized corner. `t` is an illustrative linear mix, not a calibrated competence scale.
 
 ## Fixed variables (details)
@@ -118,7 +118,7 @@ _(populated as we fix each, one at a time)_
 ## Anchored scenarios (author framing 2026-07-11) — level the field both ways
 Four substantive declared scenarios + one diagnostic contrast (values in `scenario-configs.mjs`), each a full config → `m ± 95% CI` (inner MC only):
 - **PRO-CENTRAL** — the central's declared full-favourable endpoint (every knob central-favourable). Under faithful
-  universal participation this fully-idealized endpoint is **a narrow central win (≈ −1.4%)**, and a central-winning
+  universal participation this fully-idealized endpoint is **a narrow central win (≈ −2.3%)**, and a central-winning
   region exists ~20% inward (≈9/40 draws).
 - **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast
   (≈ +38%): a diagnostic contrast attributing the harm channel ALONE — a sequential ~40% of the decline (16.3 of
@@ -140,7 +140,7 @@ Per axis we also give: D_F range, ceteris-paribus frontier location, evidence fo
   make the CENTRAL — a bounded sampler that cannot aggregate the whole population — look worse, not the distributed
   arm.)
 - **Effect of the correction (`e4:scenarios`/`e4:evidence`):** setting `p=1` (from the old 0.05–0.40) collapses the
-  central's declared full-favourable endpoint from a ~30-point win to a **narrow central win (~−1.4%)**, and raises PROBABLE
+  central's declared full-favourable endpoint from a ~30-point win to a **narrow central win (~−2.3%)**, and raises PROBABLE
   from +46.6% to **+54.6%**. Low participation was a lever that ONLY handicapped the distributed arm (the central's
   even-spread appraisal is robust to it), which is exactly why anchoring it to PB turnout was unfair.
 - **Decision:** CONFIRMED (author, 2026-07-12): participation is a facto; `p = 1.0` in every scenario.

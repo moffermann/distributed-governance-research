@@ -9,7 +9,7 @@
 // FOUR substantive declared scenarios + ONE diagnostic contrast (do not conflate):
 //   PRO_CENTRAL   = a declared central-favourable ENDPOINT (every knob central-favourable; some sit outside the
 //                   registered expectable bands). Under faithful universal participation this fully-idealized
-//                   endpoint is a NARROW CENTRAL WIN (coverage ~-1.4%); a central-winning region exists off the independent-box sample (~9/40 draws 20% inward).
+//                   endpoint is a NARROW CENTRAL WIN (coverage ~-2.3%); a central-winning region exists off the independent-box sample (~9/40 draws 20% inward).
 //   NO_MYOPIA     = a harm-aware AND otherwise-competent central BUNDLE (harm sight + unbiased + precise + no credit).
 //                   NOT a myopia isolation. A competent harm-aware central still trails coverage under faithful
 //                   participation (~+14%); it reconciles in DIRECTION with the frozen symmetry-gate near-parity
