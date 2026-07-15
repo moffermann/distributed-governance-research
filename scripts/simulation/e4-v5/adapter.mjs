@@ -1,8 +1,11 @@
-// E4 v1.14 — the render adapter (mechanical embargo). Official E4 evidence/scenarios/frontier text routes through
+// E4 v1.15 — the render adapter (mechanical embargo). Official E4 evidence/scenarios/frontier text routes through
 // here (renderReport / safeLog). It (a) validates against the closed schema, and (b) rejects the TESTED CLASSES of
 // institution-performance multiplier notation (see the NOTE on assertNoEmbargoedTokens and the test suite) — NOT a
 // proof against every conceivable obfuscation, and it does not by itself route every repository artifact.
-// m_hat is a SIGNED FRACTION of the oracle (parity at 0), never a ratio-with-parity-1 and never suffixed with 'x'.
+// m_hat is a SIGNED FRACTION of the REFERENCE/normalizer (parity at 0), never a ratio-with-parity-1 and never suffixed with 'x'.
+// v1.15 note: this executable output INTENTIONALLY reports percentages/points only. The manuscript separately states
+// the caveated DIRECTIONAL contrast (e.g. "~98% vs ~44%") that the v1.15 claim-and-estimand contract
+// permits in prose; the code-level embargo stays as a belt-and-suspenders against a *calibrated multiplier* reading.
 import { EMBARGO_TOKENS } from './contract.mjs';
 import { validateOutput } from './schema.mjs';
 
@@ -43,16 +46,16 @@ export function safeLog(...lines) { const t = lines.join(' '); assertNoEmbargoed
 export function renderReport(out) {
   const errs = validateOutput(out);
   if (errs.length) throw new Error(`[embargo] output failed closed schema: ${errs.join('; ')}`);
-  const pct = (x) => (100 * x).toFixed(1) + '%';                 // signed fraction of oracle, NOT a multiplier
+  const pct = (x) => (100 * x).toFixed(1) + '%';                 // signed fraction of the reference, NOT a multiplier
   const mag = out.m_Ralpha
-    ? Object.entries(out.m_Ralpha).map(([al, iv]) => `  α=${al}: [${pct(iv[0])}, ${pct(iv[1])}] of oracle`).join('\n')
+    ? Object.entries(out.m_Ralpha).map(([al, iv]) => `  α=${al}: [${pct(iv[0])}, ${pct(iv[1])}] of the reference`).join('\n')
     : '  (magnitude layer not computed)';
   const sh = (x) => (100 * x).toFixed(0) + '%';
   const text = [
     `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
-    `  m̂ (signed fraction of full-information oracle, parity at 0): ${pct(out.m_hat)}  CI=[${pct(out.ci[0])}, ${pct(out.ci[1])}]`,
+    `  m̂ (signed fraction of the full-information reference, parity at 0): ${pct(out.m_hat)}  CI=[${pct(out.ci[0])}, ${pct(out.ci[1])}]`,
     `  sign backbone over D_F: Core v0 wins ${sh(out.df_dist_share)} of sampled θ-points · central ${sh(out.df_cent_share)} · parity ${sh(out.df_par_share)}  (a COUNT of resolved points, not a probability)`,
-    `  magnitude over R_α (declared sensitivity boxes; a value >100% means the losing arm destroys value, so the gap exceeds the oracle):`,
+    `  magnitude over R_α (declared sensitivity boxes; a value >100% means the losing arm destroys value, so the gap exceeds the reference):`,
     mag,
     `  status → sign:${out.sign_status}  materiality:${out.materiality_status}  degeneracy:${out.degeneracy_status}  numerical:${out.numerical_status}`,
     `  π_deg (degenerate-world share): ${pct(out.pi_deg)}`,

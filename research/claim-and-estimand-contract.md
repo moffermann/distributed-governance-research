@@ -1,6 +1,7 @@
 # Claim & estimand contract (governs the paper's quantitative claims)
 
-**Date:** 2026-07-10 · **Superseded 2026-07-15 for v1.15.** · **Status:** the controlling specification for what
+**Date:** 2026-07-10 · **Revised 2026-07-15 for v1.15** (this document remains the single controlling
+specification; it was not replaced, it was corrected). · **Status:** the controlling specification for what
 the simulation may and may not claim. Written after the independent audit (`audits/2026-07-10/`) and the
 pre-registered **symmetry gate**, then **corrected for v1.15**: the pre-registered symmetric gate is a *narrow,
 central-idealizing robustness check* — **not** the primary estimand — because forcing symmetry idealizes the

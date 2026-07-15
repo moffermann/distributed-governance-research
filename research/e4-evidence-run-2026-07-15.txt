@@ -1,0 +1,14 @@
+
+> distributed-governance-research@0.0.0 e4:evidence
+> node scripts/simulation/e4-v5/evidence.mjs
+
+E4 evidence — contract e4-v5.0.0 — θ:e4v7+fnv1a-697c70fb
+  PROBABLE scenario (source-motivated declared reference) headline: m = +54.0%  95% CI [+53.2%, +54.8%]   Core v0 +98.2% of the reference · central +44.2%
+  EXPLORATORY independent-box sweep over the declared-scenario envelope (400/400 draws, knobs independent uniform — a coordinate-dependent box, NOT an anchored joint measure; pending preregistration):
+    m distribution: p5 +24.5% · median +50.1% · p95 +96.2%
+    Core v0 wins 400/400 draws · central 0 · parity 0   (0 central: one-sided 95% upper bound on central-win prob ≈ 1%, rule of three — NOT zero)
+  targeted probe of the coordinated central-favourable region (20% inward of PRO-CENTRAL): central wins 9/40 draws
+    ⇒ a central-winning region EXISTS off the independent-box sample (9/40 inward draws); the winner is region-dependent, not one-sided
+  status → sign:indeterminate (region-dependent)  materiality:material  degeneracy:ok  numerical:resolved
+  π_deg: 0%   contract hash: fnv1a-cbfdef46
+  (named scenarios & frontiers: npm run e4:scenarios / e4:frontier — see research/e4-plausible-anchors.md)

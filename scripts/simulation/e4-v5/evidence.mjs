@@ -122,8 +122,8 @@ function main() {
     : `    ⇒ 0 central wins in ${centralRegion.ok} probe draws (rule-of-three upper bound ≈ ${(300 / centralRegion.ok).toFixed(1)}% on the central-win rate) — does NOT establish the region's measure`;
   const regionTag = regionExists ? ' (region-dependent)' : '';
   const text = [
-    `E4 evidence (EXPLORATORY — not an anchored plausibility measure) — contract ${out.contract_version} — θ:${out.theta_id}`,
-    `  PROBABLE scenario (source-motivated declared reference) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of oracle · central ${P(pt.cOverO)}`,
+    `E4 evidence — contract ${out.contract_version} — θ:${out.theta_id}`,
+    `  PROBABLE scenario (source-motivated declared reference) headline: m = ${P(out.m_hat)}  95% CI [${P(out.ci[0])}, ${P(out.ci[1])}]   Core v0 ${P(pt.dOverO)} of the reference · central ${P(pt.cOverO)}`,
     `  EXPLORATORY independent-box sweep over the declared-scenario envelope (${env.resolved}/${env.n} draws, knobs independent uniform — a coordinate-dependent box, NOT an anchored joint measure; pending preregistration):`,
     `    m distribution: p5 ${P(env.p5)} · median ${P(env.p50)} · p95 ${P(env.p95)}`,
     `    Core v0 wins ${env.resolved - Math.round(env.centShare * env.resolved) - Math.round(env.parShare * env.resolved)}/${env.resolved} draws · central ${Math.round(env.centShare * env.resolved)} · parity ${Math.round(env.parShare * env.resolved)}` +
