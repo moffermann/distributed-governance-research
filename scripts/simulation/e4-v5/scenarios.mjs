@@ -1,7 +1,7 @@
-// E4 v1.14 — FOUR declared scenarios + ONE diagnostic contrast (research/e4-plausible-anchors.md; values in
+// E4 v1.15 — FOUR declared scenarios + ONE diagnostic contrast (research/e4-plausible-anchors.md; values in
 // scenario-configs.mjs). Each is a full config; we report m ± 95% CI. PRO-CENTRAL = declared central-favourable
-// endpoint (at Core-v0-faithful universal participation, this fully-idealized endpoint is at most a bare tie, not a
-// win). NO-MYOPIA (bundle) = a competent harm-aware central. MYOPIA-OFF = diagnostic harm-only contrast.
+// endpoint (at Core-v0-faithful universal participation, this fully-idealized endpoint is a NARROW CENTRAL WIN,
+// with a central-winning region ~9/40 draws 20% inward). NO-MYOPIA (bundle) = a competent harm-aware central. MYOPIA-OFF = diagnostic harm-only contrast.
 // PROBABLE = source-motivated reference. PRO-DISTRIBUTED = distributed-favourable. All prose below is COMPUTED
 // from the runs (never hardcoded), so it can never drift from the numbers.
 import { baseConfig, contractHash, resolvedHash } from './contract.mjs';

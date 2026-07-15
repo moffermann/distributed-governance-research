@@ -33,7 +33,7 @@ export const PROBABLE = { ...COMPOSITION, a_V: 0.5, b_V: 3.5, p: 1.0, a_r: 1.5, 
   s_exp: 2.5, b_H_C: 0.5, w: 0.5, a: 0.2, b: 0.9, beta: 0.35, lambda: 0.15, zeta: 0.6, gamma: 0.5,
   sigma_e: 0.5, sigma_C: 0.5 };
 // Declared central-favourable endpoint (every knob central-favourable). Under faithful universal participation:
-// at most a bare tie (~ −1.4%), NOT a win.
+// a NARROW CENTRAL WIN, with a central-winning region ~9/40 draws 20% inward (see the recorded evidence run).
 export const PRO_CENTRAL = { ...COMPOSITION, a_V: 1.0, b_V: 1.5, p: 1.0, a_r: 0.8, b_r: 14, pi_opp: 0.03, mu_opp: 1.5,
   s_exp: 0.5, b_H_C: 1.2, w: 0.1, a: 0.0, b: 1.0, beta: 0.8, lambda: 0.0, zeta: 0.85, gamma: 0.3,
   sigma_e: 1.2, sigma_C: 0.2 };

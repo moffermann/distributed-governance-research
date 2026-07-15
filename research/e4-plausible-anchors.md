@@ -1,10 +1,8 @@
 # E4 — plausible-value anchors (the "probable case", justified per variable) — LIVING DOC
 
-> **v1.15 correction (2026-07-15), supersedes the `PRO_CENTRAL` phrasings below.** The current engine and the
-> recorded run (`research/e4-evidence-run-2026-07-15.txt`) find the declared central-favourable endpoint
-> `PRO_CENTRAL` a **narrow central win** (coverage m ≈ −1.4%), and a **central-winning region exists ~20% inward
-> (≈9/40 draws)** — i.e. the winner near that endpoint is region-dependent. Any wording below that calls it "at most
-> a bare tie, coverage wins every inward draw" is stale and superseded by this note.
+> **v1.15 (2026-07-15).** The engine and the recorded run (`research/e4-evidence-run-2026-07-15.txt`) find the
+> declared central-favourable endpoint `PRO_CENTRAL` a **narrow central win** (coverage m ≈ −1.4%), with a
+> **central-winning region ~20% inward (≈9/40 draws)** — the winner near that endpoint is region-dependent.
 
 > Author framing (2026-07-11): report EVERYTHING (space-filling sweep), then LOCATE the frontier ceteris-paribus and
 > state, per axis: where the frontier is, the possible estimated values, the central's declared favourable endpoint, and the PROBABLE
@@ -85,14 +83,14 @@ facto, p=1), not a ceteris-paribus knob.
 
 | scenario | m (gap) | 95% CI | Core v0 delivers | central delivers | winner |
 |---|---|---|---|---|---|
-| PRO-CENTRAL (central's declared full-favourable endpoint) | **−1.4%** | [−1.5, −1.3] | 96.3% of oracle | 97.7% | ≈ tie (central +1.4 pt) |
+| PRO-CENTRAL (central's declared full-favourable endpoint) | **−1.4%** | [−1.5, −1.3] | 96.3% of the reference | 97.7% | narrow central win |
 | NO-MYOPIA (harm-aware and otherwise-competent bundle) | **+13.9%** | [+13.6, +14.2] | 98.9% | 85.0% | Core v0 |
 | PROBABLE (source-motivated reference) | **+54.6%** | [+53.8, +55.4] | 98.9% | 44.3% | Core v0 |
 | PRO-DISTRIBUTED (favourable, moderate) | **+205.7%** | [+203.0, +208.7] | 98.9% | −106.8% (destroys value) | Core v0 |
 
-- **Where each stands (faithful participation):** coverage wins across essentially the whole space. The central's
+- **Where each stands (faithful participation):** coverage wins across the anchored region. The central's
   best case — its fully-idealized declared endpoint (competent, harm-aware, precise, credit-free + little harm) — is
-  at most a bare tie (~−1.4%; even 20% inward, coverage wins every draw). The story from D/O: Core v0 is robust
+  a narrow central win (~−1.4%), and a central-winning region exists ~20% inward (≈9/40 draws). The story from D/O: Core v0 is robust
   (96–99%); the central swings 44%→85%→98% (or −107% when myopic + harmful) — it depends on whether it sees the
   anti-value. Net-allocation participation is NOT a lever here (universal by architecture, p=1).
 - **Continuity / reconciliation with the NO-GO:** in this sequential, path-dependent decomposition, `MYOPIA_OFF`
@@ -120,8 +118,8 @@ _(populated as we fix each, one at a time)_
 ## Anchored scenarios (author framing 2026-07-11) — level the field both ways
 Four substantive declared scenarios + one diagnostic contrast (values in `scenario-configs.mjs`), each a full config → `m ± 95% CI` (inner MC only):
 - **PRO-CENTRAL** — the central's declared full-favourable endpoint (every knob central-favourable). Under faithful
-  universal participation this fully-idealized endpoint is **at most a bare tie (≈ −1.4%; even 20% inward, coverage
-  wins every draw)**, NOT a win.
+  universal participation this fully-idealized endpoint is **a narrow central win (≈ −1.4%)**, and a central-winning
+  region exists ~20% inward (≈9/40 draws).
 - **MYOPIA-OFF** — PROBABLE with ONLY the two harm-gate coordinates changed. The genuine myopia-isolation contrast
   (≈ +38%): a diagnostic contrast attributing the harm channel ALONE — a sequential ~40% of the decline (16.3 of
   40.8 pts); the further step to the NO-MYOPIA bundle is the remaining ~60%.
@@ -142,7 +140,7 @@ Per axis we also give: D_F range, ceteris-paribus frontier location, evidence fo
   make the CENTRAL — a bounded sampler that cannot aggregate the whole population — look worse, not the distributed
   arm.)
 - **Effect of the correction (`e4:scenarios`/`e4:evidence`):** setting `p=1` (from the old 0.05–0.40) collapses the
-  central's declared full-favourable endpoint from a ~30-point win to a **bare tie (~−1.4%)**, and raises PROBABLE
+  central's declared full-favourable endpoint from a ~30-point win to a **narrow central win (~−1.4%)**, and raises PROBABLE
   from +46.6% to **+54.6%**. Low participation was a lever that ONLY handicapped the distributed arm (the central's
   even-spread appraisal is robust to it), which is exactly why anchoring it to PB turnout was unfair.
 - **Decision:** CONFIRMED (author, 2026-07-12): participation is a facto; `p = 1.0` in every scenario.
