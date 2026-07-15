@@ -1,5 +1,11 @@
 # E4 — plausible-value anchors (the "probable case", justified per variable) — LIVING DOC
 
+> **v1.15 correction (2026-07-15), supersedes the `PRO_CENTRAL` phrasings below.** The current engine and the
+> recorded run (`research/e4-evidence-run-2026-07-15.txt`) find the declared central-favourable endpoint
+> `PRO_CENTRAL` a **narrow central win** (coverage m ≈ −1.4%), and a **central-winning region exists ~20% inward
+> (≈9/40 draws)** — i.e. the winner near that endpoint is region-dependent. Any wording below that calls it "at most
+> a bare tie, coverage wins every inward draw" is stale and superseded by this note.
+
 > Author framing (2026-07-11): report EVERYTHING (space-filling sweep), then LOCATE the frontier ceteris-paribus and
 > state, per axis: where the frontier is, the possible estimated values, the central's declared favourable endpoint, and the PROBABLE
 > case (XX ± CI). The "probable case" for each variable must be JUSTIFIED — by a theoretical argument or an empirical
@@ -72,7 +78,7 @@ facto, p=1), not a ceteris-paribus knob.
 > **PARTICIPATION IS A FACTO (not a knob):** Core v0 net-allocation participation is universal by architecture
 > (profiles + delegates cover the passive), so `p = 1.0` in every scenario — NOT anchored to (low) PB turnout (that
 > conflation understated coverage). Under faithful participation the central's declared full-favourable endpoint
-> (`PRO_CENTRAL`) is **at most a bare tie (~−1.4%), not a win** — even 20% inward, coverage wins every draw.
+> (`PRO_CENTRAL`) is **a narrow central win (coverage ~-1.4%)**; a central-winning region exists (~9/40 draws 20% inward).
 > `NO_MYOPIA` (harm-aware + otherwise-competent bundle) is +13.9% (still Core v0), `MYOPIA_OFF` (two-harm-coordinate
 > diagnostic) +38.4%. Authoritative configs live in `scenario-configs.mjs`; the regression pins executable outcome
 > ORDERING only, not exact configs, magnitudes, labels, or prose.

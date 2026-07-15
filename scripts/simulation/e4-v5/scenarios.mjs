@@ -18,7 +18,7 @@ function run(name, over) {
   return r;
 }
 
-safeLog(`E4 — anchored scenarios (m = D/O − C/O, signed fraction of full-information oracle, parity at 0) — contract ${contractHash()} (captures the full resolved THETA incl. the coverage composition)\n`);
+safeLog(`E4 — anchored scenarios (m = D/O − C/O, signed fraction of the full-information reference, parity at 0) — contract ${contractHash()} (captures the full resolved THETA incl. the coverage composition)\n`);
 const rc = run('PRO-CENTRAL', PRO_CENTRAL);      // declared central-favourable endpoint — at faithful participation, ~parity
 const rp = run('PROBABLE', PROBABLE);            // source-motivated declared reference
 const ro = run('MYOPIA-OFF', MYOPIA_OFF);        // GENUINE myopia-only contrast (only s_exp,b_H_C change) — harm channel ALONE
