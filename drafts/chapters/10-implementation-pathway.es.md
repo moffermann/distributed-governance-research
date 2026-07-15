@@ -1,83 +1,9 @@
 ## 9. Ruta de implementación
 
-La arquitectura está construida para una adopción gradual y revocable, y esta
-sección es explícita sobre lo que afirma y lo que no: la pregunta del artículo
-—si la arquitectura de asignación bicentenaria puede re-arquitecturarse con la
-tecnología de hoy— se responde al nivel de un diseño construible y de una
-*dirección* condicional del mecanismo de selección, con independencia de si alguna
-autoridad elige desplegarla. **No** responde *en cuánto* mejoraría el valor
-entregado en el mundo real: ese es un estimando identificado por separado, dejado
-a revisión independiente, calibración empírica y un piloto acotado (§8). Lo que
-sigue es la ruta para una autoridad que elige desplegarla. Un país abre una función pública (el piloto de
-referencia es la infraestructura deportiva municipal), migra una pequeña cuota
-presupuestaria bajo un modo de operación tutelado, y retiene la revisión de
-admisibilidad —con toda decisión y demora tutelada pública por construcción. El
-encuadre por defecto del piloto es prospectivo: la instrumentación comienza en la
-adopción, la brecha de visibilidad se publica como la línea de partida declarada
-del adoptante ("mídanme desde aquí"), y las cifras previas a la adopción se
-reportan por separado, de manera impersonal y como contexto —la configuración
-bajo la cual históricamente se han adoptado instrumentos que exponen. Las
-métricas de madurez funcional (mezcla de
-participación, cuota de flujo por defecto, tasas de independencia de la
-fiscalización, indicadores de resistencia del sistema establecido, confiabilidad fiscal)
-determinan si el despliegue gana un ámbito más amplio, y sus trayectorias, no la
-retórica, responden si la distribución supera a la línea base local. La condición
-de salida es honesta en ambas direcciones: un piloto cuyos indicadores se
-estancan bajo el ahogamiento del sistema establecido documenta ese hecho públicamente, lo
-cual es en sí mismo información que el sistema actual nunca produce.
+La adopción es gradual y revocable. El artículo responde si la tecnología actual puede reconstruir una arquitectura de asignación bicentenaria con un diseño construible y un mecanismo de selección condicional y direccional, con independencia de su despliegue; no estima las ganancias de valor entregado en el mundo real. Ese estimando identificado por separado queda a la espera de revisión independiente, calibración empírica y un piloto acotado (§8). La ruta de los modos operativos es cerrado/tutelado, semiabierto y luego abierto. El régimen abierto —el valor predeterminado arquitectónico— distribuye la planificación por construcción; la planificación centralizada queda confinada a la transición cerrada/tutelada. Un país abre una función (referencia: infraestructura deportiva municipal), traslada una pequeña cuota presupuestaria al modo tutelado, conserva la revisión de admisibilidad y publica cada decisión y demora tuteladas. La instrumentación comienza con la adopción; la brecha de visibilidad se convierte en la línea de partida declarada («mídanme desde aquí»), mientras las cifras previas a la adopción aparecen por separado, de manera impersonal, como contexto —la configuración bajo la cual históricamente se han adoptado instrumentos que exponen. La mezcla de participación, la cuota de flujo por defecto, las tasas de independencia de la fiscalización, los indicadores de resistencia del sistema establecido y la confiabilidad fiscal condicionan la expansión; sus trayectorias, no la retórica, muestran si la distribución supera la línea de base local. El estancamiento bajo el ahogamiento del sistema establecido se publica como resultado de salida —información de la que carece el sistema actual.
 
-La transición entre regímenes está ella misma medida. Los experimentos
-complementarios (Offermann 2026b) cuantifican el régimen semiabierto de la
-escalera de regímenes operativos (docs/110) —un sobre presupuestario acotado y mandatado (envelope) que
-corre en piloto automático de protocolo junto al presupuesto tradicional de la
-autoridad— como una mezcla fiscal: sobre un piso de granularidad de cartera de
-aproximadamente diez por ciento, el valor verificado mezclado sube de forma
-monótona y casi lineal con la cuota del sobre dentro de ese aparato, desde el
-punto de equilibrio cerca del ocho a diez por ciento hacia arriba —un contraste
-del aparato anterior, ahora sujeto a la salvedad del multiplicador retirado
-(Sección 6), no un punto final calibrado. La transición desde el statu quo hacia
-el régimen abierto es una perilla, no un salto: la adopción puede proceder por
-incrementos.
+La transición se mide. Offermann (2026b) cuantifica el peldaño semiabierto (docs/110): un sobre acotado, ejecutado por protocolo, junto al presupuesto tradicional. Dentro de ese aparato, por encima de un piso de granularidad de cartera de aproximadamente 10%, el valor verificado mezclado aumenta de forma monótona y casi lineal con la cuota del sobre, y alcanza el punto de equilibrio en torno al 8–10%. Este contraste estilizado de transición es direccional, no calibrado. El contraste de selección asimétrica, justo y anclado en la literatura, sigue siendo el hallazgo direccional principal. El paso del statu quo al régimen abierto es una perilla incremental, no un salto.
 
-Los mismos experimentos midieron una variable que este corpus había dejado sin
-regular: *cuándo* libera la autoridad el presupuesto hacia la maquinaria de
-asignación. La regla de despliegue resultante: medir la liberación contra un
-techo de obra-en-proceso calibrado al caudal (throughput) y tiempo de ciclo de la
-tubería de entrega y verificación —nunca contra el calendario. La liberación
-por calendario congela meses de presupuesto en custodia y satura la verificación;
-y cuando la capacidad de verificación es escasa, ninguna política de liberación
-compensa —la capacidad de verificación es el techo de la tubería antes que su
-instrumento antifraude. La regla es condicional a un instrumento de arrastre
-plurianual (el sobre semiabierto es precisamente tal vehículo); bajo
-anualidad presupuestaria estricta degenera a medición intra-anual.
+Los experimentos también proporcionan una regla de liberación presupuestaria: medir la liberación contra un techo de obra-en-proceso calibrado al caudal y al tiempo de ciclo de entrega y verificación, nunca contra el calendario. La liberación por calendario congela meses de presupuesto en custodia y satura la verificación; cuando la verificación escasea, ninguna política de liberación compensa: la capacidad es el techo de la tubería antes que una herramienta antifraude. La regla requiere un instrumento de arrastre, proporcionado por el sobre semiabierto; bajo anualidad estricta, se reduce a la medición intraanual.
 
-Finalmente, la premisa tecnológica que reduce los costos de participación del
-lado ciudadano (el tutor de IA) aplica simétricamente al lado del control. La
-verificación por máquina de las clases de evidencia protocolizables multiplica
-la capacidad de fiscalización, con humanos como segunda instancia permanente
-—reverificación muestreada con un piso publicado, controles sembrados de
-respuesta conocida como instrumento de calibración y detección de deriva,
-auditando al verificador en vez de competir con él— de modo que la tasa de
-error de la máquina permanece medida y la profesión humana de control sigue
-financiada desde el presupuesto de control que ella alivia. Medido sobre un
-panel de cinco familias reales de modelos (Offermann 2026b), los modelos
-frontera convergen en buena especificidad y detección de fraude sobre
-evidencia legible en documentos, mientras los modelos locales pequeños son más
-débiles, y los contratos de evidencia que incluyen referencias objetivas de
-comparación (precios de mercado, bandas de duración, umbrales) permiten al
-verificador estricto juzgar en vez de adivinar. La capa máquina alcanza solo
-el fraude legible en documentos de la fase de entrega —la calidad por debajo de la especificación física y el robo previo al contrato quedan enteramente en manos humanas, de modo que
-la atestación de procedencia permite detectar manipulaciones desde el momento de
-captura, pero no constituye una prueba con validez judicial, y la admisibilidad probatoria aún requiere custodia, contradicción y
-peritaje. La evidencia ciudadana contrapuesta —productores independientes con
-intereses opuestos al ejecutor, cuya existencia anticipada disuade el desvío—
-mantiene la vigilancia distribuida incluso cuando el trabajo rutinario de
-verificación documental se reduce; pero su fuerza equivale a la *independencia*
-de la capa de aportantes de evidencia, y un anillo colusivo que la capture o silencie
-borra el efecto. La colusión entre capas es, de hecho, el único adversario que
-sortea la disuasión por hito y modifica la fuga en un orden de magnitud (mientras la
-ventaja de valor entregado sobrevive), así que la resistencia a la colusión
-—titularidad real verificada y resistencia a identidades Sybil entre los aportantes de evidencia, y
-descentralización del asignador y del piso de presupuesto de auditoría— es un
-requisito de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)), no una salvedad residual.
-
+La reducción de costos del tutor de IA se aplica simétricamente al control. La verificación por máquina de evidencia protocolizable amplía la capacidad de fiscalización, mientras los humanos siguen siendo la segunda instancia permanente: la reverificación por muestreo tiene un piso publicado, los controles sembrados de respuesta conocida calibran y detectan la deriva, y los humanos auditan al verificador en vez de competir con él, manteniendo medidos los errores y financiando la profesión de control con los presupuestos que la verificación por máquina alivia. Un panel de cinco familias de modelos reales (Offermann 2026b) constata que los modelos de frontera tienen buena especificidad y detección de fraude sobre evidencia legible en documentos; los modelos locales más pequeños son más débiles, y los contratos de evidencia con referencias objetivas —precios de mercado, bandas de duración, umbrales— permiten a los verificadores estrictos juzgar en vez de adivinar. La automatización cubre solo el fraude legible en documentos de la fase de entrega: la calidad física por debajo de especificación y el robo previo al contrato quedan enteramente en manos humanas. La atestación de procedencia es evidencia de manipulación al momento de la captura, no una prueba con validez judicial; la admisibilidad aún requiere custodia, contradicción y testimonio pericial. La evidencia ciudadana contrapuesta preserva la vigilancia distribuida a medida que se reduce la revisión documental rutinaria; la disuasión depende de aportantes independientes previstos y opuestos a los ejecutores, por lo que la captura o el silenciamiento colusivos la eliminan. Solo la colusión entre capas sortea la disuasión por hito e incrementa la fuga en un orden de magnitud, aunque la ventaja de valor entregado sobrevive. Por tanto, la titularidad real verificada, la resistencia a identidades Sybil entre los aportantes, la asignación descentralizada y un piso de presupuesto de auditoría son requisitos de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)).

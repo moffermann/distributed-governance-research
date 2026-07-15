@@ -1,79 +1,17 @@
 ## 4. The Core v0 architecture
 
-We summarize the reference architecture at the level needed for the analysis;
-the full object model, state machines, and citizen-interface layers are
-specified in the public corpus.
+We summarize the reference architecture only at the level required for the analysis; the public corpus specifies its full object model, state machines, and citizen interfaces.
 
-**Funding.** An implementing authority migrates a mandated share of an
-existing budget into individual civic wallets: periodic, non-withdrawable,
-public-purpose allocation capacity, equal per citizen by default. Every active
-planning scope carries an *Allocation Mandate* record naming the statute or
-instrument that authorized the migration, its legal rank, the organ to which
-allocations are imputed, and the allocation formula. The platform records that
-external authorization; it does not manufacture it. Binding-mode operation is
-gated on an enabling norm of sufficient rank being recorded; otherwise, the
-disclosed lawful default is consultative or tutored operation. The allocation act is designed to replicate two guarantees of the vote: secrecy of the preference and coercion-resistance (receipt-freeness). To the extent an enabling norm recognizes it, it can be shielded with protections equivalent to the vote's; until then, these are technical platform guarantees, not a legal status. Individual allocations are pseudonymous at the public layer
-and reconcile cryptographically against public per-scope totals — every peso
-traceable as money, no citizen traceable as an allocator, and no receipt or
-exportable proof of any individual allocation exists, even voluntarily, so
-that a patron who demands proof can never get one (the secret ballot's own
-defense, applied to the wallet). A *Fiscal Commitment Profile* per scope makes
-the migrated percentage, indexation, and delivery latency public and
-versioned, so fiscal strangulation by the incumbent treasury is measurable and
-attributable rather than silent. Essential services with continuity
-obligations are protected by non-assignable floors outside citizen-by-citizen
-popularity.
+**Operating modalities and planning scopes.** Core v0 progresses through closed, tutored, semi-open, and open modes. Open is the architectural default: planning, including scope construction, is distributed by construction. Centralized planning and scope construction belong only to the closed/tutored transition; there, a public authority defines active scopes and may retain project-admissibility review. Every material tutored decision—and every tutored silence past its deadline—becomes a public governance-resolution object. Indicators of incumbent resistance (scope share opened, rejection and timeout rates, and operator privilege) distinguish symbolic adoption from real transfer.
 
-**Projects and roles.** Financeable projects declare a value thesis with
-verifiable claims, affected parties, risks and anti-values, a phase and
-milestone plan, and an *evidential contract*: what must be proven, by what
-class of qualified producer, with what method, for which formal effect. Six
-roles are structurally separated — proposer, modeler/designer, executor,
-fiscalizer, evidence producer, custodian — with related-party relationships
-declared on a severity-classified graph. The load-bearing rule is that the
-executor never chooses or pays its own fiscalizers or evidence producers:
-control work is financed from a separated control budget and assigned by
-protocol.
+Every active scope carries an *Allocation Mandate* identifying the authorizing statute or instrument, its legal rank, the organ to which allocations are imputed, and the allocation formula. The platform records, rather than creates, that external authority. Binding operation requires a recorded enabling norm of sufficient rank; otherwise, the disclosed lawful default is consultative or tutored operation.
 
-**Parallel closure and conditional disbursement.** A published project
-gathers funding commitments, fiscalizer assignments, evidence commitments,
-and beneficiary confirmations concurrently; execution becomes possible only
-when all conditions required by its proportional *threshold policy* close.
-Committed funds are custodied, not transferred: release happens per
-milestone, against reviewed fulfillment evidence, with retention, blocker
-checks, and guarantees materialized by external custodians before any
-release. A *Duty-of-Care Anchor* names, before disbursement, the solvent legal person civilly answerable to third parties for damages arising from execution, in particular damage to physical integrity.
+**Funding.** An implementing authority migrates a mandated share of an existing budget into individual civic wallets: periodic, non-withdrawable, public-purpose allocation capacity, equal per citizen by default. Allocation is designed to reproduce two guarantees of voting: preference secrecy and coercion-resistance (receipt-freeness). Where an enabling norm recognizes it, protections equivalent to the vote’s may apply; until then, these are technical platform guarantees, not legal status. Public-layer allocations are pseudonymous and cryptographically reconcile with public per-scope totals: every peso remains traceable as money, no citizen is traceable as allocator, and no one can obtain a receipt or exportable proof, even voluntarily, denying patrons demanded proof as the secret ballot does. Each scope’s public, versioned *Fiscal Commitment Profile* discloses the migrated percentage, indexation, and delivery latency, making fiscal strangulation by the incumbent treasury measurable and attributable rather than silent. Non-assignable floors protect essential services subject to continuity obligations from citizen-by-citizen popularity.
 
-**Attention infrastructure.** Citizens act through a layered interface:
-discovery with user-controlled, reason-visible ordering; compact project
-cards; and progressively deeper audit surfaces down to the full trail.
-Non-attending citizens are served by configurable automatic allocation
-profiles — or a sensible default profile when none is set — and by
-scoped, revocable delegation with concentration visibility. The architecture
-does not assume attentive citizens; it assumes mostly inattentive ones and
-routes their weight through inspectable intermediation (Lupia and McCubbins
-1998). This is a design answer to the citizen-competence objection in its
-sharpest contemporary form (Brennan 2016): rather than restricting anyone's right to participate, the architecture makes the intermediation that inattention
-produces visible, revocable, and auditable.
+**Projects, roles, and lifecycle.** A financeable project states a value thesis with verifiable claims, affected parties, risks and anti-values, a phased milestone plan, and an *evidential contract*: what must be proved, by which qualified producer class and method, and for what formal effect. Six roles are structurally separated—proposer, modeler/designer, executor, fiscalizer, evidence producer, and custodian—and related-party ties are declared on a severity-classified graph. The executor never selects or pays its fiscalizers or evidence producers; protocol assigns control work financed from a separate control budget.
 
-An apparent objection —that participating via app, wallet, and AI tutor
-excludes the non-digital population— dissolves under the comparative
-discipline: the non-digital citizen already delegates today, handing their
-decision, through the vote, to a distant representative who allocates the
-budget for them. Core v0 does not add a barrier: it removes a level of
-indirection. Whoever never participates falls to the system default —equal per
-citizen, mandate-bound—, not to the attentive minority's preference; and
-whoever participates even minimally, including through non-digital channels or
-assisted delegation, brings the decision closer to their direct interests
-through microdelegation and rules such as "near me" that fund what they can
-touch. What appears to exclude, includes more —with the construction of the
-planning scope as the only remaining indirection (Section 8).
+Once published, a project concurrently gathers funding commitments, fiscalizer assignments, evidence commitments, and beneficiary confirmations. Execution begins only when every condition required by its proportional *threshold policy* closes. Committed funds remain in custody, not transferred; milestone release occurs against reviewed fulfillment evidence, with retention and blocker checks, only after external custodians have materialized the required guarantees. Before disbursement, a *Duty-of-Care Anchor* identifies the solvent legal person civilly answerable to third parties for execution damage, especially damage to physical integrity.
 
-**Transition.** Deployment proceeds through operating modes — closed,
-tutored, semi-open, open — in which a public authority may retain
-eligibility review (project admissibility), but every material tutored decision, and every
-tutored silence past its deadline, becomes a public governance-resolution
-object. Incumbent-resistance indicators (scope share opened, rejection and
-timeout rates, operator privilege) make symbolic adoption distinguishable
-from real transfer.
+**Attention and access.** Citizens use layered discovery with user-controlled, reason-visible ordering, compact project cards, and progressively deeper audit surfaces down to the full trail. Configurable automatic-allocation profiles—or a sensible default when none is set—and scoped, revocable delegation with concentration visibility serve non-attending citizens. The design assumes mostly inattentive citizens and routes their weight through inspectable intermediation (Lupia and McCubbins 1998). Against the citizen-competence objection in its sharpest contemporary form (Brennan 2016), it preserves everyone’s participation rights while making the intermediation produced by inattention visible, revocable, and auditable.
 
+The apparent exclusion of non-digital citizens by app, wallet, or AI-tutor participation fails comparatively: through voting, they already delegate budget allocation to distant representatives. Core v0 adds no barrier and removes one level of indirection. Nonparticipants receive the equal-per-citizen system default—not the attentive minority’s preference; in tutored operation, that default remains within the mandate-bound scope. Even minimal participation—including non-digital channels or assisted delegation—moves decisions closer to direct interests through microdelegation and rules such as “near me” that fund what citizens can touch. What appears exclusionary is therefore more inclusive. In tutored operation, centrally constructed planning scope is the remaining indirection (Section 8); Open removes it through distributed planning.

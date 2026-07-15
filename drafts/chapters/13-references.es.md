@@ -59,6 +59,7 @@
 - Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale University Press.
+- Menger, C. (1871). *Grundsätze der Volkswirtschaftslehre* [Principios de economía]. Viena.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Molina, E., L. Carella, A. Pacheco, G. Cruces, and L. Gasparini (2016). "Community Monitoring Interventions to Curb Corruption and Increase Access and Quality of Service Delivery in Low- and Middle-Income Countries." *Campbell Systematic Reviews* 12.
@@ -75,10 +76,12 @@
 - Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.
 - Peixoto, T., and J. Fox (2016). "When Does ICT-Enabled Citizen Voice Lead to Government Responsiveness?" *IDS Bulletin* 47(1).
 - Power, M. (1997). *The Audit Society: Rituals of Verification*. Oxford University Press.
+- Prelec, D., H. S. Seung, and J. McCoy (2017). "A Solution to the Single-Question Crowd Wisdom Problem." *Nature* 541.
 - Reinikka, R., and J. Svensson (2004). "Local Capture: Evidence from a Central Government Transfer Program in Uganda." *Quarterly Journal of Economics* 119(2).
 - Rioja, F. (2003). "Filling potholes: macroeconomic effects of maintenance versus new investments in public infrastructure." *Journal of Public Economics* 87(9–10).
 - Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
 - Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
+- Samuelson, P. (1938). "A Note on the Pure Theory of Consumer's Behaviour." *Economica* 5(17).
 - Samuelson, P. (1954). "The Pure Theory of Public Expenditure." *Review of Economics and Statistics* 36(4).
 - Samuelson, W., and R. Zeckhauser (1988). "Status Quo Bias in Decision Making." *Journal of Risk and Uncertainty* 1(1).
 - Satterthwaite, M. (1975). "Strategy-Proofness and Arrow's Conditions: Existence and Correspondence Theorems for Voting Procedures and Social Welfare Functions." *Journal of Economic Theory* 10(2).
@@ -87,6 +90,7 @@
 - Sen, A. (1999). *Development as Freedom*. Oxford University Press.
 - Skuhrovec, J., et al. (2013). "Exponential and power laws in public procurement markets." arXiv:1309.0218.
 - Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
+- Stevens, S. S. (1946). "On the Theory of Scales of Measurement." *Science* 103(2684).
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
 - Stokes, S. (2005). "Perverse Accountability: A Formal Model of Machine Politics with Evidence from Argentina." *American Political Science Review* 99(3).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).

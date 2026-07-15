@@ -1,91 +1,17 @@
 ## 4. La arquitectura Core v0
 
-Resumimos la arquitectura de referencia al nivel necesario para el análisis; el
-modelo completo de objetos, las máquinas de estado y las capas de interfaz
-ciudadana están especificados en el corpus público.
+Resumimos la arquitectura de referencia únicamente al nivel requerido para el análisis; el corpus público especifica su modelo completo de objetos, máquinas de estado e interfaces ciudadanas.
 
-**Financiamiento.** Una autoridad implementadora migra una cuota, con mandato
-legal, de un presupuesto existente hacia billeteras cívicas individuales:
-capacidad de asignación periódica, no retirable, de propósito público, igual
-por ciudadano por defecto. Todo ámbito de planificación activo porta un
-registro de *Allocation Mandate* (mandato de asignación) que nombra el
-estatuto o instrumento que autorizó la migración, su rango legal, el órgano al
-que se imputan las asignaciones y la fórmula de asignación. La plataforma
-registra esa autorización externa; no la fabrica. La operación en modo
-vinculante está supeditada a que se haya registrado una norma habilitante de
-rango suficiente; en caso contrario, la opción predeterminada legal y expresamente declarada es la
-operación consultiva o tutelada. El acto de asignación se diseña para replicar
-dos garantías propias del sufragio: el secreto de la preferencia y la
-resistencia a la coacción (receipt-freeness). En la medida en que una norma
-habilitante lo reconozca, podrá ampararse con protecciones equivalentes a las
-del voto; hasta entonces, son garantías técnicas de la plataforma, no un
-estatus jurídico. Las asignaciones individuales son seudónimas en la capa
-pública y se reconcilian criptográficamente contra los totales públicos por
-ámbito —cada peso trazable como dinero, ningún ciudadano trazable como
-asignador, y no existe recibo ni prueba exportable de ninguna asignación
-individual, ni siquiera voluntariamente, de modo que un patrón que exija
-prueba nunca pueda obtenerla (la defensa propia del voto secreto, aplicada a
-la billetera). Un *Fiscal Commitment Profile* (perfil de compromiso fiscal)
-por ámbito hace públicos y versionados el porcentaje migrado, la indexación y
-la plazo de entrega, de modo que el estrangulamiento fiscal por parte de la
-tesorería en funciones sea medible y atribuible antes que silencioso. Los
-servicios esenciales con obligaciones de continuidad quedan protegidos por
-pisos no asignables, fuera de la popularidad ciudadano-por-ciudadano.
+**Modalidades de operación y ámbitos de planificación.** Core v0 transita por los modos cerrado, tutelado, semiabierto y abierto. El modo abierto es el valor predeterminado arquitectónico: la planificación, incluida la construcción de ámbitos, se distribuye por diseño. La planificación centralizada y la construcción de ámbitos se circunscriben únicamente a la transición cerrado/tutelado; allí, una autoridad pública define los ámbitos activos y puede conservar la revisión de admisibilidad de proyectos. Toda decisión tutelada de importancia —y todo silencio tutelado más allá de su plazo— se convierte en un objeto público de resolución de gobernanza. Los indicadores de resistencia del sistema establecido (cuota de ámbitos abierta, tasas de rechazo y de vencimiento de plazos, y privilegio del operador) distinguen la adopción simbólica de la transferencia real.
 
-**Proyectos y roles.** Los proyectos financiables declaran una tesis de valor
-con afirmaciones verificables, partes afectadas, riesgos y antivalores, un plan
-de fases e hitos, y un *contrato probatorio* (evidential contract): qué debe
-probarse, por qué clase de productor calificado, con qué método, para qué efecto
-formal. Seis roles están estructuralmente separados —proponente, modelador/
-diseñador, ejecutor, fiscalizador, productor de evidencia, custodio— con las
-relaciones de partes vinculadas declaradas en un grafo clasificado por
-severidad. La regla fundamental es que el ejecutor nunca elige ni paga
-a sus propios fiscalizadores o productores de evidencia: el trabajo de control se
-financia desde un presupuesto de control separado y se asigna por protocolo.
+Cada ámbito activo porta un *Allocation Mandate* (mandato de asignación) que identifica el estatuto o instrumento habilitante, su rango legal, el órgano al que se imputan las asignaciones y la fórmula de asignación. La plataforma registra, en lugar de crear, esa autoridad externa. La operación en modo vinculante exige una norma habilitante registrada de rango suficiente; en caso contrario, la opción predeterminada legal y expresamente declarada es la operación consultiva o tutelada.
 
-**Cierre paralelo y desembolso condicional.** Un proyecto publicado reúne
-compromisos de financiamiento, asignaciones de fiscalizadores, compromisos de
-evidencia y confirmaciones de beneficiarios de manera concurrente; la ejecución
-se vuelve posible solo cuando todas las condiciones requeridas por su *política
-de umbrales* (threshold policy) proporcional cierran. Los fondos comprometidos
-quedan en custodia, no transferidos: la liberación ocurre por hito, contra
-evidencia de cumplimiento revisada, con retención, comprobaciones de impedimentos
-y garantías materializadas por custodios externos antes de cualquier liberación.
-Un *Duty-of-Care Anchor* (ancla de deber de diligencia) nombra, antes del desembolso, a la persona jurídica solvente que responde civilmente frente a terceros por los daños derivados de la ejecución, en particular los daños a la integridad física.
+**Financiamiento.** Una autoridad implementadora migra hacia billeteras cívicas individuales una cuota de un presupuesto existente establecida por mandato: capacidad de asignación periódica, no retirable, de propósito público, igual por ciudadano por defecto. El acto de asignación se diseña para reproducir dos garantías propias del sufragio: el secreto de la preferencia y la resistencia a la coacción (receipt-freeness). Cuando una norma habilitante lo reconozca, podrán aplicarse protecciones equivalentes a las del voto; hasta entonces, estas son garantías técnicas de la plataforma, no un estatus jurídico. Las asignaciones de la capa pública son seudónimas y se reconcilian criptográficamente con los totales públicos por ámbito: cada peso sigue siendo trazable como dinero, ningún ciudadano es trazable como asignador y nadie puede obtener un recibo ni una prueba exportable, ni siquiera voluntariamente, lo que niega a los patrones la prueba que exigen, tal como lo hace el voto secreto. El *Fiscal Commitment Profile* (perfil de compromiso fiscal) público y versionado de cada ámbito revela el porcentaje migrado, la indexación y la latencia de entrega, de modo que el estrangulamiento fiscal por parte de la tesorería en funciones sea medible y atribuible, en vez de silencioso. Los pisos no asignables protegen a los servicios esenciales sujetos a obligaciones de continuidad frente a la popularidad ciudadano-por-ciudadano.
 
-**Infraestructura de atención.** La ciudadanía actúa a través de una interfaz
-estratificada: descubrimiento con ordenamiento controlado por el usuario y con
-razón visible; tarjetas de proyecto compactas; y superficies de auditoría
-progresivamente más profundas hasta el rastro completo. Los ciudadanos que no
-prestan atención son servidos por perfiles automáticos de asignación
-configurables —o un perfil por defecto sensato cuando no se define ninguno—
-y por delegación acotada y revocable con
-visibilidad de la concentración. La arquitectura no supone ciudadanos atentos;
-supone que en su mayoría son desatentos y enruta su peso a través de una
-intermediación inspeccionable (Lupia y McCubbins 1998). Esta es una respuesta
-de diseño a la objeción de competencia ciudadana en su forma contemporánea más
-aguda (Brennan 2016): antes que restringir el derecho de nadie a participar,
-la arquitectura hace que la intermediación que la desatención produce sea
-visible, revocable y auditable.
+**Proyectos, roles y ciclo de vida.** Un proyecto financiable declara una tesis de valor con afirmaciones verificables, partes afectadas, riesgos y antivalores, un plan de fases e hitos, y un *contrato probatorio* (evidential contract): qué debe probarse, por qué clase de productor calificado y con qué método, y para qué efecto formal. Seis roles están estructuralmente separados —proponente, modelador/diseñador, ejecutor, fiscalizador, productor de evidencia y custodio— y las relaciones de partes vinculadas se declaran en un grafo clasificado por severidad. El ejecutor nunca selecciona ni paga a sus fiscalizadores o productores de evidencia; el protocolo asigna el trabajo de control financiado desde un presupuesto de control separado.
 
-Un aparente reproche —que participar por aplicación, billetera y tutor de IA
-excluya a la población no digitalizada— se disuelve bajo la disciplina
-comparativa: el ciudadano no digital ya delega hoy, entregando su decisión,
-vía el voto, a un representante lejano que asigna el presupuesto por él. Core
-v0 no agrega una barrera: elimina un nivel de intermediación. Quien nunca participa
-cae en el valor por defecto del sistema —igual por ciudadano, acotado por
-mandato—, no en la preferencia de la minoría atenta; y quien participa aunque
-sea mínimamente, incluso por vías no digitales o delegación asistida, acerca
-la decisión a sus intereses directos mediante la microdelegación y reglas como
-«cerca de mí», que financian lo que puede tocar. Lo que aparenta excluir,
-incluye más —con la construcción del ámbito de planificación como la única
-indirección restante (Sección 8).
+Una vez publicado, un proyecto reúne de manera concurrente compromisos de financiamiento, asignaciones de fiscalizadores, compromisos de evidencia y confirmaciones de beneficiarios. La ejecución comienza solo cuando se cierran todas las condiciones requeridas por su *política de umbrales* (threshold policy) proporcional. Los fondos comprometidos permanecen en custodia, no se transfieren; la liberación por hito ocurre contra evidencia de cumplimiento revisada, con retención y comprobaciones de impedimentos, solo después de que custodios externos hayan materializado las garantías requeridas. Antes del desembolso, un *Duty-of-Care Anchor* (ancla de deber de diligencia) identifica a la persona jurídica solvente que responde civilmente frente a terceros por los daños derivados de la ejecución, en particular los daños a la integridad física.
 
-**Transición.** El despliegue procede a través de modos de operación —cerrado,
-tutelado, semiabierto, abierto— en los que una autoridad pública puede retener la revisión de elegibilidad (admisibilidad de proyectos), pero toda decisión tutelada de importancia, y todo
-silencio tutelado más allá de su plazo, se convierte en un objeto público de
-resolución de gobernanza. Los indicadores de resistencia del sistema
-establecido (cuota de ámbito abierta, tasas de rechazo y de vencimiento de
-plazos, privilegio del operador) hacen distinguible la adopción simbólica de
-la transferencia real.
+**Atención y acceso.** La ciudadanía utiliza un descubrimiento por capas con ordenamiento controlado por el usuario y con razón visible, tarjetas de proyecto compactas y superficies de auditoría progresivamente más profundas hasta el rastro completo. Los ciudadanos que no prestan atención son atendidos por perfiles automáticos de asignación configurables —o por un valor predeterminado sensato cuando no se configura ninguno— y por delegación acotada y revocable con visibilidad de la concentración. El diseño supone ciudadanos mayoritariamente desatentos y enruta su peso a través de una intermediación inspeccionable (Lupia y McCubbins 1998). Frente a la objeción de competencia ciudadana en su forma contemporánea más aguda (Brennan 2016), preserva los derechos de participación de todos mientras hace visible, revocable y auditable la intermediación producida por la desatención.
 
+La aparente exclusión de los ciudadanos no digitales mediante la participación por aplicación, billetera o tutor de IA no se sostiene comparativamente: a través del voto, ya delegan la asignación presupuestaria en representantes distantes. Core v0 no agrega ninguna barrera y elimina un nivel de intermediación. Quienes no participan reciben el valor predeterminado del sistema, igual por ciudadano —no la preferencia de la minoría atenta—; en la operación tutelada, ese valor predeterminado permanece dentro del ámbito acotado por mandato. Incluso la participación mínima —incluidos los canales no digitales o la delegación asistida— acerca las decisiones a los intereses directos mediante la microdelegación y reglas como «cerca de mí» que financian aquello que los ciudadanos pueden tocar. Lo que parece excluyente es, por tanto, más inclusivo. En la operación tutelada, el ámbito de planificación construido centralmente es la indirección restante (Sección 8); el modo abierto la elimina mediante la planificación distribuida.

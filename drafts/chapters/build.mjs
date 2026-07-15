@@ -36,7 +36,12 @@ if (args.check) {                                          // frozen originals m
   process.exit(ok ? 0 : 1);
 }
 
-const enOut = assemble(HERE, "en", true), esOut = assemble(HERE, "es", true);   // WORKING copies, notes stripped
+// WORKING copies: strip the editor note AND normalize each chapter to end in a blank line, so an
+// edited chapter that lost its trailing newline doesn't glue the next `## ` heading onto its prose.
+const assembleWorking = (langKey) => manifest.map(ch =>
+  stripNote(readFileSync(join(HERE, ch[langKey]), "utf8")).replace(/\s+$/, "") + "\n\n"
+).join("").replace(/\n+$/, "\n");
+const enOut = assembleWorking("en"), esOut = assembleWorking("es");
 const outDir = args.out ? String(args.out) : join(ROOT, "drafts");
 writeFileSync(join(outDir, "paper.md"), enOut);
 writeFileSync(join(outDir, "paper.es.md"), esOut);

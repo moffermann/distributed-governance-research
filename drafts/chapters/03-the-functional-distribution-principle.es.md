@@ -1,47 +1,11 @@
 ## 2. El principio de distribución funcional
 
-Analizamos el Estado como una pila de capas funcionales antes que como una
-única institución: (a) garantías de derechos y fuerza legítima; (b)
-adjudicación vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e)
-planificación macro y enmarcado de agenda; (f) priorización de proyectos y
-asignación de recursos a proyectos concretos; (g) ejecución y prestación de
-servicios; (h) producción de evidencia sobre la entrega; e (i) evaluación y
-rendición de cuentas. El principio de distribución es:
+Analizamos el Estado funcionalmente: (a) garantías de derechos y fuerza legítima; (b) adjudicación vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e) planificación macro y enmarcado de agenda; (f) priorización de proyectos y asignación de recursos a proyectos concretos; (g) ejecución y prestación de servicios; (h) producción de evidencia sobre la entrega; e (i) evaluación y rendición de cuentas. El principio de distribución selectiva y funcional es:
 
-> Una capa es candidata a la distribución cuando se cumplen tres condiciones:
-> sus fallas bajo monopolio son fallas de información e incentivos antes que
-> fallas de coordinación de la fuerza; la provisión distribuida puede hacerse
-> *más* observable que la provisión monopólica; y la capa puede acotarse de
-> modo que su falla no se propague en cascada hacia las capas no
-> distribuibles.
+> Una capa es candidata a la distribución cuando las fallas del monopolio atañen a la información y los incentivos, antes que a la coordinación de la fuerza; la provisión distribuida puede ser más observable que la provisión monopólica; y la capa puede acotarse de modo que su falla no se propague en cascada hacia capas no distribuibles.
 
-Las capas (a), (b) y (d) fallan la primera o la tercera condición y permanecen
-centrales en nuestro diseño. Las capas (f) a (i) pasan las tres, y Core v0 las
-distribuye como un bloque, y debe hacerlo: distribuir la asignación sin la
-verificación reproduce la brecha de entrega del presupuesto participativo
-(PP), y distribuir la verificación sin la asignación reproduce la sociedad de
-la auditoría.
+Las capas (a), (b) y (d) no satisfacen la primera o la tercera condición y permanecen centrales. Las capas (f)–(i) satisfacen las tres y deben distribuirse juntas: la asignación sin verificación reproduce la brecha de entrega del presupuesto participativo; la verificación sin asignación reproduce la sociedad de la auditoría.
 
-La capa (e), la planificación, es el caso deliberadamente sin resolver: Core v0
-requiere que los ámbitos de planificación (Planning Scopes) sean públicos,
-versionados y portadores de mandato, pero no distribuye su construcción —razón
-por la cual la promesa de la arquitectura se enuncia con su calificador
-incorporado: lo que distribuye es la asignación *dentro de ámbitos de
-planificación acotados por mandato, visibles, versionados y disputables*, nunca
-la asignación sobre una agenda sin enmarcar. La Sección 6 muestra que el
-calificador no es un detalle: es la restricción vinculante de todo el diseño, y
-la Sección 8 eleva su remoción al siguiente objeto del programa de investigación.
+La planificación (e) depende del modo. En el modo Abierto —la opción predeterminada de la arquitectura—, la planificación está distribuida por construcción. La planificación centralizada pertenece únicamente al modo de transición tutelado/cerrado, donde los ámbitos de planificación son públicos, visibles, versionados, disputables y acotados por mandato; la asignación nunca abarca una agenda sin enmarcar. La Sección 6 considera vinculante esta restricción tutelada; la Sección 8 convierte su eliminación en el siguiente objeto del programa de investigación. Por tanto, la planificación acotada por mandato condiciona la transición, no la arquitectura en general.
 
-Dos reglas metodológicas gobiernan todo lo que sigue. La **regla de crítica
-comparativa** (P001): toda objeción se evalúa contra la línea base
-institucional actual, no contra un ideal —una dificultad compartida por ambos
-sistemas es un problema general de la gobernanza, no una refutación de la
-propuesta. La **regla de integrar-o-acotar** (P007): una vez que la
-arquitectura central está completa, una objeción fundada produce un nuevo
-mecanismo solo si el modo de falla derrotaría una afirmación central y no
-puede controlarse mediante objetos existentes; de lo contrario produce una
-frontera explícita, un riesgo residual visible y un enunciado de limitación.
-La primera regla disciplina a los críticos; la segunda disciplina a los
-diseñadores —un sesgo hacia pocas reglas simples y generales por sobre la
-proliferación de maquinaria específica, en el espíritu de Epstein (1995).
-
+De ello se siguen dos reglas metodológicas. La **regla de crítica comparativa** (P001) evalúa toda objeción frente a la línea base institucional actual, no frente a un ideal: una dificultad compartida por ambos sistemas es un problema general de gobernanza, no una refutación. Con arreglo a la **regla de integrar-o-acotar** (P007), una vez que la arquitectura central está completa, una objeción fundada amerita un nuevo mecanismo solo si su modo de falla derrotaría una afirmación central y no puede controlarse mediante objetos existentes; de lo contrario, da lugar a una frontera explícita, un riesgo residual visible y un enunciado de limitación. P001 disciplina a los críticos; P007 disciplina a los diseñadores y favorece pocas reglas simples y generales por sobre la proliferación de maquinaria específica, en el espíritu de Epstein (1995).

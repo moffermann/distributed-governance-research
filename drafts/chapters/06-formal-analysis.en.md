@@ -1,111 +1,39 @@
 ## 5. Formal analysis
 
-We state the three models and their results; proofs are one-step algebra and
-appear in the companion note ([formal-models](../research/formal-models.md)).
-All agents are risk-neutral; budgets are normalized to 1. The deterrence
-structure throughout is Becker's (1968): a violation is deterred when the
-detection probability times the stake at risk exceeds its gain — our
-contribution is mapping each term of that inequality onto a named,
-configurable architectural object. To avoid notation collisions, *Proposition
-N* denotes the formal results of this section; *P001/P007*, the methodological
-rules (§2); and *prediction N*, the behavioral predictions of §5.3.
+We present three models; their one-step-algebra proofs appear in the companion note ([formal-models](../research/formal-models.md)). Agents are risk-neutral and budgets normalized to 1. Following Becker (1968), deterrence requires detection probability times stake at risk to exceed the gain; our contribution maps each term to a named, configurable architectural object. *Proposition N* denotes this section’s formal results, *P001/P007* the methodological rules (§2), and *prediction N* the behavioral predictions of §5.3.
 
 ### 5.1 Milestone-gated disbursement
 
-An executor chooses to deliver a milestone at private cost *c* ∈ (0, 1) or
-to divert. The mechanism releases an advance *a*, holds the remainder for
-reviewed acceptance, recovers a fraction *r* of the advance on confirmed
-non-delivery, seizes a posted guarantee *γ* (carrying cost *κ* per unit),
-and imposes a reputational continuation loss *R*. Review confirms diversion
-with probability *p* — the joint quality of evidence standards, fiscalizer
-independence, and corroboration.
+An executor either delivers a milestone at private cost *c* ∈ (0, 1) or diverts. The mechanism advances *a*, withholds the remainder pending reviewed acceptance, recovers fraction *r* of the advance upon confirmed non-delivery, seizes a guarantee *γ* costing *κ* per unit, and imposes reputational continuation loss *R*. Review confirms diversion with probability *p*, jointly reflecting evidence standards, fiscalizer independence, and corroboration.
 
 **Proposition 1 (incentive compatibility).** Delivery is optimal iff
 
-> *c* ≤ *p* · [ (1 − *a*(1 − *r*)) + *γ* + *R* ].
+> *c* ≤ *p* · [(1 − *a*(1 − *r*)) + *γ* + *R*].
 
-Delivery must be cheaper than the detection probability times the total
-stake at risk. Every disbursement-gaming test in the architecture is a term
-in this inequality.
+Delivery must cost no more than detection probability times total stake at risk; every architectural disbursement-gaming test enters this inequality.
 
-**Proposition 2 (weak verification must be priced).** The minimal guarantee
-sustaining delivery for all *c* ≤ *c̄* is *γ\**(*p*) = max{0, *c̄*/*p* −
-(1 − *a*(1 − *r*)) − *R*}, decreasing and convex in *p*. Where verification
-is weak — thin fiscalization markets, poor evidence quality — the mechanism
-must compensate with smaller advances, more recoverability, larger
-guarantees, or higher-reputation executors. A single global guarantee
-percentage cannot be optimal across heterogeneous verification
-environments.
+**Proposition 2 (weak verification must be priced).** The minimal guarantee sustaining delivery for every *c* ≤ *c̄* is *γ\**(*p*) = max{0, *c̄*/*p* − (1 − *a*(1 − *r*)) − *R*}, decreasing and convex in *p*. Weak verification—thin fiscalization markets or poor evidence—therefore requires smaller advances, greater recoverability or guarantees, or higher-reputation executors. No global guarantee percentage is optimal across heterogeneous verification environments.
 
-The deterrence terms of this condition are complements, not substitutes. A
-pre-registered ablation on the companion experiments (Offermann 2026b)
-measured the consequence: at the designed operating point the inequality
-holds with slack, so removing any single term costs almost nothing — and a
-deployment negotiated one defensible concession at a time can cross the
-threshold invisibly, ending below the status quo it replaced (a material
-shortfall in verified value, with selection quality intact) while
-looking fully instrumented. The
-corpus therefore requires every scope to publish its deterrence-inequality
-margin in its operating configuration, recomputed on every term change, with
-term reductions classified as material rule changes (docs/111). The same
-slack, kept intact, buys an unexpected dividend: it absorbs verification-
-instrument error — in the companion panel of five real model families, even
-a machine verifier passing ~20% of judgment-requiring fraud produced
-leakage indistinguishable from pure-human verification, because the cascade
-removes the attempts upstream — provided the adversary is not colluding
-across the verification layers (Offermann 2026b, docs/113).
+These deterrence terms are complements, not substitutes. A pre-registered companion-experiment ablation (Offermann 2026b) found that, at the designed operating point, the inequality has enough slack that removing one term costs almost nothing. Yet successive defensible concessions can invisibly cross the threshold, leaving verified value materially below the replaced status quo despite intact selection quality and apparently complete instrumentation. Each scope must therefore publish its operating deterrence margin, recompute it after every term change, and classify term reductions as material rule changes (docs/111). Preserved slack also absorbs verification-instrument error: across five real model families, leakage remained indistinguishable from pure-human verification even when a machine verifier passed ~20% of judgment-requiring fraud, because the cascade removed attempts upstream—provided adversaries do not collude across verification layers (Offermann 2026b, docs/113).
 
-**Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes
-incentive compatibility at rate *p* but lowers honest executors' payoff at
-rate *κ*; under a designer objective weighing one unit of incentive slack
-equally against one unit of honest-executor payoff, a guarantee increase is
-net-beneficial only if *p* > *κ* (other weightings shift the threshold, not
-the trade-off's structure). Where detection quality is below the local cost
-of capital, piling on guarantees excludes honest low-margin executors
-without deterring fraud — the formal content of the architecture's
-proportionality discipline.
+**Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes incentive compatibility at rate *p* but reduces honest-executor payoff at rate *κ*. If the designer weights one unit of incentive slack equally with one unit of honest-executor payoff, an increase is net-beneficial iff *p* > *κ*; other weights shift the threshold, not the trade-off’s structure. When detection quality is below the local cost of capital, larger guarantees exclude honest low-margin executors without deterring fraud—the architecture’s proportionality discipline.
 
 ### 5.2 Collusion-proof fiscalization
 
-A non-delivered milestone is worth *G* to the executor if fraudulently
-approved. Release requires approval by *k* protocol-assigned fiscalizers,
-each carrying forfeitable stake *W* (future protocol fees plus role
-reputation) and facing post-approval discovery probability *q*. Because
-assignment is protocolized and repeat pairings are visible, executor and
-fiscalizer are strangers: a bribe offer is itself reported with probability
-*δ*, costing the executor penalty *P_e*.
+A fraudulently approved, undelivered milestone gives the executor *G*. Release requires *k* protocol-assigned fiscalizers, each with forfeitable stake *W* (future protocol fees plus role reputation) and post-approval discovery probability *q*. Protocolized assignment and visible repeat pairings keep executor and fiscalizers strangers; a bribe offer is reported with probability *δ*, imposing executor penalty *P_e*.
 
 **Proposition 4 (collusion-proofness).** Approval fraud is unsustainable if
 
 > *k* · *q* · *W* ≥ *G* − (*δ* / (1 − *δ*)) · *P_e*,
 
-and in particular whenever *kqW* ≥ *G*. Three corollaries carry design weight:
+and, in particular, whenever *kqW* ≥ *G*. Three corollaries matter:
 
-- ***Corroboration substitutes for reputation capital.*** The required stake
-  per fiscalizer falls linearly in *k*, so redundant review is exactly what
-  makes shallow-reputation fiscalizer pools workable, at linear control cost
-  —which is what proportional threshold policies are for.
+- ***Corroboration substitutes for reputation capital.*** Required stake per fiscalizer falls linearly in *k*: redundant review enables shallow-reputation pools at linear control cost, motivating proportional threshold policies.
 
-- ***Repeat relationships are the attack surface.*** The friction term exists
-  only while relational contracting is prevented, which is why repeat-pairing
-  visibility is load-bearing (we hold the report probability *δ* exogenous to
-  *k*; endogenizing it —more approached reviewers, more chances of a report—
-  only strengthens the condition).
+- ***Repeat relationships are the attack surface.*** The friction term requires prevention of relational contracting, making repeat-pairing visibility load-bearing. We hold *δ* exogenous to *k*; endogenizing it—more approached reviewers, hence more reporting chances—only strengthens the condition.
 
-- ***Thin markets attack both models at once.*** A monopolist fiscalizer that
-  cannot credibly be excluded loses its forfeitable stake (*W* → 0) while also
-  degrading *p* in Proposition 1: the two conditions identify the same
-  environments as fragile, for the same reason.
+- ***Thin markets attack both models.*** A monopolist fiscalizer that cannot credibly be excluded loses forfeitable stake (*W* → 0) and degrades *p* in Proposition 1; both conditions identify the same fragile environments for the same reason.
 
 ### 5.3 Attention-constrained allocation
 
-Citizens allocate small individual budgets; the pivotal return to evaluating
-projects is negligible, so rational ignorance is the equilibrium (Downs
-1957), and the design question is where the *inattentive* majority's weight
-flows: to salience amplified by social proof (Bikhchandani, Hirshleifer and
-Welch 1992; Noelle-Neumann 1974; Salganik, Dodds and Watts 2006), or to the architecture's own
-default layer, whose routing follows the distributed project prioritization
-— the aggregated allocation profiles — not a central plan. The model yields three testable
-predictions — caps tame cascades (prediction 1), defaults anchor quality (prediction 2), decay
-degrades gracefully only with defaults (prediction 3) — evaluated next.
-
+Citizens allocate small individual budgets, and negligible pivotal returns to evaluating projects make rational ignorance the equilibrium (Downs 1957). The design question is whether the inattentive majority’s weight follows salience amplified by social proof (Bikhchandani, Hirshleifer and Welch 1992; Noelle-Neumann 1974; Salganik, Dodds and Watts 2006) or the architecture’s default layer. In Open mode—the architectural default—planning is distributed by construction. Centralized planning exists only in tutored/closed transition mode; even there, project prioritization remains distributed through aggregated allocation profiles rather than a central plan. The model yields three testable predictions—caps tame cascades (prediction 1), defaults anchor quality (prediction 2), and decay degrades gracefully only with defaults (prediction 3)—evaluated next.

@@ -18,5 +18,20 @@ must_preserve:
   - "Common-mode sensitivity."
   - "Every honest caveat."
 observations: |
-  
+  PANEL ROUND-1 FEEDBACK — restore these items the heavy cut dropped, WHILE keeping the condensation:
+  - Restore the E4/Finding 4 FAIRNESS CAVEAT: the first E4 comparison favored the distributed arm by
+    imposing fixed central bandwidth and unbiased citizen signals; without it the retained "0.76 vs 0.62"
+    and "0.73 vs 0.04" numbers look unfairly definitive.
+  - Restore the scope condition on the analytical backbone: "expectation-level and scale-invariant" holds
+    for a noise-free, large-set expectation, NOT for all finite-sample runs.
+  - Restore the formal-positioning citations: VCG budget balance (Vickrey; Green-Laffont), second-best
+    (Lipsey-Lancaster), lack of strategy-proofness (Gibbard; Satterthwaite).
+  - Restore the in-text empirical anchors: failed community-monitoring replications (Bjorkman-Svensson;
+    Molina et al.); the 24-48% audit-leakage range with its evidence base; Chilean mental-health spending
+    ~2% (Errazuriz et al. 2015).
+  - Restore concise per-experiment (E1-E10) artifact pointers; do NOT claim "full methods are in Appendix
+    E4" (E4 only covers the gate + the four-scenario map). Restore the gate reproduction path
+    (scripts/simulation/e5-sp-symmetry-gate.mjs) and the claim-and-estimand-contract link.
+  - DEDUP: state the gate's .025/.05 NO-GO number ONCE (its full method lives in Appendix E4); elsewhere
+    give only its narrow, central-favoring, non-bounding role. Do not over-repeat 98/44/58.6 within the chapter.
 notes: "CRUX + biggest cut. Remove the confirmatory/exploratory inversion; drop 'retire the multiplier' as headline; dedupe the ~20 restatements."

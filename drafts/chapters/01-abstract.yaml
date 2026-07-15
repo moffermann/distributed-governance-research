@@ -1,24 +1,25 @@
 chapter: 01
 slug: 01-abstract
-section: "## Abstract"
-order: 1
 files: { en: 01-abstract.en.md, es: 01-abstract.es.md }
+order: 1
 status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
 en_words_original: 747
-max_words: 280
-target_reduction: "~280 words (aggressive)"
-scope_in: "The abstract."
-scope_out: "Method/result detail."
+max_words: 300
+target_reduction: "~300 words — a summary of the CONTRIBUTION, not the method"
+scope_in: "The abstract: problem -> subjective-value foundation (cited) -> the proposal -> the primary result."
+scope_out: "All methodology (the symmetry gate, the 43-attack review process, 'retire the multiplier', confirmatory/exploratory) — those live in the body."
 must_preserve:
-  - "Fair literature-anchored ASYMMETRIC contrast as the PRIMARY finding: PROBABLE ~98% vs ~44% (~2.2x, ~54-pt)."
-  - "+58.6-pt full selection+delivery result."
-  - "Honest label: directional/conditional/stylized, NOT calibrated field effects."
-  - "Symmetry gate = a NARROW idealized-central robustness check that CANNOT bound the architecture."
-  - "The calibrated FIELD multiplier stays retired (do not restore it)."
-  - "Credit-vs-coverage mechanism."
-  - "43-attack adversarial review."
-  - "The 'no pilot / uncalibrated units' honest limitation."
-observations: |
-  <<AUTHOR OBSERVATION PENDING — fill this, then it is passed to Codex on the next summarization pass.>>
-notes: "CARRIES THE FRAMING FIX. Remove any confirmatory-vs-exploratory inversion; do not headline 'retire the multiplier'."
+  - "PROBLEM: the modern State monopolizes project SELECTION + EXECUTION + FISCALIZATION in one hierarchy, with documented pathologies — agenda capture, blindness to diffuse harm, INABILITY to read real individual value (it can only approximate it with proxies), corruption, and ideological bias."
+  - "MECHANISM (state the full concept, do NOT reduce to bare 'credit vs coverage' — in Spanish 'credito' reads as financial credit): the central's structural failure above, versus a distributed process that routes budget by COVERAGE of real revealed value."
+  - "SUBJECTIVE VALUE, framed honestly: value is subjective, volatile and opaque to a central reader (Menger 1871; Hayek 1945), but it is REVEALED through costly choice (Samuelson 1938) and recovered in AGGREGATE across many independent signals (Condorcet 1785; Prelec et al. 2017). Core v0 does NOT centrally quantify value; it assigns an ORDINAL / directional measure (Stevens 1946), not a cardinal field quantity."
+  - "Compact citation cluster in the abstract: Hayek 1945; Samuelson 1938; Condorcet 1785; Prelec et al. 2017 (+ Stevens 1946 for the ordinal-measure license if room). Full source set goes in the Introduction."
+  - "THE PROPOSAL (brief): Core v0 separates the four functions; citizens route a bounded, non-withdrawable share of an existing public budget by coverage of real value, under fiscalization, within legally authorized planning scopes."
+  - "PRIMARY RESULT: in the PROBABLE literature-anchored scenario, coverage-routed distributed selection recovers ~98% of the full-information reference vs the central's ~44% (~2.2x, ~54-pt); the full selection+delivery architecture is ~+58.6 pts."
+  - "HONEST LABEL on the result: directional / conditional / stylized comparative-institutions model — NOT calibrated field effects; no pilot has run. The calibrated FIELD multiplier stays retired (do not restore it)."
+observations:
+  - "No me gusta la primera parte siento que le falta fuerza a la primera oración. La pregunta retórica que me motivo a escribir esto fue: `Dado que el Estado se diseño hace más de 200 años, ¿Es posible, con la tecnología actual, hacer una propuesta de rediseño arquitectónico que aumente el valor agregado entregado por costo asignado?` No necesariamente esto debe ir textual, pero esa es la idea central. Mejorar el bienestar de la sociedad optimizando la asignación del gasto público."
+  - "Aqui la definición de valor subjetivo es lo más importante y la cuantificación de él también, debe citarse con fuentes."
+  - "Debe ir obligatoriamente explicado el problema del Estado actual concentrando el monopolio de la selección, ejecución y fiscalización. y su ceguera documentada hacia el valor real individual, el problema de la captura de agenda, corrupción, etc."
+  - "Cuando todos los puntos anteriores estén explicados correctamente, recién pasar a explicar que hace brevemente la propuesta."
+notes: "This is a summary of the CONTRIBUTION, not the method. Order: forceful thesis (the 200-year-old State + today's technology + more value per cost allocated, ideally as a declarative thesis not a literal question) -> the State's monopoly problem + documented value-blindness/capture/corruption -> subjective value revealed & aggregated (cited, ORDINAL not cardinal) -> Core v0 briefly -> the primary result honestly labeled. OMIT all methodology from the abstract."
