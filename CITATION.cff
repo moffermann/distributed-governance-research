@@ -4,8 +4,8 @@ title: "Distributed Governance Research: A Functional Architecture for Selective
 authors:
   - family-names: "Offermann"
     given-names: "Mauricio"
-version: "v1.14"
-date-released: "2026-07-14"
+version: "v1.15"
+date-released: "2026-07-15"
 url: "https://github.com/moffermann/distributed-governance-research"
 doi: 10.5281/zenodo.21193846
 license: CC-BY-4.0
@@ -17,5 +17,5 @@ preferred-citation:
     - family-names: "Offermann"
       given-names: "Mauricio"
   year: 2026
-  notes: "Working paper: latest DEPOSITED/citable version v1.14 (DOI below, 10.5281/zenodo.21311851, published 2026-07-14). In v1.14 the earlier compound value-per-budget multiplier is retired as a calibrated effect; the simulation contrasts are directional and conditional on a stylized comparative-institutions model, not calibrated real-world effects and not a validated implementation (the controlling specification is research/claim-and-estimand-contract.md). The concept DOI (10.5281/zenodo.21193846, top-level) always resolves to the latest deposited version. Single record: corpus + manuscript + code, all CC BY 4.0 / MIT."
+  notes: "Working paper: current version v1.15 (repository); latest DEPOSITED/citable version v1.14 (DOI 10.5281/zenodo.21311851, published 2026-07-14) until v1.15 is deposited. v1.15 corrects the estimand hierarchy: the PRIMARY finding is the fair, literature-anchored ASYMMETRIC contrast (coverage-routed distributed selection recovers ~98% of the full-information reference vs the central's ~44%, about 2.2x; the full selection-and-delivery architecture about +58.6 points) — directional, conditional outputs of a stylized comparative-institutions model, not calibrated field effects. The pre-registered symmetric gate is a narrow, central-idealizing robustness check that cannot bound the architecture; the calibrated FIELD multiplier stays retired (controlling spec: research/claim-and-estimand-contract.md). The concept DOI (10.5281/zenodo.21193846, top-level) always resolves to the latest deposited version. Single record: corpus + manuscript + code, all CC BY 4.0 / MIT."
   doi: 10.5281/zenodo.21311851

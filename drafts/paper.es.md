@@ -1,1873 +1,307 @@
 # ¿Quién elige, quién ejecuta, quién juzga? Una arquitectura funcional para el gasto público distribuido
 
-**Documento de trabajo — v1.14 (julio de 2026; última versión depositada: v1.12, DOI 10.5281/zenodo.21252911). Esta versión reporta contrastes de simulación condicionales y separados por canal, y retira el multiplicador compuesto de valor por peso como efecto calibrado (véase §6 y el Apéndice E4); se apoya en la arquitectura y el mecanismo cualitativo de crédito versus cobertura. Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la trayectoria de transición semiabierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.**
+**Documento de trabajo — v1.15 (julio de 2026).** Su resultado principal es un contraste asimétrico justo y anclado en la literatura: la selección distribuida enrutada por cobertura recupera ~98% de una referencia de información completa frente al ~44% de un proceso central (~2.2×; ~54 puntos), y la arquitectura completa de selección y entrega supera al statu quo en ~58.6 puntos — resultados direccionales y condicionales de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados.
 
-*Traducción al español del documento de trabajo v1.14 (drafts/paper.md, versión autoritativa en inglés).*
+Se apoya en la arquitectura y el mecanismo de crédito versus cobertura; el multiplicador compuesto de valor por peso ya no se afirma como efecto calibrado (véase §6 y el Apéndice E4). Última versión depositada: v1.14, DOI 10.5281/zenodo.21311851. Revisado a través de ciclos sucesivos de revisión adversarial y de autor, documentados en la hoja de ruta del repositorio.
+
+Consolida el programa computacional complementario (Offermann 2026b): la regla de complementariedad de la disuasión, la trayectoria de transición semiabierta, la regla de liberación presupuestaria y la verificación por máquina con segunda instancia humana; y la separación en dos capas del artículo compañero entre la categorización macro y los perfiles de asignación, bajo la cual el brazo distribuido es robusto a una mala categorización central mientras que el brazo central es frágil ante ella.
+
+*Traducción al español del documento de trabajo v1.15 (drafts/paper.md, versión autoritativa en inglés).*
 
 *© 2026 Mauricio Offermann. Licenciado bajo CC BY 4.0 — véase LICENSE.md en la raíz del repositorio. Se ruega citar según se indica en CITATION.cff. DOI (de concepto, siempre resuelve a la última versión): 10.5281/zenodo.21193846.*
 
 ## Resumen
 
-El gasto público rutinariamente le pide a una sola jerarquía elegir proyectos, ejecutarlos y certificar su propio desempeño — la fusión donde se concentran el despilfarro, la captura y el fracaso sin rendición de cuentas. Este artículo se pregunta si una porción acotada y legalmente autorizada de esa maquinaria puede separar esas funciones —la mano que elige, la mano que gasta y la mano que certifica— y la información que las impulsa, preservando la autorización legal y la auditabilidad pública.
+La maquinaria central de gasto del Estado fue diseñada hace más de dos siglos; este artículo pregunta si la tecnología de la información actual permite un rediseño arquitectónico que eleve el valor público real entregado por unidad de presupuesto asignado. El Estado moderno monopoliza la selección de proyectos, la ejecución y la fiscalización en una sola jerarquía, en la que se han documentado captura de agenda, corrupción, sesgo ideológico y ceguera ante el daño difuso y el valor individual real; solo puede aproximar este último mediante proxies.
 
-Presentamos **Core v0**, una arquitectura a nivel de objetos completamente especificada. Dentro de ámbitos de planificación legalmente autorizados, los ciudadanos dirigen una porción no retirable de un presupuesto público existente hacia proyectos que deben declarar por adelantado sus afirmaciones de valor, partes afectadas, hitos y contratos de evidencia. La proposición, la ejecución, la producción de evidencia, la fiscalización y la custodia están separadas; los fondos se liberan en tramos contra evidencia de hitos revisada, con retención y garantías; los ejecutores no eligen ni pagan a sus fiscalizadores; y toda transición de estado con consecuencias es pública.
+El valor es subjetivo, volátil y opaco para un observador central (Menger 1871; Hayek 1945), pero se revela mediante elecciones costosas (Samuelson 1938) y puede recuperarse de forma agregada a partir de muchas señales independientes (Condorcet 1785; Prelec et al. 2017). Por tanto, Core v0 no cuantifica centralmente el valor: le asigna una medida ordinal y direccional, no una magnitud cardinal de campo (Stevens 1946).
 
-Su idea animadora es un mecanismo de **crédito versus cobertura**: cuando el ordenamiento central premia el crédito político reclamable, puede subponderar sistemáticamente los beneficios difusos y de baja visibilidad que un proceso distribuido basado en cobertura todavía logra visibilizar, aunque bajo sesgo de voz. Sometimos esta idea a una revisión adversarial pública de 43 ataques a lo largo de cinco rondas —cada uno integrado al diseño o registrado como una limitación acotada. El aporte probatorio es la arquitectura, el mecanismo de crédito versus cobertura y hallazgos condicionales separados sobre selección, entrega verificada y costo administrativo —no el gran multiplicador de valor por peso que reportó una versión anterior. En la única computación confirmatoria del artículo, una prueba prerregistrada y limitada a la selección dio al central una tasación competente y consciente del daño, con entrega en paridad; el contraste distribuido permaneció positivo pero no superó el umbral registrado de reconstrucción, así que, bajo la regla congelada, retiramos el multiplicador (§6). Como ese comparador apaga la ceguera al daño modelada del central y no pone a prueba la entrega ni la construcción de agenda, acota la calibración bajo la construcción ensayada, no el valor de Core v0 como arquitectura completa. Una extensión de robustez de cuatro escenarios, separada y **exploratoria**, modela luego al selector central tal como lo describe la evidencia. La dirección de cada eje está anclada en la literatura; su magnitud no se ajustó a los datos. El selector es casi ciego al daño difuso en la cola larga de baja visibilidad (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), proyecta sus propias creencias previas y sobreestima los beneficios visibles (Broockman–Skovron 2018; Flyvbjerg et al. 2003), y está sesgado hacia el crédito político (Mayhew 1974; Arnold 1990). En ese **escenario de referencia declarado y motivado por fuentes** —no una calibración empírica—, la selección distribuida basada en cobertura recupera cerca del 98% de la referencia voraz de información completa del modelo, frente a cerca del 44% del central. La diferencia es un contraste de modelo condicional de 54 puntos, robusto en todo el espacio declarado y ante la degradación realista del *enrutamiento* presupuestario universal de Core v0 (el enrutamiento es arquitectónico; la información independiente efectiva no lo es). El central apenas supera a la cobertura, y solo abandonando los supuestos declarados (otorgándole la visión del daño que la literatura le niega) en un mundo casi sin daño, mientras que idealizar del mismo modo al brazo distribuido lo hace ganar por goleada. Estas son magnitudes de referencia declaradas de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; y la única sensibilidad que reduce materialmente la brecha —nunca su signo en el rango declarado— es el error correlacionado o de modo común en el brazo de cobertura. Una extensión pareada de cuatro celdas cruza luego selección con entrega: en el mundo declarado PROBABLE, la arquitectura completa de selección y entrega supera al statu quo en cerca de 58.6 puntos de la misma referencia voraz [intervalo Monte Carlo condicional al 95% +58.0, +59.2]. Un factorial de tres capas deja la diagonal completa de Core v0 positiva en todos los mundos nombrados, aunque las atribuciones de capas individuales invierten su signo en mundos extremos; la dirección de la planificación está anclada pero su magnitud independiente queda diferida. El costo administrativo no juega en contra del brazo distribuido: la contabilidad de presupuesto neto lo deja aproximadamente neutro bajo un piso conservador de baja dispersión, y arroja una ventaja declarada, aunque modesta, una vez que se admite un escenario de costos asimétrico (la burocracia central de tasación/priorización ≫ una plataforma con fiscalización de costo marginal casi nulo). Proposiciones elementales dan condiciones suficientes para el desembolso por hitos compatible en incentivos y para la resistencia a la colusión de la fiscalización protocolizada, bajo supuestos de independencia y corroboración.
+Core v0 separa la selección, la ejecución, la evidencia y la fiscalización: dentro de ámbitos de planificación legalmente autorizados y bajo fiscalización, los ciudadanos dirigen una porción acotada y no retirable de un presupuesto público existente en función de la cobertura del valor real revelado, en lugar de mediante la selección de la jerarquía central, estructuralmente ciega al valor y moldeada por proxies y por la agenda.
 
-Esta es una contribución de arquitectura-y-mecanismo, no una evaluación de impacto: ningún piloto se ha ejecutado; las simulaciones aportan contrastes de modelo condicionales para la selección, la entrega y el costo administrativo, pero sus unidades no están calibradas; los modelos son de equilibrio parcial y no identifican efectos de tratamiento en el dominio objetivo; y las anclas empíricas son predominantemente de infraestructura y compras públicas —los casos con forma de proyecto y verificables por hitos donde la evidencia es más clara—, mientras que la arquitectura en sí es general en el dominio discrecional con forma de proyecto en sentido amplio, no se limita a la infraestructura; esa generalidad más amplia es una afirmación de diseño, todavía no validada empíricamente. Lo que ofrece es un diseño institucional concreto, criticable y pilotable —y un relato disciplinado de exactamente qué sí y qué todavía no sostiene su evidencia.
+Su resultado principal es que, en el escenario PROBABLE anclado en la literatura, la selección distribuida basada en cobertura recupera ~98% de la referencia de información completa frente al ~44% del central (~2.2×; ~54 puntos); la arquitectura completa de selección y entrega supera al statu quo en ~58.6 puntos. Estas cifras comparan los brazos con una referencia común —un contraste direccional, no una medición cardinal del bienestar— y son resultados condicionales de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados ni un multiplicador de campo calibrado; no se ha ejecutado ningún piloto. Los anclajes empíricos corresponden predominantemente a infraestructura y contratación pública; la aplicabilidad más amplia a iniciativas con forma de proyecto es una afirmación de diseño que aún no ha sido validada.
 
 ## 1. Introducción
 
-Los Estados modernos concentran tres cosas que no necesitan estar juntas: la
-autoridad para decidir en qué se gasta el dinero público, la capacidad para
-ejecutar ese gasto, y el poder de certificar que sirvió de algo. Cuando las
-tres viven dentro de una misma jerarquía, la rendición de cuentas se reduce a
-que ella misma se audite (Bovens 2007). Las consecuencias son predecibles y
-están documentadas en toda la economía política —asignación discrecional,
-cumplimiento autorreportado, captura por intereses concentrados y desconfianza
-ciudadana—: desde la captura regulatoria (Stigler 1971; Laffont y Tirole 1991)
-hasta la auditoría vuelta ritual (Power 1997) y las coaliciones distributivas
-que se atrincheran en los sistemas políticos estables (Olson 1982).
+Los Estados modernos a menudo combinan la autoridad para asignar dinero público, ejecutar el gasto y certificar resultados. Cuando una misma jerarquía desempeña las tres, la rendición de cuentas se convierte en una autoauditoría (Bovens 2007), lo que permite la asignación discrecional, el cumplimiento autorreportado, la captura por intereses concentrados, las coaliciones atrincheradas, la auditoría ritualizada y la desconfianza (Stigler 1971; Laffont y Tirole 1991; Olson 1982; Power 1997). Para el gasto de tipo proyecto, el criterio acotado pertinente es el valor efectivo que llega a las personas por unidad gastada, no la asignación presupuestaria: un proyecto que no se construye o se construye mal no entrega valor alguno (Okun 1975). Esto no es ni una teoría del presupuesto en su conjunto ni de la tributación ni una evaluación de la redistribución y la equidad, que siguen siendo propósitos distintos de las finanzas públicas (§8).
 
-Estas fallas no son abstractas: son la razón por la que el valor no llega a
-las personas para quienes se recaudó. Para el dinero público que financia obras
-concretas —infraestructura, obras, programas locales— lo que en último término
-importa no es cuánto se asigna en el presupuesto sino cuánto valor efectivo llega a la gente por
-peso gastado: un proyecto que no se construye, o se construye mal, no ayuda a nadie,
-por bien intencionada que sea la asignación (el balde agujereado de Okun (1975)
-cargó agua que nunca llegó). Este es un criterio acotado para la inversión pública
-tipo proyecto, no una teoría de todo el presupuesto ni de por qué los Estados
-recaudan: la redistribución y la equidad son propósitos distintos de las finanzas
-públicas que este artículo no evalúa (§8).
+El debate entre reducir o ampliar el Estado lo trata como una unidad. La pregunta tratable es arquitectónica: ¿qué funciones aún requieren monopolio central y cuáles puede distribuir la coordinación digital con una rendición de cuentas más sólida? Esto amplía la tradición del cálculo y del conocimiento disperso (Coase 1937; Mises 1920; Hayek 1945; Sowell 1980; Williamson 1985): las decisiones deben situarse cerca del conocimiento y someterse a retroalimentación. Las garantías de derechos, la fuerza legítima, la estabilidad macrofiscal y la adjudicación exigible plausiblemente siguen siendo centrales; la asignación a nivel de proyecto, la ejecución, la producción de evidencia y la auditoría plausiblemente no tienen por qué serlo.
 
-El debate estándar responde con cantidad: encoger el Estado o hacerlo crecer.
-Ambas posturas lo tratan como un objeto único. Este artículo sostiene que la
-pregunta tratable es arquitectónica, no de tamaño: *¿qué capas de la actividad
-estatal aún requieren monopolio central, y cuáles pueden hoy distribuirse —con
-mejor rendición de cuentas que el statu quo— ahora que la coordinación digital
-ha desplomado los costos de transacción que antes justificaban la jerarquía?*
-(Coase 1937; Hayek 1945; Williamson 1985). Es una pregunta con linaje —dónde
-deben residir las decisiones cuando el conocimiento está disperso—, del debate
-del cálculo económico (Mises 1920) al conocimiento disperso de Hayek y su
-tratamiento institucional en Sowell (1980): las decisiones deben vivir donde
-está el conocimiento, disciplinadas por la retroalimentación más que por la
-orden jerárquica. Las garantías de derechos, la fuerza legítima, la
-estabilidad macrofiscal y la adjudicación exigible plausiblemente siguen
-siendo centrales; el procesamiento de información, la asignación de recursos a
-nivel de proyecto, la ejecución de servicios, la producción de evidencia y la
-auditoría, plausiblemente no.
+El mecanismo es el **crédito versus cobertura**: la priorización central recompensada por un crédito político reclamable puede descuidar valor difuso y de baja visibilidad que la selección ciudadana guiada por cobertura puede revelar, aunque persiste el sesgo adverso de voz. Core v0 concreta este mecanismo mediante una arquitectura de referencia completa para asignar, ejecutar y verificar una cuota legalmente obligatoria de un presupuesto existente. El mandato concierne a la cuota presupuestaria, no a la planificación centralizada: la planificación se distribuye por construcción en el modo Abierto predeterminado; la planificación central existe solo como un modo de transición tutorizado/cerrado.
 
-Hacemos el argumento como un diseño concreto, no como un manifiesto. Core v0
-es una arquitectura de referencia completa para distribuir una capa acotada
-—la asignación, ejecución y verificación de una cuota, con mandato legal, de
-un presupuesto público existente—, desarrollada hasta el nivel de objetos
-nombrados, máquinas de estado y reglas de decisión (un corpus de más de cien
-documentos de arquitectura, cincuenta y nueve hipótesis diseñadas y cuarenta y tres
-revisiones adversariales, todo público). La ciudadanía recibe una capacidad de
-asignación periódica y no retirable en una billetera cívica (civic wallet);
-los proyectos atraviesan un ciclo de vida de cierre paralelo, en el que
-financiamiento, fiscalización independiente, compromisos de evidencia y
-confirmación de beneficiarios deben cerrar todos antes de la ejecución; el
-ejecutor nunca elige ni paga a sus propios auditores —lo que elimina el costo
-de agencia del cumplimiento auto-supervisado (Jensen y Meckling 1976); el
-dinero solo se mueve sobre hitos revisados, con retención y garantías
-materializadas externamente; y toda transición de estado relevante queda
-registrada en un rastro legible por la ciudadanía y auditable por expertos.
+Los ciudadanos reciben una capacidad de asignación periódica y no retirable en billeteras cívicas y pueden dirigirla, delegarla o gobernarla mediante reglas. El financiamiento, la fiscalización independiente, los compromisos de evidencia y la confirmación de beneficiarios se cierran en paralelo antes de la ejecución; los ejecutores no eligen ni pagan a los auditores, con lo que se eliminan los costos de agencia de la autosupervisión (Jensen y Meckling 1976). El pago requiere hitos revisados, con retención, garantías externas y un registro de transición legible para la ciudadanía y auditable por expertos. Los ejecutores elegibles pueden ser organismos, municipios, fundaciones, cooperativas o empresas, según dispongan las reglas de implementación, pero deben enfrentar competencia honesta y no monopólica, quiebra y consecuencias por el fracaso. Una fórmula pública, versionada y elegida por la autoridad determina cada cuota; su opción simple de cuota igual impide comprar influencia. En el cuidado de personas mayores, por ejemplo, los residentes dirigen su capacidad y los proveedores reciben desembolsos por tramos solo después de una verificación independiente.
 
-El *ejecutor* —quien realiza el proyecto, sea una obra, un servicio de cuidado
-de personas o un programa educativo— puede ser un organismo público, un
-municipio, una fundación, una cooperativa o una empresa, según lo defina la
-normativa de la autoridad implementadora, bajo una condición: competencia no
-monopólica y honesta, con quiebras y consecuencias para quien incumple. Y la
-cuota que cada ciudadano dirige la fija una fórmula pública y versionada que
-elige la autoridad; su opción simple es *igual para todos los ciudadanos
-elegibles*, bajo la cual nadie compra más influencia con más dinero.
+Comparamos el Core v0 factible con la institución vigente que desempeña la misma función, nunca con un ideal omnisciente, y así evitamos la falacia del nirvana en cualquiera de las dos direcciones (Demsetz 1969). Sus contribuciones son:
 
-Un ejemplo concreto. Supongamos que un municipio destina recursos a programas
-de cuidado para adultos mayores en situación de vulnerabilidad. Hoy, entre el
-peso que se asigna y la ayuda que efectivamente llega hay una brecha donde se
-pierde valor. Bajo esta arquitectura, cada vecino puede dirigir parte de sus
-impuestos al programa que prefiere; la fundación, cooperativa o servicio que
-lo ejecuta cobra por tramos, y solo cuando un verificador que ella no eligió
-confirma que la ayuda llegó; y cada paso queda público y auditable.
+1. **Asignación distribuida:** un diseño especificado mediante objetos nombrados, máquinas de estado y reglas en más de 100 documentos públicos, 59 hipótesis diseñadas y 43 revisiones adversariales.
+2. **Formalización de incentivos:** condiciones para el desembolso condicionado a hitos y la resistencia a la colusión bajo k-corroboración. La verificación débil requiere términos financieros más estrictos; las garantías resultan contraproducentes por debajo del umbral de detección del costo del capital. Los hitos, la retención, las garantías y la memoria reputacional forman la pila de disuasión.
+3. **Evidencia sobre crédito versus cobertura:** el hallazgo principal es un contraste asimétrico, justo y anclado en la literatura —la selección distribuida guiada por cobertura supera sustancialmente a la selección central miope respecto del daño, y la arquitectura completa de selección y entrega se mantiene por delante del statu quo (magnitudes e intervalos en §6). Estos son resultados direccionales y condicionales de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados; las restricciones distributivas y de derechos no están modeladas, y la selección y la entrega verificada se componen multiplicativamente solo como una identidad contable. La atribución condicional de tres capas mantiene positiva la diagonal completa de Core v0 en cada mundo nombrado, pero deja sin cuantificar la magnitud independiente de la planificación; los costos netos favorecen a Core v0 solo en el escenario declarado de costos asimétricos. La compuerta de simetría prerregistrada es solo una estrecha prueba de robustez de la selección que idealiza a la instancia central: porque concede a la instancia central una lectura imparcial, incorrupta y consciente del daño, mantiene la entrega en paridad y excluye la construcción de agenda, esa idealización es precisamente la razón por la que no puede acotar el valor de Core v0 en toda la arquitectura (§6, Apéndice E4).
+4. **Revisión adversarial:** 43 ataques fundamentados en la literatura recibieron defensas emparejadas y resoluciones de integrar-o-acotar, propagadas a través del corpus público salvo D037–D040, cuya propagación se rastrea. Esta autocrítica estructurada no es validación externa; a la espera de una validación independiente, es un método preliminar para la investigación sobre diseño institucional.
 
-Lo que vuelve investigación a un ejercicio de diseño es el rigor al que se lo
-somete, bajo una disciplina transversal: evaluamos cada objeción comparativamente
-—el Core v0 factible contra la institución que hoy cumple la misma función, nunca
-contra un ideal omnisciente y benevolente. Esto bloquea la falacia del nirvana en
-ambas direcciones (Demsetz 1969; Sección 2). Nuestras contribuciones son:
-
-1. **La distribución de la capa de asignación.** El aporte central de diseño:
-   aplicar el principio de distribución funcional a la asignación de recursos
-   —los ciudadanos dirigen su cuota directamente, la delegan, o la gobiernan
-   con reglas personales—, instanciado como una arquitectura de referencia
-   completa (Core v0).
-
-2. **Formalización de los mecanismos de incentivos** (Sección 5). Modelamos el
-   desembolso supeditado a hitos como un juego principal-agente y derivamos su
-   condición de compatibilidad de incentivos; modelamos el soborno de
-   fiscalizadores asignados por protocolo y derivamos una condición a prueba
-   de colusión bajo k-corroboración; y demostramos dos estáticas comparativas
-   relevantes para el diseño: la verificación débil debe compensarse con
-   términos financieros, y las garantías son contraproducentes cuando la
-   calidad de detección cae por debajo del costo del capital. Hitos,
-   retención, garantías y memoria reputacional forman la pila de disuasión del
-   diseño.
-
-3. **Evidencia computacional** (Sección 6). Una simulación basada en agentes,
-   sin dependencias y con semilla fija, de 10.000 ciudadanos pone a prueba los
-   supuestos conductuales de la arquitectura bajo ignorancia racional,
-   atención limitada al descubrimiento y cascadas de prueba social. Los
-   resultados disciplinan el diseño: apoyan algunas afirmaciones, afilan
-   otras, cuantifican el apalancamiento concentrado en la capa de construcción
-   de ámbitos, miden una construcción abierta viable de ella, y llevan la
-   comparación de extremo a extremo: desde la asignación hasta el valor social
-   entregado por unidad de presupuesto —un criterio relevante para esta porción
-   acotada del gasto público (junto a las restricciones distributivas y de derechos
-   que el modelo no representa). En el modelo, la selección y la entrega
-   verificada se componen multiplicativamente (una identidad contable, no un
-   hallazgo independiente); una extensión pareada de selección y entrega gana
-   ≈ +58.6 puntos de una referencia voraz en el mundo declarado [intervalo
-   Monte Carlo condicional al 95% +58.0, +59.2]; una atribución
-   condicional de tres capas mantiene positiva la diagonal completa de Core v0
-   en todos los mundos nombrados mientras deja sin cuantificar la magnitud independiente de la
-   planificación; y la contabilidad de presupuesto neto deja el costo
-   administrativo aproximadamente neutro bajo un piso conservador de baja dispersión, con una ventaja declarada para Core v0 bajo un escenario de costos asimétrico. Estos son
-   contrastes condicionales del modelo, separados por canal, no un multiplicador calibrado
-   del desempeño institucional completo. Bajo la regla prerregistrada congelada, un contraste
-   limitado a la selección que otorgó al central una tasación competente y consciente del
-   daño, con entrega en paridad, dejó positivo el contraste distribuido, pero por debajo del
-   umbral de reconstrucción de 0.05; por tanto, se retira el multiplicador anterior (§6;
-   Apéndice E4). Como ese contraste apaga la ceguera al daño modelada del central y no pone
-   a prueba la entrega ni la construcción de agenda, la decisión rige la calibración bajo la
-   construcción ensayada, no el valor de Core v0 como arquitectura completa. La contribución
-   fundamental es la arquitectura, el mecanismo cualitativo de crédito versus cobertura y la
-   separación de la selección, la entrega y el costo.
-
-4. **La revisión adversarial como método** (Sección 7). La arquitectura fue
-   atacada sistemáticamente: cuarenta y tres resúmenes de ataque anclados en las
-   literaturas de ciencia política, economía y derecho, cada uno respondido
-   por una defensa emparejada y resuelto bajo una regla explícita de
-   integrar-o-acotar, con las resoluciones propagadas a través del corpus (todas
-   salvo las D037–D040 de la ronda de revisión del manuscrito, cuya propagación al
-   corpus está rastreada) y el registro completo de revisión
-   público por construcción. El bucle es una
-   autocrítica estructurada, no validación externa, y así lo decimos; lo proponemos, junto con su regla de terminación y a la espera de validación externa independiente, como una propuesta metodológica preliminar para la investigación en diseño institucional.
-
-El estudio complementario mide tres efectos que amplían esta arquitectura: la
-ablación de la pila de disuasión (sus términos son individualmente redundantes
-pero conjuntamente indispensables), la factibilidad de la fiscalización por
-IA, y el efecto de separar la planificación macro de la asignación (robustez
-frente a una mala planificación central —un contraste condicional, interno al
-modelo, no un efecto calibrado).
-
-La Sección 8 enuncia las limitaciones con el mismo cuidado que los resultados,
-porque bajo nuestro método ellas son resultados: cada una es un riesgo
-residual nombrado y acotado.
+Un estudio complementario examina la ablación de la pila de disuasión (componentes individualmente redundantes pero conjuntamente indispensables), la factibilidad de la fiscalización por IA y la separación de la planificación macro de la asignación como robustez condicional, interna al modelo, frente a una mala planificación central —no un efecto calibrado. Bajo este método, la Sección 8 trata cada limitación como un riesgo residual nombrado y acotado.
 
 ## 2. El principio de distribución funcional
 
-Analizamos el Estado como una pila de capas funcionales antes que como una
-única institución: (a) garantías de derechos y fuerza legítima; (b)
-adjudicación vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e)
-planificación macro y enmarcado de agenda; (f) priorización de proyectos y
-asignación de recursos a proyectos concretos; (g) ejecución y prestación de
-servicios; (h) producción de evidencia sobre la entrega; e (i) evaluación y
-rendición de cuentas. El principio de distribución es:
+Analizamos el Estado funcionalmente: (a) garantías de derechos y fuerza legítima; (b) adjudicación vinculante; (c) creación de reglas; (d) gestión macrofiscal; (e) planificación macro y enmarcado de agenda; (f) priorización de proyectos y asignación de recursos a proyectos concretos; (g) ejecución y prestación de servicios; (h) producción de evidencia sobre la entrega; e (i) evaluación y rendición de cuentas. El principio de distribución selectiva y funcional es:
 
-> Una capa es candidata a la distribución cuando se cumplen tres condiciones:
-> sus fallas bajo monopolio son fallas de información e incentivos antes que
-> fallas de coordinación de la fuerza; la provisión distribuida puede hacerse
-> *más* observable que la provisión monopólica; y la capa puede acotarse de
-> modo que su falla no se propague en cascada hacia las capas no
-> distribuibles.
+> Una capa es candidata a la distribución cuando las fallas del monopolio atañen a la información y los incentivos, antes que a la coordinación de la fuerza; la provisión distribuida puede ser más observable que la provisión monopólica; y la capa puede acotarse de modo que su falla no se propague en cascada hacia capas no distribuibles.
 
-Las capas (a), (b) y (d) fallan la primera o la tercera condición y permanecen
-centrales en nuestro diseño. Las capas (f) a (i) pasan las tres, y Core v0 las
-distribuye como un bloque, y debe hacerlo: distribuir la asignación sin la
-verificación reproduce la brecha de entrega del presupuesto participativo
-(PP), y distribuir la verificación sin la asignación reproduce la sociedad de
-la auditoría.
+Las capas (a), (b) y (d) no satisfacen la primera o la tercera condición y permanecen centrales. Las capas (f)–(i) satisfacen las tres y deben distribuirse juntas: la asignación sin verificación reproduce la brecha de entrega del presupuesto participativo; la verificación sin asignación reproduce la sociedad de la auditoría.
 
-La capa (e), la planificación, es el caso deliberadamente sin resolver: Core v0
-requiere que los ámbitos de planificación (Planning Scopes) sean públicos,
-versionados y portadores de mandato, pero no distribuye su construcción —razón
-por la cual la promesa de la arquitectura se enuncia con su calificador
-incorporado: lo que distribuye es la asignación *dentro de ámbitos de
-planificación acotados por mandato, visibles, versionados y disputables*, nunca
-la asignación sobre una agenda sin enmarcar. La Sección 6 muestra que el
-calificador no es un detalle: es la restricción vinculante de todo el diseño, y
-la Sección 8 eleva su remoción al siguiente objeto del programa de investigación.
+La planificación (e) depende del modo. En el modo Abierto —la opción predeterminada de la arquitectura—, la planificación está distribuida por construcción. La planificación centralizada pertenece únicamente al modo de transición tutelado/cerrado, donde los ámbitos de planificación son públicos, visibles, versionados, disputables y acotados por mandato; la asignación nunca abarca una agenda sin enmarcar. La Sección 6 considera vinculante esta restricción tutelada; la Sección 8 convierte su eliminación en el siguiente objeto del programa de investigación. Por tanto, la planificación acotada por mandato condiciona la transición, no la arquitectura en general.
 
-Dos reglas metodológicas gobiernan todo lo que sigue. La **regla de crítica
-comparativa** (P001): toda objeción se evalúa contra la línea base
-institucional actual, no contra un ideal —una dificultad compartida por ambos
-sistemas es un problema general de la gobernanza, no una refutación de la
-propuesta. La **regla de integrar-o-acotar** (P007): una vez que la
-arquitectura central está completa, una objeción fundada produce un nuevo
-mecanismo solo si el modo de falla derrotaría una afirmación central y no
-puede controlarse mediante objetos existentes; de lo contrario produce una
-frontera explícita, un riesgo residual visible y un enunciado de limitación.
-La primera regla disciplina a los críticos; la segunda disciplina a los
-diseñadores —un sesgo hacia pocas reglas simples y generales por sobre la
-proliferación de maquinaria específica, en el espíritu de Epstein (1995).
+De ello se siguen dos reglas metodológicas. La **regla de crítica comparativa** (P001) evalúa toda objeción frente a la línea base institucional actual, no frente a un ideal: una dificultad compartida por ambos sistemas es un problema general de gobernanza, no una refutación. Con arreglo a la **regla de integrar-o-acotar** (P007), una vez que la arquitectura central está completa, una objeción fundada amerita un nuevo mecanismo solo si su modo de falla derrotaría una afirmación central y no puede controlarse mediante objetos existentes; de lo contrario, da lugar a una frontera explícita, un riesgo residual visible y un enunciado de limitación. P001 disciplina a los críticos; P007 disciplina a los diseñadores y favorece pocas reglas simples y generales por sobre la proliferación de maquinaria específica, en el espíritu de Epstein (1995).
 
 ## 3. Trabajo relacionado
 
-**Gobernanza policéntrica.** La demostración de Ostrom de que los recursos de
-uso común pueden gobernarse mediante regímenes anidados y autoorganizados sin
-monopolio central (Ostrom 1990) es el ancestro intelectual más cercano: sus
-principios de diseño —ámbito acotado, monitoreo por monitores responsables,
-sanciones graduadas, resolución barata de conflictos— reaparecen aquí como
-objetos impuestos por software. La diferencia es el ámbito y el instrumento:
-apuntamos a funciones estatales presupuestadas antes que a los comunes de
-recursos naturales, y codificamos el régimen en una plataforma cuyos cambios de
-reglas son ellos mismos objetos versionados y auditables.
+**Gobernanza policéntrica.** Ostrom (1990) mostró que los recursos de uso común pueden gobernarse mediante regímenes anidados y autoorganizados sin monopolio central; su ámbito acotado, monitoreo por monitores responsables, sanciones graduadas y resolución barata de conflictos reaparecen aquí como objetos impuestos por software. Core v0, en cambio, se dirige a funciones estatales presupuestadas y versiona y audita incluso los cambios de reglas.
 
-**Presupuesto participativo.** El PP al estilo de Porto Alegre delega una cuota
-de un presupuesto municipal a asambleas ciudadanas (Wampler 2007; Baiocchi y Ganuza 2017). Empíricamente, el PP mejora algunos resultados fiscales pero
-sufre de decaimiento del involucramiento, captura por minorías organizadas y
-vínculos débiles entre asignación y entrega verificada (Peixoto y Fox 2016).
-Core v0 difiere en exactamente esos márgenes: la asignación es continua e
-individual antes que asamblearia; la entrega está ligada a la asignación
-mediante contratos probatorios (evidential contracts) y desembolso condicional;
-y la arquitectura trata la baja participación como un insumo de diseño (Sección
-6) antes que como una falla a exhortar hasta hacerla desaparecer —la acción
-colectiva no se sostiene sola a escala (Olson 1965)—. La billetera
-cívica misma generaliza el mecanismo de vouchers (Friedman 1962) —dinero público
-dirigido por la ciudadanía— desde la elección entre proveedores de servicios
-hasta la asignación entre proyectos verificables, añadiendo el ciclo de vida de
-verificación que los vouchers nunca portaron.
+**Presupuesto participativo.** El PP al estilo de Porto Alegre delega parte de un presupuesto municipal a asambleas ciudadanas (Wampler 2007; Baiocchi y Ganuza 2017). Mejora algunos resultados fiscales, pero enfrenta decaimiento del involucramiento, captura por minorías organizadas y vínculos débiles entre asignación y entrega (Peixoto y Fox 2016). Core v0 hace que la asignación sea continua e individual, vincula la entrega mediante contratos probatorios (evidential contracts) y desembolso condicional, y trata la baja participación como un insumo porque la acción colectiva no se sostiene sola a escala (Olson 1965). Su billetera cívica extiende los vouchers (Friedman 1962) de la elección entre proveedores a proyectos verificables y añade un ciclo de vida de verificación.
 
-**Federalismo fiscal y democracia epistémica.** Los ancestros formales del
-principio de distribución funcional son la literatura de la descentralización
-—el teorema de Oates (1972) sobre cuándo la provisión descentralizada domina,
-Tiebout (1956) sobre la revelación de preferencias mediante la elección de
-jurisdicción, y Besley y Coate (2003) sobre la provisión centralizada versus
-descentralizada bajo economía política— con una diferencia deliberada: nuestras
-capas son funcionales antes que territoriales, de modo que lo que se distribuye
-es una etapa del proceso de gasto (asignación, ejecución, verificación) antes
-que un nivel de gobierno. Del lado epistémico, los resultados de agregación de la
-Sección 6 pertenecen al linaje del teorema del jurado de Condorcet (1785) y sus
-condiciones modernas de falla (Austen-Smith y Banks 1996) —una deuda que
-hacemos explícita, porque el régimen de falla del teorema (señales
-correlacionadas, estratégicas o sesgadas) es exactamente lo que el séptimo
-experimento pone a prueba— y la conversación de diseño con la democracia abierta
-de Landemore (2020) y la gobernanza participativa empoderada de Fung y Wright
-(2003) es directa: esos programas distribuyen la deliberación y el
-empoderamiento; este distribuye la asignación, la ejecución y la verificación con
-un núcleo de diseño de mecanismos y de rastro de auditoría que ellos no intentan.
+**Federalismo fiscal y democracia epistémica.** El teorema de Oates sobre cuándo la provisión descentralizada domina (1972), la revelación jurisdiccional de preferencias de Tiebout (1956) y la comparación desde la economía política de Besley y Coate entre la provisión centralizada y la descentralizada (2003) son antecedentes. Core v0 distribuye funciones —asignación, ejecución, verificación—, no territorios. Su análisis de agregación sigue a Condorcet (1785) y a las condiciones modernas de falla (Austen-Smith y Banks 1996): las señales correlacionadas, estratégicas o sesgadas motivan pruebas de estrés. Landemore (2020) y Fung y Wright (2003) distribuyen la deliberación y el empoderamiento, pero no proporcionan el diseño de mecanismos ni los rastros de auditoría de Core v0.
 
-**Democracia líquida.** La delegación transitiva o acotada promete flexibilidad
-entre la participación directa y la representativa, al costo de la concentración
-(Blum y Zuber 2016; Kahng, Mackenzie y Procaccia 2018). Core v0 adopta
-delegación acotada, revocable y no compensada con visibilidad obligatoria de la
-concentración, y —siguiendo la advertencia de Michels (1911) antes que
-desestimarla— trata la concentración de delegados como un riesgo monitoreado con
-umbrales de estrés, no como un problema resuelto.
+**Democracia líquida.** La delegación transitiva o acotada intercambia flexibilidad por riesgo de concentración (Blum y Zuber 2016; Kahng, Mackenzie y Procaccia 2018). Core v0 hace que la delegación sea acotada, revocable, no compensada y con visibilidad de la concentración, y trata la oligarquía como un riesgo monitoreado con umbrales, no como un problema resuelto (Michels 1911).
 
-**Gobernanza digital y de blockchain.** La literatura sobre DAOs demostró tanto
-la viabilidad de la asignación colectiva de recursos codificada por reglas como
-su falla característica: la votación plutocrática por tokens y la captura de la
-gobernanza (De Filippi y Wright 2018). Core v0 deliberadamente no es un diseño
-de blockchain —la identidad es verificada antes que seudónima, y el Estado
-soberano permanece como fuente de fondos y de ley— pero importa la lección de
-que la metagobernanza es la superficie de ataque de mayor apalancamiento
-(Sección 8).
+**Gobernanza digital y de blockchain.** Las DAOs demuestran la viabilidad de la asignación colectiva codificada por reglas y su vulnerabilidad a la votación plutocrática y la captura (De Filippi y Wright 2018). Core v0 no es blockchain: la identidad se verifica en lugar de ser seudónima, el Estado soberano proporciona la ley y los fondos, y la metagobernanza sigue siendo la superficie de ataque de mayor apalancamiento.
 
-**Diseño de mecanismos y auditoría.** Nuestros modelos formales son aplicaciones
-elementales del riesgo moral bajo observación imperfecta (Holmström 1979) y de
-la colusión en jerarquías de supervisión (Laffont y Tirole 1991), con la ley
-de Goodhart (Goodhart 1975; Campbell 1976) como advertencia permanente contra la
-manipulación de métricas. El diseño de mecanismos existente más cercano para la
-asignación ciudadana de fondos públicos es el financiamiento cuadrático (o «plural»)
-(Buterin, Hitzig y Weyl 2019), que tasa la concentración mediante la curvatura
-de los fondos de contrapartida; la regla de cierre por meta de financiamiento de
-Core v0 persigue la misma meta anticoncentración por truncamiento antes que por
-tasación, y nuestros resultados de simulación (Sección 6, Hallazgo 1) delimitan
-lo que el truncamiento puede y no puede lograr. Del lado de la auditoría, el
-experimento de campo de Olken (2007) sobre proyectos viales indonesios es el
-anclaje empírico canónico para las probabilidades de detección que nuestras
-Proposiciones 1–2 toman como parámetros —y su hallazgo de que la auditoría de
-arriba hacia abajo superó al monitoreo de base para el fraude en compras es una
-advertencia que esta arquitectura absorbe al hacer de la fiscalización
-profesional, no de la observación de la multitud, la capa que condiciona la
-liberación. La literatura brasileña de loterías de auditoría (Ferraz y Finan
-2008) aporta la evidencia complementaria de mecanismo —la divulgación de los
-hallazgos de auditoría cambia los resultados políticos, y la exposición a
-auditoría reduce la corrupción subsiguiente— y sus datos subyacentes de la CGU
-entran directamente en la línea base parametrizada por auditorías del séptimo experimento. La
-contribución aquí no es la profundidad técnica sino la especificidad: los parámetros de los modelos mapean uno a uno con objetos
-arquitectónicos nombrados, de modo que cada proposición es un dial
-implementable.
+**Diseño de mecanismos y auditoría.** Los modelos aplican el riesgo moral bajo observación imperfecta (Holmström 1979), la colusión en jerarquías de supervisión (Laffont y Tirole 1991) y las advertencias de Goodhart/Campbell sobre la manipulación de métricas (Goodhart 1975; Campbell 1976). El mecanismo existente de asignación ciudadana más cercano, el financiamiento cuadrático, tasa la concentración mediante la curvatura de los fondos de contrapartida (Buterin, Hitzig y Weyl 2019); la regla de cierre por meta de Core v0 persigue el mismo objetivo anticoncentración por truncamiento. El experimento de Olken (2007) sobre carreteras indonesias ancla los parámetros de detección; su ventaja de arriba hacia abajo frente al monitoreo de base del fraude en compras respalda la fiscalización profesional —no la observación de la multitud— como condición para la liberación. Las loterías brasileñas de auditoría muestran que la divulgación cambia los resultados políticos y que la exposición reduce la corrupción posterior (Ferraz y Finan 2008); los datos de la CGU informan directamente la línea base de auditoría. La contribución es la especificidad, no la profundidad técnica: los parámetros se corresponden uno a uno con objetos arquitectónicos, lo que convierte cada proposición en un dial implementable.
 
-**Qué es nuevo.** No hemos realizado la revisión sistemática de literatura previa
-que establecería prioridad a nivel de campo (nuestro mapa de literatura es
-preliminar), así que reclamamos una **síntesis integradora a nivel de objetos** más
-que novedad frente a todo trabajo adyacente. Con esa salvedad, no tenemos
-conocimiento de trabajo previo que combine:
-
-- **(i)** una descomposición funcional de la actividad estatal en capas
-  distribuibles y no distribuibles;
-
-- **(ii)** una arquitectura completa a nivel de objetos para la capa de
-  asignación;
-
-- **(iii)** un análisis formal de incentivos de los mecanismos específicos de
-  esa arquitectura;
-
-- **(iv)** simulación conductual de sus supuestos de cara a la ciudadanía
-  —incluido lo que creemos es una comparación temprana de conocimiento simétrico,
-  en simulación, de la construcción abierta de las prioridades de asignación a
-  partir de señales ciudadanas agregadas contra la construcción central de ancho
-  de banda finito (véase la Sección 6);
-
-- **(v)** un método documentado de revisión adversarial con una regla de
-  detención explícita.
-
-Y dos contribuciones adicionales conciernen a la medición y al método:
-
-- **(vi)** una comparación institucional de extremo a extremo, dentro de una
-  porción acotada de inversión pública, sobre el valor social entregado por unidad
-  de presupuesto, descomponiendo la selección de la entrega sobre carteras
-  apareadas: en el modelo, la selección y la entrega verificada se componen
-  multiplicativamente (una identidad contable, no un hallazgo independiente);
-  una extensión pareada de selección y entrega gana ≈ +58.6 puntos de una
-  referencia voraz en el mundo declarado [intervalo Monte Carlo condicional al
-  95% +58.0, +59.2]; una atribución condicional de tres
-  capas mantiene la diagonal completa de Core v0 positiva en todos los mundos
-  nombrados mientras la magnitud independiente de la planificación queda sin cuantificar; y una
-  contabilidad de presupuesto neto deja el costo administrativo
-  aproximadamente neutro bajo un piso conservador de baja dispersión, con una ventaja declarada para Core v0 bajo un escenario de costos asimétrico (el canal de
-  selección se examina por separado bajo una prueba prerregistrada; §6). Este trabajo también introduce la brecha de
-  visibilidad (entrega oficialmente reportada menos entrega real) como un déficit
-  de rendición de cuentas medible del statu quo;
-
-- **(vii)** esa comparación contra una línea base parametrizada por auditorías,
-  construida a partir de los hallazgos publicados de instituciones
-  supremas de auditoría de nueve jurisdicciones y la Unión Europea (un escenario
-  informado por prácticas documentadas cuya verificación de fuentes primarias aún
-  se está completando), bajo una condición prerregistrada de retiro del resultado principal.
-
-Las evaluaciones de presupuestos participativos miden participación y
-asignación; los estudios de auditoría miden fugas después del hecho; no
-conocemos ninguno que mida, dentro de un mismo marco, cuánto valor entregado
-produce una institución de asignación a partir de los mismos recursos.
+**Posicionamiento de la contribución.** Dado que ninguna revisión sistemática de literatura previa ha establecido la prioridad a nivel de campo y que el mapa de literatura es preliminar, reclamamos únicamente una síntesis integradora a nivel de objetos, no novedad frente a todo trabajo adyacente. No tenemos conocimiento de trabajo previo que combine una descomposición funcional de las capas estatales distribuibles y no distribuibles; una arquitectura completa de la capa de asignación; un análisis de incentivos específico de cada mecanismo; simulación conductual de los supuestos de cara a la ciudadanía; y revisión adversarial documentada con una regla de detención explícita. Los estudios de presupuestos participativos miden la participación y la asignación, mientras que los estudios de auditoría miden las fugas después del hecho; no conocemos ninguno que mida, dentro de un mismo marco, cuánto valor entregado produce una institución de asignación a partir de los mismos recursos.
 
 ## 4. La arquitectura Core v0
 
-Resumimos la arquitectura de referencia al nivel necesario para el análisis; el
-modelo completo de objetos, las máquinas de estado y las capas de interfaz
-ciudadana están especificados en el corpus público.
+Resumimos la arquitectura de referencia únicamente al nivel requerido para el análisis; el corpus público especifica su modelo completo de objetos, máquinas de estado e interfaces ciudadanas.
 
-**Financiamiento.** Una autoridad implementadora migra una cuota, con mandato
-legal, de un presupuesto existente hacia billeteras cívicas individuales:
-capacidad de asignación periódica, no retirable, de propósito público, igual
-por ciudadano por defecto. Todo ámbito de planificación activo porta un
-registro de *Allocation Mandate* (mandato de asignación) que nombra el
-estatuto o instrumento que autorizó la migración, su rango legal, el órgano al
-que se imputan las asignaciones y la fórmula de asignación. La plataforma
-registra esa autorización externa; no la fabrica. La operación en modo
-vinculante está supeditada a que se haya registrado una norma habilitante de
-rango suficiente; en caso contrario, la opción predeterminada legal y expresamente declarada es la
-operación consultiva o tutelada. El acto de asignación se diseña para replicar
-dos garantías propias del sufragio: el secreto de la preferencia y la
-resistencia a la coacción (receipt-freeness). En la medida en que una norma
-habilitante lo reconozca, podrá ampararse con protecciones equivalentes a las
-del voto; hasta entonces, son garantías técnicas de la plataforma, no un
-estatus jurídico. Las asignaciones individuales son seudónimas en la capa
-pública y se reconcilian criptográficamente contra los totales públicos por
-ámbito —cada peso trazable como dinero, ningún ciudadano trazable como
-asignador, y no existe recibo ni prueba exportable de ninguna asignación
-individual, ni siquiera voluntariamente, de modo que un patrón que exija
-prueba nunca pueda obtenerla (la defensa propia del voto secreto, aplicada a
-la billetera). Un *Fiscal Commitment Profile* (perfil de compromiso fiscal)
-por ámbito hace públicos y versionados el porcentaje migrado, la indexación y
-la plazo de entrega, de modo que el estrangulamiento fiscal por parte de la
-tesorería en funciones sea medible y atribuible antes que silencioso. Los
-servicios esenciales con obligaciones de continuidad quedan protegidos por
-pisos no asignables, fuera de la popularidad ciudadano-por-ciudadano.
+**Modalidades de operación y ámbitos de planificación.** Core v0 transita por los modos cerrado, tutelado, semiabierto y abierto. El modo abierto es el valor predeterminado arquitectónico: la planificación, incluida la construcción de ámbitos, se distribuye por diseño. La planificación centralizada y la construcción de ámbitos se circunscriben únicamente a la transición cerrado/tutelado; allí, una autoridad pública define los ámbitos activos y puede conservar la revisión de admisibilidad de proyectos. Toda decisión tutelada de importancia —y todo silencio tutelado más allá de su plazo— se convierte en un objeto público de resolución de gobernanza. Los indicadores de resistencia del sistema establecido (cuota de ámbitos abierta, tasas de rechazo y de vencimiento de plazos, y privilegio del operador) distinguen la adopción simbólica de la transferencia real.
 
-**Proyectos y roles.** Los proyectos financiables declaran una tesis de valor
-con afirmaciones verificables, partes afectadas, riesgos y antivalores, un plan
-de fases e hitos, y un *contrato probatorio* (evidential contract): qué debe
-probarse, por qué clase de productor calificado, con qué método, para qué efecto
-formal. Seis roles están estructuralmente separados —proponente, modelador/
-diseñador, ejecutor, fiscalizador, productor de evidencia, custodio— con las
-relaciones de partes vinculadas declaradas en un grafo clasificado por
-severidad. La regla fundamental es que el ejecutor nunca elige ni paga
-a sus propios fiscalizadores o productores de evidencia: el trabajo de control se
-financia desde un presupuesto de control separado y se asigna por protocolo.
+Cada ámbito activo porta un *Allocation Mandate* (mandato de asignación) que identifica el estatuto o instrumento habilitante, su rango legal, el órgano al que se imputan las asignaciones y la fórmula de asignación. La plataforma registra, en lugar de crear, esa autoridad externa. La operación en modo vinculante exige una norma habilitante registrada de rango suficiente; en caso contrario, la opción predeterminada legal y expresamente declarada es la operación consultiva o tutelada.
 
-**Cierre paralelo y desembolso condicional.** Un proyecto publicado reúne
-compromisos de financiamiento, asignaciones de fiscalizadores, compromisos de
-evidencia y confirmaciones de beneficiarios de manera concurrente; la ejecución
-se vuelve posible solo cuando todas las condiciones requeridas por su *política
-de umbrales* (threshold policy) proporcional cierran. Los fondos comprometidos
-quedan en custodia, no transferidos: la liberación ocurre por hito, contra
-evidencia de cumplimiento revisada, con retención, comprobaciones de impedimentos
-y garantías materializadas por custodios externos antes de cualquier liberación.
-Un *Duty-of-Care Anchor* (ancla de deber de diligencia) nombra, antes del desembolso, a la persona jurídica solvente que responde civilmente frente a terceros por los daños derivados de la ejecución, en particular los daños a la integridad física.
+**Financiamiento.** Una autoridad implementadora migra hacia billeteras cívicas individuales una cuota de un presupuesto existente establecida por mandato: capacidad de asignación periódica, no retirable, de propósito público, igual por ciudadano por defecto. El acto de asignación se diseña para reproducir dos garantías propias del sufragio: el secreto de la preferencia y la resistencia a la coacción (receipt-freeness). Cuando una norma habilitante lo reconozca, podrán aplicarse protecciones equivalentes a las del voto; hasta entonces, estas son garantías técnicas de la plataforma, no un estatus jurídico. Las asignaciones de la capa pública son seudónimas y se reconcilian criptográficamente con los totales públicos por ámbito: cada peso sigue siendo trazable como dinero, ningún ciudadano es trazable como asignador y nadie puede obtener un recibo ni una prueba exportable, ni siquiera voluntariamente, lo que niega a los patrones la prueba que exigen, tal como lo hace el voto secreto. El *Fiscal Commitment Profile* (perfil de compromiso fiscal) público y versionado de cada ámbito revela el porcentaje migrado, la indexación y la latencia de entrega, de modo que el estrangulamiento fiscal por parte de la tesorería en funciones sea medible y atribuible, en vez de silencioso. Los pisos no asignables protegen a los servicios esenciales sujetos a obligaciones de continuidad frente a la popularidad ciudadano-por-ciudadano.
 
-**Infraestructura de atención.** La ciudadanía actúa a través de una interfaz
-estratificada: descubrimiento con ordenamiento controlado por el usuario y con
-razón visible; tarjetas de proyecto compactas; y superficies de auditoría
-progresivamente más profundas hasta el rastro completo. Los ciudadanos que no
-prestan atención son servidos por perfiles automáticos de asignación
-configurables —o un perfil por defecto sensato cuando no se define ninguno—
-y por delegación acotada y revocable con
-visibilidad de la concentración. La arquitectura no supone ciudadanos atentos;
-supone que en su mayoría son desatentos y enruta su peso a través de una
-intermediación inspeccionable (Lupia y McCubbins 1998). Esta es una respuesta
-de diseño a la objeción de competencia ciudadana en su forma contemporánea más
-aguda (Brennan 2016): antes que restringir el derecho de nadie a participar,
-la arquitectura hace que la intermediación que la desatención produce sea
-visible, revocable y auditable.
+**Proyectos, roles y ciclo de vida.** Un proyecto financiable declara una tesis de valor con afirmaciones verificables, partes afectadas, riesgos y antivalores, un plan de fases e hitos, y un *contrato probatorio* (evidential contract): qué debe probarse, por qué clase de productor calificado y con qué método, y para qué efecto formal. Seis roles están estructuralmente separados —proponente, modelador/diseñador, ejecutor, fiscalizador, productor de evidencia y custodio— y las relaciones de partes vinculadas se declaran en un grafo clasificado por severidad. El ejecutor nunca selecciona ni paga a sus fiscalizadores o productores de evidencia; el protocolo asigna el trabajo de control financiado desde un presupuesto de control separado.
 
-Un aparente reproche —que participar por aplicación, billetera y tutor de IA
-excluya a la población no digitalizada— se disuelve bajo la disciplina
-comparativa: el ciudadano no digital ya delega hoy, entregando su decisión,
-vía el voto, a un representante lejano que asigna el presupuesto por él. Core
-v0 no agrega una barrera: elimina un nivel de intermediación. Quien nunca participa
-cae en el valor por defecto del sistema —igual por ciudadano, acotado por
-mandato—, no en la preferencia de la minoría atenta; y quien participa aunque
-sea mínimamente, incluso por vías no digitales o delegación asistida, acerca
-la decisión a sus intereses directos mediante la microdelegación y reglas como
-«cerca de mí», que financian lo que puede tocar. Lo que aparenta excluir,
-incluye más —con la construcción del ámbito de planificación como la única
-indirección restante (Sección 8).
+Una vez publicado, un proyecto reúne de manera concurrente compromisos de financiamiento, asignaciones de fiscalizadores, compromisos de evidencia y confirmaciones de beneficiarios. La ejecución comienza solo cuando se cierran todas las condiciones requeridas por su *política de umbrales* (threshold policy) proporcional. Los fondos comprometidos permanecen en custodia, no se transfieren; la liberación por hito ocurre contra evidencia de cumplimiento revisada, con retención y comprobaciones de impedimentos, solo después de que custodios externos hayan materializado las garantías requeridas. Antes del desembolso, un *Duty-of-Care Anchor* (ancla de deber de diligencia) identifica a la persona jurídica solvente que responde civilmente frente a terceros por los daños derivados de la ejecución, en particular los daños a la integridad física.
 
-**Transición.** El despliegue procede a través de modos de operación —cerrado,
-tutelado, semiabierto, abierto— en los que una autoridad pública puede retener la revisión de elegibilidad (admisibilidad de proyectos), pero toda decisión tutelada de importancia, y todo
-silencio tutelado más allá de su plazo, se convierte en un objeto público de
-resolución de gobernanza. Los indicadores de resistencia del sistema
-establecido (cuota de ámbito abierta, tasas de rechazo y de vencimiento de
-plazos, privilegio del operador) hacen distinguible la adopción simbólica de
-la transferencia real.
+**Atención y acceso.** La ciudadanía utiliza un descubrimiento por capas con ordenamiento controlado por el usuario y con razón visible, tarjetas de proyecto compactas y superficies de auditoría progresivamente más profundas hasta el rastro completo. Los ciudadanos que no prestan atención son atendidos por perfiles automáticos de asignación configurables —o por un valor predeterminado sensato cuando no se configura ninguno— y por delegación acotada y revocable con visibilidad de la concentración. El diseño supone ciudadanos mayoritariamente desatentos y enruta su peso a través de una intermediación inspeccionable (Lupia y McCubbins 1998). Frente a la objeción de competencia ciudadana en su forma contemporánea más aguda (Brennan 2016), preserva los derechos de participación de todos mientras hace visible, revocable y auditable la intermediación producida por la desatención.
+
+La aparente exclusión de los ciudadanos no digitales mediante la participación por aplicación, billetera o tutor de IA no se sostiene comparativamente: a través del voto, ya delegan la asignación presupuestaria en representantes distantes. Core v0 no agrega ninguna barrera y elimina un nivel de intermediación. Quienes no participan reciben el valor predeterminado del sistema, igual por ciudadano —no la preferencia de la minoría atenta—; en la operación tutelada, ese valor predeterminado permanece dentro del ámbito acotado por mandato. Incluso la participación mínima —incluidos los canales no digitales o la delegación asistida— acerca las decisiones a los intereses directos mediante la microdelegación y reglas como «cerca de mí» que financian aquello que los ciudadanos pueden tocar. Lo que parece excluyente es, por tanto, más inclusivo. En la operación tutelada, el ámbito de planificación construido centralmente es la indirección restante (Sección 8); el modo abierto la elimina mediante la planificación distribuida.
 
 ## 5. Análisis formal
 
-Enunciamos los tres modelos y sus resultados; las demostraciones son álgebra
-de un paso y aparecen en la nota acompañante ([formal-models](../research/formal-models.md)).
-Todos los agentes son neutrales al riesgo; los presupuestos están normalizados
-a 1. La estructura de disuasión a lo largo del texto es la de Becker (1968):
-una violación se disuade cuando la probabilidad de detección por lo que está
-en juego excede su ganancia —nuestra contribución es mapear cada término de
-esa desigualdad sobre un objeto arquitectónico nombrado y configurable. Para
-evitar colisiones de notación, *Proposición N* designa los resultados formales
-de esta sección; *P001/P007*, las reglas metodológicas (§2); y *predicción N*,
-las predicciones conductuales de §5.3.
+Presentamos tres modelos; sus demostraciones de álgebra de un paso aparecen en la nota acompañante ([formal-models](../research/formal-models.md)). Los agentes son neutrales al riesgo y los presupuestos están normalizados a 1. Siguiendo a Becker (1968), la disuasión requiere que la probabilidad de detección multiplicada por lo que está en juego exceda la ganancia; nuestra contribución asigna cada término a un objeto arquitectónico nombrado y configurable. *Proposición N* designa los resultados formales de esta sección, *P001/P007* las reglas metodológicas (§2) y *predicción N* las predicciones conductuales de §5.3.
 
 ### 5.1 Desembolso supeditado a hitos
 
-Un ejecutor elige entre entregar un hito a costo privado *c* ∈ (0, 1) y desviar los fondos. El
-mecanismo libera un adelanto *a*, retiene el remanente para la aceptación
-revisada, recupera una fracción *r* del adelanto ante la no entrega confirmada,
-incauta una garantía depositada *γ* (con costo de mantenimiento *κ* por unidad),
-e impone una pérdida reputacional de continuación *R*. La revisión confirma la
-desviación con probabilidad *p* —la calidad conjunta de los estándares de
-evidencia, la independencia del fiscalizador y la corroboración.
+Un ejecutor elige entre entregar un hito a un costo privado *c* ∈ (0, 1) o desviar los fondos. El mecanismo libera un adelanto *a*, retiene el remanente a la espera de una aceptación revisada, recupera una fracción *r* del adelanto ante la no entrega confirmada, incauta una garantía *γ*, cuyo costo es *κ* por unidad, e impone una pérdida reputacional de continuación *R*. La revisión confirma la desviación con probabilidad *p*, que refleja conjuntamente los estándares de evidencia, la independencia del fiscalizador y la corroboración.
 
-**Proposición 1 (compatibilidad de incentivos).** La entrega es óptima si y solo
-si
+**Proposición 1 (compatibilidad de incentivos).** La entrega es óptima si y solo si
 
-> *c* ≤ *p* · [ (1 − *a*(1 − *r*)) + *γ* + *R* ].
+> *c* ≤ *p* · [(1 − *a*(1 − *r*)) + *γ* + *R*].
 
-La entrega debe ser más barata que la probabilidad de detección por el total en
-juego. Cada prueba de manipulación de desembolsos en la arquitectura es un
-término de esta desigualdad.
+La entrega no debe costar más que la probabilidad de detección multiplicada por el total en juego; toda prueba arquitectónica de manipulación de desembolsos entra en esta desigualdad.
 
-**Proposición 2 (la verificación débil debe compensarse mediante las condiciones financieras).** La garantía mínima que
-sostiene la entrega para todo *c* ≤ *c̄* es *γ\**(*p*) = max{0, *c̄*/*p* −
-(1 − *a*(1 − *r*)) − *R*}, decreciente y convexa en *p*. Allí donde la
-verificación es débil —mercados de fiscalización delgados, calidad de evidencia
-pobre— el mecanismo debe compensar con adelantos más pequeños, mayor
-recuperabilidad, garantías más grandes o ejecutores de mayor reputación. Un único
-porcentaje de garantía global no puede ser óptimo a lo largo de entornos de
-verificación heterogéneos.
+**Proposición 2 (la verificación débil debe compensarse mediante las condiciones financieras).** La garantía mínima que sostiene la entrega para todo *c* ≤ *c̄* es *γ\**(*p*) = max{0, *c̄*/*p* − (1 − *a*(1 − *r*)) − *R*}, decreciente y convexa en *p*. La verificación débil —mercados de fiscalización delgados o evidencia deficiente— requiere por tanto adelantos más pequeños, mayor recuperabilidad o garantías mayores, o ejecutores de mayor reputación. Ningún porcentaje global de garantía es óptimo en entornos de verificación heterogéneos.
 
-Los términos de disuasión de esta condición son complementos, no sustitutos. Un
-programa de ablación prerregistrado sobre los experimentos complementarios
-(Offermann 2026b) midió la consecuencia: en el punto de operación diseñado la
-desigualdad se sostiene con holgura, de modo que quitar cualquier término
-individual cuesta casi nada — y un despliegue negociado concesión defendible por
-concesión puede cruzar el umbral de forma invisible, terminando por debajo del
-statu quo que reemplazó (un déficit material de valor verificado, con la calidad
-de selección intacta) mientras luce plenamente instrumentado. El corpus exige por ello que
-cada ámbito publique su margen de la desigualdad de disuasión en su configuración
-operativa, recomputado ante cada cambio de término, con las reducciones de
-términos clasificadas como cambios de regla materiales (docs/111). La misma
-holgura, mantenida intacta, compra un dividendo inesperado: absorbe el error del
-instrumento de verificación — en el panel complementario de cinco familias
-reales de modelos, incluso un verificador automático que deja pasar ~20% del
-fraude que exige juicio produjo una fuga indistinguible de la verificación
-humana pura, porque la cascada elimina los intentos aguas arriba — siempre que
-el adversario no coluda a través de las capas de verificación (Offermann 2026b,
-docs/113).
+Los términos de disuasión son complementos, no sustitutos. Una ablación prerregistrada del experimento complementario (Offermann 2026b) halló que, en el punto de operación diseñado, la desigualdad tiene holgura suficiente para que retirar un término cueste casi nada. Sin embargo, concesiones defendibles sucesivas pueden cruzar el umbral de manera imperceptible, dejando el valor verificado materialmente por debajo del statu quo reemplazado pese a una calidad de selección intacta y una instrumentación aparentemente completa. Cada ámbito debe por ello publicar su margen operativo de disuasión, recalcularlo después de cada cambio de término y clasificar las reducciones de términos como cambios materiales de reglas (docs/111). La holgura preservada también absorbe el error del instrumento de verificación: en cinco familias reales de modelos, la fuga siguió siendo indistinguible de la obtenida mediante verificación puramente humana incluso cuando un verificador automático dejó pasar ~20% del fraude que requiere juicio, porque la cascada eliminó los intentos aguas arriba —siempre que los adversarios no coludan a través de las capas de verificación (Offermann 2026b, docs/113).
 
-**Proposición 3 (compromiso entre participación y disuasión).** Elevar *γ*
-relaja la compatibilidad de incentivos a tasa *p* pero reduce el pago de los
-ejecutores honestos a tasa *κ*; bajo un objetivo del diseñador que pondera una
-unidad de holgura de incentivos por igual contra una unidad de pago del ejecutor
-honesto, un incremento de la garantía es netamente beneficioso solo si *p* > *κ*
-(otras ponderaciones desplazan el umbral, no la estructura del compromiso). Allí
-donde la calidad de detección está por debajo del costo local del capital,
-acumular garantías excluye a ejecutores honestos de bajo margen sin disuadir el
-fraude —el contenido formal de la disciplina de proporcionalidad de la
-arquitectura.
+**Proposición 3 (compromiso entre participación y disuasión).** Elevar *γ* relaja la compatibilidad de incentivos a tasa *p*, pero reduce el pago del ejecutor honesto a tasa *κ*. Si el diseñador pondera por igual una unidad de holgura de incentivos y una unidad de pago del ejecutor honesto, un aumento es netamente beneficioso si y solo si *p* > *κ*; otras ponderaciones desplazan el umbral, no la estructura del compromiso. Cuando la calidad de detección está por debajo del costo local de capital, garantías mayores excluyen a ejecutores honestos de bajo margen sin disuadir el fraude —la disciplina de proporcionalidad de la arquitectura.
 
 ### 5.2 Fiscalización a prueba de colusión
 
-Un hito no entregado vale *G* para el ejecutor si es aprobado
-fraudulentamente. La liberación requiere la aprobación de *k* fiscalizadores
-asignados por protocolo, cada uno portando un capital en juego confiscable *W*
-(honorarios futuros del protocolo más reputación de rol) y enfrentando una
-probabilidad de descubrimiento posterior a la aprobación *q*. Como la asignación
-está protocolizada y los emparejamientos repetidos son visibles, el ejecutor y el
-fiscalizador no tienen relación previa: una oferta de soborno es en sí misma reportada con
-probabilidad *δ*, costándole al ejecutor una penalidad *P_e*.
+Un hito no entregado y aprobado fraudulentamente le reporta *G* al ejecutor. La liberación requiere *k* fiscalizadores asignados por protocolo, cada uno con un capital en juego confiscable *W* (honorarios futuros del protocolo más reputación de rol) y una probabilidad *q* de descubrimiento posterior a la aprobación. La asignación protocolizada y los emparejamientos repetidos visibles mantienen al ejecutor y a los fiscalizadores como extraños entre sí; una oferta de soborno se reporta con probabilidad *δ*, imponiendo al ejecutor una penalidad *P_e*.
 
-**Proposición 4 (a prueba de colusión).** El fraude de aprobación es insostenible
-si
+**Proposición 4 (a prueba de colusión).** El fraude de aprobación es insostenible si
 
 > *k* · *q* · *W* ≥ *G* − (*δ* / (1 − *δ*)) · *P_e*,
 
-y en particular siempre que *kqW* ≥ *G*. Tres corolarios son importantes para el diseño:
+y, en particular, siempre que *kqW* ≥ *G*. Tres corolarios son importantes:
 
-- ***La corroboración sustituye al capital reputacional.*** El capital en
-  juego requerido por fiscalizador cae linealmente en *k*, de modo que la
-  revisión redundante es exactamente lo que hace viables los conjuntos de
-  fiscalizadores de trayectoria reputacional limitada, a costo de control lineal —que es
-  para lo que sirven las políticas de umbrales proporcionales.
+- ***La corroboración sustituye al capital reputacional.*** El capital en juego requerido por fiscalizador disminuye linealmente con *k*: la revisión redundante permite conjuntos de fiscalizadores de trayectoria reputacional limitada a un costo de control lineal, lo que motiva políticas de umbrales proporcionales.
 
-- ***Las relaciones repetidas son la superficie de ataque.*** El término de
-  fricción existe solo mientras se impida la contratación relacional, razón
-  por la cual la visibilidad de los emparejamientos repetidos es decisiva
-  (mantenemos la probabilidad de reporte *δ* exógena a *k*; endogenizarla —más
-  revisores abordados, más chances de un reporte— solo fortalece la
-  condición).
+- ***Las relaciones repetidas son la superficie de ataque.*** El término de fricción exige impedir la contratación relacional, lo que vuelve decisiva la visibilidad de los emparejamientos repetidos. Mantenemos *δ* exógena a *k*; endogenizarla —más revisores abordados y, por tanto, más oportunidades de reporte— solo fortalece la condición.
 
-- ***Los mercados poco profundos atacan ambos modelos a la vez.*** Un fiscalizador
-  monopolista que no puede excluirse de manera creíble pierde su capital
-  confiscable (*W* → 0) al tiempo que degrada *p* en la Proposición 1: las dos
-  condiciones identifican los mismos entornos como frágiles, por la misma
-  razón.
+- ***Los mercados poco profundos atacan ambos modelos.*** Un fiscalizador monopolista que no puede ser excluido de manera creíble pierde su capital en juego confiscable (*W* → 0) y degrada *p* en la Proposición 1; ambas condiciones identifican los mismos entornos frágiles por la misma razón.
 
 ### 5.3 Asignación bajo restricción de atención
 
-Los ciudadanos asignan pequeños presupuestos individuales; el retorno pivotal de
-evaluar proyectos es insignificante, de modo que la ignorancia racional es el
-equilibrio (Downs 1957), y la pregunta de diseño es hacia dónde fluye el peso de
-la mayoría *desatenta*: hacia la saliencia amplificada por la prueba social
-(Bikhchandani, Hirshleifer y Welch 1992; Noelle-Neumann 1974; Salganik, Dodds y Watts 2006), o
-hacia la capa de reglas por defecto de la propia arquitectura, cuyo
-enrutamiento sigue la priorización distribuida de proyectos —los perfiles de asignación agregados—, no un plan central. El modelo arroja tres predicciones verificables —los topes doman
-las cascadas (predicción 1), los valores por defecto anclan la calidad (predicción 2), el decaimiento
-solo produce un deterioro gradual cuando existen valores por defecto (predicción 3)— evaluadas a continuación.
+Los ciudadanos asignan pequeños presupuestos individuales, y los retornos pivotales insignificantes de evaluar proyectos hacen que la ignorancia racional sea el equilibrio (Downs 1957). La cuestión de diseño es si el peso de la mayoría desatenta sigue la saliencia amplificada por la prueba social (Bikhchandani, Hirshleifer y Welch 1992; Noelle-Neumann 1974; Salganik, Dodds y Watts 2006) o la capa de reglas por defecto de la arquitectura. En modo abierto —el valor por defecto arquitectónico— la planificación es distribuida por construcción. La planificación centralizada existe únicamente en el modo de transición tutelado/cerrado; incluso allí, la priorización de proyectos sigue siendo distribuida mediante perfiles de asignación agregados, en lugar de un plan central. El modelo arroja tres predicciones verificables —los topes doman las cascadas (predicción 1), los valores por defecto anclan la calidad (predicción 2) y el decaimiento solo produce un deterioro gradual cuando existen valores por defecto (predicción 3)— que se evalúan a continuación.
 
 ## 6. Evidencia computacional
 
-Ponemos a prueba las tres predicciones de §5.3 —y, en experimentos sucesivos,
-los supuestos de las Proposiciones 1–4— en una simulación basada en agentes.
-Cada experimento (E1–E10) corresponde a un hallazgo:
+Diez experimentos basados en agentes ponen a prueba las predicciones de §5.3 y, sucesivamente, las Proposiciones 1–4: topes de financiamiento (E1), calidad de asignación (E2), decaimiento de la participación (E3), construcción central frente a distribuida (E4), selección y entrega (E5), competencia reputacional (E6), una línea base parametrizada por auditorías (E7), participación endógena (E8), el conjunto de capas planificación–selección–entrega (E9) y costo administrativo (E10). La línea base simula 10.000 ciudadanos durante 24 ciclos mensuales sobre 40 proyectos bajo una escasez de 3×. La calidad θ y la saliencia se correlacionan débilmente (≈0.24); las ponderaciones de necesidad *w* = λθ + (1 − λ)*u*, para λ ∈ {0.4, 0.8}, se correlacionan ≈0.55 o ≈0.97 con la calidad. Los evaluadores muestrean la calidad, los seguidores de saliencia ven una superficie de seis ranuras amplificada por el progreso y los valores por defecto financian en orden de prioridad. Las condiciones utilizan veinte corridas deterministas, con semilla y sin dependencias; las tablas están en [resultados de la simulación](../research/simulation-results.md).
 
-| Exp | Qué pone a prueba | |
-|---|---|---|
-| E1 | ¿los topes de financiamiento suben la calidad? | Hallazgo 1 |
-| E2 | ¿qué sostiene la calidad de la asignación? | Hallazgo 2 |
-| E3 | ¿qué amortigua el decaimiento de la participación? | Hallazgo 3 |
-| E4 | agregación distribuida vs. construcción central (refinada por una frontera de fricciones simétricas + captura, E4-v4/v5; y un mapa de robustez de cuatro escenarios de miopía al daño v1.14, §6) | Hallazgo 4 |
-| E5 | valor entregado: selección × entrega, a presupuesto igualado | Hallazgo 5 |
-| E6 | competencia reputacional y estándar de ejecución | Hallazgo 6 |
-| E7 | comparación contra una línea base parametrizada por auditorías | Hallazgo 7 |
-| E8 | robustez bajo participación conductual endógena | Hallazgo 8 |
-| E9 | el conjunto completo de capas: planificación × selección × entrega (atribución de Shapley) | Hallazgo 9 |
-| E10 | la capa de costo administrativo (presupuesto neto, simétrica) | Hallazgo 10 |
+Los artefactos son específicos de cada experimento: E1–E3, scripts/simulation/allocation-sim.mjs; E4, research/e4-institutional-knowledge-design.md, scripts/simulation/e4-v4-symmetric-frontier.mjs, research/e4-v5-capture-design.md y research/e4-analytical-backbone.md; E5, scripts/simulation/e4-v5/e5-delivery.mjs; E6, research/e6-reputational-competition-design.md; E7, research/e7-calibrated-baseline-design.md; E8, research/e8-behavioral-participation-design.md; E9, scripts/simulation/e4-v5/e9-fullstack.mjs; y E10, scripts/simulation/e4-v5/e10-costs.mjs. El Apéndice E4 cubre la prueba de simetría y el mapa de cuatro escenarios, no todos los métodos. La ruta de evidencia v1.14/v1.15 es `npm run e4:evidence` (scripts/simulation/e4-v5/); la prueba prerregistrada se reproduce a partir del registro v1.13 depositado mediante `E4_ALLOW_LEGACY=1 node scripts/simulation/e5-sp-symmetry-gate.mjs`. Su diseño congelado, diagnósticos e interpretación se rigen por el [contrato de afirmación y estimando](../research/claim-and-estimand-contract.md).
 
-Simulamos 10.000 ciudadanos a lo largo de 24 ciclos mensuales asignando sobre un
-conjunto permanente de 40 proyectos con calidad *θ*, saliencia *s* (medida
-corr(*θ*, *s*) ≈ 0.24), ponderaciones de necesidad para la priorización *w* = λ*θ* + (1 − λ)*u*
-(donde *u* es un componente idiosincrático de necesidad independiente de la calidad)
-con peso de mezcla λ ∈ {0.4, 0.8} —medida corr(*θ*, *w*) ≈ 0.55 y ≈ 0.97
-respectivamente— y escasez de 3× (solo una minoría de proyectos puede
-completarse). Los evaluadores (2–10%) financian la mejor calidad que muestrean;
-los seguidores de saliencia ven una superficie de descubrimiento de seis ranuras
-ordenada por saliencia amplificada por el progreso de financiamiento; el
-presupuesto de los seguidores de valores por defecto llena proyectos en orden de
-prioridad de planificación. La regla de cierre por meta de financiamiento es
-que puede activarse o desactivarse. Veinte corridas con semilla por condición; el código es sin
-dependencias y determinista (`scripts/simulation/allocation-sim.mjs`; tablas
-completas en [simulation-results](../research/simulation-results.md)).
+El programa informa por separado la selección, la entrega con presupuesto igualado, la atribución condicional de tres capas y el costo administrativo. Todos son diferencias en puntos de referencia, con paridad en cero; ninguno es un multiplicador calibrado para toda la institución.
 
-**Estado cuantitativo: resultados separados por canal, ningún multiplicador calibrado.** El
-único cociente anterior de valor por unidad de presupuesto conflacionaba calidad de
-selección, fuga de entrega y costo administrativo, y se **retira como efecto calibrado**.
-El programa reconstruido reporta los canales por separado: selección (E4), entrega con
-presupuesto igualado (E5), una atribución condicional de tres capas (E9, dejando sin
-cuantificar la magnitud independiente de la planificación) y costo administrativo (E10).
-Todos son diferencias de puntos de referencia con paridad en cero; no se conserva ningún
-multiplicador de desempeño institucional.
+**Resultado principal: el contraste asimétrico justo, anclado en la literatura.** En PROBABLE, el selector central se modela en direcciones respaldadas por la literatura, no en magnitudes ajustadas: reconocimiento débil del daño difuso en la cola larga de baja visibilidad; creencias previas proyectadas y sobrevaloración de beneficios visibles y tasables; y presión por crédito reclamable en un espacio de proyectos de cola pesada (Hayek 1945; Olson 1965; Scott 1998; Mayhew 1974; Arnold 1990; Flyvbjerg et al. 2003; Bandiera, Prat y Valletti 2009; Broockman y Skovron 2018; Skuhrovec et al. 2013). La estimación de 83% de desperdicio pasivo de Bandiera, Prat y Valletti motiva pérdida pasiva en lugar de robo; ni calibra ni fija el modelo. La selección distribuida enrutada por cobertura recupera alrededor del 98% de la referencia voraz de información completa del modelo, frente al alrededor del 44% del central: ≈2.2× y un contraste condicional de ≈54 puntos. Con presupuesto igualado, la arquitectura completa de selección y entrega supera al statu quo en ≈58.6 puntos de referencia (intervalo Monte Carlo condicional al 95% [+58.0, +59.2]).
 
-**La decisión prerregistrada rectora.** La **única computación confirmatoria** del artículo
-fue una prueba de estrés limitada a la selección y con simetría restringida —no una prueba
-de la arquitectura completa—. Igualó el conjunto de candidatos, los costos, el presupuesto,
-el modelo de ruido de los reportes, la elegibilidad según la estimación propia, los
-presupuestos esperados de reportes de tasación y la entrega en paridad. El brazo
-distribuido conservó la cobertura endógena y su sesgo adverso de voz β; la tasación central
-se distribuyó uniformemente y su ordenamiento conservó una presión de crédito acotada
-λ ∈ {0.1, 0.2, 0.3} (el control separado con λ = 0 es todavía menor, mediana ≈ 0.016 —el
-contraste sigue a la presión de crédito del central, coherente con crédito-versus-cobertura).
-El central implementado fue un **lector de valor competente y consciente del daño** cuya
-señal de valor muestreado era insesgada pero ruidosa: el parámetro de miopía al daño está
-definido entre los parámetros del mundo, pero **el estimador central no lo utiliza**. La
-prueba apaga así la ceguera al daño modelada del central y deja la construcción de agenda
-fuera de su estimando con conjunto de candidatos fijo.
+Estas son salidas direccionales y condicionales de un modelo estilizado de instituciones comparadas, no efectos de campo calibrados. La referencia es un normalizador heurístico, no una institución factible ni un óptimo de bienestar, y el intervalo cubre solamente la variación interna de la simulación, no la incertidumbre del mundo, de la forma del modelo ni de la calibración. El resultado se sostiene en toda la región anclada declarada y bajo un enrutamiento universal realista del presupuesto (≈5% de reportes activos, 35% de microdelegación, 60% de reglas de perfil); el enrutamiento es arquitectónico, mientras que la información independiente no lo es. Incluso dotar al central de visión del daño, imparcialidad, precisión y ausencia de crédito deja a la cobertura por delante en ≈14%; el central solo la supera después del movimiento adicional, que abandona las premisas, hacia un mundo casi sin daño. La idealización espejo del brazo distribuido da ≈+118%. La sensibilidad material es el error correlacionado/de modo común procedente de una plataforma o un recomendador compartido, o de delegación concentrada: la correlación fuerte reduce la ventaja de ≈54 a ≈26 puntos sin revertirla en el rango declarado. La cobertura sin diversidad de fuentes puede recrear el cuello de botella epistémico; por ello, Core v0 hace observable la concentración de delegados, proveedores de perfiles y recomendadores, y la somete a umbrales de diversificación (§8).
 
-El contraste distribuido fue **positivo en las 18 celdas primarias**. Tres de los cuatro
-criterios conjuntivos se cumplieron, incluido el criterio del límite inferior del bootstrap;
-solo falló C2, porque la mediana agrupada Δ = 0.025 no superó el **umbral registrado de
-reconstrucción de 0.05**. Bajo la regla congelada, el veredicto formal fue **negativo (no
-continuar)**, con la consecuencia registrada de retirar el multiplicador cuantitativo y
-tratar la simulación como una frontera condicional ilustrativa. **La falta de superación
-del umbral activó la decisión registrada; la construcción determina su alcance.** El 0.025
-es pequeño para el estimando de selección ensayado, pero no es una estimación ni una cota
-inferior del efecto de Core v0 como arquitectura completa o en el dominio objetivo, y no
-establece que sea pequeño fuera de esta prueba. El umbral de 0.05 es una regla de decisión
-del programa de investigación, **no** un umbral calibrado de materialidad de política
-pública. La asimetría hipotetizada de detección del daño está motivada por la literatura;
-este estudio no calibra su prevalencia ni su magnitud. El mapa posterior de cuatro
-escenarios utiliza un proceso generador distinto, es **exploratorio** y no modifica ni
-revierte este resultado registrado. La prueba es estilizada: sus variables de valor y crédito son puntajes abstractos, no
-visibilidad, trazabilidad, permanencia o valor público medidos. Su prerregistro congelado,
-la regla de decisión, resultados y diagnósticos están en el Apéndice E4, el
-[contrato de afirmación y estimando](../research/claim-and-estimand-contract.md) y
-`scripts/simulation/e5-sp-symmetry-gate.mjs`. Las contribuciones fundamentales son la
-arquitectura y el mecanismo cualitativo de crédito versus cobertura.
+**Comprobación de robustez limitada de la prueba de simetría.** Esta prueba prerregistrada, de conjunto fijo y limitada a la selección, iguala los candidatos, los costos, el presupuesto, el ruido de los reportes, la elegibilidad por estimación propia, los presupuestos esperados de reportes de tasación y la entrega. Idealiza deliberadamente al central como un lector de valor imparcial, competente, incorrupto y consciente del daño, mientras que el brazo distribuido conserva la cobertura endógena y el sesgo adverso de voz β; así, el central ve el daño mejor que su comparador. La tasación central se distribuye uniformemente y conserva una presión de crédito acotada λ ∈ {0.1, 0.2, 0.3}; el control negativo λ = 0 respalda la interpretación de crédito frente a cobertura. La selección distribuida es positiva en las 18 celdas primarias y cumple tres de los cuatro criterios conjuntivos, incluido el límite inferior del bootstrap, pero el contraste agrupado queda por debajo del umbral de reconstrucción prerregistrado, dando como resultado el NO-GO conforme a la regla congelada (la mediana agrupada exacta, el umbral de reconstrucción y el método completo figuran en el Apéndice E4). Ese umbral es una regla del programa de investigación, no un umbral de materialidad de política pública.
 
-**El escenario de referencia declarado (E4 v1.14): un mapa de robustez exploratorio.** Cuando el selector
-central se modela como lo describe la evidencia —su *dirección* en cada eje anclada en la
-literatura (no su magnitud ajustada): casi ciego al *daño difuso en la cola larga de baja
-visibilidad* (Hayek 1945; Scott 1998; Olson 1965; Bandiera, Prat y Valletti 2009, cuyo
-**83% de desperdicio pasivo** en compras de bienes estandarizados muestra que la mayor
-parte de la pérdida pública no es elegida), proyectando sus propias creencias previas y
-sobreestimando beneficios visibles y tasables (Broockman y Skovron 2018; Flyvbjerg et al.
-2003), y sesgado hacia el crédito reclamable (Mayhew 1974; Arnold 1990), en un espacio de
-proyectos de cola pesada y baja visibilidad (Skuhrovec et al. 2013)— **la selección
-distribuida basada en cobertura recupera cerca del 98% de la referencia voraz de
-información completa del modelo frente al ~44% del central: un contraste de modelo
-condicional de 54 puntos**, no una calibración empírica ni un efecto de campo (la
-referencia es una normalización voraz, no una institución factible ni un óptimo de
-bienestar). El resultado no depende de un ajuste preciso de los parámetros: es robusto en todo el espacio declarado;
-sobrevive a la degradación realista de señal del *enrutamiento* presupuestario universal de Core
-v0 (una composición ~5% reportes activos / ~35% microdelegación / ~60% reglas de perfil
-— el *enrutamiento* universal es arquitectónico, la *información* independiente efectiva no lo
-es); y se mantiene incluso otorgándole al central el paquete competente completo y
-consciente del daño que la literatura le negaría —visión del daño, ausencia de sesgo,
-precisión y sin crédito (~+14%). El central apenas supera a la cobertura, y solo **abandonando aún
-más los supuestos declarados** —moviéndose también a un mundo casi sin daño donde el daño
-difuso que la literatura documenta apenas existe; la idealización *espejo* del brazo distribuido (su propia
-receta reflejada: señal perfecta, mundo con daño, central en su miopía declarada) gana
-por goleada (~+118%). La única sensibilidad que reduce materialmente la brecha —sin
-voltear su signo en el rango declarado— es el error correlacionado o de modo común en el brazo
-de cobertura (una plataforma/recomendador compartido o delegación concentrada), que lleva
-~+54% a ~+26% con correlación fuerte. Esta es la única condición *arquitectónica* del
-mecanismo, no un mero parámetro barrido: **la cobertura sin diversidad de fuentes puede
-reproducir el cuello de botella epistémico que pretende reemplazar.** Core v0 trata por
-tanto la concentración de delegados, proveedores de perfil y recomendadores como
-cantidades observables con umbrales de diversificación (§8), en vez de suponer
-independencia por decreto. El mapa completo de cuatro escenarios, el anclaje literario, los
-rincones idealizados espejo y la frontera de modo común están en el **Apéndice E4**. Este
-mapa exploratorio no modifica el resultado registrado de la prueba; el modelo localiza una
-frontera, no estima un efecto de campo.
+La prueba es pequeña solo para su estimando de selección: ni estima ni establece una cota inferior del valor de Core v0 en el dominio objetivo o a escala de toda la arquitectura. Como otorga al central una percepción del daño y una integridad superiores, excluye la construcción de agenda y mantiene la entrega igual, su idealización favorable al central no puede acotar la arquitectura. Sus puntajes de valor y crédito son abstractos, no visibilidad, trazabilidad, permanencia ni valor público medidos; la asimetría del daño está motivada por la literatura, pero no calibrada. El mapa PROBABLE utiliza un proceso generador de datos distinto y no revisa la prueba.
 
-**Hallazgo 1: los topes de financiamiento son un dispositivo anticoncentración,
-no un dispositivo de calidad.** Con el cierre ACTIVADO, la concentración cae
-(Gini de financiamiento 0.732 vs 0.759), el 5% de proyectos más saliente absorbe
-menos (16.8% vs 19.6% de todo el financiamiento), y se completan un 15% más de
-proyectos (25.3% vs 21.9%). Pero la selección de calidad no cambia
-(*sel(θ)*, la correlación de Pearson entre proyectos entre la calidad latente θ y el
-indicador binario de que un proyecto alcanza su meta de financiamiento, ≈ 0.39 vs
-0.41): el excedente que deja de asignarse pasa hacia el siguiente
-proyecto más *visible*, no hacia el siguiente *mejor*. La afirmación de la
-arquitectura respecto de la regla de cierre debería estar —y en el corpus ahora
-está— acotada en consecuencia.
+**Hallazgo 1: los topes reducen la concentración, no mejoran la selección.** El cierre por meta de financiamiento reduce el Gini de financiamiento (0.732 frente a 0.759), la participación del 5% de mayor saliencia (16.8% frente a 19.6%) e incrementa la finalización en 15% (25.3% frente a 21.9%), pero deja *sel*(θ), la correlación a nivel de proyecto entre calidad y finalización, aproximadamente sin cambios (0.39 frente a 0.41). El excedente se mueve al siguiente proyecto visible, no al siguiente mejor: el cierre es solo un dispositivo anticoncentración.
 
-**Hallazgo 2: el ancla por defecto, no la atención ciudadana, sostiene la
-calidad de la asignación.** Una mezcla anclada en valores por defecto, con un
-planificador casi perfectamente informado (r ≈ 0.97), alcanza sel(θ) ≈ 0.71 —
-muy por encima de las configuraciones impulsadas por saliencia (≈ 0.35–0.43). En
-cambio, subir la atención ciudadana de 2% a 10% casi no mueve la
-aguja —a lo sumo ≈ 0.08 en los regímenes de saliencia, y prácticamente nada en
-los anclados en valores por defecto—, mientras que degradar la calidad
-informativa del vector de casi perfecta a moderada (r ≈ 0.97 → 0.55) cuesta ≈
-0.29 de selección. Manda el ancla, no la atención.
+**Hallazgo 2: la calidad de la priorización, no la atención, sostiene la calidad de la asignación.** Una mezcla anclada en valores por defecto con un vector casi perfectamente informado (*r* ≈0.97) alcanza *sel*(θ) ≈0.71, frente a ≈0.35–0.43 bajo saliencia. Elevar la atención de 2% a 10% cambia los regímenes de saliencia como máximo ≈0.08 y los valores por defecto de forma despreciable; degradar la calidad del vector de *r* ≈0.97 a 0.55 cuesta ≈0.29. Esto es parcialmente mecánico: un valor por defecto determinista y correlacionado con θ controla la mayor parte del presupuesto, de modo que E2 mide el condicionamiento sobre la calidad del vector, no la sabiduría de las multitudes. Su ordenamiento sobrevive a los barridos del tamaño de muestra de evaluadores y de prueba social, salvo cuando una amplificación muy fuerte propaga la calidad de los evaluadores y los regímenes convergen dentro del ruido; las magnitudes siguen siendo dependientes de los parámetros y no calibradas.
 
-Dos salvedades mantienen honesto el hallazgo:
+El objeto pertinente es la priorización de proyectos que siguen los usuarios pasivos —perfiles de asignación agregados, no el ámbito macro de elegibilidad y planificación, que encuadra la elegibilidad pero no lleva ponderaciones—, quienquiera que la suministre. La aleatorización escapa de la captura solo acercándose a una calidad aleatoria. En el aparato complementario (Offermann 2026b), la construcción distribuida es robusta a la calidad de categorización y la construcción central es frágil, por lo que la brecha condicional se amplía a medida que empeora la categorización central; no es una magnitud calibrada. El valor por defecto es visible, versionado y sustituible: la ciudadanía puede asignar, delegar, elegir un perfil publicado, usar una regla personal o reconocer un perfil base. En el modo Abierto —el valor por defecto arquitectónico—, la planificación es distribuida por construcción; la planificación centralizada o vinculada a mandatos pertenece solo a los modos de transición tutelados/cerrados. E1–E3 no identifican conocimiento central ni distribuido: *r* caracteriza el vector, y la multitud modelada tiene prueba social pero no conocimiento.
 
-- **Por construcción.** La regla por defecto es un asignador determinista ya
-  correlacionado con θ que retiene la mayor parte del presupuesto; lo que se
-  mide es el *condicionamiento* —cuánto determina la calidad informativa del
-  vector el valor del ancla, y cuán poco lo sustituye la atención—, no la
-  sabiduría de la multitud.
+**Hallazgo 3: el tamaño del ancla, no el destino de la participación que se va, amortigua el decaimiento.** La predicción de que una caída de 10%→2% de la evaluación activa sería gradual solo cuando el peso liberado fluyera a los valores por defecto falló. Los efectos del destino son nulos en ambas fortalezas de ancla (medias emparejadas 0.001 [−0.031, 0.033] y 0.021 [−0.028, 0.071]); el único intervalo que excluye cero es pequeño y de signo opuesto, probablemente porque la saliencia amplifica la siembra de los evaluadores. Una mayor cuota por defecto amortigua el decaimiento documentado de la participación en tecnología cívica (Hirschman 1970; Peixoto y Fox 2016), pero la alineación de los ciclos tardíos se deteriora en todas partes: amortiguar no es gratis.
 
-- **Robustez.** Un panel de sensibilidad (variando el tamaño de muestra del
-  evaluador y la fuerza de la prueba social) muestra que el ordenamiento de
-  regímenes es robusto, salvo bajo prueba social muy fuerte, donde los
-  regímenes convergen dentro del ruido porque la amplificación fuerte también
-  propaga la señal de calidad de los evaluadores. Las magnitudes dependen de
-  los parámetros y no están calibradas; lo que sobrevive a todas las
-  variaciones es el ordenamiento y el predominio de la calidad informativa de
-  la priorización.
+**Hallazgo 4: la información dispersa ayuda solo mediante agregación, diversidad e integridad.** En el primer E4 prerregistrado, un planificador hizo treinta inspecciones profundas mientras que el 30% de la ciudadanía poseía, cada persona, cuatro señales locales ruidosas; cinco regímenes compartían mundos y señales y diferían solo en la agregación. A medida que los proyectos aumentaron de 40 a 200 y a 1.000, la calidad de la señal del planificador cayó de 0.81→0.37→0.17; el promedio abierto superó a la construcción central incluso con 40 proyectos (*sel*(θ) 0.76 frente a 0.62) y llegó a 0.73 frente a 0.04 con 1.000. El cruce de escala predicho falló. Pero esa primera comparación favoreció al brazo distribuido al imponer un ancho de banda central fijo y señales ciudadanas insesgadas. Estas cifras son, por tanto, ilustraciones provisionales de mecanismos, no evidencia institucional definitiva; la reexaminación justa que sigue aporta la frontera pertinente.
 
-Este hallazgo cuantifica el apalancamiento concentrado en aquello que
-construye la priorización de proyectos que sigue el tramo pasivo. Esa
-priorización tiene dos capas —que un estudio complementario (Offermann 2026b)
-separó por primera vez—: la categorización macro (el Ámbito de Planificación
-de este corpus, que enmarca la elegibilidad y no porta pesos de presupuesto) y
-los perfiles de asignación agregados que canalizan el presupuesto dentro de ella.
-El arreglo distribuido es robusto a la calidad de esa categorización y el
-central es frágil a ella, así que la ventaja sobre un statu quo central no es
-fija: crece a medida que empeora la planificación central —una dirección interna
-al modelo que el aparato complementario ilustra (un contraste condicional que se
-amplía sustancialmente a medida que se degrada la categorización central, no un
-multiplicador calibrado; véase la nota de estado cuantitativo en esta sección).
+El conocimiento no coordinado financia solo 0.6–15% de los proyectos y selecciona mal: el resultado favorece la agregación, no las multitudes sin mecanismos. El promedio elimina ruido independiente, no sesgo común; solo se probó la contaminación endógena por prueba social y fue en gran medida benigna porque el progreso se correlaciona con la calidad. La presentación de reportes no es estratégica por supuesto, por lo que la manipulación, el clientelismo y la elicitación de ámbito abierto siguen siendo problemas de diseño sujetos a condiciones. La descripción honesta es intermediación inspeccionable con un valor por defecto corregible por la ciudadanía, no «sabiduría de las multitudes»; E1–E3 tampoco autorizan la afirmación opuesta, porque nunca modelan conocimiento distribuido.
 
-Dos hechos arquitectónicos acotan el enunciado y evitan una
-sobreinterpretación tentadora. Primero, la capa por defecto es sustituible, no
-obligatoriamente central: el autopiloto cívico ofrece a cada ciudadano
-asignación manual, delegación, perfiles publicados, una regla automática
-personal, o el valor por defecto del sistema; un ciudadano en incorporación
-debe seleccionar o reconocer explícitamente un perfil base, y solo la porción
-que nunca se involucra sigue necesariamente el valor por defecto del sistema
-—que a su vez opera bajo un mandato de asignación registrado. Segundo, la
-construcción centralizada de los pesos de ámbito es propiedad de los modos de
-transición cerrado y tutelado, no de la arquitectura: los modos de operación
-son estados configurados por país, y la trayectoria diseñada apunta hacia la
-construcción abierta (el Hallazgo 4 mide su viabilidad dentro del modelo).
+La reexaminación de fricciones simétricas modela el valor verdadero de Samuelson como *T* = *S*⁺ − *S*⁻ y los ordenamientos como *S*⁺ − θ*S*⁻, con θ_C = η para el reconocimiento central del daño y θ_D = 1 − β para la desigualdad de voz distribuida. En la esperanza sin ruido de conjuntos grandes, la selección distribuida domina si y solo si **β < 1 − η**, alcanza paridad en η + β = 1 y pierde cuando β > 1 − η. Por tanto, su ventaja proviene de incluir a las personas perjudicadas, no solo de la agregación. η se barre en vez de asumirse; la evidencia sobre daño difuso identifica contextos, no una ceguera central universal, y la pérdida pasiva en la contratación pública es consistente con un η bajo pero no nulo. La competencia política puede disciplinar a un centro fuera del cuadrante de política clientelar (Wittman 1989). En (η = 1, β = 0), la simulación favorece ligeramente al central, por lo que allí no está respaldada una supuesta ventaja distribuida de varianza.
 
-Los números establecen, por tanto, un condicional. La restricción vinculante
-sobre la calidad de la asignación es la calidad informativa de la
-**priorización que sigue la porción pasiva** —los perfiles de asignación
-agregados, no un vector de planificación macro—, sea quien sea que la provea.
-Un proveedor capturado o ignorante es el modo de falla; uno bien informado o
-bien agregado, el activo. Aleatorizar esa priorización para escapar de la
-captura no ayuda: logra neutralidad al precio de una calidad casi aleatoria
-para la porción pasiva. Y como la trayectoria diseñada distribuye su
-construcción (modo abierto) y la mantiene visible, versionada y sustituible,
-la restricción se satisface por distribución, no por una agenda central. Esto
-es distinto del punto más estrecho de fijación de agenda de la Sección 8, que
-concierne solo a quién enmarca la elegibilidad.
+El modelado simétrico de la captura organizada, con penalizaciones iguales mantenidas fijas de manera conservadora, permite que la captura ocurra cuando la renta privada excede el costo de adquisición más la sanción esperada. El wallet igual de cada ciudadano impone un piso de adquisición: el dinero puede persuadir a los titulares, pero no puede comprar wallets. Bajo una detección estipulada de ≈0.10 para el central y ≈1.0 para el distribuido, la selección central se vuelve netamente perjudicial con rentas cercanas al 10% del costo del proyecto y el umbral distribuido es más alto. La detección de bola de nieve, *P* = 1 − (1 − *q*)^*m*, implica un piso aproximado *mq* ≥ −ln(1 − *p_c*) ≈0.1, con la condición exacta *m* ≥ ln(1 − *p_c*)/ln(1 − *q*). Estas son afirmaciones internas al modelo y dependientes de la sensibilidad, no cargas empíricas de prueba: la ventaja se estrecha y puede revertirse a medida que la detección distribuida se aproxima a ≈0.3. La integridad protege la ventaja de agregación en vez de añadir un multiplicador independiente.
 
-E1–E3 no autorizan dos lecturas: el origen de la priorización queda sin
-especificar (r es una propiedad del vector, no de una oficina estatal), y la
-multitud modelada porta prueba social pero ningún conocimiento —de modo que
-estos experimentos comparan atención frente a calidad de los pesos, no
-conocimiento central frente a distribuido. El Hallazgo 4 hace esa comparación
-de manera adecuada.
+Las formas cerradas de paridad, captura y detección se verifican contra la simulación en el artefacto de fundamento analítico. Son invariancias analíticas únicamente en la esperanza sin ruido de conjuntos grandes: son invariantes a la escala y dependen del sesgo de voz β, no del nivel de participación; no son afirmaciones sobre cada corrida de muestra finita. La concurrencia finita cambia la varianza de muestreo, los ordenamientos y las carteras; las colas y la forma de las valoraciones pueden importar aunque las extracciones gaussianas sean convenientes, porque los primeros momentos gobiernan los ordenamientos esperados. Conjuntos diminutos de personas interesadas restauran una ventaja central de censo completo. La comparación es estática aunque las elecciones, las auditorías y el aprendizaje son dinámicos; un centro persistentemente ciego es un caso de estrés, no una inevitabilidad. Los resultados distribuidos se puntúan contra el valor verdadero revelado, pero β y la captura hacen que la señal sea sesgada y discutible, en lugar de correcta por definición.
 
-**Hallazgo 3: lo que amortigua el decaimiento de la participación es el nivel del
-ancla, no hacia dónde fluye el peso de quienes se van —nuestra propia predicción
-falló aquí.** Predijimos que la evaluación activa en decaimiento (10% a 2% a lo
-largo de 24 ciclos) degradaría la asignación de manera gradual solo si la cuota
-liberada fluía hacia los valores por defecto antes que hacia la saliencia.
-Explotando semillas comunes a través de condiciones, el análisis emparejado
-rechaza esto: el efecto del destino sobre la selección general es nulo en ambas
-fuerzas de ancla (diferencias emparejadas medias 0.001 [−0.031, 0.033] y 0.021
-[−0.028, 0.071]), y el único intervalo que excluye el cero es pequeño y de signo
-opuesto (con un ancla fuerte, el destino de saliencia preserva la alineación de
-ciclo tardío ligeramente mejor —plausiblemente porque la prueba social
-amplificada también propaga la siembra de los evaluadores). Lo que gobierna la
-robustez frente al decaimiento es la cuota estructural de la propia capa por
-defecto, la variable del Hallazgo 2. El decaimiento del involucramiento —el
-destino documentado de la participación en tecnología cívica (Hirschman 1970;
-Peixoto y Fox
-2016)— es un riesgo amortiguado aquí, pero el amortiguador es el tamaño de la
-capa institucional, y la alineación de calidad dentro del ciclo aún se erosiona
-en los ciclos más tardíos bajo todas las condiciones, de modo que el decaimiento
-se compra, no es gratis.
+Vickrey–Clarke–Groves es inviable para esta clase de asignación de presupuestos públicos porque no mantiene el equilibrio presupuestario (Vickrey 1961; Green y Laffont 1979). Por tanto, ambos brazos son instituciones de segundo óptimo (Lipsey y Lancaster 1956), y Core v0 no afirma ni optimalidad ni inmunidad a la manipulación estratégica (*strategy-proofness*), que no está disponible para ninguna regla de elección social no dictatorial, determinista y sobreyectiva sobre al menos tres alternativas con preferencias irrestrictas (Gibbard 1973; Satterthwaite 1975), sino solo resistencia a la captura bajo coordinación organizada acotada. Su wallet igual es un dispositivo de votación que permite expresar intensidad (Casella 2012; Lalley y Weyl 2018); la agregación de Condorcet falla bajo error correlacionado (Austen-Smith y Banks 1996), justo por lo cual importan las protecciones de integridad. Sen (1999) fundamenta qué se valora y Samuelson (1954) su sumación, sin perjuicio de la objeción de Sen a esa agregación.
 
-**Hallazgo 4: las señales dispersas agregadas superan a la construcción central
-de ancho de banda fijo del vector de pesos —pero una reexaminación justa y
-simétrica resuelve la ventaja en una frontera condicional y añade una
-resistencia a la captura que la protege.** Un cuarto experimento prerregistrado
-(diseño y predicciones comprometidos antes de cualquier corrida;
-`research/e4-institutional-knowledge-design.md`) modela el conocimiento de manera
-simétrica en lugar de dotarlo: un planificador con ancho de banda fijo (treinta
-inspecciones profundas; su correlación con la calidad latente es ahora una salida
-medida, que se desploma de 0.81 → 0.37 → 0.17 a medida que el conjunto de
-proyectos crece de 40 → 200 → 1000) frente a un treinta por ciento de la
-ciudadanía que posee cuatro señales locales individualmente pobres cada uno
-(ruido 0.35). Cinco regímenes comparten el mismo mundo y las mismas señales y
-difieren únicamente en la institución de agregación. La predicción prerregistrada
-de cruce por escala falló en la dirección informativa: la construcción abierta
-del vector de pesos —un promedio simple de las señales ciudadanas por proyecto—
-supera a la construcción central pura en *cada* escala, incluida la más pequeña,
-donde el planificador inspecciona tres cuartas partes del mundo (sel(θ) 0.76 vs
-0.62 con N = 40; 0.73 vs 0.04 con N = 1000). Doce mil señales ruidosas promedian
-en un vector casi perfecto; treinta buenas inspecciones no pueden competir, y el
-ancho de banda central fijo decae hacia la aleatoriedad a medida que el mundo
-crece —una lógica de agregación de Condorcet (1785), y la tratamos como tal: las
-condiciones de falla conocidas del teorema del jurado (Austen-Smith y Banks
-1996) definen exactamente la frontera que el séptimo experimento pone a prueba.
-Tres salvedades permiten interpretar el hallazgo con rigor. Primero, el mismo
-conocimiento disperso *sin* una institución de agregación se desperdicia: el
-régimen no coordinado financia el 0.6–15% de los proyectos y selecciona mal —el
-resultado reivindica los mecanismos de agregación, no la ausencia de mecanismo, y
-la capa de valor por defecto más cierre de Core v0 es exactamente uno de esos
-mecanismos. Segundo, la agregación vence al ruido, no al sesgo: las señales son no
-sesgadas por construcción, y un sesgo de modo común no correlacionado con la
-calidad (desinformación, asignación expresiva) no se promediaría a cero —solo se
-probó la contaminación endógena por prueba social, que resultó en gran medida
-benigna porque el avance visible del financiamiento está él mismo correlacionado
-con la calidad en un sistema bien anclado. Tercero, la elicitación es no
-estratégica por supuesto; en el despliegue, el reporte de señales se convierte en
-una superficie de manipulación y clientelismo, y la mecánica de la construcción
-abierta de ámbitos sigue siendo un problema de diseño supeditado a condiciones.
-Dentro de esos límites, el hallazgo apunta en una dirección clara: la variable vinculante no es quién sostiene la pluma sino cuánta
-información dispersa ingiere la institución de construcción de ámbitos.
+Todas las magnitudes de E4 son internas al modelo. El rango modelado de eficiencia del central respecto de la referencia es solo un objetivo candidato de validación que exige un mapeo explícito de constructos; los cocientes ex post entre lo realizado y lo tasado miden un constructo distinto, y β necesita un anclaje demográfico. La evidencia de presupuestos participativos de Brasil desplaza el gasto hacia saneamiento y salud y reduce la mortalidad infantil con presupuesto per cápita constante (Gonçalves 2014), lo que respalda la dirección, no la magnitud.
 
-La simulación también disciplina la retórica —en ambas direcciones. Nada en
-E1–E3 apoya describir la asignación de Core v0 como "la sabiduría de las
-multitudes": la descripción honesta es *intermediación inspeccionable con un
-valor por defecto corregible por la ciudadanía*, la cual los resultados muestran
-que es a la vez realista y mejor que la alternativa impulsada por saliencia hacia
-la que convergen las plataformas no estructuradas. Y nada en E1–E3 autoriza la
-lectura opuesta —que el conocimiento de la planificación central vence al
-conocimiento distribuido— porque nunca modelaron el conocimiento distribuido;
-cuando E4 lo hace, la agregación gana allí donde se cumplen sus precondiciones
-nombradas. Ambos discursos pierden su eslogan; el diseño conserva sus números.
+**Hallazgo 5: la selección y la entrega se componen multiplicativamente.** E5 cruza selección central/distribuida con entrega opaca/verificada sobre carteras emparejadas. Los ejecutores oportunistas desvían recursos cuando la tentación excede la disuasión procedente de la detección, la exposición del adelanto, la recuperación, las garantías y la reputación. La pérdida opaca se ajusta por momentos al ≈24% de gasto faltante de Olken (2007) —no al bienestar—; la estimación del IMF de una ineficiencia de inversión pública de ≈30% es más amplia, y la captura de ≈87% en Uganda es una cola. La entrega verificada combina adelantos condicionados por hitos, garantías, retención, recuperación y reputación. Cada celda usa la misma referencia de información completa, no un multiplicador compuesto. La entrega es ≈95% verificada frente a ≈78% opaca. Añade ≈8 puntos de referencia bajo selección central y ≈17 bajo selección distribuida; la selección añade ≈42 puntos de referencia bajo entrega opaca y ≈51 bajo verificada. La interacción positiva es la manifestación de nivel de la identidad contable valor entregado = valor seleccionado × fracción entregada, no un descubrimiento independiente.
 
-*Una reexaminación justa y simétrica (E4-v4/v5).* Este primer E4 le dio al
-central un ancho de banda de inspección fijo y dejó las señales ciudadanas sin
-sesgo —dos idealizaciones que, como mostró una revisión adversarial, inclinan la
-comparación a favor del brazo distribuido—. Un modelo reconstruido
-(`scripts/simulation/e4-v4-symmetric-frontier.mjs`,
-`research/e4-v4-symmetric-frontier-results.txt`, `research/e4-v5-capture-design.md`)
-le da a *ambas* instituciones una fricción simétrica para percibir el valor
-verdadero, incluido el daño: el central atenúa el daño percibido por un
-coeficiente η (0 = ciego al daño difuso, 1 = un planificador plenamente
-responsable), mientras el distribuido lee valoraciones verdaderas pero los
-perjudicados difusos sub-participan a una tasa β (desigualdad de voz). El
-resultado no es un multiplicador sino una frontera con un lugar de paridad en
-forma cerrada (`research/e4-analytical-backbone.md`): ambas instituciones son
-estimadores sesgados del mismo valor de Samuelson T = S⁺ − S⁻, que ordenan
-proyectos por S⁺ − θ·S⁻ con θ_C = η y θ_D = 1 − β, de modo que el distribuido
-domina exactamente cuando su coeficiente está más cerca del peso verdadero del
-daño, que es uno —es decir, **β < 1 − η**—. La simulación confirma la ley
-(paridad en la anti-diagonal η + β = 1) y cuantifica la degradación del valor
-entregado fuera de ella (desde la paridad en la anti-diagonal hasta una ventaja
-distribuida sustancial a lo largo de la región plausible del espacio de parámetros). La ventaja es así una propiedad de
-*incluir a los perjudicados*, no de la agregación en sí; alcanza la paridad a lo
-largo de la anti-diagonal β = 1 − η y se convierte en una victoria del central por
-debajo de ella (β > 1 − η) —lo que absorbe la objeción del sesgo de participación
-dentro del propio eje β del modelo en vez de dejarla externa.
-Ningún extremo se asume: η se *barre*, no se fija, y un η bajo pero no nulo es un
-régimen defendido, no una premisa. La literatura del daño difuso (los costos no
-vistos de Bastiat 1850; la organización asimétrica de Olson 1965 en temas disputados; el
-cuadrante de política clientelar de Wilson 1973; la legibilidad de Scott 1998) describe
-*cuándo* los costos difusos quedan sin representar —cada una leída en su alcance
-propio, no como un reclamo de ceguera global—, mientras la tesis opuesta de que
-la competencia política disciplina al centro hacia la eficiencia (Wittman 1989)
-es más débil justo en ese cuadrante clientelar. Empíricamente, la mayor parte de
-la pérdida *medida* en compras públicas es pasiva —incompetencia, no robo
-(Bandiera, Prat y Valletti 2009)—, consistente con un η bajo pero no nulo.
+La observación comunitaria puede aumentar la detección, pero no la recuperación institucional, y contribuye solo una fracción de punto bajo control débil; la evidencia sobre monitoreo comunitario incluye Björkman y Svensson (2009) y réplicas fallidas (Molina et al. 2016). La recuperación formal impulsa la ganancia considerable de entrega. El desvío en el régimen verificado permanece bajo pero no nulo (≈2%, ≈7% sin reputación): las colas de gran corrupción sobreviven al control fuerte, pues las auditorías reducen la fuga, pero no la eliminan (Olken 2007; Avis, Ferraz y Finan 2018; Becker 1968). En PROBABLE, los resultados son estables entre semillas, resisten un riesgo de entrega correlacionado con el costo/tamaño (el costo es independiente del valor modelado) y persisten en el barrido conjunto muestreado. E5 mantiene iguales los presupuestos; el costo administrativo es separado.
 
-*La resistencia a la captura protege la ventaja (E4-v5).* Modelando la captura
-organizada de forma simétrica —la objeción más dura de la revisión, aplicada en
-justicia también al planificador central—, la asimetría se ensancha en vez de
-cerrarse. Un grupo captura un proyecto de bajo valor solo cuando su renta
-privada supera el costo de adquisición más la sanción esperada (Becker 1968);
-con la asimetría de disuasión cargada enteramente por la probabilidad de
-detección y el escalamiento de la adquisición (la pena mantenida igual, de forma
-conservadora), el statu quo se vuelve perjudicial en términos netos con rentas cercanas al 10% del
-costo del proyecto mientras el umbral distribuido —con piso en el wallet
-igual para cada ciudadano, que el dinero puede persuadir pero no comprar— queda
-sustancialmente más alto (forma cerrada en la nota del fundamento analítico). La
-detección es una bola de nieve p = 1 − (1 − q)^m, así que su piso es un valor
-esperado m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes del público afectado y
-transparente —baja, pero esto es una afirmación interna al modelo cuya fuerza
-depende enteramente de la brecha de detección estipulada (central ~0.10 vs
-distribuido ~1.0), no de una carga de la prueba empírica: el análisis de
-sensibilidad es decisiva aquí —la ventaja distribuida se angosta y puede
-revertirse si la detección distribuida se lleva hacia ~0.3—, de modo que la
-afirmación es que la recaptura organizada es más difícil bajo la transparencia del
-brazo distribuido *dados estos parámetros*, no que quede descartada. Esto ata el Hallazgo 4 a la
-capa de integridad del Hallazgo 5: la misma fiscalización que hace llegar el
-valor es la que impide que las rentas organizadas recompren la ventaja de
-asignación, de modo que ambos son una capa y su salvaguarda antes que
-multiplicadores independientes. Toda magnitud aquí es interna al modelo; la
-literatura (Olson 1965; Wilson 1973; Scott 1998; Bastiat 1850; Becker 1968;
-Becker y Stigler 1974; Stokes 2005; Dyck, Morse y Zingales 2010; el monitoreo
-por los propios usuarios de Ostrom 1990) defiende
-la dirección, el mecanismo y el signo de la asimetría —no los números.
+**Hallazgo 6: la visibilidad sostiene el esfuerzo; la reputación ingenua concentra más rápido de lo que selecciona.** En un modelo de preocupaciones de carrera (Holmström 1999), con ejecutores todos honestos, sin desvío y sin costo explícito del esfuerzo, el esfuerzo opaco cae de 0.49→0.24 porque el esfuerzo no tiene retorno ni estándar visible. La visibilidad verificada sostiene el esfuerzo cerca del nivel inicial y produce una ganancia pura de incentivos; la visibilidad aporta la mayor parte, en parte por construcción porque la imitación requiere visibilidad. La asignación ponderada por reputación eleva el Gini de asignación de 0.34 a 0.84 mientras que solo sigue débilmente la capacidad, porque la suerte temprana se fija. Por ello, Core v0 hace observable la concentración, protege a quienes ingresan, normaliza la reputación por oportunidades y deja que esta informe, en vez de asignar o excluir automáticamente las decisiones.
 
-*Fundamento analítico.* Tres formas cerradas sostienen el análisis, cada una verificada
-contra la simulación (`research/e4-analytical-backbone.md`); las corridas solo la
-confirman y cuantifican la degradación fuera de los casos limpios. **(i) La ley
-de paridad.** Escribiendo cada institución como un estimador sesgado que ordena
-proyectos por S⁺ − θ·S⁻, el central conserva θ_C = η del daño percibido y el
-distribuido revela θ_D = 1 − β (la tasa de participación se cancela del ordenamiento);
-como el peso verdadero del daño es uno, el brazo distribuido entrega más valor
-verdadero **si y solo si β < 1 − η**, con paridad en la anti-diagonal. Una lectura
-sesgo-varianza *predeciría* que sobre la línea de paridad, donde el sesgo se
-cancela, gana el estimador de menor varianza —el ruido de revelación del
-distribuido es cero (cada quien conoce su propio valor), el ruido de proxy del
-central no—. La simulación implementada **no** lo confirma en el rincón
-responsable: en (η = 1, β = 0) el resultado medido es una leve **victoria del
-central** (el distribuido queda apenas por debajo del central allí), así que la lectura honesta es la ley de paridad sin ruido
-β = 1 − η, y el ladeo sesgo-varianza hacia el distribuido no se sostiene allí.
-**(ii) El umbral de captura.** De renta >
-adquisición + P(detección)·pena, el umbral del central λ\*_C = (k_c + p_c·f)/C
-tiende a cero al reducirse su detección, mientras el del distribuido λ\*_D = k_d +
-p_d·f/C tiene *piso* en el término de adquisición del wallet igual k_d; la brecha
-de umbral con signo δ(C) = λ\*_D − λ\*_C se mantiene por ello positiva en todo el
-rango plausible, ensanchándose a medida que el piso del wallet k_d pasa a dominar a
-mayor costo del proyecto. **(iii) El piso de detección.** Con detección de bola de
-nieve P = 1 − (1 − q)^m, superar una tasa central p_c requiere, en la aproximación
-de *q* pequeño (Poisson) (1 − q)^m ≈ e^{−m·q}, un valor esperado
-m·q ≥ −ln(1 − p_c) ≈ 0.1 denunciantes —la condición Bernoulli exacta es
-m ≥ ln(1 − p_c)/ln(1 − q), que depende de *m* y *q* por separado, no solo de su
-producto. Es un piso de detección interno al modelo bajo los parámetros
-estipulados (dependiente de la sensibilidad; véase el Hallazgo 4), no una inversión
-empírica de la carga de la prueba. Tres invariancias acotan la inquietud de las magnitudes
-arbitrarias —como propiedades de la *esperanza* sin ruido y de conjuntos grandes,
-no de cada corrida de muestra finita: la ventaja es invariante a las unidades de
-valor (escala); en esperanza depende del sesgo de voz β y no del *nivel* de
-participación (aunque en muestras finitas la concurrencia cambia el tamaño de
-muestra, la varianza de muestreo y por ende los ordenamientos y las carteras); y, como
-solo entran los primeros momentos S⁺, S⁻ en el ordenamiento esperado, la extracción
-de una distribución gaussiana de valoraciones es allí una conveniencia antes que un supuesto
-determinante (las colas de muestra finita y la forma de la valoración aún pueden mover
-ordenamientos). Un límite
-honesto que marcan las corridas: la ley de paridad es el límite de conjuntos
-grandes; cuando el conjunto interesado de un proyecto es muy pequeño —un puñado
-de personas— la varianza de muestreo del distribuido domina y un central de censo
-completo recupera la ventaja. Otros dos límites conviene declarar. La comparación
-es *estática* —una sola ronda de asignación—, mientras que los daños reales
-emergen a lo largo de ciclos iterados y retroalimentan por elecciones y auditoría,
-de modo que un centro persistentemente ciego es el caso de estrés, no una
-inevitabilidad. Y el brazo distribuido se *puntúa sobre el valor verdadero que
-revela*, lo que sería circular si no fuera porque el sesgo de voz β y las
-fricciones de captura hacen de su señal revelada una estimación sesgada y
-disputable de ese valor, no una definicional.
+**Hallazgo 7: los parámetros de auditoría disciplinan un canal de línea base, no un efecto de tratamiento.** Este aparato prerregistrado, informado por prácticas documentadas, añade detección de auditoría, retención, fianzas, inspección y recuperación, escala la cobertura del planificador y barre el sesgo coordinado; la verificación de fuentes primarias sigue en curso. La detección se basa en estudios de obras de la contraloría de Chile y la recuperación en las series de la ASF de México. Su rango de fuga en obras de 24–48% se ancla en Olken (2007), Ferraz y Finan (2008), y evidencia de auditoría de la GAO estadounidense, la NAO británica, el Tribunal de Cuentas Europeo, el TCU/CGU de Brasil y las contralorías chilena, peruana y colombiana. Parametriza la fuga de la línea base, no el efecto causal de Core v0.
 
-*Posicionamiento.* El mecanismo de agregación de preferencias de primer óptimo
-—Vickrey–Clarke–Groves (Vickrey 1961; Green y Laffont 1979)— es inviable para
-presupuestos públicos (no mantiene el equilibrio presupuestario), de modo que tanto el
-planificador central como Core v0 son instituciones de *segundo óptimo* (Lipsey y
-Lancaster 1956); la comparación pregunta qué segundo óptimo entrega más, no si
-alguno es óptimo. Core v0 en consecuencia no afirma ser inmune a la manipulación estratégica (*strategy-proof*) —imposible
-para cualquier mecanismo no dictatorial (Gibbard 1973; Satterthwaite 1975)— sino
-*resistencia a la captura bajo coordinación organizada acotada*. El wallet
-igual para cada ciudadano lo ubica en la familia de mecanismos de votación que permiten expresar intensidad
-(Casella 2012; Lalley y Weyl 2018) con una propiedad anti-plutocrática más nítida:
-acota la influencia por *dotación igual* y no por precio convexo, así que el dinero
-puede persuadir a los titulares de wallet pero no comprar wallets —exactamente el
-piso de costo de adquisición k_d del umbral de captura—. Por último, la ventaja de
-agregación es la lógica del jurado de Condorcet (1785) y depende de que se cumpla su condición de independencia (Austen-Smith y Banks 1996): la captura organizada es la violación
-por error correlacionado de esa independencia, de modo que la capa de integridad
-existe precisamente para defender el supuesto sobre el que descansa la agregación
-distribuida. El primitivo de valor sigue las capacidades de Sen (1999) para *qué* se
-agrega —libertades, no utilidad monetaria— mientras la *suma* descansa en Samuelson
-(1954), una agregación a la que el propio Sen se opone; invocamos cada una solo donde
-aplica.
+La condición de retiro no se activó dentro de este aparato: la ventaja es sustancial a escala, pero cercana a la paridad a escala municipal de 10–40 proyectos, donde un planificador central de cobertura completa es competitivo y el caso se apoya en la entrega y la medición. Dada la distribución estipulada de costos de oportunistas y la línea base sin memoria, la detección a nivel de auditoría no disuade ningún desvío modelado: la fuga coincide con la del control cero, y la brecha de visibilidad se estrecha de 29 a 19 puntos sin aumentar el valor entregado. Estas son salidas del aparato, no estimaciones de auditorías reales. La captura coordinada degrada la selección distribuida aproximadamente de manera lineal; cae por debajo de un planificador municipal competente con cerca de 30% de coordinación, pero sigue siendo superior por debajo de 10%.
 
-*Calibración.* Las magnitudes son internas al modelo, y la brecha con los datos
-define objetivos de calibración antes que estimaciones de campo. El 44–85% del valor alcanzable por el central
-es un **objetivo de validación candidato que requiere un mapeo de constructo
-explícito** —no una comprobación directa: la razón ex-post entre valor realizado y
-valor tasado (las calificaciones del Grupo de Evaluación Independiente del Banco
-Mundial; Flyvbjerg, Bruzelius y Rothengatter 2003) es un *constructo distinto* de la
-selección central relativa a una referencia de información completa, así que unirlos
-requiere un mapeo declarado antes de que uno pueda calibrar al otro; el sesgo de voz
-β puede anclarse igualmente
-a demografías medidas de presupuestos participativos, y a la sobrerrepresentación
-documentada de participantes motivados y no representativos en procesos abiertos
-(Einstein, Palmer y Glick 2019), en vez de asumirse. Y evidencia
-de campo independiente apunta en la misma dirección que el modelo: el presupuesto
-participativo en Brasil desplazó el gasto hacia saneamiento y salud y redujo la
-mortalidad infantil con un presupuesto per cápita constante (Gonçalves 2014) —una
-instancia real de asignación dirigida por ciudadanos entregando más valor real,
-separable de cualquier magnitud que el modelo reporte. El apéndice de objetivos de
-calibración vuelve visible la línea entre lo interno al modelo y lo anclado en datos.
+**Hallazgo 8: los ordenamientos sobreviven a la participación endógena.** Al reemplazar las cuotas impuestas por trayectorias del modelo complementario para la conciencia, el registro, los modos de participación y la microdelegación confiada —utilizando distribuciones previas sintéticas de escenarios elicitadas mediante LLM (insumos internos de robustez, no calibración empírica)—, se preservan los ordenamientos a través de tres poblaciones sintéticas, todas las escalas y un lanzamiento con participación casi nula, donde los valores por defecto anclan por construcción los ciclos iniciales. La cuota informada emergente es 0.309 frente a la impuesta de 0.30; el paquete de replicación complementario es el repositorio distributed-governance-experiments.
 
-**Hallazgo 5: la selección y la entrega se componen de forma multiplicativa —la
-ventaja de la arquitectura es el valor entregado, no la selección por sí
-sola.** Un quinto experimento
-(`scripts/simulation/e4-v5/e5-delivery.mjs`, reconstruido sobre el motor
-limpio de E4) añade la etapa de ejecución que los primeros cuatro omitieron,
-como un régimen de entrega **independiente** cruzado con los dos regímenes de
-selección —un diseño de cuatro celdas para evaluar cada capa por separado y en
-conjunto sobre las *mismas* carteras financiadas. Los ejecutores tienen
-tipos ocultos: una proporción de los ejecutores, intrínsecamente honesta, cumple con la entrega; los demás desvían
-recursos cuando un valor de tentación extraído al azar supera el poder disuasorio del régimen `p·[(1−a(1−r)) + γ + R]`
-(detección *p*, exposición del adelanto *a*, recuperación *r*, garantía *γ*,
-capital reputacional *R*) —el balde con fugas de Okun (1975). La pérdida de
-valor del régimen **opaco** de statu quo se ajusta por momento a la cifra de
-~24% de gasto faltante de Olken (2007) (no identificada como bienestar); el
-~30% de ineficiencia de la inversión pública del IMF (2015) es una pérdida de
-proceso más amplia, y el ~87% de captura ugandesa de Reinikka y Svensson
-(2004) es una cola, no el caso central. El régimen **verificado** es la
-arquitectura: adelanto condicionado por hitos más garantía de desempeño,
-retención, recuperación y capital reputacional —magnitudes declaradas,
-direcciones de las Proposiciones 1–4.
+**Hallazgo 9: la atribución de tres capas es condicional y los signos de las capas se invierten.** El factorial 2×2×2 de E9 cruza planificación, selección y entrega central/distribuida sobre diez sectores COFOG persistentes (United Nations 1999). Sus valores de Shapley suman exactamente a la diferencia entre el sistema completamente distribuido y el statu quo:
 
-Cada celda es un porcentaje de la misma referencia voraz de información
-completa a entrega perfecta (un normalizador heurístico, no un óptimo), de
-modo que no se reporta multiplicador compuesto. La eficiencia de selección
-reproduce E4 (distribuido ≈ 98%, central ≈ 44% de la referencia); la
-eficiencia de entrega es ≈ 78% opaca frente a ≈ 95% verificada. Si se interpretan como dos efectos principales en el mundo declarado, la capa de entrega añade ≈ 8
-puntos bajo selección central y ≈ 17 bajo distribuida; la capa de selección
-añade ≈ 42 puntos bajo entrega opaca y ≈ 51 bajo verificada. La interacción
-es positiva: las dos capas **se componen de forma multiplicativa** —una
-identidad contable (valor entregado = valor seleccionado × fracción
-entregada, aplicada por proyecto), de la cual la interacción positiva es la manifestación del efecto de nivel, no un hallazgo independiente. La arquitectura
-completa de **selección y entrega** supera al statu quo en ≈ +58.6 puntos de la referencia (intervalo
-Monte Carlo condicional al 95% [+58.0, +59.2], que refleja solo la
-variabilidad de simulación interna —la incertidumbre de mundo, forma
-funcional y calibración no está incluida). Una versión anterior resumía esto
-como un único multiplicador compuesto de valor por presupuesto; ese compuesto
-se **retira**, y E5 reporta las capas como porcentajes separados.
+| Mundo | Ganancia del conjunto completo de capas | Planificación | Selección | Entrega |
+|---|---:|---:|---:|---:|
+| PROBABLE | +57.1 | +3.1 | +42.7 | +11.3 |
+| PRO_CENTRAL | +14.7 | +1.5 | −2.8 | +16.0 |
+| MYOPIA_OFF | +44.7 | +2.5 | +29.5 | +12.6 |
+| PRO_DIST | +172.6 | +4.8 | +169.1 | −1.4 |
 
-Dos refinamientos sobreviven al escrutinio. Primero, la cobertura distribuida
-de Core v0 no es solo una señal de selección: los ciudadanos que rutearon el
-presupuesto también observan la entrega. Pero la cobertura comunitaria eleva
-de forma creíble la *detección*, no la *recuperación* (la recuperación de fondos exige
-seguimiento institucional), de modo que el dividendo de entrega solo-comunitario
-es pequeño (una fracción de punto en el régimen de control débil;
-Björkman y Svensson 2009, con réplicas fallidas; Molina et al. 2016); la
-ganancia de entrega considerable viene del canal **formal** de recuperación
-—el régimen verificado—, no de la mera observación ciudadana. Segundo, el desvío del
-régimen verificado es **bajo pero no nulo** (≈ 2% de incidencia, ≈ 7% sin el
-capital reputacional): una casos extremos de gran corrupción deja un remanente que el
-control fuerte no elimina, coincidiendo con el hallazgo de Olken de que las
-auditorías reducen la fuga sin borrarla (2007; Avis, Ferraz y Finan 2018;
-Becker 1968) —disuasión ex ante, no un cero empírico. Dentro del mundo
-PROBABLE, el resultado es estable entre semillas y bajo riesgo de entrega
-**correlacionado con el costo o el tamaño** (el costo del proyecto es independiente del
-valor modelado), y un barrido conjunto de parámetros de entrega,
-condicional al mundo declarado, mantiene a la cobertura adelante en todo el
-espacio muestreado. El valor entregado aquí se mide a *presupuesto igual*; el
-*costo* administrativo de operar cada institución es una capa separada
-(Hallazgo 10).
+El intervalo Monte Carlo condicional al 95% de PROBABLE es [+56.8, +58.1]. Cada atribución es condicional al generador de sectores declarado; solo E5 identifica por separado la selección y la entrega, mientras que E9 proporciona la estructura de tres capas y el método de atribución. Los componentes no son robustos entre mundos: la selección se invierte en PRO_CENTRAL y la entrega se invierte en PRO_DIST porque una ejecución más fuerte magnifica una cartera dañina. No obstante, la diagonal completa de Core v0 permanece positiva en los cuatro mundos modelados.
 
-**Hallazgo 6: la visibilidad sostiene el estándar; los mercados reputacionales
-ingenuos concentran más rápido de lo que seleccionan.** Un sexto experimento
-prerregistrado (`research/e6-reputational-competition-design.md`) aísla el canal
-de incentivos de la disuasión por completo —un escenario de preocupaciones de
-carrera (career concerns) en el sentido de Holmström (1999): un conjunto de
-ejecutores enteramente honestos con esfuerzo ajustable y sin posibilidad de
-desvío (el modelo no tasa costo de esfuerzo explícito alguno; la minimización de
-costos está codificada conductualmente como la regla de decaimiento del régimen
-opaco). En el régimen opaco, el esfuerzo se desploma hacia la minimización de
-costos
-(0.49 → 0.24 a lo largo de veinticuatro ciclos) —no por malicia, sino porque el
-esfuerzo no tiene retorno y no existe un estándar visible que imitar. Hacer
-visible la calidad verificada sostiene el esfuerzo cerca de su nivel inicial, y
-el régimen visible-competitivo produce una ganancia material de entrega impulsada
-por la visibilidad frente a la línea base opaca —una
-ganancia de incentivo pura con cero desvío en el modelo. Dos predicciones
-prerregistradas fallaron de manera informativa. La visibilidad por sí sola porta
-la mayor parte del efecto: el espejo precede al mercado (la regla conductual liga
-la imitación a la visibilidad, de modo que parte de esto es por construcción
-—pero la construcción codifica la afirmación de que la opacidad erosiona las
-normas profesionales al eliminar el estándar mismo). Y la asignación ingenua
-ponderada por reputación concentra el trabajo de manera dramática (Gini de
-asignaciones 0.84 frente a 0.34) mientras rastrea la capacidad verdadera solo
-débilmente —bloqueo por suerte temprana, la dinámica de ventaja acumulativa de
-las cascadas de información reapareciendo en el mercado de ejecutores. La lección
-de diseño corre en ambas direcciones: la visibilidad verificada es donde vive el
-incentivo de calidad, y toda ponderación fuerte por reputación —humana o
-algorítmica— necesita la observabilidad de la concentración, los pisos para
-entrantes y la reputación normalizada por oportunidades que el corpus prescribe.
-En Core v0, la reputación orienta las decisiones de los financiadores en lugar de
-la asignación automática, con la concentración visible por construcción —y nunca
-excluye: ninguna regla de protocolo impide a un financiador elegir a cualquier
-actor admisible por motivos reputacionales.
+La planificación actúa principalmente mediante captura de agenda —excluyendo funciones de alta necesidad y baja visibilidad—, cuya dirección se fundamenta en la teoría de fijación de agenda (Bachrach y Baratz 1962; Schattschneider 1960), la taxonomía COFOG, los desplazamientos hacia gasto visible (Drazen y Eslava 2010) y el descuido del mantenimiento/la prevención (Rioja 2003); su magnitud requiere datos específicos de cada país. Su contribución condicional de Shapley, pequeña y positiva, no es una estimación independiente anclada; apagar el mecanismo la subestima, mientras que activarlo no la ancla. El gasto chileno en salud mental se mantuvo cerca del 2% del gasto en salud entre 2007 y 2015, pese a que los trastornos mentales tienen la principal carga de discapacidad (Errázuriz et al. 2015). Esto es consistente con la subprovisión de baja saliencia, pero no identifica la captura de agenda ni calibra su magnitud; la salud mental es una subfunción financiada, no una función COFOG de primer nivel excluida.
 
-**Hallazgo 7: una línea base parametrizada por auditorías — qué calibra y qué
-no.** El ataque más agudo de la ronda de revisión del manuscrito
-sostuvo que la línea base de cero-control es una caricatura —las administraciones
-reales operan instituciones de auditoría, retenciones, fianzas e inspección— y la
-respuesta fue un séptimo experimento prerregistrado
-(`research/e7-calibrated-baseline-design.md`) con una condición de retiro
-comprometida: si el resultado principal colapsaba contra una línea base justa,
-sería retirado, no requalificado. El brazo del statu quo parametrizado por
-auditorías toma sus parámetros de los hallazgos publicados de
-instituciones de auditoría (un escenario informado por prácticas documentadas; la
-verificación de algunas fuentes primarias está en curso) —detección a partir de los estudios de obras de la
-contraloría de Chile, retención a partir de la práctica documentada de estados de
-pago, recuperación a partir de la serie de la ASF de México, anclas de fuga
-emparejadas por categoría con la construcción (Olken 2007; la base de evidencia
-multipaís abarca la GAO estadounidense, la NAO británica, el Tribunal de Cuentas Europeo, el TCU y la CGU
-de Brasil, y las contralorías de Chile, Perú y Colombia; Ferraz y Finan 2008)—
-con el ancho de banda de inspección del planificador escalado al ámbito y el
-sesgo coordinado de señales barrido como el régimen de falla de Condorcet. La
-condición de retiro no se activó *dentro de este aparato*: contra la línea base
-parametrizada por auditorías el compuesto anterior fue sustancial a escala pero solo
-casi-paridad a escala de piloto municipal (10-40 proyectos), donde la selección central
-con cobertura plena es competitiva y el caso descansa en la entrega y la medición. Pero la evidencia de auditoría *parametriza la fuga de la
-línea base*; **no** calibra el efecto de tratamiento institucional de Core v0, que
-la prueba prerregistrada de selección posterior no respaldó recalibrar (Sección 6)
-—así que estas cifras de E7 se conservan como
-salidas condicionales del aparato, no como un resultado principal aún vigente.
-Dentro de este aparato, y condicional a su distribución estipulada de costos de
-oportunistas y a su línea base sin memoria, un resultado cualitativo es
-instructivo: a la intensidad de detección reportada por auditorías del modelo
-(verificación de fuentes primarias en curso), sin memoria reputacional, el modelo no disuade desvío alguno —el
-umbral de incentivos del régimen parametrizado por auditorías queda por debajo del
-costo de todo oportunista modelado, de modo que su fuga iguala la del régimen de
-cero-control, y en el modelo la detección añadida reduce la brecha de visibilidad
-(de veintinueve a diecinueve puntos) en lugar de elevar el valor entregado. Estas
-son salidas internas al modelo del aparato estipulado de E7, no un efecto causal
-estimado de la auditoría del mundo real. La fuga del brazo parametrizado por
-auditorías aterriza dentro de la banda de fuga reportada por auditorías (24-48% en
-obras); la mecánica de fuga del modelo, alimentada con parámetros de auditoría, es
-*consistente con* el rango documentado —esto parametriza la fuga de la línea base,
-no calibra el efecto de tratamiento institucional. Y el barrido de sesgo
-acota el reclamo de construcción abierta con honestidad: la selección distribuida
-se degrada de manera casi lineal con la captura coordinada de señales y cae por
-debajo de un planificador municipal competente de cobertura plena solo con una
-cuota coordinada de aproximadamente el treinta por ciento —se degrada, nunca
-colapsa, y sigue siendo superior en todas partes por debajo del diez por ciento.
+**Hallazgo 10: la dirección del costo administrativo favorece a Core v0, pero es modesta en términos de valor entregado.** E10 resta la maquinaria institucional recurrente de cada presupuesto antes de seleccionar, cobra la verificación y recuperación de Core v0, evita contabilizar dos veces la fuga de E5 y excluye, en vez de amortizar, el CAPEX de implementación. Como los proyectos marginales se recortan primero, la pérdida es subproporcional. Bajo el piso conservador de baja dispersión (κ_C = 8%, κ_D = 5%, ambos dentro de una banda de overhead administrativo de 1–10%), el costo reduce en 0.9 puntos de referencia la brecha con presupuesto igualado, hasta +57.7: aproximadamente neutro. Eso solo se sostiene bajo este piso. Bajo el escenario asimétrico declarado (0.12 frente a 0.02), el costo recurrente supuesto del central supera en alrededor de una décima parte del presupuesto al de Core v0 —no es un ahorro medido y es más amplio que el overhead puro—, pero el efecto sobre el valor entregado es solo ≈0.4 puntos. Las cuotas de costo son insumos de escenario, no costos medidos específicos de cada brazo: la dirección favorece a Core v0, pero la afirmación sigue siendo declarada, modesta en bienestar y no calibrada.
 
-**Hallazgo 8: el ordenamiento de arquitecturas sobrevive a la participación
-conductual endógena.** Un octavo experimento prerregistrado (E8,
-`research/e8-behavioral-participation-design.md`) reemplazó luego el lado de
-participación de estos brazos —la cuota por defecto y la cuota informada que los
-dos arquitecturas habían impuesto— con trayectorias de adopción generadas
-por un estudio conductual complementario: un modelo basado en agentes conforme a Core
-v0 de conciencia, registro, modos de participación y microdelegación confiada,
-calibrado con distribuciones previas sintéticas elicitados mediante LLM (paquete de replicación:
-el repositorio distributed-governance-experiments). El ordenamiento de
-arquitecturas se mantiene invariable en las tres poblaciones sintéticas y todas
-las escalas, incluida una trayectoria de lanzamiento que comienza con
-participación cercana a cero —donde la capa por defecto ancla por construcción
-los primeros ciclos con pocos participantes. El estudio conductual también reproduce de forma
-independiente el supuesto de cuota informada que estos experimentos habían
-impuesto: 0.309 emergente contra el 0.30 asumido.
-
-**Hallazgo 9: el conjunto completo de capas —planificación, selección y entrega— y una
-contabilidad honesta de lo que aporta cada capa.** Un noveno experimento
-(`scripts/simulation/e4-v5/e9-fullstack.mjs`, construido sobre E5) añade la
-tercera capa arquitectónica, la **planificación** (construir el marco de
-elegibilidad y las cuotas de presupuesto por sector): E9 compara las versiones
-central y distribuida de las tres capas en un factorial 2×2×2 aplicado a diez
-sectores persistentes, el número de COFOG (United Nations 1999). Una atribución de Shapley descompone
-la brecha entre el sistema completamente distribuido y el statu quo en contribuciones por capa que
-suman exactamente a ella. En el mundo declarado PROBABLE el conjunto completo de capas
-supera al statu quo en ≈ +57 puntos de la referencia [intervalo Monte Carlo
-condicional al 95% +56.8, +58.1], y el desglose condicional de Shapley es
-planificación ≈ +3, selección ≈ +43 y entrega ≈ +11 puntos.
-Dos salvedades honestas rigen la lectura. Primero,
-la atribución es *condicional*: cada valor de capa se calcula mediante el generador de sectores de planificación declarado, así que las cifras
-autónomas y cuantificadas de **selección** y **entrega** son las de E5 (sin
-capa de planificación); E9 aporta la *estructura* de tres capas y el *método*
-de atribución. Segundo, **la selección y la entrega son grandes en PROBABLE
-pero no robustas a través de los cuatro mundos nombrados** (PROBABLE,
-PRO_CENTRAL, MYOPIA_OFF y PRO_DIST): la selección se vuelve
-negativa en PRO_CENTRAL, y la entrega se vuelve negativa en PRO_DIST porque una
-entrega más fuerte magnifica una cartera dañina. Pese a esas reversiones de
-componente, la diagonal completa de Core v0 permanece positiva en los cuatro
-—un hecho que el artículo reporta en lugar de ocultar. La descomposición por mundo
-(atribuciones condicionales de Shapley a través del generador de sectores
-declarado, puntos de la referencia):
-
-| mundo | ganancia del conjunto completo | planificación | selección | entrega |
-|---|---|---|---|---|
-| PROBABLE | +57.1% | +3.1% | +42.7% | +11.3% |
-| PRO_CENTRAL | +14.7% | +1.5% | −2.8% | +16.0% |
-| MYOPIA_OFF | +44.7% | +2.5% | +29.5% | +12.6% |
-| PRO_DIST | +172.6% | +4.8% | +169.1% | −1.4% |
-
-El valor de la capa de
-**planificación** opera principalmente a través de la **captura de agenda**
-—el sistema central mantiene funciones enteras de alta necesidad y baja
-visibilidad fuera del menú (la segunda cara del poder; Bachrach y Baratz
-1962; Schattschneider 1960). Ese mecanismo es real y su *dirección* está
-anclada (la taxonomía COFOG; el giro pre-electoral hacia el gasto visible,
-Drazen y Eslava 2010; el descuido sistemático del mantenimiento y la
-prevención, Rioja 2003), pero su *magnitud* no puede identificarse sin datos
-presupuestarios de un país concreto. Por eso reportamos la planificación solo
-como la contribución **condicional** de Shapley en la tabla anterior (≈ +3
-puntos, pequeña y positiva a través de los mundos nombrados), **no como una
-figura independiente anclada**: cuantificarla como efecto independiente con el
-mecanismo apagado la subestimaría, y encendido aún no es anclable. Chile aporta una ilustración solo
-cualitativa: el gasto en salud mental se mantuvo cerca del 2% del gasto en salud
-durante 2007–2015, pese a ser los trastornos mentales la principal causa de
-discapacidad del país (Errázuriz et al. 2015). Ese patrón es consistente con una subprovisión de baja
-saliencia, pero ni identifica la captura de agenda ni calibra su magnitud; la
-salud mental es una subfunción financiada, no una función COFOG de primer nivel
-excluida.
-
-**Hallazgo 10: el costo administrativo favorece a Core v0 —aproximadamente neutro
-solo bajo un piso conservador de baja dispersión, una ventaja declarada bajo un escenario
-de costos asimétrico.** Un décimo experimento (`scripts/simulation/e4-v5/e10-costs.mjs`) añade
-el costo administrativo y de maquinaria que cada institución opera y que Core
-v0 reemplaza en gran medida —los estudios que aproximan el valor mediante indicadores indirectos, el aparato de
-asignación y priorización, y las licencias que carga el central, frente a la
-propia plataforma y maquinaria de control de Core v0. El modelo trata estos
-costos de tres maneras. Los resta del *presupuesto* de cada brazo antes de
-seleccionar, por lo que la pérdida de valor es menos que proporcional porque la financiación
-voraz corta primero los proyectos marginales; cobra la propia maquinaria de
-verificación y recuperación de Core v0 en lugar de tratarla como gratuita; y
-evita duplicar la fuga de entrega ya contabilizada en E5. Reportamos dos escenarios
-**declarados** sobre perímetros de costo idénticos (solo costos de régimen en estado
-estacionario —el **CAPEX de implementación inicial se excluye en lugar de amortizarse**).
-Bajo un **piso conservador de baja dispersión** (κ_C = 0.08, κ_D = 0.05, ambos dentro de
-una banda de overhead administrativo de 1–10%) la capa es aproximadamente neutra: el costo
-administrativo mueve la brecha modelada de +58.6 a +57.7 puntos de referencia, una
-contribución de −0.9 puntos. Pero esa baja dispersión es un piso deliberado, no el único
-caso defendible. En estado estacionario, la maquinaria del central —estudios de tasación y
-de indicadores indirectos de valor, la burocracia de priorización y asignación, las
-aprobaciones, y los sueldos que la operan— es plausiblemente un gran overhead recurrente,
-mientras que Core v0 corre sobre una plataforma digital más fiscalización asistida por IA
-y aportada por ciudadanos a costo marginal casi nulo. Por eso se declara un segundo
-**escenario de costos asimétrico** (κ_C ≫ κ_D), que se separa en dos afirmaciones.
-Primero, una **diferencia de presupuesto neto supuesta**: bajo unas cuotas declaradas
-κ_C = 0.12 frente a κ_D = 0.02, el costo operativo modelado del central en estado
-estacionario supera al de Core v0 en cerca de una décima parte del presupuesto —un insumo
-de escenario declarado, no un ahorro medido (y κ_C = 0.12 se lee como costo operativo
-recurrente en sentido amplio —tasación, priorización, burocracia salarial—, no overhead
-puro, pues queda justo por encima de esa banda de 1–10%). Segundo, su **efecto sobre el
-valor entregado** es menor (cerca de +0.4 puntos de referencia sobre la brecha) porque ese
-presupuesto liberado financia proyectos marginales de bajo valor (la sub-proporcionalidad
-del presupuesto neto). Así que la lectura honesta no es "sin diferencia de costos": la
-**dirección favorece a Core v0**; "aproximadamente neutro" solo se sostiene bajo el piso
-conservador de baja dispersión; y el escenario de costos asimétrico declarado es una
-ventaja de costo declarada —aunque modesta en bienestar y no cuantificada. Las cuotas de
-costo son insumos de escenario declarados, no costos medidos específicos por brazo: la
-dirección de la maquinaria central refleja la gran burocracia recurrente de
-tasación/priorización documentada en cuentas de costos de administración pública; el lado
-de la plataforma refleja el bajo costo operativo de sistemas públicos de compras
-electrónicas establecidos (KONEPS, ChileCompra, ProZorro) y la fiscalización IA/ciudadana
-de costo marginal casi nulo.
-
-**Qué establece el programa computacional.** Reducido a lo esencial. **(1)** Las
-contribuciones fundamentales son la arquitectura y el mecanismo cualitativo de crédito
-versus cobertura: el ordenamiento central presionado por crédito subpondera el valor difuso
-que la selección distribuida basada en cobertura sí visibiliza. **(2)** En conjunto, E5–E10
-ubican la ventaja condicional en la selección y la entrega verificada, no en la carga
-administrativa: E5 mide esos márgenes por separado sobre carteras apareadas; E9 aporta una
-atribución condicional de conjunto completo de capas cuyos signos de componente varían por
-mundo mientras la diagonal completa se mantiene positiva; y E10 deja el costo administrativo
-aproximadamente neutro bajo un piso conservador de baja dispersión, con la dirección a favor
-de Core v0 (una ventaja declarada, aunque modesta, bajo un escenario de costos asimétrico).
-**(3)** Una extensión de robustez de cuatro escenarios (v1.14) —un análisis *separado y
-exploratorio* bajo un proceso generador distinto— modela al central como lo describe
-*direccionalmente* la evidencia (*casi ciego al daño difuso en la cola larga de baja
-visibilidad*: Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009): la selección
-por cobertura recupera ≈ 98% de la referencia voraz del modelo frente al ≈ 44% del central,
-un contraste de modelo condicional reportado como puntos de referencia declarados, no
-impacto calibrado. **(4)** El multiplicador compuesto de valor por presupuesto de una
-versión anterior se retira aquí como efecto calibrado —bajo la regla prerregistrada
-congelada, la única prueba confirmatoria de selección no superó el umbral de reconstrucción
-de 0.05 (§6, Apéndice E4). La planificación queda sin resolver cuantitativamente —su
-mecanismo de captura de agenda está direccionalmente anclado, pero su magnitud independiente
-se difiere deliberadamente en vez de fabricarse a partir de un escenario no anclado.
-Cualquier efecto calibrado de valor total entregado sobre datos reales sigue siendo
-trabajo futuro.
+En conjunto, el programa establece una ventaja direccional y condicional en la selección basada en cobertura, anclada en la literatura, y en la entrega formal verificada. La planificación sigue sin resolverse cuantitativamente, el costo administrativo es secundario y depende del escenario, los efectos de los componentes varían según el mundo modelado y el valor total entregado calibrado sigue siendo trabajo futuro.
 
 ## 7. La revisión adversarial como método
 
-La arquitectura se desarrolló bajo un bucle adversarial documentado: **ataque**
-(un resumen que enuncia un modo de falla, su ubicación en el corpus, un escenario
-de estrés y anclajes en la literatura) → **defensa emparejada** (una evaluación
-objetiva que clasifica el ataque como fundado, parcialmente fundado o diferencia
-de criterio, con citas ancladas a líneas dentro del corpus) → **resolución** (un
-documento aceptado que o bien integra un mecanismo o bien acota el riesgo) →
-**propagación** (las restricciones de la resolución enhebradas a través de cada
-documento de arquitectura afectado). El bucle corrió cinco rondas, todas
-resueltas; toda resolución está propagada a través del corpus salvo las cuatro
-defensas pareadas de la ronda de revisión del manuscrito (D037–D040), que portan
-resoluciones aceptadas cuya propagación restante al corpus está
-rastreada en el roadmap de remediación. La primera ronda: dieciocho ataques a los
-mecanismos de la arquitectura (manipulación de métricas, captura del
-fiscalizador, manipulación de desembolsos, colusión, control de partes
-vinculadas, complejidad, resistencia del establecido, entre otros). La segunda:
-quince ataques deliberadamente más profundos a los fundamentos políticos y
-conductuales (mandato democrático, fijación de agenda, dependencia fiscal,
-mercados poco profundos, vacío de metagobernanza, ignorancia racional, cascadas,
-clientelismo, polarización, miopía intertemporal, el problema de las muchas
-manos (Thompson 1980)). La tercera ronda emergió del método vuelto hacia afuera: una revisión
-externa simulada de cinco perfiles del documento acompañante de este artículo
-generó preguntas de revisor que el corpus no podía responder con los anclajes
-existentes, y la regla permanente convirtió las dos serias en ataques formales
-—la caracterización legal del acto de asignación ciudadana, y el costo de
-capacidad administrativa de la operación tutelada— ambos desde entonces resueltos
-y propagados. La cuarta ronda volvió el mismo instrumento sobre este manuscrito
-mismo: cinco perfiles de revisor simulados (académico, derecho público,
-arquitectura de sistemas, práctica del sector público, lector general instruido)
-atacaron la v1.6 publicada, y sus cinco objeciones irresolubles se convirtieron
-en ataques formales, cada uno ahora resuelto —la línea base de cero-control como
-un hombre de paja de calibración (respondida por el séptimo experimento y una
-regla de reporte vinculante), la reserva de ley sobre la competencia de
-asignación (un registro de norma habilitante que supedita el modo vinculante), la
-exclusión reputacional como una sanción no procesada (reclasificada: el diseño no
-posee poder de exclusión con el cual sancionar), la trazabilidad de la asignación
-frente al secreto de la preferencia (resuelta como secreto de la asignación
-ciudadana con dinero público), y la paradoja de la adopción (una capa de adopción
-bajo una frontera de tesis explícita). La quinta ronda fue una ronda de ablación
-de tres ataques (A041–A043): el despliegue por partes de la pila de disuasión, la
-válvula no regulada de liberación presupuestaria, y la capa de verificación bajo
-colusión de máquinas y anillos —cada uno resuelto y propagado (`docs/111`–`docs/113`).
-El requisito de honestidad del método se
-aplica a sí mismo: varias
-resoluciones responden a sus ataques con un explícito "acotado, no resuelto", y
-el registro completo de revisión es público.
+La revisión adversarial fue el método de desarrollo de la arquitectura. Su bucle documentado comprendía: un resumen de ataque que especificaba el modo de falla, la ubicación en el corpus, el escenario de estrés y los anclajes en la literatura; una defensa emparejada, objetiva y con citas ancladas a líneas que lo clasificaba como fundado, parcialmente fundado o una diferencia de criterio; una resolución aceptada que integraba un mecanismo o acotaba el riesgo; y la propagación de las restricciones aceptadas a través de los documentos afectados.
 
-El bucle termina por la regla de integrar-o-acotar (P007). Su disciplina de
-salida es lo que lo distingue del modelado de amenazas ordinario: todo ataque
-acotado debe dejar tres artefactos —una oración de frontera explícita ("Core v0
-no requiere X"), un riesgo residual visible y un enunciado de limitación de una
-oración. La sección de limitaciones que sigue no es, por tanto, un gesto de
-humildad; es la salida acumulada y adversarialmente generada del método. De los
-cuarenta y tres ataques, ninguno fue desestimado; nueve de los quince de la
-segunda ronda fueron clasificados como fundados de plano y los otros seis como
-parcialmente fundados, los cinco de la ronda del manuscrito fueron clasificados
-como fundados al menos en parte, y la respuesta del corpus a varios es un honesto
-"acotado, no resuelto".
+Cinco rondas plenamente resueltas comprendieron 43 ataques: a mecanismos (18), a fundamentos políticos/conductuales (15), a lagunas derivadas de una revisión externa simulada de cinco perfiles del documento acompañante (2), de una revisión simulada de cinco perfiles del manuscrito (5) y de ablaciones (3). Una regla permanente convertía las objeciones de los revisores que no podían responderse en ataques formales. Ninguno fue desestimado: nueve ataques de la segunda ronda fueron fundados y seis parcialmente fundados; los cinco ataques al manuscrito fueron fundados al menos en parte. Solo cuatro defensas de la revisión del manuscrito (D037–D040) tienen resoluciones aceptadas cuya propagación, rastreada en el roadmap de remediación, está pendiente; todas las demás, incluidas las correspondientes a las ablaciones (`docs/111`–`docs/113`), fueron propagadas. El registro completo es público.
 
-Usamos el bucle con un único equipo de diseño más asistencia de IA —razón por la
-cual lo llamamos autocrítica estructurada antes que validación; un adversario
-autoadministrado, por disciplinado que sea, no puede sustituir el ataque
-independiente. Su siguiente aplicación obvia es con revisores genuinamente
-independientes, que identificamos más abajo como el primer punto del trabajo
-futuro.
+Bajo la regla de integrar-o-acotar de P007, todo ataque acotado debe dejar una frontera explícita («Core v0 no requiere X»), un riesgo residual visible y una limitación de una oración. Estos artefactos distinguen al bucle del modelado de amenazas ordinario. Por tanto, las limitaciones que siguen son salidas adversariales acumuladas, no humildad ornamental; varias dicen honestamente «acotado, no resuelto».
+
+Puesto que un único equipo de diseño, asistido por IA, administró tanto el ataque como la respuesta, esto es autocrítica estructurada, no validación: la disciplina no puede sustituir el ataque independiente. Aplicar el método con revisores genuinamente independientes es el primer punto del trabajo futuro.
 
 ## 8. Limitaciones
 
-Enunciadas según la propia regla del método —cada una es una frontera registrada
-con un riesgo residual nombrado.
+Según la regla del método, cada limitación es una frontera registrada con un riesgo residual nombrado.
 
-**Construir el marco de elegibilidad está centralizado en los modos de
-transición.** En los modos de operación cerrado y tutelado que Core v0 especifica
-para los pilotos, la autoridad implementadora construye los ámbitos de
-planificación; la arquitectura hace esa construcción pública, versionada,
-portadora de mandato y disputable mediante la visibilidad, pero en esos modos no
-la distribuye. Construir el ámbito significa definir el marco —qué propósitos,
-qué porción del presupuesto, qué pisos protegidos, qué reglas de admisibilidad—,
-no diseñar ni jerarquizar proyectos: la creación y la priorización de proyectos
-siguen distribuidas incluso en modo tutelado, de modo que este poder de agenda
-residual es el poder de decidir qué *puede* financiarse, nunca qué *se* financia.
-Es importante no malinterpretar aquí nuestra propia simulación. Lo que esa
-simulación muestra dominando todo otro margen de calidad es la calidad
-informativa de la **priorización de proyectos** —los perfiles de asignación
-agregados que sigue la porción financiada—, y esa priorización es distribuida por
-diseño, incluso en modo tutelado; el resultado es por tanto un argumento *a favor*
-de distribuir la construcción, no evidencia de que una agenda central gobierne la
-entrega. El poder centralizado residual es el más estrecho: construir el marco de
-elegibilidad es en sí mismo la segunda cara del poder (Bachrach y Baratz 1962;
-Schattschneider 1960; Lukes 1974) —el poder de dejar algo fuera del menú—, que la
-arquitectura responde, en estos modos, haciendo el marco público, versionado,
-portador de mandato y disputable en vez de distribuyéndolo. Tres cosas acotan la
-limitación con honestidad. Es una propiedad de los modos de transición, no de la
-arquitectura: los modos de operación son estados configurados por país, y la
-trayectoria diseñada es una fijación de agenda abierta y socialmente construida.
-Es más estrecha que la porción pasiva: los ciudadanos involucrados asignan
-manualmente, delegan, o adoptan perfiles configurables, de modo que los pesos de
-la autoridad gobiernan plenamente solo la porción que nunca se involucra. Y ahora
-está medida en lugar de supuesta: E4 muestra que la construcción abierta de los
-pesos a partir de señales ciudadanas agregadas es viable y robusta frente a la
-escala en el modelo, de modo que la restricción ya no es si la construcción
-distribuida puede funcionar en principio sino si un mecanismo de elicitación puede
-mantener las señales dispersas honestas, no sesgadas y representativas bajo la
-presión de la manipulación, el clientelismo y la asignación expresiva —un problema
-de diseño que el corpus supedita a condiciones en lugar de dar por resuelto. La
-línea base comparativa también corresponde a este párrafo: bajo el modelo
-institucional actual, la totalidad del presupuesto sigue un vector construido
-centralmente que no es ni publicado, ni versionado, ni sustituible, ni anulable
-por ciudadano alguno. Los modos de transición reproducen esa centralización de
-manera visible y revocable; el modo abierto está diseñado para terminarla. Este
-sigue siendo el principal problema abierto de la arquitectura, ahora con un premio
-medido asociado a resolverlo —y por esa razón lo tratamos no como una limitación
-entre muchas sino como el siguiente objeto del programa de investigación: el
-diseño de la fijación de agenda abierta, incluida la arquitectura candidata en la
-que una agenda distribuida se construye en paralelo a la de la propia autoridad y
-el rol tutelado se estrecha a la revisión de admisibilidad de los conflictos entre
-ambas, es el tema natural de un estudio de seguimiento y un piloto dedicados.
+**La construcción del marco de elegibilidad permanece centralizada en los modos de transición.** En los modos piloto cerrado y tutelado, la autoridad define los propósitos, la porción del presupuesto, los pisos protegidos y la admisibilidad; la arquitectura solo hace que ese ámbito sea público, versionado, portador de mandato e impugnable. Esto no es diseño ni jerarquización de proyectos: la creación y la priorización permanecen distribuidas incluso en modo tutelado, de modo que el poder residual de agenda determina qué *puede financiarse*, no qué *se financia*. El margen de calidad dominante de la simulación es la calidad informativa de la priorización de proyectos —los perfiles de asignación agregados que sigue la porción financiada—, que permanece distribuida por diseño. Por tanto, su resultado respalda distribuir la construcción del marco, no la inferencia de que una agenda central gobierna la entrega. Sin embargo, la construcción del marco es la segunda cara del poder —la capacidad de mantener elementos fuera del menú (Bachrach y Baratz 1962; Schattschneider 1960; Lukes 1974)—, a la que los modos de transición responden mediante visibilidad y posibilidad de impugnación, no distribución. Importan tres salvedades. Primero, esto pertenece a los modos de transición configurados por país, no a la arquitectura: el modo abierto, el predeterminado arquitectónico, tiene una planificación distribuida y construida socialmente; la planificación centralizada es solo una transición cerrada/tutelada. Segundo, los ciudadanos involucrados asignan manualmente, delegan o adoptan perfiles configurables, de modo que los pesos de la autoridad gobiernan plenamente solo la porción que nunca se involucra. Tercero, E4 halla que la construcción abierta de los pesos a partir de señales ciudadanas agregadas es viable y robusta frente a la escala en el modelo. La cuestión sin resolver es si la elicitación mantiene las señales dispersas honestas, no sesgadas y representativas pese a la manipulación, el clientelismo y la presión de la asignación expresiva —un problema de diseño que el corpus somete a condiciones en lugar de darlo por resuelto. En comparación, bajo las instituciones actuales, todo el presupuesto sigue un vector central que los ciudadanos no pueden ver ni versionar, al que no pueden conectarse ni anular. Los modos de transición hacen visible y revocable esa centralización; el modo abierto la elimina por construcción. Este sigue siendo el principal problema abierto y el siguiente objeto de investigación. Un estudio y un piloto dedicados deberían probar agendas construidas en paralelo por la ciudadanía y por la autoridad, con el papel tutelado restringido a la revisión de admisibilidad cuando entren en conflicto.
 
-**La legitimidad procedimental no es mandato democrático —y la norma habilitante
-aún no existe.** La plataforma registra la autorización externa para la migración
-presupuestaria y las fórmulas de asignación (el Allocation Mandate); no puede
-fabricar una autorización que la ley nunca otorgó. En la tradición continental de
-las jurisdicciones de referencia, la asignación ciudadana vinculante requiere una
-norma habilitante de rango suficiente que ningún estatuto actual provee
-—los precedentes regionales (el estatuto de presupuesto participativo del Perú,
-el marco del estatuto de la ciudad de Brasil) prueban que el instrumento es
-alcanzable, no que exista— de modo que los despliegues lícitos de la arquitectura
-hoy son consultivos y tutelados, en los que toda decisión de asignación material
-permanece atribuida a la autoridad competente como una resolución pública
-razonada; los resultados de entrega, medición y memoria reputacional operan sin
-cambios bajo ese estatus, y solo el modo abierto maduro requiere asignación
-vinculante. El debate normativo sobre sustituir la apropiación representativa por la
-asignación atomizada (Rosanvallon 2008; Urbinati 2014) permanece abierto.
-Bajo desacuerdo evaluativo profundo, la postura de la arquitectura es
-procedimental en el sentido de Gaus (2011): sus reglas apuntan a ser
-justificables desde puntos de vista morales diversos —que es lo que proveen los
-registros de mandato, la neutralidad de motivos y la disciplina de crítica
-comparativa— sin presuponer una doctrina comprehensiva compartida. Una objeción
-adicional queda deliberadamente fuera de alcance: el modelo toma como dado el
-presupuesto recaudado coercitivamente y mejora su administración; el desafío
-libertario a la recaudación misma (Nozick 1974) ni se responde ni se da por
-sentado aquí. Las fórmulas de asignación ponderadas por contribución, en
-particular, son señaladas por la arquitectura como desviaciones plutocráticas que
-requieren autorización superior explícita.
+**La legitimidad procedimental no es mandato democrático, y la norma habilitante aún no existe.** El Allocation Mandate registra la autorización externa para la migración presupuestaria y las fórmulas; no puede crear autoridad legal. En la tradición continental de las jurisdicciones de referencia, la asignación ciudadana vinculante requiere una norma habilitante de rango suficiente que ningún estatuto vigente proporciona. El estatuto de presupuesto participativo del Perú y el marco del Estatuto de la Ciudad de Brasil demuestran viabilidad, no autoridad actual. Por tanto, los despliegues lícitos hoy son consultivos y tutelados: toda decisión material de asignación se imputa a la autoridad competente mediante una resolución pública razonada. La entrega, la medición y la memoria reputacional funcionan sin cambios; solo el modo abierto maduro requiere asignación vinculante. El debate sobre sustituir la apropiación representativa por la asignación atomizada permanece abierto (Rosanvallon 2008; Urbinati 2014). Bajo desacuerdo evaluativo profundo, las reglas buscan justificabilidad procedimental entre puntos de vista morales (Gaus 2011), mediante registros de mandato, neutralidad de motivos y crítica comparativa, sin asumir una doctrina comprehensiva compartida. El modelo toma como dado un presupuesto recaudado coercitivamente y mejora su administración; ni responde ni da por sentada la objeción libertaria a la recaudación misma (Nozick 1974). Las fórmulas ponderadas por contribución son desviaciones plutocráticas que requieren autorización superior explícita.
 
-**La dependencia fiscal es medible, no exigible.** El Estado controla la llave
-del presupuesto. El Fiscal Commitment Profile convierte el estrangulamiento de
-invisible a atribuible —la plazo de entrega, las órdenes válidas no
-ejecutadas, los recortes de cuota a mitad de ciclo, todos se vuelven datos
-públicos— pero ningún software obliga a un soberano a pagar (Kydland y Prescott 1977; North y Weingast
-1989). El compromiso creíble debe provenir de la ley a nivel de país.
+**La dependencia fiscal es medible, no exigible.** El Estado controla el financiamiento. El Fiscal Commitment Profile hace atribuible el estrangulamiento al publicar la latencia de entrega, las órdenes válidas no ejecutadas y los recortes de cuota a mitad de ciclo, pero el software no puede obligar a un soberano a pagar (Kydland y Prescott 1977; North y Weingast 1989). El compromiso creíble requiere legislación a nivel de país.
 
-**La calidad de la verificación se supone y luego se incorpora a las condiciones financieras.** Las Proposiciones 1–4
-toman las probabilidades de detección y descubrimiento como parámetros. En
-mercados de control delgados —mercados de bienes de confianza donde la calidad
-es inobservable para el comprador (Akerlof 1970; Dulleck y Kerschbamer
-2006)— ambas colapsan simultáneamente, y los únicos
-márgenes compensatorios son los términos financieros y la verificación importada
-(remota o transterritorial). La arquitectura tasa la verificación débil; no puede
-conjurar verificadores.
+**La calidad de la verificación se supone y luego se le asigna un precio.** Las Proposiciones 1–4 parametrizan la detección y el descubrimiento. En mercados de control delgados —mercados de bienes de confianza donde los compradores no pueden observar la calidad (Akerlof 1970; Dulleck y Kerschbamer 2006)— ambas pueden colapsar a la vez; solo compensan los términos financieros y la verificación importada, remota o transterritorial. La arquitectura asigna un precio a la debilidad, pero no puede crear verificadores.
 
-**La cobertura supone una diversidad de fuentes que luego debe garantizar.** La
-ventaja del brazo distribuido descansa en muchas señales parcialmente
-independientes; cuando los proveedores de perfil, los delegados y los
-recomendadores se concentran en una plataforma compartida o en unos pocos
-super-delegados (Kling et al. 2015), sus errores se correlacionan y el canal de
-modo común —la única sensibilidad que reduce materialmente la brecha anclada
-(§6, Apéndice E4)— recaptura el mismo cuello de botella epistémico que la
-cobertura pretende reemplazar. La independencia no es, por tanto, una
-conveniencia de modelado sino una obligación arquitectónica: Core v0 debe
-publicar la concentración de delegados, proveedores de perfil y recomendadores
-como cantidades observables y activar umbrales de diversificación cuando
-suban. El riesgo residual es que un mercado converja hacia un solo recomendador
-más rápido de lo que muerden los umbrales.
+**La cobertura depende de una diversidad de fuentes que la arquitectura debe garantizar.** La selección distribuida se beneficia de muchas señales parcialmente independientes. La concentración de proveedores de perfiles, delegados o recomendadores en una plataforma o en unos pocos superdelegados hace que los errores se correlacionen; este canal de modo común es la única sensibilidad que estrecha materialmente la brecha anclada en la literatura (§6; Apéndice E4), y recrea el cuello de botella epistémico que la cobertura debería reemplazar (Kling et al. 2015). Por tanto, la independencia es una obligación, no una conveniencia de modelado: Core v0 debe publicar la concentración y activar umbrales de diversificación. Un mercado todavía puede converger hacia un solo recomendador antes de que los umbrales surtan efecto.
 
-**El realismo conductual corta en ambos sentidos.** La simulación reivindica
-diseñar para ciudadanos desatentos, pero igualmente muestra que un despliegue
-débil en valores por defecto degenera en asignación impulsada por saliencia. Los
-fenómenos fuera de la plataforma —intermediación clientelar, polarización
-expresiva, colusión conducida enteramente fuera del sistema— se hacen más
-difíciles y más descubribles, nunca imposibles; las afirmaciones de la
-arquitectura son comparativas (contra el monopolio opaco), no absolutas.
+**El realismo conductual corta en ambos sentidos.** La simulación respalda diseñar para la desatención, pero valores predeterminados débiles producen asignación impulsada por la saliencia. La intermediación clientelar fuera de la plataforma, la polarización expresiva y la colusión se vuelven más difíciles y más fáciles de descubrir, nunca imposibles. Las afirmaciones son comparativas frente al monopolio opaco, no absolutas.
 
-**La metagobernanza en modo abierto se difiere por diseño.** El procedimiento de
-cambio de reglas, el versionado y las restricciones de no-sorpresa están
-especificados; la mecánica constitucional —reglas para hacer reglas (Buchanan y Tullock
-1962)— de quién vota sobre los cambios de
-protocolo en un despliegue maduro en modo abierto deliberadamente no lo está. El
-despliegue en modo abierto está supeditado a resolverlos.
+**La metagobernanza en modo abierto se difiere deliberadamente.** Los procedimientos de cambio de reglas, el versionado y las restricciones de no sorpresa están especificados; las reglas constitucionales sobre quién vota los cambios de protocolo no lo están (Buchanan y Tullock 1962). El despliegue en modo abierto queda supeditado a resolverlas.
 
-**La adopción selecciona, y la tesis no depende de ello.** Este artículo aborda
-si la arquitectura puede construirse y reporta contrastes de modelo condicionales
-tanto para la selección como para la entrega —no si Core v0 entrega más valor en el
-mundo (un efecto de valor total entregado en el dominio objetivo sigue siendo un
-estimando futuro identificado por separado, no reclamado aquí), y no si alguna
-autoridad la quiere. El corpus provee la capa de despliegue para una autoridad
-que ya ha decidido (líneas base prospectivas medidas desde el inicio de la
-instrumentación, atribución de crédito sobre la entrega verificada, atribución
-institucional antes que personal de los vencimientos de plazo en el primer ciclo,
-y una cláusula de simetría que impide a cualquier operador eximir sus propios
-proyectos), y nombra los arquetipos de adoptante plausibles —el retador
-pos-escándalo, el gobierno superior que lo mandata, el financiador externo que lo
-condiciona. El efecto de selección honesto se mantiene: la arquitectura será
-plausiblemente adoptada primero por patrocinadores relativamente limpios o recién
-llegados, en los lugares que menos la necesitan.
+**La adopción selecciona, y la tesis no depende de ello.** El artículo pregunta si Core v0 puede construirse y reporta contrastes condicionales de selección y entrega, no si aumenta el valor en el mundo real ni si atrae autoridades. Un efecto sobre el valor total entregado en el dominio objetivo es un estimando futuro identificado por separado, no afirmado aquí. Para una autoridad ya comprometida, el corpus proporciona líneas base prospectivas desde el inicio de la instrumentación, crédito solo por entrega verificada, atribución institucional antes que personal de los vencimientos de plazo en el ciclo uno, y una cláusula de simetría que impide a los operadores eximir sus propios proyectos. Los adoptantes plausibles son retadores pos-escándalo, gobiernos superiores que la mandatan y financiadores externos que la condicionan. La adopción seleccionará plausiblemente patrocinadores relativamente limpios o recién llegados allí donde la arquitectura menos se necesita.
 
-**Las magnitudes por capas son condicionales, no portables.** El estimado de
-selección y entrega de E5 (≈ +58.6 puntos [intervalo Monte Carlo condicional al
-95% +58.0, +59.2]) mantiene fijos el mundo declarado, la
-forma del modelo y la calibración; el intervalo refleja variación Monte Carlo
-sobre mundos simulados, no incertidumbre sobre el proceso generador de datos, la
-calibración, la forma funcional, el transporte desde la literatura o la
-implementación de campo, y la referencia voraz es un normalizador heurístico, no
-un óptimo. Los valores de Shapley de E9 son atribuciones condicionales a través
-del generador de sectores declarado, no estimaciones autónomas; los signos de
-capas individuales se invierten en mundos extremos aunque la diagonal completa de
-Core v0 permanezca positiva en los cuatro mundos nombrados. La dirección de
-captura de agenda de la planificación está anclada, pero su magnitud queda sin
-cuantificar. El resultado de costo de E10 se apoya en cuotas de presupuesto neto
-declaradas (insumos de escenario, no costos medidos específicos por brazo):
-aproximadamente neutro bajo un piso conservador de baja dispersión, y una modesta ventaja para
-Core v0 bajo un escenario de costos asimétrico (κ_C ≫ κ_D). Ninguna de estas es una estimación de
-efecto de campo.
+**Las magnitudes por capas son condicionales, no portables.** El contraste asimétrico principal y el resultado completo de selección y entrega (reportado en §6) son resultados direccionales, condicionales y estilizados de comparación institucional, no efectos calibrados del mundo real. E5 fija el mundo declarado, la forma del modelo y la calibración; su intervalo captura la variación Monte Carlo del mundo simulado, no la incertidumbre en el proceso generador de datos, la calibración, la forma funcional, el transporte desde la literatura o la implementación de campo. Su referencia voraz es un normalizador heurístico, no un óptimo. Los valores de Shapley de E9 son atribuciones condicionales al generador, no estimaciones autónomas; los signos de las capas individuales se invierten en mundos extremos, aunque la diagonal completa de Core v0 permanece positiva en los cuatro mundos nombrados. La dirección de la captura de agenda está anclada, pero su magnitud es desconocida. E10 usa cuotas declaradas del presupuesto neto, no costos medidos específicos por brazo: es aproximadamente neutro en un piso conservador de baja dispersión y favorece modestamente a Core v0 bajo el supuesto de costos asimétricos κ_C ≫ κ_D. Ninguna es una estimación de efecto de campo.
 
-**La medida de resultado es un agregado acotado y no distribucional.** El valor
-que el modelo puntúa es una suma cardinal de estilo utilitarista sobre las partes
-afectadas en una porción acotada de inversión pública con forma de proyecto y entrega
-verificable por hitos (la infraestructura es el caso más claro, pero la arquitectura no
-se limita a ella); no está ponderada distribucionalmente y no dice nada sobre redistribución, equidad, o
-quién soporta beneficios y daños. Una cartera puede puntuar bien en esta medida y
-distribuir mal. Aplicar el criterio entre grupos, o a todo el presupuesto o al
-propósito de la tributación, requeriría una especificación separada de
-bienestar social e incidencia que este artículo no provee. El modelo es además de
-equilibrio parcial: el reporte estratégico, la oferta endógena de propuestas, las
-complementariedades entre proyectos, la incidencia tributaria y los efectos de
-equilibrio general quedan fuera (véase el
-[claim-and-estimand-contract](../research/claim-and-estimand-contract.md)).
+**El resultado es un agregado acotado y no distribucional.** La magnitud evaluada por el modelo es una suma cardinal de estilo utilitarista sobre las partes afectadas, pero solo se utiliza como un constructo del modelo cuyos resultados se interpretan como contrastes direccionales/ordinales (Stevens 1946) —no se afirma ningún bienestar interpersonal cardinal, en consonancia con el tratamiento ordinal y revelado del valor de la arquitectura. Sus anclajes empíricos son predominantemente la infraestructura y la contratación pública —los casos con forma de proyecto y verificables por hitos en los que la evidencia es más clara—; la aplicabilidad más amplia a casos con forma de proyecto es una afirmación de diseño aún no validada empíricamente. No tiene ponderaciones distribucionales y no establece nada sobre redistribución, equidad o quién recibe beneficios y quién soporta daños: una cartera con puntuación alta puede tener una mala distribución. Extenderlo entre grupos, al presupuesto completo o al propósito de la tributación requiere una especificación separada de bienestar social e incidencia. El modelo es además de equilibrio parcial; quedan excluidos el reporte estratégico, la oferta endógena de propuestas, las complementariedades entre proyectos, la incidencia tributaria y los efectos de equilibrio general (véase el [claim-and-estimand-contract](../research/claim-and-estimand-contract.md)).
 
-**Epistémicamente, este es el diseño autocriticado de un solo equipo.** El corpus
-adversarial fue producido por el mismo esfuerzo de investigación que ataca, con
-asistencia de IA; la línea base del statu quo del aparato anterior estaba
-parametrizada por auditorías (sus parámetros tomados ítem por ítem a partir de
-los hallazgos publicados de instituciones de auditoría, con la verificación de
-fuentes primarias aún en curso), mientras que la prueba de
-simetría actual es una prueba de selección estilizada no calibrada —ninguna está
-calibrada a un conjunto de datos de PP específico, y los parámetros restantes son
-plausibles antes que medidos; y no se ha realizado ningún piloto. Las tres validaciones faltantes —ataque experto independiente,
-calibración a datos empíricos de PP, y un piloto tutelado acotado (sector
-deportivo, un municipio)— son la siguiente fase del programa de investigación, en
-ese orden.
+**Epistémicamente, este es el diseño autocriticado de un solo equipo.** El mismo esfuerzo de investigación asistido por IA produjo y atacó el corpus. El aparato previo del statu quo fue parametrizado mediante auditorías a partir de hallazgos publicados de instituciones de auditoría, y la verificación de fuentes primarias sigue en curso. La compuerta de simetría prerregistrada es una comprobación estrecha y no calibrada de la robustez de la selección: idealiza el brazo central como un lector de valor imparcial, competente y sin corrupción, y le concede una mejor observación de daños que al brazo distribuido, al que perjudica el sesgo adverso de voz. Esa idealización es precisamente la razón por la que la compuerta no puede acotar el valor de Core v0 en el conjunto de la arquitectura. Ninguna de las dos pruebas de selección está calibrada a un conjunto de datos específico de presupuesto participativo; los parámetros restantes son plausibles, no medidos; y no se ha realizado ningún piloto. Lo siguiente, en ese orden, es un ataque experto independiente, una calibración empírica de PP y un piloto tutelado acotado, de un solo municipio, en el sector deportivo.
 
 ## 9. Ruta de implementación
 
-La arquitectura está construida para una adopción gradual y revocable, y esta
-sección es explícita sobre lo que afirma y lo que no: la pregunta del artículo
-—si la arquitectura de asignación bicentenaria puede re-arquitecturarse con la
-tecnología de hoy— se responde al nivel de un diseño construible y de una
-*dirección* condicional del mecanismo de selección, con independencia de si alguna
-autoridad elige desplegarla. **No** responde *en cuánto* mejoraría el valor
-entregado en el mundo real: ese es un estimando identificado por separado, dejado
-a revisión independiente, calibración empírica y un piloto acotado (§8). Lo que
-sigue es la ruta para una autoridad que elige desplegarla. Un país abre una función pública (el piloto de
-referencia es la infraestructura deportiva municipal), migra una pequeña cuota
-presupuestaria bajo un modo de operación tutelado, y retiene la revisión de
-admisibilidad —con toda decisión y demora tutelada pública por construcción. El
-encuadre por defecto del piloto es prospectivo: la instrumentación comienza en la
-adopción, la brecha de visibilidad se publica como la línea de partida declarada
-del adoptante ("mídanme desde aquí"), y las cifras previas a la adopción se
-reportan por separado, de manera impersonal y como contexto —la configuración
-bajo la cual históricamente se han adoptado instrumentos que exponen. Las
-métricas de madurez funcional (mezcla de
-participación, cuota de flujo por defecto, tasas de independencia de la
-fiscalización, indicadores de resistencia del sistema establecido, confiabilidad fiscal)
-determinan si el despliegue gana un ámbito más amplio, y sus trayectorias, no la
-retórica, responden si la distribución supera a la línea base local. La condición
-de salida es honesta en ambas direcciones: un piloto cuyos indicadores se
-estancan bajo el ahogamiento del sistema establecido documenta ese hecho públicamente, lo
-cual es en sí mismo información que el sistema actual nunca produce.
+La adopción es gradual y revocable. El artículo responde si la tecnología actual puede reconstruir una arquitectura de asignación bicentenaria con un diseño construible y un mecanismo de selección condicional y direccional, con independencia de su despliegue; no estima las ganancias de valor entregado en el mundo real. Ese estimando identificado por separado queda a la espera de revisión independiente, calibración empírica y un piloto acotado (§8). La ruta de los modos operativos es cerrado/tutelado, semiabierto y luego abierto. El régimen abierto —el valor predeterminado arquitectónico— distribuye la planificación por construcción; la planificación centralizada queda confinada a la transición cerrada/tutelada. Un país abre una función (referencia: infraestructura deportiva municipal), traslada una pequeña cuota presupuestaria al modo tutelado, conserva la revisión de admisibilidad y publica cada decisión y demora tuteladas. La instrumentación comienza con la adopción; la brecha de visibilidad se convierte en la línea de partida declarada («mídanme desde aquí»), mientras las cifras previas a la adopción aparecen por separado, de manera impersonal, como contexto —la configuración bajo la cual históricamente se han adoptado instrumentos que exponen. La mezcla de participación, la cuota de flujo por defecto, las tasas de independencia de la fiscalización, los indicadores de resistencia del sistema establecido y la confiabilidad fiscal condicionan la expansión; sus trayectorias, no la retórica, muestran si la distribución supera la línea de base local. El estancamiento bajo el ahogamiento del sistema establecido se publica como resultado de salida —información de la que carece el sistema actual.
 
-La transición entre regímenes está ella misma medida. Los experimentos
-complementarios (Offermann 2026b) cuantifican el régimen semiabierto de la
-escalera de regímenes operativos (docs/110) —un sobre presupuestario acotado y mandatado (envelope) que
-corre en piloto automático de protocolo junto al presupuesto tradicional de la
-autoridad— como una mezcla fiscal: sobre un piso de granularidad de cartera de
-aproximadamente diez por ciento, el valor verificado mezclado sube de forma
-monótona y casi lineal con la cuota del sobre dentro de ese aparato, desde el
-punto de equilibrio cerca del ocho a diez por ciento hacia arriba —un contraste
-del aparato anterior, ahora sujeto a la salvedad del multiplicador retirado
-(Sección 6), no un punto final calibrado. La transición desde el statu quo hacia
-el régimen abierto es una perilla, no un salto: la adopción puede proceder por
-incrementos.
+La transición se mide. Offermann (2026b) cuantifica el peldaño semiabierto (docs/110): un sobre acotado, ejecutado por protocolo, junto al presupuesto tradicional. Dentro de ese aparato, por encima de un piso de granularidad de cartera de aproximadamente 10%, el valor verificado mezclado aumenta de forma monótona y casi lineal con la cuota del sobre, y alcanza el punto de equilibrio en torno al 8–10%. Este contraste estilizado de transición es direccional, no calibrado. El contraste de selección asimétrica, justo y anclado en la literatura, sigue siendo el hallazgo direccional principal. El paso del statu quo al régimen abierto es una perilla incremental, no un salto.
 
-Los mismos experimentos midieron una variable que este corpus había dejado sin
-regular: *cuándo* libera la autoridad el presupuesto hacia la maquinaria de
-asignación. La regla de despliegue resultante: medir la liberación contra un
-techo de obra-en-proceso calibrado al caudal (throughput) y tiempo de ciclo de la
-tubería de entrega y verificación —nunca contra el calendario. La liberación
-por calendario congela meses de presupuesto en custodia y satura la verificación;
-y cuando la capacidad de verificación es escasa, ninguna política de liberación
-compensa —la capacidad de verificación es el techo de la tubería antes que su
-instrumento antifraude. La regla es condicional a un instrumento de arrastre
-plurianual (el sobre semiabierto es precisamente tal vehículo); bajo
-anualidad presupuestaria estricta degenera a medición intra-anual.
+Los experimentos también proporcionan una regla de liberación presupuestaria: medir la liberación contra un techo de obra-en-proceso calibrado al caudal y al tiempo de ciclo de entrega y verificación, nunca contra el calendario. La liberación por calendario congela meses de presupuesto en custodia y satura la verificación; cuando la verificación escasea, ninguna política de liberación compensa: la capacidad es el techo de la tubería antes que una herramienta antifraude. La regla requiere un instrumento de arrastre, proporcionado por el sobre semiabierto; bajo anualidad estricta, se reduce a la medición intraanual.
 
-Finalmente, la premisa tecnológica que reduce los costos de participación del
-lado ciudadano (el tutor de IA) aplica simétricamente al lado del control. La
-verificación por máquina de las clases de evidencia protocolizables multiplica
-la capacidad de fiscalización, con humanos como segunda instancia permanente
-—reverificación muestreada con un piso publicado, controles sembrados de
-respuesta conocida como instrumento de calibración y detección de deriva,
-auditando al verificador en vez de competir con él— de modo que la tasa de
-error de la máquina permanece medida y la profesión humana de control sigue
-financiada desde el presupuesto de control que ella alivia. Medido sobre un
-panel de cinco familias reales de modelos (Offermann 2026b), los modelos
-frontera convergen en buena especificidad y detección de fraude sobre
-evidencia legible en documentos, mientras los modelos locales pequeños son más
-débiles, y los contratos de evidencia que incluyen referencias objetivas de
-comparación (precios de mercado, bandas de duración, umbrales) permiten al
-verificador estricto juzgar en vez de adivinar. La capa máquina alcanza solo
-el fraude legible en documentos de la fase de entrega —la calidad por debajo de la especificación física y el robo previo al contrato quedan enteramente en manos humanas, de modo que
-la atestación de procedencia permite detectar manipulaciones desde el momento de
-captura, pero no constituye una prueba con validez judicial, y la admisibilidad probatoria aún requiere custodia, contradicción y
-peritaje. La evidencia ciudadana contrapuesta —productores independientes con
-intereses opuestos al ejecutor, cuya existencia anticipada disuade el desvío—
-mantiene la vigilancia distribuida incluso cuando el trabajo rutinario de
-verificación documental se reduce; pero su fuerza equivale a la *independencia*
-de la capa de aportantes de evidencia, y un anillo colusivo que la capture o silencie
-borra el efecto. La colusión entre capas es, de hecho, el único adversario que
-sortea la disuasión por hito y modifica la fuga en un orden de magnitud (mientras la
-ventaja de valor entregado sobrevive), así que la resistencia a la colusión
-—titularidad real verificada y resistencia a identidades Sybil entre los aportantes de evidencia, y
-descentralización del asignador y del piso de presupuesto de auditoría— es un
-requisito de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)), no una salvedad residual.
+La reducción de costos del tutor de IA se aplica simétricamente al control. La verificación por máquina de evidencia protocolizable amplía la capacidad de fiscalización, mientras los humanos siguen siendo la segunda instancia permanente: la reverificación por muestreo tiene un piso publicado, los controles sembrados de respuesta conocida calibran y detectan la deriva, y los humanos auditan al verificador en vez de competir con él, manteniendo medidos los errores y financiando la profesión de control con los presupuestos que la verificación por máquina alivia. Un panel de cinco familias de modelos reales (Offermann 2026b) constata que los modelos de frontera tienen buena especificidad y detección de fraude sobre evidencia legible en documentos; los modelos locales más pequeños son más débiles, y los contratos de evidencia con referencias objetivas —precios de mercado, bandas de duración, umbrales— permiten a los verificadores estrictos juzgar en vez de adivinar. La automatización cubre solo el fraude legible en documentos de la fase de entrega: la calidad física por debajo de especificación y el robo previo al contrato quedan enteramente en manos humanas. La atestación de procedencia es evidencia de manipulación al momento de la captura, no una prueba con validez judicial; la admisibilidad aún requiere custodia, contradicción y testimonio pericial. La evidencia ciudadana contrapuesta preserva la vigilancia distribuida a medida que se reduce la revisión documental rutinaria; la disuasión depende de aportantes independientes previstos y opuestos a los ejecutores, por lo que la captura o el silenciamiento colusivos la eliminan. Solo la colusión entre capas sortea la disuasión por hito e incrementa la fuga en un orden de magnitud, aunque la ventaja de valor entregado sobrevive. Por tanto, la titularidad real verificada, la resistencia a identidades Sybil entre los aportantes, la asignación descentralizada y un piso de presupuesto de auditoría son requisitos de primera clase ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)).
 
 ## 10. Conclusión
 
-Para el problema acotado de asignación de inversión pública que se estudia aquí,
-un criterio relevante no es cuán fielmente una institución ejecuta un plan sino
-cuánto valor entregado y verificado produce por unidad de recurso público
-(Musgrave 1959; Okun 1975) —un criterio junto a las restricciones distributivas y
-de derechos que este modelo no representa. La contribución de este
-artículo es una arquitectura que vuelve operativo ese criterio —y un relato
-disciplinado de exactamente hasta dónde llega su evidencia. La columna vertebral
-de la arquitectura son dos preguntas separables que cualquiera puede hacerse.
-Primero: tómense los mismos proyectos, diseñados de manera idéntica, y cámbiese
-únicamente quién ejecuta y cómo se lo vigila —¿acaso el régimen visiblemente
-auditado con consecuencias reputacionales entrega más que el opaco sin ellas?
-Segundo: manténgase fija la capa de control y cámbiese únicamente qué proyectos
-se financian, ¿planificados centralmente o priorizados socialmente? En el
-mundo declarado PROBABLE de E5, la respuesta a ambas es afirmativa: una ganancia
-de entrega verificada y una ganancia de selección que se componen
-multiplicativamente (una identidad contable, no un hallazgo independiente). En
-conjunto, la arquitectura completa de selección y entrega supera al statu quo en
-aproximadamente 58.6 puntos de la referencia voraz en el mundo declarado
-[+58.0, +59.2]. E9 y E10 precisan luego de dónde proviene la ventaja modelada: la
-diagonal de conjunto completo de capas se mantiene positiva a través de los mundos nombrados
-incluso cuando contribuciones de Shapley individuales se invierten en rincones
-extremos; la captura de agenda se representa como el mecanismo principal de la
-planificación, con su dirección anclada pero su magnitud independiente sin cuantificar; y una
-contabilidad de presupuesto neto
-deja el costo administrativo aproximadamente neutro bajo un piso conservador de baja dispersión, y otorga una modesta ventaja para Core v0 bajo un escenario declarado de costos asimétricos. En este modelo, la ventaja
-de la arquitectura es el valor entregado, y el costo administrativo se suma a ella en vez de restarle. Esas
-magnitudes son contrastes condicionales internos al modelo, no efectos de campo calibrados.
-El artículo descansa, por tanto, en la arquitectura plenamente especificada, el mecanismo
-de crédito versus cobertura y los hallazgos separados por canal sobre selección, entrega
-verificada y costo administrativo, no en un multiplicador del desempeño institucional
-completo. La prueba prerregistrada de selección arrojó un resultado negativo porque su
-mediana positiva Δ = 0.025 no superó el umbral de reconstrucción de 0.05; conforme a lo
-registrado, retiramos el multiplicador anterior (§6; Apéndice E4). El central competente y
-consciente del daño, junto con la entrega en paridad, determina el alcance del resultado:
-se trata de una decisión de calibración bajo ese comparador, no de un hallazgo de que Core
-v0 haya fracasado. El mapa exploratorio separado pregunta qué ocurre bajo las asimetrías
-institucionales motivadas por fuentes que la prueba deja de lado; en su escenario de
-referencia declarado, la cobertura recupera cerca del 98% de la referencia voraz del modelo
-frente al ~44% del central, mientras que la estrecha ventaja de 2.3 puntos del central
-aparece solo en su extremo favorable y casi sin daño. Estos son resultados condicionales de
-escenarios, no una recalibración ni una estimación de efectos de campo. Un resultado interno al modelo vale la pena conservar
-porque trata de la capa de entrega, no del multiplicador: en el modelo, a la
-intensidad de detección informada por auditorías de E7 (aún no plenamente
-verificada en sus fuentes), la detección sin consecuencias
-persistentes no disuade desvío alguno; lo que mueve el valor entregado es el
-instrumento del que el statu quo modelado carece: consecuencias que persisten. Que
-eso se sostenga en una institución real es una hipótesis para un piloto, no un
-resultado aquí; pero el modelo es inequívoco en que la rendición de cuentas sin
-memoria es contabilidad.
+Para este problema acotado de inversión pública, el criterio pertinente es el valor entregado y verificado por unidad de recurso (Musgrave 1959; Okun 1975), junto con las restricciones distributivas y de derechos ausentes del modelo. El artículo lo operacionaliza y lo acota. Contrasta la entrega por separado (proyectos fijos; se varían los ejecutores y el monitoreo) con la selección (controles fijos; se varía quién selecciona). En el mundo declarado PROBABLE de E5, ambas mejoran. El contraste asimétrico principal, justo y anclado en la literatura halla que la selección distribuida guiada por cobertura recupera ~98% de la referencia voraz de información completa frente al ~44% del central (≈2.2×; ~54 puntos); la arquitectura completa de selección y entrega supera el statu quo en ~58.6 puntos [+58.0, +59.2]. Las ganancias de selección y de entrega verificada se componen multiplicativamente en virtud de una identidad contable, no como un hallazgo independiente.
 
-El punto más profundo es el de Friedman: una administración central gasta el
-dinero de otras personas en otras personas, la categoría de gasto con el menor
-cuidado tanto por el costo como por el valor (Friedman y Friedman 1980). Esta
-arquitectura no responde a ese problema con exhortación; reconecta las cañerías
-del balde. La planificación permanece —el hilo conductor que fija ámbitos,
-pisos y mandatos— pero dentro de esos límites el valor proviene de unir la
-selección dispersa a una entrega sujeta a consecuencias: promesas
-medibles, liberación condicional, verificación independiente, consecuencias que
-se acumulan en reputación, y un medidor en cada fuga. La pregunta que este
-artículo responde no es, por tanto, si los Estados deberían ser más grandes o más
-pequeños, sino si las capas de la actividad estatal que fallan a través del
-monopolio de información e incentivos pueden rearquitecturarse para fallar menos
-—y para mostrar sus fallas cuando las tienen. Para una de esas capas hemos
-especificado una arquitectura completa, demostrado las condiciones de incentivos
-de las que dependen sus mecanismos, medido la selección, la agregación y la
-entrega en simulación contra una línea base que los propios auditores del sistema
-establecido suministraron, y sometido el conjunto a cinco rondas de revisión
-adversarial documentada con una disciplina explícita de integrar-o-acotar. El
-resultado es deliberadamente modesto en sus afirmaciones e inusualmente explícito
-sobre sus bordes: la calidad de la asignación depende de la calidad
-informativa de aquello que construya el vector de pesos, cuya construcción
-abierta se mide viable pero cuya elicitación honesta sigue siendo el problema
-abierto; el valor entregado depende de una verificación cuyas condiciones de
-mercado deben tasarse; la legitimidad depende de mandatos que la plataforma
-puede registrar pero no crear. Lo que distingue a la propuesta es que estos
-bordes están especificados, monitoreados y adjuntos a objetos nombrados —que es,
-sostenemos, cómo se ve cuando el diseño institucional se trata como una
-disciplina de ingeniería antes que como una disciplina ideológica.
+E9–E10: la diagonal de conjunto completo de capas se mantiene positiva a través de los mundos nombrados, aunque las contribuciones de Shapley se invierten en rincones extremos. La captura de agenda es el principal mecanismo modelado de la planificación; su dirección está anclada, pero su magnitud independiente no está cuantificada. En una contabilidad de presupuesto neto, el costo administrativo es aproximadamente neutro bajo un piso conservador de baja dispersión y favorece modestamente a Core v0 en un escenario declarado de costos asimétricos, sumándose a la ventaja de valor entregado en vez de borrarla. Estos son resultados direccionales, condicionales y estilizados de comparación institucional, no efectos de campo calibrados. La evidencia descansa en la arquitectura, el mecanismo de crédito versus cobertura y los hallazgos separados por canal sobre selección, entrega y costo, no en un multiplicador del desempeño institucional completo.
 
-La comparación es condicional, no ontológica. Un centro con canales creíbles de
-información local, representación organizada de los perjudicados difusos y baja
-presión de crédito puede acercarse a la paridad. La afirmación de Core v0 es que
-esas capacidades son logros institucionales por *demostrar*, no virtudes por
-presumir —y que un Estado menos dependiente de lo que su centro puede ver, y menos
-capaz de certificar sus propios errores, vale el intento.
+El filtro de simetría prerregistrado, una comprobación acotada de robustez de la selección, arrojó NO-GO —su contraste distribuido positivo quedó por debajo del umbral de reconstrucción prerregistrado (la cifra y el método figuran en el Apéndice E4). Idealiza al central como un lector del valor competente e imparcial, libre de corrupción, con paridad de entrega y mejor observación del daño que el brazo distribuido, lastrado por un sesgo adverso de voz. No muestra que Core v0 haya fracasado ni puede, por esas idealizaciones, acotar el valor de toda la arquitectura. La ventaja de selección de 2.3 puntos del central aparece solo en su extremo favorable y casi sin daño. E7 halla que, a una intensidad de detección informada por auditorías pero no plenamente verificada en sus fuentes, la detección sin consecuencias persistentes no disuade ningún desvío; las consecuencias reputacionales persistentes mueven el valor entregado. La realidad sigue siendo una hipótesis para un piloto: en el modelo, la rendición de cuentas sin memoria es contabilidad.
+
+Siguiendo a Friedman y Friedman (1980), la arquitectura aborda el escaso cuidado por el costo y el valor cuando los administradores gastan el dinero de otras personas en otras personas reconectando las cañerías de los incentivos, no mediante exhortaciones. La planificación está distribuida por construcción en modo Open; la planificación centralizada es solo un modo de transición tutelado/cerrado. La planificación fija ámbitos, pisos y mandatos; la selección dispersa une promesas medibles, liberación condicional, verificación independiente, reputación persistente y contabilidad de fugas. La cuestión no es el tamaño del Estado, sino si las capas de información e incentivos propensas al monopolio pueden fallar menos y mostrar sus fallas.
+
+Para esa capa, el artículo especifica una arquitectura completa, demuestra sus condiciones de incentivos, simula la selección, la agregación y la entrega contra una línea base suministrada por los auditores del sistema establecido, y aplica cinco rondas documentadas de revisión adversarial con una disciplina de integrar-o-acotar. Límites: la asignación depende de la información del vector de pesos —la construcción abierta se mide como viable, pero la elicitación honesta sigue sin resolverse—; la entrega depende de una verificación cuyas condiciones de mercado requieren tasación; la legitimidad depende de mandatos que la plataforma registra pero no puede crear. Nombrar estos bordes, monitorearlos y adjuntarlos a objetos es tratar el diseño institucional como ingeniería, no como ideología.
+
+La comparación es condicional, no ontológica. Un centro con canales creíbles de información local, representación organizada de los perjudicados difusos y baja presión de crédito puede acercarse a la paridad. Core v0 considera esas capacidades logros por demostrar, no virtudes por presumir; vale la pena intentar un Estado menos dependiente de lo que su centro puede ver y menos capaz de autocertificar sus errores.
 
 ## Apéndice E4: la prueba de decisión simétrica y el mapa de robustez de cuatro escenarios
 
-Este apéndice ofrece el diseño completo de la prueba de decisión simétrica prerregistrada (resumida
-como "Estado cuantitativo" en §6) y el mapa de robustez de cuatro escenarios v1.14
-completo (destacado en §6): la tabla de escenarios, la descomposición de la miopía al
-daño, la frontera, el teorema de paridad y los cuatro límites.
+La comparación asimétrica equitativa, anclada en la literatura, es el hallazgo direccional principal; la prueba de decisión prerregistrada es una comprobación acotada de la robustez de la selección.
 
 ### La prueba de decisión simétrica de crédito versus cobertura (métodos completos)
 
-Como esta es la prueba prerregistrada del artículo, su diseño se enuncia aquí
-por completo y no solo por referencia. Cada mundo contiene K = 500 proyectos
-candidatos; para cada uno se consideran N = 5000 participantes potenciales, y
-cada participante tiene una probabilidad, específica de cada proyecto, de estar interesado, de modo que el alcance
-de interesados es a lo sumo N y endógeno. Ambos brazos ven entonces el mismo conjunto de candidatos, los
-mismos costos exactos, la misma verdad net[j] = S[j] − h·cost[j], la entrega en
-**paridad**, y el mismo ruido de reporte report = v + Normal(0, τ); cada uno
-financia un conjunto **voraz** bajo un presupuesto de un tercio del costo total de
-los proyectos, es elegible para financiar un proyecto solo cuando *su propia*
-estimación ruidosa del valor neto es positiva (sin compuerta de oráculo), y su valor entregado se
-puntúa sobre el net *verdadero* de los proyectos. Los brazos son simétricos salvo
-por el mecanismo de cobertura y sus contrapartes igualadas. *Distribuido (cobertura
-endógena):* cada ciudadano interesado reporta de forma independiente con
-probabilidad p si su valor v ≥ 0 y p·(1 − β) si v < 0 (sesgo de voz adverso), dando
-ĥS_D = Σreportes / p, ordenado por net estimado por costo. *Central (lector de valor
-competente):* un presupuesto de tasación ajustado al total *esperado* de reportes del
-brazo distribuido en ese mundo, repartido **de manera uniforme** entre proyectos
-como un ancho de banda fijo por proyecto redondeado m_C = round(reportes esperados /
-K) (de modo que los totales de tasación de ambos brazos son iguales en esperanza
-salvo ese redondeo); por proyecto muestrea m_C ciudadanos
-interesados, observa v + Normal(0, τ), y forma su propio ĥNet_C ruidoso =
-alcance·media(observado) − h·cost. Ordena por puntaje = (1 − λ)·z(ĥNet_C/cost) +
-λ·z(P/cost) —su **propia estimación ruidosa**, nunca el net verdadero— donde P es el
-crédito político reclamable (la lógica electoral de reclamo de crédito y
-trazabilidad por la cual se favorecen los beneficios visibles y atribuibles sobre
-los difusos; Mayhew 1974; Arnold 1990) y λ es la presión de crédito acotada (una
-presión *postulada* cuya magnitud en el mundo real debe medirse, no suponerse). El
-crédito mueve el *orden*, nunca la elegibilidad (sin planificador que destruya valor
-a sabiendas). Las asimetrías legítimas son por tanto solo estas: los reportes
-distribuidos se auto-enrutan hacia los proyectos que a los ciudadanos les importan
-mientras las personas afectadas negativamente participan menos, y la tasación central se
-reparte de manera uniforme mientras su orden carga presión de crédito —todo lo demás
-es compartido. El estimando es **Δ = (D − C)/O** por mundo, donde D, C, O son el net
-verdadero entregado por los brazos distribuido, central y voraz de información
-completa, y O es un nivel de referencia, no un óptimo. La grilla congelada
-barre λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 un control negativo), un parámetro de
-correlación latente ρ ∈ {0, 0.5, 1} (corr(S, P) realizada ≈ 0.00, 0.30, 0.82),
-y h ∈ {1.5, 2.5, 4} sobre 100 mundos sembrados, en un régimen de
-observación base (p = .35, β = .30, τ = .5) y un régimen de estrés de baja
-información con presupuesto igualado (p = .15, β = .60, τ = 1.0). La **regla de
-decisión prerregistrada** —congelada antes de correr y diseñada por el auditor
-independiente para ser adversarial— exigía, para autorizar la reconstrucción del motor
-cuantitativo, al menos 15 de las 18 celdas primarias con Δ medio > 0, una **mediana
-agrupada Δ ≥ 0.05**, un límite inferior de bootstrap > 0, y mediana Δ ≥ 0 bajo el
-régimen de estrés, más un criterio de pausa si el propio control λ = 0 excedía
-0.05. El resultado fue **negativo (no continuar)**: la ventaja fue positiva en las 18
-celdas primarias, pero la **mediana agrupada Δ = 0.025** prerregistrada quedó por
-debajo del umbral de reconstrucción de 0.05; el control negativo λ = 0 se ubicó en
-≈ 0.016, dentro del criterio de pausa (ninguna asimetría oculta señalada).
-Una estimación **post hoc** de cociente de sumas agrupado por mundos fue
-Δ = 0.026 [0.023, 0.029] (incertidumbre Monte Carlo sobre el proceso generador
-simulado, reportada por separado de la mediana). La ventaja crece con la presión de
-crédito λ y cae a medida que el crédito se alinea con el valor —el mecanismo de
-crédito versus cobertura—. Es pequeña para este estimando, y la mediana agrupada no superó
-el umbral registrado de 0.05; conforme a la regla congelada, el multiplicador calibrado se
-retira y la simulación se trata como una frontera ilustrativa, y el artículo
-se apoya en la arquitectura y la dirección del
-mecanismo, ahora afinada por el mapa de robustez a continuación.
+Cada uno de los 100 mundos sembrados contiene K = 500 proyectos y N = 5000 participantes potenciales por proyecto, con interés específico de cada proyecto, de modo que el alcance es endógeno y está limitado a N. Los brazos comparten el conjunto de candidatos, los costos exactos, el net verdadero[j] = S[j] − h·cost[j], la paridad de entrega, el ruido de reporte v + Normal(0, τ), un presupuesto de un tercio del costo total de los proyectos, la selección voraz, la elegibilidad solo cuando su propia estimación ruidosa del net es positiva (sin oráculo) y la puntuación ex post sobre el net verdadero.
+
+La tasación distribuida se autoenruta: cada ciudadano interesado reporta independientemente con probabilidad p si v ≥ 0 y p(1 − β) si v < 0, imponiendo un sesgo adverso de voz; Ŝ_D = Σreportes/p, y los proyectos se ordenan por net estimado/costo. La tasación central recibe el presupuesto esperado de reportes del brazo distribuido, repartido uniformemente como m_C = round(reportes esperados/K), por lo que queda igualado en esperanza salvo por el redondeo. Por proyecto toma una muestra de m_C ciudadanos interesados, observa v + Normal(0, τ) y estima Net_C = alcance·media(observado) − h·cost. Ordena por (1 − λ)·z(Net_C/cost) + λ·z(P/cost), usando su estimación, nunca el net verdadero. P es crédito político reclamable—el mecanismo de trazabilidad electoral que favorece los beneficios visibles y atribuibles sobre los difusos (Mayhew 1974; Arnold 1990)—y λ es una presión acotada, postulada, que requiere medición. El crédito cambia el orden, no la elegibilidad: el planificador nunca financia a sabiendas proyectos que, según la estimación, destruyen valor. Así, la única diferencia es la cobertura enrutada con voz negativa reducida frente a un ancho de banda uniforme con presión de crédito.
+
+El estimando es Δ = (D − C)/O, el net verdadero entregado relativo a la referencia voraz de información completa O, que no es ni un óptimo ni una cota superior. La grilla congelada cruza λ ∈ {0, .1, .2, .3} (0 es el control negativo), ρ latente ∈ {0, .5, 1} (corr(S,P) realizada ≈ .00, .30, .82) y h ∈ {1.5, 2.5, 4}. Se ejecutan los regímenes de referencia (p = .35, β = .30, τ = .5) y de estrés de baja información con presupuesto igualado (p = .15, β = .60, τ = 1.0). La regla adversarial del auditor independiente, congelada antes de la ejecución, exigía al menos 15/18 celdas primarias con Δ medio > 0, una mediana agrupada de Δ ≥ .05, un límite inferior de bootstrap > 0, una mediana de estrés de Δ ≥ 0 y una pausa si el control λ = 0 excedía .05.
+
+La prueba de decisión arrojó NO-GO para reconstruir el motor cuantitativo: las 18 celdas fueron positivas, pero la mediana Δ = .025 no alcanzó .05; λ = 0 fue ≈ .016, dentro del criterio de pausa, por lo que no se señaló ninguna asimetría oculta. Por separado, el cociente post hoc de sumas agrupado por mundos fue Δ = .026 [.023, .029], un intervalo de Monte Carlo condicional al proceso generador de datos simulado. La ventaja aumenta con λ y disminuye a medida que el crédito se alinea con el valor, lo que respalda la dirección del mecanismo, pero es pequeña para este estimando. La regla de .05 es una prueba de decisión del programa de investigación, no un umbral calibrado de materialidad para las políticas.
+
+Esta prueba concede deliberadamente al brazo central un lector de valor por lo demás imparcial, competente y libre de corrupción, con mejor información sobre el daño, mientras pone en desventaja a la tasación distribuida mediante el sesgo adverso de voz. También fija las propuestas y mantiene igual la entrega. Precisamente estas idealizaciones hacen que su contraste de selección no sea ni una cota superior ni una cota inferior del valor de toda la arquitectura de Core v0.
 
 ### El mapa de robustez de cuatro escenarios (v1.14)
 
-La prueba prerregistrada anterior dota al brazo central de una tasación competente y
-*consciente del daño*. Una extensión v1.14 hace la pregunta empíricamente fundada: qué
-ocurre cuando el central se modela como lo describe la evidencia — **casi ciego al daño
-difuso en la cola larga de baja visibilidad**. Esa ceguera está sobre-determinada por la
-literatura: el problema del conocimiento (Hayek 1945), la legibilidad estatal (Scott
-1998), los costos difusos políticamente infraponderados (Olson 1965; Schattschneider 1960;
-Wilson 1973), el 83% del desperdicio público que es *pasivo* y no elegido (Bandiera, Prat
-y Valletti 2009), lo visible-versus-lo-no-visto (Bastiat 1850) y el control de agenda
-(Bachrach y Baratz 1962). El modelo lo realiza como un término de daño gobernado por
-saliencia, M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, cuya detección de daño s(V)
-crece con la visibilidad del proyecto, mientras el brazo distribuido registra el daño en
-toda la distribución. **La participación de asignación neta es universal por arquitectura
-(p = 1)** —en Core v0 los perfiles y delegados asignan en nombre de los pasivos, así que
-es un *hecho*, no una tasa de participación baja en presupuestos participativos. Su *calidad de señal* es
-una composición anclada: ~5% reportes activos directos (la cifra de participación de un
-dígito), ~35% microdelegación (señal individual, revocable — Kling et al. 2015) y ~60%
-reglas de perfil (un default de categoría de alta alineación, ya que la gente
-mayoritariamente conserva los defaults — Samuelson y Zeckhauser 1988). El anclaje
-literario completo de cada parámetro está en `research/e4-calibration-literature-anchors.md`.
-Puntuando la entrega sobre el valor real, cuatro escenarios declarados (más un contraste
-diagnóstico) mapean dónde queda cada institución, como la fracción con signo de la referencia
-voraz de información completa, paridad en cero (`npm run e4:scenarios`):
+El modelo asimétrico equitativo representa, en cambio, la diferencia institucional fundamentada en evidencia: la casi ceguera central al daño difuso en la cola larga de baja visibilidad. Sus fundamentos son el problema del conocimiento (Hayek 1945), la legibilidad (Scott 1998), la infraponderación política de los costos difusos (Olson 1965; Schattschneider 1960; Wilson 1973), el desperdicio pasivo—83% en el contexto específico de la contratación italiana de bienes estandarizados de Bandiera, Prat y Valletti (2009)—, lo visto frente a lo no visto (Bastiat 1850), y el control de agenda (Bachrach y Baratz 1962). Establece M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, con la detección de daño s(V) aumentando con la visibilidad; la tasación distribuida registra el daño en toda la distribución.
+
+Core v0 tiene enrutamiento presupuestario universal por arquitectura (p = 1): los perfiles y los delegados actúan en nombre de los ciudadanos pasivos; no se trata de participación directa de baja concurrencia ni de información perfecta. Su mezcla de señales declarada y motivada por fuentes es ≈5% de reportes directos, ≈35% de microdelegación individual revocable (Kling et al. 2015) y ≈60% de valores predeterminados de perfil de alta alineación (Samuelson y Zeckhauser 1988). Puntuando sobre el valor verdadero, cuatro escenarios más un diagnóstico informan fracciones con signo de la referencia voraz de información completa, con paridad en cero (`npm run e4:scenarios`):
 
 | escenario (supuestos) | m ± IC 95% | Core v0 | central | ganador |
-|---|---|---|---|---|
-| **Probable — el escenario de referencia declarado** (central miope al daño difuso, proyectando, sesgado al crédito; distribuido en su composición de cobertura anclada) | **+54,0%** [+53,2, +54,8] | 98,2% | 44,2% | **Core v0 (decisivo)** |
-| **Solo la miopía al daño desactivada** (`MYOPIA_OFF`; contraste diagnóstico: probable, cambiando SOLO las dos coordenadas del umbral de daño) | **+37,6%** [+37,0, +38,2] | 98,2% | 60,6% | Core v0 |
-| **Paquete sin miopía** — probable, pero al central se le otorga visión del daño + ausencia de sesgo + precisión + sin crédito | **+13,8%** [+13,5, +14,1] | 98,6% | 84,8% | Core v0 |
-| **Caso favorable al distribuido** | **+205,2%** [+202,9, +208,1] | 95,6% | −109,6% | Core v0 |
-| **Extremo declarado favorable al central** (un lector residualmente imperfecto en un mundo casi sin daño) | **−2,3%** [−2,5, −2,2] | 95,3% | 97,6% | central (ventaja estrecha interna al modelo) |
+|---|---:|---:|---:|---|
+| **Probable—referencia declarada:** miopía central al daño difuso, proyección, sesgo hacia el crédito; composición distribuida anclada | **+54.0%** [+53.2, +54.8] | 98.2% | 44.2% | **Core v0 (decisivo)** |
+| **Solo la miopía al daño desactivada** (`MYOPIA_OFF`; solo cambian dos coordenadas del umbral de daño) | **+37.6%** [+37.0, +38.2] | 98.2% | 60.6% | Core v0 |
+| **Paquete sin miopía:** el central obtiene visión del daño, imparcialidad, precisión y ausencia de crédito | **+13.8%** [+13.5, +14.1] | 98.6% | 84.8% | Core v0 |
+| **Caso favorable al distribuido** | **+205.2%** [+202.9, +208.1] | 95.6% | −109.6% | Core v0 |
+| **Extremo declarado favorable al central:** lector residualmente imperfecto, mundo casi sin daño | **−2.3%** [−2.5, −2.2] | 95.3% | 97.6% | central (ventaja estrecha interna al modelo) |
 
-**El resultado anclado es grande y robusto en todo el espacio declarado (exploratorio).** Bajo el escenario de **referencia
-declarado** el brazo distribuido entrega ≈ 98,2% de la referencia y el central
-≈ 44,2% —una brecha de +54 puntos— y la cobertura gana en esencialmente todo el espacio
-de parámetros anclado. Desactivar únicamente la miopía al daño (las dos coordenadas del umbral de daño)
-recupera cerca del **41%** de la brecha (16,4 de un declive de 40,2 puntos); otorgar al
-central el paquete *completo* competente-y-consciente-del-daño recupera el resto y aun
-así deja a la cobertura adelante (**≈ +13,8%**) —de modo que hasta un central idealizado
-en todo, **incluida la visión del daño**, aun así pierde. El central
-se pone apenas adelante solo **abandonando los supuestos declarados**: un lector corregido
-(sin miopía — contra Hayek/Scott/Olson/Bandiera; sin proyección — contra Broockman y
-Skovron 2018) en un mundo casi sin daño alcanza apenas ≈ −3%, un caso extremo, marginal y contrario a la evidencia. Ese rincón se reporta **simétricamente** con el rincón *igualmente
-idealizado* del brazo distribuido —construido para reflejar la misma receta: señal
-distribuida perfecta en un mundo con daño con el central en su miopía *anclada*—, que
-alcanza **≈ +118%** (el escenario más amplio `PRO_DIST` de la tabla, +205%, es aún más
-favorable porque *además* degrada al central por debajo de su nivel anclado). La
-idealización es marcadamente asimétrica, y ninguno de los dos rincones está empíricamente
-fundado. La única sensibilidad que reduce materialmente la
-brecha anclada es el **error correlacionado o de modo común** en la proporción asignada mediante
-perfiles y delegación (una plataforma/recomendador compartido, o delegación concentrada en
-super-delegados — Kling et al. 2015): reduce la brecha de aproximadamente +54% a +44% (modesto) y ≈ +26% (fuerte),
-cruzando la paridad solo a un nivel grande de error compartido (σ_cm ≈ 2,1). Ninguna
-rebanada de un-solo-factor voltea al ganador sobre su rango plausible; el sendero
-ceteris-paribus combinado desde la referencia declarada hacia el extremo del central
-plenamente idealizado cruza la paridad solo en **t ≈ 0,92 del segmento declarado**. Esto
-es evidencia de curva local, ceteris-paribus —seis rebanadas de un-solo-factor más un
-sendero combinado declarado— no una frontera global exhaustiva; un barrido conjunto
-Sobol / hipercubo latino de todo el espacio de parámetros queda diferido a trabajo
-futuro. Estas
-magnitudes son **puntos de referencia declarados y motivados por fuentes, de un modelo
-estilizado de instituciones comparadas —un contraste de modelo condicional, no efectos
-de campo calibrados al dominio objetivo**. Los límites vigentes son: (i) la *magnitud*
-exacta del umbral de daño es una forma funcional estilizada —su *dirección* está
-fuertemente anclada, y el resultado es robusto en la banda s_exp ∈ [1, 2,5] (≈ +48% a
-≈ +54%); (ii) los insumos del central cargan una brecha de transporte no propagada —la
-evidencia de opinión política identifica error de *percepción* élite–constituyente, y
-mapearlo a error de bienestar a nivel de proyecto requiere tres enlaces no estimados
-(percepción → puntaje del proyecto → elección de cartera → valor realizado del afectado),
-así que esos insumos están basados en indicadores indirectos, no calibrados; (iii) los intervalos
-reportados son intervalos de bootstrap por mundo condicionales al 95% con insumos de
-escenario *fijos* —solo incertidumbre de simulación de mundos finitos, excluyendo la
-incertidumbre en valores de parámetros, transporte literario, forma funcional e
-implementación de campo; el error independiente-más-modo-común del brazo distribuido es su
-única sensibilidad estructural (arriba); y (iv) la entrega y el costo administrativo se
-tratan en experimentos separados —E5 añade la entrega (fuga) a *presupuesto igualado*, y
-E10 añade el costo administrativo como una reducción de *presupuesto neto* antes de la
-selección— no incorporados en este mapa de selección. Los
-escenarios, la frontera, la evidencia, el teorema y el anclaje literario completo
-reproducibles están en `scripts/simulation/e4-v5/`, `research/e4-parity-theorem.md` y
-`research/e4-calibration-literature-anchors.md`.
+El contraste de selección PROBABLE y el total que incluye la entrega se informan en §6; la tabla anterior presenta la composición por escenario de este mapa de selección, y la entrega no se incorpora a ella. En los cortes anclados, la cobertura gana salvo en el extremo central declarado. Desactivar la miopía explica 16.4 de la caída de 40.2 puntos desde probable hasta el paquete completo (≈41%); incluso la idealización central completa enumerada deja +13.8. Dentro del mapa declarado, el central lidera únicamente en un rincón desfavorecido por las fuentes: sin miopía (contra Hayek/Scott/Olson/Bandiera), sin proyección (contra Broockman y Skovron 2018) y daño casi nulo. El rincón distribuido simétrico—señal perfecta en un mundo rico en daño, con la miopía central anclada—da ≈+118%; el `PRO_DIST` tabulado alcanza +205% porque también degrada al central por debajo de su anclaje. Ninguno de los dos rincones espejo está fundamentado empíricamente.
+
+El error correlacionado de perfiles/delegación derivado de una plataforma o recomendador compartido, o de la concentración de superdelegados (Kling et al. 2015), es la sensibilidad estructural del brazo distribuido: reduce la ventaja de ≈+54% a ≈+44% (modesto) y a ≈+26% (fuerte), cruzando la paridad solo cerca de σ_cm ≈ 2.1. Ningún corte plausible de un factor cambia al ganador; el sendero declarado cruza la paridad cerca de su extremo central, en t ≈ .92. Estos seis cortes y un sendero son evidencia de curvas locales, no una frontera global; se pospone la exploración conjunta Sobol/hipercubo latino.
+
+Estos son puntos de referencia declarados y motivados por fuentes de un modelo estilizado de instituciones comparadas: contrastes direccionales condicionales, no efectos de campo calibrados. Se aplican cuatro límites: (i) la magnitud del umbral de daño está estilizada, aunque su dirección está fuertemente anclada y s_exp ∈ [1, 2.5] da ≈+48% a +54%; (ii) los insumos centrales se basan en indicadores indirectos, no están calibrados, porque la evidencia de percepción élite–constituyente debe atravesar tres enlaces no estimados—error de opinión → puntuación del proyecto → cartera → valor realizado de las partes afectadas; (iii) los intervalos condicionales de bootstrap por mundo al 95%, con insumos fijos, solo capturan incertidumbre de mundo finito, excluyendo la incertidumbre de parámetros, transportabilidad, forma funcional e implementación en campo; el error independiente/de modo común del brazo distribuido es su única sensibilidad estructural; y (iv) la entrega y la administración permanecen separadas: E5 añade fuga con presupuesto igualado, mientras E10 deduce el costo administrativo del presupuesto neto antes de la selección.
 
 ### Objetivos de calibración de E4
 
-Las magnitudes de E4-v4/v5 son internas al modelo; la tabla nombra, para cada
-parámetro, el dato real que *podría* informarlo —volviendo la frontera entre lo
-interno al modelo y lo anclado empíricamente una línea visible y no una salvedad
-enterrado en prosa (detalles en `research/e4-calibration-targets.md`). El
-porcentaje de la referencia alcanzado por el central es un *resultado* que el modelo computa, pero mapearlo a los
-cocientes entre el valor realizado y el tasado **no es una superposición directa**: son
-constructos distintos (§6), así que es un **objetivo de validación candidato que
-requiere una correspondencia explícita entre constructos**, no una calibración en un paso.
+Las magnitudes de E4-v4/v5 son internas al modelo. Los conjuntos de datos siguientes podrían informar los parámetros y hacer visible la frontera empírica; el porcentaje de la referencia alcanzado por el central es un resultado, pero los cocientes entre el valor realizado y el tasado son un constructo distinto (§6), por lo que la validación requiere un puente explícito.
 
 | Cantidad del modelo | Valor modelo | Indicador indirecto en el mundo real | Conjunto de datos candidato | Estado |
 |---|---|---|---|---|
-| porcentaje de la referencia alcanzado por el central | 44–85% | valor realizado ÷ tasado | calificaciones IEG del Banco Mundial; base de megaproyectos de Flyvbjerg | objetivo candidato; requiere una correspondencia explícita entre constructos |
-| η (ceguera al daño) | 0–0.5 | desperdicio pasivo vs activo | Bandiera-Prat-Valletti 2009 (83% pasivo, específico del contexto: compras de bienes estandarizados en Italia) | dirección anclada |
+| porcentaje de la referencia alcanzado por el central | 44–85% | valor realizado ÷ valor tasado | calificaciones IEG del Banco Mundial; base de datos de megaproyectos de Flyvbjerg | objetivo candidato; se necesita una correspondencia explícita |
+| η (ceguera al daño) | 0–0.5 | desperdicio pasivo frente a activo | Bandiera–Prat–Valletti 2009 (83% pasivo; bienes estandarizados italianos) | dirección anclada |
 | β (desigualdad de voz) | 0.2–0.5 | sesgo de participación en PP | NYC / París / Porto Alegre; Decidim / Consul | calibrable |
-| q, m (detección) | q ≈ 0.5–1%, m en cientos | tasas de queja / denuncia | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |
-| umbral λ | central ≈ 0.10 | rentas de la contratación pública / magnitud de los sobornos | Olken 2007; WB Enterprise Surveys | calibrable |
-| pena f | igual en ambos brazos | escala de sanción legal | mantenida igual (conservador) | elección de alcance |
+| q, m (detección) | q ≈ 0.5–1%; m en cientos | tasas de quejas / denuncias | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibrable |
+| umbral de λ | central ≈ 0.10 | rentas de contratación pública / magnitud del soborno | Olken 2007; WB Enterprise Surveys | calibrable |
+| pena f | igual en ambos brazos | escala de sanción legal | mantenida igual (conservadora) | elección de alcance |
 
-El mapa de cuatro escenarios v1.14 (arriba; destacado en §6) hace explícito el mismo anclaje para su modelo de miopía al daño: la cola
-larga de visibilidad está motivada por fuentes en las compras públicas de cola pesada (Skuhrovec et al. 2013), la
-participación por la tasa de participación en presupuestos participativos, y el umbral de detección de daño por la literatura de
-agenda-setting/saliencia; los anclajes de cada parámetro y su fuerza están registrados en
-`research/e4-plausible-anchors.md`, con los escenarios, la frontera y el teorema reproducibles en
-`scripts/simulation/e4-v5/` y `research/e4-parity-theorem.md`.
+La cola larga de visibilidad está motivada por las compras públicas de cola pesada (Skuhrovec et al. 2013), la participación por la concurrencia en presupuestos participativos y el umbral de daño por la investigación sobre agenda/saliencia. Las fortalezas de anclaje de cada parámetro, los detalles de los objetivos, los escenarios y la frontera reproducibles, y el teorema se encuentran en `research/e4-calibration-literature-anchors.md`, `research/e4-plausible-anchors.md`, `research/e4-calibration-targets.md`, `scripts/simulation/e4-v5/` y `research/e4-parity-theorem.md`.
 
 ## Referencias
 
@@ -1930,6 +364,7 @@ agenda-setting/saliencia; los anclajes de cada parámetro y su fuerza están reg
 - Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale University Press.
+- Menger, C. (1871). *Grundsätze der Volkswirtschaftslehre* [Principios de economía]. Viena.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Molina, E., L. Carella, A. Pacheco, G. Cruces, and L. Gasparini (2016). "Community Monitoring Interventions to Curb Corruption and Increase Access and Quality of Service Delivery in Low- and Middle-Income Countries." *Campbell Systematic Reviews* 12.
@@ -1946,10 +381,12 @@ agenda-setting/saliencia; los anclajes de cada parámetro y su fuerza están reg
 - Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.
 - Peixoto, T., and J. Fox (2016). "When Does ICT-Enabled Citizen Voice Lead to Government Responsiveness?" *IDS Bulletin* 47(1).
 - Power, M. (1997). *The Audit Society: Rituals of Verification*. Oxford University Press.
+- Prelec, D., H. S. Seung, and J. McCoy (2017). "A Solution to the Single-Question Crowd Wisdom Problem." *Nature* 541.
 - Reinikka, R., and J. Svensson (2004). "Local Capture: Evidence from a Central Government Transfer Program in Uganda." *Quarterly Journal of Economics* 119(2).
 - Rioja, F. (2003). "Filling potholes: macroeconomic effects of maintenance versus new investments in public infrastructure." *Journal of Public Economics* 87(9–10).
 - Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
 - Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
+- Samuelson, P. (1938). "A Note on the Pure Theory of Consumer's Behaviour." *Economica* 5(17).
 - Samuelson, P. (1954). "The Pure Theory of Public Expenditure." *Review of Economics and Statistics* 36(4).
 - Samuelson, W., and R. Zeckhauser (1988). "Status Quo Bias in Decision Making." *Journal of Risk and Uncertainty* 1(1).
 - Satterthwaite, M. (1975). "Strategy-Proofness and Arrow's Conditions: Existence and Correspondence Theorems for Voting Procedures and Social Welfare Functions." *Journal of Economic Theory* 10(2).
@@ -1958,6 +395,7 @@ agenda-setting/saliencia; los anclajes de cada parámetro y su fuerza están reg
 - Sen, A. (1999). *Development as Freedom*. Oxford University Press.
 - Skuhrovec, J., et al. (2013). "Exponential and power laws in public procurement markets." arXiv:1309.0218.
 - Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
+- Stevens, S. S. (1946). "On the Theory of Scales of Measurement." *Science* 103(2684).
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
 - Stokes, S. (2005). "Perverse Accountability: A Formal Model of Machine Politics with Evidence from Argentina." *American Political Science Review* 99(3).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).

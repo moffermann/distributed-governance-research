@@ -4,7 +4,32 @@ Version DOIs live in `CITATION.cff` and the Zenodo record; paper headers cite th
 DOI `10.5281/zenodo.21193846` (see `RELEASING.md`). English (`drafts/paper.md`) is
 authoritative; Spanish (`drafts/paper.es.md`) mirrors it at section parity.
 
-## v1.14 — 2026-07-14
+## v1.15 — 2026-07-15
+
+Corrects the estimand hierarchy and condenses the paper (~40% shorter, ~19.5k → ~12.1k words EN).
+No change to the code's numerical results — the changes are to which result leads, to framing, and
+to length.
+
+- **The fair, literature-anchored ASYMMETRIC contrast is now the PRIMARY finding.** In the PROBABLE
+  scenario, coverage-routed distributed selection recovers ~98% of the full-information reference
+  versus the central's ~44% (~2.2×; a ~54-point contrast); the full selection-and-delivery
+  architecture is ~+58.6 points ahead of the status quo — directional, conditional outputs of a
+  stylized comparative-institutions model, not calibrated field effects.
+- **The pre-registered symmetric gate is reframed as a narrow, central-idealizing robustness check.**
+  It grants the central an unbiased, uncorrupted, harm-aware read at delivery parity; that
+  idealization is exactly why its NO-GO cannot bound Core v0's architecture-wide value. The
+  calibrated FIELD multiplier stays retired; the directional ~2.2× *model* contrast is what is reported.
+- **The controlling `research/claim-and-estimand-contract.md` was corrected** to authorize this
+  hierarchy (it previously made the gate primary and treated delivery-inclusive totals as future-only).
+- **Subjective value is framed honestly and cited:** subjective/opaque to a central reader (Menger
+  1871; Hayek 1945), *revealed* through costly choice (Samuelson 1938) and *recovered in aggregate*
+  (Condorcet 1785; Prelec et al. 2017), assigned an ordinal/directional measure (Stevens 1946) — not
+  cardinally quantified. Core v0's operating modalities (Open = distributed planning by construction;
+  tutored/closed = centralized planning as a transition mode) are made explicit, resolving ERRATA E-1.
+- **Condensed via a chapter-split workflow** (`drafts/chapters/`) and reviewed across several
+  friendly-panel rounds; EN↔ES parity maintained.
+
+
 
 Honest reframing and consolidation of how the pre-registered result is reported. No change
 to the code's numerical results; the changes are to framing, scope, and length.

@@ -1,1765 +1,305 @@
 # Who Chooses, Who Delivers, Who Judges? A Functional Architecture for Distributed Public Spending
 
-**Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version reports channel-separated, conditional simulation contrasts and retires the earlier compound value-per-budget multiplier as a calibrated effect (see §6 and Appendix E4); it rests on the architecture and the qualitative credit-versus-coverage mechanism. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
+**Working paper — v1.15 (July 2026).** Its primary result is a fair, literature-anchored asymmetric contrast: coverage-routed distributed selection recovers ~98% of a full-information reference versus a central process's ~44% (~2.2×; ~54 points), and the full selection-and-delivery architecture exceeds the status quo by ~58.6 points — directional, conditional outputs of a stylized comparative-institutions model, not calibrated field effects.
+
+It rests on the architecture and the credit-versus-coverage mechanism; the earlier compound value-per-budget multiplier is not claimed as a calibrated effect (see §6 and Appendix E4). Latest deposited version: v1.14, DOI 10.5281/zenodo.21311851. Revised through successive adversarial and author review cycles, documented in the repository's roadmap.
+
+It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.
 
 *© 2026 Mauricio Offermann. Licensed CC BY 4.0 — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
 
 ## Abstract
 
-Public spending routinely asks one hierarchy to choose projects, execute them, and certify its own performance — the fusion where waste, capture, and unaccountable failure concentrate. This paper asks whether a bounded, legally authorized share of that machinery can separate those functions — the hand that chooses, the hand that spends, and the hand that certifies — and the information that drives them, while preserving legal authorization and public auditability.
+The State's core spending machinery was designed more than two centuries ago; this paper asks whether today's information technology permits an architectural redesign of it that raises the real public value delivered per unit of budget allocated. The modern State monopolizes project selection, execution, and fiscalization in one hierarchy, with documented agenda capture, corruption, ideological bias, and blindness to diffuse harm and real individual value; it can only approximate the latter through proxies.
 
-We present **Core v0**, a fully specified, object-level architecture. Within legally authorized planning scopes, citizens direct a non-withdrawable share of an existing public budget to projects that must declare value claims, affected parties, milestones, and evidence contracts up front. Proposing, execution, evidence production, fiscalization, and custody are separated; funds move in tranches against reviewed milestone evidence, with retention and guarantees; executors neither choose nor pay their inspectors; and every consequential state transition is public.
+Value is subjective, volatile, and opaque to a central reader (Menger 1871; Hayek 1945), yet revealed through costly choice (Samuelson 1938) and recoverable in aggregate from many independent signals (Condorcet 1785; Prelec et al. 2017). Core v0 therefore does not centrally quantify value: it assigns an ordinal, directional measure, not a cardinal field quantity (Stevens 1946).
 
-Its animating idea is a **credit-versus-coverage** mechanism: when central ranking rewards claimable political credit, it can systematically underweight the diffuse, low-visibility benefits that a coverage-based distributed process still surfaces, albeit under voice bias. We held this idea to a public adversarial review of 43 attacks across five rounds — each integrated into the design or recorded as a bounded limitation. The evidentiary contribution is the architecture, the credit-versus-coverage mechanism, and separate conditional findings on selection, verified delivery, and administrative cost — not the large value-per-budget multiplier an earlier version reported. In the paper's sole confirmatory computation, a pre-registered, selection-only gate gave the central competent, harm-aware appraisal at delivery parity; the distributed contrast stayed positive but did not clear the registered rebuild bar, so under the frozen rule we retire the multiplier (§6). Because that comparator switches off the modeled central harm-blindness and does not test delivery or agenda construction, it bounds calibration under the tested construction, not Core v0's architecture-wide value. A separate, **exploratory** four-scenario robustness extension then models the central selector as the evidence describes it — its *direction* on every axis grounded in the literature (not its magnitude fitted): near-blind to diffuse harm on the low-visibility long tail (Hayek 1945; Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009), projecting its own priors and over-rating visible benefits (Broockman–Skovron 2018; Flyvbjerg et al. 2003), and credit-tilted (Mayhew 1974; Arnold 1990). In that **source-motivated declared reference scenario** — not an empirical calibration — coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference against the central's ~44%: a 54-point conditional model contrast, robust across the declared space and the realistic degradation of Core v0's universal budget *routing* (routing is architectural; effective independent information is not). The central narrowly overtakes coverage only by abandoning the declared premises (granting it the harm-sight the literature denies it) on a near-harmless world, while idealizing the distributed arm the same way makes it win by a landslide. These are declared reference points from a stylized comparative-institutions model, not calibrated field effects; and the one sensitivity that materially shrinks the gap — never its sign in the declared range — is correlated/common-mode error in the coverage arm. A matched four-cell extension then crosses selection with delivery: in the declared PROBABLE world, the full selection-and-delivery architecture exceeds the status quo by about 58.6 points of the same greedy reference [95% conditional Monte-Carlo interval +58.0, +59.2]. A three-layer factorial leaves the full Core v0 diagonal positive in every named world, although individual layer attributions reverse sign in extreme worlds; planning's direction is anchored but its standalone magnitude is deferred. Administrative cost does not run against the distributed arm: net-budget accounting leaves it roughly neutral under a conservative low-spread floor, and yields a declared, if modest, advantage once an asymmetric-cost scenario (the central's appraisal/prioritization bureaucracy ≫ a platform with near-zero-marginal fiscalization) is allowed. Elementary propositions give sufficient conditions for incentive-compatible disbursement and collusion-proof fiscalization under independence and corroboration assumptions.
+Core v0 separates selection, execution, evidence, and fiscalization: within legally authorized planning scopes and under fiscalization, citizens route a bounded, non-withdrawable share of an existing public budget by coverage of real revealed value, rather than through the central hierarchy's structurally value-blind, proxy- and agenda-shaped selection.
 
-This is an architecture-and-mechanism contribution, not an impact evaluation: no pilot has run; the simulations provide conditional model contrasts for selection, delivery, and administrative cost, but their units are uncalibrated and partial-equilibrium and do not identify target-domain treatment effects; and the empirical anchors are predominantly infrastructure and procurement — the milestone-verifiable, project-shaped cases where the evidence is clearest — while the architecture itself is general across the broader project-shaped, discretionary domain, not limited to infrastructure; that broader generality is a design claim, not yet empirically validated. What it offers is a concrete, criticizable, pilotable institutional design — and a disciplined account of exactly what its evidence does and does not yet support.
+Its primary result is that, in the PROBABLE literature-anchored scenario, coverage-routed distributed selection recovers ~98% of the full-information reference versus the central's ~44% (~2.2×; ~54 points); the full selection-and-delivery architecture exceeds the status quo by ~58.6 points. These figures compare the arms against a common reference — a directional contrast, not a cardinal welfare measurement — and are conditional outputs of a stylized comparative-institutions model, not calibrated field effects or a calibrated field multiplier; no pilot has run. The empirical anchors are predominantly infrastructure and procurement; broader project-shaped applicability is a design claim, not yet validated.
 
 ## 1. Introduction
 
-Modern states concentrate three things that need not sit together: the
-authority to decide what public money is spent on, the capacity to execute
-that spending, and the power to certify that it achieved anything. When all
-three live inside one hierarchy, accountability comes down to it auditing
-itself (Bovens 2007). The consequences are predictable and documented across
-political economy — discretionary allocation, self-reported compliance,
-capture by concentrated interests, and citizen distrust — from regulatory
-capture (Stigler 1971; Laffont and Tirole 1991) to audit turned ritual (Power
-1997) to the distributional coalitions that entrench themselves in stable
-political systems (Olson 1982).
+Modern states often combine authority to allocate public money, execute spending, and certify results. When one hierarchy performs all three, accountability becomes self-audit (Bovens 2007), enabling discretionary allocation, self-reported compliance, concentrated capture, entrenched coalitions, ritualized audit, and distrust (Stigler 1971; Laffont and Tirole 1991; Olson 1982; Power 1997). For project-type spending, the relevant bounded criterion is effective value reaching people per unit spent, not appropriation: an unbuilt or badly built project delivers none (Okun 1975). This is neither a theory of the whole budget or taxation nor an assessment of redistribution and equity, which remain distinct public-finance purposes (§8).
 
-These failures are not abstract: they are why the value never reaches the
-people it was raised for. For the public money that funds concrete projects —
-infrastructure, works, local programs — what ultimately matters is not how much
-is appropriated but how much effective value reaches people per unit spent: a
-project that is never built, or built badly, helps no one, however
-well-intentioned the allocation (Okun's (1975) leaky bucket carried water that
-never arrived). This is a bounded criterion for project-type public investment,
-not a theory of the whole budget or of why states tax: redistribution and equity
-are distinct purposes of public finance that this paper does not evaluate (§8).
+The shrink-or-grow debate treats the state as unitary. The tractable question is architectural: which functions still require central monopoly, and which can digital coordination distribute with stronger accountability? This extends the calculation and dispersed-knowledge tradition (Coase 1937; Mises 1920; Hayek 1945; Sowell 1980; Williamson 1985): decisions should sit near knowledge and face feedback. Rights guarantees, legitimate force, macro-fiscal stability, and enforceable adjudication plausibly remain central; project allocation, execution, evidence production, and audit plausibly need not.
 
-The standard debate responds with quantity: shrink the state or grow it. Both
-positions treat it as a single object. This paper argues the tractable
-question is architectural, not one of size: *which layers of state activity
-still require central monopoly, and which can now be distributed — with better
-accountability than the status quo — now that digital coordination has
-collapsed the transaction costs that once justified hierarchy?* (Coase 1937;
-Hayek 1945; Williamson 1985). It is a question with a lineage — where
-decisions should sit when knowledge is dispersed — from the economic
-calculation debate (Mises 1920) to Hayek's dispersed knowledge and its
-institutional treatment in Sowell (1980): decisions should live where the
-knowledge is, disciplined by feedback rather than top-down command. Rights
-guarantees, legitimate force, macro-fiscal stability, and enforceable
-adjudication plausibly remain central; information processing, project-level
-resource allocation, service execution, evidence production, and auditing
-plausibly do not.
+The mechanism is **credit versus coverage**: central ranking rewarded by claimable political credit can neglect diffuse, low-visibility value that coverage-routed citizen selection can surface, although adverse voice bias remains. Core v0 makes this mechanism concrete through a complete reference architecture for allocating, executing, and verifying a legally mandated share of an existing budget. The mandate concerns the budget share, not centralized planning: planning is distributed by construction in default Open mode; central planning exists only as a tutored/closed transition mode.
 
-We make the argument as a concrete design, not a manifesto. Core v0 is a
-complete reference architecture for distributing one bounded layer — the
-allocation, execution, and verification of a legally mandated share of an
-existing public budget — developed to the level of named objects, state
-machines, and decision rules (a corpus of more than one hundred architecture
-documents, fifty-nine designed hypotheses, and forty-three adversarial reviews, all
-public). Citizens receive periodic, non-withdrawable allocation capacity in a
-civic wallet; projects pass through a parallel-closure lifecycle in which
-funding, independent fiscalization, evidence commitments, and beneficiary
-confirmation must all close before execution; the executor never selects or
-pays its own auditors — which removes the agency cost of self-monitored
-compliance (Jensen and Meckling 1976); money moves only on reviewed
-milestones, with retention and externally materialized guarantees; and every
-consequential state transition is recorded in a citizen-legible,
-expert-auditable trail.
+Citizens receive periodic, non-withdrawable allocation capacity in civic wallets and may direct, delegate, or rule-govern it. Funding, independent fiscalization, evidence commitments, and beneficiary confirmation close in parallel before execution; executors neither select nor pay auditors, removing self-monitoring agency costs (Jensen and Meckling 1976). Payment requires reviewed milestones, with retention, external guarantees, and a citizen-legible, expert-auditable transition record. Eligible executors may be agencies, municipalities, foundations, cooperatives, or firms, as implementing rules provide, but must face honest, non-monopolistic competition, bankruptcy, and consequences for failure. A public, versioned, authority-chosen formula sets each share; its simple equal-share option prevents purchasing influence. In elderly care, for example, residents direct capacity and providers receive tranches only after independent verification.
 
-The *executor* —whoever carries out the project, be it a public work, a
-personal-care service, or an educational program— can be a public agency, a
-municipality, a foundation, a cooperative, or a firm, as the implementing
-authority's rules define, under one condition: non-monopolistic, honest
-competition, with bankruptcies and consequences for whoever fails to deliver.
-And the share each citizen directs is set by a public, versioned formula the
-authority chooses; its simple option is *equal for all eligible citizens*,
-under which no one buys more influence with more money.
+We compare feasible Core v0 with the incumbent performing the same function, never an omniscient ideal, avoiding the nirvana fallacy in either direction (Demsetz 1969). Its contributions are:
 
-A concrete example. Suppose a municipality funds care programs for vulnerable
-elderly people. Today, between the peso allocated and the help that actually
-arrives lies a gap where value is lost. Under this architecture, each resident
-can direct part of their taxes to the program they prefer; the foundation,
-cooperative, or service that carries it out is paid in tranches, and only once
-a verifier it did not choose confirms the help arrived; and every step is
-public and auditable.
+1. **Distributed allocation:** a design specified through named objects, state machines, and rules across more than 100 public documents, 59 designed hypotheses, and 43 adversarial reviews.
+2. **Incentive formalization:** conditions for milestone-gated disbursement and collusion resistance under k-corroboration. Weak verification requires stronger financial terms; guarantees backfire below the cost-of-capital detection threshold. Milestones, retention, guarantees, and reputational memory form the deterrence stack.
+3. **Credit-versus-coverage evidence:** the primary finding is a fair, literature-anchored asymmetric contrast — coverage-routed distributed selection substantially outperforms harm-myopic central selection, and the full selection-and-delivery architecture stays ahead of the status quo (magnitudes and intervals in §6). These are directional, conditional outputs of a stylized comparative-institutions model, not calibrated field effects; distributional and rights constraints are unmodeled, and selection with verified delivery composes multiplicatively only as an accounting identity. Conditional three-layer attribution keeps Core v0's full diagonal positive in every named world but leaves planning's standalone magnitude unquantified; net costs favor Core v0 only in the declared asymmetric-cost scenario. The pre-registered symmetry gate is only a narrow, central-idealizing selection robustness check: because it grants the central an unbiased, uncorrupted, harm-aware read, holds delivery at parity, and excludes agenda construction, its idealization is exactly why it cannot bound Core v0's architecture-wide value (§6, Appendix E4).
+4. **Adversarial review:** 43 literature-grounded attacks received paired defenses and integrate-or-bound resolutions, propagated through the public corpus except D037–D040, whose propagation is tracked. This structured self-critique is not external validation; pending independent validation, it is a preliminary method for institutional-design research.
 
-What makes a design exercise count as research is the rigor it is put through,
-under one transversal discipline: we evaluate every objection comparatively —
-feasible Core v0 against the institution that presently performs the same function,
-never against an omniscient, benevolent ideal. This blocks the nirvana fallacy in
-both directions (Demsetz 1969; Section 2). Our contributions are:
-
-1. **Distributing the allocation layer.** The core design contribution:
-   applying the functional-distribution principle to resource allocation —
-   citizens direct their share directly, delegate it, or govern it with
-   personal rules — instantiated as a complete reference architecture (Core
-   v0).
-
-2. **Formalization of the incentive mechanisms** (Section 5). We model
-   milestone-gated disbursement as a principal-agent game and derive its
-   incentive-compatibility condition; we model bribery of protocol-assigned
-   fiscalizers and derive a collusion-proofness condition under
-   k-corroboration; and we prove two design-relevant comparative statics: weak
-   verification must be compensated with financial terms, and guarantees are
-   counterproductive when detection quality falls below the cost of capital.
-   Milestones, retention, guarantees, and reputational memory form the
-   design's deterrence stack.
-
-3. **Computational evidence** (Section 6). A dependency-free, seeded
-   agent-based simulation of 10,000 citizens tests the architecture's
-   behavioral assumptions under rational ignorance, limited discovery
-   attention, and social-proof cascades. The results discipline the design:
-   they support some claims, sharpen others, quantify the leverage
-   concentrated in the scope-construction layer, measure a viable open
-   construction of it, and carry the comparison end to end: from allocation to
-   delivered social value per unit of budget — one relevant criterion for this
-   bounded slice of public spending (alongside distributional and rights
-   constraints the model does not represent). In the model, selection and
-   verified delivery compose multiplicatively (an accounting identity, not an
-   independent finding); a matched selection-and-delivery extension gains
-   ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC
-   interval +58.0, +59.2]; a conditional
-   three-layer attribution keeps the full Core v0 diagonal positive in every
-   named world while planning's standalone magnitude is left unquantified; and net-budget
-   accounting leaves administrative cost roughly neutral under a conservative low-spread
-   floor, with a declared Core v0 advantage under an asymmetric-cost scenario. These are
-   channel-separated, conditional model contrasts, not an institution-wide calibrated
-   multiplier. Under the frozen pre-registered rule, a selection-only benchmark that granted
-   the central competent, harm-aware appraisal at delivery parity left the distributed
-   contrast positive but below the 0.05 rebuild bar; the earlier multiplier is therefore
-   retired (§6; Appendix E4). Because that benchmark switches off the modeled central
-   harm-blindness and does not test delivery or agenda construction, the decision governs
-   calibration under the tested construction, not Core v0's architecture-wide value. The
-   load-bearing contribution is the architecture, the qualitative credit-versus-coverage
-   mechanism, and the separation of selection, delivery, and cost.
-
-4. **Adversarial review as method** (Section 7). The architecture was attacked
-   systematically: forty-three attack briefs grounded in the political-science,
-   economics, and law literatures, each answered by a paired defense and
-   resolved under an explicit integrate-or-bound rule, with resolutions
-   propagated through the corpus (all except the manuscript-review round's
-   D037–D040, whose corpus propagation is tracked) and the full review
-   record public by construction. The loop is a structured self-critique, not external
-   validation, and we say so; we propose it, and its terminating rule—pending independent external validation—as a preliminary methodological proposal for institutional design research.
-
-A companion study measures three effects that extend this architecture:
-ablation of the deterrence stack (its terms are individually redundant but
-jointly indispensable), the feasibility of AI-based fiscalization, and the
-effect of separating macro planning from allocation (robustness to poor
-central planning — a conditional, model-internal contrast, not a calibrated effect).
-
-Section 8 states limitations with the same care as results, because under our
-method they are results: each is a named, bounded residual risk.
+A companion study examines deterrence-stack ablation (components individually redundant but jointly indispensable), AI-fiscalization feasibility, and separation of macro planning from allocation as conditional, model-internal robustness to poor central planning—not a calibrated effect. Under this method, Section 8 treats each limitation as a named, bounded residual risk.
 
 ## 2. The functional distribution principle
 
-We analyze the state as a stack of functional layers rather than a single
-institution: (a) rights guarantees and legitimate force; (b) binding
-adjudication; (c) rule-making; (d) macro-fiscal management; (e) macro planning
-and agenda framing; (f) project prioritization and resource allocation to
-concrete projects; (g) execution and service delivery; (h) evidence production
-about delivery; and (i) evaluation and accountability. The distribution
-principle is:
+We analyze the state functionally: (a) rights guarantees and legitimate force; (b) binding adjudication; (c) rule-making; (d) macro-fiscal management; (e) macro planning and agenda framing; (f) project prioritization and resource allocation to concrete projects; (g) execution and service delivery; (h) evidence production about delivery; and (i) evaluation and accountability. The selective, functional distribution principle is:
 
-> A layer is a candidate for distribution when three conditions hold:
-> its failures under monopoly are information and incentive failures rather
-> than coordination-of-force failures; distributed provision can be made
-> *more* observable than monopoly provision; and the layer can be bounded so
-> that its failure does not cascade into the non-distributable layers.
+> A layer is a candidate for distribution when monopoly failures concern information and incentives rather than coordination of force; distributed provision can be more observable than monopoly provision; and the layer can be bounded so its failure does not cascade into non-distributable layers.
 
-Layers (a), (b), and (d) fail the first or third condition and remain central
-in our design. Layers (f) through (i) pass all three, and Core v0 distributes them as a block, and must: distributing allocation without verification reproduces the delivery gap of participatory budgeting (PB), and distributing verification without allocation reproduces the audit society.
+Layers (a), (b), and (d) fail the first or third condition and remain central. Layers (f)–(i) pass all three and must be distributed together: allocation without verification reproduces participatory budgeting’s delivery gap; verification without allocation reproduces the audit society.
 
-Layer (e), planning, is the deliberately unresolved case: Core v0 requires
-planning scopes to be public, versioned, and mandate-bearing, but does not
-distribute their construction — which is why the architecture's promise is
-stated with its qualifier built in: what it distributes is allocation
-*within mandate-bound, visible, versioned, and contestable planning
-scopes*, never allocation over an unframed agenda. Section 6 shows the
-qualifier is not a detail: it is the binding constraint of the whole
-design, and Section 8 elevates its removal to the research program's next
-object.
+Planning (e) is mode-dependent. In Open mode—the architectural default—planning is distributed by construction. Centralized planning belongs only to the tutored/closed transition mode, where scopes are public, visible, versioned, contestable, and mandate-bound; allocation never ranges over an unframed agenda. Section 6 treats this tutored constraint as binding; Section 8 makes its removal the research program’s next object. Mandate-bound planning thus qualifies the transition, not the architecture generally.
 
-Two methodological rules govern everything that follows. The **comparative
-critique rule** (P001): every objection is evaluated against the current
-institutional baseline, not an ideal — a difficulty shared by both systems
-is a general problem of governance, not a refutation of the proposal. The
-**integrate-or-bound rule** (P007): once the core architecture is complete,
-a founded objection produces a new mechanism only if the failure mode would
-defeat a core claim and cannot be controlled through existing objects;
-otherwise it produces an explicit boundary, a visible residual risk, and a
-limitation statement. The first rule disciplines critics; the second
-disciplines the designers — a bias toward few, simple, general rules over
-proliferating specific machinery in the spirit of Epstein (1995).
+Two methodological rules follow. The **comparative critique rule** (P001) assesses every objection against the current institutional baseline, not an ideal: a difficulty shared by both systems is a general governance problem, not a refutation. Under the **integrate-or-bound rule** (P007), once the core architecture is complete, a founded objection warrants a new mechanism only if its failure mode would defeat a core claim and existing objects cannot control it; otherwise it yields an explicit boundary, visible residual risk, and limitation statement. P001 disciplines critics; P007 disciplines designers, favoring few, simple, general rules over proliferating specific machinery in Epstein’s (1995) spirit.
 
 ## 3. Related work
 
-**Polycentric governance.** Ostrom's demonstration that common-pool
-resources can be governed by nested, self-organized regimes without central
-monopoly (Ostrom 1990) is the closest intellectual ancestor: her design
-principles — bounded scope, monitoring by accountable monitors, graduated
-sanctions, cheap conflict resolution — reappear here as software-enforced
-objects. The difference is scope and instrument: we target budgeted state
-functions rather than natural-resource commons, and encode the regime in a
-platform whose rule changes are themselves versioned, auditable objects.
+**Polycentric governance.** Ostrom (1990) showed commons can be governed by nested, self-organized regimes without central monopoly; her bounded scope, accountable monitoring, graduated sanctions, and cheap conflict resolution reappear here as software-enforced objects. Core v0 instead targets budgeted state functions and versions and audits even rule changes.
 
-**Participatory budgeting.** Porto Alegre-style PB delegates a share of a
-municipal budget to citizen assemblies (Wampler 2007; Baiocchi and Ganuza
-2017). Empirically, PB improves some fiscal outcomes but suffers from
-engagement decay, capture by organized minorities, and weak links between
-allocation and verified delivery (Peixoto and Fox 2016). Core v0 differs on
-exactly those margins: allocation is continuous and individual rather than
-assembly-based; delivery is bound to allocation through evidential contracts
-and conditional disbursement; and the architecture treats low participation
-as a design input (Section 6) rather than a failure to be exhorted away —
-collective action does not sustain itself at scale (Olson 1965).
-The civic wallet itself generalizes the voucher mechanism (Friedman 1962) —
-citizen-directed public money — from choosing among service providers to
-allocating among verifiable projects, adding the verification lifecycle
-that vouchers never carried.
+**Participatory budgeting.** Porto Alegre-style PB delegates part of a municipal budget to citizen assemblies (Wampler 2007; Baiocchi and Ganuza 2017). It improves some fiscal outcomes but faces engagement decay, organized-minority capture, and weak allocation-delivery links (Peixoto and Fox 2016). Core v0 makes allocation continuous and individual, binds delivery through evidential contracts and conditional disbursement, and treats low participation as an input because collective action does not sustain itself at scale (Olson 1965). Its civic wallet extends vouchers (Friedman 1962) from provider choice to verifiable projects and adds a verification lifecycle.
 
-**Fiscal federalism and epistemic democracy.** The formal ancestors of the
-functional distribution principle are the decentralization literature —
-Oates's (1972) theorem on when decentralized provision dominates, Tiebout
-(1956) on preference revelation through jurisdiction choice, and Besley
-and Coate (2003) on centralized versus decentralized provision under
-political economy — with one deliberate difference: our layers are
-functional rather than territorial, so what is distributed is a stage of
-the spending process (allocation, execution, verification) rather than a
-level of government. On the epistemic side, the aggregation results of
-Section 6 belong to the lineage of Condorcet's (1785) jury theorem and its
-modern failure conditions (Austen-Smith and Banks 1996) — a debt we make
-explicit, because the theorem's failure regime (correlated, strategic, or
-biased signals) is exactly what the seventh experiment stress-tests — and
-the design conversation with Landemore's (2020) open democracy and Fung
-and Wright's (2003) empowered participatory governance is direct: those
-programs distribute deliberation and empowerment; this one distributes
-allocation, execution, and verification with a mechanism-design and
-audit-trail core they do not attempt.
+**Fiscal federalism and epistemic democracy.** Oates's theorem on when decentralized provision dominates (1972), Tiebout's jurisdictional preference revelation (1956), and Besley and Coate's political-economy comparison of centralized and decentralized provision (2003) are antecedents. Core v0 distributes functions—allocation, execution, verification—not territories. Its aggregation analysis follows Condorcet (1785) and modern failure conditions (Austen-Smith and Banks 1996): correlated, strategic, or biased signals motivate stress tests. Landemore (2020) and Fung and Wright (2003) distribute deliberation and empowerment but do not supply Core v0's mechanism design and audit trails.
 
-**Liquid democracy.** Transitive or scoped delegation promises flexibility
-between direct and representative participation, at the cost of concentration
-(Blum and Zuber 2016; Kahng, Mackenzie and Procaccia 2018). Core v0 adopts
-scoped, revocable, non-compensated delegation with mandatory concentration
-visibility, and — following Michels' (1911) warning rather than dismissing
-it — treats delegate concentration as a monitored risk with stress
-thresholds, not a solved problem.
+**Liquid democracy.** Transitive or scoped delegation trades flexibility for concentration risk (Blum and Zuber 2016; Kahng, Mackenzie and Procaccia 2018). Core v0 makes delegation scoped, revocable, non-compensated, and concentration-visible, treating oligarchy as a monitored risk with thresholds, not a solved problem (Michels 1911).
 
-**Digital and blockchain governance.** The DAO literature demonstrated both
-the feasibility of rule-encoded collective resource allocation and its
-characteristic failure: plutocratic token voting and governance capture (De
-Filippi and Wright 2018). Core v0 is deliberately not a blockchain design —
-identity is verified rather than pseudonymous, and the sovereign state
-remains the source of funds and law — but it imports the lesson that
-meta-governance is the highest-leverage attack surface (Section 8).
+**Digital and blockchain governance.** DAOs establish rule-encoded collective allocation's feasibility and vulnerability to plutocratic voting and capture (De Filippi and Wright 2018). Core v0 is not blockchain: identity is verified rather than pseudonymous, the sovereign state supplies law and funds, and meta-governance remains the highest-leverage attack surface.
 
-**Mechanism design and audit.** Our formal models are elementary
-applications of moral hazard under imperfect observation (Holmström 1979)
-and collusion in supervision hierarchies (Laffont and Tirole 1991), with
-Goodhart's law (Goodhart 1975; Campbell 1976) as the standing warning
-against metric gaming. The closest existing mechanism design for citizen
-allocation of public funds is quadratic (or 'plural') funding (Buterin, Hitzig
-and Weyl 2019), which prices concentration through matching-fund curvature;
-Core v0's funding-target closure rule pursues the same anti-concentration
-goal by truncation rather than pricing, and our simulation results
-(Section 6, Finding 1) delimit what truncation can and cannot achieve. On
-the audit side, Olken's (2007) field experiment on Indonesian road projects
-is the canonical empirical anchor for the detection probabilities our
-Propositions 1–2 take as parameters — and its finding that top-down audit
-outperformed grassroots monitoring for procurement fraud is a caution this
-architecture absorbs by making professional fiscalization, not crowd
-observation, the release-gating layer. The Brazilian audit-lottery
-literature (Ferraz and Finan 2008) supplies the complementary mechanism
-evidence — disclosure of audit findings changes political outcomes, and
-audit exposure reduces subsequent corruption — and its underlying CGU data
-enter the seventh experiment's audit-parameterized baseline directly. The contribution here is not
-technical depth but specificity: the models' parameters map one-to-one
-onto named architectural objects, so every proposition is an implementable
-dial.
+**Mechanism design and audit.** The models apply moral hazard under imperfect observation (Holmström 1979), collusion in supervision hierarchies (Laffont and Tirole 1991), and Goodhart/Campbell warnings about metric gaming (Goodhart 1975; Campbell 1976). The closest existing citizen-allocation mechanism, quadratic funding, prices concentration through matching curvature (Buterin, Hitzig and Weyl 2019); Core v0's target-closure rule pursues the same anti-concentration goal through truncation. Olken's (2007) Indonesian-road experiment anchors detection parameters; its top-down advantage over grassroots procurement-fraud monitoring supports professional fiscalization—not crowd observation—as the release gate. Brazilian audit lotteries show disclosure changes political outcomes and exposure reduces later corruption (Ferraz and Finan 2008); CGU data directly inform the audit baseline. The contribution is specificity, not technical depth: parameters map one-to-one to architectural objects, making each proposition an implementable dial.
 
-**What is new.** We have not run the systematic prior-art review that would
-establish field-level priority (our literature map is preliminary), so we claim an
-**integrative, object-level synthesis** rather than novelty against all adjacent
-work. With that qualification, we are not aware of prior work combining:
-
-- **(i)** a functional decomposition of state activity into distributable and
-  non-distributable layers;
-
-- **(ii)** a complete object-level architecture for the allocation layer;
-
-- **(iii)** formal incentive analysis of that architecture's specific
-  mechanisms;
-
-- **(iv)** behavioral simulation of its citizen-facing assumptions —including
-  what we believe is an early symmetric-knowledge comparison, in simulation, of
-  open construction of allocation priorities from aggregated citizen signals
-  against bandwidth-constrained central construction (see Section 6);
-
-- **(v)** a documented adversarial-review method with an explicit stopping
-  rule.
-
-And two further contributions concern measurement and method:
-
-- **(vi)** an end-to-end institutional comparison, within a bounded
-  public-investment slice, on delivered social value per unit of budget,
-  decomposing selection from delivery on matched portfolios: in the model,
-  selection and verified delivery compose multiplicatively (an accounting identity, not
-  an independent finding); a matched selection-and-delivery extension gains
-  ≈ +58.6 points of a greedy reference in the declared world [95% conditional-MC interval +58.0, +59.2]; a conditional
-  three-layer attribution keeps the full Core v0 diagonal positive in every
-  named world while planning's standalone magnitude remains unquantified; and net-budget
-  accounting leaves administrative cost roughly neutral under a conservative low-spread floor,
-  with a declared Core v0 advantage under an asymmetric-cost scenario (the selection
-  channel is examined separately under a pre-registered gate; §6). This work also introduces the
-  visibility gap (officially reported minus real delivery) as a
-  measurable accountability deficit of the status quo;
-
-- **(vii)** that comparison against an audit-parameterized baseline built
-  from the published findings of supreme audit institutions across
-  nine jurisdictions and the European Union (a documented-practice-informed
-  scenario whose primary-source verification is still being completed), under a pre-registered
-  headline-withdrawal condition.
-
-Participatory-budgeting evaluations measure participation and allocation;
-audit studies measure leakage after the fact; we know of none that measures,
-within one framework, how much delivered value an allocation institution
-produces from the same resources.
+**Positioning of the contribution.** Because no systematic prior-art review has established field-level priority and the literature map is preliminary, we claim only an integrative, object-level synthesis, not novelty against all adjacent work. We know of no prior work combining functional decomposition of distributable and non-distributable state layers; a complete allocation-layer architecture; mechanism-specific incentive analysis; behavioral simulation of citizen-facing assumptions; and documented adversarial review with an explicit stopping rule. Participatory-budgeting studies measure participation and allocation, whereas audit studies measure ex-post leakage; we know of none that measures, within one framework, the delivered value an allocation institution produces from identical resources.
 
 ## 4. The Core v0 architecture
 
-We summarize the reference architecture at the level needed for the analysis;
-the full object model, state machines, and citizen-interface layers are
-specified in the public corpus.
+We summarize the reference architecture only at the level required for the analysis; the public corpus specifies its full object model, state machines, and citizen interfaces.
 
-**Funding.** An implementing authority migrates a mandated share of an
-existing budget into individual civic wallets: periodic, non-withdrawable,
-public-purpose allocation capacity, equal per citizen by default. Every active
-planning scope carries an *Allocation Mandate* record naming the statute or
-instrument that authorized the migration, its legal rank, the organ to which
-allocations are imputed, and the allocation formula. The platform records that
-external authorization; it does not manufacture it. Binding-mode operation is
-gated on an enabling norm of sufficient rank being recorded; otherwise, the
-disclosed lawful default is consultative or tutored operation. The allocation act is designed to replicate two guarantees of the vote: secrecy of the preference and coercion-resistance (receipt-freeness). To the extent an enabling norm recognizes it, it can be shielded with protections equivalent to the vote's; until then, these are technical platform guarantees, not a legal status. Individual allocations are pseudonymous at the public layer
-and reconcile cryptographically against public per-scope totals — every peso
-traceable as money, no citizen traceable as an allocator, and no receipt or
-exportable proof of any individual allocation exists, even voluntarily, so
-that a patron who demands proof can never get one (the secret ballot's own
-defense, applied to the wallet). A *Fiscal Commitment Profile* per scope makes
-the migrated percentage, indexation, and delivery latency public and
-versioned, so fiscal strangulation by the incumbent treasury is measurable and
-attributable rather than silent. Essential services with continuity
-obligations are protected by non-assignable floors outside citizen-by-citizen
-popularity.
+**Operating modalities and planning scopes.** Core v0 progresses through closed, tutored, semi-open, and open modes. Open is the architectural default: planning, including scope construction, is distributed by construction. Centralized planning and scope construction belong only to the closed/tutored transition; there, a public authority defines active scopes and may retain project-admissibility review. Every material tutored decision—and every tutored silence past its deadline—becomes a public governance-resolution object. Indicators of incumbent resistance (scope share opened, rejection and timeout rates, and operator privilege) distinguish symbolic adoption from real transfer.
 
-**Projects and roles.** Financeable projects declare a value thesis with
-verifiable claims, affected parties, risks and anti-values, a phase and
-milestone plan, and an *evidential contract*: what must be proven, by what
-class of qualified producer, with what method, for which formal effect. Six
-roles are structurally separated — proposer, modeler/designer, executor,
-fiscalizer, evidence producer, custodian — with related-party relationships
-declared on a severity-classified graph. The load-bearing rule is that the
-executor never chooses or pays its own fiscalizers or evidence producers:
-control work is financed from a separated control budget and assigned by
-protocol.
+Every active scope carries an *Allocation Mandate* identifying the authorizing statute or instrument, its legal rank, the organ to which allocations are imputed, and the allocation formula. The platform records, rather than creates, that external authority. Binding operation requires a recorded enabling norm of sufficient rank; otherwise, the disclosed lawful default is consultative or tutored operation.
 
-**Parallel closure and conditional disbursement.** A published project
-gathers funding commitments, fiscalizer assignments, evidence commitments,
-and beneficiary confirmations concurrently; execution becomes possible only
-when all conditions required by its proportional *threshold policy* close.
-Committed funds are custodied, not transferred: release happens per
-milestone, against reviewed fulfillment evidence, with retention, blocker
-checks, and guarantees materialized by external custodians before any
-release. A *Duty-of-Care Anchor* names, before disbursement, the solvent legal person civilly answerable to third parties for damages arising from execution, in particular damage to physical integrity.
+**Funding.** An implementing authority migrates a mandated share of an existing budget into individual civic wallets: periodic, non-withdrawable, public-purpose allocation capacity, equal per citizen by default. Allocation is designed to reproduce two guarantees of voting: preference secrecy and coercion-resistance (receipt-freeness). Where an enabling norm recognizes it, protections equivalent to the vote’s may apply; until then, these are technical platform guarantees, not legal status. Public-layer allocations are pseudonymous and cryptographically reconcile with public per-scope totals: every peso remains traceable as money, no citizen is traceable as allocator, and no one can obtain a receipt or exportable proof, even voluntarily, denying patrons demanded proof as the secret ballot does. Each scope’s public, versioned *Fiscal Commitment Profile* discloses the migrated percentage, indexation, and delivery latency, making fiscal strangulation by the incumbent treasury measurable and attributable rather than silent. Non-assignable floors protect essential services subject to continuity obligations from citizen-by-citizen popularity.
 
-**Attention infrastructure.** Citizens act through a layered interface:
-discovery with user-controlled, reason-visible ordering; compact project
-cards; and progressively deeper audit surfaces down to the full trail.
-Non-attending citizens are served by configurable automatic allocation
-profiles — or a sensible default profile when none is set — and by
-scoped, revocable delegation with concentration visibility. The architecture
-does not assume attentive citizens; it assumes mostly inattentive ones and
-routes their weight through inspectable intermediation (Lupia and McCubbins
-1998). This is a design answer to the citizen-competence objection in its
-sharpest contemporary form (Brennan 2016): rather than restricting anyone's right to participate, the architecture makes the intermediation that inattention
-produces visible, revocable, and auditable.
+**Projects, roles, and lifecycle.** A financeable project states a value thesis with verifiable claims, affected parties, risks and anti-values, a phased milestone plan, and an *evidential contract*: what must be proved, by which qualified producer class and method, and for what formal effect. Six roles are structurally separated—proposer, modeler/designer, executor, fiscalizer, evidence producer, and custodian—and related-party ties are declared on a severity-classified graph. The executor never selects or pays its fiscalizers or evidence producers; protocol assigns control work financed from a separate control budget.
 
-An apparent objection —that participating via app, wallet, and AI tutor
-excludes the non-digital population— dissolves under the comparative
-discipline: the non-digital citizen already delegates today, handing their
-decision, through the vote, to a distant representative who allocates the
-budget for them. Core v0 does not add a barrier: it removes a level of
-indirection. Whoever never participates falls to the system default —equal per
-citizen, mandate-bound—, not to the attentive minority's preference; and
-whoever participates even minimally, including through non-digital channels or
-assisted delegation, brings the decision closer to their direct interests
-through microdelegation and rules such as "near me" that fund what they can
-touch. What appears to exclude, includes more —with the construction of the
-planning scope as the only remaining indirection (Section 8).
+Once published, a project concurrently gathers funding commitments, fiscalizer assignments, evidence commitments, and beneficiary confirmations. Execution begins only when every condition required by its proportional *threshold policy* closes. Committed funds remain in custody, not transferred; milestone release occurs against reviewed fulfillment evidence, with retention and blocker checks, only after external custodians have materialized the required guarantees. Before disbursement, a *Duty-of-Care Anchor* identifies the solvent legal person civilly answerable to third parties for execution damage, especially damage to physical integrity.
 
-**Transition.** Deployment proceeds through operating modes — closed,
-tutored, semi-open, open — in which a public authority may retain
-eligibility review (project admissibility), but every material tutored decision, and every
-tutored silence past its deadline, becomes a public governance-resolution
-object. Incumbent-resistance indicators (scope share opened, rejection and
-timeout rates, operator privilege) make symbolic adoption distinguishable
-from real transfer.
+**Attention and access.** Citizens use layered discovery with user-controlled, reason-visible ordering, compact project cards, and progressively deeper audit surfaces down to the full trail. Configurable automatic-allocation profiles—or a sensible default when none is set—and scoped, revocable delegation with concentration visibility serve non-attending citizens. The design assumes mostly inattentive citizens and routes their weight through inspectable intermediation (Lupia and McCubbins 1998). Against the citizen-competence objection in its sharpest contemporary form (Brennan 2016), it preserves everyone’s participation rights while making the intermediation produced by inattention visible, revocable, and auditable.
+
+The apparent exclusion of non-digital citizens by app, wallet, or AI-tutor participation fails comparatively: through voting, they already delegate budget allocation to distant representatives. Core v0 adds no barrier and removes one level of indirection. Nonparticipants receive the equal-per-citizen system default—not the attentive minority’s preference; in tutored operation, that default remains within the mandate-bound scope. Even minimal participation—including non-digital channels or assisted delegation—moves decisions closer to direct interests through microdelegation and rules such as “near me” that fund what citizens can touch. What appears exclusionary is therefore more inclusive. In tutored operation, centrally constructed planning scope is the remaining indirection (Section 8); Open removes it through distributed planning.
 
 ## 5. Formal analysis
 
-We state the three models and their results; proofs are one-step algebra and
-appear in the companion note ([formal-models](../research/formal-models.md)).
-All agents are risk-neutral; budgets are normalized to 1. The deterrence
-structure throughout is Becker's (1968): a violation is deterred when the
-detection probability times the stake at risk exceeds its gain — our
-contribution is mapping each term of that inequality onto a named,
-configurable architectural object. To avoid notation collisions, *Proposition
-N* denotes the formal results of this section; *P001/P007*, the methodological
-rules (§2); and *prediction N*, the behavioral predictions of §5.3.
+We present three models; their one-step-algebra proofs appear in the companion note ([formal-models](../research/formal-models.md)). Agents are risk-neutral and budgets normalized to 1. Following Becker (1968), deterrence requires detection probability times stake at risk to exceed the gain; our contribution maps each term to a named, configurable architectural object. *Proposition N* denotes this section’s formal results, *P001/P007* the methodological rules (§2), and *prediction N* the behavioral predictions of §5.3.
 
 ### 5.1 Milestone-gated disbursement
 
-An executor chooses to deliver a milestone at private cost *c* ∈ (0, 1) or
-to divert. The mechanism releases an advance *a*, holds the remainder for
-reviewed acceptance, recovers a fraction *r* of the advance on confirmed
-non-delivery, seizes a posted guarantee *γ* (carrying cost *κ* per unit),
-and imposes a reputational continuation loss *R*. Review confirms diversion
-with probability *p* — the joint quality of evidence standards, fiscalizer
-independence, and corroboration.
+An executor either delivers a milestone at private cost *c* ∈ (0, 1) or diverts. The mechanism advances *a*, withholds the remainder pending reviewed acceptance, recovers fraction *r* of the advance upon confirmed non-delivery, seizes a guarantee *γ* costing *κ* per unit, and imposes reputational continuation loss *R*. Review confirms diversion with probability *p*, jointly reflecting evidence standards, fiscalizer independence, and corroboration.
 
 **Proposition 1 (incentive compatibility).** Delivery is optimal iff
 
-> *c* ≤ *p* · [ (1 − *a*(1 − *r*)) + *γ* + *R* ].
+> *c* ≤ *p* · [(1 − *a*(1 − *r*)) + *γ* + *R*].
 
-Delivery must be cheaper than the detection probability times the total
-stake at risk. Every disbursement-gaming test in the architecture is a term
-in this inequality.
+Delivery must cost no more than detection probability times total stake at risk; every architectural disbursement-gaming test enters this inequality.
 
-**Proposition 2 (weak verification must be priced).** The minimal guarantee
-sustaining delivery for all *c* ≤ *c̄* is *γ\**(*p*) = max{0, *c̄*/*p* −
-(1 − *a*(1 − *r*)) − *R*}, decreasing and convex in *p*. Where verification
-is weak — thin fiscalization markets, poor evidence quality — the mechanism
-must compensate with smaller advances, more recoverability, larger
-guarantees, or higher-reputation executors. A single global guarantee
-percentage cannot be optimal across heterogeneous verification
-environments.
+**Proposition 2 (weak verification must be priced).** The minimal guarantee sustaining delivery for every *c* ≤ *c̄* is *γ\**(*p*) = max{0, *c̄*/*p* − (1 − *a*(1 − *r*)) − *R*}, decreasing and convex in *p*. Weak verification—thin fiscalization markets or poor evidence—therefore requires smaller advances, greater recoverability or guarantees, or higher-reputation executors. No global guarantee percentage is optimal across heterogeneous verification environments.
 
-The deterrence terms of this condition are complements, not substitutes. A
-pre-registered ablation on the companion experiments (Offermann 2026b)
-measured the consequence: at the designed operating point the inequality
-holds with slack, so removing any single term costs almost nothing — and a
-deployment negotiated one defensible concession at a time can cross the
-threshold invisibly, ending below the status quo it replaced (a material
-shortfall in verified value, with selection quality intact) while
-looking fully instrumented. The
-corpus therefore requires every scope to publish its deterrence-inequality
-margin in its operating configuration, recomputed on every term change, with
-term reductions classified as material rule changes (docs/111). The same
-slack, kept intact, buys an unexpected dividend: it absorbs verification-
-instrument error — in the companion panel of five real model families, even
-a machine verifier passing ~20% of judgment-requiring fraud produced
-leakage indistinguishable from pure-human verification, because the cascade
-removes the attempts upstream — provided the adversary is not colluding
-across the verification layers (Offermann 2026b, docs/113).
+These deterrence terms are complements, not substitutes. A pre-registered companion-experiment ablation (Offermann 2026b) found that, at the designed operating point, the inequality has enough slack that removing one term costs almost nothing. Yet successive defensible concessions can invisibly cross the threshold, leaving verified value materially below the replaced status quo despite intact selection quality and apparently complete instrumentation. Each scope must therefore publish its operating deterrence margin, recompute it after every term change, and classify term reductions as material rule changes (docs/111). Preserved slack also absorbs verification-instrument error: across five real model families, leakage remained indistinguishable from pure-human verification even when a machine verifier passed ~20% of judgment-requiring fraud, because the cascade removed attempts upstream—provided adversaries do not collude across verification layers (Offermann 2026b, docs/113).
 
-**Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes
-incentive compatibility at rate *p* but lowers honest executors' payoff at
-rate *κ*; under a designer objective weighing one unit of incentive slack
-equally against one unit of honest-executor payoff, a guarantee increase is
-net-beneficial only if *p* > *κ* (other weightings shift the threshold, not
-the trade-off's structure). Where detection quality is below the local cost
-of capital, piling on guarantees excludes honest low-margin executors
-without deterring fraud — the formal content of the architecture's
-proportionality discipline.
+**Proposition 3 (participation-deterrence trade-off).** Raising *γ* relaxes incentive compatibility at rate *p* but reduces honest-executor payoff at rate *κ*. If the designer weights one unit of incentive slack equally with one unit of honest-executor payoff, an increase is net-beneficial iff *p* > *κ*; other weights shift the threshold, not the trade-off’s structure. When detection quality is below the local cost of capital, larger guarantees exclude honest low-margin executors without deterring fraud—the architecture’s proportionality discipline.
 
 ### 5.2 Collusion-proof fiscalization
 
-A non-delivered milestone is worth *G* to the executor if fraudulently
-approved. Release requires approval by *k* protocol-assigned fiscalizers,
-each carrying forfeitable stake *W* (future protocol fees plus role
-reputation) and facing post-approval discovery probability *q*. Because
-assignment is protocolized and repeat pairings are visible, executor and
-fiscalizer are strangers: a bribe offer is itself reported with probability
-*δ*, costing the executor penalty *P_e*.
+A fraudulently approved, undelivered milestone gives the executor *G*. Release requires *k* protocol-assigned fiscalizers, each with forfeitable stake *W* (future protocol fees plus role reputation) and post-approval discovery probability *q*. Protocolized assignment and visible repeat pairings keep executor and fiscalizers strangers; a bribe offer is reported with probability *δ*, imposing executor penalty *P_e*.
 
 **Proposition 4 (collusion-proofness).** Approval fraud is unsustainable if
 
 > *k* · *q* · *W* ≥ *G* − (*δ* / (1 − *δ*)) · *P_e*,
 
-and in particular whenever *kqW* ≥ *G*. Three corollaries carry design weight:
+and, in particular, whenever *kqW* ≥ *G*. Three corollaries matter:
 
-- ***Corroboration substitutes for reputation capital.*** The required stake
-  per fiscalizer falls linearly in *k*, so redundant review is exactly what
-  makes shallow-reputation fiscalizer pools workable, at linear control cost
-  —which is what proportional threshold policies are for.
+- ***Corroboration substitutes for reputation capital.*** Required stake per fiscalizer falls linearly in *k*: redundant review enables shallow-reputation pools at linear control cost, motivating proportional threshold policies.
 
-- ***Repeat relationships are the attack surface.*** The friction term exists
-  only while relational contracting is prevented, which is why repeat-pairing
-  visibility is load-bearing (we hold the report probability *δ* exogenous to
-  *k*; endogenizing it —more approached reviewers, more chances of a report—
-  only strengthens the condition).
+- ***Repeat relationships are the attack surface.*** The friction term requires prevention of relational contracting, making repeat-pairing visibility load-bearing. We hold *δ* exogenous to *k*; endogenizing it—more approached reviewers, hence more reporting chances—only strengthens the condition.
 
-- ***Thin markets attack both models at once.*** A monopolist fiscalizer that
-  cannot credibly be excluded loses its forfeitable stake (*W* → 0) while also
-  degrading *p* in Proposition 1: the two conditions identify the same
-  environments as fragile, for the same reason.
+- ***Thin markets attack both models.*** A monopolist fiscalizer that cannot credibly be excluded loses forfeitable stake (*W* → 0) and degrades *p* in Proposition 1; both conditions identify the same fragile environments for the same reason.
 
 ### 5.3 Attention-constrained allocation
 
-Citizens allocate small individual budgets; the pivotal return to evaluating
-projects is negligible, so rational ignorance is the equilibrium (Downs
-1957), and the design question is where the *inattentive* majority's weight
-flows: to salience amplified by social proof (Bikhchandani, Hirshleifer and
-Welch 1992; Noelle-Neumann 1974; Salganik, Dodds and Watts 2006), or to the architecture's own
-default layer, whose routing follows the distributed project prioritization
-— the aggregated allocation profiles — not a central plan. The model yields three testable
-predictions — caps tame cascades (prediction 1), defaults anchor quality (prediction 2), decay
-degrades gracefully only with defaults (prediction 3) — evaluated next.
+Citizens allocate small individual budgets, and negligible pivotal returns to evaluating projects make rational ignorance the equilibrium (Downs 1957). The design question is whether the inattentive majority’s weight follows salience amplified by social proof (Bikhchandani, Hirshleifer and Welch 1992; Noelle-Neumann 1974; Salganik, Dodds and Watts 2006) or the architecture’s default layer. In Open mode—the architectural default—planning is distributed by construction. Centralized planning exists only in tutored/closed transition mode; even there, project prioritization remains distributed through aggregated allocation profiles rather than a central plan. The model yields three testable predictions—caps tame cascades (prediction 1), defaults anchor quality (prediction 2), and decay degrades gracefully only with defaults (prediction 3)—evaluated next.
 
 ## 6. Computational evidence
 
-We test the three predictions of §5.3 —and, in successive experiments, the
-assumptions of Propositions 1–4— in an agent-based simulation. Each experiment
-(E1–E10) corresponds to a finding:
+Ten agent-based experiments test §5.3's predictions and, successively, Propositions 1–4: funding caps (E1), allocation quality (E2), participation decay (E3), central versus distributed construction (E4), selection and delivery (E5), reputational competition (E6), an audit-parameterized baseline (E7), endogenous participation (E8), the planning–selection–delivery stack (E9), and administrative cost (E10). The baseline simulates 10,000 citizens for 24 monthly cycles across 40 projects under 3× scarcity. Quality θ and salience correlate weakly (≈0.24); need weights *w* = λθ + (1 − λ)*u*, for λ ∈ {0.4, 0.8}, correlate ≈0.55 or ≈0.97 with quality. Evaluators sample quality, salience followers see a six-slot progress-amplified surface, and defaults fund in priority order. Conditions use twenty seeded, dependency-free deterministic runs; tables are in [simulation results](../research/simulation-results.md).
 
-| Exp | What it tests | |
-|---|---|---|
-| E1 | do funding caps raise quality? | Finding 1 |
-| E2 | what carries allocation quality? | Finding 2 |
-| E3 | what buffers participation decay? | Finding 3 |
-| E4 | distributed aggregation vs. central construction (refined by a symmetric-frictions frontier + capture, E4-v4/v5; and a v1.14 harm-myopia four-scenario robustness map, §6) | Finding 4 |
-| E5 | delivered value: selection × delivery, at matched budget | Finding 5 |
-| E6 | reputational competition and execution standard | Finding 6 |
-| E7 | comparison against an audit-parameterized baseline | Finding 7 |
-| E8 | robustness under endogenous behavioral participation | Finding 8 |
-| E9 | the full stack: planning × selection × delivery (Shapley attribution) | Finding 9 |
-| E10 | the administrative-cost layer (net-budget, symmetric) | Finding 10 |
+Artifacts are experiment-specific: E1–E3, scripts/simulation/allocation-sim.mjs; E4, research/e4-institutional-knowledge-design.md, scripts/simulation/e4-v4-symmetric-frontier.mjs, research/e4-v5-capture-design.md, and research/e4-analytical-backbone.md; E5, scripts/simulation/e4-v5/e5-delivery.mjs; E6, research/e6-reputational-competition-design.md; E7, research/e7-calibrated-baseline-design.md; E8, research/e8-behavioral-participation-design.md; E9, scripts/simulation/e4-v5/e9-fullstack.mjs; and E10, scripts/simulation/e4-v5/e10-costs.mjs. Appendix E4 covers the symmetry gate and four-scenario map, not all methods. The v1.14/v1.15 evidence path is `npm run e4:evidence` (scripts/simulation/e4-v5/); the pre-registered gate reproduces from the deposited v1.13 record via `E4_ALLOW_LEGACY=1 node scripts/simulation/e5-sp-symmetry-gate.mjs`. Its frozen design, diagnostics, and interpretation are governed by the [claim-and-estimand contract](../research/claim-and-estimand-contract.md).
 
-We simulate 10,000 citizens over 24 monthly cycles allocating across a
-standing pool of 40 projects with quality *θ*, salience *s* (measured
-corr(*θ*, *s*) ≈ 0.24), prioritization need-weights *w* = λ*θ* + (1 − λ)*u*
-(where *u* is an idiosyncratic need component independent of quality) with
-mixing weight λ ∈ {0.4, 0.8} — measured corr(*θ*, *w*) ≈ 0.55 and ≈ 0.97
-respectively — and 3× scarcity (only a minority of projects can
-complete). Evaluators (2–10%) fund the best quality they sample; salience
-followers see a six-slot discovery surface ranked by salience amplified by
-funding progress; default followers' budget fills projects in planning-
-priority order. The funding-target closure rule is toggleable. Twenty
-seeded runs per condition; the code is dependency-free and deterministic
-(`scripts/simulation/allocation-sim.mjs`; full tables in
-[simulation-results](../research/simulation-results.md)).
+The program reports selection, matched-budget delivery, conditional three-layer attribution, and administrative cost separately. All are reference-point differences with parity at zero; none is a calibrated institution-wide multiplier.
 
-**Quantitative status: channel-separated results, no calibrated multiplier.** The earlier
-single value-per-budget ratio conflated selection quality, delivery leakage, and
-administrative cost and is **retired as a calibrated effect**. The rebuilt program reports
-the channels separately: selection (E4), delivery at matched budget (E5), a conditional
-three-layer attribution (E9, leaving planning's standalone magnitude unquantified), and
-administrative cost (E10). All are reference-point differences with parity at zero; no
-institution-wide multiplier is retained.
+**Primary result: the fair, literature-anchored asymmetric contrast.** In PROBABLE, the central selector is modelled in literature-supported directions, not fitted magnitudes: weak recognition of diffuse harm in the low-visibility long tail; projected priors and overvaluation of visible, appraisable benefits; and claimable-credit pressure in a heavy-tailed project space (Hayek 1945; Olson 1965; Scott 1998; Mayhew 1974; Arnold 1990; Flyvbjerg et al. 2003; Bandiera, Prat and Valletti 2009; Broockman and Skovron 2018; Skuhrovec et al. 2013). Bandiera, Prat and Valletti's 83% passive-waste estimate motivates passive loss rather than theft; it neither calibrates nor fixes the model. Coverage-routed distributed selection recovers about 98% of the model's full-information greedy reference, versus the central's about 44%: ≈2.2× and a ≈54-point conditional contrast. At matched budget, the full selection-and-delivery architecture exceeds the status quo by ≈58.6 reference points (95% conditional Monte-Carlo interval [+58.0, +59.2]).
 
-**The governing pre-registered decision.** The paper's **sole confirmatory** computation
-was a selection-only, symmetry-constrained stress test — not a test of the full
-architecture. It matched the candidate pool, costs, budget, report-noise model,
-own-estimate eligibility, expected appraisal-report budgets, and delivery at parity. The
-distributed arm retained endogenous coverage and its adverse voice bias β; central
-appraisal was spread evenly and its ranking retained bounded credit pressure
-λ ∈ {0.1, 0.2, 0.3} (the separate λ = 0 control is even smaller, median ≈ 0.016 — the
-contrast tracks the central's credit pressure, consistent with credit-versus-coverage).
-The implemented central was a **competent, harm-aware value reader** whose sampled-value
-signal was unbiased but noisy: the harm-myopia parameter is defined in the world
-parameters but **unused by the central estimator**. The gate therefore switches off the
-modeled central harm-blindness and holds agenda construction outside its fixed-pool
-estimand.
+These are directional, conditional outputs of a stylized comparative-institutions model, not calibrated field effects. The reference is a heuristic normalizer, not a feasible institution or welfare optimum, and the interval covers inner simulation variation only—not world, model-form, or calibration uncertainty. The result holds across the declared anchored region and under realistic universal budget routing (≈5% active reports, 35% microdelegation, 60% profile rules); routing is architectural, whereas independent information is not. Even giving the central harm-sight, unbiasedness, precision, and no credit leaves coverage ahead by ≈14%; it overtakes only after the further, premise-abandoning move to a near-harmless world. The mirror idealization of the distributed arm yields ≈+118%. The material sensitivity is correlated/common-mode error from a shared platform or recommender or concentrated delegation: strong correlation shrinks the lead from ≈54 to ≈26 points without reversing it in the declared range. Coverage without source diversity can recreate the epistemic bottleneck; Core v0 therefore makes delegate, profile-provider, and recommender concentration observable and subject to diversification thresholds (§8).
 
-The distributed contrast was **positive in all 18 primary cells**. Three of the four
-conjunctive criteria passed, including the bootstrap lower-bound criterion; only C2 failed,
-because the pooled median Δ = 0.025 did not clear the registered **0.05 rebuild bar**.
-Under the frozen rule the formal verdict was **NO-GO**, with the registered consequence
-that the quantitative multiplier is retired and the simulation treated as an illustrative
-conditional frontier. **The threshold miss triggered the registered decision; the
-construction determines its scope.** The 0.025 is small for the tested selection estimand,
-but it is neither an estimate nor a lower bound of Core v0's architecture-wide or
-target-domain effect, and it does not establish smallness outside this benchmark. The 0.05
-bar is a research-program decision rule, **not** a calibrated policy-materiality threshold.
-The hypothesized harm-detection asymmetry is literature-motivated; this study does not
-calibrate its prevalence or magnitude. The subsequent four-scenario map uses a different
-data-generating process, is **exploratory**, and does not revise this registered result. The test is stylized: its value and credit variables are abstract scores, not measured
-visibility, traceability, permanence, or public value. Its frozen pre-registration,
-decision rule, results, and diagnostics are in Appendix E4, the
-[claim-and-estimand contract](../research/claim-and-estimand-contract.md), and
-`scripts/simulation/e5-sp-symmetry-gate.mjs`. The load-bearing contributions are the
-architecture and the qualitative credit-versus-coverage mechanism.
+**Narrow symmetry-gate robustness check.** This pre-registered, fixed-pool, selection-only test matches candidates, costs, budget, report noise, own-estimate eligibility, expected appraisal-report budgets, and delivery. It deliberately idealizes the central as an unbiased, competent, uncorrupted, harm-aware value-reader, while the distributed arm keeps endogenous coverage and adverse voice bias β; the central thus sees harm better than its comparator. Central appraisal is evenly spread and retains bounded credit pressure λ ∈ {0.1, 0.2, 0.3}; the λ = 0 negative control supports the credit-versus-coverage interpretation. Distributed selection is positive in all 18 primary cells and passes three of four conjunctive criteria, including the bootstrap lower bound, but the pooled contrast falls below the pre-registered rebuild bar, yielding the frozen-rule NO-GO (the exact pooled median, the rebuild bar, and the full method are in Appendix E4). That bar is a research-program rule, not a policy-materiality threshold.
 
-**The declared reference scenario (E4 v1.14) — an exploratory robustness map.** When the central selector is
-modelled as the evidence describes it — its *direction* on every axis grounded in the
-literature (not its magnitude fitted): near-blind to *diffuse harm on the low-visibility
-long tail* (Hayek 1945; Scott 1998; Olson 1965; Bandiera, Prat and Valletti 2009, whose
-**83% passive waste** in standardized-goods procurement shows most public loss is not
-chosen), projecting its own priors and over-rating visible, appraisable benefits
-(Broockman and Skovron 2018; Flyvbjerg et al. 2003), and tilted toward claimable credit
-(Mayhew 1974; Arnold 1990), in a heavy-tailed low-visibility project space (Skuhrovec et
-al. 2013) — **coverage-routed distributed selection recovers about 98% of the model's
-full-information greedy reference against the central's ~44%: a 54-point conditional
-model contrast**, not an empirical calibration or a field effect (the reference is a
-greedy normalization, not a feasible institution or a welfare optimum). It is not a
-knife-edge: it holds across the declared parameter space; it survives the realistic
-signal degradation of Core v0's universal budget *routing* (a ~5% active-report / ~35%
-microdelegation / ~60% profile-rule composition — universal *routing* is architectural,
-effective independent *information* is not); and it holds even when the central is
-granted the full harm-aware competent bundle the literature would deny it — harm-sight,
-unbiasedness, precision, and no credit (~+14%). The central narrowly overtakes coverage only
-by **further abandoning the declared premises** — also moving to a near-harmless world
-where the diffuse harm the literature documents barely exists; the *mirror* idealization of the
-distributed arm (its own recipe reflected: perfect signal, harm-rich world, central kept
-at its declared myopia) wins by a landslide (~+118%). The single sensitivity that
-materially shrinks the gap — without reversing its sign in the declared range — is
-correlated/common-mode error in the coverage arm (a shared platform/recommender or
-concentrated delegation), which brings ~+54% to ~+26% at a strong correlation. This is
-the mechanism's one architectural condition, not merely a swept parameter: **coverage
-without source diversity can reproduce the epistemic bottleneck it is meant to replace.**
-Core v0 therefore treats delegate, profile-provider, and recommender concentration as
-observable quantities with diversification thresholds (§8), rather than assuming
-independence by fiat. The full four-scenario map, the
-literature anchoring, the mirror idealized corners, and the common-mode frontier are in
-**Appendix E4**. This exploratory map does not revise the registered gate result; the
-model locates a frontier, it does not estimate a field effect.
+The gate is small only for its selection estimand: it neither estimates nor lower-bounds Core v0's target-domain or architecture-wide value. Because it gives the central superior harm perception and integrity, excludes agenda construction, and holds delivery equal, its central-favoring idealization cannot bound the architecture. Its value and credit scores are abstract, not measured visibility, traceability, permanence, or public value; the harm asymmetry is literature-motivated but uncalibrated. The PROBABLE map uses a different data-generating process and does not revise the gate.
 
-**Finding 1: funding caps are an anti-concentration device, not a quality
-device.** With closure ON, concentration falls (funding Gini 0.732 vs
-0.759), the most salient 5% of projects absorb less (16.8% vs 19.6% of all
-funding), and 15% more projects complete (25.3% vs 21.9%). But quality
-selection is unchanged (*sel(θ)*, the Pearson correlation across projects between
-latent quality θ and the binary indicator that a project reaches its funding
-target, ≈ 0.39 vs 0.41): the truncated surplus
-spills to the next most *visible* project, not the next *best* one. The
-architecture's claim for the closure rule should be — and in the corpus now
-is — bounded accordingly.
+**Finding 1: caps reduce concentration, not improve selection.** Target closure lowers the funding Gini (0.732 versus 0.759), the top-salience 5% share (16.8% versus 19.6%), and raises completion by 15% (25.3% versus 21.9%), but leaves *sel*(θ), the project-level quality/completion correlation, approximately unchanged (0.39 versus 0.41). Surplus moves to the next visible project, not the next best: closure is an anti-concentration device only.
 
-**Finding 2: the default anchor, not citizen attention, carries allocation
-quality.** A default-anchored mix, with a near-perfectly informed planner (r ≈
-0.97), reaches sel(θ) ≈ 0.71 — well above the salience-driven
-configurations (≈ 0.35–0.43). Raising citizen attention from 2% to
-10%, by contrast, barely moves the needle —at most ≈ 0.08 in salience-driven
-regimes, and essentially nothing in default-anchored ones—, while degrading
-the vector's informational quality from near-perfect to moderate (r ≈ 0.97 →
-0.55) costs ≈ 0.29 of selection. The anchor rules, not attention.
+**Finding 2: prioritization quality, not attention, carries allocation quality.** A default-anchored mix with an almost perfectly informed vector (*r* ≈0.97) reaches *sel*(θ) ≈0.71, versus ≈0.35–0.43 under salience. Raising attention from 2% to 10% changes salience regimes by at most ≈0.08 and defaults negligibly; degrading vector quality from *r* ≈0.97 to 0.55 costs ≈0.29. This is partly mechanical: a deterministic, θ-correlated default controls most budget, so E2 measures conditioning on vector quality, not crowd wisdom. Its ordering survives evaluator-sample and social-proof sweeps except when very strong amplification propagates evaluator quality and regimes converge within noise; magnitudes remain parameter-dependent and uncalibrated.
 
-Two qualifications keep the finding honest:
+The relevant object is the project prioritization that passive users follow—aggregated allocation profiles, not the macro eligibility/planning scope, which frames eligibility but carries no weights—whoever supplies it. Randomization escapes capture only by approaching random quality. In the companion apparatus (Offermann 2026b), distributed construction is robust to categorization quality and central construction fragile, so the conditional gap widens as central categorization worsens; it is not a calibrated magnitude. The default is visible, versioned, and pluggable: citizens may allocate, delegate, choose a published profile, use a personal rule, or acknowledge a base profile. In Open mode, the architectural default, planning is distributed by construction; centralized or mandate-bound planning belongs only to tutored/closed transition modes. E1–E3 identify neither central nor distributed knowledge: *r* characterizes the vector, and the modelled crowd has social proof but no knowledge.
 
-- **By construction.** The default rule is a deterministic θ-correlated
-  allocator already holding most of the budget; what is measured is the
-  *conditioning* —how much the vector's informational quality determines the
-  anchor's value, and how little attention substitutes for it—, not the wisdom
-  of the crowd.
+**Finding 3: anchor size, not the destination of departing participation, buffers decay.** The prediction that a 10%→2% decline in active evaluation would be graceful only when released weight flowed to defaults failed. Destination effects are null at both anchor strengths (paired means 0.001 [−0.031, 0.033] and 0.021 [−0.028, 0.071]); the sole interval excluding zero is small and opposite-signed, plausibly because salience amplifies evaluator seeding. A larger default share buffers documented civic-tech participation decay (Hirschman 1970; Peixoto and Fox 2016), but late-cycle alignment deteriorates everywhere: buffering is not free.
 
-- **Robustness.** A sensitivity panel (varying evaluator sample size and
-  social-proof strength) shows the regime ordering is robust, except under
-  very strong social proof, where the regimes converge within noise because
-  strong amplification also propagates the evaluators' quality signal.
-  Magnitudes are parameter-dependent and uncalibrated; what survives all
-  variations is the ordering and the dominance of the prioritization's
-  informational quality.
+**Finding 4: dispersed information helps only through aggregation, diversity, and integrity.** In the first pre-registered E4, a planner made thirty deep inspections while 30% of citizens each held four noisy local signals; five regimes shared worlds and signals and differed only in aggregation. As projects increased from 40 to 200 to 1,000, planner signal quality fell 0.81→0.37→0.17; open averaging beat central construction even at 40 projects (*sel*(θ) 0.76 versus 0.62) and reached 0.73 versus 0.04 at 1,000. The predicted scale crossover failed. But that first comparison favored the distributed arm by imposing fixed central bandwidth and unbiased citizen signals. These numbers are therefore provisional mechanism illustrations, not definitive institutional evidence; the fair re-examination below supplies the relevant frontier.
 
-This finding quantifies the leverage concentrated in whatever constructs the
-project prioritization the passive share follows. That prioritization has two
-layers —which a companion study (Offermann 2026b) separated for the first
-time—: the macro categorization (this corpus's Planning Scope, which frames
-eligibility and carries no budget weights) and the aggregated allocation
-profiles that route budget within it. The distributed arm is robust to the
-quality of that categorization and a central arm is fragile to it, so the
-advantage over a central status quo is not fixed: it grows as central planning
-worsens — a model-internal direction the companion apparatus illustrates (a
-conditional contrast that widens substantially as the central categorization
-degrades, not a calibrated multiplier; see the quantitative-status note in this
-section).
+Uncoordinated knowledge funds only 0.6–15% of projects and selects poorly: the result favors aggregation, not mechanism-free crowds. Averaging removes independent noise, not common bias; only endogenous social-proof contamination was tested and was mostly benign because progress is quality-correlated. Reporting is non-strategic by assumption, so gaming, clientelism, and open-scope elicitation remain gated design problems. The honest description is inspectable intermediation with a citizen-correctable default, not “wisdom of crowds”; E1–E3 also do not license the opposite claim, because they never model distributed knowledge.
 
-Two architectural facts scope the statement and forestall a tempting
-over-reading. First, the default layer is pluggable, not mandatorily central:
-the civic autopilot gives each citizen manual allocation, delegation,
-published allocation profiles, a personal automatic rule, or the system
-default; an onboarding citizen must explicitly select or acknowledge a base
-profile, and only the share who never engage necessarily follows the system
-default —which itself operates under a recorded allocation mandate. Second,
-centralized construction of scope weights is a property of the closed and
-tutored transition modes, not of the architecture: operating modes are
-country-configured states, and the designed trajectory is toward open
-construction (Finding 4 measures its in-model viability).
+The symmetric-frictions re-examination models true Samuelson value as *T* = *S*⁺ − *S*⁻ and rankings as *S*⁺ − θ*S*⁻, with θ_C = η for central harm recognition and θ_D = 1 − β for distributed voice inequality. In the noise-free, large-set expectation, distributed selection dominates iff **β < 1 − η**, reaches parity at η + β = 1, and loses when β > 1 − η. Thus its advantage comes from including harmed people, not aggregation alone. η is swept rather than assumed; diffuse-harm evidence identifies contexts, not universal central blindness, and passive procurement loss is consistent with low but nonzero η. Political competition may discipline a centre outside the client-politics quadrant (Wittman 1989). At (η = 1, β = 0), the simulation slightly favors the central, so a purported distributed variance advantage is unsupported there.
 
-The numbers therefore establish a conditional. The binding constraint on
-allocation quality is the informational quality of the **project
-prioritization the passive share follows** —the aggregated allocation
-profiles, not a macro planning vector—, whoever or whatever supplies it. A
-captured or ignorant supplier is the failure mode; a well-informed or
-well-aggregated one, the asset. Randomizing that prioritization to escape
-capture does not help: it buys neutrality at the price of near-random quality
-for the passive share. And because the architecture's designed trajectory
-distributes its construction (open mode) and keeps it visible, versioned, and
-pluggable, the constraint is met by distribution, not by a central agenda.
-This is distinct from the narrower agenda-setting point of Section 8, which
-concerns only who frames eligibility.
+Symmetric organized-capture modelling, with equal penalties conservatively held fixed, lets capture occur when private rent exceeds acquisition cost plus expected sanction. Equal citizen wallets impose an acquisition floor: money may persuade holders but cannot buy wallets. Under stipulated detection of ≈0.10 centrally and ≈1.0 distributed, central selection becomes net-harmful near rents of 10% of project cost and the distributed threshold is higher. Snowball detection, *P* = 1 − (1 − *q*)^*m*, implies an approximate floor *mq* ≥ −ln(1 − *p_c*) ≈0.1, with exact condition *m* ≥ ln(1 − *p_c*)/ln(1 − *q*). These are model-internal, sensitivity-dependent claims, not empirical burdens of proof: the advantage narrows and may reverse as distributed detection approaches ≈0.3. Integrity safeguards the aggregation advantage rather than adding an independent multiplier.
 
-E1–E3 do not authorize two readings: the prioritization's origin is
-unspecified (r is a property of the vector, not of a state office), and the
-modeled crowd carries social proof but no knowledge —so these experiments
-compare attention against weight quality, not central against distributed
-knowledge. Finding 4 makes that comparison properly.
+The parity, capture, and detection closed forms are verified against simulation in the backbone artifact. They are analytical invariances only at the noise-free, large-set expectation: they are scale-invariant and depend on voice bias β rather than participation level, not claims about every finite-sample run. Finite turnout changes sampling variance, rankings, and portfolios; valuation tails and shape can matter even though Gaussian draws are convenient because first moments govern expected rankings. Tiny interested sets restore a full-census central advantage. The comparison is static although elections, audits, and learning are dynamic; a persistently blind centre is a stress case, not an inevitability. Distributed outcomes are scored against revealed true value, but β and capture make the signal biased and contestable rather than definitionally correct.
 
-**Finding 3: what buffers participation decay is the anchor's level, not
-where the leavers' weight flows — our own prediction failed here.** We
-predicted that decaying active evaluation (10% to 2% over 24 cycles) would
-degrade allocation gracefully only if the released share flowed to
-defaults rather than salience. Exploiting common seeds across conditions,
-the paired analysis rejects this: the destination's effect on overall
-selection is null at both anchor strengths (mean paired differences 0.001
-[−0.031, 0.033] and 0.021 [−0.028, 0.071]), and the only interval
-excluding zero is small and opposite-signed (at a strong anchor, the
-salience destination preserves late-cycle alignment slightly better —
-plausibly because amplified social proof also propagates evaluator
-seeding). What governs robustness to decay is the structural share of the
-default layer itself, Finding 2's variable. Engagement decay — the
-documented fate of civic-tech participation (Hirschman 1970; Peixoto and
-Fox 2016) — is a
-buffered risk here, but the buffer is the institutional layer's size, and
-within-cycle quality alignment still erodes in later cycles under all
-conditions, so decay is bought, not free.
+Vickrey–Clarke–Groves is infeasible for this class of public-budget allocation because it is not budget-balanced (Vickrey 1961; Green and Laffont 1979). Both arms are therefore second-best institutions (Lipsey and Lancaster 1956), and Core v0 claims neither optimality nor strategy-proofness, which is unavailable to any non-dictatorial, deterministic, onto social-choice rule over at least three alternatives with unrestricted preferences (Gibbard 1973; Satterthwaite 1975), only capture-resistance under bounded organized coordination. Its equal wallet is an intensity-expressing voting device (Casella 2012; Lalley and Weyl 2018); Condorcet aggregation fails under correlated error (Austen-Smith and Banks 1996), precisely why integrity protections matter. Sen (1999) grounds what is valued and Samuelson (1954) its summation, notwithstanding Sen's objection to that aggregation.
 
-**Finding 4: aggregated dispersed signals outperform fixed-bandwidth
-central construction of the weight vector — but a fair, symmetric
-re-examination resolves the advantage into a conditional frontier and adds a
-capture-resistance that guards it.** A fourth, pre-registered experiment
-(design and predictions committed before any run;
-`research/e4-institutional-knowledge-design.md`) models knowledge
-symmetrically instead of endowing it: a planner with fixed bandwidth
-(thirty deep inspections; its correlation with latent quality is now
-measured output, collapsing 0.81 → 0.37 → 0.17 as the project pool grows
-40 → 200 → 1000) against thirty percent of citizens holding four
-individually poor local signals each (noise 0.35). Five regimes share the
-identical world and signals and differ only in the aggregation
-institution. The pre-registered scale-crossover prediction failed in the
-informative direction: open construction of the weight vector — a plain
-average of citizen signals per project — beats pure central construction
-at *every* scale, including the smallest, where the planner inspects
-three-quarters of the world (sel(θ) 0.76 vs 0.62 at N = 40; 0.73 vs 0.04
-at N = 1000). Twelve thousand noisy signals average into a near-perfect
-vector; thirty good inspections cannot compete, and fixed central
-bandwidth decays toward randomness as the world grows — a Condorcet
-(1785) aggregation logic, and we treat it as such: the jury theorem's
-known failure conditions (Austen-Smith and Banks 1996) define exactly
-the boundary the seventh experiment tests. Three
-qualifications carry the finding's honest weight. First, the same
-dispersed knowledge *without* an aggregation institution is wasted: the
-uncoordinated regime funds 0.6–15% of projects and selects poorly — the
-result vindicates aggregation mechanisms, not the absence of mechanism,
-and Core v0's default-plus-closure layer is exactly such a mechanism.
-Second, aggregation defeats noise, not bias: signals are unbiased by
-construction, and a common-mode bias uncorrelated with quality
-(misinformation, expressive allocation) would not average out — only
-endogenous social-proof contamination was tested, and proved largely
-benign because visible funding progress is itself quality-correlated in a
-well-anchored system. Third, elicitation is non-strategic by assumption;
-in deployment, signal reporting becomes a gaming and clientelism surface,
-and the mechanics of open scope construction remain a gated design
-problem. Within those bounds, the finding points in a clear direction: the binding variable is not who holds the pen but how much
-dispersed information the scope-construction institution ingests.
+All E4 magnitudes are model-internal. The central's modelled benchmark-efficiency range is only a candidate validation target requiring an explicit construct mapping; ex-post realized-to-appraised ratios measure a different construct, and β needs demographic anchoring. Brazil's participatory-budgeting evidence shifts spending toward sanitation and health and lowers infant mortality at constant per-capita budget (Gonçalves 2014), supporting direction, not magnitude.
 
-The simulation also disciplines rhetoric — in both directions. Nothing in
-E1–E3 supports describing Core v0 allocation as "the wisdom of crowds":
-the honest description is *inspectable intermediation with a
-citizen-correctable default*, which the results show is both realistic and
-better than the salience-driven alternative that unstructured platforms
-converge to. And nothing in E1–E3 licenses the opposite reading — that
-central planning knowledge beats distributed knowledge — because they
-never modeled distributed knowledge; when E4 does, aggregation wins
-wherever its named preconditions hold. Both discourses lose their slogan;
-the design keeps its numbers.
+**Finding 5: selection and delivery compose multiplicatively.** E5 crosses central/distributed selection with opaque/verified delivery on matched portfolios. Opportunistic executors divert when temptation exceeds deterrence from detection, advance exposure, recovery, guarantees, and reputation. Opaque loss is moment-matched to Olken's (2007) ≈24% missing expenditure—not welfare; the IMF's ≈30% public-investment inefficiency is broader, and Uganda's ≈87% capture is a tail. Verified delivery combines milestone-gated advances, guarantees, retention, recovery, and reputation. Every cell uses the same full-information reference, not a compound multiplier. Delivery is ≈95% verified versus ≈78% opaque. It adds ≈8 reference points under central selection and ≈17 under distributed selection; selection adds ≈42 under opaque delivery and ≈51 under verified. The positive interaction is the level signature of the accounting identity delivered value = selected value × delivered fraction, not an independent discovery.
 
-*A fair, symmetric re-examination (E4-v4/v5).* This first-pass E4 gave the
-central a fixed inspection bandwidth and left citizen signals unbiased — two
-idealizations that, an adversarial review showed, tilt the comparison in the
-distributed arm's favor. A rebuilt model
-(`scripts/simulation/e4-v4-symmetric-frontier.mjs`,
-`research/e4-v4-symmetric-frontier-results.txt`, `research/e4-v5-capture-design.md`)
-gives *both* institutions a symmetric friction in perceiving true value,
-including harm: the central attenuates perceived harm by a coefficient η (0 =
-blind to diffuse harm, 1 = a fully accountable planner), while the distributed
-reads true valuations but the diffusely harmed under-participate at a rate β
-(voice inequality). The result is not a multiplier but a frontier with a
-closed-form parity locus (`research/e4-analytical-backbone.md`): both
-institutions are biased estimators of the same Samuelson value T = S⁺ − S⁻,
-ranking projects by S⁺ − θ·S⁻ with θ_C = η and θ_D = 1 − β, so the distributed
-dominates exactly when its coefficient is closer to the true harm-weight of one
-— i.e. **β < 1 − η**. The simulation confirms the law (parity on the
-anti-diagonal η + β = 1) and quantifies the delivered-value degradation off it
-(from parity on the anti-diagonal to a substantial distributed lead across the
-plausible box). The advantage
-is thus a property of *including the harmed*, not of aggregation per se; it reaches
-parity along the anti-diagonal β = 1 − η and turns into a central win below it
-(β > 1 − η) — which absorbs the participation-bias objection into the model's own
-β axis rather than leaving it external. Neither
-extreme is assumed: η is *swept*, not fixed, and a low but non-zero η is a
-defended regime, not a premise. The diffuse-harm literature (Bastiat's (1850) unseen
-costs; Olson's (1965) asymmetric organization on contested issues; Wilson's (1973)
-client-politics quadrant; Scott's (1998) legibility) describes *when* diffuse costs go
-unrepresented — each read at its proper scope, not as a claim of global
-blindness — while the opposing thesis that political competition disciplines the
-centre toward efficiency (Wittman 1989) holds weakest in exactly that
-client-politics quadrant. Empirically, most *measured* procurement loss is
-passive — incompetence, not theft (Bandiera, Prat and Valletti 2009) —
-consistent with a low but non-zero η.
+Community observation can increase detection but not institutional recovery and contributes only a fraction of a point under weak control; the community-monitoring evidence includes Björkman and Svensson (2009) and failed replications (Molina et al. 2016). Formal recovery drives the sizeable delivery gain. Verified diversion remains low but nonzero (≈2%, ≈7% without reputation): grand-corruption tails survive strong control, as audits reduce but do not erase leakage (Olken 2007; Avis, Ferraz, and Finan 2018; Becker 1968). In PROBABLE, results are seed-stable, withstand cost/size-correlated delivery risk (cost is independent of modelled value), and persist in the sampled joint sweep. E5 holds budgets equal; administrative cost is separate.
 
-*Capture-resistance guards the advantage (E4-v5).* Modelling organized capture
-symmetrically — the review's hardest objection, applied in fairness to the
-central planner too — the asymmetry widens rather than closes. A group captures
-a low-value project only when its private rent exceeds acquisition cost plus the
-expected sanction (Becker 1968); with the deterrence asymmetry carried entirely
-by detection probability and acquisition scaling (the penalty held equal,
-conservatively), the status quo turns net-harmful at rents near 10% of project
-cost while the distributed threshold — floored by the equal-per-citizen wallet,
-which money can persuade but cannot buy — sits substantially higher (closed
-form in the backbone note). Detection is a snowball p = 1 − (1 − q)^m, so
-its floor is an expected m·q ≥ −ln(1 − p_c) ≈ 0.1 reporters drawn from the
-transparent affected public — low, but this is a model-internal statement whose
-force depends entirely on the stipulated detection gap (central ~0.10 vs
-distributed ~1.0), not an empirical burden-of-proof: sensitivity analysis is
-decisive here — the distributed advantage narrows and can reverse if distributed
-detection is driven down toward ~0.3, so the claim is that organized recapture is
-harder under the distributed arm's transparency *given these parameters*, not that
-it is ruled out. This ties Finding
-4 to the integrity layer of Finding 5: the same fiscalization that makes value
-arrive is what keeps the allocation advantage from being bought back by
-organized rents, so the two are a layer and its safeguard rather than
-independent multipliers. Every magnitude here is model-internal; the literature
-(Olson 1965; Wilson 1973; Scott 1998; Bastiat 1850; Becker 1968; Becker and
-Stigler 1974; Stokes 2005; Dyck, Morse, and Zingales 2010; Ostrom's 1990
-self-monitoring commons) defends the direction,
-the mechanism, and the sign of the asymmetry — not the numbers.
+**Finding 6: visibility sustains effort; naive reputation concentrates faster than it selects.** In an all-honest, no-diversion career-concerns model (Holmström 1999) with no explicit effort cost, opaque effort falls 0.49→0.24 because effort has no return or visible standard. Verified visibility sustains near-start effort and produces a pure incentive gain; visibility carries most of it, partly by construction because imitation requires visibility. Reputation-weighted assignment raises the assignment Gini from 0.34 to 0.84 while weakly tracking ability because early luck locks in. Core v0 therefore makes concentration observable, protects entrants, opportunity-normalizes reputation, and lets it inform rather than automatically assign or exclude choices.
 
-*Analytical backbone.* Three closed forms carry the weight, each verified against
-the simulation (`research/e4-analytical-backbone.md`); the runs then only confirm
-them and quantify the degradation off the clean cases. **(i) The parity law.**
-Writing each institution as a biased estimator that ranks projects by S⁺ − θ·S⁻,
-the central keeps θ_C = η of perceived harm and the distributed reveals
-θ_D = 1 − β (the participation rate cancels from the ranking); since the true
-harm-weight is one, the distributed arm delivers more true value **iff
-β < 1 − η**, parity on the anti-diagonal. A bias–variance reading would predict
-that on the parity line, where the bias cancels, the lower-variance estimator wins —
-the distributed's revelation noise is zero (a funder knows her own value), the
-central's proxy noise is not. The implemented simulation does **not** bear this out
-at the accountable corner: at (η = 1, β = 0) the measured outcome is a slight
-**central win** (the distributed falls just short of the central there) — so
-the honest reading is the noise-free parity law β = 1 − η, and the bias–variance tilt
-toward the distributed is not supported there.
-**(ii) The capture
-threshold.** From rent > acquisition + P(detect)·penalty, the central's threshold
-λ\*_C = (k_c + p_c·f)/C falls toward zero as its detection shrinks, while the
-distributed's λ\*_D = k_d + p_d·f/C is *floored* by the equal-wallet acquisition
-term k_d; the signed threshold gap δ(C) = λ\*_D − λ\*_C therefore stays positive
-across the plausible range, widening as the wallet floor k_d comes to dominate at
-higher project cost. **(iii) The detection floor.** With snowball detection
-P = 1 − (1 − q)^m, beating a central rate p_c needs, in the small-*q* (Poisson)
-approximation (1 − q)^m ≈ e^{−m·q}, only an expected m·q ≥ −ln(1 − p_c) ≈ 0.1
-reporters — the exact Bernoulli condition is m ≥ ln(1 − p_c)/ln(1 − q), which
-depends on *m* and *q* separately, not only on their product. It is a
-model-internal detection floor under the stipulated parameters
-(sensitivity-dependent; see Finding 4), not an empirical burden-of-proof inversion.
-Three invariances bound the arbitrary-magnitudes worry — as properties of the
-noise-free, large-set *expectation*, not of every finite-sample run: the advantage
-is invariant to the units of value (scale); in expectation it depends on the
-voice-bias β rather than on the participation *level* (though in finite samples
-turnout changes sample size, sampling variance, and hence rankings and
-portfolios); and, because only the first moments S⁺, S⁻ enter the expected
-ranking, the Gaussian valuation draw is a convenience there rather than a
-load-bearing assumption (finite-sample tails and valuation shape can still move
-rankings). One honest boundary the runs mark: the parity law is the large-set
-limit; when a project's interested set is very small — a handful of people — the
-distributed's sampling variance dominates and a full-census central regains the
-edge. Two further boundaries are honest to state. The comparison is *static* — a
-single allocation round — whereas real harms surface over iterated cycles and
-feed back through elections and audit, so a persistently blind centre is the
-stress case, not an inevitability. And the distributed arm is *scored on the true
-value it reveals*, which would be circular were it not that the β voice-bias and
-the capture frictions make its revealed signal a biased, contestable estimate of
-that value rather than a definitional one.
+**Finding 7: audit parameters discipline a baseline channel, not a treatment effect.** This pre-registered, documented-practice-informed apparatus adds audit detection, retention, bonds, inspection, and recovery, scales planner coverage, and sweeps coordinated bias; primary-source verification remains ongoing. Detection draws on Chilean comptroller works studies and recovery on Mexico's ASF series. Its 24–48% works-leakage range is anchored in Olken (2007), Ferraz and Finan (2008), and audit evidence from the U.S. GAO, U.K. NAO, European Court of Auditors, Brazil's TCU/CGU, and Chilean, Peruvian, and Colombian comptrollers. It parameterizes baseline leakage, not Core v0's causal effect.
 
-*Positioning.* The first-best preference-aggregation mechanism —
-Vickrey–Clarke–Groves (Vickrey 1961; Green and Laffont 1979) — is infeasible for
-public budgets (it is not budget-balanced), so both the central planner and Core v0
-are *second-best* institutions (Lipsey and Lancaster 1956); the comparison asks
-which second-best delivers more, not whether either is optimal. Core v0
-accordingly claims not strategy-proofness — impossible for any non-dictatorial
-mechanism (Gibbard 1973; Satterthwaite 1975) — but *capture-resistance under
-bounded organized coordination*. The equal-per-citizen wallet places it in the
-intensity-expressing voting family (Casella 2012; Lalley and Weyl 2018) with a
-sharper anti-plutocratic property: it caps influence by *equal endowment* rather
-than by convex pricing, so money can persuade wallet-holders but cannot buy
-wallets — exactly the acquisition-cost floor k_d of the capture threshold.
-Finally, the aggregation advantage is the Condorcet (1785) jury logic and dies
-under its independence condition (Austen-Smith and Banks 1996): organized capture
-is the correlated-error violation of that independence, so the integrity layer
-exists precisely to defend the assumption on which distributed aggregation rests.
-The value primitive follows Sen's (1999) capabilities for *what* is aggregated —
-freedoms, not money-utility — while the *summation* rests on Samuelson (1954), an
-aggregation Sen himself resists; we invoke each only where it applies.
+The withdrawal condition did not trigger within this apparatus: the advantage is substantial at scale but near parity at 10–40-project municipal scale, where a full-coverage central planner is competitive and the case rests on delivery and metering. Given the stipulated opportunist-cost distribution and no-memory baseline, audit-level detection deters no modelled diversion: leakage matches zero control, and the visibility gap narrows from 29 to 19 points without raising delivered value. These are apparatus outputs, not estimates of real auditing. Coordinated capture degrades distributed selection roughly linearly; it falls below a competent municipal planner at about 30% coordination but remains superior below 10%.
 
-*Calibration.* The magnitudes are model-internal, and the gap to data defines
-calibration targets rather than field estimates. The central's 44–85% of benchmark-achievable value is a
-**candidate validation target requiring an explicit construct mapping** — not a
-direct check: the ex-post realized-to-appraised ratio (the World Bank's Independent
-Evaluation Group ratings; Flyvbjerg, Bruzelius and Rothengatter 2003) is a
-*different construct* from central selection relative to a full-information
-benchmark, so bridging them needs a stated mapping before either can calibrate the
-other; the voice bias β can likewise be anchored to measured
-participatory-budgeting demographics, and to the documented over-representation
-of motivated, unrepresentative participants in open processes (Einstein, Palmer
-and Glick 2019), rather than assumed. And independent field
-evidence points the direction the model does: participatory budgeting in Brazil
-shifted spending toward sanitation and health and lowered infant mortality at
-constant per-capita budget (Gonçalves 2014) — a real-world instance of
-citizen-directed allocation delivering more real value, cleanly separable from
-any magnitude the model reports. The calibration-targets appendix makes the
-model-internal / data boundary a visible line.
+**Finding 8: rankings survive endogenous participation.** Replacing imposed shares with companion-model trajectories for awareness, registration, participation modes, and trusted microdelegation—using LLM-elicited synthetic scenario priors (internal robustness inputs, not empirical calibration)—preserves rankings across three synthetic populations, all scales, and a near-zero-participation launch, where defaults anchor early cycles by construction. The emergent informed share is 0.309 against the imposed 0.30; the companion replication package is the distributed-governance-experiments repository.
 
-**Finding 5: selection and delivery compose multiplicatively — the
-architecture's advantage is delivered value, not selection alone.** A
-fifth experiment (`scripts/simulation/e4-v5/e5-delivery.mjs`, rebuilt on
-the clean E4 engine) adds the execution stage the first four omitted, as
-an **independent** delivery regime crossed with the two selection regimes —
-a four-cell design so each layer reads separately and jointly on the *same*
-funded portfolios. Executors have hidden types: an intrinsically honest
-share deliver; the rest divert whenever a temptation draw beats the
-regime's deterrent `p·[(1−a(1−r)) + γ + R]` (detection *p*, advance
-exposure *a*, recovery *r*, guarantee *γ*, reputational stake *R*) —
-Okun's (1975) leaky bucket. The **opaque** status-quo regime's emergent
-value loss is moment-matched to Olken's (2007) ~24% missing-expenditure
-figure (not identified as welfare); IMF's (2015) ~30% public-investment
-inefficiency is a broader process loss, and Reinikka and Svensson's (2004)
-~87% Ugandan capture is a tail, not the central case. The **verified**
-regime is the architecture: a milestone-gated advance plus a performance
-guarantee, retention, recovery, and a reputational stake — magnitudes
-declared, directions from Propositions 1–4.
+**Finding 9: three-layer attribution is conditional, and layer signs reverse.** E9's 2×2×2 factorial crosses central/distributed planning, selection, and delivery over ten persistent COFOG sectors (United Nations 1999). Its Shapley values sum exactly to the all-distributed/status-quo difference:
 
-Every cell is a percentage of the same full-information greedy reference at
-perfect delivery (a heuristic normalizer, not an optimum), so no compound
-multiplier is reported. Selection efficiency reproduces E4 (distributed
-≈ 98%, central ≈ 44% of the reference); delivery efficiency is ≈ 78% opaque
-versus ≈ 95% verified. Read as two main effects at the declared world, the
-delivery layer adds ≈ 8 points under central selection and ≈ 17 under
-distributed; the selection layer adds ≈ 42 points under opaque delivery and
-≈ 51 under verified. The interaction is positive: the two layers **compose
-multiplicatively** — an accounting identity (delivered value = selected
-value × delivered fraction, applied per project), of which the positive
-interaction is the level-effect signature, not an independent discovery.
-The full **selection-and-delivery** architecture beats the status quo by
-≈ +58.6 points of the reference (95% conditional Monte-Carlo interval
-[+58.0, +59.2], reflecting
-inner simulation variability only — world, model-form, and calibration
-uncertainty are not included). An earlier version summarized this as a
-single compound value-per-budget multiplier; that compound is **retired**,
-and E5 reports the layers as separate percentages.
+| World | Full-stack gain | Planning | Selection | Delivery |
+|---|---:|---:|---:|---:|
+| PROBABLE | +57.1 | +3.1 | +42.7 | +11.3 |
+| PRO_CENTRAL | +14.7 | +1.5 | −2.8 | +16.0 |
+| MYOPIA_OFF | +44.7 | +2.5 | +29.5 | +12.6 |
+| PRO_DIST | +172.6 | +4.8 | +169.1 | −1.4 |
 
-Two refinements survive scrutiny. First, Core v0's distributed coverage is
-not only a selection signal: the citizens who routed the budget also
-observe delivery. But community coverage credibly lifts *detection*, not
-*recovery* (clawback needs institutional follow-up), so the coverage-only
-delivery dividend is small (a fraction of a point in the weak-control
-regime; Björkman and Svensson 2009, with failed replications; Molina et al.
-2016); the sizeable delivery gain comes from the **formal** recovery
-channel — the verified regime — not eyeballs alone. Second, the verified
-regime's diversion is **low but nonzero** (≈ 2% incidence, ≈ 7% without the
-reputational stake): a grand-corruption temptation tail keeps a residual
-that strong control does not eliminate, matching Olken's finding that audits
-cut leakage without erasing it (2007; Avis, Ferraz, and Finan 2018; Becker
-1968) — ex-ante deterrence, not an empirical zero. Within the PROBABLE world, the
-result is stable across seeds and under **cost/size-correlated** delivery
-risk (project cost independent of modeled value), and a joint
-delivery-parameter sweep, conditional on the declared world, keeps coverage
-ahead across the sampled space. Delivered value here is measured
-at *equal budget*; the administrative *cost* of running each institution is
-a separate layer (Finding 10).
+PROBABLE's 95% conditional Monte-Carlo interval is [+56.8, +58.1]. Each attribution is conditional on the declared sector generator; only E5 separately identifies selection and delivery, while E9 supplies the three-layer structure and attribution method. Components are not world-robust: selection reverses in PRO_CENTRAL and delivery reverses in PRO_DIST because stronger execution magnifies a harmful portfolio. The full Core v0 diagonal nevertheless remains positive in all four modelled worlds.
 
-**Finding 6: visibility sustains the standard; naive reputation markets
-concentrate faster than they select.** A sixth pre-registered experiment
-(`research/e6-reputational-competition-design.md`) isolates the incentive
-channel from deterrence entirely — a career-concerns setting in
-Holmström's (1999) sense: an all-honest executor pool with adjustable
-effort and no possibility of diversion (the model prices no explicit
-effort cost; cost-minimization is encoded behaviorally as the opaque
-regime's decay rule). In the opaque regime,
-effort collapses toward cost-minimization (0.49 → 0.24 over twenty-four
-cycles) — not through malice, but because effort has no return and no
-visible standard exists to imitate. Making verified quality visible
-sustains effort near its starting level, and the visible-competitive
-regime produces a material visibility-driven delivery gain over the opaque
-baseline — a pure incentive gain with zero diversion in the model. Two pre-registered predictions failed
-informatively. Visibility alone carries most of the effect: the mirror
-precedes the market (the behavioral rule ties imitation to visibility, so
-part of this is by construction — but the construction encodes the claim
-that opacity erodes professional norms by removing the standard itself).
-And naive reputation-weighted assignment concentrates work dramatically
-(assignment Gini 0.84 versus 0.34) while tracking true ability only
-weakly — early-luck lock-in, the cumulative-advantage dynamic of
-information cascades reappearing in the executor market. The design
-lesson runs in both directions: verified visibility is where the quality
-incentive lives, and any strong reputation weighting — human or
-algorithmic — needs the concentration observability, entrant floors, and
-opportunity-normalized reputation the corpus prescribes. In Core v0,
-reputation informs funders' choices rather than automatic assignment,
-with concentration visible by construction — and it never excludes: no
-protocol rule bars a funder from choosing any admissible actor on
-reputational grounds.
+Planning acts chiefly through agenda capture—excluding high-need, low-visibility functions—whose direction is grounded in agenda-setting theory (Bachrach and Baratz 1962; Schattschneider 1960), the COFOG taxonomy, visible-spending shifts (Drazen and Eslava 2010), and maintenance/prevention neglect (Rioja 2003); its magnitude requires country-specific data. Its small, positive conditional Shapley contribution is not a standalone anchored estimate; switching the mechanism off understates it, while switching it on does not anchor it. Chilean mental-health spending stayed near 2% of health spending in 2007–2015 despite mental disorders' leading disability burden (Errázuriz et al. 2015). This is consistent with low-salience under-provision but neither identifies agenda capture nor calibrates its magnitude; mental health is a funded subfunction, not an excluded top-level COFOG function.
 
-**Finding 7: an audit-parameterized baseline — what it does and does not
-calibrate.** The manuscript-review round's sharpest attack held that the zero-control
-baseline is a caricature — real administrations run audit institutions,
-retentions, bonds, and inspection — and the answer was a seventh
-pre-registered experiment (`research/e7-calibrated-baseline-design.md`)
-with a committed withdrawal condition: if the headline collapsed against
-a fair baseline, it would be withdrawn, not requalified. The
-audit-parameterized status-quo arm draws its parameters from published
-audit-institution findings (a documented-practice-informed scenario;
-verification of some primary sources is ongoing) — detection from Chile's comptroller works
-studies, retention from documented payment-state practice, recovery from
-Mexico's ASF series, leakage anchors category-matched to construction
-(Olken 2007; the multi-country evidence base spans the U.S. GAO, the U.K. NAO, the
-European Court of Auditors, Brazil's TCU and CGU, and the comptrollers
-of Chile, Peru and Colombia; Ferraz and Finan 2008) — with the planner's
-inspection bandwidth scaled to scope and coordinated signal bias swept
-as the Condorcet failure regime. The withdrawal condition was not
-triggered *within this apparatus*: against the audit-parameterized baseline the
-earlier compound was substantial at scale but only near-parity at municipal
-pilot scale (10-40 projects), where central selection with full coverage is
-competitive and the case rests on
-delivery and metering. But the audit evidence *parameterizes the baseline's
-leak*; it does **not** calibrate the Core v0 institutional treatment effect,
-which the later pre-registered selection gate did not support recalibrating (Section 6)
-— so these E7 figures are retained as conditional
-apparatus outputs, not a surviving headline. Within this apparatus, and
-conditional on its stipulated opportunist-cost distribution and no-memory
-baseline, one qualitative result is instructive: at the model's audit-reported
-detection intensity (primary-source verification ongoing), without reputational
-memory, the model deters no diversion — the audit-parameterized regime's incentive threshold lies
-below every modelled opportunist's cost, so its leak equals the zero-control
-regime's, and in the model the added detection reduces the visibility gap (from
-twenty-nine to nineteen points) rather than raising delivered value. These are
-model-internal outputs of E7's stipulated apparatus, not an estimated causal
-effect of real-world auditing. The audit-parameterized arm's leak lands inside
-the audit-reported leakage band (24-48% in works); the model's leak mechanics, fed
-audit parameters, are *consistent with* the documented range — this parameterizes
-the baseline's leak, it does not calibrate the institutional treatment effect. And the bias
-sweep bounds the open-construction claim honestly: distributed
-selection degrades near-linearly with coordinated signal capture and
-crosses below a competent full-coverage municipal planner only at
-roughly a thirty percent coordinated share — it degrades, never
-collapses, and remains superior everywhere below ten percent.
+**Finding 10: administrative cost directionally favors Core v0 but is modest in delivered-value terms.** E10 subtracts recurring institutional machinery from each budget before selection, charges Core v0's verification and recovery, avoids double-counting E5 leakage, and excludes rather than amortizes implementation CAPEX. Because marginal projects are cut first, loss is sub-proportional. Under the conservative low-spread floor (κ_C = 8%, κ_D = 5%, both within a 1–10% overhead band), cost reduces the matched-budget gap by 0.9 reference points to +57.7: roughly neutral. That holds only under this floor. Under the declared asymmetric scenario (0.12 versus 0.02), the central's assumed recurring cost is about one-tenth of budget higher—not a measured saving and broader than pure overhead—yet the delivered-value effect is only ≈0.4 points. Cost shares are scenario inputs, not measured arm-specific costs: the direction favors Core v0, but remains declared, welfare-modest, and uncalibrated.
 
-**Finding 8: the architecture ranking survives endogenous behavioral
-participation.** A pre-registered eighth experiment (E8,
-`research/e8-behavioral-participation-design.md`) then replaced the
-participation side of these arms — the default share and informed share
-the architecture arms had imposed — with adoption trajectories generated
-by a companion behavioral study: a Core v0-conformant agent-based model
-of awareness, registration, participation modes, and trusted
-microdelegation, calibrated with LLM-elicited synthetic priors
-(replication package: the distributed-governance-experiments
-repository). The architecture ranking is invariant across the three
-synthetic populations and all scales, including a launch trajectory that
-begins near zero participation — where the default layer anchors the thin
-early cycles by construction. The behavioral study also independently reproduces the
-informed-share assumption these experiments had imposed: 0.309 emergent
-against the 0.30 assumed.
-
-**Finding 9: the full stack — planning, selection, and delivery — and an
-honest accounting of what each layer contributes.** A ninth experiment
-(`scripts/simulation/e4-v5/e9-fullstack.mjs`, built on E5) adds the third
-architectural layer, **planning** (constructing the eligibility frame and
-per-sector budget shares): E9 compares central and distributed versions of all
-three layers in a 2×2×2 factorial applied across ten persistent sectors, the
-COFOG count (United Nations 1999). A
-Shapley attribution decomposes the all-distributed-versus-status-quo gap
-into layer contributions that sum exactly to it. In the declared PROBABLE
-world the full stack beats the status quo by ≈ +57 points of the reference
-[95% conditional Monte-Carlo interval +56.8, +58.1], and the conditional
-Shapley split is planning ≈ +3, selection ≈ +43, and delivery ≈ +11 points.
-Two honest qualifications govern the reading. First, the attribution is *conditional*: every layer
-value is computed through the declared planning sector generator, so the
-standalone, quantified **selection** and **delivery** figures are the E5
-ones (no planning layer); E9 contributes the three-layer *structure* and
-the attribution *method*. Second, **selection and delivery are large in
-PROBABLE but not robust across the four named worlds** (PROBABLE, PRO_CENTRAL,
-MYOPIA_OFF, and PRO_DIST): selection turns negative in
-PRO_CENTRAL, and delivery turns negative in PRO_DIST because stronger delivery
-magnifies a harmful portfolio. Despite those component reversals, the full
-Core v0 diagonal remains positive in all four — a fact the paper
-reports rather than hides. The named-world decomposition (conditional Shapley
-attributions through the declared sector generator, points of the reference):
-
-| world | full-stack gain | planning | selection | delivery |
-|---|---|---|---|---|
-| PROBABLE | +57.1% | +3.1% | +42.7% | +11.3% |
-| PRO_CENTRAL | +14.7% | +1.5% | −2.8% | +16.0% |
-| MYOPIA_OFF | +44.7% | +2.5% | +29.5% | +12.6% |
-| PRO_DIST | +172.6% | +4.8% | +169.1% | −1.4% |
-The **planning** layer's value operates chiefly through **agenda capture**
-— the central keeping whole high-need, low-visibility functions off the
-menu (the second face of power; Bachrach and Baratz 1962; Schattschneider
-1960). That mechanism is real and its *direction* is anchored (the COFOG
-taxonomy; the pre-election shift toward visible spending, Drazen and Eslava
-2010; the systematic neglect of maintenance and prevention, Rioja 2003),
-but its *magnitude* cannot be identified without country-specific budget
-data. We therefore report planning only as the **conditional** Shapley
-contribution in the table above (≈ +3 points, small and positive across the
-named worlds), **not as a standalone anchored figure**: quantifying it as a
-standalone effect with the mechanism switched off would understate it, and
-switched on it is not yet anchorable. Chile provides a qualitative illustration only:
-mental-health spending remained near 2% of health spending over 2007–2015,
-despite mental disorders being the country's leading cause of disability
-(Errázuriz et al. 2015). That pattern is
-consistent with low-salience under-provision, but it neither identifies
-agenda capture nor calibrates its magnitude; mental health is a funded
-subfunction, not an excluded top-level COFOG function.
-
-**Finding 10: administrative cost favors Core v0 — roughly neutral only under a
-conservative low-spread floor, a declared advantage under an asymmetric-cost scenario.** A tenth
-experiment (`scripts/simulation/e4-v5/e10-costs.mjs`) adds the administrative
-and machinery costs each institution operates and Core v0 largely replaces — the
-value-proxy studies, allocation and prioritization apparatus, and licensing
-the central carries, against Core v0's own platform and control machinery.
-The model handles these costs in three ways. It subtracts them from each
-arm's *budget* before selection, so the value loss is sub-proportional
-because greedy funding cuts the marginal projects first; it charges Core v0's
-own verification and recovery machinery rather than treating it as free; and
-it avoids double-counting the delivery leakage already modeled in E5. We report
-two **declared** scenarios over identical cost perimeters (steady-state régime costs
-only — one-time implementation is **CAPEX-excluded, not amortized**). Under a
-**conservative low-spread floor** (κ_C = 0.08, κ_D = 0.05, both inside a 1–10%
-administrative-overhead band) the layer is roughly neutral: administrative cost moves the
-modeled gap from +58.6 to +57.7 reference points, a −0.9-point contribution. But that
-low spread is a deliberate floor, not the only defensible case. In steady state the
-central's machinery — appraisal and value-proxy studies, the prioritization and
-allocation bureaucracy, approvals, and the salaries that run them — is plausibly a large
-recurring overhead, while Core v0 runs on a digital platform plus AI-assisted and
-citizen-sourced fiscalization at near-zero-marginal cost. A second, **asymmetric-cost
-scenario** (κ_C ≫ κ_D) is therefore declared, and it splits into two statements. First,
-an **assumed net-budget difference**: under a declared κ_C = 0.12 versus κ_D = 0.02 the
-central's modeled steady-state operating cost exceeds Core v0's by about a tenth of the
-budget — a declared scenario input, not a measured saving (and κ_C = 0.12 reads as
-recurring operating cost broadly — appraisal, prioritization, salaried bureaucracy — not
-pure overhead, since it sits just above that 1–10% band). Second, its **delivered-value
-effect** is smaller (about +0.4 reference points on the gap) because that freed budget
-funds marginal, low-value projects (the net-budget sub-proportionality). So the honest
-reading is not "no cost difference": the **direction favors Core v0**; "roughly neutral"
-holds only under the conservative low-spread floor; and the declared asymmetric-cost
-scenario is a declared — though welfare-modest and unquantified — cost advantage. The
-cost shares are declared scenario inputs, not measured arm-specific costs: the
-central-machinery direction reflects the large, recurring appraisal/prioritization
-bureaucracy documented in public-administration cost accounts; the platform side reflects
-the low operating cost of established public e-procurement systems (KONEPS, ChileCompra,
-ProZorro) and near-zero marginal AI/citizen fiscalization.
-
-**What the computational program establishes.** Stripped to essentials: (1) the
-load-bearing contributions are the architecture and the qualitative credit-versus-coverage
-mechanism — credit-pressured central ranking underweights diffuse value that
-coverage-based distributed selection surfaces; (2) taken together, E5–E10 locate the
-conditional advantage in selection and verified delivery, not overhead: E5 measures those
-margins separately on matched portfolios; E9 supplies a conditional full-stack attribution
-whose component signs vary by world while the full diagonal stays positive; and E10 leaves
-administrative cost roughly neutral under a conservative low-spread floor, with the
-direction favoring Core v0 (a declared advantage under an asymmetric-cost scenario); (3) a
-v1.14 four-scenario robustness extension (a *separate, exploratory* analysis under a
-different data-generating process) models the central as the evidence *directionally*
-describes it — *near-blind to diffuse harm on the low-visibility long tail* (Hayek 1945;
-Scott 1998; Olson 1965; Bandiera–Prat–Valletti 2009): coverage-routed selection recovers
-≈ 98% of the model's greedy reference against the central's ≈ 44%, a conditional model
-contrast reported as declared reference points, not calibrated impact; and (4) the earlier
-compound value-per-budget multiplier is retired here as a calibrated effect — under the
-frozen pre-registered rule the sole confirmatory selection gate did not clear the 0.05
-rebuild bar (§6, Appendix E4). Planning remains unresolved quantitatively — its
-agenda-capture mechanism is directionally grounded, but its standalone magnitude is
-deliberately deferred rather than manufactured from an unanchored scenario. Any calibrated
-total delivered-value effect on real data remains future work.
+Overall, the program establishes a directional, conditional advantage in literature-anchored coverage-based selection and formal verified delivery. Planning remains quantitatively unresolved, administrative cost is secondary and scenario-dependent, component effects vary by modelled world, and calibrated total delivered value remains future work.
 
 ## 7. Adversarial review as method
 
-The architecture was developed under a documented adversarial loop:
-**attack** (a brief stating a failure mode, its location in the corpus, a
-stress scenario, and literature anchors) → **paired defense** (an objective
-evaluation classifying the attack as founded, partially founded, or a
-difference of judgment, with line-anchored citations into the corpus) →
-**resolution** (an accepted document that either integrates a mechanism or
-bounds the risk) → **propagation** (the resolution's constraints threaded
-through every affected architecture document). The loop ran five rounds, all
-resolved; every resolution is propagated through the corpus except the
-manuscript-review round's four paired defenses (D037–D040), which carry accepted
-resolutions whose remaining corpus propagation is tracked in the remediation
-roadmap. The first round: eighteen attacks on
-the architecture's mechanisms (metric gaming, fiscalizer capture,
-disbursement gaming, collusion, related-party control, complexity,
-incumbent resistance, among others). The second: fifteen deliberately
-deeper attacks on the political and behavioral foundations (democratic
-mandate, agenda-setting, fiscal dependence, thin markets, meta-governance
-vacuum, rational ignorance, cascades, clientelism, polarization,
-intertemporal myopia, the problem of many hands (Thompson 1980)). The
-third round emerged
-from the method turned outward: a simulated five-profile external review
-of this paper's companion document generated reviewer questions the corpus
-could not answer with existing anchors, and the standing rule converted
-the two serious ones into formal attacks — the legal characterization of
-the citizen allocation act, and the administrative capacity cost of
-tutored operation — both since resolved and propagated. The fourth round
-turned the same instrument on this manuscript itself: five simulated
-reviewer profiles (academic, public law, systems architecture,
-public-sector practice, educated general reader) attacked the published
-v1.6, and their five unanswerable objections became formal attacks, each
-now resolved — the zero-control baseline as a calibration strawman
-(answered by the seventh experiment and a binding reporting rule), the
-reserve of law over the allocation competence (an enabling-norm record
-gating binding mode), reputational exclusion as an unprocessed sanction
-(reclassified: the design holds no exclusion power to sanction with),
-allocation traceability against preference secrecy (resolved as citizen
-allocation secrecy with public money), and the adoption paradox (an
-adoption layer under an explicit thesis boundary). The fifth round was an
-ablation round of three attacks (A041–A043): the piecewise deployment of the
-deterrence stack, the unregulated budget-release valve, and the verification
-layer under machine-and-ring collusion — each resolved and propagated
-(`docs/111`–`docs/113`). The method's
-honesty requirement applies to itself: several resolutions answer their
-attacks with an explicit "bounded, not solved," and the full review record
-is public.
+Adversarial review was the architecture’s development method. Its documented loop comprised: an attack brief specifying failure mode, corpus location, stress scenario, and literature anchors; a paired, objective, line-cited defense classifying it as founded, partly founded, or a difference of judgment; an accepted resolution integrating a mechanism or bounding risk; and propagation of accepted constraints across affected documents.
 
-The loop terminates by the integrate-or-bound rule (P007). Its output
-discipline is what distinguishes it from ordinary threat modeling: every
-bounded attack must leave three artifacts — an explicit boundary sentence
-("Core v0 does not require X"), a visible residual risk, and a one-sentence
-limitation statement. The limitations section below is therefore not a
-gesture of humility; it is the accumulated, adversarially generated output
-of the method. Of the forty-three attacks, none was dismissed; nine of
-the second round's fifteen were classified founded outright and the other
-six partially founded, all five of the manuscript round were classified
-founded at least in part, and the corpus's answer to several is an honest
-"bounded, not solved."
+Five fully resolved rounds comprised 43 attacks on mechanisms (18), political/behavioral foundations (15), gaps from five-profile simulated external companion review (2), simulated five-profile manuscript review (5), and ablations (3). A standing rule converted unanswerable reviewer objections into formal attacks. None was dismissed: nine second-round attacks were founded and six partly founded; all five manuscript attacks were founded at least in part. Only four manuscript-review defenses (D037–D040) have accepted resolutions awaiting roadmap-tracked propagation; all others, including ablations (`docs/111`–`docs/113`), were propagated. Full record is public.
 
-We used the loop with a single design team plus AI assistance — which is
-why we call it structured self-critique rather than validation; a
-self-administered adversary, however disciplined, cannot substitute for
-independent attack. Its obvious next application is with genuinely
-independent reviewers, which we identify below as the first item of
-future work.
+Under P007’s integrate-or-bound rule, every bounded attack must leave an explicit boundary (“Core v0 does not require X”), visible residual risk, and a one-sentence limitation. These artifacts distinguish the loop from ordinary threat modeling. Thus the limitations below are accumulated adversarial outputs, not ornamental humility; several honestly say “bounded, not solved.”
+
+Because one design team, assisted by AI, administered both attack and response, this is structured self-critique, not validation: discipline cannot substitute for independent attack. Applying the method with genuinely independent reviewers is the first future-work item.
 
 ## 8. Limitations
 
-Stated per the method's own rule — each is a recorded boundary with a named
-residual risk.
+Under the method's rule, each limitation is a recorded boundary with a named residual risk.
 
-**Constructing the eligibility frame is centralized in the transition
-modes.** In the closed and tutored operating modes Core v0 specifies for
-pilots, the implementing authority constructs planning scopes; the
-architecture makes that construction public, versioned, mandate-bearing,
-and contestable through visibility, but in those modes it does not
-distribute it. Constructing the scope means defining the frame — which
-purposes, which budget share, which protected floors, which admissibility
-rules — not designing or ranking projects: project creation and
-prioritization remain distributed even in tutored mode, so this residual
-agenda power is the power to decide what *may* be funded, never what *is*
-funded. It is important not to misread our own simulation here. What that
-simulation shows dominating every other quality margin is the
-informational quality of the **project prioritization** — the aggregated
-allocation profiles the funded share follows — and that prioritization is
-distributed by design, even in tutored mode; the result is therefore an
-argument *for* distributing construction, not evidence that a central
-agenda governs delivery. The residual centralized power is the narrower
-one: constructing the eligibility frame is itself the second face of power
-(Bachrach and Baratz 1962; Schattschneider 1960; Lukes 1974) — the power
-to keep something off the menu — which the architecture answers, in these
-modes, by making the frame public, versioned, mandate-bearing, and
-contestable rather than by distributing it. Three things scope the
-limitation honestly. It is a property of the transition modes, not of the
-architecture: operating modes are country-configured states, and the
-designed trajectory is open, socially constructed agenda-setting. It is
-narrower than the passive share: engaged citizens allocate manually,
-delegate, or adopt configurable profiles, so authority weights fully
-govern only the never-engaged share. And it is now measured rather than
-assumed: E4 shows open construction of the weights from aggregated citizen
-signals is viable and scale-robust in the model, so the constraint is no
-longer whether distributed construction can work in principle but whether
-an elicitation mechanism can keep dispersed signals honest, unbiased, and
-representative under gaming, clientelism, and expressive-allocation
-pressure — a design problem the corpus gates rather than assumes away.
-The comparative baseline also belongs in this paragraph: under the current
-institutional model, the entire budget follows a centrally constructed
-vector that is neither published, versioned, pluggable, nor overridable by
-any citizen. The transition modes reproduce that centralization visibly
-and revocably; the open mode is designed to end it. This remains the
-architecture's principal open problem, now with a measured prize attached
-to solving it — and for that reason we treat it not as one limitation
-among many but as the research program's next object: the design of open
-agenda-setting, including the candidate architecture in which a
-distributed agenda is constructed in parallel to the authority's own and
-the tutored role narrows to admissibility review of conflicts between the
-two, is the natural subject of a dedicated follow-up study and pilot.
+**Eligibility-frame construction remains centralized in transition modes.** In closed and tutored pilot modes, the authority defines purposes, budget share, protected floors, and admissibility; the architecture only makes that scope public, versioned, mandate-bearing, and contestable. This is not project design or ranking: creation and prioritization remain distributed even in tutored mode, so the residual agenda power determines what *may*, not what *is*, funded. The simulation's dominant quality margin is the informational quality of project prioritization—the aggregate allocation profiles followed by the funded share—which remains distributed by design. Its result therefore supports distributing frame construction, not an inference that a central agenda governs delivery. Nonetheless, frame construction is the second face of power—the capacity to keep items off the menu (Bachrach and Baratz 1962; Schattschneider 1960; Lukes 1974)—answered in transition modes by visibility and contestability, not distribution. Three qualifications matter. First, this belongs to country-configured transition modes, not the architecture: Open mode, the architectural default, has distributed, socially constructed planning; centralized planning is only a closed/tutored transition. Second, engaged citizens allocate manually, delegate, or adopt configurable profiles, so authority weights fully govern only the never-engaged share. Third, E4 finds open construction of weights from aggregate citizen signals viable and scale-robust in the model. The unresolved question is whether elicitation keeps dispersed signals honest, unbiased, and representative despite gaming, clientelism, and expressive-allocation pressure—a design problem the corpus gates rather than assumes away. Under current institutions, by comparison, the whole budget follows a central vector that citizens cannot see, version, plug into, or override. Transition modes make that centralization visible and revocable; Open mode ends it by construction. This remains the principal open problem and next research object. A dedicated study and pilot should test parallel citizen- and authority-constructed agendas, with the tutored role narrowed to admissibility review when they conflict.
 
-**Procedural legitimacy is not democratic mandate — and the enabling norm
-does not yet exist.** The platform records the external authorization for
-budget migration and allocation formulas (the Allocation Mandate); it
-cannot manufacture authorization the law never granted. In the continental
-tradition of the reference jurisdictions, binding citizen allocation
-requires an enabling instrument of sufficient rank that no current statute
-supplies — the regional precedents (Peru's participatory-budgeting
-statute, Brazil's city-statute framework) prove the instrument is
-achievable, not that it exists — so the architecture's lawful deployments
-today are consultative and tutored, in which every material allocation
-decision remains imputed to the competent authority as a reasoned public
-resolution; the delivery, metering, and reputational-memory results
-operate unchanged under that status, and only the mature open mode
-requires binding allocation. The normative debate over substituting
-atomized allocation for representative appropriation (Rosanvallon 2008;
-Urbinati 2014) remains open.
-Under deep evaluative disagreement, the architecture's posture is
-procedural in Gaus's (2011) sense: its rules aim to be justifiable from
-diverse moral standpoints — which is what mandate records, motive
-neutrality, and the comparative-critique discipline provide — without
-presupposing a shared comprehensive doctrine. One further objection is
-deliberately out of scope: the model takes the coercively raised budget as
-given and improves its administration; the libertarian challenge to the
-taking itself (Nozick 1974) is neither answered nor begged here.
-Contribution-weighted allocation formulas, in particular, are flagged by
-the architecture as plutocratic departures requiring explicit higher
-authorization.
+**Procedural legitimacy is not democratic mandate, and the enabling norm does not yet exist.** The Allocation Mandate records external authorization for budget migration and formulas; it cannot create legal authority. In the reference jurisdictions' continental tradition, binding citizen allocation requires a sufficiently ranked enabling instrument that no current statute supplies. Peru's participatory-budgeting statute and Brazil's city-statute framework show feasibility, not present authority. Lawful deployments today are therefore consultative and tutored: every material allocation decision is imputed to the competent authority through a reasoned public resolution. Delivery, metering, and reputational memory work unchanged; only mature Open mode requires binding allocation. Debate over replacing representative appropriation with atomized allocation remains open (Rosanvallon 2008; Urbinati 2014). Under deep evaluative disagreement, the rules seek procedural justifiability across moral standpoints (Gaus 2011), through mandate records, motive neutrality, and comparative critique, without assuming a shared comprehensive doctrine. The model takes a coercively raised budget as given and improves its administration; it neither answers nor begs the libertarian objection to the taking itself (Nozick 1974). Contribution-weighted formulas are plutocratic departures requiring explicit higher authorization.
 
-**Fiscal dependence is measurable, not enforceable.** The state controls
-the budget spigot. The Fiscal Commitment Profile converts strangulation
-from invisible to attributable — delivery latency, unexecuted valid orders,
-mid-cycle share cuts all become public data — but no software compels a
-sovereign to pay (Kydland and Prescott 1977; North and Weingast 1989). Credible commitment must come
-from country-level law.
+**Fiscal dependence is measurable, not enforceable.** The state controls funding. The Fiscal Commitment Profile makes strangulation attributable by publishing delivery latency, unexecuted valid orders, and mid-cycle share cuts, but software cannot compel sovereign payment (Kydland and Prescott 1977; North and Weingast 1989). Credible commitment requires country-level law.
 
-**Verification quality is assumed, then priced.** Propositions 1–4 take
-detection and discovery probabilities as parameters. In thin control
-markets — credence-good markets where quality is unobservable to the buyer
-(Akerlof 1970; Dulleck and Kerschbamer 2006) — both collapse
-simultaneously, and the only compensating margins are
-financial terms and imported (remote or cross-territory) verification. The
-architecture prices weak verification; it cannot conjure verifiers.
+**Verification quality is assumed, then priced.** Propositions 1–4 parameterize detection and discovery. In thin control markets—credence-good markets where buyers cannot observe quality (Akerlof 1970; Dulleck and Kerschbamer 2006)—both can collapse together; only financial terms and imported remote or cross-territory verification compensate. The architecture prices weakness but cannot create verifiers.
 
-**Coverage assumes source diversity it must then guarantee.** The distributed
-arm's advantage rests on many partly-independent signals; when profile
-providers, delegates, and recommenders concentrate onto a shared platform or a
-few super-delegates (Kling et al. 2015), their errors correlate and the
-common-mode channel — the single sensitivity that materially shrinks the
-anchored gap (§6, Appendix E4) — recaptures the very epistemic bottleneck
-coverage is meant to replace. Independence is therefore not a modeling
-convenience but an architectural obligation: Core v0 must publish delegate,
-profile-provider, and recommender concentration as observable quantities and
-trigger diversification thresholds when they climb. The residual risk is that a
-market converges on one recommender faster than the thresholds bite.
+**Coverage depends on source diversity that the architecture must secure.** Distributed selection gains from many partly independent signals. Concentration of profile providers, delegates, or recommenders on one platform or a few super-delegates correlates errors; this common-mode channel is the only sensitivity that materially narrows the literature-anchored gap (§6; Appendix E4), recreating the epistemic bottleneck coverage should replace (Kling et al. 2015). Independence is therefore an obligation, not a modeling convenience: Core v0 must publish concentration and trigger diversification thresholds. A market may still converge on one recommender before thresholds bite.
 
-**Behavioral realism cuts both ways.** The simulation vindicates designing
-for inattentive citizens, but it equally shows that a defaults-weak
-deployment degenerates into salience-driven allocation. Off-platform
-phenomena — clientelist brokerage, expressive polarization, collusion
-conducted entirely outside the system — are made harder and more
-discoverable, never impossible; the architecture's claims are comparative
-(against opaque monopoly), not absolute.
+**Behavioral realism cuts both ways.** The simulation supports designing for inattention, but weak defaults produce salience-driven allocation. Off-platform clientelist brokerage, expressive polarization, and collusion become harder and more discoverable, never impossible. Claims are comparative with opaque monopoly, not absolute.
 
-**Meta-governance in open mode is deferred by design.** Rule-change
-procedure, versioning, and non-surprise constraints are specified; the
-constitutional mechanics — rules for making rules (Buchanan and Tullock
-1962) — of who votes on protocol changes in a mature
-open-mode deployment are deliberately not. Open-mode deployment is gated on
-resolving them.
+**Open-mode meta-governance is deliberately deferred.** Rule-change procedures, versioning, and non-surprise constraints are specified; the constitutional rules for who votes on protocol changes are not (Buchanan and Tullock 1962). Open deployment is gated on resolving them.
 
-**Adoption selects, and the thesis does not depend on it.** This paper
-addresses whether the architecture can be built and reports conditional model
-contrasts for both selection and delivery — not whether Core v0 delivers more
-value in the world (a target-domain total delivered-value effect remains a
-separately identified future estimand, not claimed here), and not whether any
-authority wants it. The corpus supplies the
-deployment layer for an authority that has decided (prospective
-baselines measured from instrumentation onset, credit attribution on
-verified delivery, institutional rather than personal timeout attribution
-in the first cycle, and a symmetry clause barring any operator from
-exempting its own projects), and names the plausible adopter archetypes —
-the post-scandal challenger, the mandating higher government, the
-conditioned external funder. The honest selection effect stands: the
-architecture will plausibly be adopted first by relatively clean or newly
-arrived sponsors, in the places that need it least.
+**Adoption selects, and the thesis does not depend on it.** The paper asks whether Core v0 can be built and reports conditional selection and delivery contrasts—not whether it raises real-world value or attracts authorities. A target-domain total delivered-value effect is a separately identified future estimand, not claimed here. For an authority already committed, the corpus supplies prospective baselines from instrumentation onset, credit only for verified delivery, institutional rather than personal timeout attribution in cycle one, and a symmetry clause preventing operators from exempting their own projects. Plausible adopters are post-scandal challengers, mandating higher governments, and conditioned external funders. Adoption will plausibly select relatively clean or newly arrived sponsors where the architecture is least needed.
 
-**The layered magnitudes are conditional, not portable.** E5's ≈ +58.6-point
-selection-and-delivery estimate [95% conditional Monte-Carlo interval +58.0,
-+59.2] holds the declared world, model form, and
-calibration fixed; the interval reflects Monte-Carlo variation over simulated
-worlds, not uncertainty about the data-generating process, calibration,
-functional form, literature transport, or field implementation, and the greedy
-reference is a heuristic normalizer, not an optimum. E9's Shapley values are
-conditional attributions through the declared sector generator, not standalone
-estimates; individual layer signs reverse in extreme worlds even though the full
-Core v0 diagonal remains positive in all four named worlds. Planning's
-agenda-capture direction is anchored but its magnitude is unquantified. E10's
-cost result rests on declared net-budget shares (scenario inputs, not measured
-arm-specific costs): roughly neutral under a conservative low-spread floor, and a modest
-Core v0 advantage under a declared asymmetric-cost scenario (κ_C ≫ κ_D). None of these is a field-effect
-estimate.
+**The layered magnitudes are conditional, not portable.** The primary asymmetric contrast and the full selection-and-delivery result (reported in §6) are directional, conditional, stylized comparative-institutions outputs, not calibrated real-world effects. E5 fixes the declared world, model form, and calibration; its interval captures simulated-world Monte-Carlo variation, not uncertainty in the data-generating process, calibration, functional form, literature transport, or field implementation. Its greedy reference is a heuristic normalizer, not an optimum. E9 Shapley values are generator-conditional attributions, not standalone estimates; individual layer signs reverse in extreme worlds, although the full Core v0 diagonal stays positive in all four named worlds. Agenda capture's direction is anchored, but its magnitude is unknown. E10 uses declared net-budget shares, not measured arm-specific costs: it is roughly neutral at a conservative low-spread floor and modestly favors Core v0 under the asymmetric-cost assumption κ_C ≫ κ_D. None is a field-effect estimate.
 
-**The outcome measure is a bounded, non-distributional aggregate.** The value
-the model scores is a cardinal utilitarian-style sum over affected parties on a
-bounded slice of project-shaped, milestone-verifiable public investment (infrastructure
-is the clearest case, but the architecture is not limited to it); it is not distributionally
-weighted and says nothing about redistribution, equity, or who bears benefits and
-harms. A portfolio can score well on this measure while distributing badly.
-Applying the criterion across groups, or to the whole budget or the purpose of
-taxation, would require a separate social-welfare and incidence specification this
-paper does not provide. The model is also partial-equilibrium: strategic
-reporting, endogenous proposal supply, project complementarities, tax incidence,
-and general-equilibrium effects are outside it (see the
-[claim-and-estimand-contract](../research/claim-and-estimand-contract.md)).
+**The outcome is a bounded, non-distributional aggregate.** The model's evaluand is a cardinal, utilitarian-style sum over affected parties, but it is used only as a model construct whose outputs are read as directional/ordinal contrasts (Stevens 1946) — no cardinal interpersonal welfare is claimed, consistent with the architecture's ordinal, revealed treatment of value. Its empirical anchors are predominantly infrastructure and procurement — the milestone-verifiable, project-shaped cases where evidence is clearest; broader project-shaped applicability is a design claim, not yet empirically validated. It has no distributional weights and establishes nothing about redistribution, equity, or who bears benefits and harms: a high-scoring portfolio may distribute badly. Extending it across groups, the whole budget, or taxation's purpose requires a separate social-welfare and incidence specification. The model is also partial-equilibrium; strategic reporting, endogenous proposal supply, project complementarities, tax incidence, and general-equilibrium effects are excluded (see the [claim-and-estimand contract](../research/claim-and-estimand-contract.md)).
 
-**Epistemically, this is one team's self-critiqued design.** The
-adversarial corpus was produced by the same research effort it attacks,
-with AI assistance; the earlier apparatus's status-quo baseline was
-audit-parameterized (its parameters drawn item-by-item from published
-audit-institution findings, with primary-source verification still in progress), while the current symmetry gate is an uncalibrated
-stylized selection test — neither is calibrated to a specific PB dataset,
-and the remaining parameters are plausible rather than measured; and no
-pilot has been run. The three missing validations — independent expert
-attack, calibration to empirical PB data, and a bounded tutored pilot
-(sports-sector, one municipality) — are the research program's next
-phase, in that order.
+**Epistemically, this is one team's self-critiqued design.** The same AI-assisted research effort produced and attacked the corpus. The earlier status-quo apparatus was audit-parameterized from published audit-institution findings, with primary-source verification ongoing. The preregistered symmetry gate is an uncalibrated, narrow selection robustness check: it idealizes the central arm as an unbiased, competent value-reader without corruption and gives it better harm observation than the distributed arm, which adverse voice bias handicaps. That idealization is precisely why the gate cannot bound Core v0's architecture-wide value. Neither selection test is calibrated to a specific participatory-budgeting dataset; remaining parameters are plausible, not measured; and no pilot has run. Next, in order, are independent expert attack, empirical PB calibration, and a bounded, one-municipality tutored sports-sector pilot.
 
 ## 9. Implementation pathway
 
-The architecture is built for gradual, revocable adoption, and this
-section is explicit about what it does and does not claim: the paper's
-question — can the two-hundred-year-old allocation architecture be
-re-architected with today's technology — is answered at the level of a
-buildable design and a conditional selection-mechanism *direction*,
-independently of whether any authority chooses to deploy. It does **not**
-answer *by how much* real-world delivered value would improve: that is a
-separately identified estimand left to independent review, empirical
-calibration, and a bounded pilot (§8). What follows is the pathway for an
-authority that chooses to deploy. A country opens
-one public function (the reference pilot is municipal sports
-infrastructure), migrates a small budget share under a tutored operating
-mode, and retains admissibility review — with every tutored decision and
-delay public by construction. The pilot's default framing is prospective:
-instrumentation begins at adoption, the visibility gap is published as
-the adopter's declared starting line ("measure me from here"), and
-pre-adoption figures are reported separately, impersonally, and as
-context — the configuration under which exposing instruments have
-historically been adopted. Functional maturity metrics (participation
-mix, default-flow share, fiscalization independence rates, incumbent-
-resistance indicators, fiscal reliability) determine whether the deployment
-earns wider scope, and their trajectories, not rhetoric, answer whether
-distribution outperforms the local baseline. The exit condition is honest
-in both directions: a pilot whose indicators stagnate under incumbent
-throttling documents that fact publicly, which is itself information the
-current system never yields.
+Adoption is gradual and revocable. The paper answers whether current technology can rebuild a two-century-old allocation architecture with a buildable design and conditional, directional selection mechanism, regardless of deployment; it does not estimate real-world delivered-value gains. That separately identified estimand awaits independent review, empirical calibration, and a bounded pilot (§8). The operating-mode path is closed/tutored, semi-open, then open. Open—the architectural default—distributes planning by construction; centralized planning is confined to closed/tutored transition. A country opens one function (reference: municipal sports infrastructure), shifts a small budget share into tutored mode, retains admissibility review, and publishes every tutored decision and delay. Instrumentation begins at adoption; the visibility gap becomes the declared baseline (“measure me from here”), while pre-adoption figures appear separately, impersonally, as context—the configuration in which exposing instruments have historically been adopted. Participation mix, default-flow share, fiscalization-independence rates, incumbent-resistance indicators, and fiscal reliability gate expansion; their trajectories, not rhetoric, show whether distribution beats the local baseline. Stagnation under incumbent throttling is published as an exit result—information the current system lacks.
 
-The transition between regimes is itself measured. The companion
-experiments (Offermann 2026b) quantify the semi-open regime of the
-operating-regime ladder (docs/110) — a bounded mandated envelope running on
-protocol autopilot beside the authority's traditional budget — as a fiscal
-blend: above a portfolio-granularity floor of roughly ten percent, blended
-verified value rises monotonically and near-linearly with the envelope
-share within that apparatus, from break-even near eight to ten percent
-upward — an earlier-apparatus contrast now subject to the retired-multiplier
-caveat (Section 6), not a calibrated endpoint. The transition from the status
-quo toward the open regime is a dial, not a leap: adoption can proceed in
-increments.
+Transition is measured. Offermann (2026b) quantifies the semi-open rung (docs/110): a bounded, protocol-run envelope beside the traditional budget. Within that apparatus, above a roughly 10% portfolio-granularity floor, blended verified value rises monotonically and near-linearly with the envelope share, breaking even around 8–10%. This stylized transition contrast is directional, not calibrated. The fair, literature-anchored asymmetric selection contrast remains the primary directional finding. Movement from status quo to Open is an incremental dial, not a leap.
 
-The same experiments measured a variable this corpus had left unregulated:
-*when* the authority releases budget into the allocation machinery. The
-resulting deployment rule: meter release against a work-in-progress ceiling
-calibrated to the delivery-and-verification pipeline's throughput and cycle
-time — never against the calendar. Calendar release freezes months of
-budget in escrow and saturates verification; and when verification capacity
-is scarce, no release policy compensates — verification capacity is the
-pipeline's ceiling before it is the anti-fraud instrument. The rule is
-conditional on a carryforward instrument (the semi-open envelope is
-precisely such a vehicle); under strict budget annuality it degenerates to
-within-year metering.
+The experiments also supply a budget-release rule: meter release against a work-in-progress ceiling calibrated to delivery-and-verification throughput and cycle time, never the calendar. Calendar release strands months of budget in escrow and saturates verification; where verification is scarce, no release policy compensates: capacity is the pipeline ceiling before it is an antifraud tool. The rule requires a carryforward instrument, provided by the semi-open envelope; under strict annuality, it reduces to within-year metering.
 
-Finally, the technological premise that lowers participation costs on the
-citizen side (the AI tutor) applies symmetrically to the control side.
-Machine verification of protocolizable evidence classes multiplies
-fiscalization capacity, with humans as the permanent second instance —
-sampled re-verification with a published floor, seeded known-answer
-controls as the calibration and drift-detection instrument, auditing the
-verifier rather than competing with it — so that the machine's error rate
-remains measured and the human control profession remains funded from the
-control budget it relieves. Measured on a five-family panel of real models
-(Offermann 2026b), frontier models converge on good specificity and fraud
-detection on document-legible evidence while small local models are weaker,
-and evidence contracts that include objective comparison references (market
-benchmarks, duration bands, thresholds) let a strict verifier judge rather
-than guess. The machine layer reaches only document-legible, delivery-phase
-fraud — physical quality-below-spec and pre-contract theft remain fully
-human, so provenance attestation is tamper-evidence at capture, not
-court-grade proof, and evidentiary admissibility still needs custody, contradiction,
-and expert testimony. Contraposed citizen evidence — independent producers
-with interests opposed to the executor, whose anticipated existence deters
-diversion — keeps the watching distributed even as routine
-document-verification labor shrinks; but its strength equals the
-*independence* of the contributor layer, and a colluding ring that captures
-or silences it erases the effect. Cross-layer collusion is in fact the one
-adversary that bypasses the per-milestone deterrence and moves leakage by an
-order of magnitude (while the delivered-value advantage survives), so
-collusion resistance — verified beneficial ownership, contributor
-Sybil-resistance, and decentralization of the assigner and the audit-budget
-floor — is a first-class requirement ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)), not a residual caution.
+The AI tutor’s cost reduction applies symmetrically to control. Machine checking of protocolizable evidence expands fiscalization capacity, while humans remain the permanent second instance: sampled re-verification has a published floor, seeded known-answer controls calibrate and detect drift, and humans audit the verifier instead of competing with it, keeping errors measured and funding the control profession from budgets it relieves. A five-family panel of real models (Offermann 2026b) finds frontier models have good specificity and fraud detection on document-legible evidence; smaller local models are weaker, and evidence contracts with objective references—market benchmarks, duration bands, thresholds—let strict verifiers judge rather than guess. Automation covers only document-legible, delivery-phase fraud: below-spec physical quality and pre-contract theft remain fully human. Provenance attestation is capture-time tamper evidence, not court-grade proof; admissibility still requires custody, contradiction, and expert testimony. Contraposed citizen evidence preserves distributed watching as routine document review shrinks; deterrence depends on anticipated independent contributors opposed to executors, so colluding capture or silencing erases it. Cross-layer collusion alone bypasses per-milestone deterrence and increases leakage by an order of magnitude, although the delivered-value advantage survives. Verified beneficial ownership, contributor Sybil resistance, decentralized assignment, and an audit-budget floor are therefore first-class requirements ([docs/113](../docs/113_VERIFICATION_PACKAGE_AND_A043_RESOLUTION.md)).
 
 ## 10. Conclusion
 
-For the bounded public-investment allocation problem studied here, a
-relevant criterion is not how faithfully an institution executes a plan
-but how much delivered, verified value it produces per unit of public
-resource (Musgrave 1959; Okun 1975) — one criterion alongside the
-distributional and rights constraints this model does not represent. This
-paper's contribution is an architecture that makes that criterion
-operational — and a disciplined account of exactly how far its evidence
-reaches. The
-architecture's spine is two separable questions anyone can ask. First:
-take the same projects, designed identically, and change only who
-executes and how they are watched — does the visibly audited regime with
-reputational consequences deliver more than the one without them? Second:
-hold the control layer fixed and change only which projects get funded,
-centrally planned or socially prioritized? In E5's declared PROBABLE world, the
-answer to both is yes — a verified-delivery gain and a selection gain that compose
-multiplicatively (an accounting identity, not an independent finding). Together, the
-full selection-and-delivery architecture reaches ≈ +58.6 points of the greedy
-reference in the declared world [+58.0, +59.2]. E9 and E10 then sharpen where
-the modeled advantage comes from: the full-stack diagonal stays positive
-across the named worlds even when individual Shapley contributions reverse in
-extreme corners; agenda capture is represented as planning's principal
-mechanism, its direction anchored but its standalone magnitude left unquantified; and
-net-budget accounting leaves administrative
-cost roughly neutral under a conservative low-spread floor, and yields a modest Core v0 advantage
-under a declared asymmetric-cost scenario. In this model, the architecture's advantage is delivered
-value, and administrative cost adds to it rather than detracting from it. Those magnitudes are conditional
-model-internal contrasts, not calibrated field effects. The paper therefore stands on the
-fully specified architecture, the credit-versus-coverage mechanism, and channel-separated
-findings on selection, verified delivery, and administrative cost — not on an
-institution-wide multiplier. The pre-registered selection gate returned NO-GO because its
-positive median Δ = 0.025 did not clear the 0.05 rebuild bar; as registered, we retire the
-earlier multiplier (§6; Appendix E4). Its competent, harm-aware central and delivery parity
-determine the result's scope: this is a calibration decision under that comparator, not a
-finding that Core v0 failed. The separate exploratory map asks what follows under the
-source-motivated institutional asymmetries the gate sets aside; in its declared reference
-scenario coverage recovers about 98% of the model's greedy reference against the central's
-~44%, while the central's narrow 2.3-point lead appears only at its near-harmless
-favourable endpoint. These are conditional scenario results, not a recalibration or a
-field-effect estimate. One model-internal result is worth carrying because it is
-about the delivery layer, not the multiplier: in the model, at E7's
-audit-informed (but not yet fully source-verified) detection intensity,
-detection without persistent consequences deters no diversion; what moves delivered value is the
-instrument the modelled status quo lacks — consequences that persist. Whether
-that holds in a real institution is a hypothesis for a pilot, not a result
-here; but the model is unambiguous that accountability without memory is
-bookkeeping.
+For this bounded public-investment problem, the relevant criterion is delivered, verified value per resource unit (Musgrave 1959; Okun 1975), alongside distributional and rights constraints absent from the model. The paper operationalizes and bounds it. Contrasts separate delivery (fixed projects; vary executors and monitoring) from selection (fixed controls; vary selectors). In E5's declared PROBABLE world, both improve. The primary, fair, literature-anchored asymmetric contrast finds coverage-routed distributed selection recovering ~98% of the full-information greedy reference versus the central's ~44% (≈2.2×; ~54 points); the full selection-and-delivery architecture exceeds the status quo by ~58.6 points [+58.0, +59.2]. Selection and verified-delivery gains compose multiplicatively by accounting identity, not as an independent finding.
 
-The deeper point is Friedman's: a central administration spends other
-people's money on other people, the spending category with the least care
-for both cost and value (Friedman and Friedman 1980). This architecture
-does not answer that problem with exhortation; it re-plumbs the bucket.
-Planning remains — the guiding thread that sets scopes, floors, and
-mandates — but within those bounds value comes from joining dispersed
-selection to consequence-bearing delivery: measurable
-promises, conditional release, independent verification, consequences that
-compound into reputation, and a meter on every leak. The question this
-paper answers is therefore not whether states should be bigger or smaller,
-but whether the layers of state activity that fail through information and
-incentive monopoly can be re-architected to fail less — and to show their
-failures when they do. For one such layer we have specified a complete
-architecture, proved the incentive conditions its mechanisms depend on,
-measured selection, aggregation, and delivery in simulation against a
-baseline the incumbent system's own auditors supplied, and subjected
-the whole to five rounds of documented adversarial review with an
-explicit integrate-or-bound discipline. The result is deliberately modest
-in its claims and unusually explicit about their edges: allocation quality
-rides on the informational quality of whatever constructs the weight
-vector, whose open construction is measured viable but whose honest
-elicitation remains the open problem; delivered value rides on
-verification whose market conditions must be priced; legitimacy rides on
-mandates the platform can record but not create. What distinguishes the
-proposal is that these edges are specified, monitored, and attached to
-named objects — which is, we argue, what it looks like when institutional
-design is treated as an engineering discipline rather than an ideological
-one.
+E9–E10: full-stack diagonal remains positive across named worlds although Shapley contributions reverse in extreme corners. Agenda capture is planning's principal modeled mechanism; its direction is anchored, but standalone magnitude unquantified. Net-budget administrative cost is roughly neutral at a conservative low-spread floor and modestly favors Core v0 under a declared asymmetric-cost scenario, adding to rather than erasing delivered-value advantage. These are directional, conditional, stylized comparative-institutions results, not calibrated field effects. Evidence rests on the architecture, credit-versus-coverage mechanism, and channel-separated selection, delivery, and cost findings—not an institution-wide multiplier.
 
-The comparison is conditional, not ontological. A center with credible
-local-information channels, organized representation of diffuse losers, and low
-credit pressure can approach parity. Core v0's claim is that those capacities are
-institutional accomplishments to be *demonstrated*, not virtues to be presumed —
-and that a state less dependent on what its center can see, and less able to
-certify its own mistakes, is worth the attempt.
+The pre-registered symmetry gate, a narrow selection robustness check, returned NO-GO — its positive distributed contrast fell below the pre-registered rebuild bar (number and method in Appendix E4). It idealizes the central as an unbiased, competent value-reader with no corruption, delivery parity, and better harm observation than the distributed arm, handicapped by adverse voice bias. It neither shows Core v0 failed nor can, because of those idealizations, bound architecture-wide value. The central's 2.3-point selection lead occurs only at its near-harmless favorable endpoint. E7 finds, at audit-informed but not fully source-verified detection intensity, that detection without persistent consequences deters no diversion; persistent reputational consequences move delivered value. Reality remains pilot hypothesis: in the model, accountability without memory is bookkeeping.
+
+Following Friedman and Friedman (1980), the architecture addresses weak care for cost and value when administrators spend others' money on others by re-plumbing incentives, not exhorting. Planning is distributed by construction in Open mode; centralized planning is only a tutored/closed transition mode. Planning sets scopes, floors, and mandates; dispersed selection joins measurable promises, conditional release, independent verification, persistent reputation, and leak accounting. The question is not state size but whether monopoly-prone information and incentive layers can fail less and expose failure.
+
+For that layer, the paper specifies a complete architecture, proves its incentive conditions, simulates selection, aggregation, and delivery against an incumbent-auditor-supplied baseline, and applies five documented adversarial-review rounds with integrate-or-bound discipline. Limits: allocation depends on weight-vector information—open construction is measurably viable, honest elicitation unresolved; delivery depends on verification whose market conditions require pricing; legitimacy depends on mandates the platform records but cannot create. Naming, monitoring, and attaching these edges to objects treats institutional design as engineering, not ideology.
+
+The comparison is conditional, not ontological. A center with credible local-information channels, organized representation of diffuse losers, and low credit pressure can approach parity. Core v0 treats those capacities as accomplishments to demonstrate, not virtues to presume; a state less dependent on central visibility and less able to self-certify mistakes is worth attempting.
 
 ## Appendix E4: the symmetric gate and the four-scenario robustness map
 
-This appendix gives the full design of the pre-registered symmetric gate (summarized
-as "Quantitative status" in §6) and the complete v1.14 four-scenario robustness map
-(headlined in §6): the scenario table, the harm-myopia decomposition, the frontier,
-the benchmark theorem, and the four limits.
+The fair, literature-anchored asymmetric comparison is the primary directional finding; the pre-registered gate is a narrow selection robustness check.
 
 ### The symmetric credit-versus-coverage gate (full methods)
 
-Because this is the paper's one confirmatory computation, its design is stated in full
-here rather than only by reference. Each world holds K = 500 candidate projects; for
-each, N = 5000 potential participants are considered, each interested with a
-project-specific probability, so the interested reach is at most N and endogenous.
-Both arms then see the
-same candidate pool, the same exact costs, the same truth net[j] = S[j] − h·cost[j],
-delivery held at **parity**, and the same report noise report = v + Normal(0, τ);
-each funds a **greedy** set under a budget of one-third of total project cost, is
-eligible to fund a project only where *its own* noisy estimate of net is positive
-(no oracle gate), and its delivered value is scored on the projects' *true* net.
-The arms are symmetric except for the coverage mechanism and its matched
-counterparts. *Distributed (endogenous coverage):* each interested citizen reports
-independently with probability p if her value v ≥ 0 and p·(1 − β) if v < 0 (adverse
-voice bias), giving ĥS_D = Σreports / p, ranked by estimated net per cost.
-*Central (competent value-reader):* an appraisal budget matched to the distributed
-arm's *expected* total reports in that world, spread **evenly** across projects as a
-rounded fixed per-project bandwidth m_C = round(expected reports / K) (so the two
-arms' appraisal totals are equal in expectation up to that rounding); per project it
-samples m_C interested citizens, observes v + Normal(0, τ), and forms its own noisy
-ĥNet_C = reach·mean(observed) − h·cost. It ranks by score = (1 − λ)·z(ĥNet_C/cost) + λ·z(P/cost) — its **own noisy
-estimate**, never the true net — where P is claimable political credit (the
-electoral credit-claiming and traceability logic by which visible, attributable
-benefits are favoured over diffuse ones; Mayhew 1974; Arnold 1990) and λ is bounded
-credit pressure (a *posited* pressure whose real-world magnitude must be measured,
-not assumed). Credit moves *ranking*, never eligibility (no knowingly
-value-destroying planner). The legitimate asymmetries are therefore only these:
-distributed reports self-route to projects citizens care about while negative
-stakeholders participate less, and central appraisal is spread evenly while its
-ranking carries credit pressure — everything else is shared. The estimand is
-**Δ = (D − C)/O** per world, where D, C, O are delivered true net for the
-distributed, central, and full-information greedy arms and O is a reference level,
-not an optimum. The frozen grid sweeps λ ∈ {0, 0.1, 0.2, 0.3} (λ = 0 a negative
-control), a latent-correlation setting ρ ∈ {0, 0.5, 1} (realized corr(S, P) ≈ 0.00,
-0.30, 0.82), and h ∈ {1.5, 2.5, 4} over 100 seeded worlds, in a baseline
-observation regime (p = .35, β = .30, τ = .5) and a matched-budget low-information
-stress regime (p = .15, β = .60, τ = 1.0). The **pre-registered decision rule** —
-frozen before running and designed by the independent auditor to be adversarial —
-required, for a GO on rebuilding the quantitative engine, at least 15 of the 18
-primary cells with mean Δ > 0, a pooled **median Δ ≥ 0.05**, a bootstrap lower
-bound > 0, and median Δ ≥ 0 under the stress regime, plus a guard to pause if the
-λ = 0 control itself exceeded 0.05. The result was **NO-GO**: the advantage was
-positive in all 18 primary cells, but the pre-registered pooled **median Δ = 0.025**,
-below the 0.05 rebuild gate; the λ = 0 negative control sat at ≈ 0.016, within the
-pause guard (no hidden asymmetry flagged). A **post-hoc** world-cluster
-ratio-of-sums estimate was Δ = 0.026 [0.023, 0.029] (Monte-Carlo uncertainty on the
-simulated data-generating process, reported separately from the median). The
-advantage rises with credit pressure λ and falls as credit aligns with value — the
-credit-versus-coverage mechanism. It is small for this estimand, and its pooled median
-missed the registered 0.05 bar; under the frozen rule the calibrated multiplier is
-therefore retired and the simulation treated as an illustrative frontier, and the
-paper rests on the architecture and the mechanism direction, now sharpened by the
-robustness map below.
+Each of 100 seeded worlds contains K = 500 projects and N = 5000 potential participants per project, with project-specific interest, so reach is endogenous and capped at N. Arms share the candidate pool, exact costs, true net[j] = S[j] − h·cost[j], delivery parity, report noise v + Normal(0, τ), a budget of one-third of total project cost, greedy selection, eligibility only when their own noisy net estimate is positive (no oracle), and ex-post scoring on true net.
+
+Distributed appraisal self-routes: each interested citizen reports independently with probability p if v ≥ 0 and p(1 − β) if v < 0, imposing adverse voice bias; Ŝ_D = Σreports/p, and projects rank by estimated net/cost. Central appraisal receives the distributed arm's expected report budget, spread evenly as m_C = round(expected reports/K), hence matched in expectation up to rounding. Per project it samples m_C interested citizens, observes v + Normal(0, τ), and estimates Net_C = reach·mean(observed) − h·cost. It ranks (1 − λ)·z(Net_C/cost) + λ·z(P/cost), using its estimate, never true net. P is claimable political credit—the electoral traceability mechanism favouring visible, attributable over diffuse benefits (Mayhew 1974; Arnold 1990)—and λ is bounded, posited pressure requiring measurement. Credit changes ranking, not eligibility: the planner never knowingly funds estimated value-destroying projects. Thus only routed coverage with reduced negative voice versus even bandwidth with credit pressure differs.
+
+The estimand is Δ = (D − C)/O, delivered true net relative to the full-information greedy reference O, neither optimum nor upper bound. The frozen grid crosses λ ∈ {0, .1, .2, .3} (0 is the negative control), latent ρ ∈ {0, .5, 1} (realized corr(S,P) ≈ .00, .30, .82), and h ∈ {1.5, 2.5, 4}. Baseline (p = .35, β = .30, τ = .5) and matched-budget low-information stress (p = .15, β = .60, τ = 1.0) regimes are run. The independent auditor's adversarial rule, frozen before execution, required at least 15/18 primary cells with mean Δ > 0, pooled median Δ ≥ .05, bootstrap lower bound > 0, stress median Δ ≥ 0, and a pause if the λ = 0 control exceeded .05.
+
+The gate returned NO-GO for rebuilding the quantitative engine: all 18 cells were positive, but median Δ = .025 missed .05; λ = 0 was ≈ .016, within the pause guard, so no hidden asymmetry was flagged. The separate post-hoc world-cluster ratio-of-sums was Δ = .026 [.023, .029], a Monte-Carlo interval conditional on the simulated data-generating process. The advantage rises with λ and falls as credit aligns with value, supporting the mechanism direction, but is small for this estimand. The .05 rule is a research-program gate, not a calibrated policy-materiality threshold.
+
+This test deliberately grants the central an otherwise unbiased, competent, corruption-free value reader with better harm information while handicapping distributed appraisal through adverse voice bias. It also fixes proposals and holds delivery equal. Exactly these idealizations make its selection contrast neither an upper nor lower bound on Core v0's architecture-wide value.
 
 ### The four-scenario robustness map (v1.14)
 
-The pre-registered gate above equips the central arm with competent, *harm-aware*
-appraisal. A v1.14 extension asks the empirically-grounded question: what happens when
-the central is modelled as the evidence describes it — **near-blind to diffuse harm on
-the low-visibility long tail**? That near-blindness is over-determined by the
-literature: the knowledge problem (Hayek 1945), state legibility (Scott 1998), diffuse
-costs politically under-weighted (Olson 1965; Schattschneider 1960; Wilson 1973), 83%
-of government waste being *passive* rather than chosen (Bandiera, Prat and Valletti
-2009), the seen-versus-unseen (Bastiat 1850), and agenda control (Bachrach and Baratz
-1962). The model realizes it as a salience-gated harm term,
-M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, whose harm-detection s(V) rises with a
-project's visibility, while the distributed arm registers harm across the whole
-distribution. **Net-allocation participation is universal by architecture (p = 1)** —
-in Core v0 profiles and delegates allocate on behalf of the passive, so it is a *fact*,
-not a low participatory-budgeting turnout. Its *signal quality* is an anchored
-composition: ~5% active direct reports (the single-digit turnout figure), ~35%
-microdelegation (individual signal, revocable — Kling et al. 2015), and ~60% profile
-rules (a high-alignment category default, since people overwhelmingly keep defaults —
-Samuelson and Zeckhauser 1988). Full literature anchoring of every calibration knob is
-in `research/e4-calibration-literature-anchors.md`. Scoring delivery on true value,
-four declared scenarios (plus one diagnostic contrast) map where each institution
-stands, as the signed fraction of the full-information greedy benchmark, parity at zero
-(`npm run e4:scenarios`):
+The fair asymmetric model instead represents the evidence-grounded institutional difference: central near-blindness to diffuse harm in the low-visibility long tail. Its bases are the knowledge problem (Hayek 1945), legibility (Scott 1998), political underweighting of diffuse costs (Olson 1965; Schattschneider 1960; Wilson 1973), passive waste—83% in Bandiera, Prat and Valletti's (2009) setting-specific Italian standardized-goods procurement—seen versus unseen (Bastiat 1850), and agenda control (Bachrach and Baratz 1962). It sets M_C = a + b·S⁺ + w·(v_p − S⁺) − b_H·s(V)·H + η, with harm detection s(V) increasing in visibility; distributed appraisal registers harm throughout the distribution.
+
+Core v0 has universal budget routing by architecture (p = 1): profiles and delegates act for passive citizens, not low-turnout direct participation or perfect information. Its declared, source-motivated signal mix is ≈5% direct reports, ≈35% revocable individual microdelegation (Kling et al. 2015), and ≈60% high-alignment profile defaults (Samuelson and Zeckhauser 1988). Scored on true value, four scenarios plus one diagnostic report signed fractions of the full-information greedy reference, with parity at zero (`npm run e4:scenarios`):
 
 | scenario (assumptions) | m ± 95% CI | Core v0 | central | winner |
-|---|---|---|---|---|
-| **Probable — the declared reference scenario** (central myopic to diffuse harm, projecting, credit-tilted; distributed on its anchored coverage composition) | **+54.0%** [+53.2, +54.8] | 98.2% | 44.2% | **Core v0 (decisive)** |
-| **Only harm-myopia switched off** (`MYOPIA_OFF`; diagnostic contrast: probable, changing ONLY the two harm-gate coordinates) | **+37.6%** [+37.0, +38.2] | 98.2% | 60.6% | Core v0 |
-| **No-myopia bundle** — probable, but the central is granted harm-sight + unbiasedness + precision + no credit | **+13.8%** [+13.5, +14.1] | 98.6% | 84.8% | Core v0 |
+|---|---:|---:|---:|---|
+| **Probable—declared reference:** central diffuse-harm myopia, projection, credit tilt; anchored distributed composition | **+54.0%** [+53.2, +54.8] | 98.2% | 44.2% | **Core v0 (decisive)** |
+| **Only harm-myopia off** (`MYOPIA_OFF`; only two harm-gate coordinates change) | **+37.6%** [+37.0, +38.2] | 98.2% | 60.6% | Core v0 |
+| **No-myopia bundle:** central gets harm-sight, unbiasedness, precision, no credit | **+13.8%** [+13.5, +14.1] | 98.6% | 84.8% | Core v0 |
 | **Distributed's favourable case** | **+205.2%** [+202.9, +208.1] | 95.6% | −109.6% | Core v0 |
-| **Central's declared favourable endpoint** (a residually-imperfect reader on a near-harmless world) | **−2.3%** [−2.5, −2.2] | 95.3% | 97.6% | central (narrow model-internal lead) |
+| **Central's declared favourable endpoint:** residually imperfect reader, near-harmless world | **−2.3%** [−2.5, −2.2] | 95.3% | 97.6% | central (narrow model-internal lead) |
 
-**The anchored result is large and robust across the declared space (exploratory).** Under the **declared reference
-scenario** the distributed arm delivers ≈ 98.2% of the benchmark and the central
-≈ 44.2% — a +54-point gap — and coverage wins across essentially the whole anchored
-parameter space. Turning off harm-myopia *alone* (the two harm-gate coordinates)
-recovers about **41%** of the gap (16.4 of a 40.2-point decline); granting the central
-the *full* competent-but-harm-aware bundle recovers the rest yet still leaves coverage
-ahead (**≈ +13.8%**) — so even a central idealized in every way, **harm-sight included**,
-still loses. The central pulls narrowly ahead only by
-**abandoning the declared premises**: a corrected reader (no myopia — against
-Hayek/Scott/Olson/Bandiera; no projection — against Broockman and Skovron 2018) on a
-near-harmless world reaches only ≈ −3%, a marginal, anti-empirical corner. That corner
-is reported **symmetrically** with the distributed arm's *equally-idealized* corner —
-built to mirror the same recipe: perfect distributed signal on a harm-rich world with
-the central kept at its *anchored* myopia — which reaches **≈ +118%** (the broader
-`PRO_DIST` scenario in the table, +205%, is more favourable still because it *also*
-degrades the central below its anchored level). Idealization is wildly asymmetric, and
-neither corner is empirically grounded. The one
-sensitivity that materially shrinks the anchored gap is **correlated / common-mode
-error** on the profile-and-delegation share (a shared platform/recommender, or
-delegation concentrated on super-delegates — Kling et al. 2015): it takes ≈ +54% down
-to ≈ +44% (modest) and ≈ +26% (strong), crossing parity only at a large shared-error
-level (σ_cm ≈ 2.1). No single-factor slice flips the winner over its plausible range;
-the combined ceteris-paribus path from the declared reference to the fully-idealized
-central endpoint crosses parity only at **t ≈ 0.92 of the declared segment**. This is
-local, ceteris-paribus curve evidence — six one-factor slices plus one declared combined
-path — not an exhaustive global frontier; a joint Sobol / Latin-hypercube sweep of the
-full parameter space is deferred to future work. These magnitudes
-are **declared, source-motivated reference points from a stylized comparative-
-institutions model — a conditional model contrast, not target-domain calibrated field
-effects**. The standing limits are: (i) the harm-gate's exact *magnitude* is a stylized
-functional form — its *direction* is strongly anchored, and the result is robust across
-the s_exp ∈ [1, 2.5] band (≈ +48% to ≈ +54%); (ii) the central inputs carry an
-unpropagated transport gap — the political-opinion evidence identifies elite–constituent
-*perception* error, and mapping it to project-level welfare error requires three
-unestimated links (opinion misperception → project scoring → portfolio choice → realized
-affected-party value), so those inputs are proxy-informed, not calibrated; (iii) the
-reported intervals are 95% conditional world-bootstrap intervals at *fixed* scenario
-inputs — finite-world simulation uncertainty only, excluding uncertainty in parameter
-values, literature transport, functional form, and field implementation; the distributed
-arm's independent-plus-common-mode error is its one structural sensitivity (above); and
-(iv) delivery and administrative cost are handled in separate experiments — E5 adds
-delivery (leakage) at *matched budget*, and E10 adds administrative cost as a *net-budget*
-reduction before selection — not folded into this selection map. The
-reproducible scenarios, frontier, evidence, theorem, and full literature anchoring are
-in `scripts/simulation/e4-v5/`, `research/e4-parity-theorem.md`, and
-`research/e4-calibration-literature-anchors.md`.
+The PROBABLE selection contrast and the delivery-inclusive total are reported in §6; the table above gives this selection map's per-scenario composition, and delivery is not folded into it. Across the anchored slices, coverage wins except at the declared central endpoint. Turning off myopia accounts for 16.4 of the 40.2-point fall from probable to full bundle (≈41%); even the full listed central idealization leaves +13.8. Within the declared map, central leads only in a source-disfavoured corner: no myopia (against Hayek/Scott/Olson/Bandiera), no projection (against Broockman and Skovron 2018), and near-zero harm. The symmetric distributed corner—perfect signal in a harm-rich world, with central myopia anchored—gives ≈+118%; tabled `PRO_DIST` reaches +205% because it also degrades central below its anchor. Neither mirror corner is empirically grounded.
+
+Correlated profile/delegation error from a shared platform or recommender, or super-delegate concentration (Kling et al. 2015), is the distributed arm's structural sensitivity: it reduces ≈+54% to ≈+44% (modest) and ≈+26% (strong), crossing parity only near σ_cm ≈ 2.1. No plausible one-factor slice flips the winner; the declared path crosses near its central endpoint, at t ≈ .92. These six slices and one path are local curve evidence, not a global frontier; joint Sobol/Latin-hypercube exploration is deferred.
+
+These are declared, source-motivated reference points from a stylized comparative-institutions model: conditional directional contrasts, not calibrated field effects. Four limits apply: (i) the harm gate's magnitude is stylized, though its direction is strongly anchored and s_exp ∈ [1, 2.5] gives ≈+48% to +54%; (ii) central inputs are proxy-informed, not calibrated, because elite–constituent perception evidence must traverse three unestimated links—opinion error → project score → portfolio → realized affected-party value; (iii) 95% conditional world-bootstrap intervals at fixed inputs capture finite-world uncertainty only, excluding parameter, transport, functional-form, and field-implementation uncertainty; distributed independent/common-mode error is its one structural sensitivity; and (iv) delivery and administration remain separate: E5 adds leakage at matched budget, while E10 deducts administrative cost from net budget before selection.
 
 ### E4 calibration targets
 
-The E4-v4/v5 magnitudes are model-internal; the table names, for each parameter, the
-real dataset that *could* inform it — making the boundary between model-internal and
-empirically-anchored a visible line rather than a caveat buried in prose (details in
-`research/e4-calibration-targets.md`). The central %-benchmark is an *output* the
-model computes, but mapping it to observed realized-to-appraised ratios is **not a
-direct overlay**: the two are different constructs (§6), so it is a **candidate
-validation target requiring an explicit construct bridge**, not a one-step
-calibration.
+E4-v4/v5 magnitudes are model-internal. The datasets below could inform parameters and expose the empirical boundary; central percentage-of-benchmark is an output, but realized/appraised ratios are a different construct (§6), so validation requires an explicit bridge.
 
 | Model quantity | Model value | Real-world proxy | Candidate dataset(s) | Status |
 |---|---|---|---|---|
-| central %-benchmark | 44–85% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | candidate target; needs an explicit construct mapping |
-| η (harm-blindness) | 0–0.5 | passive vs active waste share | Bandiera-Prat-Valletti 2009 (83% passive, setting-specific: Italian standardized-goods procurement) | anchored-direction |
+| central %-benchmark | 44–85% | realized ÷ appraised value | World Bank IEG ratings; Flyvbjerg megaproject DB | candidate target; explicit mapping needed |
+| η (harm-blindness) | 0–0.5 | passive vs active waste | Bandiera–Prat–Valletti 2009 (83% passive; Italian standardized goods) | anchored-direction |
 | β (voice inequality) | 0.2–0.5 | PB participation bias | NYC / Paris / Porto Alegre; Decidim / Consul | calibratable |
-| q, m (detection) | q ≈ 0.5–1%, m in hundreds | complaint / whistleblowing rates | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibratable |
+| q, m (detection) | q ≈ 0.5–1%; m in hundreds | complaint / whistleblowing rates | FTC Consumer Sentinel; NYC 311; Dyck et al. 2010 | calibratable |
 | λ threshold | central ≈ 0.10 | procurement rents / bribe depth | Olken 2007; WB Enterprise Surveys | calibratable |
 | penalty f | equal both sides | legal sanction scale | held equal (conservative) | scope choice |
 
-The v1.14 four-scenario map (above; headlined in §6) makes the same anchoring explicit for its harm-myopia model: the visibility long
-tail is source-motivated by heavy-tailed public procurement (Skuhrovec et al. 2013), participation by
-participatory-budgeting turnout, and the harm-detection gate by the agenda-setting/salience literature; the
-per-knob anchors and their strength are recorded in `research/e4-plausible-anchors.md`, with the reproducible
-scenarios, frontier, and theorem in `scripts/simulation/e4-v5/` and `research/e4-parity-theorem.md`.
+The visibility tail is motivated by heavy-tailed procurement (Skuhrovec et al. 2013), participation by participatory-budgeting turnout, and the harm gate by agenda/salience research. Per-knob anchor strengths, target details, reproducible scenarios/frontier, and theorem are in `research/e4-calibration-literature-anchors.md`, `research/e4-plausible-anchors.md`, `research/e4-calibration-targets.md`, `scripts/simulation/e4-v5/`, and `research/e4-parity-theorem.md`.
 
 ## References
 
@@ -1822,6 +362,7 @@ scenarios, frontier, and theorem in `scripts/simulation/e4-v5/` and `research/e4
 - Lukes, S. (1974). *Power: A Radical View*. Macmillan.
 - Lupia, A., and M. McCubbins (1998). *The Democratic Dilemma: Can Citizens Learn What They Need to Know?* Cambridge University Press.
 - Mayhew, D. (1974). *Congress: The Electoral Connection*. Yale University Press.
+- Menger, C. (1871). *Grundsätze der Volkswirtschaftslehre* [Principles of Economics]. Wien.
 - Michels, R. (1911). *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy*.
 - Mises, L. von (1920). "Economic Calculation in the Socialist Commonwealth." Translated in F. Hayek, ed., *Collectivist Economic Planning* (1935).
 - Molina, E., L. Carella, A. Pacheco, G. Cruces, and L. Gasparini (2016). "Community Monitoring Interventions to Curb Corruption and Increase Access and Quality of Service Delivery in Low- and Middle-Income Countries." *Campbell Systematic Reviews* 12.
@@ -1838,10 +379,12 @@ scenarios, frontier, and theorem in `scripts/simulation/e4-v5/` and `research/e4
 - Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.
 - Peixoto, T., and J. Fox (2016). "When Does ICT-Enabled Citizen Voice Lead to Government Responsiveness?" *IDS Bulletin* 47(1).
 - Power, M. (1997). *The Audit Society: Rituals of Verification*. Oxford University Press.
+- Prelec, D., H. S. Seung, and J. McCoy (2017). "A Solution to the Single-Question Crowd Wisdom Problem." *Nature* 541.
 - Reinikka, R., and J. Svensson (2004). "Local Capture: Evidence from a Central Government Transfer Program in Uganda." *Quarterly Journal of Economics* 119(2).
 - Rioja, F. (2003). "Filling potholes: macroeconomic effects of maintenance versus new investments in public infrastructure." *Journal of Public Economics* 87(9–10).
 - Rosanvallon, P. (2008). *Counter-Democracy: Politics in an Age of Distrust*. Cambridge University Press.
 - Salganik, M., P. Dodds, and D. Watts (2006). "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." *Science* 311(5762).
+- Samuelson, P. (1938). "A Note on the Pure Theory of Consumer's Behaviour." *Economica* 5(17).
 - Samuelson, P. (1954). "The Pure Theory of Public Expenditure." *Review of Economics and Statistics* 36(4).
 - Samuelson, W., and R. Zeckhauser (1988). "Status Quo Bias in Decision Making." *Journal of Risk and Uncertainty* 1(1).
 - Satterthwaite, M. (1975). "Strategy-Proofness and Arrow's Conditions: Existence and Correspondence Theorems for Voting Procedures and Social Welfare Functions." *Journal of Economic Theory* 10(2).
@@ -1850,6 +393,7 @@ scenarios, frontier, and theorem in `scripts/simulation/e4-v5/` and `research/e4
 - Sen, A. (1999). *Development as Freedom*. Oxford University Press.
 - Skuhrovec, J., et al. (2013). "Exponential and power laws in public procurement markets." arXiv:1309.0218.
 - Sowell, T. (1980). *Knowledge and Decisions*. Basic Books.
+- Stevens, S. S. (1946). "On the Theory of Scales of Measurement." *Science* 103(2684).
 - Stigler, G. (1971). "The Theory of Economic Regulation." *Bell Journal of Economics and Management Science* 2(1).
 - Stokes, S. (2005). "Perverse Accountability: A Formal Model of Machine Politics with Evidence from Argentina." *American Political Science Review* 99(3).
 - Thompson, D. (1980). "Moral Responsibility of Public Officials: The Problem of Many Hands." *American Political Science Review* 74(4).
