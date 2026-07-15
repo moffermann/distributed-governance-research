@@ -4,8 +4,8 @@ title: "Distributed Governance Research: A Functional Architecture for Selective
 authors:
   - family-names: "Offermann"
     given-names: "Mauricio"
-version: "v1.13"
-date-released: "2026-07-10"
+version: "v1.14"
+date-released: "2026-07-14"
 url: "https://github.com/moffermann/distributed-governance-research"
 doi: 10.5281/zenodo.21193846
 license: CC-BY-4.0
@@ -17,5 +17,5 @@ preferred-citation:
     - family-names: "Offermann"
       given-names: "Mauricio"
   year: 2026
-  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below, 10.5281/zenodo.21252911, published 2026-07-07); current working draft v1.13 (drafts/paper.md, Path B reframe -- multiplier retired, not yet deposited). The concept DOI (10.5281/zenodo.21193846, top-level) always resolves to the latest deposited version. Single record: corpus + manuscript + code, all CC BY 4.0 / MIT."
+  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below, 10.5281/zenodo.21252911, published 2026-07-07); current working draft v1.14 (drafts/paper.md), not yet deposited. In v1.14 the earlier compound value-per-budget multiplier is retired as a calibrated effect, and the pre-registered symmetric test is reported as a scoped calibration decision (NO-GO under a competent, harm-aware, selection-only comparator with delivery at parity) rather than a verdict on the architecture; the four-scenario robustness map is exploratory. The concept DOI (10.5281/zenodo.21193846, top-level) always resolves to the latest deposited version. Single record: corpus + manuscript + code, all CC BY 4.0 / MIT."
   doi: 10.5281/zenodo.21252911
