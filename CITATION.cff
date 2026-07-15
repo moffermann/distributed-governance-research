@@ -17,5 +17,5 @@ preferred-citation:
     - family-names: "Offermann"
       given-names: "Mauricio"
   year: 2026
-  notes: "Working paper: latest DEPOSITED/citable version v1.12 (DOI below, 10.5281/zenodo.21252911, published 2026-07-07); current working draft v1.14 (drafts/paper.md), not yet deposited. In v1.14 the earlier compound value-per-budget multiplier is retired as a calibrated effect, and the pre-registered symmetric test is reported as a scoped calibration decision (NO-GO under a competent, harm-aware, selection-only comparator with delivery at parity) rather than a verdict on the architecture; the four-scenario robustness map is exploratory. The concept DOI (10.5281/zenodo.21193846, top-level) always resolves to the latest deposited version. Single record: corpus + manuscript + code, all CC BY 4.0 / MIT."
-  doi: 10.5281/zenodo.21252911
+  notes: "Working paper: latest DEPOSITED/citable version v1.14 (DOI below, 10.5281/zenodo.21311851, published 2026-07-14). In v1.14 the earlier compound value-per-budget multiplier is retired as a calibrated effect; the simulation contrasts are directional and conditional on a stylized comparative-institutions model, not calibrated real-world effects and not a validated implementation (the controlling specification is research/claim-and-estimand-contract.md). The concept DOI (10.5281/zenodo.21193846, top-level) always resolves to the latest deposited version. Single record: corpus + manuscript + code, all CC BY 4.0 / MIT."
+  doi: 10.5281/zenodo.21311851
