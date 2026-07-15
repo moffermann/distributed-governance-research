@@ -116,14 +116,28 @@ async function main() {
     publication_date: isoDate,
   };
 
-  console.log(`\n1) Creating / reusing a NEW VERSION draft from published record ${LATEST_ID} ...`);
-  const nv = await api("POST", `/deposit/depositions/${LATEST_ID}/actions/newversion`);
-  const draftUrl = nv.links?.latest_draft;
-  if (!draftUrl) { console.error("ERROR: no latest_draft link returned:", JSON.stringify(nv.links, null, 2)); process.exit(1); }
-  const draft = await api("GET", draftUrl);
+  console.log("\n1) Locating the draft to deposit into ...");
+  // Prefer an EXISTING open (unsubmitted) draft. Creating a second new-version draft while one
+  // is already open is what Zenodo rejects with "files.enabled: Please remove all files first".
+  let draft;
+  const list = await api("GET", "/deposit/depositions?size=25&sort=mostrecent&all_versions=true");
+  const openDraft = (Array.isArray(list) ? list : []).find(
+    (d) => (d.state || (d.submitted ? "done" : "unsubmitted")) !== "done"
+  );
+  if (openDraft) {
+    draft = await api("GET", openDraft.links?.self || `/deposit/depositions/${openDraft.id}`);
+    console.log(`   -> reusing existing open draft id ${draft.id} (previously version ${openDraft.metadata?.version || "?"})`);
+  } else {
+    console.log(`   -> no open draft; creating a NEW VERSION from published record ${LATEST_ID} ...`);
+    const nv = await api("POST", `/deposit/depositions/${LATEST_ID}/actions/newversion`);
+    const draftUrl = nv.links?.latest_draft;
+    if (!draftUrl) { console.error("ERROR: no latest_draft link returned:", JSON.stringify(nv.links, null, 2)); process.exit(1); }
+    draft = await api("GET", draftUrl);
+    console.log(`   -> new draft id ${draft.id}`);
+  }
   const draftId = draft.id;
   const bucket = draft.links?.bucket;
-  console.log(`   -> draft id ${draftId}`);
+  if (!bucket) { console.error("ERROR: draft has no files bucket link; cannot upload.", JSON.stringify(draft.links, null, 2)); process.exit(1); }
 
   console.log("2) Removing files carried over from the previous version / prior draft ...");
   for (const fobj of (draft.files || [])) {
