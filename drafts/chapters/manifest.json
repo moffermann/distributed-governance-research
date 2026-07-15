@@ -1,0 +1,142 @@
+[
+  {
+    "order": 0,
+    "slug": "00-front",
+    "section": "# Who Chooses, Who Delivers, Who Judges? A Functional Architecture for Distributed Public Spending",
+    "en": "00-front.en.md",
+    "es": "00-front.es.md",
+    "meta": "00-front.yaml",
+    "en_lines": 7,
+    "es_lines": 9
+  },
+  {
+    "order": 1,
+    "slug": "01-abstract",
+    "section": "## Abstract",
+    "en": "01-abstract.en.md",
+    "es": "01-abstract.es.md",
+    "meta": "01-abstract.yaml",
+    "en_lines": 11,
+    "es_lines": 11
+  },
+  {
+    "order": 2,
+    "slug": "02-introduction",
+    "section": "## 1. Introduction",
+    "en": "02-introduction.en.md",
+    "es": "02-introduction.es.md",
+    "meta": "02-introduction.yaml",
+    "en_lines": 141,
+    "es_lines": 150
+  },
+  {
+    "order": 3,
+    "slug": "03-the-functional-distribution-principle",
+    "section": "## 2. The functional distribution principle",
+    "en": "03-the-functional-distribution-principle.en.md",
+    "es": "03-the-functional-distribution-principle.es.md",
+    "meta": "03-the-functional-distribution-principle.yaml",
+    "en_lines": 42,
+    "es_lines": 48
+  },
+  {
+    "order": 4,
+    "slug": "04-related-work",
+    "section": "## 3. Related work",
+    "en": "04-related-work.en.md",
+    "es": "04-related-work.es.md",
+    "meta": "04-related-work.yaml",
+    "en_lines": 134,
+    "es_lines": 143
+  },
+  {
+    "order": 5,
+    "slug": "05-the-core-v0-architecture",
+    "section": "## 4. The Core v0 architecture",
+    "en": "05-the-core-v0-architecture.en.md",
+    "es": "05-the-core-v0-architecture.es.md",
+    "meta": "05-the-core-v0-architecture.yaml",
+    "en_lines": 80,
+    "es_lines": 92
+  },
+  {
+    "order": 6,
+    "slug": "06-formal-analysis",
+    "section": "## 5. Formal analysis",
+    "en": "06-formal-analysis.en.md",
+    "es": "06-formal-analysis.es.md",
+    "meta": "06-formal-analysis.yaml",
+    "en_lines": 112,
+    "es_lines": 121
+  },
+  {
+    "order": 7,
+    "slug": "07-computational-evidence",
+    "section": "## 6. Computational evidence",
+    "en": "07-computational-evidence.en.md",
+    "es": "07-computational-evidence.es.md",
+    "meta": "07-computational-evidence.yaml",
+    "en_lines": 663,
+    "es_lines": 704
+  },
+  {
+    "order": 8,
+    "slug": "08-adversarial-review-as-method",
+    "section": "## 7. Adversarial review as method",
+    "en": "08-adversarial-review-as-method.en.md",
+    "es": "08-adversarial-review-as-method.es.md",
+    "meta": "08-adversarial-review-as-method.yaml",
+    "en_lines": 68,
+    "es_lines": 68
+  },
+  {
+    "order": 9,
+    "slug": "09-limitations",
+    "section": "## 8. Limitations",
+    "en": "09-limitations.en.md",
+    "es": "09-limitations.es.md",
+    "meta": "09-limitations.yaml",
+    "en_lines": 180,
+    "es_lines": 186
+  },
+  {
+    "order": 10,
+    "slug": "10-implementation-pathway",
+    "section": "## 9. Implementation pathway",
+    "en": "10-implementation-pathway.en.md",
+    "es": "10-implementation-pathway.es.md",
+    "meta": "10-implementation-pathway.yaml",
+    "en_lines": 83,
+    "es_lines": 84
+  },
+  {
+    "order": 11,
+    "slug": "11-conclusion",
+    "section": "## 10. Conclusion",
+    "en": "11-conclusion.en.md",
+    "es": "11-conclusion.es.md",
+    "meta": "11-conclusion.yaml",
+    "en_lines": 86,
+    "es_lines": 89
+  },
+  {
+    "order": 12,
+    "slug": "12-appendix-e4-the-symmetric-gate-and-the-f",
+    "section": "## Appendix E4: the symmetric gate and the four-scenario robustness map",
+    "en": "12-appendix-e4-the-symmetric-gate-and-the-f.en.md",
+    "es": "12-appendix-e4-the-symmetric-gate-and-the-f.es.md",
+    "meta": "12-appendix-e4-the-symmetric-gate-and-the-f.yaml",
+    "en_lines": 169,
+    "es_lines": 179
+  },
+  {
+    "order": 13,
+    "slug": "13-references",
+    "section": "## References",
+    "en": "13-references.en.md",
+    "es": "13-references.es.md",
+    "meta": "13-references.yaml",
+    "en_lines": 113,
+    "es_lines": 113
+  }
+]

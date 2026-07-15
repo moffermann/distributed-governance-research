@@ -1,0 +1,13 @@
+chapter: 13
+slug: 13-references
+section: "## References"
+order: 13
+files: { en: 13-references.en.md, es: 13-references.es.md }
+en_lines: 113
+es_lines: 113
+status: draft            # draft | editing | summarized | final
+summarize: false
+target_reduction: "-"
+scope_in: "Bibliography."
+scope_out: ""
+notes: "Verbatim."

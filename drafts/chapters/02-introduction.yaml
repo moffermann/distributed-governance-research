@@ -1,0 +1,13 @@
+chapter: 02
+slug: 02-introduction
+section: "## 1. Introduction"
+order: 2
+files: { en: 02-introduction.en.md, es: 02-introduction.es.md }
+en_lines: 141
+es_lines: 150
+status: draft            # draft | editing | summarized | final
+summarize: true
+target_reduction: "medium"
+scope_in: "Motivation, the credit-vs-coverage idea, contribution statement."
+scope_out: "Methods, results, proofs."
+notes: "Qualify any 'mandated/mandate-bound planning' phrasing as the TUTORED-mode case, not the architecture."

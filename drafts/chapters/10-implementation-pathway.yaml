@@ -1,0 +1,13 @@
+chapter: 10
+slug: 10-implementation-pathway
+section: "## 9. Implementation pathway"
+order: 10
+files: { en: 10-implementation-pathway.en.md, es: 10-implementation-pathway.es.md }
+en_lines: 83
+es_lines: 84
+status: draft            # draft | editing | summarized | final
+summarize: true
+target_reduction: "medium"
+scope_in: "Transition/operating-mode path to deployment."
+scope_out: ""
+notes: "Align with the §4 modalities subsection."

@@ -1,0 +1,13 @@
+chapter: 01
+slug: 01-abstract
+section: "## Abstract"
+order: 1
+files: { en: 01-abstract.en.md, es: 01-abstract.es.md }
+en_lines: 11
+es_lines: 11
+status: draft            # draft | editing | summarized | final
+summarize: true
+target_reduction: "tighten"
+scope_in: "The single-paragraph abstract."
+scope_out: "Method/result detail."
+notes: "CARRIES THE FRAMING FIX: fair literature-anchored asymmetric result (~2.2x, 98% vs 44%) is PRIMARY; the symmetry gate is a narrow robustness check, not 'confirmatory'; drop 'retire the multiplier' as the headline. Keep directional/conditional label."

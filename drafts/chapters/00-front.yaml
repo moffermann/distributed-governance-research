@@ -1,0 +1,13 @@
+chapter: 00
+slug: 00-front
+section: "# Who Chooses, Who Delivers, Who Judges? A Functional Architecture for Distributed Public Spending"
+order: 0
+files: { en: 00-front.en.md, es: 00-front.es.md }
+en_lines: 7
+es_lines: 9
+status: draft            # draft | editing | summarized | final
+summarize: false
+target_reduction: "-"
+scope_in: "Paper title only."
+scope_out: "Any body content."
+notes: "Verbatim."
