@@ -107,7 +107,7 @@ facto, p=1), not a ceteris-paribus knob.
   parity frontier from the PROBABLE scenario within its plotted range — Core v0 wins throughout. This is a limited
   robustness statement over those four slices; reaching parity requires COMBINING central-favourable conditions.
 - **Combined scenario-path frontier:** interpolating PROBABLE → the declared central-favourable endpoint
-  (`PRO_CENTRAL`), m falls +55% → −1% at the endpoint; the **frontier (m=0) is at t ≈ 0.94** — i.e. conditions ~94%
+  (`PRO_CENTRAL`), m falls +55% → −2.3% at the endpoint; the **frontier (m=0) is at t ≈ 0.94** — i.e. conditions ~94%
   of the way from probable toward the fully-idealized central endpoint are needed to flip the winner. The field is
   **NOT level**: coverage wins across essentially the anchored region, and the central narrowly leads only at the
   extreme idealized corner. `t` is an illustrative linear mix, not a calibrated competence scale.
