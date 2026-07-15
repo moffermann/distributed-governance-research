@@ -40,7 +40,14 @@ Core v0's planning is **distributed by construction in Open mode** (the architec
 **Centralized planning is a tutored/closed transition mode only.** Any "mandated / mandate-bound
 planning" phrasing refers to the **tutored** case, not the architecture.
 
+## Honor the chapter's YAML (`NN-slug.yaml`)
+
+- **`max_words`** — a hard cap. Get at or under it.
+- **`must_preserve`** — every item must survive (you may shorten its wording, never its substance).
+- **`observations`** — author feedback for this chapter. It **overrides** any default; apply it.
+- **`status`** — edit a chapter only if its status is `summary`. Never touch one marked `ready`.
+
 ## Output
 
-Return **only** the rewritten chapter Markdown — same heading, within scope, hitting the chapter's
-`target_reduction`. Then, on a final line prefixed `EDITOR-NOTE:`, one sentence on what you cut and why.
+Respond with **ONLY** the rewritten chapter Markdown — the heading first, nothing before or after it.
+No preamble, no explanation, no editor's note, no code fences.

@@ -3,11 +3,16 @@ slug: 04-related-work
 section: "## 3. Related work"
 order: 4
 files: { en: 04-related-work.en.md, es: 04-related-work.es.md }
-en_lines: 134
-es_lines: 143
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
+en_words_original: 1090
+max_words: 654
 target_reduction: "medium"
 scope_in: "Positioning vs prior literature."
 scope_out: "Our own results."
+must_preserve:
+  - "Positioning vs polycentric/liquid-democracy/mechanism-design literature."
+  - "The distinguishing citations."
+observations: |
+  
 notes: "Often trimmable."

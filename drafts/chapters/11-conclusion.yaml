@@ -3,11 +3,16 @@ slug: 11-conclusion
 section: "## 10. Conclusion"
 order: 11
 files: { en: 11-conclusion.en.md, es: 11-conclusion.es.md }
-en_lines: 86
-es_lines: 89
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
+en_words_original: 860
+max_words: 516
 target_reduction: "medium"
 scope_in: "What the paper establishes."
 scope_out: "Restating the number many times."
-notes: "Remove repeated restatements; state the corrected headline once."
+must_preserve:
+  - "What the paper establishes."
+  - "The corrected headline, stated ONCE."
+observations: |
+  
+notes: "Remove repeated restatements."

@@ -3,11 +3,16 @@ slug: 10-implementation-pathway
 section: "## 9. Implementation pathway"
 order: 10
 files: { en: 10-implementation-pathway.en.md, es: 10-implementation-pathway.es.md }
-en_lines: 83
-es_lines: 84
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
+en_words_original: 732
+max_words: 512
 target_reduction: "medium"
-scope_in: "Transition/operating-mode path to deployment."
+scope_in: "Transition/operating-mode deployment path."
 scope_out: ""
+must_preserve:
+  - "The operating-mode transition path."
+  - "Incumbent-resistance indicators."
+observations: |
+  
 notes: "Align with the §4 modalities subsection."

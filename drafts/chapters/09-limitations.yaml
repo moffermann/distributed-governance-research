@@ -3,11 +3,15 @@ slug: 09-limitations
 section: "## 8. Limitations"
 order: 9
 files: { en: 09-limitations.en.md, es: 09-limitations.es.md }
-en_lines: 180
-es_lines: 186
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
+en_words_original: 1611
+max_words: 1369
 target_reduction: "light"
 scope_in: "Honest limits and scope conditions."
 scope_out: "New claims."
-notes: "KEEP — this is rigor, not autobiography. Tighten only."
+must_preserve:
+  - "Every distinct limitation and scope condition."
+observations: |
+  
+notes: "KEEP — rigor. Tighten only."

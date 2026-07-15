@@ -3,11 +3,15 @@ slug: 03-the-functional-distribution-principle
 section: "## 2. The functional distribution principle"
 order: 3
 files: { en: 03-the-functional-distribution-principle.en.md, es: 03-the-functional-distribution-principle.es.md }
-en_lines: 42
-es_lines: 48
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
+en_words_original: 387
+max_words: 310
 target_reduction: "light"
 scope_in: "The selective-distribution principle."
 scope_out: "Core v0 specifics."
+must_preserve:
+  - "The selective/functional distribution principle."
+observations: |
+  
 notes: ""

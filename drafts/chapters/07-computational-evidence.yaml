@@ -3,11 +3,20 @@ slug: 07-computational-evidence
 section: "## 6. Computational evidence"
 order: 7
 files: { en: 07-computational-evidence.en.md, es: 07-computational-evidence.es.md }
-en_lines: 663
-es_lines: 704
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
+en_words_original: 6621
+max_words: 3311
 target_reduction: "HEAVY"
-scope_in: "Results narrative across the experiments."
+scope_in: "Results narrative."
 scope_out: "Full methods -> Appendix E4."
-notes: "CRUX. Correct the hierarchy: fair asymmetric literature-anchored contrast (~2.2x; +58.6 full stack) is the PRIMARY finding; the symmetric gate becomes a narrow selection robustness check whose idealization (harm-aware, incorruptible central) is stated as WHY it cannot bound the architecture. Remove the confirmatory/exploratory inversion, drop 'retire the multiplier' as conclusion, and dedupe the ~20 restatements of the number. Biggest single reduction."
+must_preserve:
+  - "Fair asymmetric PROBABLE result (98%/44% ~2.2x) as PRIMARY."
+  - "+58.6-pt full stack with its CI."
+  - "Symmetry gate demoted to a narrow idealized-central robustness check (state WHY the idealization cannot bound the architecture)."
+  - "Three-layer factorial + the layer-sign-reversal caveat."
+  - "Common-mode sensitivity."
+  - "Every honest caveat."
+observations: |
+  
+notes: "CRUX + biggest cut. Remove the confirmatory/exploratory inversion; drop 'retire the multiplier' as headline; dedupe the ~20 restatements."

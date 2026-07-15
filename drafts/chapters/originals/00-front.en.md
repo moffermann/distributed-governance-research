@@ -1,0 +1,6 @@
+# Who Chooses, Who Delivers, Who Judges? A Functional Architecture for Distributed Public Spending
+
+**Working paper — v1.14 (July 2026; latest deposited version: v1.12, DOI 10.5281/zenodo.21252911). This version reports channel-separated, conditional simulation contrasts and retires the earlier compound value-per-budget multiplier as a calibrated effect (see §6 and Appendix E4); it rests on the architecture and the qualitative credit-versus-coverage mechanism. Revised through successive adversarial and author review cycles, documented in the repository's roadmap. It consolidates the companion computational program (Offermann 2026b): the deterrence-complementarity rule, the semi-open transition path, the budget-release rule, and machine verification with the human second instance; and the companion's two-layer separation of the macro categorization from the allocation profiles, under which the distributed arm is robust to a bad central categorization while the central arm is fragile to it.**
+
+*© 2026 Mauricio Offermann. Licensed CC BY 4.0 — see LICENSE.md at the repository root. Please cite as indicated in CITATION.cff. DOI (concept, always resolves to the latest version): 10.5281/zenodo.21193846.*
+

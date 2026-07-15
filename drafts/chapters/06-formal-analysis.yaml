@@ -3,11 +3,18 @@ slug: 06-formal-analysis
 section: "## 5. Formal analysis"
 order: 6
 files: { en: 06-formal-analysis.en.md, es: 06-formal-analysis.es.md }
-en_lines: 112
-es_lines: 121
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
-target_reduction: "light"
-scope_in: "Propositions 5.1 disbursement, 5.2 fiscalization, 5.3 attention."
+en_words_original: 886
+max_words: 797
+target_reduction: "light (rigor)"
+scope_in: "Propositions 5.1-5.3."
 scope_out: "Empirics."
-notes: "RIGOR — keep the propositions; tighten prose only. Contains the reconciling text that distributed prioritization holds even in tutored mode; connect it to the §4 modalities subsection."
+must_preserve:
+  - "Prop 5.1 incentive-compatible milestone disbursement."
+  - "Prop 5.2 collusion-proof fiscalization."
+  - "Prop 5.3 attention-constrained allocation."
+  - "The reconciling text: distributed prioritization holds even in tutored mode."
+observations: |
+  
+notes: "Keep propositions; tighten prose only; connect to the §4 modalities subsection."

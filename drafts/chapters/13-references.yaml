@@ -3,11 +3,15 @@ slug: 13-references
 section: "## References"
 order: 13
 files: { en: 13-references.en.md, es: 13-references.es.md }
-en_lines: 113
-es_lines: 113
-status: draft            # draft | editing | summarized | final
+status: ready            # summary = needs summarizing | ready = approved, leave it alone
 summarize: false
+en_words_original: 1773
+max_words: 1773
 target_reduction: "-"
 scope_in: "Bibliography."
 scope_out: ""
+must_preserve:
+  - "All references verbatim."
+observations: |
+  
 notes: "Verbatim."

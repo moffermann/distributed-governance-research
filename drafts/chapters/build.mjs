@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 // Reassemble the per-chapter files (in manifest order) back into the single paper files.
-//   node drafts/chapters/build.mjs --check     # verify round-trip vs the current papers (no write)
-//   node drafts/chapters/build.mjs             # write drafts/paper.md and drafts/paper.es.md
-//   node drafts/chapters/build.mjs --out=DIR   # write into DIR instead (dry run to a temp)
+//   node drafts/chapters/build.mjs --check     # verify the FROZEN originals/ round-trip to the papers
+//   node drafts/chapters/build.mjs             # write drafts/paper.md/.es.md FROM the WORKING chapters
+//   node drafts/chapters/build.mjs --out=DIR   # dry-run the WORKING assembly into DIR instead
+// Editor notes: a trailing `EDITOR-NOTE:` / `NOTA DEL EDITOR:` line in a working chapter is stripped.
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,11 +14,14 @@ const args = Object.fromEntries(process.argv.slice(2).filter(a => a.startsWith("
   .map(a => { const [k, v] = a.replace(/^--/, "").split("="); return [k, v ?? true]; }));
 
 const manifest = JSON.parse(readFileSync(join(HERE, "manifest.json"), "utf8"));
-const assemble = (langKey) => manifest.map(ch => readFileSync(join(HERE, ch[langKey]), "utf8")).join("");
-const enOut = assemble("en"), esOut = assemble("es");
+const stripNote = (t) => t.replace(/\n(EDITOR-NOTE:|NOTA DEL EDITOR:)[^\n]*\n*$/i, "\n");
+const assemble = (dir, langKey, strip) => manifest.map(ch => {
+  const t = readFileSync(join(dir, ch[langKey]), "utf8"); return strip ? stripNote(t) : t;
+}).join("");
 
-if (args.check) {
+if (args.check) {                                          // frozen originals must reproduce the papers
   let ok = true;
+  const enOut = assemble(join(HERE, "originals"), "en", false), esOut = assemble(join(HERE, "originals"), "es", false);
   for (const [lang, built, orig] of [["EN", enOut, join(ROOT, "drafts", "paper.md")], ["ES", esOut, join(ROOT, "drafts", "paper.es.md")]]) {
     const cur = readFileSync(orig, "utf8");
     if (built === cur) { console.log(`${lang}: round-trip OK (byte-identical, ${built.length} chars)`); }
@@ -32,7 +36,8 @@ if (args.check) {
   process.exit(ok ? 0 : 1);
 }
 
+const enOut = assemble(HERE, "en", true), esOut = assemble(HERE, "es", true);   // WORKING copies, notes stripped
 const outDir = args.out ? String(args.out) : join(ROOT, "drafts");
 writeFileSync(join(outDir, "paper.md"), enOut);
 writeFileSync(join(outDir, "paper.es.md"), esOut);
-console.log(`Wrote paper.md (${enOut.length} chars) and paper.es.md (${esOut.length} chars) to ${outDir}`);
+console.log(`Wrote paper.md (${enOut.length} chars) and paper.es.md (${esOut.length} chars) to ${outDir} from WORKING chapters.`);

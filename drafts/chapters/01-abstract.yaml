@@ -3,11 +3,22 @@ slug: 01-abstract
 section: "## Abstract"
 order: 1
 files: { en: 01-abstract.en.md, es: 01-abstract.es.md }
-en_lines: 11
-es_lines: 11
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
-target_reduction: "tighten"
-scope_in: "The single-paragraph abstract."
+en_words_original: 747
+max_words: 280
+target_reduction: "~280 words (aggressive)"
+scope_in: "The abstract."
 scope_out: "Method/result detail."
-notes: "CARRIES THE FRAMING FIX: fair literature-anchored asymmetric result (~2.2x, 98% vs 44%) is PRIMARY; the symmetry gate is a narrow robustness check, not 'confirmatory'; drop 'retire the multiplier' as the headline. Keep directional/conditional label."
+must_preserve:
+  - "Fair literature-anchored ASYMMETRIC contrast as the PRIMARY finding: PROBABLE ~98% vs ~44% (~2.2x, ~54-pt)."
+  - "+58.6-pt full selection+delivery result."
+  - "Honest label: directional/conditional/stylized, NOT calibrated field effects."
+  - "Symmetry gate = a NARROW idealized-central robustness check that CANNOT bound the architecture."
+  - "The calibrated FIELD multiplier stays retired (do not restore it)."
+  - "Credit-vs-coverage mechanism."
+  - "43-attack adversarial review."
+  - "The 'no pilot / uncalibrated units' honest limitation."
+observations: |
+  <<AUTHOR OBSERVATION PENDING — fill this, then it is passed to Codex on the next summarization pass.>>
+notes: "CARRIES THE FRAMING FIX. Remove any confirmatory-vs-exploratory inversion; do not headline 'retire the multiplier'."

@@ -3,11 +3,18 @@ slug: 05-the-core-v0-architecture
 section: "## 4. The Core v0 architecture"
 order: 5
 files: { en: 05-the-core-v0-architecture.en.md, es: 05-the-core-v0-architecture.es.md }
-en_lines: 80
-es_lines: 92
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
-target_reduction: "medium+add"
-scope_in: "The architecture: roles, lifecycle, planning scopes."
-scope_out: "Proofs, computational results."
-notes: "ADD an early, explicit OPERATING-MODALITIES subsection: Open = distributed planning by construction (the default); Tutored/closed = centralized scope construction as a TRANSITION mechanism, and WHAT THE CENTRAL DOES in tutored mode (defines/administers the Planning Scope, eligibility review; every material decision + silence -> public governance-resolution object). Subsumes ERRATA E-1."
+en_words_original: 755
+max_words: 755
+target_reduction: "medium + ADD modalities"
+scope_in: "Roles, lifecycle, planning scopes."
+scope_out: "Proofs, results."
+must_preserve:
+  - "Role separation (proposer/executor/fiscalizer/evidence/custody)."
+  - "The project lifecycle."
+  - "Planning scopes."
+  - "ADD: early operating-modalities subsection — Open = distributed planning by construction; Tutored/closed = centralized scope construction as a TRANSITION, and what the central does in tutored mode."
+observations: |
+  
+notes: "Subsumes ERRATA E-1."

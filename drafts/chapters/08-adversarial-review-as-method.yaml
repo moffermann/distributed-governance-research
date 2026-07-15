@@ -3,11 +3,16 @@ slug: 08-adversarial-review-as-method
 section: "## 7. Adversarial review as method"
 order: 8
 files: { en: 08-adversarial-review-as-method.en.md, es: 08-adversarial-review-as-method.es.md }
-en_lines: 68
-es_lines: 68
-status: draft            # draft | editing | summarized | final
+status: summary            # summary = needs summarizing | ready = approved, leave it alone
 summarize: true
+en_words_original: 583
+max_words: 233
 target_reduction: "HEAVY"
 scope_in: "That adversarial review was the method (short)."
-scope_out: "Blow-by-blow of the 43 attacks (lives in the corpus)."
-notes: "Methodological autobiography — compress hard to a short paragraph."
+scope_out: "Blow-by-blow of the 43 attacks (in the corpus)."
+must_preserve:
+  - "That adversarial review WAS the method."
+  - "43 attacks / 5 rounds / integrated-or-bounded-limitation outcome."
+observations: |
+  
+notes: "Compress hard."
